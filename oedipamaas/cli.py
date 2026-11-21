@@ -21,7 +21,7 @@ def cmd_coder(a):
     from .lecture import lire_fichier
     from .moteur import Moteur
 
-    moteur = Moteur(Path(a.base), a.poids, a.semantique)
+    moteur = Moteur(Path(a.base), a.poids, a.semantique, cles=a.cles)
     fichiers = sorted(Path(a.descriptions).glob("*.json"))
     if a.limite:
         fichiers = fichiers[: a.limite]
@@ -74,6 +74,7 @@ def main(argv=None):
     c.add_argument("--limite", type=int)
     c.add_argument("--poids", help="poids appris (poids/vN.json) ; sinon score et seuil provisoires")
     c.add_argument("--semantique", help="modèle de phrases dont les vecteurs sont dans la base (ex. paraphrase-multilingual-MiniLM-L12-v2)")
+    c.add_argument("--cles", action="store_true", help="proposer aussi les codes à clé (+…)")
     c.set_defaults(f=cmd_coder)
     e = s.add_parser("expliquer", help="afficher les preuves des codes d'une description")
     e.add_argument("base")

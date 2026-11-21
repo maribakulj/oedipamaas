@@ -59,10 +59,14 @@ def ordre_de_preuve(c) -> tuple:
 
 
 class Moteur:
-    def __init__(self, dossier_base: Path, poids: Path | None = None, semantique: str | None = None):
+    def __init__(self, dossier_base: Path, poids: Path | None = None, semantique: str | None = None,
+                 cles: bool = False):
+        """cles : proposer les codes à clé (+…). Désactivé par défaut : sur un premier corpus, la base des codes vrais
+        à clé était rarement candidate, et les clés proposées presque toujours fausses (le mécanisme reste)."""
         import janus_swi as janus  # importé ici : la lecture et la recherche n'en ont pas besoin
 
         self.janus = janus
+        self.cles = cles
         self.base = Base(dossier_base)
         self.sem = None
         if semantique:
@@ -162,7 +166,8 @@ class Moteur:
             self._structure(c, par_code, mentions, descendants, enfants)
         codes = sorted(par_code.values(), key=ordre_de_preuve)
         codes += self._ancetres_candidats(codes[:BUDGET_REPLI], par_code)
-        codes += self._codes_a_cle(desc, codes[:BUDGET_CLES], mentions)
+        if self.cles:
+            codes += self._codes_a_cle(desc, codes[:BUDGET_CLES], mentions)
         self._decider(codes)
         codes = codes[:BUDGET_SORTIE]     # les retenus sont en tête (ordre de la décision)
         for c in codes:

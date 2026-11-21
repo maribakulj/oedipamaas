@@ -208,8 +208,12 @@ def test_alias_wikidata(tmp_path):
     assert alias(f) == {"11H(JEROME)": ["hieronymus", "saint jerome"]}
 
 
-def test_cles(moteur, base_mini):
-    """Une clé d'Iconclass évoquée par la description donne le code à clé, avec les traits de la clé."""
+def test_cles(base_mini):
+    """Une clé d'Iconclass évoquée par la description donne le code à clé, avec les traits de la clé (option)."""
+    from oedipamaas.moteur import Moteur
+    moteur = Moteur(base_mini, cles=True)
+    assert not any("(+" in c["code"] for c in Moteur(base_mini).coder(lire(
+        {"entities": [{"id": "e1", "type": "lion", "attributes": ["heraldic"]}]}, "x"))["codes"])
     cles = json.loads((base_mini / "cles.json").read_text())
     assert cles["25Fk"]["12"]["texte"] == "heraldic animals" and "heraldry" in cles["25Fk"]["12"]["mots"]
     d = {"entities": [{"id": "e1", "type": "lion", "attributes": ["heraldic"]}], "keywords": ["lion", "heraldry"]}
