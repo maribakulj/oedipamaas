@@ -131,10 +131,28 @@ def q(s) -> str:
     return "'" + str(s).replace("\\", "\\\\").replace("'", "\\'") + "'"
 
 
+def expressions_autres_langues(depot: Path) -> dict[str, set[str]]:
+    """Mots clés et têtes de libellé de toutes les langues du dépôt autres que l'anglais, normalisés :
+    {notation: {expressions}}. Servent à la correspondance exacte (textes transcrits, descriptions dans une autre
+    langue), pas à BM25."""
+    out = defaultdict(set)
+    for sorte in ("kw", "txt"):
+        for d in sorted((depot / sorte).glob("*")):
+            if not d.is_dir() or d.name == "en":
+                continue
+            for n, t in paires(d):
+                e = texte.norme(t) if sorte == "kw" else texte.tete(t)
+                if e and len(e) > 2:
+                    out[n].add(e)
+    return out
+
+
 def compiler(depot: Path, sortie: Path, wikidata: Path | None = None) -> dict:
-    """wikidata : instantané P1256 (voir wikidata.py) ; ses alias s'ajoutent aux notations connues."""
+    """wikidata : instantané P1256 (voir wikidata.py) ; ses alias s'ajoutent aux notations connues. Les autres langues
+    du dépôt (txt/xx, kw/xx), s'il y en a, s'ajoutent comme expressions exactes."""
     depot, sortie = Path(depot), Path(sortie)
     sortie.mkdir(parents=True, exist_ok=True)
+    langues = expressions_autres_langues(depot)
     alias_wd = {}
     if wikidata:
         from .wikidata import alias
@@ -200,6 +218,9 @@ def compiler(depot: Path, sortie: Path, wikidata: Path | None = None) -> dict:
             rec["alias"] = alias_wd[n]
             comptes["notations_a_alias"] += 1
             comptes["alias"] += len(alias_wd[n])
+        if n in langues:
+            rec["langues"] = sorted(langues[n])
+            comptes["expressions_autres_langues"] += len(langues[n])
         lignes.append(json.dumps(rec, ensure_ascii=False, sort_keys=True))
         # Faits Prolog
         if rec["parent"]:

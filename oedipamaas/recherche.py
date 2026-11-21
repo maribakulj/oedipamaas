@@ -154,6 +154,8 @@ class Base:
             for k in r["mots"] + r.get("alias", []):    # alias Wikidata : expression exacte seulement
                 if texte.norme(k):
                     self.par_mot[texte.norme(k)].add(n)
+            for e in r.get("langues", []):              # autres langues d'Iconclass : expression exacte seulement
+                self.par_mot[e].add(n)
             if r["tete"]:
                 self.par_tete[r["tete"]].add(n)
         self.nb_docs = len(self.longueur)
