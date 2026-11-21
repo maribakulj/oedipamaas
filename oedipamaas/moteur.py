@@ -217,6 +217,7 @@ class Moteur:
         brutes = mesures_recherche(cands)
         for i, c in enumerate(codes):
             c["traits"] = traits(c, i, len(codes), desc, self.base, brutes)
+        codes += self.ancetres_candidats(codes)
         if self.poids:
             for c in codes:
                 c["p_catalogue"] = round(self.probabilite(c["traits"]), 4)
@@ -241,6 +242,29 @@ class Moteur:
         sortie["non_utilise"] = {"mentions": sum(non.values()), "sur": len(desc.mentions),
                                  "par_champ": dict(sorted(non.items()))}
         return sortie
+
+    def ancetres_candidats(self, codes: list[dict], top: int = 15, prof_min: int = 2) -> list[dict]:
+        """Repli sur le parent sûr : les ancêtres (jusqu'à deux niveaux, profondeur ≥ 2) des meilleurs codes deviennent
+        candidats, avec les traits de leur meilleur descendant et l'écart de profondeur ; la calibration apprend quand
+        le plus général est le meilleur pari."""
+        presents = {c["code"] for c in codes}
+        nouveaux = {}
+        for c in codes[:top]:
+            for ecart, a in enumerate(self.base.ancetres(c["code"])[:2], start=1):
+                if a in presents or self.base.n[a]["prof"] < prof_min or self.base.n[a]["gabarit"]:
+                    continue
+                prec = nouveaux.get(a)
+                if prec is None or c["score"] > prec["score"]:
+                    t = dict(c["traits"]) | {"ancetre": 1.0, "ecart_prof": float(ecart),
+                                             "prof": float(self.base.n[a]["prof"])}
+                    nouveaux[a] = {"code": a, "score": c["score"], "familles": c["familles"] + ["I"],
+                                   "iconclass": self.base.n[a]["libelle"], "mentions": c["mentions"],
+                                   "preuves": [{"regle": "I.ancetre", "faits": [], "contribution": 0.0,
+                                                "descendant": c["code"]}],
+                                   "traits": t, "second_recit": True}   # jamais retenu sans poids appris
+        for a, c in nouveaux.items():
+            c["traits"]["nb_descendants"] = float(sum(1 for x in codes[:top] if a in self.base.ancetres(x["code"])))
+        return sorted(nouveaux.values(), key=lambda c: (-c["score"], c["code"]))
 
     def _objets(self, desc, codes):
         par_entite = defaultdict(set)
