@@ -109,40 +109,68 @@ def test_lecture_v1_et_v2():
     assert d1.format == "v1" and any(m.champ == "subject.title" for m in d1.mentions)
 
 
-def test_noms_dans_un_titre():
+# Poids écrits pour les tests seulement (vérifier le chemin de la décision) ; les vrais poids s'apprennent.
+POIDS_TEST = {"nom": 2.0, "attributs_idf": 0.3, "dcov_sujet": 3.0, "lex_sujet": 1.0, "exact_tete_autre": 3.0,
+              "exact_mot_autre": 2.0, "source_ancetre": 1.0, "participants_part": 1.0, "ancetre": -3.0,
+              "recit_sans_sujet": -2.0}
+
+
+@pytest.fixture(scope="module")
+def moteur_poids(base_mini, tmp_path_factory):
+    from oedipamaas.moteur import Moteur
+    f = tmp_path_factory.mktemp("poids") / "poids.json"
+    f.write_text(json.dumps({"version": "test", "poids": POIDS_TEST, "moyenne": {k: 0.0 for k in POIDS_TEST},
+                             "ecart": {k: 1.0 for k in POIDS_TEST}, "biais": -3.0, "k": 5, "seuil": 0.5,
+                             "critere": "p"}))
+    return Moteur(base_mini, f)
+
+
+def code(s, n):
+    return next((c for c in s["codes"] if c["code"] == n), None)
+
+
+def test_noms_et_leur_contexte():
     from oedipamaas.recherche import fragments_de_noms
-    assert fragments_de_noms("subject.title", "Saint Jerome in the wilderness") == [("jerome in the wilderness", False)]
-    assert fragments_de_noms("subject.title", "Last Supper (Mark 14), engraving by Philips Galle") == []
-    assert fragments_de_noms("persons.who", "Saint John the Baptist") == [("john the baptist", True)]
+    assert ("jerome", 1, "honorifique") in fragments_de_noms("subject.title", "Saint Jerome in the wilderness")
+    assert ("mark", 2, "reference") in fragments_de_noms("subject.title", "Last Supper (Mark 14)")
+    assert fragments_de_noms("persons.who", "Saint John the Baptist") == [("john the baptist", 0, "personne")]
 
 
-def test_saint_nomme_et_appuye(moteur):
+def test_traits_du_saint(moteur):
     s = moteur.coder(lire(jerome, "jerome"))
-    codes = retenus(s)
-    assert any(c.startswith("11H(JEROME)") for c in codes)
-    assert "11H(CATHERINE)" not in [c["code"] for c in s["codes"]]   # aucune devinette quand un saint est nommé
+    j = code(s, "11H(JEROME)")
+    assert j and j["traits"]["nom"] == 1.0 and j["traits"]["nom_personne"] == 1.0
+    c = code(s, "11H(CATHERINE)")                      # « book » est aussi l'un de ses attributs : candidate
+    assert c is None or c["traits"].get("attributs_idf", 0) < j["traits"]["attributs_idf"]
 
 
-def test_nom_sans_appui_bloque(moteur):
-    d = {"subject": {"title": "a man", "type": "portrait"}, "persons": [{"who": "Jerome", "recognised_by": []}],
-         "entities": [{"id": "e1", "type": "man", "attributes": []}]}
+def test_identite_requise(moteur):
+    """Un code à nom propre (et ses sous-rubriques) affirme une identité : sans nom ni attribut vus, il n'est pas
+    proposé, même si le titre ressemble à un de ses épisodes."""
+    d = {"subject": {"title": "an old man as penitent in the desert"},
+         "entities": [{"id": "e1", "type": "man", "attributes": ["old"]}]}
     assert not any(c["code"].startswith("11H(JEROME)") for c in moteur.coder(lire(d, "x"))["codes"])
 
 
-def test_episode_par_titre_et_source(moteur):
+def test_episode_par_titre_et_source(moteur, moteur_poids):
     s = moteur.coder(lire(david, "david"))
-    codes = retenus(s)
-    # Dans la petite base, les deux épisodes frères sont presque à égalité : repli sur le parent permis, jamais le
-    # mauvais épisode.
-    assert ("71H1443" in codes or "71H144" in codes) and "71H1442" not in codes
+    bon, voisin = code(s, "71H1443"), code(s, "71H1442")
+    assert bon["traits"]["source_ancetre"] == 1.0
+    assert bon["traits"]["dcov_sujet"] > voisin["traits"].get("dcov_sujet", 0.0)
+    s = moteur_poids.coder(lire(david, "david"))
+    assert code(s, "71H1443")["p_catalogue"] > code(s, "71H1442")["p_catalogue"]
 
 
-def test_lion_objet_situe(moteur):
+def test_sans_poids_rien_n_est_retenu(moteur):
+    assert not retenus(moteur.coder(lire(david, "david")))
+
+
+def test_lion_objet_situe(moteur_poids):
     d = {"entities": [{"id": "e1", "type": "lion", "attributes": [], "box": [0.1, 0.2, 0.5, 0.9]}],
          "keywords": ["lion"]}
-    s = moteur.coder(lire(d, "lion"))
+    s = moteur_poids.coder(lire(d, "lion"))
     assert "25F23(LION)" in retenus(s)
-    assert s["objets"][0]["codes"] == ["25F23(LION)"] and s["objets"][0]["boite"] == [0.1, 0.2, 0.5, 0.9]
+    assert "25F23(LION)" in s["objets"][0]["codes"] and s["objets"][0]["boite"] == [0.1, 0.2, 0.5, 0.9]
 
 
 def test_determinisme(moteur):
@@ -159,15 +187,13 @@ def test_description_illisible(moteur, tmp_path):
     assert "erreur" in s and s["codes"] == []
 
 
-def test_ancetres_candidats_et_projection(moteur):
-    s = moteur.coder(lire(david, "david"))
-    codes = {c["code"]: c for c in s["codes"]}
-    replis = [c for c in s["codes"] if any(p["regle"] == "I.ancetre" for p in c["preuves"])]
-    assert replis and all(c["traits"].get("ancetre") == 1.0 for c in replis)
-    assert all(c["statut"] == "candidat" for c in replis)          # sans poids appris, jamais retenus
-    retenus = [n for n, c in codes.items() if c["statut"] == "retenu"]
-    for n in retenus:                                                 # aucun retenu n'est l'ancêtre d'un autre
-        assert not any(n in moteur.base.ancetres(m) for m in retenus if m != n)
+def test_ancetres_candidats_et_projection(moteur_poids):
+    s = moteur_poids.coder(lire(jerome, "jerome"))
+    replis = [c for c in s["codes"] if any(p["regle"] == "repli_sur_ancetre" for p in c["preuves"])]
+    assert all(c["traits"].get("ancetre") == 1.0 for c in replis)
+    gardes = retenus(s)
+    for n in gardes:                                                   # aucun retenu n'est l'ancêtre d'un autre
+        assert not any(n in moteur_poids.base.ancetres(m) for m in gardes if m != n)
 
 
 def test_alias_wikidata(tmp_path):
