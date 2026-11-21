@@ -230,6 +230,13 @@ class Moteur:
                 ok = c["score"] >= SEUIL and rang < MAX_RETENUS and not c.get("second_recit")
             c["statut"] = "retenu" if ok else "candidat"
             rang += ok
+        # Même projection que la mesure (most_specific) : un ancêtre retenu avec l'un de ses descendants redevient
+        # candidat, marqué « implicite » (il est dit par le descendant).
+        retenus = {c["code"] for c in codes if c["statut"] == "retenu"}
+        impliques = {a for n in retenus for a in self.base.ancetres(n)}
+        for c in codes:
+            if c["statut"] == "retenu" and c["code"] in impliques:
+                c["statut"], c["implicite"] = "candidat", True
         utilisees = {k for c in codes if c["statut"] == "retenu" for k in c["mentions"]}
         sortie["codes"] = [{k: v for k, v in c.items() if k not in ("mentions", "second_recit", "_routage")}
                            for c in codes]
