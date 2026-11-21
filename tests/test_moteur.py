@@ -157,3 +157,23 @@ def test_description_illisible(moteur, tmp_path):
     f.write_text(json.dumps({"brut": "pas de json ici"}))
     s = moteur.coder(lire_fichier(f))
     assert "erreur" in s and s["codes"] == []
+
+
+def test_ancetres_candidats_et_projection(moteur):
+    s = moteur.coder(lire(david, "david"))
+    codes = {c["code"]: c for c in s["codes"]}
+    replis = [c for c in s["codes"] if any(p["regle"] == "I.ancetre" for p in c["preuves"])]
+    assert replis and all(c["traits"].get("ancetre") == 1.0 for c in replis)
+    assert all(c["statut"] == "candidat" for c in replis)          # sans poids appris, jamais retenus
+    retenus = [n for n, c in codes.items() if c["statut"] == "retenu"]
+    for n in retenus:                                                 # aucun retenu n'est l'ancêtre d'un autre
+        assert not any(n in moteur.base.ancetres(m) for m in retenus if m != n)
+
+
+def test_alias_wikidata(tmp_path):
+    from oedipamaas.wikidata import alias, alias_valide
+    assert not alias_valide("Jr") and not alias_valide("Jer.") and alias_valide("Hieronymus")
+    f = tmp_path / "p1256.json"
+    f.write_text(json.dumps({"results": {"bindings": [
+        {"v": {"value": "11H(JEROME)"}, "libelles": {"value": "Hieronymus|Jr|Saint Jerome"}}]}}))
+    assert alias(f) == {"11H(JEROME)": ["hieronymus", "saint jerome"]}
