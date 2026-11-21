@@ -4,9 +4,12 @@ version = "0.1.0"
 description = "Moteur iconographique : descriptions d'images en mots vers codes Iconclass prouvés"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["janus-swi>=1.5"]
+dependencies = []
 
 [project.optional-dependencies]
+# Le moteur complet (règles) demande SWI-Prolog et son pont Janus ; la base et les vecteurs n'en ont pas besoin.
+prolog = ["janus-swi>=1.5"]
+semantique = ["numpy>=1.26", "sentence-transformers>=3"]
 test = ["pytest>=8"]
 
 [project.scripts]
