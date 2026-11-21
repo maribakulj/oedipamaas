@@ -106,7 +106,14 @@ def test_lecture_v1_et_v2():
     assert any(m.champ == "subject.source" and m.texte == "1 Samuel 17" for m in d2.mentions)
     d1 = lire({"entities": [{"id": "e1", "type": "lion", "attributes": []}], "relations": [], "scene": ["desert"],
                "identification": {"guess": "Saint Jerome", "based_on": ["lion"], "confidence": 0.7}}, "v1")
-    assert d1.format == "v1" and any(m.champ == "persons.who" for m in d1.mentions)
+    assert d1.format == "v1" and any(m.champ == "subject.title" for m in d1.mentions)
+
+
+def test_noms_dans_un_titre():
+    from oedipamaas.recherche import fragments_de_noms
+    assert fragments_de_noms("subject.title", "Saint Jerome in the wilderness") == [("jerome in the wilderness", False)]
+    assert fragments_de_noms("subject.title", "Last Supper (Mark 14), engraving by Philips Galle") == []
+    assert fragments_de_noms("persons.who", "Saint John the Baptist") == [("john the baptist", True)]
 
 
 def test_saint_nomme_et_appuye(moteur):

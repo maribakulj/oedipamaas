@@ -154,7 +154,8 @@ def _lire_v1(d, desc):
     conf = _conf(ident.get("confidence"))
     desc.sujet_confiance = conf
     if ident.get("guess"):
+        # La devinette v1 est un sujet (« Landscape with ruins… »), rarement un nom seul : elle va au titre, où un nom
+        # ne compte que précédé de « saint ».
         desc.ajouter("subject.title", "identification.guess", ident["guess"], conf)
-        desc.ajouter("persons.who", "identification.guess", ident["guess"], conf)
     for i, b in enumerate(_liste(ident.get("based_on"))):
         desc.ajouter("persons.recognised_by", f"identification.based_on[{i}]", b, conf)

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+import math
 import subprocess
 from collections import defaultdict
 from pathlib import Path
@@ -18,8 +20,30 @@ CHAMPS_PARTICIPANTS = ("persons.who", "persons.recognised_by", "entities.type", 
                        "concepts.symbole")
 BONUS_ROUTAGE = 0.5
 BONUS_INDICE = 0.3
-SEUIL = 2.0          # provisoire, remplacé par la calibration
+SEUIL = 2.0          # sans poids appris : seuil provisoire
 MAX_RETENUS = 10
+REGLES = ("A.tete", "A.mot", "A.libelle", "B.nom", "C.attributs", "C.sans_nom", "D.source", "D.titre",
+          "D.participants", "S.titre")
+
+
+def traits(c: dict, rang: int, nb_codes: int, desc: Description, base: Base) -> dict:
+    """Ce que la calibration apprend à peser : contribution de chaque règle, forme de la preuve, place du code."""
+    t = {r: 0.0 for r in REGLES}
+    for p in c["preuves"]:
+        if p["regle"] in t:
+            t[p["regle"]] = max(t[p["regle"]], p["contribution"])
+    r = base.n[c["code"]]
+    t |= {"routage": float(c.get("_routage", False)), "prof": float(r["prof"]),
+          "nb_mentions": float(len(c["mentions"])), "nb_familles": float(len(c["familles"])),
+          "second_recit": float(bool(c.get("second_recit"))),
+          "repli": float(any(p["regle"] == "I.repli" for p in c["preuves"])),
+          "descendant": float(any(p["regle"] == "I.descendant" for p in c["preuves"])),
+          "rang": float(rang), "score": c["score"], "nb_codes_image": float(nb_codes),
+          "conf_sujet": float(desc.sujet_confiance or 0.0), "v2": float(desc.format == "v2"),
+          "cle": float(r["cle"]), "propre": float(bool(base.sous_propre(c["code"])))}
+    for ch in "0123456789":
+        t[f"ch{ch}"] = float(r["chapitre"] == ch)
+    return {k: round(v, 4) for k, v in t.items()}
 
 
 def version_git() -> str:
@@ -38,7 +62,7 @@ def q(s) -> str:
 
 
 class Moteur:
-    def __init__(self, dossier_base: Path):
+    def __init__(self, dossier_base: Path, poids: Path | None = None):
         import janus_swi as janus  # importé ici : la lecture et la recherche n'en ont pas besoin
 
         self.janus = janus
@@ -46,9 +70,16 @@ class Moteur:
         base_pl = Path(dossier_base) / "base.pl"
         janus.query_once(f"consult({q(base_pl)})")
         janus.query_once(f"consult({q(ICI / 'regles' / 'regles.pl')})")
+        self.poids = json.loads(Path(poids).read_text()) if poids else None
         self.versions = {"moteur": version_git(),
                          "base": f"iconclass {self.base.manifeste.get('commit', '?')[:7]}",
-                         "regles": "v1"}
+                         "regles": "v1", "poids": self.poids["version"] if self.poids else None}
+
+    def probabilite(self, t: dict) -> float:
+        """Régression logistique apprise (poids/vN.json) : traits centrés-réduits, puis sigmoïde."""
+        w = self.poids
+        z = w["biais"] + sum(w["poids"][k] * (t.get(k, 0.0) - w["moyenne"][k]) / w["ecart"][k] for k in w["poids"])
+        return 1.0 / (1.0 + math.exp(-max(-30.0, min(30.0, z))))
 
     # ---------------------------------------------------------------------------------------------------------------
     def faits(self, desc: Description, cands: list[recherche.Candidat]) -> list[str]:
@@ -141,22 +172,34 @@ class Moteur:
             ks_tous = sorted({k for _, ks, _ in aps for k in ks})
             score = sum(p for _, p, _ in meilleur.values()) + BONUS_INDICE * max(0, len(meilleur) - 1)
             champs = {mentions[k].champ for k in ks_tous}
-            if any(recherche.bonus_routage(c, n) for c in champs):
+            routage = any(recherche.bonus_routage(c, n) for c in champs)
+            if routage:
                 score += BONUS_ROUTAGE
             preuves = [{"regle": regle, "faits": [{"chemin": mentions[k].chemin, "texte": mentions[k].texte}
                                                    for k in ks], "contribution": round(p, 4)}
                        for regle, ks, p in sorted(aps, key=lambda x: (-x[2], x[0], x[1]))]
             codes.append({"code": n, "score": round(score, 4), "familles": sorted({c[0] for c in meilleur}),
-                          "iconclass": self.base.n[n]["libelle"], "preuves": preuves, "mentions": ks_tous})
+                          "iconclass": self.base.n[n]["libelle"], "preuves": preuves, "mentions": ks_tous,
+                          "_routage": routage})
         codes = hierarchie(self.base, codes)
         codes.sort(key=lambda c: (-c["score"], len(c["code"]), c["code"]))
+        for i, c in enumerate(codes):
+            c["traits"] = traits(c, i, len(codes), desc, self.base)
+        if self.poids:
+            for c in codes:
+                c["p_catalogue"] = round(self.probabilite(c["traits"]), 4)
+            codes.sort(key=lambda c: (-c["p_catalogue"], -c["score"], len(c["code"]), c["code"]))
         rang = 0
         for c in codes:
-            ok = c["score"] >= SEUIL and rang < MAX_RETENUS and not c.get("second_recit")
+            if self.poids:
+                ok = c["p_catalogue"] >= self.poids["seuil"] and rang < self.poids["k"]
+            else:
+                ok = c["score"] >= SEUIL and rang < MAX_RETENUS and not c.get("second_recit")
             c["statut"] = "retenu" if ok else "candidat"
             rang += ok
         utilisees = {k for c in codes if c["statut"] == "retenu" for k in c["mentions"]}
-        sortie["codes"] = [{k: v for k, v in c.items() if k not in ("mentions", "second_recit")} for c in codes]
+        sortie["codes"] = [{k: v for k, v in c.items() if k not in ("mentions", "second_recit", "_routage")}
+                           for c in codes]
         sortie["objets"] = self._objets(desc, codes)
         sortie["relations"] = [{"sujet": a, "relation": r, "objet": b} for a, r, b in desc.relations]
         non = defaultdict(int)

@@ -186,16 +186,17 @@ def candidats(base: Base, desc: Description, top=10) -> list[Candidat]:
                     out.append(Candidat(n, m.k, "ref", 1.0, i))
             continue
         if m.champ in CHAMPS_NOMS:
-            nom = nom_de_personne(m.texte)
-            vus, pris = set(), []
-            for cle, i, j in _sous_expressions(nom):
-                if any(i < b and a < j for a, b in pris) or cle not in base.par_nom:
-                    continue  # un nom plus long a déjà pris ces mots (« john the baptist » avant « john »)
-                pris.append((i, j))
-                for n in sorted(base.par_nom[cle]):
-                    if n not in vus:
-                        vus.add(n)
-                        out.append(Candidat(n, m.k, "nom", 1.0 if cle == nom else 0.7, 0))
+            vus = set()
+            for fragment, entier in fragments_de_noms(m.champ, m.texte):
+                pris = []
+                for cle, i, j in _sous_expressions(fragment, ancre=not entier):
+                    if any(i < b and a < j for a, b in pris) or cle not in base.par_nom:
+                        continue  # un nom plus long a déjà pris ces mots (« john the baptist » avant « john »)
+                    pris.append((i, j))
+                    for n in sorted(base.par_nom[cle]):
+                        if n not in vus:
+                            vus.add(n)
+                            out.append(Candidat(n, m.k, "nom", 1.0 if cle == fragment else 0.7, 0))
         if m.champ not in ROUTAGE:
             continue
         permis = _permis(base, m.champ)
@@ -242,13 +243,37 @@ def poids_exact(df: int) -> float:
     return 0.0
 
 
-def _sous_expressions(nom: str):
+_APRES_SAINT = re.compile(r"\b(?:saint|st|ste|s|ss|san|santa|sankt|sint|sanctus|sancta|divus|diva)\s+"
+                          r"([a-z][a-z'\-]*(?:\s+[a-z][a-z'\-]*){0,3})")
+
+
+def fragments_de_noms(champ: str, texte_brut: str) -> list[tuple[str, bool]]:
+    """Où chercher un nom propre. Dans « persons.who », toute l'expression (le descripteur y nomme la personne) ; dans
+    un titre ou un texte transcrit, seulement ce qui suit « saint », « St. », « S. »… : un nom nu y est souvent un
+    auteur, un graveur ou un livre (« Mark 14 »). Un nom suivi d'un nombre est une référence, pas une personne.
+    Rend (fragment, entier) : entier = le fragment entier est l'expression (sinon seuls ses débuts comptent)."""
+    mots = " ".join(texte.mots(texte_brut))
+    if champ == "persons.who":
+        if re.search(r"\b[a-z]+\s+\d", mots):
+            mots = re.sub(r"\b[a-z]+\s+\d.*$", "", mots)
+        return [(nom_de_personne(mots), True)] if mots.strip() else []
+    out = []
+    for m in _APRES_SAINT.finditer(mots):
+        suite = mots[m.end():].lstrip()
+        if suite[:1].isdigit():
+            continue
+        out.append((texte.norme(m[1]), False))
+    return out
+
+
+def _sous_expressions(nom: str, ancre: bool = False):
     """« jerome », puis les groupes de mots d'un nom plus long (« john the baptist » dans « saint john the baptist
-    preaching »), du plus long au plus court, sans mot vide seul."""
+    preaching »), du plus long au plus court, sans mot vide seul. Ancré : seulement les groupes qui commencent au
+    premier mot (le nom qui suit « saint »)."""
     ms = nom.split()
     out = []
     for longueur in range(len(ms), 0, -1):
-        for i in range(len(ms) - longueur + 1):
+        for i in range(1 if ancre else len(ms) - longueur + 1):
             g = " ".join(ms[i:i + longueur])
             if longueur == 1 and (g in texte.VIDES or len(g) < 3):
                 continue

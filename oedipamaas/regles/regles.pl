@@ -36,7 +36,7 @@ appui(N, 'A.libelle', [K], P) :-
 appui(N, 'B.nom', [K], P) :-
     cand(N, K, nom, S, _, _, _), once(soutien_nom(N, K, _)),
     P is 2.0 * S.
-soutien_nom(N, _, K2) :- attr_vu(N, _, _, K2).
+soutien_nom(N, _, K2) :- attr_vu(N, _, I, K2), I >= 2.0.   % un attribut assez rare (« book » ne désigne personne)
 soutien_nom(N, _, K2) :- saint(N), ( halo(K2) ; dit_saint(K2) ).
 soutien_nom(N, _, K2) :- saint(N), sujet_type(saint), m(K2, 'subject.type').
 soutien_nom(N, K, K2) :- part_vu(N, P, K2), K2 \== K, \+ ic_nom(P, N).   % un participant autre que le nom lui-même
