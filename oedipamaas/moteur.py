@@ -22,8 +22,8 @@ BONUS_ROUTAGE = 0.5
 BONUS_INDICE = 0.3
 SEUIL = 2.0          # sans poids appris : seuil provisoire
 MAX_RETENUS = 10
-REGLES = ("A.tete", "A.mot", "A.libelle", "B.nom", "C.attributs", "C.sans_nom", "D.source", "D.titre",
-          "D.participants", "S.titre")
+REGLES = ("A.tete", "A.mot", "A.libelle", "A.sens", "B.nom", "C.attributs", "C.sans_nom", "D.source", "D.titre",
+          "D.sens", "D.participants", "S.titre", "S.sens")
 
 
 def traits(c: dict, rang: int, nb_codes: int, desc: Description, base: Base) -> dict:
@@ -62,18 +62,24 @@ def q(s) -> str:
 
 
 class Moteur:
-    def __init__(self, dossier_base: Path, poids: Path | None = None):
+    def __init__(self, dossier_base: Path, poids: Path | None = None, semantique: str | None = None):
         import janus_swi as janus  # importé ici : la lecture et la recherche n'en ont pas besoin
 
         self.janus = janus
         self.base = Base(dossier_base)
+        self.sem = None
+        if semantique:
+            from .semantique import IndexSemantique
+            meta = json.loads((Path(dossier_base) / f"vecteurs-{semantique.split('/')[-1]}.json").read_text())
+            self.sem = IndexSemantique(dossier_base, meta["modele"], meta["revision"])
         base_pl = Path(dossier_base) / "base.pl"
         janus.query_once(f"consult({q(base_pl)})")
         janus.query_once(f"consult({q(ICI / 'regles' / 'regles.pl')})")
         self.poids = json.loads(Path(poids).read_text()) if poids else None
         self.versions = {"moteur": version_git(),
                          "base": f"iconclass {self.base.manifeste.get('commit', '?')[:7]}",
-                         "regles": "v1", "poids": self.poids["version"] if self.poids else None}
+                         "regles": "v1", "poids": self.poids["version"] if self.poids else None,
+                         "semantique": f"{self.sem.modele_nom} {self.sem.revision}" if self.sem else None}
 
     def probabilite(self, t: dict) -> float:
         """Régression logistique apprise (poids/vN.json) : traits centrés-réduits, puis sigmoïde."""
@@ -141,7 +147,7 @@ class Moteur:
                   "versions": self.versions | {"description": f"sha256:{desc.sha256}"}}
         if desc.erreur:
             return sortie | {"erreur": desc.erreur, "codes": [], "objets": [], "relations": [], "non_utilise": {}}
-        cands = recherche.candidats(self.base, desc)
+        cands = recherche.candidats(self.base, desc, sem=self.sem)
         j = self.janus
         j.query_once("vider")
         faits = self.faits(desc, cands)

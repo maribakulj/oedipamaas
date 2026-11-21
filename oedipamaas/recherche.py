@@ -176,8 +176,33 @@ def nom_de_personne(s: str) -> str:
     return PREFIXES_SAINT.sub("", texte.norme(s))
 
 
-def candidats(base: Base, desc: Description, top=10) -> list[Candidat]:
+def _masque(base: Base, sem, champ: str):
+    """Masque des notations permises pour un champ, dans l'ordre de l'index sémantique (mis en cache)."""
+    import numpy as np
+    cache = base.__dict__.setdefault("_masques", {})
+    if champ not in cache:
+        permis = _permis(base, champ)
+        cache[champ] = np.array([n in base.longueur and permis(n) for n in sem.ids])
+    return cache[champ]
+
+
+def candidats_semantiques(base: Base, desc: Description, sem, top=8) -> list[Candidat]:
     out = []
+    mentions = [m for m in desc.mentions if m.champ in ROUTAGE]
+    sem.encoder([m.texte for m in mentions])   # un seul passage du modèle pour toute l'image
+    for m in mentions:
+        rq = {texte.racine(x) for x in texte.jetons(m.texte)}
+        for i, (n, s) in enumerate(sem.voisins(m.texte, _masque(base, sem, m.champ), top=top)):
+            rl = base.racines_libelle.get(n, set())
+            rk = {texte.racine(x) for k in base.n[n]["mots"] for x in texte.jetons(k)}
+            q_cov = base.part_idf(rq & (rl | rk), rq) if rq else 0.0
+            d_cov = base.part_idf(rq & rl, rl)
+            out.append(Candidat(n, m.k, "sem", s, i, round(q_cov, 4), round(d_cov, 4)))
+    return out
+
+
+def candidats(base: Base, desc: Description, top=10, sem=None) -> list[Candidat]:
+    out = candidats_semantiques(base, desc, sem) if sem is not None else []
     for m in desc.mentions:
         if m.champ == "subject.source":
             for ref in references.analyser(m.texte):

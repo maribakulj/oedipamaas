@@ -21,7 +21,7 @@ def cmd_coder(a):
     from .lecture import lire_fichier
     from .moteur import Moteur
 
-    moteur = Moteur(Path(a.base), a.poids)
+    moteur = Moteur(Path(a.base), a.poids, a.semantique)
     fichiers = sorted(Path(a.descriptions).glob("*.json"))
     if a.limite:
         fichiers = fichiers[: a.limite]
@@ -47,7 +47,7 @@ def cmd_expliquer(a):
     from .lecture import lire_fichier
     from .moteur import Moteur
 
-    r = Moteur(Path(a.base), a.poids).coder(lire_fichier(Path(a.description)))
+    r = Moteur(Path(a.base), a.poids, a.semantique).coder(lire_fichier(Path(a.description)))
     codes = [c for c in r["codes"] if not a.code or c["code"] == a.code]
     if not codes:
         print(f"{a.code} : aucun appui dans cette description")
@@ -72,6 +72,7 @@ def main(argv=None):
     c.add_argument("sortie")
     c.add_argument("--limite", type=int)
     c.add_argument("--poids", help="poids appris (poids/vN.json) ; sinon score et seuil provisoires")
+    c.add_argument("--semantique", help="modèle de phrases dont les vecteurs sont dans la base (ex. paraphrase-multilingual-MiniLM-L12-v2)")
     c.set_defaults(f=cmd_coder)
     e = s.add_parser("expliquer", help="afficher les preuves des codes d'une description")
     e.add_argument("base")
@@ -79,6 +80,7 @@ def main(argv=None):
     e.add_argument("code", nargs="?")
     e.add_argument("--top", type=int, default=15)
     e.add_argument("--poids")
+    e.add_argument("--semantique", help="modèle de phrases dont les vecteurs sont dans la base (ex. paraphrase-multilingual-MiniLM-L12-v2)")
     e.set_defaults(f=cmd_expliquer)
     a = p.parse_args(argv)
     a.f(a)

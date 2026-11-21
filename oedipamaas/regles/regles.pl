@@ -32,6 +32,11 @@ appui(N, 'A.libelle', [K], P) :-
     once(( D >= 0.5 ; Q >= 1.0, D >= 0.34 )),
     P is 0.6 * D + 0.4 * Q.
 
+% A.sens : voisin sémantique d'une mention hors sujet (cosinus S ; au-dessous de 0,6, rien).
+appui(N, 'A.sens', [K], P) :-
+    cand(N, K, sem, S, _, _, _), S >= 0.6, m(K, C), \+ champ_sujet(C),
+    P is 2.0 * (S - 0.5).
+
 % --- B nom : un code à nom propre, nommé et appuyé par au moins un autre fait --------------------------------------
 appui(N, 'B.nom', [K], P) :-
     cand(N, K, nom, S, _, _, _), once(soutien_nom(N, K, _)),
@@ -63,7 +68,9 @@ appui(N, 'D.source', [K], 1.5) :- cand(N, K, ref, _, _, _, _).
 appui(N, 'D.source', [K], 1.2) :-
     titre(N), \+ cand(N, _, ref, _, _, _, _),
     once(( cand(A, K, ref, _, _, _, _), ic_ancetre(N, A) )).
-titre(N) :- cand(N, K, _, _, _, _, _), m(K, C), champ_sujet(C), once(appui(N, 'D.titre', _, _)).
+titre(N) :-
+    cand(N, K, _, _, _, _, _), m(K, C), champ_sujet(C),
+    once(( appui(N, 'D.titre', _, _) ; appui(N, 'D.sens', _, _) )).
 % Le titre appuie un récit (D.titre) ; sur un code non narratif (paysage, chasse…), c'est un appui de sujet (S.titre).
 appui(N, R, [K], P) :-
     cand(N, K, lex, S, _, Q, D), m(K, C), champ_sujet(C),
@@ -74,11 +81,17 @@ appui(N, R, [K], P) :-
 appui(N, R, [K], 2.0) :-
     cand(N, K, Src, _, _, _, _), memberchk(Src, [mot, tete]), m(K, 'subject.title'),
     ( recit(N) -> R = 'D.titre' ; R = 'S.titre' ).
+% Le titre rapproché par le sens (cosinus S ≥ 0,55) : D.sens pour un récit, S.sens sinon.
+appui(N, R, [K], P) :-
+    cand(N, K, sem, S, _, _, _), S >= 0.55, m(K, C), champ_sujet(C),
+    ( C == 'subject.title' -> F = 2.0 ; F = 1.0 ),
+    P is F * 2.0 * (S - 0.45),
+    ( recit(N) -> R = 'D.sens' ; R = 'S.sens' ).
 appui(N, 'D.participants', Ks, P) :-
     part_total(N, T), T > 0, recit(N),
     setof(K, Pa^part_vu(N, Pa, K), Ks),
     setof(Pa, K^part_vu(N, Pa, K), Pas), length(Pas, Vus),
-    once(( appui(N, 'D.titre', _, _) ; appui(N, 'D.source', _, _) )),
+    once(( appui(N, 'D.titre', _, _) ; appui(N, 'D.sens', _, _) ; appui(N, 'D.source', _, _) )),
     P is 1.5 * Vus / T.
 
 % --- Blocages (J, et codes non appuyés) -----------------------------------------------------------------------------------
