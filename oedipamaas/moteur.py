@@ -26,9 +26,34 @@ REGLES = ("A.tete", "A.mot", "A.libelle", "A.sens", "B.nom", "C.attributs", "C.s
           "D.sens", "D.participants", "S.titre", "S.sens")
 
 
-def traits(c: dict, rang: int, nb_codes: int, desc: Description, base: Base) -> dict:
-    """Ce que la calibration apprend à peser : contribution de chaque règle, forme de la preuve, place du code."""
+def mesures_recherche(cands) -> dict:
+    """Par notation, les mesures brutes de la recherche : meilleur cosinus, meilleure couverture lexicale, meilleur
+    rang, nombre de mentions qui la proposent."""
+    out = defaultdict(lambda: {"sem_max": 0.0, "lex_max": 0.0, "dcov_max": 0.0, "qcov_max": 0.0, "rang_min": 20.0,
+                               "nb_propositions": 0.0})
+    for c in cands:
+        a = out[c.n]
+        a["nb_propositions"] += 1
+        if c.source == "sem":
+            a["sem_max"] = max(a["sem_max"], c.score)
+        if c.source == "lex":
+            a["lex_max"] = max(a["lex_max"], c.score)
+        if c.source in ("sem", "lex"):
+            a["dcov_max"] = max(a["dcov_max"], c.d_cov)
+            a["qcov_max"] = max(a["qcov_max"], c.q_cov)
+            a["rang_min"] = min(a["rang_min"], float(c.rang))
+    return out
+
+
+def traits(c: dict, rang: int, nb_codes: int, desc: Description, base: Base, recherche_: dict | None = None) -> dict:
+    """Ce que la calibration apprend à peser : contribution de chaque règle, forme de la preuve, place du code, mesures
+    brutes de la recherche."""
     t = {r: 0.0 for r in REGLES}
+    if recherche_ is not None and c["code"] in recherche_:
+        t |= recherche_[c["code"]]
+    else:
+        t |= {"sem_max": 0.0, "lex_max": 0.0, "dcov_max": 0.0, "qcov_max": 0.0, "rang_min": 20.0,
+              "nb_propositions": 0.0}
     for p in c["preuves"]:
         if p["regle"] in t:
             t[p["regle"]] = max(t[p["regle"]], p["contribution"])
@@ -189,8 +214,9 @@ class Moteur:
                           "_routage": routage})
         codes = hierarchie(self.base, codes)
         codes.sort(key=lambda c: (-c["score"], len(c["code"]), c["code"]))
+        brutes = mesures_recherche(cands)
         for i, c in enumerate(codes):
-            c["traits"] = traits(c, i, len(codes), desc, self.base)
+            c["traits"] = traits(c, i, len(codes), desc, self.base, brutes)
         if self.poids:
             for c in codes:
                 c["p_catalogue"] = round(self.probabilite(c["traits"]), 4)
