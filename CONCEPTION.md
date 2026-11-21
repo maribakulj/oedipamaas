@@ -205,7 +205,7 @@ Chaque famille émet des codes avec leur preuve. « Compilée » veut dire tiré
 | F relations | une relation devient une notation qui nomme les deux termes | homme `riding` cheval → 46C13141 | écrite (règle générale) |
 | G corps et gestes | type et attributs des personnes → âges (31D), postures (31A23), gestes (31A25) ; émotions → 56 | « old man, kneeling, weeping » | écrite (règle générale) |
 | H concepts | concept → idée abstraite ; personnification seulement si une figure porte les attributs du libellé | « Justice » + femme à la balance et à l'épée → 59C2 | compilée |
-| I hiérarchie | pas de doublon parent-enfant ; frères à égalité → parent commun s'il est assez profond ; un code trop général n'est pas émis seul | trois « mountain » concurrents → 25H11 | écrite (règle générale) |
+| I hiérarchie | pas de doublon parent-enfant ; récits à égalité → ancêtre commun s'il est assez profond ; un seul sujet narratif ; les ancêtres (deux niveaux) des meilleurs codes deviennent candidats, et la calibration apprend quand le code plus général est le meilleur pari (repli sur le parent sûr) | trois « mountain » concurrents → 25H11 | écrite (règle générale) |
 | J exclusions | incohérences et codes ubiquitaires : 49L8 seulement si un texte est transcrit ; un nom incertain ne crée pas seul un code à nom | — | écrite, chaque clause testée et mesurée |
 
 ### 6.2 Compilées, écrites ou apprises
@@ -228,9 +228,10 @@ probabilité basse. Les alternatives du descripteur servent deux fois : comme ca
 
 ### 7.1 Le score
 
-Chaque candidat retenu par le raisonnement porte quelques nombres : scores lexical et sémantique, rang, champ d'origine,
-confiance du descripteur, familles qui l'appuient, nombre et rareté des faits d'appui, profondeur de la notation,
-conflits. Une **régression logistique** (quelques dizaines de poids, lisibles) les transforme en probabilités :
+Chaque candidat retenu par le raisonnement porte quelques nombres (ses « traits », écrits dans la sortie) : contribution
+de chaque règle, mesures brutes de la recherche (meilleur cosinus, couverture lexicale pondérée par la rareté des mots,
+meilleur rang), confiance du descripteur, nombre de familles et de mentions qui l'appuient, profondeur et chapitre de la
+notation, repli sur un ancêtre et nombre de descendants appuyés. Une **régression logistique** (quelques dizaines de poids, lisibles) les transforme en probabilités :
 
 - `p_catalogue` : probabilité que le code (ou un de ses descendants) soit dans le catalogue de l'image, apprise sur un
   ensemble de développement étiqueté. Seuls les poids entrent dans le dépôt (`poids/vN.json`).
