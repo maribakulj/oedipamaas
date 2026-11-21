@@ -19,6 +19,11 @@
 champ_sujet('subject.title').
 champ_sujet('subject.alternatives').
 
+% D'où vient une mention : le sujet, l'ensemble de la description, ou un autre champ.
+origine(C, sujet) :- champ_sujet(C), !.
+origine(description, globale) :- !.
+origine(_, autre).
+
 sous_propre(N, N) :- ic_propre(N), !.
 sous_propre(N, P) :- ic_ancetre(N, P), ic_propre(P), !.
 
@@ -27,18 +32,16 @@ recit(N) :- sous_propre(N, P), P \== N.
 
 % --- Recherche : similarités et couvertures, séparées selon que la mention vient du sujet ou non -------------------
 trait(N, T, S, [K]) :-
-    cand(N, K, Src, S, _, _, _), memberchk(Src, [lex, sem]), m(K, C),
-    ( champ_sujet(C) -> Ou = sujet ; Ou = autre ),
+    cand(N, K, Src, S, _, _, _), memberchk(Src, [lex, sem]), m(K, C), origine(C, Ou),
     atomic_list_concat([Src, '_', Ou], T).
 trait(N, T, D, [K]) :-
-    cand(N, K, Src, _, _, _, D), memberchk(Src, [lex, sem]), m(K, C),
-    ( champ_sujet(C) -> T = dcov_sujet ; T = dcov_autre ).
+    cand(N, K, Src, _, _, _, D), memberchk(Src, [lex, sem]), m(K, C), origine(C, Ou),
+    atomic_list_concat([dcov_, Ou], T).
 trait(N, T, Q, [K]) :-
-    cand(N, K, Src, _, _, Q, _), memberchk(Src, [lex, sem]), m(K, C),
-    ( champ_sujet(C) -> T = qcov_sujet ; T = qcov_autre ).
+    cand(N, K, Src, _, _, Q, _), memberchk(Src, [lex, sem]), m(K, C), origine(C, Ou),
+    atomic_list_concat([qcov_, Ou], T).
 trait(N, T, W, [K]) :-                                  % expression égale à un mot clé ou à la tête du libellé
-    cand(N, K, Src, W, _, _, _), memberchk(Src, [mot, tete]), m(K, C),
-    ( champ_sujet(C) -> Ou = sujet ; Ou = autre ),
+    cand(N, K, Src, W, _, _, _), memberchk(Src, [mot, tete]), m(K, C), origine(C, Ou),
     atomic_list_concat(['exact_', Src, '_', Ou], T).
 
 % --- Noms propres -----------------------------------------------------------------------------------------------------

@@ -23,10 +23,10 @@ FAMILLES_CHAMPS = {
     "persons.who": "personne", "persons.recognised_by": "personne", "entities.type": "entite",
     "entities.attributes": "entite", "relations": "relation", "actions": "action", "gestures_emotions": "geste",
     "concepts": "concept", "concepts.symbole": "concept", "roles": "role", "setting": "cadre", "texts": "texte",
-    "genre_function": "genre", "keywords": "motcle", "period_style": "epoque"}
+    "genre_function": "genre", "keywords": "motcle", "period_style": "epoque", "description": "globale"}
 # Champs où l'on cherche les attributs d'un saint et les participants d'un récit (tout ce qui décrit l'image, hors
 # sujet : la vérification doit venir d'ailleurs que de l'affirmation).
-CHAMPS_INDICES = tuple(c for c, f in FAMILLES_CHAMPS.items() if f != "sujet")
+CHAMPS_INDICES = tuple(c for c, f in FAMILLES_CHAMPS.items() if f not in ("sujet", "globale"))
 # Traits dont le plus grand dit la meilleure preuve d'un code (classement des candidats quand il n'y a pas de poids,
 # et budget des candidats envoyés à la décision) ; tous dans [0, 1].
 PREUVES = ("sem_sujet", "sem_autre", "dcov_sujet", "dcov_autre", "exact_mot_sujet", "exact_mot_autre",

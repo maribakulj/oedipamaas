@@ -111,7 +111,14 @@ def lire(d: dict, image: str) -> Description:
         _lire_v2(d, desc)
     else:
         _lire_v1(d, desc)
+    # Une mention d'ensemble : ce que dit la description du sujet et de la scène, en un texte (recherche globale).
+    ensemble = [m.texte for m in desc.mentions if m.champ in CHAMPS_ENSEMBLE]
+    if ensemble:
+        desc.ajouter("description", "(ensemble)", " ; ".join(ensemble)[:1000])
     return desc
+
+
+CHAMPS_ENSEMBLE = ("subject.title", "subject.alternatives", "subject.source", "actions", "concepts", "setting")
 
 
 def _lire_v2(d, desc):

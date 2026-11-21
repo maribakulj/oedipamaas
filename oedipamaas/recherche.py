@@ -18,7 +18,7 @@ from .lecture import Description
 # école) ne désigne pas une notation.
 CHAMPS_RECHERCHE = ("subject.title", "subject.alternatives", "subject.type", "persons.who", "persons.recognised_by",
                     "entities.type", "entities.attributes", "relations", "actions", "gestures_emotions", "concepts",
-                    "concepts.symbole", "roles", "setting", "texts", "genre_function", "keywords")
+                    "concepts.symbole", "roles", "setting", "texts", "genre_function", "keywords", "description")
 CHAMPS_NOMS = ("persons.who", "subject.title", "subject.alternatives", "texts")
 # Honorifiques des noms de saints et de personnes sacrées (fait de langue : abréviations usuelles en anglais, latin,
 # langues romanes et germaniques).
