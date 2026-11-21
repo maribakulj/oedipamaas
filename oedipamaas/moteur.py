@@ -165,6 +165,11 @@ class Moteur:
         for c in par_code.values():
             self._structure(c, par_code, mentions, descendants, enfants)
         codes = sorted(par_code.values(), key=ordre_de_preuve)
+        # Preuve relative : la place du code parmi ceux de la même description (comparaison interne, pas un a priori).
+        meilleure = max((c["traits"]["preuve_somme"] for c in codes), default=0.0) or 1.0
+        for i, c in enumerate(codes):
+            c["traits"]["rang_preuve"] = float(i)
+            c["traits"]["preuve_relative"] = round(c["traits"]["preuve_somme"] / meilleure, 4)
         codes += self._ancetres_candidats(codes[:BUDGET_REPLI], par_code)
         if self.cles:
             codes += self._codes_a_cle(desc, codes[:BUDGET_CLES], mentions)
