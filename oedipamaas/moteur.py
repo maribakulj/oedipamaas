@@ -33,6 +33,7 @@ PREUVES = ("sem_sujet", "sem_autre", "dcov_sujet", "dcov_autre", "exact_mot_suje
            "exact_tete_sujet", "exact_tete_autre", "nom", "source_exacte")
 BUDGET_SAINTS = 10      # saints proposés par leurs attributs seuls, par image (budget de calcul, pas une décision)
 BUDGET_REPLI = 15       # meilleurs codes dont les ancêtres deviennent candidats
+BUDGET_SORTIE = 120     # codes écrits par image (stockage ; les retenus sont toujours en tête)
 
 
 def version_git() -> str:
@@ -160,9 +161,10 @@ class Moteur:
         codes = sorted(par_code.values(), key=ordre_de_preuve)
         codes += self._ancetres_candidats(codes[:BUDGET_REPLI], par_code)
         self._decider(codes)
+        codes = codes[:BUDGET_SORTIE]     # les retenus sont en tête (ordre de la décision)
         for c in codes:
             c["iconclass"] = self.base.n[c["code"]]["libelle"]
-            c["preuves"] = sorted(c["preuves"], key=lambda p: (-p["valeur"], p["regle"], str(p["faits"])))[:12]
+            c["preuves"] = sorted(c["preuves"], key=lambda p: (-p["valeur"], p["regle"], str(p["faits"])))[:5]
         utilisees = {k for c in codes if c["statut"] == "retenu" for k in c["mentions"]}
         sortie["codes"] = [{k: v for k, v in c.items() if k != "mentions"} for c in codes]
         sortie["objets"] = self._objets(desc, codes)
