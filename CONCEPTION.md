@@ -11,6 +11,13 @@ pouvoir être amélioré puis rejoué sur toutes les descriptions déjà faites,
 
 ## 0. En bref
 
+**Principe : un moteur pour tout corpus et tout le vocabulaire d'Iconclass.** Ce qui décide ne vient que de trois
+sources : la structure et les textes d'Iconclass, Wikidata (P1256), et quelques faits de langue documentés une fois
+(pluriel, graphie, honorifiques). Les règles mesurent, elles ne filtrent pas : aucune constante de décision n'est écrite
+à la main, aucune liste propre à un corpus, aucun correctif tiré d'une image vue. La décision est apprise à partir de
+traits qui décrivent la preuve (jamais « ce que tel catalogue contient d'habitude »), et sa généralité se mesure hors
+corpus : apprendre sur un corpus, mesurer sur un autre.
+
 1. **Lire toute la description.** Le descripteur dit le sujet et sa source, les personnes, les objets avec leur boîte,
    les relations, les actions, les gestes et émotions, les concepts, les rôles, le cadre, les textes transcrits, le
    genre et la fonction. Chaque champ est lu et dirigé vers les chapitres d'Iconclass où il a du sens.
@@ -163,9 +170,12 @@ Règle de choix écrite d'avance, par champ, sur l'ensemble de développement : 
 champ si son rappel à 20 candidats (même branche) dépasse celui de la lexicale d'au moins 5 points ; la fusion si elle
 ajoute au moins 3 points à la meilleure des deux ; sinon la lexicale seule.
 
-### 5.2 Le routage : chaque champ vers ses chapitres
+### 5.2 Le champ d'origine : un trait, pas un filtre
 
-Le routage est une préférence (un bonus de score), pas un filtre : un objet peut tomber dans un chapitre inattendu.
+Chaque mention interroge toutes les notations. Le champ d'où vient une preuve (sujet, personne, entité, relation,
+action, geste, concept, rôle, cadre, texte, genre, mot clé) devient un trait du code ; c'est la décision apprise qui
+dit ce que vaut, par exemple, un récit biblique proposé seulement par un objet. Le tableau ci-dessous dit ce qu'on
+attend de chaque champ ; il n'est pas appliqué comme une règle.
 
 | Champ | Chapitres visés d'abord | Ce que le moteur en fait |
 |---|---|---|
@@ -186,36 +196,38 @@ Le routage est une préférence (un bonus de score), pas un filtre : un objet pe
 | `keywords` | 2, 4, 25-49 | lexicale + sémantique, poids plus faible |
 | `period_style` | aucun | contexte seulement |
 
-La table est écrite à la main (c'est la seule part de la recherche qui l'est) ; ses bonus sont appris (§ 7).
-
 ## 6. Le raisonnement symbolique
 
-### 6.1 Les familles de règles
+### 6.1 Les règles mesurent
 
-Chaque famille émet des codes avec leur preuve. « Compilée » veut dire tirée d'Iconclass ou de Wikidata par programme ;
-« écrite » veut dire une règle générale écrite à la main, qui ne contient aucune culture.
+Chaque règle Prolog rend un **trait** d'une notation : une quantité, avec les mentions qui la fondent. Aucune ne
+retient ni n'écarte un code sur un seuil écrit à la main.
 
-| Famille | Ce qu'elle fait | Exemple | Origine |
-|---|---|---|---|
-| A ancrage | mention → notation par la recherche (§ 5), avec le routage | entité « lion » → 25F23(LION) | écrite (règle générale) |
-| B nom | un nom (personnes, titre, texte transcrit) → notation à nom, **appuyée** par au moins un fait compatible | « Saint Jerome » + auréole → 11H(JEROME) | index compilé |
-| C attributs | saint nommé : attributs vus parmi ses « possible attributes » (appui) ; figure à auréole sans nom : saints classés par attributs vus, pondérés par leur rareté (la roue désigne Catherine, le livre presque personne) | auréole + lion + crâne + chapeau de cardinal → 11H(JEROME) | compilée |
-| D épisode | candidats narratifs (titre, alternatives, source) vérifiés par leurs participants : part des noms et des choses du libellé retrouvés dans les personnes, entités et actions ; on garde le plus profond qui tient, sinon l'histoire entière | « David beheading Goliath », « 1 Samuel 17 », David + géant + épée → 71H1443 ; si les frères se valent → 71H144, voire 71H14 | compilée |
-| E gabarit des saints | place le saint dans le gabarit de sa vie selon le sujet et les actions | portrait seul du saint → 11H(X)9 ; martyre → 11H(X)6 | compilée |
-| F relations | une relation devient une notation qui nomme les deux termes | homme `riding` cheval → 46C13141 | écrite (règle générale) |
-| G corps et gestes | type et attributs des personnes → âges (31D), postures (31A23), gestes (31A25) ; émotions → 56 | « old man, kneeling, weeping » | écrite (règle générale) |
-| H concepts | concept → idée abstraite ; personnification seulement si une figure porte les attributs du libellé | « Justice » + femme à la balance et à l'épée → 59C2 | compilée |
-| I hiérarchie | pas de doublon parent-enfant ; récits à égalité → ancêtre commun s'il est assez profond ; un seul sujet narratif ; les ancêtres (deux niveaux) des meilleurs codes deviennent candidats, et la calibration apprend quand le code plus général est le meilleur pari (repli sur le parent sûr) | trois « mountain » concurrents → 25H11 | écrite (règle générale) |
-| J exclusions | incohérences et codes ubiquitaires : 49L8 seulement si un texte est transcrit ; un nom incertain ne crée pas seul un code à nom | — | écrite, chaque clause testée et mesurée |
+| Trait | Ce qu'il mesure | Source |
+|---|---|---|
+| similarités | cosinus et BM25 normalisé entre une mention et le libellé, selon que la mention vient du sujet ou d'ailleurs | recherche (§ 5) |
+| couvertures | part pondérée par la rareté des mots de la mention couverte par la notation, et du libellé couverte par la mention | idem |
+| expression exacte | la mention est un mot clé, la tête du libellé ou un alias Wikidata ; poids décroissant avec le nombre de notations qui la portent | Iconclass, Wikidata |
+| nom | un nom propre d'Iconclass ou de Wikidata est dans la description ; contexte : personne nommée, honorifique devant (« saint… »), suivi d'un nombre (une référence), libre | idem |
+| attributs | attributs possibles du saint vus dans la description : somme de leur rareté, nombre, part | libellés d'Iconclass |
+| source | la référence donnée (« 1 Samuel 17 ») est celle de la notation, ou celle d'une histoire dont elle est un épisode | libellés d'Iconclass |
+| participants | part des noms et mots clés du libellé narratif retrouvés hors des champs du sujet | idem |
+| ancêtres reconnus | des mots clés ou têtes des ancêtres de la notation sont dans la description, et à quelle profondeur | hiérarchie d'Iconclass |
+| identité héritée | un épisode de la vie d'un saint (11H(X)n) porte les traits de nom et d'attributs de X | structure d'Iconclass |
+| structure | profondeur, récit ou non, descendants et frères parmi les candidats, champs d'où vient la preuve | idem |
 
-### 6.2 Compilées, écrites ou apprises
+Une seule contrainte, structurelle : un code à nom propre (et ses sous-rubriques) affirme une identité ; sans nom ni
+attribut vus, il n'est pas proposé. Le **repli sur le parent sûr** est aussi structurel : les ancêtres (deux niveaux) des
+meilleurs codes deviennent candidats, avec les traits de leur descendant ; la décision apprend quand le plus général
+est le meilleur pari. La projection finale garde le plus précis des codes retenus d'une même branche.
 
-- **Compilées d'abord.** Tout ce qui est culture (qui est qui, quel attribut, quel épisode, quelle source) vient
-  d'Iconclass et de Wikidata.
-- **Écrites** : seulement des règles générales (vérifier, combiner, replier, exclure), sans nom ni épisode.
-- **Apprises** : d'abord seulement des poids (§ 7). Des motifs appris (un motif JSON par code narratif, écrit hors
-  ligne, compilé puis validé sur les données de développement) ne viennent que si la famille D, compilée, échoue sur
-  les récits ; chaque motif est gardé ou rétrogradé selon sa précision mesurée.
+### 6.2 Compilé, documenté, appris
+
+- **Compilé** : tout ce qui est culture (qui est qui, quel attribut, quel épisode, quelle source) vient d'Iconclass
+  et de Wikidata, par programme.
+- **Documenté une fois** : quelques faits de langue (pluriel, graphie britannique, honorifiques), sans rapport avec un
+  corpus.
+- **Appris** : la décision (§ 7), seulement à partir des traits, et validée hors corpus.
 
 ### 6.3 Ce que vérifie la vérification
 
