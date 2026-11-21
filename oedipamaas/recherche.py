@@ -49,9 +49,55 @@ class Base:
             r = json.loads(ligne)
             self.n[r["n"]] = r
         self.manifeste = json.loads((self.dossier / "manifeste.json").read_text(encoding="utf8"))
+        f = self.dossier / "cles.json"
+        self.cles = json.loads(f.read_text(encoding="utf8")) if f.exists() else {}
         self._sous_propre = {}
         self._ancetres = {}
         self._index()
+        self._index_cles()
+
+    @staticmethod
+    def sans_cle(n: str) -> str:
+        """« 25F23(LION)(+12) » → « 25F23(LION) »."""
+        return n[: n.rindex("(+")] if n.endswith(")") and "(+" in n else n
+
+    def libelle(self, n: str) -> str:
+        if n in self.n:
+            return self.n[n]["libelle"]
+        b = self.sans_cle(n)
+        fam, s = self.n.get(b, {}).get("famille_cle"), n[n.rindex("(+") + 2:-1] if b != n else None
+        texte_cle = self.cles.get(fam, {}).get(s, {}).get("texte", "") if fam else ""
+        return f"{self.n.get(b, {}).get('libelle', '')} (+ {texte_cle})"
+
+    def _index_cles(self):
+        """Textes et mots clés des clés : racines (couverture) et expressions exactes."""
+        self.cles_racines, self.cles_exactes, self.cles_par_racine = {}, defaultdict(set), defaultdict(set)
+        for fam, d in self.cles.items():
+            for s, v in d.items():
+                self.cles_racines[(fam, s)] = {texte.racine(m) for m in texte.jetons(v["texte"])}
+                for r in self.cles_racines[(fam, s)]:
+                    self.cles_par_racine[r].add((fam, s))
+                for e in [v["texte"]] + v["mots"]:
+                    if texte.norme(e):
+                        self.cles_exactes[texte.norme(e)].add((fam, s))
+
+    def cles_vues(self, desc: Description, top: int = 3) -> list[tuple[str, str, int, float, float, float]]:
+        """Clés que la description évoque : (famille, suffixe, mention, exacte, q_cov, d_cov) ; par mention, les
+        « top » clés de meilleure couverture de leur texte (budget de calcul)."""
+        out = []
+        for m in desc.mentions:
+            if m.champ not in CHAMPS_RECHERCHE:
+                continue
+            rq = {texte.racine(x) for x in texte.jetons(m.texte)}
+            exactes = self.cles_exactes.get(m.norme, set())
+            scores = []
+            for cle in set().union(*(self.cles_par_racine.get(r, set()) for r in rq)) | exactes:
+                rk = self.cles_racines[cle]
+                commun = rq & rk
+                scores.append((self.part_idf(commun, rk), self.part_idf(commun, rq), cle))
+            for d, q_, (fam, s) in sorted(scores, key=lambda x: (-x[0], -x[1], x[2]))[:top]:
+                out.append((fam, s, m.k, float((fam, s) in exactes), round(q_, 4), round(d, 4)))
+        return out
 
     def sous_propre(self, n: str) -> str | None:
         """Ancêtre (ou soi) à nom propre : 11H(JEROME)36 → 11H(JEROME)."""
@@ -61,6 +107,9 @@ class Base:
         return self._sous_propre[n]
 
     def ancetres(self, n: str) -> list[str]:
+        if n not in self._ancetres and n not in self.n and self.sans_cle(n) != n:
+            b = self.sans_cle(n)               # code à clé : la notation sans clé, puis ses ancêtres
+            self._ancetres[n] = [b] + self.ancetres(b)
         if n not in self._ancetres:
             out, r = [], self.n.get(n)
             while r is not None and r["parent"]:

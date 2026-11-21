@@ -51,7 +51,7 @@ def base_mini(tmp_path_factory):
     depot = tmp_path_factory.mktemp("iconclass")
     recs = []
     for n, enfants in NOTATIONS.items():
-        r = [f"N {n}"]
+        r = [f"N {n}"] + (["K 25Fk"] if n == "25F23(LION)" else [])
         if enfants:
             r.append(f"C {enfants[0]}")
             r += [f"; {e}" for e in enfants[1:]]
@@ -61,6 +61,9 @@ def base_mini(tmp_path_factory):
     (depot / "kw" / "en").mkdir(parents=True)
     (depot / "txt" / "en" / "txt_en_mini.txt").write_text("".join(f"{n}|{t}\n" for n, t in TEXTES.items()))
     (depot / "kw" / "en" / "kw_en_mini.txt").write_text("".join(f"{n}|{k}\n" for n, ks in MOTS.items() for k in ks))
+    (depot / "keys.txt").write_text("K 25Fk\nS 0\n; 12\n; 22\n$\n")
+    (depot / "txt" / "en" / "txt_en_keys.txt").write_text("25Fk0|variant\n25Fk12|heraldic animals\n25Fk22|male animal\n")
+    (depot / "kw" / "en" / "kw_en_keys.txt").write_text("25Fk12|heraldry\n25Fk22|male\n")
     sortie = tmp_path_factory.mktemp("base")
     compiler(depot, sortie)
     return sortie
@@ -203,3 +206,15 @@ def test_alias_wikidata(tmp_path):
     f.write_text(json.dumps({"results": {"bindings": [
         {"v": {"value": "11H(JEROME)"}, "libelles": {"value": "Hieronymus|Jr|Saint Jerome"}}]}}))
     assert alias(f) == {"11H(JEROME)": ["hieronymus", "saint jerome"]}
+
+
+def test_cles(moteur, base_mini):
+    """Une clé d'Iconclass évoquée par la description donne le code à clé, avec les traits de la clé."""
+    cles = json.loads((base_mini / "cles.json").read_text())
+    assert cles["25Fk"]["12"]["texte"] == "heraldic animals" and "heraldry" in cles["25Fk"]["12"]["mots"]
+    d = {"entities": [{"id": "e1", "type": "lion", "attributes": ["heraldic"]}], "keywords": ["lion", "heraldry"]}
+    s = moteur.coder(lire(d, "lion"))
+    c = code(s, "25F23(LION)(+12)")
+    assert c and c["traits"]["cle"] == 1.0 and c["traits"]["cle_exacte"] == 1.0
+    assert "heraldic animals" in c["iconclass"]
+    assert moteur.base.ancetres("25F23(LION)(+12)")[0] == "25F23(LION)"

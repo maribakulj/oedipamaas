@@ -34,6 +34,8 @@ PREUVES = ("sem_sujet", "sem_autre", "dcov_sujet", "dcov_autre", "exact_mot_suje
 BUDGET_SAINTS = 10      # saints proposés par leurs attributs seuls, par image (budget de calcul, pas une décision)
 BUDGET_REPLI = 15       # meilleurs codes dont les ancêtres deviennent candidats
 BUDGET_SORTIE = 120     # codes écrits par image (stockage ; les retenus sont toujours en tête)
+BUDGET_CLES = 20        # meilleurs codes qui peuvent recevoir une clé (+…)
+CLES_PAR_CODE = 2       # clés gardées par code de base (les mieux évoquées)
 
 
 def version_git() -> str:
@@ -160,10 +162,11 @@ class Moteur:
             self._structure(c, par_code, mentions, descendants, enfants)
         codes = sorted(par_code.values(), key=ordre_de_preuve)
         codes += self._ancetres_candidats(codes[:BUDGET_REPLI], par_code)
+        codes += self._codes_a_cle(desc, codes[:BUDGET_CLES], mentions)
         self._decider(codes)
         codes = codes[:BUDGET_SORTIE]     # les retenus sont en tête (ordre de la décision)
         for c in codes:
-            c["iconclass"] = self.base.n[c["code"]]["libelle"]
+            c["iconclass"] = self.base.libelle(c["code"])
             c["preuves"] = sorted(c["preuves"], key=lambda p: (-p["valeur"], p["regle"], str(p["faits"])))[:5]
         utilisees = {k for c in codes if c["statut"] == "retenu" for k in c["mentions"]}
         sortie["codes"] = [{k: v for k, v in c.items() if k != "mentions"} for c in codes]
@@ -217,6 +220,38 @@ class Moteur:
         for a, c in nouveaux.items():
             c["traits"]["nb_descendants"] = float(compte[a])
         return sorted(nouveaux.values(), key=lambda c: c["code"])
+
+    def _codes_a_cle(self, desc, meilleurs, mentions) -> list[dict]:
+        """Clés d'Iconclass : un candidat de la famille F, et une clé s de F que la description évoque (texte ou mot
+        clé de la clé), donnent le candidat « N(+s) », avec les traits de N et ceux de la clé."""
+        vues = defaultdict(list)
+        for fam, s, k, exacte, q_, d in self.base.cles_vues(desc):
+            vues[fam].append((s, k, exacte, q_, d))
+        out = {}
+        for c in meilleurs:
+            r = self.base.n.get(c["code"])
+            if not r or not r.get("famille_cle") or r["famille_cle"] not in vues:
+                continue
+            for s, k, exacte, q_, d in vues[r["famille_cle"]]:
+                n = f"{c['code']}(+{s})"
+                if n not in out:
+                    out[n] = {"code": n, "mentions": set(c["mentions"]), "preuves": [],
+                              "traits": dict(c["traits"]) | {"cle": 1.0, "cle_exacte": 0.0, "cle_qcov": 0.0,
+                                                             "cle_dcov": 0.0, "prof": float(r["prof"] + 1),
+                                                             "ancetre": 0.0}}
+                t = out[n]["traits"]          # plusieurs mentions peuvent évoquer la même clé : le plus fort reste
+                t["cle_exacte"], t["cle_qcov"], t["cle_dcov"] = (max(t["cle_exacte"], exacte), max(t["cle_qcov"], q_),
+                                                                 max(t["cle_dcov"], d))
+                out[n]["mentions"].add(k)
+                out[n]["preuves"].append({"regle": "cle", "valeur": max(d, exacte), "cle": s,
+                                          "faits": [{"chemin": mentions[k].chemin, "texte": mentions[k].texte}]})
+        # Budget : par code de base, les CLES_PAR_CODE clés les mieux évoquées.
+        par_base = defaultdict(list)
+        for c in out.values():
+            par_base[self.base.sans_cle(c["code"])].append(c)
+        gardes = [c for cs in par_base.values() for c in sorted(
+            cs, key=lambda c: (-c["traits"]["cle_exacte"], -c["traits"]["cle_dcov"], c["code"]))[:CLES_PAR_CODE]]
+        return sorted(gardes, key=lambda c: c["code"])
 
     def _decider(self, codes):
         """Décision apprise : probabilité, puis les k meilleurs selon le critère des poids (probabilité, ou espérance
