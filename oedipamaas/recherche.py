@@ -112,7 +112,7 @@ class Base:
                 self.postings[m].append((n, c))
             self.longueur[n] = len(rl) + len(rk)
             self.racines_libelle[n] = set(rl)
-            for k in r["mots"]:
+            for k in r["mots"] + r.get("alias", []):    # alias Wikidata : correspondance exacte seulement
                 if texte.norme(k):
                     self.par_mot[texte.norme(k)].add(n)
             if r["tete"]:
@@ -130,6 +130,8 @@ class Base:
                 noms.add(texte.norme(m[1]))
         for alias in re.findall(r"\(([A-Z][a-z]+(?: [A-Z][a-z]+)*)\)", r["libelle"]):
             noms.add(texte.norme(alias))
+        for alias in r.get("alias", []):            # Wikidata (P1256) : « saint jerome », « hieronymus »…
+            noms.add(PREFIXES_SAINT.sub("", alias))
         return {n for n in noms if len(n) > 2}
 
     def part_idf(self, commun: set[str], tout: set[str]) -> float:

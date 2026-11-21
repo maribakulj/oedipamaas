@@ -13,7 +13,7 @@ from pathlib import Path
 def cmd_base(a):
     from .base import compiler
 
-    m = compiler(Path(a.depot), Path(a.sortie))
+    m = compiler(Path(a.depot), Path(a.sortie), Path(a.wikidata) if a.wikidata else None)
     print(json.dumps(m["comptes"], ensure_ascii=False, sort_keys=True))
 
 
@@ -65,6 +65,7 @@ def main(argv=None):
     b = s.add_parser("base", help="compiler la base depuis un clone de iconclass/data")
     b.add_argument("depot")
     b.add_argument("sortie")
+    b.add_argument("--wikidata", help="instantané P1256 (oedipamaas.wikidata.telecharger) : alias des notations")
     b.set_defaults(f=cmd_base)
     c = s.add_parser("coder", help="coder un dossier de descriptions (*.json) vers codes.jsonl")
     c.add_argument("base")

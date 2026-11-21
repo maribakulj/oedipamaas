@@ -102,9 +102,14 @@ def q(s) -> str:
     return "'" + str(s).replace("\\", "\\\\").replace("'", "\\'") + "'"
 
 
-def compiler(depot: Path, sortie: Path) -> dict:
+def compiler(depot: Path, sortie: Path, wikidata: Path | None = None) -> dict:
+    """wikidata : instantané P1256 (voir wikidata.py) ; ses alias s'ajoutent aux notations connues."""
     depot, sortie = Path(depot), Path(sortie)
     sortie.mkdir(parents=True, exist_ok=True)
+    alias_wd = {}
+    if wikidata:
+        from .wikidata import alias
+        alias_wd = alias(Path(wikidata))
     parent, renvois, a_cle = {}, defaultdict(list), set()
     notations = []
     for r in enregistrements(depot / "notations.txt"):
@@ -162,6 +167,10 @@ def compiler(depot: Path, sortie: Path) -> dict:
             rec["refs"] = [list(r) for r in refs]
         if lib and n[:1] in ("1", "7", "8", "9"):
             rec["participants"] = participants(lib, kws)
+        if n in alias_wd:
+            rec["alias"] = alias_wd[n]
+            comptes["notations_a_alias"] += 1
+            comptes["alias"] += len(alias_wd[n])
         lignes.append(json.dumps(rec, ensure_ascii=False, sort_keys=True))
         # Faits Prolog
         if rec["parent"]:
@@ -195,5 +204,8 @@ def compiler(depot: Path, sortie: Path) -> dict:
     manifeste = {"source": "iconclass/data", "commit": commit_du_depot(depot), "comptes": dict(comptes),
                  "sha256": {f: hashlib.sha256((sortie / f).read_bytes()).hexdigest()
                             for f in ("notations.jsonl", "base.pl")}}
+    if wikidata:
+        manifeste["wikidata"] = {"fichier": Path(wikidata).name,
+                                 "sha256": hashlib.sha256(Path(wikidata).read_bytes()).hexdigest()}
     (sortie / "manifeste.json").write_text(json.dumps(manifeste, indent=1, sort_keys=True) + "\n", encoding="utf8")
     return manifeste
