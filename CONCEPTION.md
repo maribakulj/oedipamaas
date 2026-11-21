@@ -15,9 +15,9 @@ pouvoir être amélioré puis rejoué sur toutes les descriptions déjà faites,
    les relations, les actions, les gestes et émotions, les concepts, les rôles, le cadre, les textes transcrits, le
    genre et la fonction. Chaque champ est lu et dirigé vers les chapitres d'Iconclass où il a du sens.
 2. **Ne pas écrire de culture à la main : la compiler depuis Iconclass.** Iconclass contient déjà le raisonnement de
-   l'iconographe : 5 095 libellés donnent les attributs possibles d'un saint (« lion, skull, cardinal's hat… »), 865
-   libellés citent leur source (729 passages bibliques comme « 1 Samuel 17 », 136 passages d'Ovide), et chaque saint
-   suit le même gabarit de vie (en groupe, jeunesse, miracles, martyre, portrait…). Les règles sont tirées de ces
+   l'iconographe : les libellés de 227 saints donnent leurs attributs possibles (« lion, skull, cardinal's hat… »),
+   1 007 libellés citent leur source (1 244 références, passages bibliques comme « 1 Samuel 17 » ou d'Ovide), et
+   chaque saint suit le même gabarit de vie (en groupe, jeunesse, miracles, martyre, portrait…). Les règles sont tirées de ces
    textes par programme.
 3. **Chercher les candidats par le sens autant que par les mots.** Le descripteur écrit « David beheading Goliath »,
    Iconclass « David beheads Goliath with a sword » ; ailleurs, les mots diffèrent tout à fait pour un même sens. Une
@@ -75,11 +75,11 @@ mentions ──► 2. RECHERCHE (Python) : candidats par mention
    │            routage : chaque champ vers ses chapitres (§ 5.2)
    ▼
 faits d'image + candidats ──► 3. RAISONNEMENT (SWI-Prolog, base Iconclass compilée)
-                                 vérifie, combine, replie sur le parent, exclut
-                                 chaque code garde son arbre de preuve
+                                 vérifie, combine, exclut ; chaque appui garde ses faits
                                       │
                                       ▼
-                               4. SCORE (Python) : p_catalogue, p_juste, seuils
+                               4. SCORE (Python) : score, hiérarchie (descendant ou parent,
+                                  repli des récits à égalité, un seul sujet), p_catalogue, p_juste
                                       │
                                       ▼
                                5. SORTIE : codes.jsonl (codes, objets, relations, preuves,
@@ -105,8 +105,8 @@ chacune.
 | Hiérarchie | 40 716 notations, parents, ancêtres pré-calculés, profondeur | cohérence, repli, crédit hiérarchique |
 | Libellés et mots clés | anglais d'abord ; toutes les langues du dépôt ensuite | recherche lexicale ; noms et textes transcrits dans d'autres langues (« Hieronymus ») |
 | Noms propres | noms entre parenthèses (JEROME), noms des libellés et mots clés (« Jerome (St.) ») | index des noms (famille B) |
-| Attributs des saints | 5 095 libellés « possible attributes: … » | famille C |
-| Références de source | 729 références bibliques (livre, chapitre, versets), 136 d'Ovide (livre, vers) | famille D : la source donnée par le descripteur désigne directement une branche |
+| Attributs des saints | 227 saints à « possible attributes: … », chaque attribut pondéré par sa rareté | famille C |
+| Références de source | 1 244 références dans 1 007 libellés (livre biblique, chapitre, versets ; Ovide, livre, vers) | famille D : la source donnée par le descripteur désigne directement une branche |
 | Gabarits | structure commune des vies de saints (`11H(...)0` en groupe … `9` portrait) | famille E |
 | Renvois | renvois entre notations | voisinage de recherche, jamais un code seul |
 | Clés (+…) et noms libres (...) | presque toutes les notations déclarent une clé ; 1 184 gabarits à nom libre | phase 2, si leur part dans les catalogues le justifie |
@@ -170,7 +170,7 @@ Le routage est une préférence (un bonus de score), pas un filtre : un objet pe
 | Champ | Chapitres visés d'abord | Ce que le moteur en fait |
 |---|---|---|
 | `subject.title`, `subject.alternatives` | 7 (Bible), 9 (mythologie), 8 (littérature), 11H/11HH (vies de saints), 61 (événements), 5 (allégories) | recherche sémantique ; candidats narratifs à vérifier (famille D) |
-| `subject.source` | 7, 9, 8 | référence analysée (livre, chapitre, vers) comparée aux 865 références d'Iconclass |
+| `subject.source` | 7, 9, 8 | référence analysée (livre, chapitre, vers) comparée aux 1 244 références d'Iconclass |
 | `subject.type` | aucun code seul | oriente le routage (récit biblique → 7 ; portrait → 61B, 31D ; paysage → 25H…) |
 | `persons.who` | 11 (Christ, Marie, saints), 7 (personnages bibliques), 9 (dieux, héros), 82 (personnages littéraires), 61B (personnes historiques) | index des noms d'abord ; rôle sans nom → 3 et 4 |
 | `persons.recognised_by` | aucun code seul | preuves d'appui pour vérifier un nom (familles B, C) |

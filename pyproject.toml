@@ -1,0 +1,23 @@
+[project]
+name = "oedipamaas"
+version = "0.1.0"
+description = "Moteur iconographique : descriptions d'images en mots vers codes Iconclass prouvés"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["janus-swi>=1.5"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+oedipamaas = "oedipamaas.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["oedipamaas*"]
+
+[tool.setuptools.package-data]
+oedipamaas = ["regles/*.pl"]
