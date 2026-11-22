@@ -61,9 +61,27 @@ class Base:
         """« 25F23(LION)(+12) » → « 25F23(LION) »."""
         return n[: n.rindex("(+")] if n.endswith(")") and "(+" in n else n
 
+    @staticmethod
+    def sans_nom(n: str) -> str | None:
+        """Code construit sur un gabarit : « 25G4(TULIP) » → « 25G4 » (le parent du gabarit « 25G4(...) »)."""
+        m = re.match(r"^(.+?)\(([^)+][^)]*)\)$", n)
+        return m[1] if m else None
+
+    @property
+    def gabarits_par_parent(self) -> dict[str, str]:
+        """{parent: gabarit} : « 25G4 » → « 25G4(...) » (gabarits de premier niveau, « with NAME »)."""
+        if not hasattr(self, "_gabarits"):
+            self._gabarits = {r["parent"]: n for n, r in self.n.items()
+                              if r["gabarit"] and n.endswith("(...)") and r["parent"]}
+        return self._gabarits
+
     def libelle(self, n: str) -> str:
         if n in self.n:
             return self.n[n]["libelle"]
+        p = self.sans_nom(n)
+        if p and p in self.gabarits_par_parent:
+            g = self.n[self.gabarits_par_parent[p]]["libelle"].replace(" (with NAME)", "")
+            return f"{g}: {n[len(p) + 1:-1]}"
         b = self.sans_cle(n)
         fam, s = self.n.get(b, {}).get("famille_cle"), n[n.rindex("(+") + 2:-1] if b != n else None
         texte_cle = self.cles.get(fam, {}).get(s, {}).get("texte", "") if fam else ""
@@ -109,6 +127,9 @@ class Base:
     def ancetres(self, n: str) -> list[str]:
         if n not in self._ancetres and n not in self.n and self.sans_cle(n) != n:
             b = self.sans_cle(n)               # code à clé : la notation sans clé, puis ses ancêtres
+            self._ancetres[n] = [b] + self.ancetres(b)
+        if n not in self._ancetres and n not in self.n and self.sans_nom(n) in self.n:
+            b = self.sans_nom(n)               # gabarit instancié : le parent du gabarit, puis ses ancêtres
             self._ancetres[n] = [b] + self.ancetres(b)
         if n not in self._ancetres:
             out, r = [], self.n.get(n)

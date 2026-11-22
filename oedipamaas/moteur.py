@@ -36,6 +36,10 @@ BUDGET_REPLI = 15       # meilleurs codes dont les ancêtres deviennent candidat
 BUDGET_SORTIE = 120     # codes écrits par image (stockage ; les retenus sont toujours en tête)
 BUDGET_CLES = 20        # meilleurs codes qui peuvent recevoir une clé (+…)
 CLES_PAR_CODE = 2       # clés gardées par code de base (les mieux évoquées)
+BUDGET_GABARITS = 30    # meilleurs codes dont on instancie le gabarit « with NAME » s'ils en ont un
+NOMS_PAR_GABARIT = 2    # noms essayés par gabarit
+CHAMPS_NOMMABLES = ("entities.type", "keywords", "persons.who", "setting", "texts")   # champs qui nomment une chose
+GABARITS_PAR_IMAGE = 10 # instanciations gardées par image (les mieux accordées au gabarit)
 
 
 def version_git() -> str:
@@ -81,6 +85,7 @@ class Moteur:
                                  + (" + wikidata" if "wikidata" in self.base.manifeste else ""),
                          "regles": "v2", "poids": self.poids["version"] if self.poids else None,
                          "semantique": f"{self.sem.modele_nom} {self.sem.revision}" if self.sem else None}
+        self.noms_listes = {r["nom"] for r in self.base.n.values() if r.get("nom")}
         self._par_attribut = defaultdict(set)
         for n, r in self.base.n.items():
             for a, _ in r.get("attributs", []):
@@ -173,6 +178,7 @@ class Moteur:
         codes += self._ancetres_candidats(codes[:BUDGET_REPLI], par_code)
         if self.cles:
             codes += self._codes_a_cle(desc, codes[:BUDGET_CLES], mentions)
+        codes += self._gabarits_instancies(codes[:BUDGET_GABARITS], par_code, mentions)
         self._decider(codes)
         codes = codes[:BUDGET_SORTIE]     # les retenus sont en tête (ordre de la décision)
         for c in codes:
@@ -230,6 +236,51 @@ class Moteur:
         for a, c in nouveaux.items():
             c["traits"]["nb_descendants"] = float(compte[a])
         return sorted(nouveaux.values(), key=lambda c: c["code"])
+
+    def _gabarits_instancies(self, meilleurs, par_code, mentions) -> list[dict]:
+        """Gabarits « with NAME » d'Iconclass (« 25G4(...) », fleurs nommées) : si un candidat est le parent d'un
+        gabarit, chaque mention courte (≤ 3 mots, champ d'objet ou de personne) qui l'a proposé donne « 25G4(TULIP) »,
+        nom en majuscules ; traits du parent plus « gabarit »."""
+        gabarits = self.base.gabarits_par_parent
+        out = {}
+        for c in meilleurs:
+            if "ancetre" in c["traits"]:
+                continue
+            # Le parent du gabarit : le candidat lui-même (« 25G4 »), ou celui d'un nom listé (« 25G4(ROSE) », enfant
+            # du gabarit « 25G4(...) »).
+            p = c["code"] if c["code"] in gabarits else None
+            if p is None:
+                par = self.base.n.get(c["code"], {}).get("parent")
+                if par and self.base.n.get(par, {}).get("gabarit") and par.endswith("(...)"):
+                    p = self.base.n[par]["parent"]
+            if p not in gabarits:
+                continue
+            for k in sorted(c["mentions"]):
+                m = mentions[k]
+                if m.champ not in CHAMPS_NOMMABLES or not 0 < len(m.norme.split()) <= 3:
+                    continue
+                if m.norme in self.noms_listes:     # nom déjà listé par Iconclass (« tulip ») : pas de nom libre
+                    continue
+                nom = recherche.nom_de_personne(m.texte).upper() if m.champ == "persons.who" else m.norme.upper()
+                n = f"{p}({nom})"
+                if n in par_code or n in self.base.n or n in out:
+                    continue
+                t = dict(c["traits"]) | {"gabarit": 1.0, "gabarit_mots": float(len(nom.split())),
+                                         "gabarit_sim": self._accord(m.texte, p), "prof": c["traits"]["prof"] + 1}
+                out[n] = {"code": n, "traits": t, "mentions": set(c["mentions"]),
+                          "preuves": [{"regle": "gabarit", "valeur": 0.0, "gabarit": gabarits[p],
+                                       "faits": [{"chemin": m.chemin, "texte": m.texte}]}]}
+                if sum(1 for x in out if x.startswith(p + "(")) >= NOMS_PAR_GABARIT:
+                    break
+        gardes = sorted(out.values(), key=lambda c: (-c["traits"]["gabarit_sim"], c["code"]))[:GABARITS_PAR_IMAGE]
+        return sorted(gardes, key=lambda c: c["code"])
+
+    def _accord(self, texte_mention: str, n: str) -> float:
+        """Cosinus entre une mention et le libellé d'une notation (0 sans recherche sémantique)."""
+        if self.sem is None or n not in self.sem.position:
+            return 0.0
+        v = self.sem.encoder([texte_mention])[0]
+        return round(float(self.sem.vecteurs[self.sem.position[n]] @ v), 4)
 
     def _codes_a_cle(self, desc, meilleurs, mentions) -> list[dict]:
         """Clés d'Iconclass : un candidat de la famille F, et une clé s de F que la description évoque (texte ou mot
