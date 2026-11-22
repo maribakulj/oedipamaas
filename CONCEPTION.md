@@ -263,8 +263,10 @@ Deux mécanismes généraux existent mais sont désactivés par défaut, faute d
 **clés** (`--cles` : une clé d'Iconclass évoquée par la description donne le code à clé) et les **noms libres**
 (`--gabarits` : un gabarit « with NAME » reçoit le nom d'une mention). Ils restent à rejuger quand le rappel des codes
 de base aura progressé, car c'est lui qui les limite. La **structure de l'image** (`--structure-image` : entités
-situées et relations, § 6.1) est désactivée jusqu'à sa mesure : sur un même découpage des images, la calibration avec
-et sans ces traits, rien d'autre ne change.
+situées et relations, § 6.1) est désactivée pour la même raison : mesurée sur un même découpage des images, avec et
+sans ces traits et rien d'autre de changé, elle n'apporte pas assez à la décision (poids appris faibles ; le prédicat
+d'une relation est rarement dans un libellé). Les boîtes servent la sortie : chaque objet situé porte les codes retenus
+qu'il appuie (§ 8).
 
 ### 7.2 Les seuils
 
