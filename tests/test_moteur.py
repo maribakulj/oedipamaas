@@ -277,3 +277,39 @@ def test_structure_image(base_mini):
     sans = Moteur(base_mini).coder(lire(d, "david-situe"))
     noms = {k for c in sans["codes"] for k in c["traits"]}
     assert not noms & {"saillance_aire", "entites_appui", "relation_bouts", "relations_nb", "plan_foreground"}
+
+
+class FauxSens:
+    """Index sémantique de test : toutes les notations permises par le masque à 0,6, dans l'ordre des ids."""
+
+    def __init__(self, ids):
+        self.ids = ids
+        self.modele_nom, self.revision = "faux", "0"
+
+    def encoder(self, textes):
+        return None
+
+    def voisins(self, texte_mention, masque, top=10):
+        return [(n, 0.6) for n, ok in zip(self.ids, masque) if ok][:top]
+
+
+def test_noms_libres(base_mini):
+    """Un nom écrit inconnu d'Iconclass (« Bavo ») propose le parent d'un gabarit « with NAME » et le gabarit
+    instancié ; un nom connu (« Jerome ») et un mot commun en tête de mention (« Lion ») ne passent pas ; sans l'option,
+    rien."""
+    from oedipamaas.moteur import Moteur
+    m = Moteur(base_mini, noms_libres=True)
+    m.sem = FauxSens(sorted(m.base.n))
+    d = {"subject": {"title": "Saint Bavo with a falcon"}, "persons": [{"who": "Jerome"}],
+         "keywords": ["Lion"]}
+    s = m.coder(lire(d, "bavo"))
+    c = code(s, "11H(...)".replace("(...)", "(BAVO)"))
+    assert c["traits"]["gabarit"] == 1.0 and c["traits"]["nom_ecrit_sim"] == 0.6
+    assert c["traits"]["nom_ecrit_champ_sujet"] == 1.0
+    p = code(s, "11H")
+    assert p["traits"]["nom_ecrit"] == 1.0
+    noms = {x["code"] for x in s["codes"]}
+    assert not {n for n in noms if n.endswith("(JEROME)") and n != "11H(JEROME)"}
+    assert not any(n.endswith("(LION)") and n != "25F23(LION)" for n in noms)
+    m.noms_libres = False
+    assert not any("nom_ecrit" in x["traits"] for x in m.coder(lire(d, "bavo"))["codes"])

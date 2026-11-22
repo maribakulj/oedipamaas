@@ -34,12 +34,22 @@ PREUVES = ("sem_sujet", "sem_autre", "dcov_sujet", "dcov_autre", "exact_mot_suje
 BUDGET_SAINTS = 10      # saints proposés par leurs attributs seuls, par image (budget de calcul, pas une décision)
 BUDGET_REPLI = 15       # meilleurs codes dont les ancêtres deviennent candidats
 BUDGET_SORTIE = 120     # codes écrits par image (stockage ; les retenus sont toujours en tête)
+BUDGET_OPTIONS = 20     # candidats des options écrits en plus, au-delà du budget (pour la calibration)
+TRAITS_D_OPTION = ("nom_ecrit", "gabarit", "cle")
 BUDGET_CLES = 20        # meilleurs codes qui peuvent recevoir une clé (+…)
 CLES_PAR_CODE = 2       # clés gardées par code de base (les mieux évoquées)
 BUDGET_GABARITS = 30    # meilleurs codes dont on instancie le gabarit « with NAME » s'ils en ont un
 NOMS_PAR_GABARIT = 2    # noms essayés par gabarit
 CHAMPS_NOMMABLES = ("entities.type", "keywords", "persons.who", "setting", "texts")   # champs qui nomment une chose
 GABARITS_PAR_IMAGE = 10 # instanciations gardées par image (les mieux accordées au gabarit)
+NOMS_LIBRES_PAR_IMAGE = 8   # noms écrits, inconnus d'Iconclass et de Wikidata, envoyés aux gabarits (par image)
+GABARITS_PAR_NOM = 2        # gabarits « with NAME » essayés par nom libre (les plus proches de sa phrase par le sens)
+# Champs où un nom écrit peut désigner ce que l'image montre (pas la date, le genre ni la phrase d'ensemble).
+CHAMPS_NOMS_LIBRES = tuple(c for c in FAMILLES_CHAMPS if c not in ("period_style", "genre_function", "description",
+                                                                     "relations"))
+# Ce que le schéma de la description dit d'une chose nommée dans un champ (« persons » : une personne ; « setting » :
+# un lieu) ; ajouté devant la phrase du nom quand on la rapproche des gabarits.
+GENRE_DU_CHAMP = {"personne": "person:", "cadre": "place:"}
 
 
 def version_git() -> str:
@@ -71,16 +81,19 @@ def ordre_de_preuve(c) -> tuple:
 class Moteur:
     def __init__(self, dossier_base: Path, poids: Path | None = None, semantique: str | None = None,
                  cles: bool = False, gabarits: bool = False, decision: str = "logistique",
-                 profondeur: tuple[int, int] = (10, 8), structure_image: bool = False):
+                 profondeur: tuple[int, int] = (10, 8), structure_image: bool = False, noms_libres: bool = False):
         """cles : proposer les codes à clé (+…). Désactivé par défaut : sur un premier corpus, la base des codes vrais
         à clé était rarement candidate, et les clés proposées presque toujours fausses (le mécanisme reste).
         structure_image : traits des entités situées (boîte, plan) et des relations entre entités ; désactivé tant
-        qu'une mesure ne l'a pas gardé."""
+        qu'une mesure ne l'a pas gardé.
+        noms_libres : gabarits « with NAME » proposés depuis les noms écrits que ni Iconclass ni Wikidata ne
+        reconnaissent (demande la recherche sémantique) ; désactivé tant qu'une mesure ne l'a pas gardé."""
         import janus_swi as janus  # importé ici : la lecture et la recherche n'en ont pas besoin
 
         self.janus = janus
         self.cles = cles
         self.structure_image = structure_image
+        self.noms_libres = noms_libres
         # gabarits : instancier les gabarits « with NAME » (« X(NOM) »). Désactivé par défaut : sur un premier corpus,
         # les codes instanciés étaient rarement justes (poids appris négatifs) ; le mécanisme reste.
         self.gabarits = gabarits
@@ -246,12 +259,18 @@ class Moteur:
             c["traits"]["rang_preuve"] = float(i)
             c["traits"]["preuve_relative"] = round(c["traits"]["preuve_somme"] / meilleure, 4)
         codes += self._ancetres_candidats(codes[:BUDGET_REPLI], par_code)
+        if self.noms_libres:
+            codes += self._gabarits_des_noms(desc, len(codes), par_code, meilleure)
         if self.cles:
             codes += self._codes_a_cle(desc, codes[:BUDGET_CLES], mentions)
         if self.gabarits:
             codes += self._gabarits_instancies(codes[:BUDGET_GABARITS], par_code, mentions)
         self._decider(codes)
-        codes = codes[:BUDGET_SORTIE]     # les retenus sont en tête (ordre de la décision)
+        # Les retenus sont en tête (ordre de la décision). Au-delà du budget, les meilleurs candidats des options (noms
+        # écrits, gabarits, clés) restent écrits : sans poids, la preuve seule les classerait trop loin pour qu'une
+        # calibration les voie jamais.
+        reserve = [c for c in codes[BUDGET_SORTIE:] if any(k in c["traits"] for k in TRAITS_D_OPTION)][:BUDGET_OPTIONS]
+        codes = codes[:BUDGET_SORTIE] + reserve
         for c in codes:
             c["iconclass"] = self.base.libelle(c["code"])
             c["preuves"] = sorted(c["preuves"], key=lambda p: (-p["valeur"], p["regle"], str(p["faits"])))[:5]
@@ -345,6 +364,72 @@ class Moteur:
                     break
         gardes = sorted(out.values(), key=lambda c: (-c["traits"]["gabarit_sim"], c["code"]))[:GABARITS_PAR_IMAGE]
         return sorted(gardes, key=lambda c: c["code"])
+
+    def _gabarits_des_noms(self, desc, rang, par_code, meilleure) -> list[dict]:
+        """Noms libres : un nom écrit dans la description (suite de mots à majuscule) qu'aucun nom d'Iconclass ni de
+        Wikidata ne reconnaît est rapproché, par le sens de sa phrase, des parents des gabarits « with NAME » (« 61B2 »
+        historical persons, « 61E » cities…). Le parent et le gabarit instancié (« 61B2(FLORIS I) ») deviennent
+        candidats ; un parent déjà candidat reçoit seulement les traits. La similarité, son rang et le champ sont les
+        traits ; la décision apprend ce que valent ces propositions. Un mot seul en tête de mention n'est un nom que si
+        Iconclass ne le connaît pas comme mot (« Portrait of… » n'est pas un nom)."""
+        if self.sem is None:
+            return []
+        import numpy as np
+        parents = self.base.gabarits_par_parent
+        if not hasattr(self, "_masque_gabarits"):
+            self._masque_gabarits = np.array([n in parents for n in self.sem.ids])
+        vus, noms = set(), []
+        for m in desc.mentions:
+            if m.champ not in CHAMPS_NOMS_LIBRES:
+                continue
+            for ecrit, i in recherche.noms_ecrits(m.texte):
+                cle = recherche.nom_de_personne(ecrit)      # sans honorifique : « Saint Bavo » → « bavo »
+                if not cle or cle in vus or cle in self.base.par_nom:
+                    continue
+                if i == 0 and len(cle.split()) == 1 and texte.racine(cle) in self.base.postings:
+                    continue
+                vus.add(cle)
+                noms.append((cle, m))
+        noms = noms[:NOMS_LIBRES_PAR_IMAGE]
+        if not noms:
+            return []
+        # Ce qu'on rapproche des gabarits : la phrase du nom, précédée de ce que le champ dit de la chose nommée (le
+        # schéma de la description : « persons » nomme une personne, « setting » un lieu).
+        contextes = [f"{GENRE_DU_CHAMP.get(FAMILLES_CHAMPS.get(m.champ), '')} {m.texte}".strip() for _, m in noms]
+        self.sem.encoder(contextes)
+        out = {}
+        for (nom, m), ctx in zip(noms, contextes):
+            fam = FAMILLES_CHAMPS.get(m.champ, "autre")
+            for r, (p, s) in enumerate(self.sem.voisins(ctx, self._masque_gabarits, top=GABARITS_PAR_NOM)):
+                rp = self.base.n[p]
+                base_t = {"nom_ecrit": 1.0, "nom_ecrit_sim": s, "nom_ecrit_rang": float(r),
+                          f"nom_ecrit_champ_{fam}": 1.0, "nom_ecrit_mots": float(len(nom.split()))}
+                preuve = {"regle": "nom_ecrit", "valeur": s, "gabarit": parents[p],
+                          "faits": [{"chemin": m.chemin, "texte": m.texte}]}
+                if p in par_code:                 # parent déjà candidat : il reçoit les traits du nom écrit
+                    t = par_code[p]["traits"]
+                    for k, v in base_t.items():
+                        t[k] = max(t.get(k, 0.0), v) if k != "nom_ecrit_rang" else min(t.get(k, v), v)
+                    par_code[p]["preuves"].append(preuve)
+                    par_code[p]["mentions"].add(m.k)
+                    cibles = []
+                else:
+                    cibles = [(p, float(rp["prof"]), 0.0)]
+                cibles.append((f"{p}({nom.upper()})", float(rp["prof"] + 1), 1.0))
+                for n, prof, gab in cibles:
+                    if n in par_code:
+                        continue
+                    if n in out:
+                        t = out[n]["traits"]
+                        if s > t["nom_ecrit_sim"]:
+                            t["nom_ecrit_sim"] = t["preuve_max"] = t["preuve_somme"] = s
+                            t["preuve_relative"] = round(s / meilleure, 4)
+                        continue
+                    t = base_t | {"gabarit": gab, "prof": prof, "recit": float(rp["chapitre"] in ("7", "8", "9")),
+                                  "propre": 0.0, "nb_mentions": 1.0, f"champ_{fam}": 1.0, "preuve_max": s,
+                                  "preuve_somme": s, "rang_preuve": float(rang), "preuve_relative": round(s / meilleure, 4)}
+                    out[n] = {"code": n, "traits": t, "mentions": {m.k}, "preuves": [preuve]}
+        return sorted(out.values(), key=lambda c: c["code"])
 
     def _accord(self, texte_mention: str, n: str) -> float:
         """Cosinus entre une mention et le libellé d'une notation (0 sans recherche sémantique)."""

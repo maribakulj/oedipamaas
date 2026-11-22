@@ -234,6 +234,29 @@ def nom_de_personne(s: str) -> str:
     return PREFIXES_SAINT.sub("", texte.norme(s))
 
 
+# Particules des noms propres (fait de langue : « Willem van Oranje », « Count of Holland », « Leonardo da Vinci »).
+PARTICULES = frozenset("van de der den von of the la le di da du del della des ten ter y zu".split())
+_MOT = re.compile(r"[^\W\d_][\w'’-]*")
+
+
+def noms_ecrits(texte_brut: str) -> list[tuple[str, int]]:
+    """Suites de mots à majuscule (particules permises entre deux, chiffres romains compris) : les noms propres tels
+    que la description les écrit. Rend (nom, rang du premier mot dans la mention)."""
+    mots = _MOT.findall(texte_brut)
+    out, i = [], 0
+    while i < len(mots):
+        if not mots[i][0].isupper():
+            i += 1
+            continue
+        j = i + 1
+        while j < len(mots) and (mots[j][0].isupper() or (mots[j].lower() in PARTICULES and j + 1 < len(mots)
+                                                          and mots[j + 1][0].isupper())):
+            j += 1
+        out.append((" ".join(mots[i:j]), i))
+        i = j
+    return out
+
+
 def fragments_de_noms(champ: str, texte_brut: str) -> list[tuple[str, int, str]]:
     """Groupes de mots où chercher un nom propre, avec leur contexte. Dans « persons.who », l'expression entière (le
     descripteur y nomme la personne) ; ailleurs, chaque groupe de mots, marqué « honorifique » s'il suit « saint »,
