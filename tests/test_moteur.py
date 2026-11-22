@@ -239,3 +239,21 @@ def test_decision_par_arbres(base_mini, tmp_path):
     c = code(s, "71H1443")
     assert abs(c["p_catalogue"] - 1 / (1 + math.exp(-2.0))) < 1e-3 and c["statut"] == "retenu"
     assert not retenus(Moteur(base_mini, f).coder(lire(david, "david")))   # logistique au biais -9 : rien
+
+
+def test_seconde_probabilite(base_mini, tmp_path):
+    """Un bloc « exacte » dans les poids donne p_exact à chaque code, sans changer la décision."""
+    from oedipamaas.moteur import Moteur
+    exacte = {"poids": {"dcov_sujet": 1.0}, "moyenne": {"dcov_sujet": 0.0}, "ecart": {"dcov_sujet": 1.0}, "biais": 0.0}
+    poids = {"version": "test", "poids": POIDS_TEST, "moyenne": {k: 0.0 for k in POIDS_TEST},
+             "ecart": {k: 1.0 for k in POIDS_TEST}, "biais": -3.0, "k": 5, "seuil": 0.5, "critere": "p",
+             "exacte": exacte}
+    f = tmp_path / "poids.json"
+    f.write_text(json.dumps(poids))
+    s = Moteur(base_mini, f).coder(lire(david, "david"))
+    c = code(s, "71H1443")
+    assert 0.5 < c["p_exact"] < 1.0
+    sans = {k: v for k, v in poids.items() if k != "exacte"}
+    f.write_text(json.dumps(sans))
+    s2 = Moteur(base_mini, f).coder(lire(david, "david"))
+    assert [x["code"] for x in s2["codes"] if x["statut"] == "retenu"] == retenus(s)

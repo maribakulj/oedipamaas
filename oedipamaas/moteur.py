@@ -57,6 +57,12 @@ def q(s) -> str:
     return "'" + str(s).replace("\\", "\\\\").replace("'", "\\'") + "'"
 
 
+def logistique(w: dict, t: dict) -> float:
+    """Régression logistique : traits centrés-réduits, combinaison linéaire, sigmoïde."""
+    z = w["biais"] + sum(w["poids"][k] * (t.get(k, 0.0) - w["moyenne"][k]) / w["ecart"][k] for k in w["poids"])
+    return 1.0 / (1.0 + math.exp(-max(-30.0, min(30.0, z))))
+
+
 def ordre_de_preuve(c) -> tuple:
     """Meilleure preuve d'abord, puis la plus abondante (classement sans poids, et budget des candidats)."""
     return (-c["traits"]["preuve_max"], -c["traits"]["preuve_somme"], c["code"])
@@ -120,10 +126,8 @@ class Moteur:
                     v = x[f]
                     i = (g if manque_gauche else d) if v != v else (g if v <= seuil else d)
                 z += arbre[i][6]
-        else:
-            w = self.poids
-            z = w["biais"] + sum(w["poids"][k] * (t.get(k, 0.0) - w["moyenne"][k]) / w["ecart"][k] for k in w["poids"])
-        return 1.0 / (1.0 + math.exp(-max(-30.0, min(30.0, z))))
+            return 1.0 / (1.0 + math.exp(-max(-30.0, min(30.0, z))))
+        return logistique(self.poids, t)
 
     # ---------------------------------------------------------------------------------------------------------------
     def faits(self, desc: Description, cands: list[recherche.Candidat]) -> list[str]:
@@ -355,6 +359,8 @@ class Moteur:
             return
         for c in codes:
             c["p_catalogue"] = round(self.probabilite(c["traits"]), 4)
+            if "exacte" in self.poids:      # seconde probabilité (code exact), pour l'usage aval ; ne décide pas
+                c["p_exact"] = round(logistique(self.poids["exacte"], c["traits"]), 4)
         regle = self.regle_de_decision
         esperance = regle.get("critere") == "esperance"
 
