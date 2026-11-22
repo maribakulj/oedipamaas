@@ -64,7 +64,8 @@ def ordre_de_preuve(c) -> tuple:
 
 class Moteur:
     def __init__(self, dossier_base: Path, poids: Path | None = None, semantique: str | None = None,
-                 cles: bool = False, gabarits: bool = False, decision: str = "logistique"):
+                 cles: bool = False, gabarits: bool = False, decision: str = "logistique",
+                 profondeur: tuple[int, int] = (10, 8)):
         """cles : proposer les codes à clé (+…). Désactivé par défaut : sur un premier corpus, la base des codes vrais
         à clé était rarement candidate, et les clés proposées presque toujours fausses (le mécanisme reste)."""
         import janus_swi as janus  # importé ici : la lecture et la recherche n'en ont pas besoin
@@ -75,6 +76,7 @@ class Moteur:
         # les codes instanciés étaient rarement justes (poids appris négatifs) ; le mécanisme reste.
         self.gabarits = gabarits
         self.decision = decision     # « logistique » (lisible, par défaut) ou « arbres » (exportés avec les poids)
+        self.profondeur = profondeur  # voisins par mention : (lexicale, sémantique) ; budget de rappel
         if decision not in ("logistique", "arbres"):
             raise ValueError(f"décision inconnue : {decision}")
         self.base = Base(dossier_base)
@@ -171,7 +173,7 @@ class Moteur:
                   "versions": self.versions | {"description": f"sha256:{desc.sha256}"}}
         if desc.erreur:
             return sortie | {"erreur": desc.erreur, "codes": [], "objets": [], "relations": [], "non_utilise": {}}
-        cands = recherche.candidats(self.base, desc, sem=self.sem)
+        cands = recherche.candidats(self.base, desc, top=self.profondeur[0], sem=self.sem, top_sem=self.profondeur[1])
         j = self.janus
         j.query_once("vider")
         for fait in self.faits(desc, cands):

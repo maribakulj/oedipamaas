@@ -271,8 +271,9 @@ def candidats_semantiques(base: Base, desc: Description, sem, top=8) -> list[Can
     return out
 
 
-def candidats(base: Base, desc: Description, top=10, sem=None) -> list[Candidat]:
-    out = candidats_semantiques(base, desc, sem) if sem is not None else []
+def candidats(base: Base, desc: Description, top=10, sem=None, top_sem=8) -> list[Candidat]:
+    """top, top_sem : nombre de voisins par mention (lexicale, sémantique) ; budget de calcul et de rappel."""
+    out = candidats_semantiques(base, desc, sem, top=top_sem) if sem is not None else []
     for m in desc.mentions:
         if m.champ == "subject.source":
             for ref in references.analyser(m.texte):

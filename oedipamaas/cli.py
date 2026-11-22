@@ -21,7 +21,8 @@ def cmd_coder(a):
     from .lecture import lire_fichier
     from .moteur import Moteur
 
-    moteur = Moteur(Path(a.base), a.poids, a.semantique, cles=a.cles, gabarits=a.gabarits, decision=a.decision)
+    moteur = Moteur(Path(a.base), a.poids, a.semantique, cles=a.cles, gabarits=a.gabarits, decision=a.decision,
+                    profondeur=(a.profondeur_lex, a.profondeur_sem))
     fichiers = sorted(Path(a.descriptions).glob("*.json"))
     if a.limite:
         fichiers = fichiers[: a.limite]
@@ -84,6 +85,8 @@ def main(argv=None):
     c.add_argument("--gabarits", action="store_true", help="instancier aussi les gabarits à nom libre (X(NOM))")
     c.add_argument("--decision", default="logistique", choices=("logistique", "arbres"),
                    help="décision apprise à utiliser (les arbres doivent être dans le fichier de poids)")
+    c.add_argument("--profondeur-lex", type=int, default=10, help="voisins lexicaux par mention")
+    c.add_argument("--profondeur-sem", type=int, default=8, help="voisins sémantiques par mention")
     c.set_defaults(f=cmd_coder)
     v = s.add_parser("vecteurs", help="calculer les vecteurs de sens des libellés (recherche sémantique)")
     v.add_argument("base")
