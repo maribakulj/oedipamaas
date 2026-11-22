@@ -266,7 +266,14 @@ de base aura progressé, car c'est lui qui les limite. La **structure de l'image
 situées et relations, § 6.1) est désactivée pour la même raison : mesurée sur un même découpage des images, avec et
 sans ces traits et rien d'autre de changé, elle n'apporte pas assez à la décision (poids appris faibles ; le prédicat
 d'une relation est rarement dans un libellé). Les boîtes servent la sortie : chaque objet situé porte les codes retenus
-qu'il appuie (§ 8).
+qu'il appuie (§ 8). Les **noms écrits** (`--noms-libres`) partent des noms propres de la description qu'Iconclass et
+Wikidata ne connaissent pas : rapprochés par le sens (avec ce que le champ dit de la chose nommée, personne ou lieu)
+des parents des gabarits « with NAME », ils proposent le parent et le gabarit instancié. Mesurés de la même façon, ils
+n'apportent pas assez : le modèle de phrases rapproche mal un nom propre de son gabarit, et la décision apprend à se
+méfier des noms instanciés. C'est pourtant là que manquent le plus de codes (personnes historiques, villes, édifices) :
+un typage des noms par une base de connaissances (personne, ville, édifice) reste à essayer. Pour qu'une option soit
+mesurable, le moteur sans poids écrit aussi, au-delà de son budget, les meilleurs candidats des options : la preuve
+seule les classerait trop loin pour qu'une calibration les voie.
 
 ### 7.2 Les seuils
 
