@@ -4,6 +4,7 @@ synthétiques, déterminisme."""
 from __future__ import annotations
 
 import json
+import math
 import sys
 from pathlib import Path
 
@@ -222,3 +223,19 @@ def test_cles(base_mini):
     assert c and c["traits"]["cle"] == 1.0 and c["traits"]["cle_exacte"] == 1.0
     assert "heraldic animals" in c["iconclass"]
     assert moteur.base.ancetres("25F23(LION)(+12)")[0] == "25F23(LION)"
+
+
+def test_decision_par_arbres(base_mini, tmp_path):
+    """Arbres exportés (format du noyau de calibration) : une souche sur « dcov_sujet » ; le bon épisode passe."""
+    from oedipamaas.moteur import Moteur
+    traits = ["dcov_sujet"]
+    souche = [[0, 0.5, True, 1, 2, False, 0.0], [0, 0.0, True, 0, 0, True, -2.0], [0, 0.0, True, 0, 0, True, 2.0]]
+    poids = {"version": "test", "poids": {}, "moyenne": {}, "ecart": {}, "biais": -9.0, "k": 5, "seuil": 0.5,
+             "critere": "p", "arbres": {"traits": traits, "base": 0.0, "foret": [souche], "k": 5, "seuil": 0.5,
+                                        "critere": "p"}}
+    f = tmp_path / "poids.json"
+    f.write_text(json.dumps(poids))
+    s = Moteur(base_mini, f, decision="arbres").coder(lire(david, "david"))
+    c = code(s, "71H1443")
+    assert abs(c["p_catalogue"] - 1 / (1 + math.exp(-2.0))) < 1e-3 and c["statut"] == "retenu"
+    assert not retenus(Moteur(base_mini, f).coder(lire(david, "david")))   # logistique au biais -9 : rien

@@ -64,7 +64,7 @@ def ordre_de_preuve(c) -> tuple:
 
 class Moteur:
     def __init__(self, dossier_base: Path, poids: Path | None = None, semantique: str | None = None,
-                 cles: bool = False, gabarits: bool = False):
+                 cles: bool = False, gabarits: bool = False, decision: str = "logistique"):
         """cles : proposer les codes à clé (+…). Désactivé par défaut : sur un premier corpus, la base des codes vrais
         à clé était rarement candidate, et les clés proposées presque toujours fausses (le mécanisme reste)."""
         import janus_swi as janus  # importé ici : la lecture et la recherche n'en ont pas besoin
@@ -74,6 +74,9 @@ class Moteur:
         # gabarits : instancier les gabarits « with NAME » (« X(NOM) »). Désactivé par défaut : sur un premier corpus,
         # les codes instanciés étaient rarement justes (poids appris négatifs) ; le mécanisme reste.
         self.gabarits = gabarits
+        self.decision = decision     # « logistique » (lisible, par défaut) ou « arbres » (exportés avec les poids)
+        if decision not in ("logistique", "arbres"):
+            raise ValueError(f"décision inconnue : {decision}")
         self.base = Base(dossier_base)
         self.sem = None
         if semantique:
@@ -83,10 +86,12 @@ class Moteur:
         janus.query_once(f"consult({q(Path(dossier_base) / 'base.pl')})")
         janus.query_once(f"consult({q(ICI / 'regles' / 'regles.pl')})")
         self.poids = json.loads(Path(poids).read_text()) if poids else None
+        if self.poids and decision == "arbres" and "arbres" not in self.poids:
+            raise ValueError("décision « arbres » demandée, mais le fichier de poids n'en contient pas")
         self.versions = {"moteur": version_git(),
                          "base": f"iconclass {self.base.manifeste.get('commit', '?')[:7]}"
                                  + (" + wikidata" if "wikidata" in self.base.manifeste else ""),
-                         "regles": "v2", "poids": self.poids["version"] if self.poids else None,
+                         "regles": "v2", "poids": (f"{self.poids['version']} {decision}" if self.poids else None),
                          "semantique": f"{self.sem.modele_nom} {self.sem.revision}" if self.sem else None}
         self.noms_listes = {r["nom"] for r in self.base.n.values() if r.get("nom")}
         self._par_attribut = defaultdict(set)
@@ -94,10 +99,28 @@ class Moteur:
             for a, _ in r.get("attributs", []):
                 self._par_attribut[a].add(n)
 
+    @property
+    def regle_de_decision(self) -> dict:
+        """k, seuil et critère de la décision choisie (logistique, ou arbres exportés)."""
+        return self.poids["arbres"] if self.decision == "arbres" else self.poids
+
     def probabilite(self, t: dict) -> float:
-        """Régression logistique apprise (poids/vN.json) : traits centrés-réduits, puis sigmoïde."""
-        w = self.poids
-        z = w["biais"] + sum(w["poids"][k] * (t.get(k, 0.0) - w["moyenne"][k]) / w["ecart"][k] for k in w["poids"])
+        """Décision apprise : régression logistique (traits centrés-réduits, sigmoïde) ou arbres de gradient exportés
+        (somme des feuilles atteintes, sigmoïde)."""
+        if self.decision == "arbres":
+            a = self.poids["arbres"]
+            x = [t.get(k, 0.0) for k in a["traits"]]
+            z = a["base"]
+            for arbre in a["foret"]:
+                i = 0
+                while not arbre[i][5]:
+                    f, seuil, manque_gauche, g, d = arbre[i][:5]
+                    v = x[f]
+                    i = (g if manque_gauche else d) if v != v else (g if v <= seuil else d)
+                z += arbre[i][6]
+        else:
+            w = self.poids
+            z = w["biais"] + sum(w["poids"][k] * (t.get(k, 0.0) - w["moyenne"][k]) / w["ecart"][k] for k in w["poids"])
         return 1.0 / (1.0 + math.exp(-max(-30.0, min(30.0, z))))
 
     # ---------------------------------------------------------------------------------------------------------------
@@ -330,13 +353,14 @@ class Moteur:
             return
         for c in codes:
             c["p_catalogue"] = round(self.probabilite(c["traits"]), 4)
-        esperance = self.poids.get("critere") == "esperance"
+        regle = self.regle_de_decision
+        esperance = regle.get("critere") == "esperance"
 
         def cle(c):
             v = c["p_catalogue"] * (c["traits"]["prof"] + 1) if esperance else c["p_catalogue"]
             return (-v, c["code"])
         codes.sort(key=cle)
-        choisis = [c for c in codes if c["p_catalogue"] >= self.poids["seuil"]][: self.poids["k"]]
+        choisis = [c for c in codes if c["p_catalogue"] >= regle["seuil"]][: regle["k"]]
         for c in choisis:
             c["statut"] = "retenu"
         retenus = {c["code"] for c in choisis}
