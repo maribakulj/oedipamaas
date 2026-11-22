@@ -257,3 +257,23 @@ def test_seconde_probabilite(base_mini, tmp_path):
     f.write_text(json.dumps(sans))
     s2 = Moteur(base_mini, f).coder(lire(david, "david"))
     assert [x["code"] for x in s2["codes"] if x["statut"] == "retenu"] == retenus(s)
+
+
+def test_structure_image(base_mini):
+    """Option structure de l'image : l'entité située qui appuie un code (taille relative, centre, plan) et la relation
+    dont les deux bouts et le prédicat sont dans le libellé ; sans l'option, aucun de ces traits."""
+    from oedipamaas.moteur import Moteur
+    d = {"subject": {"title": "David beheading Goliath"},
+         "entities": [{"id": "e1", "type": "David", "attributes": ["sling"], "plane": "foreground",
+                       "box": [0.25, 0.25, 0.75, 0.75]},
+                      {"id": "e2", "type": "Goliath", "attributes": ["giant"], "plane": "background",
+                       "box": [0.0, 0.0, 0.2, 0.2]}],
+         "relations": [["e1", "beheads", "e2"], ["e1", "left_of", "e2"]]}
+    s = Moteur(base_mini, structure_image=True).coder(lire(d, "david-situe"))
+    t = code(s, "71H1443")["traits"]
+    assert t["saillance_aire"] == 1.0 and t["saillance_centre"] == 1.0 and t["plan_foreground"] == 1.0
+    assert t["entites_appui"] == 2.0 and t["relation_bouts"] == 2.0
+    assert t["relation_predicat"] == 1.0 and t["relation_complete"] == 1.0 and t["relations_nb"] == 2.0
+    sans = Moteur(base_mini).coder(lire(d, "david-situe"))
+    noms = {k for c in sans["codes"] for k in c["traits"]}
+    assert not noms & {"saillance_aire", "entites_appui", "relation_bouts", "relations_nb", "plan_foreground"}

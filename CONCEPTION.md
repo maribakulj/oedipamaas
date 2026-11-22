@@ -216,6 +216,8 @@ retient ni n'écarte un code sur un seuil écrit à la main.
 | ancêtres reconnus | des mots clés ou têtes des ancêtres de la notation sont dans la description, et à quelle profondeur | hiérarchie d'Iconclass |
 | identité héritée | un épisode de la vie d'un saint (11H(X)n) porte les traits de nom et d'attributs de X | structure d'Iconclass |
 | structure | profondeur, récit ou non, descendants et frères parmi les candidats, champs d'où vient la preuve | idem |
+| entités situées (option) | l'entité de la description qui propose le code : aire de sa boîte rapportée à la plus grande de l'image, proximité du centre, plan ; nombre d'entités distinctes qui l'appuient | boîtes de la description |
+| relations (option) | une relation entre entités dont un bout ou les deux appuient le code, avec ou sans son prédicat (« beheads », « holds ») dans le libellé | relations de la description |
 
 Une seule contrainte, structurelle : un code à nom propre (et ses sous-rubriques) affirme une identité ; sans nom ni
 attribut vus, il n'est pas proposé. Le **repli sur le parent sûr** est aussi structurel : les ancêtres (deux niveaux) des
@@ -260,7 +262,9 @@ mesure hors corpus.
 Deux mécanismes généraux existent mais sont désactivés par défaut, faute de gain mesuré sur un premier corpus : les
 **clés** (`--cles` : une clé d'Iconclass évoquée par la description donne le code à clé) et les **noms libres**
 (`--gabarits` : un gabarit « with NAME » reçoit le nom d'une mention). Ils restent à rejuger quand le rappel des codes
-de base aura progressé, car c'est lui qui les limite.
+de base aura progressé, car c'est lui qui les limite. La **structure de l'image** (`--structure-image` : entités
+situées et relations, § 6.1) est désactivée jusqu'à sa mesure : sur un même découpage des images, la calibration avec
+et sans ces traits, rien d'autre ne change.
 
 ### 7.2 Les seuils
 

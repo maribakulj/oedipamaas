@@ -22,7 +22,7 @@ def cmd_coder(a):
     from .moteur import Moteur
 
     moteur = Moteur(Path(a.base), a.poids, a.semantique, cles=a.cles, gabarits=a.gabarits, decision=a.decision,
-                    profondeur=(a.profondeur_lex, a.profondeur_sem))
+                    profondeur=(a.profondeur_lex, a.profondeur_sem), structure_image=a.structure_image)
     fichiers = sorted(Path(a.descriptions).glob("*.json"))
     if a.limite:
         fichiers = fichiers[: a.limite]
@@ -87,6 +87,8 @@ def main(argv=None):
                    help="décision apprise à utiliser (les arbres doivent être dans le fichier de poids)")
     c.add_argument("--profondeur-lex", type=int, default=10, help="voisins lexicaux par mention")
     c.add_argument("--profondeur-sem", type=int, default=8, help="voisins sémantiques par mention")
+    c.add_argument("--structure-image", action="store_true",
+                   help="traits des entités situées (boîte, plan) et des relations entre entités")
     c.set_defaults(f=cmd_coder)
     v = s.add_parser("vecteurs", help="calculer les vecteurs de sens des libellés (recherche sémantique)")
     v.add_argument("base")

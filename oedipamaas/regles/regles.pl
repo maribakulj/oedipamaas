@@ -11,9 +11,15 @@
 %   attr_vu(N, A, Idf, K)              attribut A (Iconclass, « possible attributes ») du saint N vu dans la mention K
 %   part_vu(N, P, K), part_total(N, T) participants du libellé narratif N vus (hors champs du sujet) ; leur nombre
 %   anc_vu(N, Prof, K)                 un mot clé ou la tête d'un ancêtre de N (profondeur Prof) est la mention K
+% Structure de l'image (option du moteur) :
+%   ent(E, Aire, Centre, Plan)         entité située E : aire de sa boîte / la plus grande de l'image, proximité du
+%                                      centre (1 au centre, 0 au coin), plan (premier, milieu, fond)
+%   appui_ent(N, E, K)                 la mention K, qui décrit l'entité E, propose N
+%   rel_vu(N, I, A, R, B, Ks)          relation I (sujet, prédicat, objet) : A, B = 1 si l'entité sujet, objet appuie N ;
+%                                      R = 1 si le prédicat est dans le libellé de N ; Ks = mentions des deux bouts
 % Sortie : traits(L), L = [[N, Trait, Valeur, Mentions], ...] ; codes bloqués exclus.
 
-:- dynamic m/2, cand/7, nom_ctx/3, attr_vu/4, part_vu/3, part_total/2, anc_vu/3.
+:- dynamic m/2, cand/7, nom_ctx/3, attr_vu/4, part_vu/3, part_total/2, anc_vu/3, ent/4, appui_ent/3, rel_vu/6.
 :- discontiguous trait/4.
 
 champ_sujet('subject.title').
@@ -83,6 +89,18 @@ trait(N, T2, V, Ks) :-
     member(T, [nom, attributs_idf, attributs_nb, attributs_part]), trait(P, T, V, Ks),
     atom_concat(T, '_du_saint', T2).
 
+% --- Structure de l'image : l'entité qui appuie le code, sa place, les relations qui le portent ----------------------
+trait(N, saillance_aire, A, [K]) :- appui_ent(N, E, K), ent(E, A, _, _).
+trait(N, saillance_centre, C, [K]) :- appui_ent(N, E, K), ent(E, _, C, _).
+trait(N, T, 1.0, [K]) :- appui_ent(N, E, K), ent(E, _, _, P), P \== '', atom_concat(plan_, P, T).
+trait(N, entites_appui, Nb, Ks) :-
+    candidat(N), setof(E, K^appui_ent(N, E, K), Es), length(Es, Nb), setof(K, E^appui_ent(N, E, K), Ks).
+trait(N, relation_bouts, V, Ks) :- rel_vu(N, _, A, _, B, Ks), V is A + B.
+trait(N, relation_predicat, 1.0, Ks) :- rel_vu(N, _, _, 1, _, Ks).
+trait(N, relation_complete, 1.0, Ks) :- rel_vu(N, _, 1, 1, 1, Ks).
+trait(N, relations_nb, Nb, []) :-
+    candidat(N), aggregate_all(count, rel_vu(N, _, _, _, _, _), Nb), Nb > 0.
+
 candidat(N) :- cand(N, _, _, _, _, _, _).
 candidat(N) :- attr_vu(N, _, _, _).
 
@@ -98,4 +116,5 @@ traits(L) :-
 vider :-
     retractall(m(_, _)), retractall(cand(_, _, _, _, _, _, _)), retractall(nom_ctx(_, _, _)),
     retractall(attr_vu(_, _, _, _)), retractall(part_vu(_, _, _)), retractall(part_total(_, _)),
-    retractall(anc_vu(_, _, _)).
+    retractall(anc_vu(_, _, _)), retractall(ent(_, _, _, _)), retractall(appui_ent(_, _, _)),
+    retractall(rel_vu(_, _, _, _, _, _)).

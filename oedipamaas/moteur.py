@@ -71,13 +71,16 @@ def ordre_de_preuve(c) -> tuple:
 class Moteur:
     def __init__(self, dossier_base: Path, poids: Path | None = None, semantique: str | None = None,
                  cles: bool = False, gabarits: bool = False, decision: str = "logistique",
-                 profondeur: tuple[int, int] = (10, 8)):
+                 profondeur: tuple[int, int] = (10, 8), structure_image: bool = False):
         """cles : proposer les codes à clé (+…). Désactivé par défaut : sur un premier corpus, la base des codes vrais
-        à clé était rarement candidate, et les clés proposées presque toujours fausses (le mécanisme reste)."""
+        à clé était rarement candidate, et les clés proposées presque toujours fausses (le mécanisme reste).
+        structure_image : traits des entités situées (boîte, plan) et des relations entre entités ; désactivé tant
+        qu'une mesure ne l'a pas gardé."""
         import janus_swi as janus  # importé ici : la lecture et la recherche n'en ont pas besoin
 
         self.janus = janus
         self.cles = cles
+        self.structure_image = structure_image
         # gabarits : instancier les gabarits « with NAME » (« X(NOM) »). Désactivé par défaut : sur un premier corpus,
         # les codes instanciés étaient rarement justes (poids appris négatifs) ; le mécanisme reste.
         self.gabarits = gabarits
@@ -169,7 +172,42 @@ class Moteur:
                 if prof >= 1:
                     for e in self.base.expressions(a):
                         f.extend(f"anc_vu({q(n)}, {prof}, {k})" for k in normes.get(e, ()))
+        if self.structure_image:
+            f.extend(self._faits_image(desc, cands))
         return sorted(set(f))
+
+    def _faits_image(self, desc: Description, cands: list[recherche.Candidat]) -> list[str]:
+        """Structure de l'image : quelle entité située appuie chaque candidat (taille de sa boîte rapportée à la plus
+        grande de l'image, proximité du centre, plan), et les relations dont un bout ou les deux appuient le même code,
+        avec ou sans leur prédicat dans le libellé. Ce sont des mesures ; la décision apprend ce qu'elles valent."""
+        f = []
+        geo = {}
+        for e, b in desc.boites.items():
+            x1, y1, x2, y2 = b["boite"]
+            aire = abs(x2 - x1) * abs(y2 - y1)
+            centre = 1.0 - math.hypot((x1 + x2) / 2 - 0.5, (y1 + y2) / 2 - 0.5) / math.hypot(0.5, 0.5)
+            plan = texte.norme(b.get("plan") or "").replace(" ", "_")
+            geo[e] = (aire, max(0.0, centre), plan)
+        plus_grande = max((a for a, _, _ in geo.values()), default=0.0) or 1.0
+        for e, (aire, centre, plan) in sorted(geo.items()):
+            f.append(f"ent({q(e)}, {round(aire / plus_grande, 4)}, {round(centre, 4)}, {q(plan)})")
+        entite_de = {m.k: m.entite for m in desc.mentions if m.entite and m.champ.startswith("entities.")}
+        appuis = defaultdict(set)
+        for c in cands:
+            if c.k in entite_de:
+                appuis[c.n].add(c.k)
+                f.append(f"appui_ent({q(c.n)}, {q(entite_de[c.k])}, {c.k})")
+        for n, ks in sorted(appuis.items()):
+            ents = {entite_de[k] for k in ks}
+            mots_n = set(texte.racines(self.base.libelle(n)))
+            for i, (a, rel, b) in enumerate(desc.relations):
+                va, vb = int(a in ents), int(b in ents)
+                if not (va or vb):
+                    continue
+                vr = int(bool(set(texte.racines(rel)) & mots_n))
+                kab = sorted(k for k in ks if entite_de[k] in (a, b))
+                f.append(f"rel_vu({q(n)}, {i}, {va}, {vr}, {vb}, [{', '.join(map(str, kab))}])")
+        return f
 
     # ---------------------------------------------------------------------------------------------------------------
     def coder(self, desc: Description) -> dict:
