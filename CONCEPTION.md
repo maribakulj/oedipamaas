@@ -116,7 +116,8 @@ chacune.
 | Références de source | 1 244 références dans 1 007 libellés (livre biblique, chapitre, versets ; Ovide, livre, vers) | famille D : la source donnée par le descripteur désigne directement une branche |
 | Gabarits | structure commune des vies de saints (`11H(...)0` en groupe … `9` portrait) | famille E |
 | Renvois | renvois entre notations | voisinage de recherche, jamais un code seul |
-| Clés (+…) et noms libres (...) | presque toutes les notations déclarent une clé ; 1 184 gabarits à nom libre | phase 2, si leur part dans les catalogues le justifie |
+| Clés (+…) et noms libres (...) | 58 familles de clés, 2 780 clés (textes et mots clés) ; 1 184 gabarits à nom libre | codes à clé et gabarits instanciés, en option (§ 7.1) |
+| Autres langues | libellés et mots clés des 12 autres langues du dépôt | expressions exactes (textes transcrits, descriptions dans une autre langue) |
 
 Le libellé d'un code narratif contient souvent sa vérification : « 11H(JEROME)36 : St. Jerome as penitent in the
 desert, half naked, kneeling before a crucifix and holding a stone… ; a skull… ». Les noms et les noms communs d'un
@@ -250,8 +251,16 @@ notation, repli sur un ancêtre et nombre de descendants appuyés. Une **régres
 - `p_juste` : probabilité que le code soit vrai de l'image. Le catalogue étant incomplet, `p_catalogue` la sous-estime.
   On la corrige par famille avec le jugement à l'aveugle (§ 9.3).
 
-Une logistique plutôt qu'un modèle plus fort : quelques centaines d'images ne nourrissent pas plus de quelques dizaines
-de poids sans sur-apprentissage, et un poids se lit.
+La logistique est la décision par défaut : quelques centaines d'images ne nourrissent pas plus de quelques dizaines de
+poids sans sur-apprentissage, et un poids se lit. Des arbres de gradient (profondeur 3) peuvent la remplacer
+(`--decision arbres`) : ils sont appris avec elle, exportés dans le même fichier en JSON (évaluables sans bibliothèque,
+relecture vérifiée à l'export) et gardent leur propre règle (k, seuil, critère). On choisit l'une ou l'autre sur une
+mesure hors corpus.
+
+Deux mécanismes généraux existent mais sont désactivés par défaut, faute de gain mesuré sur un premier corpus : les
+**clés** (`--cles` : une clé d'Iconclass évoquée par la description donne le code à clé) et les **noms libres**
+(`--gabarits` : un gabarit « with NAME » reçoit le nom d'une mention). Ils restent à rejuger quand le rappel des codes
+de base aura progressé, car c'est lui qui les limite.
 
 ### 7.2 Les seuils
 
