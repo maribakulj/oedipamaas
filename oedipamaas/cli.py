@@ -43,6 +43,12 @@ def cmd_coder(a):
     print(json.dumps(manifeste, ensure_ascii=False))
 
 
+def cmd_vecteurs(a):
+    from .semantique import calculer
+
+    print(json.dumps(calculer(Path(a.base), a.modele, a.revision), ensure_ascii=False))
+
+
 def cmd_expliquer(a):
     from .lecture import lire_fichier
     from .moteur import Moteur
@@ -76,6 +82,11 @@ def main(argv=None):
     c.add_argument("--semantique", help="modèle de phrases dont les vecteurs sont dans la base (ex. paraphrase-multilingual-MiniLM-L12-v2)")
     c.add_argument("--cles", action="store_true", help="proposer aussi les codes à clé (+…)")
     c.set_defaults(f=cmd_coder)
+    v = s.add_parser("vecteurs", help="calculer les vecteurs de sens des libellés (recherche sémantique)")
+    v.add_argument("base")
+    v.add_argument("--modele", default="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2")
+    v.add_argument("--revision", help="révision épinglée du modèle (empreinte de commit)")
+    v.set_defaults(f=cmd_vecteurs)
     e = s.add_parser("expliquer", help="afficher les preuves des codes d'une description")
     e.add_argument("base")
     e.add_argument("description")

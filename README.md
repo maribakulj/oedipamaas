@@ -20,7 +20,10 @@ git clone https://github.com/iconclass/data iconclass-data
 oedipamaas base iconclass-data base/
 
 # 2. (facultatif) Vecteurs de sens des libellés pour la recherche sémantique
-python -c "from oedipamaas import semantique; semantique.calculer('base/')"
+oedipamaas vecteurs base/ --revision <commit du modèle>
+
+# Wikidata (facultatif) : alias des notations, à passer à « oedipamaas base … --wikidata p1256.json »
+python -c "from oedipamaas import wikidata; wikidata.telecharger('p1256.json')"
 
 # 3. Coder un dossier de descriptions (un JSON par image) ; --poids : régression logistique apprise
 oedipamaas coder base/ descriptions/ codes.jsonl --semantique paraphrase-multilingual-MiniLM-L12-v2
