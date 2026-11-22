@@ -64,13 +64,16 @@ def ordre_de_preuve(c) -> tuple:
 
 class Moteur:
     def __init__(self, dossier_base: Path, poids: Path | None = None, semantique: str | None = None,
-                 cles: bool = False):
+                 cles: bool = False, gabarits: bool = False):
         """cles : proposer les codes à clé (+…). Désactivé par défaut : sur un premier corpus, la base des codes vrais
         à clé était rarement candidate, et les clés proposées presque toujours fausses (le mécanisme reste)."""
         import janus_swi as janus  # importé ici : la lecture et la recherche n'en ont pas besoin
 
         self.janus = janus
         self.cles = cles
+        # gabarits : instancier les gabarits « with NAME » (« X(NOM) »). Désactivé par défaut : sur un premier corpus,
+        # les codes instanciés étaient rarement justes (poids appris négatifs) ; le mécanisme reste.
+        self.gabarits = gabarits
         self.base = Base(dossier_base)
         self.sem = None
         if semantique:
@@ -178,7 +181,8 @@ class Moteur:
         codes += self._ancetres_candidats(codes[:BUDGET_REPLI], par_code)
         if self.cles:
             codes += self._codes_a_cle(desc, codes[:BUDGET_CLES], mentions)
-        codes += self._gabarits_instancies(codes[:BUDGET_GABARITS], par_code, mentions)
+        if self.gabarits:
+            codes += self._gabarits_instancies(codes[:BUDGET_GABARITS], par_code, mentions)
         self._decider(codes)
         codes = codes[:BUDGET_SORTIE]     # les retenus sont en tête (ordre de la décision)
         for c in codes:
