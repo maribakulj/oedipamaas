@@ -279,6 +279,10 @@ seule les classerait trop loin pour qu'une calibration les voie.
 
 - Pour la mesure contre le catalogue : seuil et nombre maximal de codes choisis sur une moitié de l'ensemble de
   développement, vérifiés sur l'autre moitié (partage par image, graine fixe). Jamais réglés sur l'ensemble de mesure.
+- Ou sans seuil ni nombre (`--selection f1`) : `p_catalogue` étant la probabilité qu'un nœud soit dans la fermeture
+  de la vérité, le moteur retient l'ensemble de codes qui maximise le F1 hiérarchique attendu, par ajouts successifs
+  (2·Σp / (|P| + g), g = taille attendue de la vérité, apprise avec les poids). Le nombre de codes suit alors ce que
+  l'image appuie.
 - Pour l'entraînement : deux ensembles livrés, « style catalogue » (`p_catalogue` ≥ seuil) et « complet »
   (`p_juste` ≥ 0,5), et les probabilités elles-mêmes pour des cibles souples.
 

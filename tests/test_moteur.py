@@ -313,3 +313,25 @@ def test_noms_libres(base_mini):
     assert not any(n.endswith("(LION)") and n != "25F23(LION)" for n in noms)
     m.noms_libres = False
     assert not any("nom_ecrit" in x["traits"] for x in m.coder(lire(d, "bavo"))["codes"])
+
+
+def test_selection_f1(base_mini, tmp_path):
+    """Sélection par F1 attendu : ni k ni seuil ; le bon épisode est retenu, ses ancêtres sont implicites ; un g très
+    grand (vérité attendue énorme) fait retenir davantage qu'un g petit ; sans g appris, refus."""
+    from oedipamaas.moteur import Moteur
+    poids = {"version": "test", "poids": POIDS_TEST, "moyenne": {k: 0.0 for k in POIDS_TEST},
+             "ecart": {k: 1.0 for k in POIDS_TEST}, "biais": -3.0, "k": 1, "seuil": 0.99, "critere": "p",
+             "f1_attendu": {"facteur": 1.0, "g": 4.0}}
+    f = tmp_path / "poids.json"
+    f.write_text(json.dumps(poids))
+    s = Moteur(base_mini, f, selection="f1").coder(lire(david, "david"))
+    assert "71H1443" in retenus(s), retenus(s)
+    assert s["versions"]["poids"].endswith(" f1")
+    poids["f1_attendu"]["g"] = 40.0
+    f.write_text(json.dumps(poids))
+    large = Moteur(base_mini, f, selection="f1").coder(lire(david, "david"))
+    assert len(retenus(large)) >= len(retenus(s))
+    del poids["f1_attendu"]
+    f.write_text(json.dumps(poids))
+    with pytest.raises(ValueError):
+        Moteur(base_mini, f, selection="f1")

@@ -81,7 +81,8 @@ def ordre_de_preuve(c) -> tuple:
 class Moteur:
     def __init__(self, dossier_base: Path, poids: Path | None = None, semantique: str | None = None,
                  cles: bool = False, gabarits: bool = False, decision: str = "logistique",
-                 profondeur: tuple[int, int] = (10, 8), structure_image: bool = False, noms_libres: bool = False):
+                 profondeur: tuple[int, int] = (10, 8), structure_image: bool = False, noms_libres: bool = False,
+                 selection: str = "grille"):
         """cles : proposer les codes à clé (+…). Désactivé par défaut : sur un premier corpus, la base des codes vrais
         à clé était rarement candidate, et les clés proposées presque toujours fausses (le mécanisme reste).
         structure_image : traits des entités situées (boîte, plan) et des relations entre entités ; désactivé tant
@@ -101,6 +102,10 @@ class Moteur:
         self.profondeur = profondeur  # voisins par mention : (lexicale, sémantique) ; budget de rappel
         if decision not in ("logistique", "arbres"):
             raise ValueError(f"décision inconnue : {decision}")
+        if selection not in ("grille", "f1"):
+            raise ValueError(f"sélection inconnue : {selection}")
+        # selection : « grille » (k, seuil et critère appris) ou « f1 » (F1 hiérarchique attendu, g appris).
+        self.selection = selection
         self.base = Base(dossier_base)
         self.sem = None
         if semantique:
@@ -112,10 +117,13 @@ class Moteur:
         self.poids = json.loads(Path(poids).read_text()) if poids else None
         if self.poids and decision == "arbres" and "arbres" not in self.poids:
             raise ValueError("décision « arbres » demandée, mais le fichier de poids n'en contient pas")
+        if self.poids and selection == "f1" and "f1_attendu" not in self.regle_de_decision:
+            raise ValueError("sélection « f1 » demandée, mais les poids n'ont pas de g appris (f1_attendu)")
         self.versions = {"moteur": version_git(),
                          "base": f"iconclass {self.base.manifeste.get('commit', '?')[:7]}"
                                  + (" + wikidata" if "wikidata" in self.base.manifeste else ""),
-                         "regles": "v2", "poids": (f"{self.poids['version']} {decision}" if self.poids else None),
+                         "regles": "v2", "poids": (f"{self.poids['version']} {decision}"
+                                                   + (" f1" if selection == "f1" else "") if self.poids else None),
                          "semantique": f"{self.sem.modele_nom} {self.sem.revision}" if self.sem else None}
         self.noms_listes = {r["nom"] for r in self.base.n.values() if r.get("nom")}
         self._par_attribut = defaultdict(set)
@@ -491,7 +499,12 @@ class Moteur:
             v = c["p_catalogue"] * (c["traits"]["prof"] + 1) if esperance else c["p_catalogue"]
             return (-v, c["code"])
         codes.sort(key=cle)
-        choisis = [c for c in codes if c["p_catalogue"] >= regle["seuil"]][: regle["k"]]
+        if self.selection == "f1":
+            choisis = self._choix_f1(codes, regle["f1_attendu"]["g"])
+            ordre = {c["code"]: i for i, c in enumerate(choisis)}
+            codes.sort(key=lambda c: (ordre.get(c["code"], len(ordre)),) + cle(c))
+        else:
+            choisis = [c for c in codes if c["p_catalogue"] >= regle["seuil"]][: regle["k"]]
         for c in choisis:
             c["statut"] = "retenu"
         retenus = {c["code"] for c in choisis}
@@ -499,6 +512,37 @@ class Moteur:
         for c in choisis:
             if c["code"] in impliques:
                 c["statut"], c["implicite"] = "candidat", True
+
+    def _noeuds(self, n: str) -> frozenset:
+        """Le code et ses ancêtres dans la hiérarchie, sans les gabarits « (...) » : les nœuds qu'il affirme."""
+        return frozenset([n] + [a for a in self.base.ancetres(n) if not self.base.n.get(a, {}).get("gabarit")])
+
+    def _choix_f1(self, codes, g: float) -> list[dict]:
+        """Sélection par F1 hiérarchique attendu : p_catalogue est la probabilité qu'un nœud soit dans la fermeture de
+        la vérité ; un nœud vaut le plus fort p de lui-même et de ses descendants candidats ; on ajoute le code (avec
+        ses ancêtres) qui fait le plus monter 2·Σp / (|P| + g), g = taille attendue de la vérité (apprise avec les
+        poids) ; on s'arrête quand plus rien ne la fait monter. Ni k ni seuil."""
+        noeuds_de = {c["code"]: self._noeuds(c["code"]) for c in codes}
+        q = {}
+        for c in codes:
+            for a in noeuds_de[c["code"]]:
+                q[a] = max(q.get(a, -1.0), c["p_catalogue"])
+        pris, noeuds, somme, val = [], set(), 0.0, 0.0
+        while True:
+            meilleur = None
+            for c in codes:
+                nouveaux = noeuds_de[c["code"]] - noeuds
+                if not nouveaux:
+                    continue
+                s2 = somme + sum(q[a] for a in nouveaux)
+                v2 = 2 * s2 / (len(noeuds) + len(nouveaux) + g)
+                if meilleur is None or v2 > meilleur[0] or (v2 == meilleur[0] and c["code"] < meilleur[1]["code"]):
+                    meilleur = (v2, c, nouveaux, s2)
+            if meilleur is None or meilleur[0] <= val:
+                return pris
+            val, c, nouveaux, somme = meilleur
+            noeuds |= nouveaux
+            pris.append(c)
 
     def _objets(self, desc, codes):
         par_entite = defaultdict(set)
