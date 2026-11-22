@@ -120,6 +120,9 @@ def cles(depot: Path) -> dict:
 
 
 def commit_du_depot(depot: Path) -> str:
+    """Commit du dépôt iconclass/data : par git, ou par un fichier COMMIT (copie téléchargée à un commit épinglé)."""
+    if (depot / "COMMIT").exists():
+        return (depot / "COMMIT").read_text().strip()
     try:
         return subprocess.run(["git", "-C", str(depot), "rev-parse", "HEAD"], capture_output=True, text=True,
                               check=True).stdout.strip()
