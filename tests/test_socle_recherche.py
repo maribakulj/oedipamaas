@@ -1,0 +1,83 @@
+"""Lecture d'une description en faits et recherche à plat (socle 1.0, pièce 4), sur un petit Iconclass et WordNet
+réel (WORDNET_PROLOG, WORDNET_DICT) ; sauté si WordNet n'est pas disponible."""
+import os
+import tempfile
+from pathlib import Path
+
+import pytest
+
+janus = pytest.importorskip("janus_swi")
+SOCLE = Path(__file__).resolve().parent.parent / "oedipamaas" / "socle"
+WNP, WND = os.environ.get("WORDNET_PROLOG"), os.environ.get("WORDNET_DICT")
+
+NOTATIONS = ("N 1\nC 11\n$\nN 11\nC 11H\n$\nN 11H\nC 11H(...)\n$\nN 11H(...)\nC 11H(JEROME)\n$\nN 11H(JEROME)\n$\n"
+             "N 2\nC 25\n$\nN 25\nC 25F\n$\nN 25F\nC 25F2\n$\nN 25F2\nC 25F23\n$\nN 25F23\nC 25F23(LION)\n$\n"
+             "N 25F23(LION)\n$\nN 3\nC 31\n$\nN 31\nC 31A\n$\nN 31A\nC 31A2\n$\nN 31A2\nC 31A23\n$\nN 31A23\n"
+             "C 31A231\n$\nN 31A231\n$\nN 4\nC 41\n$\nN 41\n$\n")
+LIBELLES = ("11H(...)|male saint (with NAME)\n"
+            "11H(JEROME)|Jerome, Father of the Church; possible attributes: book, cardinal's hat, lion, skull\n"
+            "25F23(LION)|beasts of prey, predatory animals: lion\n31A231|kneeling figure\n41|material aspects\n")
+MOTS = "25F23(LION)|lion\n31A231|kneeling\n11H(JEROME)|Jerome\n41|left\n"
+DESCRIPTION = {"subject": {"title": "Saint Jerome in the wilderness", "source": None, "type": "religious",
+                           "confidence": "high", "alternatives": []},
+               "persons": [{"who": "Saint Jerome", "recognised_by": "lion and skull", "confidence": "high"}],
+               "entities": [{"id": "e1", "type": "old man", "attributes": ["kneeling", "half naked"],
+                             "plane": "foreground", "position": "left", "box": [0.1, 0.2, 0.5, 0.9]},
+                            {"id": "e2", "type": "lioness", "attributes": [], "plane": "middle ground",
+                             "position": "right", "box": [0.6, 0.5, 0.9, 0.9]},
+                            {"id": "e3", "type": "feline", "attributes": [], "plane": "background",
+                             "position": "left", "box": [0.0, 0.0, 0.1, 0.1]}],
+               "relations": [["e1", "looks_at", "e2"]], "actions": ["praying"], "gestures_emotions": [],
+               "concepts": [], "roles": [], "setting": ["rocky wilderness"],
+               "texts": [{"transcription": "HIERONYMUS", "language": "Latin"}], "genre_function": [],
+               "period_style": None, "keywords": []}
+
+
+@pytest.mark.skipif(not (WNP and WND), reason="WORDNET_PROLOG et WORDNET_DICT non définis")
+def test_lecture_et_recherche():
+    from oedipamaas.socle import faits_description as fd
+    from oedipamaas.socle.compiler_iconclass import compiler
+    from oedipamaas.socle.compiler_wordnet import compiler as compiler_wn
+    with tempfile.TemporaryDirectory() as t:
+        d = Path(t) / "depot"
+        for p in ("txt/en", "kw/en"):
+            (d / p).mkdir(parents=True)
+        (d / "notations.txt").write_text(NOTATIONS, encoding="utf-8")
+        (d / "keys.txt").write_text("", encoding="utf-8")
+        (d / "txt/en/txt_en_0_1.txt").write_text(LIBELLES, encoding="utf-8")
+        (d / "kw/en/kw_en_0_1.txt").write_text(MOTS, encoding="utf-8")
+        (d / "COMMIT").write_text("essai\n")
+        base = Path(t) / "base"
+        compiler(d, base)
+        compiler_wn(WNP, WND, base)
+        janus.query_once(f"load_files('{base / 'iconclass.pl'}', [redefine_module(true)])")
+        janus.query_once(f"load_files('{base / 'wordnet.pl'}', [redefine_module(true)])")
+        for f in ("lexique.pl", "description.pl", "recherche.pl"):
+            janus.consult(str(SOCLE / f))
+        janus.query_once("morphologie:indexer")
+        janus.query_once("abolish_all_tables")
+        janus.query_once(f"lexique:construire_index('{base / 'lexique_index.pl'}')")
+        janus.query_once(f"load_files('{base / 'lexique_index.pl'}', [redefine_module(true)])")
+        janus.query_once("retractall(recherche:stats(_, _)), retractall(recherche:longueur(_, _))")
+
+        fd.charger(janus, DESCRIPTION)
+        textes = {x["T"] for x in janus.query("description:mention(_, _, _, T)")}
+        assert "left" not in textes and "foreground" not in textes and "Latin" not in textes   # mise en page
+        assert "kneeling" in textes and "HIERONYMUS" in textes
+        assert janus.query_once("description:entite(e2, lioness, 'middle ground', right, B)")["B"] == [0.6, 0.5, 0.9,
+                                                                                                       0.9]
+
+        def liens(n):
+            return {x["L"] for x in janus.query("recherche:candidat(N, _, p(_, _, _L, _)), term_string(_L, L)",
+                                                {"N": n})}
+        assert "egal" in liens("31A231")                                   # « kneeling », mot clé et lemme
+        assert "egal" in liens("11H(JEROME)")                              # « Jerome »
+        assert "wordnet(hyperonyme,1,lioness)" in liens("25F23(LION)")     # la lionne est un lion
+        assert not any("feline" in x for x in liens("25F23(LION)"))         # jamais par l'hyponyme
+        # « left » est une position, pas une mention : aucune correspondance directe (WordNet peut y mener depuis
+        # « looks_at », par polysémie : c'est un lien faible que la décision pèse)
+        assert "egal" not in liens("41")
+        r = janus.query_once("recherche:classement(10, _L), findall(_N, member(c(_N, _, _), _L), X), "
+                             "recherche:ancetres_des_premiers(_L, 10, A)")
+        assert {"25F23(LION)", "31A231", "11H(JEROME)"} <= set(r["X"])
+        assert {"11H(...)", "11H", "25F2", "31A23"} <= set(r["A"])

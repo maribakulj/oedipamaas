@@ -23,6 +23,7 @@
                       indice_visuel/2,        % ?N, ?Proposition      usually, sometimes, often
                       consigne/2,             % ?N, ?Consigne         secondaire, preferer(M), residuel
                       mots_pleins/2,          % +Texte, -Mots
+                      mot_vide/1,             % ?Mot                  mots vides (faits de langue, liste fixe)
                       mots_du_libelle/2,      % ?N, -Mots             mots pleins de tout le libellé anglais
                       mots_propres/2,         % ?N, -Mots             mots pleins absents du libellé du parent
                       mots_distinctifs/2      % ?N, -Mots             mots propres absents des libellés des sœurs
@@ -121,7 +122,8 @@ consigne(N, residuel) :-
 mot_vide(M) :- memberchk(M, [the, and, for, with, from, into, onto, upon, their, they, them, this, that, which, other,
                              others, some, being, been, have, having, also, such, when, where, while, about, over,
                              under, after, before, between, without, within, against, through, there, here, these,
-                             those, his, her, its, who, has, was, are, not, but, him, she, one, etc]).
+                             those, his, her, its, who, has, was, are, not, but, him, she, one, etc,
+                             of, in, on, at, to, is, an, as, by, or, be, it, a, he, we, us, if, so, no, do]).
 
 mots_pleins(Texte, Mots) :-
     downcase_atom(Texte, T),
