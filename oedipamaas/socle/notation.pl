@@ -20,6 +20,7 @@
 */
 :- module(notation, [ analyser/2,            % +Atome, -Notation (liste de niveaux ou composee(Parties))
                       ecrire/2,              % +Notation, -Atome (forme machine)
+                      ecrire_niveaux/2,      % +Niveaux, -Atome (une suite de niveaux, par exemple un suffixe de clé)
                       normaliser/2,          % +Atome, -Atome (forme machine)
                       ancetre_syntaxique/2,  % +Atome, ?Ancetre (préfixes, la notation comprise)
                       parent_syntaxique/2,   % +Atome, -Parent (le préfixe d'un niveau de moins)
@@ -159,6 +160,9 @@ nettoyer(Codes, Atome) :-
 ecrire_simple(Niveaux, Atome) :-
     maplist(texte_niveau, Niveaux, Textes),
     atomic_list_concat(Textes, Atome).
+
+ecrire_niveaux(Niveaux, Atome) :-
+    ecrire_simple(Niveaux, Atome).
 
 texte_niveau(chiffre(D), T) :- atom_number(T, D).
 texte_niveau(lettre(L), L).
