@@ -26,7 +26,7 @@ Référence : `CAHIER_DES_CHARGES.md`. Branche de travail : `claude/dazzling-arc
       une approbation.)
 - [x] **J0.1 Licence.** `LICENSE` (MIT), champ `license` de `pyproject.toml`, fichiers `.pl` du socle dans
       `package-data`.
-- [ ] **J0.2 Une seule hiérarchie.** `decision:plus_specifiques` sur `arbre:ancetre` ; `preuve()` de
+- [x] **J0.2 Une seule hiérarchie.** `decision:plus_specifiques` sur `arbre:ancetre` ; `preuve()` de
       `socle/moteur.py` calcule les ancêtres par Prolog, pas par préfixe de chaîne ; tests sur `11H(...)` /
       `11H(JEROME)` et une lettre doublée.
 - [ ] **J0.3 Noms libres.** Une notation `BASE(NOM)` construite par `noms.pl` a pour parent son gabarit `BASE(...)`
@@ -72,3 +72,4 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - 2026-11-23 — création du suivi ; boucle lancée sur J0.
 - 2026-11-23 — E1 : SWI-Prolog 11.0.0 (PPA), Janus, Iconclass `0595358`, WordNet 3.0 ; 37 tests passent avec les données réelles ; base compilée (index dérivés en cours). Script d'installation cloud à enregistrer au réveil (approbation).
 - 2026-11-23 — J0.1 : licence MIT, sources Prolog du socle empaquetées.
+- 2026-11-23 — J0.2 : decision:plus_specifiques et preuve() sur arbre:ancetre ; test du gabarit 11H(...) ancêtre de 11H(JEROME) ; 37 tests passent.

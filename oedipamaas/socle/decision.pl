@@ -5,14 +5,17 @@
     de preuve du candidat (paires Nom-Valeur ; un trait absent vaut 0) : la base, plus la feuille atteinte dans chaque
     arbre (à gauche si la valeur est ≤ au seuil), puis la sigmoïde.
     retenus(Candidats, Codes) : sélection par le réglage appris (les k premiers de p ≥ seuil, classés par p ou par
-    l'espérance p × (profondeur + 1)), puis les plus spécifiques (un ancêtre d'un code retenu n'est pas répété), sans
-    la division 86 (comme la mesure).
+    l'espérance p × (profondeur + 1)), puis les plus spécifiques (un ancêtre d'un code retenu n'est pas répété, au
+    sens de l'arbre d'Iconclass : arbre:ancetre/2, avec gabarits, noms et lettres doublées), sans la division 86
+    (comme la mesure).
 */
 :- module(decision, [ p_catalogue/2,  % +Traits, -P
                       p_image/2,      % +Liste de c(Notation, Traits), -Liste de Notation-P (un ou deux étages)
                       prefixes/2,     % +Notation, -Prefixes (par jetons, comme la mesure ; la notation comprise)
                       retenus/2       % +Liste de c(Notation, P, Traits), -Codes
                     ]).
+
+:- use_module(arbre).
 
 % --- Deux étages ----------------------------------------------------------------------------------------------------
 
@@ -143,6 +146,6 @@ cle_tri(esperance, P, Traits, V) :- !, valeur(Traits, prof, Prof), V is P * (Pro
 cle_tri(_, P, _, P).
 
 plus_specifiques(Ns, Codes) :-
-    include([N]>>( \+ ( member(M, Ns), M \== N, notation:ancetre_syntaxique(M, N) ) ), Ns, Codes).
+    include([N]>>( \+ ( member(M, Ns), M \== N, arbre:ancetre(M, N) ) ), Ns, Codes).
 
 division_86(N) :- sub_atom(N, 0, 2, _, '86').
