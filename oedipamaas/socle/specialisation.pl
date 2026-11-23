@@ -14,6 +14,8 @@
                             decrire/0,              % les formes de la description courante (decrit/1, decrit_dans/2)
                             unite/2,                % +Mention, -Unite
                             part_decrite/2,         % +N, -Part
+                            pleine_dans/2,          % ?N, ?Unite (l'unité décrit chacun des mots propres de N)
+                            explications/2,         % +Ns, -Max (par unité, les plus profondes des notations pleines)
                             descente/2,             % +Depart, -Atteinte (enfants les mieux soutenus, en chaîne)
                             specialisees/2          % +Departs, -Atteintes (toutes, sans doublon)
                           ]).
@@ -76,6 +78,25 @@ part_decrite(N, Part) :-
     propres_index:nb_propres(N, K),
     aggregate_all(count, distinct(I, ( propres_index:propre(N, I, F), decrit(F) )), D),
     Part is D / K.
+
+% --- Explications par unité -----------------------------------------------------------------------------------------
+
+% pleine_dans(N, U) : une même unité de la description (une entité, une entrée de champ, le sujet) décrit chacun des
+% mots propres de N — la notation explique ce que dit cette unité, sans emprunter un mot à une autre chose décrite
+pleine_dans(N, U) :-
+    propres_index:nb_propres(N, K),
+    distinct(U, ( propres_index:propre(N, 1, F1), decrit_dans(F1, U) )),
+    forall(between(2, K, I), ( propres_index:propre(N, I, F), decrit_dans(F, U) -> true )).
+
+% explications(+Ns, -Max) : parmi les notations Ns, celles qui sont pleines dans une unité sans qu'aucun de leurs
+% descendants le soit aussi dans la même unité — pour chaque chose décrite, les notations les plus précises qui
+% l'expliquent entièrement (« river » : la rivière du paysage, pas seulement « paysages ») ; aucun classement, aucun
+% budget : une notation entre parce qu'une unité la prouve
+explications(Ns, Max) :-
+    findall(U-N, ( member(N, Ns), pleine_dans(N, U) ), P0),
+    sort(P0, P),
+    findall(N, ( member(U-N, P), \+ ( member(U-M, P), M \== N, arbre:ancetre(M, N) ) ), Ms),
+    sort(Ms, Max).
 
 % --- Descente -------------------------------------------------------------------------------------------------------
 

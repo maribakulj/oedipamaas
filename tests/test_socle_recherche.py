@@ -93,6 +93,16 @@ def test_lecture_et_recherche():
         assert janus.query_once("specialisation:part_decrite('31A231', P)")["P"] == 0.5
         s = janus.query_once("specialisation:specialisees(['31A23', '25F23'], S)")["S"]
         assert set(s) == {"31A231", "25F23(LION)"}, s
+        # explications par unité : 31A231 n'est décrit qu'à moitié (« figure » manque) ; une entrée « kneeling figure »
+        # le décrit entièrement, dans une seule unité (le lion, dont aucune unité ne dit « predatory », reste dehors)
+        assert janus.query_once("specialisation:pleine_dans('31A231', _)")["truth"] is False
+        fd.charger(janus, dict(DESCRIPTION, keywords=["kneeling figure"]))
+        janus.query_once("specialisation:decrire")
+        assert janus.query_once("specialisation:pleine_dans('31A231', U)")["U"] == "keywords[0]"
+        x = janus.query_once("specialisation:explications(['31A231', '25F23(LION)', '31A23'], X)")["X"]
+        assert x == ["31A231"], x
+        fd.charger(janus, DESCRIPTION)
+        janus.query_once("specialisation:decrire")
 
         # preuve : chaque appui cite le chemin JSON et le texte de la mention, la forme, le lien et l'entrée
         import json
@@ -115,9 +125,14 @@ def test_lecture_et_recherche():
         t = dict(t)
         # appui direct « lion » dans persons.recognised_by ; la lionne (entité) passe par WordNet
         assert t["wn_hyperonyme"] == 1 and t["champ_persons"] >= 1 and t["nom"] == 1 and t["prof"] == 6, t
+        assert "explication" not in t, t                                   # aucune unité ne le décrit entièrement
         a = dict(janus.query_once("traits:candidats_traits(10, _L), member(['25F2', _, _T], _L), "
                                   "findall([_K, _V], member(_K-_V, _T), X)")["X"])
         assert a.get("ancetre_seul") == 1 and a.get("enfants_candidats", 0) >= 1, a
+        fd.charger(janus, dict(DESCRIPTION, keywords=["kneeling figure"]))
+        k = dict(janus.query_once("traits:candidats_traits(10, _L), member(['31A231', _, _T], _L), "
+                                  "findall([_K, _V], member(_K-_V, _T), X)")["X"])
+        assert k["explication"] == 1 and k["unites_pleines"] == 1, k
 
         # « half-length » se lit aussi « half », « length »
         assert janus.query_once("recherche:forme_mention(_, length)")["truth"] is False  # pas encore décrit
