@@ -32,7 +32,7 @@ Référence : `CAHIER_DES_CHARGES.md`. Branche de travail : `claude/dazzling-arc
 - [x] **J0.3 Noms libres.** Une notation `BASE(NOM)` construite par `noms.pl` a pour parent son gabarit `BASE(...)`
       (ou la base quand le gabarit n'est pas une notation) ; `arbre:valide/1`, `ancetre/2`, `profondeur_arbre/2` la
       traitent ; tests.
-- [ ] **J0.4 Division 86.** Exclue avant la sélection des K premiers dans `decision:retenus/2` ; test mis à jour.
+- [x] **J0.4 Division 86.** Exclue avant la sélection des K premiers dans `decision:retenus/2` ; test mis à jour.
 - [ ] **J0.5 `f1_attendu`.** Brancher la sélection par espérance du F1 hiérarchique (référence : `_choix_f1` de la
       0.2, `moteur.py`) si le réglage exporté l'exige, sinon retirer le fait du compilateur ; documenter le choix.
 - [ ] **J0.6 Clés.** `cles:appuis_de/3` accepte les appuis de toute nature admise (pont WordNet, spécialisation), pas
@@ -74,3 +74,4 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - 2026-11-23 — J0.1 : licence MIT, sources Prolog du socle empaquetées.
 - 2026-11-23 — J0.2 : decision:plus_specifiques et preuve() sur arbre:ancetre ; test du gabarit 11H(...) ancêtre de 11H(JEROME) ; 37 tests passent.
 - 2026-11-23 — J0.3 : nom libre enfant de son gabarit (arbre:gabarit_de/2), valide, ancêtres et profondeur ; clé d'un nom libre selon la famille du gabarit ; vérifié sur la base réelle (25F711(BUTTERFLY) → 25F711(...) → … → 2) ; 37 tests passent.
+- 2026-11-23 — J0.4 : division 86 écartée avant la sélection des k premiers ; test de décision mis à jour (le défaut y était entériné).

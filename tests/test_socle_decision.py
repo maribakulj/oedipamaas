@@ -1,7 +1,7 @@
 """Décision compilée en Prolog (socle 1.0, § 9) : une petite forêt écrite à la main, au format du noyau de
 calibration ; les probabilités de Prolog égalent la relecture Python (règle du noyau : à gauche si ≤ seuil), et la
-sélection suit le réglage (k, seuil, critère), puis garde les plus spécifiques (au sens de l'arbre d'Iconclass, sur un
-petit Iconclass factice) et retire la division 86."""
+sélection écarte la division 86, suit le réglage (k, seuil, critère), puis garde les plus spécifiques (au sens de l'arbre d'Iconclass, sur un
+petit Iconclass factice)."""
 import json
 import math
 import tempfile
@@ -72,12 +72,12 @@ def test_decision(petit_iconclass):
             traits = "[" + ",".join(f"{k}-{v}" for k, v in x.items()) + "]"
             p = janus.query_once("atom_to_term(A, _T, _), decision:p_catalogue(_T, P)", {"A": traits})["P"]
             assert abs(p - relire(x)) < 1e-12, (x, p, relire(x))
-        # sélection : seuil 0,2 (11H écarté), puis les k = 2 premières espérances p × (prof + 1) : 25F23 (4,2) et
-        # 86A (3,8) ; 31A (3,6) et 25F2 (3,5) ne passent pas ; la division 86 est retirée à la fin, comme dans la mesure
+        # sélection : seuil 0,2 (11H écarté), division 86 écartée avant la sélection (86A ne prend pas de place),
+        # puis les k = 2 premières espérances p × (prof + 1) : 25F23 (4,2) et 31A (3,6) ; 25F2 (3,5) ne passe pas
         cands = ("[c('25F23', 0.6, [prof-6]), c('25F2', 0.7, [prof-4]), c('31A', 0.9, [prof-3]), "
                  "c('86A', 0.95, [prof-3]), c('11H', 0.1, [prof-3])]")
         r = janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)", {"A": cands})["X"]
-        assert r == ["25F23"], r
+        assert r == ["25F23", "31A"], r
         # les plus spécifiques : un ancêtre d'un code retenu n'est pas répété
         cands2 = "[c('25F23', 0.9, [prof-6]), c('25F2', 0.95, [prof-5])]"
         assert janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)", {"A": cands2})["X"] == ["25F23"]

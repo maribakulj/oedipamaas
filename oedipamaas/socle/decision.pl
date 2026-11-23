@@ -5,9 +5,9 @@
     de preuve du candidat (paires Nom-Valeur ; un trait absent vaut 0) : la base, plus la feuille atteinte dans chaque
     arbre (à gauche si la valeur est ≤ au seuil), puis la sigmoïde.
     retenus(Candidats, Codes) : sélection par le réglage appris (les k premiers de p ≥ seuil, classés par p ou par
-    l'espérance p × (profondeur + 1)), puis les plus spécifiques (un ancêtre d'un code retenu n'est pas répété, au
-    sens de l'arbre d'Iconclass : arbre:ancetre/2, avec gabarits, noms et lettres doublées), sans la division 86
-    (comme la mesure).
+    l'espérance p × (profondeur + 1)) hors de la division 86, puis les plus spécifiques (un ancêtre d'un code retenu n'est pas répété, au
+    sens de l'arbre d'Iconclass : arbre:ancetre/2, avec gabarits, noms et lettres doublées). La division 86 est
+    écartée comme dans la mesure, avant la sélection, pour ne pas y occuper de place.
 */
 :- module(decision, [ p_catalogue/2,  % +Traits, -P
                       p_image/2,      % +Liste de c(Notation, Traits), -Liste de Notation-P (un ou deux étages)
@@ -135,12 +135,13 @@ arbre(A) :- distinct(A, ( decision_poids:noeud(A, 0, _, _, _, _) ; decision_poid
 
 retenus(Candidats, Codes) :-
     decision_poids:reglage(K, Seuil, Critere),
-    findall(V-N, ( member(c(N, P, Traits), Candidats), P >= Seuil, cle_tri(Critere, P, Traits, V) ), Vs),
+    % la division 86 (comme la mesure) est écartée avant de prendre les k premiers : elle n'y prend pas de place
+    findall(V-N, ( member(c(N, P, Traits), Candidats), \+ division_86(N), P >= Seuil,
+                   cle_tri(Critere, P, Traits, V) ), Vs),
     sort(1, @>=, Vs, Tries),
     length(Tries, L), K1 is min(K, L), length(Premiers, K1), append(Premiers, _, Tries),
     pairs_values(Premiers, Ns),
-    plus_specifiques(Ns, Codes0),
-    exclude(division_86, Codes0, Codes).
+    plus_specifiques(Ns, Codes).
 
 cle_tri(esperance, P, Traits, V) :- !, valeur(Traits, prof, Prof), V is P * (Prof + 1).
 cle_tri(_, P, _, P).
