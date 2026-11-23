@@ -94,9 +94,11 @@ elements(N, Textes) :-
     findall(E, ( member(P, Props), nommante(P), corps_nommant(P, C0), hors_parentheses(C0, C),
                  decouper(C, ', ', Es), member(E, Es), E \== '' ), Textes).
 
-% precisions(?N, -Textes) : les éléments des parenthèses de la proposition principale, séparés par « , », « and » et
-% « or » (« historical persons (portraits and scenes from the life) » : « portraits », « scenes from the life »)
+% precisions(?N, -Textes) : les éléments des parenthèses de la proposition principale d'un libellé simple (sans
+% « - »), séparés par « , », « and » et « or » (« historical persons (portraits and scenes from the life) » :
+% « portraits », « scenes from the life ») ; un libellé fabriqué reprend celles de sa base, qui ne le distinguent pas
 precisions(N, Textes) :-
+    \+ partie(N, 2, _),
     principal(N, P),
     corps_nommant(P, C),
     findall(E, ( entre_parentheses(C, X), decouper(X, ', ', Xs), member(X1, Xs),

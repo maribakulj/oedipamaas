@@ -66,7 +66,10 @@ formes(M, F) :-
 % tout entier dans le parent ne distingue rien ; « crown » sous « insignia… (crown, diadem…) » reste « crown ») ; si
 % aucun élément n'a de mot propre, la distinction est dans les parenthèses (« historical persons
 % (portraits and scenes from the life) », sous « historical events and situations; historical persons ») et leurs
-% éléments en tiennent lieu ; à défaut (libellé fabriqué « … - … », sans élément propre), les mots propres, ensemble.
+% éléments en tiennent lieu ; à défaut, les mots propres, ensemble — et pour un libellé fabriqué (« … - BB - woman »,
+% une base et le sens d'une lettre doublée ou d'un gabarit), avec chacune des alternatives de sa base : « woman » ne
+% suffit pas à dire 61BB, il faut aussi le portrait.
+:- table alternatives/2.
 alternatives(N, Alts) :-
     (   catch(notation:analyser(N, Niveaux), _, fail), Niveaux \= composee(_), last(Niveaux, nom(T))
     ->  lexique:forme_de(T, Nom), Alts = [[Nom]]
@@ -76,7 +79,10 @@ alternatives(N, Alts) :-
         ;   libelles:precisions(N, Ps), propres_des(Ps, MP, A2), A2 \== []
         ->  Alts = A2
         ;   libelles:mots_propres(N, Ms), Ms \== []
-        ->  Alts = [Ms]
+        ->  (   libelles:partie(N, 2, _), arbre:parent(N, P), alternatives(P, AP), AP \== []
+            ->  findall(A, ( member(A0, AP), ord_union(A0, Ms, A) ), A3), sort(A3, Alts)
+            ;   Alts = [Ms]
+            )
         ;   Alts = []
         )
     ).

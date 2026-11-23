@@ -78,6 +78,7 @@ def test_elements(petit):
     assert un("libelles:elements('11H(ANDREW)1', X)") is None             # libellé fabriqué : pas d'éléments
     assert un("libelles:precisions('61B', X)") == ["portraits", "scenes from the life"]
     assert un("libelles:precisions('41C326', X)") == ["used as drinking-vessel"]
+    assert un("libelles:precisions('11H(ANDREW)2', X)") is None            # fabriqué : celles de la base
     assert un("libelles:mots_hors_parentheses('61B', X)") == ["historical", "persons"]
     assert un("libelles:principal('11F73', X)") == "specific aspects of Mary ~ Madonna-representations"
     assert un("libelles:indice_visuel('92B1217', X)") == "she is usually lying in bed receiving a shower of gold"
