@@ -26,7 +26,7 @@
 
 :- dynamic rang_bm25/2, bm25/3, rang_part/2, rang_sujet/2, bm25_sujet/2, spec/1, cle_prop/1, cand/1, expl/1,
            expl_pont/1, unite_expl/2, nb_unites_desc/1, nom_gab/2, expl_cadre/1, cadree/2, couvre/3, cadree_tete/2,
-           expl_tete/1.
+           expl_tete/1, choisie/3.
 
 % les unités où N est pleine (mot pour mot ou par le pont WordNet), une fois par notation et par description
 % (une notation nommée dans un gabarit est pleine là où son nom est décrit)
@@ -48,7 +48,7 @@ contexte(Budget) :-
     maplist(retractall, [rang_bm25(_, _), bm25(_, _, _), rang_part(_, _), rang_sujet(_, _), bm25_sujet(_, _), spec(_),
                          cle_prop(_), cand(_), expl(_), expl_pont(_), unite_expl(_, _), nb_unites_desc(_),
                          nom_gab(_, _), expl_cadre(_), cadree(_, _), couvre(_, _, _), cadree_tete(_, _),
-                         expl_tete(_)]),
+                         expl_tete(_), choisie(_, _, _)]),
     recherche:classement(1000000, L),
     forall(nth1(R, L, c(N, cle(D, W), _)), ( assertz(rang_bm25(N, R)), assertz(bm25(N, D, W)) )),
     % troisième ordre : BM25 sur les seules mentions du sujet (titre, source, alternatives)
@@ -84,6 +84,7 @@ contexte(Budget) :-
     % ce que chaque notation cadrée rend compte de son unité : la part des mots de l'unité qui sont des entrées de la
     % notation (mots du libellé, mots clés, attributs) ou des mots de ses alternatives ; la mieux couvrante de l'unité
     forall(member(U-N, Pc), ( couverture(U, N, C), assertz(couvre(U, N, C)) )),
+    explication_econome,
     % la structure de la description : les unités où chaque explication est pleine, le nombre d'unités décrites
     append(Ex, ExP, Expl0), sort(Expl0, Expl),
     forall(( member(N, Expl), unites_pleines_de(N, Us), member(U, Us) ), assertz(unite_expl(U, N))),
@@ -150,6 +151,42 @@ trait(N, unites_tetes, C) :- aggregate_all(count, cadree_tete(_, N), C).
 trait(N, couverture_max, V) :- ( aggregate_all(max(C), couvre(_, N, C), V0) -> V = V0 ; V = 0 ).
 trait(N, meilleure_couverture, V) :-
     (   couvre(U, N, C), C > 0, \+ ( couvre(U, M, C2), M \== N, C2 > C ) -> V = 1 ; V = 0 ).
+% sa place dans l'explication la plus économe de la description, et ce qu'elle y apportait
+trait(N, rang_econome, V) :- ( choisie(N, R, _) -> V is 1 / R ; V = 0 ).
+trait(N, apport_econome, V) :- ( choisie(N, _, G) -> V = G ; V = 0 ).
+
+% explication_econome : l'explication de la description par le moins de notations — choisies une à une, chacune
+% celle qui rend compte du plus de ce qui reste à expliquer (somme, sur ses unités cadrées, de ce qu'elle couvre de
+% l'unité au-delà de ce qu'en couvre déjà la mieux couvrante des notations choisies ; ex aequo, la plus précise),
+% jusqu'à ce que plus rien n'apporte. Une notation qui redit ce qu'une autre explique déjà n'y entre pas.
+explication_econome :-
+    findall(N-UCs, ( distinct(N, couvre(_, N, _)), findall(U-C, couvre(U, N, C), UCs) ), Ns),
+    empty_assoc(Couv),
+    choisir_econome(Ns, Couv, 1).
+
+choisir_econome(Ns, Couv, R) :-
+    findall(G-D-N, ( member(N-UCs, Ns), apport(UCs, Couv, G), G > 0, arbre:profondeur_arbre(N, D) ), Gs),
+    (   Gs == [] -> true
+    ;   max_member(G-_-N, Gs),
+        assertz(choisie(N, R, G)),
+        memberchk(N-UCs, Ns),
+        foldl(couvrir, UCs, Couv, Couv1),
+        R1 is R + 1,
+        selectchk(N-_, Ns, Ns1),
+        choisir_econome(Ns1, Couv1, R1)
+    ).
+
+apport(UCs, Couv, G) :- apport(UCs, Couv, 0, G).
+apport([], _, G, G).
+apport([U-C|UCs], Couv, G0, G) :-
+    ( get_assoc(U, Couv, K) -> true ; K = 0 ),
+    G1 is G0 + max(0, C - K),
+    apport(UCs, Couv, G1, G).
+
+couvrir(U-C, Couv0, Couv) :-
+    (   get_assoc(U, Couv0, K), K >= C -> Couv = Couv0
+    ;   put_assoc(U, Couv0, C, Couv)
+    ).
 
 cadree_par_tete(U-N) :- cadres:cadre_prouve(tetes, N, U).
 

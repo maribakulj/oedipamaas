@@ -208,6 +208,9 @@ def test_lecture_et_recherche():
         jr = dict(janus.query_once("traits:candidats_traits(10, _L), member(['11H(JEROME)', _, _T], _L), "
                                    "findall([_K, _V], member(_K-_V, _T), X)")["X"])
         assert jr["meilleure_couverture"] == 1 and jr["couverture_max"] >= 0.75, jr
+        # explication économe : Jérôme, qui rend compte du plus, est choisi le premier ; le lion n'y vient pas avant lui
+        assert jr["rang_econome"] == 1.0 and jr["apport_econome"] > 0, jr
+        assert t.get("rang_econome", 0) < 1, t
         # structure : pleine dans une personne, une entité et une relation, 3 des 9 unités décrites ; une concurrente,
         # Jérôme, plein dans la même personne (« Saint Jerome… lion and skull ») ; la plus précise de ses unités
         assert t["plein_persons"] == 1 and t["plein_entities"] == 1 and "plein_subject" not in t, t
