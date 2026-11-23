@@ -108,6 +108,14 @@ def test_lecture_et_recherche():
         assert janus.query_once("specialisation:pleine_dans('31A231', U)")["U"] == "keywords[0]"
         x = janus.query_once("specialisation:explications(['31A231', '25F23(LION)', '31A23'], X)")["X"]
         assert x == ["25F23(LION)", "31A231"], x
+        # par le pont WordNet : la lionne dit « lion » (hyperonyme) et rend le lion nommé plein dans son entité ; le
+        # félin ne le dit pas (ce serait l'hyponyme) ; « HIERONYMUS » dit « jerome » (synonyme)
+        u = {x["U"] for x in janus.query("specialisation:pleine_large_dans('25F23(LION)', U)")}
+        assert u == {"persons[0]", "entities[1]"}, u
+        assert janus.query_once("specialisation:decrit_pont(jerome, 'texts[0]')")["truth"]
+        assert not janus.query_once("specialisation:decrit_pont(lion, 'entities[2]')")["truth"]
+        x = janus.query_once("specialisation:explications_pont(['31A231', '25F23(LION)', '31A23', '25F23'], X)")["X"]
+        assert x == ["25F23(LION)", "31A231"], x
         fd.charger(janus, DESCRIPTION)
         janus.query_once("specialisation:decrire")
 
@@ -133,6 +141,7 @@ def test_lecture_et_recherche():
         # appui direct « lion » dans persons.recognised_by ; la lionne (entité) passe par WordNet
         assert t["wn_hyperonyme"] == 1 and t["champ_persons"] >= 1 and t["nom"] == 1 and t["prof"] == 6, t
         assert t["explication"] == 1 and t["unites_pleines"] == 1, t       # « lion and skull » le dit entièrement
+        assert t["explication_pont"] == 1 and t["unites_pleines_pont"] == 2, t     # et la lionne, par le pont
         a = dict(janus.query_once("traits:candidats_traits(10, _L), member(['25F2', _, _T], _L), "
                                   "findall([_K, _V], member(_K-_V, _T), X)")["X"])
         assert a.get("ancetre_seul") == 1 and a.get("enfants_candidats", 0) >= 1, a

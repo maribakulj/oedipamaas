@@ -16,6 +16,7 @@
 :- module(lexique, [ construire_index/1,  % +Fichier
                      forme_de/2,          % +Texte, -Forme
                      voisin/4,            % +Forme, -Autre, -Relation, -Pas
+                     voisin_sens_dominant/4, % +Forme, -Autre, -Relation, -Pas (sens dominants de la forme)
                      synset_general/3,    % +Synset, -Profondeur, -Descendants
                      generalite_forme/3   % +Forme, -ProfondeurMin, -DescendantsMax
                    ]).
@@ -85,6 +86,23 @@ voisin(F, G, Relation, Pas) :-
     voisin_synset(S, S2, Relation, Pas),
     mots_du_synset(S2, G),
     G \== F.
+
+% le même pont, depuis les seuls sens dominants de la forme : dans chacune de ses catégories, les sens au plus grand
+% nombre d'occurrences annotées de WordNet (tous, à égalité, quand aucun n'est attesté) — « man » l'homme adulte
+% (749 occurrences), pas la pièce d'échecs ni le valet (0) ; « unidentified », jamais annoté, garde ses deux sens
+voisin_sens_dominant(F, G, Relation, Pas) :-
+    sens_dominant(F, S),
+    voisin_synset(S, S2, Relation, Pas),
+    mots_du_synset(S2, G),
+    G \== F.
+
+:- table sens_dominant/2.
+sens_dominant(F, S) :-
+    morphologie:forme_synset(F, T, S),
+    occurrences_sens(F, S, C),
+    aggregate_all(max(C2), ( morphologie:forme_synset(F, T, S2), occurrences_sens(F, S2, C2) ), C).
+
+occurrences_sens(F, S, C) :- once(( wordnet:s(S, _, Mot, _, _, C), downcase_atom(Mot, F) )).
 
 voisin_synset(S, S, synonyme, 0).
 voisin_synset(S, S2, hyperonyme, 1) :- monte(S, S2).

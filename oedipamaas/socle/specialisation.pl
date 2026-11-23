@@ -17,7 +17,9 @@
                             unite/2,                % +Mention, -Unite
                             part_decrite/2,         % +N, -Part
                             pleine_dans/2,          % ?N, ?Unite (l'unité décrit chacun des mots propres de N)
+                            pleine_large_dans/2,    % ?N, ?Unite (de même, chaque mot tel quel ou par le pont WordNet)
                             explications/2,         % +Ns, -Max (par unité, les plus profondes des notations pleines)
+                            explications_pont/2,    % +Ns, -Max (de même, pleines par le pont WordNet compris)
                             descente/2,             % +Depart, -Atteinte (enfants les mieux soutenus, en chaîne)
                             specialisees/2          % +Departs, -Atteintes (toutes, sans doublon)
                           ]).
@@ -28,7 +30,7 @@
 :- use_module(arbre).
 :- use_module(recherche).
 
-:- dynamic decrit/1, decrit_dans/2.
+:- dynamic decrit/1, decrit_dans/2, decrit_pont/2.
 
 % --- Index des mots propres ----------------------------------------------------------------------------------------
 
@@ -114,11 +116,27 @@ construire_alternatives(Fichier) :-
 % decrit(F) : la forme est dans la description ; decrit_dans(F, Unite) : dans quelle unité (une entité
 % « entities[3] », une entrée de champ « keywords[12] », le sujet « subject ») — pour les preuves qui doivent porter
 % sur la même chose (une clé « à genoux » sur la figure qui est à genoux)
+% decrit_pont(G, Unite) : G, mot d'une alternative, n'est pas dans l'unité mais l'une de ses formes y mène, depuis ses
+% sens dominants (lexique:voisin_sens_dominant/4), par un lien que la recherche admet (recherche:lien_admis/1 : synonyme,
+% hyperonyme à deux pas au plus, dérivé, pertainym, adjectif similaire, « partie de ») — « unidentified » dit
+% « anonymous », « man » dit « person », « portrait » dit « portray » ; jamais l'hyponyme : « bird » ne dit pas
+% « eagle »
 decrire :-
     retractall(decrit(_)),
     retractall(decrit_dans(_, _)),
+    retractall(decrit_pont(_, _)),
     forall(distinct(F-U, ( recherche:forme_mention(M, F), unite(M, U) )), assertz(decrit_dans(F, U))),
-    forall(distinct(F, decrit_dans(F, _)), assertz(decrit(F))).
+    forall(distinct(F, decrit_dans(F, _)), assertz(decrit(F))),
+    (   current_predicate(alternatives_index:alt/4)
+    ->  forall(distinct(G-U, ( decrit(F), morphologie:forme_connue(F, _), lexique:voisin_sens_dominant(F, G, R, _),
+                               recherche:lien_admis(R), G \== F, once(alternatives_index:alt(_, _, _, G)),
+                               decrit_dans(F, U), \+ decrit_dans(G, U) )),
+               assertz(decrit_pont(G, U)))
+    ;   true
+    ).
+
+dite_dans(F, U) :- decrit_dans(F, U).
+dite_dans(F, U) :- decrit_pont(F, U).
 
 unite(M, U) :-
     description:mention(M, _, Chemin, _),
@@ -142,14 +160,28 @@ pleine_dans(N, U) :-
                   alternatives_index:alt(N, J, 1, F1), decrit_dans(F1, U),
                   forall(between(2, K, I), ( alternatives_index:alt(N, J, I, F), decrit_dans(F, U) -> true )) )).
 
+% pleine_large_dans(N, U) : de même, chaque mot de l'alternative dit dans l'unité tel quel ou par le pont WordNet
+% (decrit_pont/2) — « unidentified man, sitter of the portrait » dit 61B11 « anonymous historical person portrayed »
+% (anonymous, person, portrayed) sans en écrire un seul mot ; une preuve plus faible, gardée à part
+pleine_large_dans(N, U) :-
+    distinct(U, ( alternatives_index:nb_alt(N, J, K),
+                  alternatives_index:alt(N, J, 1, F1), dite_dans(F1, U),
+                  forall(between(2, K, I), ( alternatives_index:alt(N, J, I, F), dite_dans(F, U) -> true )) )).
+
 % explications(+Ns, -Max) : parmi les notations Ns, celles qui sont pleines dans une unité sans qu'aucun de leurs
 % descendants le soit aussi dans la même unité — pour chaque chose décrite, les notations les plus précises qui
 % l'expliquent entièrement (« river » : la rivière du paysage, pas seulement « paysages ») ; aucun classement, aucun
 % budget : une notation entre parce qu'une unité la prouve
-explications(Ns, Max) :-
-    findall(U-N, ( member(N, Ns), pleine_dans(N, U) ), P0),
+explications(Ns, Max) :- explications_selon(pleine_dans, Ns, Max).
+
+% explications_pont(+Ns, -Max) : de même, sur les unités pleines par le pont WordNet compris
+explications_pont(Ns, Max) :- explications_selon(pleine_large_dans, Ns, Max).
+
+explications_selon(Pleine, Ns, Max) :-
+    findall(U-N, ( member(N, Ns), call(Pleine, N, U) ), P0),
     sort(P0, P),
-    findall(N, ( member(U-N, P), \+ ( member(U-M, P), M \== N, arbre:ancetre(M, N) ) ), Ms),
+    group_pairs_by_key(P, Groupes),                  % par unité : ses notations pleines
+    findall(N, ( member(_-Pl, Groupes), member(N, Pl), \+ ( member(M, Pl), M \== N, arbre:ancetre(M, N) ) ), Ms),
     sort(Ms, Max).
 
 % --- Descente -------------------------------------------------------------------------------------------------------
