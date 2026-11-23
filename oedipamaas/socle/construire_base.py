@@ -1,8 +1,9 @@
 """Index dérivés de la base (socle 1.0), construits une fois à partir de iconclass.qlf et wordnet.qlf, puis compilés
 (.qlf) : lexique_index (formes → notations), propres_index (mots propres), cles_index (clés), alternatives_index
-(façons de nommer ce qui est propre à une notation), gabarits_index (sortes des gabarits à nom, noms listés). Chaque
-index se reconstruit seul, les autres restent tels quels.
-Usage : python -m oedipamaas.socle.construire_base BASE_V1/ [lexique|propres|cles|alternatives|gabarits ...]"""
+(façons de nommer ce qui est propre à une notation), gabarits_index (sortes des gabarits à nom, noms listés),
+cadres_index (cadre de chaque libellé : phase, têtes, compléments, contexte). Chaque index se reconstruit seul, les
+autres restent tels quels.
+Usage : python -m oedipamaas.socle.construire_base BASE_V1/ [lexique|propres|cles|alternatives|gabarits|cadres ...]"""
 import sys
 import time
 from pathlib import Path
@@ -14,6 +15,7 @@ INDEX = {
     "cles": ("cles_index", "cles:construire_cles"),
     "alternatives": ("alternatives_index", "specialisation:construire_alternatives"),
     "gabarits": ("gabarits_index", "noms:construire_gabarits"),
+    "cadres": ("cadres_index", "cadres:construire_cadres"),
 }
 
 
@@ -23,7 +25,7 @@ def main(base, *noms):
     for f in ("iconclass.qlf", "wordnet.qlf"):
         janus.query_once(f"load_files('{base / f}', [redefine_module(true)])")
     for f in ("notation.pl", "arbre.pl", "libelles.pl", "morphologie.pl", "lexique.pl", "description.pl",
-              "recherche.pl", "specialisation.pl", "cles.pl", "noms.pl"):
+              "recherche.pl", "specialisation.pl", "cles.pl", "noms.pl", "cadres.pl"):
         janus.consult(str(ICI / f))
     janus.query_once("morphologie:indexer")
     for nom in noms or INDEX:

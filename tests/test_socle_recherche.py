@@ -10,7 +10,8 @@ janus = pytest.importorskip("janus_swi")
 SOCLE = Path(__file__).resolve().parent.parent / "oedipamaas" / "socle"
 WNP, WND = os.environ.get("WORDNET_PROLOG"), os.environ.get("WORDNET_DICT")
 
-NOTATIONS = ("N 1\nC 11\n$\nN 11\nC 11H\n$\nN 11H\nC 11H(...)\n$\nN 11H(...)\nC 11H(JEROME)\n$\nN 11H(JEROME)\n$\n"
+NOTATIONS = ("N 1\nC 11\n$\nN 11\nC 11H\n; 11F\n$\nN 11H\nC 11H(...)\n$\nN 11H(...)\nC 11H(JEROME)\n$\nN 11H(JEROME)\n$\n"
+             "N 11F\nC 11F4\n$\nN 11F4\nC 11F42\n$\nN 11F42\nC 11F422\n$\nN 11F422\n$\n"
              "N 2\nC 25\n$\nN 25\nC 25F\n$\nN 25F\nC 25F2\n; 25F7\n$\nN 25F2\nC 25F23\n$\nN 25F23\nC 25F23(LION)\n$\n"
              "N 25F7\nC 25F71\n$\nN 25F71\nC 25F711\n$\nN 25F711\nC 25F711(...)\n$\nN 25F711(...)\nC 25F711(ANT)\n$\n"
              "N 25F711(ANT)\n$\n"
@@ -20,7 +21,10 @@ LIBELLES = ("11H(...)|male saint (with NAME)\n"
             "11H(JEROME)|Jerome, Father of the Church; possible attributes: book, cardinal's hat, lion, skull\n"
             "25F23(LION)|beasts of prey, predatory animals: lion\n31A231|kneeling figure\n41|material aspects\n"
             "31A232|kneeling figure ~ portrait\n"
-            "25F711(...)|insects (with NAME)\n25F711(ANT)|insects: ant\n")
+            "25F711(...)|insects (with NAME)\n25F711(ANT)|insects: ant\n"
+            "11F|the Virgin Mary\n11F4|Madonna: i.e. Mary with the Christ-child\n"
+            "11F42|Madonna: Mary sitting or enthroned, the Christ-child in her lap\n"
+            "11F422|Mary sitting or enthroned, the Christ-child on her knee\n")
 MOTS = "25F23(LION)|lion\n31A231|kneeling\n11H(JEROME)|Jerome\n41|left\n"
 DESCRIPTION = {"subject": {"title": "Saint Jerome in the wilderness", "source": None, "type": "religious",
                            "confidence": "high", "alternatives": []},
@@ -130,6 +134,31 @@ def test_lecture_et_recherche():
         fd.charger(janus, dict(DESCRIPTION, keywords=["kneeling figure", "portrait"]))
         janus.query_once("specialisation:decrire")
         assert janus.query_once("specialisation:pleine_dans('31A232', U)")["U"] == "keywords[0]"
+
+        # cadres des libellés : la tête de chaque élément, ses modificateurs, ses compléments, le contexte, la phase
+        janus.consult(str(SOCLE / "cadres.pl"))
+        def cadre(n):
+            return janus.query_once("cadres:cadre(N, _C), term_string(_C, S)", {"N": n})["S"]
+        assert cadre("31A232") == "cadre([],[element([tete(figure,[kneeling])],[])],[portrait])"
+        assert cadre("25F23(LION)") == "cadre([],[element([tete(lion,[])],[])],[])"
+        assert cadre("11F422") == ("cadre([],[element([tete(mary,[sitting]),tete(action(enthroned),[])],[]),"
+                                   "element([tete('christ-child',[])],[knee])],[])")
+        # preuve du cadre : la lionne (une espèce de lion) et « lion and skull » prouvent 25F23(LION) là où elles
+        # le disent ; « kneeling figure » prouve 31A232 dans son unité, le portrait étant dit ailleurs
+        janus.query_once("cadres:preparer_cadres")
+        assert janus.query_once("cadres:pleine_et_cadree('31A232', U)")["U"] == "keywords[0]"
+        fd.charger(janus, DESCRIPTION)
+        janus.query_once("specialisation:decrire")
+        janus.query_once("cadres:preparer_cadres")
+        u = {x["U"] for x in janus.query("cadres:pleine_et_cadree('25F23(LION)', U)")}
+        assert u == {"persons[0]", "entities[1]"}, u
+        # 11F422 est pleine par « bare knee » (son seul mot propre), mais son cadre veut Marie ou l'Enfant : rien
+        # ne les dit → pas d'explication selon le cadre
+        fd.charger(janus, dict(DESCRIPTION, keywords=["bare knee"]))
+        janus.query_once("specialisation:decrire")
+        janus.query_once("cadres:preparer_cadres")
+        assert janus.query_once("specialisation:pleine_large_dans('11F422', 'keywords[0]')")["truth"]
+        assert not janus.query_once("cadres:pleine_et_cadree('11F422', _)")["truth"]
         # une mention niée ne dit rien : « no lion » ne donne pas la forme « lion »
         fd.charger(janus, dict(DESCRIPTION, keywords=["no lion"]))
         assert not janus.query_once("description:mention(_M, keywords, _, _), recherche:forme_mention(_M, lion)")["truth"]

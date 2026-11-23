@@ -22,9 +22,10 @@
 :- use_module(cles).
 :- use_module(arbre).
 :- use_module(noms).
+:- use_module(cadres).
 
 :- dynamic rang_bm25/2, bm25/3, rang_part/2, rang_sujet/2, bm25_sujet/2, spec/1, cle_prop/1, cand/1, expl/1,
-           expl_pont/1, unite_expl/2, nb_unites_desc/1, nom_gab/2.
+           expl_pont/1, unite_expl/2, nb_unites_desc/1, nom_gab/2, expl_cadre/1.
 
 % les unités où N est pleine (mot pour mot ou par le pont WordNet), une fois par notation et par description
 % (une notation nommée dans un gabarit est pleine là où son nom est décrit)
@@ -45,7 +46,7 @@ appui(N, M, F, L, S) :- recherche:candidat(N, M, p(M, F, L, S)).
 contexte(Budget) :-
     maplist(retractall, [rang_bm25(_, _), bm25(_, _, _), rang_part(_, _), rang_sujet(_, _), bm25_sujet(_, _), spec(_),
                          cle_prop(_), cand(_), expl(_), expl_pont(_), unite_expl(_, _), nb_unites_desc(_),
-                         nom_gab(_, _)]),
+                         nom_gab(_, _), expl_cadre(_)]),
     recherche:classement(1000000, L),
     forall(nth1(R, L, c(N, cle(D, W), _)), ( assertz(rang_bm25(N, R)), assertz(bm25(N, D, W)) )),
     % troisième ordre : BM25 sur les seules mentions du sujet (titre, source, alternatives)
@@ -65,6 +66,11 @@ contexte(Budget) :-
     % et de même par le pont WordNet (chaque mot tel quel ou par un lien admis par la recherche)
     specialisation:explications_pont(Lexicaux, ExP),
     forall(member(N, ExP), assertz(expl_pont(N))),
+    % et selon le cadre du libellé (cadres.pl) : la tête impliquée dans l'unité même qui dit la notation, ses
+    % compléments, son contexte, jamais une phase — les plus précises par unité
+    cadres:preparer_cadres,
+    specialisation:explications_selon(cadres:pleine_et_cadree, Lexicaux, ExC),
+    forall(member(N, ExC), assertz(expl_cadre(N))),
     % la structure de la description : les unités où chaque explication est pleine, le nombre d'unités décrites
     append(Ex, ExP, Expl0), sort(Expl0, Expl),
     forall(( member(N, Expl), unites_pleines_de(N, Us), member(U, Us) ), assertz(unite_expl(U, N))),
@@ -120,6 +126,10 @@ trait(N, explication, V) :- ( expl(N) -> V = 1 ; V = 0 ).
 trait(N, unites_pleines, C) :- aggregate_all(count, specialisation:pleine_dans(N, _), C).
 % de même par le pont WordNet (une unité pleine telle quelle l'est aussi par le pont)
 trait(N, explication_pont, V) :- ( expl_pont(N) -> V = 1 ; V = 0 ).
+% selon le cadre du libellé : la plus précise des notations dont une unité dit l'alternative et prouve le cadre (tête
+% impliquée là même, compléments, contexte, pas de phase) ; le nombre de ces unités
+trait(N, explication_cadre, V) :- ( expl_cadre(N) -> V = 1 ; V = 0 ).
+trait(N, unites_cadrees, C) :- aggregate_all(count, distinct(U, cadres:pleine_et_cadree(N, U)), C).
 % le libellé entier (son principal hors parenthèses, contexte « ~ » compris) : la part de ses mots pleins dite quelque
 % part dans la description, et s'il l'est tout entier — l'unité pleine ne vérifie que les mots propres ; « Mary
 % sitting or enthroned, the Christ-child on her knee » est pleine par « knee » sans que Marie soit dite

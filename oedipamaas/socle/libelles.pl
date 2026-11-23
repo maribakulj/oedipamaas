@@ -136,9 +136,13 @@ mots_hors_parentheses(N, Mots) :-
     hors_parentheses(T, S),
     mots_pleins(S, Mots).
 
+% une proposition nomme la notation si elle n'est ni une liste d'attributs possibles ni un indice visuel
+% (« usually… ») — jugé hors parenthèses : un aparté « (Mary sometimes represented half-length) » ne retire pas son
+% sens à « Mary sitting or enthroned »
 nommante(P) :-
     \+ sub_atom(P, _, _, _, 'possible attributes'),
-    mots_pleins(P, Ms),
+    hors_parentheses(P, H),
+    mots_pleins(H, Ms),
     \+ ( member(M, Ms), memberchk(M, [usually, sometimes, often]) ).
 
 corps_nommant(P, C) :-
