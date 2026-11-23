@@ -53,6 +53,15 @@ def main(base, dossier, sortie, maximum=MAX):
                 departs = [c["code"] for c in ligne["codes"][:K_ANCETRES]]
                 s = janus.query_once("specialisation:decrire, specialisation:specialisees(D, S)", {"D": departs})
                 ligne["specialisees"] = list(s["S"])
+                # second ordre (abduction) : part décrite des mots propres de chaque candidat, puis BM25 ; sur tous
+                # les candidats directs, pas seulement les premiers de BM25
+                t = janus.query_once("recherche:classement(1000000, _L), "
+                                     "findall([_P, _D, _N], (member(c(_N, cle(_D, _), _), _L), "
+                                     "(specialisation:part_decrite(_N, _P0) -> _P = _P0 ; _P = 0)), _T), "
+                                     "msort(_T, _T1), reverse(_T1, _T2), length(_T2, _Lg), _K is min(Max, _Lg), "
+                                     "length(_T3, _K), append(_T3, _, _T2), findall(_X, member([_, _, _X], _T3), X)",
+                                     {"Max": int(maximum)})
+                ligne["par_part"] = list(t["X"])
             except Exception as e:          # une description illisible : ligne d'erreur, comptée
                 ligne["erreur"] = f"{type(e).__name__}: {str(e)[:200]}"
                 ligne["codes"] = []
