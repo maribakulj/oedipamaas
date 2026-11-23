@@ -71,7 +71,7 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 
 ### Résumé pour le réveil (fin de la boucle, 23 novembre 2026 au soir)
 
-**Fait.** Tout J0 et tout J1, chaque tâche testée, committée et poussée ; CI verte à chaque poussée.
+**Fait.** Tout J0 et tout J1, chaque tâche testée, committée et poussée. CI : premier passage en échec (numpy manquant, corrigé), puis verte de l'exécution 2 à la 8 (dernier changement de code) ; les deux dernières, documentation seule, tournaient à l'arrêt de la boucle.
 - J0 : environnement (SWI-Prolog 11, base Iconclass `0595358` et WordNet compilées), licence MIT, une seule
   hiérarchie, noms libres rattachés à l'arbre, division 86 avant la sélection, sélection par F1 attendu branchée,
   clés indépendantes du chemin de découverte, `oedipamaas expliquer` réparé, négation dans la mention et sens des
