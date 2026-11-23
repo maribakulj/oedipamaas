@@ -16,10 +16,10 @@ K_ANCETRES = 120        # ancêtres des 120 premiers candidats (le budget de la 
 def charger_moteur(base):
     import janus_swi as janus
     base = Path(base)
-    for f in ("iconclass.qlf", "wordnet.qlf", "lexique_index.qlf"):
+    for f in ("iconclass.qlf", "wordnet.qlf", "lexique_index.qlf", "propres_index.qlf"):
         janus.query_once(f"load_files('{base / f}', [redefine_module(true)])")
     for f in ("notation.pl", "arbre.pl", "libelles.pl", "morphologie.pl", "lexique.pl", "description.pl",
-              "recherche.pl"):
+              "recherche.pl", "specialisation.pl"):
         janus.consult(str(ICI / f))
     janus.query_once("morphologie:indexer")
     return janus
@@ -48,6 +48,11 @@ def main(base, dossier, sortie, maximum=MAX):
                 ligne["codes"] = [{"code": c, "cle": [round(d, 4), round(w, 4)], "nature": na}
                                   for c, d, w, na in r["X"]]
                 ligne["ancetres_des_premiers"] = {"k": K_ANCETRES, "codes": list(r["A"])}
+                # spécialisation : descente depuis les K premiers candidats (soutenus eux-mêmes par la description,
+                # pas leurs ancêtres) vers les enfants les mieux soutenus
+                departs = [c["code"] for c in ligne["codes"][:K_ANCETRES]]
+                s = janus.query_once("specialisation:decrire, specialisation:specialisees(D, S)", {"D": departs})
+                ligne["specialisees"] = list(s["S"])
             except Exception as e:          # une description illisible : ligne d'erreur, comptée
                 ligne["erreur"] = f"{type(e).__name__}: {str(e)[:200]}"
                 ligne["codes"] = []

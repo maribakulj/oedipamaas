@@ -81,3 +81,15 @@ def test_lecture_et_recherche():
                              "recherche:ancetres_des_premiers(_L, 10, A)")
         assert {"25F23(LION)", "31A231", "11H(JEROME)"} <= set(r["X"])
         assert {"11H(...)", "11H", "25F2", "31A23"} <= set(r["A"])
+
+        # spécialisation : de 31A23 (non décrit en propre ici), la descente va vers 31A231, dont le mot propre
+        # « kneeling » est décrit ; de 25F23, vers le lion nommé
+        janus.consult(str(SOCLE / "specialisation.pl"))
+        propres = base / "propres_index.pl"
+        janus.query_once(f"specialisation:construire_propres('{propres}')")
+        janus.query_once(f"load_files('{propres}', [redefine_module(true)])")
+        janus.query_once("specialisation:decrire")
+        # mots propres de 31A231 : « kneeling » (décrit) et « figure » (non décrit) → la moitié
+        assert janus.query_once("specialisation:part_decrite('31A231', P)")["P"] == 0.5
+        s = janus.query_once("specialisation:specialisees(['31A23', '25F23'], S)")["S"]
+        assert set(s) == {"31A231", "25F23(LION)"}, s
