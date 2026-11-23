@@ -14,15 +14,18 @@
 :- module(morphologie, [ lemmes/3,      % +Mot, ?Type, -Lemmes   (Type : n, v, a, r ; liste triée, peut être vide)
                          lemme/2,       % +Mot, -Lemme           un lemme, tous types confondus, ou le mot lui-même
                          tous_lemmes/2, % +Mot, -Lemmes          tous les lemmes, tous types ; [Mot] si aucun
-                         forme_connue/2 % ?Forme, ?Type          forme (minuscules) d'un lemme de WordNet
+                         forme_connue/2, % ?Forme, ?Type         forme (minuscules) d'un lemme de WordNet
+                         forme_synset/3  % ?Forme, ?Type, ?Synset
                        ]).
 
-:- dynamic forme_connue/2.
+:- dynamic forme_connue/2, forme_synset/3.
 
 indexer :-
     retractall(forme_connue(_, _)),
-    forall(distinct(F-T, (wordnet:s(_, _, Mot, T0, _, _), type(T0, T), downcase_atom(Mot, F))),
-           assertz(forme_connue(F, T))).
+    retractall(forme_synset(_, _, _)),
+    forall(wordnet:s(S, _, Mot, T0, _, _),
+           ( type(T0, T), downcase_atom(Mot, F), assertz(forme_synset(F, T, S)) )),
+    forall(distinct(F-T, forme_synset(F, T, _)), assertz(forme_connue(F, T))).
 
 type(s, a) :- !.
 type(T, T).
