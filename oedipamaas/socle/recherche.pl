@@ -20,6 +20,7 @@
                        forme_mention/2,          % ?M, ?Forme
                        candidat/3,               % ?N, ?M, -Preuve
                        classement/2,             % +Max, -Liste de c(Notation, cle(Direct, WordNet), Nature)
+                       classement_champs/3,      % +Champs, +Max, -Liste (mentions de ces champs seulement)
                        ancetres_des_premiers/3   % +Liste, +K, -Ancetres (parents canoniques des K premiers)
                      ]).
 
@@ -119,8 +120,16 @@ poids(F, N, P) :-
     P is Idf * Tf * (K1 + 1) / (Tf + K1 * (1 - B + B * L / Moy)).
 
 classement(Max, Liste) :-
+    classement_mentions(_, Max, Liste).
+
+% le même classement, sur les seules mentions de certains champs (le sujet : l'énoncé principal de la description)
+classement_champs(Champs, Max, Liste) :-
+    classement_mentions(Champs, Max, Liste).
+
+classement_mentions(Champs, Max, Liste) :-
     statistiques,
-    findall(N-(Nature-F), ( candidat(N, _, p(_, F0, Lien, _)), nature(Lien, F0, F, Nature) ), Paires),
+    findall(N-(Nature-F), ( candidat(N, M, p(_, F0, Lien, _)), dans_champs(M, Champs), nature(Lien, F0, F, Nature) ),
+            Paires),
     sort(Paires, Uniques),
     group_pairs_by_key(Uniques, ParNotation),
     findall(c(N, cle(D, W), direct),
@@ -129,6 +138,9 @@ classement(Max, Liste) :-
             Directs),
     sort(2, @>=, Directs, Tries),
     length(Tries, L), Max1 is min(Max, L), length(Liste, Max1), append(Liste, _, Tries).
+
+dans_champs(_, Champs) :- var(Champs), !.
+dans_champs(M, Champs) :- description:mention(M, C, _, _), memberchk(C, Champs).
 
 % la forme qui compte pour le poids : celle de l'index (pour WordNet, la forme d'Iconclass atteinte)
 nature(egal, F, F, direct).

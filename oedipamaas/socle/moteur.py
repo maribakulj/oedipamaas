@@ -5,7 +5,8 @@ appris : probabilité ou espérance), statut « retenu » ou « candidat ». Auc
 
 Les candidats donnés à la décision sont pris dans l'ordre de l'apprentissage (directs, spécialisés et à clé par part
 décrite puis BM25, ancêtres ensuite), au plus MAX, comme dans le noyau qui a appris les poids.
-Usage : python -m oedipamaas.socle.moteur BASE_V1/ DECISION.pl DESCRIPTIONS/ SORTIE.jsonl [MAX] [BUDGET]"""
+Usage : python -m oedipamaas.socle.moteur BASE_V1/ DECISION.pl DESCRIPTIONS/ SORTIE.jsonl [MAX] [BUDGET] [ORDRE]
+(ORDRE : part, celui de la première décision, ou rang_min ; toujours celui de l'apprentissage de DECISION)"""
 import hashlib
 import json
 import sys
@@ -23,9 +24,14 @@ def atome(s):
     return "'" + s.replace("\\", "\\\\").replace("'", "\\'") + "'"
 
 
-def ordre(c):
-    t = c["traits"]
-    return (t.get("ancetre_seul", 0), -c["score"], -t.get("bm25_direct", 0.0), c["code"])
+ORDRES = {
+    # ordre de la première décision (mesurée sur P300) : part décrite, puis BM25
+    "part": lambda c: (c["traits"].get("ancetre_seul", 0), -c["score"], -c["traits"].get("bm25_direct", 0.0),
+                       c["code"]),
+    # meilleur rang dans l'un des trois ordres (BM25, part décrite, BM25 du sujet)
+    "rang_min": lambda c: (c["traits"].get("ancetre_seul", 0), -c["traits"].get("inv_rang_min", 0.0), -c["score"],
+                           c["code"]),
+}
 
 
 def preuve(janus, c, retenus):
@@ -46,7 +52,8 @@ def preuve(janus, c, retenus):
     return {"regle": "ancetre", "de": desc[:3]}
 
 
-def main(base, decision, dossier, sortie, maximum=MAX, budget=BUDGET):
+def main(base, decision, dossier, sortie, maximum=MAX, budget=BUDGET, nom_ordre="part"):
+    ordre = ORDRES[nom_ordre]           # celui de l'apprentissage de la décision
     janus = coder.charger_moteur(base)
     for f in ("traits.pl", "preuve.pl", "decision.pl"):
         janus.consult(str(Path(coder.__file__).resolve().parent / f))
@@ -57,7 +64,7 @@ def main(base, decision, dossier, sortie, maximum=MAX, budget=BUDGET):
     with open(sortie, "w", encoding="utf-8") as out:
         for f in sorted(Path(dossier).glob("*.json")):
             ligne = {"image": f.stem, "versions": {"moteur": coder.version(), "decision": empreinte,
-                                                    "max": int(maximum), "budget": int(budget)}}
+                                                    "max": int(maximum), "budget": int(budget), "ordre": nom_ordre}}
             try:
                 fd.charger(janus, fd.lire_fichier(f))
                 janus.query_once("abolish_all_tables")
@@ -89,6 +96,6 @@ def main(base, decision, dossier, sortie, maximum=MAX, budget=BUDGET):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) not in (5, 6, 7):
+    if len(sys.argv) not in (5, 6, 7, 8):
         raise SystemExit(__doc__)
     main(*sys.argv[1:])

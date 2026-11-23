@@ -18,23 +18,27 @@
 :- use_module(cles).
 :- use_module(arbre).
 
-:- dynamic rang_bm25/2, bm25/3, rang_part/2, spec/1, cle_prop/1, cand/1.
+:- dynamic rang_bm25/2, bm25/3, rang_part/2, rang_sujet/2, bm25_sujet/2, spec/1, cle_prop/1, cand/1.
 
 % appui(N, M, Forme, Lien, Source) : les appuis lexicaux, préparés une fois par description par la recherche
 appui(N, M, F, L, S) :- recherche:candidat(N, M, p(M, F, L, S)).
 
 contexte(Budget) :-
-    maplist(retractall, [rang_bm25(_, _), bm25(_, _, _), rang_part(_, _), spec(_), cle_prop(_), cand(_)]),
+    maplist(retractall, [rang_bm25(_, _), bm25(_, _, _), rang_part(_, _), rang_sujet(_, _), bm25_sujet(_, _), spec(_),
+                         cle_prop(_), cand(_)]),
     recherche:classement(1000000, L),
     forall(nth1(R, L, c(N, cle(D, W), _)), ( assertz(rang_bm25(N, R)), assertz(bm25(N, D, W)) )),
+    % troisième ordre : BM25 sur les seules mentions du sujet (titre, source, alternatives)
+    recherche:classement_champs([subject], 1000000, LS),
+    forall(nth1(R, LS, c(N, cle(D, _), _)), ( assertz(rang_sujet(N, R)), assertz(bm25_sujet(N, D)) )),
     specialisation:decrire,
     findall(P-D-N, ( bm25(N, D, _), ( specialisation:part_decrite(N, P0) -> P = P0 ; P = 0 ) ), T0),
     msort(T0, T1), reverse(T1, T2),
     forall(nth1(R, T2, _-_-N), assertz(rang_part(N, R))),
-    premiers(rang_bm25, Budget, B1), premiers(rang_part, Budget, B2),
+    premiers(rang_bm25, Budget, B1), premiers(rang_part, Budget, B2), premiers(rang_sujet, Budget, B3),
     specialisation:specialisees(B1, Sp),
     forall(member(N, Sp), assertz(spec(N))),
-    append([B1, B2, Sp], S0), sort(S0, Soutenues),
+    append([B1, B2, B3, Sp], S0), sort(S0, Soutenues),
     forall(( member(N, Soutenues), cles:cles_decrites(N, Cs), member(C, Cs) ), assertz(cle_prop(C))),
     findall(C, cle_prop(C), Cl),
     append(Soutenues, Cl, Base0), sort(Base0, Base),
@@ -58,12 +62,21 @@ trait(N, bm25_direct, D) :- ( bm25(N, D, _) -> true ; D = 0 ).
 trait(N, bm25_wordnet, W) :- ( bm25(N, _, W) -> true ; W = 0 ).
 trait(N, inv_rang_bm25, V) :- ( rang_bm25(N, R) -> V is 1 / R ; V = 0 ).
 trait(N, inv_rang_part, V) :- ( rang_part(N, R) -> V is 1 / R ; V = 0 ).
+trait(N, bm25_sujet, V) :- ( bm25_sujet(N, V0) -> V = V0 ; V = 0 ).
+trait(N, inv_rang_sujet, V) :- ( rang_sujet(N, R) -> V is 1 / R ; V = 0 ).
+% le meilleur rang dans l'un des trois ordres (BM25, part décrite, BM25 du sujet) : un candidat placé haut par l'un
+% d'eux ; sert aussi à choisir les candidats donnés à la décision
+trait(N, inv_rang_min, V) :-
+    (   aggregate_all(min(R), ( rang_bm25(N, R) ; rang_part(N, R) ; rang_sujet(N, R) ), Rm), Rm \== inf
+    ->  V is 1 / Rm
+    ;   V = 0
+    ).
 trait(N, part, P) :- ( specialisation:part_decrite(N, P) -> true ; P = 0 ).
 trait(N, nb_propres, K) :- ( propres_index:nb_propres(N, K) -> true ; K = 0 ).
 trait(N, prof, P) :- ( catch(notation:profondeur(N, P), _, fail) -> true ; P = 0 ).
 trait(N, specialisee, V) :- ( spec(N) -> V = 1 ; V = 0 ).
 trait(N, cle, V) :- ( cle_prop(N) -> V = 1 ; V = 0 ).
-trait(N, ancetre_seul, V) :- ( \+ bm25(N, _, _), \+ cle_prop(N), \+ spec(N) -> V = 1 ; V = 0 ).
+trait(N, ancetre_seul, V) :- ( \+ bm25(N, _, _), \+ cle_prop(N), \+ spec(N), \+ rang_sujet(N, _) -> V = 1 ; V = 0 ).
 trait(N, nb_mentions, C) :- aggregate_all(count, distinct(M, recherche:candidat(N, M, p(_, _, egal, _))), C).
 trait(N, nb_unites, C) :-
     aggregate_all(count, distinct(U, ( recherche:candidat(N, M, p(_, _, egal, _)), specialisation:unite(M, U) )), C).
