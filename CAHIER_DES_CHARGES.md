@@ -343,6 +343,7 @@ Après la V1 : T7 à T11 certifiés un par un ; service HTTP ; autres langues ; 
 | UDPipe 1 se trompe sur les textes d'art (rattachements, vocabulaire) | règles prudentes : un arbre douteux donne de l'abstention ; CoNLL-U permet de changer d'analyseur ; mesure de l'effet de l'analyseur |
 | Les cartels réels décrivent peu l'image | grammaire des titres en priorité ; couverture rapportée honnêtement |
 | Les textes savants parlent surtout d'autre chose que l'image | portée du propos explicite ; abstention attendue et mesurée |
+| Presque aucun corpus français public codé en Iconclass (annexe A) | corpus français annoté à la main dès J2 ; emblèmes de Glasgow si leur usage est autorisé |
 | Ressource lexicale française de licence ou de qualité insuffisante | mots clés FR d'Iconclass d'abord ; évaluation de WOLF/OMW au J1 |
 | Les codes des catalogues sont incomplets ou d'un style propre | précision jugée sur le texte (§ 12.2) ; le catalogue sert au rappel et à l'H-F1 |
 | Travail seul : la langue est un chantier sans fin | liste fermée de phénomènes (§ 6.2) ; tout le reste va dans `incompris` |
@@ -357,5 +358,32 @@ Après la V1 : T7 à T11 certifiés un par un ; service HTTP ; autres langues ; 
 
 ## Annexe A. Corpus de référence candidats
 
-*À compléter : inventaire des catalogues publics associant textes FR/EN et codes Iconclass, avec contenu, taille,
-licence, accès.*
+Inventaire du 23 novembre 2026 (requêtes d'essai seulement, rien téléchargé). Aucun jeu de référence public n'associe
+directement des textes FR ou EN à des codes Iconclass : chaque corpus est à moissonner et à filtrer.
+
+| Corpus | Texte | Codes posés par | Taille | Licence | Accès |
+|---|---|---|---|---|---|
+| **RKDimages** (RKD Knowledge Graph) | titres EN et NL ; peu de descriptions | documentalistes du RKD | ≈ 76 000 images codées | ODC-By 1.0 (attribution) | SPARQL `api.rkd.triply.cc/…/sparql`, par pages (les requêtes larges expirent) |
+| **Wikidata P1257** | libellés courts : ≈ 34 500 EN, ≈ 7 400 FR ; descriptions génériques | mélangé : imports de robots (CbDD, RKD), souvent sans référence | ≈ 64 600 œuvres, ≈ 11 700 codes distincts | CC0 | `query.wikidata.org/sparql` |
+| **French Emblems at Glasgow** (et Alciato at Glasgow) | devises et épigrammes **français** du XVIe s., avec traductions anglaises ; codes « image » et « texte » séparés | indexeurs experts | ≈ 1 000 à 3 000 emblèmes (estimation) | droits réservés (université de Glasgow) | pages HTML seulement : moissonnage à autoriser |
+| **Rijksmuseum** (OAI-PMH, Linked Art, dumps) | titres et descriptions surtout **néerlandais** ; peu d'anglais | catalogueurs du musée | ≈ 170 000 objets codés | métadonnées CC0 | `data.rijksmuseum.nl/oai`, `id.rijksmuseum.nl` |
+| **Europeana** | surtout Rijksmuseum (NL) ; presque rien en FR | fournisseurs | ≈ 316 000 notices citant Iconclass | métadonnées CC0 | API `api.europeana.eu` |
+| **Iconclass AI Test Set** (Arkyves) | aucun texte : images et codes | indexeurs d'Arkyves | ≈ 87 700 images | CC0 | `iconclass.org/testset/` ; inutile pour le texte sauf rattachement aux notices d'origine |
+
+Les collections françaises (Joconde/POP, Mandragore, Gallica) indexent avec Garnier ou leurs propres thésaurus, **pas
+avec Iconclass**.
+
+Conséquences pour l'évaluation :
+- **Anglais** : RKDimages (titres) et Wikidata EN suffisent pour J2 ; ce sont surtout des titres, ce qui sert d'abord
+  T1, T2, T3.
+- **Français : c'est le vrai manque.** Les sources publiques se limitent aux libellés FR de Wikidata et aux emblèmes de
+  Glasgow. L'annotation propre (§ 12.1) devient indispensable pour les cartels, les notices et les textes savants
+  français ; les descriptions d'Opus ne fournissent pas de codes de référence.
+- **Fuites** : les codes du RKD passent dans Wikidata par des robots, et le Rijksmuseum dans Europeana. On dédoublonne
+  par œuvre entre sources avant toute mesure.
+- **Biais en faveur du moteur** : beaucoup de titres Wikidata reprennent presque mot pour mot les libellés Iconclass
+  (« Rape of the Daughters of Leucippus »), ce qui gonfle T3 ; on rapporte T3 à part, en séparant les titres conformes
+  aux libellés des autres.
+- **Codes incomplets et hétérogènes** (profondeur, clés, noms) : on normalise, on compte aussi par la hiérarchie, et la
+  précision des codes établis reste jugée sur le texte (§ 12.2). Pour Glasgow, on compare un texte d'entrée aux codes
+  « texte ».
