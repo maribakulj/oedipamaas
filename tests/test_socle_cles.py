@@ -10,7 +10,7 @@ janus = pytest.importorskip("janus_swi")
 SOCLE = Path(__file__).resolve().parent.parent / "oedipamaas" / "socle"
 WNP, WND = os.environ.get("WORDNET_PROLOG"), os.environ.get("WORDNET_DICT")
 
-NOTATIONS = "N 3\nC 31\nK 31k\n$\nN 31\nC 31A\nK 31k\n$\nN 31A\nK 31k\n$\nN 4\n$\n"
+NOTATIONS = "N 3\nC 31\nK 31k\n$\nN 31\nC 31A\n; 31D\nK 31k\n$\nN 31A\nK 31k\n$\nN 31D\nK 31k\n$\nN 4\n$\n"
 KEYS = "K 31k\nS 0\n; 1\n; 3\n; 31\n; 33\n; 5\n; 51\n; 54\n; 5q1\n$\n"
 TEXTES_CLES = ("31k0|variant\n31k1|front view\n31k3|sideview, profile\n31k31|left side visible\n31k33|seen from above\n"
                "31k5|positions (of the human figure)\n31k51|standing\n31k54|kneeling\n")
@@ -28,7 +28,7 @@ def test_cles():
         (d / "notations.txt").write_text(NOTATIONS, encoding="utf-8")
         (d / "keys.txt").write_text(KEYS, encoding="utf-8")
         (d / "txt/en/txt_en_keys.txt").write_text(TEXTES_CLES, encoding="utf-8")
-        (d / "txt/en/txt_en_0_1.txt").write_text("31A|the human figure\n", encoding="utf-8")
+        (d / "txt/en/txt_en_0_1.txt").write_text("31A|the human figure\n31D|child\n", encoding="utf-8")
         (d / "COMMIT").write_text("essai\n")
         base = Path(t) / "base"
         compiler(d, base)
@@ -55,3 +55,12 @@ def test_cles():
         assert "31A(+54)" in c and "31A(+3)" in c, c       # à genoux, de profil
         assert "31A(+51)" not in c and "31A(+5)" not in c and "31A(+1)" not in c, c
         assert janus.query_once("cles:cles_decrites('4', C)")["C"] == []                  # pas de famille de clés
+        # une notation trouvée par un lien WordNet (« kid », dont le sens dominant est synonyme de « child ») reçoit
+        # ses clés comme les autres : la façon de la trouver ne décide pas des propriétés qu'on peut lui prêter
+        fd.charger(janus, {"entities": [{"id": "e1", "type": "kid", "attributes": ["kneeling"]}],
+                           "keywords": [], "subject": {}})
+        janus.query_once("specialisation:decrire")
+        assert janus.query_once("recherche:candidat('31D', _, p(_, _, wordnet(_, _, _), _))")["truth"]
+        assert not janus.query_once("recherche:candidat('31D', _, p(_, _, egal, _))")["truth"]
+        c = janus.query_once("cles:cles_decrites('31D', C)")["C"]
+        assert c == ["31D(+54)"], c

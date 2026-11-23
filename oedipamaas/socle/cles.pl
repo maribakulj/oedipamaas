@@ -96,11 +96,30 @@ propose(K, Us, Ex, S) :-
     ;   \+ ( cles_index:cle_parent(K, S2, P), S2 \== S, part_distinctive(K, S2, Us, Ex, Pd2), Pd2 > Pd )
     ).
 
-% les unités et les formes qui soutiennent N : celles de ses appuis lexicaux directs
+% les unités et les formes qui soutiennent N, quelle que soit la façon dont N a été trouvé : ses appuis lexicaux,
+% directs ou par un lien WordNet admis par la recherche (la forme de l'index et celle de la mention), et, pour une
+% notation atteinte par spécialisation, les unités où ses mots propres sont décrits
 appuis_de(N, Us, Formes) :-
-    findall(U-F, ( recherche:candidat(N, M, p(_, F, egal, _)), specialisation:unite(M, U) ), Ps),
+    findall(U-F, appui(N, U, F), Ps),
     pairs_keys_values(Ps, Us0, Fs0),
     sort(Us0, Us), sort(Fs0, Formes).
+
+appui(N, U, F) :-
+    recherche:candidat(N, M, p(_, G, Lien, _)),
+    lien_d_appui(Lien, G),
+    specialisation:unite(M, U),
+    (   F = G
+    ;   Lien = wordnet(_, _, F)
+    ).
+
+% un lien WordNet ne soutient des clés que depuis un sens dominant de la forme décrite (« tree » ne dit pas la
+% figure humaine par un sens rare) ; l'égalité, toujours
+lien_d_appui(egal, _).
+lien_d_appui(wordnet(Rel, _, F), G) :- once(lexique:voisin_sens_dominant(F, G, Rel, _)).
+appui(N, U, F) :-
+    current_predicate(propres_index:propre/3),
+    propres_index:propre(N, _, F),
+    specialisation:decrit_dans(F, U).
 
 cles_decrites(N, Codes) :-
     (   iconclass:famille_cle(N, K), appuis_de(N, Us, Ex), Us \== []
