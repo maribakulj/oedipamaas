@@ -104,3 +104,9 @@ def test_lecture_et_recherche():
         q = json.loads(janus.query_once("preuve:preuve_specialisation('31A23', '31A231', _D), "
                                         "preuve:preuve_json(_D, J)")["J"])
         assert q["mots_propres_decrits"] == ["kneeling"] and q["part_decrite"] == 0.5
+
+        # « half-length » se lit aussi « half », « length »
+        assert janus.query_once("recherche:forme_mention(_, length)")["truth"] is False  # pas encore décrit
+        fd.charger(janus, dict(DESCRIPTION, keywords=["half-length portrait"]))
+        assert janus.query_once("recherche:forme_mention(_, length)")["truth"]
+        assert janus.query_once("recherche:forme_mention(_, 'half-length')")["truth"]

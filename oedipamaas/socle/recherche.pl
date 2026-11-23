@@ -49,8 +49,13 @@ suite(Mots, Suite) :-
     extremite(Premier), extremite(Dernier),
     atomic_list_concat(Suite0, ' ', Suite).
 
+% une mention est lue telle quelle et avec ses traits d'union remplacés par des espaces : « half-length » donne
+% « half-length », « half », « length » et « half length » (Iconclass écrit l'un ou l'autre)
 forme_mention(M, Forme) :-
-    description:mention(M, _, _, Texte),
+    description:mention(M, _, _, Texte0),
+    (   Texte = Texte0
+    ;   sub_atom(Texte0, _, _, _, '-'), atomic_list_concat(Morceaux, '-', Texte0), atomic_list_concat(Morceaux, ' ', Texte)
+    ),
     mots_de_mention(Texte, Mots),
     distinct(Forme, ( suite(Mots, S), ( Forme = S ; morphologie:tous_lemmes(S, Ls), member(Forme, Ls) ) )).
 
