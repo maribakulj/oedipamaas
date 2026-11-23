@@ -109,6 +109,17 @@ def test_petit_arbre(petit):
     assert janus.query_once("arbre:valide('11H(JEROME)(+11)')")["truth"]
     assert not janus.query_once("arbre:valide('11H(JEROME)(+2)')")["truth"]   # suffixe hors de la famille
     assert not janus.query_once("arbre:valide('11H(...)3(+1)')")["truth"]      # pas de famille de clés
+    # un nom libre : enfant de son gabarit, comme un nom listé ; ce qui le suit a pour parent son préfixe
+    assert un("arbre:parent('11H(NOUVEAU)', X)") == "11H(...)"
+    assert un("arbre:parent('11H(NOUVEAU)3', X)") == "11H(NOUVEAU)"
+    assert tous("arbre:ancetre('11H(NOUVEAU)3', X)") == ["1", "11", "11H", "11H(...)", "11H(NOUVEAU)"]
+    assert un("arbre:profondeur_arbre('11H(NOUVEAU)', X)") == 4
+    assert janus.query_once("arbre:valide('11H(NOUVEAU)')")["truth"]
+    assert janus.query_once("arbre:valide('11H(NOUVEAU)3')")["truth"]
+    assert un("arbre:gabarit_de('11H(NOUVEAU)3', X)") == "11H(...)3"
+    assert not janus.query_once("arbre:valide('11HH(NOUVEAU)3')")["truth"]   # 11HH(...)3 n'existe pas
+    assert not janus.query_once("arbre:valide('25G(NOUVEAU)')")["truth"]     # 25G n'a pas de gabarit
+    assert un("arbre:parent('11H(JEROME)', X)") == "11H(...)"               # un nom listé ne change pas
 
 
 DONNEES = os.environ.get("ICONCLASS_DATA")
