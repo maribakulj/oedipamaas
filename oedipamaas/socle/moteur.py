@@ -66,7 +66,7 @@ def main(base, decision, dossier, sortie, maximum=MAX, budget=BUDGET, nom_ordre=
     k, seuil, critere = (janus.query_once("decision_poids:reglage(K, S, C)")[x] for x in ("K", "S", "C"))
     empreinte = hashlib.sha256(Path(decision).read_bytes()).hexdigest()[:16]
     t0, n, erreurs = time.time(), 0, 0
-    with open(sortie, "w", encoding="utf-8") as out:
+    with coder.ouvrir_sortie(sortie) as out:
         for f in sorted(Path(dossier).glob("*.json")):
             ligne = {"image": f.stem, "versions": {"moteur": coder.version(), "decision": empreinte,
                                                     "max": int(maximum), "budget": int(budget), "ordre": nom_ordre}}

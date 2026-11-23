@@ -2,6 +2,7 @@
 des codes du moteur (une ligne JSON par image : image, codes [{code, cle, nature}], versions), pour les mesures de
 couverture. Pas encore de décision ni de preuve rendue (pièces suivantes).
 Usage : python -m oedipamaas.socle.coder BASE_V1/ DESCRIPTIONS/ SORTIE.jsonl [MAX]"""
+import gzip
 import json
 import subprocess
 import sys
@@ -26,6 +27,14 @@ def charger_moteur(base):
     return janus
 
 
+def ouvrir_sortie(chemin):
+    """Le fichier de sortie, compressé (gzip) si son nom finit par .gz : une ligne JSON par image, des centaines de
+    mégaoctets en clair pour les candidats."""
+    if str(chemin).endswith(".gz"):
+        return gzip.open(chemin, "wt", encoding="utf-8")
+    return open(chemin, "w", encoding="utf-8")
+
+
 def version():
     r = subprocess.run(["git", "-C", str(ICI), "rev-parse", "--short", "HEAD"], capture_output=True, text=True)
     sale = subprocess.run(["git", "-C", str(ICI), "status", "--porcelain"], capture_output=True, text=True).stdout
@@ -36,7 +45,7 @@ def main(base, dossier, sortie, maximum=MAX):
     from oedipamaas.socle import faits_description as fd
     janus = charger_moteur(base)
     t0, n, erreurs = time.time(), 0, 0
-    with open(sortie, "w", encoding="utf-8") as out:
+    with ouvrir_sortie(sortie) as out:
         for f in sorted(Path(dossier).glob("*.json")):
             ligne = {"image": f.stem, "versions": {"moteur": version(), "etape": "recherche"}}
             try:

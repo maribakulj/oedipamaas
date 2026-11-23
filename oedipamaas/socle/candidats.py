@@ -1,7 +1,7 @@
 """Candidats d'un dossier de descriptions avec leurs traits de preuve (socle 1.0), pour apprendre et mesurer la
 décision : une ligne JSON par image, {image, versions, codes: [{code, score, traits}]} (score : la part décrite,
 provisoire). Aucune étiquette n'est lue ici.
-Usage : python -m oedipamaas.socle.candidats BASE_V1/ DESCRIPTIONS/ SORTIE.jsonl [BUDGET]"""
+Usage : python -m oedipamaas.socle.candidats BASE_V1/ DESCRIPTIONS/ SORTIE.jsonl[.gz] [BUDGET] (.gz : compressé)"""
 import json
 import sys
 import time
@@ -16,7 +16,7 @@ def main(base, dossier, sortie, budget=BUDGET):
     janus = coder.charger_moteur(base)
     janus.consult(str(Path(coder.__file__).resolve().parent / "traits.pl"))
     t0, n, erreurs = time.time(), 0, 0
-    with open(sortie, "w", encoding="utf-8") as out:
+    with coder.ouvrir_sortie(sortie) as out:
         for f in sorted(Path(dossier).glob("*.json")):
             ligne = {"image": f.stem, "versions": {"moteur": coder.version(), "etape": "candidats", "budget": int(budget)}}
             try:

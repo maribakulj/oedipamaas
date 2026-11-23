@@ -14,6 +14,16 @@ CANDS = [
 ]
 
 
+def test_sortie_compressee(tmp_path):
+    import gzip
+    import json
+    from oedipamaas.socle.coder import ouvrir_sortie
+    for nom in ("x.jsonl", "x.jsonl.gz"):
+        with ouvrir_sortie(tmp_path / nom) as out:
+            out.write(json.dumps({"image": "é", "codes": []}, ensure_ascii=False) + "\n")
+    assert gzip.decompress((tmp_path / "x.jsonl.gz").read_bytes()) == (tmp_path / "x.jsonl").read_bytes()
+
+
 def test_ordres():
     assert [c["code"] for c in sorted(CANDS, key=ORDRES["part"])] == ["E", "A", "B", "C", "D"]
     assert [c["code"] for c in sorted(CANDS, key=ORDRES["expl"])] == ["C", "B", "E", "A", "D"]
