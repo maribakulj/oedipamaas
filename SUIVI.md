@@ -53,7 +53,7 @@ Critère de sortie J0 : tous les tests passent ; la mesure de référence est re
 
 ## J1 — Le contrat (à commencer quand J0 est fini)
 
-- [ ] **J1.1 Langage d'assertions.** `docs/ASSERTIONS.md` (noms, arités, sens, prémisse admissible, § 5 du cahier) et
+- [x] **J1.1 Langage d'assertions.** `docs/ASSERTIONS.md` (noms, arités, sens, prémisse admissible, § 5 du cahier) et
       validateur `socle/assertions.pl` ; tests.
 - [ ] **J1.2 UDPipe.** Binaire ou liaison UDPipe 1 et modèles FR et EN (UD épinglés) ; licences des modèles dans
       `DECISIONS.md` ; segmentation avec positions en caractères.
@@ -79,3 +79,4 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - 2026-11-23 — J0.6 : appuis des clés : égalité, lien WordNet admis depuis un sens dominant, mots propres décrits (spécialisation) ; un premier essai avec tous les sens donnait « debout » à la figure par l'entité voisine — le test existant l'a bloqué, d'où la restriction aux sens dominants.
 - 2026-11-23 — J0.7 : « expliquer » lit p_catalogue et valeur ; test de contrat qui reproduit le KeyError sur l'ancien code et passe avec la correction.
 - 2026-11-23 — J0.8 : négation coupée au mot négatif (no, not, without, neither, nor, never, lack of, absence of) et postposée (absent, missing, invisible) ; cadres:unite_liee/2 suit le sens de la relation ; 39 tests passent.
+- 2026-11-23 — J1.1 : fait pendant la moisson de J0.10 (tâche indépendante) : docs/ASSERTIONS.md, socle/assertions.pl (valider/2, admissible/2, contredit/2), 14 tests plunit lancés par tests/test_plunit.py ; noms provisoires (D6).
