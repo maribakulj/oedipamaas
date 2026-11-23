@@ -1,0 +1,265 @@
+{
+ "documents": 1000,
+ "erreurs": 2,
+ "documents_avec_etabli": 572,
+ "codes_etablis": 1028,
+ "precision_exacte": 0.0934,
+ "precision_exacte_ic95": [
+  0.0749,
+  0.1109
+ ],
+ "precision_hierarchique": 0.1741,
+ "precision_hierarchique_ic95": [
+  0.1518,
+  0.1965
+ ],
+ "par_type": {
+  "T1": {
+   "n": 339,
+   "precision_hierarchique": 0.1711
+  },
+  "T2": {
+   "n": 649,
+   "precision_hierarchique": 0.1649
+  },
+  "T6": {
+   "n": 40,
+   "precision_hierarchique": 0.35
+  }
+ },
+ "exemples_non_confirmes": {
+  "T6": [
+   {
+    "code": "41C4",
+    "texte": [
+     "supper"
+    ],
+    "catalogue": [
+     "73E343"
+    ]
+   },
+   {
+    "code": "41A77",
+    "texte": [
+     "vases"
+    ],
+    "catalogue": [
+     "92D1916"
+    ]
+   },
+   {
+    "code": "11H(CROWNED MARTYRS, FOUR)",
+    "texte": [
+     "Soldiers"
+    ],
+    "catalogue": [
+     "45B312"
+    ]
+   },
+   {
+    "code": "11H(CROWNED MARTYRS, FOUR)",
+    "texte": [
+     "Soldiers"
+    ],
+    "catalogue": [
+     "45B312"
+    ]
+   },
+   {
+    "code": "46C16",
+    "texte": [
+     "van"
+    ],
+    "catalogue": [
+     "61B2"
+    ]
+   },
+   {
+    "code": "41C4",
+    "texte": [
+     "supper"
+    ],
+    "catalogue": [
+     "73D24"
+    ]
+   },
+   {
+    "code": "73A52",
+    "texte": [
+     "annunciation"
+    ],
+    "catalogue": [
+     "73B14"
+    ]
+   },
+   {
+    "code": "46C16",
+    "texte": [
+     "van"
+    ],
+    "catalogue": [
+     "61B2(DIRC VAN DELF)11"
+    ]
+   }
+  ],
+  "T2": [
+   {
+    "code": "25F42",
+    "texte": [
+     "snake"
+    ],
+    "catalogue": [
+     "94O211"
+    ]
+   },
+   {
+    "code": "11G",
+    "texte": [
+     "angel"
+    ],
+    "catalogue": [
+     "71C11932"
+    ]
+   },
+   {
+    "code": "44B113",
+    "texte": [
+     "Kings"
+    ],
+    "catalogue": [
+     "71I53",
+     "71L2311"
+    ]
+   },
+   {
+    "code": "49K12",
+    "texte": [
+     "Chronicles"
+    ],
+    "catalogue": [
+     "71I53",
+     "71L2311"
+    ]
+   },
+   {
+    "code": "44G32",
+    "texte": [
+     "executioner"
+    ],
+    "catalogue": [
+     "73C1334"
+    ]
+   },
+   {
+    "code": "31D112",
+    "texte": [
+     "child"
+    ],
+    "catalogue": [
+     "11F41"
+    ]
+   },
+   {
+    "code": "49G1",
+    "texte": [
+     "doctors"
+    ],
+    "catalogue": [
+     "73B93"
+    ]
+   },
+   {
+    "code": "48C514",
+    "texte": [
+     "painting"
+    ],
+    "catalogue": [
+     "48C510",
+     "92D1916"
+    ]
+   }
+  ],
+  "T1": [
+   {
+    "code": "95A(ARISTAEUS)",
+    "texte": [
+     "Aristaeus",
+     "Aristaeus"
+    ],
+    "catalogue": [
+     "94O211"
+    ]
+   },
+   {
+    "code": "11I63(HAGAR)",
+    "texte": [
+     "Hagar",
+     "Hagar"
+    ],
+    "catalogue": [
+     "71C11932"
+    ]
+   },
+   {
+    "code": "11I73(SALOME)",
+    "texte": [
+     "Salome",
+     "Salome"
+    ],
+    "catalogue": [
+     "73C1334"
+    ]
+   },
+   {
+    "code": "46A1241(ST. JOHN)",
+    "texte": [
+     "John",
+     "John"
+    ],
+    "catalogue": [
+     "73C1334"
+    ]
+   },
+   {
+    "code": "73B(CHRIST)",
+    "texte": [
+     "Christ",
+     "Christ"
+    ],
+    "catalogue": [
+     "73B93"
+    ]
+   },
+   {
+    "code": "11I63(REBEKAH)",
+    "texte": [
+     "Rebekah",
+     "Rebekah"
+    ],
+    "catalogue": [
+     "71C2134"
+    ]
+   },
+   {
+    "code": "73B(CHRIST)",
+    "texte": [
+     "Christ",
+     "Christ"
+    ],
+    "catalogue": [
+     "73D74"
+    ]
+   },
+   {
+    "code": "32B333(EUROPE)",
+    "texte": [
+     "Europe",
+     "Europe"
+    ],
+    "catalogue": [
+     "92B1218"
+    ]
+   }
+  ]
+ }
+}

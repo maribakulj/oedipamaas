@@ -1,0 +1,291 @@
+{
+ "documents": 500,
+ "erreurs": 4,
+ "documents_avec_etabli": 198,
+ "codes_etablis": 260,
+ "precision_exacte": 0.1731,
+ "precision_exacte_ic95": [
+  0.1308,
+  0.2192
+ ],
+ "precision_hierarchique": 0.3115,
+ "precision_hierarchique_ic95": [
+  0.2615,
+  0.3654
+ ],
+ "par_type": {
+  "T1": {
+   "n": 68,
+   "precision_hierarchique": 0.1029
+  },
+  "T2": {
+   "n": 169,
+   "precision_hierarchique": 0.3432
+  },
+  "T6": {
+   "n": 23,
+   "precision_hierarchique": 0.6957
+  }
+ },
+ "exemples_non_confirmes": {
+  "T2": [
+   {
+    "code": "45D22",
+    "texte": [
+     "Marine"
+    ],
+    "catalogue": [
+     "25H13",
+     "26C",
+     "46C24",
+     "47D31"
+    ]
+   },
+   {
+    "code": "41C323",
+    "texte": [
+     "verre"
+    ],
+    "catalogue": [
+     "41C322",
+     "41C341",
+     "41C622",
+     "47I4223"
+    ]
+   },
+   {
+    "code": "41C6411",
+    "texte": [
+     "beurre"
+    ],
+    "catalogue": [
+     "41C322",
+     "41C341",
+     "41C622",
+     "47I4223"
+    ]
+   },
+   {
+    "code": "25G3(OLIVE-TREE)",
+    "texte": [
+     "oliviers"
+    ],
+    "catalogue": [
+     "73D31211"
+    ]
+   },
+   {
+    "code": "41A6",
+    "texte": [
+     "jardin"
+    ],
+    "catalogue": [
+     "73D31211"
+    ]
+   },
+   {
+    "code": "43C9",
+    "texte": [
+     "Danse"
+    ],
+    "catalogue": [
+     "92D1916",
+     "92D19161"
+    ]
+   },
+   {
+    "code": "32B3711",
+    "texte": [
+     "Annonciation de San Martino"
+    ],
+    "catalogue": [
+     "73A522"
+    ]
+   },
+   {
+    "code": "25G4111",
+    "texte": [
+     "couronne"
+    ],
+    "catalogue": [
+     "44B162"
+    ]
+   }
+  ],
+  "T1": [
+   {
+    "code": "11H(JEROME)",
+    "texte": [
+     "saint Jérôme",
+     "Jérôme"
+    ],
+    "catalogue": [
+     "11H(Francis)0",
+     "11H(Jerome)0",
+     "11HH(Justina of Padua)0",
+     "73B821"
+    ]
+   },
+   {
+    "code": "46A1241(ST. JOHN)",
+    "texte": [
+     "Jean",
+     "Jean"
+    ],
+    "catalogue": [
+     "11H(Francis)0",
+     "11H(Jerome)0",
+     "11HH(Justina of Padua)0",
+     "73B821"
+    ]
+   },
+   {
+    "code": "11I62(JOSEPH)",
+    "texte": [
+     "Joseph",
+     "Joseph"
+    ],
+    "catalogue": [
+     "71D222"
+    ]
+   },
+   {
+    "code": "98B(PSAMMETICHUS)",
+    "texte": [
+     "Égypte",
+     "Égypte"
+    ],
+    "catalogue": [
+     "71D222"
+    ]
+   },
+   {
+    "code": "98B(FABRICIUS, C.)",
+    "texte": [
+     "Fabricius",
+     "Fabricius"
+    ],
+    "catalogue": [
+     "31A2422",
+     "61B(+52)",
+     "61B:31A2212(+1)",
+     "61B:31D14"
+    ]
+   },
+   {
+    "code": "95A(PARIS)",
+    "texte": [
+     "Paris",
+     "Paris"
+    ],
+    "catalogue": [
+     "25H",
+     "25I",
+     "31D15",
+     "46C131",
+     "46C13141"
+    ]
+   },
+   {
+    "code": "73B(CHRIST)",
+    "texte": [
+     "Christ",
+     "Christ"
+    ],
+    "catalogue": [
+     "73D353"
+    ]
+   },
+   {
+    "code": "73B(CHRIST)",
+    "texte": [
+     "Christ",
+     "Christ"
+    ],
+    "catalogue": [
+     "73D94"
+    ]
+   }
+  ],
+  "T6": [
+   {
+    "code": "45D3",
+    "texte": [
+     "officiers"
+    ],
+    "catalogue": [
+     "31A231",
+     "31A235",
+     "31A2421",
+     "31A2422",
+     "31D14",
+     "45B(+26):61B2(...)13"
+    ]
+   },
+   {
+    "code": "73A52",
+    "texte": [
+     "Annonciation"
+    ],
+    "catalogue": [
+     "73AA523"
+    ]
+   },
+   {
+    "code": "41A77",
+    "texte": [
+     "Vase"
+    ],
+    "catalogue": [
+     "25F(+3)",
+     "25F41",
+     "25F711(BUMBLEBEE)",
+     "25F711(CATERPILLAR)",
+     "25F711(GRASS-HOPPER)",
+     "25F711(LADYBIRD)"
+    ]
+   },
+   {
+    "code": "45D3",
+    "texte": [
+     "Officier"
+    ],
+    "catalogue": [
+     "46C13185"
+    ]
+   },
+   {
+    "code": "73A52",
+    "texte": [
+     "Annonciation"
+    ],
+    "catalogue": [
+     "73AA522"
+    ]
+   },
+   {
+    "code": "73A52",
+    "texte": [
+     "Annonciation"
+    ],
+    "catalogue": [
+     "73AA522"
+    ]
+   },
+   {
+    "code": "95A(ALCON)",
+    "texte": [
+     "archers"
+    ],
+    "catalogue": [
+     "25G3",
+     "31A25(+9321)",
+     "31A534",
+     "31A5341",
+     "41A2",
+     "41A33"
+    ]
+   }
+  ]
+ }
+}
