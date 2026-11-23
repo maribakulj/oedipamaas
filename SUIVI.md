@@ -17,14 +17,14 @@ Référence : `CAHIER_DES_CHARGES.md`. Branche de travail : `claude/dazzling-arc
 
 ## J0 — Remise en état
 
-- [ ] **E1 Environnement.** SWI-Prolog récent (≥ 9.2, PPA `swi-prolog/stable` ou compilation ; les paquets Ubuntu 9.0
+- [x] **E1 Environnement.** SWI-Prolog récent (≥ 9.2, PPA `swi-prolog/stable` ou compilation ; les paquets Ubuntu 9.0
       sont trop anciens pour Janus), `janus-swi`, `pytest` ; cloner `iconclass/data` (`GIT_LFS_SKIP_SMUDGE=1 git clone
       --depth 1 https://github.com/iconclass/data /home/user/donnees/iconclass-data`) ; WordNet 3.0 Prolog + `dict`
       (wordnetcode.princeton.edu) ; compiler la base ; faire passer toute la suite de tests, y compris celles qui
       demandent `ICONCLASS_DATA`, `WORDNET_PROLOG`, `WORDNET_DICT`. Écrire les commandes exactes dans
       `docs/INSTALLATION.md`. (Le script d'installation de l'environnement cloud sera enregistré au réveil : il demande
       une approbation.)
-- [ ] **J0.1 Licence.** `LICENSE` (MIT), champ `license` de `pyproject.toml`, fichiers `.pl` du socle dans
+- [x] **J0.1 Licence.** `LICENSE` (MIT), champ `license` de `pyproject.toml`, fichiers `.pl` du socle dans
       `package-data`.
 - [ ] **J0.2 Une seule hiérarchie.** `decision:plus_specifiques` sur `arbre:ancetre` ; `preuve()` de
       `socle/moteur.py` calcule les ancêtres par Prolog, pas par préfixe de chaîne ; tests sur `11H(...)` /
@@ -70,3 +70,5 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 ## Journal
 
 - 2026-11-23 — création du suivi ; boucle lancée sur J0.
+- 2026-11-23 — E1 : SWI-Prolog 11.0.0 (PPA), Janus, Iconclass `0595358`, WordNet 3.0 ; 37 tests passent avec les données réelles ; base compilée (index dérivés en cours). Script d'installation cloud à enregistrer au réveil (approbation).
+- 2026-11-23 — J0.1 : licence MIT, sources Prolog du socle empaquetées.
