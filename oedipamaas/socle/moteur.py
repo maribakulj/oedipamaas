@@ -78,9 +78,14 @@ def main(base, decision, dossier, sortie, maximum=MAX, budget=BUDGET, nom_ordre=
                 cands = sorted(({"code": c, "score": p, "traits": dict(t)} for c, p, t in r["X"]), key=ordre)
                 if int(maximum):                    # MAX = 0 : tous les candidats
                     cands = cands[:int(maximum)]
+                # les probabilités de toute l'image en une fois (une décision à deux étages lit la place de chaque
+                # candidat parmi les autres)
+                tc = "[" + ",".join(f"c({atome(c['code'])}, [" + ",".join(f"{a}-{v!r}" for a, v in c["traits"].items())
+                                    + "])" for c in cands) + "]"
+                ps = dict(janus.query_once("atom_to_term(A, _C, _), decision:p_image(_C, _Ps), "
+                                           "findall([_N, _P], member(_N-_P, _Ps), X)", {"A": tc})["X"])
                 for c in cands:
-                    tt = "[" + ",".join(f"{a}-{v!r}" for a, v in c["traits"].items()) + "]"
-                    c["p"] = janus.query_once("atom_to_term(A, _T, _), decision:p_catalogue(_T, P)", {"A": tt})["P"]
+                    c["p"] = ps[c["code"]]
                 terme = "[" + ",".join(f"c({atome(c['code'])}, {c['p']!r}, [prof-{c['traits'].get('prof', 0)}])"
                                        for c in cands) + "]"
                 ret = janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)", {"A": terme})["X"]

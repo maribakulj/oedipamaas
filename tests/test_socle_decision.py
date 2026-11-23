@@ -57,3 +57,95 @@ def test_decision():
         # les plus spécifiques : un ancêtre d'un code retenu n'est pas répété
         cands2 = "[c('25F23', 0.9, [prof-6]), c('25F2', 0.95, [prof-5])]"
         assert janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)", {"A": cands2})["X"] == ["25F23"]
+
+
+# --- Deux étages : référence Python, celle du noyau de calibration (contexte_image) et de la mesure (ancestors) ------
+
+import re  # noqa: E402
+
+PART = re.compile(r"\d\d?[A-Z]{0,2}\d*(?:\([^)]*\)\d*)*")
+TOKEN = re.compile(r"\([^)]*\)|[A-Z]{1,2}|\d")
+
+
+def ancestors(code):
+    out = {code}
+    if all(PART.fullmatch(p) for p in code.split(":")):
+        for p in code.split(":"):
+            cur = ""
+            for t in TOKEN.findall(p):
+                cur += t
+                out.add(cur)
+    return out
+
+
+def relire_foret(base, foret, noms, x):
+    z = base
+    for arbre in foret:
+        i = 0
+        while not arbre[i][5]:
+            f, seuil, _, g, d, _, _ = arbre[i]
+            i = g if x.get(noms[f], 0.0) <= seuil else d
+        z += arbre[i][6]
+    return 1 / (1 + math.exp(-max(-30.0, min(30.0, z))))
+
+
+def contexte(p):
+    """{code: {nom: valeur}} : la place de chaque candidat dans l'image (modele_calibration.contexte_image)."""
+    ordre = sorted(p, key=lambda c: (-p[c], c))
+    pmax = p[ordre[0]]
+    desc = {}
+    for c in p:
+        for a in ancestors(c):
+            if a != c and a in p and p[c] > desc.get(a, 0.0):
+                desc[a] = p[c]
+    devant, out = {}, {}
+    for r, c in enumerate(ordre, 1):
+        anc = [a for a in ancestors(c) if a != c and a in p and ":" not in a]
+        proche = max(anc, key=lambda a: (len(ancestors(a)), a), default=None)
+        out[c] = {"inv_rang_image": 1.0 / r, "p_sur_max_image": p[c] / pmax if pmax > 0 else 0.0,
+                  "max_descendant": desc.get(c, 0.0), "p_ancetre_proche": p[proche] if proche else 0.0,
+                  "devant_dans_chapitre": devant.get(c[:1], 0)}
+        devant[c[:1]] = devant.get(c[:1], 0) + 1
+    return out
+
+
+CONTEXTE = ["inv_rang_image", "p_sur_max_image", "max_descendant", "p_ancetre_proche", "devant_dans_chapitre"]
+ETAGE2 = [  # sur traits + contexte : indices 3 = inv_rang_image, 5 = max_descendant, 6 = p_ancetre_proche
+    [[3, 0.6, False, 1, 2, False, 0.0], [5, 0.5, False, 3, 4, False, 0.0], [0, 0.0, False, 0, 0, True, 1.5],
+     [0, 0.0, False, 0, 0, True, -0.5], [6, 0.4, False, 5, 6, False, 0.0], [0, 0.0, False, 0, 0, True, 0.2],
+     [0, 0.0, False, 0, 0, True, 0.9]],
+]
+
+
+def test_deux_etages():
+    from oedipamaas.socle.compiler_decision import compiler
+    poids = dict(POIDS, deux_etages={"traits": TRAITS, "contexte": CONTEXTE, "etage1": {"base": -1.0, "foret": FORET},
+                                     "etage2": {"base": -0.5, "foret": ETAGE2}, "k": 3, "seuil": 0.1, "critere": "p",
+                                     "ecart_relecture": 0.0, "f1_attendu": {"facteur": 1.0, "g": 3.0}})
+    cands = {"25F23": {"bm25_direct": 12.0, "part": 0.9, "prof": 5}, "25F2": {"bm25_direct": 11.0, "prof": 4},
+             "25F23(LION)": {"bm25_direct": 3.0, "part": 1.0, "prof": 6}, "31A": {"part": 0.2, "prof": 3},
+             "61B(+53)": {"bm25_direct": 15.0, "part": 0.7, "prof": 4}, "61B": {"bm25_direct": 1.0, "prof": 3}}
+    with tempfile.TemporaryDirectory() as t:
+        pj = Path(t) / "poids.json"
+        pj.write_text(json.dumps(poids))
+        pl = Path(t) / "decision_poids.pl"
+        assert compiler(pj, pl)["deux_etages"] == {1: 2, 2: 1}
+        janus.query_once(f"load_files('{pl}', [redefine_module(true)])")
+        for f in ("notation.pl", "decision.pl"):
+            janus.consult(str(SOCLE / f))
+        # préfixes par jetons, comme la mesure (la clé est un jeton ; un nom aussi)
+        for c in list(cands) + ["11H(JEROME)1", "47H411(+456(...))", "25FF23"]:
+            assert set(janus.query_once("decision:prefixes(N, X)", {"N": c})["X"]) == ancestors(c), c
+        p1 = {c: relire_foret(-1.0, FORET, TRAITS, x) for c, x in cands.items()}
+        ctx = contexte(p1)
+        attendu = {c: relire_foret(-0.5, ETAGE2, TRAITS + CONTEXTE, {**x, **ctx[c]}) for c, x in cands.items()}
+        terme = "[" + ",".join(f"c({c!r}, [" + ",".join(f"{k}-{v!r}" for k, v in x.items()) + "])"
+                               for c, x in cands.items()) + "]"
+        r = janus.query_once("atom_to_term(A, _C, _), decision:p_image(_C, _Ps), findall([_N, _P], member(_N-_P, _Ps), X)",
+                             {"A": terme})["X"]
+        obtenu = dict(r)
+        assert set(obtenu) == set(cands)
+        for c in cands:
+            assert abs(obtenu[c] - attendu[c]) < 1e-12, (c, obtenu[c], attendu[c])
+        # le réglage est celui des deux étages
+        assert janus.query_once("decision_poids:reglage(K, S, C)")["K"] == 3

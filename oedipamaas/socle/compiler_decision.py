@@ -10,6 +10,10 @@ Faits du module decision_poids :
   reglage(K, Seuil, Critere)                 sélection par grille (critère : p, ou esperance = p × (profondeur + 1))
   f1_attendu(G)                              sélection par F1 hiérarchique attendu (taille attendue de la vérité)
   provenance(Cle, Valeur)                    empreinte du fichier de poids, cible, nombre d'images d'apprentissage
+Décision à deux étages (poids["deux_etages"]) : deux_etages, etage_base(E, B), etage_noeud(E, A, N, Trait, Seuil, G,
+D), etage_feuille(E, A, N, V) pour E = 1 (sur les traits) et E = 2 (sur les traits et la place du candidat dans son
+image : inv_rang_image, p_sur_max_image, max_descendant, p_ancetre_proche, devant_dans_chapitre) ; reglage et
+f1_attendu sont alors ceux des deux étages (decision:p_image/2 les exécute).
 Usage : python -m oedipamaas.socle.compiler_decision POIDS.json SORTIE.pl"""
 import hashlib
 import json
@@ -41,8 +45,27 @@ def compiler(chemin_poids, sortie):
                 lignes.append(f"feuille({i}, {n}, {float(valeur)!r}).")
             else:
                 lignes.append(f"noeud({i}, {n}, {q(traits[f])}, {float(seuil)!r}, {g}, {d}).")
+    out = {"arbres": len(a["foret"]), "noeuds": sum(len(x) for x in a["foret"]), "traits": len(traits)}
+    de = p.get("deux_etages")
+    if de:      # deux étages : le premier sur les traits, le second sur les traits et la place dans l'image
+        lignes[0] = lignes[0].replace("provenance/2]).", "provenance/2, deux_etages/0, etage_base/2, etage_noeud/7, "
+                                                         "etage_feuille/4]).")
+        lignes[1] = ":- discontiguous noeud/6, feuille/3, etage_noeud/7, etage_feuille/4."
+        lignes = [x for x in lignes if not x.startswith(("reglage(", "f1_attendu("))]
+        lignes += ["deux_etages.", f"reglage({int(de['k'])}, {float(de['seuil'])!r}, {q(de['critere'])}).",
+                   f"f1_attendu({float(de['f1_attendu']['g'])!r}).",
+                   f"provenance(ecart_relecture_deux_etages, {float(de.get('ecart_relecture', 0.0))!r})."]
+        noms = {1: de["traits"], 2: de["traits"] + de["contexte"]}
+        for e in (1, 2):
+            etage = de[f"etage{e}"]
+            lignes.append(f"etage_base({e}, {float(etage['base'])!r}).")
+            for i, arbre in enumerate(etage["foret"]):
+                for n, (f, seuil, _mg, g, d, feuille, valeur) in enumerate(arbre):
+                    lignes.append(f"etage_feuille({e}, {i}, {n}, {float(valeur)!r})." if feuille else
+                                  f"etage_noeud({e}, {i}, {n}, {q(noms[e][f])}, {float(seuil)!r}, {g}, {d}).")
+        out["deux_etages"] = {e: len(de[f"etage{e}"]["foret"]) for e in (1, 2)}
     Path(sortie).write_text("\n".join(lignes) + "\n", encoding="utf-8")
-    return {"arbres": len(a["foret"]), "noeuds": sum(len(x) for x in a["foret"]), "traits": len(traits)}
+    return out
 
 
 if __name__ == "__main__":
