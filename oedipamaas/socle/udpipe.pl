@@ -12,6 +12,7 @@
     n'est pas lue).
 */
 :- module(udpipe, [ analyser/3,        % +Texte, +Langue, -Phrases
+                    analyser_lot/3,    % +Textes, +Langue, -ListeDePhrases (un seul appel pour tout le lot)
                     configuration/1    % -Config
                   ]).
 :- encoding(utf8).
@@ -55,6 +56,41 @@ analyser(Texte, Langue, Phrases) :-
         delete_file(Fichier)),
     (   Statut == exit(0) -> true ; throw(error(udpipe(Statut), _)) ),
     conllu_phrases(Sortie, Phrases).
+
+% analyser_lot(+Textes, +Langue, -Ls) : un seul appel d'UDPipe (le modèle est chargé une fois) ; les textes sont
+% joints par une ligne vide (fin de paragraphe, donc de phrase) ; une ligne vide à l'intérieur d'un texte devient
+% « espace + saut de ligne » (même longueur : les positions ne bougent pas) ; chaque phrase revient à son texte, ses
+% positions ramenées au début du texte
+analyser_lot(Textes, Langue, Ls) :-
+    maplist(sans_ligne_vide, Textes, Textes1),
+    atomic_list_concat(Textes1, '\n\n', Tout0), atom_string(Tout0, Tout),
+    debuts(Textes1, 0, Debuts),
+    analyser(Tout, Langue, Phrases),
+    maplist(phrases_du_texte(Phrases), Debuts, Textes1, Ls).
+
+sans_ligne_vide(T0, T) :-
+    split_string(T0, "", "", [S0]),
+    re_vide(S0, T).
+
+re_vide(S0, S) :-
+    (   sub_string(S0, B, 2, A, "\n\n")
+    ->  sub_string(S0, 0, B, _, Av), sub_string(S0, _, A, 0, Ap),
+        string_concat(Av, " \n", X), string_concat(X, Ap, S1), re_vide(S1, S)
+    ;   S = S0
+    ).
+
+debuts([], _, []).
+debuts([T|Ts], D, [D|Ds]) :- string_length(T, L), D1 is D + L + 2, debuts(Ts, D1, Ds).
+
+phrases_du_texte(Phrases, D0, Texte, Ps) :-
+    string_length(Texte, L), Fin is D0 + L,
+    findall(phrase(Ms),
+            ( member(phrase(Ms0), Phrases), Ms0 = [mot(_, _, _, _, _, _, _, D1, _)|_], D1 >= D0, D1 < Fin,
+              maplist(decaler(D0), Ms0, Ms) ),
+            Ps).
+
+decaler(D0, mot(I, Fo, L, C, Tr, H, R, D, F), mot(I, Fo, L, C, Tr, H, R, D1, F1)) :-
+    (   D >= 0 -> D1 is D - D0, F1 is F - D0 ; D1 = D, F1 = F ).
 
 configuration(_{binaire: B, modeles: Ms}) :-
     binaire(B),

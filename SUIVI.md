@@ -58,9 +58,9 @@ Critère de sortie J0 : tous les tests passent ; la mesure de référence est re
 - [x] **J1.2 UDPipe.** Binaire ou liaison UDPipe 1 et modèles FR et EN (UD épinglés) ; licences des modèles dans
       `DECISIONS.md` ; segmentation avec positions en caractères.
 - [x] **J1.3 Lecture du CoNLL-U** en Prolog (DCG), positions conservées.
-- [ ] **J1.4 Règles d'interprétation** FR et EN : têtes et noms, propriétés rattachées, négation et sa portée, rôles
+- [x] **J1.4 Règles d'interprétation** FR et EN : têtes et noms, propriétés rattachées, négation et sa portée, rôles
       (actif et passif), coordination ; titres simples ; tout le reste dans `incompris`.
-- [ ] **J1.5 Paires minimales** : 100 paires FR et EN (`tests/paires/`), en `plunit`.
+- [x] **J1.5 Paires minimales** : 100 paires FR et EN (`tests/paires/`), en `plunit`.
 - [ ] **J1.6 T1, T2, T6 de bout en bout** sur les assertions, preuves avec passages, sortie du § 9.
 - [ ] **J1.7 Commande Prolog** : texte ou JSONL en entrée, JSONL et manifeste en sortie, sans Python.
 
@@ -84,3 +84,5 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - 2026-11-23 — J1.2 : UDPipe 1.4.0 compilé, modèles UD 2.5 fr-gsd et en-ewt (licence CC BY-NC-SA, D7 à trancher) ; socle/udpipe.pl (fichier temporaire, positions TokenRange) ; environ 1,5 s par appel (chargement du modèle) : un processus persistant sera nécessaire pour les cibles de vitesse (J4).
 - 2026-11-23 — J1.3 : socle/conllu.pl : phrases, mots, traits, positions, mots composés (positions du jeton) ; 8 tests plunit (4 sans UDPipe, 4 avec).
 - 2026-11-23 — J0.10 : outils/moisson/moisson.py : RKD (SPARQL par pages) et Wikidata P1257 ; 96 908 œuvres après dédoublonnage (65 450 dev, 31 458 test ; 8 518 titres FR) ; manifeste copié dans docs/mesures/manifeste-corpus.json, données dans /home/user/donnees/corpus.
+- 2026-11-23 — J1.4 : socle/interpretation.pl : grappes de noms propres avec titres, propriétés (épithète, attribut, participe), événements et rôles (actif, passif, adjectival, participes, relatives), relations, négation (sans, without, no, neither, ni, absent, missing, verbe nié, présence niée), modalité (adverbes, verbes modaux, étendue aux compléments), alternatives, portée (d'après, matériaux), coréférence copulative ; UDPipe par lot (socle/udpipe:analyser_lot/3, un seul chargement du modèle) ; décisions D8, D9.
+- 2026-11-23 — J1.5 : 105 paires minimales FR et EN (tests/plunit/paires.pl) : 104 passent ; 1 erreur connue de l'analyseur signalée en fixme (« Goliath kills David » : « kills » étiqueté nom). Deux attentes de ma première rédaction corrigées parce que fausses : « threatens a man with a sword » est ambigu (instrument ou complément du nom), « John the Baptist » est le nom entier.
