@@ -18,6 +18,11 @@ from oedipamaas.socle.candidats import BUDGET
 MAX = 120
 
 
+def atome(s):
+    """Atome Prolog entre apostrophes (une notation peut contenir une apostrophe dans un nom)."""
+    return "'" + s.replace("\\", "\\\\").replace("'", "\\'") + "'"
+
+
 def ordre(c):
     t = c["traits"]
     return (t.get("ancetre_seul", 0), -c["score"], -t.get("bm25_direct", 0.0), c["code"])
@@ -63,10 +68,9 @@ def main(base, decision, dossier, sortie, maximum=MAX, budget=BUDGET):
                 for c in cands:
                     tt = "[" + ",".join(f"{a}-{v!r}" for a, v in c["traits"].items()) + "]"
                     c["p"] = janus.query_once("atom_to_term(A, _T, _), decision:p_catalogue(_T, P)", {"A": tt})["P"]
-                terme = "[" + ",".join(f"c({json.dumps(c['code'])}, {c['p']!r}, [prof-{c['traits'].get('prof', 0)}])"
+                terme = "[" + ",".join(f"c({atome(c['code'])}, {c['p']!r}, [prof-{c['traits'].get('prof', 0)}])"
                                        for c in cands) + "]"
-                ret = janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)",
-                                       {"A": terme.replace('"', "'")})["X"]
+                ret = janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)", {"A": terme})["X"]
                 cle = (lambda c: c["p"] * (c["traits"].get("prof", 0) + 1)) if critere == "esperance" else \
                     (lambda c: c["p"])
                 cands.sort(key=lambda c: (-cle(c), c["code"]))
