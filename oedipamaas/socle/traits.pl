@@ -25,7 +25,7 @@
 :- use_module(cadres).
 
 :- dynamic rang_bm25/2, bm25/3, rang_part/2, rang_sujet/2, bm25_sujet/2, spec/1, cle_prop/1, cand/1, expl/1,
-           expl_pont/1, unite_expl/2, nb_unites_desc/1, nom_gab/2, expl_cadre/1.
+           expl_pont/1, unite_expl/2, nb_unites_desc/1, nom_gab/2, expl_cadre/1, cadree/2, couvre/3.
 
 % les unités où N est pleine (mot pour mot ou par le pont WordNet), une fois par notation et par description
 % (une notation nommée dans un gabarit est pleine là où son nom est décrit)
@@ -46,7 +46,7 @@ appui(N, M, F, L, S) :- recherche:candidat(N, M, p(M, F, L, S)).
 contexte(Budget) :-
     maplist(retractall, [rang_bm25(_, _), bm25(_, _, _), rang_part(_, _), rang_sujet(_, _), bm25_sujet(_, _), spec(_),
                          cle_prop(_), cand(_), expl(_), expl_pont(_), unite_expl(_, _), nb_unites_desc(_),
-                         nom_gab(_, _), expl_cadre(_)]),
+                         nom_gab(_, _), expl_cadre(_), cadree(_, _), couvre(_, _, _)]),
     recherche:classement(1000000, L),
     forall(nth1(R, L, c(N, cle(D, W), _)), ( assertz(rang_bm25(N, R)), assertz(bm25(N, D, W)) )),
     % troisième ordre : BM25 sur les seules mentions du sujet (titre, source, alternatives)
@@ -69,8 +69,13 @@ contexte(Budget) :-
     % et selon le cadre du libellé (cadres.pl) : la tête impliquée dans l'unité même qui dit la notation, ses
     % compléments, son contexte, jamais une phase — les plus précises par unité
     cadres:preparer_cadres,
-    specialisation:explications_selon(cadres:pleine_et_cadree, Lexicaux, ExC),
+    findall(U-N, ( member(N, Lexicaux), cadres:pleine_et_cadree(N, U) ), Pc0), sort(Pc0, Pc),
+    forall(member(U-N, Pc), assertz(cadree(U, N))),
+    specialisation:plus_precises(Pc, ExC),
     forall(member(N, ExC), assertz(expl_cadre(N))),
+    % ce que chaque notation cadrée rend compte de son unité : la part des mots de l'unité qui sont des entrées de la
+    % notation (mots du libellé, mots clés, attributs) ou des mots de ses alternatives ; la mieux couvrante de l'unité
+    forall(member(U-N, Pc), ( couverture(U, N, C), assertz(couvre(U, N, C)) )),
     % la structure de la description : les unités où chaque explication est pleine, le nombre d'unités décrites
     append(Ex, ExP, Expl0), sort(Expl0, Expl),
     forall(( member(N, Expl), unites_pleines_de(N, Us), member(U, Us) ), assertz(unite_expl(U, N))),
@@ -129,7 +134,23 @@ trait(N, explication_pont, V) :- ( expl_pont(N) -> V = 1 ; V = 0 ).
 % selon le cadre du libellé : la plus précise des notations dont une unité dit l'alternative et prouve le cadre (tête
 % impliquée là même, compléments, contexte, pas de phase) ; le nombre de ces unités
 trait(N, explication_cadre, V) :- ( expl_cadre(N) -> V = 1 ; V = 0 ).
-trait(N, unites_cadrees, C) :- aggregate_all(count, distinct(U, cadres:pleine_et_cadree(N, U)), C).
+trait(N, unites_cadrees, C) :- aggregate_all(count, cadree(_, N), C).
+% une notation explique une unité si elle rend compte de ce que l'unité dit : la plus forte part des mots d'une de ses
+% unités cadrées dont elle rend compte, et si elle est la mieux couvrante de l'une d'elles (ex aequo compris)
+trait(N, couverture_max, V) :- ( aggregate_all(max(C), couvre(_, N, C), V0) -> V = V0 ; V = 0 ).
+trait(N, meilleure_couverture, V) :-
+    (   couvre(U, N, C), C > 0, \+ ( couvre(U, M, C2), M \== N, C2 > C ) -> V = 1 ; V = 0 ).
+
+% couverture(+U, +N, -C) : parmi les mots de l'unité (formes d'un seul mot dites dans U, mots vides exclus), la part qui
+% sont des entrées de N dans l'index (libellé, mots clés, attributs) ou des mots de ses alternatives
+couverture(U, N, C) :-
+    findall(F, ( specialisation:decrit_dans(F, U), \+ sub_atom(F, _, _, _, ' '), \+ libelles:mot_vide(F) ), Fs0),
+    sort(Fs0, Fs), length(Fs, K),
+    (   K =:= 0 -> C = 0
+    ;   aggregate_all(count, ( member(F, Fs),
+                               once(( lexique_index:entree(F, N, _) ; alternatives_index:alt(N, _, _, F) )) ), D),
+        C is D / K
+    ).
 % le libellé entier (son principal hors parenthèses, contexte « ~ » compris) : la part de ses mots pleins dite quelque
 % part dans la description, et s'il l'est tout entier — l'unité pleine ne vérifie que les mots propres ; « Mary
 % sitting or enthroned, the Christ-child on her knee » est pleine par « knee » sans que Marie soit dite

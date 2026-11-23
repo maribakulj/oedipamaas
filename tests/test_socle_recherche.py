@@ -188,6 +188,13 @@ def test_lecture_et_recherche():
         assert t["wn_hyperonyme"] == 1 and t["champ_persons"] >= 1 and t["nom"] == 1 and t["prof"] == 6, t
         assert t["explication"] == 1 and t["unites_pleines"] == 1, t       # « lion and skull » le dit entièrement
         assert t["explication_pont"] == 1 and t["unites_pleines_pont"] == 2, t     # et la lionne, par le pont
+        # couverture : dans « Saint Jerome / lion and skull » (persons[0]), le lion ne rend compte que d'un mot sur
+        # quatre, Jérôme de bien plus (son nom, et le lion et le crâne, ses attributs possibles) : c'est lui qui
+        # explique l'unité ; « lioness » n'est pas une entrée du lion (il n'y vient que par le pont)
+        assert abs(t["couverture_max"] - 0.25) < 1e-9 and "meilleure_couverture" not in t, t
+        jr = dict(janus.query_once("traits:candidats_traits(10, _L), member(['11H(JEROME)', _, _T], _L), "
+                                   "findall([_K, _V], member(_K-_V, _T), X)")["X"])
+        assert jr["meilleure_couverture"] == 1 and jr["couverture_max"] >= 0.75, jr
         # structure : pleine dans une personne et une entité, 2 des 9 unités décrites ; une concurrente, Jérôme, plein
         # dans la même personne (« Saint Jerome… lion and skull ») ; la plus précise de ses unités
         assert t["plein_persons"] == 1 and t["plein_entities"] == 1 and "plein_subject" not in t, t

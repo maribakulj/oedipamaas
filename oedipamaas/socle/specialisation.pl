@@ -22,6 +22,8 @@
                             mot_dit/1,              % +Mot (dit quelque part dans la description)
                             explications/2,         % +Ns, -Max (par unité, les plus profondes des notations pleines)
                             explications_pont/2,    % +Ns, -Max (de même, pleines par le pont WordNet compris)
+                            explications_selon/3,   % +Pleine, +Ns, -Max (selon un critère d'unité pleine)
+                            plus_precises/2,        % +Paires Unite-N triées, -Max (les plus précises par unité)
                             descente/2,             % +Depart, -Atteinte (enfants les mieux soutenus, en chaîne)
                             specialisees/2          % +Departs, -Atteintes (toutes, sans doublon)
                           ]).
@@ -196,6 +198,11 @@ explications_pont(Ns, Max) :- explications_selon(pleine_large_dans, Ns, Max).
 explications_selon(Pleine, Ns, Max) :-
     findall(U-N, ( member(N, Ns), call(Pleine, N, U) ), P0),
     sort(P0, P),
+    plus_precises(P, Max).
+
+% plus_precises(+Paires, -Max) : parmi des paires Unite-Notation triées, les notations qu'aucune autre de la même unité
+% ne précise
+plus_precises(P, Max) :-
     group_pairs_by_key(P, Groupes),                  % par unité : ses notations pleines
     findall(N, ( member(_-Pl, Groupes), member(N, Pl), \+ ( member(M, Pl), M \== N, arbre:ancetre(M, N) ) ), Ms),
     sort(Ms, Max).
