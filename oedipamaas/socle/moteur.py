@@ -4,9 +4,10 @@
 appris : probabilité ou espérance), statut « retenu » ou « candidat ». Aucune étiquette n'est lue ici.
 
 Les candidats donnés à la décision sont pris dans l'ordre de l'apprentissage (directs, spécialisés et à clé par part
-décrite puis BM25, ancêtres ensuite), au plus MAX, comme dans le noyau qui a appris les poids.
+décrite puis BM25, ancêtres ensuite), au plus MAX (0 : tous), comme dans le noyau qui a appris les poids.
 Usage : python -m oedipamaas.socle.moteur BASE_V1/ DECISION.pl DESCRIPTIONS/ SORTIE.jsonl [MAX] [BUDGET] [ORDRE]
-(ORDRE : part, celui de la première décision, ou rang_min ; toujours celui de l'apprentissage de DECISION)"""
+(ORDRE : part, celui de la première décision, rang_min, ou expl, les explications par unité d'abord ; toujours celui
+de l'apprentissage de DECISION)"""
 import hashlib
 import json
 import sys
@@ -31,6 +32,10 @@ ORDRES = {
     # meilleur rang dans l'un des trois ordres (BM25, part décrite, BM25 du sujet)
     "rang_min": lambda c: (c["traits"].get("ancetre_seul", 0), -c["traits"].get("inv_rang_min", 0.0), -c["score"],
                            c["code"]),
+    # explications par unité d'abord, les plus souvent dites (nombre d'unités pleines) en tête, puis comme « part »
+    "expl": lambda c: (c["traits"].get("ancetre_seul", 0), -c["traits"].get("explication", 0),
+                       -c["traits"].get("unites_pleines", 0), -c["score"], -c["traits"].get("bm25_direct", 0.0),
+                       c["code"]),
 }
 
 
@@ -71,7 +76,8 @@ def main(base, decision, dossier, sortie, maximum=MAX, budget=BUDGET, nom_ordre=
                 r = janus.query_once("traits:candidats_traits(B, _L), findall([_N, _P, _T], (member([_N, _P, _T0], _L), "
                                      "findall([_K, _V], member(_K-_V, _T0), _T)), X)", {"B": int(budget)})
                 cands = sorted(({"code": c, "score": p, "traits": dict(t)} for c, p, t in r["X"]), key=ordre)
-                cands = cands[:int(maximum)]
+                if int(maximum):                    # MAX = 0 : tous les candidats
+                    cands = cands[:int(maximum)]
                 for c in cands:
                     tt = "[" + ",".join(f"{a}-{v!r}" for a, v in c["traits"].items()) + "]"
                     c["p"] = janus.query_once("atom_to_term(A, _T, _), decision:p_catalogue(_T, P)", {"A": tt})["P"]
