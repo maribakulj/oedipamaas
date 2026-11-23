@@ -38,7 +38,7 @@ Référence : `CAHIER_DES_CHARGES.md`. Branche de travail : `claude/dazzling-arc
 - [x] **J0.6 Clés.** `cles:appuis_de/3` accepte les appuis de toute nature admise (pont WordNet, spécialisation), pas
       seulement `egal` ; test.
 - [x] **J0.7 `oedipamaas expliquer`.** Corriger `cli.py` (`score`, `contribution`) ; test de contrat de la CLI.
-- [ ] **J0.8 Négation et relations (transitoire).** Négation reconnue dans la mention et pas seulement au début
+- [x] **J0.8 Négation et relations (transitoire).** Négation reconnue dans la mention et pas seulement au début
       (« depicted without a lion ») ; `cadres:unite_liee/2` respecte le sens de la relation ; tests. (Remplacés au J1
       par les assertions.)
 - [ ] **J0.9 Intégration continue.** `.github/workflows/tests.yml` : tests sans base à chaque poussée. Si la poussée
@@ -78,3 +78,4 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - 2026-11-23 — J0.5 : branché : critère « f1 » du réglage → decision:choix_f1/3, reprise exacte de _choix_f1 (0.2), testée contre une référence Python pour trois g ; lambdas yall remplacées par des prédicats.
 - 2026-11-23 — J0.6 : appuis des clés : égalité, lien WordNet admis depuis un sens dominant, mots propres décrits (spécialisation) ; un premier essai avec tous les sens donnait « debout » à la figure par l'entité voisine — le test existant l'a bloqué, d'où la restriction aux sens dominants.
 - 2026-11-23 — J0.7 : « expliquer » lit p_catalogue et valeur ; test de contrat qui reproduit le KeyError sur l'ancien code et passe avec la correction.
+- 2026-11-23 — J0.8 : négation coupée au mot négatif (no, not, without, neither, nor, never, lack of, absence of) et postposée (absent, missing, invisible) ; cadres:unite_liee/2 suit le sens de la relation ; 39 tests passent.

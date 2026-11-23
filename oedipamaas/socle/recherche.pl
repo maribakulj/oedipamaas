@@ -65,20 +65,46 @@ forme_mention(M, Forme) :- fm(M, Forme).
 % une mention est lue telle quelle et avec ses traits d'union remplacés par des espaces : « half-length » donne
 % « half-length », « half », « length » et « half length » (Iconclass écrit l'un ou l'autre)
 forme_mention_calculee(M, Forme) :-
-    description:mention(M, _, _, Texte0),
-    \+ niee(Texte0),
+    description:mention(M, _, _, Texte00),
+    avant_negation(Texte00, Texte0),
     (   Texte = Texte0
     ;   sub_atom(Texte0, _, _, _, '-'), atomic_list_concat(Morceaux, '-', Texte0), atomic_list_concat(Morceaux, ' ', Texte)
     ),
     mots_de_mention(Texte, Mots),
     distinct(Forme, ( suite(Mots, S), ( Forme = S ; morphologie:tous_lemmes(S, Ls), member(Forme, Ls) ) )).
 
-% une mention niée tout entière (« no landscape », « without frame », « not visible », « absence of colour ») ne dit
-% pas ce qu'elle nomme : elle ne donne aucune forme
-niee(Texte) :-
+% une négation porte sur ce qui la suit : on ne garde de la mention que ce qui la précède. Niée tout entière
+% (« no landscape », « without frame », « not visible », « absence of colour ») elle ne donne aucune forme ; niée en
+% son milieu (« depicted without a lion », « a saint, no lion visible ») elle garde ce qui précède la négation.
+% Faute d'analyse de la portée, tout ce qui suit est écarté, même au-delà d'un « but » : précision d'abord.
+avant_negation(Texte, Avant) :-
     downcase_atom(Texte, T),
-    member(Negation, ['no ', 'not ', 'without ', 'lack of ', 'absence of ']),
-    sub_atom(T, 0, _, _, Negation), !.
+    atomic_list_concat(['', T, ''], ' ', T1),
+    findall(B, ( negation(Neg), atomic_list_concat([' ', Neg, ' '], Motif),
+                 sub_atom(T1, B, _, _, Motif) ), Bs),
+    (   negation_postposee(Post), atomic_list_concat([' ', Post, ' '], MotifP), sub_atom(T1, _, _, _, MotifP)
+    ->  Avant = ''                                       % « lion absent », « skull missing » : la mention entière
+    ;   Bs == []
+    ->  Avant = Texte
+    ;   min_list(Bs, B0),
+        sub_atom(Texte, 0, B0, _, Avant0),
+        normalize_space(atom(Avant), Avant0)
+    ).
+
+negation(no).
+negation(not).
+negation(without).
+negation(neither).
+negation(nor).
+negation(never).
+negation('lack of').
+negation('absence of').
+
+negation_postposee(absent).
+negation_postposee(missing).
+negation_postposee(invisible).
+
+niee(Texte) :- avant_negation(Texte, '').
 
 % --- Candidats ------------------------------------------------------------------------------------------------------
 
