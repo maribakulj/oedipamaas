@@ -50,11 +50,14 @@ suite(Mots, Suite) :-
     extremite(Premier), extremite(Dernier),
     atomic_list_concat(Suite0, ' ', Suite).
 
-% les formes des mentions sont calculées une fois par description (preparer/0) et gardées en faits
-:- dynamic fm/2.
+% les formes des mentions et les appuis des candidats sont calculés une fois par description (preparer/0) et gardés
+% en faits, indexés par notation
+:- dynamic fm/2, ap/3.
 preparer :-
     retractall(fm(_, _)),
-    forall(distinct(M-F, forme_mention_calculee(M, F)), assertz(fm(M, F))).
+    retractall(ap(_, _, _)),
+    forall(distinct(M-F, forme_mention_calculee(M, F)), assertz(fm(M, F))),
+    forall(distinct(N-M-P, candidat_calcule(N, M, P)), assertz(ap(N, M, P))).
 
 forme_mention(M, Forme) :- fm(M, Forme).
 
@@ -77,10 +80,12 @@ lien_admis(pertainym).
 lien_admis(similaire).
 lien_admis(partie_de).
 
-candidat(N, M, p(M, F, egal, Src)) :-
+candidat(N, M, P) :- ap(N, M, P).
+
+candidat_calcule(N, M, p(M, F, egal, Src)) :-
     forme_mention(M, F),
     lexique_index:entree(F, N, Src).
-candidat(N, M, p(M, G, wordnet(Rel, Pas, F), Src)) :-
+candidat_calcule(N, M, p(M, G, wordnet(Rel, Pas, F), Src)) :-
     forme_mention(M, F),
     morphologie:forme_connue(F, _),
     lexique:voisin(F, G, Rel, Pas),

@@ -105,6 +105,20 @@ def test_lecture_et_recherche():
                                         "preuve:preuve_json(_D, J)")["J"])
         assert q["mots_propres_decrits"] == ["kneeling"] and q["part_decrite"] == 0.5
 
+        # traits de preuve des candidats, pour la décision apprise
+        janus.consult(str(SOCLE / "cles.pl"))
+        janus.query_once(f"cles:construire_cles('{base / 'cles_index.pl'}')")
+        janus.query_once(f"load_files('{base / 'cles_index.pl'}', [redefine_module(true)])")
+        janus.consult(str(SOCLE / "traits.pl"))
+        t = janus.query_once("traits:candidats_traits(10, _L), member(['25F23(LION)', _P, _T], _L), "
+                             "findall([_K, _V], member(_K-_V, _T), X)")["X"]
+        t = dict(t)
+        # appui direct « lion » dans persons.recognised_by ; la lionne (entité) passe par WordNet
+        assert t["wn_hyperonyme"] == 1 and t["champ_persons"] >= 1 and t["nom"] == 1 and t["prof"] == 6, t
+        a = dict(janus.query_once("traits:candidats_traits(10, _L), member(['25F2', _, _T], _L), "
+                                  "findall([_K, _V], member(_K-_V, _T), X)")["X"])
+        assert a.get("ancetre_seul") == 1 and a.get("enfants_candidats", 0) >= 1, a
+
         # « half-length » se lit aussi « half », « length »
         assert janus.query_once("recherche:forme_mention(_, length)")["truth"] is False  # pas encore décrit
         fd.charger(janus, dict(DESCRIPTION, keywords=["half-length portrait"]))
