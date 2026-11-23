@@ -1,5 +1,6 @@
 """Les tests Prolog (plunit) de tests/plunit, lancés par swipl : un fichier, un processus. Les tests d'UDPipe
-demandent OEDIPAMAAS_UDPIPE (le binaire) et OEDIPAMAAS_MODELES (le dossier des modèles) ; sinon ils sont sautés."""
+demandent OEDIPAMAAS_UDPIPE (le binaire) et OEDIPAMAAS_MODELES (le dossier des modèles), ceux de bout en bout aussi
+OEDIPAMAAS_BASE (la base compilée) ; sinon ils sont sautés."""
 import os
 import shutil
 import subprocess

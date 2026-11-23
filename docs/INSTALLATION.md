@@ -71,3 +71,15 @@ Empreintes : `french-gsd-ud-2.5-191206.udpipe` `3b10b4c8…bea30`, `english-ewt-
 export OEDIPAMAAS_UDPIPE=/home/user/donnees/udpipe-src/src/udpipe
 export OEDIPAMAAS_MODELES=/home/user/donnees/udpipe-modeles
 ```
+
+## La commande de la V1 (Prolog seul)
+
+```bash
+export OEDIPAMAAS_UDPIPE=/home/user/donnees/udpipe-src/src/udpipe
+export OEDIPAMAAS_MODELES=/home/user/donnees/udpipe-modeles
+swipl oedipamaas/socle/commande.pl --base /home/user/donnees/base --texte "Saint Jérôme dans son étude." --langue fr
+swipl oedipamaas/socle/commande.pl --base /home/user/donnees/base --entree documents.jsonl --sortie codes.jsonl
+```
+
+`documents.jsonl` : une ligne `{"id": …, "texte": …, "langue": "fr"|"en", "genre": …}` par document. Les tests de bout
+en bout demandent en plus `OEDIPAMAAS_BASE=/home/user/donnees/base`.

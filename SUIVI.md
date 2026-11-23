@@ -61,8 +61,8 @@ Critère de sortie J0 : tous les tests passent ; la mesure de référence est re
 - [x] **J1.4 Règles d'interprétation** FR et EN : têtes et noms, propriétés rattachées, négation et sa portée, rôles
       (actif et passif), coordination ; titres simples ; tout le reste dans `incompris`.
 - [x] **J1.5 Paires minimales** : 100 paires FR et EN (`tests/paires/`), en `plunit`.
-- [ ] **J1.6 T1, T2, T6 de bout en bout** sur les assertions, preuves avec passages, sortie du § 9.
-- [ ] **J1.7 Commande Prolog** : texte ou JSONL en entrée, JSONL et manifeste en sortie, sans Python.
+- [x] **J1.6 T1, T2, T6 de bout en bout** sur les assertions, preuves avec passages, sortie du § 9.
+- [x] **J1.7 Commande Prolog** : texte ou JSONL en entrée, JSONL et manifeste en sortie, sans Python.
 
 Critère de sortie J1 : les paires passent ; un titre et un cartel courts donnent des codes établis avec preuves
 vérifiées. **Point de décision humain : la boucle s'arrête ici.**
@@ -87,3 +87,5 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - 2026-11-23 — J1.4 : socle/interpretation.pl : grappes de noms propres avec titres, propriétés (épithète, attribut, participe), événements et rôles (actif, passif, adjectival, participes, relatives), relations, négation (sans, without, no, neither, ni, absent, missing, verbe nié, présence niée), modalité (adverbes, verbes modaux, étendue aux compléments), alternatives, portée (d'après, matériaux), coréférence copulative ; UDPipe par lot (socle/udpipe:analyser_lot/3, un seul chargement du modèle) ; décisions D8, D9.
 - 2026-11-23 — J1.5 : 105 paires minimales FR et EN (tests/plunit/paires.pl) : 104 passent ; 1 erreur connue de l'analyseur signalée en fixme (« Goliath kills David » : « kills » étiqueté nom). Deux attentes de ma première rédaction corrigées parce que fausses : « threatens a man with a sword » est ambigu (instrument ou complément du nom), « John the Baptist » est le nom entier.
 - 2026-11-23 — J0.11 : outils/mesure/mesure.py ; 1 000 titres EN de la partie dev : BM25 k=3 H-F1 0,219 [0,204 ; 0,233], F1 exact 0,055 ; candidats du socle : rappel exact 0,305, H-rappel 0,559, 283 candidats par titre ; docs/mesures/J0.md. J0 terminé (critère de sortie atteint : tests verts, mesure rejouable).
+- 2026-11-23 — J1.6 : socle/raisonnement.pl : T1 (nom explicite), T2 (chose décrite, critère définitionnel sur les libellés FR et EN), T6 (repli local), contredits, candidats avec raison ; vérificateur de preuve indépendant (verifier/2, une preuve non vérifiée rétrograde le code) ; 12 tests de bout en bout (dont preuve falsifiée et déterminisme à l'octet) ; décisions D10–D12.
+- 2026-11-23 — J1.7 : socle/oedipamaas.pl (bibliothèque : analyser_documents/3) et socle/commande.pl (point d'entrée) : texte ou JSONL en entrée, JSONL et manifeste en sortie, versions et empreintes, ligne d'erreur par document illisible ; Prolog seul, sans Python ni Janus.
