@@ -43,7 +43,7 @@ Référence : `CAHIER_DES_CHARGES.md`. Branche de travail : `claude/dazzling-arc
       par les assertions.)
 - [x] **J0.9 Intégration continue.** `.github/workflows/tests.yml` : tests sans base à chaque poussée. Si la poussée
       d'un workflow est refusée (droits), le noter et garder le fichier hors dépôt.
-- [ ] **J0.10 Moisson des corpus.** `outils/moisson/` : RKDimages (SPARQL par pages) et Wikidata P1257 (libellés EN et
+- [x] **J0.10 Moisson des corpus.** `outils/moisson/` : RKDimages (SPARQL par pages) et Wikidata P1257 (libellés EN et
       FR), sortie JSONL dans `/home/user/donnees/corpus/` avec manifeste (date, requête, empreinte, licence) ;
       dédoublonnage par œuvre entre sources ; séparation développement / test par collection.
 - [ ] **J0.11 Mesure de référence.** Script d'évaluation (H-F1, F1 exact, rappel des candidats@N) ; mesures de BM25 et
@@ -55,9 +55,9 @@ Critère de sortie J0 : tous les tests passent ; la mesure de référence est re
 
 - [x] **J1.1 Langage d'assertions.** `docs/ASSERTIONS.md` (noms, arités, sens, prémisse admissible, § 5 du cahier) et
       validateur `socle/assertions.pl` ; tests.
-- [ ] **J1.2 UDPipe.** Binaire ou liaison UDPipe 1 et modèles FR et EN (UD épinglés) ; licences des modèles dans
+- [x] **J1.2 UDPipe.** Binaire ou liaison UDPipe 1 et modèles FR et EN (UD épinglés) ; licences des modèles dans
       `DECISIONS.md` ; segmentation avec positions en caractères.
-- [ ] **J1.3 Lecture du CoNLL-U** en Prolog (DCG), positions conservées.
+- [x] **J1.3 Lecture du CoNLL-U** en Prolog (DCG), positions conservées.
 - [ ] **J1.4 Règles d'interprétation** FR et EN : têtes et noms, propriétés rattachées, négation et sa portée, rôles
       (actif et passif), coordination ; titres simples ; tout le reste dans `incompris`.
 - [ ] **J1.5 Paires minimales** : 100 paires FR et EN (`tests/paires/`), en `plunit`.
@@ -81,3 +81,6 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - 2026-11-23 — J0.8 : négation coupée au mot négatif (no, not, without, neither, nor, never, lack of, absence of) et postposée (absent, missing, invisible) ; cadres:unite_liee/2 suit le sens de la relation ; 39 tests passent.
 - 2026-11-23 — J1.1 : fait pendant la moisson de J0.10 (tâche indépendante) : docs/ASSERTIONS.md, socle/assertions.pl (valider/2, admissible/2, contredit/2), 14 tests plunit lancés par tests/test_plunit.py ; noms provisoires (D6).
 - 2026-11-23 — J0.9 : workflow GitHub Actions accepté ; premier passage en échec (numpy absent pour un test de la 0.2), corrigé : run 2 vert (32 passés, 7 sautés sans données).
+- 2026-11-23 — J1.2 : UDPipe 1.4.0 compilé, modèles UD 2.5 fr-gsd et en-ewt (licence CC BY-NC-SA, D7 à trancher) ; socle/udpipe.pl (fichier temporaire, positions TokenRange) ; environ 1,5 s par appel (chargement du modèle) : un processus persistant sera nécessaire pour les cibles de vitesse (J4).
+- 2026-11-23 — J1.3 : socle/conllu.pl : phrases, mots, traits, positions, mots composés (positions du jeton) ; 8 tests plunit (4 sans UDPipe, 4 avec).
+- 2026-11-23 — J0.10 : outils/moisson/moisson.py : RKD (SPARQL par pages) et Wikidata P1257 ; 96 908 œuvres après dédoublonnage (65 450 dev, 31 458 test ; 8 518 titres FR) ; manifeste copié dans docs/mesures/manifeste-corpus.json, données dans /home/user/donnees/corpus.

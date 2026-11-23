@@ -1,0 +1,30 @@
+{
+ "agent": "oedipamaas-moisson/0.1 (offline Iconclass evaluation)",
+ "corpus": {
+  "dev": 65450,
+  "oeuvres": 96908,
+  "sha256": "d6758c185427a9470e1040e0686568537e9efe4f5dca1cddbcd121cab2fc8f77",
+  "test": 31458,
+  "titre_en": 96643,
+  "titre_fr": 8518
+ },
+ "date": "2026-11-23T21:41:09+00:00",
+ "part_test": 0.3,
+ "sources": {
+  "rkd": {
+   "licence": "ODC-By 1.0 (RKD, attribution)",
+   "oeuvres": 65893,
+   "point": "https://api.rkd.triply.cc/datasets/rkd/RKD-Knowledge-Graph/services/SPARQL/sparql",
+   "requete": "PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>\nSELECT ?obj ?titre ?c WHERE {\n  ?obj crm:P65_shows_visual_item ?v . ?v crm:P2_has_type ?c .\n  FILTER(STRSTARTS(STR(?c), \"http://iconclass.org/\"))\n  ?obj crm:P1_is_identified_by ?a .\n  ?a crm:P72_has_language <http://vocab.getty.edu/aat/300388277> ; crm:P190_has_symbolic_content ?titre .\n} LIMIT %d OFFSET %d",
+   "sha256": "5163354541b5347a6676e1eed3dac3f2477b0e24a50fa37c3462613bee49af88"
+  },
+  "wikidata": {
+   "ecartees_doublons_rkd": 17254,
+   "licence": "CC0",
+   "oeuvres": 48269,
+   "point": "https://query.wikidata.org/sparql",
+   "requete": "SELECT ?item ?code ?en ?fr ?coll ?rkd WHERE {\n  ?item wdt:P1257 ?code .\n  OPTIONAL { ?item rdfs:label ?en FILTER(lang(?en) = \"en\") }\n  OPTIONAL { ?item rdfs:label ?fr FILTER(lang(?fr) = \"fr\") }\n  OPTIONAL { ?item wdt:P195 ?coll }\n  OPTIONAL { ?item wdt:P350 ?rkd }\n} ORDER BY ?item ?code LIMIT %d OFFSET %d",
+   "sha256": "b312476f8229d08fc108d46ef6f6eeb5a8f75f6ba568f44b8d6cfcb09a3dfc59"
+  }
+ }
+}

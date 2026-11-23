@@ -1,4 +1,6 @@
-"""Les tests Prolog (plunit) de tests/plunit, lancés par swipl : un fichier, un processus."""
+"""Les tests Prolog (plunit) de tests/plunit, lancés par swipl : un fichier, un processus. Les tests d'UDPipe
+demandent OEDIPAMAAS_UDPIPE (le binaire) et OEDIPAMAAS_MODELES (le dossier des modèles) ; sinon ils sont sautés."""
+import os
 import shutil
 import subprocess
 from pathlib import Path
@@ -12,5 +14,5 @@ ICI = Path(__file__).resolve().parent / "plunit"
 @pytest.mark.parametrize("fichier", sorted(ICI.glob("test_*.pl")), ids=lambda p: p.stem)
 def test_plunit(fichier):
     r = subprocess.run(["swipl", "-g", "run_tests", "-t", "halt", str(fichier)], capture_output=True, text=True,
-                       cwd=fichier.parent, env={"LANG": "C.UTF-8", "PATH": "/usr/bin:/bin:/usr/local/bin"})
+                       cwd=fichier.parent, env={**os.environ, "LANG": "C.UTF-8"})
     assert r.returncode == 0, r.stdout + r.stderr
