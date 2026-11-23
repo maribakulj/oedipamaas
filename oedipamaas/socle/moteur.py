@@ -26,7 +26,7 @@ def atome(s):
 
 
 ORDRES = {
-    # ordre de la première décision (mesurée sur P300) : part décrite, puis BM25
+    # ordre de la première décision : part décrite, puis BM25
     "part": lambda c: (c["traits"].get("ancetre_seul", 0), -c["score"], -c["traits"].get("bm25_direct", 0.0),
                        c["code"]),
     # meilleur rang dans l'un des trois ordres (BM25, part décrite, BM25 du sujet)
