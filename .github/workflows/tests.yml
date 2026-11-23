@@ -8,8 +8,8 @@ jobs:
   tests:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
       - name: SWI-Prolog (PPA officiel ; les paquets Ubuntu sont trop anciens pour Janus)
@@ -19,6 +19,6 @@ jobs:
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y swi-prolog-nox
           swipl --version
       - name: Dépendances
-        run: pip install janus-swi pytest -e .
+        run: pip install janus-swi pytest numpy -e .
       - name: Tests sans données (ceux qui demandent Iconclass ou WordNet sont sautés)
         run: python -m pytest -q
