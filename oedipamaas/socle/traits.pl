@@ -4,13 +4,13 @@
     candidats_traits(+Budget, -Liste) : la liste [Notation, Provisoire, Traits] des candidats d'une description :
     les Budget premiers par BM25, par part décrite et par BM25 du sujet, les spécialisations des premiers, les
     explications par unité (sans budget : les notations les plus précises qu'une unité décrit entièrement, mot pour
-    mot ou par le pont WordNet), les clés de tous ceux-là, et les ancêtres de tous (un ancêtre n'a souvent pas
-    d'appui propre : il est candidat parce qu'un descendant l'est).
+    mot ou par le pont WordNet), les noms écrits dans un gabarit (noms.pl), les clés de tous ceux-là, et les ancêtres
+    de tous (un ancêtre n'a souvent pas d'appui propre : il est candidat parce qu'un descendant l'est).
     Provisoire : la part décrite (dans [0, 1]), pour le témoin. Traits (paires Nom-Valeur, valeurs nulles omises) :
         bm25_direct, bm25_wordnet, inv_rang_bm25, inv_rang_part, bm25_sujet, inv_rang_sujet, inv_rang_min, part,
         nb_propres, prof, specialisee, cle, ancetre_seul, explication, unites_pleines, explication_pont,
         unites_pleines_pont, plein_<champ> (unités pleines par champ), part_unites, concurrents,
-        ecart_profondeur_plus_un, nb_mentions, nb_unites,
+        ecart_profondeur_plus_un, nomme_gabarit, pas_taxonomiques, nb_mentions, nb_unites,
         src_mot_cle, src_libelle, src_attribut, src_renvoi, wn_synonyme, wn_hyperonyme, wn_derive, wn_autre,
         champ_<champ> (nombre de mentions directes par champ de la description),
         nom, lettre_doublee, enfants_candidats, parent_candidat
@@ -21,13 +21,18 @@
 :- use_module(specialisation).
 :- use_module(cles).
 :- use_module(arbre).
+:- use_module(noms).
 
 :- dynamic rang_bm25/2, bm25/3, rang_part/2, rang_sujet/2, bm25_sujet/2, spec/1, cle_prop/1, cand/1, expl/1,
-           expl_pont/1, unite_expl/2, nb_unites_desc/1.
+           expl_pont/1, unite_expl/2, nb_unites_desc/1, nom_gab/2.
 
 % les unités où N est pleine (mot pour mot ou par le pont WordNet), une fois par notation et par description
+% (une notation nommée dans un gabarit est pleine là où son nom est décrit)
 :- table unites_pleines_de/2.
-unites_pleines_de(N, Us) :- findall(U, specialisation:pleine_large_dans(N, U), Us0), sort(Us0, Us).
+unites_pleines_de(N, Us) :-
+    findall(U, ( specialisation:pleine_large_dans(N, U)
+               ; nom_gab(N, _), noms:nom_de(N, W), specialisation:decrit_dans(W, U) ), Us0),
+    sort(Us0, Us).
 
 % le champ d'une unité : « entities[3] » → entities, « subject.alternatives[1] » → subject, « period_style » tel quel
 champ_de_unite(U, C) :-
@@ -39,7 +44,8 @@ appui(N, M, F, L, S) :- recherche:candidat(N, M, p(M, F, L, S)).
 
 contexte(Budget) :-
     maplist(retractall, [rang_bm25(_, _), bm25(_, _, _), rang_part(_, _), rang_sujet(_, _), bm25_sujet(_, _), spec(_),
-                         cle_prop(_), cand(_), expl(_), expl_pont(_), unite_expl(_, _), nb_unites_desc(_)]),
+                         cle_prop(_), cand(_), expl(_), expl_pont(_), unite_expl(_, _), nb_unites_desc(_),
+                         nom_gab(_, _)]),
     recherche:classement(1000000, L),
     forall(nth1(R, L, c(N, cle(D, W), _)), ( assertz(rang_bm25(N, R)), assertz(bm25(N, D, W)) )),
     % troisième ordre : BM25 sur les seules mentions du sujet (titre, source, alternatives)
@@ -64,7 +70,11 @@ contexte(Budget) :-
     forall(( member(N, Expl), unites_pleines_de(N, Us), member(U, Us) ), assertz(unite_expl(U, N))),
     aggregate_all(count, distinct(U, ( description:mention(M, _, _, _), specialisation:unite(M, U) )), NU),
     assertz(nb_unites_desc(NU)),
-    append([B1, B2, B3, Sp, Ex, ExP], S0), sort(S0, Soutenues),
+    % noms écrits dans un gabarit : une chose décrite que WordNet range dans la sorte d'un gabarit « (with NAME) »
+    noms:gabarits_decrits(Gab),
+    forall(member(nomme(C, _, D), Gab), ( nom_gab(C, _) -> true ; assertz(nom_gab(C, D)) )),
+    findall(C, nom_gab(C, _), Nommes),
+    append([B1, B2, B3, Sp, Ex, ExP, Nommes], S0), sort(S0, Soutenues),
     forall(( member(N, Soutenues), cles:cles_decrites(N, Cs), member(C, Cs) ), assertz(cle_prop(C))),
     findall(C, cle_prop(C), Cl),
     append(Soutenues, Cl, Base0), sort(Base0, Base),
@@ -102,7 +112,8 @@ trait(N, nb_propres, K) :- ( propres_index:nb_propres(N, K) -> true ; K = 0 ).
 trait(N, prof, P) :- ( catch(notation:profondeur(N, P), _, fail) -> true ; P = 0 ).
 trait(N, specialisee, V) :- ( spec(N) -> V = 1 ; V = 0 ).
 trait(N, cle, V) :- ( cle_prop(N) -> V = 1 ; V = 0 ).
-trait(N, ancetre_seul, V) :- ( \+ bm25(N, _, _), \+ cle_prop(N), \+ spec(N), \+ rang_sujet(N, _) -> V = 1 ; V = 0 ).
+trait(N, ancetre_seul, V) :-
+    ( \+ bm25(N, _, _), \+ cle_prop(N), \+ spec(N), \+ rang_sujet(N, _), \+ nom_gab(N, _) -> V = 1 ; V = 0 ).
 % explication par unité : la notation est la plus précise de celles qu'une unité décrit entièrement ; le nombre
 % d'unités qui la décrivent entièrement (« river » dit par l'entité, le décor et un mot-clé)
 trait(N, explication, V) :- ( expl(N) -> V = 1 ; V = 0 ).
@@ -120,6 +131,10 @@ trait(N, K, C) :-
     atom_concat(plein_, Champ, K),
     unites_pleines_de(N, Us),
     aggregate_all(count, ( member(U, Us), champ_de_unite(U, Champ) ), C).
+% nommée dans un gabarit (25F711(BUTTERFLY)), et le nombre de pas de WordNet de la chose décrite à la sorte du
+% gabarit (papillon → insecte : 2)
+trait(N, nomme_gabarit, V) :- ( nom_gab(N, _) -> V = 1 ; V = 0 ).
+trait(N, pas_taxonomiques, D) :- ( nom_gab(N, D0) -> D = D0 ; D = 0 ).
 trait(N, part_unites, V) :-
     (   unites_pleines_de(N, Us), length(Us, K), nb_unites_desc(NU), NU > 0 -> V is K / NU ; V = 0 ).
 trait(N, concurrents, C) :-

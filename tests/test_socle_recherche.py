@@ -11,12 +11,15 @@ SOCLE = Path(__file__).resolve().parent.parent / "oedipamaas" / "socle"
 WNP, WND = os.environ.get("WORDNET_PROLOG"), os.environ.get("WORDNET_DICT")
 
 NOTATIONS = ("N 1\nC 11\n$\nN 11\nC 11H\n$\nN 11H\nC 11H(...)\n$\nN 11H(...)\nC 11H(JEROME)\n$\nN 11H(JEROME)\n$\n"
-             "N 2\nC 25\n$\nN 25\nC 25F\n$\nN 25F\nC 25F2\n$\nN 25F2\nC 25F23\n$\nN 25F23\nC 25F23(LION)\n$\n"
+             "N 2\nC 25\n$\nN 25\nC 25F\n$\nN 25F\nC 25F2\n; 25F7\n$\nN 25F2\nC 25F23\n$\nN 25F23\nC 25F23(LION)\n$\n"
+             "N 25F7\nC 25F71\n$\nN 25F71\nC 25F711\n$\nN 25F711\nC 25F711(...)\n$\nN 25F711(...)\nC 25F711(ANT)\n$\n"
+             "N 25F711(ANT)\n$\n"
              "N 25F23(LION)\n$\nN 3\nC 31\n$\nN 31\nC 31A\n$\nN 31A\nC 31A2\n$\nN 31A2\nC 31A23\n$\nN 31A23\n"
              "C 31A231\n$\nN 31A231\n$\nN 4\nC 41\n$\nN 41\n$\n")
 LIBELLES = ("11H(...)|male saint (with NAME)\n"
             "11H(JEROME)|Jerome, Father of the Church; possible attributes: book, cardinal's hat, lion, skull\n"
-            "25F23(LION)|beasts of prey, predatory animals: lion\n31A231|kneeling figure\n41|material aspects\n")
+            "25F23(LION)|beasts of prey, predatory animals: lion\n31A231|kneeling figure\n41|material aspects\n"
+            "25F711(...)|insects (with NAME)\n25F711(ANT)|insects: ant\n")
 MOTS = "25F23(LION)|lion\n31A231|kneeling\n11H(JEROME)|Jerome\n41|left\n"
 DESCRIPTION = {"subject": {"title": "Saint Jerome in the wilderness", "source": None, "type": "religious",
                            "confidence": "high", "alternatives": []},
@@ -91,6 +94,10 @@ def test_lecture_et_recherche():
         alternatives = base / "alternatives_index.pl"
         janus.query_once(f"specialisation:construire_alternatives('{alternatives}')")
         janus.query_once(f"load_files('{alternatives}', [redefine_module(true)])")
+        janus.consult(str(SOCLE / "noms.pl"))
+        gabarits = base / "gabarits_index.pl"
+        janus.query_once(f"noms:construire_gabarits('{gabarits}')")
+        janus.query_once(f"load_files('{gabarits}', [redefine_module(true)])")
         # le lion nommé se dit par son nom ; « kneeling figure », par ses deux mots
         assert janus.query_once("specialisation:alternatives('25F23(LION)', X)")["X"] == [["lion"]]
         assert janus.query_once("specialisation:alternatives('31A231', X)")["X"] == [["figure", "kneeling"]]
@@ -156,6 +163,20 @@ def test_lecture_et_recherche():
         k = dict(janus.query_once("traits:candidats_traits(10, _L), member(['31A231', _, _T], _L), "
                                   "findall([_K, _V], member(_K-_V, _T), X)")["X"])
         assert k["explication"] == 1 and k["unites_pleines"] == 1, k
+
+        # gabarit à nom : « insects (with NAME) » range surtout des noms communs (ANT) ; la description dit « a
+        # butterfly » et « an ant » : WordNet range le papillon parmi les insectes → 25F711(BUTTERFLY), écrit en
+        # capitales ; la fourmi est déjà listée (25F711(ANT)) : rien n'est inventé pour elle
+        assert janus.query_once("gabarits_index:sorte(_, '25F711(...)')")["truth"]
+        fd.charger(janus, dict(DESCRIPTION, keywords=["a butterfly", "an ant"]))
+        janus.query_once("abolish_all_tables")
+        janus.query_once("specialisation:decrire")
+        g = janus.query_once("noms:gabarits_decrits(_L), findall([_C, _W, _D], member(nomme(_C, _W, _D), _L), X)")["X"]
+        assert [c for c, _, _ in g] == ["25F711(BUTTERFLY)"] and g[0][1] == "butterfly" and g[0][2] >= 1, g
+        b = dict(janus.query_once("traits:candidats_traits(10, _L), member(['25F711(BUTTERFLY)', _, _T], _L), "
+                                  "findall([_K, _V], member(_K-_V, _T), X)")["X"])
+        assert b["nomme_gabarit"] == 1 and b["pas_taxonomiques"] >= 1 and b["plein_keywords"] == 1, b
+        assert "ancetre_seul" not in b, b
 
         # « half-length » se lit aussi « half », « length »
         assert janus.query_once("recherche:forme_mention(_, length)")["truth"] is False  # pas encore décrit
