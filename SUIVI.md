@@ -46,7 +46,7 @@ Référence : `CAHIER_DES_CHARGES.md`. Branche de travail : `claude/dazzling-arc
 - [x] **J0.10 Moisson des corpus.** `outils/moisson/` : RKDimages (SPARQL par pages) et Wikidata P1257 (libellés EN et
       FR), sortie JSONL dans `/home/user/donnees/corpus/` avec manifeste (date, requête, empreinte, licence) ;
       dédoublonnage par œuvre entre sources ; séparation développement / test par collection.
-- [ ] **J0.11 Mesure de référence.** Script d'évaluation (H-F1, F1 exact, rappel des candidats@N) ; mesures de BM25 et
+- [x] **J0.11 Mesure de référence.** Script d'évaluation (H-F1, F1 exact, rappel des candidats@N) ; mesures de BM25 et
       du socle actuel (candidats) sur les titres EN moissonnés ; résultats agrégés dans `docs/mesures/J0.md`.
 
 Critère de sortie J0 : tous les tests passent ; la mesure de référence est rejouable depuis les scripts et le manifeste.
@@ -86,3 +86,4 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - 2026-11-23 — J0.10 : outils/moisson/moisson.py : RKD (SPARQL par pages) et Wikidata P1257 ; 96 908 œuvres après dédoublonnage (65 450 dev, 31 458 test ; 8 518 titres FR) ; manifeste copié dans docs/mesures/manifeste-corpus.json, données dans /home/user/donnees/corpus.
 - 2026-11-23 — J1.4 : socle/interpretation.pl : grappes de noms propres avec titres, propriétés (épithète, attribut, participe), événements et rôles (actif, passif, adjectival, participes, relatives), relations, négation (sans, without, no, neither, ni, absent, missing, verbe nié, présence niée), modalité (adverbes, verbes modaux, étendue aux compléments), alternatives, portée (d'après, matériaux), coréférence copulative ; UDPipe par lot (socle/udpipe:analyser_lot/3, un seul chargement du modèle) ; décisions D8, D9.
 - 2026-11-23 — J1.5 : 105 paires minimales FR et EN (tests/plunit/paires.pl) : 104 passent ; 1 erreur connue de l'analyseur signalée en fixme (« Goliath kills David » : « kills » étiqueté nom). Deux attentes de ma première rédaction corrigées parce que fausses : « threatens a man with a sword » est ambigu (instrument ou complément du nom), « John the Baptist » est le nom entier.
+- 2026-11-23 — J0.11 : outils/mesure/mesure.py ; 1 000 titres EN de la partie dev : BM25 k=3 H-F1 0,219 [0,204 ; 0,233], F1 exact 0,055 ; candidats du socle : rappel exact 0,305, H-rappel 0,559, 283 candidats par titre ; docs/mesures/J0.md. J0 terminé (critère de sortie atteint : tests verts, mesure rejouable).
