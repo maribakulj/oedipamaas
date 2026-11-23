@@ -115,6 +115,15 @@ def test_lecture_et_recherche():
         # ne l'est qu'à moitié (« figure » manque) ; une entrée « kneeling figure » le décrit entièrement
         assert janus.query_once("specialisation:pleine_dans('25F23(LION)', U)")["U"] == "persons[0]"
         assert janus.query_once("specialisation:pleine_dans('31A231', _)")["truth"] is False
+        # un nom se dit par ses mots, quels que soient leur ordre et la ponctuation ; une notation absente de l'index
+        # (ici, hors des notations de l'essai) prend ses alternatives calculées
+        a = janus.query_once("specialisation:alternatives('83(TASSO, Gerusalemme Liberata)', A)")["A"]
+        assert a == [["gerusalemme", "liberata", "tasso"]], a
+        fd.charger(janus, dict(DESCRIPTION, subject={"title": "Armida and Rinaldo",
+                                                     "source": "Torquato Tasso, Gerusalemme Liberata, canto XIV"}))
+        janus.query_once("specialisation:decrire")
+        u = {x["U"] for x in janus.query("specialisation:pleine_dans('83(TASSO, Gerusalemme Liberata)', U)")}
+        assert u == {"subject"}, u
         fd.charger(janus, dict(DESCRIPTION, keywords=["kneeling figure"]))
         janus.query_once("specialisation:decrire")
         assert janus.query_once("specialisation:pleine_dans('31A231', U)")["U"] == "keywords[0]"

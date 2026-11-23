@@ -78,7 +78,11 @@ formes(M, F) :-
 :- table alternatives/2.
 alternatives(N, Alts) :-
     (   catch(notation:analyser(N, Niveaux), _, fail), Niveaux \= composee(_), last(Niveaux, nom(T))
-    ->  lexique:forme_de(T, Nom), Alts = [[Nom]]
+    ->  % un nom se dit par ses mots, tous dans une même unité, quels que soient leur ordre et la ponctuation :
+        % « TASSO, Gerusalemme Liberata » par « Torquato Tasso, Gerusalemme Liberata, canto XIV »
+        (   libelles:mots_pleins(T, Ms), Ms \== [] -> Alts = [Ms]
+        ;   lexique:forme_de(T, Nom), Alts = [[Nom]]
+        )
     ;   mots_du_parent(N, MP),
         (   libelles:elements(N, Es), propres_des(Es, MP, A1), A1 \== []
         ->  Alts = A1
@@ -178,17 +182,30 @@ part_decrite(N, Part) :-
 % mots de l'une des alternatives de N — la notation explique ce que dit cette unité, sans emprunter un mot à une
 % autre chose décrite
 pleine_dans(N, U) :-
-    distinct(U, ( alternatives_index:nb_alt(N, J, K), libelle_admis(N),
-                  alternatives_index:alt(N, J, 1, F1), decrit_dans(F1, U),
-                  forall(between(2, K, I), ( alternatives_index:alt(N, J, I, F), decrit_dans(F, U) -> true )) )).
+    (   nonvar(N), \+ alternatives_index:nb_alt(N, _, _)
+    ->  hors_index_pleine(decrit_dans, N, U)
+    ;   distinct(U, ( alternatives_index:nb_alt(N, J, K), libelle_admis(N),
+                      alternatives_index:alt(N, J, 1, F1), decrit_dans(F1, U),
+                      forall(between(2, K, I), ( alternatives_index:alt(N, J, I, F), decrit_dans(F, U) -> true )) ))
+    ).
+
+% une notation absente de l'index (un nom écrit dans un gabarit, une clé) : ses alternatives calculées (alternatives/2),
+% chaque mot dit dans l'unité par Dite (decrit_dans ou dite_dans)
+hors_index_pleine(Dite, N, U) :-
+    alternatives(N, Alts), libelle_admis(N),
+    distinct(U, ( member(Ms, Alts), Ms = [M1|_], formes(M1, F1), call(Dite, F1, U),
+                  forall(member(M, Ms), once(( formes(M, F), call(Dite, F, U) ))) )).
 
 % pleine_large_dans(N, U) : de même, chaque mot de l'alternative dit dans l'unité tel quel ou par le pont WordNet
 % (decrit_pont/2) — « unidentified man, sitter of the portrait » dit 61B11 « anonymous historical person portrayed »
 % (anonymous, person, portrayed) sans en écrire un seul mot ; une preuve plus faible, gardée à part
 pleine_large_dans(N, U) :-
-    distinct(U, ( alternatives_index:nb_alt(N, J, K), libelle_admis(N),
-                  alternatives_index:alt(N, J, 1, F1), dite_dans(F1, U),
-                  forall(between(2, K, I), ( alternatives_index:alt(N, J, I, F), dite_dans(F, U) -> true )) )).
+    (   nonvar(N), \+ alternatives_index:nb_alt(N, _, _)
+    ->  hors_index_pleine(dite_dans, N, U)
+    ;   distinct(U, ( alternatives_index:nb_alt(N, J, K), libelle_admis(N),
+                      alternatives_index:alt(N, J, 1, F1), dite_dans(F1, U),
+                      forall(between(2, K, I), ( alternatives_index:alt(N, J, I, F), dite_dans(F, U) -> true )) ))
+    ).
 
 % ce que le libellé exige au-delà de ses mots propres pour qu'une unité l'explique : un libellé « concept ~ contexte »
 % n'est dit que si chacun de ses mots (des deux côtés du « ~ ») est dit quelque part dans la description (« gods ~
