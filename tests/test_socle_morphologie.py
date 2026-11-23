@@ -18,8 +18,9 @@ def test_lemmes():
         m = compiler(WNP, WND, t)
         assert m["comptes"]["s"] > 200000 and m["comptes"]["exc"] > 6000
         assert sum(m["lignes_mal_formees_ecartees"].values()) < 10
-        janus.consult(str(Path(t) / "wordnet.pl"))
+        janus.query_once(f"load_files('{Path(t) / 'wordnet.pl'}', [redefine_module(true)])")
         janus.consult(str(SOCLE / "morphologie.pl"))
+        janus.query_once("morphologie:indexer")          # l'index des formes suit le WordNet chargé
         attendu = {"mice": ["mouse"], "kneeling": ["kneel", "kneeling"], "crowns of thorns": ["crown of thorns"],
                    "putti": ["putto"], "beheads": ["behead"], "women": ["woman"], "crucifixes": ["crucifix"],
                    "leaves": ["leaf", "leave"], "wolves": ["wolf"], "grisaille": ["grisaille"],

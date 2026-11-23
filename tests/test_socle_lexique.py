@@ -37,8 +37,9 @@ def test_index_et_pont():
         compiler(d, Path(t) / "base")
         compiler_wn(WNP, WND, Path(t) / "base")
         janus.query_once(f"load_files('{Path(t) / 'base' / 'iconclass.pl'}', [redefine_module(true)])")
-        janus.consult(str(Path(t) / "base" / "wordnet.pl"))
+        janus.query_once(f"load_files('{Path(t) / 'base' / 'wordnet.pl'}', [redefine_module(true)])")
         janus.consult(str(SOCLE / "lexique.pl"))
+        janus.query_once("morphologie:indexer")
         janus.query_once("abolish_all_tables")
         index = Path(t) / "base" / "lexique_index.pl"
         janus.query_once(f"lexique:construire_index('{index}')")
