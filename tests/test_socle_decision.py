@@ -177,3 +177,54 @@ def test_deux_etages():
             assert abs(obtenu[c] - attendu[c]) < 1e-12, (c, obtenu[c], attendu[c])
         # le réglage est celui des deux étages
         assert janus.query_once("decision_poids:reglage(K, S, C)")["K"] == 3
+
+
+# --- Sélection par F1 hiérarchique attendu (critère « f1 ») : référence Python, Moteur._choix_f1 de la version 0.2 --
+
+def choix_f1(p, g):
+    noeuds_de = {c: ancestors(c) for c in p}
+    q = {}
+    for c in p:
+        for a in noeuds_de[c]:
+            q[a] = max(q.get(a, -1.0), p[c])
+    pris, noeuds, somme, val = [], set(), 0.0, 0.0
+    while True:
+        meilleur = None
+        for c in sorted(p):
+            nouveaux = noeuds_de[c] - noeuds
+            if not nouveaux:
+                continue
+            s2 = somme + sum(q[a] for a in nouveaux)
+            v2 = 2 * s2 / (len(noeuds) + len(nouveaux) + g)
+            if meilleur is None or v2 > meilleur[0] or (v2 == meilleur[0] and c < meilleur[1]):
+                meilleur = (v2, c, nouveaux, s2)
+        if meilleur is None or meilleur[0] <= val:
+            return pris
+        val, c, nouveaux, somme = meilleur
+        noeuds |= nouveaux
+        pris.append(c)
+
+
+def test_selection_f1(petit_iconclass):
+    from oedipamaas.socle.compiler_decision import compiler
+    poids = json.loads(json.dumps(POIDS))
+    poids["arbres"]["critere"] = "f1"
+    for g in (0.5, 2.0, 6.0):
+        poids["arbres"]["f1_attendu"]["g"] = g
+        with tempfile.TemporaryDirectory() as t:
+            pj = Path(t) / "poids.json"
+            pj.write_text(json.dumps(poids))
+            pl = Path(t) / "decision_poids.pl"
+            compiler(pj, pl)
+            janus.query_once(f"load_files('{pl}', [redefine_module(true)])")
+            for f in ("notation.pl", "decision.pl"):
+                janus.consult(str(SOCLE / f))
+            p = {"25F23": 0.6, "25F2": 0.7, "31A": 0.9, "11H(JEROME)": 0.3, "86A": 0.95, "11H": 0.05}
+            terme = "[" + ",".join(f"c({c!r}, {v}, [])" for c, v in p.items()) + "]"
+            r = janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)", {"A": terme})["X"]
+            attendu = choix_f1({c: v for c, v in p.items() if not c.startswith("86")}, g)
+            # puis les plus spécifiques, dans l'arbre du petit Iconclass : 25F2 sous 25F23, 11H sous 11H(JEROME)
+            anc = {"25F23": {"25F2"}, "11H(JEROME)": {"11H"}}
+            attendu = [c for c in attendu if not any(c in anc.get(m, ()) for m in attendu)]
+            assert r == attendu, (g, r, attendu)
+            assert "86A" not in r
