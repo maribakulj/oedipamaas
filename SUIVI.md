@@ -69,6 +69,36 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 
 ## Journal
 
+### Résumé pour le réveil (fin de la boucle, 23 novembre 2026 au soir)
+
+**Fait.** Tout J0 et tout J1, chaque tâche testée, committée et poussée ; CI verte à chaque poussée.
+- J0 : environnement (SWI-Prolog 11, base Iconclass `0595358` et WordNet compilées), licence MIT, une seule
+  hiérarchie, noms libres rattachés à l'arbre, division 86 avant la sélection, sélection par F1 attendu branchée,
+  clés indépendantes du chemin de découverte, `oedipamaas expliquer` réparé, négation dans la mention et sens des
+  relations, CI GitHub Actions, moisson de 96 908 œuvres (RKD + Wikidata), mesure de référence (`docs/mesures/J0.md`).
+- J1 : langage d'assertions v1 (`docs/ASSERTIONS.md`) ; UDPipe 1 branché par CoNLL-U, par lot ; interprétation
+  FR/EN en Prolog ; **105 paires minimales, 104 passent**, 1 erreur connue d'UDPipe signalée (fixme) ; T1, T2, T6 de
+  bout en bout avec **preuves revérifiées** ; commande **en Prolog seul** (`socle/commande.pl`) ; 14 à 23 ms par titre.
+- Critère de sortie de J1 atteint : les paires passent ; un titre et un cartel courts donnent des codes établis avec
+  preuves vérifiées (`tests/plunit/test_bout_en_bout.pl`).
+
+**À regarder en premier : la mesure de fin de J1** (`docs/mesures/J1.md`). Contre le catalogue, la précision des
+codes établis n'est que de 0,17 (EN) et 0,31 (FR). C'est une borne basse, mais elle révèle aussi de vraies erreurs de
+T1 (« Paris » la ville → Pâris le héros, « John » → l'ordre de Saint-Jean) et de T2. Le jugement à la main (J2) est
+indispensable avant de corriger davantage.
+
+**Bloqué ou en attente de toi.**
+- Le script d'installation de l'environnement cloud n'est pas enregistré (il demande ton approbation) : une nouvelle
+  session devra refaire `docs/INSTALLATION.md` (≈ 10 minutes, surtout la construction des index).
+- Les données (`/home/user/donnees/`) sont dans ce conteneur seulement : elles disparaîtront avec lui ; tout se
+  reconstruit depuis les scripts et les manifestes.
+
+**Décisions provisoires à valider** (`DECISIONS.md`) : D1–D12. Les plus importantes :
+- **D7 — licence des modèles UDPipe : CC BY-NC-SA (non commerciale)**, à trancher avant toute diffusion ;
+- D6 — les noms du langage d'assertions ;
+- D10–D12 — les critères de T2, de T6 et de T1, à mesurer au J2 ;
+- D8 — l'objet d'un verbe nié est nié.
+
 - 2026-11-23 — création du suivi ; boucle lancée sur J0.
 - 2026-11-23 — E1 : SWI-Prolog 11.0.0 (PPA), Janus, Iconclass `0595358`, WordNet 3.0 ; 37 tests passent avec les données réelles ; base compilée (index dérivés en cours). Script d'installation cloud à enregistrer au réveil (approbation).
 - 2026-11-23 — J0.1 : licence MIT, sources Prolog du socle empaquetées.
