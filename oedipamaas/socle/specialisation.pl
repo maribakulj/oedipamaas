@@ -83,6 +83,18 @@ alternatives(N, Alts) :-
         (   libelles:mots_pleins(T, Ms), Ms \== [] -> Alts = [Ms]
         ;   lexique:forme_de(T, Nom), Alts = [[Nom]]
         )
+    ;   lettre_doublee(N, Jumeau, Racine, Sens)
+    ->  % « kneeling figure - AA - female human figure » : ce que dit son jumeau à lettre simple (31A233, kneeling), et
+        % ce qu'ajoute la lettre doublée, ses mots que le libellé de la racine simple ne porte pas (31A « the (nude)
+        % human figure » : female) ; jamais les mots des ancêtres, qui ne distinguent rien
+        libelles:mots_et_locutions(Sens, MS),
+        (   libelles:mots_hors_parentheses(Racine, R1), libelles:locutions_hors_parentheses(Racine, R2)
+        ->  ord_union(R1, R2, MR) ; MR = [] ),
+        ord_subtract(MS, MR, D0), ( D0 == [] -> D = MS ; D = D0 ),
+        alternatives(Jumeau, AJ),
+        (   AJ == [] -> Alts = [D]
+        ;   findall(A, ( member(A0, AJ), ord_union(A0, D, A) ), A4), sort(A4, Alts)
+        )
     ;   mots_du_parent(N, MP),
         (   libelles:elements(N, Es), propres_des(Es, MP, A1), A1 \== []
         ->  Alts = A1
@@ -96,6 +108,23 @@ alternatives(N, Alts) :-
         ;   Alts = []
         )
     ).
+
+% lettre_doublee(+N, -Jumeau, -Racine, -Sens) : N a un libellé fabriqué « base - XX - sens » ; Jumeau : N sans sa
+% lettre doublée (« 31AA233 » → « 31A233 »), Racine : la notation à lettre simple où la lettre se double (« 31A »),
+% Sens : ce que dit la lettre doublée (« female human figure »)
+lettre_doublee(N, Jumeau, Racine, Sens) :-
+    libelles:partie(N, 2, XX), atom_length(XX, 2), sub_atom(XX, 0, 1, _, L), sub_atom(XX, 1, 1, _, L),
+    libelles:partie(N, 3, Sens),
+    lettre_simple(N, Jumeau, Racine),
+    iconclass:n(Jumeau).
+
+% lettre_simple(+M, -N, -Racine) : M sans sa première lettre doublée hors des parenthèses (« 31AA233 » → « 31A233 »,
+% racine « 31A ») ; échoue sans lettre doublée
+lettre_simple(M, N, Racine) :-
+    atom_codes(M, Cs),
+    append(Av, [L, L|Ap], Cs), code_type(L, upper), \+ memberchk(0'(, Av), !,
+    append(Av, [L|Ap], Ns), atom_codes(N, Ns),
+    append(Av, [L], Rs), atom_codes(Racine, Rs).
 
 % les mots du parent, et ses locutions : une locution reprise du parent (« the Holy Family » sous « the Holy Family
 % with St. Anne ») ne distingue rien, pas plus que ses mots
@@ -244,8 +273,18 @@ explications_selon(Pleine, Ns, Max) :-
 % ne précise
 plus_precises(P, Max) :-
     group_pairs_by_key(P, Groupes),                  % par unité : ses notations pleines
-    findall(N, ( member(_-Pl, Groupes), member(N, Pl), \+ ( member(M, Pl), M \== N, arbre:ancetre(M, N) ) ), Ms),
+    findall(N, ( member(U-Pl, Groupes), member(N, Pl), \+ ( member(M, Pl), M \== N, domine(M, N, U) ) ), Ms),
     sort(Ms, Max).
+
+% domine(+M, +N, +U) : dans l'unité U, M l'emporte sur N — M précise N (une descendante) ; M est le jumeau à lettre
+% doublée de N (« 31AA233 », la figure féminine à genoux, sur « 31A233 ») ; ou M et N sont sœurs et U dit M mot pour
+% mot quand N n'y est dite que par le pont (« young woman », écrit, sur « adult woman », déduit de « woman ») : ce que
+% la description dit l'emporte sur ce qu'on en déduit par défaut
+domine(M, N, _) :- arbre:ancetre(M, N), !.
+domine(M, N, _) :- lettre_simple(M, N, _), !.
+domine(M, N, U) :-
+    arbre:parent(M, P), arbre:parent(N, P),
+    pleine_dans(M, U), \+ pleine_dans(N, U).
 
 % --- Descente -------------------------------------------------------------------------------------------------------
 
