@@ -335,3 +335,16 @@ def test_selection_f1(base_mini, tmp_path):
     f.write_text(json.dumps(poids))
     with pytest.raises(ValueError):
         Moteur(base_mini, f, selection="f1")
+
+
+def test_cli_expliquer(base_mini, tmp_path, capsys):
+    """Contrat de la commande « expliquer » : elle lit la sortie de Moteur.coder telle qu'elle est (sans score ni
+    contribution) et n'échoue pas."""
+    from oedipamaas.cli import main
+    d = tmp_path / "jerome.json"
+    d.write_text(json.dumps(jerome), encoding="utf-8")
+    main(["expliquer", str(base_mini), str(d), "--top", "3"])
+    sortie = capsys.readouterr().out
+    codes = [x.split()[0] for x in sortie.splitlines() if x and not x.startswith(" ")]
+    assert codes and len(codes) <= 3, sortie
+    assert all("sans poids" in x for x in sortie.splitlines() if x and not x.startswith(" ")), sortie
