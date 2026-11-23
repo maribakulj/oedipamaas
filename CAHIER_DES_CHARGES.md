@@ -117,7 +117,8 @@ validé à l'entrée du raisonnement. Schéma de principe (les noms définitifs 
 
 **Prémisse admissible** pour un code établi : une assertion de polarité `pos`, de modalité `affirme`, de portée
 `represente`, d'énonciateur `auteur`, hors de toute `alternative`. Une assertion `neg` peut **contredire** un
-candidat. Les autres alimentent les candidats, jamais les codes établis.
+candidat. Les autres alimentent les candidats, jamais les codes établis. Une **absence de mention** ne contredit
+jamais un code : seule une négation explicite le peut.
 
 ## 6. La lecture du texte libre
 
@@ -172,6 +173,8 @@ Un code établi affirme ses ancêtres (au sens du principe 4) ; la sortie ne les
 
 Un type est **certifié** quand sa précision mesurée sur un corpus jamais vu atteint le seuil du § 12.2. La V1 vise la
 certification des types T1 à T6 ; T7 à T11 produisent des candidats en V1 et seront certifiés version après version.
+Chaque type déclare les liens lexicaux qu'il admet (égalité, synonymie, hyperonymie à n pas, dérivation, partie, renvoi
+entre mots clés…) ; un lien non déclaré ne peut pas servir à sa preuve.
 
 | Type | Règle | Conditions minimales |
 |---|---|---|
@@ -215,7 +218,7 @@ Un objet JSON par document (JSONL pour un lot), sérialisation déterministe, pl
  "versions": {"moteur": "1.0.0+g…", "base": "iconclass <commit> ; wordnet <édition> ; …",
               "analyseur": "udpipe 1.x ; french-gsd-ud-2.x", "regles": "sha256:…", "entree": "sha256:…"},
  "etablis": [
-  {"code": "11H(JEROME)", "libelle": "St. Jerome …", "type_preuve": "T1",
+  {"code": "11H(JEROME)", "uri": "https://iconclass.org/11H(JEROME)", "libelle": "St. Jerome …", "type_preuve": "T1",
    "objet": "e1",
    "preuve": {"regle": "nom_explicite",
               "premisses": [{"assertion": "nom(e1, jerome)", "passage": [0, 14], "texte": "Saint Jérôme"}],
