@@ -15,10 +15,11 @@ NOTATIONS = ("N 1\nC 11\n$\nN 11\nC 11H\n$\nN 11H\nC 11H(...)\n$\nN 11H(...)\nC 
              "N 25F7\nC 25F71\n$\nN 25F71\nC 25F711\n$\nN 25F711\nC 25F711(...)\n$\nN 25F711(...)\nC 25F711(ANT)\n$\n"
              "N 25F711(ANT)\n$\n"
              "N 25F23(LION)\n$\nN 3\nC 31\n$\nN 31\nC 31A\n$\nN 31A\nC 31A2\n$\nN 31A2\nC 31A23\n$\nN 31A23\n"
-             "C 31A231\n$\nN 31A231\n$\nN 4\nC 41\n$\nN 41\n$\n")
+             "C 31A231\n; 31A232\n$\nN 31A231\n$\nN 31A232\n$\nN 4\nC 41\n$\nN 41\n$\n")
 LIBELLES = ("11H(...)|male saint (with NAME)\n"
             "11H(JEROME)|Jerome, Father of the Church; possible attributes: book, cardinal's hat, lion, skull\n"
             "25F23(LION)|beasts of prey, predatory animals: lion\n31A231|kneeling figure\n41|material aspects\n"
+            "31A232|kneeling figure ~ portrait\n"
             "25F711(...)|insects (with NAME)\n25F711(ANT)|insects: ant\n")
 MOTS = "25F23(LION)|lion\n31A231|kneeling\n11H(JEROME)|Jerome\n41|left\n"
 DESCRIPTION = {"subject": {"title": "Saint Jerome in the wilderness", "source": None, "type": "religious",
@@ -123,6 +124,15 @@ def test_lecture_et_recherche():
         assert not janus.query_once("specialisation:decrit_pont(lion, 'entities[2]')")["truth"]
         x = janus.query_once("specialisation:explications_pont(['31A231', '25F23(LION)', '31A23', '25F23'], X)")["X"]
         assert x == ["25F23(LION)", "31A231"], x
+        # « kneeling figure ~ portrait » : l'unité dit « kneeling figure », mais rien ne dit le portrait → pas pleine ;
+        # dès que la description le dit (ailleurs), elle l'est
+        assert not janus.query_once("specialisation:pleine_dans('31A232', _)")["truth"]
+        fd.charger(janus, dict(DESCRIPTION, keywords=["kneeling figure", "portrait"]))
+        janus.query_once("specialisation:decrire")
+        assert janus.query_once("specialisation:pleine_dans('31A232', U)")["U"] == "keywords[0]"
+        # une mention niée ne dit rien : « no lion » ne donne pas la forme « lion »
+        fd.charger(janus, dict(DESCRIPTION, keywords=["no lion"]))
+        assert not janus.query_once("description:mention(_M, keywords, _, _), recherche:forme_mention(_M, lion)")["truth"]
         fd.charger(janus, DESCRIPTION)
         janus.query_once("specialisation:decrire")
 

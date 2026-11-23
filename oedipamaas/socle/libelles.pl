@@ -22,6 +22,9 @@
                       mots_hors_parentheses/2, % ?N, -Mots            mots pleins du libellé, parenthèses ôtées
                       titre_et_suite/3,       % ?N, ?Titre, ?Suite    proposition principale « titre: suite »
                       concept_contexte/3,     % ?N, ?Concept, ?Contexte   « concept ~ contexte »
+                      phase/2,                % ?N, -Mots             « before … », « after … » : la phase
+                      mots_du_sens/2,         % ?N, -Mots             mots pleins du principal, « ~ » compris
+                      case_de_nom/1,          % +Texte                « with NAME » : la case d'un gabarit
                       attributs_possibles/2,  % ?N, -Attributs        « possible attributes: a, b (c), d »
                       indice_visuel/2,        % ?N, ?Proposition      usually, sometimes, often
                       consigne/2,             % ?N, ?Consigne         secondaire, preferer(M), residuel
@@ -101,9 +104,29 @@ precisions(N, Textes) :-
     \+ partie(N, 2, _),
     principal(N, P),
     corps_nommant(P, C),
-    findall(E, ( entre_parentheses(C, X), decouper(X, ', ', Xs), member(X1, Xs),
+    findall(E, ( entre_parentheses(C, X), \+ case_de_nom(X), decouper(X, ', ', Xs), member(X1, Xs),
                  atomic_list_concat(Ys, ' and ', X1), member(Y, Ys), atomic_list_concat(Zs, ' or ', Y),
                  member(Z, Zs), normalize_space(atom(E), Z), E \== '' ), Textes).
+
+% la case d'un gabarit, « (with NAME) », « (with TITLE) », « (with BOOK CHAPTER:VERSE) » : une consigne d'écriture,
+% pas un mot de la chose (« (non-fruit) products of plants or trees (with NAME) » ne se dit pas « name »)
+case_de_nom(X) :-
+    atom_concat('with ', R, X), sub_atom(R, 0, 1, _, C), char_type(C, upper(_)).
+
+% libellé de phase : « before the battle », « after the battle », « before and after production » — la phase est le
+% sens, et « before » / « after » sont des mots vides : aucune unité ne la prouve par un mot seul
+phase(N, Phase) :-
+    principal(N, P), downcase_atom(P, T),
+    (   sub_atom(T, 0, _, _, 'before and after ') -> Phase = [after, before]
+    ;   sub_atom(T, 0, _, _, 'before ') -> Phase = [before]
+    ;   sub_atom(T, 0, _, _, 'after ') -> Phase = [after]
+    ).
+
+% les mots pleins de tout le libellé principal, hors parenthèses, contexte « ~ » compris : ce que le libellé dit
+mots_du_sens(N, Mots) :-
+    principal(N, P),
+    hors_parentheses(P, H),
+    mots_pleins(H, Mots).
 
 % les mots du libellé hors parenthèses : un parent énumère souvent ses enfants entre parenthèses (« insignia and
 % symbols of sovereignty (crown, diadem, sceptre…) ») ; ces mots-là n'appartiennent pas au parent

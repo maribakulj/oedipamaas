@@ -18,6 +18,8 @@
                             part_decrite/2,         % +N, -Part
                             pleine_dans/2,          % ?N, ?Unite (l'unité décrit chacun des mots propres de N)
                             pleine_large_dans/2,    % ?N, ?Unite (de même, chaque mot tel quel ou par le pont WordNet)
+                            libelle_admis/1,        % +N (contexte « ~ » dit ; jamais un libellé de phase)
+                            mot_dit/1,              % +Mot (dit quelque part dans la description)
                             explications/2,         % +Ns, -Max (par unité, les plus profondes des notations pleines)
                             explications_pont/2,    % +Ns, -Max (de même, pleines par le pont WordNet compris)
                             descente/2,             % +Depart, -Atteinte (enfants les mieux soutenus, en chaîne)
@@ -156,7 +158,7 @@ part_decrite(N, Part) :-
 % mots de l'une des alternatives de N — la notation explique ce que dit cette unité, sans emprunter un mot à une
 % autre chose décrite
 pleine_dans(N, U) :-
-    distinct(U, ( alternatives_index:nb_alt(N, J, K),
+    distinct(U, ( alternatives_index:nb_alt(N, J, K), libelle_admis(N),
                   alternatives_index:alt(N, J, 1, F1), decrit_dans(F1, U),
                   forall(between(2, K, I), ( alternatives_index:alt(N, J, I, F), decrit_dans(F, U) -> true )) )).
 
@@ -164,9 +166,23 @@ pleine_dans(N, U) :-
 % (decrit_pont/2) — « unidentified man, sitter of the portrait » dit 61B11 « anonymous historical person portrayed »
 % (anonymous, person, portrayed) sans en écrire un seul mot ; une preuve plus faible, gardée à part
 pleine_large_dans(N, U) :-
-    distinct(U, ( alternatives_index:nb_alt(N, J, K),
+    distinct(U, ( alternatives_index:nb_alt(N, J, K), libelle_admis(N),
                   alternatives_index:alt(N, J, 1, F1), dite_dans(F1, U),
                   forall(between(2, K, I), ( alternatives_index:alt(N, J, I, F), dite_dans(F, U) -> true )) )).
+
+% ce que le libellé exige au-delà de ses mots propres pour qu'une unité l'explique : un libellé « concept ~ contexte »
+% n'est dit que si chacun de ses mots (des deux côtés du « ~ ») est dit quelque part dans la description (« gods ~
+% classical mythology » : des dieux hindous ne le disent pas) ; un libellé de phase (« after the battle », « before
+% and after production ») ne l'est jamais par une unité : la phase n'est pas un mot de la description
+libelle_admis(N) :-
+    \+ libelles:phase(N, _),
+    (   libelles:concept_contexte(N, _, _)
+    ->  libelles:mots_du_sens(N, Ms), forall(member(M, Ms), mot_dit(M))
+    ;   true
+    ).
+
+% mot_dit(+Mot) : le mot (ou l'un de ses lemmes) est dit quelque part dans la description, tel quel ou par le pont
+mot_dit(M) :- once(( formes(M, F), dite_dans(F, _) )).
 
 % explications(+Ns, -Max) : parmi les notations Ns, celles qui sont pleines dans une unité sans qu'aucun de leurs
 % descendants le soit aussi dans la même unité — pour chaque chose décrite, les notations les plus précises qui

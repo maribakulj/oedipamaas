@@ -66,11 +66,19 @@ forme_mention(M, Forme) :- fm(M, Forme).
 % « half-length », « half », « length » et « half length » (Iconclass écrit l'un ou l'autre)
 forme_mention_calculee(M, Forme) :-
     description:mention(M, _, _, Texte0),
+    \+ niee(Texte0),
     (   Texte = Texte0
     ;   sub_atom(Texte0, _, _, _, '-'), atomic_list_concat(Morceaux, '-', Texte0), atomic_list_concat(Morceaux, ' ', Texte)
     ),
     mots_de_mention(Texte, Mots),
     distinct(Forme, ( suite(Mots, S), ( Forme = S ; morphologie:tous_lemmes(S, Ls), member(Forme, Ls) ) )).
+
+% une mention niée tout entière (« no landscape », « without frame », « not visible », « absence of colour ») ne dit
+% pas ce qu'elle nomme : elle ne donne aucune forme
+niee(Texte) :-
+    downcase_atom(Texte, T),
+    member(Negation, ['no ', 'not ', 'without ', 'lack of ', 'absence of ']),
+    sub_atom(T, 0, _, _, Negation), !.
 
 % --- Candidats ------------------------------------------------------------------------------------------------------
 

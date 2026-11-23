@@ -10,7 +10,7 @@
         bm25_direct, bm25_wordnet, inv_rang_bm25, inv_rang_part, bm25_sujet, inv_rang_sujet, inv_rang_min, part,
         nb_propres, prof, specialisee, cle, ancetre_seul, explication, unites_pleines, explication_pont,
         unites_pleines_pont, plein_<champ> (unités pleines par champ), part_unites, concurrents,
-        ecart_profondeur_plus_un, nomme_gabarit, pas_taxonomiques, nb_mentions, nb_unites,
+        ecart_profondeur_plus_un, nomme_gabarit, pas_taxonomiques, part_libelle_dite, libelle_dit, nb_mentions, nb_unites,
         src_mot_cle, src_libelle, src_attribut, src_renvoi, wn_synonyme, wn_hyperonyme, wn_derive, wn_autre,
         champ_<champ> (nombre de mentions directes par champ de la description),
         nom, lettre_doublee, enfants_candidats, parent_candidat
@@ -120,6 +120,16 @@ trait(N, explication, V) :- ( expl(N) -> V = 1 ; V = 0 ).
 trait(N, unites_pleines, C) :- aggregate_all(count, specialisation:pleine_dans(N, _), C).
 % de même par le pont WordNet (une unité pleine telle quelle l'est aussi par le pont)
 trait(N, explication_pont, V) :- ( expl_pont(N) -> V = 1 ; V = 0 ).
+% le libellé entier (son principal hors parenthèses, contexte « ~ » compris) : la part de ses mots pleins dite quelque
+% part dans la description, et s'il l'est tout entier — l'unité pleine ne vérifie que les mots propres ; « Mary
+% sitting or enthroned, the Christ-child on her knee » est pleine par « knee » sans que Marie soit dite
+trait(N, part_libelle_dite, V) :-
+    (   libelles:mots_du_sens(N, Ms), length(Ms, K), K > 0
+    ->  aggregate_all(count, ( member(M, Ms), specialisation:mot_dit(M) ), D), V is D / K
+    ;   V = 0
+    ).
+trait(N, libelle_dit, V) :-
+    ( libelles:mots_du_sens(N, Ms), Ms \== [], forall(member(M, Ms), specialisation:mot_dit(M)) -> V = 1 ; V = 0 ).
 trait(N, unites_pleines_pont, C) :- unites_pleines_de(N, Us), length(Us, C).
 % la structure de la description : dans quels champs N est pleine (le sujet, une personne, une entité, un mot-clé…) ;
 % la part des unités de la description qu'elle explique ; ses concurrentes, les autres explications (hors de sa
