@@ -93,3 +93,14 @@ def test_lecture_et_recherche():
         assert janus.query_once("specialisation:part_decrite('31A231', P)")["P"] == 0.5
         s = janus.query_once("specialisation:specialisees(['31A23', '25F23'], S)")["S"]
         assert set(s) == {"31A231", "25F23(LION)"}, s
+
+        # preuve : chaque appui cite le chemin JSON et le texte de la mention, la forme, le lien et l'entrée
+        import json
+        janus.consult(str(SOCLE / "preuve.pl"))
+        p = json.loads(janus.query_once("preuve:preuve_lexicale('25F23(LION)', _D), preuve:preuve_json(_D, J)")["J"])
+        assert p["regle"] == "lexical" and p["iconclass"] == "beasts of prey, predatory animals: lion"
+        assert {"chemin": "entities[1].type", "texte": "lioness", "forme": "lion",
+                "lien": "wordnet(hyperonyme,1,lioness)", "entree": "mot_cle(en)"} in p["appuis"]
+        q = json.loads(janus.query_once("preuve:preuve_specialisation('31A23', '31A231', _D), "
+                                        "preuve:preuve_json(_D, J)")["J"])
+        assert q["mots_propres_decrits"] == ["kneeling"] and q["part_decrite"] == 0.5
