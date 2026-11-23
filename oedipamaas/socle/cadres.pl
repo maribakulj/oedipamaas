@@ -23,7 +23,8 @@
                     preparer_cadres/0,   % fermeture des sens décrits, par unité (description courante)
                     tete_impliquee/3,    % +N, +Tete, ?Unite
                     cadre_prouve/2,      % +N, ?Unite
-                    pleine_et_cadree/2   % ?N, ?Unite (pleine et cadre prouvé dans la même unité)
+                    pleine_et_cadree/2,  % ?N, ?Unite (pleine et cadre prouvé dans la même unité)
+                    pleine_et_cadree_par_tete/2   % ?N, ?Unite (de même, sa tête par la tête d'une phrase)
                   ]).
 
 :- use_module(libelles).
@@ -32,7 +33,7 @@
 :- use_module(specialisation).
 :- use_module(arbre).
 
-:- dynamic sens_dans/2.
+:- dynamic sens_dans/2, tete_dans/2, sens_tete_dans/2.
 
 % --- Grammaire ------------------------------------------------------------------------------------------------------
 
@@ -170,16 +171,47 @@ occurrences(F, S, C) :- once(( wordnet:s(S, _, W, _, _, C), downcase_atom(W, F) 
 
 % --- Implication ----------------------------------------------------------------------------------------------------
 
-% sens_dans(S, U) : S est un sens dominant d'une forme décrite dans l'unité U, ou l'un de ses hyperonymes
+% sens_dans(S, U) : S est un sens dominant d'une forme décrite dans l'unité U, ou l'un de ses hyperonymes ;
+% tete_dans(F, U) : F est une forme de la tête d'une phrase de U ; sens_tete_dans(S, U) : de même que sens_dans, pour
+% les seules têtes
 preparer_cadres :-
-    retractall(sens_dans(_, _)),
-    forall(distinct(S0-U, ( specialisation:decrit_dans(F, U), lexique:sens_dominant(F, S0) )), monter(S0, U)).
+    retractall(sens_dans(_, _)), retractall(tete_dans(_, _)), retractall(sens_tete_dans(_, _)),
+    forall(distinct(S0-U, ( specialisation:decrit_dans(F, U), lexique:sens_dominant(F, S0) )),
+           monter(sens_dans, S0, U)),
+    forall(distinct(F-U, tete_de_unite(U, F)), assertz(tete_dans(F, U))),
+    forall(distinct(S0-U, ( tete_dans(F, U), lexique:sens_dominant(F, S0) )), monter(sens_tete_dans, S0, U)).
 
-monter(S, U) :-
-    (   sens_dans(S, U) -> true
-    ;   assertz(sens_dans(S, U)),
-        forall(( wordnet:hyp(S, P) ; wordnet:ins(S, P) ), monter(P, U))
+monter(Fait, S, U) :-
+    G =.. [Fait, S, U],
+    (   call(G) -> true
+    ;   assertz(G),
+        forall(( wordnet:hyp(S, P) ; wordnet:ins(S, P) ), monter(Fait, P, U))
     ).
+
+% tete_de_unite(-U, -F) : une description se lit avec la même grammaire que les libellés. Chaque phrase d'une unité
+% (une mention, coupée à ses virgules et points-virgules ; « looks_at » se lit « looks at ») a ses têtes : « harmony »
+% pour « harmony of nature and art », « halo » pour « halo of rays », l'action « riding » pour « riding a donkey » ;
+% le reste n'en est que modificateur ou complément. Une relation a aussi pour têtes celles des types des entités
+% qu'elle relie.
+tete_de_unite(U, F) :-
+    (   description:mention(M, _, _, _), specialisation:unite(M, U)
+    ;   specialisation:mention_participant(U, M)
+    ),
+    tete_de_mention(M, F).
+
+% une phrase « X as Y » dit que X est Y (« Saint Joseph as foster-father of Christ ») : Y est une tête comme X ; une
+% tête composée a aussi pour tête son dernier nom (« saint joseph » est un Joseph, « domestic house » une maison)
+tete_de_mention(M, F) :-
+    description:mention(M, _, _, Texte),
+    atomic_list_concat(Ms, '_', Texte), atomic_list_concat(Ms, ' ', Texte1),
+    split_string(Texte1, ",;", " ", Ps), member(P0, Ps), P0 \== "", atom_string(P1, P0),
+    downcase_atom(P1, P2), atomic_list_concat(Qs, ' as ', P2), member(P, Qs), P \== '',
+    element(P, element(Ts, _)), member(tete(X, _), Ts),
+    ( X = action(H0) -> true ; H0 = X ),
+    (   H = H0
+    ;   atom(H0), atomic_list_concat(Mots, ' ', H0), Mots = [_, _|_], last(Mots, D), nom_dominant(D, H)
+    ),
+    specialisation:formes(H, F).
 
 % la tête est impliquée dans l'unité : dite (forme ou lemme, tel quel ou par le pont), ou l'un de ses sens de nom
 % couvre une chose de l'unité
@@ -192,22 +224,35 @@ implique(T, U) :-
 % général des ancêtres stricts de N dont un élément a cette tête et qui porte des mots clés (« figure » : 31A « the
 % human figure », mots clés man, woman, body ; jamais les mots clés de N lui-même, qui disent ses aspects : le genou
 % de 11F422 ne dit pas Marie)
-tete_impliquee(N, action(A), U) :- !,
+tete_impliquee(N, T, U) :- tete_impliquee(unite, N, T, U).
+
+% tete_impliquee(+Mode, +N, +Tete, ?U) — Mode unite : par n'importe quel mot de l'unité ; Mode tetes : par la tête
+% d'une de ses phrases seulement (« harmony of nature and art » parle d'harmonie, pas de la nature)
+tete_impliquee(Mode, N, action(A), U) :- !,
     % une action se prouve par elle-même, dans ce que la description donne pour des actions (actions, gestes,
     % relations, le sujet) : « putting on stockings » n'est pas dit par « dark stockings », ni « opening the window »
     % par « open door frame » ; jamais par les mots clés d'un ancêtre, qui nomment les choses, pas l'action
     distinct(U, specialisation:decrit_dans(_, U)),
     champ_d_action(U),
-    once(( specialisation:formes(A, F), specialisation:dite_dans(F, U) )).
-tete_impliquee(N, T, U) :-
+    once(( specialisation:formes(A, F), dite_comme(Mode, F, U) )).
+tete_impliquee(Mode, N, T, U) :-
     acte(T), !,
-    tete_impliquee(N, action(T), U).
-tete_impliquee(N, T, U) :-
+    tete_impliquee(Mode, N, action(T), U).
+tete_impliquee(Mode, N, T, U) :-
     distinct(U, specialisation:decrit_dans(_, U)),
-    (   implique(T, U) -> true
+    (   impliquee_comme(Mode, T, U) -> true
     ;   ancetre_definissant(N, T, A),
-        iconclass:mot_cle(A, en, K), lexique:forme_de(K, FK), implique(FK, U) -> true
+        iconclass:mot_cle(A, en, K), lexique:forme_de(K, FK), impliquee_comme(Mode, FK, U) -> true
     ).
+
+impliquee_comme(unite, T, U) :- implique(T, U).
+impliquee_comme(tetes, T, U) :-
+    (   specialisation:formes(T, F), tete_dans(F, U) -> true
+    ;   morphologie:forme_synset(T, n, S), sens_tete_dans(S, U) -> true
+    ).
+
+dite_comme(unite, F, U) :- specialisation:dite_dans(F, U).
+dite_comme(tetes, F, U) :- tete_dans(F, U).
 
 % une action ne se prouve pas par la description d'une chose (les attributs d'une entité, les traits d'une personne :
 % « open door frame », « arms raised ») ; partout ailleurs, oui (actions, gestes, relations, sujet, mots clés…)
@@ -228,11 +273,18 @@ ancetre_definissant(N, T, A) :-
 
 % cadre_prouve(+N, ?U) : l'unité U prouve le cadre de N — pas de phase, une tête d'un élément impliquée dans U, le
 % contexte dit quelque part
-cadre_prouve(N, U) :-
+cadre_prouve(N, U) :- cadre_prouve(unite, N, U).
+
+cadre_prouve(Mode, N, U) :-
     cadre(N, cadre([], Elements, Contexte)),
     forall(member(M, Contexte), mot_implique_partout(M)),
-    distinct(U, ( member(element(Ts, Cs), Elements), member(tete(T, _), Ts), tete_impliquee(N, T, U),
+    distinct(U, ( member(element(Ts, Cs), Elements), member(tete(T, _), Ts), tete_impliquee(Mode, N, T, U),
                   forall(member(C, Cs), complement_implique(C, U)) )).
+
+% pleine_et_cadree_par_tete(?N, ?U) : de même, la tête de N impliquée par la tête d'une phrase de U
+pleine_et_cadree_par_tete(N, U) :-
+    specialisation:pleine_large_dans(N, U),
+    cadre_prouve(tetes, N, U).
 
 % un complément de l'élément (« portraits of Christ », « hand in the sleeve ») : impliqué dans la même unité, ou dans
 % une unité liée (la description dit « e1 holds e3 ») — variante mesurée : n'importe où dans la description

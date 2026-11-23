@@ -148,13 +148,17 @@ dite_dans(F, U) :- decrit_pont(F, U).
 % participant(-U, -F) : U est l'unité d'une relation (« relations[i] »), F une forme du type d'une entité qu'elle relie
 % (son sujet ou son objet, identifiants d'entité)
 participant(U, F) :-
+    mention_participant(U, MT),
+    recherche:forme_mention(MT, F).
+
+% mention_participant(-U, -MT) : MT est la mention du type d'une entité que relie la relation d'unité U
+mention_participant(U, MT) :-
     description:relation_i(I, S, _, O),
     format(atom(U), 'relations[~d]', [I]),
     ( Id = S ; Id = O ),
     findall(E, description:entite(E, _, _, _, _), Es), nth0(J, Es, Id),
     format(atom(CheminType), 'entities[~d].type', [J]),
-    description:mention(MT, entities, CheminType, _),
-    recherche:forme_mention(MT, F).
+    description:mention(MT, entities, CheminType, _).
 
 unite(M, U) :-
     description:mention(M, _, Chemin, _),

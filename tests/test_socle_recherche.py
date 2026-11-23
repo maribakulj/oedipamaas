@@ -157,6 +157,14 @@ def test_lecture_et_recherche():
         janus.query_once("cadres:preparer_cadres")
         u = {x["U"] for x in janus.query("cadres:pleine_et_cadree('25F23(LION)', U)")}
         assert u == {"persons[0]", "entities[1]", "relations[0]"}, u
+        # têtes des phrases de la description, lues par la grammaire des libellés : « Saint Jerome in the wilderness »
+        # a pour tête Jérôme, la nature sauvage n'en est que le lieu ; une relation a pour têtes celles de ses
+        # participants ; la preuve par les têtes garde ici les trois unités du lion
+        assert janus.query_once("cadres:tete_dans(jerome, subject)")["truth"]
+        assert not janus.query_once("cadres:tete_dans(wilderness, subject)")["truth"]
+        assert janus.query_once("cadres:tete_dans(man, 'relations[0]')")["truth"]
+        u = {x["U"] for x in janus.query("cadres:pleine_et_cadree_par_tete('25F23(LION)', U)")}
+        assert u == {"persons[0]", "entities[1]", "relations[0]"}, u
         # 11F422 est pleine par « bare knee » (son seul mot propre), mais son cadre veut Marie ou l'Enfant : rien
         # ne les dit → pas d'explication selon le cadre
         fd.charger(janus, dict(DESCRIPTION, keywords=["bare knee"]))

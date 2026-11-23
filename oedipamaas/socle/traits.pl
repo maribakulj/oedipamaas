@@ -25,7 +25,8 @@
 :- use_module(cadres).
 
 :- dynamic rang_bm25/2, bm25/3, rang_part/2, rang_sujet/2, bm25_sujet/2, spec/1, cle_prop/1, cand/1, expl/1,
-           expl_pont/1, unite_expl/2, nb_unites_desc/1, nom_gab/2, expl_cadre/1, cadree/2, couvre/3.
+           expl_pont/1, unite_expl/2, nb_unites_desc/1, nom_gab/2, expl_cadre/1, cadree/2, couvre/3, cadree_tete/2,
+           expl_tete/1.
 
 % les unités où N est pleine (mot pour mot ou par le pont WordNet), une fois par notation et par description
 % (une notation nommée dans un gabarit est pleine là où son nom est décrit)
@@ -46,7 +47,8 @@ appui(N, M, F, L, S) :- recherche:candidat(N, M, p(M, F, L, S)).
 contexte(Budget) :-
     maplist(retractall, [rang_bm25(_, _), bm25(_, _, _), rang_part(_, _), rang_sujet(_, _), bm25_sujet(_, _), spec(_),
                          cle_prop(_), cand(_), expl(_), expl_pont(_), unite_expl(_, _), nb_unites_desc(_),
-                         nom_gab(_, _), expl_cadre(_), cadree(_, _), couvre(_, _, _)]),
+                         nom_gab(_, _), expl_cadre(_), cadree(_, _), couvre(_, _, _), cadree_tete(_, _),
+                         expl_tete(_)]),
     recherche:classement(1000000, L),
     forall(nth1(R, L, c(N, cle(D, W), _)), ( assertz(rang_bm25(N, R)), assertz(bm25(N, D, W)) )),
     % troisième ordre : BM25 sur les seules mentions du sujet (titre, source, alternatives)
@@ -73,6 +75,12 @@ contexte(Budget) :-
     forall(member(U-N, Pc), assertz(cadree(U, N))),
     specialisation:plus_precises(Pc, ExC),
     forall(member(N, ExC), assertz(expl_cadre(N))),
+    % parmi elles, celles dont la tête est impliquée par la tête d'une phrase de l'unité (cadres:cadre_prouve/3, mode
+    % tetes) : « Nature » n'est pas expliquée par « harmony of nature and art »
+    include(cadree_par_tete, Pc, Pt),
+    forall(member(U-N, Pt), assertz(cadree_tete(U, N))),
+    specialisation:plus_precises(Pt, ExT),
+    forall(member(N, ExT), assertz(expl_tete(N))),
     % ce que chaque notation cadrée rend compte de son unité : la part des mots de l'unité qui sont des entrées de la
     % notation (mots du libellé, mots clés, attributs) ou des mots de ses alternatives ; la mieux couvrante de l'unité
     forall(member(U-N, Pc), ( couverture(U, N, C), assertz(couvre(U, N, C)) )),
@@ -135,11 +143,15 @@ trait(N, explication_pont, V) :- ( expl_pont(N) -> V = 1 ; V = 0 ).
 % impliquée là même, compléments, contexte, pas de phase) ; le nombre de ces unités
 trait(N, explication_cadre, V) :- ( expl_cadre(N) -> V = 1 ; V = 0 ).
 trait(N, unites_cadrees, C) :- aggregate_all(count, cadree(_, N), C).
+trait(N, explication_tete, V) :- ( expl_tete(N) -> V = 1 ; V = 0 ).
+trait(N, unites_tetes, C) :- aggregate_all(count, cadree_tete(_, N), C).
 % une notation explique une unité si elle rend compte de ce que l'unité dit : la plus forte part des mots d'une de ses
 % unités cadrées dont elle rend compte, et si elle est la mieux couvrante de l'une d'elles (ex aequo compris)
 trait(N, couverture_max, V) :- ( aggregate_all(max(C), couvre(_, N, C), V0) -> V = V0 ; V = 0 ).
 trait(N, meilleure_couverture, V) :-
     (   couvre(U, N, C), C > 0, \+ ( couvre(U, M, C2), M \== N, C2 > C ) -> V = 1 ; V = 0 ).
+
+cadree_par_tete(U-N) :- cadres:cadre_prouve(tetes, N, U).
 
 % couverture(+U, +N, -C) : parmi les mots de l'unité (formes d'un seul mot dites dans U, mots vides exclus), la part qui
 % sont des entrées de N dans l'index (libellé, mots clés, attributs) ou des mots de ses alternatives
