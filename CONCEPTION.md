@@ -1,6 +1,8 @@
 # oedipamaas : document de conception
 
-Version 0.2. Statut : conception arrêtée, construction en cours.
+Version 1.0. Statut : conception arrêtée après étude ; reconstruction en cours. Le code de la version 0.2 (recherche en
+Python, modèle de phrases, décision logistique) reste dans l'historique comme ligne de base ; la version 1.0 le
+remplace pièce par pièce, dans l'ordre du § 12.
 
 oedipamaas est un moteur iconographique. Il lit ce qu'un grand modèle de vision-langage (le **descripteur**) dit d'une
 image, en mots, et le traduit en codes [Iconclass](https://iconclass.org), chaque code avec sa preuve. Les codes, avec
@@ -11,404 +13,188 @@ pouvoir être amélioré puis rejoué sur toutes les descriptions déjà faites,
 
 ## 0. En bref
 
-**Principe : un moteur pour tout corpus et tout le vocabulaire d'Iconclass.** Ce qui décide ne vient que de trois
-sources : la structure et les textes d'Iconclass, Wikidata (P1256), et quelques faits de langue documentés une fois
-(pluriel, graphie, honorifiques). Les règles mesurent, elles ne filtrent pas : aucune constante de décision n'est écrite
-à la main, aucune liste propre à un corpus, aucun correctif tiré d'une image vue. La décision est apprise à partir de
-traits qui décrivent la preuve (jamais « ce que tel catalogue contient d'habitude »), et sa généralité se mesure hors
-corpus : apprendre sur un corpus, mesurer sur un autre.
-
-1. **Lire toute la description.** Le descripteur dit le sujet et sa source, les personnes, les objets avec leur boîte,
-   les relations, les actions, les gestes et émotions, les concepts, les rôles, le cadre, les textes transcrits, le
-   genre et la fonction. Chaque champ est lu et dirigé vers les chapitres d'Iconclass où il a du sens.
-2. **Ne pas écrire de culture à la main : la compiler depuis Iconclass.** Iconclass contient déjà le raisonnement de
-   l'iconographe : les libellés de 227 saints donnent leurs attributs possibles (« lion, skull, cardinal's hat… »),
-   1 007 libellés citent leur source (1 244 références, passages bibliques comme « 1 Samuel 17 » ou d'Ovide), et
-   chaque saint suit le même gabarit de vie (en groupe, jeunesse, miracles, martyre, portrait…). Les règles sont tirées de ces
-   textes par programme.
-3. **Chercher les candidats par le sens autant que par les mots.** Le descripteur écrit « David beheading Goliath »,
-   Iconclass « David beheads Goliath with a sword » ; ailleurs, les mots diffèrent tout à fait pour un même sens. Une
-   recherche sémantique (vecteurs de sens d'un modèle de phrases local) s'ajoute à la recherche lexicale.
-4. **Prolog vérifie et combine, il ne cherche pas.** Python trouve les candidats. SWI-Prolog garde la base Iconclass et
-   les règles : un saint nommé doit être appuyé par un fait, un épisode doit retrouver ses participants dans l'image,
-   des frères à égalité se replient sur leur parent commun. La dérivation Prolog *est* la preuve du code.
-5. **Deux probabilités par code.** `p_catalogue` : un catalogueur l'aurait-il écrit ? `p_juste` : le code est-il vrai
-   de l'image ? Les catalogues sont incomplets ; la seconde se corrige par un jugement à l'aveugle.
-6. **Rejouable.** Aucun appel à un modèle payant dans le moteur. Base, règles, poids et modèle de phrases sont
-   versionnés ; mêmes entrées, mêmes octets en sortie.
+1. **Un moteur Prolog.** La connaissance est en faits ; la recherche des candidats, la vérification, la combinaison,
+   le repli sur le parent et la décision sont des règles SWI-Prolog ; la dérivation d'un code est sa preuve. Python
+   lit la description et l'écrit en faits, appelle le moteur par Janus, écrit la sortie ; des compilateurs hors ligne
+   écrivent les sources en faits.
+2. **Aucun réseau de neurones dans le moteur.** Les écarts de vocabulaire entre la description et Iconclass passent
+   par des ressources symboliques compilées (Iconclass dans toutes ses langues, WordNet, Wikidata), chaque lien étant
+   une étape de preuve nommée.
+3. **Aucune culture écrite à la main.** Iconclass contient déjà le raisonnement de l'iconographe : attributs possibles
+   des saints, sources des récits, gabarits de vie, familles de clés. Les règles en sont tirées par programme.
+4. **Raisonner comme un iconographe** : un épisode se reconnaît à une combinaison de figures, d'actions et d'objets ;
+   un saint à son nom et à ses attributs, jamais à un attribut seul ; une notation fine se justifie par ce qui la
+   distingue de ses sœurs.
+5. **Les règles mesurent, la décision apprend** : chaque règle rend une quantité nommée ; un apprenant peu profond,
+   entraîné sur un corpus, est compilé en clauses Prolog et validé sur un autre corpus.
+6. **Rejouable** : base, règles, clauses apprises et sources sont versionnées et épinglées ; mêmes entrées, mêmes
+   octets en sortie.
 
 ## 1. But et périmètre
 
-Le moteur fait :
+Le moteur fait : lire une description (format § 13) ; proposer des notations Iconclass pour chaque élément de la
+description ; les vérifier, les combiner, en garder certaines, chacune avec sa probabilité et sa preuve ; rattacher des
+codes aux objets situés (boîtes) et aux relations ; dire quelle partie de la description n'a servi à rien.
 
-- lire une description (format § 12) ;
-- proposer des notations Iconclass candidates pour chaque élément de la description ;
-- les vérifier, les combiner, en garder certaines, chacune avec un score, ses deux probabilités et sa preuve ;
-- rattacher des codes aux objets situés (boîtes) et aux relations ;
-- dire quelle partie de la description n'a servi à rien.
+Il ne fait pas : regarder l'image ; demander des codes au descripteur ; appeler un modèle de langue ; tourner en
+production (ses sorties sont des données d'entraînement).
 
-Il ne fait pas :
+## 2. Ce qu'Iconclass impose
 
-- regarder l'image (seul le descripteur la regarde, une fois) ;
-- demander des codes au descripteur, ni appeler un modèle de langue ;
-- tourner en production : ses sorties sont des données d'entraînement.
+La notation d'Iconclass n'est pas un simple arbre de préfixes. Comptes sur le dépôt `iconclass/data` (CC0) au commit
+épinglé : 40 716 notations de base, 58 familles de clés (2 931 suffixes), 6 128 renvois. Six mécanismes se combinent,
+chacun avec un sens propre à une plage de la hiérarchie :
 
-## 2. Pourquoi ces choix
+| Mécanisme | Ce qu'il est | Ce que le moteur doit savoir |
+|---|---|---|
+| hiérarchie | division, chiffre, lettre, chiffres ; coder un descendant affirme ses ancêtres | l'arbre, le type de chaque niveau |
+| lettre doublée | 5 607 notations ; sens selon la section (féminin, opposé, plein air, fabuleux, variante) ; deux parents (le parent doublé et le jumeau simple) | le sens de chaque préfixe et le trait de la description qui le déclenche |
+| texte entre parenthèses | noms listés et gabarits « (...) » ouverts à tout nom (personne, ville, édifice…), selon une convention d'écriture | le type de nom attendu par chaque gabarit |
+| chiffres structuraux | gabarits de vie appliqués aux saints, aux héros, aux personnages antiques : un chiffre = une catégorie d'épisode (jeunesse, miracle, martyre, portrait…) ; plus du tiers des notations de base | des tables chiffre → catégorie, reliées au vocabulaire d'action ; l'identité de la personne d'abord |
+| clés (+…) | une famille par notation ; plus de 1,3 million de notations valides avec les clés | composer la clé à la demande, jamais énumérer ; relier chaque famille (posture, vue, nombre, matière, personnage sacré présent, mode de représentation) aux champs de la description |
+| renvois et sources | renvois entre notations ; références bibliques et classiques dans les libellés | voisinage latéral ; passage source → figures, actions, objets attendus |
 
-Un premier prototype purement lexical (un terme de la description égal à la fin d'un libellé ou à un mot clé
-d'Iconclass) montre trois choses :
+## 3. Ce que la littérature impose
 
-- **la correspondance d'un mot isolé produit beaucoup de codes et peu de justes** : un mot n'a de sens qu'avec son
-  contexte (le champ d'où il vient, ce qui l'appuie dans l'image) ;
-- **les noms et le sujet sont les indices les plus sûrs** : l'identification d'une personne est la famille de règles
-  la plus précise ;
-- **les récits échappent aux mots** : dans la Bible, la littérature et la mythologie, la description contient souvent
-  de quoi trouver le code, mais pas sous la forme du libellé. Il faut le sens, et les références de source.
+- **Le texte bat l'image**, et une recherche lexicale sur une bonne description est déjà une base sérieuse (Banar et
+  al. 2023 ; Thomas 2025 ; Thomas et Hintersteiner 2026) : chaque mesure du moteur donne BM25 sur les mêmes
+  descriptions comme ligne de base.
+- **Candidats à plat, contrôle par la hiérarchie** : un décodage de haut en bas perd les branches multiples ; on génère
+  dans toutes les divisions, puis on vérifie, combine et replie avec l'arbre.
+- **Le repli sur le parent est le levier de précision le plus fort** : décision explicite, graduée, rapportée en courbe
+  (forme de règle de Deng et al. 2012).
+- **Un attribut seul ne prouve rien** : objets vers sens symboliques sans contexte, identification des saints par
+  leurs seuls attributs, tous deux faibles dans les travaux publiés ; on exige une combinaison, notée par abduction
+  (éléments décrits utilisés moins éléments attendus absents), et l'interprétation cohérente la plus agrégée d'abord.
+- **Visible n'est pas catalogué** : « vrai de l'image » et « écrit par un catalogueur » sont deux probabilités ; les
+  indexeurs humains ne s'accordent qu'à moitié, la précision contre un catalogue a un plafond bas.
+- **Décision lisible** : les systèmes d'indexation par thésaurus les plus proches (Maui, Annif) apprennent de petits
+  arbres sur des traits lexicaux et de structure ; on compile ces arbres en clauses.
 
-Les bons codes sont souvent parmi les candidats, mais mal classés : le classement (un score calibré) est un levier à
-part entière.
-
-## 3. Architecture
+## 4. Architecture
 
 ```
-description (JSON)
-   │
-   │  1. LECTURE (Python) : chaque champ devient des « mentions »
-   │     mention = texte, champ, chemin JSON, confiance du descripteur, entité et boîte s'il y en a
-   ▼
-mentions ──► 2. RECHERCHE (Python) : candidats par mention
-   │            index lexical (libellés, mots clés, noms, toutes langues)
-   │            index sémantique (vecteurs de sens des libellés)
-   │            routage : chaque champ vers ses chapitres (§ 5.2)
-   ▼
-faits d'image + candidats ──► 3. RAISONNEMENT (SWI-Prolog, base Iconclass compilée)
-                                 vérifie, combine, exclut ; chaque appui garde ses faits
-                                      │
-                                      ▼
-                               4. SCORE (Python) : score, hiérarchie (descendant ou parent,
-                                  repli des récits à égalité, un seul sujet), p_catalogue, p_juste
-                                      │
-                                      ▼
-                               5. SORTIE : codes.jsonl (codes, objets, relations, preuves,
-                                  matériel non utilisé, versions)
+description JSON ──(Python : lecture, aucun jugement)──► faits de la description
+                                                              │
+base compilée (faits) ───────────────────────────────────────►│ SWI-Prolog
+  grammaire de la notation · arbre et jumeaux · libellés       │  1. recherche : candidats à plat, toutes divisions,
+  décomposés · lexique (Iconclass toutes langues, WordNet,     │     chaque candidat avec sa dérivation lexicale
+  Wikidata) · personnes et attributs · tables des chiffres     │  2. raisonnement par mécanisme (§ 8)
+  structuraux · lettres doublées · gabarits · clés et leur     │  3. traits de preuve → décision (clauses apprises)
+  sens · épisodes · sources · renvois · consignes              │  4. preuve de chaque code (méta-interpréteur)
+                                                              ▼
+                                      sortie JSON : codes, probabilités, preuve, objets et relations situés
 ```
 
-Python et Prolog dans le même processus, par Janus (le pont Python ↔ SWI-Prolog livré avec SWI-Prolog). La base est
-chargée une fois, compilée (`.qlf`) ; les faits de chaque image sont ajoutés, interrogés, retirés.
+## 5. La base, dans l'ordre de construction
 
-Pourquoi Prolog : les règles se lisent comme des phrases, la hiérarchie se parcourt naturellement, et la dérivation
-d'un code donne sa preuve sans code supplémentaire. Pourquoi pas tout en Prolog : la recherche de voisins dans des
-vecteurs et l'apprentissage des poids sont plus simples et plus rapides en Python.
+Chaque contenu est compilé par programme depuis sa source épinglée.
 
-## 4. Les connaissances : la base compilée
+1. **Grammaire de la notation** (DCG) : analyse et génération de toutes les formes, avec le type de chaque élément.
+2. **L'arbre** : parent canonique, lien jumeau des lettres doublées, division, type de niveau ; ancêtres par une règle
+   tabulée.
+3. **Les libellés décomposés** : tête, contexte « ~ », spécification « : », partie « - » ; marques de récit, de
+   visibilité, d'attributs possibles, de source ; consignes d'usage.
+4. **Les sources** normalisées (livre, chapitre, verset ; Ovide…), propres et héritées.
+5. **Les personnes** : saints, personnages bibliques, dieux, héros, personnages antiques et littéraires ; formes du
+   nom ; attributs possibles avec leur rareté calculée sur Iconclass.
+6. **Les tables de chiffres structuraux**, par plage.
+7. **Les lettres doublées** : sens par préfixe et trait déclencheur.
+8. **Les gabarits** : type de ce qu'ils nomment, noms listés, convention d'écriture.
+9. **Les clés** : famille de chaque notation, suffixes hiérarchisés, textes, queues, sens fonctionnel de chaque
+   famille.
+10. **Les épisodes** : participants, action, objets, lieu, rang dans l'histoire ; du libellé, puis du passage source.
+11. **Le lexique** : mots clés de toutes les langues, renvois entre mots clés, WordNet, alias Wikidata.
+12. **Les renvois** entre notations, comme voisinage de recherche.
+13. **Les consignes d'usage** : notation secondaire, variante, dépréciée et sa préférée, niveau le plus spécifique que
+    la preuve soutient.
 
-Une seule commande (`oedipamaas base`) construit la base depuis des sources épinglées ; la base porte l'empreinte de
-chacune.
+## 6. Les sources
 
-### 4.1 Iconclass (dépôt iconclass/data, CC0, commit épinglé)
-
-| Ce qu'on en tire | Contenu | Sert à |
+| Source | Licence | Ce qui en est tiré |
 |---|---|---|
-| Hiérarchie | 40 716 notations, parents, ancêtres pré-calculés, profondeur | cohérence, repli, crédit hiérarchique |
-| Libellés et mots clés | anglais d'abord ; toutes les langues du dépôt ensuite | recherche lexicale ; noms et textes transcrits dans d'autres langues (« Hieronymus ») |
-| Noms propres | noms entre parenthèses (JEROME), noms des libellés et mots clés (« Jerome (St.) ») | index des noms (famille B) |
-| Attributs des saints | 227 saints à « possible attributes: … », chaque attribut pondéré par sa rareté | famille C |
-| Références de source | 1 244 références dans 1 007 libellés (livre biblique, chapitre, versets ; Ovide, livre, vers) | famille D : la source donnée par le descripteur désigne directement une branche |
-| Gabarits | structure commune des vies de saints (`11H(...)0` en groupe … `9` portrait) | famille E |
-| Renvois | renvois entre notations | voisinage de recherche, jamais un code seul |
-| Clés (+…) et noms libres (...) | 58 familles de clés, 2 780 clés (textes et mots clés) ; 1 184 gabarits à nom libre | codes à clé et gabarits instanciés, en option (§ 7.1) |
-| Autres langues | libellés et mots clés des 12 autres langues du dépôt | expressions exactes (textes transcrits, descriptions dans une autre langue) |
+| Iconclass (`iconclass/data`) | CC0 | tout ce qui précède |
+| WordNet (Princeton 3.0, édition Prolog ; ou Open English WordNet) | type BSD ; CC BY 4.0 | morphologie, synonymes, hyperonymes et hyponymes à deux pas au plus, dérivés, parties |
+| Wikidata | CC0 | formes de noms des entités liées à une notation (P1256), parties et ordre des cycles, exclusions, pont vers l'AAT |
+| Bible (King James avec Apocryphes), Ovide (Perseus) ; index des personnes par verset (STEPBible TIPNR, Theographic) | domaine public ; CC BY(-SA) 4.0 | figures, actions et objets attendus d'un épisode, comme indices |
+| Getty AAT | ODC-By 1.0 | vocabulaire technique de l'art absent de WordNet |
 
-Le libellé d'un code narratif contient souvent sa vérification : « 11H(JEROME)36 : St. Jerome as penitent in the
-desert, half naked, kneeling before a crucifix and holding a stone… ; a skull… ». Les noms et les noms communs d'un
-libellé sont extraits par programme comme ses **participants** attendus.
+**Jamais de donnée d'œuvre** : ni Wikidata P1257 (notations posées sur des œuvres), ni le « depicts » des œuvres
+(P180 inverse), ni aucun graphe d'énoncés sur des œuvres. Ces données peuvent contenir les œuvres d'un jeu de mesure.
+Chaque extrait est figé (date, requête, empreinte). La base compilée reste hors du dépôt ; ses compilateurs y sont.
 
-### 4.2 Wikidata (CC0)
+## 7. Le pont entre les mots
 
-- Propriété **P1256** « Iconclass notation » (environ 4 200 éléments : saints, personnages, thèmes) : on en tire les
-  **alias multilingues** de ces éléments (Jérôme, Girolamo, Hieronymus…) vers la notation. Instantané daté, figé dans
-  la base.
-- Propriété **P1257** « depicts Iconclass notation » : **exclue**. Elle porte sur des œuvres ; certaines peuvent
-  appartenir aux ensembles d'évaluation. L'utiliser ferait entrer la vérité de la mesure dans le moteur.
+Une mention de la description atteint des notations par un chemin dont chaque pas est nommé (il devient un trait de
+la décision) :
 
-### 4.3 Le modèle de phrases (index sémantique)
+1. **Morphologie** (exceptions et règles de WordNet, génitif, trait d'union) → lemme ; égalité à un mot clé, à une
+   tête de libellé, à un mot plein de libellé, dans toutes les langues d'Iconclass ; renvois entre mots clés.
+2. **WordNet** : synonymie ; hyperonymie et hyponymie à deux pas au plus ; dérivation ; méronymie. Une pénalité de
+   généralité **calculée** (profondeur depuis la racine, nombre de descendants, nombre de notations atteintes) remplace
+   toute liste de mots génériques. Tous les sens d'un mot sont gardés ; le contexte choisit (§ 8).
+3. **Noms propres** : formes d'Iconclass et alias Wikidata ; personnes bibliques par les index de versets.
+4. **Vocabulaire technique** : Getty AAT.
+5. **Renvois** entre notations : voisinage latéral seulement.
 
-Chaque notation est représentée par un vecteur de sens calculé sur « libellé + mots clés » (et le libellé du parent
-pour les libellés courts). Candidats comparés, tous libres et utilisables hors ligne :
+## 8. Le raisonnement, par mécanisme
 
-| Modèle | Paramètres | Licence |
+- **Recherche à plat** : chaque mention propose les notations que le pont atteint, dans toutes les divisions, sans
+  filtre de routage ; s'y ajoutent les ancêtres sûrs, les voisins par renvois, les notations des personnes reconnues,
+  les épisodes des sources citées.
+- **Choix du sens** : les autres mentions qui atteignent la même branche, le champ de la mention, la cohérence avec le
+  sujet départagent les sens d'un mot ; l'accord devient un trait.
+- **Spécialisation** : d'un candidat sûr, descendre vers l'enfant dont le trait distinctif (mot propre du libellé,
+  absent des libellés des sœurs) est décrit.
+- **Personnes, identité d'abord** : nom et attributs combinés, pondérés par leur rareté ; l'épisode d'une personne
+  exige la preuve de la personne.
+- **Gabarits de vie** : la catégorie d'épisode se prouve par l'action décrite, reliée au vocabulaire de la catégorie.
+- **Épisodes** : abduction sur les participants, actions et objets attendus (libellé, puis passage source), plus
+  l'accord de source ; les indices tirés d'un texte source sont pesés, jamais exigés.
+- **Lettres doublées** : le trait déclencheur de la section est-il décrit ? sinon le jumeau simple.
+- **Clés** : pour une notation prouvée, une clé de sa famille n'est proposée que si le champ de la description qui
+  porte sa propriété la soutient ; une clé par notation dans la sortie.
+- **Gabarits et noms libres** : un nom de la description, typé (personne, ville, édifice…), va au gabarit de son type,
+  écrit selon la convention ; sans nom, seul le parent se justifie.
+- **Repli sur le parent** : explicite et gradué ; le parent de frères à égalité ; la probabilité d'un parent au moins
+  celle de ses enfants.
+- **Exclusions** : les seules contradictions structurelles d'Iconclass (consignes, notation dépréciée…).
+
+## 9. La décision
+
+Traits : ceux de la preuve (force et nature du chemin lexical, rareté, part d'attendus décrits, écart aux sœurs,
+profondeur, mécanisme, accord de source…), jamais un trait de corpus (chapitre, fréquence dans un catalogue). L'apprenant
+(arbre peu profond ou liste de règles) est entraîné hors du moteur, sur un corpus de développement dont les étiquettes ne
+quittent pas la plateforme de calcul ; il rend des **clauses Prolog** que le moteur exécute. Deux probabilités :
+`p_catalogue` (un catalogueur l'aurait-il écrit ?) et `p_juste` (le code est-il vrai de l'image ?, corrigée par jugement
+à l'aveugle). La généralité se mesure hors corpus : apprendre sur une collection, mesurer sur une autre.
+
+## 10. La preuve
+
+Un méta-interpréteur dérive chaque code sur les règles déclarées ; la preuve est l'arbre de la dérivation, avec, à
+chaque feuille, le fait de la base (notation, libellé, entrée lexicale et sa source) ou de la description (champ et
+chemin JSON). Elle est rendue lisible et en JSON.
+
+## 11. L'évaluation
+
+- **Couverture par pièce** : pour chaque code vrai, la description contient-elle de quoi le déduire ? le moteur
+  l'envisage-t-il exactement, à la base de sa clé ou à son gabarit, à un ancêtre seulement ? Par mécanisme, profondeur,
+  chapitre et champ porteur.
+- **Qualité des codes retenus** : H-F1 (Kiritchenko), LCA-F, F1 exact ; par mécanisme et chapitre ; courbe précision /
+  profondeur du repli ; intervalles par rééchantillonnage.
+- **Lignes de base** dans chaque tableau : BM25 sur les mêmes descriptions, et la version précédente du moteur.
+- **Hors corpus** et **jugement à l'aveugle** (image et code présentés sans dire d'où vient le code).
+
+## 12. Feuille de route
+
+| Phase | Contenu | Sortie |
 |---|---|---|
-| paraphrase-multilingual-MiniLM-L12-v2 | 118 M | Apache-2.0 |
-| LaBSE | 471 M | Apache-2.0 |
-| bge-m3 | 568 M | MIT |
-| multilingual-e5-large | 560 M | MIT |
+| étude | Iconclass mécanisme par mécanisme ; pertes de la version 0.2 ; sources ; littérature | ce document |
+| socle | grammaire de la notation, arbre et jumeaux, libellés décomposés, lexique (WordNet, mots clés toutes langues, alias), faits de la description, recherche à plat avec dérivation, méta-interpréteur, sortie | candidats trouvés et prouvés par Prolog ; couverture au moins celle de la version 0.2, sans modèle de phrases |
+| connaissance par mécanisme | dans l'ordre des pertes mesurées : spécialisation, clés, personnes et gabarits de vie, épisodes et sources, lettres doublées, noms libres | couverture et qualité par mécanisme |
+| décision | clauses apprises, validation hors corpus, jugement à l'aveugle | version 1.0 |
 
-Les vecteurs d'Iconclass sont calculés une fois et versionnés avec la révision du modèle (40 716 × 1 024 en
-demi-précision ≈ 80 Mo). Les vecteurs des mentions sont mis en cache par empreinte du texte.
-
-### 4.4 Ce qui est écrit à la main
-
-Seulement : la table de routage des champs (§ 5.2), la normalisation des noms (« Saint X » → X, « the Virgin » → Marie),
-quelques synonymes de graphie (anglais américain → britannique), et des exceptions. Chaque exception est une clause
-d'un seul fichier `regles/exceptions.pl`, avec un test et la mesure qui la justifie. Pas de liste de saints, d'épisodes
-ou de symboles écrite à la main.
-
-Pas de fréquences de catalogue dans le moteur : il reste indépendant des étiquettes, qui ne servent qu'à apprendre
-quelques poids (§ 7).
-
-## 5. La recherche des candidats
-
-### 5.1 Lexicale et sémantique, les deux
-
-- **Lexicale** : expression égale à un mot clé ou à la fin d'un libellé, tous les mots pleins d'un libellé présents,
-  nom propre en mot entier. Précise quand elle touche, aveugle aux reformulations.
-- **Sémantique** : les k plus proches libellés d'une mention dans l'espace des vecteurs. Trouve les reformulations,
-  mais confond facilement des frères : 71H1443 « David beheads Goliath with a sword » et 71H145 « David with Goliath's
-  head » sont tout près l'un de l'autre.
-- **Fusion** : rang réciproque (somme de 1/(60 + rang) sur les deux listes), puis la vérification Prolog départage.
-
-Règle de choix écrite d'avance, par champ, sur l'ensemble de développement : on garde la recherche sémantique pour un
-champ si son rappel à 20 candidats (même branche) dépasse celui de la lexicale d'au moins 5 points ; la fusion si elle
-ajoute au moins 3 points à la meilleure des deux ; sinon la lexicale seule.
-
-### 5.2 Le champ d'origine : un trait, pas un filtre
-
-Chaque mention interroge toutes les notations. Le champ d'où vient une preuve (sujet, personne, entité, relation,
-action, geste, concept, rôle, cadre, texte, genre, mot clé) devient un trait du code ; c'est la décision apprise qui
-dit ce que vaut, par exemple, un récit biblique proposé seulement par un objet. Le tableau ci-dessous dit ce qu'on
-attend de chaque champ ; il n'est pas appliqué comme une règle.
-
-| Champ | Chapitres visés d'abord | Ce que le moteur en fait |
-|---|---|---|
-| `subject.title`, `subject.alternatives` | 7 (Bible), 9 (mythologie), 8 (littérature), 11H/11HH (vies de saints), 61 (événements), 5 (allégories) | recherche sémantique ; candidats narratifs à vérifier (famille D) |
-| `subject.source` | 7, 9, 8 | référence analysée (livre, chapitre, vers) comparée aux 1 244 références d'Iconclass |
-| `subject.type` | aucun code seul | oriente le routage (récit biblique → 7 ; portrait → 61B, 31D ; paysage → 25H…) |
-| `persons.who` | 11 (Christ, Marie, saints), 7 (personnages bibliques), 9 (dieux, héros), 82 (personnages littéraires), 61B (personnes historiques) | index des noms d'abord ; rôle sans nom → 3 et 4 |
-| `persons.recognised_by` | aucun code seul | preuves d'appui pour vérifier un nom (familles B, C) |
-| `entities` (type, attributs) | 2 (25F animaux, 25G plantes), 3 (31A corps, 31D âges), 4, 25-49 objets | lexicale + sémantique ; codes rattachés à l'entité et à sa boîte |
-| `relations` | 33 (relations entre personnes), 34 (homme et animal), 46C (transport), 4 | la phrase « sujet relation objet » est cherchée ; les deux entités doivent exister |
-| `actions` | 3, 4 (43 loisirs, 45 guerre, 47 métiers) ; vérification des épisodes 7-9 | sémantique |
-| `gestures_emotions` | 31A23 (postures), 31A25 (gestes des bras et des mains), 56 (émotion) | sémantique |
-| `concepts` | 5 (idées abstraites, personnifications), 1 | sémantique ; une personnification exige une figure dans les entités |
-| `roles` | 32 (types humains), 4 (44 État, 45 militaires, 47 métiers) | lexicale + sémantique |
-| `setting` | 25H (paysages), 25I (vues de ville), 23 (temps : mois, saisons, heures), 26 (météo), 41A (habitat) | lexicale + sémantique |
-| `texts` | 49L8 (inscription) ; noms inscrits → 61B, 61E, 11H ; citations bibliques → 7 | noms et citations ; langue donnée par le descripteur |
-| `genre_function` | 48 (art), 49M (imprimés, livres) | lexicale |
-| `keywords` | 2, 4, 25-49 | lexicale + sémantique, poids plus faible |
-| `period_style` | aucun | contexte seulement |
-
-## 6. Le raisonnement symbolique
-
-### 6.1 Les règles mesurent
-
-Chaque règle Prolog rend un **trait** d'une notation : une quantité, avec les mentions qui la fondent. Aucune ne
-retient ni n'écarte un code sur un seuil écrit à la main.
-
-| Trait | Ce qu'il mesure | Source |
-|---|---|---|
-| similarités | cosinus et BM25 normalisé entre une mention et le libellé, selon que la mention vient du sujet ou d'ailleurs | recherche (§ 5) |
-| couvertures | part pondérée par la rareté des mots de la mention couverte par la notation, et du libellé couverte par la mention | idem |
-| expression exacte | la mention est un mot clé, la tête du libellé ou un alias Wikidata ; poids décroissant avec le nombre de notations qui la portent | Iconclass, Wikidata |
-| nom | un nom propre d'Iconclass ou de Wikidata est dans la description ; contexte : personne nommée, honorifique devant (« saint… »), suivi d'un nombre (une référence), libre | idem |
-| attributs | attributs possibles du saint vus dans la description : somme de leur rareté, nombre, part | libellés d'Iconclass |
-| source | la référence donnée (« 1 Samuel 17 ») est celle de la notation, ou celle d'une histoire dont elle est un épisode | libellés d'Iconclass |
-| participants | part des noms et mots clés du libellé narratif retrouvés hors des champs du sujet | idem |
-| ancêtres reconnus | des mots clés ou têtes des ancêtres de la notation sont dans la description, et à quelle profondeur | hiérarchie d'Iconclass |
-| identité héritée | un épisode de la vie d'un saint (11H(X)n) porte les traits de nom et d'attributs de X | structure d'Iconclass |
-| structure | profondeur, récit ou non, descendants et frères parmi les candidats, champs d'où vient la preuve | idem |
-| entités situées (option) | l'entité de la description qui propose le code : aire de sa boîte rapportée à la plus grande de l'image, proximité du centre, plan ; nombre d'entités distinctes qui l'appuient | boîtes de la description |
-| relations (option) | une relation entre entités dont un bout ou les deux appuient le code, avec ou sans son prédicat (« beheads », « holds ») dans le libellé | relations de la description |
-
-Une seule contrainte, structurelle : un code à nom propre (et ses sous-rubriques) affirme une identité ; sans nom ni
-attribut vus, il n'est pas proposé. Le **repli sur le parent sûr** est aussi structurel : les ancêtres (deux niveaux) des
-meilleurs codes deviennent candidats, avec les traits de leur descendant ; la décision apprend quand le plus général
-est le meilleur pari. La projection finale garde le plus précis des codes retenus d'une même branche.
-
-### 6.2 Compilé, documenté, appris
-
-- **Compilé** : tout ce qui est culture (qui est qui, quel attribut, quel épisode, quelle source) vient d'Iconclass
-  et de Wikidata, par programme.
-- **Documenté une fois** : quelques faits de langue (pluriel, graphie britannique, honorifiques), sans rapport avec un
-  corpus.
-- **Appris** : la décision (§ 7), seulement à partir des traits, et validée hors corpus.
-
-### 6.3 Ce que vérifie la vérification
-
-Le descripteur *affirme* un sujet. Le moteur le croit d'autant plus que l'image le confirme : un épisode dont les
-participants sont présents, un saint dont les attributs sont visibles. Un sujet sans appui reste candidat avec une
-probabilité basse. Les alternatives du descripteur servent deux fois : comme candidats, et comme signal d'incertitude
-(si plusieurs alternatives tombent dans la même branche, le parent commun est sûr).
-
-## 7. Score, seuil et preuve
-
-### 7.1 Le score
-
-Chaque candidat retenu par le raisonnement porte quelques nombres (ses « traits », écrits dans la sortie) : contribution
-de chaque règle, mesures brutes de la recherche (meilleur cosinus, couverture lexicale pondérée par la rareté des mots,
-meilleur rang), confiance du descripteur, nombre de familles et de mentions qui l'appuient, profondeur et chapitre de la
-notation, repli sur un ancêtre et nombre de descendants appuyés. Une **régression logistique** (quelques dizaines de poids, lisibles) les transforme en probabilités :
-
-- `p_catalogue` : probabilité que le code (ou un de ses descendants) soit dans le catalogue de l'image, apprise sur un
-  ensemble de développement étiqueté. Seuls les poids entrent dans le dépôt (`poids/vN.json`).
-- `p_juste` : probabilité que le code soit vrai de l'image. Le catalogue étant incomplet, `p_catalogue` la sous-estime.
-  On la corrige par famille avec le jugement à l'aveugle (§ 9.3).
-
-La logistique est la décision par défaut : quelques centaines d'images ne nourrissent pas plus de quelques dizaines de
-poids sans sur-apprentissage, et un poids se lit. Des arbres de gradient (profondeur 3) peuvent la remplacer
-(`--decision arbres`) : ils sont appris avec elle, exportés dans le même fichier en JSON (évaluables sans bibliothèque,
-relecture vérifiée à l'export) et gardent leur propre règle (k, seuil, critère). On choisit l'une ou l'autre sur une
-mesure hors corpus.
-
-Deux mécanismes généraux existent mais sont désactivés par défaut, faute de gain mesuré sur un premier corpus : les
-**clés** (`--cles` : une clé d'Iconclass évoquée par la description donne le code à clé) et les **noms libres**
-(`--gabarits` : un gabarit « with NAME » reçoit le nom d'une mention). Ils restent à rejuger quand le rappel des codes
-de base aura progressé, car c'est lui qui les limite. La **structure de l'image** (`--structure-image` : entités
-situées et relations, § 6.1) est désactivée pour la même raison : mesurée sur un même découpage des images, avec et
-sans ces traits et rien d'autre de changé, elle n'apporte pas assez à la décision (poids appris faibles ; le prédicat
-d'une relation est rarement dans un libellé). Les boîtes servent la sortie : chaque objet situé porte les codes retenus
-qu'il appuie (§ 8). Les **noms écrits** (`--noms-libres`) partent des noms propres de la description qu'Iconclass et
-Wikidata ne connaissent pas : rapprochés par le sens (avec ce que le champ dit de la chose nommée, personne ou lieu)
-des parents des gabarits « with NAME », ils proposent le parent et le gabarit instancié. Mesurés de la même façon, ils
-n'apportent pas assez : le modèle de phrases rapproche mal un nom propre de son gabarit, et la décision apprend à se
-méfier des noms instanciés. C'est pourtant là que manquent le plus de codes (personnes historiques, villes, édifices) :
-un typage des noms par une base de connaissances (personne, ville, édifice) reste à essayer. Pour qu'une option soit
-mesurable, le moteur sans poids écrit aussi, au-delà de son budget, les meilleurs candidats des options : la preuve
-seule les classerait trop loin pour qu'une calibration les voie.
-
-### 7.2 Les seuils
-
-- Pour la mesure contre le catalogue : seuil et nombre maximal de codes choisis sur une moitié de l'ensemble de
-  développement, vérifiés sur l'autre moitié (partage par image, graine fixe). Jamais réglés sur l'ensemble de mesure.
-- Ou sans seuil ni nombre (`--selection f1`) : `p_catalogue` étant la probabilité qu'un nœud soit dans la fermeture
-  de la vérité, le moteur retient l'ensemble de codes qui maximise le F1 hiérarchique attendu, par ajouts successifs
-  (2·Σp / (|P| + g), g = taille attendue de la vérité, apprise avec les poids). Le nombre de codes suit alors ce que
-  l'image appuie.
-- Pour l'entraînement : deux ensembles livrés, « style catalogue » (`p_catalogue` ≥ seuil) et « complet »
-  (`p_juste` ≥ 0,5), et les probabilités elles-mêmes pour des cibles souples.
-
-### 7.3 La preuve
-
-Chaque code porte sa preuve : pour chaque appui, la règle, les faits cités tels que le descripteur les a écrits avec
-leur chemin dans la description, le texte Iconclass reconnu, et la contribution au score. Une phrase la résume. La
-commande `oedipamaas expliquer IMAGE CODE` affiche l'arbre entier, y compris pour un code écarté (et pourquoi).
-
-## 8. Le format de sortie
-
-Une ligne JSON par image dans `codes.jsonl`, plus un `manifeste.json` par lot (versions, comptes, empreintes des
-descriptions lues, durée). Exemple **illustratif** (valeurs inventées, pour montrer la forme) :
-
-```json
-{"image": "exemple-0001",
- "versions": {"moteur": "0.1.0+g1a2b3c4", "base": "iconclass <commit> ; wikidata <date> ; <modèle> <révision>",
-              "poids": "v1", "consigne": "v2 sha256:…", "description": "sha256:…"},
- "codes": [
-  {"code": "11H(JEROME)", "statut": "retenu", "score": 2.31, "p_catalogue": 0.62, "p_juste": 0.88,
-   "preuves": [
-    {"regle": "B.nom", "faits": [{"chemin": "persons[0].who", "texte": "Saint Jerome"}],
-     "iconclass": "Jerome (St.)", "contribution": 1.4},
-    {"regle": "C.attributs", "faits": [{"chemin": "entities[3].type", "texte": "lion"},
-                                       {"chemin": "keywords[12]", "texte": "cardinal's hat"}],
-     "iconclass": "possible attributes: book, cardinal's hat, crucifix, hour-glass, lion, skull, stone",
-     "contribution": 0.9}],
-   "explication": "Saint nommé dans la description ; 2 de ses 7 attributs Iconclass sont visibles."}],
- "objets": [{"id": "e4", "type": "lion", "boite": [0.61, 0.55, 0.93, 0.97], "plan": "foreground",
-             "codes": ["25F23(LION)"]}],
- "relations": [{"sujet": "e1", "relation": "looks_at", "objet": "e4", "codes": []}],
- "non_utilise": {"mentions": 37, "par_champ": {"keywords": 21, "setting": 4, "concepts": 2}}}
-```
-
-- **Statuts** : `retenu` (au-dessus du seuil) ou `candidat` (gardé pour l'explication et les cibles souples).
-- **Codes** : notation Iconclass telle qu'elle est dans la base ; toute projection propre à une mesure reste du côté
-  de la mesure.
-- **Schéma** : `schemas/codes.schema.json`, versionné ; toute sortie est validée avant d'être écrite.
-- **Déterminisme** : tri stable, nombres arrondis à 4 décimales, pas d'aléa. Test : deux passes, mêmes octets.
-- **Description illisible** : ligne avec `"erreur"` et aucun code, comptée dans le manifeste.
-
-## 9. L'évaluation, et ce qui compte comme « juste »
-
-### 9.1 Trois niveaux de « juste »
-
-| Niveau | Définition | Comment on le mesure |
-|---|---|---|
-| exact | même notation que le catalogue | contre les étiquettes |
-| branche | ancêtre ou descendant d'un code du catalogue (crédit partiel du F1 hiérarchique) | contre les étiquettes |
-| juste | le code dit vrai de l'image, à son niveau de généralité, qu'il soit au catalogue ou non | jugement à l'aveugle |
-
-### 9.2 Les mesures
-
-| Mesure | Question |
-|---|---|
-| rappel du catalogue, exact et branche, par chapitre | retrouve-t-on ce que le catalogue a ? |
-| F1 hiérarchique, précision et rappel, par chapitre et par famille | les codes retenus sont-ils ceux du catalogue ? |
-| précision réelle | les codes absents du catalogue sont-ils justes ? |
-| couverture | la description est-elle utilisée ? (champ `non_utilise`, sans étiquette) |
-| vitesse | rejouer est-il gratuit ? But : ≤ 1 s par image sur un processeur, dont ≤ 50 ms de Prolog |
-
-Les étiquettes ne sont jamais lues sur le poste de développement : les mesures qui en ont besoin tournent sur une
-machine de calcul séparée et ne renvoient que des agrégats. Deux ensembles : un ensemble de **développement** (règles,
-poids, seuils) et un ensemble de **mesure** fixe, sur lequel rien n'est réglé.
-
-### 9.3 Le jugement à l'aveugle
-
-Il faut estimer la part des codes « hors catalogue » qui sont justes, sans ouvrir les étiquettes.
-
-1. On tire 40 images de développement (graine fixe). On prend **tous** les codes retenus par le moteur pour ces images
-   (≈ 200), sans savoir lesquels sont au catalogue.
-2. On ajoute 30 leurres : des codes retenus pour *d'autres* images, du même chapitre. Ils mesurent l'indulgence du juge.
-3. Le juge voit l'image et le libellé Iconclass, dans un ordre mélangé, sans savoir d'où vient le code. Il répond :
-   juste / juste mais trop général / faux / ne sait pas.
-4. Les réponses sont jointes aux étiquettes sur la machine de calcul. Ne reviennent que des agrégats : part de justes
-   parmi les codes hors catalogue, parmi les codes au catalogue (contrôle : elle doit être haute), parmi les leurres
-   (contrôle : elle doit être basse), par famille et par chapitre.
-
-Avec ≈ 100 codes hors catalogue, la part de justes est connue à ± 10 points (intervalle à 95 %). Le juge est un humain ;
-jamais un modèle de langue (le descripteur se jugerait lui-même).
-
-### 9.4 Ce que les ensembles peuvent dire
-
-- 300 images (≈ 1 350 codes vrais) : un écart de rappel d'environ 4 points se lit, en tenant compte des codes d'une
-  même image, qui ne sont pas indépendants.
-- 30 images : seulement les écarts de plus de 8 à 10 points.
-
-## 10. Le dépôt et le code
-
-```
-oedipamaas/
-  CONCEPTION.md            ce document
-  README.md
-  pyproject.toml           Python ≥ 3.12, dépendances épinglées
-  oedipamaas/
-    base/                  sources épinglées → base compilée (faits Prolog .qlf, index, vecteurs)
-    lecture/               description → mentions
-    recherche/             index lexical, index sémantique, routage, fusion
-    regles/                *.pl : familles A-J, exceptions.pl
-    score/                 traits, logistique, seuils
-    sortie/                codes.jsonl, manifeste, validation du schéma
-    cli.py                 oedipamaas base | coder | expliquer
-  schemas/                 codes.schema.json, description.schema.json
-  poids/                   v1.json … (poids appris, aucune étiquette)
-  tests/                   descriptions synthétiques, déterminisme, schéma, vitesse
-```
-
-- **Tests sans étiquettes** : descriptions écrites pour les tests (saint Jérôme et son lion, David et Goliath avec sa
-  source, une Annonciation sans nom, un paysage, un portrait avec inscription), chacune avec les codes attendus ;
-  déterminisme ; validation du schéma ; vitesse.
-- **Aucune donnée dans le dépôt** : ni image, ni description, ni étiquette, ni sortie. La base compilée se reconstruit
-  par `oedipamaas base` ; ses gros fichiers (vecteurs) ne sont pas suivis par git.
-- **Licences des sources** : Iconclass et Wikidata CC0 ; modèles de phrases Apache-2.0 ou MIT ; SWI-Prolog BSD-2.
-
-## 11. Feuille de route
-
-| Phase | Contenu |
-|---|---|
-| 1 | base anglaise compilée (hiérarchie, noms, attributs, références, gabarits) ; lecture des descriptions ; familles A (lexicale), B, C, D, I ; sortie `codes.jsonl` ; tests |
-| 2 | index sémantique, comparaison des modèles par champ et par chapitre, fusion |
-| 3 | calibration (`p_catalogue`), seuils |
-| 4 | familles E, F, G, H, J ; base multilingue et alias Wikidata ; clés et noms libres si leur part le justifie |
-| 5 | jugement à l'aveugle, `p_juste` |
-| 6 | durcissement : installation neuve, documentation, version 1.0 |
-
-## 12. Interface
+## 13. Interface
 
 **Entrée** : un fichier JSON par image. Le champ `brut` contient la réponse du descripteur, un objet JSON aux clés
 suivantes (listes vides ou `null` quand rien ne s'applique) :
@@ -423,19 +209,44 @@ suivantes (listes vides ou `null` quand rien ne s'applique) :
 | `texts` | liste de `transcription`, `language` |
 | `period_style` | texte ou `null` |
 
-Une description de l'ancien format (`entities`, `relations`, `scene`, `identification`) est lue par un adaptateur.
+**Sortie** : une ligne JSON par image dans `codes.jsonl`, plus un `manifeste.json` par lot (versions, comptes,
+empreintes des descriptions lues, durée). Exemple **illustratif** (valeurs inventées) :
 
-**Sortie** : `codes.jsonl` + `manifeste.json` (§ 8).
+```json
+{"image": "exemple-0001",
+ "versions": {"moteur": "1.0.0+g1a2b3c4", "base": "iconclass <commit> ; wordnet <édition> ; wikidata <date>",
+              "decision": "<empreinte des clauses>", "description": "sha256:…"},
+ "codes": [
+  {"code": "11H(JEROME)", "statut": "retenu", "p_catalogue": 0.62,
+   "preuve": {"regle": "personne_nommee",
+              "faits": [{"chemin": "persons[0].who", "texte": "Saint Jerome"},
+                        {"chemin": "entities[3].type", "texte": "lion"}],
+              "iconclass": "possible attributes: book, cardinal's hat, crucifix, hour-glass, lion, skull, stone",
+              "sous_preuves": []},
+   "explication": "Saint nommé dans la description ; 2 de ses 7 attributs possibles sont décrits."}],
+ "objets": [{"id": "e4", "type": "lion", "boite": [0.61, 0.55, 0.93, 0.97], "plan": "foreground",
+             "codes": ["25F23(LION)"]}],
+ "relations": [{"sujet": "e1", "relation": "looks_at", "objet": "e4", "codes": []}],
+ "non_utilise": {"mentions": 37, "par_champ": {"keywords": 21, "setting": 4, "concepts": 2}}}
+```
 
-## 13. Risques et parades
+Statuts `retenu` et `candidat` ; notations telles qu'Iconclass les écrit ; tri stable, nombres arrondis à 4 décimales,
+pas d'aléa ; une description illisible donne une ligne avec `"erreur"`, comptée dans le manifeste.
+
+## 14. Risques et parades
 
 | Risque | Parade |
 |---|---|
-| Le descripteur affirme un sujet célèbre que l'image ne montre pas | vérification par les participants (D) ; probabilité basse sans appui ; alternatives |
-| Le descripteur reconnaît l'œuvre et récite ce qu'il en sait | chiffres séparés selon que la description nomme l'œuvre ou l'artiste ; rien n'est réglé sur l'ensemble de mesure |
-| La recherche sémantique confond des frères | vérification, puis repli sur le parent commun (I) |
-| Noms ambigus (Jean le Baptiste / l'Évangéliste) | un nom seul ne suffit pas : attributs et contexte exigés (B, C) |
+| Le descripteur affirme un sujet célèbre que l'image ne montre pas | vérification par les participants et les objets attendus ; alternatives gardées |
+| Le descripteur reconnaît l'œuvre et récite ce qu'il en sait | chiffres séparés selon que la description nomme l'œuvre ; rien n'est réglé sur un ensemble de mesure |
+| Polysémie, liens WordNet trop généraux | deux pas au plus, pénalité de généralité calculée, choix du sens par le contexte, chemin gardé dans la preuve |
+| Noms ambigus (Jean le Baptiste / l'Évangéliste) | un nom seul ne suffit pas : attributs et contexte |
 | Le style du catalogue n'est pas la vérité | deux probabilités ; jugement à l'aveugle |
-| Fuite de l'évaluation dans le moteur | P1257 exclue ; aucun réglage sur l'ensemble de mesure |
-| Sur-apprentissage des poids | logistique à peu de poids ; deux moitiés de l'ensemble de développement |
-| Trop de familles, pas assez de gain | une famille reste si elle ajoute sur l'ensemble de développement ; sinon elle est retirée |
+| Fuite de l'évaluation dans le moteur | aucune donnée d'œuvre (P1257, P180 inverse) ; aucun réglage sur un ensemble de mesure |
+| Règles écrites pour un corpus | règles générales tirées d'Iconclass et de ses sources ; toute amélioration confirmée hors corpus |
+
+## 15. Le dépôt
+
+Code du moteur, compilateurs des sources, tests sur des descriptions synthétiques écrites pour les tests (avec les codes
+attendus), déterminisme, validation du schéma, vitesse. Aucune donnée : ni image, ni description, ni étiquette, ni
+sortie, ni base compilée. Licences : code sous la licence du dépôt ; SWI-Prolog BSD-2 ; sources selon le § 6.

@@ -4,6 +4,9 @@ Moteur iconographique : traduit une description d'image écrite en mots (sujet, 
 textes…) en codes [Iconclass](https://iconclass.org), chaque code avec sa preuve. Il tourne hors ligne, sans appel
 payant, et se rejoue sur toutes les descriptions déjà faites. Conception : [CONCEPTION.md](CONCEPTION.md).
 
+**État** : la version 1.0 (moteur Prolog, sans réseau de neurones, conception arrêtée) est en reconstruction. Les
+commandes ci-dessous sont celles de la version 0.2, gardée comme ligne de base.
+
 ## Installation
 
 Python ≥ 3.12 et [SWI-Prolog](https://www.swi-prolog.org) (≥ 9.1, pour le pont Janus).
