@@ -119,6 +119,9 @@ def test_lecture_et_recherche():
         # (ici, hors des notations de l'essai) prend ses alternatives calculées
         a = janus.query_once("specialisation:alternatives('83(TASSO, Gerusalemme Liberata)', A)")["A"]
         assert a == [["gerusalemme", "liberata", "tasso"]], a
+        # une locution de WordNet reste d'un tenant (c'est une chose), la plus longue d'abord
+        m = janus.query_once("libelles:mots_et_locutions('the Holy Ghost descending on a hunting dog', M)")["M"]
+        assert m == ["descending", "holy ghost", "hunting dog"], m
         fd.charger(janus, dict(DESCRIPTION, subject={"title": "Armida and Rinaldo",
                                                      "source": "Torquato Tasso, Gerusalemme Liberata, canto XIV"}))
         janus.query_once("specialisation:decrire")

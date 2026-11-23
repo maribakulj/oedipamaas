@@ -97,11 +97,16 @@ alternatives(N, Alts) :-
         )
     ).
 
+% les mots du parent, et ses locutions : une locution reprise du parent (« the Holy Family » sous « the Holy Family
+% with St. Anne ») ne distingue rien, pas plus que ses mots
 mots_du_parent(N, MP) :-
-    (   arbre:parent(N, P), libelles:mots_hors_parentheses(P, MP) -> true ; MP = [] ).
+    (   arbre:parent(N, P), libelles:mots_hors_parentheses(P, MP0)
+    ->  (   libelles:locutions_hors_parentheses(P, ML) -> ord_union(MP0, ML, MP) ; MP = MP0 )
+    ;   MP = []
+    ).
 
 propres_des(Textes, MP, Alts) :-
-    findall(Ms, ( member(E, Textes), libelles:mots_pleins(E, Ms0), ord_subtract(Ms0, MP, Ms), Ms \== [] ), A0),
+    findall(Ms, ( member(E, Textes), libelles:mots_et_locutions(E, Ms0), ord_subtract(Ms0, MP, Ms), Ms \== [] ), A0),
     sort(A0, Alts).
 
 % index (construit une fois) : alt(N, J, I, Forme), le I-ième mot de la J-ième alternative de N sous chacune de ses

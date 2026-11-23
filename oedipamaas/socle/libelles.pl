@@ -20,6 +20,7 @@
                       elements/2,             % ?N, -Textes           ce qui nomme N à lui seul (alternatives)
                       precisions/2,           % ?N, -Textes           éléments des parenthèses de la principale
                       mots_hors_parentheses/2, % ?N, -Mots            mots pleins du libellé, parenthèses ôtées
+                      locutions_hors_parentheses/2, % ?N, -Mots       de même, locutions de WordNet d'un tenant
                       titre_et_suite/3,       % ?N, ?Titre, ?Suite    proposition principale « titre: suite »
                       concept_contexte/3,     % ?N, ?Concept, ?Contexte   « concept ~ contexte »
                       phase/2,                % ?N, -Mots             « before … », « after … » : la phase
@@ -29,6 +30,7 @@
                       indice_visuel/2,        % ?N, ?Proposition      usually, sometimes, often
                       consigne/2,             % ?N, ?Consigne         secondaire, preferer(M), residuel
                       mots_pleins/2,          % +Texte, -Mots
+                      mots_et_locutions/2,    % +Texte, -Mots         de même, les locutions de WordNet d'un tenant
                       mot_vide/1,             % ?Mot                  mots vides (faits de langue, liste fixe)
                       mots_du_libelle/2,      % ?N, -Mots             mots pleins de tout le libellé anglais
                       mots_propres/2,         % ?N, -Mots             mots pleins absents du libellé du parent
@@ -135,6 +137,12 @@ mots_hors_parentheses(N, Mots) :-
     sans_consigne(T0, T),
     hors_parentheses(T, S),
     mots_pleins(S, Mots).
+
+locutions_hors_parentheses(N, Mots) :-
+    libelle_en(N, T0),
+    sans_consigne(T0, T),
+    hors_parentheses(T, S),
+    mots_et_locutions(S, Mots).
 
 % une proposition nomme la notation si elle n'est ni une liste d'attributs possibles ni un indice visuel
 % (« usually… ») — jugé hors parenthèses : un aparté « (Mary sometimes represented half-length) » ne retire pas son
@@ -251,6 +259,26 @@ separateurs --> [C], { \+ code_type(C, alpha) }, !, separateurs.
 separateurs --> [].
 
 plein(M) :- atom_length(M, L), L >= 3, \+ mot_vide(M).
+
+% mots_et_locutions(+Texte, -Mots) : les mots pleins du texte, une locution que WordNet connaît comme nom (« holy
+% ghost », « last supper », « hunting dog ») gardée d'un tenant — c'est une chose, que ses synonymes (« holy
+% spirit ») disent aussi, et que ses mots pris un à un ne disent pas ; la plus longue d'abord (quatre mots au plus)
+mots_et_locutions(Texte, Mots) :-
+    downcase_atom(Texte, T),
+    split_string(T, "", "", [S]),
+    re_split_lettres(S, Morceaux),
+    locutions(Morceaux, Ms0),
+    include(plein_ou_locution, Ms0, Mots0),
+    sort(Mots0, Mots).
+
+locutions([], []) :- !.
+locutions(Ms, [L|R]) :-
+    member(K, [4, 3, 2]), length(P, K), append(P, Suite, Ms),
+    atomic_list_concat(P, ' ', L), morphologie:forme_connue(L, n), !,
+    locutions(Suite, R).
+locutions([M|Ms], [M|R]) :- locutions(Ms, R).
+
+plein_ou_locution(M) :- ( sub_atom(M, _, _, _, ' ') -> true ; plein(M) ).
 
 mots_du_libelle(N, Mots) :-
     libelle_en(N, T),
