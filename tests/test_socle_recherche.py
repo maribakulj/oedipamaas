@@ -88,19 +88,26 @@ def test_lecture_et_recherche():
         propres = base / "propres_index.pl"
         janus.query_once(f"specialisation:construire_propres('{propres}')")
         janus.query_once(f"load_files('{propres}', [redefine_module(true)])")
+        alternatives = base / "alternatives_index.pl"
+        janus.query_once(f"specialisation:construire_alternatives('{alternatives}')")
+        janus.query_once(f"load_files('{alternatives}', [redefine_module(true)])")
+        # le lion nommé se dit par son nom ; « kneeling figure », par ses deux mots
+        assert janus.query_once("specialisation:alternatives('25F23(LION)', X)")["X"] == [["lion"]]
+        assert janus.query_once("specialisation:alternatives('31A231', X)")["X"] == [["figure", "kneeling"]]
         janus.query_once("specialisation:decrire")
         # mots propres de 31A231 : « kneeling » (décrit) et « figure » (non décrit) → la moitié
         assert janus.query_once("specialisation:part_decrite('31A231', P)")["P"] == 0.5
         s = janus.query_once("specialisation:specialisees(['31A23', '25F23'], S)")["S"]
         assert set(s) == {"31A231", "25F23(LION)"}, s
-        # explications par unité : 31A231 n'est décrit qu'à moitié (« figure » manque) ; une entrée « kneeling figure »
-        # le décrit entièrement, dans une seule unité (le lion, dont aucune unité ne dit « predatory », reste dehors)
+        # explications par unité : le lion nommé est dit par une même unité (persons, « lion and skull ») ; 31A231
+        # ne l'est qu'à moitié (« figure » manque) ; une entrée « kneeling figure » le décrit entièrement
+        assert janus.query_once("specialisation:pleine_dans('25F23(LION)', U)")["U"] == "persons[0]"
         assert janus.query_once("specialisation:pleine_dans('31A231', _)")["truth"] is False
         fd.charger(janus, dict(DESCRIPTION, keywords=["kneeling figure"]))
         janus.query_once("specialisation:decrire")
         assert janus.query_once("specialisation:pleine_dans('31A231', U)")["U"] == "keywords[0]"
         x = janus.query_once("specialisation:explications(['31A231', '25F23(LION)', '31A23'], X)")["X"]
-        assert x == ["31A231"], x
+        assert x == ["25F23(LION)", "31A231"], x
         fd.charger(janus, DESCRIPTION)
         janus.query_once("specialisation:decrire")
 
@@ -125,7 +132,7 @@ def test_lecture_et_recherche():
         t = dict(t)
         # appui direct « lion » dans persons.recognised_by ; la lionne (entité) passe par WordNet
         assert t["wn_hyperonyme"] == 1 and t["champ_persons"] >= 1 and t["nom"] == 1 and t["prof"] == 6, t
-        assert "explication" not in t, t                                   # aucune unité ne le décrit entièrement
+        assert t["explication"] == 1 and t["unites_pleines"] == 1, t       # « lion and skull » le dit entièrement
         a = dict(janus.query_once("traits:candidats_traits(10, _L), member(['25F2', _, _T], _L), "
                                   "findall([_K, _V], member(_K-_V, _T), X)")["X"])
         assert a.get("ancetre_seul") == 1 and a.get("enfants_candidats", 0) >= 1, a

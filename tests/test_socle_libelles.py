@@ -11,7 +11,8 @@ SOCLE = Path(__file__).resolve().parent.parent / "oedipamaas" / "socle"
 
 NOTATIONS = "N 11H(...)\nC 11H(ANDREW)\n$\nN 11H(ANDREW)\nC 11H(ANDREW)1\n; 11H(ANDREW)2\n$\nN 11H(ANDREW)1\n$\n" \
             "N 11H(ANDREW)2\n$\nN 25FF\nC 25FF2\n$\n" \
-            "N 25FF2\nC 25FF23\n$\nN 25FF23\n$\nN 81C\n$\nN 11F73\n$\nN 92B1217\n$\n"
+            "N 25FF2\nC 25FF23\n$\nN 25FF23\n$\nN 81C\n$\nN 11F73\n$\nN 92B1217\n$\n" \
+            "N 41A251\n$\nN 41C326\n$\nN 61B\n$\nN 25F711\n$\n"
 LIBELLES = """11H(...)|male saint (with NAME)
 11H(ANDREW)|the apostle Andrew; possible attributes: book, X-shaped cross, fish (in hand, or on a dish), rope
 11H(ANDREW)1|the apostle Andrew; possible attributes: book, X-shaped cross, fish (in hand, or on a dish), rope - specific aspects ~ male saint
@@ -21,6 +22,10 @@ LIBELLES = """11H(...)|male saint (with NAME)
 81C|Dante, 'Divina Commedia' : Use 83(DANTE, Divina Commedia)
 11F73|specific aspects of Mary ~ Madonna-representations (N.B. secondary notation only)
 92B1217|Jupiter wooing Danae; she is usually lying in bed receiving a shower of gold
+41A251|study; 'studiolo'; library
+41C326|jar, jug (used as drinking-vessel)
+61B|historical persons (portraits and scenes from the life)
+25F711|insects: butterfly, moth
 """
 
 
@@ -58,6 +63,22 @@ def test_decomposition(petit):
     assert un("libelles:concept_contexte('25FF23', C, X)") == "predatory animals"
     assert janus.query_once("libelles:consigne('81C', preferer('83(DANTE, Divina Commedia)'))")["truth"]
     assert janus.query_once("libelles:consigne('11F73', secondaire)")["truth"]
+
+
+def test_elements(petit):
+    # ce qui nomme une notation à soi seul : synonymes « ; », éléments « , », sans parenthèses, après « titre: »,
+    # avant « ~ », ni attributs possibles ni indices visuels
+    assert un("libelles:elements('41A251', X)") == ["study", "'studiolo'", "library"]
+    assert un("libelles:elements('41C326', X)") == ["jar", "jug"]
+    assert un("libelles:elements('25F711', X)") == ["butterfly", "moth"]
+    assert un("libelles:elements('25FF23', X)") == ["fabulous animals"]
+    assert un("libelles:elements('11H(ANDREW)', X)") == ["the apostle Andrew"]
+    assert un("libelles:elements('92B1217', X)") == ["Jupiter wooing Danae"]
+    assert un("libelles:elements('61B', X)") == ["historical persons"]
+    assert un("libelles:elements('11H(ANDREW)1', X)") is None             # libellé fabriqué : pas d'éléments
+    assert un("libelles:precisions('61B', X)") == ["portraits", "scenes from the life"]
+    assert un("libelles:precisions('41C326', X)") == ["used as drinking-vessel"]
+    assert un("libelles:mots_hors_parentheses('61B', X)") == ["historical", "persons"]
     assert un("libelles:principal('11F73', X)") == "specific aspects of Mary ~ Madonna-representations"
     assert un("libelles:indice_visuel('92B1217', X)") == "she is usually lying in bed receiving a shower of gold"
     assert un("libelles:mots_pleins('The Seven Sleepers (children) of Ephesus', X)") == ["children", "ephesus",

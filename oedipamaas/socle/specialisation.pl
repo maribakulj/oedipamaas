@@ -11,6 +11,8 @@
     nb_propres(N, K).
 */
 :- module(specialisation, [ construire_propres/1,   % +Fichier
+                            construire_alternatives/1, % +Fichier (alternatives_index : alt/4, nb_alt/3)
+                            alternatives/2,         % +N, -Alts (listes de mots propres, chacune suffisante)
                             decrire/0,              % les formes de la description courante (decrit/1, decrit_dans/2)
                             unite/2,                % +Mention, -Unite
                             part_decrite/2,         % +N, -Part
@@ -56,6 +58,51 @@ formes(M, F) :-
     lexique:forme_de(M, F0),
     distinct(F, ( F = F0 ; morphologie:tous_lemmes(F0, Ls), member(F, Ls) )).
 
+% --- Alternatives : les façons de nommer ce qui est propre à une notation ------------------------------------------
+
+% alternatives(+N, -Alts) : des listes de mots dont chacune, tous ses mots décrits dans une même unité, suffit à dire
+% ce qui est propre à N. Une notation à nom se dit par son nom. Sinon chaque élément du libellé (libelles:elements/2 :
+% synonymes, « jar, jug ») par ses mots pleins absents du libellé du parent, parenthèses du parent ôtées (un élément
+% tout entier dans le parent ne distingue rien ; « crown » sous « insignia… (crown, diadem…) » reste « crown ») ; si
+% aucun élément n'a de mot propre, la distinction est dans les parenthèses (« historical persons
+% (portraits and scenes from the life) », sous « historical events and situations; historical persons ») et leurs
+% éléments en tiennent lieu ; à défaut (libellé fabriqué « … - … », sans élément propre), les mots propres, ensemble.
+alternatives(N, Alts) :-
+    (   catch(notation:analyser(N, Niveaux), _, fail), Niveaux \= composee(_), last(Niveaux, nom(T))
+    ->  lexique:forme_de(T, Nom), Alts = [[Nom]]
+    ;   mots_du_parent(N, MP),
+        (   libelles:elements(N, Es), propres_des(Es, MP, A1), A1 \== []
+        ->  Alts = A1
+        ;   libelles:precisions(N, Ps), propres_des(Ps, MP, A2), A2 \== []
+        ->  Alts = A2
+        ;   libelles:mots_propres(N, Ms), Ms \== []
+        ->  Alts = [Ms]
+        ;   Alts = []
+        )
+    ).
+
+mots_du_parent(N, MP) :-
+    (   arbre:parent(N, P), libelles:mots_hors_parentheses(P, MP) -> true ; MP = [] ).
+
+propres_des(Textes, MP, Alts) :-
+    findall(Ms, ( member(E, Textes), libelles:mots_pleins(E, Ms0), ord_subtract(Ms0, MP, Ms), Ms \== [] ), A0),
+    sort(A0, Alts).
+
+% index (construit une fois) : alt(N, J, I, Forme), le I-ième mot de la J-ième alternative de N sous chacune de ses
+% formes ; nb_alt(N, J, K)
+construire_alternatives(Fichier) :-
+    setup_call_cleanup(
+        open(Fichier, write, S, [encoding(utf8)]),
+        ( format(S, ":- module(alternatives_index, [alt/4, nb_alt/3]).~n:- encoding(utf8).~n:- discontiguous alt/4, nb_alt/3.~n", []),
+          forall(iconclass:n(N),
+                 ( alternatives(N, Alts),
+                   forall(nth1(J, Alts, Mots),
+                          ( length(Mots, K),
+                            format(S, "nb_alt(~q, ~d, ~d).~n", [N, J, K]),
+                            forall(nth1(I, Mots, M),
+                                   forall(formes(M, F), format(S, "alt(~q, ~d, ~d, ~q).~n", [N, J, I, F]))) )) )) ),
+        close(S)).
+
 % --- Formes de la description ---------------------------------------------------------------------------------------
 
 % decrit(F) : la forme est dans la description ; decrit_dans(F, Unite) : dans quelle unité (une entité
@@ -81,12 +128,13 @@ part_decrite(N, Part) :-
 
 % --- Explications par unité -----------------------------------------------------------------------------------------
 
-% pleine_dans(N, U) : une même unité de la description (une entité, une entrée de champ, le sujet) décrit chacun des
-% mots propres de N — la notation explique ce que dit cette unité, sans emprunter un mot à une autre chose décrite
+% pleine_dans(N, U) : une même unité de la description (une entité, une entrée de champ, le sujet) décrit tous les
+% mots de l'une des alternatives de N — la notation explique ce que dit cette unité, sans emprunter un mot à une
+% autre chose décrite
 pleine_dans(N, U) :-
-    propres_index:nb_propres(N, K),
-    distinct(U, ( propres_index:propre(N, 1, F1), decrit_dans(F1, U) )),
-    forall(between(2, K, I), ( propres_index:propre(N, I, F), decrit_dans(F, U) -> true )).
+    distinct(U, ( alternatives_index:nb_alt(N, J, K),
+                  alternatives_index:alt(N, J, 1, F1), decrit_dans(F1, U),
+                  forall(between(2, K, I), ( alternatives_index:alt(N, J, I, F), decrit_dans(F, U) -> true )) )).
 
 % explications(+Ns, -Max) : parmi les notations Ns, celles qui sont pleines dans une unité sans qu'aucun de leurs
 % descendants le soit aussi dans la même unité — pour chaque chose décrite, les notations les plus précises qui

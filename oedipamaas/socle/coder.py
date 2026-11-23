@@ -16,7 +16,8 @@ K_ANCETRES = 120        # ancêtres des 120 premiers candidats (le budget de la 
 def charger_moteur(base):
     import janus_swi as janus
     base = Path(base)
-    for f in ("iconclass.qlf", "wordnet.qlf", "lexique_index.qlf", "propres_index.qlf", "cles_index.qlf"):
+    for f in ("iconclass.qlf", "wordnet.qlf", "lexique_index.qlf", "propres_index.qlf", "cles_index.qlf",
+              "alternatives_index.qlf"):
         janus.query_once(f"load_files('{base / f}', [redefine_module(true)])")
     for f in ("notation.pl", "arbre.pl", "libelles.pl", "morphologie.pl", "lexique.pl", "description.pl",
               "recherche.pl", "specialisation.pl", "cles.pl"):

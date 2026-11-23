@@ -17,6 +17,9 @@
 :- module(libelles, [ partie/3,               % ?N, ?I, ?Texte        I-ième partie (« - »), à partir de 1
                       propositions/2,         % +N, -Liste            propositions de la première partie
                       principal/2,            % ?N, ?Texte            première proposition de la première partie
+                      elements/2,             % ?N, -Textes           ce qui nomme N à lui seul (alternatives)
+                      precisions/2,           % ?N, -Textes           éléments des parenthèses de la principale
+                      mots_hors_parentheses/2, % ?N, -Mots            mots pleins du libellé, parenthèses ôtées
                       titre_et_suite/3,       % ?N, ?Titre, ?Suite    proposition principale « titre: suite »
                       concept_contexte/3,     % ?N, ?Concept, ?Contexte   « concept ~ contexte »
                       attributs_possibles/2,  % ?N, -Attributs        « possible attributes: a, b (c), d »
@@ -77,6 +80,79 @@ sans_consigne(P, Texte) :-
     (   sub_atom(P, B, _, _, ' : Use ') -> sub_atom(P, 0, B, _, T1) ; T1 = P ),
     (   sub_atom(T1, B2, _, _, ' (N.B.') -> sub_atom(T1, 0, B2, _, T2) ; T2 = T1 ),
     normalize_space(atom(Texte), T2).
+
+% elements(?N, -Textes) : les textes dont chacun, à lui seul, nomme ce que désigne N, pour un libellé simple (sans
+% « - ») : les propositions de la première partie (synonymes séparés par « ; »), sauf les attributs possibles et les
+% indices visuels ; dans chacune, la spécification après « titre: » (« insects: butterfly »), le concept avant « ~ »
+% (« wine ~ alcoholic drinks »), sans les précisions entre parenthèses ; puis ses éléments séparés par « , »
+% (« jar, jug (used as drinking-vessel) » : « jar », « jug »).
+elements(N, Textes) :-
+    libelle_en(N, T0),
+    sans_consigne(T0, T),
+    decouper(T, ' - ', [Partie]),
+    decouper(Partie, '; ', Props),
+    findall(E, ( member(P, Props), nommante(P), corps_nommant(P, C0), hors_parentheses(C0, C),
+                 decouper(C, ', ', Es), member(E, Es), E \== '' ), Textes).
+
+% precisions(?N, -Textes) : les éléments des parenthèses de la proposition principale, séparés par « , », « and » et
+% « or » (« historical persons (portraits and scenes from the life) » : « portraits », « scenes from the life »)
+precisions(N, Textes) :-
+    principal(N, P),
+    corps_nommant(P, C),
+    findall(E, ( entre_parentheses(C, X), decouper(X, ', ', Xs), member(X1, Xs),
+                 atomic_list_concat(Ys, ' and ', X1), member(Y, Ys), atomic_list_concat(Zs, ' or ', Y),
+                 member(Z, Zs), normalize_space(atom(E), Z), E \== '' ), Textes).
+
+% les mots du libellé hors parenthèses : un parent énumère souvent ses enfants entre parenthèses (« insignia and
+% symbols of sovereignty (crown, diadem, sceptre…) ») ; ces mots-là n'appartiennent pas au parent
+mots_hors_parentheses(N, Mots) :-
+    libelle_en(N, T0),
+    sans_consigne(T0, T),
+    hors_parentheses(T, S),
+    mots_pleins(S, Mots).
+
+nommante(P) :-
+    \+ sub_atom(P, _, _, _, 'possible attributes'),
+    mots_pleins(P, Ms),
+    \+ ( member(M, Ms), memberchk(M, [usually, sometimes, often]) ).
+
+corps_nommant(P, C) :-
+    (   decouper(P, ': ', [_, S0|Rs]) -> atomic_list_concat([S0|Rs], ': ', S) ; S = P ),
+    (   decouper(S, ' ~ ', [C0, _|_]) -> C = C0 ; C = S ).
+
+% le texte sans ce qui est entre parenthèses (à tous les niveaux)
+hors_parentheses(T, S) :-
+    atom_codes(T, Cs),
+    hors(Cs, 0, Ds),
+    atom_codes(S0, Ds),
+    normalize_space(atom(S), S0).
+
+hors([], _, []).
+hors([C|Cs], P, Ds) :-
+    (   C == 0'( -> P1 is P + 1, Ds = Ds1
+    ;   C == 0'), P > 0 -> P1 is P - 1, Ds = Ds1
+    ;   P > 0 -> P1 = P, Ds = Ds1
+    ;   P1 = P, Ds = [C|Ds1]
+    ),
+    hors(Cs, P1, Ds1).
+
+% entre_parentheses(+T, -X) : le contenu de chaque parenthèse de premier niveau
+entre_parentheses(T, X) :-
+    atom_codes(T, Cs),
+    dedans(Cs, 0, [], Xs),
+    member(X0, Xs),
+    atom_codes(X1, X0),
+    normalize_space(atom(X), X1).
+
+dedans([], _, _, []).
+dedans([C|Cs], P, Acc, Xs) :-
+    (   C == 0'(, P =:= 0 -> dedans(Cs, 1, [], Xs)
+    ;   C == 0'( -> P1 is P + 1, dedans(Cs, P1, [C|Acc], Xs)
+    ;   C == 0'), P =:= 1 -> reverse(Acc, X), Xs = [X|Xs1], dedans(Cs, 0, [], Xs1)
+    ;   C == 0'), P > 1 -> P1 is P - 1, dedans(Cs, P1, [C|Acc], Xs)
+    ;   P > 0 -> dedans(Cs, P, [C|Acc], Xs)
+    ;   dedans(Cs, P, Acc, Xs)
+    ).
 
 titre_et_suite(N, Titre, Suite) :-
     principal(N, P),
