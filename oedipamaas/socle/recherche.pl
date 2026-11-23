@@ -16,7 +16,8 @@
     seulement. Les ancêtres des candidats sont rendus à part (ancetres_des_premiers/3) : ils ne prennent pas de place
     dans le classement.
 */
-:- module(recherche, [ forme_mention/2,          % ?M, ?Forme
+:- module(recherche, [ preparer/0,               % formes des mentions de la description courante, une fois
+                       forme_mention/2,          % ?M, ?Forme
                        candidat/3,               % ?N, ?M, -Preuve
                        classement/2,             % +Max, -Liste de c(Notation, cle(Direct, WordNet), Nature)
                        ancetres_des_premiers/3   % +Liste, +K, -Ancetres (parents canoniques des K premiers)
@@ -49,9 +50,17 @@ suite(Mots, Suite) :-
     extremite(Premier), extremite(Dernier),
     atomic_list_concat(Suite0, ' ', Suite).
 
+% les formes des mentions sont calculées une fois par description (preparer/0) et gardées en faits
+:- dynamic fm/2.
+preparer :-
+    retractall(fm(_, _)),
+    forall(distinct(M-F, forme_mention_calculee(M, F)), assertz(fm(M, F))).
+
+forme_mention(M, Forme) :- fm(M, Forme).
+
 % une mention est lue telle quelle et avec ses traits d'union remplacés par des espaces : « half-length » donne
 % « half-length », « half », « length » et « half length » (Iconclass écrit l'un ou l'autre)
-forme_mention(M, Forme) :-
+forme_mention_calculee(M, Forme) :-
     description:mention(M, _, _, Texte0),
     (   Texte = Texte0
     ;   sub_atom(Texte0, _, _, _, '-'), atomic_list_concat(Morceaux, '-', Texte0), atomic_list_concat(Morceaux, ' ', Texte)

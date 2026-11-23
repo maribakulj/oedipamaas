@@ -102,3 +102,5 @@ def charger(janus, d):
     janus.query_once("description:effacer")
     for f in faits(d):
         janus.query_once("term_string(_T, S), assertz(description:_T)", {"S": f})
+    # formes des mentions, une fois par description, si la recherche est chargée
+    janus.query_once("( current_predicate(recherche:preparer/0) -> recherche:preparer ; true )")

@@ -16,10 +16,10 @@ K_ANCETRES = 120        # ancêtres des 120 premiers candidats (le budget de la 
 def charger_moteur(base):
     import janus_swi as janus
     base = Path(base)
-    for f in ("iconclass.qlf", "wordnet.qlf", "lexique_index.qlf", "propres_index.qlf"):
+    for f in ("iconclass.qlf", "wordnet.qlf", "lexique_index.qlf", "propres_index.qlf", "cles_index.qlf"):
         janus.query_once(f"load_files('{base / f}', [redefine_module(true)])")
     for f in ("notation.pl", "arbre.pl", "libelles.pl", "morphologie.pl", "lexique.pl", "description.pl",
-              "recherche.pl", "specialisation.pl"):
+              "recherche.pl", "specialisation.pl", "cles.pl"):
         janus.consult(str(ICI / f))
     janus.query_once("morphologie:indexer")
     return janus
@@ -62,6 +62,11 @@ def main(base, dossier, sortie, maximum=MAX):
                                      "length(_T3, _K), append(_T3, _, _T2), findall(_X, member([_, _, _X], _T3), X)",
                                      {"Max": int(maximum)})
                 ligne["par_part"] = list(t["X"])
+                # clés : pour les notations soutenues (les K premiers des deux ordres et les spécialisées)
+                soutenues = list(dict.fromkeys(departs + ligne["par_part"][:K_ANCETRES] + ligne["specialisees"]))
+                k = janus.query_once("findall(_C, (member(_N, Ns), cles:cles_decrites(_N, _Cs), member(_C, _Cs)), _L), "
+                                     "sort(_L, X)", {"Ns": soutenues})
+                ligne["cles"] = list(k["X"])
             except Exception as e:          # une description illisible : ligne d'erreur, comptée
                 ligne["erreur"] = f"{type(e).__name__}: {str(e)[:200]}"
                 ligne["codes"] = []

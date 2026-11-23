@@ -45,7 +45,10 @@ def test_cles():
         assert janus.query_once("cles_index:cle_parent('31k', '54', P)")["P"] == "5"
         assert not janus.query_once("cles_index:cle_parent('31k', '5q1', _)")["truth"]    # les queues : jamais
         assert not janus.query_once("cles_index:cle_parent('31k', '0', _)")["truth"]      # la variante : jamais
-        fd.charger(janus, {"entities": [{"id": "e1", "type": "old man", "attributes": ["kneeling", "seen in profile"]}],
+        # la clé doit être prouvée dans la même unité que la notation : « human figure » soutient 31A, ses
+        # attributs « kneeling » et « seen in profile » donnent les clés ; « standing », dit d'une autre entité, non
+        fd.charger(janus, {"entities": [{"id": "e1", "type": "human figure", "attributes": ["kneeling", "seen in profile"]},
+                                        {"id": "e2", "type": "tree", "attributes": ["standing"]}],
                            "keywords": [], "subject": {}})
         janus.query_once("specialisation:decrire")
         c = janus.query_once("cles:cles_decrites('31A', C)")["C"]

@@ -24,8 +24,8 @@
 construire_cles(Fichier) :-
     setup_call_cleanup(
         open(Fichier, write, S, [encoding(utf8)]),
-        ( format(S, ":- module(cles_index, [cle_parent/3, cle_nb/2, cle_propre/4]).~n:- encoding(utf8).~n", []),
-          format(S, ":- discontiguous cle_parent/3, cle_nb/2, cle_propre/4.~n", []),
+        ( format(S, ":- module(cles_index, [cle_parent/3, cle_nb/2, cle_propre/4, cle_nd/2, cle_distinctif/4]).~n", []),
+          format(S, ":- encoding(utf8).~n:- discontiguous cle_parent/3, cle_nb/2, cle_propre/4.~n", []),
           forall(( iconclass:suffixe_cle(K, Suf, _), \+ sub_atom(Suf, _, _, _, q), Suf \== '0' ),
                  ( parent_suffixe(K, Suf, P),
                    format(S, "cle_parent(~q, ~q, ~q).~n", [K, Suf, P]),
@@ -33,7 +33,21 @@ construire_cles(Fichier) :-
                    length(Mots, Nb),
                    format(S, "cle_nb(~q, ~d).~n", [K-Suf, Nb]),
                    forall(nth1(I, Mots, M),
-                          forall(formes(M, F), format(S, "cle_propre(~q, ~q, ~d, ~q).~n", [K, Suf, I, F]))) )) ),
+                          forall(formes(M, F), format(S, "cle_propre(~q, ~q, ~d, ~q).~n", [K, Suf, I, F]))) )),
+          % mots distinctifs : les mots propres dont aucune forme n'est une forme d'un mot propre d'un frère
+          forall(( iconclass:suffixe_cle(K, Suf, _), \+ sub_atom(Suf, _, _, _, q), Suf \== '0' ),
+                 ( parent_suffixe(K, Suf, P),
+                   mots_propres_cle(K, Suf, P, Mots),
+                   findall(F2, ( iconclass:suffixe_cle(K, S2, _), S2 \== Suf, \+ sub_atom(S2, _, _, _, q),
+                                 S2 \== '0', parent_suffixe(K, S2, P), mots_propres_cle(K, S2, P, M2s),
+                                 member(M2, M2s), formes(M2, F2) ), Fs0),
+                   sort(Fs0, FormesFreres),
+                   findall(I, ( nth1(I, Mots, M), \+ ( formes(M, F), memberchk(F, FormesFreres) ) ), Is),
+                   length(Is, Nd),
+                   format(S, "cle_nd(~q, ~d).~n", [K-Suf, Nd]),
+                   forall(member(I, Is), ( nth1(I, Mots, M),
+                                           forall(formes(M, F),
+                                                  format(S, "cle_distinctif(~q, ~q, ~d, ~q).~n", [K, Suf, I, F])) )) )) ),
         close(S)).
 
 parent_suffixe(K, Suf, P) :-
@@ -59,27 +73,38 @@ part_cle(K, Suf, Part) :-
     aggregate_all(count, distinct(I, ( cles_index:cle_propre(K, Suf, I, F), specialisation:decrit(F) )), D),
     Part is D / Nb.
 
-% part distinctive : part des mots propres de S, absents de tous ses frères, qui sont décrits
-part_distinctive(K, S, Part) :-
-    cles_index:cle_parent(K, S, P),
-    findall(I, ( cles_index:cle_propre(K, S, I, F), \+ ( cles_index:cle_parent(K, S2, P), S2 \== S,
-                                                         cles_index:cle_propre(K, S2, _, F) ) ), Is0),
-    sort(Is0, Is), length(Is, Nd), Nd > 0,
-    aggregate_all(count, ( member(I, Is), once(( cles_index:cle_propre(K, S, I, F2), specialisation:decrit(F2) )) ),
+% part distinctive : part des mots propres de S, absents de tous ses frères, qui sont décrits dans l'une des unités
+% Us (les unités de la description qui soutiennent la notation)
+% les formes qui soutiennent déjà la notation (Exclues) ne prouvent pas ses clés : « positions (of the human
+% figure) » répète la figure humaine qui soutient 31A
+part_distinctive(K, S, Us, Exclues, Part) :-
+    cles_index:cle_nd(K-S, Nd), Nd > 0,
+    aggregate_all(count, distinct(I, ( cles_index:cle_distinctif(K, S, I, F), \+ memberchk(F, Exclues),
+                                       member(U, Us), specialisation:decrit_dans(F, U) )),
                   D),
     Part is D / Nd.
 
 % une famille est petite (au plus quelques centaines de suffixes) : on l'explore entière ; les catégories générales
-% (« positions of the human figure ») ne sont presque jamais décrites et ne doivent pas barrer leurs enfants
-propose(K, S) :-
-    cles_index:cle_parent(K, S, _),
-    part_distinctive(K, S, Pd), Pd > 0,
+% (« positions of the human figure ») ne sont presque jamais décrites et ne doivent pas barrer leurs enfants. Les
+% suffixes de premier niveau sont des facettes indépendantes (vue, position, nombre, sexe et âge…) qui s'appliquent
+% ensemble ; plus bas, les frères s'excluent (debout ou à genoux) : seule la plus grande part est proposée.
+propose(K, Us, Ex, S) :-
     cles_index:cle_parent(K, S, P),
-    \+ ( cles_index:cle_parent(K, S2, P), S2 \== S, part_distinctive(K, S2, Pd2), Pd2 > Pd ).
+    part_distinctive(K, S, Us, Ex, Pd), Pd > 0,
+    (   P == racine
+    ->  true
+    ;   \+ ( cles_index:cle_parent(K, S2, P), S2 \== S, part_distinctive(K, S2, Us, Ex, Pd2), Pd2 > Pd )
+    ).
+
+% les unités et les formes qui soutiennent N : celles de ses appuis lexicaux directs
+appuis_de(N, Us, Formes) :-
+    findall(U-F, ( recherche:candidat(N, M, p(_, F, egal, _)), specialisation:unite(M, U) ), Ps),
+    pairs_keys_values(Ps, Us0, Fs0),
+    sort(Us0, Us), sort(Fs0, Formes).
 
 cles_decrites(N, Codes) :-
-    (   iconclass:famille_cle(N, K)
-    ->  findall(C, ( propose(K, S), atomic_list_concat([N, '(+', S, ')'], C) ), Cs),
+    (   iconclass:famille_cle(N, K), appuis_de(N, Us, Ex), Us \== []
+    ->  findall(C, ( propose(K, Us, Ex, S), atomic_list_concat([N, '(+', S, ')'], C) ), Cs),
         sort(Cs, Codes)
     ;   Codes = []
     ).

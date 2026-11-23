@@ -11,7 +11,8 @@
     nb_propres(N, K).
 */
 :- module(specialisation, [ construire_propres/1,   % +Fichier
-                            decrire/0,              % les formes de la description courante (decrit/1)
+                            decrire/0,              % les formes de la description courante (decrit/1, decrit_dans/2)
+                            unite/2,                % +Mention, -Unite
                             part_decrite/2,         % +N, -Part
                             descente/2,             % +Depart, -Atteinte (enfants les mieux soutenus, en chaîne)
                             specialisees/2          % +Departs, -Atteintes (toutes, sans doublon)
@@ -23,7 +24,7 @@
 :- use_module(arbre).
 :- use_module(recherche).
 
-:- dynamic decrit/1.
+:- dynamic decrit/1, decrit_dans/2.
 
 % --- Index des mots propres ----------------------------------------------------------------------------------------
 
@@ -55,9 +56,21 @@ formes(M, F) :-
 
 % --- Formes de la description ---------------------------------------------------------------------------------------
 
+% decrit(F) : la forme est dans la description ; decrit_dans(F, Unite) : dans quelle unité (une entité
+% « entities[3] », une entrée de champ « keywords[12] », le sujet « subject ») — pour les preuves qui doivent porter
+% sur la même chose (une clé « à genoux » sur la figure qui est à genoux)
 decrire :-
     retractall(decrit(_)),
-    forall(distinct(F, recherche:forme_mention(_, F)), assertz(decrit(F))).
+    retractall(decrit_dans(_, _)),
+    forall(distinct(F-U, ( recherche:forme_mention(M, F), unite(M, U) )), assertz(decrit_dans(F, U))),
+    forall(distinct(F, decrit_dans(F, _)), assertz(decrit(F))).
+
+unite(M, U) :-
+    description:mention(M, _, Chemin, _),
+    (   sub_atom(Chemin, B, _, _, ']') -> L is B + 1, sub_atom(Chemin, 0, L, _, U)
+    ;   sub_atom(Chemin, B2, _, _, '.') -> sub_atom(Chemin, 0, B2, _, U)
+    ;   U = Chemin
+    ).
 
 part_decrite(N, Part) :-
     propres_index:nb_propres(N, K),
