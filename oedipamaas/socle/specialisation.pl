@@ -130,6 +130,9 @@ decrire :-
     retractall(decrit_dans(_, _)),
     retractall(decrit_pont(_, _)),
     forall(distinct(F-U, ( recherche:forme_mention(M, F), unite(M, U) )), assertz(decrit_dans(F, U))),
+    % une relation (« e1 rides e2 ») dit un événement et ses participants : son unité reçoit les formes du type de
+    % chaque entité qu'elle relie (« horse » pour e2) — « riding a horse » se prouve dans la relation même
+    forall(distinct(F-U, participant(U, F)), ( decrit_dans(F, U) -> true ; assertz(decrit_dans(F, U)) )),
     forall(distinct(F, decrit_dans(F, _)), assertz(decrit(F))),
     (   current_predicate(alternatives_index:alt/4)
     ->  forall(distinct(G-U, ( decrit(F), morphologie:forme_connue(F, _), lexique:voisin_sens_dominant(F, G, R, _),
@@ -141,6 +144,17 @@ decrire :-
 
 dite_dans(F, U) :- decrit_dans(F, U).
 dite_dans(F, U) :- decrit_pont(F, U).
+
+% participant(-U, -F) : U est l'unité d'une relation (« relations[i] »), F une forme du type d'une entité qu'elle relie
+% (son sujet ou son objet, identifiants d'entité)
+participant(U, F) :-
+    description:relation_i(I, S, _, O),
+    format(atom(U), 'relations[~d]', [I]),
+    ( Id = S ; Id = O ),
+    findall(E, description:entite(E, _, _, _, _), Es), nth0(J, Es, Id),
+    format(atom(CheminType), 'entities[~d].type', [J]),
+    description:mention(MT, entities, CheminType, _),
+    recherche:forme_mention(MT, F).
 
 unite(M, U) :-
     description:mention(M, _, Chemin, _),

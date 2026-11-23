@@ -121,11 +121,16 @@ def test_lecture_et_recherche():
         x = janus.query_once("specialisation:explications(['31A231', '25F23(LION)', '31A23'], X)")["X"]
         assert x == ["25F23(LION)", "31A231"], x
         # par le pont WordNet : la lionne dit « lion » (hyperonyme) et rend le lion nommé plein dans son entité ; le
-        # félin ne le dit pas (ce serait l'hyponyme) ; « HIERONYMUS » dit « jerome » (synonyme)
+        # félin ne le dit pas (ce serait l'hyponyme) ; « HIERONYMUS » dit « jerome » (synonyme) ; la relation où la
+        # lionne est regardée (relations[0]) la dit aussi
         u = {x["U"] for x in janus.query("specialisation:pleine_large_dans('25F23(LION)', U)")}
-        assert u == {"persons[0]", "entities[1]"}, u
+        assert u == {"persons[0]", "entities[1]", "relations[0]"}, u
         assert janus.query_once("specialisation:decrit_pont(jerome, 'texts[0]')")["truth"]
         assert not janus.query_once("specialisation:decrit_pont(lion, 'entities[2]')")["truth"]
+        # une relation dit un événement et ses participants : « e1 looks_at e2 » reçoit « old man » et « lioness »
+        assert janus.query_once("specialisation:decrit_dans(lioness, 'relations[0]')")["truth"]
+        assert janus.query_once("specialisation:decrit_dans(man, 'relations[0]')")["truth"]
+        assert not janus.query_once("specialisation:decrit_dans(feline, 'relations[0]')")["truth"]   # e3 n'y est pas
         x = janus.query_once("specialisation:explications_pont(['31A231', '25F23(LION)', '31A23', '25F23'], X)")["X"]
         assert x == ["25F23(LION)", "31A231"], x
         # « kneeling figure ~ portrait » : l'unité dit « kneeling figure », mais rien ne dit le portrait → pas pleine ;
@@ -151,7 +156,7 @@ def test_lecture_et_recherche():
         janus.query_once("specialisation:decrire")
         janus.query_once("cadres:preparer_cadres")
         u = {x["U"] for x in janus.query("cadres:pleine_et_cadree('25F23(LION)', U)")}
-        assert u == {"persons[0]", "entities[1]"}, u
+        assert u == {"persons[0]", "entities[1]", "relations[0]"}, u
         # 11F422 est pleine par « bare knee » (son seul mot propre), mais son cadre veut Marie ou l'Enfant : rien
         # ne les dit → pas d'explication selon le cadre
         fd.charger(janus, dict(DESCRIPTION, keywords=["bare knee"]))
@@ -187,7 +192,7 @@ def test_lecture_et_recherche():
         # appui direct « lion » dans persons.recognised_by ; la lionne (entité) passe par WordNet
         assert t["wn_hyperonyme"] == 1 and t["champ_persons"] >= 1 and t["nom"] == 1 and t["prof"] == 6, t
         assert t["explication"] == 1 and t["unites_pleines"] == 1, t       # « lion and skull » le dit entièrement
-        assert t["explication_pont"] == 1 and t["unites_pleines_pont"] == 2, t     # et la lionne, par le pont
+        assert t["explication_pont"] == 1 and t["unites_pleines_pont"] == 3, t     # la lionne et son regard, par le pont
         # couverture : dans « Saint Jerome / lion and skull » (persons[0]), le lion ne rend compte que d'un mot sur
         # quatre, Jérôme de bien plus (son nom, et le lion et le crâne, ses attributs possibles) : c'est lui qui
         # explique l'unité ; « lioness » n'est pas une entrée du lion (il n'y vient que par le pont)
@@ -195,10 +200,11 @@ def test_lecture_et_recherche():
         jr = dict(janus.query_once("traits:candidats_traits(10, _L), member(['11H(JEROME)', _, _T], _L), "
                                    "findall([_K, _V], member(_K-_V, _T), X)")["X"])
         assert jr["meilleure_couverture"] == 1 and jr["couverture_max"] >= 0.75, jr
-        # structure : pleine dans une personne et une entité, 2 des 9 unités décrites ; une concurrente, Jérôme, plein
-        # dans la même personne (« Saint Jerome… lion and skull ») ; la plus précise de ses unités
+        # structure : pleine dans une personne, une entité et une relation, 3 des 9 unités décrites ; une concurrente,
+        # Jérôme, plein dans la même personne (« Saint Jerome… lion and skull ») ; la plus précise de ses unités
         assert t["plein_persons"] == 1 and t["plein_entities"] == 1 and "plein_subject" not in t, t
-        assert abs(t["part_unites"] - 2 / 9) < 1e-4 and t["concurrents"] == 1 and t["ecart_profondeur_plus_un"] == 1, t
+        assert t.get("plein_relations") == 1, t
+        assert abs(t["part_unites"] - 3 / 9) < 1e-4 and t["concurrents"] == 1 and t["ecart_profondeur_plus_un"] == 1, t
         j = dict(janus.query_once("traits:candidats_traits(10, _L), member(['11H(JEROME)', _, _T], _L), "
                                   "findall([_K, _V], member(_K-_V, _T), X)")["X"])
         assert j["plein_subject"] == 1 and j["plein_texts"] == 1 and j["concurrents"] == 1, j    # « HIERONYMUS »

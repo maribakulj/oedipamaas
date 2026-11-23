@@ -7,6 +7,7 @@ Faits du module description (remplacés à chaque image) :
   entite(E, Type, Plan, Position, Boite)    Boite : [x0, y0, x1, y1] en fractions, ou []
   attribut(E, Texte)
   relation(Sujet, Predicat, Objet)          sujets et objets : identifiants d'entité ou textes
+  relation_i(I, Sujet, Predicat, Objet)     la même, avec sa place I (l'unité relations[I])
   personne(I, Nom, ReconnuPar, Confiance)
   sujet(Titre, Source, Type, Confiance)     alternative(I, Texte)
   texte_transcrit(I, Transcription, Langue)
@@ -77,9 +78,10 @@ def faits(d):
         for a in e.get("attributes") or []:
             if isinstance(a, str) and a.strip():
                 out.append(f"attribut({q(eid)}, {q(a)})")
-    for r in d.get("relations") or []:
+    for i, r in enumerate(d.get("relations") or []):
         if isinstance(r, list) and len(r) == 3:
             out.append(f"relation({q(r[0])}, {q(r[1])}, {q(r[2])})")
+            out.append(f"relation_i({i}, {q(r[0])}, {q(r[1])}, {q(r[2])})")     # sa place : l'unité relations[i]
     for i, p in enumerate(d.get("persons") or []):
         if isinstance(p, dict) and p.get("who"):
             out.append(f"personne({i}, {q(p['who'])}, {q(p.get('recognised_by') or '')}, "
