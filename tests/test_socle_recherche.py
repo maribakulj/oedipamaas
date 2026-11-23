@@ -142,6 +142,13 @@ def test_lecture_et_recherche():
         assert t["wn_hyperonyme"] == 1 and t["champ_persons"] >= 1 and t["nom"] == 1 and t["prof"] == 6, t
         assert t["explication"] == 1 and t["unites_pleines"] == 1, t       # « lion and skull » le dit entièrement
         assert t["explication_pont"] == 1 and t["unites_pleines_pont"] == 2, t     # et la lionne, par le pont
+        # structure : pleine dans une personne et une entité, 2 des 9 unités décrites ; une concurrente, Jérôme, plein
+        # dans la même personne (« Saint Jerome… lion and skull ») ; la plus précise de ses unités
+        assert t["plein_persons"] == 1 and t["plein_entities"] == 1 and "plein_subject" not in t, t
+        assert abs(t["part_unites"] - 2 / 9) < 1e-4 and t["concurrents"] == 1 and t["ecart_profondeur_plus_un"] == 1, t
+        j = dict(janus.query_once("traits:candidats_traits(10, _L), member(['11H(JEROME)', _, _T], _L), "
+                                  "findall([_K, _V], member(_K-_V, _T), X)")["X"])
+        assert j["plein_subject"] == 1 and j["plein_texts"] == 1 and j["concurrents"] == 1, j    # « HIERONYMUS »
         a = dict(janus.query_once("traits:candidats_traits(10, _L), member(['25F2', _, _T], _L), "
                                   "findall([_K, _V], member(_K-_V, _T), X)")["X"])
         assert a.get("ancetre_seul") == 1 and a.get("enfants_candidats", 0) >= 1, a
