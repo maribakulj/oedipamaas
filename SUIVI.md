@@ -41,7 +41,7 @@ Référence : `CAHIER_DES_CHARGES.md`. Branche de travail : `claude/dazzling-arc
 - [x] **J0.8 Négation et relations (transitoire).** Négation reconnue dans la mention et pas seulement au début
       (« depicted without a lion ») ; `cadres:unite_liee/2` respecte le sens de la relation ; tests. (Remplacés au J1
       par les assertions.)
-- [ ] **J0.9 Intégration continue.** `.github/workflows/tests.yml` : tests sans base à chaque poussée. Si la poussée
+- [x] **J0.9 Intégration continue.** `.github/workflows/tests.yml` : tests sans base à chaque poussée. Si la poussée
       d'un workflow est refusée (droits), le noter et garder le fichier hors dépôt.
 - [ ] **J0.10 Moisson des corpus.** `outils/moisson/` : RKDimages (SPARQL par pages) et Wikidata P1257 (libellés EN et
       FR), sortie JSONL dans `/home/user/donnees/corpus/` avec manifeste (date, requête, empreinte, licence) ;
@@ -80,3 +80,4 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - 2026-11-23 — J0.7 : « expliquer » lit p_catalogue et valeur ; test de contrat qui reproduit le KeyError sur l'ancien code et passe avec la correction.
 - 2026-11-23 — J0.8 : négation coupée au mot négatif (no, not, without, neither, nor, never, lack of, absence of) et postposée (absent, missing, invisible) ; cadres:unite_liee/2 suit le sens de la relation ; 39 tests passent.
 - 2026-11-23 — J1.1 : fait pendant la moisson de J0.10 (tâche indépendante) : docs/ASSERTIONS.md, socle/assertions.pl (valider/2, admissible/2, contredit/2), 14 tests plunit lancés par tests/test_plunit.py ; noms provisoires (D6).
+- 2026-11-23 — J0.9 : workflow GitHub Actions accepté ; premier passage en échec (numpy absent pour un test de la 0.2), corrigé : run 2 vert (32 passés, 7 sautés sans données).
