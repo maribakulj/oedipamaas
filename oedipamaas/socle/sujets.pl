@@ -69,7 +69,8 @@ ferme(fr, W) :- memberchk(W, [le, la, les, un, une, des, du, de, au, aux, ce, ce
     derrière, pendant, depuis, selon, malgré, hors, près, auprès, autour, lors, il, elle, ils, elles, lui, eux, se,
     soi, on, celui, celle, ceux, celles, ceci, cela, être, avoir, faire, est, sont, était, étaient, été, ont, avait,
     peut, peuvent, pouvoir, très, trop, aussi, ainsi, comme, quand, puis, alors, encore, déjà, souvent, parfois,
-    non, pas, plus, moins, ne, si, autre, autres, même, mêmes, etc, soit, part, lorsque, puisque, tandis, ici, là]).
+    non, pas, plus, moins, ne, si, autre, autres, même, mêmes, etc, soit, part, lorsque, puisque, tandis, ici, là,
+    tant]).
 
 lien_de_nom(en, W) :- memberchk(W, [the, of]).
 lien_de_nom(fr, W) :- memberchk(W, [de, des, du, 'd\'', 'd’', la, le, les, 'l\'', 'l’']).
