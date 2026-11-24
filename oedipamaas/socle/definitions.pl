@@ -76,7 +76,10 @@ definition(N, L, def(Type, Exige, Compatible, Contraintes, Ms)) :-
     findall(W, member(compatible(_, W), Cs0), Compatible),
     exclude(non_structurel, Cs0, Contraintes).
 
-non_structurel(C) :- C =.. [F|_], memberchk(F, [compatible, tete, nom, propriete, genre, concept, aspect, personne]).
+% (la tête, les noms et les propriétés du référent principal r sont déjà dans Exige ; ceux des autres référents, un
+% complément « with a child », un porteur « of Cupid », restent : la projection en vérifie la structure)
+non_structurel(C) :- C =.. [F|_], memberchk(F, [compatible, genre, concept, aspect, personne]), !.
+non_structurel(C) :- C =.. [F, r|_], memberchk(F, [tete, nom, propriete]).
 
 % Une parenthèse en minuscules qui n'est ni une alternative, ni un exemple, ni une définition, ni un renvoi peut porter
 % toute la distinction de la notation (« (female) » d'une lettre doublée, « (doctrine on) ») : elle est exigée (sûr
@@ -266,6 +269,7 @@ adjectifs(S, As) :- include([M]>>( M = mot(_, _, _, 'ADJ', _, _, _, _, _) ), S, 
 % partagé ; en anglais, ce qui précède la tête du premier segment (« hell represented as a cave or grotto » : hell
 % represented as a grotto ; « miraculous activities and events » : miraculous events) ; en français aussi, puis ce qui
 % suit la tête du dernier (« activités et événements miraculeux » : activités miraculeuses).
+distribuer(_, [], []) :- !.
 distribuer(_, [S], [S]) :- !.
 distribuer(en, [S1|Ss], [S1|Ss1]) :- !,
     ( append(Contexte, [T|Reste], S1), nom_ou_connu(T), \+ ( member(T2, Reste), nom_ou_connu(T2) ) -> true ; Contexte = [] ),
@@ -538,7 +542,7 @@ autre_langue(N, L, Ks) :-
 heritage(Type, _, _, []) :- memberchk(Type, [individu, recit, rubrique]), !.
 heritage(_, N, L, Hs) :-
     (   arbre:ancetre(N, A), type_libelle(A, TA), memberchk(TA, [individu, recit]),
-        definition(A, L, def(_, CsA, _)), memberchk(nom(_, Ks), CsA)
+        definition(A, L, def(_, ExA, _, _, _)), memberchk(un_de([[nom(Ks)]]), ExA), Ks \== a_remplir
     ->  Hs = [personne(Ks)]
     ;   Hs = []
     ).
