@@ -73,7 +73,7 @@ fermante_(S, I, Lg, P, F) :-
 avant(Av, Mot) :-
     split_string(Av, " ", " ,;:", Ms0), exclude(==(""), Ms0, Ms), ( last(Ms, Mot) -> true ; Mot = "" ).
 
-classer(C, _, gabarit) :- ( C == "..." ; re_match("^with [A-Z][A-Z :]+$", C) ), !.
+classer(C, _, gabarit) :- ( C == "..." ; re_match("^(with|avec) [A-Z][A-Z :]+$", C) ), !.
 classer(C, _, recit) :- memberchk(C, ["story of", "scenes from", "histoire de", "histoire d'", "scènes de"]), !.
 classer(C, _, numero(N)) :- number_string(N, C), integer(N), !.
 classer(C, _, renvoi(ripa)) :- re_match("^Ripa\\b", C), !.        % l'Iconologia de Ripa : des personnifications
