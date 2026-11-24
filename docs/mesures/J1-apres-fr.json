@@ -1,0 +1,207 @@
+{
+ "documents": 500,
+ "erreurs": 4,
+ "documents_avec_etabli": 162,
+ "codes_etablis": 202,
+ "precision_exacte": 0.2228,
+ "precision_exacte_ic95": [
+  0.1683,
+  0.2871
+ ],
+ "precision_hierarchique": 0.3218,
+ "precision_hierarchique_ic95": [
+  0.2574,
+  0.3861
+ ],
+ "par_type": {
+  "T1": {
+   "n": 33,
+   "precision_hierarchique": 0.2121
+  },
+  "T2": {
+   "n": 169,
+   "precision_hierarchique": 0.3432
+  }
+ },
+ "exemples_non_confirmes": {
+  "T2": [
+   {
+    "code": "45D22",
+    "texte": [
+     "Marine"
+    ],
+    "catalogue": [
+     "25H13",
+     "26C",
+     "46C24",
+     "47D31"
+    ]
+   },
+   {
+    "code": "41C323",
+    "texte": [
+     "verre"
+    ],
+    "catalogue": [
+     "41C322",
+     "41C341",
+     "41C622",
+     "47I4223"
+    ]
+   },
+   {
+    "code": "41C6411",
+    "texte": [
+     "beurre"
+    ],
+    "catalogue": [
+     "41C322",
+     "41C341",
+     "41C622",
+     "47I4223"
+    ]
+   },
+   {
+    "code": "25G3(OLIVE-TREE)",
+    "texte": [
+     "oliviers"
+    ],
+    "catalogue": [
+     "73D31211"
+    ]
+   },
+   {
+    "code": "41A6",
+    "texte": [
+     "jardin"
+    ],
+    "catalogue": [
+     "73D31211"
+    ]
+   },
+   {
+    "code": "43C9",
+    "texte": [
+     "Danse"
+    ],
+    "catalogue": [
+     "92D1916",
+     "92D19161"
+    ]
+   },
+   {
+    "code": "32B3711",
+    "texte": [
+     "Annonciation de San Martino"
+    ],
+    "catalogue": [
+     "73A522"
+    ]
+   },
+   {
+    "code": "25G4111",
+    "texte": [
+     "couronne"
+    ],
+    "catalogue": [
+     "44B162"
+    ]
+   }
+  ],
+  "T1": [
+   {
+    "code": "11I62(JOSEPH)",
+    "texte": [
+     "Joseph",
+     "Joseph"
+    ],
+    "catalogue": [
+     "71D222"
+    ]
+   },
+   {
+    "code": "11I62(ADAM)",
+    "texte": [
+     "Adam",
+     "Adam"
+    ],
+    "catalogue": [
+     "25F23(LION)",
+     "25F23(TIGER)",
+     "25F24(DEER)",
+     "25F35(PEACOCK)",
+     "25H",
+     "71A42"
+    ]
+   },
+   {
+    "code": "11I63(EVE)",
+    "texte": [
+     "Éve",
+     "Éve"
+    ],
+    "catalogue": [
+     "25F23(LION)",
+     "25F23(TIGER)",
+     "25F24(DEER)",
+     "25F35(PEACOCK)",
+     "25H",
+     "71A42"
+    ]
+   },
+   {
+    "code": "98B(FABRICIUS, C.)",
+    "texte": [
+     "Fabricius",
+     "Fabricius"
+    ],
+    "catalogue": [
+     "31A2422",
+     "61B(+52)",
+     "61B:31A2212(+1)",
+     "61B:31D14"
+    ]
+   },
+   {
+    "code": "11H(PETER)",
+    "texte": [
+     "Saint Pierre",
+     "Pierre"
+    ],
+    "catalogue": [
+     "73D332"
+    ]
+   },
+   {
+    "code": "11I63(SHEBA)",
+    "texte": [
+     "Saba",
+     "Saba"
+    ],
+    "catalogue": [
+     "71I331"
+    ]
+   },
+   {
+    "code": "11I63(EVE)",
+    "texte": [
+     "Ève",
+     "Ève"
+    ],
+    "catalogue": [
+     "71A411"
+    ]
+   },
+   {
+    "code": "11I62(JOSEPH)",
+    "texte": [
+     "Joseph",
+     "Joseph"
+    ],
+    "catalogue": [
+     "73B8211"
+    ]
+   }
+  ]
+ }
+}

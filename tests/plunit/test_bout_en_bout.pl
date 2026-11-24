@@ -18,7 +18,11 @@ docs([ _{id: "cartel_fr", texte: "Saint Jérôme dans son étude, avec un lion e
        _{id: "alternative_en", texte: "Saint Peter or Saint Paul.", langue: "en"},
        _{id: "ambigu_fr", texte: "Saint Jean.", langue: "fr"},
        _{id: "paysage_fr", texte: "Un chien et un cheval dans un paysage.", langue: "fr"},
-       _{id: "vide", texte: "", langue: "fr"} ]).
+       _{id: "vide", texte: "", langue: "fr"},
+       _{id: "ville_fr", texte: "Vue de Paris.", langue: "fr"},
+       _{id: "lieu_fr", texte: "Saint Jean à Patmos.", langue: "fr"},
+       _{id: "egypte_fr", texte: "La Fuite en Égypte.", langue: "fr"},
+       _{id: "ordre_en", texte: "John.", langue: "en"} ]).
 
 :- dynamic resultat/2.
 preparer :-
@@ -63,6 +67,14 @@ test(ambigu) :-
     codes("ambigu_fr", candidats, Ca), memberchk('11H(JOHN)', Ca).
 
 test(paysage) :- etablis_codes("paysage_fr", Cs), memberchk('25H', Cs), memberchk('34B11', Cs).
+
+% T1 : seulement des personnes (D12 et corrections) ; un nom en position de lieu n'est pas une personne
+test(ville) :- etablis_codes("ville_fr", Cs), \+ memberchk('95A(PARIS)', Cs).
+test(lieu) :- etablis_codes("lieu_fr", Cs), \+ ( member(C, Cs), sub_atom(C, _, _, _, 'PATMOS') ).
+test(mot_cle_thematique) :- etablis_codes("egypte_fr", Cs), \+ ( member(C, Cs), sub_atom(C, 0, _, _, '98B') ).
+test(pas_un_ordre) :-
+    codes("ordre_en", etablis, Et), codes("ordre_en", candidats, Ca), append(Et, Ca, Cs),
+    \+ memberchk('46A1241(ST. JOHN)', Cs).
 
 test(vide) :- resultat("vide", R), get_dict(erreur, R, _).
 

@@ -3,6 +3,7 @@
       admis(X)          une entité de tête ou de nom X est admissible (peut fonder un code établi)
       pas_admis(X)      aucune entité de tête ou de nom X n'est admissible
       nie(X)            une entité X est niée, sur ce que l'image représente
+      pas_nie(X)        aucune entité X n'est niée
       role(P, R, X)     un événement de prédicat P a X pour rôle R
       pas_role(P, R, X) l'événement P n'a pas X pour rôle R
       prop(X, P)        l'entité X a la propriété P, admissible
@@ -33,6 +34,8 @@ paire(neg_absent_fr, fr, "Un saint, son lion présent.", [admis(lion)], "Un sain
 paire(neg_missing_en, en, "A saint and his lion.", [admis(lion)], "A saint, the lion missing.", [nie(lion), admis(saint)]).
 paire(neg_verbe_fr, fr, "L'ange tient une épée.", [role(tenir, agent, ange)], "L'ange ne tient pas d'épée.", [pas_admis(épée)]).
 paire(neg_verbe_en, en, "The angel holds a sword.", [role(hold, agent, angel)], "The angel does not hold a sword.", [pas_admis(sword)]).
+paire(neg_objet_fr, fr, "L'ange ne tient pas d'épée.", [nie(épée)], "L'ange ne regarde pas le livre.", [pas_admis(livre), pas_nie(livre), admis(ange)]).
+paire(neg_objet_en, en, "The angel holds no sword.", [nie(sword)], "The angel does not look at the book.", [pas_admis(book), pas_nie(book), admis(angel)]).
 paire(neg_portee_fr, fr, "Un chien et un chat.", [admis(chien), admis(chat)], "Un chien, sans chat.", [admis(chien), nie(chat)]).
 paire(neg_portee_en, en, "A dog and a cat.", [admis(dog), admis(cat)], "A dog without a cat.", [admis(dog), nie(cat)]).
 paire(neg_depicted_en, en, "A lion is depicted.", [admis(lion)], "No lion is depicted.", [nie(lion)]).

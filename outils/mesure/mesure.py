@@ -25,8 +25,18 @@ PART = re.compile(r"\d\d?[A-Z]{0,2}\d*(?:\([^)]*\)\d*)*")
 JETON = re.compile(r"\([^)]*\)|[A-Z]{1,2}|\d")
 
 
+NOM = re.compile(r"\(([^+][^)]*)\)")
+
+
+def normaliser(code):
+    """Les noms entre parenthèses en capitales, comme Iconclass les écrit : un catalogue écrit « 11H(Jerome) »,
+    Iconclass « 11H(JEROME) » ; les clés « (+…) » ne changent pas."""
+    return NOM.sub(lambda m: "(" + m.group(1).upper() + ")", code.strip())
+
+
 def prefixes(code):
     """Les nœuds affirmés par un code, par jetons (comme decision:prefixes/2 et la mesure du moteur)."""
+    code = normaliser(code)
     out = {code}
     if all(PART.fullmatch(p) for p in code.split(":")):
         for p in code.split(":"):
@@ -53,7 +63,7 @@ def f1(p, r):
 
 
 def prf(pred, ref):
-    pred, ref = set(pred), set(ref)
+    pred, ref = {normaliser(c) for c in pred}, {normaliser(c) for c in ref}
     if not pred or not ref:
         return 0.0, 0.0, 0.0
     tp = len(pred & ref)

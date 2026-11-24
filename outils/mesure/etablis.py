@@ -6,7 +6,7 @@ import sys
 from collections import Counter, defaultdict
 
 sys.path.insert(0, __file__.rsplit("/", 1)[0])
-from mesure import fermeture, intervalle  # noqa: E402
+from mesure import fermeture, intervalle, normaliser  # noqa: E402
 
 
 def main(reference, sortie):
@@ -19,12 +19,12 @@ def main(reference, sortie):
         if "erreur" in d:
             erreurs += 1
             continue
-        gold = ref.get(d["document"], [])
+        gold = [normaliser(c) for c in ref.get(d["document"], [])]
         fg = fermeture(gold)
         et = [c for c in d["etablis"] if not c["code"].startswith("86")]
         avec += bool(et)
         for c in et:
-            ok_e, ok_f = c["code"] in gold, c["code"] in fg
+            ok_e, ok_f = normaliser(c["code"]) in gold, normaliser(c["code"]) in fg
             exact.append(ok_e)
             ferme.append(ok_f)
             par_type[c["type_preuve"]].append(ok_f)

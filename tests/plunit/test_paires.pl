@@ -37,6 +37,7 @@ entite_x(Fs, X, E) :-
 attente(Fs, admis(X)) :- entite_x(Fs, X, E), assertions:admissible(Fs, E), !.
 attente(Fs, pas_admis(X)) :- \+ ( entite_x(Fs, X, E), assertions:admissible(Fs, E) ).
 attente(Fs, nie(X)) :- entite_x(Fs, X, E), assertions:contredit(Fs, E), !.
+attente(Fs, pas_nie(X)) :- \+ attente(Fs, nie(X)).
 attente(Fs, role(P, R, X)) :- member(evenement(V, P0, _), Fs), meme_racine(P, P0), member(role(V, R, E), Fs), entite_x(Fs, X, E), !.
 attente(Fs, pas_role(P, R, X)) :- \+ attente(Fs, role(P, R, X)).
 attente(Fs, prop(X, P)) :-

@@ -17,7 +17,7 @@
     - relations : un nom complément d'un autre par une préposition (« un homme avec un chien ») ;
     - négation : « sans », « without », « no », « aucun », « ni … ni », « neither … nor », « absent », et la négation
       d'un verbe (« ne … pas », « not ») ; un verbe de présence nié (« n'est pas visible », « does not show ») nie ce
-      qu'il présente ;
+      qu'il présente ; l'objet d'un autre verbe nié est nié dans « pas de X », sinon non affirmé (D8) ;
     - modalité : « peut-être », « probablement », « may », « pouvoir », « sembler » ; « traditionnellement »,
       « dit » ; « autrefois », « formerly » ; elle s'étend aux compléments de l'événement ;
     - alternatives : « A ou B », « A or B » ;
@@ -372,9 +372,23 @@ nie_jeton(Ts, _, _, T) :-
     ), !.
 
 % l'objet d'un verbe nié n'est pas affirmé (« l'ange ne tient pas d'épée ») : il est nié (décision D8)
+% l'objet d'un verbe nié n'est nié que par la construction qui nie son existence (décision D8) : « pas de X »,
+% « pas d'épée » (déterminant ou préposition « de » sous la négation), « not … any X » ; sinon il n'est que non affirmé
+% (« il ne regarde pas le livre » ne nie pas le livre) : voir argument_non_affirme/2
 argument_d_un_evenement_nie(Ts, T) :-
-    T = t(S, _, _, _, _, _, H, R, _, _), memberchk(R, [obj, 'obl:arg', 'nsubj:pass']),
+    argument_d_un_verbe_nie(Ts, T),
+    T = t(S, I, _, _, _, _, _, _, _, _),
+    (   enfant(Ts, S, I, case, C), C = t(_, _, _, L, _, _, _, _, _, _), memberchk(L, [de, 'd\''])
+    ;   enfant(Ts, S, I, det, D), D = t(_, _, Fo, L, _, _, _, _, _, _), downcase_atom(Fo, F),
+        ( memberchk(L, [any, de]) ; memberchk(F, [de, 'd\'']) )
+    ), !.
+
+argument_d_un_verbe_nie(Ts, T) :-
+    T = t(S, _, _, _, _, _, H, R, _, _), rel_de_base(R, RB),
+    ( memberchk(RB, [obj, iobj, obl]) ; R == 'nsubj:pass' ),          % le sujet actif reste affirmé
     jeton(Ts, S, H, V), verbe_nie(Ts, V).
+
+argument_non_affirme(Ts, T) :- argument_d_un_verbe_nie(Ts, T), \+ argument_d_un_evenement_nie(Ts, T).
 
 verbe_nie(Ts, T) :-
     T = t(S, I, _, _, 'VERB', _, _, _, _, _),
@@ -394,6 +408,7 @@ modalise(Ts, Ents, Fs, A, M) :-
     (   memberchk(nom(A, E, _, _), Fs) -> member(ent(E, _, _, T, _), Ents) ; T = T0 ),
     modalite_jeton(Ts, T, M), !.
 
+modalite_jeton(Ts, T, non_affirme) :- argument_non_affirme(Ts, T), !.
 modalite_jeton(Ts, T, M) :-
     T = t(S, I, _, _, _, _, H, R, _, _),
     (   enfant(Ts, S, I, advmod, X), X = t(_, _, _, L, _, _, _, _, _, _), modal_adv(L, M)

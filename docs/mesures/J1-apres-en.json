@@ -1,0 +1,187 @@
+{
+ "documents": 1000,
+ "erreurs": 2,
+ "documents_avec_etabli": 489,
+ "codes_etablis": 806,
+ "precision_exacte": 0.1129,
+ "precision_exacte_ic95": [
+  0.0918,
+  0.1328
+ ],
+ "precision_hierarchique": 0.201,
+ "precision_hierarchique_ic95": [
+  0.1737,
+  0.2283
+ ],
+ "par_type": {
+  "T1": {
+   "n": 156,
+   "precision_hierarchique": 0.3462
+  },
+  "T2": {
+   "n": 650,
+   "precision_hierarchique": 0.1662
+  }
+ },
+ "exemples_non_confirmes": {
+  "T2": [
+   {
+    "code": "25F42",
+    "texte": [
+     "snake"
+    ],
+    "catalogue": [
+     "94O211"
+    ]
+   },
+   {
+    "code": "11G",
+    "texte": [
+     "angel"
+    ],
+    "catalogue": [
+     "71C11932"
+    ]
+   },
+   {
+    "code": "44B113",
+    "texte": [
+     "Kings"
+    ],
+    "catalogue": [
+     "71I53",
+     "71L2311"
+    ]
+   },
+   {
+    "code": "49K12",
+    "texte": [
+     "Chronicles"
+    ],
+    "catalogue": [
+     "71I53",
+     "71L2311"
+    ]
+   },
+   {
+    "code": "44G32",
+    "texte": [
+     "executioner"
+    ],
+    "catalogue": [
+     "73C1334"
+    ]
+   },
+   {
+    "code": "31D112",
+    "texte": [
+     "child"
+    ],
+    "catalogue": [
+     "11F41"
+    ]
+   },
+   {
+    "code": "49G1",
+    "texte": [
+     "doctors"
+    ],
+    "catalogue": [
+     "73B93"
+    ]
+   },
+   {
+    "code": "48C514",
+    "texte": [
+     "painting"
+    ],
+    "catalogue": [
+     "48C510",
+     "92D1916"
+    ]
+   }
+  ],
+  "T1": [
+   {
+    "code": "95A(ARISTAEUS)",
+    "texte": [
+     "Aristaeus",
+     "Aristaeus"
+    ],
+    "catalogue": [
+     "94O211"
+    ]
+   },
+   {
+    "code": "11I63(HAGAR)",
+    "texte": [
+     "Hagar",
+     "Hagar"
+    ],
+    "catalogue": [
+     "71C11932"
+    ]
+   },
+   {
+    "code": "11I73(SALOME)",
+    "texte": [
+     "Salome",
+     "Salome"
+    ],
+    "catalogue": [
+     "73C1334"
+    ]
+   },
+   {
+    "code": "11I63(REBEKAH)",
+    "texte": [
+     "Rebekah",
+     "Rebekah"
+    ],
+    "catalogue": [
+     "71C2134"
+    ]
+   },
+   {
+    "code": "11I62(ELIJAH)",
+    "texte": [
+     "Elijah",
+     "Elijah"
+    ],
+    "catalogue": [
+     "71M53"
+    ]
+   },
+   {
+    "code": "11I62(DAVID)",
+    "texte": [
+     "David",
+     "David"
+    ],
+    "catalogue": [
+     "71H2442"
+    ]
+   },
+   {
+    "code": "11I62(ESAU)",
+    "texte": [
+     "Esau",
+     "Esau"
+    ],
+    "catalogue": [
+     "71C274"
+    ]
+   },
+   {
+    "code": "11I62(DAVID)",
+    "texte": [
+     "David",
+     "David"
+    ],
+    "catalogue": [
+     "71H2442"
+    ]
+   }
+  ]
+ }
+}

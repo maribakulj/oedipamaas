@@ -27,7 +27,11 @@
 :- use_module(notation).
 :- use_module(assertions).
 
-:- dynamic def/3, nom_notation/2.          % def(Langue, Mot, Notation) ; nom_notation(NomNormalisé, Notation)
+:- dynamic def/3, nom_notation/2.
+
+% T6 (repli sur l'ancêtre commun) est désactivé pour le jugement J2 (décision D11) : la liste des candidats n'est pas
+% sûre d'être complète ; pour le réactiver : assertz(raisonnement:t6_actif)
+:- dynamic t6_actif/0.          % def(Langue, Mot, Notation) ; nom_notation(NomNormalisé, Notation)
 
 % --- Index des libellés ---------------------------------------------------------------------------------------------
 
@@ -35,9 +39,11 @@ preparer :-
     (   def(_, _, _) -> true
     ;   forall(( member(L, [en, fr]), iconclass:libelle(N, L, T), \+ sub_atom(N, _, _, _, '(...)'),
                  element_principal(N, L, T, W) ), assertz(def(L, W, N))),
-        forall(( notation_a_nom(N, Nom), normaliser_nom(Nom, K) ), assertz(nom_notation(K, N))),
-        forall(( iconclass:mot_cle(N, L, Mot), memberchk(L, [en, fr]), notation_a_nom(N, _),
-                 tete_mot_cle(Mot, Nom), normaliser_nom(Nom, K) ), assertz(nom_notation(K, N)))
+        forall(( notation_a_nom(N, Nom), personne(N), normaliser_nom(Nom, K) ), assertz(nom_notation(K, N))),
+        % un mot clé ne vaut pour nom que s'il en a la forme « Nom (rôle) » (« Pierre (St) », « Psammétique (roi) ») :
+        % « Égypte », mot clé thématique de 98B(PSAMMETICHUS), n'est pas un nom de cette personne
+        forall(( iconclass:mot_cle(N, L, Mot), memberchk(L, [en, fr]), notation_a_nom(N, _), personne(N),
+                 sub_atom(Mot, _, _, _, ' ('), tete_mot_cle(Mot, Nom), normaliser_nom(Nom, K) ), assertz(nom_notation(K, N)))
     ).
 
 % les éléments du libellé principal : première partie (avant « - »), première proposition (avant « ; ») si elle n'a
@@ -117,6 +123,18 @@ dernier_segment(T, Sep, P) :- sub_string(T, B, L, _, Sep), \+ ( sub_string(T, B2
 notation_a_nom(N, Nom) :-
     iconclass:n(N), notation:analyser(N, Niv), Niv \= composee(_), last(Niv, nom(Nom)).
 
+% une notation à nom de personne : le libellé anglais de son gabarit parent parle de personnes (« male saints (with
+% NAME) », « male persons from classical history », « heroes ») ; pas « knighthood order », « series of scenes »
+:- table personne/1.
+personne(N) :-
+    arbre:parent(N, G), sub_atom(G, _, _, 0, '(...)'), iconclass:libelle(G, en, T0), downcase_atom(T0, T),
+    once(( mot_de_personne(M), sub_atom(T, _, _, _, M) )),
+    \+ ( mot_de_non_personne(X), sub_atom(T, _, _, _, X) ).
+mot_de_personne(saints). mot_de_personne(persons). mot_de_personne(heroes). mot_de_personne(heroines).
+mot_de_personne(gods). mot_de_personne(goddesses). mot_de_personne(deities). mot_de_personne(prophets).
+mot_de_personne(sibyls). mot_de_personne(apostles). mot_de_personne(evangelists). mot_de_personne(martyrs).
+mot_de_non_personne('scenes'). mot_de_non_personne('series').
+
 tete_mot_cle(Mot, Nom) :- ( sub_atom(Mot, B, _, _, ' (') -> sub_atom(Mot, 0, B, _, Nom) ; Nom = Mot ).
 
 % un nom normalisé : capitales sans accents, espaces simples (« Jérôme » → JEROME)
@@ -136,9 +154,21 @@ langue(Fs, L) :- memberchk(doc(L, _), Fs).
 % T1 : les notations à nom d'une personne nommée
 candidats_t1(Fs, E, Ns) :-
     memberchk(nom(_, E, Nom, _), Fs), memberchk(entite(E, Tete, _), Fs),
+    \+ lieu(Fs, E),
     normaliser_nom(Nom, K),
     findall(N, ( nom_notation(K, N), filtre_titre(Tete, N) ), Ns0),
     sort(Ns0, Ns), Ns \== [].
+
+% un nom propre en position de lieu n'est pas une personne : complément de lieu d'un événement, complément d'un nom
+% par une préposition de lieu (« à Patmos », « in Egypt »), ou d'un nom de lieu ou de vue (« vue de Paris »)
+lieu(Fs, E) :- memberchk(role(_, lieu, E), Fs), !.
+lieu(Fs, E) :- member(relation(_, _, R, E, _), Fs), preposition_de_lieu(R), !.
+lieu(Fs, E) :- member(relation(_, H, R, E, _), Fs), memberchk(R, [de, of, 'd\'']), memberchk(entite(H, T, _), Fs),
+    tete_de_lieu(T), !.
+preposition_de_lieu(P) :- memberchk(P, ['à', en, dans, vers, près, devant, derrière, sur, sous, in, at, to, near, from,
+                                        towards, on, before, behind, under, outside, inside]).
+tete_de_lieu(T) :- memberchk(T, [vue, view, paysage, landscape, environs, plan, carte, map, port, harbour, panorama,
+                                 rue, street, ville, town, city, place, square, église, church, château, castle]).
 
 saint(N) :- ( sub_atom(N, 0, _, _, '11H(') ; sub_atom(N, 0, _, _, '11HH(') ), !.
 filtre_titre(saint, N) :- !, saint(N).
@@ -195,7 +225,7 @@ coder_entite(Fs, E, r(Et0, Ca0, Co0), r(Et, Ca, Co)) :-
     ->  (   admissible_entite(Fs, E, Type)
         ->  (   Ns = [N]
             ->  code(Fs, E, N, etabli, Type, C), Et = [C|Et0], Ca = Ca0
-            ;   ancetre_commun(Ns, A)
+            ;   t6_actif, ancetre_commun(Ns, A)
             ->  code(Fs, E, A, etabli, t6(Type, Ns), C),
                 findall(Cd, ( member(N, Ns), code(Fs, E, N, candidat(ambigu), Type, Cd) ), Cds),
                 Et = [C|Et0], append(Ca0, Cds, Ca)

@@ -27,7 +27,7 @@ d'une relation. Tous sont uniques dans le document.
 | `role(V, Role, E)` | le rôle de `E` dans `V` : `agent`, `patient`, `theme`, `instrument`, `destinataire`, `lieu` ; actif et passif ramenés aux mêmes rôles |
 | `relation(A, E1, Rel, E2, P)` | relation orientée : `E1` est le sujet, `E2` l'objet (`tient`, `regarde`, `a_cote_de`, `sur`) |
 | `polarite(A, Pol)` | `pos` (affirmé) ou `neg` (nié) |
-| `modalite(A, Mod)` | `affirme`, `probable`, `possible`, `traditionnel` (« traditionnellement identifié »), `ancien` (« autrefois attribué ») |
+| `modalite(A, Mod)` | `affirme`, `probable`, `possible`, `traditionnel` (« traditionnellement identifié »), `ancien` (« autrefois attribué »), `non_affirme` (mentionné sans être affirmé : l'objet d'un verbe nié, « il ne regarde pas le livre ») |
 | `portee(A, Por)` | `represente` (ce que l'image montre), `oeuvre` (l'objet : technique, état, support), `autre_oeuvre`, `source` (un texte, un récit), `histoire` (provenance, attribution) |
 | `enonciateur(A, Qui)` | `auteur` (l'auteur du texte) ou `cite(X)` (une autorité citée) |
 | `alternative(G, [A1, A2, …])` | hypothèses mutuellement exclusives (au moins deux) |
