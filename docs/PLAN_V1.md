@@ -38,11 +38,29 @@ mis au point.
 | Projection | `projection.pl` (premier jet : liens, rôles inversés, trois valeurs) | prototype vertical : § 0.1 |
 | Ressources | WordNet 3.0, liens morphosémantiques (17 739), WOLF (102 671 paires ; 58 % des mots français des définitions, 86 % de leurs occurrences) | |
 
-### 0.1 Le prototype vertical, premier passage (non corrigé)
+### 0.1 Le prototype vertical, premier passage (non corrigé, 25/11)
 
-Voir `docs/mesures/V2.md`, § « Prototype vertical » : 200 définitions, un texte positif, un négatif et un indéterminé
-chacune, écrits à partir des libellés (donc un ensemble de **développement**, pas de validation). Les chiffres sont
-l'état initial ; ils ne qualifient rien.
+Le premier jet de la projection, sur une fiche sur cinq de l'ensemble de développement (40 définitions, 120 textes,
+Stanza, 60 s au plus par texte ; détail dans `docs/mesures/V2.md`) :
+
+| Texte | notation visée établie (ou un descendant) | candidate | absente | délai dépassé |
+|---|---|---|---|---|
+| positif | 5 / 40 | 11 | 11 | 12 |
+| négatif | 2 / 40 | 9 | 19 | 9 |
+| indéterminé | 2 / 40 | 12 | 22 | 4 |
+
+- **Rappel** : 5 positifs sur 40. **Faux établis** sur la notation visée : 4 sur 80 négatifs et indéterminés.
+- **Codes établis autres que la notation visée** : 1 514 pour 95 textes traités, soit environ 16 par texte, non
+  jugés ; les plus fréquents sont faux à la lecture et viennent de **définitions trop faibles**. Par exemple,
+  31D82 n'exige que « individual » ou « name », 73D68 que « event », 22A que « matter », 43B8 que « show »,
+  25G3(PEAR-TREE) que « tree ». S'y ajoutent l'œuvre elle-même prise pour un objet figuré (11Q611 « object »,
+  59 fois) et des gabarits « (...) » établis.
+- **Temps** : médiane 18 s par texte, 25 textes sur 120 au-delà de 60 s (retours en arrière combinatoires de la
+  recherche d'unités liées).
+
+Ces chiffres confirment C3 (le compilateur ne garantit pas la suffisance : des segments de coordination deviennent
+des alternatives entières) et C4 (une projection à substitution globale, dont le coût est borné par la taille de la
+requête). Ils sont le point de comparaison de M1, pas une qualification.
 
 ---
 
