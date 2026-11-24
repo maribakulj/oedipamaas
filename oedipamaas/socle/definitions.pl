@@ -29,7 +29,7 @@
           assertions(Faits)             le graphe d'une scène, assertions du lecteur
         Marques : celles du prétraitement (libelles_iconclass:pretraiter/3) de la partie propre.
 */
-:- module(definitions, [ definition/3 ]).
+:- module(definitions, [ definition/3, type_libelle/2 ]).
 :- encoding(utf8).
 :- use_module(arbre).
 :- use_module(library(pcre)).
@@ -41,8 +41,18 @@
 :- use_module(libelles_iconclass, []).
 :- use_module(sujets, []).
 
+% Le type est recalculé sur la lecture en cache (libelles_iconclass:type_de_libelle/4) : changer la typologie ne
+% demande pas de relire les libellés
+:- table type_libelle/2.
+type_libelle(N, T) :-
+    (   libelles_lus:partie(N, en, 1, _, _, Ms, Ph) -> true ; libelles_lus:partie(N, fr, 1, _, _, Ms, Ph) ),
+    once(libelles_iconclass:type_de_libelle(N, Ph, Ms, T)).
+aspect_type(N, R, T) :-
+    libelles_lus:partie(N, en, R, gabarit, _, Ms, Ph), once(libelles_iconclass:type_de_libelle(N, Ph, Ms, T0)),
+    T0 \== individu, ( T0 == rubrique -> T = classe ; T = T0 ).
+
 definition(N, L, def(Type, Cs, Ms)) :-
-    libelles_lus:type(N, Type),
+    type_libelle(N, Type),
     libelles_lus:partie(N, L, 1, _, Net, Ms, Ph), !,
     conditions(Type, N, L, Net, Ph, Ms, Cs0),
     aspects(N, L, As),                                  % les parties de gabarit et de « ~ » : exigées, pour tout type
@@ -235,7 +245,10 @@ conditions(scene, _, L, Net, Ph, _, [assertions(Fs)]) :-
     include(utile, Fs0, Fs).
 
 % une variante entre parenthèses est un nom propre (en anglais, au sens de WordNet : « (Black) » n'en est pas un)
-variante_propre(en, V) :- !, atom_string(A, V), atomic_list_concat(Ms, ' ', A), forall(member(M, Ms), sujets:propre_en(M)).
+% (en anglais, aucun de ses mots n'est un mot commun de WordNet : « (Black) » n'est pas une variante, « (Heracles) »,
+% « (Lucia) », « (Hieronymus) » en sont)
+variante_propre(en, V) :- !, atom_string(A, V), atomic_list_concat(Ms, ' ', A),
+    forall(member(M, Ms), ( downcase_atom(M, W), \+ wordnet:s(_, _, W, _, _, _) )).
 variante_propre(_, _).
 
 premier_segment(Ws, S) :- segments_(Ws, [], [S|_]), !.
@@ -244,7 +257,7 @@ premier_segment(Ws, Ws).
 % les parties de gabarit d'une notation (« - miraculous activities and events », « - portrayed alone ») : un aspect
 % exigé, par ses têtes
 aspects(N, L, As) :-
-    findall(aspect(T, Tetes, Ps), ( libelles_lus:aspect(N, R, T), libelles_lus:partie(N, L, R, gabarit, Net, _, Ph),
+    findall(aspect(T, Tetes, Ps), ( aspect_type(N, R, T), libelles_lus:partie(N, L, R, gabarit, Net, _, Ph),
                                     \+ lettres_doublees(Net),
                                     mots(Ph, Ws), segments(Ws, Ss),
                                     findall(Te, ( member(S, Ss), tete_d_aspect(T, L, S, Tt), lemme_de_tete(L, S, Tt, Te) ), Tetes0),
@@ -295,7 +308,7 @@ autre_langue(N, L, Ks) :-
 
 heritage(Type, _, _, []) :- memberchk(Type, [individu, recit, rubrique]), !.
 heritage(_, N, L, Hs) :-
-    (   arbre:ancetre(N, A), libelles_lus:type(A, TA), memberchk(TA, [individu, recit]),
+    (   arbre:ancetre(N, A), type_libelle(A, TA), memberchk(TA, [individu, recit]),
         definition(A, L, def(_, CsA, _)), memberchk(nom(_, Ks), CsA)
     ->  Hs = [personne(Ks)]
     ;   Hs = []

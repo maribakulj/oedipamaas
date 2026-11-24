@@ -16,7 +16,7 @@ main :-
     atom_concat(Base, '/definitions_index.pl', Sortie),
     setup_call_cleanup(open(Sortie, write, S, [encoding(utf8)]),
         ( format(S, ":- module(definitions_index, [definition/3]).~n:- encoding(utf8).~n", []),
-          forall(( libelles_lus:type(N, T), member(L, [en, fr]) ),
+          forall(( distinct(N, libelles_lus:partie(N, _, 1, _, _, _, _)), definitions:type_libelle(N, T), member(L, [en, fr]) ),
                  (   catch(definitions:definition(N, L, Def), E, ( print_message(error, E), fail ))
                  ->  format(S, "definition(~q, ~q, ~q).~n", [N, L, Def]), compter(T, ok)
                  ;   ( libelles_lus:partie(N, L, 1, _, _, _, _) -> compter(T, echec) ; true )

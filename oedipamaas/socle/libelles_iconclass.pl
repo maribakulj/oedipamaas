@@ -146,7 +146,7 @@ verbe(mot(_, F, _, C, _, _, _, _, _)) :-
 gabarit_de_personnes(N) :-
     gabarit_ou_soi(N, G), iconclass:libelle(G, en, T0),
     atomic_list_concat(Qs, ' ~ ', T0), member(T, Qs),
-    atom_string(T, St), re_replace("(,|;|:|\\(| of | with | - ).*$", "", St, Tete),
+    atom_string(T, St), re_replace("(,|;|:|\\(| of | with | from | in | on | at | by | for | - ).*$", "", St, Tete),
     split_string(Tete, " ", " ", Ms), exclude(==(""), Ms, Ms1), last(Ms1, M0), atom_string(M1, M0), downcase_atom(M1, W),
     ( catch(morphologie:lemmes(W, n, [L|_]), _, fail) -> true ; L = W ),
     once(wordnet:s(S, _, L, n, 1, _)),
