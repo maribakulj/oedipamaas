@@ -74,8 +74,10 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - [x] **J2.1 Textes français** : 2 977 notices Joconde (Licence Ouverte), `outils/moisson/joconde.py`.
 - [x] **J2.2 Échantillon** : 200 codes établis (50 × T1/T2 × EN/FR), `outils/mesure/echantillon_j2.py`.
 - [x] **J2.3 Page de jugement** : https://claude.ai/artifact/PJPD9uptfRG3v4UFUSrfi4 (privée, jugements enregistrés).
-- [ ] **J2.4 Jugement** (toi) : premier tour, 50 par strate.
-- [ ] **J2.5 Lecture des jugements** : précision et borne basse par strate ; analyse des erreurs ; second tour (150)
+- [x] **J2.4 Jugement** : premier tour, 50 par strate, par un juge Opus à l'aveugle (choix de la propriétaire) ; 20 jugements contrôlés.
+- [x] **J2.5 Lecture des jugements** (`docs/mesures/J2.md`) : 0,50 / 0,68 / 0,10 / 0,40 ; aucune strate au second tour.
+- [ ] **J2.6 Corrections** du tableau de `docs/mesures/J2.md`, puis nouveau tirage et nouveau jugement.
+- [ ] (ancien J2.5) : précision et borne basse par strate ; analyse des erreurs ; second tour (150)
       pour les strates au-dessus de 85 % ; rejugement de 20 % une semaine plus tard.
 
 ## Journal
