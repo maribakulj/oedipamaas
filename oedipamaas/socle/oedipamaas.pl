@@ -163,13 +163,16 @@ versions(Base, _{moteur: Vm, base: Vb, analyseur: Va, regles: Vr}) :-
         ( get_dict(commit, J, Cm) -> true ; Cm = inconnu ), format(string(Vb), "iconclass ~w ; wordnet 3.0", [Cm])
     ;   Vb = "inconnue"
     ),
-    (   catch(udpipe:configuration(Cf), _, fail)
+    (   getenv('OEDIPAMAAS_ANALYSEUR', stanza)                 % D20
+    ->  ( getenv('OEDIPAMAAS_STANZA', Ds) -> true ; Ds = '/home/user/donnees/stanza' ),
+        format(string(Va), "stanza 1.10.1 (modèles ~w)", [Ds])
+    ;   catch(udpipe:configuration(Cf), _, fail)
     ->  dict_pairs(Cf.modeles, _, Ms), findall(M, ( member(_-X, Ms), format(string(M), "~w ~w", [X.fichier, X.sha256]) ), Mss),
         atomic_list_concat(['udpipe'|Mss], ' ; ', Va0), atom_string(Va0, Va)
     ;   Va = "non configuré"
     ),
     module_property(oedipamaas, file(F)), file_directory_name(F, Dir),
-    findall(C, ( member(X, [assertions, conllu, interpretation, raisonnement, udpipe, oedipamaas, arbre, notation]),
+    findall(C, ( member(X, [assertions, conllu, interpretation, raisonnement, udpipe, oedipamaas, arbre, notation, mondes]),
                  atom_concat(X, '.pl', Fx), directory_file_path(Dir, Fx, Px), read_file_to_string(Px, C, []) ), Cs),
     atomic_list_concat(Cs, Tout), crypto_data_hash(Tout, H, [algorithm(sha256)]),
     string_concat("sha256:", H, Vr).

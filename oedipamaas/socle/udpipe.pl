@@ -47,6 +47,22 @@ analyser(Texte, Langue, Phrases) :- analyser(Texte, Langue, [], Phrases).
 
 % syntaxe(false) : segmentation, catégories et lemmes seulement (têtes à 0, relations « _ ») ; pour les compilateurs
 % qui n'ont besoin que des lemmes (sujets.pl)
+% l'analyseur (D20) : UDPipe 1 par défaut ; Stanza avec OEDIPAMAAS_ANALYSEUR=stanza (par stanza_textes.py, même
+% frontière CoNLL-U). Les compilateurs qui ne demandent que les lemmes (syntaxe(false)) restent sur UDPipe 1.
+analyser(Texte, Langue, Options, Phrases) :-
+    \+ memberchk(syntaxe(false), Options), getenv('OEDIPAMAAS_ANALYSEUR', stanza), !,
+    module_property(udpipe, file(Ici)), file_directory_name(Ici, Dir),
+    directory_file_path(Dir, 'stanza_textes.py', Script),
+    setup_call_cleanup(
+        ( tmp_file_stream(text, Entree, S0), tmp_file(conllu, Sortie) ),
+        ( set_stream(S0, encoding(utf8)), write(S0, Texte), close(S0),
+          process_create(path(python3), [Script, Langue, Entree, Sortie], [stderr(null), process(Pid)]),
+          process_wait(Pid, Statut),
+          (   Statut == exit(0) -> read_file_to_string(Sortie, Txt, [encoding(utf8)])
+          ;   throw(error(stanza(Statut), _))
+          ) ),
+        ( delete_file(Entree), ( exists_file(Sortie) -> delete_file(Sortie) ; true ) )),
+    conllu_phrases(Txt, Phrases).
 analyser(Texte, Langue, Options, Phrases) :-
     ( memberchk(syntaxe(false), Options) -> Parse = [] ; Parse = ['--parse'] ),
     binaire(B),
