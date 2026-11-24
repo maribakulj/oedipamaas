@@ -13,6 +13,7 @@
 */
 :- module(udpipe, [ analyser/3,        % +Texte, +Langue, -Phrases
                     analyser_lot/3,    % +Textes, +Langue, -ListeDePhrases (un seul appel pour tout le lot)
+                    analyser_lot/4,    % +Textes, +Langue, +Options, -ListeDePhrases ; syntaxe(false) : sans arbre
                     configuration/1    % -Config
                   ]).
 :- encoding(utf8).
@@ -42,13 +43,19 @@ chemin_modele(Langue, Chemin) :-
     directory_file_path(Dossier, Nom, Chemin),
     (   exists_file(Chemin) -> true ; existence_error(modele_udpipe, Chemin) ).
 
-analyser(Texte, Langue, Phrases) :-
+analyser(Texte, Langue, Phrases) :- analyser(Texte, Langue, [], Phrases).
+
+% syntaxe(false) : segmentation, catégories et lemmes seulement (têtes à 0, relations « _ ») ; pour les compilateurs
+% qui n'ont besoin que des lemmes (sujets.pl)
+analyser(Texte, Langue, Options, Phrases) :-
+    ( memberchk(syntaxe(false), Options) -> Parse = [] ; Parse = ['--parse'] ),
     binaire(B),
     chemin_modele(Langue, M),
     setup_call_cleanup(
         tmp_file_stream(text, Fichier, S0),
         ( set_stream(S0, encoding(utf8)), write(S0, Texte), close(S0),
-          process_create(B, ['--tokenize', '--tokenizer=ranges', '--tag', '--parse', M, Fichier],
+          append([['--tokenize', '--tokenizer=ranges', '--tag'], Parse, [M, Fichier]], Args),
+          process_create(B, Args,
                          [stdout(pipe(Out)), stderr(null), process(Pid)]),
           set_stream(Out, encoding(utf8)),
           read_string(Out, _, Sortie), close(Out),
@@ -61,11 +68,12 @@ analyser(Texte, Langue, Phrases) :-
 % joints par une ligne vide (fin de paragraphe, donc de phrase) ; une ligne vide à l'intérieur d'un texte devient
 % « espace + saut de ligne » (même longueur : les positions ne bougent pas) ; chaque phrase revient à son texte, ses
 % positions ramenées au début du texte
-analyser_lot(Textes, Langue, Ls) :-
+analyser_lot(Textes, Langue, Ls) :- analyser_lot(Textes, Langue, [], Ls).
+analyser_lot(Textes, Langue, Options, Ls) :-
     maplist(sans_ligne_vide, Textes, Textes1),
     atomic_list_concat(Textes1, '\n\n', Tout0), atom_string(Tout0, Tout),
     debuts(Textes1, 0, Debuts),
-    analyser(Tout, Langue, Phrases),
+    analyser(Tout, Langue, Options, Phrases),
     maplist(phrases_du_texte(Phrases), Debuts, Textes1, Ls).
 
 sans_ligne_vide(T0, T) :-

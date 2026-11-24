@@ -85,3 +85,14 @@ rend compte de ce qui manque, sans abaisser le seuil.
 L'identification d'une personne par ses seuls attributs (sans son nom) reste candidate ; les allégories reconnues par
 leurs attributs aussi. Les clés (+…), les lettres doublées, les noms libres ne bougent pas. Le chemin des sorties
 d'Opus (voie 2) n'est pas exclu : il pourra être mesuré avec le même cadre quand les données seront disponibles.
+
+## 6. Corrections du plan en cours de route
+
+- **Étape 1, périmètre des sujets** (24 novembre) : l'inventaire avait d'abord été restreint aux divisions 1, 7 et 9
+  (religion, Bible, mythologie). Or 16 des 21 sujets de la référence du banc de développement sont ailleurs (paysages
+  25H/25I, portraits 61B2(…), natures mortes 34B, scènes de genre 41D, figures 31D). Le profil est donc compilé pour
+  toutes les notations ; une notation à nom a un profil sans son nom.
+- **Étape 1, lecture des libellés** : la catégorie que donne l'étiqueteur n'est pas utilisée (les libellés sont
+  télégraphiques, et la correspondance passe par les sens) ; les noms propres se reconnaissent à la majuscule, que
+  Iconclass réserve aux noms ; les mots pleins par exclusion des classes fermées. Taux d'erreur de catégorie fermée
+  de l'étiqueteur sur les libellés : 0,9 % (en), 0,4 % (fr), sur 2 000 libellés.
