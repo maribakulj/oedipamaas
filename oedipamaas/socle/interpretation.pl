@@ -76,13 +76,29 @@ agent_case(par). agent_case(by).
 interpreter(Texte, Langue, Genre, Phrases, Faits) :-
     jetons(Phrases, Ts),
     entites(Ts, Ents),                       % liste de ent(E, Tete, ToksDuNom, TokTete, TokNom-ou-rien)
-    findall(F, fait(Ts, Ents, F), Fs00),
-    maplist(nom_du_texte(Texte), Fs00, Fs0),
+    findall(F, fait(Ts, Ents, F), Fs000),
+    sort(Fs000, Fs00),                       % les doublons exacts (même fait trouvé deux fois) s'effacent
+    maplist(nom_du_texte(Texte), Fs00, Fs01),
+    identifiants_uniques(Fs01, Fs0),
     qualifier(Ts, Ents, Fs0, Fs1),
     passages(Texte, Ts, Fs1, Ps),
     append([[texte(Texte), doc(Langue, Genre)], Ps, Fs1], Faits0),
     sort(Faits0, Faits1),
     ordonner(Faits1, Faits).
+
+% deux faits distincts sous le même identifiant (deux prépositions sous un même nom, « à côté de » ; un adjectif
+% épithète et attribut) : le second et les suivants reçoivent un suffixe (r_1_5, r_1_5_2…)
+identifiants_uniques(Fs0, Fs) :- uniques(Fs0, [], Fs).
+uniques([], _, []).
+uniques([F0|Fs0], Vus0, [F|Fs]) :-
+    (   F0 =.. [N, A|R], memberchk(N, [propriete, relation, evenement, nom])
+    ->  (   selectchk(A-K0, Vus0, Vus1)
+        ->  K is K0 + 1, atomic_list_concat([A, K], '_', A2), F =.. [N, A2|R], Vus = [A-K|Vus1]
+        ;   F = F0, Vus = [A-1|Vus0]
+        )
+    ;   F = F0, Vus = Vus0
+    ),
+    uniques(Fs0, Vus, Fs).
 
 nom_du_texte(Texte, nom(A, E, texte_de(Ns), P), nom(A, E, Nom, P)) :- !,
     bornes(passage_nom(Ns), D, F),
