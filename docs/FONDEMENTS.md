@@ -1,5 +1,10 @@
 # Les fondements conceptuels d'oedipamaas — version 2 (25 novembre 2026)
 
+**Amendement (25 novembre, décision de la propriétaire).** Les définitions sont « sûres d'abord » : tout ce que le
+libellé dit est exigé, sauf ce que la grammaire d'Iconclass marque sûrement comme facultatif (alternatives, exemples,
+renvois, numéros, « possible attributes », biographie d'un individu) ; l'analyse syntaxique n'ajoute que des
+contraintes. Une erreur de lecture rend une définition trop forte, pas trop faible. Mesures : `docs/mesures/V2.md`.
+
 **Statut.** La version 1 de ce document (même jour) a été soumise à une contre-expertise indépendante. Verdict :
 « pas justes en l'état, réparables sans changer d'architecture, par des corrections de fond ». Les fautes relevées, et
 reconnues : (1) un libellé d'Iconclass n'est pas uniformément une description d'image (rubriques, individus,
@@ -87,7 +92,7 @@ d'Iconclass) et par WordNet, et chaque type a une sémantique, écrite une fois 
 | alternative | « or », « alternatively », « (or standing beside) », « and/or » | ensemble de graphes alternatifs |
 | exclusion | « (not in biblical context) », « (except the earth) » | condition négative (§ 4.4) |
 | classe résiduelle | « (other) … » | défaut en monde fermé (§ 4.4) |
-| modifieur facultatif | « (high) », « (open) », « (nude) » | précise sans être exigé |
+| modificateur | « (high) », « (open) », « (nude) », « (female) », « (doctrine on) » | **exigé** : il porte parfois toute la distinction de la notation (jugement 4 des définitions, `docs/mesures/V2.md`) ; quand il n'est qu'un détail, la définition n'est que trop forte |
 | renvoi, numéro | « (Ripa) », « (Exodus 20:3-17) », « (11) » | hors définition ; le numéro d'un cycle (« the Twelve Labours: (11) ») est une variante de désignation (« Eleventh Labor ») |
 | « possible attributes: … » | listes des individus | indices d'identification, jamais des conditions |
 | « ~ » | « temple ~ Egyptian religion » | une qualification de la branche : exigée si elle distingue la notation de ses sœurs (§ 4.2), sinon compatible |

@@ -70,12 +70,25 @@ definition(N, L, def(Type, Exige, Compatible, Contraintes, Ms)) :-
     exigences_d_aspects(N, L, E1),
     heritage(Type, N, L, Hs),
     findall(un_de([[nom(Ks)]]), member(personne(Ks), Hs), E2),
-    append([E0, E1, E2], Exige),
+    exigences_de_parentheses(L, Ms, E3),
+    append([E0, E1, E2, E3], Exige),
     Exige \== [],
     findall(W, member(compatible(_, W), Cs0), Compatible),
     exclude(non_structurel, Cs0, Contraintes).
 
 non_structurel(C) :- C =.. [F|_], memberchk(F, [compatible, tete, nom, propriete, genre, concept, aspect, personne]).
+
+% Une parenthèse en minuscules qui n'est ni une alternative, ni un exemple, ni une définition, ni un renvoi peut porter
+% toute la distinction de la notation (« (female) » d'une lettre doublée, « (doctrine on) ») : elle est exigée (sûr
+% d'abord ; quand elle n'est qu'un détail, « (high) hill », la définition n'est que trop forte). Ses mots pleins, tous.
+exigences_de_parentheses(L, Ms, Gs) :-
+    findall(un_de([Us]), ( member(facultatif(C), Ms), mots_de_parenthese(L, C, Us), Us \== [] ), Gs).
+mots_de_parenthese(L, C, Us) :-
+    split_string(C, " ,;:/", " ,;:/.()'", Ps), exclude(==(""), Ps, Ps1),
+    findall(mot(W), ( member(P0, Ps1), atom_string(P, P0), \+ mot_ferme(P), alphabetique(P), \+ metalangage(P),
+                      downcase_atom(P, Pm), lemme_simple(L, Pm, W) ), Us0), list_to_set(Us0, Us).
+lemme_simple(en, P, W) :- ( catch(morphologie:lemmes(P, n, [W|_]), _, fail) -> true ; W = P ), !.
+lemme_simple(_, P, P).
 
 % --- Ce que la partie propre exige, par type -------------------------------------------------------------------------
 
