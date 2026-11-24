@@ -1,3 +1,4 @@
+% Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 /*  Le lexique (conception 1.0, § 7) : l'index des formes d'Iconclass et le pont WordNet.
 
     Index (construit une fois par construire_index/1, chargé ensuite comme module lexique_index) :

@@ -1,11 +1,15 @@
 # oedipamaas
 
-Moteur iconographique : traduit une description d'image écrite en mots (sujet, personnes, objets, relations, concepts,
-textes…) en codes [Iconclass](https://iconclass.org), chaque code avec sa preuve. Il tourne hors ligne, sans appel
-payant, et se rejoue sur toutes les descriptions déjà faites. Conception : [CONCEPTION.md](CONCEPTION.md).
+Moteur iconographique : lit des textes écrits sur des œuvres (cartels, notices, catalogues, textes savants,
+descriptions visuelles), en français et en anglais, et en tire des codes [Iconclass](https://iconclass.org), chacun
+avec sa preuve. Hors ligne, sans LLM, la précision d'abord.
 
-**État** : la version 1.0 (moteur Prolog, sans réseau de neurones, conception arrêtée) est en reconstruction. Les
-commandes ci-dessous sont celles de la version 0.2, gardée comme ligne de base.
+**État** (25 novembre 2026) : en construction. Références : [CAHIER_DES_CHARGES.md](CAHIER_DES_CHARGES.md),
+[docs/FONDEMENTS.md](docs/FONDEMENTS.md), [DECISIONS.md](DECISIONS.md), mesures dans [docs/mesures/](docs/mesures/).
+Installation du moteur actuel : [docs/INSTALLATION.md](docs/INSTALLATION.md) ; commande :
+`swipl oedipamaas/socle/commande.pl --base BASE --texte "…" --langue fr`. Ce qui est historique (versions 0.2 et 1.0,
+dont [CONCEPTION.md](CONCEPTION.md)) est listé dans [docs/HISTORIQUE.md](docs/HISTORIQUE.md) ; les commandes
+ci-dessous sont celles de la version 0.2, gardée comme ligne de base.
 
 ## Installation
 

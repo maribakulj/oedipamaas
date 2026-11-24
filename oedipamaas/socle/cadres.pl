@@ -1,3 +1,4 @@
+% Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 /*  Les cadres des libellés (conception 1.0, R3) : ce que dit un libellé d'Iconclass, lu par une grammaire et non
     découpé en mots. Un libellé est une formule : une phase éventuelle (« before the battle »), des éléments (synonymes
     « ; », listes « , ») dont chacun a une ou plusieurs têtes coordonnées (« mother and child »), chacune avec ses

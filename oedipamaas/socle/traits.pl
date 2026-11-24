@@ -1,3 +1,4 @@
+% Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 /*  Traits de preuve des candidats (conception 1.0, § 9), pour la décision apprise. Que des quantités tirées de la
     preuve, jamais de trait de corpus (ni chapitre, ni fréquence dans un catalogue).
 

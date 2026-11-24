@@ -1,3 +1,4 @@
+# Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 """Le moteur 1.0 de bout en bout : description → candidats et traits de preuve (Prolog) → décision apprise compilée
 (Prolog) → codes retenus, avec leur probabilité et leur preuve. Une ligne JSON par image :
 {image, versions, codes: [{code, statut, p_catalogue, preuve}]} — codes triés dans l'ordre de la décision (critère

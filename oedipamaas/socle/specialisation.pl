@@ -1,3 +1,4 @@
+% Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 /*  Spécialisation (conception 1.0, § 8) : descendre d'une notation sûre vers celles de ses enfants que la description
     soutient le mieux.
 
