@@ -39,13 +39,15 @@
 :- use_module(raisonnement, []).
 :- use_module(interpretation, []).
 :- use_module(libelles_iconclass, []).
+:- use_module(sujets, []).
 
 definition(N, L, def(Type, Cs, Ms)) :-
     libelles_lus:type(N, Type),
     libelles_lus:partie(N, L, 1, _, Net, Ms, Ph), !,
     conditions(Type, N, L, Net, Ph, Ms, Cs0),
+    aspects(N, L, As),                                  % les parties de gabarit et de « ~ » : exigées, pour tout type
     heritage(Type, N, L, Hs),
-    append(Cs0, Hs, Cs).
+    append([Cs0, As, Hs], Cs).
 
 % --- Les mots d'une partie analysée ---------------------------------------------------------------------------------
 
@@ -96,7 +98,9 @@ tete_segment(fr, S, T, Avant, Apres) :-
     append(Avant, [T|Apres], S), nom_ou_connu(T), !.
 
 % un nom, ou un mot que l'étiqueteur a mal rangé sur un libellé d'un seul mot et que WordNet connaît comme nom
-% (« hill » rangé en verbe)
+% (« hill » rangé en verbe) ; jamais un mot d'une classe fermée (« le », « un », « de » pris pour un nom) ni un mot
+% sans lettre
+nom_ou_connu(M) :- M = mot(_, F, _, _, _, _, _, _, _), ( mot_ferme(F) ; \+ alphabetique(F) ), !, fail.
 nom_ou_connu(M) :- nominal(M), !.
 nom_ou_connu(mot(_, F, _, C, _, _, _, _, _)) :-
     memberchk(C, ['VERB', 'ADJ', 'ADP', 'X', 'ADV', 'INTJ', 'NUM', 'SYM', 'DET', 'PRON']), downcase_atom(F, W),
@@ -138,12 +142,48 @@ noms_de(S, K) :-
     K \== ''.
 titre(F) :- downcase_atom(F, W), memberchk(W, ['st.', st, saint, sainte, ste, 'ste.', 's.']).
 
+mot_ferme(F) :- downcase_atom(F, W), ( sujets:ferme(en, W) ; sujets:ferme(fr, W) ; atom_length(W, 1) ), !.
+alphabetique(F) :- atom_codes(F, Cs), Cs = [C|_], code_type(C, alpha), \+ code_type(C, digit(_)).
+
+% Le lemme d'une tête, ou d'un composé dont elle est la tête : en anglais, un composé que WordNet connaît (« still
+% life », « book of hours ») ; en français, un composé qui est un mot clé français d'Iconclass (« nature morte », « lit
+% de mort », « maison d'arrêt ») : Iconclass lui-même fournit le lexique des composés
+lemme_de_tete(L, S, T, W) :- compose(L, S, T, W), !.
+lemme_de_tete(_, _, T, W) :- lemme(T, W).
+
+compose(en, S, T, W) :-
+    append(Av, [T|Ap], S),
+    (   last(Av, M), M = mot(_, F, _, _, _, _, _, _, _), downcase_atom(F, Fm), lemme(T, Lt),
+        atomic_list_concat([Fm, Lt], ' ', W), wordnet:s(_, _, W, n, _, _)
+    ;   Ap = [mot(_, Of, _, _, _, _, _, _, _), X|_], downcase_atom(Of, of), nominal(X), lemme(T, Lt),
+        X = mot(_, Fx, _, _, _, _, _, _, _), downcase_atom(Fx, Xm),
+        atomic_list_concat([Lt, of, Xm], ' ', W), wordnet:s(_, _, W, n, _, _)
+    ), !.
+compose(fr, S, T, W) :-
+    append(_, [T|Ap], S), T = mot(_, Ft, _, _, _, _, _, _, _),
+    between(1, 3, K), length(Suite, K), append(Suite, _, Ap),
+    findall(F, member(mot(_, F, _, _, _, _, _, _, _), [T|Suite]), Fs),
+    joindre(Fs, W0), downcase_atom(W0, W1), re_replace("’"/g, "'", W1, W2), atom_string(W, W2),
+    mot_cle_fr(W), Ft \== '', !.
+
+% joindre des mots sans espace après une élision (« d' » + « arrêt » → « d'arrêt »)
+joindre([F], F) :- !.
+joindre([F|Fs], W) :- joindre(Fs, W1), ( ( sub_atom(F, _, 1, 0, '\'') ; sub_atom(F, _, 1, 0, '’') ) -> atom_concat(F, W1, W) ; atomic_list_concat([F, W1], ' ', W) ).
+
+:- table mot_cle_fr/1.
+mot_cle_fr(W) :- mots_cles_fr(Ws), memberchk(W, Ws).
+:- table mots_cles_fr/1.
+mots_cles_fr(Ws) :-
+    findall(W, ( iconclass:mot_cle(_, fr, K), downcase_atom(K, W0), sub_atom(W0, _, _, _, ' '),
+                 re_replace("’"/g, "'", W0, W1), atom_string(W, W1) ), Ws0),
+    sort(Ws0, Ws).
+
 % --- Les conditions, par type ---------------------------------------------------------------------------------------
 
 conditions(rubrique, _, _, _, _, _, []).
 conditions(classe, _, L, _, Ph, Ms, Cs) :-
     mots(Ph, Ws0), defini(Ws0, Ws), segments(Ws, Ss),
-    findall(seg(Tete, Ps, Co), ( member(S, Ss), tete_segment(L, S, T, Av, Ap), lemme(T, Tete),
+    findall(seg(Tete, Ps, Co), ( member(S, Ss), tete_segment(L, S, T, Av, Ap), lemme_de_tete(L, S, T, Tete),
                                  modificateurs(Av, Ap, Ps), complements(r, Ap, Co) ), Segs),
     Segs \== [],
     findall(Te, member(seg(Te, _, _), Segs), Tetes0), sort(Tetes0, Tetes),
@@ -153,18 +193,25 @@ conditions(classe, _, L, _, Ph, Ms, Cs) :-
     nom_et_type(Ms, Ph, Cs0, Cs).
 % les noms d'un individu : ceux du premier segment de sa partie propre (« the apostle Peter », pas « first bishop of
 % Rome »), le nom de la notation, ses variantes (parenthèses, autre langue) ; un gabarit a un nom à remplir
+% Les noms : celui de la notation (11H(PETER)), les variantes entre parenthèses, et les mots clés d'Iconclass de la
+% forme « Nom (rôle) » dans les deux langues (« Pierre (St) », « Jean Baptiste (St) ») ; à défaut de nom de notation
+% (un récit : « (story of) Hercules »), les noms du premier segment. Les mots à majuscule qui ne sont pas le nom
+% (« Dominican », « bishop of Rome ») n'en sont pas.
 conditions(individu, N, L, _, Ph, Ms, Cs) :-
-    mots(Ph, Ws), avant_deux_points(Ws, Ws0), premier_segment(Ws0, Ws1), noms(Ws1, Ks0),
-    findall(K, ( member(variante(V), Ms), raisonnement:normaliser_nom(V, K) ), Vs),
+    mots(Ph, Ws), avant_deux_points(Ws, Ws0), premier_segment(Ws0, Ws1),
     nom_de_la_notation(N, Kn),
-    append([Kn, Ks0, Vs], Ks1), sort(Ks1, Ks),
+    ( Kn == [] -> noms(Ws1, Ks0) ; Ks0 = [] ),
+    findall(K, ( member(variante(V), Ms), variante_propre(L, V), raisonnement:normaliser_nom(V, K) ), Vs),
+    findall(K, ( member(L2, [en, fr]), iconclass:mot_cle(N, L2, Mc), sub_atom(Mc, _, _, _, ' ('),
+                 sub_atom(Mc, 0, 1, _, Ini), char_type(Ini, upper(_)),
+                 raisonnement:tete_mot_cle(Mc, Nom), raisonnement:normaliser_nom(Nom, K) ), Kc),
+    append([Kn, Ks0, Vs, Kc], Ks1), sort(Ks1, Ks),
     findall(compatible(r, W), ( member(M, Ws0), M = mot(_, _, _, 'NOUN', _, _, _, _, _), \+ propre(M), lemme(M, W) ), Cp),
-    autre_langue(N, L, Ka),
+    ( Kn == [] -> autre_langue(N, L, Ka) ; Ka = [] ),
     append(Ks, Ka, Ks2), sort(Ks2, Ks3),
-    (   Ks3 \== [] -> Cs0 = [nom(r, Ks3)|Cp]
-    ;   sub_atom(N, _, _, _, '(...)') -> Cs0 = [nom(r, a_remplir)|Cp]
-    ),
-    aspects(N, L, As), append(Cs0, As, Cs).
+    (   Ks3 \== [] -> Cs = [nom(r, Ks3)|Cp]
+    ;   sub_atom(N, _, _, _, '(...)') -> Cs = [nom(r, a_remplir)|Cp]
+    ).
 
 conditions(recit, N, L, Net, Ph, Ms, Cs) :- conditions(individu, N, L, Net, Ph, Ms, Cs).
 conditions(attribut, _, L, _, Ph, _, [porteur(r, p)|Cs]) :-
@@ -172,7 +219,8 @@ conditions(attribut, _, L, _, Ph, _, [porteur(r, p)|Cs]) :-
     ( noms(Av, [K|_]) -> Porteur = [nom(p, [K])] ; append(_, [mot(_, De, _, _, _, _, _, _, _)|Ap], Av), downcase_atom(De, Dm),
       memberchk(Dm, [of, de, du, des]), include(nominal, Ap, [T|_]) -> lemme(T, W), Porteur = [tete(p, [W])] ; Porteur = [] ),
     segments(D, Ss),
-    findall(Te, ( member(S, Ss), tete_segment(L, S, T, _, _), lemme(T, Te) ), Tetes0), sort(Tetes0, Tetes), Tetes \== [],
+    findall(Te, ( member(S, Ss), tete_segment(L, S, T, _, _), lemme_de_tete(L, S, T, Te) ), Tetes0), sort(Tetes0, Tetes),
+    Tetes \== [],
     append([tete(r, Tetes)], Porteur, Cs).
 conditions(genre, _, L, _, Ph, _, [genre(Tetes)]) :-
     mots(Ph, Ws), segments(Ws, Ss),
@@ -186,16 +234,26 @@ conditions(scene, _, L, Net, Ph, _, [assertions(Fs)]) :-
     interpretation:interpreter(Net, L, description, Ph, Fs0),
     include(utile, Fs0, Fs).
 
+% une variante entre parenthèses est un nom propre (en anglais, au sens de WordNet : « (Black) » n'en est pas un)
+variante_propre(en, V) :- !, atom_string(A, V), atomic_list_concat(Ms, ' ', A), forall(member(M, Ms), sujets:propre_en(M)).
+variante_propre(_, _).
+
 premier_segment(Ws, S) :- segments_(Ws, [], [S|_]), !.
 premier_segment(Ws, Ws).
 
 % les parties de gabarit d'une notation (« - miraculous activities and events », « - portrayed alone ») : un aspect
 % exigé, par ses têtes
 aspects(N, L, As) :-
-    findall(aspect(T, Tetes), ( libelles_lus:aspect(N, R, T), libelles_lus:partie(N, L, R, gabarit, _, _, Ph),
-                                mots(Ph, Ws), segments(Ws, Ss),
-                                findall(Te, ( member(S, Ss), tete_d_aspect(T, L, S, Tt), lemme(Tt, Te) ), Tetes0),
-                                sort(Tetes0, Tetes), Tetes \== [] ), As).
+    findall(aspect(T, Tetes, Ps), ( libelles_lus:aspect(N, R, T), libelles_lus:partie(N, L, R, gabarit, Net, _, Ph),
+                                    \+ lettres_doublees(Net),
+                                    mots(Ph, Ws), segments(Ws, Ss),
+                                    findall(Te, ( member(S, Ss), tete_d_aspect(T, L, S, Tt), lemme_de_tete(L, S, Tt, Te) ), Tetes0),
+                                    sort(Tetes0, Tetes), Tetes \== [],
+                                    ( Ss = [S1] -> tete_segment(L, S1, _, Av, Ap), modificateurs(Av, Ap, Ps) ; Ps = [] ) ),
+            As).
+
+% « - AA - », « - FF - » : la lettre doublée d'Iconclass, qui annonce la partie suivante (elle-même un aspect)
+lettres_doublees(Net) :- atom_length(Net, Lg), Lg =< 3, upcase_atom(Net, Net).
 
 % la tête d'un aspect de genre ou de mode est son mot de représentation (« portrayed alone » : portray)
 tete_d_aspect(genre, _, S, T) :- member(T, S), lemme(T, W), ( libelles_iconclass:genre(W) ; libelles_iconclass:genre_mode(W) ), !.

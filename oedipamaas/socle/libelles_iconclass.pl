@@ -142,14 +142,15 @@ verbe(mot(_, F, _, C, _, _, _, _, _)) :-
 % le gabarit d'une notation à nom parle de personnes : la tête de son libellé (le dernier mot avant « of », « with »,
 % une parenthèse ou une ponctuation : la tête d'un groupe nominal anglais précède ses compléments) a pour sens
 % dominant une personne (« male saints », « historical person » ; pas « attributes of Cupid »)
+% (chaque partie séparée par « ~ » compte : « representations ~ gods, demi-gods, heroes etc. (with NAME) »)
 gabarit_de_personnes(N) :-
-    gabarit_ou_soi(N, G), iconclass:libelle(G, en, T),
-    atom_codes(T, Cs), atom_codes(T1, Cs), split_string(T1, " ", " ", Ms0),
-    append(Avant, [Coupe|_], Ms0), coupure(Coupe), !,
-    exclude(==(""), Avant, Avant1), last(Avant1, M0), atom_string(M1, M0), downcase_atom(M1, W),
+    gabarit_ou_soi(N, G), iconclass:libelle(G, en, T0),
+    atomic_list_concat(Qs, ' ~ ', T0), member(T, Qs),
+    atom_string(T, St), re_replace("(,|;|:|\\(| of | with | - ).*$", "", St, Tete),
+    split_string(Tete, " ", " ", Ms), exclude(==(""), Ms, Ms1), last(Ms1, M0), atom_string(M1, M0), downcase_atom(M1, W),
     ( catch(morphologie:lemmes(W, n, [L|_]), _, fail) -> true ; L = W ),
     once(wordnet:s(S, _, L, n, 1, _)),
-    ( wordnet:lexfile(S, 'noun.person') -> true ; sous_personne(S) ).   % « person » lui-même est dans noun.Tops
+    ( wordnet:lexfile(S, 'noun.person') -> true ; sous_personne(S) ), !.   % « person » est dans noun.Tops
 
 :- table sous_personne/1.
 sous_personne(100007846).
@@ -159,7 +160,6 @@ gabarit_ou_soi(N, N) :- sub_atom(N, _, _, 0, '(...)'), !.
 gabarit_ou_soi(N, G) :- arbre:ancetre(N, G), sub_atom(G, _, _, 0, '(...)'), !.
 gabarit_ou_soi(N, G) :- arbre:gabarit_de(N, G).
 
-coupure(M) :- ( memberchk(M, ["of", "with", "-", "~"]) ; sub_string(M, 0, 1, _, "(") ; sub_string(M, _, 1, 0, ",") ), !.
 
 lemme_bas(mot(_, _, L0, _, _, _, _, _, _), L) :- downcase_atom(L0, L).
 

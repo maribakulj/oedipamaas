@@ -44,6 +44,7 @@
                   ]).
 :- encoding(utf8).
 :- use_module(arbre).
+:- use_module(library(pcre)).
 :- use_module(udpipe).
 :- use_module(raisonnement, []).
 :- discontiguous element/4.
@@ -73,12 +74,9 @@ ferme(fr, W) :- memberchk(W, [le, la, les, un, une, des, du, de, au, aux, ce, ce
 lien_de_nom(en, W) :- memberchk(W, [the, of]).
 lien_de_nom(fr, W) :- memberchk(W, [de, des, du, 'd\'', 'd’', la, le, les, 'l\'', 'l’']).
 
-marque_d_attributs(en, 'possible attributes:').
-marque_d_attributs(fr, 'attributs possibles :').
-marque_d_attributs(fr, 'attributs possibles:').
-marque_d_attributs(en, 'possible attribute:').
-marque_d_attributs(fr, 'attribut possible :').
-marque_d_attributs(fr, 'attribut possible:').
+% « possible attributes: », « possible attributes of Solomon: », « attributs possibles : », « attribut possible de … : »
+marque_d_attributs(en, "possible attributes?( of [^:;]+)?\\s*:").
+marque_d_attributs(fr, "attributs? possibles?( d[eu']s? ?[^:;]+)?\\s*:").
 
 % --- La structure d'un libellé ---------------------------------------------------------------------------------------
 
@@ -94,7 +92,7 @@ parties(T, L, Parties) :-
     ).
 
 attributs(P, L, Parties) :-
-    (   marque_d_attributs(L, M), sub_atom(P, B, LM, _, M)
+    (   marque_d_attributs(L, M), re_matchsub(M, P, D, [capture_type(range)]), get_dict(0, D, B-LM)
     ->  sub_atom(P, 0, B, _, Av), A is B + LM, sub_atom(P, A, _, 0, Ap),
         Parties = [propre-Av, attribut-Ap]
     ;   Parties = [propre-P]
