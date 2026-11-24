@@ -38,7 +38,13 @@ charger_base(Base) :-
         use_module(Morpho),                              % après WordNet : son index se construit au chargement
         morphologie:indexer
     ),
-    raisonnement:preparer.
+    raisonnement:preparer,
+    (   \+ getenv('OEDIPAMAAS_REFONTE', '1') -> true    % prototype de la refonte (banc d'essai) seulement
+    ;   getenv('OEDIPAMAAS_SANS_SENS', _) -> true      % pour mesurer l'apport de la couche de sens
+    ;   current_predicate(sens:aligne/3), sens:aligne(_, _, _) -> true
+    ;   module_property(oedipamaas, file(Ici2)), file_directory_name(Ici2, Dir2),
+        directory_file_path(Dir2, 'sens.pl', Sens), use_module(Sens), sens:aligner(_)
+    ).
 
 main(Argv) :-
     Spec = [[opt(base), type(atom), longflags([base]), default('')],

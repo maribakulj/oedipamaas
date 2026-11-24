@@ -81,7 +81,8 @@ interpreter(Texte, Langue, Genre, Phrases, Faits) :-
     sort(Fs000, Fs00),                       % les doublons exacts (même fait trouvé deux fois) s'effacent
     maplist(nom_du_texte(Texte), Fs00, Fs01),
     identifiants_uniques(Fs01, Fs0),
-    qualifier(Ts, Ents, Fs0, Fs1),
+    qualifier(Ts, Ents, Fs0, Fs10),
+    ancrer(Genre, Ts, Ents, Fs10, Fs1),
     passages(Texte, Ts, Fs1, Ps),
     append([[texte(Texte), doc(Langue, Genre)], Ps, Fs1], Faits0),
     sort(Faits0, Faits1),
@@ -205,9 +206,23 @@ entite_de(Ts, ent(E, Tete, Noms, TT, Ms)) :-
     atomic_list_concat([e, S, I], '_', E).
 entite_de(Ts, ent(E, L, [], T, [T])) :-
     member(T, Ts), nominal(T), \+ mot_du_nom(Ts, T), \+ est_titre(T), \+ propriete_en_ing(T),
+    \+ nom_de_cadre_ou_de_locution(Ts, T),
     T = t(_, _, Fo, _, _, _, _, _, _, _), downcase_atom(Fo, Fm), \+ negation_adj(Fm),
     T = t(S, I, _, L, _, _, _, _, _, _),
     atomic_list_concat([e, S, I], '_', E).
+
+% un nom qui ne désigne pas un référent (REFONTE F1) : le cadre spatial lui-même (« au premier plan », « at lower
+% right » : le plan, la droite ne sont pas représentés), ou un nom commun au singulier sans déterminant dans un groupe
+% prépositionnel figé (« en pied », « en bas », « at rest », « in profile », « by hand »)
+% (prototype de la refonte, actif avec OEDIPAMAAS_REFONTE=1 ; défaut connu : le partitif nié « pas d'épée » est pris
+% pour une locution)
+nom_de_cadre_ou_de_locution(Ts, T) :-
+    getenv('OEDIPAMAAS_REFONTE', '1'),
+    T = t(S, I, _, L, 'NOUN', _, _, _, _, _),
+    (   cadre_spatial(L) -> true
+    ;   enfant(Ts, S, I, case, _), \+ enfant(Ts, S, I, det, _), \+ enfant(Ts, S, I, 'nmod:poss', _),
+        \+ trait(T, 'Number', 'Plur'), \+ enfant(Ts, S, I, amod, _), \+ enfant(Ts, S, I, nmod, _)
+    ), !.
 
 % « a kneeling saint » : un nom composé en -ing devant un nom est une propriété (l'analyseur en fait un nom)
 propriete_en_ing(t(_, _, Fo, _, 'NOUN', _, _, compound, _, _)) :- sub_atom(Fo, _, 3, 0, ing).
@@ -528,3 +543,98 @@ arg_passage(X, Id) :- compound(X), X =.. [N|_], memberchk(N, [passage_de, passag
 arg_passage(X, X).
 
 passage_sans_bornes(passage(_, D, F)) :- \+ ( integer(D), integer(F), D >= 0, D < F ).
+
+% --- Ancrage dans l'image (docs/REFONTE.md, F1) ----------------------------------------------------------------------
+
+% Rien n'est représenté sans ancrage. Une description visuelle (genre « description » : la sortie d'un descripteur
+% d'images, qui décrit ce qu'il voit) est ancrée par construction. Dans un cartel, une notice, un texte savant, une
+% entité n'a la portée « represente » que si le texte la rattache à l'image : complément d'un verbe de représentation,
+% placée dans un cadre spatial de l'image, sujet d'une posture ou d'une action de figure, ou porteuse d'une propriété
+% de posture ; l'ancrage se propage par les relations, les rôles d'un même événement, la coordination, les compléments
+% du nom et la coréférence. Le reste a la portée « non_ancre » : il n'établit rien.
+
+% prototype de la refonte : actif seulement avec OEDIPAMAAS_REFONTE=1 (banc d'essai), en attendant la décision
+ancrage_requis(Genre) :- getenv('OEDIPAMAAS_REFONTE', '1'), \+ memberchk(Genre, [description]).
+
+ancrer(Genre, _, _, Fs, Fs) :- \+ ancrage_requis(Genre), !.
+ancrer(_, Ts, Ents, Fs0, Fs) :-
+    findall(E, ( member(ent(E, _, _, T, _), Ents), ancre_base(Ts, T) ), B0), sort(B0, B),
+    propager(Ts, Ents, Fs0, B, Anc),
+    maplist(requalifier_portee(Fs0, Anc), Fs0, Fs).
+
+requalifier_portee(Fs, Anc, portee(A, represente), portee(A, P)) :- !,
+    (   entites_concernees(Fs, A, Es), Es \== [], \+ ( member(E, Es), memberchk(E, Anc) ) -> P = non_ancre
+    ;   P = represente
+    ).
+requalifier_portee(_, _, F, F).
+
+entites_concernees(Fs, A, Es) :-
+    (   memberchk(entite(A, _, _), Fs) -> Es = [A]
+    ;   memberchk(nom(A, E, _, _), Fs) -> Es = [E]
+    ;   memberchk(propriete(A, E, _, _), Fs) -> Es = [E]
+    ;   memberchk(relation(A, E1, _, E2, _), Fs) -> Es = [E1, E2]
+    ;   memberchk(evenement(A, _, _), Fs) -> findall(E, member(role(A, _, E), Fs), Es)
+    ;   Es = []
+    ).
+
+verbe_de_representation(L) :- memberchk(L, [représenter, figurer, montrer, peindre, dessiner, sculpter, graver, voir,
+    apparaître, dépeindre, illustrer, présenter, depict, represent, show, portray, feature, see, appear, picture,
+    paint, draw, render, illustrate, present, capture, carve, show]).
+cadre_spatial(L) :- memberchk(L, [plan, 'premier-plan', 'arrière-plan', fond, centre, milieu, gauche, droite, coin,
+    angle, foreground, background, left, right, center, centre, corner, middle, distance, side, top, bottom]).
+verbe_d_inscription(L) :- memberchk(L, [signer, annoter, inscrire, dater, numéroter, marquer, sign, inscribe, date,
+    annotate, number, mark, stamp, coller, monter, mount]).
+action_de_figure(L) :- memberchk(L, [tenir, porter, regarder, lever, poser, agenouiller, asseoir, appuyer, marcher,
+    courir, danser, jouer, lire, écrire, prier, combattre, tuer, embrasser, offrir, tendre, désigner, pointer, reposer,
+    dormir, nourrir, allaiter, chevaucher, monter, couronner, bénir, frapper, contempler, écarter, tirer, saisir, entourer,
+    hold, carry, wear, look, gaze, stand, sit, kneel, lie, lean, raise, point, read, write, pray, fight, kill, embrace,
+    offer, play, dance, walk, ride, rest, sleep, nurse, crown, bless, strike, contemplate, draw, pull, grasp, surround,
+    reach, turn, face, stare, watch, bend, rise, flank, accompany, present]).
+posture(L) :- memberchk(L, [agenouillé, agenouiller, assis, asseoir, debout, couché, coucher, allongé, allonger, nu, vêtu,
+    vêtir, drapé, draper, couronné, couronner, kneeling, kneel, seated, seat, standing, stand, lying, lie, reclining,
+    recline, nude, naked, dressed, dress, clad, crowned, crown, wearing, wear]).
+
+% les bases de l'ancrage, sur le jeton tête d'une entité
+ancre_base(Ts, T) :-
+    T = t(S, I, _, _, _, _, H, R, _, _), rel_de_base(R, RB),
+    (   % complément ou sujet passif d'un verbe de représentation (« représente un diacre », « is shown »)
+        H > 0, jeton(Ts, S, H, V), V = t(_, _, _, LV, _, _, _, _, _, _), verbe_de_representation(LV),
+        memberchk(RB, [obj, obl, xcomp, nsubj, ccomp, iobj])
+    ;   % un nom que complète un participe de représentation (« a devout woman, shown at lower right »)
+        enfant(Ts, S, I, acl, P), P = t(_, _, _, LP, _, _, _, _, _, _), verbe_de_representation(LP)
+    ;   % sujet ou objet d'une action ou d'une posture de figure (« a young girl draws back a curtain »)
+        H > 0, jeton(Ts, S, H, V), V = t(_, IV, _, LV, CV, _, _, _, _, _), memberchk(CV, ['VERB', 'ADJ']),
+        ( action_de_figure(LV) ; posture(LV) ), memberchk(RB, [nsubj, obj, 'nsubj:pass']),
+        \+ verbe_d_inscription(LV), IV = IV
+    ;   % porteur d'une propriété de posture (« un saint agenouillé », « a seated woman »)
+        enfant(Ts, S, I, X), X = t(_, _, _, LX, _, _, _, RX, _, _), rel_de_base(RX, RBX),
+        memberchk(RBX, [amod, acl]), posture(LX)
+    ;   % placé dans l'image (« au premier plan », « in the lower-left corner »), hors des inscriptions
+        cadre_de(Ts, T)
+    ), !.
+
+cadre_de(Ts, T) :-
+    T = t(S, I, _, _, _, _, H, R, _, _),
+    (   enfant(Ts, S, I, X), X = t(_, _, _, LX, _, _, _, RX, _, _), rel_de_base(RX, RBX), memberchk(RBX, [nmod, obl]),
+        cadre_spatial(LX)
+    ;   rel_de_base(R, RB), memberchk(RB, [nsubj, obj, 'nsubj:pass']), H > 0, jeton(Ts, S, H, V),
+        V = t(_, IV, _, LV, _, _, _, _, _, _), \+ verbe_d_inscription(LV),
+        enfant(Ts, S, IV, obl, X), X = t(_, _, _, LX, _, _, _, _, _, _), cadre_spatial(LX)
+    ), !.
+
+% propagation jusqu'au point fixe
+propager(Ts, Ents, Fs, A0, A) :-
+    findall(E2, ( member(E1, A0), voisin_ancre(Ts, Ents, Fs, E1, E2), \+ memberchk(E2, A0) ), N0), sort(N0, N),
+    (   N == [] -> A = A0 ; append(A0, N, A1), sort(A1, A2), propager(Ts, Ents, Fs, A2, A) ).
+
+voisin_ancre(_, _, Fs, E1, E2) :- member(relation(_, E1, _, E2, _), Fs).
+voisin_ancre(_, _, Fs, E1, E2) :- member(relation(_, E2, _, E1, _), Fs).
+voisin_ancre(_, _, Fs, E1, E2) :- member(role(V, _, E1), Fs), member(role(V, _, E2), Fs), E2 \== E1.
+voisin_ancre(_, _, Fs, E1, E2) :- ( member(coref(E1, E2), Fs) ; member(coref(E2, E1), Fs) ).
+voisin_ancre(Ts, Ents, _, E1, E2) :-                    % coordination et compléments du nom
+    member(ent(E1, _, _, T1, _), Ents), T1 = t(S, I1, _, _, _, _, H1, R1, _, _),
+    (   enfant(Ts, S, I1, RB, T2), memberchk(RB, [conj, nmod, appos])
+    ;   rel_de_base(R1, RB1), memberchk(RB1, [conj, appos]), jeton(Ts, S, H1, T2)
+    ),
+    member(ent(E2, _, _, T2, _), Ents).
+

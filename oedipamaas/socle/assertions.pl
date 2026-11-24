@@ -33,7 +33,7 @@ role_permis(lieu).
 
 qualificatif(polarite, [pos, neg]).
 qualificatif(modalite, [affirme, probable, possible, traditionnel, ancien, non_affirme, titre]).
-qualificatif(portee, [represente, oeuvre, autre_oeuvre, source, histoire]).
+qualificatif(portee, [represente, oeuvre, autre_oeuvre, source, histoire, non_ancre]).
 qualificatif(enonciateur, [auteur, cite(_)]).
 
 % --- Identifiants ---------------------------------------------------------------------------------------------------

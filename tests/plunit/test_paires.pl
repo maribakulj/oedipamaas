@@ -18,7 +18,7 @@ preparer :-
     forall(member(L, [fr, en]),
            ( findall(T, ( paire(_, L, A, _, B, _), member(T, [A, B]) ), Ts0), sort(Ts0, Ts),
              udpipe:analyser_lot(Ts, L, Ps),
-             forall(nth1(I, Ts, T), ( nth1(I, Ps, P), interpretation:interpreter(T, L, cartel, P, Fs),
+             forall(nth1(I, Ts, T), ( nth1(I, Ps, P), interpretation:interpreter(T, L, description, P, Fs),
                                       assertvar(T, Fs) )) )).
 assertvar(T, Fs) :- assertz(analyse(T, Fs)).
 

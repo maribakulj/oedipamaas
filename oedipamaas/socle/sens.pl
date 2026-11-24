@@ -13,6 +13,9 @@
 */
 :- module(sens, [ aligner/1, aligne/3, sens_de/2, mots_de_contexte/2, note/3 ]).
 :- encoding(utf8).
+:- use_module(libelles).
+:- use_module(arbre).
+:- use_module(morphologie).
 
 :- dynamic aligne/3.
 
@@ -73,9 +76,21 @@ meilleurs_sens(N, W, Ss) :-
     findall(F-S, ( member(S, Ex), frequence(W, S, F) ), FS), keysort(FS, FS1), last(FS1, Fmax-_),
     findall(S, member(Fmax-S, FS1), Ss).
 
+% un mot dont le sens dominant porte au moins 70 % des emplois annotés de WordNet (et au moins 3) : « window » (72 sur
+% 82), « angel », « hill » ; pas « model », « life », « shift », « right », vraiment ambigus
+sens_quasi_unique(W0, S) :-
+    ( wordnet:s(_, _, W0, n, _, _) -> W = W0 ; catch(morphologie:tous_lemmes(W0, Ls), _, fail), member(W, Ls),
+      wordnet:s(_, _, W, n, _, _) ), !,
+    aggregate_all(sum(F), wordnet:s(_, _, W, n, _, F), Tot), Tot >= 3,
+    aggregate_all(max(F, S0), wordnet:s(S0, _, W, n, _, F), max(Fmax, S)),
+    Fmax >= 0.7 * Tot.
+
 aligner(_{notations: NN, alignees: NA, alignements: NS}) :-
     retractall(aligne(_, _, _)),
-    forall(( distinct(N-W, ( raisonnement:def(en, W, N), \+ sub_atom(W, _, _, _, '(') )), meilleurs_sens(N, W, Ss),
+    forall(( distinct(N-W, ( raisonnement:def(en, W, N), \+ sub_atom(W, _, _, _, '(') )),
+             (   meilleurs_sens(N, W, Ss) -> true
+             ;   sens_quasi_unique(W, S0) -> Ss = [S0]     % sinon, un mot presque monosémique
+             ),
              member(S, Ss) ),
            assertz(aligne(N, W, S))),
     aggregate_all(count, distinct(N, raisonnement:def(en, _, N)), NN),

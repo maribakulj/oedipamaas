@@ -192,7 +192,22 @@ candidats_t2(Fs, E, Ns) :-
     memberchk(entite(E, Tete, _), Fs), Tete \== nom_propre, langue(Fs, L),
     findall(N, def(L, Tete, N), Ns0),
     sort(Ns0, Ns1),
-    exclude(lettre_doublee, Ns1, Ns), Ns \== [].
+    exclude(lettre_doublee, Ns1, Ns2),
+    include(sens_accorde(L, Tete), Ns2, Ns), Ns \== [].
+
+% la couche de sens (REFONTE F2), quand elle est construite : la notation est alignée sur un sens de WordNet ; en
+% anglais, ce sens est aussi le sens dominant du mot du texte (choix du sens élémentaire, avant le contexte) ; en
+% français, faute de wordnet français pour l'instant, la notation doit seulement être alignée
+sens_accorde(_, _, _) :- \+ current_predicate(sens:aligne/3), !.
+sens_accorde(_, _, _) :- \+ sens:aligne(_, _, _), !.
+sens_accorde(en, W, N) :- !, sens:aligne(N, _, S), sens_dominant_de(W, S), !.
+sens_accorde(_, _, N) :- sens:aligne(N, _, _), !.
+
+sens_dominant_de(W, S) :- wordnet:s(_, _, W, n, _, _), !,
+    aggregate_all(max(F, S0), wordnet:s(S0, _, W, n, _, F), max(_, S)).
+sens_dominant_de(W, S) :-
+    catch(morphologie:tous_lemmes(W, Ls), _, fail), member(L, Ls), wordnet:s(_, _, L, n, _, _), !,
+    aggregate_all(max(F, S0), wordnet:s(S0, _, L, n, _, F), max(_, S)).
 
 % une notation à lettre doublée (féminin, fabuleux, opposé…) : son trait déclencheur n'est pas vérifié en V1 (T10 non
 % certifié) ; elle ne sert pas à T2 (« crâne » ne doit pas aboutir au seul 31AA211, le crâne féminin)
