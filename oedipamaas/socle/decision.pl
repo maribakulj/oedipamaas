@@ -1,3 +1,4 @@
+% Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 /*  La décision (conception 1.0, § 9), exécutée par Prolog sur les faits compilés depuis un apprentissage
     (compiler_decision.py, module decision_poids).
 

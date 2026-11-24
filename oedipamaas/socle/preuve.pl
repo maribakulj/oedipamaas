@@ -1,3 +1,4 @@
+% Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 /*  La preuve d'un code (conception 1.0, § 10), rendue en JSON.
 
     Trois règles, pour l'instant (les règles d'iconographe de R3 s'y ajouteront) :

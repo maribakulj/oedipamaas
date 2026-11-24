@@ -114,6 +114,11 @@ type_de_libelle(N, _, _, concept) :- sub_atom(N, 0, 1, _, '5'), !.
 type_de_libelle(_, Ph, _, attribut) :- relation_de_tete(Ph), !.
 type_de_libelle(_, _, Ms, recit) :- memberchk(recit, Ms), !.
 type_de_libelle(_, _, Ms, concept) :- memberchk(renvoi(ripa), Ms), !.
+% « representations ~ gods, demi-gods, heroes etc. (with NAME) » : la représentation d'une personne nommée, un
+% individu (son gabarit parle de personnes), pas un genre
+type_de_libelle(N, Ph, _, individu) :-
+    tete(Ph, T), lemme_bas(T, L), ( genre(L) ; genre_mode(L) ),
+    ( nom_de_notation(N) ; sub_atom(N, _, _, _, '(...)') ), gabarit_de_personnes(N), !.
 type_de_libelle(_, Ph, _, genre) :- tete(Ph, T), lemme_bas(T, L), ( genre(L) ; genre_mode(L) ), !.
 type_de_libelle(_, Ph, _, scene) :- member(phrase(Ms), Ph), member(M, Ms), verbe(M), !.
 type_de_libelle(_, Ph, _, scene) :- tete(Ph, T), T = mot(_, _, _, 'NOUN', _, _, _, _, _), lemme_bas(T, L), nom_d_evenement(L), !.
@@ -149,7 +154,7 @@ gabarit_de_personnes(N) :-
     atom_string(T, St), re_replace("(,|;|:|\\(| of | with | from | in | on | at | by | for | - ).*$", "", St, Tete),
     split_string(Tete, " ", " ", Ms), exclude(==(""), Ms, Ms1), last(Ms1, M0), atom_string(M1, M0), downcase_atom(M1, W),
     ( catch(morphologie:lemmes(W, n, [L|_]), _, fail) -> true ; L = W ),
-    once(wordnet:s(S, _, L, n, 1, _)),
+    sens_dominant(L, S),
     ( wordnet:lexfile(S, 'noun.person') -> true ; sous_personne(S) ), !.   % « person » est dans noun.Tops
 
 :- table sous_personne/1.
@@ -180,10 +185,14 @@ nom_d_action(L) :- wordnet:s(S, _, L, n, _, _), wordnet:lexfile(S, F), memberchk
 
 % le sens dominant d'un nom est un acte, un événement, un processus (WordNet, fichiers lexicographiques)
 nom_d_evenement(L) :-
-    once(wordnet:s(S, _, L, n, 1, _)), wordnet:lexfile(S, F),
+    sens_dominant(L, S), wordnet:lexfile(S, F),
     memberchk(F, ['noun.act', 'noun.event', 'noun.process', 'noun.phenomenon']).
 
 abstrait(L) :-
-    once(wordnet:s(S, _, L, n, 1, _)), wordnet:lexfile(S, F),
+    sens_dominant(L, S), wordnet:lexfile(S, F),
     memberchk(F, ['noun.attribute', 'noun.cognition', 'noun.feeling', 'noun.state', 'noun.communication',
                   'noun.motive', 'noun.relation', 'noun.time']).
+
+% le sens nominal dominant d'un mot : celui de plus petit numéro (WordNet numérote les sens par fréquence ; le numéro 1
+% peut manquer en minuscules quand il est pris par la forme à majuscule : « god » / « God »)
+sens_dominant(L, S) :- once(( between(1, 40, K), wordnet:s(S, _, L, n, K, _) )).

@@ -1,3 +1,4 @@
+# Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 """Coder un dossier de descriptions avec le socle 1.0 (recherche à plat, classement provisoire) : sortie au format
 des codes du moteur (une ligne JSON par image : image, codes [{code, cle, nature}], versions), pour les mesures de
 couverture. Pas encore de décision ni de preuve rendue (pièces suivantes).

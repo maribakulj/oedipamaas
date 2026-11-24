@@ -1,5 +1,9 @@
 # oedipamaas : document de conception
 
+> **Historique.** Ce document décrit la version 1.0 (lecture du JSON d'un descripteur d'images, recherche de
+> candidats, traits, décision apprise). Il est remplacé par `CAHIER_DES_CHARGES.md` et `docs/FONDEMENTS.md` ; ce qui en
+> reste dans le code est listé dans `docs/HISTORIQUE.md`.
+
 Version 1.0. Statut : conception arrêtée après étude ; reconstruction en cours. Le code de la version 0.2 (recherche en
 Python, modèle de phrases, décision logistique) reste dans l'historique comme ligne de base ; la version 1.0 le
 remplace pièce par pièce, dans l'ordre du § 12.

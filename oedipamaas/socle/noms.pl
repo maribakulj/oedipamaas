@@ -1,3 +1,4 @@
+% Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 /*  Les gabarits à nom (conception 1.0, § 8 ; R3, taxinomie WordNet) : Iconclass ouvre 601 notations « (...) » à un
     nom libre ; celles dont le libellé dit « X (with NAME) » attendent le nom d'une chose de la sorte X — « insects
     (with NAME) », « flowers (with NAME) », « stringed instruments (with NAME) ». Seuls quelques noms y sont listés

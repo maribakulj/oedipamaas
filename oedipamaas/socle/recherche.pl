@@ -1,3 +1,4 @@
+% Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 /*  Recherche des candidats (conception 1.0, § 8, première étape), sur les faits du module description.
 
     Chaque mention est découpée en mots (lettres, traits d'union, apostrophes), puis en suites d'un à quatre mots

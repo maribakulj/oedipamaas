@@ -1,3 +1,4 @@
+# Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 """Candidats d'un dossier de descriptions avec leurs traits de preuve (socle 1.0), pour apprendre et mesurer la
 décision : une ligne JSON par image, {image, versions, codes: [{code, score, traits}]} (score : la part décrite,
 provisoire). Aucune étiquette n'est lue ici.

@@ -1,3 +1,4 @@
+# Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 """Une description (consigne v2) en faits Prolog (socle 1.0, pièce 4). Transcription sans jugement : chaque chaîne
 devient une mention avec son champ et son chemin JSON (pour la preuve) ; entités, relations, personnes, sujet et
 textes gardent leur structure. Aucun mot n'est choisi, filtré ni corrigé ici.

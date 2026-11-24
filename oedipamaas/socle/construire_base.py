@@ -1,3 +1,4 @@
+# Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 """Index dérivés de la base (socle 1.0), construits une fois à partir de iconclass.qlf et wordnet.qlf, puis compilés
 (.qlf) : lexique_index (formes → notations), propres_index (mots propres), cles_index (clés), alternatives_index
 (façons de nommer ce qui est propre à une notation), gabarits_index (sortes des gabarits à nom, noms listés),

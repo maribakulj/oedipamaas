@@ -1,3 +1,4 @@
+# Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 """Compile une décision apprise (poids.json du noyau de calibration) en faits Prolog (socle 1.0, § 9) : les arbres
 boostés deviennent des nœuds et des feuilles, leur réglage (k, seuil, critère ; g du F1 attendu) des faits ; la règle
 qui les exécute est dans decision.pl. Aucune étiquette n'est dans ce fichier : seulement des seuils sur des traits de

@@ -1,3 +1,4 @@
+% Historique (version 1.0) : n'est plus le moteur en construction ; voir docs/HISTORIQUE.md.
 /*  Les clés (+…) (conception 1.0, § 8) : pour une notation soutenue, les clés de sa famille que la description porte.
 
     Chaque notation a une famille de clés (champ K d'Iconclass : 61Bk pour les portraits, 31k pour la figure humaine,
