@@ -16,7 +16,7 @@ main :-
     atom_concat(Base, '/sujets_index.pl', F), use_module(F),
     aggregate_all(count, notation_de_sujet(_), NS),
     findall(L-C, ( member(L, [en, fr]), couverture(L, C) ), Cs),
-    set_random(seed(20261124)),
+    ( current_prolog_flag(argv, [_, _, G|_]) -> atom_number(G, Graine) ; Graine = 20261124 ), set_random(seed(Graine)),
     findall(N, notation_de_sujet(N), Ns), random_permutation(Ns, P), length(T40, 40), append(T40, _, P),
     maplist(profil_json, T40, Tirage),
     dict_pairs(Couv, _, Cs),

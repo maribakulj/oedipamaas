@@ -132,6 +132,7 @@ terme_connu(enonciateur(_, _)).
 terme_connu(alternative(_, _)).
 terme_connu(coref(_, _)).
 terme_connu(incompris(_, _)).
+terme_connu(saillance(_, principal)).
 
 passage_de(entite(_, _, P), P).
 passage_de(nom(_, _, _, P), P).
@@ -143,6 +144,7 @@ passage_de(incompris(P, _), P).
 entite_citee(nom(_, E, _, _), E).
 entite_citee(propriete(_, E, _, _), E).
 entite_citee(nombre(E, _), E).
+entite_citee(saillance(E, _), E).
 entite_citee(role(_, _, E), E).
 entite_citee(relation(_, E, _, _, _), E).
 entite_citee(relation(_, _, _, E, _), E).

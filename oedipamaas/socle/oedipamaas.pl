@@ -120,7 +120,7 @@ resultat_(Vs, ParLangue, D, R) :-
     texte_et_titre(D, Texte, FinTitre), langue_doc(D, L),
     ( get_dict(genre, D, G0) -> atom_string(G, G0) ; G = inconnu ),
     memberchk(L-Analyses, ParLangue), memberchk(D.id-Phrases, Analyses),
-    interpretation:interpreter(Texte, L, G, Phrases, Fs0),
+    interpretation:interpreter(Texte, L, G, FinTitre, Phrases, Fs0),
     dit_par_le_titre(FinTitre, Fs0, Fs),
     assertions:valider(Fs, Err),
     (   Err \== [] -> term_string(Err, ES), R = _{erreur: ES}

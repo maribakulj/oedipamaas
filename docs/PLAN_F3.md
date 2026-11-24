@@ -96,3 +96,11 @@ d'Opus (voie 2) n'est pas exclu : il pourra être mesuré avec le même cadre qu
   télégraphiques, et la correspondance passe par les sens) ; les noms propres se reconnaissent à la majuscule, que
   Iconclass réserve aux noms ; les mots pleins par exclusion des classes fermées. Taux d'erreur de catégorie fermée
   de l'étiqueteur sur les libellés : 0,9 % (en), 0,4 % (fr), sur 2 000 libellés.
+- **Étape 2, ancrage** : la version 1 (rien sans ancrage explicite) perdait la moitié des éléments ; la version 2 (les
+  deux mondes, `mondes.pl` : ponts, temps, œuvre et producteurs, cadres de l'image) les retrouve, au prix d'une scène
+  bruitée ; la saillance (ce que le texte donne pour le sujet) s'y ajoute comme assertion `saillance/2`.
+- **Étape 3, conditions** : la condition nécessaire exige toutes les personnes du libellé propre (hors parenthèses et
+  lieux), l'élément distinctif doit être discriminant et saillant, la meilleure explication écarte les hypothèses
+  qu'une autre branche explique strictement mieux. Mesures et diagnostic : `docs/mesures/F3.md`.
+- **Lacune du plan** : les personnes historiques nommées (S1, 61B2(NOM)) et les genres (S4) ne sont pas outillés ;
+  ils font 15 des 20 sujets du banc de développement.

@@ -10,7 +10,7 @@ le chevauche. Sinon, sa perte est classée par ce que la lecture en a fait :
   sans_element    lu et admissible, mais sans élément de scène (relation par préposition, mot trop court)
 Les mots de l'analyseur qui couvrent chaque citation perdue sont joints au détail, pour juger la part des pertes dues
 à l'analyseur.
-Les éléments de scène hors de toute citation de la référence sont comptés à part (« hors référence ») : la référence
+Les motifs (référents abstraits) ne comptent ni pour retrouver ni pour la précision. Les éléments de scène hors de toute citation de la référence sont comptés à part (« hors référence ») : la référence
 ne liste pas tout ce qui est représenté, leur justesse se juge sur échantillon."""
 import collections
 import json
@@ -29,7 +29,7 @@ def cause(ass, span):
         return "sans_element"
     if any(a["modalite"] == "titre" for a in lues):
         return "titre"
-    if all(a["portee"] != "represente" for a in lues):
+    if any(a["portee"] != "represente" for a in lues):
         return "non_ancre"
     if any(a["polarite"] == "neg" for a in lues):
         return "nie"
@@ -42,7 +42,7 @@ def main(reference, scenes, detail=None):
     ref = {r["id"]: r for r in json.load(open(reference, encoding="utf-8"))}
     tot = trouves = 0
     causes = collections.Counter()
-    els_tot = els_hors = 0
+    els_tot = els_hors = motifs = 0
     pertes, hors = [], []
     for l in open(scenes, encoding="utf-8"):
         d = json.loads(l)
@@ -63,7 +63,7 @@ def main(reference, scenes, detail=None):
             span = (i, i + len(e["texte"]))
             spans.append(span)
             tot += 1
-            if any(chevauche((x["debut"], x["fin"]), span) for x in d["elements"]):
+            if any(chevauche((x["debut"], x["fin"]), span) for x in d["elements"] if x["genre"] != "motif"):
                 trouves += 1
             else:
                 c = cause(d["assertions"], span)
@@ -76,6 +76,9 @@ def main(reference, scenes, detail=None):
                                               for a in d["assertions"]
                                               if chevauche((a["debut"], a["fin"]), span)]})
         for x in d["elements"]:
+            if x["genre"] == "motif":
+                motifs += 1
+                continue
             els_tot += 1
             if not any(chevauche((x["debut"], x["fin"]), s) for s in spans):
                 els_hors += 1
@@ -83,7 +86,7 @@ def main(reference, scenes, detail=None):
                              "passage": texte[x["debut"]:x["fin"]]})
     res = {"elements_reference": tot, "retrouves": trouves, "rappel": round(trouves / max(1, tot), 3),
            "pertes": dict(causes.most_common()),
-           "elements_de_scene": els_tot, "hors_reference": els_hors,
+           "motifs": motifs, "elements_de_scene": els_tot, "hors_reference": els_hors,
            "part_hors_reference": round(els_hors / max(1, els_tot), 3)}
     print(json.dumps(res, ensure_ascii=False, indent=1))
     if detail:

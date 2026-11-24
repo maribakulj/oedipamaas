@@ -23,9 +23,11 @@
     - alternatives : « A ou B », « A or B » ;
     - portée : ce qui suit « d'après », « after » (une autre œuvre) ; les matériaux et techniques (l'œuvre).
 */
-:- module(interpretation, [ interpreter/5   % +Texte, +Langue, +Genre, +Phrases, -Faits
+:- module(interpretation, [ interpreter/5,  % +Texte, +Langue, +Genre, +Phrases, -Faits
+                            interpreter/6   % +Texte, +Langue, +Genre, +FinTitre, +Phrases, -Faits
                           ]).
 :- encoding(utf8).
+:- use_module(mondes, []).                 % l'ancrage, version 2
 
 % --- Lexique grammatical (FR, EN) -----------------------------------------------------------------------------------
 
@@ -74,7 +76,9 @@ agent_case(par). agent_case(by).
 
 % --- Entrée ---------------------------------------------------------------------------------------------------------
 
-interpreter(Texte, Langue, Genre, Phrases, Faits) :-
+interpreter(Texte, Langue, Genre, Phrases, Faits) :- interpreter(Texte, Langue, Genre, 0, Phrases, Faits).
+% FinTitre : la fin du titre en tête du texte (0 sans titre) ; le titre n'est jamais ce qui annonce le sujet (D15)
+interpreter(Texte, Langue, Genre, FinTitre, Phrases, Faits) :-
     jetons(Phrases, Ts),
     entites(Ts, Ents),                       % liste de ent(E, Tete, ToksDuNom, TokTete, TokNom-ou-rien)
     findall(F, fait(Ts, Ents, F), Fs000),
@@ -82,7 +86,7 @@ interpreter(Texte, Langue, Genre, Phrases, Faits) :-
     maplist(nom_du_texte(Texte), Fs00, Fs01),
     identifiants_uniques(Fs01, Fs0),
     qualifier(Ts, Ents, Fs0, Fs10),
-    ancrer(Genre, Ts, Ents, Fs10, Fs1),
+    ancrer(Genre, FinTitre, Ts, Ents, Fs10, Fs1),
     passages(Texte, Ts, Fs1, Ps),
     append([[texte(Texte), doc(Langue, Genre)], Ps, Fs1], Faits0),
     sort(Faits0, Faits1),
@@ -149,7 +153,11 @@ est_titre(t(_, _, Fo, L, _, _, _, _, _, _)) :- ( downcase_atom(Fo, F), titre(F) 
 
 % un mot du nom : un nom propre, ou un mot en capitale (hors début de phrase) rattaché à un titre (« Saint Jérôme »,
 % où l'analyseur fait parfois de « Jérôme » un adjectif)
-mot_du_nom(Ts, T) :- \+ est_titre(T), ( propre(T) -> true ; capitale_liee_a_un_titre(Ts, T) ).
+% (pas une élision : « L’ », « S’ », « D’ », que l'analyseur range parfois en nom propre, ne sont pas des noms)
+mot_du_nom(Ts, T) :- \+ est_titre(T), \+ elision(T), ( propre(T) -> true ; capitale_liee_a_un_titre(Ts, T) ).
+
+elision(t(_, _, Fo, _, _, _, _, _, _, _)) :-
+    atom_codes(Fo, Cs), include([C]>>code_type(C, alpha), Cs, Ls), length(Ls, N), N < 2.
 
 capitale_liee_a_un_titre(Ts, T) :-
     T = t(S, I, Fo, _, C, _, H, _, _, _), I > 1, memberchk(C, ['ADJ', 'NOUN', 'X']), capitale(Fo),
@@ -157,9 +165,13 @@ capitale_liee_a_un_titre(Ts, T) :-
 
 % une grappe : un nom propre en plusieurs mots, avec ses titres (flat, compound ; un titre aussi par nmod, appos)
 lien_de_grappe(R) :- memberchk(R, [flat, compound]).
+% une grappe est d'un seul tenant : entre un membre et sa tête, il n'y a que des mots du nom, des titres ou des mots de
+% liaison (« Saint John the Baptist », « Catherine de Sienne ») ; sinon « Saint Lucy, identified by …; Saint Agnes »
+% ferait un seul nom de trois saintes
 dans_grappe(Ts, T) :-                    % T dépend d'un autre membre de grappe
     ( mot_du_nom(Ts, T) ; est_titre(T) ),
     T = t(S, I, _, _, _, _, H, R, _, _), rel_de_base(R, RB),
+    d_un_seul_tenant(Ts, S, I, H),
     jeton(Ts, S, H, P), ( mot_du_nom(Ts, P) ; est_titre(P) ),
     (   lien_de_grappe(RB) -> true
     ;   memberchk(RB, [nmod, appos, amod]), ( est_titre(T) ; est_titre(P) ) -> true
@@ -170,6 +182,14 @@ dans_grappe(Ts, T) :-                    % T dépend d'un autre membre de grappe
         RB == nmod, propre(T), propre(P), titre_attache(Ts, P),
         enfant(Ts, S, I, case, C), C = t(_, _, _, LC, _, _, _, _, _, _), memberchk(LC, [de, of, 'd\''])
     ).
+
+d_un_seul_tenant(Ts, S, I, H) :-
+    Min is min(I, H) + 1, Max is max(I, H) - 1,
+    forall(between(Min, Max, K),
+           ( jeton(Ts, S, K, X),
+             ( mot_du_nom(Ts, X) ; est_titre(X)
+             ; X = t(_, _, _, _, C, _, _, R, _, _), memberchk(C, ['DET', 'ADP']), rel_de_base(R, RB), memberchk(RB, [det, case])
+             ) )).
 
 % un titre (« saint », « sainte ») rattaché directement au nom propre P, comme dépendant ou comme tête
 titre_attache(Ts, P) :-
@@ -556,8 +576,11 @@ passage_sans_bornes(passage(_, D, F)) :- \+ ( integer(D), integer(F), D >= 0, D 
 % prototype de la refonte : actif seulement avec OEDIPAMAAS_REFONTE=1 (banc d'essai), en attendant la décision
 ancrage_requis(Genre) :- getenv('OEDIPAMAAS_REFONTE', '1'), \+ memberchk(Genre, [description]).
 
-ancrer(Genre, _, _, Fs, Fs) :- \+ ancrage_requis(Genre), !.
-ancrer(_, Ts, Ents, Fs0, Fs) :-
+ancrer(Genre, _, _, _, Fs, Fs) :- \+ ancrage_requis(Genre), !.
+ancrer(_, FinTitre, Ts, Ents, Fs0, Fs) :-                % version 2, les deux mondes (mondes.pl) ; la version 1
+    \+ getenv('OEDIPAMAAS_ANCRAGE', v1), !,               % reste pour la comparaison (OEDIPAMAAS_ANCRAGE=v1)
+    mondes:mondes(FinTitre, Ts, Ents, Fs0, Fs).
+ancrer(_, _, Ts, Ents, Fs0, Fs) :-
     findall(E, ( member(ent(E, _, _, T, _), Ents), ancre_base(Ts, T) ), B0), sort(B0, B),
     propager(Ts, Ents, Fs0, B, Anc),
     maplist(requalifier_portee(Fs0, Anc), Fs0, Fs).
