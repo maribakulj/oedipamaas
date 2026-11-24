@@ -51,13 +51,121 @@ aspect_type(N, R, T) :-
     libelles_lus:partie(N, en, R, gabarit, _, Ms, Ph), once(libelles_iconclass:type_de_libelle(N, Ph, Ms, T0)),
     T0 \== individu, ( T0 == rubrique -> T = classe ; T = T0 ).
 
-definition(N, L, def(Type, Cs, Ms)) :-
+% La définition est sûre d'abord (FONDEMENTS § 3, décision de la propriétaire du 24/11) : tout ce que le libellé dit
+% est exigé, sauf ce que la grammaire d'Iconclass marque comme facultatif (parenthèses, « possible attributes »,
+% renvois, alternatives, biographie d'un individu). Une erreur de lecture rend une définition trop forte (un code
+% manqué), jamais trop faible (un code faux). L'analyse syntaxique n'ajoute que des contraintes (rôles, porteur).
+%   def(Type, Exige, Compatible, Contraintes, Marques)
+%     Exige        une liste de groupes, tous exigés ; un groupe : un_de([Alternative…]), une alternative : une liste
+%                  d'unités toutes exigées ; une unité : mot(Lemme), nom([Nom…]) (l'un des noms), genre(Lemme) (un
+%                  prédicat sur l'œuvre)
+%     Compatible   des mots qui ne doivent pas être contredits (la biographie d'un individu)
+%     Contraintes  les conditions structurées de la lecture (conditions/7 : rôles d'une scène, porteur d'un attribut)
+definition(N, L, def(Type, Exige, Compatible, Contraintes, Ms)) :-
     type_libelle(N, Type),
     libelles_lus:partie(N, L, 1, _, Net, Ms, Ph), !,
-    conditions(Type, N, L, Net, Ph, Ms, Cs0),
-    aspects(N, L, As),                                  % les parties de gabarit et de « ~ » : exigées, pour tout type
+    ( conditions(Type, N, L, Net, Ph, Ms, Cs0) -> true ; Cs0 = [] ),
+    exigences_propres(Type, L, Ph, Cs0, Ms, E0),
+    exigences_d_aspects(N, L, E1),
     heritage(Type, N, L, Hs),
-    append([Cs0, As, Hs], Cs).
+    findall(un_de([[nom(Ks)]]), member(personne(Ks), Hs), E2),
+    append([E0, E1, E2], Exige),
+    Exige \== [],
+    findall(W, member(compatible(_, W), Cs0), Compatible),
+    exclude(non_structurel, Cs0, Contraintes).
+
+non_structurel(C) :- C =.. [F|_], memberchk(F, [compatible, tete, nom, propriete, genre, concept, aspect, personne]).
+
+% --- Ce que la partie propre exige, par type -------------------------------------------------------------------------
+
+exigences_propres(rubrique, _, _, _, _, []).
+exigences_propres(individu, _, _, Cs, _, [un_de([[nom(a_remplir)]])]) :- memberchk(nom(_, a_remplir), Cs), !.
+exigences_propres(Type, _, _, Cs, _, [un_de([[nom(Ks)]])]) :-
+    memberchk(Type, [individu, recit]), !, memberchk(nom(_, Ks), Cs), Ks \== a_remplir.
+exigences_propres(concept, L, Ph, Cs, _, [un_de(Alts)]) :- !,
+    ( memberchk(concept(Tetes), Cs) -> true ; Tetes = [] ),
+    findall([nom([K])], member(nom(_, [K]), Cs), Ts),
+    mots(Ph, Ws), segments(Ws, Ss),
+    findall(A, ( member(S, Ss), \+ cite(S), unites(L, S, A), A \== [] ), As0),
+    ( As0 == [] -> findall([mot(T)], member(T, Tetes), As1) ; As1 = As0 ),
+    append(As1, Ts, Alts), Alts \== [].
+exigences_propres(attribut, L, Ph, Cs, _, [un_de(Alts)|Porteur]) :- !,
+    mots(Ph, Ws), defini(Ws, D), segments(D, Ss),
+    findall(A, ( member(S, Ss), unites(L, S, A), A \== [] ), Alts), Alts \== [],
+    (   memberchk(nom(p, Ks), Cs) -> Porteur = [un_de([[nom(Ks)]])]
+    ;   memberchk(tete(p, Ws2), Cs) -> findall([mot(W)], member(W, Ws2), Ap), Porteur = [un_de(Ap)]
+    ;   Porteur = []
+    ).
+exigences_propres(Type, L, Ph, _, _, Groupes) :-          % classe, genre, scène
+    mots(Ph, Ws0), ( Type == classe -> defini(Ws0, Ws) ; Ws = Ws0 ),
+    segments(Ws, Ss),
+    findall(A, ( member(S, Ss), unites(L, S, A0), genres(Type, A0, A), A \== [] ), As),
+    As \== [],
+    (   Type == scene -> findall(un_de([A]), member(A, As), Groupes)      % une scène : tout ensemble
+    ;   Groupes = [un_de(As)]                                              % une classe, un genre : l'une des têtes
+    ).
+
+% dans un libellé de genre, les mots de la représentation sont des prédicats sur l'œuvre
+genres(genre, A0, A) :- !, maplist(genre_unite, A0, A).
+genres(_, A, A).
+genre_unite(mot(W), genre(W)) :- ( libelles_iconclass:genre(W) ; libelles_iconclass:genre_mode(W) ), !.
+genre_unite(U, U).
+
+% les parties de gabarit et de « ~ » : chacune exige l'un de ses segments (« martyrdom, suffering, misfortune,
+% death » : l'un des quatre), chaque segment avec tous ses mots (« miraculous activities » : miraculous et activity)
+% (un aspect qui redit la catégorie du gabarit de la personne, « ~ male saint » pour 11H(PETER)5, est impliqué par la
+% personne elle-même : ses mots ne sont pas une condition nouvelle)
+exigences_d_aspects(N, L, Gs) :-
+    mots_du_gabarit_de_personne(N, L, Mg),
+    findall(un_de(As), ( libelles_lus:partie(N, L, R, gabarit, Net, _, Ph), R > 1, \+ lettres_doublees(Net),
+                         mots(Ph, Ws), segments(Ws, Ss),
+                         findall(A, ( member(S, Ss), unites(L, S, A0), exclude(impliquee(Mg), A0, A1),
+                                      maplist(genre_unite, A1, A), A \== [] ), As),      % « portrayed » : sur l'œuvre
+                         As \== [] ), Gs).
+
+impliquee(Mg, mot(W)) :- memberchk(W, Mg).
+
+% les mots du libellé du gabarit de la personne dont la notation relève (11H(...) « male saints (with NAME) » :
+% male, saint)
+mots_du_gabarit_de_personne(N, L, Mg) :-
+    (   libelles_iconclass:gabarit_ou_soi(N, G), libelles_iconclass:gabarit_de_personnes(N),
+        libelles_lus:partie(G, L, 1, _, _, _, Ph)
+    ->  mots(Ph, Ws), findall(W, ( member(M, Ws), M = mot(_, F, _, _, _, _, _, _, _), \+ mot_ferme(F), alphabetique(F),
+                                    lemme(M, W) ), Mg)
+    ;   Mg = []
+    ).
+
+% les unités d'un segment : ses noms propres (une suite de mots à majuscule, un nom), ses composés (WordNet en
+% anglais, mots clés d'Iconclass en français), ses mots pleins ; ni mots des classes fermées, ni ponctuation
+unites(L, S, Us) :-
+    noms(S, Ks), findall(nom([K]), member(K, Ks), Un),
+    findall(I, ( member(M, S), propre(M), M = mot(I, _, _, _, _, _, _, _, _) ), Ip),
+    unites_mots(L, S, S, Ip, Um),
+    append(Un, Um, Us0), list_to_set(Us0, Us).
+
+unites_mots(_, _, [], _, []).
+unites_mots(L, S, [M|Ms], Couverts, Us) :-
+    M = mot(I, F, _, _, _, _, _, _, _),
+    (   ( memberchk(I, Couverts) ; mot_ferme(F) ; \+ alphabetique(F) ; titre(F) )
+    ->  unites_mots(L, S, Ms, Couverts, Us)
+    ;   compose_couvrant(L, S, M, W, Cv)
+    ->  append(Couverts, Cv, C1), Us = [mot(W)|Us1], unites_mots(L, S, Ms, C1, Us1)
+    ;   lemme(M, W), Us = [mot(W)|Us1], unites_mots(L, S, Ms, Couverts, Us1)
+    ).
+
+% un composé dont M est le premier mot, et les mots qu'il couvre
+compose_couvrant(en, S, M, W, Cv) :-
+    append(_, [M, T|Ap], S), compose(en, [M, T|Ap], T, W), \+ sub_atom(W, _, _, _, ' of '), !,
+    T = mot(J, _, _, _, _, _, _, _, _), Cv = [J].
+compose_couvrant(en, S, M, W, Cv) :-
+    append(_, [M|Ap], S), compose(en, [M|Ap], M, W), sub_atom(W, _, _, _, ' of '), !,
+    Ap = [mot(J1, _, _, _, _, _, _, _, _), mot(J2, _, _, _, _, _, _, _, _)|_], Cv = [J1, J2].
+compose_couvrant(fr, S, M, W, Cv) :-
+    append(_, [M|Ap], S), compose(fr, [M|Ap], M, W), !,
+    atomic_list_concat(Parts, ' ', W), length(Parts, K0),
+    findall(J, ( between(1, 3, X), nth1(X, Ap, mot(J, _, _, _, _, _, _, _, _)) ), Js0),
+    ( atom_length(W, _), sub_atom(W, _, _, _, '\'') -> K = K0 ; K is K0 - 1 ),
+    length(Cv, K), append(Cv, _, Js0).
 
 % --- Les mots d'une partie analysée ---------------------------------------------------------------------------------
 

@@ -14,7 +14,7 @@ main :-
     set_random(seed(G)),
     Ts = [attribut, classe, concept, genre, individu, recit, scene],
     findall(J, ( member(T, Ts), T \== rubrique,
-                 findall(N, ( definitions_index:definition(N, en, def(T, _, _)),
+                 findall(N, ( definitions_index:definition(N, en, def(T, _, _, _, _)),
                               definitions_index:definition(N, fr, _) ), Ns),
                  random_permutation(Ns, P), length(P, LP), K is min(PT, LP), length(Pk, K), append(Pk, _, P),
                  member(N, Pk), fiche(N, T, J) ), Js),
@@ -26,9 +26,21 @@ fiche(N, T, _{notation: N, type: T, libelle_en: LE, libelle_fr: LF, definition_e
     rendu(N, en, DE), rendu(N, fr, DF).
 
 rendu(N, L, R) :-
-    (   definitions_index:definition(N, L, def(_, Cs, _)) -> maplist(cond_texte, Cs, Rs0), atomic_list_concat(Rs0, " ; ", R)
+    (   definitions_index:definition(N, L, def(_, Ex, Cp, Ct, _))
+    ->  maplist(groupe_texte, Ex, Gs), atomic_list_concat(Gs, " ET ", G),
+        ( Cp == [] -> C = "" ; atomic_list_concat(Cp, ", ", C0), format(atom(C), " | compatible (non exigé) : ~w", [C0]) ),
+        ( Ct == [] -> K = "" ; maplist(cond_texte, Ct, Ks0), atomic_list_concat(Ks0, " ; ", K0), format(atom(K), " | contraintes : ~w", [K0]) ),
+        format(atom(R), "EXIGE : ~w~w~w", [G, C, K])
     ;   R = "(aucune)"
     ).
+
+groupe_texte(un_de([A]), T) :- !, alt_texte(A, T).
+groupe_texte(un_de(As), T) :- maplist(alt_texte, As, Ts), atomic_list_concat(Ts, " OU ", T0), format(atom(T), "(~w)", [T0]).
+alt_texte(A, T) :- maplist(unite_texte, A, Ts), atomic_list_concat(Ts, " + ", T0), ( A = [_] -> T = T0 ; format(atom(T), "[~w]", [T0]) ).
+unite_texte(mot(W), T) :- format(atom(T), "~w", [W]).
+unite_texte(nom(a_remplir), "NOM(à remplir)") :- !.
+unite_texte(nom(Ks), T) :- atomic_list_concat(Ks, "|", K), format(atom(T), "NOM(~w)", [K]).
+unite_texte(genre(W), T) :- format(atom(T), "GENRE-DE-L-OEUVRE(~w)", [W]).
 
 cond_texte(assertions(Fs), T) :- !,
     findall(X, ( member(F, Fs), assertion_texte(Fs, F, X) ), Xs), atomic_list_concat(Xs, " ; ", T0),
