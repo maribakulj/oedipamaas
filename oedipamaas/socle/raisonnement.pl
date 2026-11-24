@@ -155,6 +155,7 @@ langue(Fs, L) :- memberchk(doc(L, _), Fs).
 candidats_t1(Fs, E, Ns) :-
     memberchk(nom(_, E, Nom, _), Fs), memberchk(entite(E, Tete, _), Fs),
     \+ lieu(Fs, E),
+    \+ nom_de_lieu(Nom),
     normaliser_nom(Nom, K),
     findall(N, ( nom_notation(K, N), filtre_titre(Tete, N) ), Ns0),
     sort(Ns0, Ns), Ns \== [].
@@ -170,8 +171,20 @@ preposition_de_lieu(P) :- memberchk(P, ['à', en, dans, vers, près, devant, der
 tete_de_lieu(T) :- memberchk(T, [vue, view, paysage, landscape, environs, plan, carte, map, port, harbour, panorama,
                                  rue, street, ville, town, city, place, square, église, church, château, castle]).
 
+% un nom qui a, dans WordNet, un sens de lieu (une instance ou une sorte de « location » : « Paris » la ville, à côté
+% de Pâris le prince) n'est pas sûrement une personne : T1 s'abstient, le code reste candidat (jugement J2 : « Paris »
+% dans une adresse, un lieu d'édition, « Notre-Dame de Paris »)
+nom_de_lieu(Nom) :-
+    normaliser_nom(Nom, K), downcase_atom(K, Km),
+    catch(( wordnet:s(S, _, W, n, _, _), downcase_atom(W, Wm), Wm == Km, sens_de_lieu(S) ), _, fail), !.
+:- table sens_de_lieu/1.
+sens_de_lieu(100027167) :- !.
+sens_de_lieu(S) :- ( wordnet:ins(S, P) ; wordnet:hyp(S, P) ), sens_de_lieu(P), !.
+
+titre_de_saint(T) :- memberchk(T, [saint, sainte, st, ste, 'st.', san, santa, santo, sankt]).
+
 saint(N) :- ( sub_atom(N, 0, _, _, '11H(') ; sub_atom(N, 0, _, _, '11HH(') ), !.
-filtre_titre(saint, N) :- !, saint(N).
+filtre_titre(T, N) :- titre_de_saint(T), !, saint(N).
 filtre_titre(_, N) :- \+ saint(N).
 
 % T2 : les notations dont un élément du libellé principal est la tête du référent
@@ -223,7 +236,9 @@ coder_entite(Fs, E, r(Et0, Ca0, Co0), r(Et, Ca, Co)) :-
         append(Co0, Cs, Co), Et = Et0, Ca = Ca0
     ;   preuve_entite(Fs, E, Type, Ns)
     ->  (   admissible_entite(Fs, E, Type)
-        ->  (   Ns = [N]
+        ->  (   Ns = [N], hors_contexte_biblique_dans_un_recit(Fs, N)
+            ->  code(Fs, E, N, candidat(recit_biblique), Type, Cd), Et = Et0, Ca = [Cd|Ca0]
+            ;   Ns = [N]
             ->  code(Fs, E, N, etabli, Type, C), Et = [C|Et0], Ca = Ca0
             ;   t6_actif, ancetre_commun(Ns, A)
             ->  code(Fs, E, A, etabli, t6(Type, Ns), C),
@@ -246,6 +261,12 @@ preuve_entite(Fs, E, t2, Ns) :- candidats_t2(Fs, E, Ns).
 % T1 demande l'entité et son nom admissibles ; T2 l'entité
 admissible_entite(Fs, E, t1) :- assertions:admissible(Fs, E), memberchk(nom(A, E, _, _), Fs), assertions:admissible(Fs, A).
 admissible_entite(Fs, E, t2) :- assertions:admissible(Fs, E).
+
+% une notation de personnage biblique « not in biblical context » (11I62(DAVID)…) dans un texte qui raconte (un
+% événement est décrit) : Iconclass code alors l'épisode (71…, 73…), pas la personne hors récit (jugement J2)
+hors_contexte_biblique_dans_un_recit(Fs, N) :-
+    iconclass:libelle(N, en, L), sub_atom(L, _, _, _, 'not in biblical context'),
+    memberchk(evenement(_, _, _), Fs).
 
 raison_non_admissible(Fs, E, R) :-
     (   member(alternative(_, As), Fs), memberchk(E, As) -> R = alternative

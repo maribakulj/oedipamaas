@@ -32,7 +32,7 @@ role_permis(destinataire).
 role_permis(lieu).
 
 qualificatif(polarite, [pos, neg]).
-qualificatif(modalite, [affirme, probable, possible, traditionnel, ancien, non_affirme]).
+qualificatif(modalite, [affirme, probable, possible, traditionnel, ancien, non_affirme, titre]).
 qualificatif(portee, [represente, oeuvre, autre_oeuvre, source, histoire]).
 qualificatif(enonciateur, [auteur, cite(_)]).
 

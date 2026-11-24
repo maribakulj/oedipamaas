@@ -4,7 +4,8 @@
     swipl oedipamaas/socle/commande.pl --base BASE --texte "Saint Jérôme dans son étude." --langue fr
     (ce module est aussi une bibliothèque : analyser_documents/3 ; commande.pl n'en est que le point d'entrée)
 
-    ENTREE.jsonl : un document par ligne, {"id": …, "texte": …, "langue": "fr"|"en", "genre": …} (genre facultatif :
+    ENTREE.jsonl : un document par ligne, {"id": …, "description": …, "titre": …, "langue": "fr"|"en", "genre": …}
+    (« texte » vaut « description » ; le titre est facultatif et n'est qu'un indice, D15 ; genre facultatif :
     titre, cartel, notice, description, savant ; « inconnu » par défaut). SORTIE.jsonl : une ligne par document (§ 9 :
     etablis, candidats, contredits, objets, incompris, versions), triée comme l'entrée ; plus SORTIE.manifeste.json.
     Un document illisible donne une ligne avec « erreur », comptée dans le manifeste, sans arrêter le lot.
@@ -12,6 +13,7 @@
     (iconclass.qlf, wordnet.qlf).
 */
 :- module(oedipamaas, [ analyser_documents/3,  % +Base, +Documents (dicts), -Resultats (dicts)
+                        texte_et_titre/3,      % +Document, -Texte analysé, -Fin du titre (0 sans titre)
                         main/1                 % +Argv : la commande (socle/commande.pl)
                       ]).
 :- encoding(utf8).
@@ -83,7 +85,16 @@ analyses_langue(Docs, L, Analyses) :-
     ;   Analyses = []
     ).
 
-texte_doc(D, T) :- get_dict(texte, D, T0), string(T0), T0 \== "", T = T0.
+% le texte analysé : la description (champ « description », ou « texte »), précédée du titre s'il y en a un ; le titre
+% seul est accepté mais ne donne aucun code établi (décision D15 : un titre est un indice, jamais une preuve)
+texte_doc(D, T) :- texte_et_titre(D, T, _).
+texte_et_titre(D, T, FinTitre) :-
+    champ(D, titre, Ti), ( champ(D, description, De) -> true ; champ(D, texte, De) -> true ; De = "" ),
+    !,
+    string_length(Ti, FinTitre),
+    (   De == "" -> T = Ti ; atomic_list_concat([Ti, '. ', De], A), atom_string(A, T) ).
+texte_et_titre(D, T, 0) :- ( champ(D, description, T) -> true ; champ(D, texte, T) ).
+champ(D, K, V) :- get_dict(K, D, V0), string(V0), split_string(V0, "", " \t\n", [V]), V \== "".
 
 resultat(Vs, ParLangue, D, R) :-
     Id = D.get(id, ""),
@@ -100,10 +111,11 @@ message_to_codes(E, _, Cs) :- catch(( message_to_codes_(E, Cs) ), _, fail).
 message_to_codes_(E, Cs) :- format(codes(Cs), "~q", [E]).
 
 resultat_(Vs, ParLangue, D, R) :-
-    texte_doc(D, Texte), langue_doc(D, L),
+    texte_et_titre(D, Texte, FinTitre), langue_doc(D, L),
     ( get_dict(genre, D, G0) -> atom_string(G, G0) ; G = inconnu ),
     memberchk(L-Analyses, ParLangue), memberchk(D.id-Phrases, Analyses),
-    interpretation:interpreter(Texte, L, G, Phrases, Fs),
+    interpretation:interpreter(Texte, L, G, Phrases, Fs0),
+    dit_par_le_titre(FinTitre, Fs0, Fs),
     assertions:valider(Fs, Err),
     (   Err \== [] -> term_string(Err, ES), R = _{erreur: ES}
     ;   raisonnement:coder(Fs, C),
@@ -112,6 +124,21 @@ resultat_(Vs, ParLangue, D, R) :-
         R = _{versions: Vs.put(entree, H), etablis: C.etablis, candidats: C.candidats,
               contredits: C.contredits, objets: Os, incompris: Is}
     ).
+
+% ce qui n'est dit que dans le titre (passage entièrement dans le titre) : modalité « titre », un indice qui ne fonde
+% aucun code établi ; ce que la description dit aussi reste porté par sa propre assertion
+dit_par_le_titre(0, Fs, Fs) :- !.
+dit_par_le_titre(Fin, Fs0, Fs) :-
+    findall(A, ( member(F, Fs0), assertion_passage(F, A, P), memberchk(passage(P, _, F2), Fs0), F2 =< Fin ), As0),
+    sort(As0, As),
+    maplist(requalifier(As), Fs0, Fs).
+assertion_passage(entite(E, _, P), E, P).
+assertion_passage(nom(A, _, _, P), A, P).
+assertion_passage(propriete(A, _, _, P), A, P).
+assertion_passage(evenement(V, _, P), V, P).
+assertion_passage(relation(A, _, _, _, P), A, P).
+requalifier(As, modalite(A, M0), modalite(A, M)) :- !, ( memberchk(A, As), M0 == affirme -> M = titre ; M = M0 ).
+requalifier(_, F, F).
 
 objets(Fs, Os) :-
     findall(O, ( member(entite(E, Tete, P), Fs), memberchk(passage(P, D, F), Fs), texte_de(Fs, D, F, T),

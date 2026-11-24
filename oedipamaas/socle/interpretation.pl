@@ -63,7 +63,8 @@ autre_oeuvre_case(après). autre_oeuvre_case(after).
 materiau(huile). materiau(toile). materiau(panneau). materiau(papier). materiau(cuivre). materiau(encre).
 materiau(craie). materiau(aquarelle). materiau(gouache). materiau(pastel). materiau(oil). materiau(canvas).
 materiau(panel). materiau(paper). materiau(copper). materiau(ink). materiau(chalk). materiau(watercolour).
-materiau(watercolor). materiau(tempera). materiau(détrempe).
+materiau(watercolor). materiau(tempera). materiau(détrempe). materiau(vélin). materiau(parchemin). materiau(carton).
+materiau(percaline). materiau(chagrin). materiau(maroquin).
 
 lieu_case(dans). lieu_case(sur). lieu_case(devant). lieu_case(derrière). lieu_case(sous). lieu_case(près).
 lieu_case(in). lieu_case(on). lieu_case(before). lieu_case(behind). lieu_case(under). lieu_case(near).
@@ -157,11 +158,24 @@ capitale_liee_a_un_titre(Ts, T) :-
 lien_de_grappe(R) :- memberchk(R, [flat, compound]).
 dans_grappe(Ts, T) :-                    % T dépend d'un autre membre de grappe
     ( mot_du_nom(Ts, T) ; est_titre(T) ),
-    T = t(S, _, _, _, _, _, H, R, _, _), rel_de_base(R, RB),
+    T = t(S, I, _, _, _, _, H, R, _, _), rel_de_base(R, RB),
     jeton(Ts, S, H, P), ( mot_du_nom(Ts, P) ; est_titre(P) ),
     (   lien_de_grappe(RB) -> true
-    ;   memberchk(RB, [nmod, appos, amod]), ( est_titre(T) ; est_titre(P) )
+    ;   memberchk(RB, [nmod, appos, amod]), ( est_titre(T) ; est_titre(P) ) -> true
+    ;   % « Catherine de Sienne », « Catherine of Siena », « Antoine de Padoue » : un nom propre complément d'un nom
+        % propre par « de »/« of » fait partie du nom (sinon Catherine de Sienne devient Catherine d'Alexandrie)
+        % — seulement pour un nom qui porte un titre de saint (« Crucifixion de Rubens », « Sacrifice d'Isaac » restent
+        % deux référents)
+        RB == nmod, propre(T), propre(P), titre_attache(Ts, P),
+        enfant(Ts, S, I, case, C), C = t(_, _, _, LC, _, _, _, _, _, _), memberchk(LC, [de, of, 'd\''])
     ).
+
+% un titre (« saint », « sainte ») rattaché directement au nom propre P, comme dépendant ou comme tête
+titre_attache(Ts, P) :-
+    P = t(S, IP, _, _, _, _, HP, _, _, _),
+    (   enfant(Ts, S, IP, X), est_titre(X) -> true
+    ;   HP > 0, jeton(Ts, S, HP, X), est_titre(X)
+    ), !.
 
 racine_de_grappe(Ts, T) :- ( mot_du_nom(Ts, T) ; est_titre(T) ), \+ dans_grappe(Ts, T).
 
@@ -446,6 +460,30 @@ porte(Ts, Ents, Fs, A, P) :-
     ),
     portee_jeton(Ts, T, P), !.
 
+% le support de l'œuvre (album, folio, recto, reliure, étiquette…) : une phrase dont la racine ou le sujet est un
+% support parle de l'objet, pas de l'image ; un nom complément d'un support aussi (« le dos de l'album ») ; une
+% technique introduite par « à »/« au » (« à la plume », « à la pierre noire », « au lavis ») (jugement J2)
+support(album). support(carnet). support(folio). support(feuillet). support(recto). support(verso). support(reliure).
+support(cartonnage). support(plat). support(gaine). support(étiquette). support(annotation). support(monture).
+support(montage). support('passe-partout'). support(encadrement). support(filigrane). support(couverture).
+support(page). support(planche). support(numéro). support(inventaire). support(cachet). support(marque).
+technique(plume). technique(pierre). technique(sanguine). technique(lavis). technique(fusain). technique(mine).
+technique(graphite). technique(crayon). technique(pinceau). technique(burin). technique(pointe). technique(rehaut).
+technique(craie). technique(encre). technique(aquarelle). technique(gouache). technique(pastel). technique(huile).
+
+phrase_de_support(Ts, S) :-
+    member(R, Ts), R = t(S, _, _, LR, _, _, 0, _, _, _),
+    (   support(LR) -> true
+    ;   R = t(_, IR, _, _, _, _, _, _, _, _), enfant(Ts, S, IR, nsubj, X), X = t(_, _, _, LX, _, _, _, _, _, _), support(LX)
+    ), !.
+
+portee_jeton(Ts, T, oeuvre) :-
+    T = t(S, I, _, L, _, _, H, _, _, _),
+    (   phrase_de_support(Ts, S)
+    ;   support(L)
+    ;   technique(L), enfant(Ts, S, I, case, C), C = t(_, _, _, LC, _, _, _, _, _, _), memberchk(LC, ['à', au, aux, en])
+    ;   H > 0, jeton(Ts, S, H, Par), Par = t(_, _, _, LP, _, _, _, _, _, _), support(LP)
+    ), !.
 portee_jeton(Ts, T, P) :-
     T = t(S, I, _, L, _, _, H, _, _, _),
     (   enfant(Ts, S, I, case, C), C = t(_, IC, _, LC, _, _, _, _, _, _),

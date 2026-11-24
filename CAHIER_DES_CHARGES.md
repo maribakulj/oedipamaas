@@ -6,9 +6,10 @@ conformer (§ 15).
 
 ## 0. En bref
 
-1. **Le produit** : un moteur hors ligne, rapide, déterministe, qui lit les textes que les humains ont déjà écrits sur
-   les œuvres (cartels, notices, descriptions, textes savants, en français et en anglais) et en tire des codes
-   Iconclass, chacun avec sa preuve. Une alternative aux LLM et à l'annotation manuelle, pas un client de l'un ou de
+1. **Le produit** : un moteur hors ligne, rapide, déterministe, qui lit les **descriptions** des œuvres — sorties
+   d'Opus, cartels de musée qui décrivent ce qu'on voit, notices, catalogues d'exposition, textes savants, en français
+   et en anglais — et en tire des codes Iconclass, chacun avec sa preuve. **Le titre n'est jamais une preuve** : c'est
+   un indice, qui ne fonde aucun code établi (décision D15). Une alternative aux LLM et à l'annotation manuelle, pas un client de l'un ou de
    l'autre.
 2. **Critère de réception : l'indexation automatique.** Un code au statut *établi* doit pouvoir être écrit dans une
    base de collections sans relecture. Précision d'abord : l'abstention est un résultat normal ; un code faux présenté
@@ -55,7 +56,7 @@ En cas de conflit, l'indexation automatique l'emporte.
 | Entrée | V1 | Adaptateur |
 |---|---|---|
 | Texte libre FR ou EN : descriptions visuelles, cartels, notices, textes savants | oui | segmentation → UDPipe → CoNLL-U → règles d'interprétation (§ 6) |
-| Titre seul (« Saint Jérôme pénitent », « Allegory of Vanity ») | oui | grammaire des titres (§ 6.3) |
+| Titre (« Saint Jérôme pénitent », « Allegory of Vanity ») | **comme indice seulement** | analysé avec la description ; ce qu'il est seul à dire a la modalité `titre` : candidat au mieux, jamais établi ; un titre sans description ne donne aucun code établi (D15) |
 | JSON d'Opus (schéma du § 13 de `CONCEPTION.md`) et ses variantes | oui | conversion directe en assertions ; les champs en prose passent par l'adaptateur texte |
 | Notices structurées (champs titre, sujet, description ; LIDO, Dublin Core, JSON simple) | oui | correspondance de champs déclarée, chaque champ en prose passant par l'adaptateur texte |
 | Assertions déjà écrites dans le langage du § 5 | oui | aucun : entrée directe, documentée |
@@ -149,13 +150,13 @@ Chacun a ses règles, ses paires de tests minimales (§ 12.3) et son comportemen
 | portée du propos | « d'après une gravure de », « comme dans le tableau de Madrid », « inspiré d'Ovide », provenance, technique | hors `represente` |
 | énumération et coordination | « un lion, un crâne et un livre » | chaque élément séparément |
 
-### 6.3. Grammaire des titres
+### 6.3. Le titre : un indice, jamais une preuve
 
-Les titres sont le texte le plus riche en Iconclass et le plus fréquent. Une grammaire dédiée (FR, EN) reconnaît les
-formes canoniques : personne + qualificatif (« Saint Jérôme pénitent »), épisode (« Le Sacrifice d'Isaac »), personne
-dans un lieu (« Saint Jérôme dans son étude »), allégorie (« Allégorie de la Vanité »), genre (« Nature morte au
-homard », « Portrait d'homme »). Un titre est une assertion de portée `represente`, d'énonciateur `auteur` ; un titre
-« dit » (« dit *La Belle Jardinière* ») est de modalité `traditionnel`.
+Un titre dit ce que l'artiste ou le catalogueur a voulu nommer, pas ce que l'image montre : « Saint Jérôme » peut
+désigner un assemblage de cubes abstraits, une allégorie ou une œuvre perdue. Le titre est donc analysé avec la
+description, mais tout ce qu'il est seul à dire reçoit la modalité `titre` : il peut proposer des candidats et, plus
+tard, corroborer une identification par les attributs décrits (T7 : « un vieil homme avec un lion » + titre « Saint
+Jérôme »), jamais établir un code à lui seul (D15).
 
 ## 7. Le raisonnement iconographique
 
@@ -172,7 +173,7 @@ Un code établi affirme ses ancêtres (au sens du principe 4) ; la sortie ne les
 ### 7.2. Types de preuve
 
 Un type est **certifié** quand sa précision mesurée sur un corpus jamais vu atteint le seuil du § 12.2. La V1 vise la
-certification des types T1 à T6 ; T7 à T11 produisent des candidats en V1 et seront certifiés version après version.
+certification des types T1, T2, T4, T5 et T6 (T3, « titre conforme », est retiré : D15) ; T7 à T11 produisent des candidats en V1 et seront certifiés version après version.
 Chaque type déclare les liens lexicaux qu'il admet (égalité, synonymie, hyperonymie à n pas, dérivation, partie, renvoi
 entre mots clés…) ; un lien non déclaré ne peut pas servir à sa preuve.
 
@@ -180,7 +181,6 @@ entre mots clés…) ; un lien non déclaré ne peut pas servir à sa preuve.
 |---|---|---|
 | T1 nom explicite | une personne nommée → sa notation (11H(JEROME), personnages bibliques, dieux, héros) | nom non ambigu, ou ambiguïté levée par le contexte (Jean Baptiste / Évangéliste) ; prémisse admissible |
 | T2 chose décrite | un référent décrit → la notation de son concept (lion → 25F23(LION)) | tête du référent, lien lexical égal ou montant (jamais descendant : « oiseau » ne dit pas « aigle ») |
-| T3 titre conforme | le titre correspond au libellé ou aux mots clés d'une notation, dans la langue du titre | correspondance de structure, pas de mots isolés |
 | T4 clé | une propriété (posture, vue, nombre, matière…) → la clé (+…) de la notation établie | propriété rattachée au même référent que la notation |
 | T5 nom libre | un nom typé → le gabarit de son type (25G41(NOM)) | type du gabarit vérifié ; notation construite valide et rattachée à son parent |
 | T6 repli | aucune preuve fine → l'ancêtre le plus spécifique démontré | toujours permis |
@@ -377,8 +377,8 @@ Les collections françaises (Joconde/POP, Mandragore, Gallica) indexent avec Gar
 avec Iconclass**.
 
 Conséquences pour l'évaluation :
-- **Anglais** : RKDimages (titres) et Wikidata EN suffisent pour J2 ; ce sont surtout des titres, ce qui sert d'abord
-  T1, T2, T3.
+- **Anglais** : RKDimages et Wikidata n'offrent que des titres : ils ne servent plus qu'au rappel contre un catalogue,
+  pas à la précision (D15). Les descriptions anglaises viendront des sorties d'Opus.
 - **Français : c'est le vrai manque.** Les sources publiques se limitent aux libellés FR de Wikidata et aux emblèmes de
   Glasgow. L'annotation propre (§ 12.1) devient indispensable pour les cartels, les notices et les textes savants
   français ; les descriptions d'Opus ne fournissent pas de codes de référence.

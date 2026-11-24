@@ -22,7 +22,19 @@ docs([ _{id: "cartel_fr", texte: "Saint Jérôme dans son étude, avec un lion e
        _{id: "ville_fr", texte: "Vue de Paris.", langue: "fr"},
        _{id: "lieu_fr", texte: "Saint Jean à Patmos.", langue: "fr"},
        _{id: "egypte_fr", texte: "La Fuite en Égypte.", langue: "fr"},
-       _{id: "ordre_en", texte: "John.", langue: "en"} ]).
+       _{id: "ordre_en", texte: "John.", langue: "en"},
+       % le titre est un indice, jamais une preuve (D15)
+       _{id: "titre_seul", titre: "Saint Jérôme", langue: "fr"},
+       _{id: "titre_et_description", titre: "Saint Jérôme",
+         description: "Au premier plan, un vieil homme agenouillé, un lion couché à ses pieds.", langue: "fr"},
+       _{id: "description_nomme", titre: "Saint Jérôme pénitent",
+         description: "Saint Jérôme, agenouillé, se frappe la poitrine avec une pierre ; un lion est couché près de lui.", langue: "fr"},
+       % corrections du jugement J2
+       _{id: "adresse", description: "Vue de la Seine, 1er arrondissement, Paris.", langue: "fr"},
+       _{id: "album", description: "Femme debout, drapée. Album Della Bella Stefano, folio 36, rapporté au verso ; Album cartonné recouvert de papier brun marbré, le dos en parchemin.", langue: "fr"},
+       _{id: "sainte", description: "Sainte Anne portant la Vierge et l'Enfant.", langue: "fr"},
+       _{id: "sienne", description: "Le Christ apparaît à sainte Catherine de Sienne.", langue: "fr"},
+       _{id: "recit", description: "David escapes through a window; Michal lets him down with a rope.", langue: "en"} ]).
 
 :- dynamic resultat/2.
 preparer :-
@@ -76,14 +88,26 @@ test(pas_un_ordre) :-
     codes("ordre_en", etablis, Et), codes("ordre_en", candidats, Ca), append(Et, Ca, Cs),
     \+ memberchk('46A1241(ST. JOHN)', Cs).
 
+test(titre_seul) :- codes("titre_seul", etablis, []), codes("titre_seul", candidats, Ca), memberchk('11H(JEROME)', Ca).
+test(titre_indice) :-
+    codes("titre_et_description", etablis, Et), \+ memberchk('11H(JEROME)', Et), memberchk('25F23(LION)', Et),
+    codes("titre_et_description", candidats, Ca), memberchk('11H(JEROME)', Ca).
+test(description_nomme) :- codes("description_nomme", etablis, Et), memberchk('11H(JEROME)', Et).
+test(adresse) :- codes("adresse", etablis, Et), \+ memberchk('95A(PARIS)', Et).
+test(album) :- codes("album", etablis, Et), \+ memberchk('31A2225', Et).
+test(sainte) :- codes("sainte", etablis, Et), \+ ( member(C, Et), sub_atom(C, 0, _, _, '96D') ).
+test(sienne) :- codes("sienne", etablis, Et), \+ memberchk('11HH(CATHERINE)', Et).
+test(recit) :- codes("recit", etablis, Et), \+ memberchk('11I62(DAVID)', Et).
+
 test(vide) :- resultat("vide", R), get_dict(erreur, R, _).
 
 % chaque code établi se revérifie ; chaque prémisse cite le texte exact à ses positions
 test(preuves) :-
     forall(( docs(Ds), member(D, Ds), resultat(D.id, R), get_dict(etablis, R, Et), member(C, Et) ),
            ( C.statut == etabli, C.preuve.premisses \== [],
+             oedipamaas:texte_et_titre(D, Tx, _),
              forall(member(P, C.preuve.premisses),
-                    ( [Deb, Fin] = P.passage, L is Fin - Deb, sub_string(D.texte, Deb, L, _, T), T == P.texte )) )).
+                    ( [Deb, Fin] = P.passage, L is Fin - Deb, sub_string(Tx, Deb, L, _, T), T == P.texte )) )).
 
 % une preuve falsifiée ne se vérifie pas
 test(preuve_falsifiee) :-
