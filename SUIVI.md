@@ -77,8 +77,8 @@ vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 - [x] **J2.4 Jugement** : premier tour, 50 par strate, par un juge Opus à l'aveugle (choix de la propriétaire) ; 20 jugements contrôlés.
 - [x] **J2.5 Lecture des jugements** (`docs/mesures/J2.md`) : 0,50 / 0,68 / 0,10 / 0,40 ; aucune strate au second tour.
 - [ ] **J2.6 Corrections** du tableau de `docs/mesures/J2.md`, puis nouveau tirage et nouveau jugement.
-- [ ] (ancien J2.5) : précision et borne basse par strate ; analyse des erreurs ; second tour (150)
-      pour les strates au-dessus de 85 % ; rejugement de 20 % une semaine plus tard.
+- [ ] **J2.7 Second tour** (150 par strate) pour les strates au-dessus de 85 %, et contrôle humain d'une vingtaine de
+      jugements.
 
 ## Journal
 
