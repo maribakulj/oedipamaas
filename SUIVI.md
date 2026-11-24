@@ -67,6 +67,17 @@ Critère de sortie J0 : tous les tests passent ; la mesure de référence est re
 Critère de sortie J1 : les paires passent ; un titre et un cartel courts donnent des codes établis avec preuves
 vérifiées. **Point de décision humain : la boucle s'arrête ici.**
 
+## J2 — La mesure (en cours)
+
+- [x] **J2.0 Décisions du 24 novembre** : D7-A ; T1 limité aux personnes et hors lieux (D13) ; négation de l'objet
+      nuancée (D8) ; T6 désactivé (D11) ; casse des noms normalisée dans la mesure (D14).
+- [x] **J2.1 Textes français** : 2 977 notices Joconde (Licence Ouverte), `outils/moisson/joconde.py`.
+- [x] **J2.2 Échantillon** : 200 codes établis (50 × T1/T2 × EN/FR), `outils/mesure/echantillon_j2.py`.
+- [x] **J2.3 Page de jugement** : https://claude.ai/artifact/PJPD9uptfRG3v4UFUSrfi4 (privée, jugements enregistrés).
+- [ ] **J2.4 Jugement** (toi) : premier tour, 50 par strate.
+- [ ] **J2.5 Lecture des jugements** : précision et borne basse par strate ; analyse des erreurs ; second tour (150)
+      pour les strates au-dessus de 85 % ; rejugement de 20 % une semaine plus tard.
+
 ## Journal
 
 ### Résumé pour le réveil (fin de la boucle, 23 novembre 2026 au soir)
