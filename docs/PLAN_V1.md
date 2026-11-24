@@ -50,8 +50,8 @@ Stanza, 60 s au plus par texte ; détail dans `docs/mesures/V2.md`) :
 | indéterminé | 2 / 40 | 12 | 22 | 4 |
 
 - **Rappel** : 5 positifs sur 40. **Faux établis** sur la notation visée : 4 sur 80 négatifs et indéterminés.
-- **Codes établis autres que la notation visée** : 1 514 pour 95 textes traités, soit environ 16 par texte, non
-  jugés ; les plus fréquents sont faux à la lecture et viennent de **définitions trop faibles**. Par exemple,
+- **Codes établis hors de la branche de la notation visée** (arbre canonique) : 1 528 pour 95 textes traités, soit
+  environ 16 par texte, non jugés ; les plus fréquents sont faux à la lecture et viennent de **définitions trop faibles**. Par exemple,
   31D82 n'exige que « individual » ou « name », 73D68 que « event », 22A que « matter », 43B8 que « show »,
   25G3(PEAR-TREE) que « tree ». S'y ajoutent l'œuvre elle-même prise pour un objet figuré (11Q611 « object »,
   59 fois) et des gabarits « (...) » établis.
