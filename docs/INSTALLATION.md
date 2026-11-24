@@ -35,7 +35,8 @@ Commit d'Iconclass utilisé : `0595358b0e6e1635f254124ca37db49091102614`.
 B=/home/user/donnees/base && mkdir -p $B
 python3 -m oedipamaas.socle.compiler_iconclass /home/user/donnees/iconclass-data $B
 python3 -m oedipamaas.socle.compiler_wordnet /home/user/donnees/prolog /home/user/donnees/WordNet-3.0/dict $B
-(cd $B && swipl -g "qcompile('iconclass.pl'), qcompile('wordnet.pl')" -t halt)
+python3 -m oedipamaas.socle.compiler_ressources /home/user/donnees/ressources $B   # demande xlrd (compilation)
+(cd $B && swipl -g "qcompile('iconclass.pl'), qcompile('wordnet.pl'), qcompile('ressources.pl')" -t halt)
 python3 -m oedipamaas.socle.construire_base $B
 ```
 
@@ -83,3 +84,24 @@ swipl oedipamaas/socle/commande.pl --base /home/user/donnees/base --entree docum
 
 `documents.jsonl` : une ligne `{"id": …, "texte": …, "langue": "fr"|"en", "genre": …}` par document. Les tests de bout
 en bout demandent en plus `OEDIPAMAAS_BASE=/home/user/donnees/base`.
+
+## Ressources de langue (D17)
+
+Rapatriées dans `/home/user/donnees/ressources/` (hors dépôt). Les liens morphosémantiques sont compilés
+(`compiler_ressources.py`, module `ressources`) ; les autres le seront à leur tour. Le moteur ne s'en sert qu'au fur et à
+mesure de leur intégration, une à la fois, chacune avec sa mesure.
+
+| Ressource | Source | Licence |
+|---|---|---|
+| Liens morphosémantiques de WordNet 3.0 | `https://wordnetcode.princeton.edu/standoff-files/morphosemantic-links.xls` | licence de WordNet 3.0 (Princeton) |
+| VerbNet 3.3 | `https://verbs.colorado.edu/verb-index/vn/verbnet-3.3.tar.gz` | « distributed with permission of the author » (University of Colorado) ; à reconfirmer avant toute redistribution |
+| FrameNet 1.7 | `https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/framenet_v17.zip` | Creative Commons Attribution 3.0 Unported |
+| NomBank 1.0 | `https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/nombank.1.0.zip` | « distributed with permission » (NYU) ; les fichiers qui demandent une licence LDC (COMNOM, impression) ne sont pas inclus ; à reconfirmer avant toute redistribution |
+
+```bash
+R=/home/user/donnees/ressources && mkdir -p $R && cd $R
+curl -sSLO https://wordnetcode.princeton.edu/standoff-files/morphosemantic-links.xls
+curl -sSLO https://verbs.colorado.edu/verb-index/vn/verbnet-3.3.tar.gz
+curl -sSLO https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/framenet_v17.zip
+curl -sSLO https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/nombank.1.0.zip
+```

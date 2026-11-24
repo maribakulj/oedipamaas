@@ -7,6 +7,9 @@ Faits du module wordnet (schéma de WNprolog, prologdb(5WN)) :
   hyp(Synset, Hyperonyme)    ins(Synset, Classe)    der(S1, R1, S2, R2)    per(S1, R1, S2, R2)
   mm(S, Membre)  ms(S, Substance)  mp(S, Partie)    sim(S1, S2)
   exc(Type, Forme, Lemme)    exceptions de la morphologie (noun.exc, verb.exc, adj.exc, adv.exc)
+  lexfile(Synset, Fichier)   le fichier lexicographique d'un synset nominal ou verbal (dict/data.noun, data.verb,
+                             dict/lexnames : noun.person, noun.artifact, verb.motion…) ; deux fichiers nominaux
+                             différents sont disjoints par construction (docs/FONDEMENTS.md, § 2)
 Usage : python -m oedipamaas.socle.compiler_wordnet DOSSIER_WNPROLOG DOSSIER_DICT SORTIE/"""
 import hashlib
 import json
@@ -30,7 +33,7 @@ def compiler(dossier_prolog, dossier_dict, sortie):
     sortie.mkdir(parents=True, exist_ok=True)
     chemin = sortie / "wordnet.pl"
     comptes, empreintes, ecartees = {}, {}, {}
-    exports = ", ".join(f"{p}/{a}" for p, a in RELATIONS.items()) + ", exc/3"
+    exports = ", ".join(f"{p}/{a}" for p, a in RELATIONS.items()) + ", exc/3, lexfile/2"
     with open(chemin, "w", encoding="utf-8") as out:
         out.write(f":- module(wordnet, [{exports}]).\n:- encoding(utf8).\n")
         for p in RELATIONS:
@@ -55,7 +58,26 @@ def compiler(dossier_prolog, dossier_dict, sortie):
                     out.write(f"exc({t}, {q(mots[0].replace('_', ' '))}, {q(lemme.replace('_', ' '))}).\n")
                     n += 1
         comptes["exc"] = n
-    manifeste = {"source": "WordNet 3.0 (Princeton), édition Prolog WNprolog 3.0 et dict/*.exc",
+        noms = {}
+        for ligne in (dossier_dict / "lexnames").read_text(encoding="latin-1").splitlines():
+            champs = ligne.split()
+            if len(champs) >= 2:
+                noms[champs[0]] = champs[1]
+        empreintes["lexnames"] = hashlib.sha256((dossier_dict / "lexnames").read_bytes()).hexdigest()
+        n = 0
+        for nom, prefixe in (("data.noun", 1), ("data.verb", 2)):
+            src = dossier_dict / nom
+            empreintes[nom] = hashlib.sha256(src.read_bytes()).hexdigest()
+            for ligne in src.read_text(encoding="latin-1").splitlines():
+                if ligne.startswith("  "):
+                    continue                                    # en-tête de licence
+                champs = ligne.split(" ", 2)
+                if len(champs) < 3 or not champs[0].isdigit():
+                    continue
+                out.write(f"lexfile({prefixe * 100000000 + int(champs[0])}, {q(noms[champs[1]])}).\n")
+                n += 1
+        comptes["lexfile"] = n
+    manifeste = {"source": "WordNet 3.0 (Princeton), édition Prolog WNprolog 3.0, dict/*.exc, dict/data.noun, data.verb, lexnames",
                  "licence": "WordNet 3.0 license (Princeton University)", "comptes": comptes,
                  "lignes_mal_formees_ecartees": ecartees,
                  "sha256_sources": empreintes,
