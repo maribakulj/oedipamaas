@@ -9,6 +9,9 @@
       ni son préfixe ni son jumeau) : le parent canonique est alors le premier parent cité.
     Les notations à clé ne sont pas énumérées : leur parent est syntaxique (notation:parent_syntaxique/2), jusqu'à la
     notation de base.
+    Un nom libre (un nom écrit dans un gabarit ouvert, 25G41(BUTTERFLY) pour 25G41(...)) n'est pas énuméré non plus :
+    son gabarit est son parent, comme pour un nom listé ; ce qui le suit (11H(NOUVEAU)3, d'après 11H(...)3) a pour
+    parent son préfixe. Il est valide quand son gabarit est une notation d'Iconclass.
 */
 :- module(arbre, [ parent/2,          % ?N, ?P   parent canonique
                    jumeau/2,          % ?N, ?J   jumeau simple d'une notation à lettre doublée (cité comme parent)
@@ -18,7 +21,8 @@
                    enfants/2,         % +P, -Enfants (ordre d'Iconclass)
                    racine/1,          % ?N
                    connue/1,          % ?N       notation de base ou citée comme enfant
-                   valide/1,          % +N       notation de base, ou notation à clé d'une famille valable
+                   valide/1,          % +N       notation de base, nom libre d'un gabarit, ou notation à clé valable
+                   gabarit_de/2,      % +N, -G   le gabarit d'un nom libre (25G41(BUTTERFLY) → 25G41(...))
                    profondeur_arbre/2 % +N, -D   nombre d'ancêtres
                  ]).
 
@@ -44,7 +48,27 @@ parent_de(N, P) :-
     ;   \+ iconclass:n(N), notation:analyser(N, Niveaux), Niveaux \= composee(_),
         memberchk(cle(_), Niveaux)                       % notation à clé : parent syntaxique
     ->  notation:parent_syntaxique(N, P)
+    ;   gabarit_de(N, G)                                 % nom libre : le gabarit, ou le préfixe après le nom
+    ->  (   notation:analyser(N, Niveaux), last(Niveaux, nom(_))
+        ->  P = G
+        ;   notation:parent_syntaxique(N, P)
+        )
     ).
+
+% gabarit_de(+N, -G) : N, absent d'Iconclass et sans clé, porte des noms ; le même texte avec « (...) » à la place de
+% chaque nom est une notation d'Iconclass
+gabarit_de(N, G) :-
+    \+ connue(N),
+    notation:analyser(N, Niveaux),
+    Niveaux \= composee(_),
+    \+ memberchk(cle(_), Niveaux),
+    memberchk(nom(_), Niveaux),
+    maplist(nom_en_gabarit, Niveaux, NiveauxG),
+    notation:ecrire(NiveauxG, G),
+    connue(G).
+
+nom_en_gabarit(nom(_), gabarit) :- !.
+nom_en_gabarit(X, X).
 
 jumeau(N, J) :-
     iconclass:enfant(J, N, _),
@@ -78,13 +102,16 @@ enfants(P, Enfants) :-
 racine(N) :- iconclass:n(N), \+ iconclass:enfant(_, N, _).
 
 valide(N) :- connue(N), !.
+valide(N) :- gabarit_de(N, _), !.
 valide(N) :-
     notation:analyser(N, Niveaux),
     Niveaux \= composee(_),
     append(Base0, [cle(S)], Niveaux),
     notation:ecrire(Base0, Base),
-    connue(Base),
-    iconclass:famille_cle(Base, K),
+    (   connue(Base) -> Famille = Base
+    ;   gabarit_de(Base, Famille)                        % la clé d'un nom libre : la famille de son gabarit
+    ),
+    iconclass:famille_cle(Famille, K),
     notation:ecrire_niveaux(S, Suffixe),
     iconclass:suffixe_cle(K, Suffixe, _).
 

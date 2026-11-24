@@ -3,6 +3,8 @@ name = "oedipamaas"
 version = "0.2.0"
 description = "Moteur iconographique : descriptions d'images en mots vers codes Iconclass prouvés"
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.12"
 dependencies = []
 
@@ -23,4 +25,4 @@ build-backend = "setuptools.build_meta"
 include = ["oedipamaas*"]
 
 [tool.setuptools.package-data]
-oedipamaas = ["regles/*.pl"]
+oedipamaas = ["regles/*.pl", "socle/*.pl"]

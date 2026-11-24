@@ -1,6 +1,7 @@
 """Décision compilée en Prolog (socle 1.0, § 9) : une petite forêt écrite à la main, au format du noyau de
 calibration ; les probabilités de Prolog égalent la relecture Python (règle du noyau : à gauche si ≤ seuil), et la
-sélection suit le réglage (k, seuil, critère), puis garde les plus spécifiques et retire la division 86."""
+sélection écarte la division 86, suit le réglage (k, seuil, critère), puis garde les plus spécifiques (au sens de l'arbre d'Iconclass, sur un
+petit Iconclass factice)."""
 import json
 import math
 import tempfile
@@ -23,6 +24,29 @@ POIDS = {"cible": "essai", "images": 3,
                     "ecart_relecture": 0.0, "f1_attendu": {"facteur": 1.0, "g": 4.0}}}
 
 
+# un petit Iconclass : les ancêtres se lisent dans l'arbre (11H(JEROME) est enfant du gabarit 11H(...), qui n'en est
+# pas un préfixe)
+NOTATIONS = "".join(f"N {n}\n" + "".join(f"C {c}\n" for c in cs) + "$\n" for n, cs in [
+    ("1", ["11"]), ("11", ["11H"]), ("11H", ["11H(...)"]), ("11H(...)", ["11H(JEROME)"]), ("11H(JEROME)", []),
+    ("2", ["25"]), ("25", ["25F"]), ("25F", ["25F2"]), ("25F2", ["25F23"]), ("25F23", []),
+    ("3", ["31"]), ("31", ["31A"]), ("31A", []), ("8", ["86"]), ("86", ["86A"]), ("86A", [])])
+
+
+@pytest.fixture(scope="module")
+def petit_iconclass():
+    from oedipamaas.socle.compiler_iconclass import compiler
+    with tempfile.TemporaryDirectory() as t:
+        d = Path(t) / "depot"
+        (d / "txt" / "en").mkdir(parents=True)
+        (d / "kw" / "en").mkdir(parents=True)
+        (d / "notations.txt").write_text(NOTATIONS, encoding="utf-8")
+        (d / "keys.txt").write_text("", encoding="utf-8")
+        (d / "COMMIT").write_text("essai\n")
+        compiler(d, Path(t) / "base")
+        janus.query_once(f"load_files('{Path(t) / 'base' / 'iconclass.pl'}', [redefine_module(true)])")
+        yield
+
+
 def relire(x):
     z = POIDS["arbres"]["base"]
     for arbre in FORET:
@@ -34,7 +58,7 @@ def relire(x):
     return 1 / (1 + math.exp(-z))
 
 
-def test_decision():
+def test_decision(petit_iconclass):
     from oedipamaas.socle.compiler_decision import compiler
     with tempfile.TemporaryDirectory() as t:
         poids = Path(t) / "poids.json"
@@ -48,15 +72,19 @@ def test_decision():
             traits = "[" + ",".join(f"{k}-{v}" for k, v in x.items()) + "]"
             p = janus.query_once("atom_to_term(A, _T, _), decision:p_catalogue(_T, P)", {"A": traits})["P"]
             assert abs(p - relire(x)) < 1e-12, (x, p, relire(x))
-        # sélection : seuil 0,2 (11H écarté), puis les k = 2 premières espérances p × (prof + 1) : 25F23 (4,2) et
-        # 86A (3,8) ; 31A (3,6) et 25F2 (3,5) ne passent pas ; la division 86 est retirée à la fin, comme dans la mesure
+        # sélection : seuil 0,2 (11H écarté), division 86 écartée avant la sélection (86A ne prend pas de place),
+        # puis les k = 2 premières espérances p × (prof + 1) : 25F23 (4,2) et 31A (3,6) ; 25F2 (3,5) ne passe pas
         cands = ("[c('25F23', 0.6, [prof-6]), c('25F2', 0.7, [prof-4]), c('31A', 0.9, [prof-3]), "
                  "c('86A', 0.95, [prof-3]), c('11H', 0.1, [prof-3])]")
         r = janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)", {"A": cands})["X"]
-        assert r == ["25F23"], r
+        assert r == ["25F23", "31A"], r
         # les plus spécifiques : un ancêtre d'un code retenu n'est pas répété
         cands2 = "[c('25F23', 0.9, [prof-6]), c('25F2', 0.95, [prof-5])]"
         assert janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)", {"A": cands2})["X"] == ["25F23"]
+        # au sens de l'arbre, pas des préfixes : le gabarit 11H(...) est un ancêtre de 11H(JEROME)
+        cands3 = "[c('11H(JEROME)', 0.9, [prof-5]), c('11H(...)', 0.95, [prof-4])]"
+        assert janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)",
+                                {"A": cands3})["X"] == ["11H(JEROME)"]
 
 
 # --- Deux étages : référence Python, celle du noyau de calibration (contexte_image) et de la mesure (ancestors) ------
@@ -149,3 +177,54 @@ def test_deux_etages():
             assert abs(obtenu[c] - attendu[c]) < 1e-12, (c, obtenu[c], attendu[c])
         # le réglage est celui des deux étages
         assert janus.query_once("decision_poids:reglage(K, S, C)")["K"] == 3
+
+
+# --- Sélection par F1 hiérarchique attendu (critère « f1 ») : référence Python, Moteur._choix_f1 de la version 0.2 --
+
+def choix_f1(p, g):
+    noeuds_de = {c: ancestors(c) for c in p}
+    q = {}
+    for c in p:
+        for a in noeuds_de[c]:
+            q[a] = max(q.get(a, -1.0), p[c])
+    pris, noeuds, somme, val = [], set(), 0.0, 0.0
+    while True:
+        meilleur = None
+        for c in sorted(p):
+            nouveaux = noeuds_de[c] - noeuds
+            if not nouveaux:
+                continue
+            s2 = somme + sum(q[a] for a in nouveaux)
+            v2 = 2 * s2 / (len(noeuds) + len(nouveaux) + g)
+            if meilleur is None or v2 > meilleur[0] or (v2 == meilleur[0] and c < meilleur[1]):
+                meilleur = (v2, c, nouveaux, s2)
+        if meilleur is None or meilleur[0] <= val:
+            return pris
+        val, c, nouveaux, somme = meilleur
+        noeuds |= nouveaux
+        pris.append(c)
+
+
+def test_selection_f1(petit_iconclass):
+    from oedipamaas.socle.compiler_decision import compiler
+    poids = json.loads(json.dumps(POIDS))
+    poids["arbres"]["critere"] = "f1"
+    for g in (0.5, 2.0, 6.0):
+        poids["arbres"]["f1_attendu"]["g"] = g
+        with tempfile.TemporaryDirectory() as t:
+            pj = Path(t) / "poids.json"
+            pj.write_text(json.dumps(poids))
+            pl = Path(t) / "decision_poids.pl"
+            compiler(pj, pl)
+            janus.query_once(f"load_files('{pl}', [redefine_module(true)])")
+            for f in ("notation.pl", "decision.pl"):
+                janus.consult(str(SOCLE / f))
+            p = {"25F23": 0.6, "25F2": 0.7, "31A": 0.9, "11H(JEROME)": 0.3, "86A": 0.95, "11H": 0.05}
+            terme = "[" + ",".join(f"c({c!r}, {v}, [])" for c, v in p.items()) + "]"
+            r = janus.query_once("atom_to_term(A, _C, _), decision:retenus(_C, X)", {"A": terme})["X"]
+            attendu = choix_f1({c: v for c, v in p.items() if not c.startswith("86")}, g)
+            # puis les plus spécifiques, dans l'arbre du petit Iconclass : 25F2 sous 25F23, 11H sous 11H(JEROME)
+            anc = {"25F23": {"25F2"}, "11H(JEROME)": {"11H"}}
+            attendu = [c for c in attendu if not any(c in anc.get(m, ()) for m in attendu)]
+            assert r == attendu, (g, r, attendu)
+            assert "86A" not in r

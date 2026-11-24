@@ -162,6 +162,23 @@ def test_lecture_et_recherche():
         # une mention niée ne dit rien : « no lion » ne donne pas la forme « lion »
         fd.charger(janus, dict(DESCRIPTION, keywords=["no lion"]))
         assert not janus.query_once("description:mention(_M, keywords, _, _), recherche:forme_mention(_M, lion)")["truth"]
+        # niée en son milieu : ce qui précède reste, ce qui suit non (« depicted without a lion », « neither lion nor
+        # skull ») ; niée après coup (« lion absent ») : rien
+        for texte, garde, perd in (("saint depicted without a lion", "saint", "lion"),
+                                   ("hermit, neither lion nor skull", "hermit", "skull"),
+                                   ("lion absent", None, "lion"), ("skull missing", None, "skull")):
+            fd.charger(janus, dict(DESCRIPTION, keywords=[texte]))
+            q = "description:mention(_M, keywords, _, _), recherche:forme_mention(_M, {})"
+            assert not janus.query_once(q.format(perd))["truth"], texte
+            if garde:
+                assert janus.query_once(q.format(garde))["truth"], texte
+        # un complément dit dans une entité liée : la relation compte dans son sens (sujet : l'entité de la tête)
+        for rel, attendu in ((["e1", "in", "e2"], True), (["e2", "covers", "e1"], False)):
+            fd.charger(janus, {"entities": [{"id": "e1", "type": "hand", "attributes": []},
+                                            {"id": "e2", "type": "sleeve", "attributes": []}],
+                               "relations": [rel], "keywords": [], "subject": {}})
+            janus.query_once("specialisation:decrire")
+            assert janus.query_once("cadres:unite_liee('entities[0]', sleeve)")["truth"] is attendu, rel
         fd.charger(janus, DESCRIPTION)
         janus.query_once("specialisation:decrire")
 

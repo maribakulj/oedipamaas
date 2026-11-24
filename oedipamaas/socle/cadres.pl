@@ -243,11 +243,13 @@ complement_implique(C, U) :-
     ;   ( implique(C, U) -> true ; specialisation:formes(C, F), specialisation:dite_dans(F, _), unite_liee(U, F) )
     ).
 
-% une forme dite dans une unité liée à U par une relation de la description
+% une forme dite dans une unité liée à U par une relation de la description, dans son sens : l'entité de U (celle de
+% la tête) en est le sujet, celle du complément l'objet — « e1 holds e3 » donne à la figure e1 l'objet e3, pas
+% l'inverse
 unite_liee(U, F) :-
     specialisation:dite_dans(F, U2), U2 \== U,
     entite_de_unite(U, E1), entite_de_unite(U2, E2),
-    ( description:relation(E1, _, E2) ; description:relation(E2, _, E1) ), !.
+    description:relation(E1, _, E2), !.
 
 entite_de_unite(U, E) :-
     atom_concat('entities[', R, U), atom_concat(I0, ']', R), atom_number(I0, I),

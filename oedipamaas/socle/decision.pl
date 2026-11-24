@@ -5,14 +5,17 @@
     de preuve du candidat (paires Nom-Valeur ; un trait absent vaut 0) : la base, plus la feuille atteinte dans chaque
     arbre (à gauche si la valeur est ≤ au seuil), puis la sigmoïde.
     retenus(Candidats, Codes) : sélection par le réglage appris (les k premiers de p ≥ seuil, classés par p ou par
-    l'espérance p × (profondeur + 1)), puis les plus spécifiques (un ancêtre d'un code retenu n'est pas répété), sans
-    la division 86 (comme la mesure).
+    l'espérance p × (profondeur + 1) ; ou, critère « f1 », par F1 hiérarchique attendu) hors de la division 86, puis les plus spécifiques (un ancêtre d'un code retenu n'est pas répété, au
+    sens de l'arbre d'Iconclass : arbre:ancetre/2, avec gabarits, noms et lettres doublées). La division 86 est
+    écartée comme dans la mesure, avant la sélection, pour ne pas y occuper de place.
 */
 :- module(decision, [ p_catalogue/2,  % +Traits, -P
                       p_image/2,      % +Liste de c(Notation, Traits), -Liste de Notation-P (un ou deux étages)
                       prefixes/2,     % +Notation, -Prefixes (par jetons, comme la mesure ; la notation comprise)
                       retenus/2       % +Liste de c(Notation, P, Traits), -Codes
                     ]).
+
+:- use_module(arbre).
 
 % --- Deux étages ----------------------------------------------------------------------------------------------------
 
@@ -132,17 +135,61 @@ arbre(A) :- distinct(A, ( decision_poids:noeud(A, 0, _, _, _, _) ; decision_poid
 
 retenus(Candidats, Codes) :-
     decision_poids:reglage(K, Seuil, Critere),
-    findall(V-N, ( member(c(N, P, Traits), Candidats), P >= Seuil, cle_tri(Critere, P, Traits, V) ), Vs),
-    sort(1, @>=, Vs, Tries),
-    length(Tries, L), K1 is min(K, L), length(Premiers, K1), append(Premiers, _, Tries),
-    pairs_values(Premiers, Ns),
-    plus_specifiques(Ns, Codes0),
-    exclude(division_86, Codes0, Codes).
+    % la division 86 (comme la mesure) est écartée avant la sélection : elle n'y prend pas de place
+    exclude(candidat_86, Candidats, Admis),
+    (   Critere == f1
+    ->  decision_poids:f1_attendu(G),
+        choix_f1(Admis, G, Ns)
+    ;   findall(V-N, ( member(c(N, P, Traits), Admis), P >= Seuil, cle_tri(Critere, P, Traits, V) ), Vs),
+        sort(1, @>=, Vs, Tries),
+        length(Tries, L), K1 is min(K, L), length(Premiers, K1), append(Premiers, _, Tries),
+        pairs_values(Premiers, Ns)
+    ),
+    plus_specifiques(Ns, Codes).
+
+% choix_f1(+Candidats, +G, -Codes) : sélection par F1 hiérarchique attendu (critère « f1 » du réglage ; reprise de
+% Moteur._choix_f1 de la version 0.2). p est la probabilité qu'un nœud soit dans la fermeture de la vérité ; un nœud
+% (préfixe par jetons, comme la mesure) vaut le plus fort p des candidats qui le contiennent ; on prend, tant qu'il la
+% fait monter, le code dont les nœuds nouveaux maximisent 2·Σp / (|nœuds| + G), G étant la taille attendue de la
+% vérité apprise avec les poids ; à égalité, la notation la plus petite. Ni k ni seuil.
+choix_f1(Cs, G, Pris) :-
+    findall(N-Nds, ( member(c(N, _, _), Cs), prefixes(N, L), sort(L, Nds) ), NoeudsDe0),
+    sort(NoeudsDe0, NoeudsDe),
+    findall(A-P, ( member(c(N, P, _), Cs), memberchk(N-Nds, NoeudsDe), member(A, Nds) ), AP0),
+    keysort(AP0, AP1), group_pairs_by_key(AP1, AP2),
+    findall(A-Q, ( member(A-Ps, AP2), max_list(Ps, Q) ), AQ),
+    list_to_assoc(AQ, Q),
+    glouton(NoeudsDe, Q, G, [], 0.0, 0.0, [], Pris).
+
+glouton(NoeudsDe, Q, G, Noeuds, Somme, Val, Acc, Pris) :-
+    length(Noeuds, LN),
+    findall(f(MV2, N, Nouv, S2),
+            ( member(N-Nds, NoeudsDe), ord_subtract(Nds, Noeuds, Nouv), Nouv \== [],
+              somme_q(Nouv, Q, Somme, S2),
+              length(Nouv, LV), V2 is 2 * S2 / (LN + LV + G), MV2 is -V2 ),
+            Options),
+    (   Options == []
+    ->  reverse(Acc, Pris)
+    ;   sort(0, @=<, Options, [f(MV2, N, Nouv, S2)|_]),
+        V2 is -MV2,
+        (   V2 =< Val
+        ->  reverse(Acc, Pris)
+        ;   ord_union(Noeuds, Nouv, Noeuds2),
+            glouton(NoeudsDe, Q, G, Noeuds2, S2, V2, [N|Acc], Pris)
+        )
+    ).
+
+somme_q([], _, S, S).
+somme_q([A|As], Q, S0, S) :- get_assoc(A, Q, QA), S1 is S0 + QA, somme_q(As, Q, S1, S).
+
+candidat_86(c(N, _, _)) :- division_86(N).
 
 cle_tri(esperance, P, Traits, V) :- !, valeur(Traits, prof, Prof), V is P * (Prof + 1).
 cle_tri(_, P, _, P).
 
 plus_specifiques(Ns, Codes) :-
-    include([N]>>( \+ ( member(M, Ns), M \== N, notation:ancetre_syntaxique(M, N) ) ), Ns, Codes).
+    include(sans_descendant(Ns), Ns, Codes).
+
+sans_descendant(Ns, N) :- \+ ( member(M, Ns), M \== N, arbre:ancetre(M, N) ).
 
 division_86(N) :- sub_atom(N, 0, 2, _, '86').

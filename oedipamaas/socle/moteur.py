@@ -53,7 +53,9 @@ def preuve(janus, c, retenus):
             return d
     if t.get("specialisee"):
         return {"regle": "specialisation", "notation": n, "part_decrite": t.get("part", 0)}
-    desc = [m for m in retenus if m != n and m.startswith(n)]
+    # les codes retenus dont la notation est un ancêtre, au sens de l'arbre d'Iconclass (gabarits, noms, lettres
+    # doublées), pas des préfixes de chaîne
+    desc = [m for m in retenus if m != n and janus.query_once("arbre:ancetre(M, N)", {"M": m, "N": n})["truth"]]
     return {"regle": "ancetre", "de": desc[:3]}
 
 

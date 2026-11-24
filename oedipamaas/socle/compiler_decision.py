@@ -8,7 +8,8 @@ Faits du module decision_poids :
   noeud(Arbre, Noeud, Trait, Seuil, Gauche, Droite)   aller à gauche si la valeur du trait est ≤ Seuil
   feuille(Arbre, Noeud, Valeur)
   reglage(K, Seuil, Critere)                 sélection par grille (critère : p, ou esperance = p × (profondeur + 1))
-  f1_attendu(G)                              sélection par F1 hiérarchique attendu (taille attendue de la vérité)
+  f1_attendu(G)                              taille attendue de la vérité, pour le critère « f1 » du réglage (sélection par
+                                             F1 hiérarchique attendu, decision:choix_f1/3)
   provenance(Cle, Valeur)                    empreinte du fichier de poids, cible, nombre d'images d'apprentissage
 Décision à deux étages (poids["deux_etages"]) : deux_etages, etage_base(E, B), etage_noeud(E, A, N, Trait, Seuil, G,
 D), etage_feuille(E, A, N, V) pour E = 1 (sur les traits) et E = 2 (sur les traits et la place du candidat dans son

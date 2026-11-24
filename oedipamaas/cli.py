@@ -60,11 +60,13 @@ def cmd_expliquer(a):
     if not codes:
         print(f"{a.code} : aucun appui dans cette description")
     for c in codes[: a.top]:
-        print(f"{c['code']}  {c['statut']}  score {c['score']}  — {c['iconclass']}")
+        # la sortie de Moteur.coder : p_catalogue quand des poids sont donnés, et pour chaque preuve sa valeur
+        p_cat = f"p {c['p_catalogue']}" if "p_catalogue" in c else "sans poids"
+        print(f"{c['code']}  {c['statut']}  {p_cat}  — {c.get('iconclass', '')}")
         for p in c["preuves"]:
-            faits = " ; ".join(f"{f['chemin']} « {f['texte']} »" for f in p["faits"])
+            faits = " ; ".join(f"{f['chemin']} « {f['texte']} »" for f in p.get("faits", []))
             extra = p.get("remplace") or p.get("freres") or ""
-            print(f"    {p['regle']:<15} +{p['contribution']:<6} {faits} {extra}")
+            print(f"    {p['regle']:<15} {p.get('valeur', 0.0):<6} {faits} {extra}")
 
 
 def main(argv=None):
