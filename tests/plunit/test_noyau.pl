@@ -48,6 +48,18 @@ preuves_acceptees(G, Q) :-
     k(K), satisfaire(K, G, Q, resultat(etablie, Ps, _)), Ps \== [],
     forall(member(P, Ps), verifier(K, G, Q, P, accepte)).
 
+:- begin_tests(independance).
+
+test(le_noyau_ne_charge_ni_iconclass_ni_wordnet) :-   % docs/NOYAU.md : l'indépendance du noyau
+    forall(member(M, [iconclass, wordnet, ressources, arbre, libelles_lus, definitions_index]), \+ current_module(M)).
+test(le_noyau_ne_nomme_aucun_de_ces_modules) :-
+    forall(( member(F, ['requetes.pl', 'satisfaction.pl', 'satisfaction_reference.pl', 'verificateur.pl']),
+             atom_concat('../../oedipamaas/socle/', F, C), read_file_to_string(C, S, []) ),
+           forall(member(M, ["iconclass:", "wordnet:", "ressources:", "arbre:", "libelles_lus:", "definitions_index:"]),
+                  \+ sub_string(S, _, _, _, M))).
+
+:- end_tests(independance).
+
 :- begin_tests(requetes).
 
 test(bien_formee) :- q_tenir(Q), bien_formee(Q, []).

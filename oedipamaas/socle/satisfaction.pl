@@ -13,7 +13,7 @@
 
     Le graphe est chargé dans un module temporaire, propre à l'appel : deux documents ne se mêlent jamais.
 */
-:- module(satisfaction, [ satisfaire/4, version_noyau/1, limite/1 ]).
+:- module(satisfaction, [ satisfaire/4, solutions_classees/4, version_noyau/1, limite/1 ]).
 :- encoding(utf8).
 :- use_module(library(lists)).
 :- use_module(library(apply)).
@@ -137,19 +137,26 @@ instancier_arg(S, A, Ai, L0, L) :- instancier(A, S, Ai, La), append(L0, La, L).
 
 lier(Ls, S0, S) :- foldl([V-X, A0, A]>>( memberchk(V-Y, A0) -> Y == X, A = A0 ; A = [V-X|A0] ), Ls, S0, S).
 
-contrainte_prete(meme(X, Y), S) :- ( memberchk(X-_, S) ; memberchk(Y-_, S) ), !.
+contrainte_prete(meme(X, Y), S) :- memberchk(X-_, S), memberchk(Y-_, S).
 contrainte_prete(distincts(X, Y), S) :- memberchk(X-_, S), memberchk(Y-_, S).
 contrainte_prete(nombre(X, _), S) :- memberchk(X-_, S).
 
-contrainte_vraie(_, meme(X, Y), S0, S) :-
-    (   memberchk(X-A, S0), memberchk(Y-B, S0) -> A == B, S = S0
-    ;   memberchk(X-A, S0) -> S = [Y-A|S0]
-    ;   memberchk(Y-B, S0) -> S = [X-B|S0]
-    ).
+contrainte_vraie(_, meme(X, Y), S, S) :- memberchk(X-A, S), memberchk(Y-B, S), A == B.
 contrainte_vraie(_, distincts(X, Y), S, S) :- memberchk(X-A, S), memberchk(Y-B, S), A \== B.
 contrainte_vraie(M, nombre(X, N), S, S) :- memberchk(X-R, S), M:classe(E, R), M:nombre(E, N), !.
 
 % --- Le classement des substitutions et le résultat -----------------------------------------------------------------
+
+% solutions_classees(+K, +Graphe, +Requete, -Classees) : toutes les solutions, chacune c(Classe, Sigma, Selection),
+% triées ; sans limite de calcul. C'est la vue que le moteur de référence (satisfaction_reference.pl) doit reproduire
+% exactement (docs/NOYAU.md, § 7)
+solutions_classees(K, Graphe, requete(Id, F), Cs) :-
+    requetes:bien_formee(requete(Id, F), []),
+    in_temporary_module(M, charger(M, Graphe), toutes_classees(K, M, F, Cs)).
+toutes_classees(K, M, F, Cs) :-
+    findall(Sol, distinct(Sol, solution(K, M, F, Sol)), Sols),
+    maplist(classe_brute(K, M), Sols, Cs0), sort(Cs0, Cs).
+classe_brute(K, M, sol(Sigma, Sel), c(Classe, Sigma, Sel)) :- classer(K, M, sol(Sigma, Sel), c(Classe, _, _)).
 
 resoudre(K, M, Id, F, resultat(Statut, Elements, Complet)) :-
     limite(Lim), Lim1 is Lim + 1,
