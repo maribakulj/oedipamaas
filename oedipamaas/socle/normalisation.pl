@@ -16,6 +16,16 @@
         noun.process, noun.phenomenon : ni l'agent « trainer », ni l'instrument, ni la matière « dye »), ou un lien
         morphosémantique de type « event » ; en français, les mêmes liens entre les synsets de WOLF.
 
+    Les rôles (C7.3) : le patient et le thème (ce qui subit l'action, ce qui se déplace ou change) ne se distinguent
+    pas sûrement, ni par le lecteur ni par un annotateur : chacun donne aussi l'autre. Le participant unique d'un
+    événement (« l'arche flotte ») est l'agent ou le thème selon le verbe, que la syntaxe ne dit pas : il reçoit les
+    deux. L'agent d'un événement à deux participants reste distinct : « Goliath tranche la tête de David » n'est pas
+    « David tranche la tête de Goliath ».
+
+    Les composés en « de », « of » que la langue ne lexicalise pas (« chaland de trait » n'est ni dans WordNet ni
+    dans WOLF) ne sont pas une unité : une entité de ce type reçoit aussi la structure (une entité « chaland », une
+    entité « trait », la relation de). Un composé lexicalisé (« mal de tête ») reste une unité.
+
     Le complément du nom d'action est lu comme le patient (« training of dogs », « dressage des chiens ») : la lecture
     usuelle du génitif d'un verbe transitif. Pour un verbe intransitif (« death of Anna »), elle est fausse ; elle se
     mesure (docs/mesures/V2.md).
@@ -45,6 +55,31 @@ genitif_lu(fr, R) :- memberchk(R, [de, du, des, 'd\'', 'd’']).
 enrichir(L, G0, G) :-
     findall(F, ajout(L, G0, F), Fs0), sort(Fs0, Fs),
     append(G0, Fs, G1), sort(G1, G).
+
+% R1 : patient et thème
+ajout(_, G, role(V, R2, X)) :-
+    member(role(V, R1, X), G), ( R1 == patient -> R2 = theme ; R1 == theme -> R2 = patient ).
+% R2 : le participant unique d'un événement est agent et thème
+ajout(_, G, role(V, R2, X)) :-
+    member(evenement(V, _, _), G), findall(R-Y, member(role(V, R, Y), G), [R1-X]),
+    ( R1 == agent -> R2 = theme ; R1 == theme -> R2 = agent ).
+% C1 : un composé en « de » ou « of » non lexicalisé reçoit sa structure
+ajout(L, G, F) :-
+    member(entite(E, W, Pa), G), atom(W), W \== nom_propre, compose_libre(L, W, A, B),
+    format(atom(Ea), "ca_~w", [E]), format(atom(Eb), "cb_~w", [E]), format(atom(R), "cr_~w", [E]), genitif(L, Ge),
+    (   F = entite(Ea, A, Pa) ; F = entite(Eb, B, Pa) ; F = relation(R, Ea, Ge, Eb, Pa)
+    ;   member(X, [Ea, Eb, R]), qualificatif(G, E, X, F)
+    ;   F = coref(E, Ea)
+    ).
+compose_libre(L, W, A, B) :-
+    member(Sep, [' de ', ' du ', ' des ', ' d\'', ' of ']), sub_atom(W, Av, Ls, Ap, Sep), !,
+    \+ lexicalise(L, W),
+    sub_atom(W, 0, Av, _, A0), Debut is Av + Ls, sub_atom(W, Debut, Ap, 0, B0),
+    retirer_article(A0, A), retirer_article(B0, B), A \== '', B \== ''.
+retirer_article(X0, X) :-
+    ( member(Art, ['la ', 'le ', 'les ', 'l\'', 'the ']), atom_concat(Art, X1, X0) -> X = X1 ; X = X0 ).
+lexicalise(en, W) :- wordnet:s(_, _, W, n, _, _), !.
+lexicalise(fr, W) :- ressources:wolf(S, W), S // 100000000 =:= 1, !.
 
 % E1 : un événement donne son nom d'action
 ajout(L, G, F) :-
