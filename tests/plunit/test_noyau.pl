@@ -188,6 +188,10 @@ test(ordre_de_liaison_rapide) :-                % 200 entités, un nom rare : le
     satisfaire(K, G, requete(r, et([type(v(x), homme), evenement(v(e), prier), role(v(e), agent, v(x)),
                                     nom(v(x), ['JEROME'])])), resultat(etablie, [_], complet)),
     statistics(cputime, T1), T1 - T0 < 2.0.
+test(hierarchie_cyclique) :-                   % le noyau termine, et le vérificateur aussi
+    graphe([entite(e1, cycle_a, p_1)], G),
+    Q = requete(c, type(v(x), cycle_b)), resultat(G, Q, etablie), preuves_acceptees(G, Q),
+    resultat(G, requete(d, type(v(x), ailleurs)), inconnue).
 test(isolation_des_documents) :-
     graphe([entite(e1, lion, p_1)], G1), graphe([entite(e1, tigre, p_1)], G2),
     resultat(G1, requete(l, type(v(x), lion)), etablie),

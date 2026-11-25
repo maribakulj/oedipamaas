@@ -77,7 +77,7 @@ Contrainte ::= meme(X, Y) | distincts(X, Y) | nombre(X, K)
 **Le fragment.** Ce sont des formules existentielles positives (∃, ∧, ∨) à atomes typés, avec égalité et
 différence, évaluées sur un graphe fini : l'équivalent d'unions de requêtes conjonctives. Il n'y a pas de négation
 dans une requête, et aucune négation par échec dans une preuve. L'évaluation termine : le graphe est fini, la requête
-aussi, la hiérarchie des types est sans cycle. Son coût est celui d'un homomorphisme de graphes, exponentiel dans le
+aussi, et un lien est un chemin simple dans la hiérarchie de K (qui peut avoir des cycles : celle des verbes de WordNet en a). Son coût est celui d'un homomorphisme de graphes, exponentiel dans le
 nombre de variables seulement ; le moteur lie d'abord les atomes les plus sélectifs (§ 4).
 
 ## 4. La satisfaction

@@ -95,7 +95,7 @@ negatif(G, A, Ctx) :- memberchk(polarite(A, neg), G), memberchk(modalite(A, affi
 % un lien : chaque pas est une primitive de K
 lien_valide(K, Cat, W, T, chemin(W, [S0|Ch])) :- K:sens(Cat, W, S0), pas(K, [S0|Ch], T).
 pas(_, [T], T0) :- T == T0, !.
-pas(K, [S, S1|Ch], T) :- K:sous(S, S1), pas(K, [S1|Ch], T).
+pas(K, [S, S1|Ch], T) :- K:sous(S, S1), \+ memberchk(S, [S1|Ch]), pas(K, [S1|Ch], T).
 nom_valide(K, Nom, Ks, cle(C)) :- K:cle_de_nom(Nom, C), memberchk(C, Ks).
 nom_valide(K, Nom, Ks, alias(C, Ka)) :- K:cle_de_nom(Nom, C), memberchk(Ka, Ks), ( K:alias(C, Ka) ; K:alias(Ka, C) ).
 
@@ -147,9 +147,9 @@ appui_signe_cherche(K, G, S, relation(X, Re, Y), A) :-
 appui_signe_cherche(K, G, _, genre(T), E) :-
     member(entite(E, W, _), G), W \== nom_propre, negatif(G, E, oeuvre), lien_existe(K, n, W, T).
 
-lien_existe(K, Cat, W, T) :- K:sens(Cat, W, S0), monte(K, S0, T), !.
-monte(_, S, T) :- S == T, !.
-monte(K, S, T) :- K:sous(S, S1), monte(K, S1, T).
+lien_existe(K, Cat, W, T) :- K:sens(Cat, W, S0), monte(K, S0, T, [S0]), !.
+monte(_, S, T, _) :- S == T, !.
+monte(K, S, T, Vus) :- K:sous(S, S1), \+ memberchk(S1, Vus), monte(K, S1, T, [S1|Vus]).
 
 contrainte_vraie(_, S, meme(X, Y)) :- val(S, X, A), val(S, Y, B), A == B.
 contrainte_vraie(_, S, distincts(X, Y)) :- val(S, X, A), val(S, Y, B), A \== B.

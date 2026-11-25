@@ -116,8 +116,8 @@ signe_appui(K, G, _, genre(T), Sg) :-
     member(entite(E, W, _), G), W \== nom_propre, etat(G, E, oeuvre, Sg), monte(K, n, W, T).
 
 % un mot du texte va au type T par K : un sens, puis des pas vers le haut
-monte(K, C, W, T) :- K:sens(C, W, S0), atteint(K, S0, T), !.
-atteint(_, S, T) :- S == T, !.
-atteint(K, S, T) :- K:sous(S, S1), atteint(K, S1, T).
+monte(K, C, W, T) :- K:sens(C, W, S0), atteint(K, S0, T, [S0]), !.
+atteint(_, S, T, _) :- S == T, !.
+atteint(K, S, T, Vus) :- K:sous(S, S1), \+ memberchk(S1, Vus), atteint(K, S1, T, [S1|Vus]).
 
 nomme(K, Nom, Ks) :- K:cle_de_nom(Nom, C), ( memberchk(C, Ks) -> true ; member(Ka, Ks), ( K:alias(C, Ka) ; K:alias(Ka, C) ) ), !.

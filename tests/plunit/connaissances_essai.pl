@@ -21,6 +21,8 @@ sous(enfant, personne).
 sous(bercer, tenir).
 sous(terrasser, attaquer).
 sous(portrait_en_buste, portrait).
+sous(cycle_a, cycle_b).          % un cycle, comme dans la hiérarchie des verbes de WordNet
+sous(cycle_b, cycle_a).
 
 cle_de_nom(Nom, C) :- upcase_atom(Nom, C).
 

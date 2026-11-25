@@ -67,9 +67,11 @@ passage_de(M, A, P) :- ( M:entite(A, _, P) ; M:nom(A, _, _, P) ; M:propriete(A, 
 
 % --- Les liens (K) ---------------------------------------------------------------------------------------------------
 
-lien(K, Cat, W, T, chemin(W, Ch)) :- K:sens(Cat, W, S0), once(chemin(K, S0, T, Ch)).
-chemin(_, S, T, [S]) :- S == T, !.
-chemin(K, S, T, [S|Ch]) :- K:sous(S, S1), chemin(K, S1, T, Ch).
+lien(K, Cat, W, T, chemin(W, Ch)) :- K:sens(Cat, W, S0), once(chemin(K, S0, T, [S0], Ch)).
+% un chemin simple (sans retour sur un nœud déjà vu : la hiérarchie de K peut avoir des cycles, celle des verbes de
+% WordNet en a)
+chemin(_, S, T, _, [S]) :- S == T, !.
+chemin(K, S, T, Vus, [S|Ch]) :- K:sous(S, S1), \+ memberchk(S1, Vus), chemin(K, S1, T, [S1|Vus], Ch).
 
 lien_de_nom(K, Nom, Ks, L) :-
     K:cle_de_nom(Nom, C),
