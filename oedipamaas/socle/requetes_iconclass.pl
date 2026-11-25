@@ -57,14 +57,28 @@ compiler(N, L, compilation(N, L, Type, Suff, Nec, Statut, Raisons, Famille)) :-
 pas_pris_en_charge(N, _, cle) :- sub_atom(N, _, _, _, '(+'), !.
 pas_pris_en_charge(N, _, gabarit_a_remplir) :- sub_atom(N, _, _, _, '(...)'), !.
 pas_pris_en_charge(_, T, type(T)) :- memberchk(T, [rubrique, attribut, concept, inconnu]), !.
+% une section à lettres doublées (31AA : figure féminine ; 25FF : fabuleux ; 48CC, 25HH…) : le trait que la lettre
+% doublée déclenche n'est pas dans le libellé de la notation ; sans lui la requête est trop faible (C8)
+pas_pris_en_charge(N, _, lettres_doublees) :- lettres_doublees(N), !.
 
 % --- Par type ---------------------------------------------------------------------------------------------------------
 
-compiler_(N, L, _, gabarit, F, Fn, Rs) :-                       % une notation à nom sur un gabarit
-    nom_de_gabarit(N, Nom), !,
+compiler_(N, L, T0, gabarit, F, Fn, Rs) :-                      % une notation à nom sur un gabarit de choses
+    \+ memberchk(T0, [individu, recit]), \+ libelles_iconclass:gabarit_de_personnes(N), nom_de_gabarit(N, Nom, G), !,
     tetes_du_nom(L, Nom, Ts), Ts \== [],
-    findall(type(v(x), T), member(T, Ts), As), ou_ou_un(As, F), Fn = F,
+    findall(type(v(x), T), member(T, Ts), As), ou_ou_un(As, Fnom),
+    % le genre que donne le libellé du gabarit (« bottles » pour PELICAN, « trees » pour PEAR-TREE) : sur la même
+    % variable ; impliqué quand le nom n'a qu'un sens, il écarte les autres sens quand il en a plusieurs
+    (   genre_du_gabarit(G, L, Gs), Gs \== []
+    ->  findall(type(v(x), Tg), member(Tg, Gs), Ags), ou_ou_un(Ags, Fg), F = et([Fnom, Fg])
+    ;   F = Fnom
+    ),
+    Fn = Fnom,
     ( L == fr, formes_anglaises(Nom, Ts) -> Rs = [nom_sans_traduction(Nom)] ; Rs = [] ).
+compiler_(N, L, T, scene, F, Fn, Rs) :-                         % une subdivision d'une personne (11I62(ADAM)11)
+    T \== scene, ( memberchk(T, [individu, recit]) ; libelles_iconclass:gabarit_de_personnes(N) ),
+    subdivision_de_personne(N), !,
+    compiler_(N, L, scene, scene, F, Fn, Rs).
 compiler_(N, L, T, T, F, Fn, Rs) :- memberchk(T, [individu, recit]), !,
     noms(N, L, Ks), Ks \== [],
     aspects(N, L, Gs, Ra),
@@ -76,19 +90,23 @@ compiler_(N, L, genre, genre, F, F, []) :- !,
 compiler_(N, L, scene, scene, F, Fn, Rs) :- !,
     partie(N, L, Net, Ph), graphe(N, L, Net, Ph, Fs),
     graphe_requete(Fs, all, Cs0, Ra),
-    heritage(N, L, Cs0, Cs),
-    Cs \== [], et_ou_un(Cs, F), necessaire(Cs, Fn), mots_non_couverts(L, Ph, Cs, Rm), append(Ra, Rm, Rs).
+    heritage(N, L, Cs0, Cs1),
+    aspects(N, L, Gs, Rg), append(Cs1, Gs, Cs),
+    Cs \== [], et_ou_un(Cs, F), necessaire(Cs1, Fn), mots_non_couverts(L, Ph, Cs1, Rm),
+    parentheses_non_lues(N, L, Rp), append([Ra, Rm, Rg, Rp], Rs).
 compiler_(N, L, classe, classe, F, Fn, Rs) :- !,
     partie(N, L, Net, Ph), graphe(N, L, Net, Ph, Fs),
     definitions:mots(Ph, Ws0), definitions:defini(Ws0, Ws), definitions:segments_complets(L, Ws, Ss),
     findall(Cs-Ra-S, ( member(S, Ss), debuts_du_segment(S, Ds), graphe_requete(Fs, debuts(Ds), Cs0, Ra), Cs0 \== [],
-                       heritage(N, L, Cs0, Cs) ), Alts),
-    Alts \== [],
-    findall(Fa, ( member(Cs-_-_, Alts), et_ou_un(Cs, Fa) ), Fas), ou_ou_un(Fas, F),
+                       heritage(N, L, Cs0, Cs) ), Alts0),
+    Alts0 \== [], tete_partagee_a_droite(L, Alts0, Alts),
+    findall(Fa, ( member(Cs-_-_, Alts), et_ou_un(Cs, Fa) ), Fas), ou_ou_un(Fas, F0),
+    aspects(N, L, Gs, Rg), ( Gs == [] -> F = F0 ; append([F0], Gs, Fg), F = et(Fg) ),
+    parentheses_non_lues(N, L, Rp),
     findall(Fn1, ( member(Cs-_-_, Alts), necessaire(Cs, Fn1) ), Fns), ou_ou_un(Fns, Fn),
     findall(R, ( member(_-Ra-_, Alts), member(R, Ra) ), Rs0),
     findall(R, ( member(Cs-_-S, Alts), mots_non_couverts(L, [phrase(S)], Cs, Rm), member(R, Rm) ), Rs1),
-    append(Rs0, Rs1, Rs2), sort(Rs2, Rs).
+    append([Rs0, Rs1, Rg, Rp], Rs2), sort(Rs2, Rs).
 
 partie(N, L, Net, Ph) :- libelles_lus:partie(N, L, 1, _, Net, _, Ph), !.
 graphe(_, L, Net, Ph, Fs) :- interpretation:interpreter(Net, L, description, Ph, Fs).
@@ -106,7 +124,7 @@ ou_ou_un(As0, ou(As)) :- sort(As0, As).
 graphe_requete(Fs, Por, Cs, Rs) :-
     findall(E, ( member(entite(E, _, P), Fs), dans(Fs, P, Por) ), Es),
     findall(V, ( member(evenement(V, _, P), Fs), dans(Fs, P, Por) ), Vs),
-    findall(C, condition(Fs, Es, Vs, C), Cs0), list_to_set(Cs0, Cs1),
+    findall(C, condition(Fs, Es, Vs, C), Cs00), list_to_set(Cs00, Cs01), composes(Cs01, Cs0), list_to_set(Cs0, Cs1),
     distinctions(Cs1, Ds), append(Cs1, Ds, Cs),
     findall(R, raison(Fs, Es, Vs, Cs, R), Rs0), sort(Rs0, Rs).
 
@@ -114,7 +132,9 @@ dans(_, _, all) :- !.
 dans(Fs, P, debuts(Ds)) :- memberchk(passage(P, Dp, _), Fs), memberchk(Dp, Ds).
 
 condition(Fs, Es, _, type(v(E), T)) :- member(E, Es), member(entite(E, T0, _), Fs), T0 \== nom_propre, mot(T0, T).
-condition(Fs, Es, _, nom(v(E), [K])) :- member(E, Es), member(nom(_, E, Nom, _), Fs), raisonnement:normaliser_nom(Nom, K).
+condition(Fs, Es, _, nom(v(E), [K])) :-
+    member(E, Es), member(nom(_, E, Nom, _), Fs), \+ mot_commun_en_tete(Fs, E, Nom, _), raisonnement:normaliser_nom(Nom, K).
+condition(Fs, Es, _, type(v(E), W)) :- member(E, Es), member(nom(_, E, Nom, _), Fs), mot_commun_en_tete(Fs, E, Nom, W).
 condition(Fs, Es, _, propriete(v(E), P)) :-
     member(E, Es), member(propriete(_, E, P0, _), Fs), mot(P0, P), \+ metalangage(P).
 condition(Fs, _, Vs, evenement(v(V), P)) :- member(V, Vs), member(evenement(V, P0, _), Fs), mot(P0, P).
@@ -124,7 +144,51 @@ condition(Fs, Es, _, relation(v(E1), R, v(E2))) :-
 condition(Fs, Es, _, meme(v(E1), v(E2))) :- member(coref(E1, E2), Fs), memberchk(E1, Es), memberchk(E2, Es).
 
 mot(X, W) :- atom(X), downcase_atom(X, W).
+
+% Iconclass met une majuscule au premier mot d'un libellé : un « nom » qui est le premier mot et un nom commun de la
+% langue (un sens qui n'est pas une instance dans WordNet ; un mot de WOLF) est ce nom commun (« Isthmus »)
+mot_commun_en_tete(Fs, E, Nom, W) :-
+    member(entite(E, nom_propre, P), Fs), memberchk(passage(P, 0, _), Fs),
+    \+ sub_atom(Nom, _, _, _, ' '), downcase_atom(Nom, W),
+    nb_current(definitions_langue, L),
+    (   L == en -> wordnet:s(S, _, W, n, _, _), \+ wordnet:ins(S, _)
+    ;   ressources:wolf(S, W), S // 100000000 =:= 1, \+ wordnet:ins(S, _)
+    ), !.
 metalangage(W) :- memberchk(W, [other, others, autre, autres, specific, spécifique, various, divers]).
+
+% Les composés que la langue lexicalise (WordNet en anglais, WOLF en français) sont un seul type, non une tête et
+% son complément : « ring finger » (finger + ring), « mal de tête » (mal de tête), « organe sexuel » (organe + sexuel)
+composes(Cs0, Cs) :-
+    (   select(type(X, T), Cs0, Cs1), select(propriete(X, P), Cs1, Cs2), compose_de(T, P, W)
+    ->  composes([type(X, W)|Cs2], Cs)
+    ;   select(type(X, T1), Cs0, Cs1), select(relation(X, R, Y), Cs1, Cs2), memberchk(R, [of, de, du, des]),
+        select(type(Y, T2), Cs2, Cs3), \+ autre_condition(Cs3, Y), compose_de_complement(T1, R, T2, W)
+    ->  composes([type(X, W)|Cs3], Cs)
+    ;   Cs = Cs0
+    ).
+compose_de(T, P, W) :-
+    nb_current(definitions_langue, L),
+    ( L == en -> atomic_list_concat([P, T], ' ', W) ; atomic_list_concat([T, P], ' ', W) ), lexicalise(L, W), !.
+compose_de_complement(T1, R, T2, W) :-
+    nb_current(definitions_langue, L), ( L == en -> R1 = of ; R1 = de ),
+    member(R0, [R1, R]), atomic_list_concat([T1, R0, T2], ' ', W), lexicalise(L, W), !.
+autre_condition(Cs, Y) :- member(C, Cs), arg(_, C, A), A == Y, !.
+lexicalise(en, W) :- wordnet:s(_, _, W, n, _, _), !.
+lexicalise(fr, W) :- ressources:wolf(S, W), S // 100000000 =:= 1, !.
+
+% La tête partagée à droite (« skin and venereal diseases ») : la lecture la plus exigeante d'un segment réduit à un
+% nom (« skin ») est le composé qu'il forme avec la tête du dernier segment, quand la langue le lexicalise (« skin
+% disease ») ; sinon le segment reste tel quel
+tete_partagee_a_droite(L, Alts0, Alts) :-
+    (   last(Alts0, Cd-_-_), member(type(_, Td0), Cd), tete_finale(Td0, Td)
+    ->  maplist(distribuer_a_droite(L, Td), Alts0, Alts)
+    ;   Alts = Alts0
+    ).
+tete_finale(T, H) :- atomic_list_concat(Ps, ' ', T), last(Ps, H).
+distribuer_a_droite(L, Td, [type(X, T)]-Ra-S, [type(X, W)]-Ra-S) :-
+    ( L == en -> atomic_list_concat([T, Td], ' ', W) ; atomic_list_concat([Td, T], ' ', W) ),
+    lexicalise(L, W), !.
+distribuer_a_droite(_, _, A, A).
 
 % deux noms propres différents d'un même libellé : deux individus (docs/PLAN_V1.md, C2.3)
 distinctions(Cs, Ds) :-
@@ -163,6 +227,15 @@ couvert(Cs, W) :- member(nom(_, Ks), Cs), member(K, Ks), upcase_atom(W, Wu), sub
 
 debuts_du_segment(S, Ds) :- findall(X, member(mot(_, _, _, _, _, _, _, X, _), S), Ds).
 
+% une parenthèse en minuscules exigée par la grammaire des libellés (definitions.pl : « facultatif » au sens du
+% prétraitement, qui la garde pour l'exiger) : ses mots ne sont pas lus en graphe à ce jalon ; la requête est partielle
+parentheses_non_lues(N, L, Rs) :-
+    ( libelles_lus:partie(N, L, 1, _, _, Ms, _) -> true ; Ms = [] ),
+    findall(parenthese_non_lue(C), ( member(facultatif(C), Ms), definitions:mots_de_parenthese(L, C, [_|_]) ), Rs).
+
+% une subdivision d'une notation de personne : du texte après la parenthèse du nom (11I62(ADAM)11, 11H(PETER)5)
+subdivision_de_personne(N) :- sub_atom(N, _, 1, A, ')'), A > 0, \+ sub_atom(N, _, _, _, '(+'), !.
+
 % --- Les noms, les aspects, l'héritage --------------------------------------------------------------------------------
 
 noms(N, L, Ks) :- definitions:definition(N, L, def(_, Ex, _, _, _)), member(un_de([[nom(Ks)]]), Ex), is_list(Ks), !.
@@ -172,7 +245,14 @@ aspects(N, L, Gs, Rs) :-
     findall(F-Ra, ( libelles_lus:partie(N, L, R, gabarit, Net, _, Ph), R > 1, \+ definitions:lettres_doublees(Net),
                     graphe(N, L, Net, Ph, Fs), graphe_requete(Fs, all, Cs, Ra0), Cs \== [],
                     et_ou_un(Cs, F), Ra = [aspect_non_lie_a_la_personne|Ra0] ), Ps),
-    pairs_keys_values(Ps, Gs0, Rss), renommer_aspects(Gs0, 1, Gs), append(Rss, Rs0), sort(Rs0, Rs).
+    pairs_keys_values(Ps, Gs0, Rss), renommer_aspects(Gs0, 1, Gs), append(Rss, Rs1),
+    % une partie de gabarit dont la lecture ne donne aucune condition (« ~ cold », un adjectif seul) n'est pas lue :
+    % la requête n'en dit pas tout
+    findall(aspect_non_lu(Net), ( libelles_lus:partie(N, L, R, gabarit, Net, _, Ph), R > 1,
+                                  \+ definitions:lettres_doublees(Net), graphe(N, L, Net, Ph, Fs),
+                                  graphe_requete(Fs, all, [], _),
+                                  mots_non_couverts(L, Ph, [], [_|_]) ), Rs2),
+    append(Rs1, Rs2, Rs0), sort(Rs0, Rs).
 renommer_aspects([], _, []).
 renommer_aspects([G|Gs], I, [G1|Gs1]) :- prefixer(I, G, G1), I1 is I + 1, renommer_aspects(Gs, I1, Gs1).
 prefixer(I, v(X), v(Y)) :- !, format(atom(Y), "a~w_~w", [I, X]).
@@ -192,10 +272,19 @@ heritage(N, L, Cs0, Cs) :-
 
 % --- Les notations à nom construites sur un gabarit -------------------------------------------------------------------
 
-nom_de_gabarit(N, Nom) :-
+nom_de_gabarit(N, Nom, G) :-
     \+ sub_atom(N, _, _, _, '(...)'), sub_atom(N, B, 1, _, '('), \+ sub_atom(N, _, _, _, '(+'),
     sub_atom(N, 0, B, _, Racine), atom_concat(Racine, '(...)', G), iconclass:n(G),
     B1 is B + 1, sub_atom(N, E, 1, _, ')'), E > B1, !, Lg is E - B1, sub_atom(N, B1, Lg, _, Nom).
+
+genre_du_gabarit(G, L, Ts) :-
+    libelles_lus:partie(G, L, 1, _, Net, Ms, Ph),
+    definitions:conditions(classe, G, L, Net, Ph, Ms, Cs), memberchk(tete(r, Ts), Cs), !.
+
+% une notation d'une section à lettres doublées : une lettre majuscule répétée après la division (« 31AA4631 »,
+% « 25FF711(…) », « 11HH(BARBARA)32 »)
+lettres_doublees(N) :- atom_codes(N, Cs), append(_, [A, A|_], Cs), code_type(A, upper), \+ code_type(A, digit(_)),
+    append(Av, [A, A|_], Cs), \+ ( member(X, Av), X == 0'( ), !.
 
 % les têtes d'un nom de gabarit (PEAR-TREE) : en anglais, le lemme (« pear tree », « pear-tree ») ; en français, les
 % mots de WOLF des sens anglais de ce lemme
