@@ -3,7 +3,8 @@
         OEDIPAMAAS_ANALYSEUR=stanza swipl outils/vertical/coder.pl BASE TEXTES.json SORTIE.json [PAS [CONTROLE]]
     TEXTES.json : [{k, notation, langue, positif, negatif, indetermine, variantes?}] (ou sans notation : fiches.json
     est alors lu à côté pour la retrouver par k). PAS : une fiche sur PAS. CONTROLE : une fiche sur CONTROLE est aussi
-    codée en mode exhaustif, et les deux modes doivent donner les mêmes codes (C5, I4).
+    codée en mode exhaustif : CONTROLE est le nombre de fiches contrôlées, les premières de l'échantillon ; les deux
+    modes doivent donner les mêmes codes (C5, I4).
     SORTIE.json : pour chaque fiche et chaque texte, le statut de la notation visée (etabli, candidat, ecarte,
     contradictoire, absent), à part un descendant établi (ascendance documentaire : jamais compté comme la notation
     visée, I11), les codes établis, ceux hors de la branche documentaire, et l'accord des deux modes.  */
@@ -23,6 +24,7 @@ main :-
     findall(F, ( nth1(I, Fiches1, F), (I - 1) mod Pas =:= 0 ), Fiches),
     findall(L-t(K, Genre, T), ( member(Fi, Fiches), atom_string(L, Fi.langue), K = Fi.k, textes(Fi, Genre, T) ), Ts),
     findall(L, member(L-_, Ts), Ls0), sort(Ls0, Ls),
+    findall(K, ( nth1(I, Fiches, Fi), I =< Controle, K = Fi.k ), Ks), nb_setval(controlees, Ks),
     findall(R, ( member(L, Ls), findall(X, member(L-X, Ts), Xs), lire_et_coder(L, Xs, Controle, Rs), member(R, Rs) ), Res),
     findall(J, ( member(Fi, Fiches), fiche(Fi, Res, J) ), Js),
     setup_call_cleanup(open(Sortie, write, S, [encoding(utf8)]), json_write_dict(S, Js, [width(140)]), close(S)),
@@ -43,7 +45,7 @@ lire_et_coder(L, Xs, Controle, Rs) :-
     findall(r(K, G, Res, Accord, Dt),
             ( nth1(I, Xs, t(K, G, T)), nth1(I, Ps, Phrases),
               get_time(T0), coder_texte(T, L, Phrases, indexe, Res), get_time(T1), Dt is T1 - T0,
-              (   Controle > 0, K mod Controle =:= 0, Res \== erreur
+              (   Controle > 0, nb_getval(controlees, Ks), memberchk(K, Ks), Res \== erreur
               ->  coder_texte(T, L, Phrases, exhaustif, Rx), ( Rx == Res -> Accord = egal ; Accord = different )
               ;   Accord = non_controle
               ) ),
