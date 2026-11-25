@@ -79,13 +79,15 @@ sous_terme_formule(F, F).
 sous_terme_formule(et(Fs), G) :- is_list(Fs), member(F, Fs), sous_terme_formule(F, G).
 sous_terme_formule(ou(Fs), G) :- is_list(Fs), member(F, Fs), sous_terme_formule(F, G).
 
-arguments_valides(type(v(_), T)) :- atom(T).
+% un type, un prédicat, une propriété, une relation : un lemme (atome) ou un identifiant de concept de K (entier)
+arguments_valides(type(v(_), T)) :- type_valide(T).
 arguments_valides(nom(v(_), Ks)) :- is_list(Ks), Ks \== [], maplist(atom, Ks).
-arguments_valides(propriete(v(_), P)) :- atom(P).
-arguments_valides(evenement(v(_), P)) :- atom(P).
+arguments_valides(propriete(v(_), P)) :- type_valide(P).
+arguments_valides(evenement(v(_), P)) :- type_valide(P).
 arguments_valides(role(v(_), R, v(_))) :- atom(R).
-arguments_valides(relation(v(_), R, v(_))) :- atom(R).
-arguments_valides(genre(T)) :- atom(T).
+arguments_valides(relation(v(_), R, v(_))) :- type_valide(R).
+arguments_valides(genre(T)) :- type_valide(T).
+type_valide(T) :- ( atom(T) ; integer(T) ), !.
 arguments_valides(meme(v(_), v(_))).
 arguments_valides(distincts(v(_), v(_))).
 arguments_valides(nombre(v(_), K)) :- integer(K), K >= 1.

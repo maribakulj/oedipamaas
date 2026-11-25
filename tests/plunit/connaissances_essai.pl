@@ -7,6 +7,7 @@
 version('essai 1').
 
 sens(_, W, W) :- atom(W).
+sens(n, lionne, 1001).            % un identifiant de concept (comme un synset) ; 1001 est sous 1000
 
 sous(lionne, lion).
 sous(lion, felin).
@@ -21,6 +22,7 @@ sous(enfant, personne).
 sous(bercer, tenir).
 sous(terrasser, attaquer).
 sous(portrait_en_buste, portrait).
+sous(1001, 1000).
 sous(cycle_a, cycle_b).          % un cycle, comme dans la hiérarchie des verbes de WordNet
 sous(cycle_b, cycle_a).
 

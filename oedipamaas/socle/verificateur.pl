@@ -33,13 +33,14 @@ forme_requete(requete(Id, F)) :- atom(Id), formule(F).
 formule(et(Fs)) :- !, is_list(Fs), Fs \== [], maplist(formule, Fs).
 formule(ou(Fs)) :- !, is_list(Fs), Fs = [_, _|_], maplist(formule, Fs).
 formule(F) :- ground(F), ( atome(F) ; contrainte(F) ).
-atome(type(v(X), T)) :- atom(X), atom(T).
+type_valide(T) :- ( atom(T) ; integer(T) ), !.
+atome(type(v(X), T)) :- atom(X), type_valide(T).
 atome(nom(v(X), Ks)) :- atom(X), is_list(Ks), Ks \== [], maplist(atom, Ks).
-atome(propriete(v(X), P)) :- atom(X), atom(P).
-atome(evenement(v(X), P)) :- atom(X), atom(P).
+atome(propriete(v(X), P)) :- atom(X), type_valide(P).
+atome(evenement(v(X), P)) :- atom(X), type_valide(P).
 atome(role(v(X), R, v(Y))) :- atom(X), atom(R), atom(Y).
-atome(relation(v(X), R, v(Y))) :- atom(X), atom(R), atom(Y).
-atome(genre(T)) :- atom(T).
+atome(relation(v(X), R, v(Y))) :- atom(X), type_valide(R), atom(Y).
+atome(genre(T)) :- type_valide(T).
 contrainte(meme(v(X), v(Y))) :- atom(X), atom(Y).
 contrainte(distincts(v(X), v(Y))) :- atom(X), atom(Y).
 contrainte(nombre(v(X), N)) :- atom(X), integer(N), N >= 1.

@@ -1,7 +1,9 @@
 /*  Le moteur de satisfaction des requêtes, optimisé (docs/NOYAU.md, version 0.2, § 4 et 5).
 
     satisfaire(+K, +Graphe, +Requete, -Resultat)
-    satisfaire(+K, +Graphe, +Requete, +Options, -Resultat)      Options : [budget(N)]
+    satisfaire(+K, +Graphe, +Requete, +Options, -Resultat)      Options : [budget(N), temps(Secondes)]
+        temps(S) : une limite de temps ; dépassée, le résultat est resultat(incomplet, [temps_depasse], incomplet),
+                   même si une solution certifiable avait été trouvée (le calcul interrompu n'est pas mis en forme)
         K        le module de connaissances (docs/NOYAU.md, § 2)
         Graphe   la liste des assertions d'un document, validée (assertions:valider/2) ; invalide : une erreur
                  graphe_invalide(Erreurs)
@@ -28,6 +30,7 @@
 :- use_module(library(pairs)).
 :- use_module(library(solution_sequences)).
 :- use_module(library(yall)).
+:- use_module(library(time)).
 :- use_module(requetes).
 :- use_module(assertions, [valider/2]).
 
@@ -35,9 +38,14 @@ version_noyau('noyau 0.2').
 budget(300000).                  % appuis examinés par requête
 
 satisfaire(K, G, Q, R) :- satisfaire(K, G, Q, [], R).
-satisfaire(K, G, requete(Id, F), Opts, R) :-
+satisfaire(K, G, Q, Opts, R) :-
+    ( Q = requete(Id, F) -> true ; throw(error(requete_mal_formee(inconnu, [pas_une_requete(Q)]), _)) ),
     controler(G, requete(Id, F)),
-    in_temporary_module(M, charger(M, G), resoudre(K, M, Id, F, Opts, R)).
+    (   memberchk(temps(T), Opts)
+    ->  catch(call_with_time_limit(T, in_temporary_module(M, charger(M, G), resoudre(K, M, Id, F, Opts, R))),
+              time_limit_exceeded, R = resultat(incomplet, [temps_depasse], incomplet))
+    ;   in_temporary_module(M, charger(M, G), resoudre(K, M, Id, F, Opts, R))
+    ).
 
 satisfaire_lot(K, G, Qs, Rs) :-
     controler(G, requete(r, genre(x))),

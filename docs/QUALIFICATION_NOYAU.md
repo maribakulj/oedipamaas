@@ -39,17 +39,17 @@ REJETÉ (examiné, pas un défaut : raison donnée).
 | D8 | moyenne | Limite de solutions prise pour un budget ; conclusion négative d'un calcul incomplet (audit 1, § 12) | CORRIGÉ (0.2) |
 | D9 | moyenne | Test de coréférence qui ne teste rien (audit 2, § 1) | CORRIGÉ (0.2) |
 | D10 | moyenne | Tests génératifs : angles morts, distributions non publiées (audit 2, § 8) | CORRIGÉ en partie (0.2) ; contextes imbriqués et portées mêlées : OUVERT |
-| D11 | moyenne | Entrées invalides : comportement non testé (graphe invalide, requête mal formée, preuve mal formée) | OUVERT |
-| D12 | moyenne | Isolation et concurrence non testées au-delà d'un cas | OUVERT |
-| D13 | moyenne | Reproductibilité (même entrée, même sortie, empreinte) non testée | OUVERT |
+| D11 | moyenne | Entrées invalides : comportement non testé (graphe invalide, requête mal formée, preuve mal formée) | CORRIGÉ (cycle 2) |
+| D12 | moyenne | Isolation et concurrence non testées au-delà d'un cas | CORRIGÉ (cycle 2) : concurrence et modules temporaires testés |
+| D13 | moyenne | Reproductibilité (même entrée, même sortie, empreinte) non testée | CORRIGÉ (cycle 2) |
 | D14 | moyenne | Comparateur : transitivité, renommage, insatisfiables, taxinomie non testés ; pas de mutation du comparateur | OUVERT |
 | D15 | moyenne | Pas de mutation du vérificateur | OUVERT |
 | D16 | moyenne | Pas d'oracle indépendant des deux moteurs pour les fragments finis (les deux moteurs Prolog sont écrits d'après la même spécification) | OUVERT |
 | D17 | moyenne | Compilateur : couverture lexicale par sous-chaîne (`couvert/2`), fausse complétude (audit 1, § 11) | CORRIGÉ (cycle 1) |
 | D18 | moyenne | Compilateur : la personne héritée devient une variable indépendante (coprésence prise pour participation) (audit 1, § 11) | CORRIGÉ (cycle 1) |
-| D19 | basse | Contrat : les types des requêtes sont des atomes, les synsets des entiers (audit 2, § 6) | OUVERT |
+| D19 | basse | Contrat : les types des requêtes sont des atomes, les synsets des entiers (audit 2, § 6) | CORRIGÉ (cycle 2) |
 | D20 | basse | `sens(_, _, W, W)` : un mot désigne le lemme lui-même ; mot, concept, référent confondus (audit 2, § 6) | DOCUMENTÉ (C7) |
-| D21 | basse | Pas de limite de temps ni de mémoire (seulement un budget d'appuis) | OUVERT |
+| D21 | basse | Pas de limite de temps ni de mémoire (seulement un budget d'appuis) | CORRIGÉ en partie (cycle 2) : limite de temps ; pas de limite de mémoire (celle de la pile de SWI-Prolog) |
 
 ## 4. Commandes de reproduction
 
@@ -82,6 +82,19 @@ python -m pytest -q
 - Effet des deux : 19 457 → 17 432 requêtes compilées (sur 81 394), dans le sens prudent.
 - Lancés en parallèle : trois contradicteurs (sémantique, vérificateur et robustesse, inclusion) et un oracle Python
   écrit d'après la spécification seule (D16).
+
+### Cycle 2 (26/11) : D11, D12, D13, D19, D21
+
+- `tests/plunit/test_noyau_robustesse.pl` (20 tests), écrit d'abord ; trois échouaient :
+  - une entrée qui n'est pas `requete/2` faisait **échouer** `satisfaire/4` en silence (au lieu d'une erreur
+    structurée) : corrigé (`requete_mal_formee(inconnu, [pas_une_requete(Q)])`) ;
+  - un type entier (un identifiant de concept de K, comme un synset) était refusé par la forme des requêtes et du
+    vérificateur, alors que K en emploie (D19) : la forme admet un atome ou un entier ; le moteur de référence aussi ;
+  - pas de limite de temps (D21) : option `temps(S)` ; dépassée, `resultat(incomplet, [temps_depasse], incomplet)`.
+- Passent sans correction : graphe non liste, terme inconnu, identifiant double, qualificatif manquant, rôle vers un
+  événement absent (erreurs `graphe_invalide`) ; requête mal formée ; vérificateur sur graphe invalide, preuve non
+  close, liste impropre ; reproductibilité, ordre des faits sans effet, empreinte indépendante de l'ordre ; appels
+  concurrents égaux aux appels en série ; aucun module temporaire laissé, même après une erreur.
 
 ## 7. Garanties établies, garanties absentes, limites
 
