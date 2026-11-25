@@ -36,6 +36,7 @@ mis au point.
 | Statut de compilation | `compilation.pl` (premier jet) | 63 452 compilées, 16 631 partielles, 1 311 non prises en charge |
 | Sens des mots des définitions | bilingue (WordNet ∩ WOLF) 187 443, hiérarchie 41 338, unique 21 675, aucun 65 329 | non jugé |
 | Projection | `projection.pl` (premier jet : liens, rôles inversés, trois valeurs) | prototype vertical : § 0.1 |
+| Noyau logique (M0, M1 en partie) | `docs/NOYAU.md` ; `requetes.pl`, `satisfaction.pl`, `verificateur.pl` | 43 tests sur graphes écrits à la main (`tests/plunit/test_noyau.pl`), dont les variantes de C6.4 et un banc de 135 preuves altérées, toutes rejetées |
 | Ressources | WordNet 3.0, liens morphosémantiques (17 739), WOLF (102 671 paires ; 58 % des mots français des définitions, 86 % de leurs occurrences) | |
 
 ### 0.1 Le prototype vertical, premier passage (non corrigé, 25/11)
@@ -50,8 +51,8 @@ Stanza, 60 s au plus par texte ; détail dans `docs/mesures/V2.md`) :
 | indéterminé | 2 / 40 | 12 | 22 | 4 |
 
 - **Rappel** : 5 positifs sur 40. **Faux établis** sur la notation visée : 4 sur 80 négatifs et indéterminés.
-- **Codes établis autres que la notation visée** : 1 514 pour 95 textes traités, soit environ 16 par texte, non
-  jugés ; les plus fréquents sont faux à la lecture et viennent de **définitions trop faibles**. Par exemple,
+- **Codes établis hors de la branche de la notation visée** (arbre canonique) : 1 528 pour 95 textes traités, soit
+  environ 16 par texte, non jugés ; les plus fréquents sont faux à la lecture et viennent de **définitions trop faibles**. Par exemple,
   31D82 n'exige que « individual » ou « name », 73D68 que « event », 22A que « matter », 43B8 que « show »,
   25G3(PEAR-TREE) que « tree ». S'y ajoutent l'œuvre elle-même prise pour un objet figuré (11Q611 « object »,
   59 fois) et des gabarits « (...) » établis.

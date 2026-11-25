@@ -53,9 +53,12 @@ fiche(Fi, Res, J) :-
 
 visee(_, erreur, _{statut: erreur}) :- !.
 visee(_, delai, _{statut: delai}) :- !.
-visee(N, R, _{statut: St, etablis: Es, preuve: P}) :-
+visee(N, R, _{statut: St, etablis: Es, hors_branche: Hs, preuve: P}) :-
     (   memberchk(resultat(N, S0, Pr), R) -> St = S0, term_string(Pr, P)
     ;   member(resultat(N2, etabli, Pr), R), arbre:ancetre(N2, N) -> St = etabli_par_descendant, term_string(N2-Pr, P)
     ;   St = absent, P = ""
     ),
-    findall(E, member(resultat(E, etabli, _), R), Es).
+    findall(E, member(resultat(E, etabli, _), R), Es),
+    % les codes établis hors de la branche de la notation visée, par l'arbre canonique (arbre:ancetre/2), jamais par
+    % les préfixes des notations (la hiérarchie d'Iconclass ne s'y réduit pas)
+    findall(E, ( member(E, Es), E \== N, \+ arbre:ancetre(E, N), \+ arbre:ancetre(N, E) ), Hs).

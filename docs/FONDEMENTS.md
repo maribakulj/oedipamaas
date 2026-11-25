@@ -1,5 +1,10 @@
 # Les fondements conceptuels d'oedipamaas — version 2 (25 novembre 2026)
 
+**Version 3 en cours** (`docs/PLAN_V1.md`, M0). Sa partie formelle est écrite : `docs/NOYAU.md` (langage des
+requêtes, quatre valeurs, substitution globale, preuves, vérificateur). Elle remplace ici le § 4 pour la logique de la
+projection, et retire la disjonction des catégories de WordNet et le principe du nom unique (§ 2). Le reste de C1 et
+C2 (contextes, modalités, axiomes de disjonction explicites, exclusions et « (other) » en monde ouvert) suit.
+
 **Amendement (25 novembre, décision de la propriétaire).** Les définitions sont « sûres d'abord » : tout ce que le
 libellé dit est exigé, sauf ce que la grammaire d'Iconclass marque sûrement comme facultatif (alternatives, exemples,
 renvois, numéros, « possible attributes », biographie d'un individu) ; l'analyse syntaxique n'ajoute que des

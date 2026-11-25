@@ -1,0 +1,244 @@
+/*  Tests du noyau logique (docs/NOYAU.md) : requêtes, satisfaction, preuves et vérificateur, sur des graphes et des
+    requêtes écrits à la main, sans lecteur de textes ni ressource : aucune erreur de langue ne peut y masquer une
+    erreur de logique. Les variantes de docs/PLAN_V1.md (C6.4) sont reprises une à une.  */
+:- use_module('../../oedipamaas/socle/requetes').
+:- use_module('../../oedipamaas/socle/satisfaction').
+:- use_module('../../oedipamaas/socle/verificateur').
+:- use_module(connaissances_essai).
+:- use_module(library(plunit)).
+:- use_module(library(lists)).
+:- use_module(library(apply)).
+:- encoding(utf8).
+
+k(connaissances_essai).
+
+% --- Les graphes ---------------------------------------------------------------------------------------------------
+
+% graphe(+Faits0, -Graphe) : chaque assertion reçoit les qualificatifs par défaut (positive, affirmée, représentée, de
+% l'auteur), sauf ceux que donnent les marqueurs neg(A), mod(A, M), por(A, P), enon(A, Q) ; un passage par assertion
+graphe(Fs0, G) :-
+    exclude(marqueur, Fs0, Fs1), include(marqueur, Fs0, Ms),
+    findall(A, ( member(F, Fs1), identifiant(F, A) ), As),
+    findall(Q, ( member(A, As), qualificatif(A, Ms, Q) ), Qs),
+    findall(passage(P, 0, 1), ( member(F, Fs1), passage_de(F, P) ), Ps0), sort(Ps0, Ps),
+    append([Fs1, Qs, Ps], G).
+marqueur(neg(_)). marqueur(mod(_, _)). marqueur(por(_, _)). marqueur(enon(_, _)).
+identifiant(entite(A, _, _), A). identifiant(nom(A, _, _, _), A). identifiant(propriete(A, _, _, _), A).
+identifiant(evenement(A, _, _), A). identifiant(relation(A, _, _, _, _), A).
+passage_de(F, P) :- identifiant(F, _), arg(_, F, P), atom(P), sub_atom(P, 0, 2, _, p_), !.
+qualificatif(A, Ms, polarite(A, Po)) :- ( memberchk(neg(A), Ms) -> Po = neg ; Po = pos ).
+qualificatif(A, Ms, modalite(A, M)) :- ( memberchk(mod(A, M), Ms) -> true ; M = affirme ).
+qualificatif(A, Ms, portee(A, P)) :- ( memberchk(por(A, P), Ms) -> true ; P = represente ).
+qualificatif(A, Ms, enonciateur(A, Q)) :- ( memberchk(enon(A, Q), Ms) -> true ; Q = auteur ).
+
+% « une femme tient un enfant »
+q_tenir(requete(tenir, et([type(v(x), femme), type(v(y), enfant), evenement(v(e), tenir),
+                           role(v(e), agent, v(x)), role(v(e), patient, v(y))]))).
+
+femme_enfant(Extra, G) :-
+    append([entite(e1, femme, p_1), entite(e2, enfant, p_2)], Extra, Fs), graphe(Fs, G).
+tient(Agent, Patient, Pred, Extra, G) :-
+    femme_enfant([evenement(v1, Pred, p_3), role(v1, agent, Agent), role(v1, patient, Patient)|Extra], G).
+
+resultat(G, Q, S) :- k(K), satisfaire(K, G, Q, resultat(S, _, _)).
+resultat(G, Q, S, El) :- k(K), satisfaire(K, G, Q, resultat(S, El, _)).
+
+% toutes les preuves d'un résultat établi sont acceptées par le vérificateur
+preuves_acceptees(G, Q) :-
+    k(K), satisfaire(K, G, Q, resultat(etablie, Ps, _)), Ps \== [],
+    forall(member(P, Ps), verifier(K, G, Q, P, accepte)).
+
+:- begin_tests(requetes).
+
+test(bien_formee) :- q_tenir(Q), bien_formee(Q, []).
+test(variable_seulement_dans_une_contrainte) :-
+    bien_formee(requete(r, et([type(v(x), femme), distincts(v(x), v(y))])), Es), memberchk(variable_sans_atome(v(y)), Es).
+test(ou_a_une_branche) :- bien_formee(requete(r, ou([type(v(x), femme)])), Es), Es = [ou_a_une_branche(_)].
+test(role_inconnu) :- bien_formee(requete(r, et([evenement(v(e), tenir), role(v(e), porteur, v(x)), type(v(x), f)])), Es),
+    memberchk(role_inconnu(porteur), Es).
+test(deux_sortes) :- bien_formee(requete(r, et([evenement(v(e), tenir), type(v(e), femme)])), Es),
+    memberchk(deux_sortes(v(e)), Es).
+test(atomes_et_chemins) :-
+    atomes(et([type(v(x), a), ou([type(v(x), b), nom(v(x), ['C'])])]), As),
+    As == [[1]-type(v(x), a), [2, 1]-type(v(x), b), [2, 2]-nom(v(x), ['C'])].
+test(mal_formee_refusee, [throws(error(requete_mal_formee(r, _), _))]) :-
+    k(K), satisfaire(K, [], requete(r, ou([type(v(x), a)])), _).
+
+:- end_tests(requetes).
+
+:- begin_tests(variantes).          % docs/PLAN_V1.md, C6.4 : « une femme tient un enfant »
+
+test(dite_simplement) :-
+    tient(e1, e2, tenir, [], G), q_tenir(Q), resultat(G, Q, etablie, [P]),
+    P = preuve(tenir, _, figuration, S, _), S == [v(e)-v1, v(x)-e1, v(y)-e2], preuves_acceptees(G, Q).
+test(paraphrase_par_la_hierarchie) :-          % « une mère berce son nourrisson » (bercer sous tenir dans K)
+    graphe([entite(e1, mere, p_1), entite(e2, nourrisson, p_2), evenement(v1, bercer, p_3),
+            role(v1, agent, e1), role(v1, patient, e2)], G),
+    q_tenir(Q), resultat(G, Q, etablie), preuves_acceptees(G, Q).
+test(roles_inverses) :- tient(e2, e1, tenir, [], G), q_tenir(Q), resultat(G, Q, inconnue).
+test(autre_relation) :- tient(e1, e2, regarder, [], G), q_tenir(Q), resultat(G, Q, inconnue).
+test(modalite_possible) :-
+    tient(e1, e2, tenir, [mod(v1, possible)], G), q_tenir(Q), resultat(G, Q, inconnue, [partiel(Sat, Manq)]),
+    memberchk([1]-type(v(x), femme), Sat), memberchk([3]-evenement(v(e), tenir), Manq).
+test(negation) :- tient(e1, e2, tenir, [neg(v1)], G), q_tenir(Q), resultat(G, Q, ecartee, [contredite(S, _)]),
+    memberchk(v(x)-e1, S).
+test(coprésence_seule) :- femme_enfant([], G), q_tenir(Q), resultat(G, Q, inconnue).
+test(hors_de_l_image) :-
+    tient(e1, e2, tenir, [por(e1, histoire), por(e2, histoire), por(v1, histoire)], G), q_tenir(Q),
+    resultat(G, Q, inconnue).
+test(deux_scenes) :-                           % « un lion attaque un homme ; plus loin, l'homme terrasse le lion »
+    graphe([entite(e1, lion, p_1), entite(e2, homme, p_2), evenement(v1, attaquer, p_3),
+            role(v1, agent, e1), role(v1, patient, e2), evenement(v2, terrasser, p_4),
+            role(v2, agent, e2), role(v2, patient, e1)], G),
+    Q = requete(attaque, et([type(v(x), homme), type(v(y), lion), evenement(v(e), attaquer),
+                             role(v(e), agent, v(x)), role(v(e), patient, v(y))])),
+    resultat(G, Q, etablie, [preuve(_, _, _, S, _)]), memberchk(v(e)-v2, S), preuves_acceptees(G, Q).
+test(sources_contradictoires) :-               % la notice nomme Pierre ; une étude le nie
+    graphe([entite(e1, homme, p_1), nom(n1, e1, pierre, p_2), nom(n2, e1, pierre, p_3), neg(n2), enon(n2, cite(etude))], G),
+    resultat(G, requete(pierre, et([type(v(x), homme), nom(v(x), ['PIERRE'])])), contradictoire).
+test(titre_seul) :-
+    tient(e1, e2, tenir, [mod(e1, titre), mod(e2, titre), mod(v1, titre)], G), q_tenir(Q), resultat(G, Q, inconnue).
+
+:- end_tests(variantes).
+
+q_decapite(requete(david, et([nom(v(x), ['DAVID']), nom(v(y), ['GOLIATH']), distincts(v(x), v(y)),
+                              evenement(v(e), decapiter), role(v(e), agent, v(x)), role(v(e), patient, v(y))]))).
+david(A, P, G) :-
+    graphe([entite(e1, homme, p_1), nom(n1, e1, david, p_2), entite(e2, homme, p_3), nom(n2, e2, goliath, p_4),
+            evenement(v1, decapiter, p_5), role(v1, agent, A), role(v1, patient, P)], G).
+q_regarde(D, requete(regarde, et([type(v(x), homme), type(v(y), homme), evenement(v(e), regarder),
+                                  role(v(e), agent, v(x)), role(v(e), patient, v(y))|D]))).
+soi_meme(G) :- graphe([entite(e1, homme, p_1), evenement(v1, regarder, p_2), role(v1, agent, e1), role(v1, patient, e1)], G).
+
+:- begin_tests(identites).
+
+test(coreference) :-                           % « un homme… le saint… Jérôme »
+    graphe([entite(e1, homme, p_1), entite(e2, saint, p_2), coref(e1, e2), nom(n1, e2, jerome, p_3)], G),
+    Q = requete(jerome, et([type(v(x), homme), nom(v(x), ['JEROME'])])),
+    resultat(G, Q, etablie, [preuve(_, _, _, S, _)]), S == [v(x)-e1], preuves_acceptees(G, Q).
+test(alias) :-
+    graphe([entite(e1, saint, p_1), nom(n1, e1, hieronymus, p_2)], G),
+    Q = requete(jerome, nom(v(x), ['JEROME'])), resultat(G, Q, etablie), preuves_acceptees(G, Q).
+test(sans_coreference_pas_de_fusion) :-
+    graphe([entite(e1, homme, p_1), entite(e2, saint, p_2), nom(n1, e2, jerome, p_3)], G),
+    Q = requete(jerome, et([type(v(x), femme), nom(v(x), ['JEROME'])])), resultat(G, Q, inconnue).
+test(david_et_goliath) :- david(e1, e2, G), q_decapite(Q), resultat(G, Q, etablie), preuves_acceptees(G, Q).
+test(goliath_et_david) :- david(e2, e1, G), q_decapite(Q), resultat(G, Q, inconnue).
+test(meme_referent_permis) :-                  % « un homme se regarde » : rien n'interdit x = y
+    soi_meme(G), q_regarde([], Q), resultat(G, Q, etablie, [preuve(_, _, _, S, _)]),
+    memberchk(v(x)-e1, S), memberchk(v(y)-e1, S), preuves_acceptees(G, Q).
+test(distincts_explicites) :- soi_meme(G), q_regarde([distincts(v(x), v(y))], Q), resultat(G, Q, inconnue).
+test(meme_explicite) :-
+    graphe([entite(e1, homme, p_1), entite(e2, homme, p_2), evenement(v1, regarder, p_3), role(v1, agent, e1),
+            role(v1, patient, e2)], G),
+    q_regarde([meme(v(x), v(y))], Q), resultat(G, Q, inconnue).
+
+:- end_tests(identites).
+
+:- begin_tests(formules).
+
+test(union) :-
+    graphe([entite(e1, lionne, p_1)], G), Q = requete(fauve, ou([type(v(x), tigre), type(v(x), lion)])),
+    resultat(G, Q, etablie, [preuve(_, _, _, _, [j(C, _, appui(e1, e1, p_1, chemin(lionne, [lionne, lion])))])]),
+    C == [2], preuves_acceptees(G, Q).
+test(jamais_vers_le_bas) :-                     % « un animal » ne dit pas « un lion »
+    graphe([entite(e1, animal, p_1)], G), resultat(G, requete(lion, type(v(x), lion)), inconnue).
+test(propriete_du_meme_referent) :-
+    graphe([entite(e1, homme, p_1), propriete(q1, e1, mort, p_2), entite(e2, oiseau, p_3)], G),
+    resultat(G, requete(oiseau_mort, et([type(v(x), oiseau), propriete(v(x), mort)])), inconnue),
+    resultat(G, requete(homme_mort, et([type(v(x), homme), propriete(v(x), mort)])), etablie).
+test(relation_orientee) :-
+    graphe([entite(e1, femme, p_1), entite(e2, enfant, p_2), relation(r1, e2, avec, e1, p_3)], G),
+    resultat(G, requete(f_avec_e, et([type(v(x), femme), type(v(y), enfant), relation(v(x), avec, v(y))])), inconnue),
+    resultat(G, requete(e_avec_f, et([type(v(x), femme), type(v(y), enfant), relation(v(y), avec, v(x))])), etablie).
+test(nombre) :-
+    graphe([entite(e1, ange, p_1), nombre(e1, 3)], G),
+    Q3 = requete(trois, et([type(v(x), ange), nombre(v(x), 3)])), resultat(G, Q3, etablie), preuves_acceptees(G, Q3),
+    resultat(G, requete(deux, et([type(v(x), ange), nombre(v(x), 2)])), inconnue).
+test(genre_de_l_oeuvre) :-
+    graphe([entite(e1, portrait_en_buste, p_1), por(e1, oeuvre)], G),
+    Q = requete(portrait, genre(portrait)), resultat(G, Q, etablie, [preuve(_, _, classement, [], _)]),
+    preuves_acceptees(G, Q).
+test(portrait_dans_la_scene_n_est_pas_le_genre) :-
+    graphe([entite(e1, portrait, p_1)], G), resultat(G, requete(portrait, genre(portrait)), inconnue).
+test(plusieurs_referents) :-                    % une notation portée par deux référents : deux preuves
+    graphe([entite(e1, lion, p_1), entite(e2, lion, p_2)], G),
+    Q = requete(lion, type(v(x), lion)), resultat(G, Q, etablie, Ps), length(Ps, 2), preuves_acceptees(G, Q).
+test(limite_de_calcul) :-                       % 30 femmes et 30 enfants : 900 substitutions, au-delà de la limite
+    findall(entite(F, femme, p_1), ( between(1, 30, I), atom_concat(f, I, F) ), Fs),
+    findall(entite(E, enfant, p_2), ( between(1, 30, I), atom_concat(c, I, E) ), Es),
+    append(Fs, Es, X), graphe(X, G), k(K),
+    satisfaire(K, G, requete(fe, et([type(v(x), femme), type(v(y), enfant)])), resultat(etablie, _, incomplet)).
+test(ordre_de_liaison_rapide) :-                % 200 entités, un nom rare : le nom est lié d'abord
+    findall(entite(E, homme, p_1), ( between(1, 200, I), atom_concat(h, I, E) ), Hs),
+    append(Hs, [nom(n1, h77, jerome, p_2), evenement(v1, prier, p_3), role(v1, agent, h77)], X), graphe(X, G), k(K),
+    statistics(cputime, T0),
+    satisfaire(K, G, requete(r, et([type(v(x), homme), evenement(v(e), prier), role(v(e), agent, v(x)),
+                                    nom(v(x), ['JEROME'])])), resultat(etablie, [_], complet)),
+    statistics(cputime, T1), T1 - T0 < 2.0.
+test(isolation_des_documents) :-
+    graphe([entite(e1, lion, p_1)], G1), graphe([entite(e1, tigre, p_1)], G2),
+    resultat(G1, requete(l, type(v(x), lion)), etablie),
+    resultat(G2, requete(l, type(v(x), lion)), inconnue),
+    resultat(G1, requete(l, type(v(x), lion)), etablie).
+
+:- end_tests(formules).
+
+% --- Le banc de mutations (docs/NOYAU.md, § 6) : toute preuve altérée est rejetée --------------------------------------
+
+cas(G, Q) :- tient(e1, e2, tenir, [], G), q_tenir(Q).
+cas(G, Q) :- graphe([entite(e1, mere, p_1), entite(e2, nourrisson, p_2), evenement(v1, bercer, p_3),
+                     role(v1, agent, e1), role(v1, patient, e2)], G), q_tenir(Q).
+cas(G, Q) :- david(e1, e2, G), q_decapite(Q).
+cas(G, Q) :- graphe([entite(e1, homme, p_1), entite(e2, saint, p_2), coref(e1, e2), nom(n1, e2, jerome, p_3)], G),
+             Q = requete(jerome, et([type(v(x), homme), nom(v(x), ['JEROME'])])).
+cas(G, Q) :- graphe([entite(e1, lionne, p_1)], G), Q = requete(fauve, ou([type(v(x), tigre), type(v(x), lion)])).
+cas(G, Q) :- graphe([entite(e1, ange, p_1), nombre(e1, 3), entite(e2, ange, p_2)], G),
+             Q = requete(trois, et([type(v(x), ange), nombre(v(x), 3)])).
+
+% mutation(+Graphe, +Preuve, -Graphe2, -Preuve2, -Nom)
+mutation(G, preuve(I, V, R, S, Js), G, preuve(I, V, R, S, Js1), retire(C)) :- select(j(C, _, _), Js, Js1).
+mutation(G, preuve(I, V, R, S, Js), G, preuve(I, V, R, S, Js1), inexistant(C)) :-
+    select(j(C, A, appui(_, E, P, L)), Js, j(C, A, appui(x_inexistant, E, P, L)), Js1).
+mutation(G, P, G2, P, nie(X)) :-
+    P = preuve(_, _, _, _, Js), member(j(_, _, appui(X0, _, _, _)), Js),
+    ( X0 = role(X, _, _) -> true ; X = X0 ), selectchk(polarite(X, pos), G, polarite(X, neg), G2).
+mutation(G, preuve(I, V, R, S, Js), G, preuve(I, V, R, S1, Js), sigma(Va)) :-
+    select(Va-Val, S, Va-Autre, S1), member(Autre, [e1, e2, v1, x_ailleurs]), Autre \== Val.
+mutation(G, preuve(I, V, R, S, Js), G, preuve(I, V, R, S, Js1), role(C)) :-
+    select(j(C, role(E, agent, X), Ap), Js, j(C, role(E, patient, X), Ap), Js1).
+mutation(G, preuve(I, V, R, S, Js), G, preuve(I, V, R, S, Js1), lien(C)) :-
+    select(j(C, A, appui(X, E, P, chemin(W, [W0|Ch]))), Js, j(C, A, appui(X, E, P, chemin(W, [W0, invente|Ch]))), Js1).
+mutation(G, preuve(I, V, R, S, Js), G, preuve(I, V, R, S, Js1), branche(C)) :-
+    select(j(C, A, Ap), Js, j(C1, A, Ap), Js1), C \== [], last(C, N), N1 is N + 1, append(C0, [N], C), append(C0, [N1], C1).
+mutation(G, preuve(I, _, R, S, Js), G, preuve(I, [noyau('noyau 0.0'), connaissances('essai 1')], R, S, Js), version).
+
+:- begin_tests(verificateur).
+
+test(preuves_du_moteur_acceptees) :- forall(cas(G, Q), preuves_acceptees(G, Q)).
+test(toute_mutation_rejetee) :-
+    findall(Nom, ( cas(G, Q), k(K), satisfaire(K, G, Q, resultat(etablie, Ps, _)), member(P, Ps),
+                   mutation(G, P, G2, P2, Nom), P2-G2 \== P-G,
+                   \+ verifier(K, G2, Q, P2, rejete(_)) ), Acceptees),
+    assertion(Acceptees == []).
+test(banc_de_mutations_non_vide) :-
+    aggregate_all(count, ( cas(G, Q), k(K), satisfaire(K, G, Q, resultat(etablie, Ps, _)), member(P, Ps),
+                           mutation(G, P, _, _, _) ), N),
+    N >= 40.
+test(preuve_rejetee_si_le_graphe_nie_aussi) :-    % règle 7 : une négation ajoutée au graphe, hors de l'appui cité
+    graphe([entite(e1, homme, p_1), nom(n1, e1, pierre, p_2)], G), k(K),
+    Q = requete(pierre, et([type(v(x), homme), nom(v(x), ['PIERRE'])])),
+    satisfaire(K, G, Q, resultat(etablie, [P], _)),
+    graphe([nom(n2, e1, pierre, p_3), neg(n2), enon(n2, cite(etude))], G2), append(G, G2, G3),
+    verifier(K, G3, Q, P, rejete(Rs)), memberchk(nie([2], n2), Rs),
+    satisfaire(K, G3, Q, resultat(contradictoire, _, _)).
+test(sigma_sur_un_membre_et_non_le_representant) :-
+    graphe([entite(e1, homme, p_1), entite(e2, saint, p_2), coref(e1, e2), nom(n1, e2, jerome, p_3)], G), k(K),
+    Q = requete(jerome, et([type(v(x), homme), nom(v(x), ['JEROME'])])),
+    satisfaire(K, G, Q, resultat(etablie, [preuve(I, V, R, [v(x)-e1], Js)], _)),
+    verifier(K, G, Q, preuve(I, V, R, [v(x)-e2], Js), rejete(_)).
+test(preuve_d_une_autre_requete_rejetee) :-
+    cas(G, Q), !, k(K), satisfaire(K, G, Q, resultat(etablie, [P|_], _)),
+    verifier(K, G, requete(autre, type(v(x), femme)), P, rejete(_)).
+
+:- end_tests(verificateur).
