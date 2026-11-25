@@ -131,6 +131,7 @@ terme_connu(portee(_, _)).
 terme_connu(enonciateur(_, _)).
 terme_connu(alternative(_, _)).
 terme_connu(coref(_, _)).
+terme_connu(distinct(_, _)).
 terme_connu(incompris(_, _)).
 terme_connu(saillance(_, principal)).
 
@@ -150,3 +151,5 @@ entite_citee(relation(_, E, _, _, _), E).
 entite_citee(relation(_, _, _, E, _), E).
 entite_citee(coref(E, _), E).
 entite_citee(coref(_, E), E).
+entite_citee(distinct(E, _), E).
+entite_citee(distinct(_, E), E).

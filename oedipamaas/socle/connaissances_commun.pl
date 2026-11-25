@@ -25,4 +25,7 @@ sous(L, S, W) :- integer(S), lemme(L, S, W0), ( W = W0 ; graphie(W0, W) ).
 lemme(en, S, W) :- wordnet:s(S, _, W, _, _, _).
 lemme(fr, S, W) :- ressources:wolf(S, W).
 
+% l'inclusion sémantique : l'hyperonymie et l'instance de WordNet, jamais la lexicalisation (d'un sens vers un lemme)
+inclus(S, P) :- integer(S), ( wordnet:hyp(S, P) ; wordnet:ins(S, P) ).
+
 cle_de_nom(Nom, C) :- raisonnement:normaliser_nom(Nom, C).

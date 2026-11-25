@@ -46,6 +46,8 @@ compiler(N, L, compilation(N, L, Type, Suff, Nec, Statut, Raisons, Famille)) :-
             requetes:bien_formee(Suff, Es), requetes:bien_formee(Nec, Esn),
             append([Es, Esn], Ef),
             (   Ef \== [] -> Statut = invalide, append(Rs0, [mal_formee(Ef)], Raisons)
+            ;   member(R, Rs0), memberchk(R, [construction_negative(_), construction_modale(_)])
+            ->  Statut = non_prise_en_charge, Raisons = Rs0
             ;   Rs0 == [] -> Statut = compilee, Raisons = []
             ;   Statut = partielle, Raisons = Rs0
             ),
@@ -194,14 +196,23 @@ distribuer_a_droite(_, _, A, A).
 distinctions(Cs, Ds) :-
     findall(distincts(X, Y), ( member(nom(X, [K1]), Cs), member(nom(Y, [K2]), Cs), X @< Y, K1 \== K2 ), Ds).
 
+% une négation ou une modalité du libellé (« angels without wings », « possibly ») : le langage des requêtes n'a pas de
+% négation, et la condition deviendrait positive ; la construction n'est pas prise en charge (docs/NOYAU.md, § 3)
+raison(Fs, Es, Vs, _, construction_negative(A)) :-
+    member(polarite(A, neg), Fs), ( memberchk(A, Es) ; memberchk(A, Vs) ; assertion_de_portee(Fs, Es, A) ).
+raison(Fs, Es, Vs, _, construction_modale(M)) :-
+    member(modalite(A, M), Fs), M \== affirme, ( memberchk(A, Es) ; memberchk(A, Vs) ; assertion_de_portee(Fs, Es, A) ).
+assertion_de_portee(Fs, Es, A) :-
+    ( member(propriete(A, E, _, _), Fs) ; member(nom(A, E, _, _), Fs) ; member(relation(A, E, _, _, _), Fs) ), memberchk(E, Es), !.
 raison(Fs, Es, _, _, metalangage(W)) :- member(E, Es), member(propriete(_, E, P, _), Fs), mot(P, W), metalangage(W).
 raison(_, _, _, Cs, non_lie(Xs)) :- composantes(Cs, Ks), Ks = [_, _|_], maplist([K, X]>>( K = [X|_] ), Ks, Xs).
 raison(_, _, Vs, Cs, evenement_sans_participant(V)) :- member(V, Vs), \+ memberchk(role(v(V), _, _), Cs).
 
 % les composantes connexes du graphe de la requête (variables liées par rôle, relation, meme)
 composantes(Cs, Ks) :-
-    requetes:variables(Cs, Vs0), exclude([V]>>( V = v(_), \+ atome_sur(Cs, V) ), Vs0, Vs),
+    requetes:variables(Cs, Vs0), exclude(sans_atome(Cs), Vs0, Vs),
     composantes_(Vs, Cs, Ks).
+sans_atome(Cs, V) :- V = v(_), \+ atome_sur(Cs, V).
 atome_sur(Cs, V) :- member(A, Cs), requetes:atome(A), requetes:variables(A, Va), memberchk(V, Va), !.
 composantes_([], _, []).
 composantes_([V|Vs], Cs, [K|Ks]) :- atteint(Cs, [V], [V], K), subtract(Vs, K, Vs1), composantes_(Vs1, Cs, Ks).

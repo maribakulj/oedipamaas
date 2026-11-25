@@ -111,5 +111,11 @@ code(K, G, L, N, resultat(etablie, Ps, _), code(N, Statut, Ps)) :-
 % supérieure de Wilson du taux de requêtes trop faibles ≤ 5 %) ; aucune ne l'est à ce jour
 :- dynamic familles_justifiees/1.
 famille_justifiee(F) :- familles_justifiees(Fs), memberchk(F, Fs), !.
+% une conclusion sous hypothèses (une distinction supposée) : conditionnelle, jamais un code établi
+code(K, G, L, N, resultat(etablie_sous_hypotheses, Ps, _), code(N, Statut, Ps)) :-
+    requetes_index:requete_compilee(N, L, _, Q, _, _, _, _),
+    ( forall(member(P, Ps), verifier(K, G, Q, P, accepte)) -> Statut = conditionnel ; Statut = rejete_par_le_verificateur ).
 code(_, _, _, N, resultat(contradictoire, D, _), code(N, contradictoire, D)).
+code(_, _, _, N, resultat(non_certifiee, D, _), code(N, non_certifie, D)).
 code(_, _, _, N, resultat(ecartee, D, _), code(N, ecarte, D)).
+code(_, _, _, N, resultat(incomplet, D, _), code(N, incomplet, D)).

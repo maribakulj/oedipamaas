@@ -59,6 +59,14 @@ erreur(F, deux_sortes(V)) :-
     ( member(_-evenement(V, _), As) ; member(_-role(V, _, _), As) ),
     ( member(_-type(V, _), As) ; member(_-nom(V, _), As) ; member(_-propriete(V, _), As)
     ; member(_-role(_, _, V), As) ; member(_-relation(V, _, _), As) ; member(_-relation(_, _, V), As) ).
+% une contrainte ne lie aucune variable : dans chaque sélection qui la contient, ses variables sont celles d'atomes
+% de la même sélection (docs/NOYAU.md, § 3)
+erreur(F, contrainte_non_liee(Co)) :-
+    selection(F, Sel), member(Co, Sel), contrainte(Co), variables(Co, Vc),
+    findall(V, ( member(A, Sel), atome(A), variables(A, Va), member(V, Va) ), Vs),
+    member(V, Vc), \+ memberchk(V, Vs), !.
+% `distincts(X, X)` ne peut être vrai d'aucune substitution : une requête qui l'exige est mal formée
+erreur(F, distincts_reflexive(X)) :- atomes(F, As), member(_-distincts(X, Y), As), X == Y.
 erreur(F, role_inconnu(R)) :- atomes(F, As), member(_-role(_, R, _), As), roles(Rs), \+ memberchk(R, Rs).
 erreur(F, argument(A)) :- atomes(F, As), member(_-A, As), \+ arguments_valides(A).
 
@@ -81,3 +89,8 @@ arguments_valides(genre(T)) :- atom(T).
 arguments_valides(meme(v(_), v(_))).
 arguments_valides(distincts(v(_), v(_))).
 arguments_valides(nombre(v(_), K)) :- integer(K), K >= 1.
+
+% les sélections d'une formule : tous les enfants d'un « et », un enfant d'un « ou »
+selection(et(Fs), Sel) :- !, is_list(Fs), maplist(selection, Fs, Ss), append(Ss, Sel).
+selection(ou(Fs), Sel) :- !, is_list(Fs), member(F, Fs), selection(F, Sel).
+selection(A, [A]).

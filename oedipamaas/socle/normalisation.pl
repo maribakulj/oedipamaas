@@ -53,7 +53,8 @@ genitif_lu(en, R) :- R == of.
 genitif_lu(fr, R) :- memberchk(R, [de, du, des, 'd\'', 'd’']).
 
 enrichir(L, G0, G) :-
-    findall(F, ajout(L, G0, F), Fs0), sort(Fs0, Fs),
+    hors_alternatives(G0, Gs),
+    findall(F, ajout(L, Gs, F), Fs0), sort(Fs0, Fs),
     append(G0, Fs, G1), sort(G1, G2),
     findall(F, ajout_de_role(G2, F), Rs0), sort(Rs0, Rs),        % les rôles, sur tout ce qui précède
     append(G2, Rs, G3), sort(G3, G).
@@ -108,9 +109,22 @@ ajout(L, G, F) :-
     format(atom(Ev), "ve_~w_~w", [E, V]),
     (   F = evenement(Ev, V, Pa)
     ;   qualificatif(G, E, Ev, F)
-    ;   member(relation(_, E, R, Y, _), G), genitif_lu(L, R), F = role(Ev, patient, Y)
+    ;   member(relation(_, E2, R, Y, _), G), genitif_lu(L, R), meme_referent(G, E, E2), F = role(Ev, patient, Y)
     ).
+
+% deux entités d'une même classe de coréférence (le complément d'un nom d'action peut être rattaché à une autre
+% mention du même référent)
+meme_referent(_, E, E) :- !.
+meme_referent(G, E1, E2) :- atteint_coref(G, [E1], [E1], E2).
+atteint_coref(_, _, Vus, E) :- memberchk(E, Vus), !.
+atteint_coref(G, Front, Vus, E) :-
+    findall(Y, ( member(X, Front), ( member(coref(X, Y), G) ; member(coref(Y, X), G) ), \+ memberchk(Y, Vus) ), Ys0),
+    sort(Ys0, Ys), Ys \== [], append(Vus, Ys, Vus1), atteint_coref(G, Ys, Vus1, E).
 
 qualificatif(G, De, A, F) :-
     member(Q, G), Q =.. [P, De, X], memberchk(P, [polarite, modalite, portee, enonciateur]), F =.. [P, A, X].
-qualificatif(G, De, A, alternative(Gr, [A|As])) :- member(alternative(Gr, As), G), memberchk(De, As).
+% une assertion d'une alternative (une hypothèse parmi d'autres) n'est pas enrichie : elle n'appuie rien (NOYAU § 1)
+hors_alternatives(G, Gs) :-
+    findall(A, ( member(alternative(_, As), G), member(A, As) ), Alts),
+    exclude(membre_alternatif(Alts), G, Gs).
+membre_alternatif(Alts, F) :- F =.. [P, A|_], memberchk(P, [entite, evenement, propriete, relation, nom]), memberchk(A, Alts).
