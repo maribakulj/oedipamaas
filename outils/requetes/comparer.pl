@@ -1,6 +1,6 @@
 /*  Compare les requêtes compilées (requetes_iconclass.pl) aux requêtes de référence écrites à la main, par inclusion
     logique (docs/PLAN_V1.md, C3 et C6.2), avec le noyau lui-même.
-        swipl outils/requetes/comparer.pl BASE COMPILEES.json REFERENCE.json SORTIE.json
+        swipl outils/requetes/comparer.pl BASE COMPILEES.json REFERENCE.json SORTIE.json [sans_normalisation]
 
     Q1 implique Q2 (Q1 ⊆ Q2) si, pour chaque disjonction de Q1 mise en forme normale, le graphe canonique de ce cas
     (chaque variable devient un référent, chaque atome une assertion positive) satisfait Q2 : c'est le critère
@@ -21,6 +21,8 @@ main :-
     oedipamaas:charger_base(Base),
     atom_concat(Base, '/ressources.qlf', Res), load_files(Res, []),
     use_module(socle(satisfaction)), use_module(socle(connaissances_en), []), use_module(socle(connaissances_fr), []),
+    use_module(socle(normalisation), []),
+    ( current_prolog_flag(argv, [_, _, _, _, sans_normalisation|_]) -> nb_setval(normaliser, non) ; nb_setval(normaliser, oui) ),
     lire(Compilees, Cs), lire(Reference, Rs),
     findall(J, ( member(C, Cs), member(R, Rs), R.k =:= C.k, comparer(C, R, J) ), Js),
     setup_call_cleanup(open(Sortie, write, O, [encoding(utf8)]), json_write_dict(O, Js, [width(160)]), close(O)),
@@ -51,7 +53,13 @@ verdict_(non, non, incomparable).
 
 % Q1 ⊆ Q2 : chaque cas de Q1 (forme normale disjonctive) satisfait Q2 sur son graphe canonique
 implique(K, requete(_, F1), Q2) :-
-    forall(cas(F1, Atomes), ( canonique(Atomes, G), catch(satisfaction:satisfaire(K, G, Q2, resultat(etablie, _, _)), _, fail) )).
+    atom_concat(connaissances_, L, K),
+    forall(cas(F1, Atomes), ( canonique(Atomes, G0), normaliser(L, G0, G),
+                              catch(satisfaction:satisfaire(K, G, Q2, resultat(etablie, _, _)), _, fail) )).
+
+% les deux formes d'une action (un verbe, un nom d'action) sont équivalentes : le graphe canonique les reçoit toutes les
+% deux (normalisation.pl, C7.3), comme le graphe d'un texte
+normaliser(L, G0, G) :- ( nb_getval(normaliser, oui) -> normalisation:enrichir(L, G0, G) ; G = G0 ).
 
 cas(et(Fs), As) :- !, foldl([F, A0, A]>>( cas(F, Af), append(A0, Af, A) ), Fs, [], As).
 cas(ou(Fs), As) :- !, member(F, Fs), cas(F, As).
