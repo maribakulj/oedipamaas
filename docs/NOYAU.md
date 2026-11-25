@@ -1,5 +1,11 @@
 # Le noyau logique : requêtes, satisfaction, preuves (M0, 25 novembre 2026)
 
+**Indépendance.** Le noyau ne connaît ni Iconclass ni WordNet : ni notation, ni arbre, ni libellé, ni ressource de
+langue n'y entre. Ce qui est propre à Iconclass relève des connaissances (le module K), des définitions (les requêtes
+qu'un compilateur tire des libellés) et des règles de composition (gabarits, clés, lettres doublées : C8) ; le seul
+prédicat sur l'œuvre, `genre(T)`, est générique (il vaut pour toute classification d'œuvres). Un test le vérifie :
+charger le noyau ne charge aucun de ces modules.
+
 Ce document est la partie formelle de FONDEMENTS v3 (`docs/PLAN_V1.md`, C1 et C2) : le langage des requêtes, leur
 satisfaction sur le graphe d'un texte, la forme des preuves et ce que le vérificateur contrôle. Le code suit ce texte :
 `oedipamaas/socle/requetes.pl` (forme des requêtes), `satisfaction.pl` (le moteur), `verificateur.pl` (le
@@ -61,6 +67,8 @@ Contrainte ::= meme(X, Y) | distincts(X, Y) | nombre(X, K)
   `ou` est la même variable.
 - **Aucune distinction implicite** : deux variables peuvent tomber sur le même référent, sauf `distincts(X, Y)` ; elles
   tombent sur le même référent si `meme(X, Y)`.
+- **Une contrainte ne lie aucune variable** : ses variables doivent l'être par des atomes de la même sélection (un
+  `distincts(X, Y)` dont Y n'apparaît que dans l'autre branche d'un `ou` n'est pas satisfait par cette branche).
 - `nombre(X, K)` : le texte dit que X est au nombre de K (`nombre/2`).
 - Une requête est **bien formée** si chaque variable apparaît dans au moins un atome (pas seulement dans une
   contrainte), si un `ou` a au moins deux branches et un `et` au moins une, et si la sorte de chaque variable est
@@ -156,3 +164,35 @@ dira à quel niveau tient chaque code.
 **Le banc de mutations** : chaque preuve d'un test est altérée de toutes les façons suivantes, et chaque altération
 doit être rejetée : un appui retiré ; un appui remplacé par une assertion inexistante ; un appui nié ; une valeur de σ
 changée ; un rôle changé ; un pas de lien inventé ; un chemin déplacé vers une autre branche ; une version changée.
+
+## 7. Le moteur de référence, le moteur optimisé, et ce qui garantit qu'ils disent la même chose
+
+- **Le moteur de référence** (`satisfaction_reference.pl`) écrit la sémantique du § 4 le plus simplement possible :
+  toutes les sélections de la formule (tous les enfants d'un `et`, un enfant d'un `ou`) ; pour chacune, toutes les
+  substitutions de ses variables par toutes les valeurs de leur domaine (les représentants des classes de coréférence
+  pour un référent, les événements pour un événement) ; une solution est une sélection et une substitution sous
+  lesquelles chaque atome a un appui (de l'un ou l'autre signe) et chaque contrainte est vraie ; puis le classement de
+  chaque solution (vraie, contradictoire, contredite). Sans ordre de liaison, sans index, sans limite. Il ne réutilise
+  rien du moteur optimisé ni du vérificateur.
+- **Le moteur optimisé** (`satisfaction.pl`) lie les atomes les plus sélectifs d'abord, ne parcourt que les valeurs
+  qu'un appui propose, charge chaque document dans un module temporaire, et s'arrête à la limite de calcul. Il expose
+  `solutions_classees/4`, la même vue que le moteur de référence (toutes les solutions classées, sans limite).
+- **La garantie** : toute optimisation doit préserver exactement les solutions classées du moteur de référence. Les
+  tests génératifs (`tests/plunit/test_noyau_generatif.pl`) tirent, à graine fixe, 1 500 petits graphes (un à cinq
+  référents, noms, propriétés, événements, rôles, relations, coréférences, nombres, polarités, modalités, portées,
+  énonciateurs et alternatives tirés au hasard) et 1 500 requêtes (atomes, contraintes, `et` et `ou` emboîtés), et
+  vérifient pour chaque cas :
+  1. les solutions classées des deux moteurs sont identiques ;
+  2. le statut du moteur optimisé est celui de la référence, quand son calcul est complet ;
+  3. chaque preuve du moteur optimisé est acceptée par le vérificateur ;
+  4. le vérificateur est sûr : une preuve altérée au hasard (substitution, appui, chemin, justification retirée) qu'il
+     accepte décrit une solution vraie du moteur de référence.
+- **Les tests savent échouer** : `outils/noyau/injection.py` injecte des défauts dans une copie du moteur optimisé
+  (négation sans modalité, distinction inversée, rôle sans l'état de son événement, contradiction prise pour vraie,
+  énonciateur ignoré, alternative ignorée, nombre hors de la classe) ; chacun doit faire échouer les tests génératifs.
+
+**Ce que ces tests mesurent, et ce qu'ils ne mesurent pas.** Sur les graphes et les requêtes formellement définis,
+dont les réponses sont connues (les tests écrits à la main) ou calculées par l'oracle (les tests génératifs), le noyau
+doit réussir à 100 % : c'est la correction du noyau logique. Ils ne disent rien de la justesse du lecteur (le graphe
+tiré d'un texte) ni du compilateur (la requête tirée d'un libellé) : celles-là sont statistiques et se mesurent à part
+(`docs/mesures/`, `docs/PLAN_V1.md`, C3 et C6).

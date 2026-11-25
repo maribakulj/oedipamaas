@@ -3,7 +3,8 @@
 Usage : python outils/vertical/mesurer.py RESULTATS.json FICHES.json
 
 Pour chaque genre de texte (positif, négatif, indéterminé) : le statut de la notation visée (établie, établie par un
-descendant, candidate, contredite, absente), par strate ; et le nombre de codes établis autres que la notation visée
+descendant — compté à part : l'ascendance de l'arbre d'Iconclass est documentaire, pas une implication —,
+candidate, contredite, absente), par strate ; et le nombre de codes établis autres que la notation visée
 et de sa branche (à juger : faux positifs possibles), tel que projeter.pl le calcule sur l'arbre canonique
 d'Iconclass (champ « hors_branche ») ; jamais par les préfixes des notations."""
 import collections

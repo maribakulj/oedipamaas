@@ -170,6 +170,11 @@ Jérôme »), jamais établir un code à lui seul (D15).
 
 Un code établi affirme ses ancêtres (au sens du principe 4) ; la sortie ne les répète pas.
 
+> **Révisé le 25/11** (plan V1 validé par la propriétaire, invariant I11) : l'arbre d'Iconclass n'est pas une
+> subsomption. Un code établi n'affirme ses ancêtres que par les liens dont la sémantique autorise l'implication ; les
+> autres ancêtres restent une ascendance documentaire, accessible mais jamais une conclusion ; ne donner que le plus
+> précis est une option de présentation. Les mesures suivent la même distinction.
+
 ### 7.2. Types de preuve
 
 Un type est **certifié** quand sa précision mesurée sur un corpus jamais vu atteint le seuil du § 12.2. La V1 vise la

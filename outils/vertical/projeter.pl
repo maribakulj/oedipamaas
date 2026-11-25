@@ -6,7 +6,9 @@
     TEXTES.json : [{k, notation, langue, positif, negatif, indetermine, note}] (un positif dit ce que la notation
     décrit ; un négatif une situation proche qui ne l'est pas ; un indéterminé un texte qui n'en dit pas assez).
     SORTIE.json : pour chaque fiche et chaque texte, le statut de la notation visée (etabli, candidat, contredit,
-    absent ; « etabli_par_descendant » si un descendant est établi), et tous les codes établis, avec leur preuve.  */
+    absent ; « etabli_par_descendant » si un descendant est établi), et tous les codes établis, avec leur preuve.
+    L'ascendance est celle de l'arbre canonique d'Iconclass : documentaire, pas une implication (docs/PLAN_V1.md, I11).
+    Un descendant établi n'est donc pas la notation visée : il est compté à part, jamais comme une réussite.  */
 :- initialization(main, main).
 :- prolog_load_context(directory, D), atom_concat(D, '/../../oedipamaas/socle', S), asserta(user:file_search_path(socle, S)).
 :- use_module(socle(oedipamaas)).

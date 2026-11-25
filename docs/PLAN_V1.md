@@ -44,15 +44,18 @@ mis au point.
 Le premier jet de la projection, sur une fiche sur cinq de l'ensemble de développement (40 définitions, 120 textes,
 Stanza, 60 s au plus par texte ; détail dans `docs/mesures/V2.md`) :
 
-| Texte | notation visée établie (ou un descendant) | candidate | absente | délai dépassé |
-|---|---|---|---|---|
-| positif | 5 / 40 | 11 | 11 | 12 |
-| négatif | 2 / 40 | 9 | 19 | 9 |
-| indéterminé | 2 / 40 | 12 | 22 | 4 |
+| Texte | notation visée établie | un descendant établi (ascendance documentaire) | candidate | absente | délai dépassé |
+|---|---|---|---|---|---|
+| positif | 4 / 40 | 1 | 11 | 11 | 12 |
+| négatif | 1 / 40 | 1 | 9 | 19 | 9 |
+| indéterminé | 2 / 40 | 0 | 12 | 22 | 4 |
 
-- **Rappel** : 5 positifs sur 40. **Faux établis** sur la notation visée : 4 sur 80 négatifs et indéterminés.
-- **Codes établis hors de la branche de la notation visée** (arbre canonique) : 1 528 pour 95 textes traités, soit
-  environ 16 par texte, non jugés ; les plus fréquents sont faux à la lecture et viennent de **définitions trop faibles**. Par exemple,
+- **Rappel** : 4 positifs sur 40. Un descendant établi n'est pas compté comme la notation visée : l'arbre d'Iconclass
+  dit une ascendance documentaire, pas une implication (I11) ; la colonne est donnée à part, pour information.
+- **Faux établis** sur la notation visée : 3 sur 80 négatifs et indéterminés (et 1 descendant).
+- **Codes établis hors de la branche documentaire de la notation visée** (ni elle, ni un ancêtre, ni un descendant dans
+  l'arbre canonique) : 1 528 pour 95 textes traités, soit environ 16 par texte, non jugés (être hors de la branche
+  ne dit ni qu'un code est faux ni qu'il est juste : le texte peut décrire autre chose aussi) ; les plus fréquents sont faux à la lecture et viennent de **définitions trop faibles**. Par exemple,
   31D82 n'exige que « individual » ou « name », 73D68 que « event », 22A que « matter », 43B8 que « show »,
   25G3(PEAR-TREE) que « tree ». S'y ajoutent l'œuvre elle-même prise pour un objet figuré (11Q611 « object »,
   59 fois) et des gabarits « (...) » établis.
@@ -524,8 +527,9 @@ catégorie, sur textes libres FR/EN, descriptions d'Opus et notices réelles.
 
 - **D21** : les cibles de précision et de rappel par catégorie (C10.2), après la mesure de M1.
 - **D22** : la liste des axiomes de disjonction (C2.1), relue avant d'entrer dans le moteur.
-- **D23** : l'annotation des graphes et des requêtes de référence et la rédaction des textes de validation par des
-  agents distincts, avec relecture d'un échantillon par la propriétaire (C6.2, C6.3) ; ou une autre source.
+- **D23** (décidée le 25/11) : les données de développement et de validation sont annotées par des agents ; la
+  qualification finale a en plus un échantillon stratifié jugé par deux annotateurs humains (`docs/QUALIFICATION_HUMAINE.md`),
+  dont la mise en œuvre sera décidée plus tard ; le développement n'attend pas.
 - **D24** : les titres. D15 reste la règle du moteur (un titre ne prouve pas ce que l'image montre). Proposition à
   trancher : un mode « documentation complète » qui donnerait, **à part des codes établis**, les désignations que seul
   le titre fournit, avec le statut « désigné par le titre » (une désignation documentaire, jamais une figuration). Je
