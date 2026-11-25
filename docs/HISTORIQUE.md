@@ -17,6 +17,8 @@ Référence : `CAHIER_DES_CHARGES.md`, `docs/FONDEMENTS.md` (version 2 et amende
 | langage d'assertions et validation | `docs/ASSERTIONS.md`, `assertions.pl` |
 | ancrage dans l'image (deux mondes, saillance) | `mondes.pl`, `scene.pl` |
 | grammaire des libellés et définitions | `libelles_iconclass.pl`, `definitions.pl`, `outils/definitions/` (Stanza à la compilation, D18) |
+| noyau logique : requêtes, satisfaction, vérificateur (`docs/NOYAU.md`) | `requetes.pl`, `satisfaction.pl`, `verificateur.pl` |
+| premier jet de projection (point de comparaison, remplacé par le noyau) | `projection.pl`, `compilation.pl` (statut et sens, gardés) |
 | raisonnement et preuves (T1, T2 ; remplacés par l'implication de FONDEMENTS § 4) | `raisonnement.pl`, `sens.pl` |
 | essai de la méthode des profils, abandonnée (FONDEMENTS § 6) | `sujets.pl`, `hypotheses.pl`, `outils/sujets/` |
 | base | `compiler_iconclass.py`, `compiler_wordnet.py`, `compiler_ressources.py`, `arbre.pl`, `notation.pl`, `morphologie.pl`, `libelles.pl` |

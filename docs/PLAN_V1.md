@@ -36,6 +36,7 @@ mis au point.
 | Statut de compilation | `compilation.pl` (premier jet) | 63 452 compilées, 16 631 partielles, 1 311 non prises en charge |
 | Sens des mots des définitions | bilingue (WordNet ∩ WOLF) 187 443, hiérarchie 41 338, unique 21 675, aucun 65 329 | non jugé |
 | Projection | `projection.pl` (premier jet : liens, rôles inversés, trois valeurs) | prototype vertical : § 0.1 |
+| Noyau logique (M0, M1 en partie) | `docs/NOYAU.md` ; `requetes.pl`, `satisfaction.pl`, `verificateur.pl` | 43 tests sur graphes écrits à la main (`tests/plunit/test_noyau.pl`), dont les variantes de C6.4 et un banc de 135 preuves altérées, toutes rejetées |
 | Ressources | WordNet 3.0, liens morphosémantiques (17 739), WOLF (102 671 paires ; 58 % des mots français des définitions, 86 % de leurs occurrences) | |
 
 ### 0.1 Le prototype vertical, premier passage (non corrigé, 25/11)
