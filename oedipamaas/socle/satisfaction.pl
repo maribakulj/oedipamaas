@@ -13,7 +13,7 @@
 
     Le graphe est chargé dans un module temporaire, propre à l'appel : deux documents ne se mêlent jamais.
 */
-:- module(satisfaction, [ satisfaire/4, solutions_classees/4, version_noyau/1, limite/1 ]).
+:- module(satisfaction, [ satisfaire/4, satisfaire_lot/4, solutions_classees/4, version_noyau/1, limite/1 ]).
 :- encoding(utf8).
 :- use_module(library(lists)).
 :- use_module(library(apply)).
@@ -29,6 +29,15 @@ satisfaire(K, Graphe, requete(Id, F), Resultat) :-
     (   Es \== [] -> throw(error(requete_mal_formee(Id, Es), _))
     ;   in_temporary_module(M, charger(M, Graphe), resoudre(K, M, Id, F, Resultat))
     ).
+
+% satisfaire_lot(+K, +Graphe, +Requetes, -Resultats) : les mêmes résultats que satisfaire/4 pour chaque requête
+% (Resultats : [Id-Resultat]), le graphe chargé une seule fois ; une requête mal formée donne mal_formee(Erreurs)
+satisfaire_lot(K, Graphe, Qs, Rs) :-
+    in_temporary_module(M, charger(M, Graphe), resoudre_toutes(K, M, Qs, Rs)).
+resoudre_toutes(K, M, Qs, Rs) :- maplist(resoudre_une(K, M), Qs, Rs).
+resoudre_une(K, M, requete(Id, F), Id-R) :-
+    requetes:bien_formee(requete(Id, F), Es),
+    ( Es \== [] -> R = mal_formee(Es) ; resoudre(K, M, Id, F, R) ).
 
 % --- Le graphe -------------------------------------------------------------------------------------------------------
 
