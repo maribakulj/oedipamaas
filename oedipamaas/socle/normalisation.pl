@@ -54,15 +54,26 @@ genitif_lu(fr, R) :- memberchk(R, [de, du, des, 'd\'', 'd’']).
 
 enrichir(L, G0, G) :-
     findall(F, ajout(L, G0, F), Fs0), sort(Fs0, Fs),
-    append(G0, Fs, G1), sort(G1, G).
+    append(G0, Fs, G1), sort(G1, G2),
+    findall(F, ajout_de_role(G2, F), Rs0), sort(Rs0, Rs),        % les rôles, sur tout ce qui précède
+    append(G2, Rs, G3), sort(G3, G).
 
 % R1 : patient et thème
-ajout(_, G, role(V, R2, X)) :-
+ajout_de_role(G, role(V, R2, X)) :-
     member(role(V, R1, X), G), ( R1 == patient -> R2 = theme ; R1 == theme -> R2 = patient ).
-% R2 : le participant unique d'un événement est agent et thème
-ajout(_, G, role(V, R2, X)) :-
-    member(evenement(V, _, _), G), findall(R-Y, member(role(V, R, Y), G), [R1-X]),
-    ( R1 == agent -> R2 = theme ; R1 == theme -> R2 = agent ).
+% R2 : le participant unique d'un événement est agent, thème et patient (la syntaxe ne dit pas lequel)
+ajout_de_role(G, role(V, R2, X)) :-
+    member(evenement(V, _, _), G), findall(R-Y, member(role(V, R, Y), G), [_-X]),
+    member(R2, [agent, theme, patient]).
+% P1 : un participe lu comme propriété (« swimming mammal », « sitting figure ») : le verbe est un événement dont le
+% référent est le participant unique ; un mot qui est aussi un adjectif de la langue reste une propriété seulement
+ajout(L, G, F) :-
+    member(propriete(Q, X, P, Pa), G), atom(P), verbe_seulement(L, P),
+    format(atom(Ev), "vp_~w", [Q]),
+    ( F = evenement(Ev, P, Pa) ; F = role(Ev, theme, X) ; qualificatif(G, Q, Ev, F) ).
+verbe_seulement(en, P) :- wordnet:s(_, _, P, v, _, _), \+ wordnet:s(_, _, P, a, _, _), \+ wordnet:s(_, _, P, s, _, _), !.
+verbe_seulement(fr, P) :- ressources:wolf(S, P), S // 100000000 =:= 2,
+    \+ ( ressources:wolf(S2, P), S2 // 100000000 =:= 3 ), !.
 % C1 : un composé en « de » ou « of » non lexicalisé reçoit sa structure
 ajout(L, G, F) :-
     member(entite(E, W, Pa), G), atom(W), W \== nom_propre, compose_libre(L, W, A, B),

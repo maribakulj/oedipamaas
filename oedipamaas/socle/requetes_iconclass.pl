@@ -262,13 +262,22 @@ prefixer(_, T, T).
 % la personne du récit ou de l'individu dont la notation fait partie (FONDEMENTS § 3.4) : sur la variable qui porte
 % déjà l'un de ses noms, sinon sur une variable de plus (la personne est dans l'image, son rôle n'est pas dit)
 heritage(N, L, Cs0, Cs) :-
-    (   arbre:ancetre(N, A), definitions:type_libelle(A, TA), memberchk(TA, [individu, recit]), noms(A, L, Ks)
+    (   arbre:ancetre(N, A), personne_de(A, L, Ks)
     ->  (   select(nom(X, [K]), Cs0, nom(X, Ks2), Cs), memberchk(K, Ks) -> union([K], Ks, Ks2)
         ;   member(nom(_, Ks1), Cs0), intersection(Ks1, Ks, [_|_]) -> Cs = Cs0
         ;   append(Cs0, [nom(v(personne), Ks)], Cs)
         )
     ;   Cs = Cs0
     ).
+
+% la personne d'une notation ancêtre : un individu, un récit « (story of) X », ou un libellé « story of X »,
+% « histoire de X » sans parenthèses (« story of Elijah (Elias) » : le même récit, que la typologie range en classe)
+personne_de(A, L, Ks) :- definitions:type_libelle(A, TA), memberchk(TA, [individu, recit]), noms(A, L, Ks), !.
+personne_de(A, L, Ks) :-
+    libelles_lus:partie(A, L, 1, _, Net, _, Ph),
+    member(Debut, ['story of ', 'the story of ', 'histoire de ', 'histoire d\'', 'l\'histoire de ']), atom_concat(Debut, _, Net),
+    graphe(A, L, Net, Ph, Fs), findall(K, ( member(nom(_, _, Nom, _), Fs), raisonnement:normaliser_nom(Nom, K) ), Ks0),
+    sort(Ks0, Ks), Ks \== [], !.
 
 % --- Les notations à nom construites sur un gabarit -------------------------------------------------------------------
 
