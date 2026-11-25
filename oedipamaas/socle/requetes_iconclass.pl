@@ -92,15 +92,15 @@ compiler_(N, L, genre, genre, F, F, []) :- !,
 compiler_(N, L, scene, scene, F, Fn, Rs) :- !,
     partie(N, L, Net, Ph), graphe(N, L, Net, Ph, Fs),
     graphe_requete(Fs, all, Cs0, Ra),
-    heritage(N, L, Cs0, Cs1),
+    heritage(N, L, Cs0, Cs1), liens_apres_heritage(Cs0, Cs1, Rh),
     aspects(N, L, Gs, Rg), append(Cs1, Gs, Cs),
     Cs \== [], et_ou_un(Cs, F), necessaire(Cs1, Fn), mots_non_couverts(L, Ph, Cs1, Rm),
-    parentheses_non_lues(N, L, Rp), append([Ra, Rm, Rg, Rp], Rs).
+    parentheses_non_lues(N, L, Rp), append([Ra, Rh, Rm, Rg, Rp], Rs).
 compiler_(N, L, classe, classe, F, Fn, Rs) :- !,
     partie(N, L, Net, Ph), graphe(N, L, Net, Ph, Fs),
     definitions:mots(Ph, Ws0), definitions:defini(Ws0, Ws), definitions:segments_complets(L, Ws, Ss),
-    findall(Cs-Ra-S, ( member(S, Ss), debuts_du_segment(S, Ds), graphe_requete(Fs, debuts(Ds), Cs0, Ra), Cs0 \== [],
-                       heritage(N, L, Cs0, Cs) ), Alts0),
+    findall(Cs1-Ra-S, ( member(S, Ss), debuts_du_segment(S, Ds), graphe_requete(Fs, debuts(Ds), Cs0, Ra0), Cs0 \== [],
+                       heritage(N, L, Cs0, Cs1), liens_apres_heritage(Cs0, Cs1, Rh), append(Ra0, Rh, Ra) ), Alts0),
     Alts0 \== [], tete_partagee_a_droite(L, Alts0, Alts),
     findall(Fa, ( member(Cs-_-_, Alts), et_ou_un(Cs, Fa) ), Fas), ou_ou_un(Fas, F0),
     aspects(N, L, Gs, Rg), ( Gs == [] -> F = F0 ; append([F0], Gs, Fg), F = et(Fg) ),
@@ -233,8 +233,12 @@ mots_non_couverts(L, Ph, Cs, Rs) :-
                               memberchk(C, ['NOUN', 'VERB', 'ADJ']), \+ definitions:mot_ferme(F), \+ metalangage_mot(F),
                               definitions:lemme(L, M, W), \+ couvert(Cs, W) ), Rs0), sort(Rs0, Rs).
 metalangage_mot(F) :- downcase_atom(F, W), ( metalangage(W) ; definitions:metalangage(W) ), !.
-couvert(Cs, W) :- member(C, Cs), arg(_, C, X), atom(X), ( X == W ; sub_atom(X, _, _, _, W) ), !.
-couvert(Cs, W) :- member(nom(_, Ks), Cs), member(K, Ks), upcase_atom(W, Wu), sub_atom(K, _, _, _, Wu), !.
+% un mot est couvert par un atome qui le porte comme mot entier : l'argument lui-même, ou l'un des mots d'un composé
+% (séparés par une espace, un trait d'union ou une apostrophe) ; pour un nom, l'un de ses mots, en majuscules. Jamais
+% une sous-chaîne : « woman » ne couvre pas « man » (docs/QUALIFICATION_NOYAU.md, D17)
+couvert(Cs, W) :- member(C, Cs), arg(_, C, X), atom(X), mots_du_terme(X, Ms), memberchk(W, Ms), !.
+couvert(Cs, W) :- member(nom(_, Ks), Cs), member(K, Ks), upcase_atom(W, Wu), mots_du_terme(K, Ms), memberchk(Wu, Ms), !.
+mots_du_terme(X, Ms) :- split_string(X, " -'’", " -'’", Ps), exclude(==(""), Ps, Ps1), maplist(atom_string, Ms, Ps1).
 
 debuts_du_segment(S, Ds) :- findall(X, member(mot(_, _, _, _, _, _, _, X, _), S), Ds).
 
@@ -272,6 +276,14 @@ prefixer(_, T, T).
 
 % la personne du récit ou de l'individu dont la notation fait partie (FONDEMENTS § 3.4) : sur la variable qui porte
 % déjà l'un de ses noms, sinon sur une variable de plus (la personne est dans l'image, son rôle n'est pas dit)
+% la personne héritée ajoutée comme une variable de plus n'est liée à rien : la requête dirait sa présence, pas sa
+% participation (D18) ; le graphe de la requête n'est plus connexe, elle est partielle et ne peut rien établir
+liens_apres_heritage(Cs0, Cs1, Rs) :-
+    (   Cs0 == Cs1 -> Rs = []
+    ;   composantes(Cs1, Ks), Ks = [_, _|_] -> Rs = [personne_heritee_non_liee]
+    ;   Rs = []
+    ).
+
 heritage(N, L, Cs0, Cs) :-
     (   arbre:ancetre(N, A), personne_de(A, L, Ks)
     ->  (   select(nom(X, [K]), Cs0, nom(X, Ks2), Cs), memberchk(K, Ks) -> union([K], Ks, Ks2)
