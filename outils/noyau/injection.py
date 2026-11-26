@@ -20,7 +20,7 @@ TESTS = ICI / "tests" / "plunit"
 
 FAUTES = {
     "négation qui remonte la hiérarchie": (
-        "qualifie(M, E, neg, represente, Q), nue(M, E), lien_neg(K, n, T, W, L),",
+        "qualifie(M, E, neg, represente, Q), nue(M, E), lien_signe(Sg, K, n, T, W, L),",
         "qualifie(M, E, neg, represente, Q), nue(M, E), lien_pos(K, n, W, T, L),"),
     "distinction en monde fermé": (
         "    ;   V = i\n    ).\n% le nombre d'une entité",
@@ -32,8 +32,8 @@ FAUTES = {
         "    \\+ ( M:alternative(_, As), memberchk(A, As) ).\npresent(M, E)",
         "    true.\npresent(M, E)"),
     "certification malgré un appui négatif": (
-        "( lie(A, S, Ai), \\+ appui(K, M, Ai, neg, _, _), once(appui_sain(K, M, Ai, _)) )),",
-        "( lie(A, S, Ai), once(appui_sain(K, M, Ai, _)) )),"),
+        "hypotheses_retenues(K, M, S, A, Hs) :- lie(A, S, Ai), \\+ appui(K, M, Ai, neg, _, _), appui_retenu(",
+        "hypotheses_retenues(K, M, S, A, Hs) :- lie(A, S, Ai), appui_retenu("),
     "source citée certifiée": (
         "arbre(pos(auteur), K, M, F, F, [], [], S0, [], Sel0)",
         "arbre(pos(tout), K, M, F, F, [], [], S0, [], Sel0)"),
@@ -47,12 +47,12 @@ FAUTES = {
         "M:role(V, Ro, E), M:classe(E, R), M:evenement(V, _, P), qualifie(M, V, pos, represente, Q0), present(M, E),",
         "M:role(V, Ro, E), M:classe(E, R), M:evenement(V, _, P), Q0 = auteur, present(M, E),"),
     "nombre hors de la classe": (
-        "    (   M:classe(E, R), M:nombre(E, Nb), present_auteur(M, E), \\+ porteur_nie(K, M, E) -> Pv = v(nombre(E))",
-        "    (   M:nombre(E, Nb) -> Pv = v(nombre(E))"),
+        "    findall((L-Hs)-F, ( M:classe(F, R), M:nombre(F, Nb), present_auteur(M, F), \\+ porteur_nie(K, M, F),",
+        "    findall((L-Hs)-F, ( M:nombre(F, Nb), present_auteur(M, F), \\+ porteur_nie(K, M, F),"),
     # version 0.3 (journal, D23 à D33)
     "négation d'une description répartie": (
-        "qualifie(M, E, neg, represente, Q), nue(M, E), lien_neg(K, n, T, W, L),",
-        "qualifie(M, E, neg, represente, Q), lien_neg(K, n, T, W, L),"),
+        "qualifie(M, E, neg, represente, Q), nue(M, E), lien_signe(Sg, K, n, T, W, L),",
+        "qualifie(M, E, neg, represente, Q), lien_signe(Sg, K, n, T, W, L),"),
     "liste de noms niée par un seul nom": (
         "nom_nie(K, M, R, K1, Q, Ap), forall(member(Ki, Kr), nom_nie(K, M, R, Ki, _, _)).",
         "member(Ki, [K1|Kr]), nom_nie(K, M, R, Ki, Q, Ap)."),
@@ -69,8 +69,8 @@ FAUTES = {
         "( A == B -> ( Neg == 1 -> V = b ; V = v(egalite) ) ; Neg == 1 -> V = f ; V = i ).",
         "( A == B -> V = v(egalite) ; Neg == 1 -> V = f ; V = i )."),
     "distinction documentaire sur un nom cité": (
-        "qualifie(M, A, pos, represente, auteur), present_auteur(M, E),\n                 K:cle_de_nom(Nom, C), \\+ nom_conteste(K, M, R, C) ), Ns0),",
-        "qualifie(M, A, pos, represente, _),\n                 K:cle_de_nom(Nom, C) ), Ns0),"),
+        "qualifie(M, A, pos, represente, auteur), present_auteur(M, E),\n                 \\+ porteur_nie(K, M, E), ",
+        "qualifie(M, A, pos, represente, _),\n                 \\+ porteur_nie(K, M, E), "),
     # audit final (cycle 7)
     "existence du porteur ignorée": (
         "conteste(K, M, Ai, Ap) :- porteur(M, Ai, Ap, E), porteur_nie(K, M, E), !.",
@@ -99,8 +99,8 @@ FAUTES = {
         "appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \\+ conteste(K, M, Ai, Ap), lecture_possible(K, M, Ai, Ap).",
         "appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \\+ conteste(K, M, Ai, Ap)."),
     "type entier jamais nié": (
-        "noeud_demande(_, _, T, T) :- integer(T), !.",
-        "noeud_demande(_, _, T, _) :- integer(T), !, fail."),
+        "noeuds_demandes(_, _, T, [T]) :- integer(T), !.",
+        "noeuds_demandes(_, _, T, []) :- integer(T), !."),
 }
 
 
@@ -115,9 +115,11 @@ FAUTES_VERIFICATEUR = {
     "appui négatif ignoré": (
         "    \\+ ( member(j(_, A, _), Js), atome(A), appui_negatif(K, G, S, A) ),",
         "    true,"),
+    # depuis le cycle 9, le contrôle de l'assertion citée est couvert par celui des lectures (une assertion niée de
+    # façon certaine n'a aucune lecture) : retirer l'un seul donne un mutant équivalent ; on retire les deux
     "prémisse contredite acceptée": (
-        "    \\+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ),",
-        "    true,"),
+        "    \\+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ),\n    % ni contre l'existence d'une entité que l'appui cite, ni contre l'événement d'un rôle\n    \\+ ( member(j(_, A, Ap), Js), atome(A), A \\= genre(_), entite_citee(G, Ap, E), inexistante(K, G, E) ),\n    forall(( member(j(_, A, Ap), Js), atome(A) ), une_lecture(K, G, S, A, Ap)),\n",
+        "    % ni contre l'existence d'une entité que l'appui cite, ni contre l'événement d'un rôle\n    \\+ ( member(j(_, A, Ap), Js), atome(A), A \\= genre(_), entite_citee(G, Ap, E), inexistante(K, G, E) ),\n"),
     "contrainte contradictoire acceptée": (
         "    \\+ ( member(distinct(E1, E2), G), meme_classe(G, E1, A), meme_classe(G, E2, A), porteur_admis(G, E1),\n         porteur_admis(G, E2) ),",
         "    true,"),
@@ -134,13 +136,13 @@ FAUTES_VERIFICATEUR = {
         "    qualifie(G, E, pos, represente, auteur), lien_positif(K, n, W, T, L).\nappui_positif(K, G, S, nom(X, Ks)",
         "    qualifie(G, E, pos, represente, _), lien_positif(K, n, W, T, L).\nappui_positif(K, G, S, nom(X, Ks)"),
     "hypothèses non rapprochées": (
-        "    findall(X-Y, member(distinction_supposee(X, Y, _, _), Hs), Hs1), msort(Hs1, Hs2), sort(Hs1, Hs2), Hs2 == Us.",
-        "    true."),
+        "    findall(X-Y, member(distinction_supposee(X, Y, _, _), Hs), Hs1), msort(Hs1, Hs2), sort(Hs1, Hs2), Hs2 == Us,",
+        "    true,"),
     "chemin d'un autre atome accepté": (
         "    forall(member(j(C, A, _), Js), ( position(F, C, A0), A0 == A )).",
         "    true."),
     "lien positif non contrôlé": (
-        "lien_positif(K, Cat, W, T, chemin(W, [S0|Ch])) :- K:sens(Cat, W, S0), pas_sous(K, [S0|Ch], T).",
+        "lien_positif(K, Cat, W, T, chemin(W, [S0|Ch])) :- sens_du_mot(K, Cat, W, Ss), memberchk(S0, Ss), pas_sous(K, [S0|Ch], T).",
         "lien_positif(_, _, _, _, _)."),
     "porteur présent non contrôlé": (
         "present(G, E) :- qualifie(G, E, pos, represente, _).",

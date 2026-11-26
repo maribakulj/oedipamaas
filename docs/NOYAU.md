@@ -341,14 +341,14 @@ un nombre seulement possible ou cité ; une distinction dans une classe dite une
 - **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : 51 cas dont le statut attendu est
   écrit d'après ce document seul, confrontés au moteur optimisé et au moteur de référence. Les deux moteurs peuvent
   partager une erreur de conception (ils sont écrits d'après la même spécification) ; ce banc n'en dépend pas.
-- **Les tests savent échouer** : `outils/noyau/injection.py` injecte vingt et un défauts dans une copie du moteur
+- **Les tests savent échouer** : `outils/noyau/injection.py` injecte vingt-six défauts dans une copie du moteur
   optimisé (négation qui remonte la hiérarchie, distinction en monde fermé, référent porteur non vérifié, négation
   d'une alternative admise, certification malgré un appui négatif, source citée certifiée, conjonction où un faux ne
   suffit pas, budget épuisé pris pour une conclusion, rôle sans l'état de son événement, nombre hors de la classe ;
   et pour la version 0.3 : négation d'une description répartie, liste de noms niée par un seul nom, prémisse
   contredite certifiée, porteur d'une source citée certifié, nombre d'une entité seulement possible, contrainte à trois
   valeurs, distinction documentaire sur un nom cité, type entier jamais nié ; et, après l'audit final : existence du
-  porteur ignorée, événement d'un rôle ignoré, identité contre K non réfutée), seize dans une copie du vérificateur et
+  porteur ignorée, événement d'un rôle ignoré, identité contre K non réfutée), dix-sept dans une copie du vérificateur et
   huit dans le comparateur (§ 8) ;
   chacun doit faire échouer au moins un des bancs.
 

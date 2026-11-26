@@ -359,27 +359,28 @@ d'eux (contre-exemples écrits à la main, graphes-témoins, mutations).
 4. Reprise de la compilation d'Iconclass : après 1 et 2 ; les mesures provisoires du comparateur qualifié sont dans
    `docs/mesures/V2.md` (cycle 5) et restent provisoires.
 
-## 9. Rapport final (26/11)
+## 9. Rapport final (27/11, version intermédiaire du noyau)
 
 **État initial** (commit a040a9b, noyau 0.2) : 51 tests déterministes, 15 contre-exemples, 1 500 cas génératifs,
 10 défauts injectés dans le moteur, aucun dans le vérificateur ni le comparateur, pas d'oracle indépendant, un
 comparateur dont les `oui` n'étaient pas contrôlés.
 
-**État final** (noyau 0.3) : `test_noyau` 51, `test_noyau_semantique` 60 cas × 3, `test_noyau_robustesse` 38,
-`test_noyau_generatif` 5 (1 500 cas), `test_inclusion` 28, `test_inclusion_generatif` 4 (300 paires),
-`test_compilateur` 6, `tests/test_oracle.py` 2 ; pytest complet vert, CI verte ; 45 défauts injectés (21 moteur, 16
-vérificateur, 8 comparateur), tous détectés.
+**État final** (noyau 0.3 avec les décisions D30, D31, D50 du 27/11) : `test_noyau` 51, `test_noyau_semantique`
+74 cas × 3, `test_noyau_robustesse` 40, `test_noyau_generatif` 5 (1 500 cas), `test_inclusion` 29,
+`test_inclusion_generatif` 4 (300 paires), `test_codage` 12, `test_compilateur` 6, `tests/test_oracle.py` 2 ; pytest
+complet : 53 verts ; CI verte ; 51 défauts injectés (26 moteur, 17 vérificateur, 8 comparateur), tous détectés ;
+oracle indépendant : 0 désaccord sur les bancs standard.
 
-**Défauts** : D1 à D51 au § 3, avec gravité, statut, contre-exemple et correction ; les cycles 1 à 7 au § 6. Les plus
-graves trouvés pendant la mission : négation répartie sur les descriptions (D23), porteur d'une source citée (D25),
-contraintes à trois valeurs (D29), comparateur (D37 à D40, D47 : des `oui` faux), prémisses non contrôlées (D48),
-graphe non clos et recherche de liens exponentielle (D42, D43).
+**Défauts** : D1 à D59 au § 3, avec gravité, statut, contre-exemple et correction ; les cycles 1 à 9 au § 6. Trois
+audits contradictoires successifs ont chacun trouvé des défauts bloquants (cycles 3, 7, 9) ; ceux du dernier sont
+corrigés, et aucune contre-expertise n'a encore porté sur leurs corrections.
 
-**Mesures** : `docs/mesures/V2.md`, sections « Qualification formelle du noyau » et « Comparateur qualifié »
-(provisoires).
+**Mesures** : `docs/mesures/V2.md` (provisoires ; l'anglais changera avec D30, qui retire le premier sens implicite).
 
-**Recommandation sur la reprise de la compilation massive d'Iconclass** : pas encore. Le noyau et le comparateur
-sont en bien meilleur état, mais le dernier audit a encore trouvé des défauts bloquants, et leur correction n'a pas
-été revue par un contradicteur neuf ; trois décisions sémantiques (D30, D31, D50) changent ce que le noyau certifie.
-Reprendre après ces décisions et un audit sans défaut bloquant ; les mesures du compilateur seront alors refaites
-avec le comparateur de ce journal.
+**Ce qui n'est pas qualifié** : ni M1 ni la V1. Ce lot qualifie le noyau logique, le vérificateur, le comparateur et
+la couche de codage au sens du § 7 (tests, oracle, mutations, audits), pas le lecteur, le compilateur, la
+désambiguïsation, ni les mesures de bout en bout.
+
+**Suite recommandée** (décision du propriétaire du 27/11) : intégrer ce lot comme version intermédiaire du noyau ;
+reprendre C3 (compilation des définitions), C6 (qualité des graphes extraits), C7 (désambiguïsation) et des mesures
+indépendantes de bout en bout ; un nouvel audit du noyau quand C7 changera les sens qu'il reçoit.
