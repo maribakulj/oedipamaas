@@ -161,7 +161,7 @@ appui(K, G, S, relation(X, Re, Y), Sg, Q) :-
     ( Sg == pos -> positif(K, r, W, Re), source(G, Q0, [E1, E2], Q) ; negatif(K, r, Re, W), Q = Q0 ).
 appui(K, G, _, genre(T), Sg, Q) :-
     member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, Sg, oeuvre, Q),
-    ( Sg == pos -> positif(K, n, W, T) ; negatif(K, n, T, W) ).
+    ( Sg == pos -> positif(K, n, W, T) ; seule_le_type(G, E), negatif(K, n, T, W) ).
 
 nom_nie(K, G, R, Ki, Q) :-
     member(nom(A, E, Nom, _), G), dans_la_classe(G, E, R), qualifie(G, A, neg, represente, Q), present(G, E),
@@ -171,21 +171,30 @@ nom_nie(K, G, R, Ki, Q) :-
 % v (vraie, certifiable) | h (sous hypothèse) | p (vraie, non certifiable) | b (contradictoire) | f | i
 contrainte_val(K, G, S, meme(X, Y), V) :-
     val(S, X, A), val(S, Y, B),
-    ( distinctes(K, G, A, B, D), D \== supposee -> Contre = oui ; Contre = non ),
+    (   distinctes(K, G, A, B, D), D \== supposee -> Contre = oui
+    ;   A == B, noms_surs(K, G, A, Ns), member(C1, Ns), member(C2, Ns), K:distincts_documentes(C1, C2, _) -> Contre = oui
+    ;   Contre = non
+    ),
     (   A == B -> ( Contre == oui -> V = b ; V = v )
     ;   Contre == oui -> V = f
     ;   V = i
     ).
 contrainte_val(K, G, S, distincts(X, Y), V) :-
     val(S, X, A), val(S, Y, B),
-    ( A == B -> V = i ; distinctes(K, G, A, B, D) -> ( D == supposee -> V = h ; V = v ) ; V = i ).
-contrainte_val(_, G, S, nombre(X, N), V) :-
+    (   A == B -> V = i
+    ;   member(distinct(E1, E2), G), ( dans_la_classe(G, E1, A), dans_la_classe(G, E2, B) ; dans_la_classe(G, E1, B),
+        dans_la_classe(G, E2, A) ), present_auteur(G, E1), present_auteur(G, E2), \+ existence_niee(K, G, E1),
+        \+ existence_niee(K, G, E2) -> V = v
+    ;   distinctes(K, G, A, B, D) -> ( D == supposee -> V = h ; D == etablie -> V = p ; V = v )
+    ;   V = i
+    ).
+contrainte_val(K, G, S, nombre(X, N), V) :-
     val(S, X, R),
-    findall(Q, ( member(nombre(E, N), G), dans_la_classe(G, E, R), qualifie(G, E, pos, represente, Q) ), Pour),
+    findall(Q-E, ( member(nombre(E, N), G), dans_la_classe(G, E, R), qualifie(G, E, pos, represente, Q) ), Pour),
     ( member(nombre(E, Mb), G), Mb \== N, dans_la_classe(G, E, R), present(G, E) -> Contre = oui ; Contre = non ),
     (   Pour == [] -> ( Contre == oui -> V = f ; V = i )
     ;   Contre == oui -> V = b
-    ;   memberchk(auteur, Pour) -> V = v
+    ;   member(auteur-E, Pour), \+ existence_niee(K, G, E) -> V = v
     ;   V = p
     ).
 
@@ -199,7 +208,7 @@ distinctes(K, G, A, B, documentaire) :-
     \+ ( member(T, T2), meme_cle(K, C1, T) ), \+ ( member(T, T1), meme_cle(K, C2, T) ), !.
 distinctes(K, G, A, B, supposee) :-
     noms(K, G, A, N1), N1 \== [], noms(K, G, B, N2), N2 \== [],
-    \+ ( member(C1, N1), member(C2, N2), meme_cle(K, C1, C2) ).
+    portes(K, G, A, P1), portes(K, G, B, P2), \+ ( member(C1, P1), member(C2, P2), meme_cle(K, C1, C2) ).
 % les noms d'une classe sur lesquels une distinction documentaire peut reposer : de l'auteur, d'un porteur présent selon
 % l'auteur, et qu'aucune assertion niée de la classe ne contredit
 noms_surs(K, G, R, Ns) :-
@@ -240,24 +249,35 @@ valeurs([F|Fs], K, G, S, [V|Vs]) :- valeur(K, G, F, S, V), valeurs(Fs, K, G, S, 
 % --- La certification, d'après le § 4.3 ---------------------------------------------------------------------------
 
 % un appui positif de l'auteur dont l'assertion, prise avec son propre mot, n'a aucun appui négatif
-premisse_non_niee(K, G, S, A) :- appui(K, G, S, A, pos, auteur), mot_de_l_appui(K, G, S, A, B), \+ appui(K, G, S, B, neg, _).
-mot_de_l_appui(K, G, S, type(X, T), type(X, W)) :-
+% les prémisses d'un appui positif de l'auteur : l'assertion reformée avec son propre mot, l'existence de chaque entité
+% qu'elle cite (le type de son mot n'est pas nié pour sa classe), et, pour un rôle, son événement ; une seule prémisse
+% niée et l'appui ne certifie rien (§ 4.3)
+premisse_non_niee(K, G, S, A) :-
+    mot_de_l_appui(K, G, S, A, B, Es, Vs), \+ appui(K, G, S, B, neg, _),
+    forall(member(E, Es), \+ existence_niee(K, G, E)),
+    forall(( member(V, Vs), member(evenement(V, W, _), G) ), \+ appui(K, G, [v('$e')-V], evenement(v('$e'), W), neg, _)).
+existence_niee(K, G, E) :-
+    member(entite(E, W, _), G), W \== nom_propre, representant_de(G, R), dans_la_classe(G, E, R),
+    appui(K, G, [v('$p')-R], type(v('$p'), W), neg, _), !.
+mot_de_l_appui(K, G, S, type(X, T), type(X, W), [E], []) :-
     val(S, X, R), member(entite(E, W, _), G), W \== nom_propre, dans_la_classe(G, E, R),
     qualifie(G, E, pos, represente, auteur), positif(K, n, W, T).
-mot_de_l_appui(K, G, S, nom(X, Ks), nom(X, [C])) :-
+mot_de_l_appui(K, G, S, nom(X, Ks), nom(X, [C]), [E], []) :-
     val(S, X, R), member(nom(A, E, Nom, _), G), dans_la_classe(G, E, R), qualifie(G, A, pos, represente, auteur),
     present_auteur(G, E), nomme(K, Nom, Ks), K:cle_de_nom(Nom, C).
-mot_de_l_appui(K, G, S, propriete(X, P), propriete(X, W)) :-
+mot_de_l_appui(K, G, S, propriete(X, P), propriete(X, W), [E], []) :-
     val(S, X, R), member(propriete(A, E, W, _), G), dans_la_classe(G, E, R), qualifie(G, A, pos, represente, auteur),
     present_auteur(G, E), positif(K, a, W, P).
-mot_de_l_appui(K, G, S, evenement(X, P), evenement(X, W)) :-
+mot_de_l_appui(K, G, S, evenement(X, P), evenement(X, W), [], []) :-
     val(S, X, V), member(evenement(V, W, _), G), qualifie(G, V, pos, represente, auteur), positif(K, v, W, P).
-mot_de_l_appui(K, G, S, role(X, Ro, Y), role(X, Ro, Y)) :- appui(K, G, S, role(X, Ro, Y), pos, auteur).
-mot_de_l_appui(K, G, S, relation(X, Re, Y), relation(X, W, Y)) :-
+mot_de_l_appui(_, G, S, role(X, Ro, Y), role(X, Ro, Y), [E], [V]) :-
+    val(S, X, V), val(S, Y, R), member(role(V, Ro, E), G), dans_la_classe(G, E, R), member(evenement(V, _, _), G),
+    qualifie(G, V, pos, represente, auteur), present_auteur(G, E).
+mot_de_l_appui(K, G, S, relation(X, Re, Y), relation(X, W, Y), [E1, E2], []) :-
     val(S, X, R1), val(S, Y, R2), member(relation(A, E1, W, E2, _), G), dans_la_classe(G, E1, R1),
     dans_la_classe(G, E2, R2), qualifie(G, A, pos, represente, auteur), present_auteur(G, E1), present_auteur(G, E2),
     positif(K, r, W, Re).
-mot_de_l_appui(K, G, _, genre(T), genre(W)) :-
+mot_de_l_appui(K, G, _, genre(T), genre(W), [], []) :-
     member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, pos, oeuvre, auteur), positif(K, n, W, T).
 
 certifiable(K, G, Sel, S, Cl) :-

@@ -77,7 +77,7 @@ d'un atome, ou là où la description niée est entièrement couverte :
 | `entite(E, W)` restreinte (« pas de lion mort ») | rien : la description niée n'est pas décomposée |
 | `evenement(N, W)` et ses rôles `role(N, Ro, E)`, chaque participant E présent | `evenement(V, P)` pour un **autre** événement V présent qui a, pour chaque rôle de N, le même rôle vers un membre de la même classe, P inclus dans W (« Marie ne tient pas l'enfant » contredit « Marie tient l'enfant » ; un événement nié sans rôle nie tout événement de ce prédicat : la lecture la plus prudente) |
 | `role(N, …)` d'un événement nié | rien : un rôle n'est pas nié seul |
-| `entite(E, W)` de portée `oeuvre` | `genre(T)`, T inclus dans W |
+| `entite(E, W)` nue de portée `oeuvre` | `genre(T)`, T inclus dans W (« pas un portrait mort » ne nie pas le genre) |
 
 Ces règles sont saines (chaque appui négatif découle de l'assertion niée) mais incomplètes : la réfutation d'une
 conjonction de la requête qui couvre exactement une description niée (« la femme tient l'enfant » contre « la femme ne
@@ -163,7 +163,7 @@ Une contrainte a, comme un atome, un appui positif et un appui négatif, indépe
 
 | Contrainte, variables liées | appui positif | appui négatif |
 |---|---|---|
-| `meme(X, Y)` | même classe | une distinction établie ou documentaire entre les deux classes (ou dans la classe : coréférents et distincts à la fois donne (1,1)) |
+| `meme(X, Y)` | même classe | une distinction établie (entre entités présentes selon l'auteur) ou documentaire entre les deux classes ; dans la classe, une telle distinction, ou deux noms admissibles que K dit deux individus, donnent (1,1) |
 | `distincts(X, Y)` | classes différentes, distinction établie ou documentaire ; **supposée** : vraie sous hypothèse (§ 4.4) | aucun (la même classe : une substitution invalide, valeur (0,0), pas une réfutation) |
 | `nombre(X, K)` | un membre **présent** de la classe a le nombre K (certifiable s'il est présent selon l'auteur) | un membre présent a un autre nombre |
 
@@ -174,8 +174,8 @@ présent selon l'auteur, qu'aucune assertion niée de la classe ne contredit), e
 ne porte, à alias près, le nom documenté de l'autre (D26). Les noms qu'une classe « porte », pour
 cette exclusion, sont tous ceux qu'une assertion positive lui donne, quels que soient leurs autres qualificatifs et leur
 porteur, contestés ou non (la lecture prudente). **La distinction supposée** ne repose que sur des noms d'un porteur
-présent, qu'aucune assertion niée de la classe ne contredit, et suppose qu'aucun nom de l'une n'est, à alias près, un
-nom de l'autre.
+présent, qu'aucune assertion niée de la classe ne contredit, et suppose qu'aucun nom que l'une porte (au sens large ci-dessus,
+même seulement possible ou contesté) n'est, à alias près, un nom que porte l'autre.
 
 ### 4.2 La valeur d'une formule
 
@@ -188,10 +188,13 @@ question (§ 4.3).
 
 Une **solution certifiable** est une sélection (tous les enfants d'un `et`, un enfant d'un `ou`) et la substitution
 de ses seules variables, telle que chaque atome sélectionné est vrai (1,0) avec un appui positif de l'auteur du texte
-dont **la prémisse n'est pas niée** (l'atome reformé avec le mot même de l'appui, `type(X, W)` pour une entité de mot
-W, `nom(X, [Clé])` pour un nom, etc., n'a aucun appui négatif : « une lionne » ne certifie pas « un lion » quand le
-texte dit aussi « pas de lionne »), et chaque contrainte sélectionnée vraie et certifiable (ou vraie sous
-hypothèse). Elle est **vraie** si elle n'emploie aucune
+dont **aucune prémisse n'est niée** : l'atome reformé avec le mot même de l'appui (`type(X, W)` pour une entité de mot
+W, `nom(X, [Clé])` pour un nom, etc. : « une lionne » ne certifie pas « un lion » quand le texte dit aussi « pas de
+lionne ») ; l'existence de chaque entité que l'appui cite (le type de son mot n'est pas nié pour sa classe : « un
+homme nommé Pierre ; il n'y a pas d'homme ») ; pour un rôle, son événement (« la femme ne tient pas l'enfant » ôte au
+rôle de « la femme tient l'enfant » sa prémisse). Chaque contrainte sélectionnée est vraie et certifiable (ou vraie
+sous hypothèse) ; une distinction établie ou un nombre ne sont certifiables que si l'existence de leurs entités n'est
+pas niée. Elle est **vraie** si elle n'emploie aucune
 hypothèse, **vraie sous hypothèses** sinon (avec la liste de ses hypothèses).
 
 Une substitution de valeur vraie qui n'a aucune solution certifiable sous elle (sa vérité passe par un atome
@@ -360,10 +363,16 @@ nombre ; rien n'y est nié.
    chaque clé l'est), les rôles, les contraintes transmettent la négation par construction (§ 1.1, § 4.1).
 4. Sinon, pour un type : le graphe canonique plus « pas de T2 » ; s'il établit Q1 et pas Q2, c'est un contre-exemple
    (`non(negation(Cas, T2))`) ; sinon `indetermine(negation_non_transmise)`.
+5. Un `meme(X, Y)` de Q2 dont les deux variables tombent sur une classe que Q1 ne dit une par aucune coréférence (une
+   seule de ses variables) ne transmet pas la négation : un modèle de Q1 peut y dire la classe une et deux. Le graphe
+   canonique plus un « jumeau » (une entité coréférente au porteur et distincte de lui) est alors un contre-exemple
+   (`non(jumeau(Cas, Porteur))`), s'il établit Q1 sans établir Q2 (audit final, B1).
 Q1 ⊆ Q2 si chaque cas est inclus. **Pourquoi c'est sûr** : dans un graphe G où Q1 est certifiée par une substitution
 σ, l'homomorphisme du graphe canonique vers G (σ) porte la preuve de Q2 ; chaque appui positif de Q2 est l'appui d'un
 atome de Q1 (même assertion, lien prolongé), donc de l'auteur, admissible, de prémisse non niée ; un appui négatif de
-Q2 serait, par la transmission, un appui négatif de Q1, exclu. Cet argument est écrit, non démontré mécaniquement ; il
+Q2 serait, par la transmission, un appui négatif de Q1, exclu ; une prémisse de Q2 (porteur, événement d'un rôle) est
+celle de l'atome de Q1 dont l'appui est le même ; un `meme` de Q2 tombe sur une classe que Q1 dit une, donc sans
+distinction interne dans G. Cet argument est écrit, non démontré mécaniquement ; il
 est mis à l'épreuve par les bancs ci-dessous.
 
 **Hors de la méthode** : `indetermine(Raison)` — deux prédicats pour un même événement, une requête mal formée, un

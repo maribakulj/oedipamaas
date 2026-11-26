@@ -218,9 +218,41 @@ cas(hypothese_sur_un_nom_sans_porteur,
 cas(nom_conteste_porte_contre_la_documentaire,
     [entite(e1, homme, p_1), nom(a1, e1, david, p_2), entite(e2, homme, p_3), nom(a2, e2, goliath, p_4),
      nom(a3, e2, david, p_5), nom(a4, e2, david, p_6), neg(a4)],
-    requete(q, et([nom(v(x), ['DAVID']), nom(v(y), ['GOLIATH']), distincts(v(x), v(y))])), etablie_sous_hypotheses,
-    'la seconde classe porte aussi DAVID (même contesté) : pas de distinction documentaire ; reste l’hypothèse sur
-     les noms non contestés (DAVID contre GOLIATH), comme le dit le § 4.1').
+    requete(q, et([nom(v(x), ['DAVID']), nom(v(y), ['GOLIATH']), distincts(v(x), v(y))])), ecartee,
+    'la seconde classe porte aussi DAVID (même contesté) : ni distinction documentaire, ni hypothèse (cycle 7 : deux
+     classes qui portent un même nom, à quelque titre que ce soit, ne sont pas supposées distinctes ; au cycle 6, le
+     § 4.1 ne l’excluait que des noms non contestés et l’attendu était etablie_sous_hypotheses) ; reste, sous x = y = e2,
+     DAVID contradictoire ∧ GOLIATH vrai ∧ distincts inconnu = faux (Belnap) : écartée pour ces référents (D31)').
+% --- Audit final (cycle 7) : les prémisses d'un appui sont aussi l'existence de ses porteurs et l'événement d'un rôle
+cas(role_d_un_evenement_que_l_auteur_nie,
+    [entite(e1, femme, p_1), entite(e2, enfant, p_2), evenement(v1, tenir, p_3), role(v1, agent, e1),
+     role(v1, patient, e2), evenement(v2, tenir, p_4), role(v2, agent, e1), role(v2, patient, e2), neg(v2)],
+    requete(q, et([type(v(x), femme), role(v(e), agent, v(x)), role(v(e), patient, v(y)), type(v(y), enfant)])),
+    non_certifiee, 'le rôle a l’état de son événement, que l’auteur nie aussi : prémisse niée').
+cas(nom_d_un_homme_que_le_texte_dit_absent,
+    [entite(e1, homme, p_1), nom(n1, e1, pierre, p_2), entite(e2, homme, p_3), neg(e2)],
+    requete(q, nom(v(x), ['PIERRE'])), non_certifiee,
+    '« un homme nommé Pierre ; il n’y a pas d’homme » : l’existence du porteur est niée').
+cas(role_d_un_lion_que_le_texte_dit_absent,
+    [entite(e1, lion, p_1), evenement(v1, dormir, p_2), role(v1, agent, e1), entite(e2, lion, p_3), neg(e2)],
+    requete(q, et([evenement(v(e), dormir), role(v(e), agent, v(x))])), non_certifiee,
+    '« un lion dort ; pas de lion »').
+cas(coreferents_distincts_dont_un_cite,
+    [entite(e1, homme, p_1), entite(e2, homme, p_2), enon(e2, cite(catalogue)), coref(e1, e2), distinct(e1, e2)],
+    requete(q, et([type(v(x), homme), type(v(y), homme), meme(v(x), v(y))])), etablie,
+    'une distinction vers une entité que seul un catalogue dit là ne contredit pas l’identité (D45)').
+cas(genre_d_une_description_niee,
+    [entite(e1, portrait, p_1), por(e1, oeuvre), neg(e1), propriete(q1, e1, mort, p_2)],
+    requete(q, genre(portrait)), inconnue, '« pas un portrait mort » ne nie pas le genre portrait (§ 1.1)').
+cas(hypothese_malgre_un_nom_possible_partage,
+    [entite(e1, homme, p_1), nom(n1, e1, david, p_2), entite(e2, homme, p_3), nom(n2, e2, goliath, p_4),
+     nom(n3, e2, david, p_5), mod(n3, possible)],
+    requete(q, et([nom(v(x), ['DAVID']), nom(v(y), ['GOLIATH']), distincts(v(x), v(y))])), inconnue,
+    '« Goliath, peut-être David » : pas d’hypothèse de distinction contre David').
+cas(meme_dans_une_classe_que_k_dit_deux,
+    [entite(e1, homme, p_1), nom(n1, e1, david, p_2), nom(n2, e1, goliath, p_3)],
+    requete(q, et([nom(v(x), ['DAVID']), nom(v(y), ['GOLIATH']), meme(v(x), v(y))])), contradictoire,
+    'l’auteur donne à une classe deux noms que K dit deux individus : `meme` est contredit par K').
 cas(alias_en_chaine,
     [entite(e1, homme, p_1), nom(n1, e1, girolamo, p_2)], requete(q, nom(v(x), ['HIERONYMUS'])), etablie,
     'HIERONYMUS ~ JEROME ~ GIROLAMO : l’alias est clos (D33)').

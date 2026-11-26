@@ -72,8 +72,9 @@ premier_contre_exemple(K, N, [As|Cas], Q1, Q2, R) :-
     ;   etablit(K, G, Q2, St2, Ps),
         (   St2 == incomplet -> R = indetermine(budget)
         ;   St2 \== etablie -> R = non(As)
-        ;   member(P, Ps), preuve_sure(K, P) -> premier_contre_exemple(K, N, Cas, Q1, Q2, R)
+        ;   member(P, Ps), preuve_sure(K, G, P) -> premier_contre_exemple(K, N, Cas, Q1, Q2, R)
         ;   contre_exemple_par_negation(K, G, Q1, Q2, Ps, As, R0) -> R = R0
+        ;   contre_exemple_par_jumeau(K, G, Q1, Q2, Ps, As, R0) -> R = R0
         ;   R = indetermine(negation_non_transmise(As))
         )
     ).
@@ -85,10 +86,19 @@ etablit(K, G, Q, St, Els) :-
 normaliser(aucune, G, G) :- !.
 normaliser(N, G0, G) :- call(N, G0, G).
 
-% une preuve sûre : aucune distinction documentaire, et chaque lien transmet la négation
-preuve_sure(K, preuve(_, _, _, _, Js, _)) :-
+% une preuve sûre : aucune distinction documentaire, chaque lien transmet la négation, et chaque `meme` de Q2 tombe
+% sur une classe que Q1 dit une par une coréférence (deux de ses variables) : sinon un modèle de Q1 peut dire cette
+% classe une et deux à la fois, et `meme` y est contradictoire (audit final, B1)
+preuve_sure(K, G, preuve(_, _, _, S, Js, _)) :-
     \+ member(j(_, _, contrainte(documentaire(_, _, _))), Js),
-    forall(member(j(_, A, appui(_, _, _, L)), Js), transmet(K, A, L)).
+    forall(member(j(_, A, appui(_, _, _, L)), Js), transmet(K, A, L)),
+    forall(member(j(_, meme(X, _), contrainte(egalite)), Js),
+           ( memberchk(X-I, S), classe_canonique(G, I, C),
+             aggregate_all(count, ( member(E, C), sub_atom(E, 0, 2, _, '$v') ), Nv), Nv >= 2 )).
+classe_canonique(G, I, C) :- clos_coref(G, [I], [I], C).
+clos_coref(G, Front, Vus, C) :-
+    findall(Y, ( member(X, Front), ( member(coref(X, Y), G) ; member(coref(Y, X), G) ), \+ memberchk(Y, Vus) ), Ys0),
+    sort(Ys0, Ys), ( Ys == [] -> C = Vus ; append(Vus, Ys, Vus1), clos_coref(G, Ys, Vus1, C) ).
 transmet(K, A, chemin(Mot, _)) :- !,
     categorie(A, Cat, T2), atom_concat('$noeud:', X, Mot), noeud_de(X, T1),
     noeuds(K, Cat, T1, N1), noeuds(K, Cat, T2, N2),
@@ -105,6 +115,15 @@ inclus_ou_egal(K, S1, S2) :- clos_inclus(K, [S1], [S1], Ns), memberchk(S2, Ns).
 clos_inclus(K, Front, Vus, Ns) :-
     findall(Y, ( member(X, Front), K:inclus(X, Y), \+ memberchk(Y, Vus) ), Ys0), sort(Ys0, Ys),
     ( Ys == [] -> Ns = Vus ; append(Vus, Ys, Vus1), clos_inclus(K, Ys, Vus1, Ns) ).
+
+% un jumeau : une entité coréférente au porteur d'une variable de Q2 et distincte de lui ; la classe est dite une et
+% deux, ce qui ne touche que les `meme` ; s'il établit encore Q1 sans établir Q2, c'est un contre-exemple
+contre_exemple_par_jumeau(K, G, Q1, Q2, Ps, As, non(jumeau(As, I))) :-
+    member(preuve(_, _, _, S, Js, _), Ps), member(j(_, meme(X, _), contrainte(egalite)), Js), memberchk(X-I, S),
+    append(G, [entite('$jumeau', '$referent', '$p'), polarite('$jumeau', pos), modalite('$jumeau', affirme),
+               portee('$jumeau', represente), enonciateur('$jumeau', auteur), coref(I, '$jumeau'),
+               distinct(I, '$jumeau')], G2),
+    etablit(K, G2, Q1, etablie, _), etablit(K, G2, Q2, St2, _), St2 \== etablie, St2 \== incomplet, !.
 
 % « pas de T2 » ajouté au graphe canonique : un modèle de Q1 où Q2 n'est pas établie, s'il l'est encore
 contre_exemple_par_negation(K, G, Q1, Q2, Ps, As, non(negation(As, T2))) :-

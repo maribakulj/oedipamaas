@@ -101,6 +101,13 @@ test(liaison_sans_enumerer_les_selections) :-
     call_with_time_limit(5, requetes:bien_formee(requete(r, et(Fs)), Es)), Es == [],
     call_with_time_limit(5, requetes:bien_formee(requete(r, et([ou([type(v(x), lion), type(v(y), lion)]), distincts(v(x), v(y))])), Es2)),
     Es2 = [contrainte_non_liee(_)].
+% audit final N4 : le vérificateur refuse une requête dont une contrainte porte sur des événements
+test(verificateur_contrainte_sur_evenements) :-
+    graphe([entite(e1, homme, p_1), evenement(v1, tenir, p_2), role(v1, agent, e1)], G), k(K),
+    satisfaire(K, G, requete(q, et([evenement(v(e), tenir), evenement(v(f), tenir)])), resultat(etablie, [P0], _)),
+    P0 = preuve(I, V, R, S, Js, H), S = [_, v(f)-F],
+    P = preuve(I, V, R, S, [j([3], meme(v(e), v(f)), contrainte(egalite))|Js], H), F == v1,
+    verifier(K, G, requete(q, et([evenement(v(e), tenir), evenement(v(f), tenir), meme(v(e), v(f))])), P, rejete(_)).
 test(verificateur_graphe_invalide) :-
     k(K), verifier(K, [bizarre], requete(q, type(v(x), lion)), preuve(q, [], figuration, [], [], []), rejete([graphe_invalide])).
 test(verificateur_preuve_non_close) :-

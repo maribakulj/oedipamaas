@@ -66,7 +66,11 @@ negations_ciblees(G0, Ng) :-
                  un_de([r, r1], Pr),
                  member(F, [propriete(A, P, Pr, '$p'), polarite(A, neg), modalite(A, affirme), portee(A, represente),
                             enonciateur(A, auteur)]) ), Ns3),
-    append([Ns1, Ns2, Ns3], Ng).
+    % un jumeau : la classe d'un porteur dite une et deux
+    findall(F, ( member(entite(P, '$referent', _), G0), peut_etre(0.15), atom_concat(P, '_jumeau', A),
+                 member(F, [entite(A, '$referent', '$p'), polarite(A, pos), modalite(A, affirme), portee(A, represente),
+                            enonciateur(A, auteur), coref(P, A), distinct(P, A)]) ), Ns4),
+    append([Ns1, Ns2, Ns3, Ns4], Ng).
 
 etablie(K, G, Q) :- satisfaire(K, G, Q, resultat(etablie, _, complet)).
 % les modèles sont des graphes de K⁺ (K et les mots « $noeud:T », NOYAU § 8) ; un comparateur qui n'a pas K⁺ (un
@@ -81,6 +85,11 @@ contre_exemple_valide(Ke, Q1, Q2, non(negation(As, T2))) :- !,
     canonique(As, G0), format(atom(M), "$noeud:~w", [T2]),
     append(G0, [entite('$nie', M, '$p'), polarite('$nie', neg), modalite('$nie', affirme), portee('$nie', represente),
                 enonciateur('$nie', auteur)], G),
+    etablie(Ke, G, Q1), \+ etablie(Ke, G, Q2).
+contre_exemple_valide(Ke, Q1, Q2, non(jumeau(As, I))) :- !,
+    canonique(As, G0),
+    append(G0, [entite('$jumeau', '$referent', '$p'), polarite('$jumeau', pos), modalite('$jumeau', affirme),
+                portee('$jumeau', represente), enonciateur('$jumeau', auteur), coref(I, '$jumeau'), distinct(I, '$jumeau')], G),
     etablie(Ke, G, Q1), \+ etablie(Ke, G, Q2).
 contre_exemple_valide(Ke, Q1, Q2, non(As)) :- canonique(As, G), etablie(Ke, G, Q1), \+ etablie(Ke, G, Q2).
 

@@ -78,6 +78,9 @@ Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audi
 | D44 | moyenne | Requêtes non closes ou cycliques admises par `bien_formee` (V-R3, B1) ; `bien_formee` exponentiel en `ou` (V-X3) ; `valider` quadratique, hors limite de temps (V-X2) | CORRIGÉ en partie (cycle 4) : requêtes closes et acycliques exigées ; liaison des contraintes linéaire ; la limite de temps couvre la validation ; `valider` reste quadratique |
 | D45 | basse | Identifiants entiers, variables `v(1)`, options invalides, `satisfaire_lot` qui échoue en silence (V-R1, R2, B2 à B5) ; `distinct` vers une entité seulement possible (V-V4) ; passage d'un appui non contrôlé (V-V8) ; budget dépendant de l'ordre des faits et réinitialisé par un appel imbriqué (V-D1 à D3) | CORRIGÉ en partie (cycle 4) : identifiants atomiques, variables atomiques, options contrôlées, lot sans échec silencieux, distinction entre entités présentes selon l'auteur, passage contrôlé, budget propre à l'appel ; reste DOCUMENTÉ : sous un budget épuisé, ce qui est trouvé dépend de l'ordre d'exploration (le statut `incomplet` le dit) ; la preuve choisie parmi plusieurs dépend de l'ordre des faits (toutes sont valides) |
 | D46 | moyenne | Entité niée nue d'une classe sans membre présent lue comme existentielle (O-A) ; participants d'un événement nié non exigés présents (O-B) ; noms d'un porteur absent dans la distinction supposée (O-C) ; nom contesté non compté contre la documentaire (O-D) | CORRIGÉ (cycle 6) |
+| D47 | critique | Comparateur : un `meme` de Q2 sans coréférence correspondante dans Q1 donne des `oui` faux (F-B1) | CORRIGÉ (cycle 7) : contre-exemple « jumeau » |
+| D48 | haute | Prémisses non contrôlées : un rôle certifié par un événement que l'auteur nie (F-B2) ; un appui dont le porteur n'existe pas selon le texte (F-B3) ; distinction établie et nombre de même | CORRIGÉ (cycle 7) |
+| D49 | moyenne | Le vérificateur rejette une preuve juste (distinction vers une entité citée : F-N1) et accepte une requête mal formée (F-N4) ; `genre` nié par une description restreinte (F-N2) ; hypothèse malgré un nom possible partagé (F-N3) ; `meme` non réfuté par K dans une classe (F-N5) | CORRIGÉ (cycle 7) |
 | D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | CORRIGÉ (cycle 5) |
 | D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | CORRIGÉ (cycle 5) |
 | D39 | grave | Comparateur : distinction documentaire du graphe canonique, cas non contrôlés, insatisfiables, noms de variables (I-D2, D4, D5) | CORRIGÉ (cycle 5) |
@@ -224,6 +227,31 @@ python -m pytest -q
   § 4.1 donne `etablie_sous_hypotheses`, comme l'oracle) : corrigé, avec la raison.
 - Noté, non corrigé : le moteur de référence ne contrôle pas la forme des requêtes (il rend un statut sur une requête
   mal formée) ; il n'est appelé que sur des requêtes déjà contrôlées.
+
+### Cycle 7 (26/11) : audit final (F), trois défauts bloquants
+
+- Contradicteur neuf (le code et la spécification, sans mes conclusions), rapport dans `scratchpad/audit_final/`. Trois
+  défauts bloquants, tous reproduits ici :
+  - B1 (comparateur) : `type(x, saint)` ⊆ `et([type(x, saint), type(y, homme), meme(x, y)])` rendu `oui`, alors que
+    « un saint, coréférent à un autre saint et distinct de lui » établit Q1 et rend Q2 contradictoire (`meme` a quatre
+    valeurs). Le § 8 disait à tort que les contraintes transmettent la négation par construction. Corrigé : un `meme`
+    de Q2 n'est sûr que sur une classe que Q1 dit une par une coréférence ; sinon contre-exemple « jumeau ». Le test
+    ancien `identite` attendait `equivalentes` : faux, l'inclusion n'est que dans un sens (`incluse`) ; corrigé avec la
+    raison.
+  - B2 : « la femme tient l'enfant ; la femme ne tient pas l'enfant » certifiait les rôles seuls ; B3 : « un homme
+    nommé Pierre ; il n'y a pas d'homme » certifiait le nom. La racine : la prémisse d'un appui n'était contrôlée que
+    par son assertion propre. Corrigé dans les trois programmes : existence des porteurs, événement d'un rôle,
+    entités d'une distinction établie et d'un nombre.
+- Non bloquants, corrigés : N1 (le vérificateur exige maintenant, comme les moteurs, des entités présentes selon
+  l'auteur pour une distinction), N2 (`genre` nié seulement par une entité nue), N3 (aucune hypothèse de distinction
+  entre deux classes qui portent un même nom, à quelque titre que ce soit), N4 (le vérificateur refuse une contrainte
+  sur des événements), N5 (`meme` contredit dans une classe que K dit deux individus). Conséquence de N3 : le cas
+  `nom_conteste_porte_contre_la_documentaire` passe de `etablie_sous_hypotheses` à `ecartee` (raison dans le cas).
+- Un défaut de ma correction, trouvé par un avertissement du compilateur : le vérificateur prenait K non lié dans la
+  justification d'une distinction établie (elle aurait été rejetée par erreur) ; corrigé.
+- Tests : `test_noyau_semantique` 58 cas, `test_noyau_robustesse` 38, `test_inclusion` 28, `test_inclusion_generatif`
+  (les modèles ont maintenant des jumeaux). Le banc de l'oracle (`tests/test_oracle.py`) échoue tant que l'oracle
+  n'a pas reçu ces amendements de la spécification (en cours, par un agent qui ne lit que la spécification).
 
 ## 7. Garanties établies, garanties absentes, limites
 

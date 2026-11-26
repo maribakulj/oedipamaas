@@ -71,6 +71,16 @@ FAUTES = {
     "distinction documentaire sur un nom cité": (
         "qualifie(M, A, pos, represente, auteur), present_auteur(M, E),\n                 K:cle_de_nom(Nom, C), \\+ nom_conteste(K, M, R, C) ), Ns0),",
         "qualifie(M, A, pos, represente, _),\n                 K:cle_de_nom(Nom, C) ), Ns0),"),
+    # audit final (cycle 7)
+    "existence du porteur ignorée": (
+        "conteste(K, M, Ai, Ap) :- porteur(M, Ai, Ap, E), porteur_nie(K, M, E), !.",
+        "conteste(_, _, _, _) :- fail."),
+    "événement d'un rôle ignoré": (
+        "conteste(K, M, role(V, _, _), _) :- M:evenement(V, W, _), once(appui_(K, M, evenement(V, W), neg, _, _)), !.",
+        ""),
+    "identité contre K non réfutée": (
+        "    ( ( distinction(K, M, A, B, D), D \\= supposee(_) ; A == B, documentee_dans(K, M, A) ) -> Neg = 1 ; Neg = 0 ),",
+        "    ( distinction(K, M, A, B, D), D \\= supposee(_) -> Neg = 1 ; Neg = 0 ),"),
     "type entier jamais nié": (
         "noeud_demande(_, _, T, T) :- integer(T), !.",
         "noeud_demande(_, _, T, _) :- integer(T), !, fail."),
@@ -118,6 +128,12 @@ FAUTES_VERIFICATEUR = {
     "porteur présent non contrôlé": (
         "present(G, E) :- qualifie(G, E, pos, represente, _).",
         "present(_, _)."),
+    "existence du porteur non contrôlée": (
+        "    \\+ ( member(j(_, A, Ap), Js), atome(A), entite_citee(G, Ap, E), inexistante(K, G, E) ),",
+        "    true,"),
+    "événement d'un rôle non contrôlé": (
+        "    \\+ ( member(j(_, role(_, _, _), appui(role(V, _, _), _, _, _)), Js), member(evenement(V, W, _), G),\n         appui_negatif(K, G, [v('$e')-V], evenement(v('$e'), W)) ).",
+        "    true."),
     "porteur d'une source citée accepté": (
         "porteur_admis(G, E) :- qualifie(G, E, pos, represente, auteur).",
         "porteur_admis(G, E) :- qualifie(G, E, pos, represente, _)."),
@@ -145,6 +161,9 @@ FAUTES_COMPARATEUR = {
     "le type de Q1 pris pour un mot": (
         "mot(T, M) :- format(atom(M), \"$noeud:~w\", [T]).",
         "mot(T, T)."),
+    "identité de Q2 sans identité de Q1": (
+        "             aggregate_all(count, ( member(E, C), sub_atom(E, 0, 2, _, '$v') ), Nv), Nv >= 2 )).",
+        "             true )).",),
     "statut sous hypothèses pris pour établi": (
         "    ( Complet == incomplet -> St = incomplet ; St = St0 ).",
         "    ( Complet == incomplet -> St = incomplet ; St0 == etablie_sous_hypotheses -> St = etablie ; St = St0 )."),

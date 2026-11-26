@@ -30,7 +30,9 @@ controle(N, _, _, _, _) :- member(N, [requete, versions, regime, chemins, select
 
 % --- La forme (§ 5) --------------------------------------------------------------------------------------------------
 
-forme_requete(requete(Id, F)) :- atom(Id), formule(F).
+forme_requete(requete(Id, F)) :-
+    atom(Id), formule(F),
+    \+ ( sous_formule(F, Co), contrainte(Co), vars(Co, Vc), member(V, Vc), evenementielle(F, V) ).  % D35
 formule(et(Fs)) :- !, is_list(Fs), Fs \== [], maplist(formule, Fs).
 formule(ou(Fs)) :- !, is_list(Fs), Fs = [_, _|_], maplist(formule, Fs).
 formule(F) :- ground(F), ( atome(F) ; contrainte(F) ).
@@ -87,7 +89,17 @@ etabli(hypotheses, _, _, _, preuve(_, _, _, _, Js, Hs)) :-
 etabli(pas_d_appui_negatif, K, G, _, preuve(_, _, _, S, Js, _)) :-
     \+ ( member(j(_, A, _), Js), atome(A), appui_negatif(K, G, S, A) ),
     % ni contre l'assertion citée, prise avec son propre mot (une lionne niée ne prouve pas un lion)
-    \+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ).
+    \+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ),
+    % ni contre l'existence d'une entité que l'appui cite, ni contre l'événement d'un rôle
+    \+ ( member(j(_, A, Ap), Js), atome(A), entite_citee(G, Ap, E), inexistante(K, G, E) ),
+    \+ ( member(j(_, role(_, _, _), appui(role(V, _, _), _, _, _)), Js), member(evenement(V, W, _), G),
+         appui_negatif(K, G, [v('$e')-V], evenement(v('$e'), W)) ).
+entite_citee(_, appui(_, E, _, _), E).
+entite_citee(G, appui(A, _, _, _), E2) :- memberchk(relation(A, _, _, E2, _), G).
+% le texte nie que cette entité existe : le type de son mot est nié pour sa classe
+inexistante(K, G, E) :-
+    member(entite(E, W, _), G), W \== nom_propre, member(entite(R, _, _), G), meme_classe(G, E, R), representant(G, R),
+    appui_negatif(K, G, [v('$p')-R], type(v('$p'), W)), !.
 
 assertion_citee(type(X, _), appui(_, _, _, chemin(W, _)), type(X, W)).
 assertion_citee(nom(X, _), appui(_, _, _, cle(C)), nom(X, [C])).
@@ -211,7 +223,8 @@ appui_negatif(K, G, S, relation(X, Re, Y)) :-
     val(S, X, R1), val(S, Y, R2), member(relation(A, E1, W, E2, _), G), meme_classe(G, E1, R1), meme_classe(G, E2, R2),
     qualifie(G, A, neg, represente, _), present(G, E1), present(G, E2), inclus_lien(K, r, Re, W).
 appui_negatif(K, G, _, genre(T)) :-
-    member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, neg, oeuvre, _), inclus_lien(K, n, T, W).
+    member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, neg, oeuvre, _), sans_autre_dit(G, E),
+    inclus_lien(K, n, T, W).
 
 % T est inclus dans W : un sens de T monte par « inclus » jusqu'à un sens de W
 inclus_lien(K, Cat, T, W) :- ( integer(T) -> S0 = T ; K:sens(Cat, T, S0) ), K:sens(Cat, W, Sn), monte_inclus(K, S0, Sn, [S0]), !.
@@ -222,13 +235,17 @@ inclus_atteints(K, Front, Vus, Ns) :-
 
 % --- Les contraintes -------------------------------------------------------------------------------------------------
 
-contrainte_justifiee(_, G, S, _, meme(X, Y), egalite) :-
+contrainte_justifiee(K, G, S, _, meme(X, Y), egalite) :-
     val(S, X, A), val(S, Y, B), A == B,
-    \+ ( member(distinct(E1, E2), G), meme_classe(G, E1, A), meme_classe(G, E2, A) ).   % la classe n'est pas contredite
-contrainte_justifiee(_, G, S, _, distincts(X, Y), etablie(distinct(E1, E2))) :-
+    % la classe n'est pas dite deux : ni par le texte (entre entités que l'auteur dit là), ni par K
+    \+ ( member(distinct(E1, E2), G), meme_classe(G, E1, A), meme_classe(G, E2, A), porteur_admis(G, E1),
+         porteur_admis(G, E2) ),
+    \+ ( nom_admissible(K, G, A, C1), nom_admissible(K, G, A, C2), K:distincts_documentes(C1, C2, _) ).
+contrainte_justifiee(K, G, S, _, distincts(X, Y), etablie(distinct(E1, E2))) :-
     val(S, X, A), val(S, Y, B), A \== B, meme_classe(G, E1, A), meme_classe(G, E2, B),
     ( memberchk(distinct(E1, E2), G) ; memberchk(distinct(E2, E1), G) ),
-    porteur_admis(G, E1), porteur_admis(G, E2).          % une distinction entre deux entités que l'auteur dit là
+    porteur_admis(G, E1), porteur_admis(G, E2),          % une distinction entre deux entités que l'auteur dit là,
+    \+ inexistante(K, G, E1), \+ inexistante(K, G, E2).   % et dont le texte ne nie pas l'existence
 contrainte_justifiee(K, G, S, _, distincts(X, Y), documentaire(C1, C2, Src)) :-
     val(S, X, A), val(S, Y, B), A \== B, nom_admissible(K, G, A, C1), nom_admissible(K, G, B, C2),
     ( K:distincts_documentes(C1, C2, Src) ; K:distincts_documentes(C2, C1, Src) ),
@@ -237,9 +254,9 @@ contrainte_justifiee(K, G, S, _, distincts(X, Y), documentaire(C1, C2, Src)) :-
 contrainte_justifiee(K, G, S, Hs, distincts(X, Y), hypothese) :-
     val(S, X, A), val(S, Y, B), A \== B, memberchk(distinction_supposee(X, Y, N1, N2), Hs),
     noms(K, G, A, N1), noms(K, G, B, N2), N1 \== [], N2 \== [],
-    \+ ( member(C1, N1), member(C2, N2), cles_equivalentes(K, C1, C2) ).
-contrainte_justifiee(_, G, S, _, nombre(X, N), nombre(E)) :-
-    val(S, X, R), memberchk(nombre(E, N), G), meme_classe(G, E, R), porteur_admis(G, E),
+    portes(K, G, A, P1), portes(K, G, B, P2), \+ ( member(C1, P1), member(C2, P2), cles_equivalentes(K, C1, C2) ).
+contrainte_justifiee(K, G, S, _, nombre(X, N), nombre(E)) :-
+    val(S, X, R), memberchk(nombre(E, N), G), meme_classe(G, E, R), porteur_admis(G, E), \+ inexistante(K, G, E),
     \+ ( member(nombre(E2, N2), G), N2 \== N, meme_classe(G, E2, R), present(G, E2) ).   % aucun autre nombre
 
 % un nom sur lequel une distinction documentaire repose : de l'auteur, porteur admis, non contredit dans la classe

@@ -25,9 +25,12 @@ test(noms_alternatifs_ne_sont_pas_une_conjonction) :-
 test(distinction_exigee) :-                    % deux hommes, l'identité libre, n'impliquent pas deux hommes distincts
     cmp(et([type(v(x), homme), type(v(y), homme)]),
         et([type(v(x), homme), type(v(y), homme), distincts(v(x), v(y))]), contient).
+% Attendu « equivalentes » jusqu'au cycle 6 ; `meme` a quatre valeurs (D29) : dans un modèle où la classe est dite
+% une et deux (un jumeau coréférent et distinct), « x homme et saint » reste établie et `meme(x, y)` est contradictoire.
+% L'inclusion n'est que dans un sens (audit final, B1).
 test(identite) :-
     cmp(et([type(v(x), homme), type(v(y), saint), meme(v(x), v(y))]), et([type(v(x), homme), type(v(x), saint)]),
-        equivalentes).
+        incluse).
 test(union) :- cmp(type(v(x), lionne), ou([type(v(x), lion), type(v(x), tigre)]), incluse).
 test(relation_orientee) :-
     cmp(relation(v(x), avec, v(y)), relation(v(y), avec, v(x)), equivalentes),   % le nom des variables est libre
@@ -79,6 +82,15 @@ test(liste_de_noms_et_disjonction) :-
 test(transitivite_simple) :-
     cmp(type(v(x), lionne), type(v(x), lion), incluse), cmp(type(v(x), lion), type(v(x), felin), incluse),
     cmp(type(v(x), lionne), type(v(x), felin), incluse).
+
+test(meme_ne_transmet_pas_sans_meme_dans_q1) :-   % audit final B1
+    Q1 = type(v(x), saint), Q2 = et([type(v(x), saint), type(v(y), homme), meme(v(x), v(y))]),
+    temoin([entite(e1, saint, p_1), entite(e2, saint, p_2), coref(e1, e2), distinct(e1, e2)], Q1, etablie),
+    temoin([entite(e1, saint, p_1), entite(e2, saint, p_2), coref(e1, e2), distinct(e1, e2)], Q2, contradictoire),
+    cmp(Q1, Q2, contient),
+    % avec une coréférence de Q1 de chaque côté, l'identité se transmet (saint est sous homme dans K)
+    cmp(et([type(v(x), saint), type(v(z), saint), meme(v(x), v(z))]), et([type(v(x), saint), type(v(y), homme), meme(v(x), v(y))]),
+        equivalentes).
 
 :- end_tests(inclusion).
 

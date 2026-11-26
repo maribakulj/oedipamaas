@@ -216,7 +216,7 @@ appui_(K, M, relation(R1, Re, R2), neg, Q, appui(A, E1, P, L)) :-
     present(M, E1), present(M, E2), lien_neg(K, r, Re, W, L).
 appui_(K, M, genre(T), S, Q, appui(E, E, P, L)) :-
     M:entite(E, W, P), W \== nom_propre, qualifie(M, E, S, oeuvre, Q),
-    ( S == pos -> lien_pos(K, n, W, T, L) ; lien_neg(K, n, T, W, L) ).
+    ( S == pos -> lien_pos(K, n, W, T, L) ; nue(M, E), lien_neg(K, n, T, W, L) ).   % niée : nue seulement (§ 1.1)
 
 nom_nie(K, M, R, Ki, Q, appui(A, E, P, L)) :-
     M:nom(A, E, Nom, P), M:classe(E, R), qualifie(M, A, neg, represente, Q), present(M, E), lien_de_nom(K, Nom, [Ki], L).
@@ -262,24 +262,33 @@ paire_contrainte(v(_), 1-0). paire_contrainte(h(_), 1-0). paire_contrainte(p, 1-
 paire_contrainte(b, 1-1). paire_contrainte(f, 0-1). paire_contrainte(i, 0-0).
 contrainte_valeur(K, M, meme(X, Y), S, V) :-
     memberchk(X-A, S), memberchk(Y-B, S),
-    ( distinction(K, M, A, B, D), D \= supposee(_) -> Neg = 1 ; Neg = 0 ),
+    ( ( distinction(K, M, A, B, D), D \= supposee(_) ; A == B, documentee_dans(K, M, A) ) -> Neg = 1 ; Neg = 0 ),
     ( A == B -> ( Neg == 1 -> V = b ; V = v(egalite) ) ; Neg == 1 -> V = f ; V = i ).
 contrainte_valeur(K, M, distincts(X, Y), S, V) :-
     memberchk(X-A, S), memberchk(Y-B, S),
     (   A == B -> V = i                    % une substitution invalide, pas une réfutation par le texte
-    ;   distinction(K, M, A, B, D) -> ( D = supposee(Ns1-Ns2) -> V = h(distinction_supposee(X, Y, Ns1, Ns2)) ; V = v(D) )
+    ;   etablie_saine(K, M, A, B, E1, E2) -> V = v(etablie(distinct(E1, E2)))
+    ;   distinction(K, M, A, B, D)
+    ->  (   D = supposee(Ns1-Ns2) -> V = h(distinction_supposee(X, Y, Ns1, Ns2))
+        ;   D = etablie(_) -> V = p                % ses entités n'existent pas selon le texte : non certifiable
+        ;   V = v(D)
+        )
     ;   V = i
     ).
 % le nombre d'une entité ne compte que si elle est présente (D28) ; il n'est certifiable que de l'auteur
-contrainte_valeur(_, M, nombre(X, Nb), S, V) :-
+contrainte_valeur(K, M, nombre(X, Nb), S, V) :-
     memberchk(X-R, S),
-    (   M:classe(E, R), M:nombre(E, Nb), present_auteur(M, E) -> Pv = v(nombre(E))
+    (   M:classe(E, R), M:nombre(E, Nb), present_auteur(M, E), \+ porteur_nie(K, M, E) -> Pv = v(nombre(E))
     ;   M:classe(E, R), M:nombre(E, Nb), present(M, E) -> Pv = p
     ;   Pv = non
     ),
     ( M:classe(E2, R), M:nombre(E2, N2), N2 \== Nb, present(M, E2) -> Neg = 1 ; Neg = 0 ),
     ( Pv == non -> ( Neg == 1 -> V = f ; V = i ) ; Neg == 1 -> V = b ; V = Pv ).
 
+% une distinction établie dont les deux entités existent selon le texte (cycle 7)
+etablie_saine(K, M, A, B, E1, E2) :-
+    M:classe(E1, A), M:classe(E2, B), ( M:distinct(E1, E2) ; M:distinct(E2, E1) ),
+    present_auteur(M, E1), present_auteur(M, E2), \+ porteur_nie(K, M, E1), \+ porteur_nie(K, M, E2), !.
 % la distinction de deux classes (§ 1) : etablie(distinct(E1, E2)) | documentaire(C1, C2, Source) | supposee(Noms)
 % établie : entre deux entités présentes selon l'auteur (une entité seulement possible ne distingue rien)
 distinction(_, M, A, B, etablie(distinct(E1, E2))) :-
@@ -294,7 +303,11 @@ distinction(K, M, A, B, documentaire(C1, C2, Src)) :-
     \+ ( member(T, Ts2), meme_nom(K, C1, T) ), \+ ( member(T, Ts1), meme_nom(K, C2, T) ), !.
 distinction(K, M, A, B, supposee(Ns1-Ns2)) :-
     noms_de_classe(K, M, A, Ns1), Ns1 \== [], noms_de_classe(K, M, B, Ns2), Ns2 \== [],
-    \+ ( member(C1, Ns1), member(C2, Ns2), meme_nom(K, C1, C2) ).
+    noms_portes(K, M, A, Ps1), noms_portes(K, M, B, Ps2),      % aucun nom, même possible ou contesté, en commun
+    \+ ( member(C1, Ps1), member(C2, Ps2), meme_nom(K, C1, C2) ).
+% une classe dont deux noms admissibles sont, selon K, deux individus : `meme` y est contredit (D12, cycle 7)
+documentee_dans(K, M, R) :-
+    noms_admissibles(K, M, R, Ns), member(C1, Ns), member(C2, Ns), K:distincts_documentes(C1, C2, _), !.
 % les noms qu'une classe porte, pour exclure une distinction documentaire : tout nom affirmé positivement, quels que
 % soient ses qualificatifs, contesté ou non (la lecture prudente)
 noms_portes(K, M, R, Ns) :-
@@ -402,7 +415,16 @@ certifiable(K, M, S, Sel, Cl) :-
 % un appui positif de l'auteur dont l'assertion elle-même n'est pas niée (« une lionne » quand le texte dit aussi « pas
 % de lionne » ne certifie pas « un lion ») : la preuve ne repose que sur des prémisses non contredites (§ 4.3)
 % (le réexamen d'un appui déjà compté par l'arbre ne l'est pas une seconde fois)
-appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \+ ( base(Ai, Ap, B), once(appui_(K, M, B, neg, _, _)) ).
+appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \+ conteste(K, M, Ai, Ap).
+% les prémisses d'un appui (cycle 7) : l'assertion avec son mot ; l'existence de chaque porteur (le type de son entité
+% n'est pas nié : « un homme nommé Pierre ; il n'y a pas d'homme ») ; pour un rôle, son événement (« la femme ne tient
+% pas l'enfant » contre le rôle de « la femme tient l'enfant »)
+conteste(K, M, Ai, Ap) :- base(Ai, Ap, B), once(appui_(K, M, B, neg, _, _)), !.
+conteste(K, M, Ai, Ap) :- porteur(M, Ai, Ap, E), porteur_nie(K, M, E), !.
+conteste(K, M, role(V, _, _), _) :- M:evenement(V, W, _), once(appui_(K, M, evenement(V, W), neg, _, _)), !.
+porteur(_, _, appui(_, E, _, _), E).
+porteur(M, relation(_, _, _), appui(A, _, _, _), E2) :- M:relation(A, _, _, E2, _).
+porteur_nie(K, M, E) :- M:entite(E, W, _), W \== nom_propre, M:classe(E, R), once(appui_(K, M, type(R, W), neg, _, _)).
 base(type(R, _), appui(_, _, _, chemin(W, _)), type(R, W)).
 base(nom(R, _), appui(_, _, _, cle(C)), nom(R, [C])).
 base(nom(R, _), appui(_, _, _, alias(C, _)), nom(R, [C])).
