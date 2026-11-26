@@ -60,6 +60,25 @@ def codage(sortie):
                                 + f" | {nsens / n:.1f} |")
             lignes_temps.append(f"| {rn} | {statistics.median(temps) if temps else 0:.1f} | {centile(temps, .95):.1f} |"
                                 f" {max(temps) if temps else 0:.1f} |")
+        # les textes codés dans tous les réglages : les moyennes y sont comparables (un délai retire les textes lourds)
+        codes = {}
+        for r in REGLAGES:
+            f = sortie / f"codage_{r}_{jeu}.json"
+            if f.exists():
+                codes[r] = {(fi["k"], g): fi[g] for fi in json.loads(f.read_text(encoding="utf-8")) for g in GENRES
+                            if isinstance(fi.get(g), dict) and isinstance(fi[g].get("comptes"), dict)}
+        if len(codes) > 1:
+            communs = set.intersection(*(set(c) for c in codes.values()))
+            print(f"\nCodes par texte, sur les {len(communs)} textes codés dans tous les réglages :\n")
+            print("| réglage | " + " | ".join(STATUTS) + " | preuves conditionnelles supposant un sens |")
+            print("|---|" + "---|" * (len(STATUTS) + 1))
+            for r, c in codes.items():
+                n = max(len(communs), 1)
+                cp = collections.Counter()
+                for t in communs:
+                    cp.update(c[t]["comptes"])
+                ns = sum(c[t].get("conditionnels_par_sens", 0) for t in communs)
+                print(f"| {REGLAGES[r]} | " + " | ".join(f"{cp[s_] / n:.1f}" for s_ in STATUTS) + f" | {ns / n:.1f} |")
         print("\nCodes par texte (moyenne sur les textes codés) :\n")
         print("| réglage | textes | " + " | ".join(STATUTS) + " | preuves conditionnelles supposant un sens |")
         print("|---|---|" + "---|" * (len(STATUTS) + 1))
