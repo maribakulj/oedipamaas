@@ -373,6 +373,7 @@ class Resultat:
         self.securite = collections.Counter()
         self.confusion = collections.Counter()      # (rôle de référence ou « aucun », rôle du graphe ou « aucun »)
         self.detail = {}
+        self.promotions = []
 
     def fusion(self, autre):
         self.comptes.fusion(autre.comptes)
@@ -473,9 +474,13 @@ def comparer(r: Graphe, g: Graphe, methode="optimal", referents="classes", deriv
             res.securite["reference_non_admissible"] += 1
             if adm_g:
                 res.securite["promotion"] += 1
+                motifs = []
                 for motif, val in (("neg", 0), ("modalite", 1), ("portee", 2), ("cite", 3), ("alternative", 4)):
                     if qr[val] != ADMISSIBLE[val]:
                         res.securite["promotion_" + motif] += 1
+                        motifs.append(f"{motif}={qr[val]}")
+                quoi = (r.entites.get(ri) or r.evenements.get(ri) or ("assertion",))[0]
+                res.promotions.append({"assertion": ri, "tete": quoi, "motifs": motifs})
         else:
             res.securite["reference_admissible"] += 1
             if not adm_g:
@@ -672,7 +677,8 @@ def evaluer(R, G, accord=False, derivations=False, alignement="optimal", referen
         total.fusion(res)
         par_langue[R[k]["langue"]].fusion(res)
         if detail:
-            details.append({"k": k[0], "genre": k[1], "texte": R[k]["texte"], "detail": res.detail})
+            details.append({"k": k[0], "genre": k[1], "texte": R[k]["texte"], "detail": res.detail,
+                            "promotions": res.promotions})
         if derivations and not accord and not g.erreur:
             for rg, c in juger_derivations(G[k], r, g, alignement, referents).items():
                 regles[rg].update(c)
