@@ -315,23 +315,51 @@ def est_concept(t) -> bool:
     return isinstance(t, int) and not isinstance(t, bool)
 
 
+def sens_conceptuels(K: Connaissances, mot) -> set:
+    """§ 2, « La polysémie » (D30) : les sens conceptuels d'un mot sont ses identifiants de concepts (les entiers que
+    K lui donne), s'il en a ; sinon ses sens tels que K les donne (le mot lui-même, D20)."""
+    s = K.sens(mot)
+    concepts = {t for t in s if est_concept(t)}
+    return concepts if concepts else set(s)
+
+
 def lien_positif(K: Connaissances, mot, type_demande) -> bool:
-    """§ 2 : chemin(Mot, [T0, ..., Tn]) : K:sens(Cat, Mot, T0), K:sous(Ti, Ti+1), Tn le type demandé.
-    Un mot du texte va vers un type plus général ; un lien part de n'importe quel sens du mot."""
-    return any(K.atteint("sous", t0, type_demande) for t0 in K.sens(mot))
+    """§ 2 : chemin(Mot, [T0, ..., Tn]) : T0 un sens conceptuel du mot (D30), K:sous(Ti, Ti+1), Tn le type demandé.
+    Un mot du texte va vers un type plus général."""
+    return any(K.atteint("sous", t0, type_demande) for t0 in sens_conceptuels(K, mot))
+
+
+def lien_certain(K: Connaissances, mot, type_demande) -> bool:
+    """§ 2 (D30) : un lien positif est **certain** si chacun des sens conceptuels du mot atteint le type demandé ;
+    sinon il ne fonde qu'une hypothèse de sens, sens_suppose(Mot, Type)."""
+    sc = sens_conceptuels(K, mot)
+    return bool(sc) and all(K.atteint("sous", t0, type_demande) for t0 in sc)
 
 
 def noeuds_du_type(K: Connaissances, type_demande) -> set:
-    """§ 2 (D27) : S0, le nœud du type demandé : le type lui-même si c'est un identifiant de concept (un entier),
-    un de ses sens si c'est un mot."""
-    return {type_demande} if est_concept(type_demande) else K.sens(type_demande)
+    """§ 2 (D27, D30) : les nœuds du type demandé : le type lui-même si c'est un identifiant de concept (un entier),
+    sinon ses sens conceptuels."""
+    return {type_demande} if est_concept(type_demande) else sens_conceptuels(K, type_demande)
 
 
-def lien_negatif(K: Connaissances, type_demande, mot) -> bool:
-    """§ 2 : chemin_inclus(Type, [S0, ..., Sn], Mot) : S0 le nœud du type demandé, K:inclus(Si, Si+1),
-    K:sens(Cat, Mot, Sn). Du type demandé vers le mot nié, par la seule inclusion (nier un type plus général
-    nie les plus spécifiques)."""
-    return any(K.atteint("inclus", s0, sn) for s0 in noeuds_du_type(K, type_demande) for sn in K.sens(mot))
+def force_negation(K: Connaissances, type_demande, mot) -> Optional[str]:
+    """§ 2 : chemin_inclus(Type, [S0, ..., Sn], Mot) : S0 un nœud du type demandé, K:inclus(Si, Si+1), Sn un sens
+    conceptuel du mot nié (nier un type plus général nie les plus spécifiques), par la seule inclusion.
+    D30 : la négation est 'certaine' si chaque nœud du type demandé est inclus dans chaque sens conceptuel du mot
+    nié ; 'possible' si un couple seulement l'est (elle ne réfute rien, ne contredit rien) ; None sinon."""
+    couples = [(s0, sn) for s0 in noeuds_du_type(K, type_demande) for sn in sens_conceptuels(K, mot)]
+    inclus = [K.atteint("inclus", s0, sn) for s0, sn in couples]
+    if couples and all(inclus):
+        return "certaine"
+    if any(inclus):
+        return "possible"
+    return None
+
+
+def lien_negatif(K: Connaissances, type_demande, mot, force: str = "certaine") -> bool:
+    """Un lien négatif de la force demandée ('certaine' : un appui négatif ; 'possible' : D30, une négation qui ne
+    fonde qu'une hypothèse negation_autre_sens sur ce qu'elle touche)."""
+    return force_negation(K, type_demande, mot) == force
 
 
 def cle_correspond(K: Connaissances, cle_texte, cles_demandees) -> bool:
@@ -463,12 +491,15 @@ NOM_VALEUR = {INCONNU: "inconnu", VRAI: "vrai", FAUX: "faux", CONTRADICTOIRE: "c
 class Appui:
     """Un appui positif d'un atome : son énonciateur Q (§ 1), l'assertion, et le mot de l'appui (la tête, le
     prédicat, la propriété, la relation, ou la clé du nom), qui sert à reformer la prémisse (§ 4.3) ; les entités que
-    l'appui cite (§ 4.3, 0.3 amendée : leur existence est une prémisse) et, pour un rôle, son événement."""
+    l'appui cite (§ 4.3, 0.3 amendée : leur existence est une prémisse) et, pour un rôle, son événement ; certain :
+    le lien de l'appui est certain (D30 : chaque sens conceptuel du mot atteint le type demandé), sinon l'appui ne
+    certifie que sous l'hypothèse sens_suppose(Mot, Type)."""
     enonciateur: object
     assertion: object
     mot: object
     cites: tuple = ()
     evenement: object = None
+    certain: bool = True
 
 
 def contexte_de(atome) -> str:
@@ -489,7 +520,7 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
             if representant(g, e) == sigma[x] and lien_positif(K, tete, T):
                 st = etat(g, e, [], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], e, tete, (e,)))
+                    res.append(Appui(st[1], e, tete, (e,), certain=lien_certain(K, tete, T)))
     elif t == "nom":
         _, x, cles = atome
         for a, e, nom in g.noms:
@@ -504,7 +535,7 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
             if representant(g, e) == sigma[x] and lien_positif(K, prop, P):
                 st = etat(g, a, [e], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], a, prop, (e,)))
+                    res.append(Appui(st[1], a, prop, (e,), certain=lien_certain(K, prop, P)))
     elif t == "relation":
         _, x, R, y = atome
         for a, e1, rel, e2 in g.relations:
@@ -512,7 +543,7 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
                     and lien_positif(K, rel, R)):
                 st = etat(g, a, [e1, e2], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], a, rel, (e1, e2)))
+                    res.append(Appui(st[1], a, rel, (e1, e2), certain=lien_certain(K, rel, R)))
     elif t == "evenement":
         _, ev, P = atome
         for v, pred in g.evenements:
@@ -521,7 +552,7 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
             if v == sigma[ev] and lien_positif(K, pred, P):
                 st = etat(g, v, [], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], v, pred))
+                    res.append(Appui(st[1], v, pred, certain=lien_certain(K, pred, P)))
     elif t == "role":
         _, ev, R, x = atome
         for v, r, e in g.roles:
@@ -539,7 +570,7 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
                     # AMBIGUITES, premisse_genre : l'existence de l'entité de portée oeuvre est-elle aussi lue dans
                     # le contexte de la figuration ? Lecture : non (variante 'figuration' : oui).
                     cites = (e,) if LECTURES["existence_genre"] == "figuration" else ()
-                    res.append(Appui(st[1], e, tete, cites))
+                    res.append(Appui(st[1], e, tete, cites, certain=lien_certain(K, tete, T)))
     return res
 
 
@@ -552,10 +583,14 @@ def entite_nue(g: Graphe, e) -> bool:
                 or any(x[0] == e for x in g.nombres) or any(e in x for x in g.distincts))
 
 
-def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
+def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict, force: str = "certaine") -> list:
     """§ 1.1 : les appuis négatifs d'un atome dont les variables sont liées (une liste d'identifiants
-    d'assertions niées ; une liste de noms en demande une par clé). Rien d'autre ne nie un atome."""
+    d'assertions niées ; une liste de noms en demande une par clé). Rien d'autre ne nie un atome.
+    force='possible' (D30) : les négations qui remplissent les mêmes conditions mais dont le lien négatif n'est que
+    possible (un couple de sens seulement) : elles ne sont pas des appuis négatifs (aucune valeur négative) ; elles
+    ne fondent que l'hypothèse negation_autre_sens de ce qu'elles touchent. Un nom n'a pas de sens : jamais possible."""
     C = contexte_de(atome)
+    neg = lambda T, w: lien_negatif(K, T, w, force)
     t = atome[0]
     res = []
     if t == "type":
@@ -564,7 +599,7 @@ def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
         _, x, T = atome
         for e, tete in g.entites:
             st = etat(g, e, [], C)
-            if not (st and st[0] == "neg" and entite_nue(g, e) and lien_negatif(K, T, tete)):
+            if not (st and st[0] == "neg" and entite_nue(g, e) and neg(T, tete)):
                 continue
             classe = classe_de(g, e)
             if len(classe) == 1:
@@ -575,6 +610,8 @@ def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
     elif t == "nom":
         # nom(A, E, Nom) nié, E présente : nom(X, Ks) si chaque clé de Ks est niée ainsi (D24).
         _, x, cles = atome
+        if force != "certaine":
+            return []
         par_cle = []
         for k in cles:
             niees = [a for a, e, nom in g.noms
@@ -587,7 +624,7 @@ def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
     elif t == "propriete":
         _, x, P = atome
         for a, e, prop in g.proprietes:
-            if representant(g, e) == sigma[x] and lien_negatif(K, P, prop):
+            if representant(g, e) == sigma[x] and neg(P, prop):
                 st = etat(g, a, [e], C)
                 if st and st[0] == "neg":
                     res.append(a)
@@ -595,7 +632,7 @@ def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
         _, x, R, y = atome
         for a, e1, rel, e2 in g.relations:
             if (representant(g, e1) == sigma[x] and representant(g, e2) == sigma[y]
-                    and lien_negatif(K, R, rel)):
+                    and neg(R, rel)):
                 st = etat(g, a, [e1, e2], C)
                 if st and st[0] == "neg":
                     res.append(a)
@@ -607,7 +644,7 @@ def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
         v_present = qualifiee(g, V, "pos", C)
         if v_present:
             for N, pred in g.evenements:
-                if N == V or not lien_negatif(K, P, pred):
+                if N == V or not neg(P, pred):
                     continue
                 roles_n = [(r, e) for (n, r, e) in g.roles if n == N]
                 # LECTURE : l'événement nié parle des participants de ses rôles, qui doivent être présents
@@ -628,7 +665,7 @@ def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
         _, T = atome
         for e, tete in g.entites:
             st = etat(g, e, [], C)
-            if st and st[0] == "neg" and lien_negatif(K, T, tete) and (entite_nue(g, e) or not GENRE_NU):
+            if st and st[0] == "neg" and neg(T, tete) and (entite_nue(g, e) or not GENRE_NU):
                 res.append(e)
     return res
 
@@ -659,6 +696,10 @@ LECTURES = {
     # § 4.1 : un nom « qu'une assertion niée de la classe contredit » : appui négatif, porteur présent ('etat') ; variante :
     # toute assertion de nom niée affirmée, de portée figuration, hors alternative, porteur non vérifié ('qualifie')
     "conteste": "etat",
+    # D30 : une négation seulement possible de l'existence d'une entité d'une distinction établie ou d'un nombre :
+    # sans effet ('ignoree', § 6 point 7 n'en parle que pour les atomes) ; variante : l'hypothèse negation_autre_sens
+    # ('hypothese', § 2 : « une conclusion positive qu'elle touche »)
+    "existence_contrainte": "ignoree",
 }
 
 
@@ -700,22 +741,33 @@ def tete_de(g: Graphe, e):
     return next(t for x, t in g.entites if x == e)
 
 
+def atome_existence(g, e):
+    """§ 4.3 (0.3 amendée) : l'existence d'une entité, comme atome : type(X, W) sous σ(X) la classe de e, W le mot
+    de e ; rend (atome, σ)."""
+    return ("type", "_x", tete_de(g, e)), {"_x": representant(g, e)}
+
+
+def atome_evenement(g, v):
+    """§ 4.3 (0.3 amendée) : l'événement d'un rôle, comme atome : evenement(E, P) sous σ(E) = v, P le prédicat de v."""
+    pred = next(p for x, p in g.evenements if x == v)
+    return ("evenement", "_e", pred), {"_e": v}
+
+
 def existence_niee(g, K, e) -> bool:
     """§ 4.3 (0.3 amendée) : l'existence d'une entité est niée si le type de son mot est nié pour sa classe :
     type(X, W) sous σ(X) la classe de e, W le mot de e, a un appui négatif (§ 1.1) ; « un homme nommé Pierre ;
     il n'y a pas d'homme »."""
-    return bool(appuis_negatifs(g, K, ("type", "_x", tete_de(g, e)), {"_x": representant(g, e)}))
+    return bool(appuis_negatifs(g, K, *atome_existence(g, e)))
 
 
 def evenement_nie(g, K, v) -> bool:
     """§ 4.3 (0.3 amendée) : la prémisse d'un rôle qu'est son événement est niée si l'atome de prédicat de cet
     événement, evenement(E, P) sous σ(E) = v, P le prédicat de v, a un appui négatif (§ 1.1)."""
-    pred = next(p for x, p in g.evenements if x == v)
-    return bool(appuis_negatifs(g, K, ("evenement", "_e", pred), {"_e": v}))
+    return bool(appuis_negatifs(g, K, *atome_evenement(g, v)))
 
 
 def premisse_niee(g, K, atome, sigma, ap: Appui) -> bool:
-    """§ 4.3 (0.3 amendée) : une prémisse de l'appui est niée :
+    """§ 4.3 (0.3 amendée) : une prémisse de l'appui est niée (certainement, D30) :
     (a) l'atome reformé avec le mot même de l'appui a un appui négatif ;
     (b) l'existence d'une entité que l'appui cite est niée (existence_niee) ;
     (c) pour un rôle, son événement est nié (evenement_nie).
@@ -728,13 +780,62 @@ def premisse_niee(g, K, atome, sigma, ap: Appui) -> bool:
     return ap.evenement is not None and evenement_nie(g, K, ap.evenement)
 
 
-def atome_certifiable(g, K, atome, sigma) -> bool:
+def instancier(atome, sigma):
+    """§ 5 (D30) : l'atome d'une hypothèse negation_autre_sens(Atome), instancié par σ (référents par leur
+    représentant de classe, événements par leur identifiant) ; une liste de clés devient un tuple."""
+    return tuple(sigma.get(a, a) if isinstance(a, str) and a in sigma else (tuple(a) if isinstance(a, list) else a)
+                 for a in atome)
+
+
+def hypothese_negation(g, K, atome, sigma) -> set:
+    """D30 : si l'atome (lié) n'a qu'une négation possible (aucune certaine : celle-là le nierait), l'hypothèse
+    negation_autre_sens(Atome) ; sinon rien."""
+    if appuis_negatifs(g, K, atome, sigma, "possible") and not appuis_negatifs(g, K, atome, sigma):
+        return {("negation_autre_sens", instancier(atome, sigma))}
+    return set()
+
+
+def type_demande(atome):
+    """Le type demandé d'un atome à lien (le T de sens_suppose(Mot, T))."""
+    return atome[1] if atome[0] == "genre" else atome[2]
+
+
+def hypotheses_appui(g, K, atome, sigma, ap: Appui) -> set:
+    """§ 2 et § 6, point 7 (D30) : les hypothèses que demande un appui (dont aucune prémisse n'est niée) :
+    - sens_suppose(Mot, Type) si son lien n'est pas certain ;
+    - negation_autre_sens(A) pour une négation seulement possible de l'assertion citée reformée avec son mot, de
+      l'existence d'une entité citée (type(X, W) de sa classe), de l'événement d'un rôle (evenement(V, P))."""
+    h = set()
+    if not ap.certain:
+        h.add(("sens_suppose", ap.mot, type_demande(atome)))
+    h |= hypothese_negation(g, K, reforme(atome, ap.mot), sigma)
+    for e in ap.cites:
+        h |= hypothese_negation(g, K, *atome_existence(g, e))
+    if ap.evenement is not None:
+        h |= hypothese_negation(g, K, *atome_evenement(g, ap.evenement))
+    return h
+
+
+def certification_atome(g, K, atome, sigma) -> Optional[tuple]:
     """§ 4.3 : l'atome est vrai (1,0) avec un appui positif de l'auteur du texte dont **aucune prémisse n'est
-    niée** (premisse_niee). Un appui à prémisse niée laisse l'atome vrai, non certifiable."""
+    niée** (premisse_niee). Un appui à prémisse niée laisse l'atome vrai, non certifiable.
+    D30 : parmi les appuis admissibles, celui qui demande le moins d'hypothèses (à égalité : le premier dans l'ordre
+    standard de la liste des hypothèses), plus l'hypothèse d'une négation seulement possible de l'atome lui-même.
+    Rend None (non certifiable) ou le tuple trié des hypothèses (vide : certifié sans hypothèse)."""
     if valeur_atome(g, K, atome, sigma) != VRAI:
-        return False
-    return any(ap.enonciateur == AUTEUR and not premisse_niee(g, K, atome, sigma, ap)
-               for ap in appuis_positifs(g, K, atome, sigma))
+        return None
+    candidats = [tuple(sorted(hypotheses_appui(g, K, atome, sigma, ap), key=repr))
+                 for ap in appuis_positifs(g, K, atome, sigma)
+                 if ap.enonciateur == AUTEUR and not premisse_niee(g, K, atome, sigma, ap)]
+    if not candidats:
+        return None
+    meilleur = min(candidats, key=lambda h: (len(h), repr(h)))
+    return tuple(sorted(set(meilleur) | hypothese_negation(g, K, atome, sigma), key=repr))
+
+
+def atome_certifiable(g, K, atome, sigma) -> bool:
+    """§ 4.3 : certifiable, avec ou sans hypothèses (certification_atome)."""
+    return certification_atome(g, K, atome, sigma) is not None
 
 
 # --- § 1 et § 4.1 : les trois régimes de distinction ------------------------------------------------------
@@ -901,22 +1002,37 @@ def valeur_contrainte(g, K, c, sigma) -> tuple:
     raise ValueError(c)
 
 
-def contrainte_certifiee(g, K, c, sigma):
+def hypotheses_existence_contrainte(g, K, entites) -> set:
+    """D30, variante LECTURES['existence_contrainte'] = 'hypothese' (AMBIGUITES, existence_contrainte) : une négation
+    seulement possible de l'existence d'une entité d'une distinction établie ou d'un nombre demande l'hypothèse
+    negation_autre_sens ; lecture de l'oracle ('ignoree') : seule une négation certaine compte (§ 6, point 7 n'énumère
+    d'hypothèses de négation que pour les atomes)."""
+    if LECTURES["existence_contrainte"] != "hypothese":
+        return set()
+    h = set()
+    for e in entites:
+        h |= hypothese_negation(g, K, *atome_existence(g, e))
+    return h
+
+
+def contrainte_certifiee(g, K, c, sigma) -> Optional[tuple]:
     """§ 4.3 : une contrainte sélectionnée est « vraie et certifiable (ou vraie sous hypothèse) ».
     `nombre` n'est certifiable que si un membre présent selon l'auteur a ce nombre (§ 4.1) ; une distinction établie
     ou un nombre ne le sont que si l'existence de leurs entités n'est pas niée (0.3 amendée, existence_niee).
     LECTURE (AMBIGUITES, distinction_existence_niee) : une distinction établie dont une entité a l'existence niée
     ne certifie pas `distincts`, mais n'empêche pas une distinction documentaire, ni une supposée (hypothèse), si
     elles tiennent par ailleurs.
-    Rend 'vraie', ('hypothese', X, Y) ou None."""
+    Rend None (non certifiable) ou le tuple des hypothèses (vide : vraie) ; la justification qui en demande le
+    moins est retenue."""
     v = valeur_contrainte(g, K, c, sigma)
     if v != VRAI:
         return None
     if c[0] == "nombre":
         r, k = sigma[c[1]], c[2]
-        if not any(n == k and representant(g, e) == r and presente_selon_auteur(g, e, FIGURATION)
-                   and not existence_niee(g, K, e) for e, n in g.nombres):
-            return None
+        cands = [hypotheses_existence_contrainte(g, K, [e]) for e, n in g.nombres
+                 if n == k and representant(g, e) == r and presente_selon_auteur(g, e, FIGURATION)
+                 and not existence_niee(g, K, e)]
+        return tuple(sorted(min(cands, key=len), key=repr)) if cands else None
     if c[0] == "distincts":
         r1, r2 = sigma[c[1]], sigma[c[2]]
         etablies = [(a, b) for a, b in distinction_etablie(g, r1, r2)
@@ -924,11 +1040,14 @@ def contrainte_certifiee(g, K, c, sigma):
         if (LECTURES["distinction_niee"] == "etablie_prime" and distinction_etablie(g, r1, r2)
                 and not etablies):
             return None
-        if not (etablies or distinction_documentaire(g, K, r1, r2)):
-            if distinction_supposee(g, K, r1, r2):
-                return ("hypothese", c[1], c[2])      # vraie par la seule distinction supposée
-            return None                               # vraie par une distinction établie à l'existence niée
-    return "vraie"
+        cands = [hypotheses_existence_contrainte(g, K, [a, b]) for a, b in etablies]
+        if distinction_documentaire(g, K, r1, r2):
+            cands.append(set())
+        if distinction_supposee(g, K, r1, r2):
+            cands.append({("distinction_supposee", c[1], c[2])})
+        # aucune : vraie par une distinction établie à l'existence niée
+        return tuple(sorted(min(cands, key=len), key=repr)) if cands else None
+    return ()
 
 
 # ---------------------------------------------------------------------------------------------------------
@@ -1005,18 +1124,19 @@ def solutions_certifiables(g, K, f) -> list:
             ok, hyps = True, []
             for _, x in sel:
                 if est_atome(x):
-                    if not atome_certifiable(g, K, x, sigma):
+                    h = certification_atome(g, K, x, sigma)
+                    if h is None:
                         ok = False
                         break
+                    hyps.extend(h)
                 else:
                     c = contrainte_certifiee(g, K, x, sigma)
                     if c is None:
                         ok = False
                         break
-                    if c != "vraie":
-                        hyps.append(c)
+                    hyps.extend(c)
             if ok:
-                sols.append((sel, frozenset(sigma.items()), tuple(sorted(set(hyps)))))
+                sols.append((sel, frozenset(sigma.items()), tuple(sorted(set(hyps), key=repr))))
     return sols
 
 
@@ -1091,7 +1211,7 @@ def statut(graphe: Graphe, K: Connaissances, requete, ancrage: bool = True) -> s
 # ---------------------------------------------------------------------------------------------------------
 
 TETES = ("lion", "felin", "animal", "chien", "chat", "matou", "homme", "saint", "personne", "livre", "objet")
-TYPES_DEMANDES = TETES + ("bete", 1, 2)
+TYPES_DEMANDES = TETES + ("bete", 1, 2, 3, 4, 6)
 PROPRIETES = ("couronne", "coiffe", "rouge", "couleur", "agenouille")
 PREDICATS = ("tuer", "trancher", "frapper", "agir", "faire", "tenir", "occire")
 RELATIONS = ("tient", "touche", "sur", "pres_de", "regarde")
@@ -1103,26 +1223,33 @@ def k_de_test() -> Connaissances:
     """Le K des cas tirés par l'oracle :
     - une hiérarchie avec un cycle (agir ⇄ faire), deux pas de lexicalisation qui ne sont pas des inclusions
       (animal → bete, tuer → occire) ;
-    - des identifiants de concept entiers (D27) : 1 entre lion et felin, 2 un second sens de « chat » (polysémie,
-      D30), sous objet ; « matou » n'a pour sens que le concept de « chat » (un mot dont le sens n'est pas lui-même) ;
+    - des identifiants de concept entiers (D27) : 1 entre lion et felin ;
+    - des mots polysémiques (D30), dont les sens conceptuels sont des entiers qui se lexicalisent en leur lemme
+      (un pas de `sous`, jamais d'`inclus`) : « chat » (3 sous felin, 2 sous objet ; K lui donne aussi le sens
+      « chat » lui-même, qui n'est pas conceptuel puisqu'il a des entiers), « couronne » (8 sous coiffe, 9 sans
+      parent), « sur » (4 sous pres_de, 5 sous touche), « tenir » (6 sous agir, 7 sans parent) ; « matou » n'a pour
+      sens que le concept 3 (le chat félin : un mot monosémique dont le sens n'est pas lui-même) ;
     - un alias non clos (JÉRÔME → HIERONYMUS, SOPHRONIUS → HIERONYMUS : JÉRÔME et SOPHRONIUS ne le sont que par
       fermeture, D33) ;
     - deux paires documentées distinctes, dans un seul sens : (DAVID, GOLIATH), (SAÜL, HIERONYMUS) ; SAÜL et
       JÉRÔME ne sont distincts qu'à alias près."""
     inclus = {("lion", "felin"), ("lion", 1), (1, "felin"), ("felin", "animal"), ("chien", "animal"),
-              ("chat", "felin"), (2, "objet"),
-              ("saint", "homme"), ("homme", "personne"), ("livre", "objet"), ("couronne", "coiffe"),
+              (3, "felin"), (2, "objet"), (8, "coiffe"), (4, "pres_de"), (5, "touche"), (6, "agir"),
+              ("saint", "homme"), ("homme", "personne"), ("livre", "objet"),
               ("rouge", "couleur"), ("trancher", "tuer"), ("tuer", "frapper"), ("frapper", "agir"),
-              ("agir", "faire"), ("faire", "agir"), ("tient", "touche"), ("sur", "pres_de")}
-    sous = inclus | {("animal", "bete"), ("tuer", "occire")}
+              ("agir", "faire"), ("faire", "agir"), ("tient", "touche")}
+    lexicalisations = {(3, "chat"), (2, "chat"), (8, "couronne"), (9, "couronne"), (4, "sur"), (5, "sur"),
+                       (6, "tenir"), (7, "tenir")}
+    sous = inclus | lexicalisations | {("animal", "bete"), ("tuer", "occire")}
+    polysemes = {"chat": (3, 2), "couronne": (8, 9), "sur": (4, 5), "tenir": (6, 7), "matou": (3,)}
     mots = (set(t for t in TYPES_DEMANDES if not est_concept(t)) | set(PROPRIETES) | set(PREDICATS)
-            | set(RELATIONS)) - {"matou"}
-    sens = {(m, m) for m in mots} | {("chat", 2), ("matou", "chat")}
+            | set(RELATIONS)) - {"matou", "couronne", "sur", "tenir"}
+    sens = {(m, m) for m in mots} | {(m, c) for m, cs in polysemes.items() for c in cs}
     cles = {(n, n.upper()) for n in NOMS_PROPRES}
     alias = {("JÉRÔME", "HIERONYMUS"), ("SOPHRONIUS", "HIERONYMUS")}
     dd = {("DAVID", "GOLIATH", "bible"), ("SAÜL", "HIERONYMUS", "vita")}
     return Connaissances(frozenset(sens), frozenset(sous), frozenset(inclus), frozenset(cles),
-                         frozenset(alias), frozenset(dd))
+                         frozenset(alias), frozenset(dd), version="oracle_3")
 
 
 def _qualif_aleatoire(rng: random.Random) -> Qualif:
@@ -1370,23 +1497,28 @@ def pl_connaissances(K: Connaissances) -> str:
 #    reproduits en Python (les données seulement ; la sémantique reste celle des § 1 à 4 ci-dessus)
 # ---------------------------------------------------------------------------------------------------------
 
-TETES_GEN = ("a", "a1", "a2", "b", "b1", "top", "c1", "lemme_a", "nom_propre")
+TETES_GEN = ("a", "a1", "a2", "b", "b1", "top", "c1", "lemme_a", "poly", "nom_propre")
 NOMS_GEN = ("x", "xa", "y", "z")
 
 
 class _ToutAtome(dict):
-    """sens(_, W, W) :- atom(W) : tout atome est son propre sens (pas un entier)."""
+    """sens(_, W, W) :- atom(W) : tout atome est son propre sens (pas un entier) ; sens(_, poly, 801),
+    sens(_, poly, 802) : un mot polysémique (D30)."""
     def get(self, mot, defaut=None):
-        return {mot} if isinstance(mot, str) else set()
+        if not isinstance(mot, str):
+            return set()
+        return {mot, 801, 802} if mot == "poly" else {mot}
 
 
 def k_gen(fichier: str) -> Connaissances:
-    """connaissances_gen.pl : sens(_, W, W) pour tout atome ; sous (un cycle c1 ⇄ c2, un pas de
-    lexicalisation lemme_a → a) ; inclus = sous sauf depuis lemme_a ; cle_de_nom = upcase_atom ;
-    distincts_documentes('X', 'Z', gen) ; alias('XA', 'X')."""
+    """connaissances_gen.pl : sens(_, W, W) pour tout atome, et poly polysémique (801, 802) ; sous (un cycle
+    c1 ⇄ c2, un pas de lexicalisation lemme_a → a ; 801 → a1, 802 → b1, et leur lexicalisation 801, 802 → poly) ;
+    inclus = sous sauf depuis lemme_a et vers poly ; cle_de_nom = upcase_atom ; distincts_documentes('X', 'Z', gen) ;
+    alias('XA', 'X')."""
     sous = {("a1", "a"), ("a2", "a"), ("a", "top"), ("b1", "b"), ("b", "top"), ("p1", "p"), ("q", "p0"),
-            ("p", "p0"), ("r1", "r"), ("s1", "s"), ("c1", "c2"), ("c2", "c1"), ("lemme_a", "a")}
-    inclus = {(a, b) for a, b in sous if a != "lemme_a"}
+            ("p", "p0"), ("r1", "r"), ("s1", "s"), ("c1", "c2"), ("c2", "c1"), ("lemme_a", "a"),
+            (801, "a1"), (802, "b1"), (801, "poly"), (802, "poly")}
+    inclus = {(a, b) for a, b in sous if a != "lemme_a" and b != "poly"}
     noms = set(NOMS_GEN) | {"X", "XA", "Y", "Z"}
     K = Connaissances(frozenset(), frozenset(sous), frozenset(inclus),
                       frozenset((n, n.upper()) for n in noms), frozenset({("XA", "X")}),
@@ -1397,7 +1529,7 @@ def k_gen(fichier: str) -> Connaissances:
 
 
 def graphe_gen(rng: random.Random) -> Graphe:
-    """graphe_aleatoire/1 de test_noyau_generatif.pl (mêmes lois, autre générateur pseudo-aléatoire)."""
+    """graphe_aleatoire/1 de tests/plunit/generateur_noyau.pl (mêmes lois, autre générateur pseudo-aléatoire)."""
     p = lambda x: rng.random() < x
     ents = [f"e{i}" for i in range(1, rng.randint(1, 5) + 1)]
     entites = tuple((e, rng.choice(TETES_GEN)) for e in ents)
@@ -1430,7 +1562,7 @@ def graphe_gen(rng: random.Random) -> Graphe:
 
 
 def requete_gen(rng: random.Random):
-    """requete_aleatoire/1 de test_noyau_generatif.pl."""
+    """requete_aleatoire/1 de tests/plunit/generateur_noyau.pl."""
     if rng.random() < 0.3:
         k1 = rng.choice((["X"], ["XA"]))
         k2 = rng.choice((["Y"], ["Z"]))
@@ -1441,7 +1573,7 @@ def requete_gen(rng: random.Random):
     def atome():
         i = rng.randint(1, 7)
         if i == 1:
-            return ("type", ref(), rng.choice(("a", "a1", "b", "top", "c2", "lemme_a")))
+            return ("type", ref(), rng.choice(("a", "a1", "b", "top", "c2", "lemme_a", "poly", "b1")))
         if i == 2:
             return ("nom", ref(), rng.choice((["X"], ["Y"], ["Z"], ["X", "Y"])))
         if i == 3:
