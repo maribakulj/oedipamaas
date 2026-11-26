@@ -1,52 +1,70 @@
 """Compare des graphes d'assertions à des graphes de référence (lot 5 ; docs/BANC_GRAPHES.md, § 4).
 
 Usage :
-  python outils/graphes/comparer_graphes.py REFERENCES.json GRAPHES.json [--derivations] [--detail SORTIE.json]
-  python outils/graphes/comparer_graphes.py --accord ANNOTATION_A.json ANNOTATION_B.json
+  python outils/graphes/comparer_graphes.py REFERENCES.json GRAPHES.json [options]
+  python outils/graphes/comparer_graphes.py --accord ANNOTATION_A.json ANNOTATION_B.json [options]
+Options :
+  --alignement optimal|glouton   l'appariement des mentions (optimal par défaut : affectation de poids maximal)
+  --referents classes|mentions   un participant est juste s'il est aligné sur une mention de la même classe de
+                                 coréférence de référence (classes, défaut), ou sur la mention annotée elle-même
+                                 (mentions : la mesure sans l'aide des coréférences de référence)
+  --ordre-inverse                les mentions répétées prennent leurs occurrences dans l'ordre inverse (sensibilité)
+  --derivations                  juge chaque dérivation du lecteur (lire.pl), canonisée, avec ses dépendances
+  --detail SORTIE.json           tout, texte par texte
+  --json SORTIE.json             les tables seulement
 
-REFERENCES.json : les graphes annotés (schéma du § 2 du guide), une liste d'objets {k, genre, langue, texte, entites,
-evenements, relations, coref, distinct, alternatives}. GRAPHES.json : la sortie de outils/graphes/lire.pl (les faits du
-lecteur), ou d'autres graphes annotés (--accord : l'accord entre deux annotateurs, par les mêmes mesures).
+REFERENCES.json : les graphes annotés (schéma du § 2 du guide). GRAPHES.json : la sortie de outils/graphes/lire.pl
+(les faits du lecteur), ou d'autres graphes annotés (--accord).
 
-Les mesures, par catégorie (précision, rappel, F1, et les comptes) :
-  entites       une entité de référence alignée sur une entité du graphe de même tête
-  noms          (référent, nom)                        sous l'alignement
-  proprietes    (référent, propriété)
-  nombres       (référent, nombre), les nombres supérieurs à 1 (un singulier n'est pas un nombre dit)
-  evenements    un événement de référence aligné sur un événement de même prédicat
-  roles         (événement, rôle, référent)            « Hercule étrangle le lion » : le rôle et son sens
-  roles_macro   la même chose, patient et thème confondus (la question E3 de l'étude)
-  relations     (référent, relation, référent), orientée
-  coref         les paires de mentions d'un même référent
-  distinct      les paires de référents distincts
-  negations     les assertions niées (polarité neg), sous l'alignement
-  modalites     les assertions de modalité autre qu'affirme, avec leur modalité
-  portees       les assertions de portée autre que represente, avec leur portée
-  citations     les assertions d'un énonciateur cité
-Un référent est une classe de coréférence : un rôle, une relation, un nom… est juste si son participant est aligné sur
-une mention de la même classe de référence. Les entités et les événements sont alignés un à un (même tête ou même
-prédicat : 2 points ; la tête du graphe dans la mention de référence : 1 point ; au moins 1 point), glouton par score
-décroissant puis par position.
+Les mesures, par catégorie (précision, rappel, F1, comptes), en deux versions :
+  structure   l'élément seul (la tête, le prédicat, le rôle et ses deux bouts…)
+  qualifiee   l'élément et les qualificatifs de son assertion (polarité, modalité, portée, énonciateur, appartenance à
+              une alternative) : une assertion entièrement qualifiée ; un rôle prend ceux de son événement
+Catégories : entites, noms, proprietes, nombres (> 1), evenements, roles, roles_macro (patient et thème confondus),
+relations (orientées), coref (paires de mentions), distinct, et les qualificatifs eux-mêmes (negations, modalites,
+portees, citations, alternatives : les assertions qui les portent, sous la correspondance des assertions).
+La sûreté : parmi les assertions de référence NON admissibles (niées, modalisées, d'une autre portée que represente,
+d'une source citée, ou d'une alternative) qui ont une correspondante dans le graphe, celles que le graphe rend
+admissibles (positives, affirmées, figurées, de l'auteur, hors alternative) : une promotion, la faute qui compromet le
+noyau. À l'inverse, les rétrogradations (admissible en référence, non admissible dans le graphe : une perte, sans
+danger pour la sûreté).
+Les rôles : la matrice de confusion (rôle de référence × rôle du graphe, « aucun » compris), sur les paires
+(événement, participant) dont l'un des deux graphes donne un rôle.
 
---derivations : chaque assertion dérivée (lire.pl, normalisation:deriver/3) est jugée contre la référence : juste si
-elle ajoute un élément de référence qui manquait, fausse si elle ajoute un élément absent de la référence, sans effet
-sinon ; par règle. C'est la mesure des règles hypothétiques (E1, E2, E3 de l'étude) sur des références construites
-sans elles.
+Alignement : un poids par paire (mention de référence, mention du graphe) : 2 pour la même tête (ou le même
+prédicat), +1 si la portée du graphe est dans celle de la référence (ou la chevauche), -1 si les deux ont la même
+tête mais ailleurs dans le texte ; une paire de poids < 1 n'est jamais alignée. L'appariement optimal maximise la
+somme des poids (algorithme hongrois), à égalité la proximité des positions ; le glouton prend les paires par poids
+décroissant puis par position. Les mentions répétées prennent leurs occurrences dans l'ordre de la liste annotée, en
+mots entiers d'abord.
 
-Rien ne dépend d'une ressource lexicale : les têtes et les prédicats sont comparés comme écrits (minuscules, espaces et
-traits bas confondus). Une tête synonyme est une erreur de tête ; le rôle et la relation restent jugés par
-l'alignement (le même passage)."""
+Dérivations (--derivations), chacune avec les dérivations dont elle dépend (ses sources dérivées, de proche en
+proche), canonisée selon le guide (une action est un événement : l'entité « nom d'action » d'E1 est la forme non
+conforme de son événement source, et sa relation « of » / « de » celle du rôle source), puis classée :
+  non_conforme   sa forme n'est pas celle du guide (E1) ; son contenu canonisé est jugé ensuite (compté deux fois)
+  redondante     son contenu canonisé est déjà dans le graphe, ou n'y change rien
+  gain           elle ajoute un élément de la référence qui manquait
+  erreur_regle   elle ajoute un élément absent de la référence, alors que ses sources lues sont justes
+  erreur_heritee elle ajoute un élément absent de la référence, et l'une de ses sources lues est déjà fausse (une
+                 mention non alignée, un événement de prédicat faux, un rôle entre deux référents que la référence ne
+                 relie pas) : l'erreur vient de la lecture
+
+Rien ne dépend d'une ressource lexicale : têtes et prédicats comparés comme écrits (minuscules, espaces et traits bas
+confondus ; la forme pronominale française d'un prédicat est celle du verbe)."""
 import argparse
 import collections
+import itertools
 import json
 import re
 import sys
 import unicodedata
 from pathlib import Path
 
-CATEGORIES = ("entites", "noms", "proprietes", "nombres", "evenements", "roles", "roles_macro", "relations", "coref",
-              "distinct", "negations", "modalites", "portees", "citations")
+STRUCTURELLES = ("entites", "noms", "proprietes", "nombres", "evenements", "roles", "roles_macro", "relations")
+QUALIFICATIFS = ("negations", "modalites", "portees", "citations", "alternatives")
 QUALIF_DEFAUT = {"polarite": "pos", "modalite": "affirme", "portee": "represente", "enonciateur": "auteur"}
+ROLES = ("agent", "patient", "theme", "instrument", "destinataire", "lieu")
+ADMISSIBLE = ("pos", "affirme", "represente", "auteur", False)
 
 
 def norm(x) -> str:
@@ -55,8 +73,6 @@ def norm(x) -> str:
 
 
 def norm_pred(x) -> str:
-    """Un prédicat : la forme pronominale française est celle du verbe (« se tenir », « s'asseoir » : tenir,
-    asseoir ; le guide ne l'avait pas fixé, les annotateurs l'ont écrite des deux façons)."""
     s = norm(x).replace("’", "'")
     for p in ("se ", "s'"):
         if s.startswith(p):
@@ -68,19 +84,29 @@ def norm_nom(x) -> str:
     return norm(x).replace("’", "'")
 
 
-# --- La forme commune : un graphe de mentions -------------------------------------------------------------------------
+# --- La forme commune --------------------------------------------------------------------------------------------------
 
 class Graphe:
-    """Les mentions (entités, événements), leurs portées dans le texte, et les éléments à comparer."""
-
     def __init__(self, texte):
         self.texte = texte
-        self.entites = {}       # id -> (tete, (debut, fin) ou None)
-        self.evenements = {}    # id -> (predicat, (debut, fin) ou None, nom d'action ou None)
-        self.noms, self.proprietes, self.nombres = [], [], []          # (entite, valeur, id d'assertion)
-        self.roles, self.relations = [], []                            # (v, role, e) ; (e1, rel, e2, id)
+        self.entites = {}        # id -> (tete, portee ou None)
+        self.evenements = {}     # id -> (predicat, portee ou None)
+        self.noms, self.proprietes, self.nombres = [], [], []           # (entite, valeur, id d'assertion)
+        self.roles, self.relations = [], []                             # (v, role, e) ; (e1, rel, e2, id)
         self.coref, self.distinct = [], []
-        self.qualif = {}        # id d'assertion -> {polarite, modalite, portee, enonciateur}
+        self.qualif = {}         # id d'assertion -> {polarite, modalite, portee, enonciateur}
+        self.alternatives = set()
+        self.erreur = False
+
+    def q(self, ident):
+        """La signature qualifiée d'une assertion : (polarité, modalité, portée, énonciateur, en alternative)."""
+        d = self.qualif.get(ident, QUALIF_DEFAUT)
+        en = d.get("enonciateur", "auteur")
+        return (d.get("polarite", "pos"), d.get("modalite", "affirme"), d.get("portee", "represente"),
+                "auteur" if en == "auteur" else "cite", ident in self.alternatives)
+
+    def admissible(self, ident):
+        return self.q(ident) == ADMISSIBLE
 
     def classes(self):
         parent = {e: e for e in self.entites}
@@ -95,36 +121,48 @@ class Graphe:
                 parent[trouver(a)] = trouver(b)
         return {e: trouver(e) for e in self.entites}
 
+    def copie(self):
+        h = Graphe(self.texte)
+        for k, v in self.__dict__.items():
+            setattr(h, k, v.copy() if isinstance(v, (dict, list, set)) else v)
+        return h
 
-def portee_de_mention(texte, mention, deja):
-    """La portée (début, fin) de la n-ième occurrence de la mention dans le texte (n : le nombre de fois qu'elle a déjà
-    été prise), ou None si elle n'y est pas. Les occurrences sont cherchées en mots entiers d'abord (« hold » n'est pas
-    dans « holds »), puis sans tenir compte de la casse, puis comme simple sous-chaîne."""
-    if not mention:
-        return None
-    m = str(mention)
-    n = deja.get(m, 0)
+
+def occurrences(texte, m):
     motif = r"(?<!\w)" + re.escape(m) + r"(?!\w)"
     for occ in (list(re.finditer(motif, texte)), list(re.finditer(motif, texte, re.I)),
                 list(re.finditer(re.escape(m), texte, re.I))):
         if occ:
-            o = occ[min(n, len(occ) - 1)]
-            deja[m] = n + 1
-            return (o.start(), o.end())
-    return None
+            return [(o.start(), o.end()) for o in occ]
+    return []
 
 
-def depuis_reference(r) -> Graphe:
+def depuis_reference(r, ordre_inverse=False) -> Graphe:
+    """Les mentions répétées prennent leurs occurrences dans l'ordre de la liste annotée (entités, puis événements),
+    ou dans l'ordre inverse (ordre_inverse : pour mesurer la sensibilité de la mesure à cette convention)."""
     g = Graphe(r["texte"])
-    deja = {}
+    mentions = [x.get("mention") for x in r.get("entites", []) + r.get("evenements", [])]
+    total = collections.Counter(m for m in mentions if m)
+    vues = collections.Counter()
+
+    def place(m):
+        if not m:
+            return None
+        occ = occurrences(g.texte, str(m))
+        if not occ:
+            return None
+        n = vues[m]
+        vues[m] += 1
+        i = (total[m] - 1 - n) if ordre_inverse else n
+        return occ[max(0, min(i, len(occ) - 1))]
 
     def qualif(ident, obj):
-        q = {q: obj.get(q, d) for q, d in QUALIF_DEFAUT.items()}
-        if q["enonciateur"] != "auteur":           # {"cite": "Vasari"} : une source citée (la source n'est pas comparée)
+        q = {k: obj.get(k, d) for k, d in QUALIF_DEFAUT.items()}
+        if q["enonciateur"] != "auteur":
             q["enonciateur"] = "cite"
         g.qualif[ident] = q
     for e in r.get("entites", []):
-        g.entites[e["id"]] = (norm(e["tete"]), portee_de_mention(g.texte, e.get("mention"), deja))
+        g.entites[e["id"]] = (norm(e["tete"]), place(e.get("mention")))
         qualif(e["id"], e)
         for i, n in enumerate(e.get("noms", [])):
             v, q = (n, {}) if isinstance(n, str) else (n["nom"], n)
@@ -137,12 +175,11 @@ def depuis_reference(r) -> Graphe:
             g.proprietes.append((e["id"], norm(v), ident))
             qualif(ident, q)
         if e.get("nombre") is not None and int(e["nombre"]) > 1:      # « un » n'est pas un nombre dit (guide, § 3)
-            g.nombres.append((e["id"], int(e["nombre"]), None))
+            g.nombres.append((e["id"], int(e["nombre"]), e["id"]))
     for v in r.get("evenements", []):
-        g.evenements[v["id"]] = (norm_pred(v["predicat"]), portee_de_mention(g.texte, v.get("mention"), deja),
-                                 norm(v["nom_d_action"]) if v.get("nom_d_action") else None)
+        g.evenements[v["id"]] = (norm_pred(v["predicat"]), place(v.get("mention")))
         qualif(v["id"], v)
-        for role, es in v.get("roles", {}).items():
+        for role, es in (v.get("roles") or {}).items():
             for e in ([es] if isinstance(es, str) else es):
                 g.roles.append((v["id"], role, e))
     for x in r.get("relations", []):
@@ -153,110 +190,162 @@ def depuis_reference(r) -> Graphe:
             g.coref.append((a, b))
     for a, b in r.get("distinct", []):
         g.distinct.append((a, b))
+    for alt in r.get("alternatives", []):
+        g.alternatives |= set(alt)
     return g
+
+
+def ajouter(g: Graphe, f, passages=None):
+    """Ajoute un fait du lecteur ([Foncteur, Arg…]) à un graphe."""
+    passages = passages or {}
+    t = f[0]
+    if t == "entite":
+        g.entites[f[1]] = (norm(f[2]) if f[2] != "nom_propre" else "", passages.get(f[3]))
+    elif t == "evenement":
+        g.evenements[f[1]] = (norm_pred(f[2]), passages.get(f[3]))
+    elif t == "nom":
+        g.noms.append((f[2], norm_nom(f[3]), f[1]))
+    elif t == "propriete":
+        g.proprietes.append((f[2], norm(f[3]), f[1]))
+    elif t == "nombre" and isinstance(f[2], int) and f[2] > 1:
+        g.nombres.append((f[1], f[2], f[1]))
+    elif t == "role":
+        g.roles.append((f[1], f[2], f[3]))
+    elif t == "relation":
+        g.relations.append((f[2], norm(f[3]), f[4], f[1]))
+    elif t == "coref":
+        g.coref.append((f[1], f[2]))
+    elif t == "distinct":
+        g.distinct.append((f[1], f[2]))
+    elif t == "alternative":
+        g.alternatives |= set(f[2])
+    elif t in QUALIF_DEFAUT:
+        g.qualif.setdefault(f[1], dict(QUALIF_DEFAUT))[t] = f[2] if t != "enonciateur" else (
+            f[2] if f[2] == "auteur" else "cite")
 
 
 def depuis_faits(r) -> Graphe:
-    """Les faits de lire.pl ([Foncteur, Arg…]) ; les passages donnent les portées."""
-    faits = r["faits"]
     g = Graphe(r["texte"])
-    if faits == "erreur":
+    if r["faits"] == "erreur":
         g.erreur = True
         return g
-    passages = {f[1]: (f[2], f[3]) for f in faits if f[0] == "passage"}
-    alternatives = {a for f in faits if f[0] == "alternative" for a in f[2]}
-    for f in faits:
-        t = f[0]
-        if t == "entite" and f[2] != "nom_propre":
-            g.entites[f[1]] = (norm(f[2]), passages.get(f[3]))
-        elif t == "entite":
-            g.entites[f[1]] = ("", passages.get(f[3]))
-        elif t == "evenement":
-            g.evenements[f[1]] = (norm_pred(f[2]), passages.get(f[3]), None)
-        elif t == "nom":
-            g.noms.append((f[2], norm_nom(f[3]), f[1]))
-        elif t == "propriete":
-            g.proprietes.append((f[2], norm(f[3]), f[1]))
-        elif t == "nombre" and f[2] > 1:
-            g.nombres.append((f[1], f[2], None))
-        elif t == "role":
-            g.roles.append((f[1], f[2], f[3]))
-        elif t == "relation":
-            g.relations.append((f[2], norm(f[3]), f[4], f[1]))
-        elif t == "coref":
-            g.coref.append((f[1], f[2]))
-        elif t == "distinct":
-            g.distinct.append((f[1], f[2]))
-        elif t in QUALIF_DEFAUT:
-            g.qualif.setdefault(f[1], dict(QUALIF_DEFAUT))[t] = f[2] if t != "enonciateur" else (
-                f[2] if isinstance(f[2], str) else "cite")
-    g.alternatives = alternatives
+    passages = {f[1]: (f[2], f[3]) for f in r["faits"] if f[0] == "passage"}
+    for f in r["faits"]:
+        ajouter(g, f, passages)
     return g
 
 
-def ajouter_faits(g: Graphe, faits):
-    """Ajoute des faits (une dérivation) à un graphe de lire.pl, sans passage : ils n'ont pas de portée propre."""
-    h = Graphe(g.texte)
-    h.__dict__.update({k: (v.copy() if isinstance(v, (dict, list)) else v) for k, v in g.__dict__.items()})
-    for f in faits:
-        t = f[0]
-        if t == "entite":
-            h.entites[f[1]] = (norm(f[2]) if f[2] != "nom_propre" else "", None)
-        elif t == "evenement":
-            h.evenements[f[1]] = (norm_pred(f[2]), None, None)
-        elif t == "propriete":
-            h.proprietes.append((f[2], norm(f[3]), f[1]))
-        elif t == "role":
-            h.roles.append((f[1], f[2], f[3]))
-        elif t == "relation":
-            h.relations.append((f[2], norm(f[3]), f[4], f[1]))
-        elif t == "coref":
-            h.coref.append((f[1], f[2]))
-        elif t in QUALIF_DEFAUT:
-            h.qualif.setdefault(f[1], dict(QUALIF_DEFAUT))[t] = f[2] if t != "enonciateur" else (
-                f[2] if isinstance(f[2], str) else "cite")
-    return h
+# --- L'appariement -----------------------------------------------------------------------------------------------------
+
+def hongrois(poids):
+    """Affectation de poids maximal d'une matrice rectangulaire (liste de listes ; None : paire interdite) ; rend
+    {ligne: colonne}. Algorithme hongrois (potentiels), O(n³), sur la matrice carrée complétée."""
+    n_l = len(poids)
+    n_c = len(poids[0]) if n_l else 0
+    n = max(n_l, n_c)
+    if n == 0:
+        return {}
+    grand = 1 + max([abs(p) for ligne in poids for p in ligne if p is not None] or [0])
+    cout = [[(grand - poids[i][j]) if i < n_l and j < n_c and poids[i][j] is not None else 2 * grand
+             for j in range(n)] for i in range(n)]
+    INF = float("inf")
+    u, v, p, way = [0.0] * (n + 1), [0.0] * (n + 1), [0] * (n + 1), [0] * (n + 1)
+    for i in range(1, n + 1):
+        p[0] = i
+        j0 = 0
+        minv = [INF] * (n + 1)
+        used = [False] * (n + 1)
+        while True:
+            used[j0] = True
+            i0, delta, j1 = p[j0], INF, 0
+            for j in range(1, n + 1):
+                if not used[j]:
+                    c = cout[i0 - 1][j - 1] - u[i0] - v[j]
+                    if c < minv[j]:
+                        minv[j], way[j] = c, j0
+                    if minv[j] < delta:
+                        delta, j1 = minv[j], j
+            for j in range(n + 1):
+                if used[j]:
+                    u[p[j]] += delta
+                    v[j] -= delta
+                else:
+                    minv[j] -= delta
+            j0 = j1
+            if p[j0] == 0:
+                break
+        while True:
+            j1 = way[j0]
+            p[j0] = p[j1]
+            j0 = j1
+            if j0 == 0:
+                break
+    res = {}
+    for j in range(1, n + 1):
+        i = p[j]
+        if i and i <= n_l and j <= n_c and poids[i - 1][j - 1] is not None:
+            res[i - 1] = j - 1
+    return res
 
 
-# --- L'alignement ------------------------------------------------------------------------------------------------------
-
-def dans(portee_g, portee_r) -> bool:
-    return bool(portee_g and portee_r and portee_r[0] <= portee_g[0] and portee_g[1] <= portee_r[1])
+def dans(a, b) -> bool:
+    return bool(a and b and b[0] <= a[0] and a[1] <= b[1])
 
 
 def chevauche(a, b) -> bool:
     return bool(a and b and a[0] < b[1] and b[0] < a[1])
 
 
-def aligner(ref: dict, pred: dict, cle_ref=lambda x: x[0], cle_pred=lambda x: x[0], derivees=None):
-    """Un à un : score 2 pour la même tête, +1 si la portée du graphe est dans celle de la référence (ou la
-    chevauche) ; au moins 1 point. Une mention dérivée (sans portée) ne s'aligne que par sa tête, et seulement sur une
-    mention de référence qui reste libre (derivees : ses identifiants, pour la placer après les mentions lues)."""
-    paires = []
-    for i, x in ref.items():
-        for j, y in pred.items():
-            s = (2 if cle_ref(x) and cle_ref(x) == cle_pred(y) else 0)
-            if dans(y[1], x[1]) or chevauche(y[1], x[1]):
-                s += 1
-            elif s and x[1] and y[1]:
-                s -= 1          # même tête, ailleurs dans le texte : une autre mention
-            if s >= 1:
-                derive = 1 if derivees and j in derivees else 0
-                paires.append((-s, derive, (x[1] or (1e9,))[0], (y[1] or (1e9,))[0], i, j))
-    paires.sort(key=lambda p: (p[0], p[1], p[2], p[3], str(p[4]), str(p[5])))
-    a, pris = {}, set()
-    for _, _, _, _, i, j in paires:
-        if i not in a and j not in pris:
-            a[i] = j
-            pris.add(j)
-    return a
+def poids_paire(x, y):
+    s = 2 if x[0] and x[0] == y[0] else 0
+    if dans(y[1], x[1]) or chevauche(y[1], x[1]):
+        s += 1
+    elif s and x[1] and y[1]:
+        s -= 1
+    return s
+
+
+def aligner(ref: dict, pred: dict, methode="optimal", derivees=None):
+    """{id de référence: id du graphe}. Une mention dérivée (derivees) passe après une mention lue à poids égal."""
+    R, P = list(ref), list(pred)
+    if not R or not P:
+        return {}
+    if methode == "glouton":
+        paires = []
+        for i in R:
+            for j in P:
+                s = poids_paire(ref[i], pred[j])
+                if s >= 1:
+                    d = 1 if derivees and j in derivees else 0
+                    paires.append((-s, d, (ref[i][1] or (1e9,))[0], (pred[j][1] or (1e9,))[0], str(i), str(j), i, j))
+        paires.sort(key=lambda t: t[:6])
+        a, pris = {}, set()
+        for *_, i, j in paires:
+            if i not in a and j not in pris:
+                a[i] = j
+                pris.add(j)
+        return a
+    W = []
+    for i in R:
+        ligne = []
+        for j in P:
+            s = poids_paire(ref[i], pred[j])
+            if s < 1:
+                ligne.append(None)
+                continue
+            px, py = ref[i][1], pred[j][1]
+            prox = 1.0 / (1 + abs(px[0] - py[0])) if px and py else 0.0
+            d = 0.01 if derivees and j in derivees else 0.0
+            ligne.append(s * 10 + prox - d)
+        W.append(ligne)
+    return {R[i]: P[j] for i, j in hongrois(W).items()}
 
 
 # --- Les comptes -------------------------------------------------------------------------------------------------------
 
 class Comptes:
     def __init__(self):
-        self.c = {k: collections.Counter() for k in CATEGORIES}
+        self.c = collections.defaultdict(collections.Counter)
 
     def ajouter(self, cat, vp, ref, pred):
         self.c[cat]["vp"] += vp
@@ -264,107 +353,258 @@ class Comptes:
         self.c[cat]["pred"] += pred
 
     def fusion(self, autre):
-        for k in CATEGORIES:
-            self.c[k].update(autre.c[k])
+        for k, v in autre.c.items():
+            self.c[k].update(v)
 
     def table(self):
-        lignes = {}
-        for k in CATEGORIES:
+        t = {}
+        for k in sorted(self.c):
             vp, r, p = self.c[k]["vp"], self.c[k]["ref"], self.c[k]["pred"]
             P = vp / p if p else None
             R = vp / r if r else None
             F = 2 * P * R / (P + R) if P and R else (0.0 if (P is not None and R is not None) else None)
-            lignes[k] = {"vp": vp, "ref": r, "pred": p, "precision": P, "rappel": R, "f1": F}
-        return lignes
+            t[k] = {"vp": vp, "ref": r, "pred": p, "precision": P, "rappel": R, "f1": F}
+        return t
 
 
-def ensemble_compare(cat, comptes, refs: set, preds: set, detail):
-    vp = refs & preds
-    comptes.ajouter(cat, len(vp), len(refs), len(preds))
-    if detail is not None:
-        detail[cat] = {"manquants": sorted(map(str, refs - preds)), "en_trop": sorted(map(str, preds - refs))}
+class Resultat:
+    def __init__(self):
+        self.comptes = Comptes()
+        self.securite = collections.Counter()
+        self.confusion = collections.Counter()      # (rôle de référence ou « aucun », rôle du graphe ou « aucun »)
+        self.detail = {}
+
+    def fusion(self, autre):
+        self.comptes.fusion(autre.comptes)
+        self.securite.update(autre.securite)
+        self.confusion.update(autre.confusion)
 
 
-def comparer(r: Graphe, g: Graphe, detail=None, derivees=None) -> Comptes:
-    c = Comptes()
-    if getattr(g, "erreur", False):
+def comparer(r: Graphe, g: Graphe, methode="optimal", referents="classes", derivees=None, detail=False) -> Resultat:
+    res = Resultat()
+    if g.erreur:
         g = Graphe(g.texte)
-    ae = aligner(r.entites, g.entites, derivees=derivees)
-    av = aligner(r.evenements, g.evenements, derivees=derivees)
-    # une mention de référence par mention du graphe : les identifiants du graphe vus comme ceux de la référence
+    ae = aligner(r.entites, g.entites, methode, derivees)
+    av = aligner(r.evenements, g.evenements, methode, derivees)
     inv_e = {j: i for i, j in ae.items()}
     inv_v = {j: i for i, j in av.items()}
-    cr, cg = r.classes(), g.classes()
-    # la classe de référence d'une entité du graphe : celle de sa mention alignée ; une mention non alignée est sa
-    # propre classe (jamais juste)
+    cr = r.classes() if referents == "classes" else {e: e for e in r.entites}
+
     def classe_g(e):
-        if e in inv_e:
-            return cr[inv_e[e]]
-        return ("hors", cg.get(e, e))
+        return cr[inv_e[e]] if e in inv_e else ("hors", e)
 
     def classe_r(e):
         return cr.get(e, ("inconnu", e))
 
     def ev_g(v):
         return inv_v.get(v, ("hors", v))
-    # entités et événements : alignés et de même tête
-    ensemble_compare("entites", c, {(i, x[0]) for i, x in r.entites.items()},
-                     {(inv_e.get(j, ("hors", j)), y[0]) for j, y in g.entites.items() if y[0]}, detail)
-    ensemble_compare("evenements", c, {(i, x[0]) for i, x in r.evenements.items()},
-                     {(inv_v.get(j, ("hors", j)), y[0]) for j, y in g.evenements.items()}, detail)
-    ensemble_compare("noms", c, {(classe_r(e), v) for e, v, _ in r.noms}, {(classe_g(e), v) for e, v, _ in g.noms},
-                     detail)
-    ensemble_compare("proprietes", c, {(classe_r(e), v) for e, v, _ in r.proprietes},
-                     {(classe_g(e), v) for e, v, _ in g.proprietes}, detail)
-    ensemble_compare("nombres", c, {(classe_r(e), v) for e, v, _ in r.nombres},
-                     {(classe_g(e), v) for e, v, _ in g.nombres}, detail)
-    ensemble_compare("roles", c, {(v, ro, classe_r(e)) for v, ro, e in r.roles},
-                     {(ev_g(v), ro, classe_g(e)) for v, ro, e in g.roles}, detail)
-    macro = lambda ro: "patient_theme" if ro in ("patient", "theme") else ro
-    ensemble_compare("roles_macro", c, {(v, macro(ro), classe_r(e)) for v, ro, e in r.roles},
-                     {(ev_g(v), macro(ro), classe_g(e)) for v, ro, e in g.roles}, detail)
-    ensemble_compare("relations", c, {(classe_r(a), rel, classe_r(b)) for a, rel, b, _ in r.relations},
-                     {(classe_g(a), rel, classe_g(b)) for a, rel, b, _ in g.relations}, detail)
 
-    def paires_coref(gr, classes_, nom):
+    def macro(ro):
+        return "patient_theme" if ro in ("patient", "theme") else ro
+    R = {
+        "entites": [((i, x[0]), i) for i, x in r.entites.items()],
+        "evenements": [((i, x[0]), i) for i, x in r.evenements.items()],
+        "noms": [((classe_r(e), v), a) for e, v, a in r.noms],
+        "proprietes": [((classe_r(e), v), a) for e, v, a in r.proprietes],
+        "nombres": [((classe_r(e), v), a) for e, v, a in r.nombres],
+        "roles": [((v, ro, classe_r(e)), v) for v, ro, e in r.roles],
+        "roles_macro": [((v, macro(ro), classe_r(e)), v) for v, ro, e in r.roles],
+        "relations": [((classe_r(a), rel, classe_r(b)), i) for a, rel, b, i in r.relations],
+    }
+    G = {
+        "entites": [((inv_e.get(j, ("hors", j)), y[0]), j) for j, y in g.entites.items() if y[0]],
+        "evenements": [((inv_v.get(j, ("hors", j)), y[0]), j) for j, y in g.evenements.items()],
+        "noms": [((classe_g(e), v), a) for e, v, a in g.noms],
+        "proprietes": [((classe_g(e), v), a) for e, v, a in g.proprietes],
+        "nombres": [((classe_g(e), v), a) for e, v, a in g.nombres],
+        "roles": [((ev_g(v), ro, classe_g(e)), v) for v, ro, e in g.roles],
+        "roles_macro": [((ev_g(v), macro(ro), classe_g(e)), v) for v, ro, e in g.roles],
+        "relations": [((classe_g(a), rel, classe_g(b)), i) for a, rel, b, i in g.relations],
+    }
+    correspondance = {}            # id d'assertion du graphe -> id de référence
+    for cat in STRUCTURELLES:
+        rs = {k for k, _ in R[cat]}
+        ps = {k for k, _ in G[cat]}
+        res.comptes.ajouter("structure:" + cat, len(rs & ps), len(rs), len(ps))
+        rq = {(k, r.q(a)) for k, a in R[cat]}
+        pq = {(k, g.q(a)) for k, a in G[cat]}
+        res.comptes.ajouter("qualifiee:" + cat, len(rq & pq), len(rq), len(pq))
+        if detail:
+            res.detail[cat] = {"manquants": sorted(map(str, rs - ps)), "en_trop": sorted(map(str, ps - rs))}
+        if cat in ("noms", "proprietes", "relations", "nombres"):
+            par_cle = collections.defaultdict(list)
+            for k, a in R[cat]:
+                par_cle[k].append(a)
+            for k, a in G[cat]:
+                if k in par_cle:
+                    correspondance.setdefault(a, par_cle[k][0])
+    correspondance.update(inv_e)
+    correspondance.update(inv_v)
+
+    def paires(classes_, nom):
         par = collections.defaultdict(set)
         for e, k in classes_.items():
             par[k].add(nom(e))
         return {tuple(sorted(map(str, (a, b)))) for m in par.values() for a in m for b in m if str(a) < str(b)}
-    ensemble_compare("coref", c, paires_coref(r, cr, lambda e: e),
-                     paires_coref(g, {j: k for j, k in cg.items() if j in inv_e}, lambda j: inv_e[j]), detail)
-    ensemble_compare("distinct", c, {tuple(sorted(map(str, (classe_r(a), classe_r(b))))) for a, b in r.distinct},
-                     {tuple(sorted(map(str, (classe_g(a), classe_g(b))))) for a, b in g.distinct}, detail)
-    # les qualificatifs : sur les assertions de référence et leurs correspondantes
-    corr = {}                                       # id d'assertion du graphe -> id de référence
-    corr.update(inv_e)
-    corr.update(inv_v)
-    for (e, v, ident) in g.noms:
-        for (e2, v2, i2) in r.noms:
-            if v == v2 and classe_g(e) == classe_r(e2):
-                corr.setdefault(ident, i2)
-    for (e, v, ident) in g.proprietes:
-        for (e2, v2, i2) in r.proprietes:
-            if v == v2 and classe_g(e) == classe_r(e2):
-                corr.setdefault(ident, i2)
-    for (a, rel, b, ident) in g.relations:
-        for (a2, rel2, b2, i2) in r.relations:
-            if rel == rel2 and classe_g(a) == classe_r(a2) and classe_g(b) == classe_r(b2):
-                corr.setdefault(ident, i2)
+    rc = paires(r.classes(), lambda e: e)
+    pc = paires({j: k for j, k in g.classes().items() if j in inv_e}, lambda j: inv_e[j])
+    res.comptes.ajouter("structure:coref", len(rc & pc), len(rc), len(pc))
+    rd = {tuple(sorted(map(str, (classe_r(a), classe_r(b))))) for a, b in r.distinct}
+    pd = {tuple(sorted(map(str, (classe_g(a), classe_g(b))))) for a, b in g.distinct}
+    res.comptes.ajouter("structure:distinct", len(rd & pd), len(rd), len(pd))
+    # les qualificatifs, assertion par assertion, sous la correspondance
+    ids_r = set(r.qualif) | r.alternatives
+    ids_g = set(g.qualif) | g.alternatives
+    for cat, val, defaut in (("negations", 0, "pos"), ("modalites", 1, "affirme"), ("portees", 2, "represente"),
+                             ("citations", 3, "auteur"), ("alternatives", 4, False)):
+        refs = {(i, r.q(i)[val]) for i in ids_r if r.q(i)[val] != defaut}
+        preds = {(correspondance.get(i, ("hors", i)), g.q(i)[val]) for i in ids_g if g.q(i)[val] != defaut}
+        res.comptes.ajouter("qualificatif:" + cat, len(refs & preds), len(refs), len(preds))
+    # la sûreté
+    inv_corr = collections.defaultdict(list)
+    for gi, ri in correspondance.items():
+        inv_corr[ri].append(gi)
+    for ri in ids_r:
+        if ri not in inv_corr:
+            continue
+        qr = r.q(ri)
+        adm_g = any(g.admissible(gi) for gi in inv_corr[ri])
+        if qr != ADMISSIBLE:
+            res.securite["reference_non_admissible"] += 1
+            if adm_g:
+                res.securite["promotion"] += 1
+                for motif, val in (("neg", 0), ("modalite", 1), ("portee", 2), ("cite", 3), ("alternative", 4)):
+                    if qr[val] != ADMISSIBLE[val]:
+                        res.securite["promotion_" + motif] += 1
+        else:
+            res.securite["reference_admissible"] += 1
+            if not adm_g:
+                res.securite["retrogradation"] += 1
+    # la matrice de confusion des rôles
+    ref_pairs = collections.defaultdict(set)
+    for v, ro, e in r.roles:
+        ref_pairs[(v, classe_r(e))].add(ro)
+    pred_pairs = collections.defaultdict(set)
+    for v, ro, e in g.roles:
+        pred_pairs[(ev_g(v), classe_g(e))].add(ro)
+    for k in set(ref_pairs) | set(pred_pairs):
+        a, b = ref_pairs.get(k, set()), pred_pairs.get(k, set())
+        for ro in a & b:
+            res.confusion[(ro, ro)] += 1
+        for x, y in itertools.zip_longest(sorted(a - b), sorted(b - a), fillvalue="aucun"):
+            res.confusion[(x, y)] += 1
+    return res
 
-    def qual(gr, q, defaut, nom):
-        return {(nom(i), v[q]) for i, v in gr.qualif.items() if v[q] != defaut and not str(v[q]).startswith("#")}
-    for cat, q in (("negations", "polarite"), ("modalites", "modalite"), ("portees", "portee"),
-                   ("citations", "enonciateur")):
-        d = QUALIF_DEFAUT[q]
-        refs = qual(r, q, d, lambda i: i)
-        preds = qual(g, q, d, lambda i: corr.get(i, ("hors", i)))
-        if q == "enonciateur":
-            refs = {(i, "cite") for i, _ in refs}
-            preds = {(i, "cite") for i, _ in preds}
-        ensemble_compare(cat, c, refs, preds, detail)
-    return c
 
+# --- Les dérivations -----------------------------------------------------------------------------------------------
+
+def requises(der, toutes, faits_lus):
+    """La dérivation et celles dont elle dépend (ses sources absentes du graphe lu), de proche en proche."""
+    par_fait = {}
+    for d in toutes:
+        par_fait.setdefault(json.dumps(d["fait"]), d)
+    lus = {json.dumps(f) for f in faits_lus}
+    chaine, file, vus = [der], list(der["sources"]), set()
+    while file:
+        s = json.dumps(file.pop())
+        if s in lus or s in vus:
+            continue
+        vus.add(s)
+        if s in par_fait:
+            chaine.append(par_fait[s])
+            file.extend(par_fait[s]["sources"])
+    return chaine
+
+
+def qualificatifs_de(ident, toutes):
+    return [d["fait"] for d in toutes if d["fait"][0] in QUALIF_DEFAUT and d["fait"][1] == ident]
+
+
+def canoniser(chaine):
+    """Les faits canonisés d'une chaîne de dérivations ; et si sa forme est non conforme au guide. E1 : l'entité
+    nv_V_N (le nom d'action de l'événement V) est V lui-même ; sa relation of / de vers Y est le rôle (patient ou
+    thème) de Y dans V que donne sa source."""
+    faits, non_conforme = [], False
+    for d in chaine:
+        f = d["fait"]
+        if d["regle"] == "e1":
+            non_conforme = True
+            if f[0] == "relation":
+                faits += [s for s in d["sources"] if s[0] == "role"]
+            continue
+        faits.append(f)
+    return faits, non_conforme
+
+
+def sources_justes(chaine, faits_lus, r: Graphe, g: Graphe, methode, referents):
+    """Les sources lues (non dérivées) de la chaîne sont-elles justes au regard de la référence ?"""
+    lus = {json.dumps(f) for f in faits_lus}
+    srcs = [s for d in chaine for s in d["sources"] if json.dumps(s) in lus]
+    inv_e = {j: i for i, j in aligner(r.entites, g.entites, methode).items()}
+    inv_v = {j: i for i, j in aligner(r.evenements, g.evenements, methode).items()}
+    cr = r.classes() if referents == "classes" else {e: e for e in r.entites}
+    relies = {(v, cr.get(e)) for v, _, e in r.roles}
+    for s in srcs:
+        t = s[0]
+        if t == "entite" and s[2] != "nom_propre":
+            if s[1] not in inv_e:
+                return False
+        elif t == "evenement":
+            if s[1] not in inv_v or r.evenements[inv_v[s[1]]][0] != norm_pred(s[2]):
+                return False
+        elif t == "role":
+            # un rôle source n'est faux que si la référence ne relie pas ces deux-là : le nom du rôle est ce que les
+            # règles de rôle (R1, R2) remettent en cause
+            if s[1] not in inv_v or s[3] not in inv_e or (inv_v[s[1]], cr.get(inv_e[s[3]])) not in relies:
+                return False
+        elif t in ("relation", "propriete"):
+            if (t == "relation" and (s[2] not in inv_e or s[4] not in inv_e)) or (t == "propriete" and s[2] not in inv_e):
+                return False
+    return True
+
+
+def juger_derivations(rlu, gref: Graphe, glu: Graphe, methode, referents):
+    """{règle: Counter(catégorie)} pour les dérivations d'un texte."""
+    toutes = rlu.get("derivations", [])
+    faits = rlu["faits"]
+    out = collections.defaultdict(collections.Counter)
+    tb = comparer(gref, glu, methode, referents).comptes.table()
+    passages = {f[1]: (f[2], f[3]) for f in faits if f[0] == "passage"}
+    lus = {json.dumps(f) for f in faits}
+    cats = ("structure:roles", "structure:relations", "structure:evenements", "structure:entites",
+            "structure:proprietes")
+    for d in toutes:
+        if d["fait"][0] not in ("entite", "evenement", "role", "relation", "propriete", "coref"):
+            continue                                  # un qualificatif dérivé suit son assertion
+        chaine = requises(d, toutes, faits)
+        canon, non_conforme = canoniser(chaine)
+        if non_conforme:
+            out[d["regle"]]["non_conforme"] += 1
+        nouveaux = [f for f in canon if json.dumps(f) not in lus]
+        if not nouveaux:
+            out[d["regle"]]["redondante"] += 1
+            continue
+        h = glu.copie()
+        for f in nouveaux:
+            ajouter(h, f, passages)
+            for qf in qualificatifs_de(f[1], toutes):
+                ajouter(h, qf)
+        ids = {f[1] for f in nouveaux if f[0] in ("entite", "evenement")}
+        t2 = comparer(gref, h, methode, referents, derivees=ids).comptes.table()
+        gain = sum(t2[c]["vp"] - tb[c]["vp"] for c in cats)
+        ajout = sum(t2[c]["pred"] - tb[c]["pred"] for c in cats)
+        if gain > 0:
+            out[d["regle"]]["gain"] += 1
+        elif ajout <= 0:
+            out[d["regle"]]["redondante"] += 1
+        elif sources_justes(chaine, faits, gref, glu, methode, referents):
+            out[d["regle"]]["erreur_regle"] += 1
+        else:
+            out[d["regle"]]["erreur_heritee"] += 1
+    return out
+
+
+# --- Le programme ------------------------------------------------------------------------------------------------------
 
 def charger(p):
     return json.loads(Path(p).read_text(encoding="utf-8"))
@@ -374,68 +614,113 @@ def cle(x):
     return (x["k"], x["genre"])
 
 
-def imprimer(titre, comptes: Comptes):
+def f2(x):
+    return "—" if x is None else f"{x:.2f}"
+
+
+def prf(s):
+    return f"{f2(s['precision'])} / {f2(s['rappel'])} / {f2(s['f1'])}"
+
+
+def imprimer(titre, res: Resultat):
     print(f"\n### {titre}\n")
-    print("| catégorie | référence | graphe | justes | précision | rappel | F1 |")
-    print("|---|---|---|---|---|---|---|")
-    f = lambda x: "—" if x is None else f"{x:.2f}"
-    for k, v in comptes.table().items():
-        print(f"| {k} | {v['ref']} | {v['pred']} | {v['vp']} | {f(v['precision'])} | {f(v['rappel'])} | {f(v['f1'])} |")
+    t = res.comptes.table()
+    print("| catégorie | référence | graphe | structure : P / R / F1 | qualifiée : P / R / F1 |")
+    print("|---|---|---|---|---|")
+    for cat in STRUCTURELLES:
+        s, q = t.get("structure:" + cat), t.get("qualifiee:" + cat)
+        if s:
+            print(f"| {cat} | {s['ref']} | {s['pred']} | {prf(s)} | {prf(q)} |")
+    for cat in ("coref", "distinct"):
+        s = t.get("structure:" + cat)
+        if s:
+            print(f"| {cat} | {s['ref']} | {s['pred']} | {prf(s)} | — |")
+    for cat in QUALIFICATIFS:
+        s = t.get("qualificatif:" + cat)
+        if s:
+            print(f"| {cat} | {s['ref']} | {s['pred']} | {prf(s)} | — |")
+    S = res.securite
+    n = S["reference_non_admissible"]
+    if n:
+        print(f"\nSûreté : {n} assertions de référence non admissibles ont une correspondante ; le graphe en rend "
+              f"admissibles {S['promotion']} ({S['promotion'] / n:.0%}) : niées {S['promotion_neg']}, modalisées "
+              f"{S['promotion_modalite']}, d'une autre portée {S['promotion_portee']}, citées {S['promotion_cite']}, "
+              f"en alternative {S['promotion_alternative']}. Rétrogradées : {S['retrogradation']} sur "
+              f"{S['reference_admissible']} admissibles.")
+
+
+def imprimer_confusion(res: Resultat):
+    lignes = ROLES + ("aucun",)
+    print("\nMatrice de confusion des rôles (lignes : référence ; colonnes : graphe) :\n")
+    print("| référence \\ graphe | " + " | ".join(lignes) + " |")
+    print("|---|" + "---|" * len(lignes))
+    for a in lignes:
+        print(f"| {a} | " + " | ".join(str(res.confusion.get((a, b), 0)) for b in lignes) + " |")
+
+
+def evaluer(R, G, accord=False, derivations=False, alignement="optimal", referents="classes", ordre_inverse=False,
+            detail=False):
+    communs = sorted(set(R) & set(G))
+    total, par_langue, details = Resultat(), collections.defaultdict(Resultat), []
+    regles = collections.defaultdict(collections.Counter)
+    erreurs = 0
+    for k in communs:
+        r = depuis_reference(R[k], ordre_inverse)
+        g = depuis_reference(G[k], ordre_inverse) if accord else depuis_faits(G[k])
+        erreurs += g.erreur
+        res = comparer(r, g, alignement, referents, detail=detail)
+        total.fusion(res)
+        par_langue[R[k]["langue"]].fusion(res)
+        if detail:
+            details.append({"k": k[0], "genre": k[1], "texte": R[k]["texte"], "detail": res.detail})
+        if derivations and not accord and not g.erreur:
+            for rg, c in juger_derivations(G[k], r, g, alignement, referents).items():
+                regles[rg].update(c)
+    return communs, erreurs, total, par_langue, regles, details
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("references")
     ap.add_argument("graphes")
-    ap.add_argument("--accord", action="store_true", help="GRAPHES est une seconde annotation")
+    ap.add_argument("--accord", action="store_true")
     ap.add_argument("--derivations", action="store_true")
+    ap.add_argument("--alignement", choices=("optimal", "glouton"), default="optimal")
+    ap.add_argument("--referents", choices=("classes", "mentions"), default="classes")
+    ap.add_argument("--ordre-inverse", action="store_true")
     ap.add_argument("--detail")
+    ap.add_argument("--json")
     a = ap.parse_args()
     R = {cle(x): x for x in charger(a.references)}
     G = {cle(x): x for x in charger(a.graphes)}
-    communs = sorted(set(R) & set(G))
+    communs, erreurs, total, par_langue, regles, details = evaluer(
+        R, G, a.accord, a.derivations, a.alignement, a.referents, a.ordre_inverse, bool(a.detail))
     if not communs:
         sys.exit("aucun texte commun")
-    total, par_langue, details = Comptes(), collections.defaultdict(Comptes), []
-    regles = collections.defaultdict(collections.Counter)
-    erreurs = 0
-    for k in communs:
-        r = depuis_reference(R[k])
-        g = depuis_reference(G[k]) if a.accord else depuis_faits(G[k])
-        erreurs += getattr(g, "erreur", False)
-        d = {} if a.detail else None
-        c = comparer(r, g, d)
-        total.fusion(c)
-        par_langue[R[k]["langue"]].fusion(c)
-        if a.detail:
-            details.append({"k": k[0], "genre": k[1], "texte": R[k]["texte"], "detail": d})
-        if a.derivations and not a.accord and not getattr(g, "erreur", False):
-            base = {cat: v["vp"] for cat, v in c.table().items()}
-            basep = {cat: v["pred"] for cat, v in c.table().items()}
-            for der in G[k].get("derivations", []):
-                if der["fait"][0] not in ("entite", "evenement", "role", "relation", "propriete", "coref"):
-                    continue                     # un qualificatif dérivé suit son assertion : jugé avec elle
-                h = ajouter_faits(g, [der["fait"]] + [s for s in der["sources"] if s not in G[k]["faits"]])
-                ids = {der["fait"][1]} if der["fait"][0] in ("entite", "evenement") else set()
-                c2 = comparer(r, h, derivees=ids).table()
-                gain = sum(c2[cat]["vp"] - base[cat] for cat in ("roles", "relations", "evenements", "entites"))
-                ajout = sum(c2[cat]["pred"] - basep[cat] for cat in ("roles", "relations", "evenements", "entites"))
-                juge = "juste" if gain > 0 else ("fausse" if ajout > 0 else "sans_effet")
-                regles[der["regle"]][juge] += 1
-    print(f"{len(communs)} textes comparés ({len(R)} références, {len(G)} graphes) ; graphes en erreur : {erreurs}")
+    print(f"{len(communs)} textes comparés ({len(R)} références, {len(G)} graphes) ; graphes en erreur : {erreurs} ;"
+          f" alignement {a.alignement}, référents {a.referents}{', ordre inverse' if a.ordre_inverse else ''}")
     imprimer("ensemble", total)
-    for l, c in sorted(par_langue.items()):
-        imprimer(f"langue {l}", c)
+    imprimer_confusion(total)
+    for l, res in sorted(par_langue.items()):
+        imprimer(f"langue {l}", res)
     if regles:
-        print("\n### dérivations (lot 3), jugées contre la référence\n")
-        print("| règle | justes | fausses | sans effet |\n|---|---|---|---|")
+        print("\n### Dérivations, canonisées, avec leurs dépendances\n")
+        cats = ("non_conforme", "redondante", "gain", "erreur_regle", "erreur_heritee")
+        print("| règle | jugées | " + " | ".join(cats) + " |\n|---|---|" + "---|" * len(cats))
         for rg, n in sorted(regles.items()):
-            print(f"| {rg} | {n['juste']} | {n['fausse']} | {n['sans_effet']} |")
+            tot = n["redondante"] + n["gain"] + n["erreur_regle"] + n["erreur_heritee"]
+            print(f"| {rg} | {tot} | " + " | ".join(str(n[c]) for c in cats) + " |")
+    sortie = {"textes": len(communs), "alignement": a.alignement, "referents": a.referents,
+              "ordre_inverse": a.ordre_inverse, "total": total.comptes.table(), "securite": dict(total.securite),
+              "confusion": {f"{x}>{y}": n for (x, y), n in total.confusion.items()},
+              "par_langue": {l: {"comptes": v.comptes.table(), "securite": dict(v.securite)}
+                             for l, v in par_langue.items()},
+              "regles": {k: dict(v) for k, v in regles.items()}}
+    if a.json:
+        Path(a.json).write_text(json.dumps(sortie, ensure_ascii=False, indent=1), encoding="utf-8")
     if a.detail:
-        Path(a.detail).write_text(json.dumps({"total": total.table(), "par_langue": {l: c.table() for l, c in
-                                                                                  par_langue.items()},
-                                              "regles": regles, "textes": details}, ensure_ascii=False, indent=1),
-                                  encoding="utf-8")
+        sortie["textes_detail"] = details
+        Path(a.detail).write_text(json.dumps(sortie, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 if __name__ == "__main__":
