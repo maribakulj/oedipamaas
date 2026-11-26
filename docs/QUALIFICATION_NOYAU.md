@@ -83,6 +83,9 @@ Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audi
 | D49 | moyenne | Le vérificateur rejette une preuve juste (distinction vers une entité citée : F-N1) et accepte une requête mal formée (F-N4) ; `genre` nié par une description restreinte (F-N2) ; hypothèse malgré un nom possible partagé (F-N3) ; `meme` non réfuté par K dans une classe (F-N5) | CORRIGÉ (cycle 7) |
 | D50 | basse | Un nom nié dont le porteur n'est que possible, nié ou d'une autre portée contredit-il le nom de la classe ? Les moteurs : oui ; l'oracle (§ 1 : « aucun état sinon ») : non ; aucune lecture n'est uniformément prudente (O, cycle 7) | CORRIGÉ (cycle 8, décision du 27/11) : lecture de l'oracle ; l'information n'est pas une contestation logique |
 | D51 | moyenne | Une distinction établie dont l'existence d'une entité est niée empêchait la documentaire et la supposée (non monotone) ; le genre recevait une prémisse d'existence du contexte de la figuration (le moteur optimisé seul : les deux moteurs divergeaient) (O, cycle 7) | CORRIGÉ (cycle 7) |
+| D52 | haute | Codage : l'indicateur d'incomplétude du noyau perdu dans le résultat Iconclass (relecture du propriétaire, 27/11) | CORRIGÉ (cycle 8) : `annexe(Complet, Necessaire)` jusqu'à la sortie |
+| D53 | haute | Codage : l'index excluait les types entiers et ne fermait pas les alias comme le noyau ; des requêtes établissables n'étaient pas essayées en mode indexé | CORRIGÉ (cycle 8) : test d'égalité des résultats positifs indexé / exhaustif, écrit et génératif |
+| D54 | haute | Codage : seule la condition suffisante évaluée ; une suffisante écartée donnait « ecarte » (une notation réfutée) | CORRIGÉ (cycle 8) : suffisante et nécessaire évaluées séparément ; `suffisante_ecartee` ne réfute pas la notation |
 | D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | CORRIGÉ (cycle 5) |
 | D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | CORRIGÉ (cycle 5) |
 | D39 | grave | Comparateur : distinction documentaire du graphe canonique, cas non contrôlés, insatisfiables, noms de variables (I-D2, D4, D5) | CORRIGÉ (cycle 5) |
@@ -256,6 +259,21 @@ python -m pytest -q
 - L'oracle a reçu les amendements (agent qui ne lit que la spécification) ; 0 désaccord sur les bancs standard, mais
   ceux-ci n'exercent presque pas les amendements : ses bancs ciblés (environ 12 000 cas) ont trouvé D51 (corrigé, deux
   cas au banc sémantique) et D50 (soumis au propriétaire). Après correction : 0 désaccord sur les bancs standard.
+
+### Cycle 8 (27/11) : décisions du propriétaire (D30, D31, D50) et codage (D52 à D54)
+
+- D30 : sens conceptuels ; liens certains ou hypothèses de sens (`sens_suppose`) ; négations certaines ou possibles
+  (`negation_autre_sens`, une hypothèse, jamais une réfutation) ; appui retenu au moindre nombre d'hypothèses ; le
+  vérificateur exige exactement les hypothèses que demandent les appuis cités ; le comparateur transmet la négation
+  dans les deux sens ; l'anglais prend tous les sens de WordNet (le premier sens était une désambiguïsation cachée :
+  les mesures de l'anglais changeront, c'est l'affaire de C7). K de test : « pomme » (deux concepts), « poly » dans le
+  K génératif. Sept cas sémantiques (dont L-D8a à c) ; trois défauts injectés, détectés.
+- D31 : `refutation(Sigma, substitution, Fondements)` ; deux tests (source citée, documentaire avec sa source).
+- D50 : lecture de l'oracle ; un cas sémantique. L'information (un nom nié d'un porteur absent) n'est pas exposée comme
+  indice : elle reste dans le graphe ; la rendre visible est un travail de présentation, hors du noyau.
+- Codage (D52 à D54) : `tests/plunit/test_codage.pl` (11 tests : type entier, alias en chaîne, indexé = exhaustif écrit
+  et sur 120 graphes tirés, suffisante écartée et nécessaire établie, nécessaire seule, incomplétude jusqu'à la sortie,
+  aucun statut de notation réfutée) ; `coder/5` (K, normalisation, budget en options) ; `satisfaire_lot/5`.
 
 ## 7. Garanties établies, garanties absentes, limites
 

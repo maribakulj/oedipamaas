@@ -64,11 +64,11 @@ fiche(Fi, Res, J) :-
     dict_pairs(J0, _, Vs), J = J0.put(_{k: K, notation: Fi.notation, langue: Fi.langue}).
 
 visee(_, erreur, _, _, _{statut: erreur}) :- !.
-visee(N, R, A, Dt, _{statut: St, descendant_etabli: De, etablis: Es, etablissables: Eb, hors_branche: Hs,
-                     hors_branche_etablissables: Hb, accord: A, temps: Dt}) :-
-    ( memberchk(code(N, S0, _), R) -> St = S0 ; St = absent ),
-    ( member(code(N2, etabli, _), R), arbre:ancetre(N2, N) -> De = N2 ; De = null ),
-    findall(E, member(code(E, etabli, _), R), Es),
+visee(N, R, A, Dt, _{statut: St, complet: Co, necessaire: Ne, descendant_etabli: De, etablis: Es, etablissables: Eb,
+                     hors_branche: Hs, hors_branche_etablissables: Hb, accord: A, temps: Dt}) :-
+    ( memberchk(code(N, S0, _, annexe(C0, N0)), R) -> St = S0, Co = C0, Ne = N0 ; St = absent, Co = null, Ne = null ),
+    ( member(code(N2, etabli, _, _), R), arbre:ancetre(N2, N) -> De = N2 ; De = null ),
+    findall(E, member(code(E, etabli, _, _), R), Es),
     findall(E, ( member(E, Es), E \== N, \+ arbre:ancetre(E, N), \+ arbre:ancetre(N, E) ), Hs),
-    findall(E, member(code(E, etablissable, _), R), Eb),
+    findall(E, member(code(E, etablissable, _, _), R), Eb),
     findall(E, ( member(E, Eb), E \== N, \+ arbre:ancetre(E, N), \+ arbre:ancetre(N, E) ), Hb).

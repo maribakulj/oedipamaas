@@ -25,7 +25,7 @@
 
     Le graphe est chargé dans un module temporaire, propre à l'appel : deux documents ne se mêlent jamais.
 */
-:- module(satisfaction, [ satisfaire/4, satisfaire/5, satisfaire_lot/4, solutions_classees/4, version_noyau/1,
+:- module(satisfaction, [ satisfaire/4, satisfaire/5, satisfaire_lot/4, satisfaire_lot/5, solutions_classees/4, version_noyau/1,
                           budget/1, empreinte/2 ]).
 :- encoding(utf8).
 :- use_module(library(lists)).
@@ -61,15 +61,18 @@ options_valides(Opts) :-
 option_valide(budget(N)) :- ( N == inf -> true ; integer(N), N >= 1 ).
 option_valide(temps(S)) :- number(S), S > 0.
 
-satisfaire_lot(K, G, Qs, Rs) :-
+satisfaire_lot(K, G, Qs, Rs) :- satisfaire_lot(K, G, Qs, [], Rs).
+% Options : [budget(N)], le budget de chaque requête
+satisfaire_lot(K, G, Qs, Opts, Rs) :-
     ( is_list(Qs) -> true ; throw(error(requetes_pas_une_liste(Qs), _)) ),
+    options_valides(Opts),
     controler(G, requete(r, genre(x))),
-    in_temporary_module(M, charger(M, G), resoudre_toutes(K, M, Qs, Rs)).
-resoudre_toutes(K, M, Qs, Rs) :- maplist(resoudre_une(K, M), Qs, Rs).
-resoudre_une(K, M, Q, Id-R) :-
+    in_temporary_module(M, charger(M, G), resoudre_toutes(K, M, Qs, Opts, Rs)).
+resoudre_toutes(K, M, Qs, Opts, Rs) :- maplist(resoudre_une(K, M, Opts), Qs, Rs).
+resoudre_une(K, M, Opts, Q, Id-R) :-
     (   nonvar(Q), Q = requete(Id, F)
     ->  requetes:bien_formee(requete(Id, F), Es),
-        ( Es \== [] -> R = mal_formee(Es) ; resoudre(K, M, Id, F, [], R) )
+        ( Es \== [] -> R = mal_formee(Es) ; resoudre(K, M, Id, F, Opts, R) )
     ;   Id = inconnu, R = mal_formee([pas_une_requete(Q)])
     ).
 
