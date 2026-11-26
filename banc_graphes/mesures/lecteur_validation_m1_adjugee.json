@@ -1,0 +1,663 @@
+{
+ "textes": 204,
+ "alignement": "optimal",
+ "referents": "classes",
+ "ordre_inverse": false,
+ "total": {
+  "qualificatif:alternatives": {
+   "vp": 38,
+   "ref": 86,
+   "pred": 100,
+   "precision": 0.38,
+   "rappel": 0.4418604651162791,
+   "f1": 0.40860215053763443
+  },
+  "qualificatif:citations": {
+   "vp": 0,
+   "ref": 72,
+   "pred": 0,
+   "precision": null,
+   "rappel": 0.0,
+   "f1": null
+  },
+  "qualificatif:modalites": {
+   "vp": 37,
+   "ref": 574,
+   "pred": 108,
+   "precision": 0.3425925925925926,
+   "rappel": 0.06445993031358885,
+   "f1": 0.10850439882697947
+  },
+  "qualificatif:negations": {
+   "vp": 185,
+   "ref": 429,
+   "pred": 227,
+   "precision": 0.8149779735682819,
+   "rappel": 0.43123543123543123,
+   "f1": 0.5640243902439025
+  },
+  "qualificatif:portees": {
+   "vp": 70,
+   "ref": 1748,
+   "pred": 125,
+   "precision": 0.56,
+   "rappel": 0.04004576659038902,
+   "f1": 0.07474639615589962
+  },
+  "qualifiee:entites": {
+   "vp": 2315,
+   "ref": 3936,
+   "pred": 3979,
+   "precision": 0.5818044734858004,
+   "rappel": 0.588160569105691,
+   "f1": 0.5849652558433354
+  },
+  "qualifiee:evenements": {
+   "vp": 564,
+   "ref": 1637,
+   "pred": 1563,
+   "precision": 0.36084452975047987,
+   "rappel": 0.3445326817348809,
+   "f1": 0.35250000000000004
+  },
+  "qualifiee:nombres": {
+   "vp": 0,
+   "ref": 39,
+   "pred": 0,
+   "precision": null,
+   "rappel": 0.0,
+   "f1": null
+  },
+  "qualifiee:noms": {
+   "vp": 124,
+   "ref": 136,
+   "pred": 176,
+   "precision": 0.7045454545454546,
+   "rappel": 0.9117647058823529,
+   "f1": 0.794871794871795
+  },
+  "qualifiee:proprietes": {
+   "vp": 580,
+   "ref": 946,
+   "pred": 946,
+   "precision": 0.6131078224101479,
+   "rappel": 0.6131078224101479,
+   "f1": 0.6131078224101479
+  },
+  "qualifiee:relations": {
+   "vp": 423,
+   "ref": 1452,
+   "pred": 681,
+   "precision": 0.6211453744493393,
+   "rappel": 0.29132231404958675,
+   "f1": 0.39662447257383965
+  },
+  "qualifiee:roles": {
+   "vp": 494,
+   "ref": 2947,
+   "pred": 2080,
+   "precision": 0.2375,
+   "rappel": 0.16762809636918902,
+   "f1": 0.19653869106823157
+  },
+  "qualifiee:roles_macro": {
+   "vp": 733,
+   "ref": 2947,
+   "pred": 2080,
+   "precision": 0.3524038461538462,
+   "rappel": 0.24872751951136748,
+   "f1": 0.2916252237915258
+  },
+  "structure:coref": {
+   "vp": 37,
+   "ref": 848,
+   "pred": 162,
+   "precision": 0.22839506172839505,
+   "rappel": 0.04363207547169811,
+   "f1": 0.07326732673267326
+  },
+  "structure:distinct": {
+   "vp": 0,
+   "ref": 23,
+   "pred": 0,
+   "precision": null,
+   "rappel": 0.0,
+   "f1": null
+  },
+  "structure:entites": {
+   "vp": 3580,
+   "ref": 3936,
+   "pred": 3979,
+   "precision": 0.8997235486303091,
+   "rappel": 0.9095528455284553,
+   "f1": 0.9046114971572963
+  },
+  "structure:evenements": {
+   "vp": 1187,
+   "ref": 1637,
+   "pred": 1563,
+   "precision": 0.7594369801663468,
+   "rappel": 0.7251069028711057,
+   "f1": 0.741875
+  },
+  "structure:nombres": {
+   "vp": 0,
+   "ref": 38,
+   "pred": 0,
+   "precision": null,
+   "rappel": 0.0,
+   "f1": null
+  },
+  "structure:noms": {
+   "vp": 129,
+   "ref": 136,
+   "pred": 176,
+   "precision": 0.7329545454545454,
+   "rappel": 0.9485294117647058,
+   "f1": 0.8269230769230769
+  },
+  "structure:proprietes": {
+   "vp": 594,
+   "ref": 946,
+   "pred": 946,
+   "precision": 0.627906976744186,
+   "rappel": 0.627906976744186,
+   "f1": 0.627906976744186
+  },
+  "structure:relations": {
+   "vp": 493,
+   "ref": 1444,
+   "pred": 681,
+   "precision": 0.723935389133627,
+   "rappel": 0.3414127423822715,
+   "f1": 0.464
+  },
+  "structure:roles": {
+   "vp": 888,
+   "ref": 2947,
+   "pred": 2080,
+   "precision": 0.4269230769230769,
+   "rappel": 0.3013233797081778,
+   "f1": 0.35329222200119353
+  },
+  "structure:roles_macro": {
+   "vp": 1444,
+   "ref": 2947,
+   "pred": 2080,
+   "precision": 0.6942307692307692,
+   "rappel": 0.48998982015609094,
+   "f1": 0.5744977123532923
+  }
+ },
+ "securite": {
+  "reference_admissible": 4069,
+  "reference_non_admissible": 2281,
+  "promotion": 1870,
+  "promotion_neg": 118,
+  "promotion_portee": 1466,
+  "promotion_modalite": 353,
+  "promotion_alternative": 36,
+  "retrogradation": 56,
+  "promotion_cite": 45
+ },
+ "confusion": {
+  "theme>patient": 555,
+  "aucun>lieu": 102,
+  "destinataire>destinataire": 11,
+  "agent>agent": 688,
+  "agent>aucun": 512,
+  "lieu>aucun": 239,
+  "patient>aucun": 68,
+  "aucun>agent": 210,
+  "theme>aucun": 423,
+  "aucun>patient": 162,
+  "lieu>lieu": 119,
+  "theme>agent": 17,
+  "agent>patient": 41,
+  "aucun>instrument": 36,
+  "instrument>lieu": 3,
+  "destinataire>aucun": 79,
+  "instrument>aucun": 57,
+  "patient>patient": 59,
+  "lieu>patient": 15,
+  "theme>instrument": 3,
+  "instrument>instrument": 11,
+  "theme>lieu": 15,
+  "destinataire>patient": 18,
+  "patient>lieu": 1,
+  "instrument>agent": 2,
+  "patient>agent": 1,
+  "destinataire>agent": 1,
+  "destinataire>instrument": 2,
+  "agent>instrument": 3,
+  "agent>lieu": 1,
+  "instrument>patient": 3,
+  "aucun>destinataire": 1
+ },
+ "par_langue": {
+  "en": {
+   "comptes": {
+    "qualificatif:alternatives": {
+     "vp": 22,
+     "ref": 53,
+     "pred": 68,
+     "precision": 0.3235294117647059,
+     "rappel": 0.41509433962264153,
+     "f1": 0.36363636363636365
+    },
+    "qualificatif:citations": {
+     "vp": 0,
+     "ref": 32,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "qualificatif:modalites": {
+     "vp": 26,
+     "ref": 286,
+     "pred": 61,
+     "precision": 0.4262295081967213,
+     "rappel": 0.09090909090909091,
+     "f1": 0.14985590778097985
+    },
+    "qualificatif:negations": {
+     "vp": 94,
+     "ref": 234,
+     "pred": 110,
+     "precision": 0.8545454545454545,
+     "rappel": 0.4017094017094017,
+     "f1": 0.5465116279069768
+    },
+    "qualificatif:portees": {
+     "vp": 23,
+     "ref": 900,
+     "pred": 50,
+     "precision": 0.46,
+     "rappel": 0.025555555555555557,
+     "f1": 0.048421052631578955
+    },
+    "qualifiee:entites": {
+     "vp": 1207,
+     "ref": 2050,
+     "pred": 2109,
+     "precision": 0.5723091512565197,
+     "rappel": 0.588780487804878,
+     "f1": 0.5804279874969945
+    },
+    "qualifiee:evenements": {
+     "vp": 296,
+     "ref": 826,
+     "pred": 777,
+     "precision": 0.38095238095238093,
+     "rappel": 0.3583535108958838,
+     "f1": 0.3693075483468497
+    },
+    "qualifiee:nombres": {
+     "vp": 0,
+     "ref": 18,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "qualifiee:noms": {
+     "vp": 53,
+     "ref": 56,
+     "pred": 77,
+     "precision": 0.6883116883116883,
+     "rappel": 0.9464285714285714,
+     "f1": 0.7969924812030074
+    },
+    "qualifiee:proprietes": {
+     "vp": 327,
+     "ref": 572,
+     "pred": 514,
+     "precision": 0.6361867704280155,
+     "rappel": 0.5716783216783217,
+     "f1": 0.6022099447513811
+    },
+    "qualifiee:relations": {
+     "vp": 226,
+     "ref": 768,
+     "pred": 379,
+     "precision": 0.5963060686015831,
+     "rappel": 0.2942708333333333,
+     "f1": 0.3940714908456844
+    },
+    "qualifiee:roles": {
+     "vp": 280,
+     "ref": 1517,
+     "pred": 1070,
+     "precision": 0.2616822429906542,
+     "rappel": 0.1845748187211602,
+     "f1": 0.21646695013529185
+    },
+    "qualifiee:roles_macro": {
+     "vp": 400,
+     "ref": 1517,
+     "pred": 1070,
+     "precision": 0.37383177570093457,
+     "rappel": 0.26367831245880025,
+     "f1": 0.30923850019327404
+    },
+    "structure:coref": {
+     "vp": 22,
+     "ref": 482,
+     "pred": 55,
+     "precision": 0.4,
+     "rappel": 0.04564315352697095,
+     "f1": 0.08193668528864059
+    },
+    "structure:distinct": {
+     "vp": 0,
+     "ref": 7,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "structure:entites": {
+     "vp": 1872,
+     "ref": 2050,
+     "pred": 2109,
+     "precision": 0.887624466571835,
+     "rappel": 0.9131707317073171,
+     "f1": 0.9002163981726377
+    },
+    "structure:evenements": {
+     "vp": 594,
+     "ref": 826,
+     "pred": 777,
+     "precision": 0.7644787644787645,
+     "rappel": 0.7191283292978208,
+     "f1": 0.7411104179663132
+    },
+    "structure:nombres": {
+     "vp": 0,
+     "ref": 17,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "structure:noms": {
+     "vp": 56,
+     "ref": 56,
+     "pred": 77,
+     "precision": 0.7272727272727273,
+     "rappel": 1.0,
+     "f1": 0.8421052631578948
+    },
+    "structure:proprietes": {
+     "vp": 335,
+     "ref": 572,
+     "pred": 514,
+     "precision": 0.6517509727626459,
+     "rappel": 0.5856643356643356,
+     "f1": 0.6169429097605893
+    },
+    "structure:relations": {
+     "vp": 266,
+     "ref": 763,
+     "pred": 379,
+     "precision": 0.7018469656992085,
+     "rappel": 0.3486238532110092,
+     "f1": 0.4658493870402802
+    },
+    "structure:roles": {
+     "vp": 476,
+     "ref": 1517,
+     "pred": 1070,
+     "precision": 0.44485981308411215,
+     "rappel": 0.3137771918259723,
+     "f1": 0.36799381522999614
+    },
+    "structure:roles_macro": {
+     "vp": 755,
+     "ref": 1517,
+     "pred": 1070,
+     "precision": 0.705607476635514,
+     "rappel": 0.4976928147659855,
+     "f1": 0.5836876691148049
+    }
+   },
+   "securite": {
+    "reference_admissible": 2154,
+    "reference_non_admissible": 1153,
+    "promotion": 944,
+    "promotion_neg": 66,
+    "promotion_portee": 749,
+    "promotion_modalite": 162,
+    "promotion_alternative": 21,
+    "retrogradation": 30,
+    "promotion_cite": 21
+   }
+  },
+  "fr": {
+   "comptes": {
+    "qualificatif:alternatives": {
+     "vp": 16,
+     "ref": 33,
+     "pred": 32,
+     "precision": 0.5,
+     "rappel": 0.48484848484848486,
+     "f1": 0.49230769230769234
+    },
+    "qualificatif:citations": {
+     "vp": 0,
+     "ref": 40,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "qualificatif:modalites": {
+     "vp": 11,
+     "ref": 288,
+     "pred": 47,
+     "precision": 0.23404255319148937,
+     "rappel": 0.03819444444444445,
+     "f1": 0.06567164179104479
+    },
+    "qualificatif:negations": {
+     "vp": 91,
+     "ref": 195,
+     "pred": 117,
+     "precision": 0.7777777777777778,
+     "rappel": 0.4666666666666667,
+     "f1": 0.5833333333333334
+    },
+    "qualificatif:portees": {
+     "vp": 47,
+     "ref": 848,
+     "pred": 75,
+     "precision": 0.6266666666666667,
+     "rappel": 0.055424528301886794,
+     "f1": 0.10184182015167931
+    },
+    "qualifiee:entites": {
+     "vp": 1108,
+     "ref": 1886,
+     "pred": 1870,
+     "precision": 0.5925133689839572,
+     "rappel": 0.5874867444326617,
+     "f1": 0.5899893503727369
+    },
+    "qualifiee:evenements": {
+     "vp": 268,
+     "ref": 811,
+     "pred": 786,
+     "precision": 0.34096692111959287,
+     "rappel": 0.33045622688039455,
+     "f1": 0.3356293049467752
+    },
+    "qualifiee:nombres": {
+     "vp": 0,
+     "ref": 21,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "qualifiee:noms": {
+     "vp": 71,
+     "ref": 80,
+     "pred": 99,
+     "precision": 0.7171717171717171,
+     "rappel": 0.8875,
+     "f1": 0.7932960893854748
+    },
+    "qualifiee:proprietes": {
+     "vp": 253,
+     "ref": 374,
+     "pred": 432,
+     "precision": 0.5856481481481481,
+     "rappel": 0.6764705882352942,
+     "f1": 0.6277915632754343
+    },
+    "qualifiee:relations": {
+     "vp": 197,
+     "ref": 684,
+     "pred": 302,
+     "precision": 0.652317880794702,
+     "rappel": 0.2880116959064328,
+     "f1": 0.3995943204868154
+    },
+    "qualifiee:roles": {
+     "vp": 214,
+     "ref": 1430,
+     "pred": 1010,
+     "precision": 0.21188118811881188,
+     "rappel": 0.14965034965034965,
+     "f1": 0.17540983606557375
+    },
+    "qualifiee:roles_macro": {
+     "vp": 333,
+     "ref": 1430,
+     "pred": 1010,
+     "precision": 0.3297029702970297,
+     "rappel": 0.23286713286713287,
+     "f1": 0.27295081967213114
+    },
+    "structure:coref": {
+     "vp": 15,
+     "ref": 366,
+     "pred": 107,
+     "precision": 0.14018691588785046,
+     "rappel": 0.040983606557377046,
+     "f1": 0.06342494714587738
+    },
+    "structure:distinct": {
+     "vp": 0,
+     "ref": 16,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "structure:entites": {
+     "vp": 1708,
+     "ref": 1886,
+     "pred": 1870,
+     "precision": 0.9133689839572192,
+     "rappel": 0.9056203605514316,
+     "f1": 0.9094781682641109
+    },
+    "structure:evenements": {
+     "vp": 593,
+     "ref": 811,
+     "pred": 786,
+     "precision": 0.7544529262086515,
+     "rappel": 0.7311960542540074,
+     "f1": 0.7426424546023794
+    },
+    "structure:nombres": {
+     "vp": 0,
+     "ref": 21,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "structure:noms": {
+     "vp": 73,
+     "ref": 80,
+     "pred": 99,
+     "precision": 0.7373737373737373,
+     "rappel": 0.9125,
+     "f1": 0.8156424581005587
+    },
+    "structure:proprietes": {
+     "vp": 259,
+     "ref": 374,
+     "pred": 432,
+     "precision": 0.5995370370370371,
+     "rappel": 0.6925133689839572,
+     "f1": 0.6426799007444169
+    },
+    "structure:relations": {
+     "vp": 227,
+     "ref": 681,
+     "pred": 302,
+     "precision": 0.7516556291390728,
+     "rappel": 0.3333333333333333,
+     "f1": 0.461851475076297
+    },
+    "structure:roles": {
+     "vp": 412,
+     "ref": 1430,
+     "pred": 1010,
+     "precision": 0.4079207920792079,
+     "rappel": 0.2881118881118881,
+     "f1": 0.33770491803278685
+    },
+    "structure:roles_macro": {
+     "vp": 689,
+     "ref": 1430,
+     "pred": 1010,
+     "precision": 0.6821782178217822,
+     "rappel": 0.4818181818181818,
+     "f1": 0.5647540983606558
+    }
+   },
+   "securite": {
+    "reference_non_admissible": 1128,
+    "promotion": 926,
+    "promotion_modalite": 191,
+    "reference_admissible": 1915,
+    "promotion_neg": 52,
+    "promotion_portee": 717,
+    "retrogradation": 26,
+    "promotion_alternative": 15,
+    "promotion_cite": 24
+   }
+  }
+ },
+ "regles": {
+  "e1": {
+   "non_conforme": 20487,
+   "redondante": 20487
+  },
+  "e2": {
+   "erreur_regle": 4758,
+   "erreur_heritee": 483,
+   "gain": 144
+  },
+  "r2": {
+   "erreur_regle": 2262,
+   "gain": 584,
+   "erreur_heritee": 462
+  },
+  "r1": {
+   "gain": 559,
+   "erreur_heritee": 214,
+   "erreur_regle": 1084
+  },
+  "p1": {
+   "gain": 117,
+   "erreur_regle": 316,
+   "erreur_heritee": 9
+  }
+ }
+}

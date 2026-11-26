@@ -1,0 +1,8068 @@
+{
+ "textes": 120,
+ "alignement": "optimal",
+ "referents": "classes",
+ "ordre_inverse": false,
+ "total": {
+  "qualificatif:alternatives": {
+   "vp": 6,
+   "ref": 10,
+   "pred": 10,
+   "precision": 0.6,
+   "rappel": 0.6,
+   "f1": 0.6
+  },
+  "qualificatif:citations": {
+   "vp": 0,
+   "ref": 0,
+   "pred": 0,
+   "precision": null,
+   "rappel": null,
+   "f1": null
+  },
+  "qualificatif:modalites": {
+   "vp": 1,
+   "ref": 41,
+   "pred": 3,
+   "precision": 0.3333333333333333,
+   "rappel": 0.024390243902439025,
+   "f1": 0.04545454545454545
+  },
+  "qualificatif:negations": {
+   "vp": 11,
+   "ref": 22,
+   "pred": 14,
+   "precision": 0.7857142857142857,
+   "rappel": 0.5,
+   "f1": 0.6111111111111112
+  },
+  "qualificatif:portees": {
+   "vp": 9,
+   "ref": 75,
+   "pred": 31,
+   "precision": 0.2903225806451613,
+   "rappel": 0.12,
+   "f1": 0.169811320754717
+  },
+  "qualifiee:entites": {
+   "vp": 528,
+   "ref": 683,
+   "pred": 699,
+   "precision": 0.7553648068669528,
+   "rappel": 0.7730600292825769,
+   "f1": 0.76410998552822
+  },
+  "qualifiee:evenements": {
+   "vp": 186,
+   "ref": 263,
+   "pred": 263,
+   "precision": 0.7072243346007605,
+   "rappel": 0.7072243346007605,
+   "f1": 0.7072243346007604
+  },
+  "qualifiee:nombres": {
+   "vp": 0,
+   "ref": 5,
+   "pred": 0,
+   "precision": null,
+   "rappel": 0.0,
+   "f1": null
+  },
+  "qualifiee:noms": {
+   "vp": 42,
+   "ref": 67,
+   "pred": 65,
+   "precision": 0.6461538461538462,
+   "rappel": 0.6268656716417911,
+   "f1": 0.6363636363636365
+  },
+  "qualifiee:proprietes": {
+   "vp": 107,
+   "ref": 237,
+   "pred": 214,
+   "precision": 0.5,
+   "rappel": 0.45147679324894513,
+   "f1": 0.4745011086474501
+  },
+  "qualifiee:relations": {
+   "vp": 71,
+   "ref": 387,
+   "pred": 127,
+   "precision": 0.5590551181102362,
+   "rappel": 0.1834625322997416,
+   "f1": 0.27626459143968873
+  },
+  "qualifiee:roles": {
+   "vp": 165,
+   "ref": 472,
+   "pred": 382,
+   "precision": 0.4319371727748691,
+   "rappel": 0.3495762711864407,
+   "f1": 0.3864168618266979
+  },
+  "qualifiee:roles_macro": {
+   "vp": 231,
+   "ref": 472,
+   "pred": 382,
+   "precision": 0.6047120418848168,
+   "rappel": 0.4894067796610169,
+   "f1": 0.5409836065573771
+  },
+  "structure:coref": {
+   "vp": 14,
+   "ref": 31,
+   "pred": 42,
+   "precision": 0.3333333333333333,
+   "rappel": 0.45161290322580644,
+   "f1": 0.3835616438356164
+  },
+  "structure:distinct": {
+   "vp": 0,
+   "ref": 1,
+   "pred": 0,
+   "precision": null,
+   "rappel": 0.0,
+   "f1": null
+  },
+  "structure:entites": {
+   "vp": 594,
+   "ref": 683,
+   "pred": 699,
+   "precision": 0.8497854077253219,
+   "rappel": 0.8696925329428989,
+   "f1": 0.8596237337192475
+  },
+  "structure:evenements": {
+   "vp": 202,
+   "ref": 263,
+   "pred": 263,
+   "precision": 0.7680608365019012,
+   "rappel": 0.7680608365019012,
+   "f1": 0.7680608365019012
+  },
+  "structure:nombres": {
+   "vp": 0,
+   "ref": 5,
+   "pred": 0,
+   "precision": null,
+   "rappel": 0.0,
+   "f1": null
+  },
+  "structure:noms": {
+   "vp": 42,
+   "ref": 67,
+   "pred": 65,
+   "precision": 0.6461538461538462,
+   "rappel": 0.6268656716417911,
+   "f1": 0.6363636363636365
+  },
+  "structure:proprietes": {
+   "vp": 113,
+   "ref": 237,
+   "pred": 214,
+   "precision": 0.5280373831775701,
+   "rappel": 0.4767932489451477,
+   "f1": 0.5011086474501109
+  },
+  "structure:relations": {
+   "vp": 73,
+   "ref": 387,
+   "pred": 127,
+   "precision": 0.5748031496062992,
+   "rappel": 0.18863049095607234,
+   "f1": 0.2840466926070039
+  },
+  "structure:roles": {
+   "vp": 173,
+   "ref": 472,
+   "pred": 382,
+   "precision": 0.45287958115183247,
+   "rappel": 0.3665254237288136,
+   "f1": 0.405152224824356
+  },
+  "structure:roles_macro": {
+   "vp": 244,
+   "ref": 472,
+   "pred": 382,
+   "precision": 0.6387434554973822,
+   "rappel": 0.5169491525423728,
+   "f1": 0.5714285714285714
+  }
+ },
+ "securite": {
+  "reference_admissible": 1002,
+  "reference_non_admissible": 108,
+  "promotion": 79,
+  "promotion_portee": 55,
+  "promotion_modalite": 22,
+  "retrogradation": 15,
+  "promotion_neg": 5,
+  "promotion_alternative": 3
+ },
+ "confusion": {
+  "aucun>lieu": 44,
+  "agent>agent": 128,
+  "lieu>lieu": 33,
+  "instrument>aucun": 8,
+  "agent>aucun": 93,
+  "theme>aucun": 34,
+  "aucun>patient": 28,
+  "aucun>agent": 30,
+  "lieu>patient": 4,
+  "aucun>instrument": 6,
+  "theme>patient": 71,
+  "lieu>aucun": 36,
+  "patient>patient": 7,
+  "patient>agent": 2,
+  "instrument>instrument": 5,
+  "agent>patient": 14,
+  "patient>aucun": 16,
+  "theme>instrument": 2,
+  "theme>lieu": 5,
+  "destinataire>aucun": 11,
+  "agent>lieu": 2,
+  "instrument>lieu": 1
+ },
+ "par_langue": {
+  "en": {
+   "comptes": {
+    "qualificatif:alternatives": {
+     "vp": 2,
+     "ref": 4,
+     "pred": 6,
+     "precision": 0.3333333333333333,
+     "rappel": 0.5,
+     "f1": 0.4
+    },
+    "qualificatif:citations": {
+     "vp": 0,
+     "ref": 0,
+     "pred": 0,
+     "precision": null,
+     "rappel": null,
+     "f1": null
+    },
+    "qualificatif:modalites": {
+     "vp": 1,
+     "ref": 13,
+     "pred": 2,
+     "precision": 0.5,
+     "rappel": 0.07692307692307693,
+     "f1": 0.13333333333333336
+    },
+    "qualificatif:negations": {
+     "vp": 5,
+     "ref": 11,
+     "pred": 6,
+     "precision": 0.8333333333333334,
+     "rappel": 0.45454545454545453,
+     "f1": 0.5882352941176471
+    },
+    "qualificatif:portees": {
+     "vp": 1,
+     "ref": 25,
+     "pred": 2,
+     "precision": 0.5,
+     "rappel": 0.04,
+     "f1": 0.07407407407407407
+    },
+    "qualifiee:entites": {
+     "vp": 286,
+     "ref": 359,
+     "pred": 349,
+     "precision": 0.8194842406876791,
+     "rappel": 0.7966573816155988,
+     "f1": 0.8079096045197739
+    },
+    "qualifiee:evenements": {
+     "vp": 101,
+     "ref": 148,
+     "pred": 142,
+     "precision": 0.7112676056338029,
+     "rappel": 0.6824324324324325,
+     "f1": 0.696551724137931
+    },
+    "qualifiee:nombres": {
+     "vp": 0,
+     "ref": 2,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "qualifiee:noms": {
+     "vp": 19,
+     "ref": 37,
+     "pred": 37,
+     "precision": 0.5135135135135135,
+     "rappel": 0.5135135135135135,
+     "f1": 0.5135135135135135
+    },
+    "qualifiee:proprietes": {
+     "vp": 44,
+     "ref": 97,
+     "pred": 87,
+     "precision": 0.5057471264367817,
+     "rappel": 0.4536082474226804,
+     "f1": 0.4782608695652174
+    },
+    "qualifiee:relations": {
+     "vp": 38,
+     "ref": 193,
+     "pred": 56,
+     "precision": 0.6785714285714286,
+     "rappel": 0.19689119170984457,
+     "f1": 0.30522088353413657
+    },
+    "qualifiee:roles": {
+     "vp": 100,
+     "ref": 263,
+     "pred": 211,
+     "precision": 0.47393364928909953,
+     "rappel": 0.38022813688212925,
+     "f1": 0.4219409282700422
+    },
+    "qualifiee:roles_macro": {
+     "vp": 135,
+     "ref": 263,
+     "pred": 211,
+     "precision": 0.6398104265402843,
+     "rappel": 0.5133079847908745,
+     "f1": 0.569620253164557
+    },
+    "structure:coref": {
+     "vp": 6,
+     "ref": 22,
+     "pred": 18,
+     "precision": 0.3333333333333333,
+     "rappel": 0.2727272727272727,
+     "f1": 0.3
+    },
+    "structure:distinct": {
+     "vp": 0,
+     "ref": 1,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "structure:entites": {
+     "vp": 308,
+     "ref": 359,
+     "pred": 349,
+     "precision": 0.8825214899713467,
+     "rappel": 0.8579387186629527,
+     "f1": 0.8700564971751413
+    },
+    "structure:evenements": {
+     "vp": 107,
+     "ref": 148,
+     "pred": 142,
+     "precision": 0.7535211267605634,
+     "rappel": 0.722972972972973,
+     "f1": 0.7379310344827587
+    },
+    "structure:nombres": {
+     "vp": 0,
+     "ref": 2,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "structure:noms": {
+     "vp": 19,
+     "ref": 37,
+     "pred": 37,
+     "precision": 0.5135135135135135,
+     "rappel": 0.5135135135135135,
+     "f1": 0.5135135135135135
+    },
+    "structure:proprietes": {
+     "vp": 44,
+     "ref": 97,
+     "pred": 87,
+     "precision": 0.5057471264367817,
+     "rappel": 0.4536082474226804,
+     "f1": 0.4782608695652174
+    },
+    "structure:relations": {
+     "vp": 38,
+     "ref": 193,
+     "pred": 56,
+     "precision": 0.6785714285714286,
+     "rappel": 0.19689119170984457,
+     "f1": 0.30522088353413657
+    },
+    "structure:roles": {
+     "vp": 103,
+     "ref": 263,
+     "pred": 211,
+     "precision": 0.4881516587677725,
+     "rappel": 0.3916349809885932,
+     "f1": 0.4345991561181435
+    },
+    "structure:roles_macro": {
+     "vp": 139,
+     "ref": 263,
+     "pred": 211,
+     "precision": 0.6587677725118484,
+     "rappel": 0.5285171102661597,
+     "f1": 0.5864978902953587
+    }
+   },
+   "securite": {
+    "reference_admissible": 530,
+    "reference_non_admissible": 37,
+    "promotion": 27,
+    "promotion_portee": 19,
+    "promotion_modalite": 5,
+    "promotion_neg": 3,
+    "promotion_alternative": 1
+   }
+  },
+  "fr": {
+   "comptes": {
+    "qualificatif:alternatives": {
+     "vp": 4,
+     "ref": 6,
+     "pred": 4,
+     "precision": 1.0,
+     "rappel": 0.6666666666666666,
+     "f1": 0.8
+    },
+    "qualificatif:citations": {
+     "vp": 0,
+     "ref": 0,
+     "pred": 0,
+     "precision": null,
+     "rappel": null,
+     "f1": null
+    },
+    "qualificatif:modalites": {
+     "vp": 0,
+     "ref": 28,
+     "pred": 1,
+     "precision": 0.0,
+     "rappel": 0.0,
+     "f1": 0.0
+    },
+    "qualificatif:negations": {
+     "vp": 6,
+     "ref": 11,
+     "pred": 8,
+     "precision": 0.75,
+     "rappel": 0.5454545454545454,
+     "f1": 0.631578947368421
+    },
+    "qualificatif:portees": {
+     "vp": 8,
+     "ref": 50,
+     "pred": 29,
+     "precision": 0.27586206896551724,
+     "rappel": 0.16,
+     "f1": 0.20253164556962025
+    },
+    "qualifiee:entites": {
+     "vp": 242,
+     "ref": 324,
+     "pred": 350,
+     "precision": 0.6914285714285714,
+     "rappel": 0.7469135802469136,
+     "f1": 0.7181008902077151
+    },
+    "qualifiee:evenements": {
+     "vp": 85,
+     "ref": 115,
+     "pred": 121,
+     "precision": 0.7024793388429752,
+     "rappel": 0.7391304347826086,
+     "f1": 0.7203389830508475
+    },
+    "qualifiee:nombres": {
+     "vp": 0,
+     "ref": 3,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "qualifiee:noms": {
+     "vp": 23,
+     "ref": 30,
+     "pred": 28,
+     "precision": 0.8214285714285714,
+     "rappel": 0.7666666666666667,
+     "f1": 0.793103448275862
+    },
+    "qualifiee:proprietes": {
+     "vp": 63,
+     "ref": 140,
+     "pred": 127,
+     "precision": 0.49606299212598426,
+     "rappel": 0.45,
+     "f1": 0.4719101123595506
+    },
+    "qualifiee:relations": {
+     "vp": 33,
+     "ref": 194,
+     "pred": 71,
+     "precision": 0.4647887323943662,
+     "rappel": 0.17010309278350516,
+     "f1": 0.24905660377358493
+    },
+    "qualifiee:roles": {
+     "vp": 65,
+     "ref": 209,
+     "pred": 171,
+     "precision": 0.38011695906432746,
+     "rappel": 0.31100478468899523,
+     "f1": 0.34210526315789475
+    },
+    "qualifiee:roles_macro": {
+     "vp": 96,
+     "ref": 209,
+     "pred": 171,
+     "precision": 0.5614035087719298,
+     "rappel": 0.45933014354066987,
+     "f1": 0.5052631578947369
+    },
+    "structure:coref": {
+     "vp": 8,
+     "ref": 9,
+     "pred": 24,
+     "precision": 0.3333333333333333,
+     "rappel": 0.8888888888888888,
+     "f1": 0.48484848484848486
+    },
+    "structure:distinct": {
+     "vp": 0,
+     "ref": 0,
+     "pred": 0,
+     "precision": null,
+     "rappel": null,
+     "f1": null
+    },
+    "structure:entites": {
+     "vp": 286,
+     "ref": 324,
+     "pred": 350,
+     "precision": 0.8171428571428572,
+     "rappel": 0.8827160493827161,
+     "f1": 0.8486646884272998
+    },
+    "structure:evenements": {
+     "vp": 95,
+     "ref": 115,
+     "pred": 121,
+     "precision": 0.7851239669421488,
+     "rappel": 0.8260869565217391,
+     "f1": 0.8050847457627119
+    },
+    "structure:nombres": {
+     "vp": 0,
+     "ref": 3,
+     "pred": 0,
+     "precision": null,
+     "rappel": 0.0,
+     "f1": null
+    },
+    "structure:noms": {
+     "vp": 23,
+     "ref": 30,
+     "pred": 28,
+     "precision": 0.8214285714285714,
+     "rappel": 0.7666666666666667,
+     "f1": 0.793103448275862
+    },
+    "structure:proprietes": {
+     "vp": 69,
+     "ref": 140,
+     "pred": 127,
+     "precision": 0.5433070866141733,
+     "rappel": 0.4928571428571429,
+     "f1": 0.5168539325842697
+    },
+    "structure:relations": {
+     "vp": 35,
+     "ref": 194,
+     "pred": 71,
+     "precision": 0.49295774647887325,
+     "rappel": 0.18041237113402062,
+     "f1": 0.2641509433962264
+    },
+    "structure:roles": {
+     "vp": 70,
+     "ref": 209,
+     "pred": 171,
+     "precision": 0.4093567251461988,
+     "rappel": 0.3349282296650718,
+     "f1": 0.3684210526315789
+    },
+    "structure:roles_macro": {
+     "vp": 105,
+     "ref": 209,
+     "pred": 171,
+     "precision": 0.6140350877192983,
+     "rappel": 0.5023923444976076,
+     "f1": 0.5526315789473684
+    }
+   },
+   "securite": {
+    "reference_admissible": 472,
+    "reference_non_admissible": 71,
+    "promotion": 52,
+    "promotion_modalite": 17,
+    "promotion_portee": 36,
+    "retrogradation": 15,
+    "promotion_neg": 2,
+    "promotion_alternative": 2
+   }
+  }
+ },
+ "regles": {
+  "e1": {
+   "non_conforme": 3127,
+   "redondante": 3127
+  },
+  "e2": {
+   "erreur_regle": 400,
+   "erreur_heritee": 133,
+   "gain": 9
+  },
+  "p1": {
+   "erreur_regle": 105,
+   "erreur_heritee": 6,
+   "gain": 19
+  },
+  "r2": {
+   "erreur_regle": 285,
+   "erreur_heritee": 214,
+   "gain": 61
+  },
+  "r1": {
+   "erreur_regle": 139,
+   "erreur_heritee": 96,
+   "gain": 71
+  }
+ },
+ "textes_detail": [
+  {
+   "k": 1,
+   "genre": "indetermine",
+   "texte": "A man sings alone, one hand on his chest; the background is left blank, so nothing shows whether he is indoors or outside.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'alone')",
+      "('e4', 'blank')"
+     ],
+     "en_trop": [
+      "('e4', 'leave')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_20'), 'show')"
+     ]
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'of', 'e1')",
+      "('e2', 'on', 'e3')",
+      "('e3', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 1,
+   "genre": "negatif",
+   "texte": "A young woman stands alone in a meadow beneath the trees, mouth wide open in song, singing without any instrument or accompanist.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_17'), 'song')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'alone')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'in', 'e2')",
+      "('e4', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 1,
+   "genre": "positif",
+   "texte": "A young man stands alone in a meadow beneath the trees, mouth wide open in song, singing without any instrument or accompanist.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_17'), 'song')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'alone')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'in', 'e2')",
+      "('e4', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 6,
+   "genre": "indetermine",
+   "texte": "Une haute croix de pierre sur un socle à degrés est dessinée isolément sur la feuille, sans aucune indication du lieu où elle se dresse.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_10'), 'degré')",
+      "(('hors', 'e_1_20'), 'indication')",
+      "(('hors', 'e_1_5'), 'pierre')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'pierre')",
+      "('e2', 'à degrés')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'indiquer')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_12'), 'dessiner')",
+      "(('hors', 'v_1_26'), 'dresser')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_12'), 'lieu', 'e3')",
+      "(('hors', 'v_1_12'), 'patient', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e4')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_12'), 'lieu', 'e3')",
+      "(('hors', 'v_1_12'), 'patient_theme', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'sur', 'e3')"
+     ],
+     "en_trop": [
+      "('e1', 'de', ('hors', 'e_1_5'))",
+      "('e2', 'à', ('hors', 'e_1_10'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 6,
+   "genre": "negatif",
+   "texte": "Au centre d'un cimetière de village, entre les tombes et les ifs, s'élève une haute croix de pierre sur un socle à degrés.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'if')"
+     ],
+     "en_trop": [
+      "('e3', 'ifs')",
+      "(('hors', 'e_1_2'), 'centre')",
+      "(('hors', 'e_1_22'), 'pierre')",
+      "(('hors', 'e_1_27'), 'degré')",
+      "(('hors', 'e_1_7'), 'village')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'village')",
+      "('e4', 'pierre')",
+      "('e5', 'à degrés')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'élever')"
+     ]
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'lieu', 'e5')",
+      "(('hors', 'v_1_17'), 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'lieu', 'e5')",
+      "(('hors', 'v_1_17'), 'patient_theme', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'au centre de', 'e1')",
+      "('e4', 'entre', 'e2')",
+      "('e4', 'entre', 'e3')",
+      "('e4', 'sur', 'e5')"
+     ],
+     "en_trop": [
+      "('e1', 'de', ('hors', 'e_1_7'))",
+      "('e4', 'de', ('hors', 'e_1_22'))",
+      "('e5', 'à', ('hors', 'e_1_27'))",
+      "(('hors', 'e_1_2'), 'de', 'e1')",
+      "(('hors', 'e_1_2'), 'entre', 'e2')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 6,
+   "genre": "positif",
+   "texte": "Au centre d'une place de marché animée, entre les étals de légumes et les paniers de volailles, s'élève une haute croix de pierre sur un socle à degrés.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_2'), 'centre')",
+      "(('hors', 'e_1_27'), 'pierre')",
+      "(('hors', 'e_1_32'), 'degré')",
+      "(('hors', 'e_1_7'), 'marché')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'animé')",
+      "('e1', 'marché')",
+      "('e6', 'pierre')",
+      "('e7', 'à degrés')"
+     ],
+     "en_trop": [
+      "('e1', 'animer')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_22'), 'élever')"
+     ]
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_22'), 'lieu', 'e7')",
+      "(('hors', 'v_1_22'), 'patient', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_22'), 'lieu', 'e7')",
+      "(('hors', 'v_1_22'), 'patient_theme', 'e6')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e6', 'au centre de', 'e1')",
+      "('e6', 'entre', 'e2')",
+      "('e6', 'entre', 'e4')",
+      "('e6', 'sur', 'e7')"
+     ],
+     "en_trop": [
+      "('e1', 'de', ('hors', 'e_1_7'))",
+      "('e6', 'de', ('hors', 'e_1_27'))",
+      "('e7', 'à', ('hors', 'e_1_32'))",
+      "(('hors', 'e_1_2'), 'de', 'e1')",
+      "(('hors', 'e_1_2'), 'entre', 'e2')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 11,
+   "genre": "indetermine",
+   "texte": "Gravestones and leaning wooden crosses appear in the foreground; the frame cuts off whatever building may stand beyond them.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'gravestone')"
+     ],
+     "en_trop": [
+      "('e1', 'gravestones')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e2', 'lean')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'lean')",
+      "('v2', 'cut off')"
+     ],
+     "en_trop": [
+      "('v2', 'cut')",
+      "(('hors', 'v_1_18'), 'stand')",
+      "(('hors', 'v_1_6'), 'appear')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_18'), 'agent', 'e5')",
+      "(('hors', 'v_1_6'), 'agent', 'e1')",
+      "(('hors', 'v_1_6'), 'lieu', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'patient_theme', 'e5')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_18'), 'agent', 'e5')",
+      "(('hors', 'v_1_6'), 'agent', 'e1')",
+      "(('hors', 'v_1_6'), 'lieu', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'in', 'e3')",
+      "('e2', 'in', 'e3')",
+      "('e5', 'beyond', 'e1')",
+      "('e5', 'beyond', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 11,
+   "genre": "negatif",
+   "texte": "Gravestones and leaning wooden crosses fill a large municipal cemetery outside the town, with no church anywhere in sight.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'gravestone')"
+     ],
+     "en_trop": [
+      "('e1', 'gravestones')",
+      "(('hors', 'e_1_20'), 'sight')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e2', 'lean')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'lean')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'agent', 'e2')",
+      "('v2', 'lieu', 'e3')"
+     ],
+     "en_trop": [
+      "('v2', 'instrument', 'e5')",
+      "('v2', 'patient', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'agent', 'e2')",
+      "('v2', 'lieu', 'e3')"
+     ],
+     "en_trop": [
+      "('v2', 'instrument', 'e5')",
+      "('v2', 'patient_theme', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'outside', 'e4')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 11,
+   "genre": "positif",
+   "texte": "Gravestones and leaning wooden crosses crowd the grass that surrounds a small parish church, the whole enclosed by a low wall.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'gravestone')",
+      "('e4', 'parish church')",
+      "('e5', 'whole')"
+     ],
+     "en_trop": [
+      "('e1', 'gravestones')",
+      "('e4', 'parish')",
+      "(('hors', 'e_1_14'), 'church')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'small')"
+     ],
+     "en_trop": [
+      "('e2', 'lean')",
+      "(('hors', 'e_1_14'), 'small')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'lean')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'agent', 'e2')",
+      "('v2', 'lieu', 'e3')",
+      "('v3', 'theme', 'e4')",
+      "('v4', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e3')",
+      "('v3', 'patient', ('hors', 'e_1_14'))"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'agent', 'e2')",
+      "('v2', 'lieu', 'e3')",
+      "('v3', 'patient_theme', 'e4')",
+      "('v4', 'patient_theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v2', 'patient_theme', 'e3')",
+      "('v3', 'patient_theme', ('hors', 'e_1_14'))"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 16,
+   "genre": "indetermine",
+   "texte": "Une affiche à demi arrachée montre une jeune femme tenant une petite boîte dont l'étiquette est illisible.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'à demi arraché')"
+     ],
+     "en_trop": [
+      "('e1', 'arracher')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_6'), 'montrer')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e3')",
+      "(('hors', 'v_1_6'), 'agent', 'e1')",
+      "(('hors', 'v_1_6'), 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_6'), 'agent', 'e1')",
+      "(('hors', 'v_1_6'), 'patient_theme', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'de', 'e3')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 16,
+   "genre": "negatif",
+   "texte": "Une affiche de maternité montre une jeune femme enceinte, souriante, tenant un test de grossesse positif, à côté d'un calendrier de naissance.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'test de grossesse')"
+     ],
+     "en_trop": [
+      "('e3', 'test')",
+      "(('hors', 'e_1_17'), 'grossesse')",
+      "(('hors', 'e_1_21'), 'côté')",
+      "(('hors', 'e_1_26'), 'naissance')",
+      "(('hors', 'e_1_4'), 'maternité')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'maternité')",
+      "('e4', 'naissance')"
+     ],
+     "en_trop": [
+      "('e2', 'souriant')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'sourire')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_5'), 'montrer')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e3')",
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'patient_theme', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'à côté de', 'e4')"
+     ],
+     "en_trop": [
+      "('e1', 'de', ('hors', 'e_1_4'))",
+      "('e3', 'de', ('hors', 'e_1_17'))",
+      "('e4', 'de', ('hors', 'e_1_26'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 16,
+   "genre": "positif",
+   "texte": "Une affiche de planning familial montre une jeune femme tenant une plaquette de pilules contraceptives, à côté d'un préservatif et d'un calendrier du cycle.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_18'), 'côté')",
+      "(('hors', 'e_1_4'), 'planning')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'planning familial')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_4'), 'familial')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_6'), 'montrer')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e3')",
+      "(('hors', 'v_1_6'), 'agent', 'e1')",
+      "(('hors', 'v_1_6'), 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_6'), 'agent', 'e1')",
+      "(('hors', 'v_1_6'), 'patient_theme', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'à côté de', 'e5')",
+      "('e2', 'à côté de', 'e6')",
+      "('e6', 'de', 'e7')"
+     ],
+     "en_trop": [
+      "('e1', 'de', ('hors', 'e_1_4'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 21,
+   "genre": "indetermine",
+   "texte": "A carriage lies overturned in the ditch and its horses are gone; how the accident happened is not shown.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_16'), 'accident')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'overturned')"
+     ],
+     "en_trop": [
+      "('e3', 'gone')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'accident')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'happen')",
+      "(('hors', 'v_1_20'), 'show')",
+      "(('hors', 'v_1_3'), 'lie')",
+      "(('hors', 'v_1_4'), 'overturn')"
+     ]
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'agent', ('hors', 'e_1_16'))",
+      "(('hors', 'v_1_3'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'lieu', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'agent', ('hors', 'e_1_16'))",
+      "(('hors', 'v_1_3'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'lieu', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'in', 'e2')",
+      "('e3', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 21,
+   "genre": "negatif",
+   "texte": "A rider digs his spurs into his horse's flanks; the frightened animal bolts and the rider is thrown into the ditch.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_15'), 'bolt')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e5', 'frightened')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_15'), 'frighten')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'bolt')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'lieu', 'e4')",
+      "('v1', 'theme', 'e2')",
+      "('v2', 'agent', 'e5')",
+      "('v3', 'lieu', 'e7')",
+      "('v3', 'theme', 'e6')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')",
+      "('v3', 'patient', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'lieu', 'e4')",
+      "('v2', 'agent', 'e5')",
+      "('v3', 'lieu', 'e7')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'into', 'e4')",
+      "('e2', 'of', 'e6')",
+      "('e4', 'of', 'e5')",
+      "('e5', 'of', 'e6')",
+      "('e6', 'into', 'e7')"
+     ],
+     "en_trop": [
+      "('e4', \"'s\", 'e5')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 21,
+   "genre": "positif",
+   "texte": "A coachman lashes his horses with a whip; the frightened animals bolt and the carriage overturns into the ditch.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'frightened')"
+     ],
+     "en_trop": [
+      "('e4', 'frighten')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v3', 'lieu', 'e6')",
+      "('v3', 'patient', 'e5')"
+     ],
+     "en_trop": [
+      "('v3', 'agent', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v3', 'lieu', 'e6')",
+      "('v3', 'patient_theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v3', 'agent', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'of', 'e1')",
+      "('e5', 'into', 'e6')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 26,
+   "genre": "indetermine",
+   "texte": "La frise est presque entièrement effacée ; seuls subsistent quelques traits courbes, végétaux ou simples volutes.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'effacé')",
+      "('e3', 'simple')",
+      "('e3', 'végétal')"
+     ],
+     "en_trop": [
+      "('e1', 'effacer')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_2_2'), 'subsister')"
+     ]
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_2_2'), 'agent', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_2_2'), 'agent', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 26,
+   "genre": "negatif",
+   "texte": "La frise se compose de rinceaux de feuilles d'acanthe et de grappes de raisin, dessinées avec une précision de botaniste.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', \"feuille d'acanthe\")",
+      "('e4', 'grappe de raisin')"
+     ],
+     "en_trop": [
+      "('e3', 'feuille')",
+      "('e4', 'grappe')",
+      "(('hors', 'e_1_10'), 'acanthe')",
+      "(('hors', 'e_1_15'), 'raisin')",
+      "(('hors', 'e_1_20'), 'précision')",
+      "(('hors', 'e_1_22'), 'botaniste')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e2', 'dessiner')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e4')"
+     ],
+     "en_trop": [
+      "('e3', 'de', ('hors', 'e_1_10'))",
+      "('e4', 'de', ('hors', 'e_1_15'))",
+      "(('hors', 'e_1_20'), 'de', ('hors', 'e_1_22'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 26,
+   "genre": "positif",
+   "texte": "La frise se compose de rinceaux végétaux stylisés, feuilles et vrilles si librement inventées qu'on n'y reconnaît aucune plante.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'inventé')",
+      "('e4', 'inventé')"
+     ],
+     "en_trop": [
+      "('e2', 'inventer')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')",
+      "('v1', 'theme', 'e3')",
+      "('v1', 'theme', 'e4')",
+      "('v2', 'lieu', 'e3')",
+      "('v2', 'lieu', 'e4')",
+      "('v2', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e2')",
+      "('v1', 'patient_theme', 'e3')",
+      "('v1', 'patient_theme', 'e4')",
+      "('v2', 'lieu', 'e3')",
+      "('v2', 'lieu', 'e4')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 31,
+   "genre": "indetermine",
+   "texte": "Fishermen haul wicker traps onto their boat; the traps are still closed and their contents cannot be seen.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'fisherman')"
+     ],
+     "en_trop": [
+      "('e1', 'fishermen')",
+      "(('hors', 'e_1_3'), 'wicker')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'closed')",
+      "('e4', 'wicker')"
+     ],
+     "en_trop": [
+      "('e4', 'close')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'lieu', 'e3')",
+      "('v1', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'lieu', 'e3')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'of', 'e1')",
+      "('e4', 'onto', 'e3')",
+      "('e5', 'of', 'e4')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 31,
+   "genre": "negatif",
+   "texte": "Fishermen haul baskets of mussels and oysters onto their boat; inside the wicker baskets, the shells lie closed and still.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'fisherman')"
+     ],
+     "en_trop": [
+      "('e1', 'fishermen')",
+      "(('hors', 'e_1_14'), 'wicker')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e6', 'wicker')",
+      "('e7', 'closed')",
+      "('e7', 'still')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_19'), 'lie')",
+      "(('hors', 'v_1_20'), 'close')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'lieu', 'e5')",
+      "('v1', 'theme', 'e6')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e6')",
+      "(('hors', 'v_1_19'), 'agent', 'e7')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'lieu', 'e5')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_19'), 'agent', 'e7')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e5', 'of', 'e1')",
+      "('e6', 'of', 'e4')",
+      "('e6', 'onto', 'e5')",
+      "('e7', 'inside', 'e6')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 31,
+   "genre": "positif",
+   "texte": "Fishermen haul lobster pots onto their boat; inside the wicker traps, lobsters and crabs wave their claws.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'fisherman')",
+      "('e2', 'lobster pot')"
+     ],
+     "en_trop": [
+      "('e1', 'fishermen')",
+      "('e2', 'lobster')",
+      "(('hors', 'e_1_11'), 'wicker')",
+      "(('hors', 'e_1_4'), 'pot')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'wicker')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'lieu', 'e3')",
+      "('v1', 'theme', 'e4')",
+      "('v2', 'agent', 'e6')",
+      "('v2', 'lieu', 'e4')",
+      "('v2', 'theme', 'e7')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', ('hors', 'e_1_4'))",
+      "('v2', 'patient', 'e7')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'lieu', 'e3')",
+      "('v1', 'patient_theme', 'e4')",
+      "('v2', 'agent', 'e6')",
+      "('v2', 'lieu', 'e4')"
+     ],
+     "en_trop": [
+      "('v1', 'patient_theme', ('hors', 'e_1_4'))"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'of', 'e1')",
+      "('e4', 'onto', 'e3')",
+      "('e5', 'inside', 'e4')",
+      "('e6', 'inside', 'e4')",
+      "('e7', 'of', 'e5')",
+      "('e7', 'of', 'e6')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 36,
+   "genre": "indetermine",
+   "texte": "Une cascade tombe entre des rochers ; le fragment conservé est trop petit pour juger du caractère du paysage.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'conservé')"
+     ],
+     "en_trop": [
+      "('e3', 'conserver')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'entre', 'e2')",
+      "('e4', 'de', 'e5')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 36,
+   "genre": "negatif",
+   "texte": "Dans une vue topographique fidèle d'une vallée des Alpes, une cascade tombe entre des rochers, notée sur le motif avec ses chalets et ses sapins.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'alpes')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_22'), 'motif')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e5', 'noter')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'noter')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'theme', 'e4')",
+      "('v2', 'theme', 'e6')",
+      "('v2', 'theme', 'e7')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'patient_theme', 'e4')",
+      "('v2', 'patient_theme', 'e6')",
+      "('v2', 'patient_theme', 'e7')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e3')",
+      "('e4', 'dans', 'e1')",
+      "('e4', 'entre', 'e5')",
+      "('e6', 'de', 'e2')",
+      "('e7', 'de', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 36,
+   "genre": "positif",
+   "texte": "Dans un paysage idéal à la manière de Poussin, une cascade tombe entre des rochers harmonieusement ordonnés, parmi des temples antiques et des bergers drapés.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'poussin')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e5', 'ordonné')"
+     ],
+     "en_trop": [
+      "('e5', 'ordonner')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'lieu', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'lieu', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'dans', 'e1')",
+      "('e4', 'entre', 'e5')",
+      "('e4', 'parmi', 'e6')",
+      "('e4', 'parmi', 'e7')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 41,
+   "genre": "indetermine",
+   "texte": "An anatomical plate shows a broken thigh-bone with its fragments displaced; only the isolated bone is drawn, not the body it belongs to.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'displaced')",
+      "('e4', 'broken')"
+     ],
+     "en_trop": [
+      "('e3', 'displace')",
+      "('e4', 'break')",
+      "('e4', 'draw')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_4'), 'show')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e4')",
+      "('v1', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e4')",
+      "('v1', 'patient_theme', 'e5')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'patient_theme', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'of', 'e4')"
+     ],
+     "en_trop": [
+      "('e4', 'with', 'e3')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 41,
+   "genre": "negatif",
+   "texte": "An anatomical plate shows a standing male nude whose broken thigh-bone is drawn beneath the skin, the two fragments visibly displaced.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'broken')",
+      "('e5', 'displaced')"
+     ],
+     "en_trop": [
+      "('e2', 'standing')",
+      "('e3', 'break')",
+      "('e5', 'displace')"
+     ]
+    },
+    "nombres": {
+     "manquants": [
+      "('e5', 2)"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'stand')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_13'), 'draw')",
+      "(('hors', 'v_1_4'), 'show')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_13'), 'patient', 'e3')",
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_13'), 'patient_theme', 'e3')",
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'patient_theme', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'beneath', 'e4')",
+      "('e3', 'of', 'e2')",
+      "('e4', 'of', 'e2')",
+      "('e5', 'of', 'e3')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 41,
+   "genre": "positif",
+   "texte": "An anatomical plate shows a standing female nude whose broken thigh-bone is drawn beneath the skin, the two fragments visibly displaced.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e5', 'displaced')"
+     ],
+     "en_trop": [
+      "('e2', 'standing')",
+      "('e5', 'displace')"
+     ]
+    },
+    "nombres": {
+     "manquants": [
+      "('e5', 2)"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'stand')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_13'), 'draw')",
+      "(('hors', 'v_1_4'), 'show')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_13'), 'patient', 'e3')",
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_13'), 'patient_theme', 'e3')",
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'patient_theme', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'beneath', 'e4')",
+      "('e3', 'of', 'e2')",
+      "('e4', 'of', 'e2')",
+      "('e5', 'of', 'e3')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 46,
+   "genre": "indetermine",
+   "texte": "Un homme assis à son bureau se tient le front à deux mains ; on ne sait s'il souffre ou s'il réfléchit.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e1', 'asseoir')"
+     ]
+    },
+    "nombres": {
+     "manquants": [
+      "('e4', 2)"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'asseoir')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_2_3'), 'savoir')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e4')",
+      "('v2', 'theme', 'e3')",
+      "('v3', 'agent', 'e1')",
+      "('v4', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e1')",
+      "('v2', 'patient', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e4')",
+      "('v3', 'agent', 'e1')",
+      "('v4', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v2', 'patient_theme', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'à', 'e2')",
+      "('e2', 'de', 'e1')",
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 46,
+   "genre": "negatif",
+   "texte": "Un homme assis à son bureau se tient la joue à deux mains, grimaçant sous une rage de dents, un mouchoir noué autour de la mâchoire.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e5', 'rage de dents')"
+     ],
+     "en_trop": [
+      "('e5', 'rage')",
+      "(('hors', 'e_1_20'), 'dent')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e6', 'noué')"
+     ],
+     "en_trop": [
+      "('e1', 'asseoir')",
+      "('e6', 'nouer')"
+     ]
+    },
+    "nombres": {
+     "manquants": [
+      "('e4', 2)"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'asseoir')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e4')",
+      "('v2', 'theme', 'e3')",
+      "('v3', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e1')",
+      "('v2', 'patient', 'e3')",
+      "('v3', 'lieu', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e4')",
+      "('v3', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v2', 'patient_theme', 'e1')",
+      "('v3', 'lieu', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'sous', 'e5')",
+      "('e1', 'à', 'e2')",
+      "('e2', 'de', 'e1')",
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')",
+      "('e6', 'autour de', 'e7')",
+      "('e7', 'de', 'e1')"
+     ],
+     "en_trop": [
+      "('e3', 'à', 'e4')",
+      "('e5', 'de', ('hors', 'e_1_20'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 46,
+   "genre": "positif",
+   "texte": "Un homme assis à son bureau se tient le front à deux mains, grimaçant sous une violente migraine, une compresse posée sur la tempe.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e6', 'posé')"
+     ],
+     "en_trop": [
+      "('e1', 'asseoir')",
+      "('e6', 'poser')"
+     ]
+    },
+    "nombres": {
+     "manquants": [
+      "('e4', 2)"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'asseoir')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e4')",
+      "('v2', 'theme', 'e3')",
+      "('v3', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e1')",
+      "('v2', 'patient', 'e3')",
+      "('v3', 'lieu', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v2', 'instrument', 'e4')",
+      "('v3', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v2', 'patient_theme', 'e1')",
+      "('v3', 'lieu', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'sous', 'e5')",
+      "('e1', 'à', 'e2')",
+      "('e2', 'de', 'e1')",
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')",
+      "('e6', 'sur', 'e7')",
+      "('e7', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 51,
+   "genre": "indetermine",
+   "texte": "The engraving shows only the lady's face; a fashion note printed below mentions a mantelet.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_11'), 'fashion')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'fashion')",
+      "('e4', 'printed')"
+     ],
+     "en_trop": [
+      "('e4', 'print')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_3'), 'show')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e5')",
+      "(('hors', 'v_1_3'), 'agent', 'e1')",
+      "(('hors', 'v_1_3'), 'patient', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_3'), 'agent', 'e1')",
+      "(('hors', 'v_1_3'), 'patient_theme', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'of', 'e2')",
+      "('e4', 'below', 'e3')"
+     ],
+     "en_trop": [
+      "('e3', \"'s\", 'e2')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 51,
+   "genre": "negatif",
+   "texte": "A lady wears a long hooded cloak that falls to her ankles, fastened at the throat with ribbons.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')",
+      "('v2', 'lieu', 'e3')",
+      "('v3', 'patient', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'lieu', 'e3')",
+      "('v3', 'patient_theme', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'of', 'e1')",
+      "('e4', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 51,
+   "genre": "positif",
+   "texte": "A lady wears a short silk mantelet, a little cape that barely covers her shoulders, tied at the throat with ribbons.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_6'), 'silk')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'silk')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e3')",
+      "('v2', 'theme', 'e4')",
+      "('v3', 'patient', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e3')",
+      "('v2', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v3', 'patient_theme', 'e3')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'of', 'e1')",
+      "('e5', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 56,
+   "genre": "indetermine",
+   "texte": "Une planche anatomique dont la figure a été découpée ; seules subsistent les lettres de renvoi d'un appareil génital non précisé.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'lettre de renvoi')",
+      "('e4', 'appareil génital')"
+     ],
+     "en_trop": [
+      "('e3', 'lettre')",
+      "('e4', 'appareil')",
+      "(('hors', 'e_2_6'), 'renvoi')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'précisé')"
+     ],
+     "en_trop": [
+      "('e2', 'découper')",
+      "('e4', 'génital')",
+      "('e4', 'préciser')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'découper')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'patient', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e1')",
+      "('e3', 'de', 'e4')"
+     ],
+     "en_trop": [
+      "('e3', 'de', ('hors', 'e_2_6'))",
+      "(('hors', 'e_2_6'), 'de', 'e4')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 56,
+   "genre": "negatif",
+   "texte": "Une planche anatomique représente l'appareil génital féminin, utérus et ovaires, avec ses canaux désignés par des lettres.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'appareil génital')"
+     ],
+     "en_trop": [
+      "('e2', 'appareil')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e2', 'génital')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_4'), 'représenter')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e5')",
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'instrument', 'e5')",
+      "(('hors', 'v_1_4'), 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'instrument', 'e5')",
+      "(('hors', 'v_1_4'), 'patient_theme', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'de', 'e2')",
+      "('e4', 'de', 'e2')",
+      "('e5', 'de', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 56,
+   "genre": "positif",
+   "texte": "Une planche anatomique représente l'appareil génital masculin, pénis et testicules, avec ses canaux désignés par des lettres.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'appareil génital')"
+     ],
+     "en_trop": [
+      "('e2', 'appareil')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e2', 'génital')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_4'), 'représenter')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e5')",
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'instrument', 'e5')",
+      "(('hors', 'v_1_4'), 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_4'), 'agent', 'e1')",
+      "(('hors', 'v_1_4'), 'instrument', 'e5')",
+      "(('hors', 'v_1_4'), 'patient_theme', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'de', 'e2')",
+      "('e4', 'de', 'e2')",
+      "('e5', 'de', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 61,
+   "genre": "indetermine",
+   "texte": "A garden pavilion with bowls and censers stands empty; nothing shows whether anything is burning or in bloom.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_19'), 'bloom')",
+      "(('hors', 'e_1_2'), 'garden')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'empty')",
+      "('e1', 'garden')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'burn')",
+      "('v2', 'bloom')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_12'), 'show')",
+      "(('hors', 'v_1_8'), 'stand')"
+     ]
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_8'), 'agent', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_8'), 'agent', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'with', 'e3')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 61,
+   "genre": "negatif",
+   "texte": "A tannery yard is filled with stinking hides and vats of urine, smoke from the boilers drifts through the air, and the visitors hold their noses against the stench.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_2'), 'tannery')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'tannery')"
+     ],
+     "en_trop": [
+      "('e2', 'stinking')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'stink')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'lieu', 'e1')",
+      "('v1', 'theme', 'e2')",
+      "('v1', 'theme', 'e3')",
+      "('v2', 'agent', 'e2')",
+      "('v3', 'lieu', 'e7')",
+      "('v4', 'theme', 'e9')"
+     ],
+     "en_trop": [
+      "('v1', 'instrument', 'e2')",
+      "('v1', 'patient', 'e1')",
+      "('v4', 'patient', 'e9')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'lieu', 'e1')",
+      "('v1', 'patient_theme', 'e2')",
+      "('v1', 'patient_theme', 'e3')",
+      "('v2', 'agent', 'e2')",
+      "('v3', 'lieu', 'e7')"
+     ],
+     "en_trop": [
+      "('v1', 'instrument', 'e2')",
+      "('v1', 'patient_theme', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'of', 'e4')",
+      "('e9', 'of', 'e8')"
+     ],
+     "en_trop": [
+      "('e2', 'of', 'e4')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 61,
+   "genre": "positif",
+   "texte": "A garden pavilion is filled with blossoming orange trees and bowls of rose petals, censers send perfumed smoke through the air, and the visitors breathe in the scent with delight.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'orange tree')"
+     ],
+     "en_trop": [
+      "('e2', 'tree')",
+      "(('hors', 'e_1_13'), 'rose')",
+      "(('hors', 'e_1_2'), 'garden')",
+      "(('hors', 'e_1_32'), 'delight')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'garden')",
+      "('e4', 'rose')",
+      "('e6', 'perfumed')"
+     ],
+     "en_trop": [
+      "('e2', 'blossoming')",
+      "('e2', 'orange')",
+      "('e6', 'perfume')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'blossom')",
+      "('v4', 'breathe in')",
+      "('v5', 'delight')"
+     ],
+     "en_trop": [
+      "('v4', 'breathe')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'lieu', 'e1')",
+      "('v1', 'theme', 'e2')",
+      "('v1', 'theme', 'e3')",
+      "('v2', 'agent', 'e2')",
+      "('v3', 'lieu', 'e7')",
+      "('v3', 'theme', 'e6')",
+      "('v4', 'theme', 'e9')",
+      "('v5', 'agent', 'e8')"
+     ],
+     "en_trop": [
+      "('v1', 'instrument', 'e2')",
+      "('v1', 'patient', 'e1')",
+      "('v3', 'patient', 'e6')",
+      "('v4', 'instrument', ('hors', 'e_1_32'))",
+      "('v4', 'lieu', 'e9')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'lieu', 'e1')",
+      "('v1', 'patient_theme', 'e2')",
+      "('v1', 'patient_theme', 'e3')",
+      "('v2', 'agent', 'e2')",
+      "('v3', 'lieu', 'e7')",
+      "('v4', 'patient_theme', 'e9')",
+      "('v5', 'agent', 'e8')"
+     ],
+     "en_trop": [
+      "('v1', 'instrument', 'e2')",
+      "('v1', 'patient_theme', 'e1')",
+      "('v4', 'instrument', ('hors', 'e_1_32'))",
+      "('v4', 'lieu', 'e9')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 66,
+   "genre": "indetermine",
+   "texte": "Une vieille femme garde son bonnet bien serré sur la tête, tandis que sa servante tient une perruque.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'serré')"
+     ],
+     "en_trop": [
+      "('e2', 'serrer')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')",
+      "('v2', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')",
+      "('v2', 'patient', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e1')",
+      "('e2', 'sur', 'e3')",
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 66,
+   "genre": "negatif",
+   "texte": "Un vieil homme, son bonnet ôté, laisse voir son crâne chauve et luisant, que son valet s'apprête à couvrir d'une perruque.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'ôté')",
+      "('e3', 'chauve')",
+      "('e3', 'luisant')"
+     ],
+     "en_trop": [
+      "('e2', 'ôter')",
+      "('e3', 'chauv')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_10'), 'voir')",
+      "(('hors', 'v_1_9'), 'laisser')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e4')",
+      "('v2', 'instrument', 'e5')",
+      "('v2', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_10'), 'patient', 'e3')",
+      "(('hors', 'v_1_9'), 'agent', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e4')",
+      "('v2', 'instrument', 'e5')",
+      "('v2', 'patient_theme', 'e3')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_10'), 'patient_theme', 'e3')",
+      "(('hors', 'v_1_9'), 'agent', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e1')",
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 66,
+   "genre": "positif",
+   "texte": "Une vieille femme, son bonnet ôté, laisse voir son crâne chauve et luisant, que sa servante s'apprête à couvrir d'une perruque.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'ôté')",
+      "('e3', 'chauve')",
+      "('e3', 'luisant')"
+     ],
+     "en_trop": [
+      "('e2', 'ôter')",
+      "('e3', 'chauv')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_10'), 'voir')",
+      "(('hors', 'v_1_9'), 'laisser')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e4')",
+      "('v2', 'instrument', 'e5')",
+      "('v2', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_10'), 'patient', 'e3')",
+      "(('hors', 'v_1_9'), 'agent', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e4')",
+      "('v2', 'instrument', 'e5')",
+      "('v2', 'patient_theme', 'e3')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_10'), 'patient_theme', 'e3')",
+      "(('hors', 'v_1_9'), 'agent', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e1')",
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 71,
+   "genre": "indetermine",
+   "texte": "Saint Cassian of Imola, stylus in hand, stands beside a bishop in a church; the panel is damaged and what passes between them cannot be read.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'imola')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'cassian')",
+      "('e2', 'imola')"
+     ],
+     "en_trop": [
+      "('e1', 'cassian of imola')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [
+      "('e7', 'damaged')"
+     ],
+     "en_trop": [
+      "('e7', 'damage')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'read')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'agent', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'agent', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'beside', 'e5')",
+      "('e1', 'of', 'e2')",
+      "('e4', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 71,
+   "genre": "negatif",
+   "texte": "Saint Cassian of Imola, bound to a post, is stabbed to death with their styluses by the pupils he once taught.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'imola')",
+      "('e5', 'stylus')"
+     ],
+     "en_trop": [
+      "('e5', 'styluse')",
+      "(('hors', 'e_1_14'), 'death')"
+     ]
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'cassian')",
+      "('e2', 'imola')"
+     ],
+     "en_trop": [
+      "('e1', 'cassian of imola')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'bound')"
+     ],
+     "en_trop": [
+      "('e1', 'bind')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'die')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v3', 'agent', 'e1')",
+      "('v3', 'destinataire', 'e4')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v3', 'agent', 'e1')",
+      "('v3', 'destinataire', 'e4')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'of', 'e2')",
+      "('e1', 'to', 'e3')",
+      "('e5', 'of', 'e4')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 71,
+   "genre": "positif",
+   "texte": "Saint Cassian of Imola kneels before a bishop who anoints his head and consecrates him, his schoolmaster's stylus laid on the altar step beside him.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'imola')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_24'), 'altar')"
+     ]
+    },
+    "noms": {
+     "manquants": [
+      "('e2', 'imola')",
+      "('e6', 'cassian')"
+     ],
+     "en_trop": [
+      "('e6', 'cassian of imola')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [
+      "('e5', 'laid')",
+      "('e7', 'altar')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_21'), 'lay')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v3', 'agent', 'e3')",
+      "('v3', 'patient', 'e6')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')",
+      "(('hors', 'v_1_21'), 'agent', 'e5')",
+      "(('hors', 'v_1_21'), 'lieu', 'e7')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v3', 'agent', 'e3')",
+      "('v3', 'patient_theme', 'e6')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')",
+      "(('hors', 'v_1_21'), 'agent', 'e5')",
+      "(('hors', 'v_1_21'), 'lieu', 'e7')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'of', 'e6')",
+      "('e5', 'beside', 'e6')",
+      "('e5', 'of', 'e6')",
+      "('e5', 'on', 'e7')",
+      "('e6', 'before', 'e3')",
+      "('e6', 'of', 'e2')"
+     ],
+     "en_trop": [
+      "('e5', \"'s\", 'e6')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 76,
+   "genre": "indetermine",
+   "texte": "Saint Pantaléon, médecin, ses instruments chirurgicaux posés près de lui, se tient debout dans un paysage.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'debout')",
+      "('e3', 'posé')"
+     ],
+     "en_trop": [
+      "('e3', 'poser')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient_theme', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'de', 'e2')",
+      "('e3', 'près de', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 76,
+   "genre": "negatif",
+   "texte": "Saint Pantaléon, médecin, les mains clouées au-dessus de la tête contre un olivier, subit le martyre devant ses bourreaux.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_19'), 'martyre')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'martyriser')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'subir')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'patient', 'e2')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'agent', 'e2')",
+      "(('hors', 'v_1_17'), 'lieu', 'e6')",
+      "(('hors', 'v_1_17'), 'patient', ('hors', 'e_1_19'))"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e2')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'agent', 'e2')",
+      "(('hors', 'v_1_17'), 'lieu', 'e6')",
+      "(('hors', 'v_1_17'), 'patient_theme', ('hors', 'e_1_19'))"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'devant', 'e6')",
+      "('e3', 'au-dessus de', 'e4')",
+      "('e3', 'contre', 'e5')",
+      "('e3', 'de', 'e2')",
+      "('e4', 'de', 'e2')",
+      "('e6', 'de', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 76,
+   "genre": "positif",
+   "texte": "Saint Pantaléon, médecin, ses instruments chirurgicaux posés près de lui, s'agenouille seul en prière devant un crucifix.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_18'), 'prière')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'seul')",
+      "('e3', 'posé')"
+     ],
+     "en_trop": [
+      "('e3', 'poser')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'prier')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'devant', 'e4')",
+      "('e3', 'de', 'e2')",
+      "('e3', 'près de', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 81,
+   "genre": "indetermine",
+   "texte": "Shiva, with trident and serpent, sits beside Parvati on Mount Kailasa.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'shiva')",
+      "('e4', 'parvati')",
+      "('e5', 'mount')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e5', 'kailasa')"
+     ],
+     "en_trop": [
+      "('e5', 'mount kailasa')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'instrument', 'e2')",
+      "('v1', 'lieu', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'instrument', 'e2')",
+      "('v1', 'lieu', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'beside', 'e4')",
+      "('e1', 'with', 'e2')",
+      "('e1', 'with', 'e3')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 81,
+   "genre": "negatif",
+   "texte": "Shiva, his throat turned blue, dances triumphantly within a ring of flames, while Parvati looks on and the dwarf of ignorance lies under his foot.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'shiva')",
+      "('e5', 'parvati')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'blue')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'look on')"
+     ],
+     "en_trop": [
+      "('v2', 'look')",
+      "(('hors', 'v_1_5'), 'turn')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e3')"
+     ],
+     "en_trop": [
+      "('v3', 'lieu', 'e8')",
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'agent', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e3')"
+     ],
+     "en_trop": [
+      "('v3', 'lieu', 'e8')",
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'agent', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'of', 'e1')",
+      "('e6', 'under', 'e8')",
+      "('e8', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 81,
+   "genre": "positif",
+   "texte": "Shiva, his throat turned blue, writhes in pain after swallowing the poison churned from the cosmic ocean, while Parvati presses his neck to hold it back.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'shiva')",
+      "('e5', 'parvati')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_10'), 'pain')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'blue')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'writhe')",
+      "('v2', 'pain')",
+      "('v6', 'hold back')"
+     ],
+     "en_trop": [
+      "('v1', 'writh')",
+      "('v6', 'hold')",
+      "(('hors', 'v_1_5'), 'turn')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v2', 'agent', 'e1')",
+      "('v3', 'agent', 'e1')",
+      "('v3', 'theme', 'e3')",
+      "('v4', 'lieu', 'e4')",
+      "('v4', 'theme', 'e3')",
+      "('v5', 'theme', 'e6')",
+      "('v6', 'agent', 'e5')",
+      "('v6', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', ('hors', 'e_1_10'))",
+      "('v3', 'patient', 'e3')",
+      "('v5', 'patient', 'e6')",
+      "(('hors', 'v_1_5'), 'agent', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v2', 'agent', 'e1')",
+      "('v3', 'agent', 'e1')",
+      "('v4', 'lieu', 'e4')",
+      "('v4', 'patient_theme', 'e3')",
+      "('v6', 'agent', 'e5')",
+      "('v6', 'patient_theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', ('hors', 'e_1_10'))",
+      "(('hors', 'v_1_5'), 'agent', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'of', 'e1')",
+      "('e6', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 86,
+   "genre": "indetermine",
+   "texte": "Saint Athanase, évêque d'Alexandrie, représenté en buste, tient un rouleau.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'alexandrie')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e2', 'représenter')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'en', 'e4')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 86,
+   "genre": "negatif",
+   "texte": "Saint Athanase, évêque d'Alexandrie, en riches ornements pontificaux, foule aux pieds l'hérétique Arius.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'alexandrie')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_13'), 'foule')",
+      "(('hors', 'e_1_15'), 'pied')"
+     ]
+    },
+    "noms": {
+     "manquants": [
+      "('e5', 'arius')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_18'), 'arius')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'fouler aux pieds')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'patient', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'patient_theme', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 86,
+   "genre": "positif",
+   "texte": "Saint Athanase, évêque d'Alexandrie, a dépouillé ses ornements et vit caché au désert dans une grotte, vêtu d'une simple tunique, jeûnant et priant devant un rouleau.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'alexandrie')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'caché')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_14'), 'cacher')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e4')",
+      "('v2', 'agent', 'e2')",
+      "('v2', 'lieu', 'e5')",
+      "('v2', 'lieu', 'e6')",
+      "('v3', 'patient', 'e2')",
+      "('v3', 'theme', 'e7')",
+      "('v4', 'agent', 'e2')",
+      "('v5', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e4')",
+      "('v5', 'lieu', 'e8')",
+      "(('hors', 'v_1_14'), 'lieu', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e2')",
+      "('v2', 'lieu', 'e5')",
+      "('v2', 'lieu', 'e6')",
+      "('v3', 'patient_theme', 'e2')",
+      "('v3', 'patient_theme', 'e7')",
+      "('v4', 'agent', 'e2')",
+      "('v5', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v5', 'lieu', 'e8')",
+      "(('hors', 'v_1_14'), 'lieu', 'e6')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'devant', 'e8')",
+      "('e4', 'de', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 91,
+   "genre": "indetermine",
+   "texte": "Saint Lidwyna of Schiedam, roses in her hair, lies on her sickbed with a crucifix; a man sits beside her.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'schiedam')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'lidwyna')",
+      "('e2', 'schiedam')"
+     ],
+     "en_trop": [
+      "('e1', 'lidwyna of schiedam')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'instrument', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'instrument', 'e6')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'of', 'e2')",
+      "('e1', 'with', 'e6')",
+      "('e4', 'of', 'e1')",
+      "('e5', 'of', 'e1')",
+      "('e7', 'beside', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 91,
+   "genre": "negatif",
+   "texte": "Saint Lidwyna of Schiedam, roses in her hair, falls on the ice while skating and breaks a rib.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'schiedam')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'lidwyna')",
+      "('e2', 'schiedam')"
+     ],
+     "en_trop": [
+      "('e1', 'lidwyna of schiedam')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v3', 'agent', 'e1')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v3', 'agent', 'e1')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'of', 'e2')",
+      "('e4', 'of', 'e1')",
+      "('e6', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 91,
+   "genre": "positif",
+   "texte": "Saint Lidwyna of Schiedam, roses in her hair, sits up on her sickbed and dictates her visions to a scribe who writes them down.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'schiedam')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'lidwyna')",
+      "('e2', 'schiedam')"
+     ],
+     "en_trop": [
+      "('e1', 'lidwyna of schiedam')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'sit up')",
+      "('v3', 'write down')"
+     ],
+     "en_trop": [
+      "('v1', 'sit')",
+      "('v3', 'write')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'destinataire', 'e7')",
+      "('v2', 'theme', 'e6')",
+      "('v3', 'theme', 'e6')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'destinataire', 'e7')",
+      "('v3', 'patient_theme', 'e6')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'of', 'e2')",
+      "('e4', 'of', 'e1')",
+      "('e5', 'of', 'e1')",
+      "('e6', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 96,
+   "genre": "indetermine",
+   "texte": "Sainte Afre d'Augsbourg se tient près d'un arbre mort, un vase d'onguent à la main.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'augsbourg')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'afre')",
+      "('e2', 'augsbourg')"
+     ],
+     "en_trop": [
+      "('e1', \"afre d'augsbourg\")"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'patient_theme', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'de', 'e2')",
+      "('e1', 'près de', 'e3')",
+      "('e6', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 96,
+   "genre": "negatif",
+   "texte": "Sainte Afre d'Augsbourg, liée à un arbre mort au milieu d'un tas de bois, est brûlée vive sur le bûcher.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'augsbourg')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_12'), 'milieu')"
+     ]
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'afre')",
+      "('e2', 'augsbourg')"
+     ],
+     "en_trop": [
+      "('e1', \"afre d'augsbourg\")"
+     ]
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'lié')",
+      "('e1', 'vif')",
+      "('e3', 'mort')"
+     ],
+     "en_trop": [
+      "('e1', 'lier')",
+      "('e3', 'mourir')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'de', 'e2')",
+      "('e1', 'à', 'e3')",
+      "('e3', 'au milieu de', 'e4')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_12'), 'de', 'e4')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 96,
+   "genre": "positif",
+   "texte": "Longtemps après son supplice, sainte Afre d'Augsbourg apparaît en songe à un évêque endormi pour lui indiquer l'emplacement de son tombeau.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'augsbourg')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_12'), 'songer')",
+      "(('hors', 'e_1_4'), 'supplice')"
+     ]
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'afre')",
+      "('e2', 'augsbourg')"
+     ],
+     "en_trop": [
+      "('e1', \"afre d'augsbourg\")"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'supplicier')",
+      "('v3', 'songer')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'patient', 'e1')",
+      "('v2', 'destinataire', 'e3')",
+      "('v3', 'agent', 'e3')",
+      "('v4', 'agent', 'e1')",
+      "('v4', 'destinataire', 'e3')",
+      "('v4', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v4', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e1')",
+      "('v2', 'destinataire', 'e3')",
+      "('v3', 'agent', 'e3')",
+      "('v4', 'agent', 'e1')",
+      "('v4', 'destinataire', 'e3')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'de', 'e2')",
+      "('e5', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 101,
+   "genre": "indetermine",
+   "texte": "In the schoolyard a boy is down on the ground; whether he has fallen or is playing cannot be told.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'fall')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_21'), 'tell')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'agent', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'agent', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'in', 'e1')",
+      "('e2', 'on', 'e3')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 101,
+   "genre": "negatif",
+   "texte": "In the schoolyard boys race each other walking on their hands, legs straight up in the air, in a game of tricks.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'straight up')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'trick')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'lieu', 'e1')",
+      "('v2', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'lieu', 'e6')",
+      "('v2', 'lieu', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'lieu', 'e1')",
+      "('v2', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'lieu', 'e6')",
+      "('v2', 'lieu', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'in', 'e6')",
+      "('e2', 'on', 'e3')",
+      "('e3', 'of', 'e2')",
+      "('e4', 'in', 'e5')",
+      "('e4', 'of', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 101,
+   "genre": "positif",
+   "texte": "In the schoolyard boys race each other on all fours, hands and feet on the ground like bears, in a game of leaps and scrambles.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_10'), 'four')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'leap')",
+      "('v3', 'scramble')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'lieu', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'lieu', 'e7')",
+      "('v1', 'lieu', ('hors', 'e_1_10'))"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'lieu', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'lieu', 'e7')",
+      "('v1', 'lieu', ('hors', 'e_1_10'))"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'in', 'e7')",
+      "('e2', 'like', 'e6')",
+      "('e3', 'of', 'e2')",
+      "('e3', 'on', 'e5')",
+      "('e4', 'of', 'e2')",
+      "('e4', 'on', 'e5')",
+      "('e7', 'of', 'e9')"
+     ],
+     "en_trop": [
+      "('e5', 'like', 'e6')",
+      "(('hors', 'e_1_10'), 'on', 'e5')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 106,
+   "genre": "indetermine",
+   "texte": "Depuis le pont d'un navire, une lueur rouge monte dans la nuit ; on ne sait si c'est une fusée ou un incendie.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_2_3'), 'savoir')"
+     ]
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'depuis', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 106,
+   "genre": "negatif",
+   "texte": "Depuis le pont d'un navire en détresse, un marin agite des pavillons de signalisation pour appeler à l'aide.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e4', 'pavillon de signalisation')"
+     ],
+     "en_trop": [
+      "('e4', 'pavillon')",
+      "(('hors', 'e_1_16'), 'signalisation')",
+      "(('hors', 'e_1_8'), 'détresse')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'en détresse')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e4')",
+      "('v2', 'agent', 'e3')",
+      "('v2', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e3')",
+      "('v2', 'patient_theme', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'depuis', 'e1')"
+     ],
+     "en_trop": [
+      "('e2', 'en', ('hors', 'e_1_8'))",
+      "('e4', 'de', ('hors', 'e_1_16'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 106,
+   "genre": "positif",
+   "texte": "Depuis le pont d'un navire en détresse, un marin tire une fusée de signalisation qui monte dans la nuit en une traînée rouge.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e4', 'fusée de signalisation')"
+     ],
+     "en_trop": [
+      "('e4', 'fusée')",
+      "(('hors', 'e_1_16'), 'signalisation')",
+      "(('hors', 'e_1_8'), 'détresse')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'en détresse')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'depuis', 'e1')",
+      "('e4', 'en', 'e6')"
+     ],
+     "en_trop": [
+      "('e2', 'en', ('hors', 'e_1_8'))",
+      "('e4', 'de', ('hors', 'e_1_16'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 111,
+   "genre": "indetermine",
+   "texte": "A man sits on straw beside a barred window; the room could be a cell or a stable.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'barred')"
+     ],
+     "en_trop": [
+      "('e3', 'barr')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'beside', 'e3')",
+      "('e1', 'on', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 111,
+   "genre": "negatif",
+   "texte": "A prisoner in chains kneels on a scaffold in the square, while the executioner raises his sword above him.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'theme', 'e6')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e4')",
+      "('v2', 'patient', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'lieu', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'on', 'e3')",
+      "('e3', 'in', 'e4')",
+      "('e6', 'above', 'e1')",
+      "('e6', 'of', 'e5')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 111,
+   "genre": "positif",
+   "texte": "A prisoner in chains sits on straw in a dungeon cell behind a barred door, while the jailer turns the key in the lock.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_10'), 'dungeon')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'dungeon')",
+      "('e5', 'barred')"
+     ],
+     "en_trop": [
+      "('e5', 'barr')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'theme', 'e7')"
+     ],
+     "en_trop": [
+      "('v2', 'lieu', 'e8')",
+      "('v2', 'patient', 'e7')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "('v2', 'lieu', 'e8')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'in', 'e4')",
+      "('e1', 'on', 'e3')",
+      "('e7', 'in', 'e8')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 116,
+   "genre": "indetermine",
+   "texte": "Une femme debout, enveloppée dans un grand manteau qui cache ses bras.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'enveloppé')"
+     ],
+     "en_trop": [
+      "('e1', 'envelopper')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'dans', 'e2')",
+      "('e3', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 116,
+   "genre": "negatif",
+   "texte": "Une femme debout lève son bras droit, tendu vers le ciel, la main ouverte au-dessus de la tête.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'tendu')",
+      "('e4', 'ouvert')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_16'), 'ouvrir')",
+      "(('hors', 'v_1_9'), 'tendre')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')",
+      "(('hors', 'v_1_16'), 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_16'), 'patient_theme', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e1')",
+      "('e2', 'vers', 'e3')",
+      "('e4', 'au-dessus de', 'e5')",
+      "('e4', 'de', 'e1')",
+      "('e5', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 116,
+   "genre": "positif",
+   "texte": "Une femme debout laisse pendre son bras droit, tendu vers le sol, la main ouverte le long du corps.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_19'), 'long')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'tendu')",
+      "('e4', 'ouvert')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_10'), 'tendre')",
+      "(('hors', 'v_1_17'), 'ouvrir')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'theme', 'e2')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e2')",
+      "(('hors', 'v_1_17'), 'patient', 'e4')",
+      "(('hors', 'v_1_17'), 'patient', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'patient_theme', 'e4')",
+      "(('hors', 'v_1_17'), 'patient_theme', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e1')",
+      "('e2', 'vers', 'e3')",
+      "('e4', 'de', 'e1')",
+      "('e4', 'le long de', 'e5')",
+      "('e5', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 121,
+   "genre": "indetermine",
+   "texte": "A traveller lies motionless in the snow beside the road; he may simply be resting.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'motionless')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'rest')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'beside', 'e3')",
+      "('e1', 'in', 'e2')"
+     ],
+     "en_trop": [
+      "('e2', 'beside', 'e3')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 121,
+   "genre": "negatif",
+   "texte": "A traveller lies dead of heatstroke in the scorching desert beside the road, his water-flask empty.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'dead')",
+      "('e3', 'scorching')"
+     ],
+     "en_trop": [
+      "('e3', 'scorch')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'beside', 'e4')",
+      "('e1', 'in', 'e3')",
+      "('e1', 'of', 'e2')",
+      "('e5', 'of', 'e1')"
+     ],
+     "en_trop": [
+      "('e3', 'beside', 'e4')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 121,
+   "genre": "positif",
+   "texte": "A traveller lies frozen to death in the snow beside the road, frost on his beard and his lantern gone out.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_6'), 'death')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'frozen')",
+      "('e6', 'gone out')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'die')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_21'), 'go')",
+      "(('hors', 'v_1_4'), 'freeze')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_21'), 'agent', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "(('hors', 'v_1_21'), 'agent', 'e6')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'beside', 'e3')",
+      "('e1', 'in', 'e2')",
+      "('e5', 'of', 'e1')",
+      "('e6', 'of', 'e1')"
+     ],
+     "en_trop": [
+      "('e2', 'beside', 'e3')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 126,
+   "genre": "indetermine",
+   "texte": "Un portefaix est assis près d'un lourd tonneau, la main sur le ventre.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e1', 'asseoir')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'asseoir')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'près de', 'e2')",
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 126,
+   "genre": "negatif",
+   "texte": "Un portefaix qui soulevait un lourd tonneau s'effondre, foudroyé par une rupture du cœur ; ses compagnons se découvrent devant son corps sans vie.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v4', 'rompre')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v3', 'patient', 'e1')",
+      "('v4', 'patient', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')",
+      "('v2', 'patient', 'e1')",
+      "('v5', 'lieu', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v3', 'patient_theme', 'e1')",
+      "('v4', 'patient_theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v2', 'patient_theme', 'e1')",
+      "('v5', 'lieu', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')",
+      "('e4', 'devant', 'e5')",
+      "('e5', 'de', 'e1')",
+      "('e6', 'de', 'e5')",
+      "('e7', 'de', 'e3')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 126,
+   "genre": "positif",
+   "texte": "Un portefaix qui soulevait un lourd tonneau s'effondre, plié de douleur par une hernie soudaine ; ses compagnons le soutiennent et il se relève, blessé mais vivant.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'blessé')",
+      "('e1', 'vivant')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_2_10'), 'blesser')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v3', 'patient', 'e1')",
+      "('v4', 'theme', 'e1')",
+      "('v5', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')",
+      "('v2', 'patient', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v3', 'patient_theme', 'e1')",
+      "('v4', 'patient_theme', 'e1')",
+      "('v5', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v2', 'patient_theme', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e5', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 131,
+   "genre": "indetermine",
+   "texte": "A little girl keeps her lips pressed together and holds something tiny in her closed fist.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'something')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'pressed together')",
+      "('e3', 'tiny')",
+      "('e4', 'closed')"
+     ],
+     "en_trop": [
+      "('e4', 'close')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_7'), 'press')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v2', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')",
+      "('v2', 'lieu', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'patient_theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v2', 'lieu', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'of', 'e1')",
+      "('e3', 'in', 'e4')",
+      "('e4', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 131,
+   "genre": "negatif",
+   "texte": "A little boy grins to show the gap where his milk tooth has just come out, holding the tiny tooth in his palm.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'milk tooth')"
+     ],
+     "en_trop": [
+      "('e3', 'milk')",
+      "(('hors', 'e_1_12'), 'tooth')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_12'), 'come')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'come out')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'theme', 'e2')",
+      "('v3', 'lieu', 'e2')",
+      "('v3', 'theme', 'e4')",
+      "('v4', 'agent', 'e1')",
+      "('v4', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e2')",
+      "('v4', 'lieu', 'e5')",
+      "('v4', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v3', 'lieu', 'e2')",
+      "('v3', 'patient_theme', 'e4')",
+      "('v4', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v4', 'lieu', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'in', 'e5')",
+      "('e4', 'of', 'e1')",
+      "('e5', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 131,
+   "genre": "positif",
+   "texte": "A little girl grins to show the gap where her milk tooth has just come out, holding the tiny tooth in her palm.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'milk tooth')"
+     ],
+     "en_trop": [
+      "('e3', 'milk')",
+      "(('hors', 'e_1_12'), 'tooth')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_12'), 'come')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'come out')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'theme', 'e2')",
+      "('v3', 'lieu', 'e2')",
+      "('v3', 'theme', 'e4')",
+      "('v4', 'agent', 'e1')",
+      "('v4', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e2')",
+      "('v4', 'lieu', 'e5')",
+      "('v4', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v3', 'lieu', 'e2')",
+      "('v3', 'patient_theme', 'e4')",
+      "('v4', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v4', 'lieu', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'in', 'e5')",
+      "('e4', 'of', 'e1')",
+      "('e5', 'of', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 136,
+   "genre": "indetermine",
+   "texte": "Une femme est étendue sur un lit, sous un drap qui ne permet pas de voir si elle repose sur le dos ou sur le flanc.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v4', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')",
+      "('v1', 'patient', 'e1')",
+      "('v4', 'lieu', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v4', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')",
+      "('v1', 'patient_theme', 'e1')",
+      "('v4', 'lieu', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'sous', 'e3')",
+      "('e1', 'sur', 'e2')",
+      "('e1', 'sur', 'e4')",
+      "('e1', 'sur', 'e5')",
+      "('e4', 'de', 'e1')",
+      "('e5', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 136,
+   "genre": "negatif",
+   "texte": "Un homme nu est étendu de tout son long sur le flanc gauche, la tête appuyée sur son bras replié.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_9'), 'long')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'appuyé')",
+      "('e4', 'replié')"
+     ],
+     "en_trop": [
+      "('e4', 'replier')",
+      "(('hors', 'e_1_9'), 'tout')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'appuyer')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'patient', 'e1')",
+      "(('hors', 'v_1_17'), 'lieu', 'e4')",
+      "(('hors', 'v_1_17'), 'patient', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'patient_theme', 'e1')",
+      "(('hors', 'v_1_17'), 'lieu', 'e4')",
+      "(('hors', 'v_1_17'), 'patient_theme', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'sur', 'e2')",
+      "('e2', 'de', 'e1')",
+      "('e3', 'de', 'e1')",
+      "('e3', 'sur', 'e4')",
+      "('e4', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 136,
+   "genre": "positif",
+   "texte": "Une femme nue est étendue de tout son long sur le flanc gauche, la tête appuyée sur son bras replié.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_9'), 'long')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'appuyé')",
+      "('e4', 'replié')"
+     ],
+     "en_trop": [
+      "('e4', 'replier')",
+      "(('hors', 'e_1_9'), 'tout')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_17'), 'appuyer')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'patient', 'e1')",
+      "(('hors', 'v_1_17'), 'lieu', 'e4')",
+      "(('hors', 'v_1_17'), 'patient', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'patient_theme', 'e1')",
+      "(('hors', 'v_1_17'), 'lieu', 'e4')",
+      "(('hors', 'v_1_17'), 'patient_theme', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'sur', 'e2')",
+      "('e2', 'de', 'e1')",
+      "('e3', 'de', 'e1')",
+      "('e3', 'sur', 'e4')",
+      "('e4', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 141,
+   "genre": "indetermine",
+   "texte": "Psyche stands alone by a river among the reeds, lost in thought.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_13'), 'thought')"
+     ]
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'psyche')"
+     ],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'alone')",
+      "('e1', 'lost in thought')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_11'), 'lose')"
+     ]
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_11'), 'lieu', ('hors', 'e_1_13'))"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_11'), 'lieu', ('hors', 'e_1_13'))"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'among', 'e3')",
+      "('e1', 'by', 'e2')"
+     ],
+     "en_trop": [
+      "('e2', 'among', 'e3')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 141,
+   "genre": "negatif",
+   "texte": "Psyche stands by a river where the whispering reeds have told her to wait, while a swarm of ants sorts a heap of mixed grain for her.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'psyche')"
+     ],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e7', 'mixed')"
+     ],
+     "en_trop": [
+      "('e3', 'tell')",
+      "('e3', 'whispering')",
+      "('e7', 'mix')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'whisper')",
+      "('v3', 'tell')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e3')",
+      "('v3', 'agent', 'e3')",
+      "('v3', 'destinataire', 'e1')",
+      "('v4', 'agent', 'e1')",
+      "('v4', 'lieu', 'e2')",
+      "('v5', 'destinataire', 'e1')",
+      "('v5', 'theme', 'e6')"
+     ],
+     "en_trop": [
+      "('v5', 'patient', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e3')",
+      "('v3', 'agent', 'e3')",
+      "('v3', 'destinataire', 'e1')",
+      "('v4', 'agent', 'e1')",
+      "('v4', 'lieu', 'e2')",
+      "('v5', 'destinataire', 'e1')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'by', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 141,
+   "genre": "positif",
+   "texte": "Psyche stands by a river where the whispering reeds have told her to wait; she gathers the tufts of golden wool left by the fierce sheep on the briars.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e1', 'psyche')"
+     ],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e3', 'tell')",
+      "('e3', 'whispering')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'whisper')",
+      "('v3', 'tell')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e3')",
+      "('v3', 'agent', 'e3')",
+      "('v3', 'destinataire', 'e1')",
+      "('v4', 'agent', 'e1')",
+      "('v4', 'lieu', 'e2')",
+      "('v5', 'agent', 'e1')",
+      "('v5', 'theme', 'e4')",
+      "('v6', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v5', 'patient', 'e4')",
+      "('v6', 'lieu', 'e7')",
+      "('v6', 'patient', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e3')",
+      "('v3', 'agent', 'e3')",
+      "('v3', 'destinataire', 'e1')",
+      "('v4', 'agent', 'e1')",
+      "('v4', 'lieu', 'e2')",
+      "('v5', 'agent', 'e1')",
+      "('v6', 'patient_theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v6', 'lieu', 'e7')",
+      "('v6', 'patient_theme', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'by', 'e2')",
+      "('e4', 'on', 'e7')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 146,
+   "genre": "indetermine",
+   "texte": "L'arche de Noé flotte sur les eaux ; le bas du tableau, où apparaissait peut-être la terre submergée, est perdu.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'noé')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'perdu')",
+      "('e6', 'submergé')"
+     ],
+     "en_trop": [
+      "('e4', 'perdre')",
+      "('e6', 'submerger')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_2_7'), 'apparaître')"
+     ]
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_2_7'), 'agent', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_2_7'), 'agent', 'e6')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'sur', 'e3')",
+      "('e4', 'de', 'e5')",
+      "('e6', 'dans', 'e4')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 146,
+   "genre": "negatif",
+   "texte": "L'arche de Noé flotte au loin, minuscule, sur une immense étendue d'eau ; au premier plan, des noyés et des maisons englouties occupent toute la vue.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'noé')",
+      "('e5', 'premier plan')"
+     ],
+     "en_trop": [
+      "('e5', 'plan')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'minuscule')",
+      "('e7', 'englouti')"
+     ],
+     "en_trop": [
+      "('e5', 'premier')",
+      "('e7', 'engloutir')",
+      "('e8', 'tout')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e7')",
+      "('v2', 'lieu', 'e5')",
+      "('v2', 'theme', 'e8')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e8')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e7')",
+      "('v2', 'lieu', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'sur', 'e3')",
+      "('e6', 'à', 'e5')",
+      "('e7', 'à', 'e5')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 146,
+   "genre": "positif",
+   "texte": "L'arche de Noé flotte paisiblement sur une immense étendue d'eau calme ; aucun noyé, aucune maison engloutie n'est visible.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'noé')",
+      "('e5', 'noyé')"
+     ],
+     "en_trop": [
+      "('e5', 'noyer')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e6', 'englouti')"
+     ],
+     "en_trop": [
+      "('e6', 'engloutir')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'sur', 'e3')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 151,
+   "genre": "indetermine",
+   "texte": "Anna, Dido's sister, stands on the bank of a river.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'anna')",
+      "('e2', 'dido')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'of', 'e2')"
+     ],
+     "en_trop": [
+      "('e3', \"'s\", 'e2')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 151,
+   "genre": "negatif",
+   "texte": "Anna, Dido's sister, rises from the river Numicius transformed into a nymph crowned with reeds.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'anna')",
+      "('e2', 'dido')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e4', 'numicius')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_11'), 'numicius')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [
+      "('e5', 'crowned')"
+     ],
+     "en_trop": [
+      "('e5', 'crown')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'patient', 'e5')"
+     ],
+     "en_trop": [
+      "('v2', 'agent', ('hors', 'e_1_11'))"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'patient_theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v2', 'agent', ('hors', 'e_1_11'))"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e5', 'from', 'e4')",
+      "('e5', 'of', 'e2')",
+      "('e5', 'with', 'e6')"
+     ],
+     "en_trop": [
+      "('e5', \"'s\", 'e2')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 151,
+   "genre": "positif",
+   "texte": "The lifeless body of Anna, Dido's sister, is drawn from the waters of the river by grieving companions.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'anna')",
+      "('e3', 'dido')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e7', 'grieve')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'grieve')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e7')",
+      "('v1', 'theme', 'e1')",
+      "('v2', 'agent', 'e7')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e7')",
+      "('v2', 'agent', 'e7')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'from', 'e5')",
+      "('e4', 'of', 'e3')"
+     ],
+     "en_trop": [
+      "('e4', \"'s\", 'e3')",
+      "('e5', 'by', 'e7')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 156,
+   "genre": "indetermine",
+   "texte": "Ézéchiel se tient près d'un lit où repose une femme.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'ézéchiel')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v2', 'lieu', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v2', 'lieu', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient_theme', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'près de', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 156,
+   "genre": "negatif",
+   "texte": "Ézéchiel, devant le peuple qui l'interroge, coupe ses cheveux et sa barbe avec un couteau et les pèse dans une balance, comme l'a ordonné le Seigneur.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'ézéchiel')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'destinataire', 'e1')",
+      "('v2', 'patient', 'e4')",
+      "('v3', 'agent', 'e1')",
+      "('v3', 'instrument', 'e6')",
+      "('v3', 'theme', 'e3')",
+      "('v3', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v3', 'lieu', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'destinataire', 'e1')",
+      "('v2', 'patient_theme', 'e4')",
+      "('v3', 'agent', 'e1')",
+      "('v3', 'instrument', 'e6')",
+      "('v3', 'patient_theme', 'e3')",
+      "('v3', 'patient_theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v3', 'lieu', 'e6')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 156,
+   "genre": "positif",
+   "texte": "Ézéchiel, devant le corps de sa femme morte, se tient le visage sec, sans voile ni cendre, tandis que le peuple l'interroge sur cette absence de deuil voulue par le Seigneur.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'ézéchiel')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_32'), 'deuil')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'mort')"
+     ],
+     "en_trop": [
+      "('e3', 'mourir')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'deuil')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v2', 'destinataire', 'e1')",
+      "('v2', 'theme', 'e8')",
+      "('v3', 'agent', 'e1')",
+      "('v4', 'theme', 'e8')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'patient', 'e1')",
+      "('v1', 'patient', 'e4')",
+      "('v2', 'lieu', 'e8')",
+      "('v4', 'patient', 'e8')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v2', 'destinataire', 'e1')",
+      "('v2', 'patient_theme', 'e8')",
+      "('v3', 'agent', 'e1')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'patient_theme', 'e1')",
+      "('v1', 'patient_theme', 'e4')",
+      "('v2', 'lieu', 'e8')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'devant', 'e2')",
+      "('e3', 'de', 'e1')",
+      "('e4', 'de', 'e1')"
+     ],
+     "en_trop": [
+      "('e8', 'de', ('hors', 'e_1_32'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 161,
+   "genre": "indetermine",
+   "texte": "Lycaon holds a dagger in a dark palace corridor.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'lycaon')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'of', 'e4')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 161,
+   "genre": "negatif",
+   "texte": "Lycaon serves human flesh to Jupiter, seated at his table, and is changed into a wolf as lightning strikes his house.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'lycaon')",
+      "('e3', 'jupiter')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'sit')"
+     ],
+     "en_trop": [
+      "('v2', 'seat')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'destinataire', 'e3')",
+      "('v1', 'theme', 'e2')",
+      "('v2', 'agent', 'e3')",
+      "('v3', 'patient', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'destinataire', 'e3')",
+      "('v2', 'agent', 'e3')",
+      "('v3', 'patient_theme', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'of', 'e3')",
+      "('e7', 'of', 'e5')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 161,
+   "genre": "positif",
+   "texte": "Lycaon creeps up to the bed where Jupiter lies asleep, dagger raised; as he strikes, his arms turn into a wolf's legs and his face into a snout.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'lycaon')",
+      "('e3', 'jupiter')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'asleep')",
+      "('e4', 'raised')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_13'), 'raise')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'lieu', 'e2')",
+      "('v3', 'agent', 'e1')",
+      "('v4', 'patient', 'e7')",
+      "('v4', 'patient', 'e9')"
+     ],
+     "en_trop": [
+      "('v4', 'agent', 'e7')",
+      "(('hors', 'v_1_13'), 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'lieu', 'e2')",
+      "('v3', 'agent', 'e1')",
+      "('v4', 'patient_theme', 'e7')",
+      "('v4', 'patient_theme', 'e9')"
+     ],
+     "en_trop": [
+      "('v4', 'agent', 'e7')",
+      "(('hors', 'v_1_13'), 'patient_theme', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'to', 'e2')",
+      "('e7', 'of', 'e1')",
+      "('e7', 'of', 'e6')",
+      "('e9', 'of', 'e1')"
+     ],
+     "en_trop": [
+      "('e7', \"'s\", 'e6')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 166,
+   "genre": "indetermine",
+   "texte": "Pilate, assis à sa table, tient une tablette.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'pilate')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e1', 'asseoir')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'asseoir')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e1')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 166,
+   "genre": "negatif",
+   "texte": "Un soldat, monté sur une échelle, cloue au sommet de la croix la tablette portant l'inscription « Jésus de Nazareth, roi des Juifs ».",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e7', 'jésus')",
+      "('e8', 'nazareth')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e1', 'monter')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'monter')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'lieu', 'e3')",
+      "('v2', 'theme', 'e5')",
+      "('v3', 'theme', 'e6')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e5')",
+      "('v3', 'patient', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'lieu', 'e3')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e9', 'de', 'e10')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 166,
+   "genre": "positif",
+   "texte": "Pilate, assis à sa table, trace de sa main sur une tablette l'inscription « Jésus de Nazareth, roi des Juifs » destinée à la croix.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'pilate')",
+      "('e6', 'jésus')",
+      "('e7', 'nazareth')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e1', 'asseoir')",
+      "('e5', 'destiner')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'asseoir')",
+      "('v3', 'destiner')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'instrument', 'e3')",
+      "('v2', 'theme', 'e5')",
+      "('v3', 'destinataire', 'e10')",
+      "('v3', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'instrument', 'e3')",
+      "('v3', 'destinataire', 'e10')",
+      "('v3', 'patient_theme', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'de', 'e1')",
+      "('e3', 'de', 'e1')",
+      "('e8', 'de', 'e9')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 171,
+   "genre": "indetermine",
+   "texte": "A woman clutches a purse of coins beside a weeping poor man.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e4', 'weep')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'weep')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')",
+      "('v2', 'agent', 'e4')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e4')",
+      "('v1', 'patient', 'e2')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e4')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e4')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'beside', 'e4')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 171,
+   "genre": "negatif",
+   "texte": "A woman personifying Bribery slips a purse of coins into a judge's hand behind his back.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'bribery')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": [
+      "('e2', 'bribery')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e2')",
+      "('v2', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e2')",
+      "('v2', 'patient', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'into', 'e6')",
+      "('e6', 'of', 'e5')",
+      "('e7', 'of', 'e5')"
+     ],
+     "en_trop": [
+      "('e6', \"'s\", 'e5')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 171,
+   "genre": "positif",
+   "texte": "A woman personifying Ill-gotten Gain, Ripa's 'Acquisto cattivo', clutches a purse of coins snatched from a weeping poor man, a harpy perched on her shoulder.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'gain')",
+      "('e3', 'ripa')",
+      "('e4', 'acquisto cattivo')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [
+      "('e4', 'acquisto cattivo')"
+     ],
+     "en_trop": [
+      "('e4', 'acquisto')",
+      "('e4', 'gain')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e6', 'snatch')",
+      "('e7', 'weep')",
+      "('e8', 'perch')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'snatch')",
+      "('v4', 'weep')",
+      "('v5', 'perch')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e4')",
+      "('v2', 'theme', 'e5')",
+      "('v3', 'theme', 'e5')",
+      "('v4', 'agent', 'e7')",
+      "('v5', 'agent', 'e8')",
+      "('v5', 'lieu', 'e9')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e4')",
+      "('v2', 'patient', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v3', 'patient_theme', 'e5')",
+      "('v4', 'agent', 'e7')",
+      "('v5', 'agent', 'e8')",
+      "('v5', 'lieu', 'e9')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'of', 'e3')",
+      "('e5', 'from', 'e7')",
+      "('e9', 'of', 'e1')"
+     ],
+     "en_trop": [
+      "('e4', \"'s\", 'e3')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 176,
+   "genre": "indetermine",
+   "texte": "Un homme et une femme couronnés de myrte se tiennent côte à côte.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_11'), 'côte')",
+      "(('hors', 'e_1_13'), 'côte')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'couronné')",
+      "('e2', 'couronné')"
+     ],
+     "en_trop": [
+      "('e1', 'couronner')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient_theme', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'de', 'e3')",
+      "('e1', 'à côté de', 'e2')",
+      "('e2', 'de', 'e3')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_11'), 'à', ('hors', 'e_1_13'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 176,
+   "genre": "negatif",
+   "texte": "Une figure allégorique de la Discorde conjugale : un homme et une femme se disputent une chaîne d'or rompue, un chien et un chat se battant à leurs pieds.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_19'), 'or')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e5', 'or')",
+      "('e5', 'rompu')"
+     ],
+     "en_trop": [
+      "('e5', 'rompre')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e4')",
+      "('v1', 'theme', 'e5')",
+      "('v2', 'agent', 'e6')",
+      "('v2', 'agent', 'e7')",
+      "('v2', 'lieu', 'e8')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e4')",
+      "('v2', 'agent', 'e6')",
+      "('v2', 'agent', 'e7')",
+      "('v2', 'lieu', 'e8')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e8', 'de', 'e3')",
+      "('e8', 'de', 'e4')"
+     ],
+     "en_trop": [
+      "('e5', 'de', ('hors', 'e_1_19'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 176,
+   "genre": "positif",
+   "texte": "Une figure allégorique de la Concorde conjugale : un homme et une femme couronnés de myrte tiennent ensemble une même chaîne d'or, un couple de tourterelles à leurs pieds.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'concorde')"
+     ],
+     "en_trop": [
+      "(('hors', 'e_1_23'), 'or')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": [
+      "('e2', 'concorde')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'couronné')",
+      "('e4', 'couronné')",
+      "('e6', 'or')"
+     ],
+     "en_trop": [
+      "('e3', 'couronner')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e4')",
+      "('v1', 'theme', 'e6')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e4')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'de', 'e5')",
+      "('e4', 'de', 'e5')",
+      "('e9', 'de', 'e3')",
+      "('e9', 'de', 'e4')"
+     ],
+     "en_trop": [
+      "('e6', 'de', ('hors', 'e_1_23'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 181,
+   "genre": "indetermine",
+   "texte": "A series of winged cupids, each holding a different object; no inscription explains them.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e3')",
+      "('v2', 'theme', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e3')",
+      "('v2', 'agent', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'patient_theme', 'e2')"
+     ],
+     "en_trop": [
+      "('v2', 'agent', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 181,
+   "genre": "negatif",
+   "texte": "A winged cupid personifying Friendship, 'Amicitia', embraces an elm entwined with a vine; no other quality of Love is shown.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'friendship')",
+      "('e3', 'amicitia')",
+      "('e7', 'love')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": [
+      "('e3', 'friendship')",
+      "('e7', 'love')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [
+      "('e4', 'entwined')"
+     ],
+     "en_trop": [
+      "('e1', 'personify')",
+      "('e4', 'entwine')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'personify')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'theme', 'e3')",
+      "('v2', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v2', 'agent', 'e3')",
+      "('v2', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e1')",
+      "('v1', 'patient_theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v2', 'agent', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'with', 'e5')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 181,
+   "genre": "positif",
+   "texte": "A series of winged cupids, each personifying a quality of Love, Constancy with a column, Fidelity with a dog and Patience with a yoke, forms the first set of the Qualities of Love.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e12', 'quality')",
+      "('e13', 'love')",
+      "('e4', 'love')",
+      "('e5', 'constancy')",
+      "('e7', 'fidelity')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": [
+      "('e12', 'qualities')",
+      "('e13', 'love')",
+      "('e4', 'love')",
+      "('e5', 'constancy')",
+      "('e7', 'fidelity')"
+     ]
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v_1_29'), 'form')"
+     ]
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'agent', 'e11')",
+      "('v1', 'patient', 'e3')",
+      "(('hors', 'v_1_29'), 'agent', 'e11')",
+      "(('hors', 'v_1_29'), 'patient', 'e11')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'agent', 'e11')",
+      "(('hors', 'v_1_29'), 'agent', 'e11')",
+      "(('hors', 'v_1_29'), 'patient_theme', 'e11')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 186,
+   "genre": "indetermine",
+   "texte": "Un clocher élancé émerge au-dessus des arbres ; l'édifice auquel il appartient est caché.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'élancé')",
+      "('e3', 'caché')"
+     ],
+     "en_trop": [
+      "('e1', 'élancer')",
+      "('e3', 'cacher')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e1')",
+      "('v2', 'theme', 'e3')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e1')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e1', 'au-dessus de', 'e2')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 186,
+   "genre": "negatif",
+   "texte": "Une grande cathédrale est surmontée d'un clocher élancé où pendent de nombreuses cloches.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'élancé')"
+     ],
+     "en_trop": [
+      "('e2', 'élancer')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'theme', 'e1')",
+      "('v2', 'lieu', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'lieu', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 186,
+   "genre": "positif",
+   "texte": "Une petite chapelle de campagne est surmontée d'un clocher élancé où pend une cloche unique.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_5'), 'campagne')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e1', 'campagne')",
+      "('e2', 'élancé')"
+     ],
+     "en_trop": [
+      "('e2', 'élancer')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'theme', 'e1')",
+      "('v2', 'lieu', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v2', 'lieu', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": [
+      "('e1', 'de', ('hors', 'e_1_5'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 191,
+   "genre": "indetermine",
+   "texte": "On the foredeck, sailors haul on a cable; the machine it runs to is hidden by a sail.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e3')",
+      "('v2', 'agent', 'e3')",
+      "('v3', 'theme', 'e4')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')",
+      "('v3', 'patient', 'e4')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e3')",
+      "('v2', 'agent', 'e3')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e3', 'to', 'e4')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 191,
+   "genre": "negatif",
+   "texte": "On the foredeck, sailors walk round the vertical capstan, pushing its bars to haul in a cable.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e2')",
+      "('v2', 'theme', 'e4')",
+      "('v3', 'agent', 'e2')",
+      "('v3', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v2', 'patient', 'e4')",
+      "('v3', 'lieu', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e2')",
+      "('v3', 'agent', 'e2')",
+      "('v3', 'patient_theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v3', 'lieu', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'round', 'e3')",
+      "('e4', 'of', 'e3')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 191,
+   "genre": "positif",
+   "texte": "On the foredeck, sailors heave on the bars of the horizontal windlass to wind in the anchor cable.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e5', 'anchor cable')"
+     ],
+     "en_trop": [
+      "('e5', 'anchor')",
+      "(('hors', 'e_1_19'), 'cable')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e3')",
+      "('v2', 'agent', 'e2')",
+      "('v2', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')",
+      "('v2', 'lieu', ('hors', 'e_1_19'))"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e3')",
+      "('v2', 'agent', 'e2')",
+      "('v2', 'patient_theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e3')",
+      "('v2', 'lieu', ('hors', 'e_1_19'))"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 196,
+   "genre": "indetermine",
+   "texte": "Une coquille de noix est nommée dans le titre de la gravure, mais la feuille a été découpée et l'image manque.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'coquille de noix')"
+     ],
+     "en_trop": [
+      "('e1', 'coquille')",
+      "(('hors', 'e_1_4'), 'noix')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e4', 'découper')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v2', 'découper')"
+     ],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e1')",
+      "('v2', 'patient', 'e4')"
+     ],
+     "en_trop": [
+      "('v1', 'patient', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'patient_theme', 'e4')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": [
+      "('e1', 'de', ('hors', 'e_1_4'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 196,
+   "genre": "negatif",
+   "texte": "Dans une nature morte, une coquille de noix ordinaire, brisée, repose sur une assiette près d'un casse-noix.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'nature morte')",
+      "('e2', 'coquille de noix')"
+     ],
+     "en_trop": [
+      "('e1', 'nature')",
+      "('e2', 'coquille')",
+      "(('hors', 'e_1_9'), 'noix')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e2', 'brisé')",
+      "('e2', 'ordinaire')"
+     ],
+     "en_trop": [
+      "('e1', 'mourir')",
+      "('e2', 'briser')",
+      "(('hors', 'e_1_9'), 'ordinaire')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'lieu', 'e1')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'lieu', 'e1')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'dans', 'e1')",
+      "('e2', 'près de', 'e4')"
+     ],
+     "en_trop": [
+      "('e2', 'de', ('hors', 'e_1_9'))"
+     ]
+    }
+   }
+  },
+  {
+   "k": 196,
+   "genre": "positif",
+   "texte": "Dans une gravure fantastique, une immense coquille de noix s'ouvre comme une barque, d'où sortent des rameaux qui portent des têtes humaines.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e2', 'coquille de noix')"
+     ],
+     "en_trop": [
+      "('e2', 'coquille')",
+      "(('hors', 'e_1_10'), 'noix')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v3', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e1')",
+      "('v1', 'patient', 'e2')",
+      "('v3', 'patient', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'agent', 'e2')"
+     ],
+     "en_trop": [
+      "('v1', 'lieu', 'e1')",
+      "('v1', 'patient_theme', 'e2')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e2', 'comme', 'e3')",
+      "('e2', 'dans', 'e1')",
+      "('e4', 'de', 'e2')"
+     ],
+     "en_trop": [
+      "('e2', 'de', ('hors', 'e_1_10'))"
+     ]
+    }
+   }
+  }
+ ]
+}

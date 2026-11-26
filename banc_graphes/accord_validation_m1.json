@@ -1,0 +1,3956 @@
+{
+ "total": {
+  "entites": {
+   "vp": 779,
+   "ref": 800,
+   "pred": 783,
+   "precision": 0.9948914431673053,
+   "rappel": 0.97375,
+   "f1": 0.9842072015161086
+  },
+  "noms": {
+   "vp": 28,
+   "ref": 28,
+   "pred": 28,
+   "precision": 1.0,
+   "rappel": 1.0,
+   "f1": 1.0
+  },
+  "proprietes": {
+   "vp": 187,
+   "ref": 194,
+   "pred": 194,
+   "precision": 0.9639175257731959,
+   "rappel": 0.9639175257731959,
+   "f1": 0.9639175257731959
+  },
+  "nombres": {
+   "vp": 8,
+   "ref": 8,
+   "pred": 8,
+   "precision": 1.0,
+   "rappel": 1.0,
+   "f1": 1.0
+  },
+  "evenements": {
+   "vp": 312,
+   "ref": 334,
+   "pred": 336,
+   "precision": 0.9285714285714286,
+   "rappel": 0.9341317365269461,
+   "f1": 0.9313432835820896
+  },
+  "roles": {
+   "vp": 534,
+   "ref": 601,
+   "pred": 600,
+   "precision": 0.89,
+   "rappel": 0.8885191347753744,
+   "f1": 0.8892589508742714
+  },
+  "roles_macro": {
+   "vp": 545,
+   "ref": 601,
+   "pred": 600,
+   "precision": 0.9083333333333333,
+   "rappel": 0.9068219633943427,
+   "f1": 0.9075770191507077
+  },
+  "relations": {
+   "vp": 241,
+   "ref": 277,
+   "pred": 260,
+   "precision": 0.926923076923077,
+   "rappel": 0.8700361010830325,
+   "f1": 0.8975791433891992
+  },
+  "coref": {
+   "vp": 165,
+   "ref": 171,
+   "pred": 173,
+   "precision": 0.953757225433526,
+   "rappel": 0.9649122807017544,
+   "f1": 0.9593023255813954
+  },
+  "distinct": {
+   "vp": 2,
+   "ref": 4,
+   "pred": 3,
+   "precision": 0.6666666666666666,
+   "rappel": 0.5,
+   "f1": 0.5714285714285715
+  },
+  "negations": {
+   "vp": 74,
+   "ref": 86,
+   "pred": 79,
+   "precision": 0.9367088607594937,
+   "rappel": 0.8604651162790697,
+   "f1": 0.8969696969696971
+  },
+  "modalites": {
+   "vp": 56,
+   "ref": 87,
+   "pred": 78,
+   "precision": 0.717948717948718,
+   "rappel": 0.6436781609195402,
+   "f1": 0.6787878787878788
+  },
+  "portees": {
+   "vp": 206,
+   "ref": 309,
+   "pred": 326,
+   "precision": 0.6319018404907976,
+   "rappel": 0.6666666666666666,
+   "f1": 0.6488188976377953
+  },
+  "citations": {
+   "vp": 14,
+   "ref": 17,
+   "pred": 16,
+   "precision": 0.875,
+   "rappel": 0.8235294117647058,
+   "f1": 0.8484848484848485
+  }
+ },
+ "par_langue": {
+  "en": {
+   "entites": {
+    "vp": 410,
+    "ref": 419,
+    "pred": 412,
+    "precision": 0.9951456310679612,
+    "rappel": 0.9785202863961814,
+    "f1": 0.98676293622142
+   },
+   "noms": {
+    "vp": 7,
+    "ref": 7,
+    "pred": 7,
+    "precision": 1.0,
+    "rappel": 1.0,
+    "f1": 1.0
+   },
+   "proprietes": {
+    "vp": 132,
+    "ref": 134,
+    "pred": 138,
+    "precision": 0.9565217391304348,
+    "rappel": 0.9850746268656716,
+    "f1": 0.9705882352941176
+   },
+   "nombres": {
+    "vp": 4,
+    "ref": 4,
+    "pred": 4,
+    "precision": 1.0,
+    "rappel": 1.0,
+    "f1": 1.0
+   },
+   "evenements": {
+    "vp": 165,
+    "ref": 177,
+    "pred": 177,
+    "precision": 0.9322033898305084,
+    "rappel": 0.9322033898305084,
+    "f1": 0.9322033898305084
+   },
+   "roles": {
+    "vp": 287,
+    "ref": 318,
+    "pred": 322,
+    "precision": 0.8913043478260869,
+    "rappel": 0.9025157232704403,
+    "f1": 0.8968750000000001
+   },
+   "roles_macro": {
+    "vp": 291,
+    "ref": 318,
+    "pred": 322,
+    "precision": 0.9037267080745341,
+    "rappel": 0.9150943396226415,
+    "f1": 0.9093749999999999
+   },
+   "relations": {
+    "vp": 131,
+    "ref": 147,
+    "pred": 137,
+    "precision": 0.9562043795620438,
+    "rappel": 0.891156462585034,
+    "f1": 0.9225352112676056
+   },
+   "coref": {
+    "vp": 95,
+    "ref": 99,
+    "pred": 95,
+    "precision": 1.0,
+    "rappel": 0.9595959595959596,
+    "f1": 0.979381443298969
+   },
+   "distinct": {
+    "vp": 1,
+    "ref": 2,
+    "pred": 2,
+    "precision": 0.5,
+    "rappel": 0.5,
+    "f1": 0.5
+   },
+   "negations": {
+    "vp": 42,
+    "ref": 51,
+    "pred": 43,
+    "precision": 0.9767441860465116,
+    "rappel": 0.8235294117647058,
+    "f1": 0.8936170212765957
+   },
+   "modalites": {
+    "vp": 34,
+    "ref": 41,
+    "pred": 43,
+    "precision": 0.7906976744186046,
+    "rappel": 0.8292682926829268,
+    "f1": 0.8095238095238095
+   },
+   "portees": {
+    "vp": 93,
+    "ref": 148,
+    "pred": 145,
+    "precision": 0.6413793103448275,
+    "rappel": 0.6283783783783784,
+    "f1": 0.6348122866894199
+   },
+   "citations": {
+    "vp": 2,
+    "ref": 2,
+    "pred": 2,
+    "precision": 1.0,
+    "rappel": 1.0,
+    "f1": 1.0
+   }
+  },
+  "fr": {
+   "entites": {
+    "vp": 369,
+    "ref": 381,
+    "pred": 371,
+    "precision": 0.9946091644204852,
+    "rappel": 0.968503937007874,
+    "f1": 0.9813829787234042
+   },
+   "noms": {
+    "vp": 21,
+    "ref": 21,
+    "pred": 21,
+    "precision": 1.0,
+    "rappel": 1.0,
+    "f1": 1.0
+   },
+   "proprietes": {
+    "vp": 55,
+    "ref": 60,
+    "pred": 56,
+    "precision": 0.9821428571428571,
+    "rappel": 0.9166666666666666,
+    "f1": 0.9482758620689654
+   },
+   "nombres": {
+    "vp": 4,
+    "ref": 4,
+    "pred": 4,
+    "precision": 1.0,
+    "rappel": 1.0,
+    "f1": 1.0
+   },
+   "evenements": {
+    "vp": 147,
+    "ref": 157,
+    "pred": 159,
+    "precision": 0.9245283018867925,
+    "rappel": 0.9363057324840764,
+    "f1": 0.930379746835443
+   },
+   "roles": {
+    "vp": 247,
+    "ref": 283,
+    "pred": 278,
+    "precision": 0.8884892086330936,
+    "rappel": 0.872791519434629,
+    "f1": 0.8805704099821746
+   },
+   "roles_macro": {
+    "vp": 254,
+    "ref": 283,
+    "pred": 278,
+    "precision": 0.9136690647482014,
+    "rappel": 0.8975265017667845,
+    "f1": 0.9055258467023173
+   },
+   "relations": {
+    "vp": 110,
+    "ref": 130,
+    "pred": 123,
+    "precision": 0.8943089430894309,
+    "rappel": 0.8461538461538461,
+    "f1": 0.8695652173913043
+   },
+   "coref": {
+    "vp": 70,
+    "ref": 72,
+    "pred": 78,
+    "precision": 0.8974358974358975,
+    "rappel": 0.9722222222222222,
+    "f1": 0.9333333333333333
+   },
+   "distinct": {
+    "vp": 1,
+    "ref": 2,
+    "pred": 1,
+    "precision": 1.0,
+    "rappel": 0.5,
+    "f1": 0.6666666666666666
+   },
+   "negations": {
+    "vp": 32,
+    "ref": 35,
+    "pred": 36,
+    "precision": 0.8888888888888888,
+    "rappel": 0.9142857142857143,
+    "f1": 0.9014084507042254
+   },
+   "modalites": {
+    "vp": 22,
+    "ref": 46,
+    "pred": 35,
+    "precision": 0.6285714285714286,
+    "rappel": 0.4782608695652174,
+    "f1": 0.54320987654321
+   },
+   "portees": {
+    "vp": 113,
+    "ref": 161,
+    "pred": 181,
+    "precision": 0.6243093922651933,
+    "rappel": 0.7018633540372671,
+    "f1": 0.6608187134502923
+   },
+   "citations": {
+    "vp": 12,
+    "ref": 15,
+    "pred": 14,
+    "precision": 0.8571428571428571,
+    "rappel": 0.8,
+    "f1": 0.8275862068965518
+   }
+  }
+ },
+ "regles": {},
+ "textes": [
+  {
+   "k": 1,
+   "genre": "indetermine",
+   "texte": "Close to a window, a woman stands on her own, wearing a long white gown and a veil. Behind her, slightly further into the room, a man's dark coat has been laid over the back of a chair. That garment is the only hint of anyone else: no second person appears, no ring can be made out on her hand, and no inscription accompanies the image. The picture therefore leaves its occasion open. Nothing tells the viewer whether she is about to be married, on her way to a first communion, or simply wearing a stage costume, and the scene can be read in any of these ways.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e20', 'way')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e11', 'only')"
+     ],
+     "en_trop": [
+      "('e2', 'alone')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v3', 'lieu', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v3', 'lieu', 'e2')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e20', 'of', 'e2')",
+      "('e20', 'to', 'e21')"
+     ],
+     "en_trop": [
+      "('e11', 'behind', 'e2')",
+      "('e2', 'to', 'e21')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": [
+      "('e12', 'e2')"
+     ]
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e20', 'non_affirme')",
+      "('v4', 'non_affirme')"
+     ],
+     "en_trop": [
+      "('r3', 'non_affirme')",
+      "(('hors', 'r6'), 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [],
+     "en_trop": [
+      "('e18', 'non_ancre')",
+      "('v4', 'oeuvre')",
+      "('v5', 'non_ancre')",
+      "('v6', 'non_ancre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 11,
+   "genre": "negatif",
+   "texte": "What we see is a wall poster announcing a public auction of furniture. Large lettering runs across the upper part of the sheet, and the lines below set out the details of the sale. The poster was meant to be pasted up and read from a distance, so its type is broad and its layout simple. It is another means of publicity altogether: it is not a merchant's own emblem, nor a slip to be handed to customers. The sheet carries no image beyond its printed text, which fills it from top to bottom.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v3'), 'run')",
+      "(('hors', 'v5'), 'sell')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v3'), 'agent', 'e4')",
+      "(('hors', 'v3'), 'lieu', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v3'), 'agent', 'e4')",
+      "(('hors', 'v3'), 'lieu', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'across', 'e5')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": [
+      "('r7', 'non_affirme')",
+      "('r8', 'non_affirme')",
+      "('v4', 'non_affirme')",
+      "('v5', 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [
+      "('e1', 'oeuvre')",
+      "('e10', 'oeuvre')",
+      "('e11', 'oeuvre')",
+      "('e12', 'oeuvre')",
+      "('e19', 'oeuvre')",
+      "('e6', 'oeuvre')",
+      "('v4', 'histoire')",
+      "('v5', 'histoire')"
+     ],
+     "en_trop": []
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 21,
+   "genre": "positif",
+   "texte": "This still life is built around a silver cruet stand, placed in the foreground of the table. It holds two glass flasks. One contains a golden liquid pressed from olives; the other holds soured red wine of the kind used for dressing salads, its colour darker against the light. Beside the stand sits a gravy boat filled with a brown pouring liquid, its spout turned slightly towards the viewer. Behind these objects the background is left plain and unobtrusive, so that the gleam of the silver and the transparency of the glass hold the eye across the whole composition.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e15', 'cruet stand')",
+      "('e6', 'flask')",
+      "('e9', 'flask')"
+     ],
+     "en_trop": [
+      "('e15', 'stand')"
+     ]
+    },
+    "evenements": {
+     "manquants": [
+      "('v11', 'leave')"
+     ],
+     "en_trop": [
+      "(('hors', 'v9'), 'sit')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v11', 'lieu', 'e20')",
+      "('v11', 'theme', 'e21')",
+      "('v4', 'agent', 'e6')",
+      "('v6', 'agent', 'e9')",
+      "('v8', 'theme', 'e12')",
+      "('v9', 'patient', 'e16')"
+     ],
+     "en_trop": [
+      "('v4', 'agent', 'e5')",
+      "('v6', 'agent', 'e5')",
+      "('v8', 'patient', 'e12')",
+      "('v9', 'theme', 'e16')",
+      "(('hors', 'v9'), 'agent', 'e16')",
+      "(('hors', 'v9'), 'lieu', 'e15')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v11', 'lieu', 'e20')",
+      "('v11', 'patient_theme', 'e21')",
+      "('v4', 'agent', 'e6')",
+      "('v6', 'agent', 'e9')"
+     ],
+     "en_trop": [
+      "('v4', 'agent', 'e5')",
+      "('v6', 'agent', 'e5')",
+      "(('hors', 'v9'), 'agent', 'e16')",
+      "(('hors', 'v9'), 'lieu', 'e15')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e16', 'beside', 'e15')"
+     ],
+     "en_trop": [
+      "('e21', 'behind', 'e20')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [
+      "('e6', 'e9')"
+     ],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [],
+     "en_trop": [
+      "('v12', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 26,
+   "genre": "indetermine",
+   "texte": "Sous la surface de l'eau se devine une forme sombre, munie d'une nageoire. Le reste du corps demeure invisible, si bien qu'on ne peut dire s'il s'agit d'une bête réelle ou imaginaire. L'artiste a délibérément ou non laissé la figure dans l'indistinction, et l'image ne livre aucun détail qui permettrait de trancher. Cette incertitude interdit de rattacher la feuille au répertoire des créatures fabuleuses aussi bien qu'à celui de l'histoire naturelle. L'analyse doit donc s'en tenir à la qualité du traitement de l'eau, dont les reflets et les transparences enveloppent cette présence obscure sans jamais la révéler entièrement.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e10', 'indistinction')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v5', 'permettre')",
+      "('v6', 'trancher')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'patient', 'e24')",
+      "('v5', 'agent', 'e12')",
+      "('v8', 'destinataire', 'e15')",
+      "('v8', 'destinataire', 'e17')"
+     ],
+     "en_trop": [
+      "('v1', 'theme', 'e24')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v5', 'agent', 'e12')",
+      "('v8', 'destinataire', 'e15')",
+      "('v8', 'destinataire', 'e17')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e24', 'dans', 'e10')"
+     ],
+     "en_trop": [
+      "('e14', 'à', 'e15')",
+      "('e15', 'de', 'e17')",
+      "('e6', 'de', 'e24')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": [
+      "('e24', 'e7')",
+      "('e3', 'e7')",
+      "('e7', 'e9')"
+     ]
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e7#prop0', 'possible')",
+      "('e7#prop1', 'possible')",
+      "('v5', 'non_affirme')",
+      "('v6', 'non_affirme')"
+     ],
+     "en_trop": [
+      "('e7#prop0', 'non_affirme')",
+      "('e7#prop1', 'non_affirme')",
+      "(('hors', 'r5'), 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [
+      "('e8', 'histoire')"
+     ],
+     "en_trop": [
+      "('e13', 'non_ancre')",
+      "('e19', 'non_ancre')",
+      "('e8', 'oeuvre')",
+      "('v2', 'non_ancre')",
+      "('v3', 'oeuvre')",
+      "('v4', 'oeuvre')",
+      "('v7', 'non_ancre')",
+      "('v8', 'non_ancre')",
+      "(('hors', 'r5'), 'non_ancre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 31,
+   "genre": "variante_autre_relation",
+   "texte": "In this scene no work is being performed on the chair. The craftsman delivers a finished, fully covered chair to a customer and receives payment for it. The painting thus turns from the process of the trade to its commercial conclusion: the exchange of the completed object for money. The artist frames the transaction with a certain formality, the chair standing between the two figures as the visible result of labour now concluded. Genre painters often favoured such moments of exchange, which allowed them to suggest social relations through a simple gesture of handing over.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e22', 'genre painter')",
+      "('e27', 'handing over')"
+     ],
+     "en_trop": [
+      "('e22', 'painter')"
+     ]
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v8'), 'stand')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e22', 'genre')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'lieu', 'e1')"
+     ],
+     "en_trop": [
+      "(('hors', 'v8'), 'agent', 'e20')",
+      "(('hors', 'v8'), 'lieu', 'e19')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'lieu', 'e1')"
+     ],
+     "en_trop": [
+      "(('hors', 'v8'), 'agent', 'e20')",
+      "(('hors', 'v8'), 'lieu', 'e19')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e20', 'between', 'e19')",
+      "('e26', 'of', 'e27')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e15', 'histoire')",
+      "('e27', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e10', 'non_ancre')",
+      "('e15', 'oeuvre')",
+      "('e17', 'oeuvre')",
+      "('e9', 'non_ancre')",
+      "('r2', 'non_ancre')",
+      "('r3', 'non_ancre')",
+      "('v5', 'non_ancre')",
+      "('v7', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 36,
+   "genre": "positif",
+   "texte": "Cette créature imaginaire, tirée d'un bestiaire, occupe tout le premier plan. Sa silhouette est celle d'un gibier à plume, avec une longue queue barrée et une collerette rousse autour du cou ; mais elle porte trois têtes et se termine par une queue de serpent. La créature crache des flammes, dont les langues rouges se détachent en avant d'elle. Derrière elle, le fond est laissé presque nu, de sorte que rien ne détourne l'attention de ce mélange inquiétant de traits familiers et d'attributs monstrueux.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v7', 'laisser')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'lieu', 'e3')",
+      "('v4', 'theme', 'e12')",
+      "('v7', 'lieu', 'e12')",
+      "('v7', 'theme', 'e15')"
+     ],
+     "en_trop": [
+      "('v2', 'theme', 'e3')",
+      "('v4', 'agent', 'e12')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'lieu', 'e3')",
+      "('v4', 'patient_theme', 'e12')",
+      "('v7', 'lieu', 'e12')",
+      "('v7', 'patient_theme', 'e15')"
+     ],
+     "en_trop": [
+      "('v2', 'patient_theme', 'e3')",
+      "('v4', 'agent', 'e12')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e4', 'avec', 'e6')",
+      "('e4', 'avec', 'e7')"
+     ],
+     "en_trop": [
+      "('e15', 'derrière', 'e12')",
+      "('e6', 'de', 'e12')",
+      "('e7', 'de', 'e12')",
+      "('e8', 'de', 'e12')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e2', 'oeuvre')",
+      "('r1', 'histoire')",
+      "('v1', 'histoire')"
+     ],
+     "en_trop": [
+      "('e16', 'non_ancre')",
+      "('e2', 'source')",
+      "('v1', 'source')",
+      "('v8', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 41,
+   "genre": "indetermine",
+   "texte": "A figure stands among dense foliage, which hides the whole of its lower body. Only the upper part emerges from the leaves, and on one arm a few scales can be made out. These scales are the only unusual sign, and they are not enough to tell what kind of being is meant. Its nature therefore remains unclear: the image does not reveal whether the figure is human, animal or something in between. The foliage fills the foreground and the space behind the figure is left dark, so that no other detail helps the viewer.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e10', 'kind')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v7', 'leave')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e9', 'only')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v4', 'agent', 'e9')",
+      "('v7', 'theme', 'e17')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v4', 'agent', 'e9')",
+      "('v7', 'patient_theme', 'e17')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e10', 'of', 'e11')"
+     ],
+     "en_trop": [
+      "('e4', 'of', 'e18')",
+      "('e6', 'of', 'e18')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e10', 'non_affirme')",
+      "('v8', 'non_affirme')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [],
+     "en_trop": [
+      "('v4', 'non_ancre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 51,
+   "genre": "negatif",
+   "texte": "The photograph shows the same boy walking with crutches only. Nothing is fitted to his leg: no splint, strap or brace can be seen. The image focuses on his gait and on the support the crutches provide under his arms. Its plain, frontal framing places it within the conventions of clinical documentation, where the patient's posture and movement were the main concern of the photographer.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v6', 'document')",
+      "('v7', 'move')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v7', 'agent', 'e16')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v7', 'agent', 'e16')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('v6', 'non_ancre')",
+      "('v7', 'non_ancre')"
+     ],
+     "en_trop": []
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 61,
+   "genre": "positif",
+   "texte": "The scene is set in a cholera ward, the illness being named in the caption. Patients with sunken eyes and bluish skin lie on cots arranged along the room, while nurses burn tar to keep the infection from spreading. The artist records both the physical signs of the disease and the measures taken against contagion, giving the image a documentary character. The smoke of the tar and the rows of cots set a sombre tone throughout.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v7'), 'record')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v7'), 'agent', 'e13')",
+      "(('hors', 'v7'), 'theme', 'e14')",
+      "(('hors', 'v7'), 'theme', 'e16')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v7'), 'agent', 'e13')",
+      "(('hors', 'v7'), 'patient_theme', 'e14')",
+      "(('hors', 'v7'), 'patient_theme', 'e16')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [
+      "('e12', 'e15')",
+      "('e12', 'e3')",
+      "('e2', 'e9')"
+     ],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e13', 'non_ancre')",
+      "('v8', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e13', 'oeuvre')",
+      "('v1', 'oeuvre')",
+      "('v8', 'oeuvre')",
+      "(('hors', 'v7'), 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 66,
+   "genre": "indetermine",
+   "texte": "Le tableau représente une religieuse dont la tête est entièrement couverte d'un voile. On ignore tout de la coupe de ses cheveux, totalement dissimulés par l'étoffe. Le peintre s'attache à l'ovale du visage, encadré par les plis du voile, et à l'expression calme du modèle. La notice ne peut rien affirmer quant à un éventuel crâne rasé en couronne, que l'image ne laisse pas voir.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e17', 'couronne')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'couper')",
+      "('v8', 'raser')"
+     ],
+     "en_trop": [
+      "(('hors', 'v7'), 'laisser voir')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e16', 'éventuel')"
+     ],
+     "en_trop": [
+      "('e16', 'rasé')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v3', 'theme', 'e6')",
+      "('v7', 'theme', 'e16')",
+      "('v8', 'patient', 'e16')"
+     ],
+     "en_trop": [
+      "(('hors', 'v7'), 'agent', 'e18')",
+      "(('hors', 'v7'), 'theme', 'e16')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v3', 'patient_theme', 'e6')",
+      "('v7', 'patient_theme', 'e16')",
+      "('v8', 'patient_theme', 'e16')"
+     ],
+     "en_trop": [
+      "(('hors', 'v7'), 'agent', 'e18')",
+      "(('hors', 'v7'), 'patient_theme', 'e16')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e16', 'en', 'e17')"
+     ],
+     "en_trop": [
+      "('e16', 'de', 'e14')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v7'), 'neg')"
+     ]
+    },
+    "modalites": {
+     "manquants": [
+      "('e17', 'non_affirme')",
+      "('e5', 'non_affirme')",
+      "('r8', 'non_affirme')",
+      "('v3', 'non_affirme')",
+      "('v8', 'non_affirme')"
+     ],
+     "en_trop": [
+      "(('hors', 'r8'), 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [
+      "('e8', 'non_ancre')",
+      "('v5', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e8', 'oeuvre')",
+      "('v5', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 76,
+   "genre": "negatif",
+   "texte": "L'œuvre représente Ignatius livré aux lions dans le cirque de Rome. C'est le supplice qui fait ici le sujet : les fauves s'élancent vers le prélat, sous le regard de la foule. Le peintre exploite la puissance dramatique de l'épisode, opposant la fragilité de la victime à la violence des bêtes. La composition s'inscrit dans la longue tradition des images de martyre, où l'arène sert de théâtre à la constance du témoin de la foi. Le traitement dynamique des lions et la profondeur de l'amphithéâtre confèrent à l'ensemble un caractère spectaculaire, très éloigné de la sérénité des scènes d'institution.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e10', 'regard')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v11'), 'instituer')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'patient', 'e16')"
+     ],
+     "en_trop": [
+      "('v1', 'theme', 'e16')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e10', 'de', 'e11')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e12', 'non_ancre')",
+      "('e13', 'non_ancre')",
+      "('e34', 'non_ancre')",
+      "('v10', 'non_ancre')",
+      "('v5', 'non_ancre')",
+      "('v6', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e12', 'oeuvre')",
+      "('e13', 'oeuvre')",
+      "('e30', 'oeuvre')",
+      "('e34', 'autre_oeuvre')",
+      "('e7', 'oeuvre')",
+      "('v10', 'oeuvre')",
+      "('v5', 'oeuvre')",
+      "('v6', 'oeuvre')",
+      "(('hors', 'v11'), 'autre_oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 76,
+   "genre": "variante_negation",
+   "texte": "On pourrait croire à une scène de confirmation, mais la légende précise que la demande d'Ignatius fut rejetée : le pape refuse le parchemin. Le geste représenté n'est donc pas celui d'une remise, mais celui d'un refus, la main pontificale écartant le document. Le peintre fait de ce rejet le centre dramatique de l'œuvre, rare dans une iconographie qui préfère d'ordinaire célébrer la reconnaissance des fondateurs. La tension entre les deux figures, l'une suppliante, l'autre inflexible, donne à la composition une gravité particulière.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e22', 'figure')",
+      "('e23', 'figure')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v11', 'rejeter')"
+     ],
+     "en_trop": [
+      "(('hors', 'v14'), 'supplier')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e22', 'suppliant')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e1')"
+     ],
+     "en_trop": [
+      "(('hors', 'v14'), 'agent', 'e22')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e1')"
+     ],
+     "en_trop": [
+      "(('hors', 'v14'), 'agent', 'e22')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e18', 'de', 'e19')"
+     ],
+     "en_trop": [
+      "('e11', 'de', 'e23')"
+     ]
+    },
+    "coref": {
+     "manquants": [
+      "('e22', 'e5')",
+      "('e23', 'e6')"
+     ],
+     "en_trop": [
+      "('e10', 'e14')",
+      "('e10', 'e15')"
+     ]
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": [
+      "('e9', 'neg')"
+     ]
+    },
+    "modalites": {
+     "manquants": [
+      "('e9', 'non_affirme')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e13', 'non_ancre')",
+      "('e25', 'non_ancre')",
+      "('e4', 'source')",
+      "('v10', 'non_ancre')",
+      "('v15', 'non_ancre')",
+      "('v3', 'source')",
+      "('v4', 'source')"
+     ],
+     "en_trop": [
+      "('e13', 'oeuvre')",
+      "('e15', 'oeuvre')",
+      "('v10', 'oeuvre')",
+      "('v15', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": [
+      "('v4', 'cite')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 81,
+   "genre": "indetermine",
+   "texte": "In the foreground, a bearded man holding a book hands veils to a group of women who kneel before him. The women's heads are lowered, and they reach up to receive the cloth. The man is not named, and no inscription or attribute identifies him or the women. The meaning of the scene therefore remains uncertain, though the gesture of giving is clear. Behind the figures, the background is plain and unspecific, giving no indication of the place. The composition is simple, centred on the exchange of the veils between the standing man and the kneeling group.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v4', 'lower')",
+      "('v5', 'reach')"
+     ],
+     "en_trop": [
+      "('v5', 'reach up')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e8', 'lowered')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v11', 'lieu', 'e22')",
+      "('v4', 'theme', 'e8')"
+     ],
+     "en_trop": [
+      "('v11', 'instrument', 'e22')",
+      "('v12', 'agent', 'e24')",
+      "('v12', 'destinataire', 'e25')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v11', 'lieu', 'e22')",
+      "('v4', 'patient_theme', 'e8')"
+     ],
+     "en_trop": [
+      "('v11', 'instrument', 'e22')",
+      "('v12', 'agent', 'e24')",
+      "('v12', 'destinataire', 'e25')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e22', 'between', 'e24')",
+      "('e22', 'between', 'e25')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [
+      "('v10', 'neg')",
+      "('v8', 'neg')"
+     ],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e20', 'non_affirme')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [],
+     "en_trop": [
+      "('v10', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 91,
+   "genre": "negatif",
+   "texte": "Quentin is shown alone as iron spikes are driven into his shoulders. The image is one of torment, concentrated on the suffering of the young man and the brutal gesture of his tormentors. The painter places the action in the foreground and accentuates the violence of the scene, in keeping with the conventions of martyrdom imagery. No other holy figure accompanies him.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v3', 'lieu', 'e6')",
+      "('v3', 'lieu', 'e8')"
+     ],
+     "en_trop": [
+      "('v3', 'instrument', 'e6')",
+      "('v3', 'instrument', 'e8')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v3', 'lieu', 'e6')",
+      "('v3', 'lieu', 'e8')"
+     ],
+     "en_trop": [
+      "('v3', 'instrument', 'e6')",
+      "('v3', 'instrument', 'e8')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e10', 'in keeping with', 'e15')",
+      "('e6', 'of', 'e7')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [
+      "('v7', 'neg')"
+     ],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e10', 'non_ancre')",
+      "('r7', 'non_ancre')",
+      "('v5', 'non_ancre')",
+      "('v6', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e10', 'oeuvre')",
+      "('v5', 'oeuvre')",
+      "('v6', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 96,
+   "genre": "variante_hors_image",
+   "texte": "L'Hôpital\nHuile sur bois, vers 1635\nLe panneau montre l'hôpital, vu de l'extérieur. Selon l'archive, sa confrérie invoquait Antoine pendant l'épidémie de 1630 ; le saint n'est pas représenté.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": [
+      "('e8', 'pendant', 'e10')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e1', 'titre')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e7', 'source')",
+      "('r1', 'oeuvre')"
+     ],
+     "en_trop": [
+      "('e7', 'histoire')",
+      "('v1', 'oeuvre')",
+      "(('hors', 'r3'), 'histoire')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'r3'), 'cite')"
+     ]
+    }
+   }
+  },
+  {
+   "k": 96,
+   "genre": "variante_roles_inverses",
+   "texte": "Le Drap tendu\nHuile sur bois, vers 1520\nDes fidèles étendent un drap au-dessus d'Antoine pour le protéger de la pluie.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'patient', 'e6')"
+     ],
+     "en_trop": [
+      "('v2', 'theme', 'e6')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e1', 'titre')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('r1', 'oeuvre')"
+     ],
+     "en_trop": []
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 101,
+   "genre": "variante_autre_relation",
+   "texte": "The elderly couple are shown quarrelling at the head of the table, while the rest of the family looks on with embarrassment. The photograph thus records a moment of tension rather than of celebration. Faces are turned away or lowered, and the couple's gestures are sharp. Such an image, unusual among family photographs, which generally favour harmony, offers a rare glimpse of domestic discord. The photographer, whether by intention or chance, preserved an instant that more conventional practice would have discarded.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [
+      "('e14', 'e7')"
+     ],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e15', 'non_ancre')",
+      "('e16', 'non_ancre')",
+      "('e19', 'histoire')",
+      "('e20', 'histoire')",
+      "('e21', 'histoire')",
+      "('v7', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e14', 'oeuvre')",
+      "('e15', 'autre_oeuvre')",
+      "('e16', 'autre_oeuvre')",
+      "('e19', 'oeuvre')",
+      "('v3', 'oeuvre')",
+      "('v7', 'autre_oeuvre')",
+      "('v8', 'oeuvre')",
+      "('v9', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 106,
+   "genre": "positif",
+   "texte": "Au premier plan, le président d'une assemblée se tient debout et frappe la table de son maillet pour annoncer la fin des débats. Autour de lui, les membres rassemblent déjà leurs papiers ; certains se lèvent, d'autres se dirigent vers la sortie, au fond de la salle. Le mouvement de la foule vers la porte anime l'arrière-plan, tandis que la table, couverte de documents, occupe le centre de la composition. La lumière tombe sur le geste du président, qui donne le signal de la dispersion et marque la clôture de la séance.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e10', 'certain')",
+      "('e11', 'autre')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v16', 'clore')"
+     ],
+     "en_trop": [
+      "('v16', 'clôturer')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v10', 'patient', 'e19')",
+      "('v12', 'theme', 'e23')",
+      "('v16', 'patient', 'e29')",
+      "('v2', 'patient', 'e19')",
+      "('v6', 'agent', 'e10')",
+      "('v7', 'agent', 'e11')",
+      "('v8', 'lieu', 'e17')"
+     ],
+     "en_trop": [
+      "('v10', 'theme', 'e19')",
+      "('v12', 'agent', 'e23')",
+      "('v16', 'theme', 'e29')",
+      "('v2', 'theme', 'e19')",
+      "('v6', 'agent', 'e8')",
+      "('v7', 'agent', 'e8')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v12', 'patient_theme', 'e23')",
+      "('v6', 'agent', 'e10')",
+      "('v7', 'agent', 'e11')",
+      "('v8', 'lieu', 'e17')"
+     ],
+     "en_trop": [
+      "('v12', 'agent', 'e23')",
+      "('v6', 'agent', 'e8')",
+      "('v7', 'agent', 'e8')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e28', 'de', 'e29')"
+     ],
+     "en_trop": [
+      "('e15', 'vers', 'e17')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [
+      "('e10', 'e11')"
+     ],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [],
+     "en_trop": [
+      "('e21', 'oeuvre')",
+      "('e22', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 106,
+   "genre": "variante_modalite",
+   "texte": "Au premier plan, le président de l'assemblée tient son maillet levé, comme suspendu au-dessus de la table. Le texte qui accompagne l'image dit qu'il « s'apprête peut-être » à conclure, mais rien ne le confirme : le maillet n'est pas encore tombé, et les membres ne se lèvent pas. Autour de la table, chacun reste à sa place. Au fond, la salle demeure calme. L'image saisit ainsi un instant d'incertitude, dont l'issue n'est pas représentée, et le geste du président garde toute son ambiguïté.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v8', 'theme', 'e8')"
+     ],
+     "en_trop": [
+      "('v8', 'agent', 'e8')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v8', 'patient_theme', 'e8')"
+     ],
+     "en_trop": [
+      "('v8', 'agent', 'e8')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('v2', 'non_affirme')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e6', 'source')"
+     ],
+     "en_trop": [
+      "('e6', 'oeuvre')",
+      "('v11', 'oeuvre')",
+      "('v3', 'oeuvre')",
+      "('v4', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 111,
+   "genre": "negatif",
+   "texte": "The painting shows the balance itself, with its beam and two empty pans. No counterpieces are present: nothing lies in the pans or beside them to be placed on the scale. The instrument is presented on its own, its symmetrical form standing out against a plain background. The artist's interest lies in the clean lines of the beam and the delicate suspension of the pans.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v4'), 'lie')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e8', 'alone')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v4'), 'agent', 'e11')",
+      "(('hors', 'v4'), 'lieu', 'e13')",
+      "(('hors', 'v4'), 'lieu', 'e15')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v4'), 'agent', 'e11')",
+      "(('hors', 'v4'), 'lieu', 'e13')",
+      "(('hors', 'v4'), 'lieu', 'e15')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e11', 'in', 'e13')",
+      "('e11', 'in', 'e15')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [
+      "('v2', 'neg')"
+     ],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": [
+      "('v2', 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [
+      "('e12', 'histoire')"
+     ],
+     "en_trop": [
+      "('e12', 'oeuvre')",
+      "(('hors', 'v4'), 'non_ancre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 116,
+   "genre": "variante_hors_image",
+   "texte": "Buste\nBronze, 1885\nL'œuvre est un buste. Son sculpteur raconte s'être blessé à la plante quand il était enfant, épisode que l'œuvre ne montre pas.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'montrer')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'agent', 'e7')",
+      "('v3', 'agent', 'e9')",
+      "('v3', 'theme', 'e8')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'agent', 'e7')",
+      "('v3', 'agent', 'e9')",
+      "('v3', 'patient_theme', 'e8')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e6', 'de', 'e7')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [
+      "('v3', 'neg')"
+     ],
+     "en_trop": [
+      "('e8', 'neg')"
+     ]
+    },
+    "modalites": {
+     "manquants": [
+      "('e1', 'titre')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e1', 'oeuvre')",
+      "('e4', 'oeuvre')",
+      "('e8', 'source')",
+      "('r2', 'source')",
+      "('v1', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('v1', 'histoire')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 116,
+   "genre": "variante_roles_inverses",
+   "texte": "L'Écharde\nBronze, Ier siècle\nUne fillette retire l'écharde de la plante du garçon, qui se laisse faire.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e3', 'siècle')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e3', 'premier')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e1', 'titre')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e3', 'histoire')"
+     ],
+     "en_trop": []
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 121,
+   "genre": "variante_autre_relation",
+   "texte": "The workman sells a finished part to a customer. The scene shows a commercial exchange rather than any work at the bench: the object passes from the maker's hands to the buyer's, and payment is made. The painter sets the transaction in the workshop, with its tools hanging idle on the walls, and concentrates on the gestures of the two men facing each other across the counter.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v2'), 'exchange')",
+      "(('hors', 'v3'), 'work')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'theme', 'e8')"
+     ],
+     "en_trop": [
+      "('v2', 'agent', 'e8')",
+      "('v7', 'theme', 'e18')",
+      "(('hors', 'v3'), 'lieu', 'e7')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'patient_theme', 'e8')"
+     ],
+     "en_trop": [
+      "('v2', 'agent', 'e8')",
+      "('v7', 'patient_theme', 'e18')",
+      "(('hors', 'v3'), 'lieu', 'e7')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v3'), 'neg')"
+     ]
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": [
+      "('r1', 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [
+      "('e12', 'non_ancre')",
+      "('v4', 'non_ancre')",
+      "('v6', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e12', 'oeuvre')",
+      "('v4', 'oeuvre')",
+      "('v6', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 126,
+   "genre": "positif",
+   "texte": "Une jeune fille des universités, vêtue d'un manteau usé, va de ville en ville sur les routes. Elle mendie son pain et son gîte en chantant, et des livres dépassent de sa besace. L'artiste associe ainsi l'errance et le savoir, la pauvreté du costume et la présence des volumes. La figure, saisie en chemin, incarne une forme de vie itinérante où l'étude se mêle à la quête quotidienne de subsistance.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e1', 'fille')",
+      "('e5', 'ville')"
+     ],
+     "en_trop": [
+      "('e1', 'jeune fille')"
+     ]
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v10'), 'étudier')",
+      "(('hors', 'v12'), 'quêter')",
+      "(('hors', 'v7'), 'errer')",
+      "(('hors', 'v8'), 'saisir')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e18', 'jeune')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'patient', 'e18')",
+      "('v8', 'lieu', 'e21')",
+      "('v8', 'theme', 'e23')"
+     ],
+     "en_trop": [
+      "('v1', 'theme', 'e18')",
+      "('v2', 'lieu', 'e4')",
+      "(('hors', 'v12'), 'theme', 'e24')",
+      "(('hors', 'v8'), 'lieu', 'e19')",
+      "(('hors', 'v8'), 'theme', 'e18')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v8', 'lieu', 'e21')",
+      "('v8', 'patient_theme', 'e23')"
+     ],
+     "en_trop": [
+      "('v2', 'lieu', 'e4')",
+      "(('hors', 'v12'), 'patient_theme', 'e24')",
+      "(('hors', 'v8'), 'lieu', 'e19')",
+      "(('hors', 'v8'), 'patient_theme', 'e18')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e18', 'de', 'e4')",
+      "('e18', 'en', 'e19')",
+      "('e18', 'en', 'e5')",
+      "('e23', 'de', 'e24')"
+     ],
+     "en_trop": [
+      "('e22', 'à', 'e23')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": [
+      "('e15', 'e3')"
+     ]
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e11', 'non_ancre')",
+      "('v6', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e11', 'oeuvre')",
+      "('v6', 'oeuvre')",
+      "(('hors', 'r9'), 'non_ancre')",
+      "(('hors', 'v10'), 'non_ancre')",
+      "(('hors', 'v12'), 'non_ancre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 131,
+   "genre": "indetermine",
+   "texte": "Horses stand tethered near some tents. Whether the camp is military is not said, and nothing in the image settles the question: no uniforms, weapons or flags are visible. The camp could belong to soldiers, travellers or a fair. The catalogue therefore describes the scene without assigning it a military character. The artist's interest lies in the animals and the arrangement of the tents.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v8'), 'arrange')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v4', 'agent', 'e9')",
+      "('v4', 'theme', 'e10')",
+      "('v4', 'theme', 'e11')",
+      "('v4', 'theme', 'e12')"
+     ],
+     "en_trop": [
+      "('v4', 'agent', 'e10')",
+      "('v4', 'agent', 'e11')",
+      "('v4', 'agent', 'e12')",
+      "('v4', 'theme', 'e9')",
+      "(('hors', 'v8'), 'theme', 'e20')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v4', 'agent', 'e9')",
+      "('v4', 'patient_theme', 'e10')",
+      "('v4', 'patient_theme', 'e11')",
+      "('v4', 'patient_theme', 'e12')"
+     ],
+     "en_trop": [
+      "('v4', 'agent', 'e10')",
+      "('v4', 'agent', 'e11')",
+      "('v4', 'agent', 'e12')",
+      "('v4', 'patient_theme', 'e9')",
+      "(('hors', 'v8'), 'patient_theme', 'e20')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e19', 'of', 'e20')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e17', 'non_ancre')",
+      "('r1', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e17', 'oeuvre')",
+      "('e5', 'non_ancre')",
+      "('v2', 'non_ancre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 136,
+   "genre": "variante_autre_relation",
+   "texte": "Les paysans apportent du pain au captif à travers les barreaux. Aucune porte n'est forcée : le rapport entre eux est fait de secours et de solidarité, non de délivrance. L'artiste montre les mains tendues de part et d'autre de la grille, dans une composition sobre qui insiste sur ce geste de charité. La geôle reste close, et la scène garde un caractère paisible.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v3'), 'secourir')",
+      "(('hors', 'v4'), 'délivrer')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "('v3', 'lieu', 'e12')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "('v3', 'lieu', 'e12')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e11', \"de part et d'autre de\", 'e12')",
+      "('e11', 'dans', 'e13')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v4'), 'neg')"
+     ]
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": [
+      "('e9', 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [
+      "('e10', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e10', 'oeuvre')",
+      "('v4', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 141,
+   "genre": "positif",
+   "texte": "The Bronze Snake\nEngraving, c. 1580\nIn the wilderness, Moses directs a metalworker who casts a bronze snake, which is then hoisted atop a tall staff; Israelites bitten by fiery snakes turn their eyes toward it.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'destinataire', 'e5')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'patient_theme', 'e5')"
+     ],
+     "en_trop": [
+      "('v1', 'destinataire', 'e5')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e1', 'titre')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 141,
+   "genre": "variante_modalite",
+   "texte": "The Figure on the Staff\nEngraving, c. 1580\nThe caption says the metal figure on the staff \"may be\" the snake Moses had made, or perhaps a later copy.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [],
+     "en_trop": [
+      "('v1', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 146,
+   "genre": "negatif",
+   "texte": "L'œuvre représente le baptême du Christ par Jean dans le Jourdain. Le Christ se tient dans l'eau du fleuve, tandis que Jean, debout sur la rive, accomplit le geste rituel. Aucun messager, aucune prison n'intervient dans la scène. Le peintre organise la composition autour de ce face-à-face, que le cours du fleuve et le paysage environnant viennent encadrer avec simplicité, dans une lumière égale.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v4'), 'intervenir')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v4'), 'agent', 'e11')",
+      "(('hors', 'v4'), 'agent', 'e12')",
+      "(('hors', 'v4'), 'lieu', 'e13')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v4'), 'agent', 'e11')",
+      "(('hors', 'v4'), 'agent', 'e12')",
+      "(('hors', 'v4'), 'lieu', 'e13')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e11', 'dans', 'e13')",
+      "('e12', 'dans', 'e13')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e14', 'histoire')"
+     ],
+     "en_trop": [
+      "('e14', 'oeuvre')",
+      "('v5', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 146,
+   "genre": "variante_negation",
+   "texte": "La légende précise que Jean n'envoya personne vers le Christ. Il ne faut donc pas lire l'image comme la représentation d'une ambassade venue de la prison. Les figures qui entourent le Christ ne sont pas des messagers de Jean, et aucun lien n'unit la scène à la geôle. La notice suit la légende, qui exclut expressément cette interprétation, et décrit la composition pour ce qu'elle montre.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v2', 'destinataire', 'e9')"
+     ],
+     "en_trop": [
+      "('v2', 'lieu', 'e9')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v2', 'destinataire', 'e9')"
+     ],
+     "en_trop": [
+      "('v2', 'lieu', 'e9')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": [
+      "('e14', 'non_affirme')",
+      "('r4', 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [
+      "('e1', 'oeuvre')",
+      "('e16', 'oeuvre')"
+     ],
+     "en_trop": [
+      "('e1', 'source')",
+      "('e16', 'source')",
+      "('e17', 'non_ancre')",
+      "('v1', 'source')",
+      "('v2', 'source')",
+      "('v3', 'non_ancre')",
+      "('v8', 'source')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 151,
+   "genre": "indetermine",
+   "texte": "A storm breaks over fields that stretch across the picture. In the foreground stands an old man holding a staff. Nothing links him to the storm: he makes no gesture towards the sky, and the image gives no sign that he has caused it or that he even notices it. The clouds are dark and heavy, and the fields beneath them are swept by wind. The old man and the weather simply share the same landscape, and the painter leaves their relation, if any, unexplained.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e17', 'same')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [
+      "('r1', 'neg')"
+     ],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": [
+      "('r1', 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [
+      "('e18', 'histoire')",
+      "('e4', 'oeuvre')"
+     ],
+     "en_trop": [
+      "('e18', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 151,
+   "genre": "variante_copresence",
+   "texte": "Moses and a storm are in the same landscape, but he walks away from it. In the foreground, the old man moves off towards the edge of the picture, his back turned to the clouds. Behind him, the storm breaks over the fields. No gesture or glance connects him with the weather, and nothing suggests that he has caused it. Their presence in one view is the only relation the image establishes, and the painter emphasises the separation by the direction of his walk.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v1', 'walk')"
+     ],
+     "en_trop": [
+      "('v1', 'walk away')",
+      "(('hors', 'v11'), 'separate')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": [
+      "('e3', 'same')"
+     ]
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v4', 'lieu', 'e5')"
+     ],
+     "en_trop": [
+      "('v3', 'lieu', 'e9')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v4', 'lieu', 'e5')"
+     ],
+     "en_trop": [
+      "('v3', 'lieu', 'e9')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e8', 'to', 'e9')"
+     ],
+     "en_trop": [
+      "('e14', 'behind', 'e5')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e19', 'histoire')",
+      "('e4', 'oeuvre')"
+     ],
+     "en_trop": [
+      "('e19', 'oeuvre')",
+      "('v8', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 156,
+   "genre": "variante_hors_image",
+   "texte": "La toile montre une nature morte, sans aucune figure humaine. Le lien avec Adam et Ève tient à un souvenir du peintre, qui raconte avoir partagé une pomme avec sa femme. Cet épisode relève de sa vie privée et de ses écrits, non de l'image. Rien, sur la toile, ne représente le jardin, le couple ou le reptile. Les objets sont rendus avec soin.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'v5'), 'rendre')"
+     ]
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v4', 'theme', 'e11')"
+     ],
+     "en_trop": [
+      "('v4', 'agent', 'e11')",
+      "('v4', 'theme', 'e12')",
+      "('v4', 'theme', 'e13')",
+      "(('hors', 'v5'), 'theme', 'e19')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v4', 'patient_theme', 'e11')"
+     ],
+     "en_trop": [
+      "('v4', 'agent', 'e11')",
+      "('v4', 'patient_theme', 'e12')",
+      "('v4', 'patient_theme', 'e13')",
+      "(('hors', 'v5'), 'patient_theme', 'e19')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e11', 'de', 'e12')",
+      "('e11', 'de', 'e13')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e10', 'non_ancre')",
+      "('e11', 'non_ancre')",
+      "('e12', 'non_ancre')",
+      "('e13', 'non_ancre')",
+      "('e7', 'non_ancre')",
+      "('e9', 'non_ancre')",
+      "('v2', 'non_ancre')",
+      "('v3', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e10', 'source')",
+      "('e11', 'source')",
+      "('e12', 'histoire')",
+      "('e13', 'histoire')",
+      "('e7', 'histoire')",
+      "('e9', 'source')",
+      "('v2', 'histoire')",
+      "('v3', 'source')",
+      "(('hors', 'v5'), 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [
+      "('e10', 'cite')",
+      "('e9', 'cite')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 156,
+   "genre": "variante_roles_inverses",
+   "texte": "La scène inverse les rôles attendus : c'est le reptile qui tient la pomme et la croque, tandis qu'Adam et Ève le regardent. L'animal devient l'acteur du geste, et le couple en est le spectateur. L'artiste place la créature au centre, enroulée autour de l'arbre, et dispose les deux figures humaines de part et d'autre, immobiles. La composition reste sobre et lisible, et la lumière égale n'accentue aucun détail particulier.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": [
+      "('e10', 'e16')",
+      "('e11', 'e16')"
+     ]
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e12', 'histoire')"
+     ],
+     "en_trop": [
+      "('e12', 'oeuvre')",
+      "('e2', 'non_ancre')",
+      "('v1', 'non_ancre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 161,
+   "genre": "variante_autre_relation",
+   "texte": "Jeremiah weeps with the people of Judah. No rebuke and no mockery appear: the relation between prophet and people is one of shared grief. The figures are gathered together, heads bowed and faces covered, in a common expression of sorrow. The painter dissolves the usual opposition between the prophet and his audience into a scene of collective mourning. Such an approach emphasises compassion over denunciation, and the composition, compact and subdued, gives visual form to a community united in lamentation.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e4', 'rebuke')",
+      "('e5', 'mockery')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v10', 'denounce')",
+      "('v4', 'grieve')",
+      "('v6', 'express')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v12', 'patient', 'e26')",
+      "('v4', 'agent', 'e17')",
+      "('v4', 'agent', 'e18')",
+      "('v6', 'agent', 'e10')",
+      "('v6', 'theme', 'e14')"
+     ],
+     "en_trop": [
+      "('v12', 'theme', 'e26')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v4', 'agent', 'e17')",
+      "('v4', 'agent', 'e18')",
+      "('v6', 'agent', 'e10')",
+      "('v6', 'patient_theme', 'e14')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [
+      "('e4', 'neg')",
+      "('e5', 'neg')"
+     ],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e15', 'histoire')",
+      "('r14', 'non_ancre')",
+      "('v10', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e15', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 166,
+   "genre": "positif",
+   "texte": "Penuel\nHuile sur toile, vers 1650\nÀ l'aube, après la lutte, Jacob boitant se retourne et proclame que ce lieu s'appellera Penuel, « j'ai vu Dieu face à face » ; il grave une pierre.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e5', 'lutte')"
+     ],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [
+      "('e6', 'après', 'e5')",
+      "('e6', 'à', 'e4')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e1', 'titre')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('r1', 'oeuvre')"
+     ],
+     "en_trop": []
+    },
+    "citations": {
+     "manquants": [
+      "('e8', 'cite')"
+     ],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 166,
+   "genre": "variante_modalite",
+   "texte": "Jacob au gué\nHuile sur toile, vers 1650\nSelon le texte, Jacob « aurait » baptisé ce lieu Penuel.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e1', 'titre')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('r2', 'oeuvre')"
+     ],
+     "en_trop": []
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 171,
+   "genre": "negatif",
+   "texte": "An allegorical woman stands in the centre of the picture, her eyes closed and her hands folded before her. Nothing in her posture suggests movement or attention: she seems uninterested in finding anything out, withdrawn into herself. No animal accompanies her, and no object draws her gaze. Behind her, the background is plain and even. The stillness of the figure and the closed eyes are the key elements of the composition, which the painter renders with calm, smooth handling and a soft, diffused light.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'move')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v5', 'agent', 'e14')"
+     ],
+     "en_trop": [
+      "('v5', 'theme', 'e14')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v5', 'agent', 'e14')"
+     ],
+     "en_trop": [
+      "('v5', 'patient_theme', 'e14')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [
+      "('v6', 'neg')",
+      "('v7', 'neg')"
+     ],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('v3', 'non_affirme')"
+     ],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e18', 'histoire')",
+      "('e20', 'oeuvre')"
+     ],
+     "en_trop": [
+      "('e18', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 181,
+   "genre": "positif",
+   "texte": "An allegorical judge lifts her blindfold in order to favour one of the litigants. She lets a purse tip one pan of her balance and turns her back on the poor plaintiff. The artist subverts the familiar iconography of Justice, whose blindfold and level scales normally signify impartiality, by showing each attribute corrupted: the raised blindfold reveals partiality, the purse distorts the balance, and the turned back expresses contempt for the weak. Such satirical inversions of virtue allegories were a powerful vehicle of social criticism, and the clarity of the visual language made the denunciation accessible to a broad public.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v11', 'invert')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v11', 'patient', 'e24')",
+      "('v3', 'theme', 'e18')",
+      "('v6', 'patient', 'e10')"
+     ],
+     "en_trop": [
+      "('v5', 'lieu', 'e8')",
+      "('v6', 'theme', 'e10')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v11', 'patient_theme', 'e24')",
+      "('v3', 'patient_theme', 'e18')"
+     ],
+     "en_trop": [
+      "('v5', 'lieu', 'e8')"
+     ]
+    },
+    "relations": {
+     "manquants": [
+      "('e20', 'on', 'e8')"
+     ],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e10', 'non_ancre')",
+      "('e11', 'non_ancre')",
+      "('e12', 'non_ancre')",
+      "('e13', 'non_ancre')",
+      "('e14', 'non_ancre')",
+      "('e9', 'histoire')",
+      "('r10', 'non_ancre')",
+      "('r11', 'non_ancre')",
+      "('r12', 'non_ancre')",
+      "('r13', 'non_ancre')",
+      "('r6', 'non_ancre')",
+      "('r7', 'non_ancre')",
+      "('r8', 'non_ancre')",
+      "('v11', 'non_ancre')",
+      "('v6', 'non_ancre')",
+      "('v7', 'non_ancre')"
+     ],
+     "en_trop": [
+      "('e10', 'autre_oeuvre')",
+      "('e11', 'autre_oeuvre')",
+      "('e12', 'autre_oeuvre')",
+      "('e13', 'autre_oeuvre')",
+      "('e14', 'autre_oeuvre')",
+      "('e9', 'oeuvre')",
+      "('v6', 'oeuvre')",
+      "('v7', 'autre_oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 186,
+   "genre": "indetermine",
+   "texte": "Un croissant argenté apparaît sous les pieds d'une femme. Aucun phylactère n'accompagne le motif, si bien qu'on ne sait s'il s'agit d'un emblème de la Vierge ou d'un attribut de Diane. L'image ne fournit aucun autre élément qui permettrait de trancher entre ces deux lectures. La notice se limite donc à décrire la figure et le croissant sur lequel elle se tient, sans proposer d'identification que l'œuvre ne justifie pas.",
+   "detail": {
+    "entites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "evenements": {
+     "manquants": [
+      "('v3', 'fournir')",
+      "('v4', 'permettre')"
+     ],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v3', 'agent', 'e10')",
+      "('v3', 'theme', 'e11')",
+      "('v4', 'agent', 'e11')"
+     ],
+     "en_trop": []
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v3', 'agent', 'e10')",
+      "('v3', 'patient_theme', 'e11')",
+      "('v4', 'agent', 'e11')"
+     ],
+     "en_trop": []
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [
+      "('v1', 'neg')",
+      "('v3', 'neg')"
+     ],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [
+      "('e6', 'possible')",
+      "('e7', 'possible')",
+      "('e8', 'possible')",
+      "('e9', 'possible')",
+      "('r3', 'possible')",
+      "('r4', 'possible')",
+      "('v4', 'non_affirme')"
+     ],
+     "en_trop": [
+      "('e6', 'non_affirme')",
+      "('e7', 'non_affirme')",
+      "('e8', 'non_affirme')",
+      "('e9', 'non_affirme')",
+      "('r3', 'non_affirme')",
+      "('r4', 'non_affirme')"
+     ]
+    },
+    "portees": {
+     "manquants": [
+      "('v3', 'oeuvre')"
+     ],
+     "en_trop": []
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  },
+  {
+   "k": 196,
+   "genre": "negatif",
+   "texte": "Une grande cathédrale occupe toute l'image, vue du dehors. Son bras transversal, du même type, dépasse de la nef de part et d'autre, mais à une tout autre échelle : les murs s'élèvent très haut, percés de vastes fenêtres, et le volume se perd dans la masse de l'édifice. Au premier plan, le pavement d'une place s'étend jusqu'aux portails. Au fond, les tours et les toitures se détachent sur le ciel. L'artiste insiste sur la monumentalité de la construction, dont les dimensions écrasent les passants.",
+   "detail": {
+    "entites": {
+     "manquants": [
+      "('e13', 'plan')"
+     ],
+     "en_trop": [
+      "('e13', 'premier plan')"
+     ]
+    },
+    "evenements": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "noms": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "proprietes": {
+     "manquants": [
+      "('e13', 'premier')"
+     ],
+     "en_trop": []
+    },
+    "nombres": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "roles": {
+     "manquants": [
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'instrument', 'e3')",
+      "('v3', 'lieu', 'e6')"
+     ],
+     "en_trop": [
+      "('v1', 'theme', 'e2')",
+      "('v2', 'lieu', 'e3')"
+     ]
+    },
+    "roles_macro": {
+     "manquants": [
+      "('v1', 'lieu', 'e2')",
+      "('v2', 'instrument', 'e3')",
+      "('v3', 'lieu', 'e6')"
+     ],
+     "en_trop": [
+      "('v1', 'patient_theme', 'e2')",
+      "('v2', 'lieu', 'e3')"
+     ]
+    },
+    "relations": {
+     "manquants": [],
+     "en_trop": [
+      "('e4', 'de', 'e6')"
+     ]
+    },
+    "coref": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "distinct": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "negations": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "modalites": {
+     "manquants": [],
+     "en_trop": []
+    },
+    "portees": {
+     "manquants": [
+      "('e21', 'histoire')"
+     ],
+     "en_trop": [
+      "('e21', 'oeuvre')",
+      "('v2', 'oeuvre')"
+     ]
+    },
+    "citations": {
+     "manquants": [],
+     "en_trop": []
+    }
+   }
+  }
+ ]
+}

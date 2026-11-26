@@ -1,0 +1,7854 @@
+[
+ {
+  "annotation_A": {
+   "k": 1,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "A young man stands alone in a meadow beneath the trees, mouth wide open in song, singing without any instrument or accompanist.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "man",
+     "mention": "A young man",
+     "proprietes": [
+      "young",
+      "alone"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "meadow",
+     "mention": "a meadow",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "tree",
+     "mention": "the trees",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "mouth",
+     "mention": "mouth",
+     "proprietes": [
+      "open"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "instrument",
+     "mention": "any instrument",
+     "proprietes": [],
+     "noms": [],
+     "polarite": "neg"
+    },
+    {
+     "id": "e6",
+     "tete": "accompanist",
+     "mention": "accompanist",
+     "proprietes": [],
+     "noms": [],
+     "polarite": "neg"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "stand",
+     "mention": "stands",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "sing",
+     "mention": "singing",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "instrument": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "in",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "beneath",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« in song » et « singing » désignent le même chant : un seul événement ; l'accompagnateur nié n'a pas de rôle prévu par le guide (pas de rôle comitatif), il reste une entité niée."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 1,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "A young woman stands alone in a meadow beneath the trees, mouth wide open in song, singing without any instrument or accompanist.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "woman",
+     "mention": "A young woman",
+     "proprietes": [
+      "young",
+      "alone"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "meadow",
+     "mention": "a meadow",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "tree",
+     "mention": "the trees",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "mouth",
+     "mention": "mouth",
+     "proprietes": [
+      "open"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "instrument",
+     "mention": "any instrument",
+     "proprietes": [],
+     "noms": [],
+     "polarite": "neg"
+    },
+    {
+     "id": "e6",
+     "tete": "accompanist",
+     "mention": "accompanist",
+     "proprietes": [],
+     "noms": [],
+     "polarite": "neg"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "stand",
+     "mention": "stands",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "sing",
+     "mention": "singing",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "instrument": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "in",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "beneath",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« in song » et « singing » désignent le même chant : un seul événement ; l'accompagnateur nié n'a pas de rôle prévu par le guide, il reste une entité niée."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 1,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "A man sings alone, one hand on his chest; the background is left blank, so nothing shows whether he is indoors or outside.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "man",
+     "mention": "A man",
+     "proprietes": [
+      "alone"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "hand",
+     "mention": "one hand",
+     "proprietes": [],
+     "noms": [],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "chest",
+     "mention": "his chest",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "background",
+     "mention": "the background",
+     "proprietes": [
+      "blank"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "sing",
+     "mention": "sings",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "on",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« indoors or outside » sont des adverbes, non des entités : l'alternative non tranchée sur le lieu ne peut pas s'écrire en `alternatives` ; le fond laissé vierge est un état du support (portée oeuvre)."
+  },
+  "annotation_B": {
+   "k": 1,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "A man sings alone, one hand on his chest; the background is left blank, so nothing shows whether he is indoors or outside.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "man",
+     "mention": "A man"
+    },
+    {
+     "id": "e2",
+     "tete": "hand",
+     "mention": "one hand",
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "chest",
+     "mention": "his chest"
+    },
+    {
+     "id": "e4",
+     "tete": "background",
+     "mention": "the background",
+     "proprietes": [
+      "blank"
+     ],
+     "portee": "oeuvre"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "sing",
+     "mention": "sings",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "on",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "The indoors/outside question bears only on adverbs, so no entity or alternative can carry it; 'alone' (adverb) is left unannotated, and the blank background is treated as a state of the work."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 6,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Au centre d'une place de marché animée, entre les étals de légumes et les paniers de volailles, s'élève une haute croix de pierre sur un socle à degrés.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "place",
+     "mention": "une place de marché animée",
+     "proprietes": [
+      "marché",
+      "animé"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "étal",
+     "mention": "les étals",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "légume",
+     "mention": "légumes",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "panier",
+     "mention": "les paniers",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "volaille",
+     "mention": "volailles",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "croix",
+     "mention": "une haute croix de pierre",
+     "proprietes": [
+      "haut",
+      "pierre"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e7",
+     "tete": "socle",
+     "mention": "un socle à degrés",
+     "proprietes": [
+      "à degrés"
+     ],
+     "noms": []
+    }
+   ],
+   "evenements": [],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e6",
+     "relation": "au centre de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e6",
+     "relation": "entre",
+     "objet": "e2"
+    },
+    {
+     "id": "r3",
+     "sujet": "e6",
+     "relation": "entre",
+     "objet": "e4"
+    },
+    {
+     "id": "r4",
+     "sujet": "e6",
+     "relation": "sur",
+     "objet": "e7"
+    },
+    {
+     "id": "r5",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e3"
+    },
+    {
+     "id": "r6",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e5"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« s'élève » dit pour un objet sa simple présence : pas d'événement ; « de marché » (espèce) et « à degrés » traités en propriétés, légumes et volailles (référents concrets) en entités."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 6,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Au centre d'un cimetière de village, entre les tombes et les ifs, s'élève une haute croix de pierre sur un socle à degrés.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "cimetière",
+     "mention": "un cimetière de village",
+     "proprietes": [
+      "village"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "tombe",
+     "mention": "les tombes",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "if",
+     "mention": "les ifs",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "croix",
+     "mention": "une haute croix de pierre",
+     "proprietes": [
+      "haut",
+      "pierre"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "socle",
+     "mention": "un socle à degrés",
+     "proprietes": [
+      "à degrés"
+     ],
+     "noms": []
+    }
+   ],
+   "evenements": [],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e4",
+     "relation": "au centre de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e4",
+     "relation": "entre",
+     "objet": "e2"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "entre",
+     "objet": "e3"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "sur",
+     "objet": "e5"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« s'élève » dit pour un objet sa simple présence : pas d'événement ; « de village » (espèce) traité en propriété."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 6,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Une haute croix de pierre sur un socle à degrés est dessinée isolément sur la feuille, sans aucune indication du lieu où elle se dresse.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "croix",
+     "mention": "Une haute croix de pierre",
+     "proprietes": [
+      "haut",
+      "pierre"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "socle",
+     "mention": "un socle à degrés",
+     "proprietes": [
+      "à degrés"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "feuille",
+     "mention": "la feuille",
+     "proprietes": [],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e4",
+     "tete": "lieu",
+     "mention": "lieu",
+     "proprietes": [],
+     "noms": [],
+     "modalite": "non_affirme"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "indiquer",
+     "mention": "indication",
+     "nom_d_action": "indication",
+     "roles": {
+      "theme": [
+       "e4"
+      ]
+     },
+     "polarite": "neg"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "sur",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "sur",
+     "objet": "e3",
+     "portee": "oeuvre"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« est dessinée » et « se dresse » sont des verbes de figuration ou de présence : pas d'événement ; l'adverbe « isolément » n'a pas de place dans le schéma ; le lieu, complément d'une indication niée, est non affirmé."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 11,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "Gravestones and leaning wooden crosses crowd the grass that surrounds a small parish church, the whole enclosed by a low wall.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "gravestone",
+     "mention": "Gravestones",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "cross",
+     "mention": "leaning wooden crosses",
+     "proprietes": [
+      "wooden"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "grass",
+     "mention": "the grass",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "parish church",
+     "mention": "a small parish church",
+     "proprietes": [
+      "small"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "whole",
+     "mention": "the whole",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "wall",
+     "mention": "a low wall",
+     "proprietes": [
+      "low"
+     ],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "lean",
+     "mention": "leaning",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "crowd",
+     "mention": "crowd",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1",
+       "e2"
+      ],
+      "lieu": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "surround",
+     "mention": "surrounds",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e3"
+      ],
+      "theme": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v4",
+     "predicat": "enclose",
+     "mention": "enclosed",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e6"
+      ],
+      "theme": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« the whole » désigne l'ensemble (tombes, croix, herbe, église) et ne coréfère à aucune entité seule ; « surrounds » et « enclosed by » sont des verbes de relation stative, donc des événements."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 11,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "Gravestones and leaning wooden crosses fill a large municipal cemetery outside the town, with no church anywhere in sight.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "gravestone",
+     "mention": "Gravestones",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "cross",
+     "mention": "leaning wooden crosses",
+     "proprietes": [
+      "wooden"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "cemetery",
+     "mention": "a large municipal cemetery",
+     "proprietes": [
+      "large",
+      "municipal"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "town",
+     "mention": "the town",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "church",
+     "mention": "no church",
+     "proprietes": [],
+     "noms": [],
+     "polarite": "neg"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "lean",
+     "mention": "leaning",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "fill",
+     "mention": "fill",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1",
+       "e2"
+      ],
+      "lieu": [
+       "e3"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "outside",
+     "objet": "e4"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« anywhere in sight » renforce la négation de l'église ; « sight » n'est pas un référent."
+  },
+  "annotation_B": {
+   "k": 11,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "Gravestones and leaning wooden crosses fill a large municipal cemetery outside the town, with no church anywhere in sight.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "gravestone",
+     "mention": "Gravestones"
+    },
+    {
+     "id": "e2",
+     "tete": "cross",
+     "mention": "leaning wooden crosses",
+     "proprietes": [
+      "wooden"
+     ]
+    },
+    {
+     "id": "e3",
+     "tete": "cemetery",
+     "mention": "a large municipal cemetery",
+     "proprietes": [
+      "large",
+      "municipal"
+     ]
+    },
+    {
+     "id": "e4",
+     "tete": "town",
+     "mention": "the town"
+    },
+    {
+     "id": "e5",
+     "tete": "church",
+     "mention": "no church",
+     "polarite": "neg"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "lean",
+     "mention": "leaning",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "fill",
+     "mention": "fill",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1",
+       "e2"
+      ],
+      "lieu": [
+       "e3"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "outside",
+     "objet": "e4"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "'fill' is a stative verb written as an event; the filled cemetery is taken as its lieu."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 11,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "Gravestones and leaning wooden crosses appear in the foreground; the frame cuts off whatever building may stand beyond them.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "gravestone",
+     "mention": "Gravestones",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "cross",
+     "mention": "leaning wooden crosses",
+     "proprietes": [
+      "wooden"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "foreground",
+     "mention": "the foreground",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "frame",
+     "mention": "the frame",
+     "proprietes": [],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e5",
+     "tete": "building",
+     "mention": "whatever building",
+     "proprietes": [],
+     "noms": [],
+     "modalite": "possible"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "lean",
+     "mention": "leaning",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "cut off",
+     "mention": "cuts off",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ],
+      "theme": [
+       "e5"
+      ]
+     },
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "in",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "in",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e5",
+     "relation": "beyond",
+     "objet": "e1",
+     "modalite": "possible"
+    },
+    {
+     "id": "r4",
+     "sujet": "e5",
+     "relation": "beyond",
+     "objet": "e2",
+     "modalite": "possible"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« them » reprend les tombes et les croix (pluriel), non « the foreground » ; « appear » et « may stand » (présence d'un bâtiment) ne sont pas des événements, le bâtiment n'est que possible."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 16,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Une affiche de planning familial montre une jeune femme tenant une plaquette de pilules contraceptives, à côté d'un préservatif et d'un calendrier du cycle.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "affiche",
+     "mention": "Une affiche de planning familial",
+     "proprietes": [
+      "planning familial"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "femme",
+     "mention": "une jeune femme",
+     "proprietes": [
+      "jeune"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "plaquette",
+     "mention": "une plaquette",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "pilule",
+     "mention": "pilules contraceptives",
+     "proprietes": [
+      "contraceptif"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "préservatif",
+     "mention": "un préservatif",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "calendrier",
+     "mention": "un calendrier",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e7",
+     "tete": "cycle",
+     "mention": "cycle",
+     "proprietes": [],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "tenir",
+     "mention": "tenant",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ],
+      "theme": [
+       "e3"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e4"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "à côté de",
+     "objet": "e5"
+    },
+    {
+     "id": "r3",
+     "sujet": "e2",
+     "relation": "à côté de",
+     "objet": "e6"
+    },
+    {
+     "id": "r4",
+     "sujet": "e6",
+     "relation": "de",
+     "objet": "e7"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« à côté de » est rattaché à la femme (lecture la plus naturelle ; il pourrait aussi porter sur la plaquette) ; « de planning familial » (espèce d'affiche) en propriété."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 16,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Une affiche de maternité montre une jeune femme enceinte, souriante, tenant un test de grossesse positif, à côté d'un calendrier de naissance.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "affiche",
+     "mention": "Une affiche de maternité",
+     "proprietes": [
+      "maternité"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "femme",
+     "mention": "une jeune femme enceinte",
+     "proprietes": [
+      "jeune",
+      "enceinte"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "test de grossesse",
+     "mention": "un test de grossesse positif",
+     "proprietes": [
+      "positif"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "calendrier",
+     "mention": "un calendrier de naissance",
+     "proprietes": [
+      "naissance"
+     ],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "sourire",
+     "mention": "souriante",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "tenir",
+     "mention": "tenant",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ],
+      "theme": [
+       "e3"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "à côté de",
+     "objet": "e4"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« souriante » décrit une action en cours : événement ; « test de grossesse » pris comme composé lexical."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 16,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Une affiche à demi arrachée montre une jeune femme tenant une petite boîte dont l'étiquette est illisible.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "affiche",
+     "mention": "Une affiche à demi arrachée",
+     "proprietes": [
+      "à demi arraché"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "femme",
+     "mention": "une jeune femme",
+     "proprietes": [
+      "jeune"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "boîte",
+     "mention": "une petite boîte",
+     "proprietes": [
+      "petit"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "étiquette",
+     "mention": "l'étiquette",
+     "proprietes": [
+      "illisible"
+     ],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "tenir",
+     "mention": "tenant",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ],
+      "theme": [
+       "e3"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e3"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« arrachée » est un état résultant de l'affiche (propriété, portée oeuvre)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 21,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "A coachman lashes his horses with a whip; the frightened animals bolt and the carriage overturns into the ditch.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "coachman",
+     "mention": "A coachman",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "horse",
+     "mention": "his horses",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "whip",
+     "mention": "a whip",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "animal",
+     "mention": "the frightened animals",
+     "proprietes": [
+      "frightened"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "carriage",
+     "mention": "the carriage",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "ditch",
+     "mention": "the ditch",
+     "proprietes": [],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "lash",
+     "mention": "lashes",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "patient": [
+       "e2"
+      ],
+      "instrument": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "bolt",
+     "mention": "bolt",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "overturn",
+     "mention": "overturns",
+     "nom_d_action": null,
+     "roles": {
+      "patient": [
+       "e5"
+      ],
+      "lieu": [
+       "e6"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e5",
+     "relation": "into",
+     "objet": "e6"
+    }
+   ],
+   "coref": [
+    [
+     "e2",
+     "e4"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "La voiture qui se renverse subit un changement d'état : patient plutôt qu'agent, bien qu'elle soit sujet d'un verbe actif."
+  },
+  "annotation_B": {
+   "k": 21,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "A coachman lashes his horses with a whip; the frightened animals bolt and the carriage overturns into the ditch.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "coachman",
+     "mention": "A coachman"
+    },
+    {
+     "id": "e2",
+     "tete": "horse",
+     "mention": "his horses"
+    },
+    {
+     "id": "e3",
+     "tete": "whip",
+     "mention": "a whip"
+    },
+    {
+     "id": "e4",
+     "tete": "animal",
+     "mention": "the frightened animals",
+     "proprietes": [
+      "frightened"
+     ]
+    },
+    {
+     "id": "e5",
+     "tete": "carriage",
+     "mention": "the carriage"
+    },
+    {
+     "id": "e6",
+     "tete": "ditch",
+     "mention": "the ditch"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "lash",
+     "mention": "lashes",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "patient": [
+       "e2"
+      ],
+      "instrument": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "bolt",
+     "mention": "bolt",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "overturn",
+     "mention": "overturns",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e5",
+     "relation": "into",
+     "objet": "e6"
+    }
+   ],
+   "coref": [
+    [
+     "e2",
+     "e4"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "The subject of intransitive 'overturns' is agent per the guide (subject of an active verb), although it undergoes the change."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 21,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "A rider digs his spurs into his horse's flanks; the frightened animal bolts and the rider is thrown into the ditch.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "rider",
+     "mention": "A rider",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "spur",
+     "mention": "his spurs",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "horse",
+     "mention": "his horse",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "flank",
+     "mention": "flanks",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "animal",
+     "mention": "the frightened animal",
+     "proprietes": [
+      "frightened"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "rider",
+     "mention": "the rider",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e7",
+     "tete": "ditch",
+     "mention": "the ditch",
+     "proprietes": [],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "dig",
+     "mention": "digs",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e2"
+      ],
+      "lieu": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "bolt",
+     "mention": "bolts",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e5"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "throw",
+     "mention": "thrown",
+     "nom_d_action": null,
+     "roles": {
+      "theme": [
+       "e6"
+      ],
+      "lieu": [
+       "e7"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e3"
+    },
+    {
+     "id": "r4",
+     "sujet": "e2",
+     "relation": "into",
+     "objet": "e4"
+    },
+    {
+     "id": "r5",
+     "sujet": "e6",
+     "relation": "into",
+     "objet": "e7"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e6"
+    ],
+    [
+     "e3",
+     "e5"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "Le passif « is thrown » n'a pas de complément d'agent : aucun agent n'est écrit (le cheval n'est pas supposé)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 21,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "A carriage lies overturned in the ditch and its horses are gone; how the accident happened is not shown.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "carriage",
+     "mention": "A carriage",
+     "proprietes": [
+      "overturned"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "ditch",
+     "mention": "the ditch",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "horse",
+     "mention": "its horses",
+     "proprietes": [],
+     "noms": [],
+     "polarite": "neg"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "accident",
+     "mention": "the accident",
+     "nom_d_action": "accident",
+     "roles": {}
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "in",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« are gone » lu comme l'absence des chevaux dans l'image (entité niée) ; l'accident est présupposé, mais sa manière (« how … happened », contenu d'une question indirecte non montrée) n'est pas représentée ; « lies » est un verbe de présence."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 26,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "La frise se compose de rinceaux végétaux stylisés, feuilles et vrilles si librement inventées qu'on n'y reconnaît aucune plante.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "frise",
+     "mention": "La frise",
+     "proprietes": [],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "rinceau",
+     "mention": "rinceaux végétaux stylisés",
+     "proprietes": [
+      "végétal",
+      "stylisé"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "feuille",
+     "mention": "feuilles",
+     "proprietes": [
+      "inventé"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "vrille",
+     "mention": "vrilles",
+     "proprietes": [
+      "inventé"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "plante",
+     "mention": "aucune plante",
+     "proprietes": [],
+     "noms": [],
+     "modalite": "non_affirme"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "se composer",
+     "mention": "se compose",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e2",
+       "e3",
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "reconnaître",
+     "mention": "reconnaît",
+     "nom_d_action": null,
+     "roles": {
+      "theme": [
+       "e5"
+      ],
+      "lieu": [
+       "e3",
+       "e4"
+      ]
+     },
+     "polarite": "neg"
+    }
+   ],
+   "relations": [],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« feuilles et vrilles » détaille les rinceaux (apposition, sans coréférence stricte) ; « ne … aucune » traité comme « does not hold » : événement nié, plante non affirmée ; le sujet « on » n'est pas une entité."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 26,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "La frise se compose de rinceaux de feuilles d'acanthe et de grappes de raisin, dessinées avec une précision de botaniste.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "frise",
+     "mention": "La frise",
+     "proprietes": [],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "rinceau",
+     "mention": "rinceaux",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "feuille d'acanthe",
+     "mention": "feuilles d'acanthe",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "grappe de raisin",
+     "mention": "grappes de raisin",
+     "proprietes": [],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "se composer",
+     "mention": "se compose",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e2"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e4"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« dessinées » est un verbe de figuration (pas d'événement) ; « avec une précision de botaniste » est un jugement de style sans référent, que le schéma ne permet pas d'écrire."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 26,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "La frise est presque entièrement effacée ; seuls subsistent quelques traits courbes, végétaux ou simples volutes.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "frise",
+     "mention": "La frise",
+     "proprietes": [
+      "effacé"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "trait",
+     "mention": "quelques traits courbes",
+     "proprietes": [
+      "courbe",
+      {
+       "propriete": "végétal",
+       "modalite": "possible"
+      }
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e3",
+     "tete": "volute",
+     "mention": "simples volutes",
+     "proprietes": [
+      "simple"
+     ],
+     "noms": [],
+     "modalite": "possible",
+     "portee": "oeuvre"
+    }
+   ],
+   "evenements": [],
+   "relations": [],
+   "coref": [
+    [
+     "e2",
+     "e3"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "L'alternative « végétaux ou simples volutes » oppose une propriété à une entité : rendue par deux qualificatifs « possible » et une coréférence traits/volutes, faute de pouvoir la mettre dans `alternatives` ; « subsistent » est un verbe de présence."
+  },
+  "annotation_B": {
+   "k": 26,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "La frise est presque entièrement effacée ; seuls subsistent quelques traits courbes, végétaux ou simples volutes.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "frise",
+     "mention": "La frise",
+     "proprietes": [
+      "effacé"
+     ],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "trait",
+     "mention": "quelques traits courbes",
+     "proprietes": [
+      "courbe"
+     ]
+    },
+    {
+     "id": "e3",
+     "tete": "végétal",
+     "mention": "végétaux"
+    },
+    {
+     "id": "e4",
+     "tete": "volute",
+     "mention": "simples volutes",
+     "proprietes": [
+      "simple"
+     ]
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "subsister",
+     "mention": "subsistent",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     },
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [
+    [
+     "e3",
+     "e4"
+    ]
+   ],
+   "notes": "« végétaux ou simples volutes » est lu comme deux identifications exclusives des traits subsistants (alternatives), sans coref affirmée ; l'effacement et la survivance relèvent de l'état de l'œuvre."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 31,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "Fishermen haul lobster pots onto their boat; inside the wicker traps, lobsters and crabs wave their claws.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "fisherman",
+     "mention": "Fishermen",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "lobster pot",
+     "mention": "lobster pots",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "boat",
+     "mention": "their boat",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "trap",
+     "mention": "the wicker traps",
+     "proprietes": [
+      "wicker"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "lobster",
+     "mention": "lobsters",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "crab",
+     "mention": "crabs",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e7",
+     "tete": "claw",
+     "mention": "their claws",
+     "proprietes": [],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "haul",
+     "mention": "haul",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e2"
+      ],
+      "lieu": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "wave",
+     "mention": "wave",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e5",
+       "e6"
+      ],
+      "theme": [
+       "e7"
+      ],
+      "lieu": [
+       "e4"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "onto",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e5",
+     "relation": "inside",
+     "objet": "e4"
+    },
+    {
+     "id": "r4",
+     "sujet": "e6",
+     "relation": "inside",
+     "objet": "e4"
+    },
+    {
+     "id": "r5",
+     "sujet": "e7",
+     "relation": "of",
+     "objet": "e5"
+    },
+    {
+     "id": "r6",
+     "sujet": "e7",
+     "relation": "of",
+     "objet": "e6"
+    }
+   ],
+   "coref": [
+    [
+     "e2",
+     "e4"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« lobster pot » pris comme composé lexical ; les nasses d'osier reprennent les casiers."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 31,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "Fishermen haul baskets of mussels and oysters onto their boat; inside the wicker baskets, the shells lie closed and still.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "fisherman",
+     "mention": "Fishermen",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "basket",
+     "mention": "baskets",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "mussel",
+     "mention": "mussels",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "oyster",
+     "mention": "oysters",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "boat",
+     "mention": "their boat",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "basket",
+     "mention": "the wicker baskets",
+     "proprietes": [
+      "wicker"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e7",
+     "tete": "shell",
+     "mention": "the shells",
+     "proprietes": [
+      "closed",
+      "still"
+     ],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "haul",
+     "mention": "haul",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e2"
+      ],
+      "lieu": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e2",
+     "relation": "onto",
+     "objet": "e5"
+    },
+    {
+     "id": "r4",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r5",
+     "sujet": "e7",
+     "relation": "inside",
+     "objet": "e6"
+    }
+   ],
+   "coref": [
+    [
+     "e2",
+     "e6"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "Les coquilles sont celles des moules et huîtres (anaphore associative non écrite, le texte ne la dit pas explicitement) ; « lie » est un verbe de présence."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 31,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "Fishermen haul wicker traps onto their boat; the traps are still closed and their contents cannot be seen.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "fisherman",
+     "mention": "Fishermen",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "trap",
+     "mention": "wicker traps",
+     "proprietes": [
+      "wicker"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "boat",
+     "mention": "their boat",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "trap",
+     "mention": "the traps",
+     "proprietes": [
+      "closed"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "content",
+     "mention": "their contents",
+     "proprietes": [],
+     "noms": [],
+     "modalite": "non_affirme"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "haul",
+     "mention": "haul",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e2"
+      ],
+      "lieu": [
+       "e3"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "onto",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e4"
+    }
+   ],
+   "coref": [
+    [
+     "e2",
+     "e4"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« cannot be seen » nie la figuration, non l'existence : le contenu est mentionné sans être affirmé dans l'image (non_affirme plutôt que neg)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 36,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Dans un paysage idéal à la manière de Poussin, une cascade tombe entre des rochers harmonieusement ordonnés, parmi des temples antiques et des bergers drapés.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "paysage",
+     "mention": "un paysage idéal",
+     "proprietes": [
+      "idéal"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "manière",
+     "mention": "la manière de Poussin",
+     "proprietes": [],
+     "noms": [],
+     "portee": "non_ancre"
+    },
+    {
+     "id": "e3",
+     "tete": "poussin",
+     "mention": "Poussin",
+     "proprietes": [],
+     "noms": [
+      "Poussin"
+     ],
+     "portee": "non_ancre"
+    },
+    {
+     "id": "e4",
+     "tete": "cascade",
+     "mention": "une cascade",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "rocher",
+     "mention": "des rochers harmonieusement ordonnés",
+     "proprietes": [
+      "ordonné"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "temple",
+     "mention": "des temples antiques",
+     "proprietes": [
+      "antique"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e7",
+     "tete": "berger",
+     "mention": "des bergers drapés",
+     "proprietes": [
+      "drapé"
+     ],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "tomber",
+     "mention": "tombe",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "à",
+     "objet": "e2",
+     "portee": "non_ancre"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e3",
+     "portee": "non_ancre"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "dans",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "entre",
+     "objet": "e5"
+    },
+    {
+     "id": "r5",
+     "sujet": "e4",
+     "relation": "parmi",
+     "objet": "e6"
+    },
+    {
+     "id": "r6",
+     "sujet": "e4",
+     "relation": "parmi",
+     "objet": "e7"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« à la manière de Poussin » est un énoncé de style (portée non_ancre) ; le paysage idéal caractérise l'œuvre elle-même (portée oeuvre)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 36,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Dans une vue topographique fidèle d'une vallée des Alpes, une cascade tombe entre des rochers, notée sur le motif avec ses chalets et ses sapins.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "vue",
+     "mention": "une vue topographique fidèle",
+     "proprietes": [
+      "topographique",
+      "fidèle"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "vallée",
+     "mention": "une vallée",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "alpes",
+     "mention": "Alpes",
+     "proprietes": [],
+     "noms": [
+      "Alpes"
+     ]
+    },
+    {
+     "id": "e4",
+     "tete": "cascade",
+     "mention": "une cascade",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "rocher",
+     "mention": "des rochers",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "chalet",
+     "mention": "ses chalets",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e7",
+     "tete": "sapin",
+     "mention": "ses sapins",
+     "proprietes": [],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "tomber",
+     "mention": "tombe",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "noter",
+     "mention": "notée",
+     "nom_d_action": null,
+     "roles": {
+      "theme": [
+       "e4",
+       "e6",
+       "e7"
+      ]
+     },
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "dans",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "entre",
+     "objet": "e5"
+    },
+    {
+     "id": "r5",
+     "sujet": "e6",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r6",
+     "sujet": "e7",
+     "relation": "de",
+     "objet": "e2"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« ses » rattaché à la vallée selon le sens (la règle de la mention la plus proche donnerait « le motif ») ; « notée sur le motif » dit la technique d'exécution (portée oeuvre), « le motif » n'y est pas un référent."
+  },
+  "annotation_B": {
+   "k": 36,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Dans une vue topographique fidèle d'une vallée des Alpes, une cascade tombe entre des rochers, notée sur le motif avec ses chalets et ses sapins.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "vue",
+     "mention": "une vue topographique fidèle",
+     "proprietes": [
+      "topographique",
+      "fidèle"
+     ],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "vallée",
+     "mention": "une vallée"
+    },
+    {
+     "id": "e3",
+     "tete": "alpes",
+     "mention": "Alpes",
+     "noms": [
+      "Alpes"
+     ]
+    },
+    {
+     "id": "e4",
+     "tete": "cascade",
+     "mention": "une cascade"
+    },
+    {
+     "id": "e5",
+     "tete": "rocher",
+     "mention": "des rochers"
+    },
+    {
+     "id": "e6",
+     "tete": "motif",
+     "mention": "le motif",
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e7",
+     "tete": "chalet",
+     "mention": "ses chalets"
+    },
+    {
+     "id": "e8",
+     "tete": "sapin",
+     "mention": "ses sapins"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "tomber",
+     "mention": "tombe",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "noter",
+     "mention": "notée",
+     "nom_d_action": null,
+     "roles": {
+      "theme": [
+       "e4",
+       "e7",
+       "e8"
+      ],
+      "lieu": [
+       "e6"
+      ]
+     },
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "dans",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "entre",
+     "objet": "e5"
+    },
+    {
+     "id": "r5",
+     "sujet": "e7",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r6",
+     "sujet": "e8",
+     "relation": "de",
+     "objet": "e2"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« notée sur le motif » (relevé d'après nature) est rattaché à la technique de l'œuvre ; le participe s'accorde avec la cascade, et « ses » est rapporté à la vallée par le sens."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 36,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Une cascade tombe entre des rochers ; le fragment conservé est trop petit pour juger du caractère du paysage.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "cascade",
+     "mention": "Une cascade",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "rocher",
+     "mention": "des rochers",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "fragment",
+     "mention": "le fragment conservé",
+     "proprietes": [
+      "conservé",
+      "petit"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e4",
+     "tete": "caractère",
+     "mention": "caractère",
+     "proprietes": [],
+     "noms": [],
+     "modalite": "non_affirme",
+     "portee": "non_ancre"
+    },
+    {
+     "id": "e5",
+     "tete": "paysage",
+     "mention": "paysage",
+     "proprietes": [],
+     "noms": [],
+     "portee": "oeuvre"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "tomber",
+     "mention": "tombe",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "juger",
+     "mention": "juger",
+     "nom_d_action": null,
+     "roles": {
+      "theme": [
+       "e4"
+      ]
+     },
+     "polarite": "neg",
+     "portee": "non_ancre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "entre",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e5"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« trop petit pour juger » nie la possibilité du jugement : événement nié (portée non_ancre), son objet non affirmé ; le fragment est l'état de l'œuvre."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 41,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "An anatomical plate shows a standing female nude whose broken thigh-bone is drawn beneath the skin, the two fragments visibly displaced.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "plate",
+     "mention": "An anatomical plate",
+     "proprietes": [
+      "anatomical"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "nude",
+     "mention": "a standing female nude",
+     "proprietes": [
+      "female"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "thigh-bone",
+     "mention": "broken thigh-bone",
+     "proprietes": [
+      "broken"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "skin",
+     "mention": "the skin",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "fragment",
+     "mention": "the two fragments",
+     "proprietes": [
+      "displaced"
+     ],
+     "noms": [],
+     "nombre": 2
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "stand",
+     "mention": "standing",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "beneath",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r4",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e3"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« standing » (posture) est un événement, « broken » et « displaced » des états résultants ; « is drawn » est un verbe de figuration."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 41,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "An anatomical plate shows a standing male nude whose broken thigh-bone is drawn beneath the skin, the two fragments visibly displaced.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "plate",
+     "mention": "An anatomical plate",
+     "proprietes": [
+      "anatomical"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "nude",
+     "mention": "a standing male nude",
+     "proprietes": [
+      "male"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "thigh-bone",
+     "mention": "broken thigh-bone",
+     "proprietes": [
+      "broken"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "skin",
+     "mention": "the skin",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "fragment",
+     "mention": "the two fragments",
+     "proprietes": [
+      "displaced"
+     ],
+     "noms": [],
+     "nombre": 2
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "stand",
+     "mention": "standing",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "beneath",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r4",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e3"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« standing » (posture) est un événement, « broken » et « displaced » des états résultants ; « is drawn » est un verbe de figuration."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 41,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "An anatomical plate shows a broken thigh-bone with its fragments displaced; only the isolated bone is drawn, not the body it belongs to.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "plate",
+     "mention": "An anatomical plate",
+     "proprietes": [
+      "anatomical"
+     ],
+     "noms": [],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "thigh-bone",
+     "mention": "a broken thigh-bone",
+     "proprietes": [
+      "broken"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "fragment",
+     "mention": "its fragments",
+     "proprietes": [
+      "displaced"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "bone",
+     "mention": "the isolated bone",
+     "proprietes": [
+      "isolated"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e5",
+     "tete": "body",
+     "mention": "the body",
+     "proprietes": [],
+     "noms": [],
+     "polarite": "neg"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "belong",
+     "mention": "belongs",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ],
+      "theme": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e2"
+    }
+   ],
+   "coref": [
+    [
+     "e2",
+     "e4"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« it » reprend l'os selon le sens (la mention la plus proche serait « the body ») ; le corps est nié comme figuré, non comme existant, et « belongs » (relation stative) est écrit en événement."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 46,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Un homme assis à son bureau se tient le front à deux mains, grimaçant sous une violente migraine, une compresse posée sur la tempe.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "homme",
+     "mention": "Un homme",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "bureau",
+     "mention": "son bureau",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "front",
+     "mention": "le front",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "main",
+     "mention": "deux mains",
+     "proprietes": [],
+     "noms": [],
+     "nombre": 2
+    },
+    {
+     "id": "e5",
+     "tete": "migraine",
+     "mention": "une violente migraine",
+     "proprietes": [
+      "violent"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "compresse",
+     "mention": "une compresse",
+     "proprietes": [
+      "posé"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e7",
+     "tete": "tempe",
+     "mention": "la tempe",
+     "proprietes": [],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "s'asseoir",
+     "mention": "assis",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "tenir",
+     "mention": "se tient",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e3"
+      ],
+      "instrument": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "grimacer",
+     "mention": "grimaçant",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "à",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r5",
+     "sujet": "e1",
+     "relation": "sous",
+     "objet": "e5"
+    },
+    {
+     "id": "r6",
+     "sujet": "e6",
+     "relation": "sur",
+     "objet": "e7"
+    },
+    {
+     "id": "r7",
+     "sujet": "e7",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« se tient le front » = tenir son propre front (prédicat tenir) ; « sous une migraine » est causal et non spatial, gardé en relation « sous » faute de rôle de cause ; « assis » (posture) est un événement."
+  },
+  "annotation_B": {
+   "k": 46,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Un homme assis à son bureau se tient le front à deux mains, grimaçant sous une violente migraine, une compresse posée sur la tempe.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "homme",
+     "mention": "Un homme"
+    },
+    {
+     "id": "e2",
+     "tete": "bureau",
+     "mention": "son bureau"
+    },
+    {
+     "id": "e3",
+     "tete": "front",
+     "mention": "le front"
+    },
+    {
+     "id": "e4",
+     "tete": "main",
+     "mention": "deux mains",
+     "nombre": 2
+    },
+    {
+     "id": "e5",
+     "tete": "migraine",
+     "mention": "une violente migraine",
+     "proprietes": [
+      "violent"
+     ]
+    },
+    {
+     "id": "e6",
+     "tete": "compresse",
+     "mention": "une compresse",
+     "proprietes": [
+      "posé"
+     ]
+    },
+    {
+     "id": "e7",
+     "tete": "tempe",
+     "mention": "la tempe"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "asseoir",
+     "mention": "assis",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "tenir",
+     "mention": "se tient",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e3"
+      ],
+      "instrument": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "grimacer",
+     "mention": "grimaçant",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e1",
+     "relation": "sous",
+     "objet": "e5"
+    },
+    {
+     "id": "r5",
+     "sujet": "e6",
+     "relation": "sur",
+     "objet": "e7"
+    },
+    {
+     "id": "r6",
+     "sujet": "e7",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« sous une violente migraine » est causal et non spatial ; faute de rôle de cause, la préposition est gardée comme relation."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 46,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Un homme assis à son bureau se tient la joue à deux mains, grimaçant sous une rage de dents, un mouchoir noué autour de la mâchoire.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "homme",
+     "mention": "Un homme",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "bureau",
+     "mention": "son bureau",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "joue",
+     "mention": "la joue",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "main",
+     "mention": "deux mains",
+     "proprietes": [],
+     "noms": [],
+     "nombre": 2
+    },
+    {
+     "id": "e5",
+     "tete": "rage de dents",
+     "mention": "une rage de dents",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e6",
+     "tete": "mouchoir",
+     "mention": "un mouchoir",
+     "proprietes": [
+      "noué"
+     ],
+     "noms": []
+    },
+    {
+     "id": "e7",
+     "tete": "mâchoire",
+     "mention": "la mâchoire",
+     "proprietes": [],
+     "noms": []
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "s'asseoir",
+     "mention": "assis",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "tenir",
+     "mention": "se tient",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e3"
+      ],
+      "instrument": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "grimacer",
+     "mention": "grimaçant",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "à",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r5",
+     "sujet": "e1",
+     "relation": "sous",
+     "objet": "e5"
+    },
+    {
+     "id": "r6",
+     "sujet": "e6",
+     "relation": "autour de",
+     "objet": "e7"
+    },
+    {
+     "id": "r7",
+     "sujet": "e7",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« rage de dents » pris comme composé lexical (comme « mal de tête ») ; « sous » causal gardé en relation faute de rôle de cause."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 46,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Un homme assis à son bureau se tient le front à deux mains ; on ne sait s'il souffre ou s'il réfléchit.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "homme",
+     "mention": "Un homme",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e2",
+     "tete": "bureau",
+     "mention": "son bureau",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e3",
+     "tete": "front",
+     "mention": "le front",
+     "proprietes": [],
+     "noms": []
+    },
+    {
+     "id": "e4",
+     "tete": "main",
+     "mention": "deux mains",
+     "proprietes": [],
+     "noms": [],
+     "nombre": 2
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "s'asseoir",
+     "mention": "assis",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "tenir",
+     "mention": "se tient",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e3"
+      ],
+      "instrument": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "souffrir",
+     "mention": "souffre",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     },
+     "modalite": "non_affirme"
+    },
+    {
+     "id": "v4",
+     "predicat": "réfléchir",
+     "mention": "réfléchit",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     },
+     "modalite": "non_affirme"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "à",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [
+    [
+     "v3",
+     "v4"
+    ]
+   ],
+   "notes": "Souffrir et réfléchir sont le contenu d'une question indirecte (non affirmés) et des hypothèses exclusives ; « on ne sait » est un énoncé de l'auteur sur l'image, sans référent, non écrit en événement."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 51,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "A lady wears a short silk mantelet, a little cape that barely covers her shoulders, tied at the throat with ribbons.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "lady",
+     "mention": "A lady",
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "mantelet",
+     "mention": "a short silk mantelet",
+     "proprietes": [
+      "short",
+      "silk"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "cape",
+     "mention": "a little cape",
+     "proprietes": [
+      "little"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "shoulder",
+     "mention": "her shoulders"
+    },
+    {
+     "id": "e5",
+     "tete": "throat",
+     "mention": "the throat",
+     "nombre": 1
+    },
+    {
+     "id": "e6",
+     "tete": "ribbon",
+     "mention": "ribbons"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "wear",
+     "mention": "wears",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "cover",
+     "mention": "covers",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e3"
+      ],
+      "theme": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "tie",
+     "mention": "tied",
+     "nom_d_action": null,
+     "roles": {
+      "patient": [
+       "e3"
+      ],
+      "lieu": [
+       "e5"
+      ],
+      "instrument": [
+       "e6"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [
+    [
+     "e2",
+     "e3"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« tied at the throat with ribbons » est annoté en événement plutôt qu'en propriété résultative pour garder lieu et instrument ; « barely » n'a pas de champ ; la gorge est rattachée à la dame par le sens."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 51,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "A lady wears a long hooded cloak that falls to her ankles, fastened at the throat with ribbons.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "lady",
+     "mention": "A lady",
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "cloak",
+     "mention": "a long hooded cloak",
+     "proprietes": [
+      "long",
+      "hooded"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "ankle",
+     "mention": "her ankles"
+    },
+    {
+     "id": "e4",
+     "tete": "throat",
+     "mention": "the throat",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "ribbon",
+     "mention": "ribbons"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "wear",
+     "mention": "wears",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "fall",
+     "mention": "falls",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ],
+      "lieu": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "fasten",
+     "mention": "fastened",
+     "nom_d_action": null,
+     "roles": {
+      "patient": [
+       "e2"
+      ],
+      "lieu": [
+       "e4"
+      ],
+      "instrument": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« fastened at the throat with ribbons » en événement (lieu, instrument) ; « falls to her ankles » : la longueur du manteau, annotée par l'événement fall avec les chevilles en lieu."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 51,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "The engraving shows only the lady's face; a fashion note printed below mentions a mantelet.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "engraving",
+     "mention": "The engraving",
+     "nombre": 1,
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "lady",
+     "mention": "the lady",
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "face",
+     "mention": "the lady's face",
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "note",
+     "mention": "a fashion note",
+     "proprietes": [
+      "fashion",
+      "printed"
+     ],
+     "nombre": 1,
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e5",
+     "tete": "mantelet",
+     "mention": "a mantelet",
+     "nombre": 1,
+     "portee": "source"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "mention",
+     "mention": "mentions",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ],
+      "theme": [
+       "e5"
+      ]
+     },
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e4",
+     "relation": "below",
+     "objet": "e3",
+     "portee": "oeuvre"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« shows only the lady's face » : seul le visage est figuré, le mantelet n'existe que dans le texte de la note (portée source) ; « below » sans complément est rattaché au visage figuré."
+  },
+  "annotation_B": {
+   "k": 51,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "The engraving shows only the lady's face; a fashion note printed below mentions a mantelet.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "engraving",
+     "mention": "The engraving",
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "face",
+     "mention": "the lady's face"
+    },
+    {
+     "id": "e3",
+     "tete": "lady",
+     "mention": "lady"
+    },
+    {
+     "id": "e4",
+     "tete": "note",
+     "mention": "a fashion note",
+     "proprietes": [
+      "fashion",
+      "printed"
+     ],
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e5",
+     "tete": "mantelet",
+     "mention": "a mantelet",
+     "portee": "source"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "mention",
+     "mention": "mentions",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ],
+      "theme": [
+       "e5"
+      ]
+     },
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e3"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "The mantelet is only named by the printed text, not shown (portee source); 'below' has no expressed object, so no relation is written."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 56,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Une planche anatomique représente l'appareil génital masculin, pénis et testicules, avec ses canaux désignés par des lettres.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "planche",
+     "mention": "Une planche anatomique",
+     "proprietes": [
+      "anatomique"
+     ],
+     "nombre": 1,
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "appareil génital",
+     "mention": "l'appareil génital masculin",
+     "proprietes": [
+      "masculin"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "pénis",
+     "mention": "pénis",
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "testicule",
+     "mention": "testicules"
+    },
+    {
+     "id": "e5",
+     "tete": "canal",
+     "mention": "ses canaux"
+    },
+    {
+     "id": "e6",
+     "tete": "lettre",
+     "mention": "des lettres",
+     "portee": "oeuvre"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "désigner",
+     "mention": "désignés",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e6"
+      ],
+      "theme": [
+       "e5"
+      ]
+     },
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r3",
+     "sujet": "e5",
+     "relation": "de",
+     "objet": "e2"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« pénis et testicules » en apposition détaille les parties de l'appareil : relations de partie (de) plutôt que coréférence ; « appareil génital » gardé comme tête composée ; les lettres de renvoi relèvent du support."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 56,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Une planche anatomique représente l'appareil génital féminin, utérus et ovaires, avec ses canaux désignés par des lettres.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "planche",
+     "mention": "Une planche anatomique",
+     "proprietes": [
+      "anatomique"
+     ],
+     "nombre": 1,
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "appareil génital",
+     "mention": "l'appareil génital féminin",
+     "proprietes": [
+      "féminin"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "utérus",
+     "mention": "utérus",
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "ovaire",
+     "mention": "ovaires"
+    },
+    {
+     "id": "e5",
+     "tete": "canal",
+     "mention": "ses canaux"
+    },
+    {
+     "id": "e6",
+     "tete": "lettre",
+     "mention": "des lettres",
+     "portee": "oeuvre"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "désigner",
+     "mention": "désignés",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e6"
+      ],
+      "theme": [
+       "e5"
+      ]
+     },
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r3",
+     "sujet": "e5",
+     "relation": "de",
+     "objet": "e2"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« utérus et ovaires » en apposition détaille les parties de l'appareil : relations de partie (de) plutôt que coréférence ; « appareil génital » gardé comme tête composée."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 56,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Une planche anatomique dont la figure a été découpée ; seules subsistent les lettres de renvoi d'un appareil génital non précisé.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "planche",
+     "mention": "Une planche anatomique",
+     "proprietes": [
+      "anatomique"
+     ],
+     "nombre": 1,
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e2",
+     "tete": "figure",
+     "mention": "la figure",
+     "nombre": 1,
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e3",
+     "tete": "lettre de renvoi",
+     "mention": "les lettres de renvoi",
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e4",
+     "tete": "appareil génital",
+     "mention": "un appareil génital non précisé",
+     "proprietes": [
+      {
+       "propriete": "précisé",
+       "polarite": "neg"
+      }
+     ],
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "découper",
+     "mention": "découpée",
+     "nom_d_action": null,
+     "roles": {
+      "patient": [
+       "e2"
+      ]
+     },
+     "portee": "oeuvre"
+    },
+    {
+     "id": "v2",
+     "predicat": "subsister",
+     "mention": "subsistent",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e3"
+      ]
+     },
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e4"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "Tout porte sur l'état matériel de la planche (portée oeuvre) ; l'appareil génital, dont seules les lettres subsistent, n'est pas précisé (propriété niée) ; « seules » n'a pas de champ propre."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 61,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "A garden pavilion is filled with blossoming orange trees and bowls of rose petals, censers send perfumed smoke through the air, and the visitors breathe in the scent with delight.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "pavilion",
+     "mention": "A garden pavilion",
+     "proprietes": [
+      "garden"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "orange tree",
+     "mention": "blossoming orange trees"
+    },
+    {
+     "id": "e3",
+     "tete": "bowl",
+     "mention": "bowls"
+    },
+    {
+     "id": "e4",
+     "tete": "petal",
+     "mention": "rose petals",
+     "proprietes": [
+      "rose"
+     ]
+    },
+    {
+     "id": "e5",
+     "tete": "censer",
+     "mention": "censers"
+    },
+    {
+     "id": "e6",
+     "tete": "smoke",
+     "mention": "perfumed smoke",
+     "proprietes": [
+      "perfumed"
+     ]
+    },
+    {
+     "id": "e7",
+     "tete": "air",
+     "mention": "the air"
+    },
+    {
+     "id": "e8",
+     "tete": "visitor",
+     "mention": "the visitors"
+    },
+    {
+     "id": "e9",
+     "tete": "scent",
+     "mention": "the scent"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "fill",
+     "mention": "filled",
+     "nom_d_action": null,
+     "roles": {
+      "theme": [
+       "e2",
+       "e3"
+      ],
+      "lieu": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "blossom",
+     "mention": "blossoming",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "send",
+     "mention": "send",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e5"
+      ],
+      "theme": [
+       "e6"
+      ],
+      "lieu": [
+       "e7"
+      ]
+     }
+    },
+    {
+     "id": "v4",
+     "predicat": "breathe in",
+     "mention": "breathe in",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e8"
+      ],
+      "theme": [
+       "e9"
+      ]
+     }
+    },
+    {
+     "id": "v5",
+     "predicat": "delight",
+     "mention": "delight",
+     "nom_d_action": "delight",
+     "roles": {
+      "agent": [
+       "e8"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e4"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« is filled with » : contenus en thème, pavillon en lieu ; « bowls of rose petals » suit la règle du complément du nom (of) bien que ce soit un contenu ; « with delight » est rendu par un nom d'affect dont les visiteurs sont l'agent."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 61,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "A tannery yard is filled with stinking hides and vats of urine, smoke from the boilers drifts through the air, and the visitors hold their noses against the stench.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "yard",
+     "mention": "A tannery yard",
+     "proprietes": [
+      "tannery"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "hide",
+     "mention": "stinking hides"
+    },
+    {
+     "id": "e3",
+     "tete": "vat",
+     "mention": "vats"
+    },
+    {
+     "id": "e4",
+     "tete": "urine",
+     "mention": "urine"
+    },
+    {
+     "id": "e5",
+     "tete": "smoke",
+     "mention": "smoke"
+    },
+    {
+     "id": "e6",
+     "tete": "boiler",
+     "mention": "the boilers"
+    },
+    {
+     "id": "e7",
+     "tete": "air",
+     "mention": "the air"
+    },
+    {
+     "id": "e8",
+     "tete": "visitor",
+     "mention": "the visitors"
+    },
+    {
+     "id": "e9",
+     "tete": "nose",
+     "mention": "their noses"
+    },
+    {
+     "id": "e10",
+     "tete": "stench",
+     "mention": "the stench"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "fill",
+     "mention": "filled",
+     "nom_d_action": null,
+     "roles": {
+      "theme": [
+       "e2",
+       "e3"
+      ],
+      "lieu": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "stink",
+     "mention": "stinking",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "drift",
+     "mention": "drifts",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e5"
+      ],
+      "lieu": [
+       "e7"
+      ]
+     }
+    },
+    {
+     "id": "v4",
+     "predicat": "hold",
+     "mention": "hold",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e8"
+      ],
+      "theme": [
+       "e9"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e4"
+    },
+    {
+     "id": "r2",
+     "sujet": "e5",
+     "relation": "from",
+     "objet": "e6"
+    },
+    {
+     "id": "r3",
+     "sujet": "e9",
+     "relation": "of",
+     "objet": "e8"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« against the stench » (ce contre quoi l'on se protège) n'a pas de rôle dans le schéma : la puanteur reste une entité sans lien ; « stinking » traité comme participe d'action en cours."
+  },
+  "annotation_B": {
+   "k": 61,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "A tannery yard is filled with stinking hides and vats of urine, smoke from the boilers drifts through the air, and the visitors hold their noses against the stench.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "yard",
+     "mention": "A tannery yard",
+     "proprietes": [
+      "tannery"
+     ]
+    },
+    {
+     "id": "e2",
+     "tete": "hide",
+     "mention": "stinking hides"
+    },
+    {
+     "id": "e3",
+     "tete": "vat",
+     "mention": "vats"
+    },
+    {
+     "id": "e4",
+     "tete": "urine",
+     "mention": "urine"
+    },
+    {
+     "id": "e5",
+     "tete": "smoke",
+     "mention": "smoke"
+    },
+    {
+     "id": "e6",
+     "tete": "boiler",
+     "mention": "the boilers"
+    },
+    {
+     "id": "e7",
+     "tete": "air",
+     "mention": "the air"
+    },
+    {
+     "id": "e8",
+     "tete": "visitor",
+     "mention": "the visitors"
+    },
+    {
+     "id": "e9",
+     "tete": "nose",
+     "mention": "their noses"
+    },
+    {
+     "id": "e10",
+     "tete": "stench",
+     "mention": "the stench"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "fill",
+     "mention": "filled",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2",
+       "e3"
+      ],
+      "lieu": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "stink",
+     "mention": "stinking",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "drift",
+     "mention": "drifts",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e5"
+      ],
+      "lieu": [
+       "e7"
+      ]
+     }
+    },
+    {
+     "id": "v4",
+     "predicat": "hold",
+     "mention": "hold",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e8"
+      ],
+      "theme": [
+       "e9"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e4"
+    },
+    {
+     "id": "r2",
+     "sujet": "e5",
+     "relation": "from",
+     "objet": "e6"
+    },
+    {
+     "id": "r3",
+     "sujet": "e9",
+     "relation": "of",
+     "objet": "e8"
+    },
+    {
+     "id": "r4",
+     "sujet": "e9",
+     "relation": "against",
+     "objet": "e10"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "'filled with' is brought back to the active (hides and vats fill the yard); 'against the stench' is purposive, kept as a relation for lack of a matching role."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 61,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "A garden pavilion with bowls and censers stands empty; nothing shows whether anything is burning or in bloom.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "pavilion",
+     "mention": "A garden pavilion",
+     "proprietes": [
+      "garden",
+      "empty"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "bowl",
+     "mention": "bowls"
+    },
+    {
+     "id": "e3",
+     "tete": "censer",
+     "mention": "censers"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "burn",
+     "mention": "burning",
+     "nom_d_action": null,
+     "roles": {},
+     "modalite": "non_affirme"
+    },
+    {
+     "id": "v2",
+     "predicat": "bloom",
+     "mention": "bloom",
+     "nom_d_action": "bloom",
+     "roles": {},
+     "modalite": "non_affirme"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "with",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "with",
+     "objet": "e3"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« stands empty » : verbe de présence, « empty » en propriété ; le contenu de l'interrogative indirecte (« whether… ») est non affirmé, et « anything », pronom sans antécédent, ne donne ni entité ni rôle."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 66,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Une vieille femme, son bonnet ôté, laisse voir son crâne chauve et luisant, que sa servante s'apprête à couvrir d'une perruque.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "femme",
+     "mention": "Une vieille femme",
+     "proprietes": [
+      "vieux"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "bonnet",
+     "mention": "son bonnet",
+     "proprietes": [
+      "ôté"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "crâne",
+     "mention": "son crâne chauve et luisant",
+     "proprietes": [
+      "chauve",
+      "luisant"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "servante",
+     "mention": "sa servante",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "perruque",
+     "mention": "une perruque",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "s'apprêter",
+     "mention": "s'apprête",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "couvrir",
+     "mention": "couvrir",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ],
+      "theme": [
+       "e3"
+      ],
+      "instrument": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« laisse voir » est traité comme un verbe de figuration (le crâne est visible), non comme un événement ; « ôté » est un état résultant (propriété) ; l'imminence de « s'apprête à » n'a pas de qualificatif propre."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 66,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Un vieil homme, son bonnet ôté, laisse voir son crâne chauve et luisant, que son valet s'apprête à couvrir d'une perruque.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "homme",
+     "mention": "Un vieil homme",
+     "proprietes": [
+      "vieux"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "bonnet",
+     "mention": "son bonnet",
+     "proprietes": [
+      "ôté"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "crâne",
+     "mention": "son crâne chauve et luisant",
+     "proprietes": [
+      "chauve",
+      "luisant"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "valet",
+     "mention": "son valet",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "perruque",
+     "mention": "une perruque",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "s'apprêter",
+     "mention": "s'apprête",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "couvrir",
+     "mention": "couvrir",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ],
+      "theme": [
+       "e3"
+      ],
+      "instrument": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« laisse voir » est traité comme un verbe de figuration, non comme un événement ; « ôté » est un état résultant (propriété)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 66,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Une vieille femme garde son bonnet bien serré sur la tête, tandis que sa servante tient une perruque.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "femme",
+     "mention": "Une vieille femme",
+     "proprietes": [
+      "vieux"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "bonnet",
+     "mention": "son bonnet",
+     "proprietes": [
+      "serré"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "tête",
+     "mention": "la tête",
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "servante",
+     "mention": "sa servante",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "perruque",
+     "mention": "une perruque",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "garder",
+     "mention": "garde",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e2"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "tenir",
+     "mention": "tient",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ],
+      "theme": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e2",
+     "relation": "sur",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« la tête » sans possessif est rattachée à la femme par le sens (possession inaliénable)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 71,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "Saint Cassian of Imola kneels before a bishop who anoints his head and consecrates him, his schoolmaster's stylus laid on the altar step beside him.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Cassian of Imola",
+     "noms": [
+      "Cassian"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "imola",
+     "mention": "Imola",
+     "noms": [
+      "Imola"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "bishop",
+     "mention": "a bishop",
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "head",
+     "mention": "his head",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "stylus",
+     "mention": "his schoolmaster's stylus",
+     "proprietes": [
+      "laid"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e6",
+     "tete": "schoolmaster",
+     "mention": "schoolmaster",
+     "nombre": 1
+    },
+    {
+     "id": "e7",
+     "tete": "step",
+     "mention": "the altar step",
+     "proprietes": [
+      "altar"
+     ],
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "kneel",
+     "mention": "kneels",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "anoint",
+     "mention": "anoints",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e3"
+      ],
+      "patient": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "consecrate",
+     "mention": "consecrates",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e3"
+      ],
+      "patient": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "before",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e6"
+    },
+    {
+     "id": "r5",
+     "sujet": "e5",
+     "relation": "on",
+     "objet": "e7"
+    },
+    {
+     "id": "r6",
+     "sujet": "e5",
+     "relation": "beside",
+     "objet": "e1"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e6"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "Les pronoms « his », « him » sont rapportés à Cassian selon le sens, non à la mention la plus proche (l'évêque) ; « his schoolmaster's stylus » : le maître d'école est Cassian lui-même (coref)."
+  },
+  "annotation_B": {
+   "k": 71,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "Saint Cassian of Imola kneels before a bishop who anoints his head and consecrates him, his schoolmaster's stylus laid on the altar step beside him.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Cassian of Imola",
+     "noms": [
+      "Cassian"
+     ]
+    },
+    {
+     "id": "e2",
+     "tete": "imola",
+     "mention": "Imola",
+     "noms": [
+      "Imola"
+     ]
+    },
+    {
+     "id": "e3",
+     "tete": "bishop",
+     "mention": "a bishop"
+    },
+    {
+     "id": "e4",
+     "tete": "head",
+     "mention": "his head"
+    },
+    {
+     "id": "e5",
+     "tete": "stylus",
+     "mention": "stylus",
+     "proprietes": [
+      "laid"
+     ]
+    },
+    {
+     "id": "e6",
+     "tete": "schoolmaster",
+     "mention": "his schoolmaster's"
+    },
+    {
+     "id": "e7",
+     "tete": "step",
+     "mention": "the altar step"
+    },
+    {
+     "id": "e8",
+     "tete": "altar",
+     "mention": "altar"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "kneel",
+     "mention": "kneels",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "anoint",
+     "mention": "anoints",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e3"
+      ],
+      "patient": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "consecrate",
+     "mention": "consecrates",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e3"
+      ],
+      "patient": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "before",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e6"
+    },
+    {
+     "id": "r5",
+     "sujet": "e5",
+     "relation": "on",
+     "objet": "e7"
+    },
+    {
+     "id": "r6",
+     "sujet": "e7",
+     "relation": "of",
+     "objet": "e8"
+    },
+    {
+     "id": "r7",
+     "sujet": "e5",
+     "relation": "beside",
+     "objet": "e1"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e6"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "'his head', 'him' are resolved by sense to Cassian, not to the nearer 'bishop'; 'his schoolmaster's stylus' is read as the stylus of Cassian as schoolmaster (coref), though 'his teacher's' is grammatically possible."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 71,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "Saint Cassian of Imola, bound to a post, is stabbed to death with their styluses by the pupils he once taught.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Cassian of Imola",
+     "noms": [
+      "Cassian"
+     ],
+     "proprietes": [
+      "bound"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "imola",
+     "mention": "Imola",
+     "noms": [
+      "Imola"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "post",
+     "mention": "a post",
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "pupil",
+     "mention": "the pupils"
+    },
+    {
+     "id": "e5",
+     "tete": "stylus",
+     "mention": "their styluses"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "stab",
+     "mention": "stabbed",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e4"
+      ],
+      "patient": [
+       "e1"
+      ],
+      "instrument": [
+       "e5"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "die",
+     "mention": "death",
+     "nom_d_action": "death",
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "teach",
+     "mention": "taught",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "destinataire": [
+       "e4"
+      ]
+     },
+     "portee": "non_ancre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "to",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e4"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« he once taught » : fait biographique antérieur, non montré (portée non_ancre) ; « he » est rapporté à Cassian selon le sens ; « bound » est un état résultant (propriété)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 71,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "Saint Cassian of Imola, stylus in hand, stands beside a bishop in a church; the panel is damaged and what passes between them cannot be read.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Cassian of Imola",
+     "noms": [
+      "Cassian"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "imola",
+     "mention": "Imola",
+     "noms": [
+      "Imola"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "stylus",
+     "mention": "stylus",
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "hand",
+     "mention": "hand",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "bishop",
+     "mention": "a bishop",
+     "nombre": 1
+    },
+    {
+     "id": "e6",
+     "tete": "church",
+     "mention": "a church",
+     "nombre": 1
+    },
+    {
+     "id": "e7",
+     "tete": "panel",
+     "mention": "the panel",
+     "proprietes": [
+      "damaged"
+     ],
+     "nombre": 1,
+     "portee": "oeuvre"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "stand",
+     "mention": "stands",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e6"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "pass",
+     "mention": "passes",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1",
+       "e5"
+      ]
+     },
+     "modalite": "non_affirme"
+    },
+    {
+     "id": "v3",
+     "predicat": "read",
+     "mention": "read",
+     "nom_d_action": null,
+     "roles": {},
+     "polarite": "neg",
+     "portee": "oeuvre"
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "in",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e1",
+     "relation": "beside",
+     "objet": "e5"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "Ce qui se passe entre Cassian et l'évêque est illisible : l'événement est non affirmé, ses deux participants (« between them ») mis en agent faute de rôle mieux adapté ; l'illisibilité tient à l'état du panneau (portée oeuvre)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 76,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Saint Pantaléon, médecin, ses instruments chirurgicaux posés près de lui, s'agenouille seul en prière devant un crucifix.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Pantaléon",
+     "noms": [
+      "Pantaléon"
+     ],
+     "proprietes": [
+      "seul"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "médecin",
+     "mention": "médecin",
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "instrument",
+     "mention": "ses instruments chirurgicaux",
+     "proprietes": [
+      "chirurgical",
+      "posé"
+     ]
+    },
+    {
+     "id": "e4",
+     "tete": "crucifix",
+     "mention": "un crucifix",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "s'agenouiller",
+     "mention": "s'agenouille",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "prier",
+     "mention": "prière",
+     "nom_d_action": "prière",
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "près de",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e1",
+     "relation": "devant",
+     "objet": "e4"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e2"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« médecin » en apposition : deux entités coréférentes ; « lui » est rapporté au saint ; « en prière » est un nom d'action (prier)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 76,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Saint Pantaléon, médecin, les mains clouées au-dessus de la tête contre un olivier, subit le martyre devant ses bourreaux.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Pantaléon",
+     "noms": [
+      "Pantaléon"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "médecin",
+     "mention": "médecin",
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "main",
+     "mention": "les mains",
+     "proprietes": [
+      "cloué"
+     ]
+    },
+    {
+     "id": "e4",
+     "tete": "tête",
+     "mention": "la tête",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "olivier",
+     "mention": "un olivier",
+     "nombre": 1
+    },
+    {
+     "id": "e6",
+     "tete": "bourreau",
+     "mention": "ses bourreaux"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "martyriser",
+     "mention": "martyre",
+     "nom_d_action": "martyre",
+     "roles": {
+      "patient": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "au-dessus de",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e3",
+     "relation": "contre",
+     "objet": "e5"
+    },
+    {
+     "id": "r5",
+     "sujet": "e1",
+     "relation": "devant",
+     "objet": "e6"
+    },
+    {
+     "id": "r6",
+     "sujet": "e6",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e2"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« subit le martyre » : verbe support + nom d'action, un seul événement (martyriser) dont le saint est patient ; les bourreaux ne sont pas mis en agent, le texte ne le dit pas."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 76,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Saint Pantaléon, médecin, ses instruments chirurgicaux posés près de lui, se tient debout dans un paysage.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Pantaléon",
+     "noms": [
+      "Pantaléon"
+     ],
+     "proprietes": [
+      "debout"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "médecin",
+     "mention": "médecin",
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "instrument",
+     "mention": "ses instruments chirurgicaux",
+     "proprietes": [
+      "chirurgical",
+      "posé"
+     ]
+    },
+    {
+     "id": "e4",
+     "tete": "paysage",
+     "mention": "un paysage",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "se tenir",
+     "mention": "se tient",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e4"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "près de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e2"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« debout » est noté en propriété du saint, le prédicat restant « se tenir »."
+  },
+  "annotation_B": {
+   "k": 76,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Saint Pantaléon, médecin, ses instruments chirurgicaux posés près de lui, se tient debout dans un paysage.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Pantaléon",
+     "noms": [
+      "Pantaléon"
+     ]
+    },
+    {
+     "id": "e2",
+     "tete": "médecin",
+     "mention": "médecin"
+    },
+    {
+     "id": "e3",
+     "tete": "instrument",
+     "mention": "ses instruments chirurgicaux",
+     "proprietes": [
+      "chirurgical",
+      "posé"
+     ]
+    },
+    {
+     "id": "e4",
+     "tete": "paysage",
+     "mention": "un paysage"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "se tenir",
+     "mention": "se tient debout",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e4"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e3",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "près de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e2"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": []
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 81,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "Shiva, his throat turned blue, writhes in pain after swallowing the poison churned from the cosmic ocean, while Parvati presses his neck to hold it back.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "shiva",
+     "mention": "Shiva",
+     "noms": [
+      "Shiva"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "throat",
+     "mention": "his throat",
+     "proprietes": [
+      "blue"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "poison",
+     "mention": "the poison"
+    },
+    {
+     "id": "e4",
+     "tete": "ocean",
+     "mention": "the cosmic ocean",
+     "proprietes": [
+      "cosmic"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "parvati",
+     "mention": "Parvati",
+     "noms": [
+      "Parvati"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e6",
+     "tete": "neck",
+     "mention": "his neck",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "writhe",
+     "mention": "writhes",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "pain",
+     "mention": "pain",
+     "nom_d_action": "pain",
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "swallow",
+     "mention": "swallowing",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v4",
+     "predicat": "churn",
+     "mention": "churned",
+     "nom_d_action": null,
+     "roles": {
+      "theme": [
+       "e3"
+      ],
+      "lieu": [
+       "e4"
+      ]
+     },
+     "portee": "source"
+    },
+    {
+     "id": "v5",
+     "predicat": "press",
+     "mention": "presses",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e5"
+      ],
+      "theme": [
+       "e6"
+      ]
+     }
+    },
+    {
+     "id": "v6",
+     "predicat": "hold back",
+     "mention": "hold",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e5"
+      ],
+      "theme": [
+       "e3"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e6",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« it » est rapporté au poison selon le sens (non au cou, mention la plus proche) ; le barattage de l'océan est un épisode du récit, non montré (portée source) ; « turned blue » : état résultant, propriété blue."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 81,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "Shiva, his throat turned blue, dances triumphantly within a ring of flames, while Parvati looks on and the dwarf of ignorance lies under his foot.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "shiva",
+     "mention": "Shiva",
+     "noms": [
+      "Shiva"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "throat",
+     "mention": "his throat",
+     "proprietes": [
+      "blue"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "ring",
+     "mention": "a ring",
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "flame",
+     "mention": "flames"
+    },
+    {
+     "id": "e5",
+     "tete": "parvati",
+     "mention": "Parvati",
+     "noms": [
+      "Parvati"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e6",
+     "tete": "dwarf",
+     "mention": "the dwarf of ignorance",
+     "nombre": 1
+    },
+    {
+     "id": "e7",
+     "tete": "ignorance",
+     "mention": "ignorance"
+    },
+    {
+     "id": "e8",
+     "tete": "foot",
+     "mention": "his foot",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "dance",
+     "mention": "dances",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "look on",
+     "mention": "looks on",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e5"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "lie",
+     "mention": "lies",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e6"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "of",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e6",
+     "relation": "of",
+     "objet": "e7"
+    },
+    {
+     "id": "r4",
+     "sujet": "e6",
+     "relation": "under",
+     "objet": "e8"
+    },
+    {
+     "id": "r5",
+     "sujet": "e8",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« triumphantly » (manière) n'a pas de champ ; « his foot » est rapporté à Shiva selon le sens."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 81,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "Shiva, with trident and serpent, sits beside Parvati on Mount Kailasa.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "shiva",
+     "mention": "Shiva",
+     "noms": [
+      "Shiva"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "trident",
+     "mention": "trident",
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "serpent",
+     "mention": "serpent",
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "parvati",
+     "mention": "Parvati",
+     "noms": [
+      "Parvati"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "mount",
+     "mention": "Mount Kailasa",
+     "noms": [
+      "Kailasa"
+     ],
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "sit",
+     "mention": "sits",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "with",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "with",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e1",
+     "relation": "beside",
+     "objet": "e4"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« with trident and serpent » (attributs) est noté par la préposition with, faute de verbe."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 86,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Saint Athanase, évêque d'Alexandrie, a dépouillé ses ornements et vit caché au désert dans une grotte, vêtu d'une simple tunique, jeûnant et priant devant un rouleau.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Athanase",
+     "noms": [
+      "Athanase"
+     ],
+     "proprietes": [
+      "caché"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "évêque",
+     "mention": "évêque",
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "alexandrie",
+     "mention": "Alexandrie",
+     "noms": [
+      "Alexandrie"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "ornement",
+     "mention": "ses ornements"
+    },
+    {
+     "id": "e5",
+     "tete": "désert",
+     "mention": "désert",
+     "nombre": 1
+    },
+    {
+     "id": "e6",
+     "tete": "grotte",
+     "mention": "une grotte",
+     "nombre": 1
+    },
+    {
+     "id": "e7",
+     "tete": "tunique",
+     "mention": "une simple tunique",
+     "proprietes": [
+      "simple"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e8",
+     "tete": "rouleau",
+     "mention": "un rouleau",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "dépouiller",
+     "mention": "dépouillé",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e4"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "vivre",
+     "mention": "vit",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e5",
+       "e6"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "vêtir",
+     "mention": "vêtu",
+     "nom_d_action": null,
+     "roles": {
+      "patient": [
+       "e1"
+      ],
+      "theme": [
+       "e7"
+      ]
+     }
+    },
+    {
+     "id": "v4",
+     "predicat": "jeûner",
+     "mention": "jeûnant",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v5",
+     "predicat": "prier",
+     "mention": "priant",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e1"
+    },
+    {
+     "id": "r3",
+     "sujet": "e1",
+     "relation": "devant",
+     "objet": "e8"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e2"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« vêtu d'une simple tunique » est noté en événement (vêtir) pour garder la tunique, alors que « caché » reste une propriété d'état ; « évêque » en apposition, coréférent."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 86,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Saint Athanase, évêque d'Alexandrie, en riches ornements pontificaux, foule aux pieds l'hérétique Arius.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Athanase",
+     "noms": [
+      "Athanase"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "évêque",
+     "mention": "évêque",
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "alexandrie",
+     "mention": "Alexandrie",
+     "noms": [
+      "Alexandrie"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "ornement",
+     "mention": "riches ornements pontificaux",
+     "proprietes": [
+      "riche",
+      "pontifical"
+     ]
+    },
+    {
+     "id": "e5",
+     "tete": "hérétique",
+     "mention": "l'hérétique Arius",
+     "noms": [
+      "Arius"
+     ],
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "fouler aux pieds",
+     "mention": "foule aux pieds",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "patient": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "en",
+     "objet": "e4"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e2"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« fouler aux pieds » est une locution verbale (les pieds n'y font pas une entité) ; « en riches ornements » : vêtement noté par la préposition en."
+  },
+  "annotation_B": {
+   "k": 86,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Saint Athanase, évêque d'Alexandrie, en riches ornements pontificaux, foule aux pieds l'hérétique Arius.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Athanase",
+     "noms": [
+      "Athanase"
+     ]
+    },
+    {
+     "id": "e2",
+     "tete": "évêque",
+     "mention": "évêque"
+    },
+    {
+     "id": "e3",
+     "tete": "alexandrie",
+     "mention": "Alexandrie",
+     "noms": [
+      "Alexandrie"
+     ]
+    },
+    {
+     "id": "e4",
+     "tete": "ornement",
+     "mention": "riches ornements pontificaux",
+     "proprietes": [
+      "riche",
+      "pontifical"
+     ]
+    },
+    {
+     "id": "e5",
+     "tete": "pied",
+     "mention": "pieds"
+    },
+    {
+     "id": "e6",
+     "tete": "hérétique",
+     "mention": "l'hérétique Arius",
+     "noms": [
+      "Arius"
+     ]
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "fouler",
+     "mention": "foule",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "patient": [
+       "e6"
+      ],
+      "instrument": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "en",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e5",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e2"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« fouler aux pieds » est pris au sens littéral (scène figurée), les pieds comme instrument ; « en ornements » (vêtu de) est gardé comme relation « en »."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 86,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Saint Athanase, évêque d'Alexandrie, représenté en buste, tient un rouleau.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Athanase",
+     "noms": [
+      "Athanase"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "évêque",
+     "mention": "évêque",
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "alexandrie",
+     "mention": "Alexandrie",
+     "noms": [
+      "Alexandrie"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "buste",
+     "mention": "buste",
+     "nombre": 1,
+     "portee": "oeuvre"
+    },
+    {
+     "id": "e5",
+     "tete": "rouleau",
+     "mention": "un rouleau",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "tenir",
+     "mention": "tient",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e2",
+     "relation": "de",
+     "objet": "e3"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "en",
+     "objet": "e4",
+     "portee": "oeuvre"
+    }
+   ],
+   "coref": [
+    [
+     "e1",
+     "e2"
+    ]
+   ],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« représenté » est un verbe de figuration (pas d'événement) ; « en buste » dit le cadrage de l'œuvre (portée oeuvre)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 91,
+   "genre": "positif",
+   "langue": "en",
+   "texte": "Saint Lidwyna of Schiedam, roses in her hair, sits up on her sickbed and dictates her visions to a scribe who writes them down.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Lidwyna of Schiedam",
+     "noms": [
+      "Lidwyna"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "schiedam",
+     "mention": "Schiedam",
+     "noms": [
+      "Schiedam"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "rose",
+     "mention": "roses"
+    },
+    {
+     "id": "e4",
+     "tete": "hair",
+     "mention": "her hair"
+    },
+    {
+     "id": "e5",
+     "tete": "sickbed",
+     "mention": "her sickbed",
+     "nombre": 1
+    },
+    {
+     "id": "e6",
+     "tete": "vision",
+     "mention": "her visions"
+    },
+    {
+     "id": "e7",
+     "tete": "scribe",
+     "mention": "a scribe",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "sit up",
+     "mention": "sits up",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e5"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "dictate",
+     "mention": "dictates",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "theme": [
+       "e6"
+      ],
+      "destinataire": [
+       "e7"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "write down",
+     "mention": "writes",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e7"
+      ],
+      "theme": [
+       "e6"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "in",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r5",
+     "sujet": "e6",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« them » est rapporté aux visions ; « writes … down » est un verbe à particule discontinu, la mention ne garde que « writes »."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 91,
+   "genre": "negatif",
+   "langue": "en",
+   "texte": "Saint Lidwyna of Schiedam, roses in her hair, falls on the ice while skating and breaks a rib.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Lidwyna of Schiedam",
+     "noms": [
+      "Lidwyna"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "schiedam",
+     "mention": "Schiedam",
+     "noms": [
+      "Schiedam"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "rose",
+     "mention": "roses"
+    },
+    {
+     "id": "e4",
+     "tete": "hair",
+     "mention": "her hair"
+    },
+    {
+     "id": "e5",
+     "tete": "ice",
+     "mention": "the ice"
+    },
+    {
+     "id": "e6",
+     "tete": "rib",
+     "mention": "a rib",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "fall",
+     "mention": "falls",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e5"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "skate",
+     "mention": "skating",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "break",
+     "mention": "breaks",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "patient": [
+       "e6"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "in",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e6",
+     "relation": "of",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "La côte brisée est celle de la sainte (rattachée par le sens, le texte dit « a rib »)."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 91,
+   "genre": "indetermine",
+   "langue": "en",
+   "texte": "Saint Lidwyna of Schiedam, roses in her hair, lies on her sickbed with a crucifix; a man sits beside her.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "saint",
+     "mention": "Saint Lidwyna of Schiedam",
+     "noms": [
+      "Lidwyna"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "schiedam",
+     "mention": "Schiedam",
+     "noms": [
+      "Schiedam"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "rose",
+     "mention": "roses"
+    },
+    {
+     "id": "e4",
+     "tete": "hair",
+     "mention": "her hair"
+    },
+    {
+     "id": "e5",
+     "tete": "sickbed",
+     "mention": "her sickbed",
+     "nombre": 1
+    },
+    {
+     "id": "e6",
+     "tete": "crucifix",
+     "mention": "a crucifix",
+     "nombre": 1
+    },
+    {
+     "id": "e7",
+     "tete": "man",
+     "mention": "a man",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "lie",
+     "mention": "lies",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "lieu": [
+       "e5"
+      ]
+     }
+    },
+    {
+     "id": "v2",
+     "predicat": "sit",
+     "mention": "sits",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e7"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "of",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e3",
+     "relation": "in",
+     "objet": "e4"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r4",
+     "sujet": "e5",
+     "relation": "of",
+     "objet": "e1"
+    },
+    {
+     "id": "r5",
+     "sujet": "e1",
+     "relation": "with",
+     "objet": "e6"
+    },
+    {
+     "id": "r6",
+     "sujet": "e7",
+     "relation": "beside",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« with a crucifix » est noté par la préposition with ; l'homme n'est pas identifié."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 96,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Longtemps après son supplice, sainte Afre d'Augsbourg apparaît en songe à un évêque endormi pour lui indiquer l'emplacement de son tombeau.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "sainte",
+     "mention": "sainte Afre d'Augsbourg",
+     "noms": [
+      "Afre"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "augsbourg",
+     "mention": "Augsbourg",
+     "noms": [
+      "Augsbourg"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "évêque",
+     "mention": "un évêque endormi",
+     "proprietes": [
+      "endormi"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "emplacement",
+     "mention": "l'emplacement",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "tombeau",
+     "mention": "son tombeau",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "supplicier",
+     "mention": "supplice",
+     "nom_d_action": "supplice",
+     "roles": {
+      "patient": [
+       "e1"
+      ]
+     },
+     "portee": "source"
+    },
+    {
+     "id": "v2",
+     "predicat": "apparaître",
+     "mention": "apparaît",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "destinataire": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "songer",
+     "mention": "songe",
+     "nom_d_action": "songe",
+     "roles": {
+      "agent": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v4",
+     "predicat": "indiquer",
+     "mention": "indiquer",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "destinataire": [
+       "e3"
+      ],
+      "theme": [
+       "e4"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e5"
+    },
+    {
+     "id": "r3",
+     "sujet": "e5",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« apparaît en songe à » est ici une apparition miraculeuse adressée à l'évêque, annotée en événement malgré la règle sur « appears » ; le supplice, antérieur et non montré, est de portée source ; « son » (cataphorique) et « son tombeau » sont rapportés à la sainte."
+  },
+  "annotation_B": {
+   "k": 96,
+   "genre": "positif",
+   "langue": "fr",
+   "texte": "Longtemps après son supplice, sainte Afre d'Augsbourg apparaît en songe à un évêque endormi pour lui indiquer l'emplacement de son tombeau.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "sainte",
+     "mention": "sainte Afre d'Augsbourg",
+     "noms": [
+      "Afre"
+     ]
+    },
+    {
+     "id": "e2",
+     "tete": "augsbourg",
+     "mention": "Augsbourg",
+     "noms": [
+      "Augsbourg"
+     ]
+    },
+    {
+     "id": "e3",
+     "tete": "songe",
+     "mention": "songe"
+    },
+    {
+     "id": "e4",
+     "tete": "évêque",
+     "mention": "un évêque endormi",
+     "proprietes": [
+      "endormi"
+     ]
+    },
+    {
+     "id": "e5",
+     "tete": "emplacement",
+     "mention": "l'emplacement"
+    },
+    {
+     "id": "e6",
+     "tete": "tombeau",
+     "mention": "son tombeau"
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "supplicier",
+     "mention": "supplice",
+     "nom_d_action": "supplice",
+     "roles": {
+      "patient": [
+       "e1"
+      ]
+     },
+     "portee": "source"
+    },
+    {
+     "id": "v2",
+     "predicat": "apparaître",
+     "mention": "apparaît",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "destinataire": [
+       "e4"
+      ],
+      "lieu": [
+       "e3"
+      ]
+     }
+    },
+    {
+     "id": "v3",
+     "predicat": "indiquer",
+     "mention": "indiquer",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ],
+      "destinataire": [
+       "e4"
+      ],
+      "theme": [
+       "e5"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e5",
+     "relation": "de",
+     "objet": "e6"
+    },
+    {
+     "id": "r3",
+     "sujet": "e6",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« apparaît en songe à » est ici l'action narrée (apparition), non un verbe de simple figuration ; le supplice, antérieur, est raconté et non montré."
+  }
+ },
+ {
+  "annotation_A": {
+   "k": 96,
+   "genre": "negatif",
+   "langue": "fr",
+   "texte": "Sainte Afre d'Augsbourg, liée à un arbre mort au milieu d'un tas de bois, est brûlée vive sur le bûcher.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "sainte",
+     "mention": "Sainte Afre d'Augsbourg",
+     "noms": [
+      "Afre"
+     ],
+     "proprietes": [
+      "lié",
+      "vif"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "augsbourg",
+     "mention": "Augsbourg",
+     "noms": [
+      "Augsbourg"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "arbre",
+     "mention": "un arbre mort",
+     "proprietes": [
+      "mort"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "tas",
+     "mention": "un tas de bois",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "bois",
+     "mention": "bois"
+    },
+    {
+     "id": "e6",
+     "tete": "bûcher",
+     "mention": "le bûcher",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "brûler",
+     "mention": "brûlée",
+     "nom_d_action": null,
+     "roles": {
+      "patient": [
+       "e1"
+      ],
+      "lieu": [
+       "e6"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "à",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e3",
+     "relation": "au milieu de",
+     "objet": "e4"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e5"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "Le passif « est brûlée » est ramené à l'actif sans agent (non dit) ; « liée » est un état résultant (propriété) ; « vive » qualifie la sainte."
+  },
+  "annotation_B": null
+ },
+ {
+  "annotation_A": {
+   "k": 96,
+   "genre": "indetermine",
+   "langue": "fr",
+   "texte": "Sainte Afre d'Augsbourg se tient près d'un arbre mort, un vase d'onguent à la main.",
+   "entites": [
+    {
+     "id": "e1",
+     "tete": "sainte",
+     "mention": "Sainte Afre d'Augsbourg",
+     "noms": [
+      "Afre"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e2",
+     "tete": "augsbourg",
+     "mention": "Augsbourg",
+     "noms": [
+      "Augsbourg"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e3",
+     "tete": "arbre",
+     "mention": "un arbre mort",
+     "proprietes": [
+      "mort"
+     ],
+     "nombre": 1
+    },
+    {
+     "id": "e4",
+     "tete": "vase",
+     "mention": "un vase d'onguent",
+     "nombre": 1
+    },
+    {
+     "id": "e5",
+     "tete": "onguent",
+     "mention": "onguent"
+    },
+    {
+     "id": "e6",
+     "tete": "main",
+     "mention": "la main",
+     "nombre": 1
+    }
+   ],
+   "evenements": [
+    {
+     "id": "v1",
+     "predicat": "se tenir",
+     "mention": "se tient",
+     "nom_d_action": null,
+     "roles": {
+      "agent": [
+       "e1"
+      ]
+     }
+    }
+   ],
+   "relations": [
+    {
+     "id": "r1",
+     "sujet": "e1",
+     "relation": "de",
+     "objet": "e2"
+    },
+    {
+     "id": "r2",
+     "sujet": "e1",
+     "relation": "près de",
+     "objet": "e3"
+    },
+    {
+     "id": "r3",
+     "sujet": "e4",
+     "relation": "de",
+     "objet": "e5"
+    },
+    {
+     "id": "r4",
+     "sujet": "e4",
+     "relation": "à",
+     "objet": "e6"
+    },
+    {
+     "id": "r5",
+     "sujet": "e6",
+     "relation": "de",
+     "objet": "e1"
+    }
+   ],
+   "coref": [],
+   "distinct": [],
+   "alternatives": [],
+   "notes": "« un vase d'onguent à la main » est noté par la préposition à (sans verbe tenir, que le texte ne dit pas) ; la main est rattachée à la sainte par le sens."
+  },
+  "annotation_B": null
+ }
+]

@@ -1,0 +1,38 @@
+{
+ "vise": {
+  "indetermine": {
+   "absent>absent": 38,
+   "absent>conditionnel": 1,
+   "sans_suffisante>candidat": 1
+  },
+  "negatif": {
+   "absent>absent": 38,
+   "absent>sans_suffisante": 1,
+   "sans_suffisante>sans_suffisante": 1
+  },
+  "positif": {
+   "absent>absent": 30,
+   "sans_suffisante>sans_suffisante": 5,
+   "etablissable>etablissable": 2,
+   "absent>sans_suffisante": 3
+  }
+ },
+ "etablissables": {
+  "reference": 6.116666666666666,
+  "lecteur": 5.7,
+  "communs": 5.008333333333334,
+  "jaccard": 0.7528432658028247
+ },
+ "candidats": {
+  "reference": 5.233333333333333,
+  "lecteur": 5.483333333333333,
+  "communs": 4.716666666666667,
+  "jaccard": 0.7753617879704837
+ },
+ "conditionnels": {
+  "reference": 66.48333333333333,
+  "lecteur": 71.49166666666666,
+  "communs": 55.708333333333336,
+  "jaccard": 0.7282071311388776
+ }
+}

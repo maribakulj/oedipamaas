@@ -1,0 +1,5954 @@
+[
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 12,
+    "conditionnel": 82,
+    "etablissable": 7,
+    "sans_suffisante": 244
+   },
+   "conditionnels_par_sens": 120,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31A222",
+    "31A2245",
+    "31A2523",
+    "31A28",
+    "41A733",
+    "43B8"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31A222",
+    "31A2245",
+    "31A2523",
+    "31A28",
+    "41A733",
+    "43B8"
+   ],
+   "mesure": {
+    "assertions": 46,
+    "codage": {
+     "cpu": 7.0386567100000015,
+     "inferences": 45730637,
+     "mur": 7.08573055267334
+    },
+    "lecture": {
+     "cpu": 0.0008803119999996056,
+     "inferences": 12198,
+     "mur": 0.0008928775787353516
+    },
+    "total_mur": 7.086623430252075
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.086623430252075
+  },
+  "k": 1,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 17,
+    "conditionnel": 80,
+    "etablissable": 9,
+    "sans_suffisante": 209
+   },
+   "conditionnels_par_sens": 125,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D3281",
+    "11Q611",
+    "25G3",
+    "25H161",
+    "25H17",
+    "31A2214",
+    "31B6232",
+    "46A821",
+    "46E223"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D3281",
+    "11Q611",
+    "25G3",
+    "25H161",
+    "25H17",
+    "31A2214",
+    "31B6232",
+    "46A821",
+    "46E223"
+   ],
+   "mesure": {
+    "assertions": 78,
+    "codage": {
+     "cpu": 6.252609201999999,
+     "inferences": 44109319,
+     "mur": 6.299482345581055
+    },
+    "lecture": {
+     "cpu": 0.0009640480000001617,
+     "inferences": 16695,
+     "mur": 0.0009725093841552734
+    },
+    "total_mur": 6.30045485496521
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 6.30045485496521
+  },
+  "notation": "48CC75511",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 19,
+    "conditionnel": 92,
+    "etablissable": 9,
+    "sans_suffisante": 247
+   },
+   "conditionnels_par_sens": 137,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25G3",
+    "25H161",
+    "25H17",
+    "31A2214",
+    "31A28",
+    "31B6232",
+    "46A821",
+    "46E223"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25G3",
+    "25H161",
+    "25H17",
+    "31A2214",
+    "31A28",
+    "31B6232",
+    "46A821",
+    "46E223"
+   ],
+   "mesure": {
+    "assertions": 78,
+    "codage": {
+     "cpu": 7.7272336809999995,
+     "inferences": 58052854,
+     "mur": 7.789867401123047
+    },
+    "lecture": {
+     "cpu": 0.002060221000000695,
+     "inferences": 22829,
+     "mur": 0.002059459686279297
+    },
+    "total_mur": 7.791926860809326
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.791926860809326
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 8,
+    "conditionnel": 270,
+    "etablissable": 25,
+    "rejete_par_le_verificateur": 1,
+    "sans_suffisante": 716
+   },
+   "conditionnels_par_sens": 1980,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "23K11",
+    "23K12",
+    "23K13",
+    "23K21",
+    "23K22",
+    "23K23",
+    "23K31",
+    "23K32",
+    "23K33",
+    "23K41",
+    "23K42",
+    "23K43",
+    "25H1124",
+    "42A11",
+    "43C58",
+    "46A170",
+    "48A71",
+    "48C52",
+    "48C524",
+    "49A",
+    "73C71",
+    "73D662",
+    "73F2126",
+    "73F2128",
+    "73F2129"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "23K11",
+    "23K12",
+    "23K13",
+    "23K21",
+    "23K22",
+    "23K23",
+    "23K31",
+    "23K32",
+    "23K33",
+    "23K41",
+    "23K42",
+    "23K43",
+    "25H1124",
+    "42A11",
+    "43C58",
+    "46A170",
+    "48A71",
+    "48C52",
+    "48C524",
+    "49A",
+    "73C71",
+    "73D662",
+    "73F2126",
+    "73F2128",
+    "73F2129"
+   ],
+   "mesure": {
+    "assertions": 83,
+    "codage": {
+     "cpu": 128.41875513399998,
+     "inferences": 2469053853,
+     "mur": 151.93039631843567
+    },
+    "lecture": {
+     "cpu": 0.0012164709999922252,
+     "inferences": 18555,
+     "mur": 0.002980947494506836
+    },
+    "total_mur": 151.93337726593018
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 151.93337726593018
+  },
+  "k": 6,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 10,
+    "conditionnel": 168,
+    "etablissable": 12,
+    "sans_suffisante": 548
+   },
+   "conditionnels_par_sens": 357,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "25H1124",
+    "25I2",
+    "41A342",
+    "42E31",
+    "42E43",
+    "45B11",
+    "46C112",
+    "47I1",
+    "73D662",
+    "73F2126",
+    "73F2128",
+    "73F2129"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "25H1124",
+    "25I2",
+    "41A342",
+    "42E31",
+    "42E43",
+    "45B11",
+    "46C112",
+    "47I1",
+    "73D662",
+    "73F2126",
+    "73F2128",
+    "73F2129"
+   ],
+   "mesure": {
+    "assertions": 100,
+    "codage": {
+     "cpu": 25.326035949999977,
+     "inferences": 291694567,
+     "mur": 31.602826595306396
+    },
+    "lecture": {
+     "cpu": 0.0012169720000088091,
+     "inferences": 20848,
+     "mur": 0.0012199878692626953
+    },
+    "total_mur": 31.60404658317566
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 31.60404658317566
+  },
+  "notation": "44G1231",
+  "positif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 63.924161974000015,
+     "inferences": 999970142,
+     "mur": 80.57843780517578
+    },
+    "lecture": {
+     "cpu": 0.0017503249999890613,
+     "inferences": 29897,
+     "mur": 0.0017845630645751953
+    },
+    "total_mur": 80.58022236824036
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 80.58022236824036
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 1,
+    "conditionnel": 70,
+    "etablissable": 2,
+    "sans_suffisante": 226
+   },
+   "conditionnels_par_sens": 106,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "13A35",
+    "13D2132"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "13A35",
+    "13D2132"
+   ],
+   "mesure": {
+    "assertions": 66,
+    "codage": {
+     "cpu": 7.9410096429999975,
+     "inferences": 43909778,
+     "mur": 8.006641864776611
+    },
+    "lecture": {
+     "cpu": 0.0008765769999996564,
+     "inferences": 13289,
+     "mur": 0.0008833408355712891
+    },
+    "total_mur": 8.007525205612183
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 8.007525205612183
+  },
+  "k": 11,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "conditionnel": 49,
+    "etablissable": 6,
+    "sans_suffisante": 145
+   },
+   "conditionnels_par_sens": 52,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "13D2132",
+    "41D253",
+    "42E43",
+    "42E431",
+    "46E223"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "13D2132",
+    "41D253",
+    "42E431",
+    "46E223"
+   ],
+   "mesure": {
+    "assertions": 71,
+    "codage": {
+     "cpu": 3.6712025970000006,
+     "inferences": 18193703,
+     "mur": 3.7037763595581055
+    },
+    "lecture": {
+     "cpu": 0.0008934170000003405,
+     "inferences": 13483,
+     "mur": 0.0009052753448486328
+    },
+    "total_mur": 3.704681634902954
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.704681634902954
+  },
+  "notation": "42E432",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 5,
+    "conditionnel": 69,
+    "etablissable": 4,
+    "sans_suffisante": 233
+   },
+   "conditionnels_par_sens": 96,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "13D2132",
+    "41A54",
+    "46A7",
+    "46A821"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "13D2132",
+    "41A54",
+    "46A7",
+    "46A821"
+   ],
+   "mesure": {
+    "assertions": 85,
+    "codage": {
+     "cpu": 4.784238649000001,
+     "inferences": 27572585,
+     "mur": 4.860325574874878
+    },
+    "lecture": {
+     "cpu": 0.0021689889999993994,
+     "inferences": 22799,
+     "mur": 0.002167940139770508
+    },
+    "total_mur": 4.862493515014648
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 4.862493515014648
+  }
+ },
+ {
+  "indetermine": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 96.67786881500001,
+     "inferences": 999987984,
+     "mur": 123.03582787513733
+    },
+    "lecture": {
+     "cpu": 0.0008029919999898993,
+     "inferences": 12063,
+     "mur": 0.0008027553558349609
+    },
+    "total_mur": 123.03663063049316
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 123.03663063049316
+  },
+  "k": 16,
+  "langue": "fr",
+  "negatif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 100.11852209400001,
+     "inferences": 999979045,
+     "mur": 117.68424034118652
+    },
+    "lecture": {
+     "cpu": 0.0013278300000081344,
+     "inferences": 21002,
+     "mur": 0.0013275146484375
+    },
+    "total_mur": 117.68556785583496
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 117.68556785583496
+  },
+  "notation": "42A111",
+  "positif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 96.572427634,
+     "inferences": 999978819,
+     "mur": 122.68750071525574
+    },
+    "lecture": {
+     "cpu": 0.0012819600000000264,
+     "inferences": 21234,
+     "mur": 0.0012936592102050781
+    },
+    "total_mur": 122.68879437446594
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 122.68879437446594
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 6,
+    "conditionnel": 51,
+    "etablissable": 3,
+    "sans_suffisante": 169
+   },
+   "conditionnels_par_sens": 62,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "46C1314",
+    "46C13141",
+    "46C144"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "46C1314",
+    "46C13141",
+    "46C144"
+   ],
+   "mesure": {
+    "assertions": 59,
+    "codage": {
+     "cpu": 3.4393022190000018,
+     "inferences": 25693057,
+     "mur": 3.570483446121216
+    },
+    "lecture": {
+     "cpu": 0.0007446239999993054,
+     "inferences": 12321,
+     "mur": 0.0007524490356445312
+    },
+    "total_mur": 3.5712358951568604
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.5712358951568604
+  },
+  "k": 21,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 11,
+    "conditionnel": 77,
+    "etablissable": 5,
+    "sans_suffisante": 218
+   },
+   "conditionnels_par_sens": 135,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25F",
+    "41A3283",
+    "46C1314",
+    "46C13141"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25F",
+    "41A3283",
+    "46C1314",
+    "46C13141"
+   ],
+   "mesure": {
+    "assertions": 78,
+    "codage": {
+     "cpu": 5.965607799000001,
+     "inferences": 43222318,
+     "mur": 6.144201993942261
+    },
+    "lecture": {
+     "cpu": 0.0009875729999997418,
+     "inferences": 15960,
+     "mur": 0.000993967056274414
+    },
+    "total_mur": 6.145195960998535
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 6.145195960998535
+  },
+  "notation": "46C14963",
+  "positif": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 8,
+    "conditionnel": 69,
+    "etablissable": 10,
+    "sans_suffisante": 195
+   },
+   "conditionnels_par_sens": 117,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25F",
+    "31D82",
+    "31G",
+    "41A3283",
+    "46C1314",
+    "46C13141",
+    "46C144",
+    "46C1463",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25F",
+    "31D82",
+    "31G",
+    "41A3283",
+    "46C1314",
+    "46C13141",
+    "46C144",
+    "46C1463",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 67,
+    "codage": {
+     "cpu": 5.022295001,
+     "inferences": 27843983,
+     "mur": 5.195997476577759
+    },
+    "lecture": {
+     "cpu": 0.0023822329999987346,
+     "inferences": 19058,
+     "mur": 0.0062389373779296875
+    },
+    "total_mur": 5.2022364139556885
+   },
+   "necessaire": "etablie",
+   "statut": "sans_suffisante",
+   "temps": 5.2022364139556885
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 3,
+    "conditionnel": 30,
+    "sans_suffisante": 131
+   },
+   "conditionnels_par_sens": 33,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [],
+   "hors_branche": [],
+   "hors_branche_etablissables": [],
+   "mesure": {
+    "assertions": 39,
+    "codage": {
+     "cpu": 1.2220623399999795,
+     "inferences": 7071873,
+     "mur": 1.5261650085449219
+    },
+    "lecture": {
+     "cpu": 0.000603823000005832,
+     "inferences": 8791,
+     "mur": 0.0006084442138671875
+    },
+    "total_mur": 1.526773452758789
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 1.526773452758789
+  },
+  "k": 26,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 8,
+    "conditionnel": 99,
+    "etablissable": 13,
+    "sans_suffisante": 303
+   },
+   "conditionnels_par_sens": 193,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "22A",
+    "25G",
+    "25G1",
+    "25G21",
+    "25G4",
+    "25G4(ACANTHUS)",
+    "31A28",
+    "31D82",
+    "31F3",
+    "41C653",
+    "43B8",
+    "47I4222",
+    "47I4223"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "22A",
+    "25G",
+    "25G1",
+    "25G21",
+    "25G4",
+    "25G4(ACANTHUS)",
+    "31A28",
+    "31D82",
+    "31F3",
+    "41C653",
+    "43B8",
+    "47I4222",
+    "47I4223"
+   ],
+   "mesure": {
+    "assertions": 87,
+    "codage": {
+     "cpu": 7.124104334000009,
+     "inferences": 72094749,
+     "mur": 9.256629467010498
+    },
+    "lecture": {
+     "cpu": 0.0011652069999854575,
+     "inferences": 18638,
+     "mur": 0.00116729736328125
+    },
+    "total_mur": 9.25779676437378
+   },
+   "necessaire": "etablie_sous_hypotheses",
+   "statut": "sans_suffisante",
+   "temps": 9.25779676437378
+  },
+  "notation": "48A9834",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 4,
+    "conditionnel": 89,
+    "etablissable": 2,
+    "sans_suffisante": 261
+   },
+   "conditionnels_par_sens": 153,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "43B8",
+    "49G35"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "43B8",
+    "49G35"
+   ],
+   "mesure": {
+    "assertions": 64,
+    "codage": {
+     "cpu": 5.415903601000025,
+     "inferences": 54319399,
+     "mur": 7.185918569564819
+    },
+    "lecture": {
+     "cpu": 0.000992145999987315,
+     "inferences": 13835,
+     "mur": 0.004995822906494141
+    },
+    "total_mur": 7.1909143924713135
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.1909143924713135
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 9,
+    "conditionnel": 46,
+    "etablissable": 6,
+    "sans_suffisante": 90
+   },
+   "conditionnels_par_sens": 79,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "45E",
+    "46C",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "45E",
+    "46C",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "mesure": {
+    "assertions": 52,
+    "codage": {
+     "cpu": 2.5999028689999975,
+     "inferences": 16409753,
+     "mur": 2.6387171745300293
+    },
+    "lecture": {
+     "cpu": 0.0007825220000015065,
+     "inferences": 11584,
+     "mur": 0.0007913112640380859
+    },
+    "total_mur": 2.6395084857940674
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 2.6395084857940674
+  },
+  "k": 31,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 10,
+    "conditionnel": 51,
+    "etablissable": 7,
+    "sans_suffisante": 196
+   },
+   "conditionnels_par_sens": 102,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "45E",
+    "46C",
+    "48C5",
+    "48C52",
+    "48C524",
+    "71W65"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "45E",
+    "46C",
+    "48C5",
+    "48C52",
+    "48C524",
+    "71W65"
+   ],
+   "mesure": {
+    "assertions": 77,
+    "codage": {
+     "cpu": 5.0001306910000025,
+     "inferences": 37630597,
+     "mur": 5.032506942749023
+    },
+    "lecture": {
+     "cpu": 0.0010465519999982575,
+     "inferences": 15746,
+     "mur": 0.0010688304901123047
+    },
+    "total_mur": 5.033575773239136
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 5.033575773239136
+  },
+  "notation": "47K13",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 10,
+    "conditionnel": 87,
+    "etablissable": 8,
+    "sans_suffisante": 225
+   },
+   "conditionnels_par_sens": 131,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25H2311",
+    "41A773",
+    "45E",
+    "46C",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25H2311",
+    "41A773",
+    "45E",
+    "46C",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "mesure": {
+    "assertions": 72,
+    "codage": {
+     "cpu": 6.0944954919999965,
+     "inferences": 42677579,
+     "mur": 6.127342700958252
+    },
+    "lecture": {
+     "cpu": 0.0009225470000018277,
+     "inferences": 13571,
+     "mur": 0.0009362697601318359
+    },
+    "total_mur": 6.128278970718384
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 6.128278970718384
+  }
+ },
+ {
+  "indetermine": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 83.86151837299997,
+     "inferences": 999988365,
+     "mur": 106.51129221916199
+    },
+    "lecture": {
+     "cpu": 0.0007725369999889153,
+     "inferences": 11675,
+     "mur": 0.004069089889526367
+    },
+    "total_mur": 106.51536130905151
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 106.51536130905151
+  },
+  "k": 36,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 14,
+    "conditionnel": 183,
+    "etablissable": 15,
+    "sans_suffisante": 504
+   },
+   "conditionnels_par_sens": 570,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "25H1124",
+    "25H12",
+    "25H216",
+    "25I14511",
+    "31A4113",
+    "41A",
+    "41A1",
+    "41B2",
+    "41B21",
+    "41B2133",
+    "45A42",
+    "45L1",
+    "46B47",
+    "47G",
+    "71A4"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "25H1124",
+    "25H12",
+    "25H216",
+    "25I14511",
+    "31A4113",
+    "41A",
+    "41A1",
+    "41B2",
+    "41B21",
+    "41B2133",
+    "45A42",
+    "45L1",
+    "46B47",
+    "47G",
+    "71A4"
+   ],
+   "mesure": {
+    "assertions": 87,
+    "codage": {
+     "cpu": 32.86539259700004,
+     "inferences": 454361363,
+     "mur": 42.33414959907532
+    },
+    "lecture": {
+     "cpu": 0.001408317999960218,
+     "inferences": 23283,
+     "mur": 0.0014204978942871094
+    },
+    "total_mur": 42.335570096969604
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 42.335570096969604
+  },
+  "notation": "25HH216",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 14,
+    "conditionnel": 174,
+    "etablissable": 10,
+    "sans_suffisante": 610
+   },
+   "conditionnels_par_sens": 478,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "25H1124",
+    "25H216",
+    "25I14511",
+    "31A4113",
+    "41A1",
+    "45A42",
+    "45L1",
+    "46B47",
+    "47G",
+    "71A4"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "25H1124",
+    "25H216",
+    "25I14511",
+    "31A4113",
+    "41A1",
+    "45A42",
+    "45L1",
+    "46B47",
+    "47G",
+    "71A4"
+   ],
+   "mesure": {
+    "assertions": 93,
+    "codage": {
+     "cpu": 28.630714719000025,
+     "inferences": 363197374,
+     "mur": 36.071813106536865
+    },
+    "lecture": {
+     "cpu": 0.0015758619999814982,
+     "inferences": 24359,
+     "mur": 0.0015952587127685547
+    },
+    "total_mur": 36.073408365249634
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 36.073408365249634
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 4,
+    "conditionnel": 66,
+    "etablissable": 2,
+    "sans_suffisante": 94
+   },
+   "conditionnels_par_sens": 100,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "41C341",
+    "43B8"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "41C341",
+    "43B8"
+   ],
+   "mesure": {
+    "assertions": 82,
+    "codage": {
+     "cpu": 5.940360329000001,
+     "inferences": 26652971,
+     "mur": 5.980752468109131
+    },
+    "lecture": {
+     "cpu": 0.0010991880000048582,
+     "inferences": 17701,
+     "mur": 0.0011143684387207031
+    },
+    "total_mur": 5.981866836547852
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 5.981866836547852
+  },
+  "k": 41,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 5,
+    "conditionnel": 123,
+    "etablissable": 5,
+    "sans_suffisante": 210
+   },
+   "conditionnels_par_sens": 200,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "41C341",
+    "43B8",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "41C341",
+    "43B8",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "mesure": {
+    "assertions": 78,
+    "codage": {
+     "cpu": 8.619719814999996,
+     "inferences": 53587047,
+     "mur": 8.659374713897705
+    },
+    "lecture": {
+     "cpu": 0.0010158950000018763,
+     "inferences": 15499,
+     "mur": 0.0010275840759277344
+    },
+    "total_mur": 8.660402297973633
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 8.660402297973633
+  },
+  "notation": "31AA4631",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 3,
+    "conditionnel": 110,
+    "etablissable": 5,
+    "sans_suffisante": 208
+   },
+   "conditionnels_par_sens": 178,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "41C341",
+    "43B8",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "41C341",
+    "43B8",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "mesure": {
+    "assertions": 78,
+    "codage": {
+     "cpu": 7.036181821999996,
+     "inferences": 46094470,
+     "mur": 7.082436800003052
+    },
+    "lecture": {
+     "cpu": 0.0010505090000023642,
+     "inferences": 15671,
+     "mur": 0.0010633468627929688
+    },
+    "total_mur": 7.083500146865845
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.083500146865845
+  }
+ },
+ {
+  "indetermine": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 98.11394437399997,
+     "inferences": 999986343,
+     "mur": 126.36061930656433
+    },
+    "lecture": {
+     "cpu": 0.0009428850000858802,
+     "inferences": 13710,
+     "mur": 0.0009458065032958984
+    },
+    "total_mur": 126.36156511306763
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 126.36156511306763
+  },
+  "k": 46,
+  "langue": "fr",
+  "negatif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 98.78200758899999,
+     "inferences": 999980124,
+     "mur": 129.17401766777039
+    },
+    "lecture": {
+     "cpu": 0.0012778219999631801,
+     "inferences": 19916,
+     "mur": 0.0012810230255126953
+    },
+    "total_mur": 129.1752986907959
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 129.1752986907959
+  },
+  "notation": "31A46331",
+  "positif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 99.26384640499998,
+     "inferences": 999981831,
+     "mur": 126.71922063827515
+    },
+    "lecture": {
+     "cpu": 0.0011666330000252856,
+     "inferences": 18209,
+     "mur": 0.0045261383056640625
+    },
+    "total_mur": 126.72374677658081
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 126.72374677658081
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 9,
+    "conditionnel": 74,
+    "etablissable": 11,
+    "sans_suffisante": 166
+   },
+   "conditionnels_par_sens": 107,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D3",
+    "11D3281",
+    "11Q611",
+    "31D82",
+    "31G",
+    "41D",
+    "41D1",
+    "43B8",
+    "45E",
+    "48C3521",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D3",
+    "11D3281",
+    "11Q611",
+    "31D82",
+    "31G",
+    "41D1",
+    "43B8",
+    "45E",
+    "48C3521",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 66,
+    "codage": {
+     "cpu": 4.301575459999995,
+     "inferences": 33733562,
+     "mur": 4.3634326457977295
+    },
+    "lecture": {
+     "cpu": 0.0007497140000012337,
+     "inferences": 11468,
+     "mur": 0.0007534027099609375
+    },
+    "total_mur": 4.36418604850769
+   },
+   "necessaire": "etablie",
+   "statut": "conditionnel",
+   "temps": 4.36418604850769
+  },
+  "k": 51,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 12,
+    "conditionnel": 57,
+    "etablissable": 10,
+    "sans_suffisante": 127
+   },
+   "conditionnels_par_sens": 72,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D3",
+    "11D3281",
+    "11Q611",
+    "31A2254",
+    "31D82",
+    "31G",
+    "41D2653",
+    "46C361",
+    "71A4",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D3",
+    "11D3281",
+    "11Q611",
+    "31A2254",
+    "31D82",
+    "31G",
+    "41D2653",
+    "46C361",
+    "71A4",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 67,
+    "codage": {
+     "cpu": 4.276984812000002,
+     "inferences": 23593815,
+     "mur": 4.348534345626831
+    },
+    "lecture": {
+     "cpu": 0.0008285380000003784,
+     "inferences": 12981,
+     "mur": 0.0008368492126464844
+    },
+    "total_mur": 4.3493711948394775
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 4.3493711948394775
+  },
+  "notation": "41D2122(MANTELET)",
+  "positif": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 10,
+    "conditionnel": 92,
+    "etablissable": 11,
+    "sans_suffisante": 184
+   },
+   "conditionnels_par_sens": 121,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D3",
+    "11D3281",
+    "11Q611",
+    "31A2224",
+    "31D82",
+    "31G",
+    "41D212",
+    "41D2122",
+    "41D2122(MANTELET)",
+    "41D2653",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D3",
+    "11D3281",
+    "11Q611",
+    "31A2224",
+    "31D82",
+    "31G",
+    "41D2653",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 81,
+    "codage": {
+     "cpu": 7.137833325999999,
+     "inferences": 46931335,
+     "mur": 7.266332149505615
+    },
+    "lecture": {
+     "cpu": 0.001007982000000851,
+     "inferences": 16580,
+     "mur": 0.0010128021240234375
+    },
+    "total_mur": 7.267344951629639
+   },
+   "necessaire": "etablie",
+   "statut": "etablissable",
+   "temps": 7.267344951629639
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 5,
+    "conditionnel": 196,
+    "etablissable": 4,
+    "sans_suffisante": 234
+   },
+   "conditionnels_par_sens": 298,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "46E221",
+    "47D",
+    "49C17",
+    "49L1"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "46E221",
+    "47D",
+    "49C17",
+    "49L1"
+   ],
+   "mesure": {
+    "assertions": 75,
+    "codage": {
+     "cpu": 7.8811492250000015,
+     "inferences": 67479908,
+     "mur": 10.148886442184448
+    },
+    "lecture": {
+     "cpu": 0.0009393089999889526,
+     "inferences": 15540,
+     "mur": 0.0009479522705078125
+    },
+    "total_mur": 10.149834394454956
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 10.149834394454956
+  },
+  "k": 56,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "conditionnel": 35,
+    "etablissable": 93
+   },
+   "conditionnels_par_sens": 46,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11B21",
+    "11B22",
+    "11B23",
+    "11B33",
+    "11B331",
+    "11B332",
+    "11B333",
+    "11C5",
+    "11D313",
+    "11I31",
+    "11P1",
+    "11P12",
+    "11S1",
+    "11S16",
+    "11T1",
+    "11U1",
+    "11U11",
+    "12B13",
+    "12B14",
+    "12B15",
+    "12B17",
+    "12C13",
+    "12D13",
+    "12E13",
+    "12E14",
+    "12E15",
+    "12E17",
+    "12F13",
+    "12F14",
+    "12F15",
+    "12F17",
+    "12G13",
+    "12H13",
+    "12L13",
+    "12N11",
+    "12N13",
+    "12O13",
+    "12R13",
+    "12R14",
+    "23A4",
+    "240",
+    "25B61",
+    "25B62",
+    "25I8",
+    "31A140",
+    "31B0",
+    "44B51",
+    "480",
+    "48C10",
+    "48C14",
+    "48C141",
+    "48C14111",
+    "48C20",
+    "48C30",
+    "48C40",
+    "48C510",
+    "48C520",
+    "48C530",
+    "48C610",
+    "48C620",
+    "48C70",
+    "48C80",
+    "48C801",
+    "48C802",
+    "48C8021",
+    "48C803",
+    "48C804",
+    "48C90",
+    "48C901",
+    "48C9011",
+    "48C90111",
+    "48C9012",
+    "48C90121",
+    "48C9013",
+    "48C9014",
+    "48C9015",
+    "48C902",
+    "48C9021",
+    "49A0",
+    "49C0",
+    "49G0",
+    "61B11",
+    "73B83",
+    "73C74",
+    "73C75",
+    "73C8414",
+    "73C84141",
+    "73C84142",
+    "73D25",
+    "73D271",
+    "73D62",
+    "73E14",
+    "73E742"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11B21",
+    "11B22",
+    "11B23",
+    "11B33",
+    "11B331",
+    "11B332",
+    "11B333",
+    "11C5",
+    "11D313",
+    "11I31",
+    "11P1",
+    "11P12",
+    "11S1",
+    "11S16",
+    "11T1",
+    "11U1",
+    "11U11",
+    "12B13",
+    "12B14",
+    "12B15",
+    "12B17",
+    "12C13",
+    "12D13",
+    "12E13",
+    "12E14",
+    "12E15",
+    "12E17",
+    "12F13",
+    "12F14",
+    "12F15",
+    "12F17",
+    "12G13",
+    "12H13",
+    "12L13",
+    "12N11",
+    "12N13",
+    "12O13",
+    "12R13",
+    "12R14",
+    "23A4",
+    "240",
+    "25B61",
+    "25B62",
+    "25I8",
+    "31A140",
+    "31B0",
+    "44B51",
+    "480",
+    "48C10",
+    "48C14",
+    "48C141",
+    "48C14111",
+    "48C20",
+    "48C30",
+    "48C40",
+    "48C510",
+    "48C520",
+    "48C530",
+    "48C610",
+    "48C620",
+    "48C70",
+    "48C80",
+    "48C801",
+    "48C802",
+    "48C8021",
+    "48C803",
+    "48C804",
+    "48C90",
+    "48C901",
+    "48C9011",
+    "48C90111",
+    "48C9012",
+    "48C90121",
+    "48C9013",
+    "48C9014",
+    "48C9015",
+    "48C902",
+    "48C9021",
+    "49A0",
+    "49C0",
+    "49G0",
+    "61B11",
+    "73B83",
+    "73C74",
+    "73C75",
+    "73C8414",
+    "73C84141",
+    "73C84142",
+    "73D25",
+    "73D271",
+    "73D62",
+    "73E14",
+    "73E742"
+   ],
+   "mesure": {
+    "assertions": 74,
+    "codage": {
+     "cpu": 20.203745591,
+     "inferences": 230849304,
+     "mur": 25.388167142868042
+    },
+    "lecture": {
+     "cpu": 0.0008746130000076846,
+     "inferences": 12508,
+     "mur": 0.0008769035339355469
+    },
+    "total_mur": 25.389044046401978
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 25.389044046401978
+  },
+  "notation": "31A22361",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "conditionnel": 39,
+    "etablissable": 93
+   },
+   "conditionnels_par_sens": 51,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11B21",
+    "11B22",
+    "11B23",
+    "11B33",
+    "11B331",
+    "11B332",
+    "11B333",
+    "11C5",
+    "11D313",
+    "11I31",
+    "11P1",
+    "11P12",
+    "11S1",
+    "11S16",
+    "11T1",
+    "11U1",
+    "11U11",
+    "12B13",
+    "12B14",
+    "12B15",
+    "12B17",
+    "12C13",
+    "12D13",
+    "12E13",
+    "12E14",
+    "12E15",
+    "12E17",
+    "12F13",
+    "12F14",
+    "12F15",
+    "12F17",
+    "12G13",
+    "12H13",
+    "12L13",
+    "12N11",
+    "12N13",
+    "12O13",
+    "12R13",
+    "12R14",
+    "23A4",
+    "240",
+    "25B61",
+    "25B62",
+    "25I8",
+    "31A140",
+    "31B0",
+    "44B51",
+    "480",
+    "48C10",
+    "48C14",
+    "48C141",
+    "48C14111",
+    "48C20",
+    "48C30",
+    "48C40",
+    "48C510",
+    "48C520",
+    "48C530",
+    "48C610",
+    "48C620",
+    "48C70",
+    "48C80",
+    "48C801",
+    "48C802",
+    "48C8021",
+    "48C803",
+    "48C804",
+    "48C90",
+    "48C901",
+    "48C9011",
+    "48C90111",
+    "48C9012",
+    "48C90121",
+    "48C9013",
+    "48C9014",
+    "48C9015",
+    "48C902",
+    "48C9021",
+    "49A0",
+    "49C0",
+    "49G0",
+    "61B11",
+    "73B83",
+    "73C74",
+    "73C75",
+    "73C8414",
+    "73C84141",
+    "73C84142",
+    "73D25",
+    "73D271",
+    "73D62",
+    "73E14",
+    "73E742"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11B21",
+    "11B22",
+    "11B23",
+    "11B33",
+    "11B331",
+    "11B332",
+    "11B333",
+    "11C5",
+    "11D313",
+    "11I31",
+    "11P1",
+    "11P12",
+    "11S1",
+    "11S16",
+    "11T1",
+    "11U1",
+    "11U11",
+    "12B13",
+    "12B14",
+    "12B15",
+    "12B17",
+    "12C13",
+    "12D13",
+    "12E13",
+    "12E14",
+    "12E15",
+    "12E17",
+    "12F13",
+    "12F14",
+    "12F15",
+    "12F17",
+    "12G13",
+    "12H13",
+    "12L13",
+    "12N11",
+    "12N13",
+    "12O13",
+    "12R13",
+    "12R14",
+    "23A4",
+    "240",
+    "25B61",
+    "25B62",
+    "25I8",
+    "31A140",
+    "31B0",
+    "44B51",
+    "480",
+    "48C10",
+    "48C14",
+    "48C141",
+    "48C14111",
+    "48C20",
+    "48C30",
+    "48C40",
+    "48C510",
+    "48C520",
+    "48C530",
+    "48C610",
+    "48C620",
+    "48C70",
+    "48C80",
+    "48C801",
+    "48C802",
+    "48C8021",
+    "48C803",
+    "48C804",
+    "48C90",
+    "48C901",
+    "48C9011",
+    "48C90111",
+    "48C9012",
+    "48C90121",
+    "48C9013",
+    "48C9014",
+    "48C9015",
+    "48C902",
+    "48C9021",
+    "49A0",
+    "49C0",
+    "49G0",
+    "61B11",
+    "73B83",
+    "73C74",
+    "73C75",
+    "73C8414",
+    "73C84141",
+    "73C84142",
+    "73D25",
+    "73D271",
+    "73D62",
+    "73E14",
+    "73E742"
+   ],
+   "mesure": {
+    "assertions": 73,
+    "codage": {
+     "cpu": 19.70686882000001,
+     "inferences": 240558731,
+     "mur": 25.12222409248352
+    },
+    "lecture": {
+     "cpu": 0.0007969790000004195,
+     "inferences": 12527,
+     "mur": 0.0007977485656738281
+    },
+    "total_mur": 25.123021841049194
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 25.123021841049194
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 11,
+    "conditionnel": 62,
+    "etablissable": 7,
+    "sans_suffisante": 134
+   },
+   "conditionnels_par_sens": 92,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "11Q71428",
+    "41A191",
+    "41A6",
+    "41A77",
+    "41C345",
+    "43B8"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "11Q71428",
+    "41A191",
+    "41A6",
+    "41A77",
+    "41C345",
+    "43B8"
+   ],
+   "mesure": {
+    "assertions": 51,
+    "codage": {
+     "cpu": 4.252164235000002,
+     "inferences": 22295200,
+     "mur": 4.2723188400268555
+    },
+    "lecture": {
+     "cpu": 0.0007737379999994687,
+     "inferences": 11185,
+     "mur": 0.000789642333984375
+    },
+    "total_mur": 4.27310848236084
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 4.27310848236084
+  },
+  "k": 61,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 25,
+    "conditionnel": 85,
+    "etablissable": 11,
+    "sans_suffisante": 220
+   },
+   "conditionnels_par_sens": 115,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "22A",
+    "31A25351",
+    "31D82",
+    "31G",
+    "41A77",
+    "41B162",
+    "41D253",
+    "46C361",
+    "49G35",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "22A",
+    "31A25351",
+    "31D82",
+    "31G",
+    "41A77",
+    "41B162",
+    "41D253",
+    "46C361",
+    "49G35",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 109,
+    "codage": {
+     "cpu": 9.222342128999998,
+     "inferences": 71591253,
+     "mur": 9.286317110061646
+    },
+    "lecture": {
+     "cpu": 0.0014293050000020457,
+     "inferences": 24627,
+     "mur": 0.0014424324035644531
+    },
+    "total_mur": 9.28775954246521
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 9.28775954246521
+  },
+  "notation": "31A3333",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 11,
+    "conditionnel": 74,
+    "etablissable": 13,
+    "sans_suffisante": 211
+   },
+   "conditionnels_par_sens": 121,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "11Q71428",
+    "25G3",
+    "31A5141",
+    "31D82",
+    "31G",
+    "41A191",
+    "41A6",
+    "41A77",
+    "41B162",
+    "41C345",
+    "41D253",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "11Q71428",
+    "25G3",
+    "31A5141",
+    "31D82",
+    "31G",
+    "41A191",
+    "41A6",
+    "41A77",
+    "41B162",
+    "41C345",
+    "41D253",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 123,
+    "codage": {
+     "cpu": 6.874479917000002,
+     "inferences": 54714852,
+     "mur": 6.94592809677124
+    },
+    "lecture": {
+     "cpu": 0.0016894809999996596,
+     "inferences": 28524,
+     "mur": 0.0018787384033203125
+    },
+    "total_mur": 6.9478068351745605
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 6.9478068351745605
+  }
+ },
+ {
+  "indetermine": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 101.32063183700006,
+     "inferences": 999988842,
+     "mur": 132.96934843063354
+    },
+    "lecture": {
+     "cpu": 0.0007077100000287828,
+     "inferences": 11208,
+     "mur": 0.0007104873657226562
+    },
+    "total_mur": 132.97005891799927
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 132.97005891799927
+  },
+  "k": 66,
+  "langue": "fr",
+  "negatif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 96.72034259300005,
+     "inferences": 999982466,
+     "mur": 123.60651969909668
+    },
+    "lecture": {
+     "cpu": 0.0010398819999863917,
+     "inferences": 17572,
+     "mur": 0.0010485649108886719
+    },
+    "total_mur": 123.60756826400757
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 123.60756826400757
+  },
+  "notation": "31AA5339",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 13,
+    "conditionnel": 240,
+    "etablissable": 16,
+    "rejete_par_le_verificateur": 1,
+    "sans_suffisante": 749
+   },
+   "conditionnels_par_sens": 861,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q624",
+    "31A5331",
+    "31A56",
+    "31D17",
+    "41A7634",
+    "41D",
+    "41D2",
+    "41D221(BERET)",
+    "41D221(CAP)",
+    "41D221(HAT)",
+    "41D221(HOOD)",
+    "44B152",
+    "46A63",
+    "46B314",
+    "47G331",
+    "47H6"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q624",
+    "31A5331",
+    "31A56",
+    "31D17",
+    "41A7634",
+    "41D",
+    "41D2",
+    "41D221(BERET)",
+    "41D221(CAP)",
+    "41D221(HAT)",
+    "41D221(HOOD)",
+    "44B152",
+    "46A63",
+    "46B314",
+    "47G331",
+    "47H6"
+   ],
+   "mesure": {
+    "assertions": 78,
+    "codage": {
+     "cpu": 97.97527816299998,
+     "inferences": 1321019623,
+     "mur": 127.26346158981323
+    },
+    "lecture": {
+     "cpu": 0.0011109719999922163,
+     "inferences": 17668,
+     "mur": 0.0011134147644042969
+    },
+    "total_mur": 127.26457500457764
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 127.26457500457764
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 13,
+    "conditionnel": 151,
+    "etablissable": 5,
+    "sans_suffisante": 418
+   },
+   "conditionnels_par_sens": 273,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11Q611",
+    "25I1412",
+    "31A2245",
+    "31A2523"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25I1412",
+    "31A2245",
+    "31A2523"
+   ],
+   "mesure": {
+    "assertions": 72,
+    "codage": {
+     "cpu": 12.700041848999994,
+     "inferences": 99737111,
+     "mur": 12.75841498374939
+    },
+    "lecture": {
+     "cpu": 0.0013618540000024382,
+     "inferences": 22421,
+     "mur": 0.0013713836669921875
+    },
+    "total_mur": 12.759786367416382
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 12.759786367416382
+  },
+  "k": 71,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 4,
+    "conditionnel": 72,
+    "etablissable": 5,
+    "sans_suffisante": 165
+   },
+   "conditionnels_par_sens": 102,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11Q611",
+    "41A3251",
+    "46E",
+    "49B24"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "41A3251",
+    "46E",
+    "49B24"
+   ],
+   "mesure": {
+    "assertions": 59,
+    "codage": {
+     "cpu": 3.792376789000002,
+     "inferences": 23180847,
+     "mur": 3.8169844150543213
+    },
+    "lecture": {
+     "cpu": 0.001124435000001256,
+     "inferences": 16379,
+     "mur": 0.0011372566223144531
+    },
+    "total_mur": 3.8181216716766357
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.8181216716766357
+  },
+  "notation": "11H(CASSIAN)32",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 7,
+    "conditionnel": 114,
+    "etablissable": 15,
+    "sans_suffisante": 322
+   },
+   "conditionnels_par_sens": 167,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11Q611",
+    "11Q7141",
+    "23K11",
+    "23K12",
+    "23K13",
+    "23K21",
+    "23K23",
+    "23K31",
+    "23K32",
+    "23K33",
+    "23K41",
+    "23K42",
+    "23K43",
+    "46A170"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "11Q7141",
+    "23K11",
+    "23K12",
+    "23K13",
+    "23K21",
+    "23K23",
+    "23K31",
+    "23K32",
+    "23K33",
+    "23K41",
+    "23K42",
+    "23K43",
+    "46A170"
+   ],
+   "mesure": {
+    "assertions": 86,
+    "codage": {
+     "cpu": 9.676822260000002,
+     "inferences": 71092824,
+     "mur": 9.726503372192383
+    },
+    "lecture": {
+     "cpu": 0.001813992999998959,
+     "inferences": 23170,
+     "mur": 0.0018231868743896484
+    },
+    "total_mur": 9.728326559066772
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 9.728326559066772
+  }
+ },
+ {
+  "indetermine": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 86.67511578899996,
+     "inferences": 999986966,
+     "mur": 111.71483373641968
+    },
+    "lecture": {
+     "cpu": 0.000924281000038718,
+     "inferences": 13073,
+     "mur": 0.0009360313415527344
+    },
+    "total_mur": 111.71576976776123
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 111.71576976776123
+  },
+  "k": 76,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 13,
+    "conditionnel": 184,
+    "etablissable": 9,
+    "sans_suffisante": 516
+   },
+   "conditionnels_par_sens": 471,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11H(FOURTEEN HOLY HELPERS)",
+    "11H(PANTALEON)",
+    "31A2245",
+    "31A2523",
+    "31A28",
+    "31D82",
+    "31F3",
+    "44G32"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11H(FOURTEEN HOLY HELPERS)",
+    "31A2245",
+    "31A2523",
+    "31A28",
+    "31D82",
+    "31F3",
+    "44G32"
+   ],
+   "mesure": {
+    "assertions": 66,
+    "codage": {
+     "cpu": 21.49421921499993,
+     "inferences": 215536243,
+     "mur": 27.943950414657593
+    },
+    "lecture": {
+     "cpu": 0.0012171310000894664,
+     "inferences": 16397,
+     "mur": 0.001230001449584961
+    },
+    "total_mur": 27.945180416107178
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 27.945180416107178
+  },
+  "notation": "11H(PANTALEON)3",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 6,
+    "conditionnel": 89,
+    "etablissable": 6,
+    "sans_suffisante": 277
+   },
+   "conditionnels_par_sens": 154,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11H(FOURTEEN HOLY HELPERS)",
+    "11H(PANTALEON)",
+    "11Q2121",
+    "47D",
+    "73C9"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11H(FOURTEEN HOLY HELPERS)",
+    "11Q2121",
+    "47D",
+    "73C9"
+   ],
+   "mesure": {
+    "assertions": 59,
+    "codage": {
+     "cpu": 5.7310548939999535,
+     "inferences": 52884241,
+     "mur": 7.680816888809204
+    },
+    "lecture": {
+     "cpu": 0.0010979549999774463,
+     "inferences": 15724,
+     "mur": 0.0011031627655029297
+    },
+    "total_mur": 7.681920051574707
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.681920051574707
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 4,
+    "conditionnel": 35,
+    "etablissable": 7,
+    "sans_suffisante": 102
+   },
+   "conditionnels_par_sens": 40,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "12H13(SHIVA)",
+    "31A224",
+    "45C1",
+    "45C11(SPEAR)",
+    "45C14(LANCE)",
+    "73D82(LANCE)"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31A224",
+    "45C1",
+    "45C11(SPEAR)",
+    "45C14(LANCE)",
+    "73D82(LANCE)"
+   ],
+   "mesure": {
+    "assertions": 57,
+    "codage": {
+     "cpu": 1.5744108760000017,
+     "inferences": 7868927,
+     "mur": 1.6056466102600098
+    },
+    "lecture": {
+     "cpu": 0.0011583420000036426,
+     "inferences": 17394,
+     "mur": 0.0011677742004394531
+    },
+    "total_mur": 1.6068143844604492
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 1.6068143844604492
+  },
+  "k": 81,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 14,
+    "conditionnel": 91,
+    "etablissable": 11,
+    "sans_suffisante": 266
+   },
+   "conditionnels_par_sens": 168,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "12H13(SHIVA)",
+    "22A21",
+    "22E12",
+    "31A2255",
+    "31A422",
+    "41B121",
+    "41D2664",
+    "43B",
+    "43C9",
+    "44B127",
+    "45B4"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "22A21",
+    "22E12",
+    "31A2255",
+    "31A422",
+    "41B121",
+    "41D2664",
+    "43B",
+    "43C9",
+    "44B127",
+    "45B4"
+   ],
+   "mesure": {
+    "assertions": 101,
+    "codage": {
+     "cpu": 9.021850919999999,
+     "inferences": 71000725,
+     "mur": 9.155346870422363
+    },
+    "lecture": {
+     "cpu": 0.0015659680000013054,
+     "inferences": 27306,
+     "mur": 0.0015749931335449219
+    },
+    "total_mur": 9.156921863555908
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 9.156921863555908
+  },
+  "notation": "12H13(SHIVA)6",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 5,
+    "conditionnel": 126,
+    "etablissable": 4,
+    "sans_suffisante": 259
+   },
+   "conditionnels_par_sens": 196,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "12H13(SHIVA)",
+    "25H2321",
+    "31A461",
+    "46D"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "25H2321",
+    "31A461",
+    "46D"
+   ],
+   "mesure": {
+    "assertions": 102,
+    "codage": {
+     "cpu": 10.861656998999997,
+     "inferences": 84942764,
+     "mur": 11.024274349212646
+    },
+    "lecture": {
+     "cpu": 0.0017558910000019523,
+     "inferences": 29838,
+     "mur": 0.0018372535705566406
+    },
+    "total_mur": 11.026111602783203
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 11.026111602783203
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 16,
+    "conditionnel": 293,
+    "etablissable": 7,
+    "rejete_par_le_verificateur": 1,
+    "sans_suffisante": 783
+   },
+   "conditionnels_par_sens": 904,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11I4",
+    "11Q7551",
+    "31A222",
+    "31A2226",
+    "46C",
+    "49L71"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11I4",
+    "11Q7551",
+    "31A222",
+    "31A2226",
+    "46C",
+    "49L71"
+   ],
+   "mesure": {
+    "assertions": 64,
+    "codage": {
+     "cpu": 106.91294898600003,
+     "inferences": 1783616007,
+     "mur": 127.46973943710327
+    },
+    "lecture": {
+     "cpu": 0.0009990669999808688,
+     "inferences": 14559,
+     "mur": 0.0010123252868652344
+    },
+    "total_mur": 127.47075176239014
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 127.47075176239014
+  },
+  "k": 86,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 7,
+    "conditionnel": 52,
+    "etablissable": 9,
+    "sans_suffisante": 301
+   },
+   "conditionnels_par_sens": 55,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11P4432",
+    "31A2255",
+    "31A2313",
+    "31A28",
+    "31D82",
+    "31F3",
+    "46A7",
+    "48A"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11P4432",
+    "31A2255",
+    "31A2313",
+    "31A28",
+    "31D82",
+    "31F3",
+    "46A7",
+    "48A"
+   ],
+   "mesure": {
+    "assertions": 94,
+    "codage": {
+     "cpu": 3.606417606000008,
+     "inferences": 30959738,
+     "mur": 3.644973039627075
+    },
+    "lecture": {
+     "cpu": 0.001340997999989213,
+     "inferences": 23438,
+     "mur": 0.0013511180877685547
+    },
+    "total_mur": 3.6463241577148438
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.6463241577148438
+  },
+  "notation": "11H(ATHANASIUS)33",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 12,
+    "conditionnel": 127,
+    "etablissable": 15,
+    "sans_suffisante": 469
+   },
+   "conditionnels_par_sens": 257,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11I4",
+    "25H119",
+    "25K16",
+    "41A1",
+    "41A221",
+    "44B1621",
+    "44B1622",
+    "44B1623",
+    "44G51",
+    "44G544",
+    "48A",
+    "48C81",
+    "49L71",
+    "73C9"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11I4",
+    "25H119",
+    "25K16",
+    "41A1",
+    "41A221",
+    "44B1621",
+    "44B1622",
+    "44B1623",
+    "44G51",
+    "44G544",
+    "48A",
+    "48C81",
+    "49L71",
+    "73C9"
+   ],
+   "mesure": {
+    "assertions": 114,
+    "codage": {
+     "cpu": 16.21386658900002,
+     "inferences": 195955737,
+     "mur": 20.71913743019104
+    },
+    "lecture": {
+     "cpu": 0.0018958969999971487,
+     "inferences": 34303,
+     "mur": 0.001901388168334961
+    },
+    "total_mur": 20.721038818359375
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 20.721038818359375
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 7,
+    "conditionnel": 93,
+    "etablissable": 6,
+    "sans_suffisante": 286
+   },
+   "conditionnels_par_sens": 114,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11Q611",
+    "11Q71423",
+    "31A22621",
+    "31A28",
+    "41A761"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11H",
+    "11Q611",
+    "11Q71423",
+    "31A22621",
+    "31A28",
+    "41A761"
+   ],
+   "mesure": {
+    "assertions": 67,
+    "codage": {
+     "cpu": 5.144579695999994,
+     "inferences": 35970504,
+     "mur": 5.181246042251587
+    },
+    "lecture": {
+     "cpu": 0.0011443150000047808,
+     "inferences": 17272,
+     "mur": 0.0011553764343261719
+    },
+    "total_mur": 5.182401418685913
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 5.182401418685913
+  },
+  "k": 91,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 10,
+    "conditionnel": 116,
+    "etablissable": 5,
+    "sans_suffisante": 228
+   },
+   "conditionnels_par_sens": 194,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "31A2121",
+    "31A22621",
+    "43B",
+    "71A4"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11H",
+    "31A2121",
+    "31A22621",
+    "43B",
+    "71A4"
+   ],
+   "mesure": {
+    "assertions": 66,
+    "codage": {
+     "cpu": 9.29310789600001,
+     "inferences": 60638752,
+     "mur": 9.423616647720337
+    },
+    "lecture": {
+     "cpu": 0.0010240940000016963,
+     "inferences": 15761,
+     "mur": 0.0010349750518798828
+    },
+    "total_mur": 9.424651622772217
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 9.424651622772217
+  },
+  "notation": "11HH(LIDWYNA)12",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 2,
+    "conditionnel": 85,
+    "etablissable": 6,
+    "sans_suffisante": 214
+   },
+   "conditionnels_par_sens": 121,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11H",
+    "11Q611",
+    "31A22621",
+    "31B2",
+    "41A761",
+    "49L111"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11H",
+    "11Q611",
+    "31A22621",
+    "31B2",
+    "41A761",
+    "49L111"
+   ],
+   "mesure": {
+    "assertions": 73,
+    "codage": {
+     "cpu": 5.132923107000003,
+     "inferences": 35471972,
+     "mur": 5.158609867095947
+    },
+    "lecture": {
+     "cpu": 0.0013807120000066675,
+     "inferences": 20406,
+     "mur": 0.0013895034790039062
+    },
+    "total_mur": 5.159999370574951
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 5.159999370574951
+  }
+ },
+ {
+  "indetermine": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 89.11834954200003,
+     "inferences": 999985330,
+     "mur": 106.72316575050354
+    },
+    "lecture": {
+     "cpu": 0.0010573159999012205,
+     "inferences": 14710,
+     "mur": 0.0010707378387451172
+    },
+    "total_mur": 106.72423648834229
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 106.72423648834229
+  },
+  "k": 96,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 7,
+    "conditionnel": 158,
+    "etablissable": 8,
+    "sans_suffisante": 433
+   },
+   "conditionnels_par_sens": 259,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "22A21",
+    "25G3",
+    "25H1131",
+    "25H15",
+    "41B121",
+    "43B8",
+    "46A821",
+    "49G35"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "22A21",
+    "25G3",
+    "25H1131",
+    "25H15",
+    "41B121",
+    "43B8",
+    "46A821",
+    "49G35"
+   ],
+   "mesure": {
+    "assertions": 76,
+    "codage": {
+     "cpu": 12.235155008999982,
+     "inferences": 129428424,
+     "mur": 13.73094391822815
+    },
+    "lecture": {
+     "cpu": 0.0013223429999698055,
+     "inferences": 20107,
+     "mur": 0.0013353824615478516
+    },
+    "total_mur": 13.732279300689697
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 13.732279300689697
+  },
+  "notation": "11HH(AFRA)83",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 11,
+    "conditionnel": 185,
+    "etablissable": 6,
+    "sans_suffisante": 417
+   },
+   "conditionnels_par_sens": 808,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "13A35",
+    "31B2",
+    "31B3",
+    "42E31",
+    "43B8",
+    "49N"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "13A35",
+    "31B2",
+    "31B3",
+    "42E31",
+    "43B8",
+    "49N"
+   ],
+   "mesure": {
+    "assertions": 70,
+    "codage": {
+     "cpu": 30.549477469000067,
+     "inferences": 427096764,
+     "mur": 39.07473134994507
+    },
+    "lecture": {
+     "cpu": 0.0013416719999668203,
+     "inferences": 19723,
+     "mur": 0.004701375961303711
+    },
+    "total_mur": 39.07943272590637
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 39.07943272590637
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 8,
+    "conditionnel": 66,
+    "etablissable": 5,
+    "sans_suffisante": 189
+   },
+   "conditionnels_par_sens": 79,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31D82",
+    "31G",
+    "46E223",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31D82",
+    "31G",
+    "46E223",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 32,
+    "codage": {
+     "cpu": 4.4387085520000085,
+     "inferences": 25388753,
+     "mur": 4.458048582077026
+    },
+    "lecture": {
+     "cpu": 0.0006281049999898869,
+     "inferences": 9664,
+     "mur": 0.00063323974609375
+    },
+    "total_mur": 4.45868182182312
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 4.45868182182312
+  },
+  "k": 101,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 16,
+    "conditionnel": 109,
+    "etablissable": 11,
+    "sans_suffisante": 392
+   },
+   "conditionnels_par_sens": 180,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31A2245",
+    "31A225",
+    "31A2523",
+    "31A2711",
+    "31A2717",
+    "31D82",
+    "31G",
+    "43B",
+    "46E223",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31A2245",
+    "31A225",
+    "31A2523",
+    "31A2711",
+    "31A2717",
+    "31D82",
+    "31G",
+    "43B",
+    "46E223",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 65,
+    "codage": {
+     "cpu": 9.982503800000003,
+     "inferences": 78693744,
+     "mur": 10.03377103805542
+    },
+    "lecture": {
+     "cpu": 0.0008494100000007165,
+     "inferences": 14015,
+     "mur": 0.0008559226989746094
+    },
+    "total_mur": 10.034626960754395
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 10.034626960754395
+  },
+  "notation": "43C71253",
+  "positif": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 13,
+    "conditionnel": 113,
+    "etablissable": 9,
+    "sans_suffisante": 390
+   },
+   "conditionnels_par_sens": 187,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31A2245",
+    "31A2255",
+    "31A2523",
+    "31D82",
+    "31G",
+    "43B",
+    "46E223",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31A2245",
+    "31A2255",
+    "31A2523",
+    "31D82",
+    "31G",
+    "43B",
+    "46E223",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 89,
+    "codage": {
+     "cpu": 10.505683848999993,
+     "inferences": 82962956,
+     "mur": 10.563607454299927
+    },
+    "lecture": {
+     "cpu": 0.0011721760000114045,
+     "inferences": 19915,
+     "mur": 0.00118255615234375
+    },
+    "total_mur": 10.56479001045227
+   },
+   "necessaire": "etablie",
+   "statut": "sans_suffisante",
+   "temps": 10.56479001045227
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 8,
+    "conditionnel": 152,
+    "etablissable": 4,
+    "sans_suffisante": 392
+   },
+   "conditionnels_par_sens": 299,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "23R",
+    "23R14",
+    "46C112",
+    "46C21"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "23R",
+    "23R14",
+    "46C112",
+    "46C21"
+   ],
+   "mesure": {
+    "assertions": 65,
+    "codage": {
+     "cpu": 16.255258149999918,
+     "inferences": 165133121,
+     "mur": 24.3561909198761
+    },
+    "lecture": {
+     "cpu": 0.00091974500003289,
+     "inferences": 14513,
+     "mur": 0.0009315013885498047
+    },
+    "total_mur": 24.35712242126465
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 24.35712242126465
+  },
+  "k": 106,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 13,
+    "conditionnel": 188,
+    "etablissable": 9,
+    "sans_suffisante": 452
+   },
+   "conditionnels_par_sens": 950,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "31A28",
+    "31D82",
+    "31F3",
+    "41D2664",
+    "45B332",
+    "45D323",
+    "46C112",
+    "46C21",
+    "46C2711"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "31A28",
+    "31D82",
+    "31F3",
+    "41D2664",
+    "45B332",
+    "45D323",
+    "46C112",
+    "46C21",
+    "46C2711"
+   ],
+   "mesure": {
+    "assertions": 76,
+    "codage": {
+     "cpu": 39.30851093700005,
+     "inferences": 618355275,
+     "mur": 54.58461546897888
+    },
+    "lecture": {
+     "cpu": 0.0010150049999992916,
+     "inferences": 15241,
+     "mur": 0.0010180473327636719
+    },
+    "total_mur": 54.585633516311646
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 54.585633516311646
+  },
+  "notation": "46E43(ROCKET)",
+  "positif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 75.29205606599999,
+     "inferences": 999980968,
+     "mur": 89.08470344543457
+    },
+    "lecture": {
+     "cpu": 0.0011872050000647505,
+     "inferences": 19071,
+     "mur": 0.0011897087097167969
+    },
+    "total_mur": 89.08589315414429
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 89.08589315414429
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 5,
+    "conditionnel": 58,
+    "etablissable": 3,
+    "sans_suffisante": 154
+   },
+   "conditionnels_par_sens": 64,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31A28",
+    "41A33"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31A28",
+    "41A33"
+   ],
+   "mesure": {
+    "assertions": 55,
+    "codage": {
+     "cpu": 4.280037043999997,
+     "inferences": 25212186,
+     "mur": 4.369934797286987
+    },
+    "lecture": {
+     "cpu": 0.0007331210000103283,
+     "inferences": 10150,
+     "mur": 0.0007448196411132812
+    },
+    "total_mur": 4.370679616928101
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 4.370679616928101
+  },
+  "k": 111,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 12,
+    "conditionnel": 54,
+    "etablissable": 12,
+    "sans_suffisante": 167
+   },
+   "conditionnels_par_sens": 55,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31A224",
+    "31A2511",
+    "31D82",
+    "31G",
+    "41B111",
+    "44G312",
+    "44G32",
+    "44G342",
+    "45C1",
+    "45C13(SWORD)",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31A224",
+    "31A2511",
+    "31D82",
+    "31G",
+    "41B111",
+    "44G32",
+    "44G342",
+    "45C1",
+    "45C13(SWORD)",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 61,
+    "codage": {
+     "cpu": 4.60398849100001,
+     "inferences": 22344877,
+     "mur": 4.680969953536987
+    },
+    "lecture": {
+     "cpu": 0.0008318609999946602,
+     "inferences": 12336,
+     "mur": 0.0008440017700195312
+    },
+    "total_mur": 4.681813955307007
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 4.681813955307007
+  },
+  "notation": "44G31",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 4,
+    "conditionnel": 103,
+    "etablissable": 10,
+    "sans_suffisante": 244
+   },
+   "conditionnels_par_sens": 183,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31D82",
+    "31G",
+    "41A32",
+    "41A3281",
+    "41A71221",
+    "42B61",
+    "44G3111",
+    "44G312",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31D82",
+    "31G",
+    "41A32",
+    "41A3281",
+    "41A71221",
+    "42B61",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 92,
+    "codage": {
+     "cpu": 9.957823453000003,
+     "inferences": 70399579,
+     "mur": 10.094073057174683
+    },
+    "lecture": {
+     "cpu": 0.001107540999996104,
+     "inferences": 18765,
+     "mur": 0.0011169910430908203
+    },
+    "total_mur": 10.095190048217773
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 10.095190048217773
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 7,
+    "conditionnel": 64,
+    "etablissable": 5,
+    "sans_suffisante": 273
+   },
+   "conditionnels_par_sens": 75,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q624",
+    "25H2324",
+    "31A224",
+    "41D212",
+    "41D2121"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q624",
+    "25H2324",
+    "31A224",
+    "41D212",
+    "41D2121"
+   ],
+   "mesure": {
+    "assertions": 46,
+    "codage": {
+     "cpu": 3.662522919999958,
+     "inferences": 27237091,
+     "mur": 4.620900392532349
+    },
+    "lecture": {
+     "cpu": 0.0006510009999942667,
+     "inferences": 7882,
+     "mur": 0.0006535053253173828
+    },
+    "total_mur": 4.621553897857666
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 4.621553897857666
+  },
+  "k": 116,
+  "langue": "fr",
+  "negatif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 75.87143285600001,
+     "inferences": 999987505,
+     "mur": 96.48520517349243
+    },
+    "lecture": {
+     "cpu": 0.000838683999973,
+     "inferences": 12535,
+     "mur": 0.0008475780487060547
+    },
+    "total_mur": 96.48605275154114
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 96.48605275154114
+  },
+  "notation": "31A2515",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 15,
+    "conditionnel": 241,
+    "etablissable": 8,
+    "sans_suffisante": 732
+   },
+   "conditionnels_par_sens": 709,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "25H2324",
+    "31A224",
+    "31A2245",
+    "31A2371",
+    "31A2523",
+    "31E3",
+    "44B152",
+    "46B314"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "25H2324",
+    "31A224",
+    "31A2245",
+    "31A2371",
+    "31A2523",
+    "31E3",
+    "44B152",
+    "46B314"
+   ],
+   "mesure": {
+    "assertions": 78,
+    "codage": {
+     "cpu": 60.067013298999996,
+     "inferences": 735253461,
+     "mur": 76.31875038146973
+    },
+    "lecture": {
+     "cpu": 0.000973489999978483,
+     "inferences": 14754,
+     "mur": 0.0009851455688476562
+    },
+    "total_mur": 76.31973552703857
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 76.31973552703857
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 5,
+    "conditionnel": 19,
+    "etablissable": 6,
+    "sans_suffisante": 96
+   },
+   "conditionnels_par_sens": 22,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "26D1",
+    "31D82",
+    "31G",
+    "46C11",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "26D1",
+    "31D82",
+    "31G",
+    "46C11",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 34,
+    "codage": {
+     "cpu": 1.0085003550000096,
+     "inferences": 5179142,
+     "mur": 1.0103175640106201
+    },
+    "lecture": {
+     "cpu": 0.0005092319999988604,
+     "inferences": 7892,
+     "mur": 0.0005176067352294922
+    },
+    "total_mur": 1.0108351707458496
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 1.0108351707458496
+  },
+  "k": 121,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 5,
+    "conditionnel": 10,
+    "etablissable": 9,
+    "sans_suffisante": 83
+   },
+   "conditionnels_par_sens": 10,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25K16",
+    "31D82",
+    "31G",
+    "44B1323",
+    "46A821",
+    "46C11",
+    "46E223",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25K16",
+    "31D82",
+    "31G",
+    "44B1323",
+    "46A821",
+    "46C11",
+    "46E223",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 58,
+    "codage": {
+     "cpu": 1.2814204660000001,
+     "inferences": 6456864,
+     "mur": 1.2937061786651611
+    },
+    "lecture": {
+     "cpu": 0.0007198319999872638,
+     "inferences": 10768,
+     "mur": 0.0007309913635253906
+    },
+    "total_mur": 1.2944371700286865
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 1.2944371700286865
+  },
+  "notation": "31E2222",
+  "positif": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 12,
+    "conditionnel": 50,
+    "etablissable": 11,
+    "sans_suffisante": 180
+   },
+   "conditionnels_par_sens": 76,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "22E21",
+    "26D",
+    "26D1",
+    "31A534",
+    "31D82",
+    "31G",
+    "41B3",
+    "41B33",
+    "46C11",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "22E21",
+    "26D",
+    "26D1",
+    "31A534",
+    "31D82",
+    "31G",
+    "41B3",
+    "41B33",
+    "46C11",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 77,
+    "codage": {
+     "cpu": 4.851976178000001,
+     "inferences": 30065984,
+     "mur": 4.865927696228027
+    },
+    "lecture": {
+     "cpu": 0.0009577820000004067,
+     "inferences": 15232,
+     "mur": 0.0009696483612060547
+    },
+    "total_mur": 4.866897344589233
+   },
+   "necessaire": "etablie",
+   "statut": "sans_suffisante",
+   "temps": 4.866897344589233
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 4,
+    "conditionnel": 63,
+    "etablissable": 3,
+    "sans_suffisante": 255
+   },
+   "conditionnels_par_sens": 69,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "31A2245",
+    "31A2523",
+    "41A775"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "31A2245",
+    "31A2523",
+    "41A775"
+   ],
+   "mesure": {
+    "assertions": 45,
+    "codage": {
+     "cpu": 4.21407018299999,
+     "inferences": 26693467,
+     "mur": 5.665526628494263
+    },
+    "lecture": {
+     "cpu": 0.0006811949999701028,
+     "inferences": 8257,
+     "mur": 0.00069427490234375
+    },
+    "total_mur": 5.6662209033966064
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 5.6662209033966064
+  },
+  "k": 126,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 6,
+    "conditionnel": 164,
+    "etablissable": 8,
+    "sans_suffisante": 534
+   },
+   "conditionnels_par_sens": 378,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "31A28",
+    "31D82",
+    "31E3",
+    "31F3",
+    "41A342",
+    "41A775",
+    "46A63",
+    "46C112"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "31A28",
+    "31D82",
+    "31E3",
+    "31F3",
+    "41A342",
+    "41A775",
+    "46A63",
+    "46C112"
+   ],
+   "mesure": {
+    "assertions": 80,
+    "codage": {
+     "cpu": 42.68448977100002,
+     "inferences": 489076593,
+     "mur": 55.72330451011658
+    },
+    "lecture": {
+     "cpu": 0.001105762999941362,
+     "inferences": 17210,
+     "mur": 0.0011219978332519531
+    },
+    "total_mur": 55.72442650794983
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 55.72442650794983
+  },
+  "notation": "31EE223",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 10,
+    "conditionnel": 196,
+    "etablissable": 10,
+    "sans_suffisante": 564
+   },
+   "conditionnels_par_sens": 605,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "31A28",
+    "31A461",
+    "31D82",
+    "31F3",
+    "41A1",
+    "41A221",
+    "41A342",
+    "41A775",
+    "44G163",
+    "46C112"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "31A28",
+    "31A461",
+    "31D82",
+    "31F3",
+    "41A1",
+    "41A221",
+    "41A342",
+    "41A775",
+    "44G163",
+    "46C112"
+   ],
+   "mesure": {
+    "assertions": 85,
+    "codage": {
+     "cpu": 57.735970460999965,
+     "inferences": 722707125,
+     "mur": 84.72735333442688
+    },
+    "lecture": {
+     "cpu": 0.0011913470000308735,
+     "inferences": 20434,
+     "mur": 0.0011942386627197266
+    },
+    "total_mur": 84.7285475730896
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 84.7285475730896
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 13,
+    "conditionnel": 108,
+    "etablissable": 8,
+    "sans_suffisante": 201
+   },
+   "conditionnels_par_sens": 125,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31A2245",
+    "31A2523",
+    "31D82",
+    "31G",
+    "46C361",
+    "46D",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31A2245",
+    "31A2523",
+    "31D82",
+    "31G",
+    "46C361",
+    "46D",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 53,
+    "codage": {
+     "cpu": 6.867080846999997,
+     "inferences": 41128201,
+     "mur": 6.908902883529663
+    },
+    "lecture": {
+     "cpu": 0.0006690160000033529,
+     "inferences": 9735,
+     "mur": 0.0006830692291259766
+    },
+    "total_mur": 6.909585952758789
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 6.909585952758789
+  },
+  "k": 131,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 12,
+    "conditionnel": 97,
+    "etablissable": 10,
+    "sans_suffisante": 208
+   },
+   "conditionnels_par_sens": 131,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "22A",
+    "31A2112",
+    "31D82",
+    "31G",
+    "41C6413",
+    "43B8",
+    "45E",
+    "47I223",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "22A",
+    "31A2112",
+    "31D82",
+    "31G",
+    "41C6413",
+    "43B8",
+    "45E",
+    "47I223",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 78,
+    "codage": {
+     "cpu": 7.1025985729999945,
+     "inferences": 50370984,
+     "mur": 7.138761281967163
+    },
+    "lecture": {
+     "cpu": 0.0010489699999993718,
+     "inferences": 16499,
+     "mur": 0.0010616779327392578
+    },
+    "total_mur": 7.139822959899902
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.139822959899902
+  },
+  "notation": "42AA562",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 13,
+    "conditionnel": 103,
+    "etablissable": 10,
+    "sans_suffisante": 212
+   },
+   "conditionnels_par_sens": 137,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "22A",
+    "31A2112",
+    "31D82",
+    "31G",
+    "41C6413",
+    "43B8",
+    "45E",
+    "47I223",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "22A",
+    "31A2112",
+    "31D82",
+    "31G",
+    "41C6413",
+    "43B8",
+    "45E",
+    "47I223",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 78,
+    "codage": {
+     "cpu": 7.181693564,
+     "inferences": 50831660,
+     "mur": 7.205150365829468
+    },
+    "lecture": {
+     "cpu": 0.0010388979999902404,
+     "inferences": 16519,
+     "mur": 0.001051187515258789
+    },
+    "total_mur": 7.206201553344727
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.206201553344727
+  }
+ },
+ {
+  "indetermine": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 93.92541964599991,
+     "inferences": 999984252,
+     "mur": 119.49474477767944
+    },
+    "lecture": {
+     "cpu": 0.0012851450001107878,
+     "inferences": 15804,
+     "mur": 0.004288673400878906
+    },
+    "total_mur": 119.49903345108032
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 119.49903345108032
+  },
+  "k": 136,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 17,
+    "conditionnel": 233,
+    "etablissable": 16,
+    "sans_suffisante": 685
+   },
+   "conditionnels_par_sens": 694,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "23K11",
+    "23K12",
+    "23K13",
+    "23K21",
+    "23K22",
+    "23K23",
+    "23K31",
+    "23K32",
+    "23K33",
+    "23K41",
+    "23K42",
+    "23K43",
+    "25H2324",
+    "31A224",
+    "31A28",
+    "46A170"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "23K11",
+    "23K12",
+    "23K13",
+    "23K21",
+    "23K22",
+    "23K23",
+    "23K31",
+    "23K32",
+    "23K33",
+    "23K41",
+    "23K42",
+    "23K43",
+    "25H2324",
+    "31A224",
+    "31A28",
+    "46A170"
+   ],
+   "mesure": {
+    "assertions": 72,
+    "codage": {
+     "cpu": 52.838757203,
+     "inferences": 716620839,
+     "mur": 67.954017162323
+    },
+    "lecture": {
+     "cpu": 0.0008976269999720898,
+     "inferences": 14282,
+     "mur": 0.004174470901489258
+    },
+    "total_mur": 67.95819163322449
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 67.95819163322449
+  },
+  "notation": "31AA2363",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 16,
+    "conditionnel": 226,
+    "etablissable": 15,
+    "sans_suffisante": 671
+   },
+   "conditionnels_par_sens": 675,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "23K11",
+    "23K12",
+    "23K13",
+    "23K21",
+    "23K22",
+    "23K23",
+    "23K31",
+    "23K32",
+    "23K33",
+    "23K41",
+    "23K42",
+    "23K43",
+    "25H2324",
+    "31A224",
+    "46A170"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "23K11",
+    "23K12",
+    "23K13",
+    "23K21",
+    "23K22",
+    "23K23",
+    "23K31",
+    "23K32",
+    "23K33",
+    "23K41",
+    "23K42",
+    "23K43",
+    "25H2324",
+    "31A224",
+    "46A170"
+   ],
+   "mesure": {
+    "assertions": 72,
+    "codage": {
+     "cpu": 48.49795809099999,
+     "inferences": 676926170,
+     "mur": 64.88835978507996
+    },
+    "lecture": {
+     "cpu": 0.0009966620000341209,
+     "inferences": 14318,
+     "mur": 0.0010085105895996094
+    },
+    "total_mur": 64.88936829566956
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 64.88936829566956
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 13,
+    "conditionnel": 57,
+    "etablissable": 3,
+    "sans_suffisante": 151
+   },
+   "conditionnels_par_sens": 68,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213"
+   ],
+   "mesure": {
+    "assertions": 46,
+    "codage": {
+     "cpu": 2.9953375110000025,
+     "inferences": 15997513,
+     "mur": 3.051790952682495
+    },
+    "lecture": {
+     "cpu": 0.0006116729999945392,
+     "inferences": 8684,
+     "mur": 0.0006246566772460938
+    },
+    "total_mur": 3.052415609359741
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.052415609359741
+  },
+  "k": 141,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 18,
+    "conditionnel": 106,
+    "etablissable": 9,
+    "sans_suffisante": 306
+   },
+   "conditionnels_par_sens": 136,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25F",
+    "25F1",
+    "25F71",
+    "25F711",
+    "25F711(ANT)",
+    "25H211",
+    "25H213",
+    "46A821"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25F",
+    "25F1",
+    "25F71",
+    "25F711",
+    "25F711(ANT)",
+    "25H211",
+    "25H213",
+    "46A821"
+   ],
+   "mesure": {
+    "assertions": 95,
+    "codage": {
+     "cpu": 7.877381807000006,
+     "inferences": 60886041,
+     "mur": 8.015960931777954
+    },
+    "lecture": {
+     "cpu": 0.0017403789999974606,
+     "inferences": 21584,
+     "mur": 0.001852273941040039
+    },
+    "total_mur": 8.017813205718994
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 8.017813205718994
+  },
+  "notation": "92D192172",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 15,
+    "conditionnel": 99,
+    "etablissable": 4,
+    "sans_suffisante": 253
+   },
+   "conditionnels_par_sens": 135,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213",
+    "47I213"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213",
+    "47I213"
+   ],
+   "mesure": {
+    "assertions": 103,
+    "codage": {
+     "cpu": 7.702152480000009,
+     "inferences": 59358017,
+     "mur": 7.830213785171509
+    },
+    "lecture": {
+     "cpu": 0.0014165999999988799,
+     "inferences": 24728,
+     "mur": 0.0014247894287109375
+    },
+    "total_mur": 7.83163857460022
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.83163857460022
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 12,
+    "conditionnel": 154,
+    "etablissable": 5,
+    "sans_suffisante": 471
+   },
+   "conditionnels_par_sens": 261,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11I62(NOAH'S SONS)",
+    "26C",
+    "43B",
+    "48C514",
+    "91A12"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11I62(NOAH'S SONS)",
+    "26C",
+    "43B",
+    "48C514",
+    "91A12"
+   ],
+   "mesure": {
+    "assertions": 77,
+    "codage": {
+     "cpu": 19.70893017800006,
+     "inferences": 217736665,
+     "mur": 25.58141326904297
+    },
+    "lecture": {
+     "cpu": 0.001084243000036622,
+     "inferences": 17532,
+     "mur": 0.0010867118835449219
+    },
+    "total_mur": 25.582499980926514
+   },
+   "necessaire": "etablie",
+   "statut": "candidat",
+   "temps": 25.582499980926514
+  },
+  "k": 146,
+  "langue": "fr",
+  "negatif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 74.167097544,
+     "inferences": 999973433,
+     "mur": 96.50465512275696
+    },
+    "lecture": {
+     "cpu": 0.0014938819999770203,
+     "inferences": 26607,
+     "mur": 0.0015048980712890625
+    },
+    "total_mur": 96.50616002082825
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 96.50616002082825
+  },
+  "notation": "71B3311",
+  "positif": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 8,
+    "conditionnel": 77,
+    "etablissable": 3,
+    "sans_suffisante": 218
+   },
+   "conditionnels_par_sens": 105,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11I62(NOAH'S SONS)",
+    "26C",
+    "43B"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11I62(NOAH'S SONS)",
+    "26C",
+    "43B"
+   ],
+   "mesure": {
+    "assertions": 81,
+    "codage": {
+     "cpu": 11.40998387899998,
+     "inferences": 111183714,
+     "mur": 14.751208543777466
+    },
+    "lecture": {
+     "cpu": 0.0012360449999846423,
+     "inferences": 17837,
+     "mur": 0.0012488365173339844
+    },
+    "total_mur": 14.7524573802948
+   },
+   "necessaire": "etablie",
+   "statut": "sans_suffisante",
+   "temps": 14.7524573802948
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 21,
+    "conditionnel": 60,
+    "etablissable": 11,
+    "sans_suffisante": 158
+   },
+   "conditionnels_par_sens": 71,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213",
+    "31D82",
+    "31G",
+    "46B53",
+    "71E113",
+    "73A23",
+    "73B82",
+    "96D(ANNA)",
+    "96D(DIDO)"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213",
+    "31D82",
+    "31G",
+    "46B53",
+    "71E113",
+    "73A23",
+    "73B82",
+    "96D(DIDO)"
+   ],
+   "mesure": {
+    "assertions": 63,
+    "codage": {
+     "cpu": 3.203231040999995,
+     "inferences": 22847059,
+     "mur": 3.2208211421966553
+    },
+    "lecture": {
+     "cpu": 0.0007775280000004159,
+     "inferences": 11840,
+     "mur": 0.0007853507995605469
+    },
+    "total_mur": 3.221606492996216
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.221606492996216
+  },
+  "k": 151,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 15,
+    "conditionnel": 49,
+    "etablissable": 10,
+    "sans_suffisante": 183
+   },
+   "conditionnels_par_sens": 73,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213",
+    "31D82",
+    "31G",
+    "71E113",
+    "73A23",
+    "73B82",
+    "96D(ANNA)",
+    "96D(DIDO)"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213",
+    "31D82",
+    "31G",
+    "71E113",
+    "73A23",
+    "73B82",
+    "96D(DIDO)"
+   ],
+   "mesure": {
+    "assertions": 86,
+    "codage": {
+     "cpu": 3.856660482999999,
+     "inferences": 27354015,
+     "mur": 3.875976324081421
+    },
+    "lecture": {
+     "cpu": 0.0013549390000093808,
+     "inferences": 21469,
+     "mur": 0.0013728141784667969
+    },
+    "total_mur": 3.8773491382598877
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.8773491382598877
+  },
+  "notation": "96D(ANNA)68",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 14,
+    "conditionnel": 78,
+    "etablissable": 13,
+    "sans_suffisante": 196
+   },
+   "conditionnels_par_sens": 105,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213",
+    "31D82",
+    "31G",
+    "48C5",
+    "48C52",
+    "48C524",
+    "71E113",
+    "73A23",
+    "73B82",
+    "96D(ANNA)",
+    "96D(DIDO)"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25H211",
+    "25H213",
+    "31D82",
+    "31G",
+    "48C5",
+    "48C52",
+    "48C524",
+    "71E113",
+    "73A23",
+    "73B82",
+    "96D(DIDO)"
+   ],
+   "mesure": {
+    "assertions": 98,
+    "codage": {
+     "cpu": 5.235010533999997,
+     "inferences": 40335809,
+     "mur": 5.269359350204468
+    },
+    "lecture": {
+     "cpu": 0.0013327930000031074,
+     "inferences": 22654,
+     "mur": 0.0013403892517089844
+    },
+    "total_mur": 5.270699739456177
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 5.270699739456177
+  }
+ },
+ {
+  "indetermine": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 94.69513589799999,
+     "inferences": 999992541,
+     "mur": 121.14849996566772
+    },
+    "lecture": {
+     "cpu": 0.0006107649999194109,
+     "inferences": 7497,
+     "mur": 0.0006248950958251953
+    },
+    "total_mur": 121.14912486076355
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 121.14912486076355
+  },
+  "k": 156,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 12,
+    "conditionnel": 98,
+    "etablissable": 7,
+    "sans_suffisante": 355
+   },
+   "conditionnels_par_sens": 302,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11I11",
+    "11I62(EZEKIEL)",
+    "31A46321",
+    "31A534",
+    "32B",
+    "46B3311",
+    "46B91"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11I11",
+    "11I62(EZEKIEL)",
+    "31A46321",
+    "31A534",
+    "32B",
+    "46B3311",
+    "46B91"
+   ],
+   "mesure": {
+    "assertions": 85,
+    "codage": {
+     "cpu": 16.629585859999906,
+     "inferences": 180472791,
+     "mur": 21.510682344436646
+    },
+    "lecture": {
+     "cpu": 0.002884650999931182,
+     "inferences": 23694,
+     "mur": 0.002886533737182617
+    },
+    "total_mur": 21.513568878173828
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 21.513568878173828
+  },
+  "notation": "71O925",
+  "positif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 94.58980467200001,
+     "inferences": 999967678,
+     "mur": 120.06748366355896
+    },
+    "lecture": {
+     "cpu": 0.0018885529999579376,
+     "inferences": 32380,
+     "mur": 0.0019009113311767578
+    },
+    "total_mur": 120.06938457489014
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 120.06938457489014
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 1,
+    "conditionnel": 62,
+    "etablissable": 4,
+    "sans_suffisante": 124
+   },
+   "conditionnels_par_sens": 70,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "25I1412",
+    "41A11",
+    "41A211"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "25I1412",
+    "41A11",
+    "41A211"
+   ],
+   "mesure": {
+    "assertions": 46,
+    "codage": {
+     "cpu": 2.9211721639999837,
+     "inferences": 14012950,
+     "mur": 3.035757541656494
+    },
+    "lecture": {
+     "cpu": 0.0005734030000041912,
+     "inferences": 7585,
+     "mur": 0.0005869865417480469
+    },
+    "total_mur": 3.036344528198242
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.036344528198242
+  },
+  "k": 161,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 19,
+    "conditionnel": 89,
+    "etablissable": 5,
+    "sans_suffisante": 257
+   },
+   "conditionnels_par_sens": 111,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "24C12",
+    "41A711",
+    "92A",
+    "92B1"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "24C12",
+    "41A711",
+    "92A",
+    "92B1"
+   ],
+   "mesure": {
+    "assertions": 89,
+    "codage": {
+     "cpu": 7.522983627000002,
+     "inferences": 54906315,
+     "mur": 7.834982633590698
+    },
+    "lecture": {
+     "cpu": 0.001429174999998395,
+     "inferences": 23197,
+     "mur": 0.0014443397521972656
+    },
+    "total_mur": 7.8364269733428955
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.8364269733428955
+  },
+  "notation": "97C41",
+  "positif": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 18,
+    "conditionnel": 134,
+    "etablissable": 9,
+    "sans_suffisante": 362
+   },
+   "conditionnels_par_sens": 222,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "24C12",
+    "31A224",
+    "31A225",
+    "41A761",
+    "46C361",
+    "48C7334",
+    "92A",
+    "92B1"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "24C12",
+    "31A224",
+    "31A225",
+    "41A761",
+    "46C361",
+    "48C7334",
+    "92A",
+    "92B1"
+   ],
+   "mesure": {
+    "assertions": 106,
+    "codage": {
+     "cpu": 14.551291923000008,
+     "inferences": 122542787,
+     "mur": 14.869824647903442
+    },
+    "lecture": {
+     "cpu": 0.0017581120000045303,
+     "inferences": 31064,
+     "mur": 0.0017747879028320312
+    },
+    "total_mur": 14.871599435806274
+   },
+   "necessaire": "etablie",
+   "statut": "sans_suffisante",
+   "temps": 14.871599435806274
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 12,
+    "conditionnel": 256,
+    "etablissable": 4,
+    "rejete_par_le_verificateur": 1,
+    "sans_suffisante": 721
+   },
+   "conditionnels_par_sens": 734,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "41A711",
+    "41A713",
+    "41C351",
+    "46C"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "41A711",
+    "41A713",
+    "41C351",
+    "46C"
+   ],
+   "mesure": {
+    "assertions": 39,
+    "codage": {
+     "cpu": 90.1622591759999,
+     "inferences": 1453216372,
+     "mur": 115.17148017883301
+    },
+    "lecture": {
+     "cpu": 0.0005796260002171039,
+     "inferences": 7083,
+     "mur": 0.006638526916503906
+    },
+    "total_mur": 115.17811870574951
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 115.17811870574951
+  },
+  "k": 166,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 23,
+    "conditionnel": 194,
+    "etablissable": 11,
+    "sans_suffisante": 511
+   },
+   "conditionnels_par_sens": 337,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "31A28",
+    "31D82",
+    "31F3",
+    "41A343",
+    "44B113",
+    "45B6",
+    "45M2",
+    "46C",
+    "46C223",
+    "49L8",
+    "73D662"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "31A28",
+    "31D82",
+    "31F3",
+    "41A343",
+    "44B113",
+    "45B6",
+    "45M2",
+    "46C",
+    "46C223",
+    "49L8",
+    "73D662"
+   ],
+   "mesure": {
+    "assertions": 108,
+    "codage": {
+     "cpu": 22.681631267000057,
+     "inferences": 283876634,
+     "mur": 28.895163774490356
+    },
+    "lecture": {
+     "cpu": 0.0017405270000381279,
+     "inferences": 29135,
+     "mur": 0.0017540454864501953
+    },
+    "total_mur": 28.896917819976807
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 28.896917819976807
+  },
+  "notation": "73D581",
+  "positif": {
+   "accord": "non_controle",
+   "complet": "complet",
+   "comptes": {
+    "candidat": 8,
+    "conditionnel": 119,
+    "etablissable": 11,
+    "sans_suffisante": 371
+   },
+   "conditionnels_par_sens": 152,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "31A2245",
+    "31A2523",
+    "31A28",
+    "31D82",
+    "31F3",
+    "41A711",
+    "41A713",
+    "41C351",
+    "44B113",
+    "49L8",
+    "73D662"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "31A2245",
+    "31A2523",
+    "31A28",
+    "31D82",
+    "31F3",
+    "41A711",
+    "41A713",
+    "41C351",
+    "44B113",
+    "49L8",
+    "73D662"
+   ],
+   "mesure": {
+    "assertions": 106,
+    "codage": {
+     "cpu": 8.014902054999993,
+     "inferences": 74911975,
+     "mur": 10.215151309967041
+    },
+    "lecture": {
+     "cpu": 0.0023556339999686315,
+     "inferences": 32575,
+     "mur": 0.0023577213287353516
+    },
+    "total_mur": 10.217509031295776
+   },
+   "necessaire": "etablie",
+   "statut": "sans_suffisante",
+   "temps": 10.217509031295776
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 6,
+    "conditionnel": 48,
+    "etablissable": 4,
+    "sans_suffisante": 135
+   },
+   "conditionnels_par_sens": 64,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D3281",
+    "11Q611",
+    "31A28",
+    "46B311"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D3281",
+    "11Q611",
+    "31A28",
+    "46B311"
+   ],
+   "mesure": {
+    "assertions": 53,
+    "codage": {
+     "cpu": 2.508761978999999,
+     "inferences": 17959293,
+     "mur": 2.536007881164551
+    },
+    "lecture": {
+     "cpu": 0.000566817000006381,
+     "inferences": 7830,
+     "mur": 0.0005750656127929688
+    },
+    "total_mur": 2.5365829467773438
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 2.5365829467773438
+  },
+  "k": 171,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 11,
+    "conditionnel": 82,
+    "etablissable": 8,
+    "sans_suffisante": 275
+   },
+   "conditionnels_par_sens": 131,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D3281",
+    "11Q611",
+    "31A2245",
+    "31A2523",
+    "31D82",
+    "31G",
+    "46B311",
+    "71E113"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D3281",
+    "11Q611",
+    "31A2245",
+    "31A2523",
+    "31D82",
+    "31G",
+    "46B311",
+    "71E113"
+   ],
+   "mesure": {
+    "assertions": 83,
+    "codage": {
+     "cpu": 7.704086412000009,
+     "inferences": 56453407,
+     "mur": 7.938277721405029
+    },
+    "lecture": {
+     "cpu": 0.0010587769999972352,
+     "inferences": 15694,
+     "mur": 0.001074075698852539
+    },
+    "total_mur": 7.939351797103882
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.939351797103882
+  },
+  "notation": "46B910",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 7,
+    "conditionnel": 75,
+    "etablissable": 5,
+    "sans_suffisante": 192
+   },
+   "conditionnels_par_sens": 106,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D3281",
+    "11Q611",
+    "31A2224",
+    "31A28",
+    "46B311"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D3281",
+    "11Q611",
+    "31A2224",
+    "31A28",
+    "46B311"
+   ],
+   "mesure": {
+    "assertions": 131,
+    "codage": {
+     "cpu": 6.607969013000002,
+     "inferences": 49752794,
+     "mur": 6.722737073898315
+    },
+    "lecture": {
+     "cpu": 0.002269878999996422,
+     "inferences": 38225,
+     "mur": 0.0028274059295654297
+    },
+    "total_mur": 6.725564479827881
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 6.725564479827881
+  }
+ },
+ {
+  "indetermine": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 90.88769417100002,
+     "inferences": 999991759,
+     "mur": 117.84558081626892
+    },
+    "lecture": {
+     "cpu": 0.0006554430000278444,
+     "inferences": 8281,
+     "mur": 0.0006589889526367188
+    },
+    "total_mur": 117.84623980522156
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 117.84623980522156
+  },
+  "k": 176,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 14,
+    "conditionnel": 227,
+    "etablissable": 6,
+    "sans_suffisante": 694
+   },
+   "conditionnels_par_sens": 567,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "31A2255",
+    "31A2313",
+    "31A28",
+    "34B11",
+    "34B12",
+    "34B121"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "31A2255",
+    "31A2313",
+    "31A28",
+    "34B11",
+    "34B12",
+    "34B121"
+   ],
+   "mesure": {
+    "assertions": 100,
+    "codage": {
+     "cpu": 38.497570135000046,
+     "inferences": 386317351,
+     "mur": 50.67646884918213
+    },
+    "lecture": {
+     "cpu": 0.0013236399998959314,
+     "inferences": 23048,
+     "mur": 0.0013234615325927734
+    },
+    "total_mur": 50.67779231071472
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 50.67779231071472
+  },
+  "notation": "42D330",
+  "positif": {
+   "interruption": "inferences",
+   "mesure": {
+    "assertions": null,
+    "codage": {
+     "cpu": 105.42229986699999,
+     "inferences": 999969495,
+     "mur": 136.56656980514526
+    },
+    "lecture": {
+     "cpu": 0.0017975320000687134,
+     "inferences": 30558,
+     "mur": 0.0018126964569091797
+    },
+    "total_mur": 136.56838250160217
+   },
+   "phase": "codage",
+   "statut": "interrompu",
+   "temps": 136.56838250160217
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 4,
+    "conditionnel": 49,
+    "etablissable": 7,
+    "sans_suffisante": 96
+   },
+   "conditionnels_par_sens": 63,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D1",
+    "11F1",
+    "11Q611",
+    "31F",
+    "44B610",
+    "44G0",
+    "49G35"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D1",
+    "11F1",
+    "11Q611",
+    "31F",
+    "44B610",
+    "44G0",
+    "49G35"
+   ],
+   "mesure": {
+    "assertions": 60,
+    "codage": {
+     "cpu": 3.769445214000001,
+     "inferences": 18916589,
+     "mur": 3.82342267036438
+    },
+    "lecture": {
+     "cpu": 0.0007044780000029505,
+     "inferences": 10570,
+     "mur": 0.0007121562957763672
+    },
+    "total_mur": 3.8241348266601562
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.8241348266601562
+  },
+  "k": 181,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 8,
+    "conditionnel": 23,
+    "etablissable": 13,
+    "sans_suffisante": 75
+   },
+   "conditionnels_par_sens": 23,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D1",
+    "11F1",
+    "11Q611",
+    "25G",
+    "25G1",
+    "25G4",
+    "31F",
+    "41D2665",
+    "44B610",
+    "44G0",
+    "47I422",
+    "49G35",
+    "96A5(AMICITIA)"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D1",
+    "11F1",
+    "11Q611",
+    "25G",
+    "25G1",
+    "25G4",
+    "31F",
+    "41D2665",
+    "44B610",
+    "44G0",
+    "47I422",
+    "49G35",
+    "96A5(AMICITIA)"
+   ],
+   "mesure": {
+    "assertions": 99,
+    "codage": {
+     "cpu": 1.8123609289999933,
+     "inferences": 11544883,
+     "mur": 1.8263559341430664
+    },
+    "lecture": {
+     "cpu": 0.0015557930000085207,
+     "inferences": 27548,
+     "mur": 0.0015614032745361328
+    },
+    "total_mur": 1.8279173374176025
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 1.8279173374176025
+  },
+  "notation": "56F251",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 8,
+    "conditionnel": 107,
+    "etablissable": 9,
+    "sans_suffisante": 283
+   },
+   "conditionnels_par_sens": 172,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11D1",
+    "11F1",
+    "11M11",
+    "31F",
+    "34B11",
+    "44B610",
+    "44G0",
+    "46C14111",
+    "49G35"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11D1",
+    "11F1",
+    "11M11",
+    "31F",
+    "34B11",
+    "44B610",
+    "44G0",
+    "46C14111",
+    "49G35"
+   ],
+   "mesure": {
+    "assertions": 176,
+    "codage": {
+     "cpu": 8.804833193999997,
+     "inferences": 86306803,
+     "mur": 8.900613069534302
+    },
+    "lecture": {
+     "cpu": 0.005227173000008634,
+     "inferences": 63676,
+     "mur": 0.005286216735839844
+    },
+    "total_mur": 8.905899286270142
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 8.905899286270142
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 4,
+    "conditionnel": 86,
+    "etablissable": 5,
+    "sans_suffisante": 318
+   },
+   "conditionnels_par_sens": 100,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "25G3",
+    "25I14511",
+    "41A1",
+    "42A2",
+    "47G"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "25G3",
+    "25I14511",
+    "41A1",
+    "42A2",
+    "47G"
+   ],
+   "mesure": {
+    "assertions": 46,
+    "codage": {
+     "cpu": 5.84977892500001,
+     "inferences": 52032531,
+     "mur": 7.6153404712677
+    },
+    "lecture": {
+     "cpu": 0.0006664689999524853,
+     "inferences": 8515,
+     "mur": 0.0006771087646484375
+    },
+    "total_mur": 7.616017580032349
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 7.616017580032349
+  },
+  "k": 186,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 11,
+    "conditionnel": 35,
+    "etablissable": 4,
+    "sans_suffisante": 171
+   },
+   "conditionnels_par_sens": 39,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11P118",
+    "25I14511",
+    "41A1",
+    "47G"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11P118",
+    "25I14511",
+    "41A1",
+    "47G"
+   ],
+   "mesure": {
+    "assertions": 52,
+    "codage": {
+     "cpu": 2.5519010430000435,
+     "inferences": 17195292,
+     "mur": 3.469435214996338
+    },
+    "lecture": {
+     "cpu": 0.0006789240001126018,
+     "inferences": 9409,
+     "mur": 0.002105712890625
+    },
+    "total_mur": 3.471540927886963
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 3.471540927886963
+  },
+  "notation": "11QQ7121(STEEPLE)",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 17,
+    "conditionnel": 124,
+    "etablissable": 1,
+    "sans_suffisante": 224
+   },
+   "conditionnels_par_sens": 822,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "47G"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "47G"
+   ],
+   "mesure": {
+    "assertions": 64,
+    "codage": {
+     "cpu": 17.467997148999984,
+     "inferences": 260576138,
+     "mur": 23.03268599510193
+    },
+    "lecture": {
+     "cpu": 0.0007808720001776237,
+     "inferences": 11486,
+     "mur": 0.0007829666137695312
+    },
+    "total_mur": 23.0334689617157
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 23.0334689617157
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 11,
+    "conditionnel": 89,
+    "etablissable": 10,
+    "sans_suffisante": 194
+   },
+   "conditionnels_par_sens": 128,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31A27112",
+    "45D323",
+    "45E",
+    "46C",
+    "47D",
+    "47D311",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31A27112",
+    "45D323",
+    "45E",
+    "47D",
+    "47D311",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "mesure": {
+    "assertions": 55,
+    "codage": {
+     "cpu": 6.001149937000008,
+     "inferences": 40573336,
+     "mur": 6.25307035446167
+    },
+    "lecture": {
+     "cpu": 0.0007437479999907737,
+     "inferences": 11140,
+     "mur": 0.0007538795471191406
+    },
+    "total_mur": 6.253824234008789
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 6.253824234008789
+  },
+  "k": 191,
+  "langue": "en",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 17,
+    "conditionnel": 76,
+    "etablissable": 8,
+    "sans_suffisante": 220
+   },
+   "conditionnels_par_sens": 83,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "31A2711",
+    "45D323",
+    "45E",
+    "46C",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "31A2711",
+    "45D323",
+    "45E",
+    "48C5",
+    "48C52",
+    "48C524"
+   ],
+   "mesure": {
+    "assertions": 60,
+    "codage": {
+     "cpu": 5.600387753000007,
+     "inferences": 38719057,
+     "mur": 5.871558427810669
+    },
+    "lecture": {
+     "cpu": 0.0008000589999994645,
+     "inferences": 12376,
+     "mur": 0.0008132457733154297
+    },
+    "total_mur": 5.872371673583984
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 5.872371673583984
+  },
+  "notation": "46C215(WINDLASS)",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 5,
+    "conditionnel": 68,
+    "etablissable": 3,
+    "sans_suffisante": 227
+   },
+   "conditionnels_par_sens": 109,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "11Q611",
+    "26C",
+    "45D323"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "11Q611",
+    "26C",
+    "45D323"
+   ],
+   "mesure": {
+    "assertions": 66,
+    "codage": {
+     "cpu": 5.304256021999976,
+     "inferences": 33146133,
+     "mur": 5.534417629241943
+    },
+    "lecture": {
+     "cpu": 0.000793210000011868,
+     "inferences": 12911,
+     "mur": 0.0008053779602050781
+    },
+    "total_mur": 5.535223007202148
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 5.535223007202148
+  }
+ },
+ {
+  "indetermine": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 3,
+    "conditionnel": 164,
+    "etablissable": 4,
+    "sans_suffisante": 506
+   },
+   "conditionnels_par_sens": 407,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "31A22323",
+    "46B91",
+    "49B4213",
+    "73C71"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "31A22323",
+    "46B91",
+    "49B4213",
+    "73C71"
+   ],
+   "mesure": {
+    "assertions": 71,
+    "codage": {
+     "cpu": 19.687282961999927,
+     "inferences": 214320342,
+     "mur": 25.562828302383423
+    },
+    "lecture": {
+     "cpu": 0.0010386750000179745,
+     "inferences": 15061,
+     "mur": 0.0010516643524169922
+    },
+    "total_mur": 25.56387996673584
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 25.56387996673584
+  },
+  "k": 196,
+  "langue": "fr",
+  "negatif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 4,
+    "conditionnel": 166,
+    "etablissable": 1,
+    "sans_suffisante": 441
+   },
+   "conditionnels_par_sens": 315,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "41C341"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "41C341"
+   ],
+   "mesure": {
+    "assertions": 65,
+    "codage": {
+     "cpu": 13.652477027000032,
+     "inferences": 116726412,
+     "mur": 17.535820484161377
+    },
+    "lecture": {
+     "cpu": 0.0009085330000289105,
+     "inferences": 13301,
+     "mur": 0.0009846687316894531
+    },
+    "total_mur": 17.536805152893066
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 17.536805152893066
+  },
+  "notation": "25GG211(NUTSHELL)",
+  "positif": {
+   "accord": "non_controle",
+   "complet": null,
+   "comptes": {
+    "candidat": 22,
+    "conditionnel": 247,
+    "etablissable": 4,
+    "sans_suffisante": 637
+   },
+   "conditionnels_par_sens": 900,
+   "descendant_etabli": null,
+   "etablis": [],
+   "etablissables": [
+    "46C",
+    "46C21",
+    "46C223",
+    "49B4213"
+   ],
+   "hors_branche": [],
+   "hors_branche_etablissables": [
+    "46C",
+    "46C21",
+    "46C223",
+    "49B4213"
+   ],
+   "mesure": {
+    "assertions": 85,
+    "codage": {
+     "cpu": 58.286200920000056,
+     "inferences": 891595548,
+     "mur": 73.65221500396729
+    },
+    "lecture": {
+     "cpu": 0.0011528830000315793,
+     "inferences": 18632,
+     "mur": 0.003702878952026367
+    },
+    "total_mur": 73.65591788291931
+   },
+   "necessaire": null,
+   "statut": "absent",
+   "temps": 73.65591788291931
+  }
+ }
+]

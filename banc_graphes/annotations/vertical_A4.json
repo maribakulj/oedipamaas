@@ -1,0 +1,712 @@
+[
+ {"k": 151, "genre": "positif", "langue": "en",
+  "texte": "The lifeless body of Anna, Dido's sister, is drawn from the waters of the river by grieving companions.",
+  "entites": [
+   {"id": "e1", "tete": "body", "mention": "The lifeless body", "proprietes": ["lifeless"]},
+   {"id": "e2", "tete": "anna", "mention": "Anna", "noms": ["Anna"]},
+   {"id": "e3", "tete": "dido", "mention": "Dido", "noms": ["Dido"]},
+   {"id": "e4", "tete": "sister", "mention": "Dido's sister"},
+   {"id": "e5", "tete": "water", "mention": "the waters"},
+   {"id": "e6", "tete": "river", "mention": "the river"},
+   {"id": "e7", "tete": "companion", "mention": "grieving companions"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "draw", "mention": "drawn", "nom_d_action": null, "roles": {"agent": ["e7"], "theme": ["e1"]}},
+   {"id": "v2", "predicat": "grieve", "mention": "grieving", "nom_d_action": null, "roles": {"agent": ["e7"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "of", "objet": "e2"},
+   {"id": "r2", "sujet": "e4", "relation": "of", "objet": "e3"},
+   {"id": "r3", "sujet": "e1", "relation": "from", "objet": "e5"},
+   {"id": "r4", "sujet": "e5", "relation": "of", "objet": "e6"}
+  ],
+  "coref": [["e2", "e4"]],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "Le passif est ramené à l'actif (les compagnons agents) ; l'origine du déplacement (« from the waters ») est écrite en relation de lieu, faute de rôle « source »."},
+
+ {"k": 151, "genre": "negatif", "langue": "en",
+  "texte": "Anna, Dido's sister, rises from the river Numicius transformed into a nymph crowned with reeds.",
+  "entites": [
+   {"id": "e1", "tete": "anna", "mention": "Anna", "noms": ["Anna"]},
+   {"id": "e2", "tete": "dido", "mention": "Dido", "noms": ["Dido"]},
+   {"id": "e3", "tete": "sister", "mention": "Dido's sister"},
+   {"id": "e4", "tete": "river", "mention": "the river Numicius", "noms": ["Numicius"]},
+   {"id": "e5", "tete": "nymph", "mention": "a nymph", "proprietes": ["crowned"]},
+   {"id": "e6", "tete": "reed", "mention": "reeds"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "rise", "mention": "rises", "nom_d_action": null, "roles": {"agent": ["e1"]}},
+   {"id": "v2", "predicat": "transform", "mention": "transformed", "nom_d_action": null, "roles": {"patient": ["e1"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e3", "relation": "of", "objet": "e2"},
+   {"id": "r2", "sujet": "e1", "relation": "from", "objet": "e4"},
+   {"id": "r3", "sujet": "e5", "relation": "with", "objet": "e6"}
+  ],
+  "coref": [["e1", "e3"], ["e1", "e5"]],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "Le résultat de la métamorphose (la nymphe) est relié à Anna par une coref, faute de rôle « résultat » ; « crowned » est une propriété (état résultant), les roseaux lui sont reliés par « with »."},
+
+ {"k": 151, "genre": "indetermine", "langue": "en",
+  "texte": "Anna, Dido's sister, stands on the bank of a river.",
+  "entites": [
+   {"id": "e1", "tete": "anna", "mention": "Anna", "noms": ["Anna"]},
+   {"id": "e2", "tete": "dido", "mention": "Dido", "noms": ["Dido"]},
+   {"id": "e3", "tete": "sister", "mention": "Dido's sister"},
+   {"id": "e4", "tete": "bank", "mention": "the bank"},
+   {"id": "e5", "tete": "river", "mention": "a river"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "stand", "mention": "stands", "nom_d_action": null, "roles": {"agent": ["e1"], "lieu": ["e4"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e3", "relation": "of", "objet": "e2"},
+   {"id": "r2", "sujet": "e4", "relation": "of", "objet": "e5"}
+  ],
+  "coref": [["e1", "e3"]],
+  "distinct": [],
+  "alternatives": []},
+
+ {"k": 156, "genre": "positif", "langue": "fr",
+  "texte": "Ézéchiel, devant le corps de sa femme morte, se tient le visage sec, sans voile ni cendre, tandis que le peuple l'interroge sur cette absence de deuil voulue par le Seigneur.",
+  "entites": [
+   {"id": "e1", "tete": "ézéchiel", "mention": "Ézéchiel", "noms": ["Ézéchiel"]},
+   {"id": "e2", "tete": "corps", "mention": "le corps"},
+   {"id": "e3", "tete": "femme", "mention": "sa femme morte", "proprietes": ["mort"]},
+   {"id": "e4", "tete": "visage", "mention": "le visage", "proprietes": ["sec"]},
+   {"id": "e5", "tete": "voile", "mention": "voile", "polarite": "neg"},
+   {"id": "e6", "tete": "cendre", "mention": "cendre", "polarite": "neg"},
+   {"id": "e7", "tete": "peuple", "mention": "le peuple"},
+   {"id": "e8", "tete": "absence", "mention": "cette absence"},
+   {"id": "e9", "tete": "seigneur", "mention": "le Seigneur", "portee": "source"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "se tenir", "mention": "se tient", "nom_d_action": null, "roles": {"agent": ["e1"]}},
+   {"id": "v2", "predicat": "interroger", "mention": "interroge", "nom_d_action": null, "roles": {"agent": ["e7"], "destinataire": ["e1"], "theme": ["e8"]}},
+   {"id": "v3", "predicat": "deuil", "mention": "deuil", "nom_d_action": "deuil", "roles": {"agent": ["e1"]}, "polarite": "neg"},
+   {"id": "v4", "predicat": "vouloir", "mention": "voulue", "nom_d_action": null, "roles": {"agent": ["e9"], "theme": ["e8"]}, "portee": "source"}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "devant", "objet": "e2"},
+   {"id": "r2", "sujet": "e2", "relation": "de", "objet": "e3"},
+   {"id": "r3", "sujet": "e3", "relation": "de", "objet": "e1"},
+   {"id": "r4", "sujet": "e4", "relation": "de", "objet": "e1"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« l' » reprend Ézéchiel (le sens l'emporte sur la mention la plus proche, « le peuple ») ; « absence de deuil » : le deuil est un événement nié et l'absence l'objet de la question ; la volonté du Seigneur relève du récit (portée source)."},
+
+ {"k": 156, "genre": "negatif", "langue": "fr",
+  "texte": "Ézéchiel, devant le peuple qui l'interroge, coupe ses cheveux et sa barbe avec un couteau et les pèse dans une balance, comme l'a ordonné le Seigneur.",
+  "entites": [
+   {"id": "e1", "tete": "ézéchiel", "mention": "Ézéchiel", "noms": ["Ézéchiel"]},
+   {"id": "e2", "tete": "peuple", "mention": "le peuple"},
+   {"id": "e3", "tete": "cheveu", "mention": "ses cheveux"},
+   {"id": "e4", "tete": "barbe", "mention": "sa barbe"},
+   {"id": "e5", "tete": "couteau", "mention": "un couteau"},
+   {"id": "e6", "tete": "balance", "mention": "une balance"},
+   {"id": "e7", "tete": "seigneur", "mention": "le Seigneur", "portee": "source"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "interroger", "mention": "interroge", "nom_d_action": null, "roles": {"agent": ["e2"], "destinataire": ["e1"]}},
+   {"id": "v2", "predicat": "couper", "mention": "coupe", "nom_d_action": null, "roles": {"agent": ["e1"], "patient": ["e3", "e4"], "instrument": ["e5"]}},
+   {"id": "v3", "predicat": "peser", "mention": "pèse", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e3", "e4"], "instrument": ["e6"]}},
+   {"id": "v4", "predicat": "ordonner", "mention": "ordonné", "nom_d_action": null, "roles": {"agent": ["e7"]}, "portee": "source"}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "devant", "objet": "e2"},
+   {"id": "r2", "sujet": "e3", "relation": "de", "objet": "e1"},
+   {"id": "r3", "sujet": "e4", "relation": "de", "objet": "e1"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« l'interroge » : Ézéchiel ; « les » : les cheveux et la barbe ; la balance est l'instrument de la pesée ; l'ordre du Seigneur est dit du récit (portée source)."},
+
+ {"k": 156, "genre": "indetermine", "langue": "fr",
+  "texte": "Ézéchiel se tient près d'un lit où repose une femme.",
+  "entites": [
+   {"id": "e1", "tete": "ézéchiel", "mention": "Ézéchiel", "noms": ["Ézéchiel"]},
+   {"id": "e2", "tete": "lit", "mention": "un lit"},
+   {"id": "e3", "tete": "femme", "mention": "une femme"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "se tenir", "mention": "se tient", "nom_d_action": null, "roles": {"agent": ["e1"]}},
+   {"id": "v2", "predicat": "reposer", "mention": "repose", "nom_d_action": null, "roles": {"agent": ["e3"], "lieu": ["e2"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "près de", "objet": "e2"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []},
+
+ {"k": 161, "genre": "positif", "langue": "en",
+  "texte": "Lycaon creeps up to the bed where Jupiter lies asleep, dagger raised; as he strikes, his arms turn into a wolf's legs and his face into a snout.",
+  "entites": [
+   {"id": "e1", "tete": "lycaon", "mention": "Lycaon", "noms": ["Lycaon"]},
+   {"id": "e2", "tete": "bed", "mention": "the bed"},
+   {"id": "e3", "tete": "jupiter", "mention": "Jupiter", "noms": ["Jupiter"], "proprietes": ["asleep"]},
+   {"id": "e4", "tete": "dagger", "mention": "dagger", "proprietes": ["raised"]},
+   {"id": "e5", "tete": "arm", "mention": "his arms"},
+   {"id": "e6", "tete": "wolf", "mention": "a wolf"},
+   {"id": "e7", "tete": "leg", "mention": "a wolf's legs"},
+   {"id": "e8", "tete": "face", "mention": "his face"},
+   {"id": "e9", "tete": "snout", "mention": "a snout"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "creep", "mention": "creeps up", "nom_d_action": null, "roles": {"agent": ["e1"]}},
+   {"id": "v2", "predicat": "lie", "mention": "lies", "nom_d_action": null, "roles": {"agent": ["e3"], "lieu": ["e2"]}},
+   {"id": "v3", "predicat": "strike", "mention": "strikes", "nom_d_action": null, "roles": {"agent": ["e1"]}},
+   {"id": "v4", "predicat": "turn", "mention": "turn", "nom_d_action": null, "roles": {"patient": ["e5", "e8"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "to", "objet": "e2"},
+   {"id": "r2", "sujet": "e5", "relation": "of", "objet": "e1"},
+   {"id": "r3", "sujet": "e7", "relation": "of", "objet": "e6"},
+   {"id": "r4", "sujet": "e8", "relation": "of", "objet": "e1"}
+  ],
+  "coref": [["e5", "e7"], ["e8", "e9"]],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« he » et « his » reprennent Lycaon (sens) ; le second « turn » est elliptique, d'où un seul événement à deux patients, chaque partie étant reliée à son résultat par une coref ; le texte ne dit pas qui tient la dague."},
+
+ {"k": 161, "genre": "negatif", "langue": "en",
+  "texte": "Lycaon serves human flesh to Jupiter, seated at his table, and is changed into a wolf as lightning strikes his house.",
+  "entites": [
+   {"id": "e1", "tete": "lycaon", "mention": "Lycaon", "noms": ["Lycaon"]},
+   {"id": "e2", "tete": "flesh", "mention": "human flesh", "proprietes": ["human"]},
+   {"id": "e3", "tete": "jupiter", "mention": "Jupiter", "noms": ["Jupiter"]},
+   {"id": "e4", "tete": "table", "mention": "his table"},
+   {"id": "e5", "tete": "wolf", "mention": "a wolf"},
+   {"id": "e6", "tete": "lightning", "mention": "lightning"},
+   {"id": "e7", "tete": "house", "mention": "his house"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "serve", "mention": "serves", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e2"], "destinataire": ["e3"]}},
+   {"id": "v2", "predicat": "sit", "mention": "seated", "nom_d_action": null, "roles": {"agent": ["e3"], "lieu": ["e4"]}},
+   {"id": "v3", "predicat": "change", "mention": "changed", "nom_d_action": null, "roles": {"patient": ["e1"]}},
+   {"id": "v4", "predicat": "strike", "mention": "strikes", "nom_d_action": null, "roles": {"agent": ["e6"], "patient": ["e7"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e4", "relation": "of", "objet": "e3"},
+   {"id": "r2", "sujet": "e7", "relation": "of", "objet": "e1"}
+  ],
+  "coref": [["e1", "e5"]],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« his table » est ambigu (Jupiter ou Lycaon) : rattaché à Jupiter, la mention la plus proche ; « his house » à Lycaon ; le loup, résultat de la métamorphose, est en coref avec Lycaon."},
+
+ {"k": 161, "genre": "indetermine", "langue": "en",
+  "texte": "Lycaon holds a dagger in a dark palace corridor.",
+  "entites": [
+   {"id": "e1", "tete": "lycaon", "mention": "Lycaon", "noms": ["Lycaon"]},
+   {"id": "e2", "tete": "dagger", "mention": "a dagger"},
+   {"id": "e3", "tete": "corridor", "mention": "a dark palace corridor", "proprietes": ["dark"]},
+   {"id": "e4", "tete": "palace", "mention": "palace"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "hold", "mention": "holds", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e2"], "lieu": ["e3"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e3", "relation": "of", "objet": "e4"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« palace corridor » : le palais n'est ni une matière ni une espèce, il est annoté comme entité possédant le couloir."},
+
+ {"k": 166, "genre": "positif", "langue": "fr",
+  "texte": "Pilate, assis à sa table, trace de sa main sur une tablette l'inscription « Jésus de Nazareth, roi des Juifs » destinée à la croix.",
+  "entites": [
+   {"id": "e1", "tete": "pilate", "mention": "Pilate", "noms": ["Pilate"]},
+   {"id": "e2", "tete": "table", "mention": "sa table"},
+   {"id": "e3", "tete": "main", "mention": "sa main"},
+   {"id": "e4", "tete": "tablette", "mention": "une tablette"},
+   {"id": "e5", "tete": "inscription", "mention": "l'inscription"},
+   {"id": "e6", "tete": "jésus", "mention": "Jésus", "noms": ["Jésus"], "modalite": "non_affirme"},
+   {"id": "e7", "tete": "nazareth", "mention": "Nazareth", "noms": ["Nazareth"], "modalite": "non_affirme"},
+   {"id": "e8", "tete": "roi", "mention": "roi", "modalite": "non_affirme"},
+   {"id": "e9", "tete": "juif", "mention": "Juifs", "modalite": "non_affirme"},
+   {"id": "e10", "tete": "croix", "mention": "la croix"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "s'asseoir", "mention": "assis", "nom_d_action": null, "roles": {"agent": ["e1"], "lieu": ["e2"]}},
+   {"id": "v2", "predicat": "tracer", "mention": "trace", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e5"], "instrument": ["e3"], "lieu": ["e4"]}},
+   {"id": "v3", "predicat": "destiner", "mention": "destinée", "nom_d_action": null, "roles": {"theme": ["e5"], "destinataire": ["e10"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e2", "relation": "de", "objet": "e1"},
+   {"id": "r2", "sujet": "e3", "relation": "de", "objet": "e1"},
+   {"id": "r3", "sujet": "e6", "relation": "de", "objet": "e7"},
+   {"id": "r4", "sujet": "e8", "relation": "de", "objet": "e9"}
+  ],
+  "coref": [["e6", "e8"]],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "Les noms cités dans l'inscription sont son contenu, mentionnés sans être affirmés ni figurés (modalité non_affirme) ; le schéma n'offre pas de lien « contenu de » entre l'inscription et eux."},
+
+ {"k": 166, "genre": "negatif", "langue": "fr",
+  "texte": "Un soldat, monté sur une échelle, cloue au sommet de la croix la tablette portant l'inscription « Jésus de Nazareth, roi des Juifs ».",
+  "entites": [
+   {"id": "e1", "tete": "soldat", "mention": "Un soldat"},
+   {"id": "e2", "tete": "échelle", "mention": "une échelle"},
+   {"id": "e3", "tete": "sommet", "mention": "sommet"},
+   {"id": "e4", "tete": "croix", "mention": "la croix"},
+   {"id": "e5", "tete": "tablette", "mention": "la tablette"},
+   {"id": "e6", "tete": "inscription", "mention": "l'inscription"},
+   {"id": "e7", "tete": "jésus", "mention": "Jésus", "noms": ["Jésus"], "modalite": "non_affirme"},
+   {"id": "e8", "tete": "nazareth", "mention": "Nazareth", "noms": ["Nazareth"], "modalite": "non_affirme"},
+   {"id": "e9", "tete": "roi", "mention": "roi", "modalite": "non_affirme"},
+   {"id": "e10", "tete": "juif", "mention": "Juifs", "modalite": "non_affirme"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "monter", "mention": "monté", "nom_d_action": null, "roles": {"agent": ["e1"], "lieu": ["e2"]}},
+   {"id": "v2", "predicat": "clouer", "mention": "cloue", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e5"], "lieu": ["e3"]}},
+   {"id": "v3", "predicat": "porter", "mention": "portant", "nom_d_action": null, "roles": {"agent": ["e5"], "theme": ["e6"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e3", "relation": "de", "objet": "e4"},
+   {"id": "r2", "sujet": "e7", "relation": "de", "objet": "e8"},
+   {"id": "r3", "sujet": "e9", "relation": "de", "objet": "e10"}
+  ],
+  "coref": [["e7", "e9"]],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« monté sur une échelle » : posture, donc événement ; « portant » est un verbe de relation stative écrit en événement ; le contenu de l'inscription est en modalité non_affirme."},
+
+ {"k": 166, "genre": "indetermine", "langue": "fr",
+  "texte": "Pilate, assis à sa table, tient une tablette.",
+  "entites": [
+   {"id": "e1", "tete": "pilate", "mention": "Pilate", "noms": ["Pilate"]},
+   {"id": "e2", "tete": "table", "mention": "sa table"},
+   {"id": "e3", "tete": "tablette", "mention": "une tablette"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "s'asseoir", "mention": "assis", "nom_d_action": null, "roles": {"agent": ["e1"], "lieu": ["e2"]}},
+   {"id": "v2", "predicat": "tenir", "mention": "tient", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e3"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e2", "relation": "de", "objet": "e1"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []},
+
+ {"k": 171, "genre": "positif", "langue": "en",
+  "texte": "A woman personifying Ill-gotten Gain, Ripa's 'Acquisto cattivo', clutches a purse of coins snatched from a weeping poor man, a harpy perched on her shoulder.",
+  "entites": [
+   {"id": "e1", "tete": "woman", "mention": "A woman"},
+   {"id": "e2", "tete": "gain", "mention": "Ill-gotten Gain", "proprietes": ["ill-gotten"]},
+   {"id": "e3", "tete": "ripa", "mention": "Ripa", "noms": ["Ripa"], "portee": "autre_oeuvre"},
+   {"id": "e4", "tete": "acquisto cattivo", "mention": "Acquisto cattivo", "noms": ["Acquisto cattivo"], "portee": "autre_oeuvre"},
+   {"id": "e5", "tete": "purse", "mention": "a purse"},
+   {"id": "e6", "tete": "coin", "mention": "coins"},
+   {"id": "e7", "tete": "man", "mention": "a weeping poor man", "proprietes": ["poor"]},
+   {"id": "e8", "tete": "harpy", "mention": "a harpy"},
+   {"id": "e9", "tete": "shoulder", "mention": "her shoulder"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "personify", "mention": "personifying", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e2"]}},
+   {"id": "v2", "predicat": "clutch", "mention": "clutches", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e5"]}},
+   {"id": "v3", "predicat": "snatch", "mention": "snatched", "nom_d_action": null, "roles": {"theme": ["e5"]}},
+   {"id": "v4", "predicat": "weep", "mention": "weeping", "nom_d_action": null, "roles": {"agent": ["e7"]}},
+   {"id": "v5", "predicat": "perch", "mention": "perched", "nom_d_action": null, "roles": {"agent": ["e8"], "lieu": ["e9"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e4", "relation": "of", "objet": "e3"},
+   {"id": "r2", "sujet": "e5", "relation": "of", "objet": "e6"},
+   {"id": "r3", "sujet": "e5", "relation": "from", "objet": "e7"},
+   {"id": "r4", "sujet": "e9", "relation": "of", "objet": "e1"}
+  ],
+  "coref": [["e2", "e4"]],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« Ripa's 'Acquisto cattivo' » renvoie à la figure du recueil de Ripa (portée autre_oeuvre), en apposition à Ill-gotten Gain ; « her » reprend la femme par le sens ; l'auteur du vol n'est pas dit."},
+
+ {"k": 171, "genre": "negatif", "langue": "en",
+  "texte": "A woman personifying Bribery slips a purse of coins into a judge's hand behind his back.",
+  "entites": [
+   {"id": "e1", "tete": "woman", "mention": "A woman"},
+   {"id": "e2", "tete": "bribery", "mention": "Bribery"},
+   {"id": "e3", "tete": "purse", "mention": "a purse"},
+   {"id": "e4", "tete": "coin", "mention": "coins"},
+   {"id": "e5", "tete": "judge", "mention": "a judge"},
+   {"id": "e6", "tete": "hand", "mention": "a judge's hand"},
+   {"id": "e7", "tete": "back", "mention": "his back"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "personify", "mention": "personifying", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e2"]}},
+   {"id": "v2", "predicat": "slip", "mention": "slips", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e3"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e3", "relation": "of", "objet": "e4"},
+   {"id": "r2", "sujet": "e6", "relation": "of", "objet": "e5"},
+   {"id": "r3", "sujet": "e3", "relation": "into", "objet": "e6"},
+   {"id": "r4", "sujet": "e7", "relation": "of", "objet": "e5"},
+   {"id": "r5", "sujet": "e6", "relation": "behind", "objet": "e7"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« behind his back » est rattaché à la main du juge (c'est elle qui est derrière son dos)."},
+
+ {"k": 171, "genre": "indetermine", "langue": "en",
+  "texte": "A woman clutches a purse of coins beside a weeping poor man.",
+  "entites": [
+   {"id": "e1", "tete": "woman", "mention": "A woman"},
+   {"id": "e2", "tete": "purse", "mention": "a purse"},
+   {"id": "e3", "tete": "coin", "mention": "coins"},
+   {"id": "e4", "tete": "man", "mention": "a weeping poor man", "proprietes": ["poor"]}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "clutch", "mention": "clutches", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e2"]}},
+   {"id": "v2", "predicat": "weep", "mention": "weeping", "nom_d_action": null, "roles": {"agent": ["e4"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e2", "relation": "of", "objet": "e3"},
+   {"id": "r2", "sujet": "e1", "relation": "beside", "objet": "e4"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []},
+
+ {"k": 176, "genre": "positif", "langue": "fr",
+  "texte": "Une figure allégorique de la Concorde conjugale : un homme et une femme couronnés de myrte tiennent ensemble une même chaîne d'or, un couple de tourterelles à leurs pieds.",
+  "entites": [
+   {"id": "e1", "tete": "figure", "mention": "Une figure allégorique", "proprietes": ["allégorique"]},
+   {"id": "e2", "tete": "concorde", "mention": "la Concorde conjugale", "proprietes": ["conjugal"]},
+   {"id": "e3", "tete": "homme", "mention": "un homme", "proprietes": ["couronné"]},
+   {"id": "e4", "tete": "femme", "mention": "une femme", "proprietes": ["couronné"]},
+   {"id": "e5", "tete": "myrte", "mention": "myrte"},
+   {"id": "e6", "tete": "chaîne", "mention": "une même chaîne", "proprietes": ["même", "or"]},
+   {"id": "e7", "tete": "couple", "mention": "un couple"},
+   {"id": "e8", "tete": "tourterelle", "mention": "tourterelles"},
+   {"id": "e9", "tete": "pied", "mention": "leurs pieds"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "tenir", "mention": "tiennent", "nom_d_action": null, "roles": {"agent": ["e3", "e4"], "theme": ["e6"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "de", "objet": "e2"},
+   {"id": "r2", "sujet": "e3", "relation": "de", "objet": "e5"},
+   {"id": "r3", "sujet": "e4", "relation": "de", "objet": "e5"},
+   {"id": "r4", "sujet": "e7", "relation": "de", "objet": "e8"},
+   {"id": "r5", "sujet": "e7", "relation": "à", "objet": "e9"},
+   {"id": "r6", "sujet": "e9", "relation": "de", "objet": "e3"},
+   {"id": "r7", "sujet": "e9", "relation": "de", "objet": "e4"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "La figure allégorique est composée du couple décrit après les deux-points, sans identité stricte, donc sans coref ; « couronnés de myrte » : propriété plus relation « de » vers le myrte ; « d'or » est une matière (propriété)."},
+
+ {"k": 176, "genre": "negatif", "langue": "fr",
+  "texte": "Une figure allégorique de la Discorde conjugale : un homme et une femme se disputent une chaîne d'or rompue, un chien et un chat se battant à leurs pieds.",
+  "entites": [
+   {"id": "e1", "tete": "figure", "mention": "Une figure allégorique", "proprietes": ["allégorique"]},
+   {"id": "e2", "tete": "discorde", "mention": "la Discorde conjugale", "proprietes": ["conjugal"]},
+   {"id": "e3", "tete": "homme", "mention": "un homme"},
+   {"id": "e4", "tete": "femme", "mention": "une femme"},
+   {"id": "e5", "tete": "chaîne", "mention": "une chaîne", "proprietes": ["or", "rompu"]},
+   {"id": "e6", "tete": "chien", "mention": "un chien"},
+   {"id": "e7", "tete": "chat", "mention": "un chat"},
+   {"id": "e8", "tete": "pied", "mention": "leurs pieds"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "se disputer", "mention": "se disputent", "nom_d_action": null, "roles": {"agent": ["e3", "e4"], "theme": ["e5"]}},
+   {"id": "v2", "predicat": "se battre", "mention": "se battant", "nom_d_action": null, "roles": {"agent": ["e6", "e7"], "lieu": ["e8"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "de", "objet": "e2"},
+   {"id": "r2", "sujet": "e8", "relation": "de", "objet": "e3"},
+   {"id": "r3", "sujet": "e8", "relation": "de", "objet": "e4"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []},
+
+ {"k": 176, "genre": "indetermine", "langue": "fr",
+  "texte": "Un homme et une femme couronnés de myrte se tiennent côte à côte.",
+  "entites": [
+   {"id": "e1", "tete": "homme", "mention": "Un homme", "proprietes": ["couronné"]},
+   {"id": "e2", "tete": "femme", "mention": "une femme", "proprietes": ["couronné"]},
+   {"id": "e3", "tete": "myrte", "mention": "myrte"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "se tenir", "mention": "se tiennent", "nom_d_action": null, "roles": {"agent": ["e1", "e2"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "de", "objet": "e3"},
+   {"id": "r2", "sujet": "e2", "relation": "de", "objet": "e3"},
+   {"id": "r3", "sujet": "e1", "relation": "à côté de", "objet": "e2"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "La locution adverbiale « côte à côte » est rendue par la relation « à côté de » entre l'homme et la femme."},
+
+ {"k": 181, "genre": "positif", "langue": "en",
+  "texte": "A series of winged cupids, each personifying a quality of Love, Constancy with a column, Fidelity with a dog and Patience with a yoke, forms the first set of the Qualities of Love.",
+  "entites": [
+   {"id": "e1", "tete": "series", "mention": "A series", "portee": "oeuvre"},
+   {"id": "e2", "tete": "cupid", "mention": "winged cupids", "proprietes": ["winged"]},
+   {"id": "e3", "tete": "quality", "mention": "a quality"},
+   {"id": "e4", "tete": "love", "mention": "Love"},
+   {"id": "e5", "tete": "constancy", "mention": "Constancy"},
+   {"id": "e6", "tete": "column", "mention": "a column"},
+   {"id": "e7", "tete": "fidelity", "mention": "Fidelity"},
+   {"id": "e8", "tete": "dog", "mention": "a dog"},
+   {"id": "e9", "tete": "patience", "mention": "Patience"},
+   {"id": "e10", "tete": "yoke", "mention": "a yoke"},
+   {"id": "e11", "tete": "set", "mention": "the first set", "proprietes": ["first"], "portee": "oeuvre"},
+   {"id": "e12", "tete": "quality", "mention": "the Qualities", "portee": "oeuvre"},
+   {"id": "e13", "tete": "love", "mention": "Love", "portee": "oeuvre"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "personify", "mention": "personifying", "nom_d_action": null, "roles": {"agent": ["e2"], "theme": ["e3"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "of", "objet": "e2"},
+   {"id": "r2", "sujet": "e3", "relation": "of", "objet": "e4"},
+   {"id": "r3", "sujet": "e5", "relation": "with", "objet": "e6"},
+   {"id": "r4", "sujet": "e7", "relation": "with", "objet": "e8"},
+   {"id": "r5", "sujet": "e9", "relation": "with", "objet": "e10"},
+   {"id": "r6", "sujet": "e11", "relation": "of", "objet": "e12"},
+   {"id": "r7", "sujet": "e12", "relation": "of", "objet": "e13"}
+  ],
+  "coref": [["e1", "e11"]],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« each » reprend les cupidons ; Constancy, Fidelity et Patience sont des exemples de qualités personnifiées (pas de coref avec « a quality ») ; « forms the first set » est traité comme un attribut (coref série = premier ensemble) ; la série et les Qualities of Love concernent l'œuvre (portée oeuvre)."},
+
+ {"k": 181, "genre": "negatif", "langue": "en",
+  "texte": "A winged cupid personifying Friendship, 'Amicitia', embraces an elm entwined with a vine; no other quality of Love is shown.",
+  "entites": [
+   {"id": "e1", "tete": "cupid", "mention": "A winged cupid", "proprietes": ["winged"]},
+   {"id": "e2", "tete": "friendship", "mention": "Friendship"},
+   {"id": "e3", "tete": "amicitia", "mention": "Amicitia", "noms": ["Amicitia"]},
+   {"id": "e4", "tete": "elm", "mention": "an elm", "proprietes": ["entwined"]},
+   {"id": "e5", "tete": "vine", "mention": "a vine"},
+   {"id": "e6", "tete": "quality", "mention": "no other quality", "proprietes": ["other"], "polarite": "neg"},
+   {"id": "e7", "tete": "love", "mention": "Love"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "personify", "mention": "personifying", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e2"]}},
+   {"id": "v2", "predicat": "embrace", "mention": "embraces", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e4"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e4", "relation": "with", "objet": "e5"},
+   {"id": "r2", "sujet": "e6", "relation": "of", "objet": "e7"}
+  ],
+  "coref": [["e2", "e3"]],
+  "distinct": [["e2", "e6"]],
+  "alternatives": [],
+  "notes": "« entwined » est un état résultant (propriété) ; « no other quality » : entité niée, dite distincte de Friendship par « other » ; « is shown » n'est pas un événement."},
+
+ {"k": 181, "genre": "indetermine", "langue": "en",
+  "texte": "A series of winged cupids, each holding a different object; no inscription explains them.",
+  "entites": [
+   {"id": "e1", "tete": "series", "mention": "A series", "portee": "oeuvre"},
+   {"id": "e2", "tete": "cupid", "mention": "winged cupids", "proprietes": ["winged"]},
+   {"id": "e3", "tete": "object", "mention": "a different object", "proprietes": ["different"]},
+   {"id": "e4", "tete": "inscription", "mention": "no inscription", "polarite": "neg", "portee": "oeuvre"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "hold", "mention": "holding", "nom_d_action": null, "roles": {"agent": ["e2"], "theme": ["e3"]}},
+   {"id": "v2", "predicat": "explain", "mention": "explains", "nom_d_action": null, "roles": {"agent": ["e4"], "theme": ["e2"]}, "polarite": "neg"}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "of", "objet": "e2"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« each » et « them » reprennent les cupidons (par le sens) ; l'inscription niée est un élément de la feuille (portée oeuvre) et l'explication, qui n'a pas lieu, est niée aussi."},
+
+ {"k": 186, "genre": "positif", "langue": "fr",
+  "texte": "Une petite chapelle de campagne est surmontée d'un clocher élancé où pend une cloche unique.",
+  "entites": [
+   {"id": "e1", "tete": "chapelle", "mention": "Une petite chapelle", "proprietes": ["petit", "campagne"]},
+   {"id": "e2", "tete": "clocher", "mention": "un clocher élancé", "proprietes": ["élancé"]},
+   {"id": "e3", "tete": "cloche", "mention": "une cloche unique", "proprietes": ["unique"], "nombre": 1}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "surmonter", "mention": "surmontée", "nom_d_action": null, "roles": {"agent": ["e2"], "theme": ["e1"]}},
+   {"id": "v2", "predicat": "pendre", "mention": "pend", "nom_d_action": null, "roles": {"agent": ["e3"], "lieu": ["e2"]}}
+  ],
+  "relations": [],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« de campagne » dit l'espèce de chapelle (propriété) ; « est surmontée de » est un verbe de relation stative ramené à l'actif ; « unique » dit le nombre 1."},
+
+ {"k": 186, "genre": "negatif", "langue": "fr",
+  "texte": "Une grande cathédrale est surmontée d'un clocher élancé où pendent de nombreuses cloches.",
+  "entites": [
+   {"id": "e1", "tete": "cathédrale", "mention": "Une grande cathédrale", "proprietes": ["grand"]},
+   {"id": "e2", "tete": "clocher", "mention": "un clocher élancé", "proprietes": ["élancé"]},
+   {"id": "e3", "tete": "cloche", "mention": "de nombreuses cloches", "proprietes": ["nombreux"]}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "surmonter", "mention": "surmontée", "nom_d_action": null, "roles": {"agent": ["e2"], "theme": ["e1"]}},
+   {"id": "v2", "predicat": "pendre", "mention": "pendent", "nom_d_action": null, "roles": {"agent": ["e3"], "lieu": ["e2"]}}
+  ],
+  "relations": [],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []},
+
+ {"k": 186, "genre": "indetermine", "langue": "fr",
+  "texte": "Un clocher élancé émerge au-dessus des arbres ; l'édifice auquel il appartient est caché.",
+  "entites": [
+   {"id": "e1", "tete": "clocher", "mention": "Un clocher élancé", "proprietes": ["élancé"]},
+   {"id": "e2", "tete": "arbre", "mention": "arbres"},
+   {"id": "e3", "tete": "édifice", "mention": "l'édifice", "proprietes": ["caché"]}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "émerger", "mention": "émerge", "nom_d_action": null, "roles": {"agent": ["e1"]}},
+   {"id": "v2", "predicat": "appartenir", "mention": "appartient", "nom_d_action": null, "roles": {"agent": ["e1"], "theme": ["e3"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e1", "relation": "au-dessus de", "objet": "e2"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« il » reprend le clocher ; « appartient » est un verbe de relation stative, écrit en événement ; « caché » est un état (propriété) sans agent dit."},
+
+ {"k": 191, "genre": "positif", "langue": "en",
+  "texte": "On the foredeck, sailors heave on the bars of the horizontal windlass to wind in the anchor cable.",
+  "entites": [
+   {"id": "e1", "tete": "foredeck", "mention": "the foredeck"},
+   {"id": "e2", "tete": "sailor", "mention": "sailors"},
+   {"id": "e3", "tete": "bar", "mention": "the bars"},
+   {"id": "e4", "tete": "windlass", "mention": "the horizontal windlass", "proprietes": ["horizontal"]},
+   {"id": "e5", "tete": "anchor cable", "mention": "the anchor cable"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "heave", "mention": "heave", "nom_d_action": null, "roles": {"agent": ["e2"], "theme": ["e3"], "lieu": ["e1"]}},
+   {"id": "v2", "predicat": "wind", "mention": "wind in", "nom_d_action": null, "roles": {"agent": ["e2"], "theme": ["e5"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e3", "relation": "of", "objet": "e4"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« anchor cable » est traité comme un composé lexicalisé."},
+
+ {"k": 191, "genre": "negatif", "langue": "en",
+  "texte": "On the foredeck, sailors walk round the vertical capstan, pushing its bars to haul in a cable.",
+  "entites": [
+   {"id": "e1", "tete": "foredeck", "mention": "the foredeck"},
+   {"id": "e2", "tete": "sailor", "mention": "sailors"},
+   {"id": "e3", "tete": "capstan", "mention": "the vertical capstan", "proprietes": ["vertical"]},
+   {"id": "e4", "tete": "bar", "mention": "its bars"},
+   {"id": "e5", "tete": "cable", "mention": "a cable"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "walk", "mention": "walk", "nom_d_action": null, "roles": {"agent": ["e2"], "lieu": ["e1"]}},
+   {"id": "v2", "predicat": "push", "mention": "pushing", "nom_d_action": null, "roles": {"agent": ["e2"], "theme": ["e4"]}},
+   {"id": "v3", "predicat": "haul", "mention": "haul in", "nom_d_action": null, "roles": {"agent": ["e2"], "theme": ["e5"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e2", "relation": "round", "objet": "e3"},
+   {"id": "r2", "sujet": "e4", "relation": "of", "objet": "e3"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []},
+
+ {"k": 191, "genre": "indetermine", "langue": "en",
+  "texte": "On the foredeck, sailors haul on a cable; the machine it runs to is hidden by a sail.",
+  "entites": [
+   {"id": "e1", "tete": "foredeck", "mention": "the foredeck"},
+   {"id": "e2", "tete": "sailor", "mention": "sailors"},
+   {"id": "e3", "tete": "cable", "mention": "a cable"},
+   {"id": "e4", "tete": "machine", "mention": "the machine"},
+   {"id": "e5", "tete": "sail", "mention": "a sail"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "haul", "mention": "haul", "nom_d_action": null, "roles": {"agent": ["e2"], "theme": ["e3"], "lieu": ["e1"]}},
+   {"id": "v2", "predicat": "run", "mention": "runs", "nom_d_action": null, "roles": {"agent": ["e3"]}},
+   {"id": "v3", "predicat": "hide", "mention": "hidden", "nom_d_action": null, "roles": {"agent": ["e5"], "theme": ["e4"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e3", "relation": "to", "objet": "e4"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« it » reprend le câble ; « is hidden by a sail » a un complément d'agent, donc il est écrit en événement ramené à l'actif (la voile agent)."},
+
+ {"k": 196, "genre": "positif", "langue": "fr",
+  "texte": "Dans une gravure fantastique, une immense coquille de noix s'ouvre comme une barque, d'où sortent des rameaux qui portent des têtes humaines.",
+  "entites": [
+   {"id": "e1", "tete": "gravure", "mention": "une gravure fantastique", "proprietes": ["fantastique"], "portee": "oeuvre"},
+   {"id": "e2", "tete": "coquille de noix", "mention": "une immense coquille de noix", "proprietes": ["immense"]},
+   {"id": "e3", "tete": "barque", "mention": "une barque", "modalite": "non_affirme"},
+   {"id": "e4", "tete": "rameau", "mention": "des rameaux"},
+   {"id": "e5", "tete": "tête", "mention": "des têtes humaines", "proprietes": ["humain"]}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "s'ouvrir", "mention": "s'ouvre", "nom_d_action": null, "roles": {"agent": ["e2"]}},
+   {"id": "v2", "predicat": "sortir", "mention": "sortent", "nom_d_action": null, "roles": {"agent": ["e4"]}},
+   {"id": "v3", "predicat": "porter", "mention": "portent", "nom_d_action": null, "roles": {"agent": ["e4"], "theme": ["e5"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e2", "relation": "dans", "objet": "e1"},
+   {"id": "r2", "sujet": "e2", "relation": "comme", "objet": "e3"},
+   {"id": "r3", "sujet": "e4", "relation": "de", "objet": "e2"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "La barque n'est qu'un terme de comparaison (non_affirme) ; « d'où » (de la coquille) est écrit en relation « de », de sens locatif ici et non possessif ; la gravure est l'œuvre (portée oeuvre)."},
+
+ {"k": 196, "genre": "negatif", "langue": "fr",
+  "texte": "Dans une nature morte, une coquille de noix ordinaire, brisée, repose sur une assiette près d'un casse-noix.",
+  "entites": [
+   {"id": "e1", "tete": "nature morte", "mention": "une nature morte", "portee": "oeuvre"},
+   {"id": "e2", "tete": "coquille de noix", "mention": "une coquille de noix ordinaire", "proprietes": ["ordinaire", "brisé"]},
+   {"id": "e3", "tete": "assiette", "mention": "une assiette"},
+   {"id": "e4", "tete": "casse-noix", "mention": "un casse-noix"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "reposer", "mention": "repose", "nom_d_action": null, "roles": {"agent": ["e2"], "lieu": ["e3"]}}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e2", "relation": "dans", "objet": "e1"},
+   {"id": "r2", "sujet": "e2", "relation": "près de", "objet": "e4"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "« près d'un casse-noix » est rattaché à la coquille (il pourrait l'être à l'assiette)."},
+
+ {"k": 196, "genre": "indetermine", "langue": "fr",
+  "texte": "Une coquille de noix est nommée dans le titre de la gravure, mais la feuille a été découpée et l'image manque.",
+  "entites": [
+   {"id": "e1", "tete": "coquille de noix", "mention": "Une coquille de noix", "modalite": "titre"},
+   {"id": "e2", "tete": "titre", "mention": "le titre", "portee": "oeuvre"},
+   {"id": "e3", "tete": "gravure", "mention": "la gravure", "portee": "oeuvre"},
+   {"id": "e4", "tete": "feuille", "mention": "la feuille", "portee": "oeuvre"},
+   {"id": "e5", "tete": "image", "mention": "l'image", "portee": "oeuvre"}
+  ],
+  "evenements": [
+   {"id": "v1", "predicat": "nommer", "mention": "nommée", "nom_d_action": null, "roles": {"theme": ["e1"], "lieu": ["e2"]}, "portee": "oeuvre"},
+   {"id": "v2", "predicat": "découper", "mention": "découpée", "nom_d_action": null, "roles": {"patient": ["e4"]}, "portee": "oeuvre"},
+   {"id": "v3", "predicat": "manquer", "mention": "manque", "nom_d_action": null, "roles": {"agent": ["e5"]}, "portee": "oeuvre"}
+  ],
+  "relations": [
+   {"id": "r1", "sujet": "e2", "relation": "de", "objet": "e3"}
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "La coquille n'est dite que par le titre (modalité titre) ; tout le reste décrit l'état matériel de la feuille (portée oeuvre), sans agent de la découpe."}
+]

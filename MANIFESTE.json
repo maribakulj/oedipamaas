@@ -1,0 +1,1026 @@
+{
+ "cree": "2026-11-26T23:11:13Z",
+ "commit_de_l_archiveur": "f290a549bdc64e3a7476e4e87768a23fed2a5f78",
+ "commits_des_passes_du_lot1": [
+  "f6dc80449ec8374b4aac12347a6e48d7f25a2562"
+ ],
+ "validation_humaine": "aucune à ce jour : tout ce qui est « agents » est un accord entre agents",
+ "reproduction": "docs/BANC_GRAPHES.md, § 5 (commandes)",
+ "fichiers": [
+  {
+   "chemin": "banc_graphes/accord_validation_m1.json",
+   "taille": 88337,
+   "sha256": "204512839d6f79c08f3f3350dfdcbe43b5080f3c13597d6e4b5043ca76a7b6c8",
+   "role": "l'accord des annotateurs (ancien emplacement)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/accord_vertical.json",
+   "taille": 36119,
+   "sha256": "1f8815ee5d8e6b8bf6de8b3660098c9cf0e728ef5323d6eb7dec9c2a1d3d2ba8",
+   "role": "l'accord des annotateurs (ancien emplacement)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J1.json",
+   "taille": 379818,
+   "sha256": "39ef183bbef3246b27cd6f67155946f773d1a098bf040b7c4e6cde4654a7e36a",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J1_adjuge.json",
+   "taille": 364358,
+   "sha256": "4c3fc49edba308376d6787b360bd7f94d3e950a10194e9c2240542b0701b0942",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J1_journal.json",
+   "taille": 23800,
+   "sha256": "b7975213df3cb648bdb8b182987dedd5685409a3cdca1f255e332758f86a627b",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J2.json",
+   "taille": 343647,
+   "sha256": "d0113835b01e77e1a6053e9a59ca9cf75ac956b675fd568475386a50a5f41881",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J2_adjuge.json",
+   "taille": 331722,
+   "sha256": "827d0eb68c6040918651a526000aac97f7ee10bde9d75287b3eae3a754f5fdfa",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J2_journal.json",
+   "taille": 27987,
+   "sha256": "dc7770aaca018fa6fd87797fcf6fd30654d840e76ff87e16e70d12279a5c1774",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J3.json",
+   "taille": 274216,
+   "sha256": "89f4df3fabc346e4f5700de209d8b37e319dfb3ae68e0034d9d243ada533163c",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J3_adjuge.json",
+   "taille": 263025,
+   "sha256": "9c1a1b554a57e3520f5dc38febe924c9bb9c665a9371dcc1838b4b7f3b85c7eb",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J3_journal.json",
+   "taille": 22642,
+   "sha256": "6d3af5a118424ec616f9f684a8fab6e49d6cd0488abe56406da3ad75e6cc834e",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J4.json",
+   "taille": 348832,
+   "sha256": "58b6dfe4da704ea7575eb0877f1cc573ed69efa4ead4824e93ceab598b589756",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J4_adjuge.json",
+   "taille": 335836,
+   "sha256": "a568e11ec13eaa7d5ae8e0af49870ee7adcc7af7b07d74eaf4379650aa82995c",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/validation_m1_J4_journal.json",
+   "taille": 29942,
+   "sha256": "44d8d7c41e15a8a2a844163d04f420fbdb1496f5ca0dd6f7ecd30ccf581d1ed0",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/vertical_J1.json",
+   "taille": 144302,
+   "sha256": "8d9dc231a66d1dc39e8681288e274f40824bad6a60b21fcc0b7b1d47ea06d8e4",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/vertical_J1_adjuge.json",
+   "taille": 76349,
+   "sha256": "97957993ad8882ed5de6d351d1f68346aac2967ed3625af4bb00bba4db3e6420",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/vertical_J1_journal.json",
+   "taille": 20036,
+   "sha256": "680a72562ff60f8fbecbfde025885597ed41583f7455acaaf57654daaac1c8ec",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/vertical_J2.json",
+   "taille": 132106,
+   "sha256": "0865db340c55059c0f33ba55ca036b922a7c4626475240378576addd881f5b73",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/vertical_J2_adjuge.json",
+   "taille": 79031,
+   "sha256": "52e3ac777b425b9ec86817f8bc964b5b8c99195cea3f2f1ea4c7e2e06291c718",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/adjudication/vertical_J2_journal.json",
+   "taille": 20917,
+   "sha256": "875e470de710d8e580275e6d57dad8f7f01131bc9d48f88efeca799e3437f6ec",
+   "role": "les lots d'adjudication, les graphes adjugés et les journaux des changements",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/validation_m1_A1.json",
+   "taille": 159951,
+   "sha256": "924d8695d172c7da9505271dbe1a02973c8ba87e2725e08ee92a99e0f6902daf",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/validation_m1_A2.json",
+   "taille": 149687,
+   "sha256": "f3a99fa2e574b1e81082075bb62715ed878dcd1610128d3e1b98909699a8a487",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/validation_m1_A3.json",
+   "taille": 123031,
+   "sha256": "db56a6f79b96d7351617b1f4c2520b496bafda8b46209db3b5c23e4c0f0d047a",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/validation_m1_A4.json",
+   "taille": 104884,
+   "sha256": "5c3159e8c2fa64e6e60d0b1b43353c266c083f34ca9573fb776c4e7e5760dba4",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/validation_m1_A5.json",
+   "taille": 128794,
+   "sha256": "1c741906e0efaaacd4b56ffb1c1512ffabed41da34940259ac2cca8160d17491",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/validation_m1_A6.json",
+   "taille": 138180,
+   "sha256": "c53b1fd564729a1cce6106a0806d8e349cc4d36ccdddac3e8488f3674bab2b5f",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/validation_m1_B1.json",
+   "taille": 158189,
+   "sha256": "f12ae4a6a57b17c600e6c7fa355a29ae9ee1113b24ddc5b54f25e1fe9b781c83",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/vertical_A1.json",
+   "taille": 44799,
+   "sha256": "1fcfd6715e811316247815df0312a57ba1e873727f21c52fcf19037ce618252a",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/vertical_A2.json",
+   "taille": 44446,
+   "sha256": "b3bc1603a9bbd60175fc8abc440922b2c5312af08684688d555dbd5eabd79d89",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/vertical_A3.json",
+   "taille": 51154,
+   "sha256": "c47b9bfd95fa79e95b50cea854ef74df180db7511cc0ebf1f2d16e7e8ef8cfae",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/vertical_A4.json",
+   "taille": 40955,
+   "sha256": "9c120aab2714976446c7e9e11d85325158e7656ac035279c07a106a840dacff2",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/annotations/vertical_B1.json",
+   "taille": 31848,
+   "sha256": "4c6194803b1f0e8e7cd342ba3e8e215449791d3db4a6a4e29ea8adc692253550",
+   "role": "les annotations brutes (A : un annotateur par lot ; B1 : la seconde annotation)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/faits_reference_vertical.json",
+   "taille": 544673,
+   "sha256": "eed7c942ccf8c5b0ad0a083a339ad31f8bc4094436491cf5b3754c4f1fb16c7d",
+   "role": "les références en assertions du noyau (outils/graphes/vers_faits.py)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/guide_annotateur.md",
+   "taille": 11696,
+   "sha256": "db05a30ee15a90388c010762e60663419bd92a2112035992f4b8d2dcdd76fcf3",
+   "role": "le guide remis aux annotateurs (§ 2 et § 3 de docs/BANC_GRAPHES.md)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/harmonisation_validation_m1_journal.json",
+   "taille": 9921,
+   "sha256": "fb5024c92a7d2115f2bf4ff8712746ecec705acf6f65565d4a25921953ef1115",
+   "role": "les journaux de l'harmonisation (décisions H1 à H4)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/harmonisation_vertical_journal.json",
+   "taille": 476,
+   "sha256": "619fcb512db2680109162a587e546f9636387b1a786e23d6ba978ec41715b0ac",
+   "role": "les journaux de l'harmonisation (décisions H1 à H4)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lecteur_validation_m1.json.gz",
+   "taille": 1455138,
+   "sha256": "8def5f437adba3e86bbd999462a2ab8863a8e3d07c98567a628604fc12c91955",
+   "role": "les graphes du lecteur (outils/graphes/lire.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lecteur_vertical.json.gz",
+   "taille": 247048,
+   "sha256": "a87e57edf209b48b003e62e829455c8d269995212a6d53a4e45af4d3a15a39ca",
+   "role": "les graphes du lecteur (outils/graphes/lire.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/validation_m1_A1.json",
+   "taille": 20505,
+   "sha256": "6980e8c20dc3bad3e644e71ad5f5f3ef92836fd1d73ed75b9a9c75961af0b0c1",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/validation_m1_A2.json",
+   "taille": 17805,
+   "sha256": "71e383f6ee53890c16b45851380695842fe07813b7dad6d0d09bc77d950270d7",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/validation_m1_A3.json",
+   "taille": 15770,
+   "sha256": "e66f07b8c4f59018279399404dbdb50f8cadeefd1bb5f721ea2794cd01a9bbb1",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/validation_m1_A4.json",
+   "taille": 13781,
+   "sha256": "83c1661b1a92a0cd9a2e6850edf8843cad79490855cf0fc57f87676418de5bdc",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/validation_m1_A5.json",
+   "taille": 16223,
+   "sha256": "cf7db6587b871e90a1190c4b63c4f9db0f33b9ca0bb1c3de1ad048ac8520415b",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/validation_m1_A6.json",
+   "taille": 16600,
+   "sha256": "12f1713b36acc532ef5318d68186ad610375959b5e6c13fd321cc5f3c248b9e1",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/validation_m1_B1.json",
+   "taille": 20266,
+   "sha256": "2b00870cd890d403c1207554a77f6e04589774eb9dfc57c32bd7b6059ed9bf29",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/vertical_A1.json",
+   "taille": 6035,
+   "sha256": "121464ccb263f0dc6f4c2acd26383bc8c4db3e2579b8747c59828d68da1f514b",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/vertical_A2.json",
+   "taille": 5867,
+   "sha256": "578db42db32237b37a8cd42922b5a7fd1308af848fcce6110fbaa62201ed6538",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/vertical_A3.json",
+   "taille": 5539,
+   "sha256": "fb1466100c93fca4748e45342b4a810a7b973a8771ba6cc0c8b176bbb85a6344",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/vertical_A4.json",
+   "taille": 5526,
+   "sha256": "d99342771c7eb978f2f2ceda1afa108f47eda0617c2572c38e68382e95b8228b",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/lots/vertical_B1.json",
+   "taille": 4533,
+   "sha256": "7af0a7cb4d01118ab2092b86757db6c206c507a84bd176ca97ab95575156cc2a",
+   "role": "les lots remis aux annotateurs",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesure_lecteur_validation_m1.json",
+   "taille": 698408,
+   "sha256": "4782b92320c59b7389c4f60dcc3ba32995a31dd6be63171749ab6d6d6d88fab1",
+   "role": "les mesures du lecteur (ancien emplacement, références brutes)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesure_lecteur_vertical.json",
+   "taille": 210812,
+   "sha256": "f287b3c4984ebc5d53d299f675c4766ad72bcc4ceaac37704fb54e19a2fff63e",
+   "role": "les mesures du lecteur (ancien emplacement, références brutes)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/accord_validation_m1_A_adjugee.json",
+   "taille": 13260,
+   "sha256": "b0bbce4bcf06c0da783c36f71e43858dc18def9a3d617b575965bfebdde64dfb",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/accord_validation_m1_B_adjugee.json",
+   "taille": 12910,
+   "sha256": "d79abc25192208d1d840c8a26e014ae3f56b4c7d668cb063b03e284cab5c8ed7",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/accord_validation_m1_brut.json",
+   "taille": 13159,
+   "sha256": "a5c9109149e54347edfdd2f346461488f8f0517088e276d7e8923e1a281ebf90",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/accord_vertical_A_adjugee.json",
+   "taille": 12381,
+   "sha256": "9fff18b70712ab7e18929df6225c8eecfff97f80e5b5130fd4df404616ef9c1e",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/accord_vertical_B_adjugee.json",
+   "taille": 11611,
+   "sha256": "a4223fc145e05272429765d2fbd8d4ee4375606ac33579416b167f830a674456",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/accord_vertical_brut.json",
+   "taille": 11759,
+   "sha256": "2df8827bcea6730feebfd6aa5dfaea3145e618ac89f8cd4d28a946acceb13a33",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/codage_faits_reference_vertical.json",
+   "taille": 182293,
+   "sha256": "9a57a9b1010bd28ad32e0e995758713fa22a717467ab94ab06bc9d01df207d1e",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/codage_lecteur_vertical.json",
+   "taille": 191379,
+   "sha256": "452c77b758cc48ca0ec172aceba53cb17e4bf0a77377ecf9e601ec68f7fd2384",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/effet_codage_vertical.json",
+   "taille": 838,
+   "sha256": "46c29634b1efa316315a028a85a081ba9d7942a59500a84c89aeae0b08b889de",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_validation_m1_adjugee.json",
+   "taille": 14297,
+   "sha256": "97f95f4e42c661e9ab113bf1462479c7cbd888bb1df61e9442683ce26baeede8",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_validation_m1_complet.json",
+   "taille": 14288,
+   "sha256": "2102715bcbd004e7001dcb87a046de0e96b320b638b7e4a0617ef4e80d2df0b5",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_validation_m1_detail.json",
+   "taille": 526982,
+   "sha256": "6ce8d5130ecb9a2503e73bd11d66cbc8d682b3b56ab6dc8251929497e75ecaa3",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_validation_m1_glouton_classes.json",
+   "taille": 13904,
+   "sha256": "e084013684385b981b15256bc6f33d6a2395f4f0da65f5ac57afb179a977ce1c",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_validation_m1_optimal_classes.json",
+   "taille": 13902,
+   "sha256": "36aa7f103f236b89d81784c173d854fd7b022e2a518e959380e0ce198e0aa1db",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_validation_m1_optimal_classes_inv.json",
+   "taille": 13932,
+   "sha256": "de6cba63c9129acc9b281fee3a9eed093af4ef3c4f4ff31edb240d11bbd6221e",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_validation_m1_optimal_mentions.json",
+   "taille": 13910,
+   "sha256": "6d9db9e6d2286d1ba3874f71f33c677d992ba73fad628bffcbf70d4cd4e9d7c3",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_vertical_adjugee.json",
+   "taille": 13563,
+   "sha256": "3b888b3eb15eaefec4589f5b35963e0b6e47e94d2b33fcc85ffc01a59096c587",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_vertical_complet.json",
+   "taille": 13569,
+   "sha256": "e0bd5e2aaf0035e84e10bcca27dd4087b95add31b35ccb913474ff2970feb557",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_vertical_detail.json",
+   "taille": 164591,
+   "sha256": "5ae9f644e400fba3e24723da779444b745499da3a5e4ba36cfffd8a106552256",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_vertical_glouton_classes.json",
+   "taille": 13194,
+   "sha256": "52a8bfcba24b35c387c98b9cd70868db4d81cd96dd3c4ca082a9e8b7d557a991",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_vertical_optimal_classes.json",
+   "taille": 13194,
+   "sha256": "785ba2e1fbb223baff41cb427d7ac117ac6ae09c2993fb560f5e68f63d6e473a",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_vertical_optimal_classes_inv.json",
+   "taille": 13191,
+   "sha256": "b1a852389a149b2da0cb91f1364ab618720a7f15d5caa694bd63a9b65e52e531",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/lecteur_vertical_optimal_mentions.json",
+   "taille": 13195,
+   "sha256": "dc4c780042123775dbf62cd93de8f7cc85468298b66bfa5749c98fa3833eabd6",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/roles_vertical.json",
+   "taille": 6465,
+   "sha256": "75acb35c2b3e0894d0ae11dc09d2a53be8eeb77bbef871154a47dc24531195c8",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/outils/harmoniser.py",
+   "taille": 3624,
+   "sha256": "7e2f5c6b4512d469a4a219ffbf4443dbe5c8391772c1265c6afb96c6addc6875",
+   "role": "les scripts propres aux données (harmonisation)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/reference_validation_m1.json",
+   "taille": 1057950,
+   "sha256": "1354bb2fc9936f6027384976d9b587f18e5f80b19a3dd626afe2f681cb73a47b",
+   "role": "les références (brute : réunion des A ; adjugee ; sans suffixe : harmonisée, la référence)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/reference_validation_m1_adjugee.json",
+   "taille": 1057425,
+   "sha256": "80f40114880689c61d6204fc4a514084e0038e778a6148da137e982be9eb7d58",
+   "role": "les références (brute : réunion des A ; adjugee ; sans suffixe : harmonisée, la référence)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/reference_validation_m1_brute.json",
+   "taille": 1055673,
+   "sha256": "893434943cdc13293a23c49e148d23bdf61db73b1101ac9adda6dcb9f2bb7c45",
+   "role": "les références (brute : réunion des A ; adjugee ; sans suffixe : harmonisée, la référence)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/reference_vertical.json",
+   "taille": 206411,
+   "sha256": "7dc99b4fea6e1a1c8f821ee21c04fc6b0f8f2e18342e90e64963c922273100c3",
+   "role": "les références (brute : réunion des A ; adjugee ; sans suffixe : harmonisée, la référence)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/reference_vertical_adjugee.json",
+   "taille": 206225,
+   "sha256": "365611f3e509638d65a8a27f1e0f746042d9339fed832fefa0d6adda0f279164",
+   "role": "les références (brute : réunion des A ; adjugee ; sans suffixe : harmonisée, la référence)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/reference_vertical_brute.json",
+   "taille": 215870,
+   "sha256": "c12137af17328512813a4bcfa82f4df591a63ab1d933476d33d573162fce30d9",
+   "role": "les références (brute : réunion des A ; adjugee ; sans suffixe : harmonisée, la référence)",
+   "statut": "agents"
+  },
+  {
+   "chemin": "banc_graphes/relecture/relecture.md",
+   "taille": 74126,
+   "sha256": "3072205ab54f9b78a1e27d217a08384bc338948c7367d5a01ea2c4311568bb75",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/relecture/relecture.tsv",
+   "taille": 90885,
+   "sha256": "1cfc15402b6d1954dc3ec2e9ec4e6506a39cea47563f18a27effca1a16d402f1",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/textes_validation_m1.json",
+   "taille": 100674,
+   "sha256": "64c7d485cd85cfd86761483967d021ae72079c15535da0865368346769338a37",
+   "role": "les textes du banc (échantillon : une fiche sur cinq)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/textes_vertical.json",
+   "taille": 22961,
+   "sha256": "8447b46f6aba383eb43843fac4269eaf0cbd478776f14cf25b0419cd2d9f3eb1",
+   "role": "les textes du banc (échantillon : une fiche sur cinq)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t1de2.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t2de2.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical.json",
+   "taille": 110396,
+   "sha256": "c284426b1801b486c58e228f6901b188cc451f7e0d4e934de5f9cc01edba76dc",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical.json.passe.json",
+   "taille": 1058,
+   "sha256": "0cd403779f5c5c919e91761d0aa46a6f352fd31acd471a0d549b16380971f33e",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical_t1de1.json",
+   "taille": 97880,
+   "sha256": "53b754d320cee7c32053b18bcf7863ce20ef2a0853731c9bca2384dc1b461930",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical_t1de1.json.passe.json",
+   "taille": 939,
+   "sha256": "33c04b48a5bd543d2e378b5187c7d24f3987c4ab4e2d7ec05eb5d539f1e0aaa8",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical_t1de1.log",
+   "taille": 825,
+   "sha256": "987e72600d9b6a8286df68590e23676016cac921f195813c852793a0f2cce460",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t1de6.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t2de6.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical.json",
+   "taille": 111296,
+   "sha256": "b73a334ce45985a02cb4625bc5dd83e5733d5addee3fc29e6b31d5de7c970b5b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical.json.passe.json",
+   "taille": 1781,
+   "sha256": "f4974620ea4dcf3a8e039ad52fcec14fd40b7cddde2da0e00d7acf6ed1ff4fda",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t1de3.json",
+   "taille": 32432,
+   "sha256": "e419b542c994e8e762008cf50c00add4867dcc985dafa218f257ed7786dc81cd",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t1de3.json.passe.json",
+   "taille": 625,
+   "sha256": "da553fa181a3adae673ede50fcb257d9a9bfad26c4c0d6c10111fba5e804a502",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t1de3.log",
+   "taille": 825,
+   "sha256": "32d9aec4edcaf646d173b3ab7892f33e275f9ce21d047e9dba141379e2fe105c",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t2de3.json",
+   "taille": 30765,
+   "sha256": "83bc78ab7f25d1f8c602e8e0f0bc5c1bb37c4ccfdc1b937190d154b8b9db94e2",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t2de3.json.passe.json",
+   "taille": 619,
+   "sha256": "dfcfb675e4303982f61c1a2574409064a1b75615cfef27417be432882a48abc7",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t2de3.log",
+   "taille": 826,
+   "sha256": "a9af9ae710fbdd8c50f94d61d98cbf4366ab9530eb430dc4e84d8308ce3a908b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t3de3.json",
+   "taille": 34327,
+   "sha256": "47dd8c220ff512c0fb01753c362cb9f7220021876ab8e5e1f6d8e9291d3626a5",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t3de3.json.passe.json",
+   "taille": 623,
+   "sha256": "08ef8e0747abdb2225c3c60ffd5066475ffc06385955aa98e4c9615f9a8e0c19",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t3de3.log",
+   "taille": 826,
+   "sha256": "a9c64db6da3c975f6329d6cdd6b92746b0f12b8aca530c032484d5fc13b9f156",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical.json",
+   "taille": 121190,
+   "sha256": "acf7f25345683e3804f4a1a521f57f76234e9b17fe5b47f7654b6799256f344a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical.json.passe.json",
+   "taille": 1813,
+   "sha256": "b2309d8bcb8e5376ea719372a8fe2f3bd959679e4184ec002772f04a03e7a136",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t1de3.json",
+   "taille": 35580,
+   "sha256": "5250a4d1d35411f015399a530cb1895eeb81ca4367e593f7bd84185b57e53df6",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t1de3.json.passe.json",
+   "taille": 653,
+   "sha256": "4e46da928ee73d7f7e5111d2cee3e7c42c9f836aebdd65c0c59705d7906d1bd4",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t1de3.log",
+   "taille": 826,
+   "sha256": "d032136998623f14f2490df1e1f49b995d344c7e328f33ae369fa2fe7817bdb5",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t2de3.json",
+   "taille": 33161,
+   "sha256": "db87cc9435443962b35e161f5935d032d8f1f3c91baf07a9736cabafd9956357",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t2de3.json.passe.json",
+   "taille": 652,
+   "sha256": "f72df9bda5a89160bade26cce40d77253fa55ff8ff98252bc3176842cd41b8d9",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t2de3.log",
+   "taille": 826,
+   "sha256": "44c4f67c6d858419f006169f754537b5c2c8986b5f72089da52ed3a1ff53a50d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t3de3.json",
+   "taille": 37094,
+   "sha256": "6219b1e2f86bd23294221bab053c132a5874663928b937b8a7cab2faa47ade2a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t3de3.json.passe.json",
+   "taille": 652,
+   "sha256": "2ccd40dd514f0b5e846745e0e73db6a0c0a7709a29055ff4eaccb0a02e4747ef",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t3de3.log",
+   "taille": 826,
+   "sha256": "a6e379e3c67c2061b94fc5763cd2731a8011d692122eca1c281e59437d4c21fe",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/commit",
+   "taille": 41,
+   "sha256": "3a256361f5c277e8c53e47ecbc2f0020900afb202e548cdec6b06777d558a260",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/comparaison_validation_m1.json",
+   "taille": 102740,
+   "sha256": "d29314a8d27433289ae2c35885f482e791abda7b0dacab6df0ab5af52a332998",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/comparaison_validation_m1_sans_norm.json",
+   "taille": 102780,
+   "sha256": "db6783cbf4f0d9d5f1e1a2cf80296bbcd466d3ee0fd93ca475da75213f3fa61c",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/comparaison_vertical.json",
+   "taille": 101102,
+   "sha256": "9860759db3647636041a7ad5121bacbc212a8700a3a9000bd17eb2b90619f18c",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/comparaison_vertical_sans_norm.json",
+   "taille": 101150,
+   "sha256": "85526594e4b7993b26b602053fd336b055463ff1fd514a5d49b3af2ed5b6ced8",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/comparer_validation_m1.log",
+   "taille": 787,
+   "sha256": "8d57c5fff4fcffc7aac4ebaf1a524a6572324f2328adab00074d2225783a169b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/comparer_validation_m1_sans_norm.log",
+   "taille": 787,
+   "sha256": "8d57c5fff4fcffc7aac4ebaf1a524a6572324f2328adab00074d2225783a169b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/comparer_vertical.log",
+   "taille": 787,
+   "sha256": "8d57c5fff4fcffc7aac4ebaf1a524a6572324f2328adab00074d2225783a169b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/comparer_vertical_sans_norm.log",
+   "taille": 787,
+   "sha256": "8d57c5fff4fcffc7aac4ebaf1a524a6572324f2328adab00074d2225783a169b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/compilation.log",
+   "taille": 562,
+   "sha256": "cdea963d233fd2fc7f28f973b6b3f58f34909bf520daa8c42d17e07dc8716a80",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/compilees_validation_m1.json",
+   "taille": 89055,
+   "sha256": "5c671395db87ba0233784027fc8c29e49770728c37298c5f7260b5cbfcae5f94",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/compilees_vertical.json",
+   "taille": 88631,
+   "sha256": "d01ec6283f6104fe4ad0a419b53b8c1cfa97be97f3286c75fdb625afe1f2bfca",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/compiler_validation_m1.log",
+   "taille": 435,
+   "sha256": "e0f67ed1a33ad02ab6a11012ad5e4330b5f8873f54fdf5861706bf23df1b0e7d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/compiler_vertical.log",
+   "taille": 435,
+   "sha256": "e0f67ed1a33ad02ab6a11012ad5e4330b5f8873f54fdf5861706bf23df1b0e7d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_sans_norm_validation_m1.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_sans_norm_validation_m1_t1de2.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_sans_norm_validation_m1_t2de2.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_sans_norm_vertical.json",
+   "taille": 67848,
+   "sha256": "ee5b65ce2f3782976d7595aad09b2b920737837ceff621467ee1cda30f1ccbe6",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_sans_norm_vertical.log",
+   "taille": 825,
+   "sha256": "d3c67587a720ed296c0c66aaf30dd5f5c4cf16db5042ad4985a5b309ad13e858",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_validation_m1.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_validation_m1_t1.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_validation_m1_t1de6.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_vertical.json",
+   "taille": 70857,
+   "sha256": "bffc39ff8871c84b836906db3264f2b8476a644c8c3045634d211e81a12c34c0",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_d30_vertical.log",
+   "taille": 826,
+   "sha256": "45aeaf579e5ea6de8caa156b042aa893acf928e599161d3235ca7e5e9605c894",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_premier_sens_validation_m1.log",
+   "taille": 770,
+   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_premier_sens_vertical.json",
+   "taille": 72493,
+   "sha256": "be371ac4f6b30451d40881d4696b25aea069fba061ad89e316c73008fb73338b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/protocole_delai_mur/codage_premier_sens_vertical.log",
+   "taille": 825,
+   "sha256": "0a4dc19b35a3cc3ea58cb2f443e3801069591ef0ccf1b390f075b4c02b90cd61",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  }
+ ]
+}

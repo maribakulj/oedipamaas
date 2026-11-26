@@ -1,0 +1,3106 @@
+[
+ {
+  "k": 101,
+  "genre": "positif",
+  "langue": "en",
+  "texte": "In the schoolyard boys race each other on all fours, hands and feet on the ground like bears, in a game of leaps and scrambles.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "schoolyard",
+    "mention": "the schoolyard"
+   },
+   {
+    "id": "e2",
+    "tete": "boy",
+    "mention": "boys"
+   },
+   {
+    "id": "e3",
+    "tete": "hand",
+    "mention": "hands"
+   },
+   {
+    "id": "e4",
+    "tete": "foot",
+    "mention": "feet"
+   },
+   {
+    "id": "e5",
+    "tete": "ground",
+    "mention": "the ground"
+   },
+   {
+    "id": "e6",
+    "tete": "bear",
+    "mention": "bears",
+    "modalite": "non_affirme"
+   },
+   {
+    "id": "e7",
+    "tete": "game",
+    "mention": "a game"
+   },
+   {
+    "id": "e8",
+    "tete": "leap",
+    "mention": "leaps"
+   },
+   {
+    "id": "e9",
+    "tete": "scramble",
+    "mention": "scrambles"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "race",
+    "mention": "race",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e2"
+     ],
+     "lieu": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "leap",
+    "mention": "leaps",
+    "nom_d_action": "leap",
+    "roles": {}
+   },
+   {
+    "id": "v3",
+    "predicat": "scramble",
+    "mention": "scrambles",
+    "nom_d_action": "scramble",
+    "roles": {}
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e3",
+    "relation": "of",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e4",
+    "relation": "of",
+    "objet": "e2"
+   },
+   {
+    "id": "r3",
+    "sujet": "e3",
+    "relation": "on",
+    "objet": "e5"
+   },
+   {
+    "id": "r4",
+    "sujet": "e4",
+    "relation": "on",
+    "objet": "e5"
+   },
+   {
+    "id": "r5",
+    "sujet": "e2",
+    "relation": "like",
+    "objet": "e6"
+   },
+   {
+    "id": "r6",
+    "sujet": "e2",
+    "relation": "in",
+    "objet": "e7"
+   },
+   {
+    "id": "r7",
+    "sujet": "e7",
+    "relation": "of",
+    "objet": "e8"
+   },
+   {
+    "id": "r8",
+    "sujet": "e7",
+    "relation": "of",
+    "objet": "e9"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'on all fours' (posture idiom, no referent) is rendered by hands and feet on the ground; the bears of the simile are not depicted (non_affirme); 'each other' is a reciprocal pronoun folded into the boys. The action nouns 'leaps' and 'scrambles' are also entities, which receive the 'of' relations."
+ },
+ {
+  "k": 101,
+  "genre": "negatif",
+  "langue": "en",
+  "texte": "In the schoolyard boys race each other walking on their hands, legs straight up in the air, in a game of tricks.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "schoolyard",
+    "mention": "the schoolyard"
+   },
+   {
+    "id": "e2",
+    "tete": "boy",
+    "mention": "boys"
+   },
+   {
+    "id": "e3",
+    "tete": "hand",
+    "mention": "their hands"
+   },
+   {
+    "id": "e4",
+    "tete": "leg",
+    "mention": "legs",
+    "proprietes": [
+     "straight up"
+    ]
+   },
+   {
+    "id": "e5",
+    "tete": "air",
+    "mention": "the air"
+   },
+   {
+    "id": "e6",
+    "tete": "game",
+    "mention": "a game"
+   },
+   {
+    "id": "e7",
+    "tete": "trick",
+    "mention": "tricks"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "race",
+    "mention": "race",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e2"
+     ],
+     "lieu": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "walk",
+    "mention": "walking",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v3",
+    "predicat": "trick",
+    "mention": "tricks",
+    "nom_d_action": null,
+    "roles": {}
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e3",
+    "relation": "of",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e2",
+    "relation": "on",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e4",
+    "relation": "of",
+    "objet": "e2"
+   },
+   {
+    "id": "r4",
+    "sujet": "e4",
+    "relation": "in",
+    "objet": "e5"
+   },
+   {
+    "id": "r5",
+    "sujet": "e2",
+    "relation": "in",
+    "objet": "e6"
+   },
+   {
+    "id": "r6",
+    "sujet": "e6",
+    "relation": "of",
+    "objet": "e7"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'tricks' (stunts) has no usual corresponding verb, so the noun is kept as predicate. 'tricks' is also an entity, which receives the 'of' relation."
+ },
+ {
+  "k": 101,
+  "genre": "indetermine",
+  "langue": "en",
+  "texte": "In the schoolyard a boy is down on the ground; whether he has fallen or is playing cannot be told.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "schoolyard",
+    "mention": "the schoolyard"
+   },
+   {
+    "id": "e2",
+    "tete": "boy",
+    "mention": "a boy"
+   },
+   {
+    "id": "e3",
+    "tete": "ground",
+    "mention": "the ground"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "fall",
+    "mention": "fallen",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e2"
+     ]
+    },
+    "modalite": "possible"
+   },
+   {
+    "id": "v2",
+    "predicat": "play",
+    "mention": "playing",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e2"
+     ]
+    },
+    "modalite": "possible"
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e2",
+    "relation": "in",
+    "objet": "e1"
+   },
+   {
+    "id": "r2",
+    "sujet": "e2",
+    "relation": "on",
+    "objet": "e3"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [
+   [
+    "v1",
+    "v2"
+   ]
+  ],
+  "notes": "The two exclusive hypotheses (fallen / playing) are events marked possible and listed as alternatives."
+ },
+ {
+  "k": 106,
+  "genre": "positif",
+  "langue": "fr",
+  "texte": "Depuis le pont d'un navire en détresse, un marin tire une fusée de signalisation qui monte dans la nuit en une traînée rouge.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "pont",
+    "mention": "le pont"
+   },
+   {
+    "id": "e2",
+    "tete": "navire",
+    "mention": "un navire en détresse",
+    "proprietes": [
+     "en détresse"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "marin",
+    "mention": "un marin"
+   },
+   {
+    "id": "e4",
+    "tete": "fusée de signalisation",
+    "mention": "une fusée de signalisation"
+   },
+   {
+    "id": "e5",
+    "tete": "nuit",
+    "mention": "la nuit"
+   },
+   {
+    "id": "e6",
+    "tete": "traînée",
+    "mention": "une traînée rouge",
+    "proprietes": [
+     "rouge"
+    ]
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "tirer",
+    "mention": "tire",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e3"
+     ],
+     "theme": [
+      "e4"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "monter",
+    "mention": "monte",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e4"
+     ],
+     "lieu": [
+      "e5"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "de",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e3",
+    "relation": "depuis",
+    "objet": "e1"
+   },
+   {
+    "id": "r3",
+    "sujet": "e4",
+    "relation": "en",
+    "objet": "e6"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'en détresse' is kept as a property of the ship (a state, not a depicted referent); 'en une traînée rouge' links the rocket to the form it takes."
+ },
+ {
+  "k": 106,
+  "genre": "negatif",
+  "langue": "fr",
+  "texte": "Depuis le pont d'un navire en détresse, un marin agite des pavillons de signalisation pour appeler à l'aide.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "pont",
+    "mention": "le pont"
+   },
+   {
+    "id": "e2",
+    "tete": "navire",
+    "mention": "un navire en détresse",
+    "proprietes": [
+     "en détresse"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "marin",
+    "mention": "un marin"
+   },
+   {
+    "id": "e4",
+    "tete": "pavillon de signalisation",
+    "mention": "des pavillons de signalisation"
+   },
+   {
+    "id": "e5",
+    "tete": "aide",
+    "mention": "l'aide"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "agiter",
+    "mention": "agite",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e3"
+     ],
+     "theme": [
+      "e4"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "appeler",
+    "mention": "appeler",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e3"
+     ],
+     "theme": [
+      "e5"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "de",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e3",
+    "relation": "depuis",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'pour appeler à l'aide' is the purpose of waving the flags; the guide has no purpose relation, so it is a plain event of the sailor."
+ },
+ {
+  "k": 106,
+  "genre": "indetermine",
+  "langue": "fr",
+  "texte": "Depuis le pont d'un navire, une lueur rouge monte dans la nuit ; on ne sait si c'est une fusée ou un incendie.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "pont",
+    "mention": "le pont"
+   },
+   {
+    "id": "e2",
+    "tete": "navire",
+    "mention": "un navire"
+   },
+   {
+    "id": "e3",
+    "tete": "lueur",
+    "mention": "une lueur rouge",
+    "proprietes": [
+     "rouge"
+    ]
+   },
+   {
+    "id": "e4",
+    "tete": "nuit",
+    "mention": "la nuit"
+   },
+   {
+    "id": "e5",
+    "tete": "fusée",
+    "mention": "une fusée",
+    "modalite": "possible"
+   },
+   {
+    "id": "e6",
+    "tete": "incendie",
+    "mention": "un incendie",
+    "modalite": "possible"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "monter",
+    "mention": "monte",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e3"
+     ],
+     "lieu": [
+      "e4"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "de",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e3",
+    "relation": "depuis",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [
+   [
+    "e5",
+    "e6"
+   ]
+  ],
+  "notes": "The glow's two possible identities are exclusive alternatives; no coref is written with the glow since neither identity is affirmed."
+ },
+ {
+  "k": 111,
+  "genre": "positif",
+  "langue": "en",
+  "texte": "A prisoner in chains sits on straw in a dungeon cell behind a barred door, while the jailer turns the key in the lock.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "prisoner",
+    "mention": "A prisoner"
+   },
+   {
+    "id": "e2",
+    "tete": "chain",
+    "mention": "chains"
+   },
+   {
+    "id": "e3",
+    "tete": "straw",
+    "mention": "straw"
+   },
+   {
+    "id": "e4",
+    "tete": "cell",
+    "mention": "a dungeon cell",
+    "proprietes": [
+     "dungeon"
+    ]
+   },
+   {
+    "id": "e5",
+    "tete": "door",
+    "mention": "a barred door",
+    "proprietes": [
+     "barred"
+    ]
+   },
+   {
+    "id": "e6",
+    "tete": "jailer",
+    "mention": "the jailer"
+   },
+   {
+    "id": "e7",
+    "tete": "key",
+    "mention": "the key"
+   },
+   {
+    "id": "e8",
+    "tete": "lock",
+    "mention": "the lock"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "sit",
+    "mention": "sits",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e3",
+      "e4"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "turn",
+    "mention": "turns",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e6"
+     ],
+     "theme": [
+      "e7"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "in",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "on",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e1",
+    "relation": "in",
+    "objet": "e4"
+   },
+   {
+    "id": "r4",
+    "sujet": "e4",
+    "relation": "behind",
+    "objet": "e5"
+   },
+   {
+    "id": "r5",
+    "sujet": "e7",
+    "relation": "in",
+    "objet": "e8"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []
+ },
+ {
+  "k": 111,
+  "genre": "negatif",
+  "langue": "en",
+  "texte": "A prisoner in chains kneels on a scaffold in the square, while the executioner raises his sword above him.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "prisoner",
+    "mention": "A prisoner"
+   },
+   {
+    "id": "e2",
+    "tete": "chain",
+    "mention": "chains"
+   },
+   {
+    "id": "e3",
+    "tete": "scaffold",
+    "mention": "a scaffold"
+   },
+   {
+    "id": "e4",
+    "tete": "square",
+    "mention": "the square"
+   },
+   {
+    "id": "e5",
+    "tete": "executioner",
+    "mention": "the executioner"
+   },
+   {
+    "id": "e6",
+    "tete": "sword",
+    "mention": "his sword"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "kneel",
+    "mention": "kneels",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e3"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "raise",
+    "mention": "raises",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e5"
+     ],
+     "theme": [
+      "e6"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "in",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "on",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e3",
+    "relation": "in",
+    "objet": "e4"
+   },
+   {
+    "id": "r4",
+    "sujet": "e6",
+    "relation": "of",
+    "objet": "e5"
+   },
+   {
+    "id": "r5",
+    "sujet": "e6",
+    "relation": "above",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'him' is resolved to the prisoner by meaning, not to the nearest preceding mention (the executioner)."
+ },
+ {
+  "k": 111,
+  "genre": "indetermine",
+  "langue": "en",
+  "texte": "A man sits on straw beside a barred window; the room could be a cell or a stable.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "man",
+    "mention": "A man"
+   },
+   {
+    "id": "e2",
+    "tete": "straw",
+    "mention": "straw"
+   },
+   {
+    "id": "e3",
+    "tete": "window",
+    "mention": "a barred window",
+    "proprietes": [
+     "barred"
+    ]
+   },
+   {
+    "id": "e4",
+    "tete": "room",
+    "mention": "the room"
+   },
+   {
+    "id": "e5",
+    "tete": "cell",
+    "mention": "a cell",
+    "modalite": "possible"
+   },
+   {
+    "id": "e6",
+    "tete": "stable",
+    "mention": "a stable",
+    "modalite": "possible"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "sit",
+    "mention": "sits",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e2"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "on",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "beside",
+    "objet": "e3"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [
+   [
+    "e5",
+    "e6"
+   ]
+  ],
+  "notes": "The room's two possible identities are exclusive alternatives (possible); no coref with the room since neither is affirmed."
+ },
+ {
+  "k": 116,
+  "genre": "positif",
+  "langue": "fr",
+  "texte": "Une femme debout laisse pendre son bras droit, tendu vers le sol, la main ouverte le long du corps.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "femme",
+    "mention": "Une femme debout",
+    "proprietes": [
+     "debout"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "bras",
+    "mention": "son bras droit",
+    "proprietes": [
+     "droit",
+     "tendu"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "sol",
+    "mention": "le sol"
+   },
+   {
+    "id": "e4",
+    "tete": "main",
+    "mention": "la main ouverte",
+    "proprietes": [
+     "ouvert"
+    ]
+   },
+   {
+    "id": "e5",
+    "tete": "corps",
+    "mention": "corps"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "laisser",
+    "mention": "laisse",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "pendre",
+    "mention": "pendre",
+    "nom_d_action": null,
+    "roles": {
+     "theme": [
+      "e2"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e2",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r2",
+    "sujet": "e2",
+    "relation": "vers",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e4",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r4",
+    "sujet": "e4",
+    "relation": "le long de",
+    "objet": "e5"
+   },
+   {
+    "id": "r5",
+    "sujet": "e5",
+    "relation": "de",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'debout' is an adjective, hence a property; the hand and body are the woman's (inalienable possession read from the definite article)."
+ },
+ {
+  "k": 116,
+  "genre": "negatif",
+  "langue": "fr",
+  "texte": "Une femme debout lève son bras droit, tendu vers le ciel, la main ouverte au-dessus de la tête.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "femme",
+    "mention": "Une femme debout",
+    "proprietes": [
+     "debout"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "bras",
+    "mention": "son bras droit",
+    "proprietes": [
+     "droit",
+     "tendu"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "ciel",
+    "mention": "le ciel"
+   },
+   {
+    "id": "e4",
+    "tete": "main",
+    "mention": "la main ouverte",
+    "proprietes": [
+     "ouvert"
+    ]
+   },
+   {
+    "id": "e5",
+    "tete": "tête",
+    "mention": "la tête"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "lever",
+    "mention": "lève",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e2"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e2",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r2",
+    "sujet": "e2",
+    "relation": "vers",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e4",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r4",
+    "sujet": "e4",
+    "relation": "au-dessus de",
+    "objet": "e5"
+   },
+   {
+    "id": "r5",
+    "sujet": "e5",
+    "relation": "de",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []
+ },
+ {
+  "k": 116,
+  "genre": "indetermine",
+  "langue": "fr",
+  "texte": "Une femme debout, enveloppée dans un grand manteau qui cache ses bras.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "femme",
+    "mention": "Une femme debout",
+    "proprietes": [
+     "debout",
+     "enveloppé"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "manteau",
+    "mention": "un grand manteau",
+    "proprietes": [
+     "grand"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "bras",
+    "mention": "ses bras"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "cacher",
+    "mention": "cache",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e2"
+     ],
+     "theme": [
+      "e3"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "dans",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e3",
+    "relation": "de",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []
+ },
+ {
+  "k": 121,
+  "genre": "positif",
+  "langue": "en",
+  "texte": "A traveller lies frozen to death in the snow beside the road, frost on his beard and his lantern gone out.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "traveller",
+    "mention": "A traveller",
+    "proprietes": [
+     "frozen"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "snow",
+    "mention": "the snow"
+   },
+   {
+    "id": "e3",
+    "tete": "road",
+    "mention": "the road"
+   },
+   {
+    "id": "e4",
+    "tete": "frost",
+    "mention": "frost"
+   },
+   {
+    "id": "e5",
+    "tete": "beard",
+    "mention": "his beard"
+   },
+   {
+    "id": "e6",
+    "tete": "lantern",
+    "mention": "his lantern",
+    "proprietes": [
+     "gone out"
+    ]
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "lie",
+    "mention": "lies",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "die",
+    "mention": "death",
+    "nom_d_action": "death",
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "in",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "beside",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e4",
+    "relation": "on",
+    "objet": "e5"
+   },
+   {
+    "id": "r4",
+    "sujet": "e5",
+    "relation": "of",
+    "objet": "e1"
+   },
+   {
+    "id": "r5",
+    "sujet": "e6",
+    "relation": "of",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'frozen' is a resulting-state participle (property); 'death' is an action noun (die) of which the traveller is the experiencer."
+ },
+ {
+  "k": 121,
+  "genre": "negatif",
+  "langue": "en",
+  "texte": "A traveller lies dead of heatstroke in the scorching desert beside the road, his water-flask empty.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "traveller",
+    "mention": "A traveller",
+    "proprietes": [
+     "dead"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "heatstroke",
+    "mention": "heatstroke"
+   },
+   {
+    "id": "e3",
+    "tete": "desert",
+    "mention": "the scorching desert",
+    "proprietes": [
+     "scorching"
+    ]
+   },
+   {
+    "id": "e4",
+    "tete": "road",
+    "mention": "the road"
+   },
+   {
+    "id": "e5",
+    "tete": "water-flask",
+    "mention": "his water-flask",
+    "proprietes": [
+     "empty"
+    ]
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "lie",
+    "mention": "lies",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e3"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "of",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "in",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e1",
+    "relation": "beside",
+    "objet": "e4"
+   },
+   {
+    "id": "r4",
+    "sujet": "e5",
+    "relation": "of",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "r1 'dead of heatstroke' is a causal 'of', not possession; the guide has no cause relation."
+ },
+ {
+  "k": 121,
+  "genre": "indetermine",
+  "langue": "en",
+  "texte": "A traveller lies motionless in the snow beside the road; he may simply be resting.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "traveller",
+    "mention": "A traveller",
+    "proprietes": [
+     "motionless"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "snow",
+    "mention": "the snow"
+   },
+   {
+    "id": "e3",
+    "tete": "road",
+    "mention": "the road"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "lie",
+    "mention": "lies",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "rest",
+    "mention": "resting",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    },
+    "modalite": "possible"
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "in",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "beside",
+    "objet": "e3"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": []
+ },
+ {
+  "k": 126,
+  "genre": "positif",
+  "langue": "fr",
+  "texte": "Un portefaix qui soulevait un lourd tonneau s'effondre, plié de douleur par une hernie soudaine ; ses compagnons le soutiennent et il se relève, blessé mais vivant.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "portefaix",
+    "mention": "Un portefaix",
+    "proprietes": [
+     "blessé",
+     "vivant"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "tonneau",
+    "mention": "un lourd tonneau",
+    "proprietes": [
+     "lourd"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "douleur",
+    "mention": "douleur"
+   },
+   {
+    "id": "e4",
+    "tete": "hernie",
+    "mention": "une hernie soudaine",
+    "proprietes": [
+     "soudain"
+    ]
+   },
+   {
+    "id": "e5",
+    "tete": "compagnon",
+    "mention": "ses compagnons"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "soulever",
+    "mention": "soulevait",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "s'effondrer",
+    "mention": "s'effondre",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v3",
+    "predicat": "plier",
+    "mention": "plié",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e4"
+     ],
+     "patient": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v4",
+    "predicat": "soutenir",
+    "mention": "soutiennent",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e5"
+     ],
+     "theme": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v5",
+    "predicat": "se relever",
+    "mention": "se relève",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r2",
+    "sujet": "e5",
+    "relation": "de",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'plié ... par une hernie' is a passive brought back to the active (hernia agent); the cause 'de douleur' is not annotated as a relation; 'le' is resolved to the porter by meaning."
+ },
+ {
+  "k": 126,
+  "genre": "negatif",
+  "langue": "fr",
+  "texte": "Un portefaix qui soulevait un lourd tonneau s'effondre, foudroyé par une rupture du cœur ; ses compagnons se découvrent devant son corps sans vie.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "portefaix",
+    "mention": "Un portefaix"
+   },
+   {
+    "id": "e2",
+    "tete": "tonneau",
+    "mention": "un lourd tonneau",
+    "proprietes": [
+     "lourd"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "cœur",
+    "mention": "cœur"
+   },
+   {
+    "id": "e4",
+    "tete": "compagnon",
+    "mention": "ses compagnons"
+   },
+   {
+    "id": "e5",
+    "tete": "corps",
+    "mention": "son corps"
+   },
+   {
+    "id": "e6",
+    "tete": "vie",
+    "mention": "vie",
+    "polarite": "neg"
+   },
+   {
+    "id": "e7",
+    "tete": "rupture",
+    "mention": "rupture"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "soulever",
+    "mention": "soulevait",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "s'effondrer",
+    "mention": "s'effondre",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v3",
+    "predicat": "foudroyer",
+    "mention": "foudroyé",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e7"
+     ],
+     "patient": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v4",
+    "predicat": "rompre",
+    "mention": "rupture",
+    "nom_d_action": "rupture",
+    "roles": {
+     "patient": [
+      "e3"
+     ]
+    }
+   },
+   {
+    "id": "v5",
+    "predicat": "se découvrir",
+    "mention": "se découvrent",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e4"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e3",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r2",
+    "sujet": "e4",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r3",
+    "sujet": "e4",
+    "relation": "devant",
+    "objet": "e5"
+   },
+   {
+    "id": "r4",
+    "sujet": "e5",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r5",
+    "sujet": "e6",
+    "relation": "de",
+    "objet": "e5"
+   },
+   {
+    "id": "r6",
+    "sujet": "e7",
+    "relation": "de",
+    "objet": "e3"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "The action noun 'rupture' is both an event (rompre) and an entity, the entity being agent of 'foudroyé'; 'sans vie' is a negated entity, like 'without any instrument'."
+ },
+ {
+  "k": 126,
+  "genre": "indetermine",
+  "langue": "fr",
+  "texte": "Un portefaix est assis près d'un lourd tonneau, la main sur le ventre.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "portefaix",
+    "mention": "Un portefaix"
+   },
+   {
+    "id": "e2",
+    "tete": "tonneau",
+    "mention": "un lourd tonneau",
+    "proprietes": [
+     "lourd"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "main",
+    "mention": "la main"
+   },
+   {
+    "id": "e4",
+    "tete": "ventre",
+    "mention": "le ventre"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "s'asseoir",
+    "mention": "assis",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "près de",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e3",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r3",
+    "sujet": "e3",
+    "relation": "sur",
+    "objet": "e4"
+   },
+   {
+    "id": "r4",
+    "sujet": "e4",
+    "relation": "de",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'est assis' is a posture of the whole person, written as an event."
+ },
+ {
+  "k": 131,
+  "genre": "positif",
+  "langue": "en",
+  "texte": "A little girl grins to show the gap where her milk tooth has just come out, holding the tiny tooth in her palm.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "girl",
+    "mention": "A little girl",
+    "proprietes": [
+     "little"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "gap",
+    "mention": "the gap"
+   },
+   {
+    "id": "e3",
+    "tete": "milk tooth",
+    "mention": "her milk tooth"
+   },
+   {
+    "id": "e4",
+    "tete": "tooth",
+    "mention": "the tiny tooth",
+    "proprietes": [
+     "tiny"
+    ]
+   },
+   {
+    "id": "e5",
+    "tete": "palm",
+    "mention": "her palm"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "grin",
+    "mention": "grins",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "show",
+    "mention": "show",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v3",
+    "predicat": "come out",
+    "mention": "come out",
+    "nom_d_action": null,
+    "roles": {
+     "theme": [
+      "e3"
+     ],
+     "lieu": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v4",
+    "predicat": "hold",
+    "mention": "holding",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e4"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e3",
+    "relation": "of",
+    "objet": "e1"
+   },
+   {
+    "id": "r2",
+    "sujet": "e4",
+    "relation": "in",
+    "objet": "e5"
+   },
+   {
+    "id": "r3",
+    "sujet": "e5",
+    "relation": "of",
+    "objet": "e1"
+   }
+  ],
+  "coref": [
+   [
+    "e3",
+    "e4"
+   ]
+  ],
+  "distinct": [],
+  "alternatives": []
+ },
+ {
+  "k": 131,
+  "genre": "negatif",
+  "langue": "en",
+  "texte": "A little boy grins to show the gap where his milk tooth has just come out, holding the tiny tooth in his palm.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "boy",
+    "mention": "A little boy",
+    "proprietes": [
+     "little"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "gap",
+    "mention": "the gap"
+   },
+   {
+    "id": "e3",
+    "tete": "milk tooth",
+    "mention": "his milk tooth"
+   },
+   {
+    "id": "e4",
+    "tete": "tooth",
+    "mention": "the tiny tooth",
+    "proprietes": [
+     "tiny"
+    ]
+   },
+   {
+    "id": "e5",
+    "tete": "palm",
+    "mention": "his palm"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "grin",
+    "mention": "grins",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "show",
+    "mention": "show",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v3",
+    "predicat": "come out",
+    "mention": "come out",
+    "nom_d_action": null,
+    "roles": {
+     "theme": [
+      "e3"
+     ],
+     "lieu": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v4",
+    "predicat": "hold",
+    "mention": "holding",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e4"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e3",
+    "relation": "of",
+    "objet": "e1"
+   },
+   {
+    "id": "r2",
+    "sujet": "e4",
+    "relation": "in",
+    "objet": "e5"
+   },
+   {
+    "id": "r3",
+    "sujet": "e5",
+    "relation": "of",
+    "objet": "e1"
+   }
+  ],
+  "coref": [
+   [
+    "e3",
+    "e4"
+   ]
+  ],
+  "distinct": [],
+  "alternatives": []
+ },
+ {
+  "k": 131,
+  "genre": "indetermine",
+  "langue": "en",
+  "texte": "A little girl keeps her lips pressed together and holds something tiny in her closed fist.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "girl",
+    "mention": "A little girl",
+    "proprietes": [
+     "little"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "lip",
+    "mention": "her lips",
+    "proprietes": [
+     "pressed together"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "something",
+    "mention": "something tiny",
+    "proprietes": [
+     "tiny"
+    ]
+   },
+   {
+    "id": "e4",
+    "tete": "fist",
+    "mention": "her closed fist",
+    "proprietes": [
+     "closed"
+    ]
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "keep",
+    "mention": "keeps",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "hold",
+    "mention": "holds",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e3"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e2",
+    "relation": "of",
+    "objet": "e1"
+   },
+   {
+    "id": "r2",
+    "sujet": "e3",
+    "relation": "in",
+    "objet": "e4"
+   },
+   {
+    "id": "r3",
+    "sujet": "e4",
+    "relation": "of",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'something' is an indefinite pronoun that resumes nothing; it is kept as an entity because it is the only mention of the held object."
+ },
+ {
+  "k": 136,
+  "genre": "positif",
+  "langue": "fr",
+  "texte": "Une femme nue est étendue de tout son long sur le flanc gauche, la tête appuyée sur son bras replié.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "femme",
+    "mention": "Une femme nue",
+    "proprietes": [
+     "nu"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "flanc",
+    "mention": "le flanc gauche",
+    "proprietes": [
+     "gauche"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "tête",
+    "mention": "la tête",
+    "proprietes": [
+     "appuyé"
+    ]
+   },
+   {
+    "id": "e4",
+    "tete": "bras",
+    "mention": "son bras replié",
+    "proprietes": [
+     "replié"
+    ]
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "s'étendre",
+    "mention": "étendue",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "sur",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e2",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r3",
+    "sujet": "e3",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r4",
+    "sujet": "e3",
+    "relation": "sur",
+    "objet": "e4"
+   },
+   {
+    "id": "r5",
+    "sujet": "e4",
+    "relation": "de",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'de tout son long' (full length) has no referent and qualifies the lying posture; whole-body posture is an event, body-part states (appuyée, replié) are properties."
+ },
+ {
+  "k": 136,
+  "genre": "negatif",
+  "langue": "fr",
+  "texte": "Un homme nu est étendu de tout son long sur le flanc gauche, la tête appuyée sur son bras replié.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "homme",
+    "mention": "Un homme nu",
+    "proprietes": [
+     "nu"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "flanc",
+    "mention": "le flanc gauche",
+    "proprietes": [
+     "gauche"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "tête",
+    "mention": "la tête",
+    "proprietes": [
+     "appuyé"
+    ]
+   },
+   {
+    "id": "e4",
+    "tete": "bras",
+    "mention": "son bras replié",
+    "proprietes": [
+     "replié"
+    ]
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "s'étendre",
+    "mention": "étendu",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "sur",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e2",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r3",
+    "sujet": "e3",
+    "relation": "de",
+    "objet": "e1"
+   },
+   {
+    "id": "r4",
+    "sujet": "e3",
+    "relation": "sur",
+    "objet": "e4"
+   },
+   {
+    "id": "r5",
+    "sujet": "e4",
+    "relation": "de",
+    "objet": "e1"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'de tout son long' (full length) has no referent and qualifies the lying posture."
+ },
+ {
+  "k": 136,
+  "genre": "indetermine",
+  "langue": "fr",
+  "texte": "Une femme est étendue sur un lit, sous un drap qui ne permet pas de voir si elle repose sur le dos ou sur le flanc.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "femme",
+    "mention": "Une femme"
+   },
+   {
+    "id": "e2",
+    "tete": "lit",
+    "mention": "un lit"
+   },
+   {
+    "id": "e3",
+    "tete": "drap",
+    "mention": "un drap"
+   },
+   {
+    "id": "e4",
+    "tete": "dos",
+    "mention": "le dos",
+    "modalite": "non_affirme"
+   },
+   {
+    "id": "e5",
+    "tete": "flanc",
+    "mention": "le flanc",
+    "modalite": "non_affirme"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "s'étendre",
+    "mention": "étendue",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "permettre",
+    "mention": "permet",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e3"
+     ]
+    },
+    "polarite": "neg"
+   },
+   {
+    "id": "v3",
+    "predicat": "voir",
+    "mention": "voir",
+    "nom_d_action": null,
+    "roles": {},
+    "modalite": "non_affirme"
+   },
+   {
+    "id": "v4",
+    "predicat": "reposer",
+    "mention": "repose",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "sur",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "sous",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e1",
+    "relation": "sur",
+    "objet": "e4",
+    "modalite": "non_affirme"
+   },
+   {
+    "id": "r4",
+    "sujet": "e4",
+    "relation": "de",
+    "objet": "e1",
+    "modalite": "non_affirme"
+   },
+   {
+    "id": "r5",
+    "sujet": "e1",
+    "relation": "sur",
+    "objet": "e5",
+    "modalite": "non_affirme"
+   },
+   {
+    "id": "r6",
+    "sujet": "e5",
+    "relation": "de",
+    "objet": "e1",
+    "modalite": "non_affirme"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [
+   [
+    "e4",
+    "e5"
+   ]
+  ],
+  "notes": "Only the side (back or flank) is the content of the indirect question; resting itself is implied by 'est étendue', so v4 is left affirmed."
+ },
+ {
+  "k": 141,
+  "genre": "positif",
+  "langue": "en",
+  "texte": "Psyche stands by a river where the whispering reeds have told her to wait; she gathers the tufts of golden wool left by the fierce sheep on the briars.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "psyche",
+    "mention": "Psyche",
+    "noms": [
+     "Psyche"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "river",
+    "mention": "a river"
+   },
+   {
+    "id": "e3",
+    "tete": "reed",
+    "mention": "the whispering reeds"
+   },
+   {
+    "id": "e4",
+    "tete": "tuft",
+    "mention": "the tufts"
+   },
+   {
+    "id": "e5",
+    "tete": "wool",
+    "mention": "golden wool",
+    "proprietes": [
+     "golden"
+    ]
+   },
+   {
+    "id": "e6",
+    "tete": "sheep",
+    "mention": "the fierce sheep",
+    "proprietes": [
+     "fierce"
+    ]
+   },
+   {
+    "id": "e7",
+    "tete": "briar",
+    "mention": "the briars"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "stand",
+    "mention": "stands",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "whisper",
+    "mention": "whispering",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e3"
+     ]
+    }
+   },
+   {
+    "id": "v3",
+    "predicat": "tell",
+    "mention": "told",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e3"
+     ],
+     "destinataire": [
+      "e1"
+     ]
+    },
+    "portee": "source"
+   },
+   {
+    "id": "v4",
+    "predicat": "wait",
+    "mention": "wait",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v5",
+    "predicat": "gather",
+    "mention": "gathers",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "theme": [
+      "e4"
+     ]
+    }
+   },
+   {
+    "id": "v6",
+    "predicat": "leave",
+    "mention": "left",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e6"
+     ],
+     "theme": [
+      "e4"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "by",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e4",
+    "relation": "of",
+    "objet": "e5"
+   },
+   {
+    "id": "r3",
+    "sujet": "e4",
+    "relation": "on",
+    "objet": "e7"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "The reeds' telling (present perfect, prior to the scene) is narrated rather than shown, hence portee source; 'her' is resolved to Psyche by meaning."
+ },
+ {
+  "k": 141,
+  "genre": "negatif",
+  "langue": "en",
+  "texte": "Psyche stands by a river where the whispering reeds have told her to wait, while a swarm of ants sorts a heap of mixed grain for her.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "psyche",
+    "mention": "Psyche",
+    "noms": [
+     "Psyche"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "river",
+    "mention": "a river"
+   },
+   {
+    "id": "e3",
+    "tete": "reed",
+    "mention": "the whispering reeds"
+   },
+   {
+    "id": "e4",
+    "tete": "swarm",
+    "mention": "a swarm"
+   },
+   {
+    "id": "e5",
+    "tete": "ant",
+    "mention": "ants"
+   },
+   {
+    "id": "e6",
+    "tete": "heap",
+    "mention": "a heap"
+   },
+   {
+    "id": "e7",
+    "tete": "grain",
+    "mention": "mixed grain",
+    "proprietes": [
+     "mixed"
+    ]
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "stand",
+    "mention": "stands",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "whisper",
+    "mention": "whispering",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e3"
+     ]
+    }
+   },
+   {
+    "id": "v3",
+    "predicat": "tell",
+    "mention": "told",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e3"
+     ],
+     "destinataire": [
+      "e1"
+     ]
+    },
+    "portee": "source"
+   },
+   {
+    "id": "v4",
+    "predicat": "wait",
+    "mention": "wait",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e2"
+     ]
+    }
+   },
+   {
+    "id": "v5",
+    "predicat": "sort",
+    "mention": "sorts",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e4"
+     ],
+     "theme": [
+      "e6"
+     ],
+     "destinataire": [
+      "e1"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "by",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e4",
+    "relation": "of",
+    "objet": "e5"
+   },
+   {
+    "id": "r3",
+    "sujet": "e6",
+    "relation": "of",
+    "objet": "e7"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'for her' (beneficiary) is written as destinataire; the reeds' telling is prior narration (portee source)."
+ },
+ {
+  "k": 141,
+  "genre": "indetermine",
+  "langue": "en",
+  "texte": "Psyche stands alone by a river among the reeds, lost in thought.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "psyche",
+    "mention": "Psyche",
+    "noms": [
+     "Psyche"
+    ],
+    "proprietes": [
+     "alone",
+     "lost in thought"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "river",
+    "mention": "a river"
+   },
+   {
+    "id": "e3",
+    "tete": "reed",
+    "mention": "the reeds"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "stand",
+    "mention": "stands",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "by",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "among",
+    "objet": "e3"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'lost in thought' is an idiomatic state kept whole as a property, 'thought' not being a depicted referent."
+ },
+ {
+  "k": 146,
+  "genre": "positif",
+  "langue": "fr",
+  "texte": "L'arche de Noé flotte paisiblement sur une immense étendue d'eau calme ; aucun noyé, aucune maison engloutie n'est visible.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "arche",
+    "mention": "L'arche"
+   },
+   {
+    "id": "e2",
+    "tete": "noé",
+    "mention": "Noé",
+    "noms": [
+     "Noé"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "étendue",
+    "mention": "une immense étendue",
+    "proprietes": [
+     "immense"
+    ]
+   },
+   {
+    "id": "e4",
+    "tete": "eau",
+    "mention": "eau calme",
+    "proprietes": [
+     "calme"
+    ]
+   },
+   {
+    "id": "e5",
+    "tete": "noyé",
+    "mention": "aucun noyé",
+    "polarite": "neg"
+   },
+   {
+    "id": "e6",
+    "tete": "maison",
+    "mention": "aucune maison engloutie",
+    "proprietes": [
+     "englouti"
+    ],
+    "polarite": "neg"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "flotter",
+    "mention": "flotte",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e3"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "de",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "sur",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e3",
+    "relation": "de",
+    "objet": "e4"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "The manner adverb 'paisiblement' has no slot in the schema (events carry no properties); 'n'est visible' is a figuration verb, so the negation goes to the entities."
+ },
+ {
+  "k": 146,
+  "genre": "negatif",
+  "langue": "fr",
+  "texte": "L'arche de Noé flotte au loin, minuscule, sur une immense étendue d'eau ; au premier plan, des noyés et des maisons englouties occupent toute la vue.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "arche",
+    "mention": "L'arche",
+    "proprietes": [
+     "minuscule"
+    ]
+   },
+   {
+    "id": "e2",
+    "tete": "noé",
+    "mention": "Noé",
+    "noms": [
+     "Noé"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "étendue",
+    "mention": "une immense étendue",
+    "proprietes": [
+     "immense"
+    ]
+   },
+   {
+    "id": "e4",
+    "tete": "eau",
+    "mention": "eau"
+   },
+   {
+    "id": "e5",
+    "tete": "premier plan",
+    "mention": "premier plan"
+   },
+   {
+    "id": "e6",
+    "tete": "noyé",
+    "mention": "des noyés"
+   },
+   {
+    "id": "e7",
+    "tete": "maison",
+    "mention": "des maisons englouties",
+    "proprietes": [
+     "englouti"
+    ]
+   },
+   {
+    "id": "e8",
+    "tete": "vue",
+    "mention": "toute la vue"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "flotter",
+    "mention": "flotte",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e3"
+     ]
+    }
+   },
+   {
+    "id": "v2",
+    "predicat": "occuper",
+    "mention": "occupent",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e6",
+      "e7"
+     ],
+     "theme": [
+      "e8"
+     ],
+     "lieu": [
+      "e5"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "de",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "sur",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e3",
+    "relation": "de",
+    "objet": "e4"
+   },
+   {
+    "id": "r4",
+    "sujet": "e6",
+    "relation": "à",
+    "objet": "e5"
+   },
+   {
+    "id": "r5",
+    "sujet": "e7",
+    "relation": "à",
+    "objet": "e5"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'au loin' (in the distance) has no referent noun; it is carried only by the ark being tiny and opposed to the foreground."
+ },
+ {
+  "k": 146,
+  "genre": "indetermine",
+  "langue": "fr",
+  "texte": "L'arche de Noé flotte sur les eaux ; le bas du tableau, où apparaissait peut-être la terre submergée, est perdu.",
+  "entites": [
+   {
+    "id": "e1",
+    "tete": "arche",
+    "mention": "L'arche"
+   },
+   {
+    "id": "e2",
+    "tete": "noé",
+    "mention": "Noé",
+    "noms": [
+     "Noé"
+    ]
+   },
+   {
+    "id": "e3",
+    "tete": "eau",
+    "mention": "les eaux"
+   },
+   {
+    "id": "e4",
+    "tete": "bas",
+    "mention": "le bas",
+    "proprietes": [
+     "perdu"
+    ],
+    "portee": "oeuvre"
+   },
+   {
+    "id": "e5",
+    "tete": "tableau",
+    "mention": "tableau",
+    "portee": "oeuvre"
+   },
+   {
+    "id": "e6",
+    "tete": "terre",
+    "mention": "la terre submergée",
+    "proprietes": [
+     "submergé"
+    ],
+    "modalite": "possible"
+   }
+  ],
+  "evenements": [
+   {
+    "id": "v1",
+    "predicat": "flotter",
+    "mention": "flotte",
+    "nom_d_action": null,
+    "roles": {
+     "agent": [
+      "e1"
+     ],
+     "lieu": [
+      "e3"
+     ]
+    }
+   }
+  ],
+  "relations": [
+   {
+    "id": "r1",
+    "sujet": "e1",
+    "relation": "de",
+    "objet": "e2"
+   },
+   {
+    "id": "r2",
+    "sujet": "e1",
+    "relation": "sur",
+    "objet": "e3"
+   },
+   {
+    "id": "r3",
+    "sujet": "e4",
+    "relation": "de",
+    "objet": "e5"
+   },
+   {
+    "id": "r4",
+    "sujet": "e6",
+    "relation": "dans",
+    "objet": "e4",
+    "modalite": "possible"
+   }
+  ],
+  "coref": [],
+  "distinct": [],
+  "alternatives": [],
+  "notes": "'apparaissait' is a figuration verb (no event); the relative 'où' is rendered by 'dans'; the submerged land is only possibly depicted, in a part of the painting now lost."
+ }
+]

@@ -1,0 +1,1034 @@
+jeu	k	genre	numero	element	jugement	correction
+developpement	21	indetermine	1	entité carriage#e1 « A carriage » ; propriétés : overturned		
+developpement	21	indetermine	2	entité ditch#e2 « the ditch »		
+developpement	21	indetermine	3	entité horse#e3 « its horses » [polarite=neg]		
+developpement	21	indetermine	4	événement accident#v1 « the accident » (nom d'action accident)		
+developpement	21	indetermine	5	relation carriage#e1 —in→ ditch#e2		
+developpement	21	indetermine	6	relation horse#e3 —of→ carriage#e1		
+developpement	21	indetermine	manque	(ce qui manque au graphe)		
+developpement	51	indetermine	1	entité engraving#e1 « The engraving » [portee=oeuvre]		
+developpement	51	indetermine	2	entité lady#e2 « the lady »		
+developpement	51	indetermine	3	entité face#e3 « the lady's face »		
+developpement	51	indetermine	4	entité note#e4 « a fashion note » ; propriétés : fashion, printed [portee=oeuvre]		
+developpement	51	indetermine	5	entité mantelet#e5 « a mantelet » [portee=source]		
+developpement	51	indetermine	6	événement mention#v1 « mentions » — agent : note#e4; theme : mantelet#e5 [portee=oeuvre]		
+developpement	51	indetermine	7	relation face#e3 —of→ lady#e2		
+developpement	51	indetermine	manque	(ce qui manque au graphe)		
+developpement	21	negatif	1	entité rider#e1 « A rider »		
+developpement	21	negatif	2	entité spur#e2 « his spurs »		
+developpement	21	negatif	3	entité horse#e3 « his horse »		
+developpement	21	negatif	4	entité flank#e4 « flanks »		
+developpement	21	negatif	5	entité animal#e5 « the frightened animal » ; propriétés : frightened		
+developpement	21	negatif	6	entité rider#e6 « the rider »		
+developpement	21	negatif	7	entité ditch#e7 « the ditch »		
+developpement	21	negatif	8	événement dig#v1 « digs » — agent : rider#e1; theme : spur#e2; lieu : flank#e4		
+developpement	21	negatif	9	événement bolt#v2 « bolts » — agent : animal#e5		
+developpement	21	negatif	10	événement throw#v3 « thrown » — theme : rider#e6; lieu : ditch#e7		
+developpement	21	negatif	11	relation spur#e2 —of→ rider#e1		
+developpement	21	negatif	12	relation horse#e3 —of→ rider#e1		
+developpement	21	negatif	13	relation flank#e4 —of→ horse#e3		
+developpement	21	negatif	14	coréférence rider#e1 = rider#e6		
+developpement	21	negatif	15	coréférence horse#e3 = animal#e5		
+developpement	21	negatif	manque	(ce qui manque au graphe)		
+developpement	11	negatif	1	entité gravestone#e1 « Gravestones »		
+developpement	11	negatif	2	entité cross#e2 « leaning wooden crosses » ; propriétés : wooden		
+developpement	11	negatif	3	entité cemetery#e3 « a large municipal cemetery » ; propriétés : large, municipal		
+developpement	11	negatif	4	entité town#e4 « the town »		
+developpement	11	negatif	5	entité church#e5 « no church » [polarite=neg]		
+developpement	11	negatif	6	événement lean#v1 « leaning » — agent : cross#e2		
+developpement	11	negatif	7	événement fill#v2 « fill » — agent : gravestone#e1, cross#e2; lieu : cemetery#e3		
+developpement	11	negatif	8	relation cemetery#e3 —outside→ town#e4		
+developpement	11	negatif	manque	(ce qui manque au graphe)		
+developpement	61	positif	1	entité pavilion#e1 « A garden pavilion » ; propriétés : garden		
+developpement	61	positif	2	entité orange tree#e2 « blossoming orange trees »		
+developpement	61	positif	3	entité bowl#e3 « bowls »		
+developpement	61	positif	4	entité petal#e4 « rose petals » ; propriétés : rose		
+developpement	61	positif	5	entité censer#e5 « censers »		
+developpement	61	positif	6	entité smoke#e6 « perfumed smoke » ; propriétés : perfumed		
+developpement	61	positif	7	entité air#e7 « the air »		
+developpement	61	positif	8	entité visitor#e8 « the visitors »		
+developpement	61	positif	9	entité scent#e9 « the scent »		
+developpement	61	positif	10	événement fill#v1 « filled » — agent : orange tree#e2, bowl#e3; lieu : pavilion#e1		
+developpement	61	positif	11	événement blossom#v2 « blossoming » — agent : orange tree#e2		
+developpement	61	positif	12	événement send#v3 « send » — agent : censer#e5; theme : smoke#e6; lieu : air#e7		
+developpement	61	positif	13	événement breathe in#v4 « breathe in » — agent : visitor#e8; theme : scent#e9		
+developpement	61	positif	14	relation bowl#e3 —of→ petal#e4		
+developpement	61	positif	manque	(ce qui manque au graphe)		
+developpement	21	positif	1	entité coachman#e1 « A coachman »		
+developpement	21	positif	2	entité horse#e2 « his horses »		
+developpement	21	positif	3	entité whip#e3 « a whip »		
+developpement	21	positif	4	entité animal#e4 « the frightened animals » ; propriétés : frightened		
+developpement	21	positif	5	entité carriage#e5 « the carriage »		
+developpement	21	positif	6	entité ditch#e6 « the ditch »		
+developpement	21	positif	7	événement lash#v1 « lashes » — agent : coachman#e1; patient : horse#e2; instrument : whip#e3		
+developpement	21	positif	8	événement bolt#v2 « bolt » — agent : animal#e4		
+developpement	21	positif	9	événement overturn#v3 « overturns » — agent : carriage#e5; lieu : ditch#e6		
+developpement	21	positif	10	relation horse#e2 —of→ coachman#e1		
+developpement	21	positif	11	coréférence horse#e2 = animal#e4		
+developpement	21	positif	manque	(ce qui manque au graphe)		
+developpement	36	indetermine	1	entité cascade#e1 « Une cascade »		
+developpement	36	indetermine	2	entité rocher#e2 « des rochers »		
+developpement	36	indetermine	3	entité fragment#e3 « le fragment conservé » ; propriétés : conservé, petit [portee=oeuvre]		
+developpement	36	indetermine	4	entité caractère#e4 « caractère » [modalite=non_affirme, portee=non_ancre]		
+developpement	36	indetermine	5	entité paysage#e5 « paysage » [portee=oeuvre]		
+developpement	36	indetermine	6	événement tomber#v1 « tombe » — agent : cascade#e1; lieu : rocher#e2		
+developpement	36	indetermine	7	événement juger#v2 « juger » — theme : caractère#e4 [polarite=neg, portee=non_ancre]		
+developpement	36	indetermine	8	relation caractère#e4 —de→ paysage#e5		
+developpement	36	indetermine	manque	(ce qui manque au graphe)		
+developpement	76	indetermine	1	entité saint#e1 « Saint Pantaléon » ; noms : Pantaléon		
+developpement	76	indetermine	2	entité médecin#e2 « médecin »		
+developpement	76	indetermine	3	entité instrument#e3 « ses instruments chirurgicaux » ; propriétés : chirurgical		
+developpement	76	indetermine	4	entité paysage#e4 « un paysage »		
+developpement	76	indetermine	5	événement se tenir#v1 « se tient debout » — agent : saint#e1; lieu : paysage#e4		
+developpement	76	indetermine	6	événement poser#v2 « posés » — theme : instrument#e3; lieu : saint#e1		
+developpement	76	indetermine	7	relation instrument#e3 —de→ saint#e1		
+developpement	76	indetermine	8	coréférence saint#e1 = médecin#e2		
+developpement	76	indetermine	manque	(ce qui manque au graphe)		
+developpement	126	negatif	1	entité portefaix#e1 « Un portefaix »		
+developpement	126	negatif	2	entité tonneau#e2 « un lourd tonneau » ; propriétés : lourd		
+developpement	126	negatif	3	entité cœur#e3 « cœur »		
+developpement	126	negatif	4	entité compagnon#e4 « ses compagnons »		
+developpement	126	negatif	5	entité corps#e5 « son corps »		
+developpement	126	negatif	6	entité vie#e6 « vie » [polarite=neg]		
+developpement	126	negatif	7	entité rupture#e7 « rupture »		
+developpement	126	negatif	8	événement soulever#v1 « soulevait » — agent : portefaix#e1; theme : tonneau#e2		
+developpement	126	negatif	9	événement s'effondrer#v2 « s'effondre » — agent : portefaix#e1		
+developpement	126	negatif	10	événement foudroyer#v3 « foudroyé » — agent : rupture#e7; patient : portefaix#e1		
+developpement	126	negatif	11	événement rompre#v4 « rupture » (nom d'action rupture) — patient : cœur#e3		
+developpement	126	negatif	12	événement se découvrir#v5 « se découvrent » — agent : compagnon#e4; lieu : corps#e5		
+developpement	126	negatif	13	relation cœur#e3 —de→ portefaix#e1		
+developpement	126	negatif	14	relation compagnon#e4 —de→ portefaix#e1		
+developpement	126	negatif	15	relation corps#e5 —de→ portefaix#e1		
+developpement	126	negatif	16	relation vie#e6 —de→ corps#e5		
+developpement	126	negatif	17	relation rupture#e7 —de→ cœur#e3		
+developpement	126	negatif	manque	(ce qui manque au graphe)		
+developpement	136	negatif	1	entité homme#e1 « Un homme nu » ; propriétés : nu		
+developpement	136	negatif	2	entité flanc#e2 « le flanc gauche » ; propriétés : gauche		
+developpement	136	negatif	3	entité tête#e3 « la tête »		
+developpement	136	negatif	4	entité bras#e4 « son bras replié » ; propriétés : replié		
+developpement	136	negatif	5	événement s'étendre#v1 « étendu » — agent : homme#e1; lieu : flanc#e2		
+developpement	136	negatif	6	événement appuyer#v2 « appuyée » — theme : tête#e3; lieu : bras#e4		
+developpement	136	negatif	7	relation flanc#e2 —de→ homme#e1		
+developpement	136	negatif	8	relation tête#e3 —de→ homme#e1		
+developpement	136	negatif	9	relation bras#e4 —de→ homme#e1		
+developpement	136	negatif	manque	(ce qui manque au graphe)		
+validation	181	indetermine	1	entité woman#e1 « A woman »		
+validation	181	indetermine	2	entité balance#e2 « a balance » ; propriétés : level [modalite=non_affirme]		
+validation	181	indetermine	3	entité pan#e3 « the pans »		
+validation	181	indetermine	4	entité reading#e4 « a reading » [modalite=non_affirme, portee=non_ancre]		
+validation	181	indetermine	5	entité blindfold#e5 « No blindfold » [polarite=neg]		
+validation	181	indetermine	6	entité purse#e6 « purse » [polarite=neg]		
+validation	181	indetermine	7	entité attribute#e7 « other attribute » ; propriétés : other [polarite=neg]		
+validation	181	indetermine	8	entité meaning#e8 « meaning »		
+validation	181	indetermine	9	entité figure#e9 « the figure »		
+validation	181	indetermine	10	entité justice#e10 « Justice » ; noms : Justice [modalite=possible]		
+validation	181	indetermine	11	entité trade#e11 « trade » [modalite=possible]		
+validation	181	indetermine	12	entité merchant#e12 « merchant » [modalite=possible]		
+validation	181	indetermine	13	entité concept#e13 « another concept » [modalite=possible]		
+validation	181	indetermine	14	entité weighing#e14 « weighing »		
+validation	181	indetermine	15	entité work#e15 « the work » [portee=oeuvre]		
+validation	181	indetermine	16	entité image#e16 « an image » [modalite=non_affirme, portee=non_ancre]		
+validation	181	indetermine	17	entité judgement#e17 « judgement » ; propriétés : fair [modalite=possible], corrupt [modalite=possible] [modalite=non_affirme, portee=non_ancre]		
+validation	181	indetermine	18	entité painter#e18 « painter » [portee=histoire]		
+validation	181	indetermine	19	entité handling#e19 « handling » ; propriétés : careful [portee=oeuvre]		
+validation	181	indetermine	20	entité figure#e20 « the figure »		
+validation	181	indetermine	21	entité detail#e21 « the essential detail » ; propriétés : essential, invisible		
+validation	181	indetermine	22	entité sense#e22 « sense »		
+validation	181	indetermine	23	entité allegory#e23 « the allegory »		
+validation	181	indetermine	24	entité interpretation#e24 « interpretation » [portee=non_ancre]		
+validation	181	indetermine	25	entité limit#e25 « this limit » [portee=non_ancre]		
+validation	181	indetermine	26	événement hold#v1 « holds » — agent : woman#e1; theme : balance#e2		
+validation	181	indetermine	27	événement tip#v2 « tipped » — patient : balance#e2 [modalite=non_affirme]		
+validation	181	indetermine	28	événement obscure#v3 « obscured » — theme : pan#e3		
+validation	181	indetermine	29	événement render#v4 « rendered » — theme : pan#e3 [portee=oeuvre]		
+validation	181	indetermine	30	événement allow#v5 « allow » — theme : reading#e4 [polarite=neg]		
+validation	181	indetermine	31	événement clarify#v6 « clarifies » — agent : blindfold#e5, purse#e6, attribute#e7; theme : meaning#e8 [modalite=non_affirme]		
+validation	181	indetermine	32	événement personify#v7 « personify » — agent : woman#e1; theme : justice#e10, trade#e11, concept#e13 [modalite=possible]		
+validation	181	indetermine	33	événement associate#v8 « associated » — theme : concept#e13; instrument : weighing#e14 [modalite=possible]		
+validation	181	indetermine	34	événement weigh#v9 « weighing » (nom d'action weighing)		
+validation	181	indetermine	35	événement interpret#v10 « interpret » — theme : work#e15 [modalite=non_affirme, portee=non_ancre]		
+validation	181	indetermine	36	événement determine#v11 « determine » — agent : detail#e21; theme : sense#e22 [modalite=non_affirme]		
+validation	181	indetermine	37	événement respect#v12 « respect » — agent : interpretation#e24; theme : limit#e25 [portee=non_ancre]		
+validation	181	indetermine	38	relation pan#e3 —of→ balance#e2		
+validation	181	indetermine	39	relation meaning#e8 —of→ figure#e9		
+validation	181	indetermine	40	relation trade#e11 —of→ merchant#e12 [modalite=possible]		
+validation	181	indetermine	41	relation work#e15 —as→ image#e16 [modalite=non_affirme, portee=non_ancre]		
+validation	181	indetermine	42	relation image#e16 —of→ judgement#e17 [modalite=non_affirme, portee=non_ancre]		
+validation	181	indetermine	43	relation handling#e19 —of→ painter#e18		
+validation	181	indetermine	44	relation handling#e19 —of→ figure#e20		
+validation	181	indetermine	45	relation sense#e22 —of→ allegory#e23		
+validation	181	indetermine	46	coréférence woman#e1 = figure#e9		
+validation	181	indetermine	47	coréférence woman#e1 = figure#e20		
+validation	181	indetermine	48	alternative v3 | v4		
+validation	181	indetermine	49	alternative justice#e10 | trade#e11 | concept#e13		
+validation	181	indetermine	manque	(ce qui manque au graphe)		
+validation	81	indetermine	1	entité foreground#e1 « the foreground »		
+validation	81	indetermine	2	entité man#e2 « a bearded man » ; propriétés : bearded		
+validation	81	indetermine	3	entité book#e3 « a book »		
+validation	81	indetermine	4	entité veil#e4 « veils »		
+validation	81	indetermine	5	entité group#e5 « a group »		
+validation	81	indetermine	6	entité woman#e6 « women »		
+validation	81	indetermine	7	entité woman#e7 « The women »		
+validation	81	indetermine	8	entité head#e8 « heads »		
+validation	81	indetermine	9	entité cloth#e9 « the cloth »		
+validation	81	indetermine	10	entité man#e10 « The man »		
+validation	81	indetermine	11	entité inscription#e11 « no inscription » [polarite=neg]		
+validation	81	indetermine	12	entité attribute#e12 « attribute » [polarite=neg]		
+validation	81	indetermine	13	entité woman#e13 « the women »		
+validation	81	indetermine	14	entité meaning#e14 « The meaning » ; propriétés : uncertain [portee=non_ancre]		
+validation	81	indetermine	15	entité scene#e15 « the scene »		
+validation	81	indetermine	16	entité gesture#e16 « the gesture » ; propriétés : clear		
+validation	81	indetermine	17	entité figure#e17 « the figures »		
+validation	81	indetermine	18	entité background#e18 « the background » ; propriétés : plain, unspecific		
+validation	81	indetermine	19	entité indication#e19 « no indication » [polarite=neg]		
+validation	81	indetermine	20	entité place#e20 « the place » [modalite=non_affirme]		
+validation	81	indetermine	21	entité composition#e21 « The composition » ; propriétés : simple [portee=oeuvre]		
+validation	81	indetermine	22	entité exchange#e22 « the exchange »		
+validation	81	indetermine	23	entité veil#e23 « the veils »		
+validation	81	indetermine	24	entité man#e24 « the standing man »		
+validation	81	indetermine	25	entité group#e25 « the kneeling group »		
+validation	81	indetermine	26	événement hold#v1 « holding » — agent : man#e2; theme : book#e3		
+validation	81	indetermine	27	événement hand#v2 « hands » — agent : man#e2; theme : veil#e4; destinataire : group#e5; lieu : foreground#e1		
+validation	81	indetermine	28	événement kneel#v3 « kneel » — agent : woman#e6; lieu : man#e2		
+validation	81	indetermine	29	événement lower#v4 « are lowered » — agent : head#e8		
+validation	81	indetermine	30	événement reach up#v5 « reach up » — agent : woman#e7		
+validation	81	indetermine	31	événement receive#v6 « receive » — agent : woman#e7; theme : cloth#e9		
+validation	81	indetermine	32	événement name#v7 « named » — theme : man#e10 [polarite=neg]		
+validation	81	indetermine	33	événement identify#v8 « identifies » — agent : inscription#e11, attribute#e12; theme : man#e10, woman#e13 [modalite=non_affirme]		
+validation	81	indetermine	34	événement give#v9 « giving »		
+validation	81	indetermine	35	événement give#v10 « giving » — agent : background#e18; theme : indication#e19 [modalite=non_affirme]		
+validation	81	indetermine	36	événement centre#v11 « centred » — theme : composition#e21; instrument : exchange#e22 [portee=oeuvre]		
+validation	81	indetermine	37	événement exchange#v12 « exchange » (nom d'action exchange) — agent : man#e24; theme : veil#e23; destinataire : group#e25		
+validation	81	indetermine	38	événement stand#v13 « standing » — agent : man#e24		
+validation	81	indetermine	39	événement kneel#v14 « kneeling » — agent : group#e25		
+validation	81	indetermine	40	relation group#e5 —of→ woman#e6		
+validation	81	indetermine	41	relation head#e8 —of→ woman#e7		
+validation	81	indetermine	42	relation meaning#e14 —of→ scene#e15		
+validation	81	indetermine	43	relation background#e18 —behind→ figure#e17		
+validation	81	indetermine	44	relation indication#e19 —of→ place#e20		
+validation	81	indetermine	45	coréférence man#e2 = man#e10 = man#e24		
+validation	81	indetermine	46	coréférence woman#e6 = woman#e7 = woman#e13		
+validation	81	indetermine	47	coréférence veil#e4 = cloth#e9 = veil#e23		
+validation	81	indetermine	48	coréférence group#e5 = group#e25		
+validation	81	indetermine	manque	(ce qui manque au graphe)		
+validation	31	negatif	1	entité cabinetmaker#e1 « a cabinetmaker »		
+validation	31	negatif	2	entité chair#e2 « the same chair » ; propriétés : same		
+validation	31	negatif	3	entité task#e3 « his task »		
+validation	31	negatif	4	entité frame#e4 « its wooden frame » ; propriétés : wooden		
+validation	31	negatif	5	entité member#e5 « the members »		
+validation	31	negatif	6	entité joint#e6 « the joints »		
+validation	31	negatif	7	entité scene#e7 « The scene »		
+validation	31	negatif	8	entité woodwork#e8 « woodwork »		
+validation	31	negatif	9	entité covering#e9 « covering » [polarite=neg]		
+validation	31	negatif	10	entité fabric#e10 « no fabric » [polarite=neg]		
+validation	31	negatif	11	entité stuffing#e11 « stuffing » [polarite=neg]		
+validation	31	negatif	12	entité painter#e12 « The painter » [portee=histoire]		
+validation	31	negatif	13	entité precision#e13 « the precision »		
+validation	31	negatif	14	entité tool#e14 « the tools »		
+validation	31	negatif	15	entité attention#e15 « the attention »		
+validation	31	negatif	16	entité craftsman#e16 « the craftsman »		
+validation	31	negatif	17	entité joint#e17 « each joint »		
+validation	31	negatif	18	entité structure#e18 « the bare structure » ; propriétés : bare		
+validation	31	negatif	19	entité seat#e19 « the seat »		
+validation	31	negatif	20	entité subject#e20 « the true subject » ; propriétés : true		
+validation	31	negatif	21	entité picture#e21 « the picture » [portee=oeuvre]		
+validation	31	negatif	22	entité image#e22 « Such images » [portee=non_ancre]		
+validation	31	negatif	23	entité trade#e23 « the furniture trades » ; propriétés : furniture [portee=non_ancre]		
+validation	31	negatif	24	entité interest#e24 « a broader interest » ; propriétés : broad [portee=non_ancre]		
+validation	31	negatif	25	entité practice#e25 « workshop practice » ; propriétés : workshop [portee=non_ancre]		
+validation	31	negatif	26	entité genre painting#e26 « genre painting » [portee=non_ancre]		
+validation	31	negatif	27	entité technique#e27 « technique » [portee=non_ancre]		
+validation	31	negatif	28	entité labour#e28 « patient labour » ; propriétés : patient [portee=non_ancre]		
+validation	31	negatif	29	entité theme#e29 « worthy themes » ; propriétés : worthy [portee=non_ancre]		
+validation	31	negatif	30	événement work#v1 « work » — agent : cabinetmaker#e1; theme : chair#e2		
+validation	31	negatif	31	événement concern#v2 « concerns » — agent : task#e3; theme : frame#e4		
+validation	31	negatif	32	événement carve#v3 « carves » — agent : cabinetmaker#e1; patient : member#e5		
+validation	31	negatif	33	événement glue#v4 « glues » — agent : cabinetmaker#e1; patient : joint#e6		
+validation	31	negatif	34	événement devote#v5 « devoted » — theme : scene#e7; destinataire : woodwork#e8, covering#e9		
+validation	31	negatif	35	événement cover#v6 « covering » (nom d'action covering) [polarite=neg]		
+validation	31	negatif	36	événement come into play#v7 « comes into play » — agent : fabric#e10, stuffing#e11 [modalite=non_affirme]		
+validation	31	negatif	37	événement observe#v8 « observes » — agent : painter#e12; theme : precision#e13, attention#e15 [portee=oeuvre]		
+validation	31	negatif	38	événement bring#v9 « brings » — agent : craftsman#e16; theme : attention#e15; destinataire : joint#e17		
+validation	31	negatif	39	événement belong#v10 « belong » — theme : image#e22; lieu : interest#e24 [portee=non_ancre]		
+validation	31	negatif	40	événement run#v11 « ran » — agent : interest#e24; lieu : genre painting#e26 [portee=non_ancre]		
+validation	31	negatif	41	événement value#v12 « valuing » — agent : interest#e24; theme : technique#e27, labour#e28 [portee=non_ancre]		
+validation	31	negatif	42	relation task#e3 —of→ cabinetmaker#e1		
+validation	31	negatif	43	relation frame#e4 —of→ chair#e2		
+validation	31	negatif	44	relation precision#e13 —of→ tool#e14		
+validation	31	negatif	45	relation structure#e18 —of→ seat#e19		
+validation	31	negatif	46	relation subject#e20 —of→ picture#e21		
+validation	31	negatif	47	relation image#e22 —of→ trade#e23		
+validation	31	negatif	48	relation interest#e24 —in→ practice#e25		
+validation	31	negatif	49	relation technique#e27 —as→ theme#e29		
+validation	31	negatif	50	relation labour#e28 —as→ theme#e29		
+validation	31	negatif	51	coréférence cabinetmaker#e1 = craftsman#e16		
+validation	31	negatif	52	coréférence chair#e2 = seat#e19		
+validation	31	negatif	53	coréférence joint#e6 = joint#e17		
+validation	31	negatif	54	coréférence structure#e18 = subject#e20		
+validation	31	negatif	manque	(ce qui manque au graphe)		
+validation	51	negatif	1	entité photograph#e1 « The photograph » [portee=oeuvre]		
+validation	51	negatif	2	entité boy#e2 « the same boy » ; propriétés : same		
+validation	51	negatif	3	entité crutch#e3 « crutches »		
+validation	51	negatif	4	entité leg#e4 « his leg »		
+validation	51	negatif	5	entité splint#e5 « no splint » [polarite=neg]		
+validation	51	negatif	6	entité strap#e6 « strap » [polarite=neg]		
+validation	51	negatif	7	entité brace#e7 « brace » [polarite=neg]		
+validation	51	negatif	8	entité image#e8 « The image » [portee=oeuvre]		
+validation	51	negatif	9	entité gait#e9 « his gait »		
+validation	51	negatif	10	entité support#e10 « the support »		
+validation	51	negatif	11	entité crutch#e11 « the crutches »		
+validation	51	negatif	12	entité arm#e12 « his arms »		
+validation	51	negatif	13	entité framing#e13 « Its plain, frontal framing » ; propriétés : plain, frontal [portee=oeuvre]		
+validation	51	negatif	14	entité convention#e14 « the conventions » [portee=non_ancre]		
+validation	51	negatif	15	entité documentation#e15 « clinical documentation » ; propriétés : clinical [portee=non_ancre]		
+validation	51	negatif	16	entité patient#e16 « the patient » [portee=non_ancre]		
+validation	51	negatif	17	entité posture#e17 « posture » [portee=non_ancre]		
+validation	51	negatif	18	entité movement#e18 « movement » [portee=non_ancre]		
+validation	51	negatif	19	entité concern#e19 « the main concern » ; propriétés : main [portee=non_ancre]		
+validation	51	negatif	20	entité photographer#e20 « the photographer » [portee=non_ancre]		
+validation	51	negatif	21	événement walk#v1 « walking » — agent : boy#e2; instrument : crutch#e3		
+validation	51	negatif	22	événement fit#v2 « is fitted » — lieu : leg#e4 [polarite=neg]		
+validation	51	negatif	23	événement focus#v3 « focuses » — agent : image#e8; theme : gait#e9, support#e10 [portee=oeuvre]		
+validation	51	negatif	24	événement provide#v4 « provide » — agent : crutch#e11; theme : support#e10; lieu : arm#e12		
+validation	51	negatif	25	événement place#v5 « places » — agent : framing#e13; theme : image#e8; lieu : convention#e14 [portee=non_ancre]		
+validation	51	negatif	26	événement document#v6 « documentation » (nom d'action documentation) [portee=non_ancre]		
+validation	51	negatif	27	événement move#v7 « movement » (nom d'action movement) — agent : patient#e16 [portee=non_ancre]		
+validation	51	negatif	28	relation leg#e4 —of→ boy#e2		
+validation	51	negatif	29	relation gait#e9 —of→ boy#e2		
+validation	51	negatif	30	relation arm#e12 —of→ boy#e2		
+validation	51	negatif	31	relation framing#e13 —of→ image#e8		
+validation	51	negatif	32	relation convention#e14 —of→ documentation#e15		
+validation	51	negatif	33	relation posture#e17 —of→ patient#e16		
+validation	51	negatif	34	relation movement#e18 —of→ patient#e16		
+validation	51	negatif	35	relation concern#e19 —of→ photographer#e20		
+validation	51	negatif	36	coréférence photograph#e1 = image#e8		
+validation	51	negatif	37	coréférence crutch#e3 = crutch#e11		
+validation	51	negatif	manque	(ce qui manque au graphe)		
+validation	171	positif	1	entité woman#e1 « An allegorical woman » ; propriétés : allegorical		
+validation	171	positif	2	entité foreground#e2 « the foreground »		
+validation	171	positif	3	entité eye#e3 « keen eyes » ; propriétés : keen		
+validation	171	positif	4	entité gaze#e4 « her gaze » ; propriétés : fixed		
+validation	171	positif	5	entité hand#e5 « one hand » ; nombre 1		
+validation	171	positif	6	entité leash#e6 « a leash »		
+validation	171	positif	7	entité end#e7 « the end »		
+validation	171	positif	8	entité hound#e8 « a hunting hound » ; propriétés : hunting		
+validation	171	positif	9	entité ground#e9 « the ground »		
+validation	171	positif	10	entité nose#e10 « its nose » ; propriétés : lowered		
+validation	171	positif	11	entité trail#e11 « a trail »		
+validation	171	positif	12	entité pair#e12 « The pair »		
+validation	171	positif	13	entité picture#e13 « the picture » [portee=oeuvre]		
+validation	171	positif	14	entité figure#e14 « The figure »		
+validation	171	positif	15	entité emblem#e15 « an emblem »		
+validation	171	positif	16	entité searching#e16 « searching »		
+validation	171	positif	17	entité thing#e17 « hidden things » ; propriétés : hidden		
+validation	171	positif	18	entité element#e18 « every element »		
+validation	171	positif	19	entité composition#e19 « the composition » [portee=oeuvre]		
+validation	171	positif	20	entité posture#e20 « her forward posture » ; propriétés : forward		
+validation	171	positif	21	entité muzzle#e21 « attentive muzzle » ; propriétés : attentive		
+validation	171	positif	22	entité dog#e22 « the dog »		
+validation	171	positif	23	entité inquiry#e23 « inquiry »		
+validation	171	positif	24	entité background#e24 « the background » ; propriétés : simple		
+validation	171	positif	25	entité landscape#e25 « a plain landscape » ; propriétés : plain		
+validation	171	positif	26	entité allegory#e26 « the allegory » ; propriétés : legible		
+validation	171	positif	27	événement occupy#v1 « occupies » — agent : woman#e1; lieu : foreground#e2		
+validation	171	positif	28	événement lean#v2 « leaning » — agent : woman#e1		
+validation	171	positif	29	événement hold#v3 « holds » — agent : woman#e1; theme : leash#e6; lieu : hand#e5		
+validation	171	positif	30	événement sniff#v4 « sniffs » — agent : hound#e8; theme : ground#e9; lieu : end#e7		
+validation	171	positif	31	événement follow#v5 « follow » — agent : hound#e8; theme : trail#e11		
+validation	171	positif	32	événement move#v6 « moves » — agent : pair#e12; lieu : picture#e13		
+validation	171	positif	33	événement search out#v7 « searching » (nom d'action searching) — theme : thing#e17		
+validation	171	positif	34	événement express#v8 « expresses » — agent : element#e18; theme : inquiry#e23		
+validation	171	positif	35	événement inquire#v9 « inquiry » (nom d'action inquiry)		
+validation	171	positif	36	événement leave#v10 « leaves » — agent : landscape#e25; theme : allegory#e26		
+validation	171	positif	37	relation eye#e3 —of→ woman#e1		
+validation	171	positif	38	relation gaze#e4 —of→ woman#e1		
+validation	171	positif	39	relation hand#e5 —of→ woman#e1		
+validation	171	positif	40	relation end#e7 —of→ leash#e6		
+validation	171	positif	41	relation nose#e10 —of→ hound#e8		
+validation	171	positif	42	relation emblem#e15 —of→ searching#e16		
+validation	171	positif	43	relation element#e18 —of→ composition#e19		
+validation	171	positif	44	relation posture#e20 —of→ woman#e1		
+validation	171	positif	45	relation muzzle#e21 —of→ dog#e22		
+validation	171	positif	46	relation background#e24 —behind→ woman#e1		
+validation	171	positif	47	relation background#e24 —behind→ hound#e8		
+validation	171	positif	48	coréférence woman#e1 = figure#e14		
+validation	171	positif	49	coréférence figure#e14 = emblem#e15		
+validation	171	positif	50	coréférence hound#e8 = dog#e22		
+validation	171	positif	51	coréférence background#e24 = landscape#e25		
+validation	171	positif	manque	(ce qui manque au graphe)		
+validation	181	positif	1	entité judge#e1 « An allegorical judge » ; propriétés : allegorical		
+validation	181	positif	2	entité blindfold#e2 « her blindfold »		
+validation	181	positif	3	entité litigant#e3 « one of the litigants » ; nombre 1		
+validation	181	positif	4	entité purse#e4 « a purse »		
+validation	181	positif	5	entité pan#e5 « one pan » ; nombre 1		
+validation	181	positif	6	entité balance#e6 « her balance »		
+validation	181	positif	7	entité back#e7 « her back »		
+validation	181	positif	8	entité plaintiff#e8 « the poor plaintiff » ; propriétés : poor		
+validation	181	positif	9	entité artist#e9 « The artist » [portee=histoire]		
+validation	181	positif	10	entité iconography#e10 « the familiar iconography » ; propriétés : familiar [portee=non_ancre]		
+validation	181	positif	11	entité justice#e11 « Justice » ; noms : Justice [portee=non_ancre]		
+validation	181	positif	12	entité blindfold#e12 « whose blindfold » [portee=non_ancre]		
+validation	181	positif	13	entité scale#e13 « level scales » ; propriétés : level [portee=non_ancre]		
+validation	181	positif	14	entité impartiality#e14 « impartiality » [portee=non_ancre]		
+validation	181	positif	15	entité attribute#e15 « each attribute » ; propriétés : corrupted		
+validation	181	positif	16	entité blindfold#e16 « the raised blindfold » ; propriétés : raised		
+validation	181	positif	17	entité partiality#e17 « partiality »		
+validation	181	positif	18	entité purse#e18 « the purse »		
+validation	181	positif	19	entité balance#e19 « the balance »		
+validation	181	positif	20	entité back#e20 « the turned back » ; propriétés : turned		
+validation	181	positif	21	entité contempt#e21 « contempt »		
+validation	181	positif	22	entité weak#e22 « the weak »		
+validation	181	positif	23	entité inversion#e23 « Such satirical inversions » ; propriétés : satirical [portee=non_ancre]		
+validation	181	positif	24	entité allegory#e24 « virtue allegories » ; propriétés : virtue [portee=non_ancre]		
+validation	181	positif	25	entité vehicle#e25 « a powerful vehicle » ; propriétés : powerful [portee=non_ancre]		
+validation	181	positif	26	entité criticism#e26 « social criticism » ; propriétés : social [portee=non_ancre]		
+validation	181	positif	27	entité clarity#e27 « the clarity » [portee=non_ancre]		
+validation	181	positif	28	entité language#e28 « the visual language » ; propriétés : visual [portee=non_ancre]		
+validation	181	positif	29	entité denunciation#e29 « the denunciation » ; propriétés : accessible [portee=non_ancre]		
+validation	181	positif	30	entité public#e30 « a broad public » ; propriétés : broad [portee=non_ancre]		
+validation	181	positif	31	événement lift#v1 « lifts » — agent : judge#e1; theme : blindfold#e2		
+validation	181	positif	32	événement favour#v2 « favour » — agent : judge#e1; theme : litigant#e3		
+validation	181	positif	33	événement let#v3 « lets » — agent : judge#e1; theme : purse#e4		
+validation	181	positif	34	événement tip#v4 « tip » — agent : purse#e4; patient : pan#e5		
+validation	181	positif	35	événement turn#v5 « turns » — agent : judge#e1; theme : back#e7; lieu : plaintiff#e8		
+validation	181	positif	36	événement subvert#v6 « subverts » — agent : artist#e9; patient : iconography#e10 [portee=oeuvre]		
+validation	181	positif	37	événement signify#v7 « signify » — agent : blindfold#e12, scale#e13; theme : impartiality#e14 [portee=non_ancre]		
+validation	181	positif	38	événement reveal#v8 « reveals » — agent : blindfold#e16; theme : partiality#e17		
+validation	181	positif	39	événement distort#v9 « distorts » — agent : purse#e18; patient : balance#e19		
+validation	181	positif	40	événement express#v10 « expresses » — agent : back#e20; theme : contempt#e21		
+validation	181	positif	41	événement invert#v11 « inversions » (nom d'action inversion) — patient : allegory#e24 [portee=non_ancre]		
+validation	181	positif	42	événement criticize#v12 « criticism » (nom d'action criticism) [portee=non_ancre]		
+validation	181	positif	43	événement make#v13 « made » — agent : clarity#e27; theme : denunciation#e29 [portee=non_ancre]		
+validation	181	positif	44	événement denounce#v14 « denunciation » (nom d'action denunciation) [portee=non_ancre]		
+validation	181	positif	45	relation blindfold#e2 —of→ judge#e1		
+validation	181	positif	46	relation pan#e5 —of→ balance#e6		
+validation	181	positif	47	relation balance#e6 —of→ judge#e1		
+validation	181	positif	48	relation back#e7 —of→ judge#e1		
+validation	181	positif	49	relation iconography#e10 —of→ justice#e11 [portee=non_ancre]		
+validation	181	positif	50	relation blindfold#e12 —of→ justice#e11 [portee=non_ancre]		
+validation	181	positif	51	relation scale#e13 —of→ justice#e11 [portee=non_ancre]		
+validation	181	positif	52	relation contempt#e21 —for→ weak#e22		
+validation	181	positif	53	relation inversion#e23 —of→ allegory#e24 [portee=non_ancre]		
+validation	181	positif	54	relation vehicle#e25 —of→ criticism#e26 [portee=non_ancre]		
+validation	181	positif	55	relation clarity#e27 —of→ language#e28 [portee=non_ancre]		
+validation	181	positif	56	relation denunciation#e29 —to→ public#e30 [portee=non_ancre]		
+validation	181	positif	57	coréférence blindfold#e2 = blindfold#e16		
+validation	181	positif	58	coréférence purse#e4 = purse#e18		
+validation	181	positif	59	coréférence balance#e6 = balance#e19		
+validation	181	positif	60	coréférence back#e7 = back#e20		
+validation	181	positif	61	coréférence inversion#e23 = vehicle#e25		
+validation	181	positif	manque	(ce qui manque au graphe)		
+validation	151	variante_roles_inverses	1	entité foreground#e1 « the foreground » [portee=oeuvre]		
+validation	151	variante_roles_inverses	2	entité magician#e2 « Pharaoh's magician »		
+validation	151	variante_roles_inverses	3	entité pharaoh#e3 « Pharaoh » ; noms : Pharaoh		
+validation	151	variante_roles_inverses	4	entité staff#e4 « his staff »		
+validation	151	variante_roles_inverses	5	entité storm#e5 « the ice storm » ; propriétés : ice		
+validation	151	variante_roles_inverses	6	entité hebrew#e6 « the Hebrews »		
+validation	151	variante_roles_inverses	7	entité ball#e7 « The balls »		
+validation	151	variante_roles_inverses	8	entité ice#e8 « ice »		
+validation	151	variante_roles_inverses	9	entité lightning#e9 « the lightning »		
+validation	151	variante_roles_inverses	10	entité tent#e10 « their tents »		
+validation	151	variante_roles_inverses	11	entité flock#e11 « their flocks »		
+validation	151	variante_roles_inverses	12	entité magician#e12 « the magician » ; propriétés : triumphant		
+validation	151	variante_roles_inverses	13	entité direction#e13 « The usual direction » ; propriétés : usual, reversed		
+validation	151	variante_roles_inverses	14	entité calamity#e14 « the calamity »		
+validation	151	variante_roles_inverses	15	entité sky#e15 « The sky » ; propriétés : black		
+validation	151	variante_roles_inverses	16	entité cloud#e16 « cloud »		
+validation	151	variante_roles_inverses	17	entité light#e17 « the light »		
+validation	151	variante_roles_inverses	18	entité lightning#e18 « the lightning »		
+validation	151	variante_roles_inverses	19	entité figure#e19 « the fleeing figures »		
+validation	151	variante_roles_inverses	20	entité background#e20 « the background » [portee=oeuvre]		
+validation	151	variante_roles_inverses	21	entité building#e21 « the Egyptian buildings » ; propriétés : egyptian, untouched		
+validation	151	variante_roles_inverses	22	entité reversal#e22 « the reversal »		
+validation	151	variante_roles_inverses	23	entité fortune#e23 « fortune »		
+validation	151	variante_roles_inverses	24	entité storm#e24 « The storm »		
+validation	151	variante_roles_inverses	25	événement lift#v1 « lifts » — agent : magician#e2; theme : staff#e4; lieu : foreground#e1		
+validation	151	variante_roles_inverses	26	événement strike#v2 « strikes » — agent : storm#e5; patient : hebrew#e6		
+validation	151	variante_roles_inverses	27	événement fall#v3 « fall » — agent : ball#e7, lightning#e9; lieu : tent#e10, flock#e11		
+validation	151	variante_roles_inverses	28	événement stand#v4 « stands » — agent : magician#e12		
+validation	151	variante_roles_inverses	29	événement turn#v5 « turned » — patient : direction#e13		
+validation	151	variante_roles_inverses	30	événement spare#v6 « spared » — patient : hebrew#e6 [portee=source]		
+validation	151	variante_roles_inverses	31	événement pick out#v7 « picks out » — agent : light#e17; theme : figure#e19		
+validation	151	variante_roles_inverses	32	événement flee#v8 « fleeing » — agent : figure#e19		
+validation	151	variante_roles_inverses	33	événement emphasise#v10 « emphasising » — agent : building#e21; theme : reversal#e22		
+validation	151	variante_roles_inverses	34	événement reverse#v11 « reversal » (nom d'action reversal) — theme : fortune#e23		
+validation	151	variante_roles_inverses	35	relation magician#e2 —of→ pharaoh#e3		
+validation	151	variante_roles_inverses	36	relation staff#e4 —of→ magician#e2		
+validation	151	variante_roles_inverses	37	relation ball#e7 —of→ ice#e8		
+validation	151	variante_roles_inverses	38	relation tent#e10 —of→ hebrew#e6		
+validation	151	variante_roles_inverses	39	relation flock#e11 —of→ hebrew#e6		
+validation	151	variante_roles_inverses	40	relation direction#e13 —of→ calamity#e14		
+validation	151	variante_roles_inverses	41	relation direction#e13 —against→ hebrew#e6		
+validation	151	variante_roles_inverses	42	relation sky#e15 —with→ cloud#e16		
+validation	151	variante_roles_inverses	43	relation light#e17 —of→ lightning#e18		
+validation	151	variante_roles_inverses	44	relation building#e21 —in→ background#e20		
+validation	151	variante_roles_inverses	45	coréférence magician#e2 = magician#e12		
+validation	151	variante_roles_inverses	46	coréférence lightning#e9 = lightning#e18		
+validation	151	variante_roles_inverses	47	coréférence storm#e5 = storm#e24		
+validation	151	variante_roles_inverses	manque	(ce qui manque au graphe)		
+validation	161	variante_autre_relation	1	entité jeremiah#e1 « Jeremiah » ; noms : Jeremiah		
+validation	161	variante_autre_relation	2	entité people#e2 « the people »		
+validation	161	variante_autre_relation	3	entité judah#e3 « Judah » ; noms : Judah		
+validation	161	variante_autre_relation	4	entité rebuke#e4 « No rebuke » [polarite=neg]		
+validation	161	variante_autre_relation	5	entité mockery#e5 « no mockery » [polarite=neg]		
+validation	161	variante_autre_relation	6	entité relation#e6 « the relation »		
+validation	161	variante_autre_relation	7	entité prophet#e7 « prophet »		
+validation	161	variante_autre_relation	8	entité people#e8 « people »		
+validation	161	variante_autre_relation	9	entité grief#e9 « shared grief » ; propriétés : shared		
+validation	161	variante_autre_relation	10	entité figure#e10 « The figures »		
+validation	161	variante_autre_relation	11	entité head#e11 « heads » ; propriétés : bowed		
+validation	161	variante_autre_relation	12	entité face#e12 « faces » ; propriétés : covered		
+validation	161	variante_autre_relation	13	entité expression#e13 « a common expression » ; propriétés : common		
+validation	161	variante_autre_relation	14	entité sorrow#e14 « sorrow »		
+validation	161	variante_autre_relation	15	entité painter#e15 « The painter » [portee=histoire]		
+validation	161	variante_autre_relation	16	entité opposition#e16 « the usual opposition » ; propriétés : usual		
+validation	161	variante_autre_relation	17	entité prophet#e17 « the prophet »		
+validation	161	variante_autre_relation	18	entité audience#e18 « his audience »		
+validation	161	variante_autre_relation	19	entité scene#e19 « a scene »		
+validation	161	variante_autre_relation	20	entité mourning#e20 « collective mourning » ; propriétés : collective		
+validation	161	variante_autre_relation	21	entité approach#e21 « Such an approach » [portee=non_ancre]		
+validation	161	variante_autre_relation	22	entité compassion#e22 « compassion » [portee=non_ancre]		
+validation	161	variante_autre_relation	23	entité denunciation#e23 « denunciation » [portee=non_ancre]		
+validation	161	variante_autre_relation	24	entité composition#e24 « the composition » ; propriétés : compact, subdued [portee=oeuvre]		
+validation	161	variante_autre_relation	25	entité form#e25 « visual form » ; propriétés : visual		
+validation	161	variante_autre_relation	26	entité community#e26 « a community »		
+validation	161	variante_autre_relation	27	entité lamentation#e27 « lamentation »		
+validation	161	variante_autre_relation	28	événement weep#v1 « weeps » — agent : jeremiah#e1, people#e2		
+validation	161	variante_autre_relation	29	événement rebuke#v2 « rebuke » (nom d'action rebuke) [polarite=neg]		
+validation	161	variante_autre_relation	30	événement mock#v3 « mockery » (nom d'action mockery) [polarite=neg]		
+validation	161	variante_autre_relation	31	événement grieve#v4 « grief » (nom d'action grief) — agent : prophet#e7, people#e8		
+validation	161	variante_autre_relation	32	événement gather#v5 « gathered » — theme : figure#e10		
+validation	161	variante_autre_relation	33	événement express#v6 « expression » (nom d'action expression) — agent : figure#e10; theme : sorrow#e14		
+validation	161	variante_autre_relation	34	événement dissolve#v7 « dissolves » — agent : painter#e15; patient : opposition#e16 [portee=oeuvre]		
+validation	161	variante_autre_relation	35	événement mourn#v8 « mourning » (nom d'action mourning)		
+validation	161	variante_autre_relation	36	événement emphasise#v9 « emphasises » — agent : approach#e21; theme : compassion#e22 [portee=non_ancre]		
+validation	161	variante_autre_relation	37	événement denounce#v10 « denunciation » (nom d'action denunciation) [portee=non_ancre]		
+validation	161	variante_autre_relation	38	événement give#v11 « gives » — agent : composition#e24; theme : form#e25; destinataire : community#e26 [portee=oeuvre]		
+validation	161	variante_autre_relation	39	événement unite#v12 « united » — patient : community#e26; instrument : lamentation#e27		
+validation	161	variante_autre_relation	40	événement lament#v13 « lamentation » (nom d'action lamentation)		
+validation	161	variante_autre_relation	41	relation people#e2 —of→ judah#e3		
+validation	161	variante_autre_relation	42	relation relation#e6 —between→ prophet#e7		
+validation	161	variante_autre_relation	43	relation relation#e6 —between→ people#e8		
+validation	161	variante_autre_relation	44	relation relation#e6 —of→ grief#e9		
+validation	161	variante_autre_relation	45	relation head#e11 —of→ figure#e10		
+validation	161	variante_autre_relation	46	relation face#e12 —of→ figure#e10		
+validation	161	variante_autre_relation	47	relation figure#e10 —in→ expression#e13		
+validation	161	variante_autre_relation	48	relation expression#e13 —of→ sorrow#e14		
+validation	161	variante_autre_relation	49	relation opposition#e16 —between→ prophet#e17		
+validation	161	variante_autre_relation	50	relation opposition#e16 —between→ audience#e18		
+validation	161	variante_autre_relation	51	relation audience#e18 —of→ prophet#e17		
+validation	161	variante_autre_relation	52	relation opposition#e16 —into→ scene#e19		
+validation	161	variante_autre_relation	53	relation scene#e19 —of→ mourning#e20		
+validation	161	variante_autre_relation	54	relation compassion#e22 —over→ denunciation#e23 [portee=non_ancre]		
+validation	161	variante_autre_relation	55	coréférence jeremiah#e1 = prophet#e7		
+validation	161	variante_autre_relation	56	coréférence people#e2 = people#e8		
+validation	161	variante_autre_relation	57	coréférence jeremiah#e1 = prophet#e17		
+validation	161	variante_autre_relation	58	coréférence people#e2 = audience#e18		
+validation	161	variante_autre_relation	manque	(ce qui manque au graphe)		
+validation	16	indetermine	1	entité mur#e1 « mur »		
+validation	16	indetermine	2	entité objet#e2 « objet »		
+validation	16	indetermine	3	entité manche#e3 « long manche » ; propriétés : long		
+validation	16	indetermine	4	entité caisse#e4 « caisse »		
+validation	16	indetermine	5	entité bois#e5 « bois »		
+validation	16	indetermine	6	entité centre#e6 « le centre »		
+validation	16	indetermine	7	entité composition#e7 « la composition » [portee=oeuvre]		
+validation	16	indetermine	8	entité nature#e8 « Sa nature exacte » ; propriétés : exact		
+validation	16	indetermine	9	entité fil#e9 « fils » [modalite=non_affirme]		
+validation	16	indetermine	10	entité figure#e10 « aucune figure » [polarite=neg]		
+validation	16	indetermine	11	entité œuvre#e11 « L'œuvre » [portee=oeuvre]		
+validation	16	indetermine	12	entité étude#e12 « une étude » [portee=oeuvre]		
+validation	16	indetermine	13	entité objet#e13 « objet »		
+validation	16	indetermine	14	entité identification#e14 « l'identification » ; propriétés : incertain		
+validation	16	indetermine	15	entité traitement#e15 « Le traitement » [portee=oeuvre]		
+validation	16	indetermine	16	entité bois#e16 « bois »		
+validation	16	indetermine	17	entité ombre portée#e17 « l'ombre portée »		
+validation	16	indetermine	18	entité paroi#e18 « la paroi »		
+validation	16	indetermine	19	entité observation#e19 « une observation attentive » ; propriétés : attentif [portee=oeuvre]		
+validation	16	indetermine	20	entité ambiguïté#e20 « l'ambiguïté »		
+validation	16	indetermine	21	événement accrocher#v1 « Accroché » — theme : objet#e2; lieu : mur#e1		
+validation	16	indetermine	22	événement occuper#v2 « occupe » — agent : objet#e2; lieu : centre#e6		
+validation	16	indetermine	23	événement préciser#v3 « préciser » — theme : nature#e8 [modalite=non_affirme]		
+validation	16	indetermine	24	événement porter#v5 « porte » — agent : objet#e2; theme : fil#e9 [modalite=non_affirme]		
+validation	16	indetermine	25	événement jouer#v6 « joue » — theme : objet#e2 [modalite=non_affirme]		
+validation	16	indetermine	26	événement manipuler#v7 « manipuler » — agent : figure#e10; theme : objet#e2 [modalite=non_affirme]		
+validation	16	indetermine	27	événement identifier#v8 « identification » (nom d'action identification) — theme : objet#e13		
+validation	16	indetermine	28	événement traiter#v9 « traitement » (nom d'action traitement) — theme : bois#e16, ombre portée#e17 [portee=oeuvre]		
+validation	16	indetermine	29	événement témoigner#v10 « témoigne » — agent : traitement#e15; theme : observation#e19 [portee=oeuvre]		
+validation	16	indetermine	30	événement observer#v11 « observation » (nom d'action observation) [portee=oeuvre]		
+validation	16	indetermine	31	événement lever#v12 « lever » — agent : traitement#e15; theme : ambiguïté#e20 [polarite=neg]		
+validation	16	indetermine	32	relation manche#e3 —de→ objet#e2		
+validation	16	indetermine	33	relation caisse#e4 —de→ objet#e2		
+validation	16	indetermine	34	relation caisse#e4 —de→ bois#e5		
+validation	16	indetermine	35	relation centre#e6 —de→ composition#e7		
+validation	16	indetermine	36	relation nature#e8 —de→ objet#e2		
+validation	16	indetermine	37	relation étude#e12 —de→ objet#e13		
+validation	16	indetermine	38	relation ombre portée#e17 —sur→ paroi#e18		
+validation	16	indetermine	39	coréférence mur#e1 = paroi#e18		
+validation	16	indetermine	40	coréférence objet#e2 = objet#e13		
+validation	16	indetermine	41	coréférence bois#e5 = bois#e16		
+validation	16	indetermine	42	coréférence œuvre#e11 = étude#e12		
+validation	16	indetermine	manque	(ce qui manque au graphe)		
+validation	66	indetermine	1	entité tableau#e1 « Le tableau » [portee=oeuvre]		
+validation	66	indetermine	2	entité religieuse#e2 « une religieuse »		
+validation	66	indetermine	3	entité tête#e3 « la tête »		
+validation	66	indetermine	4	entité voile#e4 « un voile »		
+validation	66	indetermine	5	entité coupe#e5 « la coupe » [modalite=non_affirme]		
+validation	66	indetermine	6	entité cheveu#e6 « ses cheveux »		
+validation	66	indetermine	7	entité étoffe#e7 « l'étoffe »		
+validation	66	indetermine	8	entité peintre#e8 « Le peintre » [portee=histoire]		
+validation	66	indetermine	9	entité ovale#e9 « l'ovale »		
+validation	66	indetermine	10	entité visage#e10 « du visage »		
+validation	66	indetermine	11	entité pli#e11 « les plis »		
+validation	66	indetermine	12	entité voile#e12 « du voile »		
+validation	66	indetermine	13	entité expression#e13 « l'expression calme » ; propriétés : calme		
+validation	66	indetermine	14	entité modèle#e14 « du modèle »		
+validation	66	indetermine	15	entité notice#e15 « La notice » [portee=non_ancre]		
+validation	66	indetermine	16	entité crâne#e16 « un éventuel crâne » ; propriétés : éventuel [modalite=non_affirme]		
+validation	66	indetermine	17	entité couronne#e17 « couronne » [modalite=non_affirme]		
+validation	66	indetermine	18	entité image#e18 « l'image » [portee=oeuvre]		
+validation	66	indetermine	19	événement couvrir#v1 « couverte » — theme : tête#e3; instrument : voile#e4		
+validation	66	indetermine	20	événement ignorer#v2 « ignore » — theme : coupe#e5 [portee=non_ancre]		
+validation	66	indetermine	21	événement couper#v3 « la coupe » (nom d'action coupe) — theme : cheveu#e6 [modalite=non_affirme]		
+validation	66	indetermine	22	événement dissimuler#v4 « dissimulés » — agent : étoffe#e7; theme : cheveu#e6		
+validation	66	indetermine	23	événement s'attacher#v5 « s'attache » — agent : peintre#e8; theme : ovale#e9, expression#e13 [portee=oeuvre]		
+validation	66	indetermine	24	événement encadrer#v6 « encadré » — agent : pli#e11; theme : ovale#e9		
+validation	66	indetermine	25	événement affirmer#v7 « affirmer » — agent : notice#e15; theme : crâne#e16 [polarite=neg, portee=non_ancre]		
+validation	66	indetermine	26	événement raser#v8 « rasé » — patient : crâne#e16 [modalite=non_affirme]		
+validation	66	indetermine	27	relation tête#e3 —de→ religieuse#e2		
+validation	66	indetermine	28	relation cheveu#e6 —de→ religieuse#e2		
+validation	66	indetermine	29	relation coupe#e5 —de→ cheveu#e6		
+validation	66	indetermine	30	relation ovale#e9 —de→ visage#e10		
+validation	66	indetermine	31	relation visage#e10 —de→ religieuse#e2		
+validation	66	indetermine	32	relation pli#e11 —de→ voile#e12		
+validation	66	indetermine	33	relation expression#e13 —de→ modèle#e14		
+validation	66	indetermine	34	relation crâne#e16 —en→ couronne#e17 [modalite=non_affirme]		
+validation	66	indetermine	35	coréférence voile#e4 = étoffe#e7 = voile#e12		
+validation	66	indetermine	36	coréférence religieuse#e2 = modèle#e14		
+validation	66	indetermine	manque	(ce qui manque au graphe)		
+validation	66	negatif	1	entité œuvre#e1 « L'œuvre » [portee=oeuvre]		
+validation	66	negatif	2	entité moine#e2 « un moine »		
+validation	66	negatif	3	entité crâne#e3 « le crâne »		
+validation	66	negatif	4	entité couronne#e4 « couronne »		
+validation	66	negatif	5	entité cercle#e5 « Le cercle »		
+validation	66	negatif	6	entité cheveu#e6 « cheveux »		
+validation	66	negatif	7	entité tête#e7 « la tête »		
+validation	66	negatif	8	entité sommet#e8 « un sommet dégagé » ; propriétés : dégagé		
+validation	66	negatif	9	entité usage#e9 « l'usage monastique » ; propriétés : monastique [portee=non_ancre]		
+validation	66	negatif	10	entité peintre#e10 « Le peintre » [portee=histoire]		
+validation	66	negatif	11	entité visage#e11 « visage »		
+validation	66	negatif	12	entité religieux#e12 « du religieux »		
+validation	66	negatif	13	entité simplicité#e13 « la simplicité »		
+validation	66	negatif	14	entité habit#e14 « son habit »		
+validation	66	negatif	15	entité composition#e15 « une composition dépouillée » ; propriétés : dépouillé [portee=oeuvre]		
+validation	66	negatif	16	entité figure#e16 « la figure »		
+validation	66	negatif	17	entité personnage#e17 « Aucun autre personnage » ; propriétés : autre [polarite=neg]		
+validation	66	negatif	18	entité image#e18 « cette image » [portee=oeuvre]		
+validation	66	negatif	19	entité recueillement#e19 « recueillement monastique » ; propriétés : monastique		
+validation	66	negatif	20	événement raser#v1 « est rasé » — patient : crâne#e3		
+validation	66	negatif	21	événement encadrer#v3 « encadre » — agent : cercle#e5; theme : sommet#e8		
+validation	66	negatif	22	événement s'attacher#v4 « s'attache » — agent : peintre#e10; theme : visage#e11, simplicité#e13; lieu : composition#e15 [portee=oeuvre]		
+validation	66	negatif	23	événement convenir#v5 « convient » — agent : composition#e15; destinataire : figure#e16 [portee=non_ancre]		
+validation	66	negatif	24	événement perturber#v6 « perturber » — agent : personnage#e17; theme : image#e18 [modalite=non_affirme]		
+validation	66	negatif	25	événement se recueillir#v7 « recueillement » (nom d'action recueillement)		
+validation	66	negatif	26	relation crâne#e3 —de→ moine#e2		
+validation	66	negatif	27	relation crâne#e3 —en→ couronne#e4		
+validation	66	negatif	28	relation cercle#e5 —de→ cheveu#e6		
+validation	66	negatif	29	relation tête#e7 —de→ moine#e2		
+validation	66	negatif	30	relation cercle#e5 —selon→ usage#e9		
+validation	66	negatif	31	relation visage#e11 —de→ religieux#e12		
+validation	66	negatif	32	relation habit#e14 —de→ religieux#e12		
+validation	66	negatif	33	relation simplicité#e13 —de→ habit#e14		
+validation	66	negatif	34	relation image#e18 —de→ recueillement#e19		
+validation	66	negatif	35	relation cercle#e5 —autour de→ tête#e7		
+validation	66	negatif	36	coréférence moine#e2 = religieux#e12 = figure#e16		
+validation	66	negatif	37	coréférence œuvre#e1 = image#e18		
+validation	66	negatif	38	distincts moine#e2 ≠ personnage#e17		
+validation	66	negatif	manque	(ce qui manque au graphe)		
+validation	196	negatif	1	entité cathédrale#e1 « Une grande cathédrale » ; propriétés : grand		
+validation	196	negatif	2	entité image#e2 « l'image » [portee=oeuvre]		
+validation	196	negatif	3	entité bras#e4 « Son bras transversal » ; propriétés : transversal		
+validation	196	negatif	4	entité type#e5 « même type » ; propriétés : même		
+validation	196	negatif	5	entité nef#e6 « la nef »		
+validation	196	negatif	6	entité échelle#e7 « une tout autre échelle » ; propriétés : autre		
+validation	196	negatif	7	entité mur#e8 « les murs »		
+validation	196	negatif	8	entité fenêtre#e9 « vastes fenêtres » ; propriétés : vaste		
+validation	196	negatif	9	entité volume#e10 « le volume »		
+validation	196	negatif	10	entité masse#e11 « la masse »		
+validation	196	negatif	11	entité édifice#e12 « l'édifice »		
+validation	196	negatif	12	entité premier plan#e13 « premier plan »		
+validation	196	negatif	13	entité pavement#e14 « le pavement »		
+validation	196	negatif	14	entité place#e15 « une place »		
+validation	196	negatif	15	entité portail#e16 « portails »		
+validation	196	negatif	16	entité fond#e17 « fond »		
+validation	196	negatif	17	entité tour#e18 « les tours »		
+validation	196	negatif	18	entité toiture#e19 « les toitures »		
+validation	196	negatif	19	entité ciel#e20 « le ciel »		
+validation	196	negatif	20	entité artiste#e21 « L'artiste » [portee=histoire]		
+validation	196	negatif	21	entité monumentalité#e22 « la monumentalité »		
+validation	196	negatif	22	entité construction#e23 « la construction »		
+validation	196	negatif	23	entité dimension#e24 « les dimensions »		
+validation	196	negatif	24	entité passant#e25 « les passants »		
+validation	196	negatif	25	événement occuper#v1 « occupe » — agent : cathédrale#e1; lieu : image#e2		
+validation	196	negatif	26	événement dépasser#v3 « dépasse » — agent : bras#e4		
+validation	196	negatif	27	événement percer#v5 « percés » — patient : mur#e8; instrument : fenêtre#e9		
+validation	196	negatif	28	événement se perdre#v6 « se perd » — agent : volume#e10; lieu : masse#e11		
+validation	196	negatif	29	événement insister#v9 « insiste » — agent : artiste#e21; theme : monumentalité#e22 [portee=oeuvre]		
+validation	196	negatif	30	événement écraser#v10 « écrasent » — agent : dimension#e24; theme : passant#e25		
+validation	196	negatif	31	relation bras#e4 —de→ cathédrale#e1		
+validation	196	negatif	32	relation bras#e4 —de→ type#e5		
+validation	196	negatif	33	relation bras#e4 —à→ échelle#e7		
+validation	196	negatif	34	relation masse#e11 —de→ édifice#e12		
+validation	196	negatif	35	relation pavement#e14 —de→ place#e15		
+validation	196	negatif	36	relation monumentalité#e22 —de→ construction#e23		
+validation	196	negatif	37	relation dimension#e24 —de→ construction#e23		
+validation	196	negatif	38	relation bras#e4 —de→ nef#e6		
+validation	196	negatif	39	relation pavement#e14 —à→ premier plan#e13		
+validation	196	negatif	40	relation pavement#e14 —jusqu'à→ portail#e16		
+validation	196	negatif	41	relation tour#e18 —sur→ ciel#e20		
+validation	196	negatif	42	relation toiture#e19 —sur→ ciel#e20		
+validation	196	negatif	43	relation tour#e18 —à→ fond#e17		
+validation	196	negatif	44	relation toiture#e19 —à→ fond#e17		
+validation	196	negatif	45	coréférence cathédrale#e1 = édifice#e12		
+validation	196	negatif	46	coréférence cathédrale#e1 = construction#e23		
+validation	196	negatif	manque	(ce qui manque au graphe)		
+validation	26	positif	1	entité planche#e1 « La planche » [portee=oeuvre]		
+validation	26	positif	2	entité bestiaire#e2 « un bestiaire » [portee=oeuvre]		
+validation	26	positif	3	entité créature#e3 « une créature imaginaire » ; propriétés : imaginaire		
+validation	26	positif	4	entité vague#e4 « vagues »		
+validation	26	positif	5	entité corps#e5 « corps »		
+validation	26	positif	6	entité écaille#e6 « écailles »		
+validation	26	positif	7	entité nageoire#e7 « nageoires »		
+validation	26	positif	8	entité queue#e8 « une queue fourchue » ; propriétés : fourchu		
+validation	26	positif	9	entité tête#e9 « une tête »		
+validation	26	positif	10	entité lion#e10 « lion »		
+validation	26	positif	11	entité assemblage#e11 « Cet assemblage hybride » ; propriétés : hybride		
+validation	26	positif	12	entité logique#e12 « la logique » [portee=non_ancre]		
+validation	26	positif	13	entité bestiaire#e13 « bestiaires » [portee=non_ancre]		
+validation	26	positif	14	entité être#e14 « des êtres fabuleux » ; propriétés : fabuleux [portee=non_ancre]		
+validation	26	positif	15	entité partie#e15 « des parties » [portee=non_ancre]		
+validation	26	positif	16	entité animal#e16 « des animaux connus » ; propriétés : connu [portee=non_ancre]		
+validation	26	positif	17	entité enlumineur#e17 « L'enlumineur » [portee=histoire]		
+validation	26	positif	18	entité contraste#e18 « le contraste » [portee=oeuvre]		
+validation	26	positif	19	entité crinière#e19 « la crinière »		
+validation	26	positif	20	entité fauve#e20 « fauve »		
+validation	26	positif	21	entité souplesse#e21 « la souplesse aquatique » ; propriétés : aquatique		
+validation	26	positif	22	entité corps#e22 « corps »		
+validation	26	positif	23	entité mouvement#e23 « le mouvement »		
+validation	26	positif	24	entité bête#e24 « la bête »		
+validation	26	positif	25	entité eau#e25 « l'eau »		
+validation	26	positif	26	entité vivacité#e26 « une vivacité remarquable » ; propriétés : remarquable		
+validation	26	positif	27	entité image#e27 « l'image » [portee=oeuvre]		
+validation	26	positif	28	entité mer#e28 « La mer »		
+validation	26	positif	29	entité ondulation#e29 « des ondulations stylisées » ; propriétés : stylisé		
+validation	26	positif	30	entité cadre#e30 « simple cadre » ; propriétés : simple		
+validation	26	positif	31	entité apparition#e31 « l'apparition »		
+validation	26	positif	32	événement extraire#v1 « extraite » — theme : planche#e1 [portee=histoire]		
+validation	26	positif	33	événement surgir#v2 « surgit » — agent : créature#e3		
+validation	26	positif	34	événement couvrir#v3 « couvert » — patient : corps#e5; instrument : écaille#e6		
+validation	26	positif	35	événement pourvoir#v4 « pourvu » — patient : corps#e5; instrument : nageoire#e7		
+validation	26	positif	36	événement terminer#v5 « terminé » — patient : corps#e5; agent : queue#e8		
+validation	26	positif	37	événement porter#v6 « porte » — agent : corps#e5; theme : tête#e9		
+validation	26	positif	38	événement illustrer#v7 « illustre » — agent : assemblage#e11; theme : logique#e12		
+validation	26	positif	39	événement composer#v8 « composait » — theme : être#e14; lieu : bestiaire#e13 [portee=non_ancre]		
+validation	26	positif	40	événement associer#v9 « associant » — theme : partie#e15 [portee=non_ancre]		
+validation	26	positif	41	événement emprunter#v10 « empruntées » — theme : partie#e15 [portee=non_ancre]		
+validation	26	positif	42	événement exploiter#v11 « exploite » — agent : enlumineur#e17; theme : contraste#e18 [portee=oeuvre]		
+validation	26	positif	43	événement mouvoir#v12 « mouvement » (nom d'action mouvement) — agent : bête#e24		
+validation	26	positif	44	événement jaillir#v13 « jaillissant » — agent : bête#e24; lieu : eau#e25		
+validation	26	positif	45	événement conférer#v14 « confère » — agent : mouvement#e23; theme : vivacité#e26; destinataire : image#e27		
+validation	26	positif	46	événement réduire#v15 « réduite » — patient : mer#e28		
+validation	26	positif	47	événement servir#v16 « sert » — agent : mer#e28; destinataire : apparition#e31		
+validation	26	positif	48	événement apparaître#v17 « apparition » (nom d'action apparition)		
+validation	26	positif	49	relation planche#e1 —de→ bestiaire#e2 [portee=histoire]		
+validation	26	positif	50	relation créature#e3 —de→ vague#e4		
+validation	26	positif	51	relation corps#e5 —de→ créature#e3		
+validation	26	positif	52	relation tête#e9 —de→ lion#e10		
+validation	26	positif	53	relation logique#e12 —de→ bestiaire#e13		
+validation	26	positif	54	relation partie#e15 —à→ animal#e16		
+validation	26	positif	55	relation contraste#e18 —entre→ crinière#e19		
+validation	26	positif	56	relation contraste#e18 —entre→ souplesse#e21		
+validation	26	positif	57	relation crinière#e19 —de→ fauve#e20		
+validation	26	positif	58	relation souplesse#e21 —de→ corps#e22		
+validation	26	positif	59	relation mer#e28 —à→ ondulation#e29		
+validation	26	positif	60	coréférence créature#e3 = assemblage#e11 = fauve#e20 = bête#e24		
+validation	26	positif	61	coréférence corps#e5 = corps#e22		
+validation	26	positif	62	coréférence eau#e25 = mer#e28 = cadre#e30		
+validation	26	positif	manque	(ce qui manque au graphe)		
+validation	166	positif	1	entité penuel#e1 « Penuel » ; noms : Penuel [modalite=titre]		
+validation	166	positif	2	entité huile#e2 « Huile » [portee=oeuvre]		
+validation	166	positif	3	entité toile#e3 « toile » [portee=oeuvre]		
+validation	166	positif	4	entité aube#e4 « l'aube »		
+validation	166	positif	5	entité jacob#e6 « Jacob » ; noms : Jacob		
+validation	166	positif	6	entité lieu#e7 « ce lieu » ; noms : Penuel		
+validation	166	positif	7	entité dieu#e8 « Dieu » ; noms : Dieu [portee=source, enonciateur=cité : Jacob]		
+validation	166	positif	8	entité pierre#e9 « une pierre »		
+validation	166	positif	9	événement lutter#v1 « lutte » (nom d'action lutte)		
+validation	166	positif	10	événement boiter#v2 « boitant » — agent : jacob#e6		
+validation	166	positif	11	événement se retourner#v3 « se retourne » — agent : jacob#e6		
+validation	166	positif	12	événement proclamer#v4 « proclame » — agent : jacob#e6		
+validation	166	positif	13	événement s'appeler#v5 « s'appellera » — theme : lieu#e7		
+validation	166	positif	14	événement voir#v6 « vu » — agent : jacob#e6; theme : dieu#e8 [portee=source, enonciateur=cité : Jacob]		
+validation	166	positif	15	événement graver#v7 « grave » — agent : jacob#e6; patient : pierre#e9		
+validation	166	positif	16	relation huile#e2 —sur→ toile#e3 [portee=oeuvre]		
+validation	166	positif	17	coréférence penuel#e1 = lieu#e7		
+validation	166	positif	manque	(ce qui manque au graphe)		
+validation	76	variante_roles_inverses	1	entité composition#e1 « cette composition » [portee=oeuvre]		
+validation	76	variante_roles_inverses	2	entité hiérarchie#e2 « la hiérarchie habituelle » ; propriétés : habituel, renversé		
+validation	76	variante_roles_inverses	3	entité ignatius#e3 « Ignatius » ; noms : Ignatius		
+validation	76	variante_roles_inverses	4	entité parchemin#e4 « le parchemin scellé » ; propriétés : scellé		
+validation	76	variante_roles_inverses	5	entité fondateur#e5 « un fondateur »		
+validation	76	variante_roles_inverses	6	entité prélat#e6 « Le prélat »		
+validation	76	variante_roles_inverses	7	entité antioche#e7 « Antioche » ; noms : Antioche		
+validation	76	variante_roles_inverses	8	entité place#e8 « la place »		
+validation	76	variante_roles_inverses	9	entité autorité#e9 « l'autorité »		
+validation	76	variante_roles_inverses	10	entité figure#e10 « l'autre figure » ; propriétés : autre		
+validation	76	variante_roles_inverses	11	entité document#e11 « le document »		
+validation	76	variante_roles_inverses	12	entité peintre#e12 « Le peintre » [portee=histoire]		
+validation	76	variante_roles_inverses	13	entité scène#e13 « la scène »		
+validation	76	variante_roles_inverses	14	entité geste#e14 « ce geste » ; propriétés : souverain		
+validation	76	variante_roles_inverses	15	entité transmission#e15 « transmission »		
+validation	76	variante_roles_inverses	16	entité position#e16 « la position assise » ; propriétés : assis		
+validation	76	variante_roles_inverses	17	entité ignatius#e17 « Ignatius » ; noms : Ignatius		
+validation	76	variante_roles_inverses	18	entité mise en scène#e18 « Une telle mise en scène » ; propriétés : tel [portee=oeuvre]		
+validation	76	variante_roles_inverses	19	entité imagerie#e19 « l'imagerie » [portee=non_ancre]		
+validation	76	variante_roles_inverses	20	entité légitimation#e20 « légitimation » [portee=non_ancre]		
+validation	76	variante_roles_inverses	21	entité figure#e21 « une figure vénérée » ; propriétés : vénéré [portee=non_ancre]		
+validation	76	variante_roles_inverses	22	entité origine#e22 « l'origine » [portee=non_ancre]		
+validation	76	variante_roles_inverses	23	entité institution#e23 « une institution » [portee=non_ancre]		
+validation	76	variante_roles_inverses	24	entité sobriété#e24 « La sobriété » [portee=oeuvre]		
+validation	76	variante_roles_inverses	25	entité composition#e25 « la composition » [portee=oeuvre]		
+validation	76	variante_roles_inverses	26	entité intérêt#e26 « l'intérêt » [portee=non_ancre]		
+validation	76	variante_roles_inverses	27	entité échange#e27 « le seul échange » ; propriétés : seul		
+validation	76	variante_roles_inverses	28	entité parchemin#e28 « parchemin »		
+validation	76	variante_roles_inverses	29	événement s'asseoir#v1 « assis » — agent : ignatius#e3		
+validation	76	variante_roles_inverses	30	événement remettre#v2 « remet » — agent : ignatius#e3; theme : parchemin#e4; destinataire : fondateur#e5		
+validation	76	variante_roles_inverses	31	événement s'agenouiller#v3 « agenouillé » — agent : fondateur#e5; lieu : ignatius#e3		
+validation	76	variante_roles_inverses	32	événement occuper#v4 « occupe » — agent : prélat#e6; theme : place#e8		
+validation	76	variante_roles_inverses	33	événement confirmer#v5 « confirme » — agent : autorité#e9		
+validation	76	variante_roles_inverses	34	événement recevoir#v6 « reçoit » — agent : figure#e10; theme : document#e11		
+validation	76	variante_roles_inverses	35	événement organiser#v7 « organise » — agent : peintre#e12; theme : scène#e13; lieu : geste#e14 [portee=oeuvre]		
+validation	76	variante_roles_inverses	36	événement transmettre#v8 « transmission » (nom d'action transmission)		
+validation	76	variante_roles_inverses	37	événement rendre#v9 « rend » — agent : position#e16; theme : geste#e14 [portee=non_ancre]		
+validation	76	variante_roles_inverses	38	événement relever#v10 « relève » — agent : mise en scène#e18; theme : imagerie#e19 [portee=non_ancre]		
+validation	76	variante_roles_inverses	39	événement légitimer#v11 « légitimation » (nom d'action légitimation) [portee=non_ancre]		
+validation	76	variante_roles_inverses	40	événement charger#v12 « est chargée » — theme : figure#e21 [portee=non_ancre]		
+validation	76	variante_roles_inverses	41	événement garantir#v13 « garantir » — agent : figure#e21; theme : origine#e22 [portee=non_ancre]		
+validation	76	variante_roles_inverses	42	événement concentrer#v14 « concentre » — agent : sobriété#e24; theme : intérêt#e26; lieu : échange#e27 [portee=non_ancre]		
+validation	76	variante_roles_inverses	43	événement échanger#v15 « échange » (nom d'action échange) — theme : parchemin#e28		
+validation	76	variante_roles_inverses	44	relation hiérarchie#e2 —dans→ composition#e1		
+validation	76	variante_roles_inverses	45	relation prélat#e6 —de→ antioche#e7		
+validation	76	variante_roles_inverses	46	relation place#e8 —de→ autorité#e9		
+validation	76	variante_roles_inverses	47	relation geste#e14 —de→ transmission#e15		
+validation	76	variante_roles_inverses	48	relation position#e16 —de→ ignatius#e17		
+validation	76	variante_roles_inverses	49	relation imagerie#e19 —de→ légitimation#e20		
+validation	76	variante_roles_inverses	50	relation origine#e22 —de→ institution#e23		
+validation	76	variante_roles_inverses	51	relation sobriété#e24 —de→ composition#e25		
+validation	76	variante_roles_inverses	52	relation échange#e27 —de→ parchemin#e28		
+validation	76	variante_roles_inverses	53	coréférence ignatius#e3 = prélat#e6 = ignatius#e17		
+validation	76	variante_roles_inverses	54	coréférence fondateur#e5 = figure#e10		
+validation	76	variante_roles_inverses	55	coréférence parchemin#e4 = document#e11 = parchemin#e28		
+validation	76	variante_roles_inverses	56	coréférence composition#e1 = composition#e25		
+validation	76	variante_roles_inverses	57	distincts prélat#e6 ≠ figure#e10		
+validation	76	variante_roles_inverses	manque	(ce qui manque au graphe)		
+validation	156	variante_roles_inverses	1	entité scène#e1 « La scène »		
+validation	156	variante_roles_inverses	2	entité rôle#e2 « les rôles attendus » ; propriétés : attendu		
+validation	156	variante_roles_inverses	3	entité reptile#e3 « le reptile »		
+validation	156	variante_roles_inverses	4	entité pomme#e4 « la pomme »		
+validation	156	variante_roles_inverses	5	entité adam#e5 « Adam » ; noms : Adam		
+validation	156	variante_roles_inverses	6	entité ève#e6 « Ève » ; noms : Ève		
+validation	156	variante_roles_inverses	7	entité animal#e7 « L'animal »		
+validation	156	variante_roles_inverses	8	entité acteur#e8 « l'acteur »		
+validation	156	variante_roles_inverses	9	entité geste#e9 « geste »		
+validation	156	variante_roles_inverses	10	entité couple#e10 « le couple »		
+validation	156	variante_roles_inverses	11	entité spectateur#e11 « le spectateur »		
+validation	156	variante_roles_inverses	12	entité artiste#e12 « L'artiste » [portee=histoire]		
+validation	156	variante_roles_inverses	13	entité créature#e13 « la créature »		
+validation	156	variante_roles_inverses	14	entité centre#e14 « centre »		
+validation	156	variante_roles_inverses	15	entité arbre#e15 « l'arbre »		
+validation	156	variante_roles_inverses	16	entité figure#e16 « les deux figures humaines » ; propriétés : humain, immobile ; nombre 2		
+validation	156	variante_roles_inverses	17	entité composition#e17 « La composition » ; propriétés : sobre, lisible [portee=oeuvre]		
+validation	156	variante_roles_inverses	18	entité lumière#e18 « la lumière égale » ; propriétés : égal		
+validation	156	variante_roles_inverses	19	entité détail#e19 « aucun détail particulier » ; propriétés : particulier [polarite=neg]		
+validation	156	variante_roles_inverses	20	événement inverser#v1 « inverse » — agent : scène#e1; theme : rôle#e2		
+validation	156	variante_roles_inverses	21	événement tenir#v2 « tient » — agent : reptile#e3; theme : pomme#e4		
+validation	156	variante_roles_inverses	22	événement croquer#v3 « croque » — agent : reptile#e3; patient : pomme#e4		
+validation	156	variante_roles_inverses	23	événement regarder#v4 « regardent » — agent : adam#e5, ève#e6; theme : reptile#e3		
+validation	156	variante_roles_inverses	24	événement placer#v5 « place » — agent : artiste#e12; theme : créature#e13; lieu : centre#e14 [portee=oeuvre]		
+validation	156	variante_roles_inverses	25	événement enrouler#v6 « enroulée » — theme : créature#e13; lieu : arbre#e15		
+validation	156	variante_roles_inverses	26	événement disposer#v7 « dispose » — agent : artiste#e12; theme : figure#e16 [portee=oeuvre]		
+validation	156	variante_roles_inverses	27	événement accentuer#v8 « accentue » — agent : lumière#e18; theme : détail#e19 [modalite=non_affirme]		
+validation	156	variante_roles_inverses	28	relation acteur#e8 —de→ geste#e9		
+validation	156	variante_roles_inverses	29	relation spectateur#e11 —de→ geste#e9		
+validation	156	variante_roles_inverses	30	coréférence reptile#e3 = animal#e7 = acteur#e8 = créature#e13		
+validation	156	variante_roles_inverses	31	coréférence couple#e10 = spectateur#e11 = figure#e16		
+validation	156	variante_roles_inverses	manque	(ce qui manque au graphe)		
+validation	121	indetermine	1	entité workman#e1 « A workman »		
+validation	121	indetermine	2	entité bench#e2 « a bench »		
+validation	121	indetermine	3	entité tool#e3 « a tool »		
+validation	121	indetermine	4	entité tool#e4 « the tool » [polarite=neg]		
+validation	121	indetermine	5	entité action#e5 « the action » [polarite=neg]		
+validation	121	indetermine	6	entité body#e6 « body »		
+validation	121	indetermine	7	entité man#e7 « the man »		
+validation	121	indetermine	8	entité angle#e8 « the angle »		
+validation	121	indetermine	9	entité view#e9 « view »		
+validation	121	indetermine	10	entité catalogue#e10 « The catalogue » [portee=non_ancre]		
+validation	121	indetermine	11	entité work#e11 « what work » [modalite=non_affirme]		
+validation	121	indetermine	12	entité painting#e12 « The painting » [portee=oeuvre]		
+validation	121	indetermine	13	entité posture#e13 « a posture »		
+validation	121	indetermine	14	entité concentration#e14 « concentration »		
+validation	121	indetermine	15	entité setting#e15 « the setting »		
+validation	121	indetermine	16	entité bench#e16 « the bench »		
+validation	121	indetermine	17	entité nature#e17 « the nature » ; propriétés : undetermined		
+validation	121	indetermine	18	entité task#e18 « the task »		
+validation	121	indetermine	19	entité light#e19 « The subdued light » ; propriétés : subdued		
+validation	121	indetermine	20	entité workshop#e20 « the workshop »		
+validation	121	indetermine	21	entité obscurity#e21 « the obscurity »		
+validation	121	indetermine	22	entité scene#e22 « the scene »		
+validation	121	indetermine	23	événement bend#v1 « bends » — agent : workman#e1; lieu : bench#e2		
+validation	121	indetermine	24	événement hold#v2 « holding » — agent : workman#e1; theme : tool#e3		
+validation	121	indetermine	25	événement perform#v3 « performs » — agent : tool#e4; theme : action#e5 [modalite=non_affirme]		
+validation	121	indetermine	26	événement conceal#v4 « conceal » — agent : body#e6, angle#e8; theme : tool#e4, action#e5		
+validation	121	indetermine	27	événement say#v5 « cannot say » — agent : catalogue#e10 [polarite=neg, portee=non_ancre]		
+validation	121	indetermine	28	événement carry out#v6 « is being carried out » — theme : work#e11 [modalite=non_affirme]		
+validation	121	indetermine	29	événement leave#v7 « leaves » — agent : painting#e12; theme : nature#e17 [portee=oeuvre]		
+validation	121	indetermine	30	événement add#v8 « adds » — agent : light#e19; patient : obscurity#e21		
+validation	121	indetermine	31	relation body#e6 —of→ man#e7		
+validation	121	indetermine	32	relation angle#e8 —of→ view#e9		
+validation	121	indetermine	33	relation posture#e13 —of→ concentration#e14		
+validation	121	indetermine	34	relation setting#e15 —of→ bench#e16		
+validation	121	indetermine	35	relation nature#e17 —of→ task#e18		
+validation	121	indetermine	36	relation light#e19 —of→ workshop#e20		
+validation	121	indetermine	37	relation obscurity#e21 —of→ scene#e22		
+validation	121	indetermine	38	coréférence workman#e1 = man#e7		
+validation	121	indetermine	39	coréférence tool#e3 = tool#e4		
+validation	121	indetermine	40	coréférence bench#e2 = bench#e16		
+validation	121	indetermine	41	coréférence work#e11 = task#e18		
+validation	121	indetermine	manque	(ce qui manque au graphe)		
+validation	41	indetermine	1	entité figure#e1 « A figure »		
+validation	41	indetermine	2	entité foliage#e2 « dense foliage » ; propriétés : dense		
+validation	41	indetermine	3	entité body#e3 « its lower body » ; propriétés : lower		
+validation	41	indetermine	4	entité part#e4 « the upper part » ; propriétés : upper		
+validation	41	indetermine	5	entité leaf#e5 « the leaves »		
+validation	41	indetermine	6	entité arm#e6 « one arm » ; nombre 1		
+validation	41	indetermine	7	entité scale#e7 « a few scales »		
+validation	41	indetermine	8	entité scale#e8 « These scales »		
+validation	41	indetermine	9	entité sign#e9 « the only unusual sign » ; propriétés : only, unusual		
+validation	41	indetermine	10	entité kind#e10 « kind » [modalite=non_affirme]		
+validation	41	indetermine	11	entité being#e11 « being » [modalite=non_affirme]		
+validation	41	indetermine	12	entité nature#e12 « Its nature » ; propriétés : unclear		
+validation	41	indetermine	13	entité image#e13 « the image » [portee=oeuvre]		
+validation	41	indetermine	14	entité figure#e14 « the figure » ; propriétés : human [modalite=possible], animal [modalite=possible]		
+validation	41	indetermine	15	entité foliage#e15 « The foliage »		
+validation	41	indetermine	16	entité foreground#e16 « the foreground »		
+validation	41	indetermine	17	entité space#e17 « the space » ; propriétés : dark		
+validation	41	indetermine	18	entité figure#e18 « the figure »		
+validation	41	indetermine	19	entité detail#e19 « no other detail » ; propriétés : other [polarite=neg]		
+validation	41	indetermine	20	entité viewer#e20 « the viewer » [portee=non_ancre]		
+validation	41	indetermine	21	événement stand#v1 « stands » — agent : figure#e1; lieu : foliage#e2		
+validation	41	indetermine	22	événement hide#v2 « hides » — agent : foliage#e2; theme : body#e3		
+validation	41	indetermine	23	événement emerge#v3 « emerges » — agent : part#e4		
+validation	41	indetermine	24	événement tell#v4 « tell » — agent : scale#e8 [polarite=neg]		
+validation	41	indetermine	25	événement reveal#v5 « reveal » — agent : image#e13 [polarite=neg]		
+validation	41	indetermine	26	événement fill#v6 « fills » — agent : foliage#e15; theme : foreground#e16		
+validation	41	indetermine	27	événement leave#v7 « left » — theme : space#e17		
+validation	41	indetermine	28	événement help#v8 « helps » — agent : detail#e19; destinataire : viewer#e20 [modalite=non_affirme]		
+validation	41	indetermine	29	relation body#e3 —of→ figure#e1		
+validation	41	indetermine	30	relation part#e4 —from→ leaf#e5		
+validation	41	indetermine	31	relation scale#e7 —on→ arm#e6		
+validation	41	indetermine	32	relation kind#e10 —of→ being#e11		
+validation	41	indetermine	33	relation nature#e12 —of→ figure#e1		
+validation	41	indetermine	34	relation space#e17 —behind→ figure#e18		
+validation	41	indetermine	35	coréférence figure#e1 = figure#e14 = figure#e18		
+validation	41	indetermine	36	coréférence foliage#e2 = leaf#e5 = foliage#e15		
+validation	41	indetermine	37	coréférence scale#e7 = scale#e8 = sign#e9		
+validation	41	indetermine	manque	(ce qui manque au graphe)		
+validation	161	negatif	1	entité jeremiah#e1 « Jeremiah » ; noms : Jeremiah		
+validation	161	negatif	2	entité ruin#e2 « the ruins »		
+validation	161	negatif	3	entité jerusalem#e3 « Jerusalem » ; noms : Jerusalem		
+validation	161	negatif	4	entité prophet#e4 « The prophet »		
+validation	161	negatif	5	entité stone#e5 « fallen stones » ; propriétés : fallen		
+validation	161	negatif	6	entité head#e6 « his head »		
+validation	161	negatif	7	entité grief#e7 « grief »		
+validation	161	negatif	8	entité city#e8 « the destroyed city » ; propriétés : destroyed		
+validation	161	negatif	9	entité crowd#e9 « No crowd » [polarite=neg]		
+validation	161	negatif	10	entité rebuke#e10 « no rebuke » [polarite=neg]		
+validation	161	negatif	11	entité image#e11 « the image » [portee=oeuvre]		
+validation	161	negatif	12	entité mourning#e12 « mourning »		
+validation	161	negatif	13	entité preaching#e13 « preaching » [polarite=neg]		
+validation	161	negatif	14	entité representation#e14 « Such representations » [portee=autre_oeuvre]		
+validation	161	negatif	15	entité prophet#e15 « the lamenting prophet » [portee=autre_oeuvre]		
+validation	161	negatif	16	entité popularity#e16 « considerable popularity » ; propriétés : considerable [portee=non_ancre]		
+validation	161	negatif	17	entité painter#e17 « painters » [portee=non_ancre]		
+validation	161	negatif	18	entité occasion#e18 « an occasion » [portee=non_ancre]		
+validation	161	negatif	19	entité figure#e19 « an expressive figure » ; propriétés : expressive [portee=autre_oeuvre]		
+validation	161	negatif	20	entité landscape#e20 « a landscape » [portee=autre_oeuvre]		
+validation	161	negatif	21	entité desolation#e21 « desolation » [portee=autre_oeuvre]		
+validation	161	negatif	22	entité palette#e22 « The muted palette » ; propriétés : muted [portee=oeuvre]		
+validation	161	negatif	23	entité posture#e23 « the slumped posture » ; propriétés : slumped		
+validation	161	negatif	24	entité sense#e24 « a sense »		
+validation	161	negatif	25	entité loss#e25 « irrevocable loss » ; propriétés : irrevocable		
+validation	161	negatif	26	entité tradition#e26 « the elegiac tradition » ; propriétés : elegiac [portee=non_ancre]		
+validation	161	negatif	27	entité prophet#e27 « the prophet » [portee=non_ancre]		
+validation	161	negatif	28	événement lament#v1 « laments » — agent : jeremiah#e1; theme : ruin#e2		
+validation	161	negatif	29	événement sit#v2 « sits » — agent : prophet#e4; lieu : stone#e5		
+validation	161	negatif	30	événement kneel#v3 « kneels » — agent : prophet#e4; lieu : stone#e5		
+validation	161	negatif	31	événement bow#v4 « bowed » — theme : head#e6		
+validation	161	negatif	32	événement address#v6 « addressed » — destinataire : crowd#e9 [modalite=non_affirme]		
+validation	161	negatif	33	événement utter#v7 « uttered » — theme : rebuke#e10 [modalite=non_affirme]		
+validation	161	negatif	34	événement mourn#v8 « mourning » (nom d'action mourning)		
+validation	161	negatif	35	événement preach#v9 « preaching » (nom d'action preaching) [polarite=neg]		
+validation	161	negatif	36	événement lament#v10 « lamenting » — agent : prophet#e15 [portee=autre_oeuvre]		
+validation	161	negatif	37	événement enjoy#v11 « enjoyed » — agent : representation#e14; theme : popularity#e16 [portee=non_ancre]		
+validation	161	negatif	38	événement offer#v12 « offering » — agent : representation#e14; destinataire : painter#e17; theme : occasion#e18 [portee=non_ancre]		
+validation	161	negatif	39	événement combine#v13 « combine » — agent : painter#e17; theme : figure#e19, landscape#e20 [portee=autre_oeuvre]		
+validation	161	negatif	40	événement convey#v14 « convey » — agent : palette#e22, posture#e23; theme : sense#e24		
+validation	161	negatif	41	événement associate#v15 « associated » — theme : tradition#e26; instrument : prophet#e27 [portee=non_ancre]		
+validation	161	negatif	42	relation ruin#e2 —of→ jerusalem#e3		
+validation	161	negatif	43	relation head#e6 —of→ prophet#e4		
+validation	161	negatif	44	relation head#e6 —in→ grief#e7		
+validation	161	negatif	45	relation image#e11 —of→ mourning#e12		
+validation	161	negatif	46	relation image#e11 —of→ preaching#e13 [polarite=neg]		
+validation	161	negatif	47	relation representation#e14 —of→ prophet#e15		
+validation	161	negatif	48	relation landscape#e20 —of→ desolation#e21		
+validation	161	negatif	49	relation sense#e24 —of→ loss#e25		
+validation	161	negatif	50	relation sense#e24 —in keeping with→ tradition#e26		
+validation	161	negatif	51	relation city#e8 —behind→ prophet#e4		
+validation	161	negatif	52	coréférence jeremiah#e1 = prophet#e4		
+validation	161	negatif	53	coréférence jerusalem#e3 = city#e8		
+validation	161	negatif	54	coréférence jeremiah#e1 = prophet#e27		
+validation	161	negatif	55	alternative v2 | v3		
+validation	161	negatif	manque	(ce qui manque au graphe)		
+validation	91	negatif	1	entité quentin#e1 « Quentin » ; noms : Quentin ; propriétés : alone		
+validation	91	negatif	2	entité spike#e2 « iron spikes » ; propriétés : iron		
+validation	91	negatif	3	entité shoulder#e3 « his shoulders »		
+validation	91	negatif	4	entité image#e4 « The image » [portee=oeuvre]		
+validation	91	negatif	5	entité torment#e5 « torment »		
+validation	91	negatif	6	entité suffering#e6 « the suffering »		
+validation	91	negatif	7	entité man#e7 « the young man » ; propriétés : young		
+validation	91	negatif	8	entité gesture#e8 « the brutal gesture » ; propriétés : brutal		
+validation	91	negatif	9	entité tormentor#e9 « his tormentors »		
+validation	91	negatif	10	entité painter#e10 « The painter » [portee=histoire]		
+validation	91	negatif	11	entité action#e11 « the action »		
+validation	91	negatif	12	entité foreground#e12 « the foreground »		
+validation	91	negatif	13	entité violence#e13 « the violence »		
+validation	91	negatif	14	entité scene#e14 « the scene »		
+validation	91	negatif	15	entité convention#e15 « the conventions » [portee=non_ancre]		
+validation	91	negatif	16	entité imagery#e16 « martyrdom imagery » ; propriétés : martyrdom [portee=non_ancre]		
+validation	91	negatif	17	entité figure#e17 « No other holy figure » ; propriétés : other, holy [polarite=neg]		
+validation	91	negatif	18	événement drive#v1 « are driven » — theme : spike#e2; lieu : shoulder#e3		
+validation	91	negatif	19	événement torment#v2 « torment » (nom d'action torment)		
+validation	91	negatif	20	événement concentrate#v3 « concentrated » — theme : image#e4; instrument : suffering#e6, gesture#e8 [portee=oeuvre]		
+validation	91	negatif	21	événement suffer#v4 « suffering » (nom d'action suffering) — agent : man#e7		
+validation	91	negatif	22	événement place#v5 « places » — agent : painter#e10; theme : action#e11; lieu : foreground#e12 [portee=oeuvre]		
+validation	91	negatif	23	événement accentuate#v6 « accentuates » — agent : painter#e10; theme : violence#e13 [portee=oeuvre]		
+validation	91	negatif	24	événement accompany#v7 « accompanies » — agent : figure#e17; theme : quentin#e1 [modalite=non_affirme]		
+validation	91	negatif	25	relation shoulder#e3 —of→ quentin#e1		
+validation	91	negatif	26	relation image#e4 —of→ torment#e5		
+validation	91	negatif	27	relation suffering#e6 —of→ man#e7		
+validation	91	negatif	28	relation gesture#e8 —of→ tormentor#e9		
+validation	91	negatif	29	relation tormentor#e9 —of→ man#e7		
+validation	91	negatif	30	relation violence#e13 —of→ scene#e14		
+validation	91	negatif	31	relation convention#e15 —of→ imagery#e16		
+validation	91	negatif	32	coréférence quentin#e1 = man#e7		
+validation	91	negatif	33	distincts quentin#e1 ≠ figure#e17		
+validation	91	negatif	manque	(ce qui manque au graphe)		
