@@ -460,10 +460,13 @@ NOM_VALEUR = {INCONNU: "inconnu", VRAI: "vrai", FAUX: "faux", CONTRADICTOIRE: "c
 @dataclass(frozen=True)
 class Appui:
     """Un appui positif d'un atome : son énonciateur Q (§ 1), l'assertion, et le mot de l'appui (la tête, le
-    prédicat, la propriété, la relation, ou la clé du nom), qui sert à reformer la prémisse (§ 4.3)."""
+    prédicat, la propriété, la relation, ou la clé du nom), qui sert à reformer la prémisse (§ 4.3) ; les entités que
+    l'appui cite (§ 4.3, 0.3 amendée : leur existence est une prémisse) et, pour un rôle, son événement."""
     enonciateur: object
     assertion: object
     mot: object
+    cites: tuple = ()
+    evenement: object = None
 
 
 def contexte_de(atome) -> str:
@@ -484,7 +487,7 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
             if representant(g, e) == sigma[x] and lien_positif(K, tete, T):
                 st = etat(g, e, [], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], e, tete))
+                    res.append(Appui(st[1], e, tete, (e,)))
     elif t == "nom":
         _, x, cles = atome
         for a, e, nom in g.noms:
@@ -492,14 +495,14 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
             if representant(g, e) == sigma[x] and cle_correspond(K, cle, cles):
                 st = etat(g, a, [e], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], a, cle))
+                    res.append(Appui(st[1], a, cle, (e,)))
     elif t == "propriete":
         _, x, P = atome
         for a, e, prop in g.proprietes:
             if representant(g, e) == sigma[x] and lien_positif(K, prop, P):
                 st = etat(g, a, [e], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], a, prop))
+                    res.append(Appui(st[1], a, prop, (e,)))
     elif t == "relation":
         _, x, R, y = atome
         for a, e1, rel, e2 in g.relations:
@@ -507,7 +510,7 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
                     and lien_positif(K, rel, R)):
                 st = etat(g, a, [e1, e2], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], a, rel))
+                    res.append(Appui(st[1], a, rel, (e1, e2)))
     elif t == "evenement":
         _, ev, P = atome
         for v, pred in g.evenements:
@@ -524,7 +527,7 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
             if v == sigma[ev] and r == R and representant(g, e) == sigma[x]:
                 st = etat(g, v, [e], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], ("role", v, r, e), r))
+                    res.append(Appui(st[1], ("role", v, r, e), r, (e,), v))
     elif t == "genre":
         _, T = atome
         for e, tete in g.entites:
@@ -615,8 +618,8 @@ def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
     elif t == "role":
         pass                                          # § 1.1 : un rôle n'est pas nié seul
     elif t == "genre":
-        # entite(E, W) de portée oeuvre : genre(T), T inclus dans W.
-        # LECTURE : la table ne demande pas que l'entité soit nue (voir AMBIGUITES, genre_nu).
+        # entite(E, W) **nue** de portée oeuvre : genre(T), T inclus dans W (0.3 amendée : « pas un portrait mort »
+        # ne nie pas le genre). Nue au sens de la ligne 4 de la table (entite_nue).
         _, T = atome
         for e, tete in g.entites:
             st = etat(g, e, [], C)
@@ -625,7 +628,7 @@ def appuis_negatifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
     return res
 
 
-GENRE_NU = False   # voir AMBIGUITES, genre_nu
+GENRE_NU = True    # § 1.1 (0.3 amendée) : seule une entité nue de portée oeuvre nie genre(T)
 
 # Les lectures choisies là où le texte est ambigu (AMBIGUITES), et leur variante, pour mesurer leur effet dans le
 # banc (differentiel.py --lecture cle=valeur). Les valeurs par défaut sont la lecture de l'oracle.
@@ -676,12 +679,45 @@ def reforme(atome, mot):
     raise ValueError(atome)
 
 
+def tete_de(g: Graphe, e):
+    """Le mot (la tête) de l'entité e : entite(E, W)."""
+    return next(t for x, t in g.entites if x == e)
+
+
+def existence_niee(g, K, e) -> bool:
+    """§ 4.3 (0.3 amendée) : l'existence d'une entité est niée si le type de son mot est nié pour sa classe :
+    type(X, W) sous σ(X) la classe de e, W le mot de e, a un appui négatif (§ 1.1) ; « un homme nommé Pierre ;
+    il n'y a pas d'homme »."""
+    return bool(appuis_negatifs(g, K, ("type", "_x", tete_de(g, e)), {"_x": representant(g, e)}))
+
+
+def evenement_nie(g, K, v) -> bool:
+    """§ 4.3 (0.3 amendée) : la prémisse d'un rôle qu'est son événement est niée si l'atome de prédicat de cet
+    événement, evenement(E, P) sous σ(E) = v, P le prédicat de v, a un appui négatif (§ 1.1)."""
+    pred = next(p for x, p in g.evenements if x == v)
+    return bool(appuis_negatifs(g, K, ("evenement", "_e", pred), {"_e": v}))
+
+
+def premisse_niee(g, K, atome, sigma, ap: Appui) -> bool:
+    """§ 4.3 (0.3 amendée) : une prémisse de l'appui est niée :
+    (a) l'atome reformé avec le mot même de l'appui a un appui négatif ;
+    (b) l'existence d'une entité que l'appui cite est niée (existence_niee) ;
+    (c) pour un rôle, son événement est nié (evenement_nie).
+    LECTURE (AMBIGUITES, premisse_genre) : l'appui d'un genre (une entité de portée oeuvre) ne cite aucune entité de
+    figuration ; son existence, dans le contexte oeuvre, est la prémisse (a), genre(W)."""
+    if appuis_negatifs(g, K, reforme(atome, ap.mot), sigma):
+        return True
+    if any(existence_niee(g, K, e) for e in ap.cites):
+        return True
+    return ap.evenement is not None and evenement_nie(g, K, ap.evenement)
+
+
 def atome_certifiable(g, K, atome, sigma) -> bool:
-    """§ 4.3 : l'atome est vrai (1,0) avec un appui positif de l'auteur du texte dont la prémisse n'est pas
-    niée (l'atome reformé avec le mot de l'appui n'a aucun appui négatif)."""
+    """§ 4.3 : l'atome est vrai (1,0) avec un appui positif de l'auteur du texte dont **aucune prémisse n'est
+    niée** (premisse_niee). Un appui à prémisse niée laisse l'atome vrai, non certifiable."""
     if valeur_atome(g, K, atome, sigma) != VRAI:
         return False
-    return any(ap.enonciateur == AUTEUR and not appuis_negatifs(g, K, reforme(atome, ap.mot), sigma)
+    return any(ap.enonciateur == AUTEUR and not premisse_niee(g, K, atome, sigma, ap)
                for ap in appuis_positifs(g, K, atome, sigma))
 
 
@@ -771,12 +807,31 @@ def distinction_documentaire(g, K, r1, r2) -> list:
 DOC_PAR_ALIAS = False   # voir AMBIGUITES, documentaire_alias
 
 
+def distinction_documentaire_interne(g, K, r) -> list:
+    """§ 4.1, `meme` (0.3 amendée) : dans une classe, « deux noms admissibles que K dit deux individus »
+    (K:distincts_documentes(C1, C2, S), C1 et C2 tous deux admissibles pour la classe r) donnent (1,1).
+    LECTURE : l'exclusion « à alias près » (D26) est propre à deux classes et ne s'applique pas ici (la classe porte
+    les deux noms par hypothèse) ; un nom admissible compte s'il est la clé documentée elle-même (DOC_PAR_ALIAS)."""
+    a = noms_admissibles(g, K, r)
+    res = []
+    for (c1, c2, s) in K.distincts_documentes:
+        if DOC_PAR_ALIAS:
+            fonde = any(K.alias_eq(k, c1) for k in a) and any(K.alias_eq(k, c2) for k in a)
+        else:
+            fonde = c1 in a and c2 in a
+        if fonde:
+            res.append((c1, c2, s))
+    return res
+
+
 def distinction_supposee(g, K, r1, r2) -> bool:
     """§ 1 et § 4.1 : les deux classes portent des noms propres, tous différents, sans alias connu ni distinction
-    contraire ; seuls comptent les noms qu'aucune assertion niée de la classe ne contredit, et aucun nom de l'une
-    n'est, à alias près (alias clos), un nom de l'autre.
-    LECTURE : les noms dans l'état pos, de tout énonciateur ; « distinction contraire » n'ajoute rien de
-    vérifiable (le graphe ne dit l'identité que par coref, qui ferait une seule classe)."""
+    contraire. Elle ne repose que sur des noms d'un porteur présent qu'aucune assertion niée de la classe ne
+    contredit (il en faut dans chaque classe), et (0.3 amendée) aucun nom que l'une porte **au sens large** (toute
+    assertion de nom positive, quels que soient ses autres qualificatifs et son porteur, contestée ou non :
+    noms_affirmes) n'est, à alias près (alias clos), un nom que l'autre porte au sens large.
+    LECTURE : les noms du fondement dans l'état pos, de tout énonciateur ; « distinction contraire » n'ajoute rien
+    de vérifiable (le graphe ne dit l'identité que par coref, qui ferait une seule classe)."""
     if r1 == r2:
         return False
     porteur = LECTURES["noms_porteur"] == "etat"
@@ -784,7 +839,9 @@ def distinction_supposee(g, K, r1, r2) -> bool:
     n2 = {c for c in noms_portes(g, K, r2, False, porteur) if not nom_conteste(g, K, r2, c)}
     if not n1 or not n2:
         return False
-    return not any(K.alias_eq(a, b) for a in n1 for b in n2)
+    if any(K.alias_eq(a, b) for a in n1 for b in n2):
+        return False
+    return not any(K.alias_eq(a, b) for a in noms_affirmes(g, K, r1) for b in noms_affirmes(g, K, r2))
 
 
 def nombres_presents(g, r, auteur_seul=False) -> list:
@@ -796,8 +853,9 @@ def nombres_presents(g, r, auteur_seul=False) -> list:
 def valeur_contrainte(g, K, c, sigma) -> tuple:
     """§ 4.1, table des contraintes (quatre valeurs, D29). Une contrainte dont une variable n'est pas liée vaut
     inconnu.
-    - meme(X, Y) : positif si même classe ; négatif si une distinction établie ou documentaire entre les deux
-      classes (ou dans la classe : coréférents et distincts à la fois donne (1,1)) ;
+    - meme(X, Y) : positif si même classe ; négatif si une distinction établie (entre entités présentes selon
+      l'auteur) ou documentaire entre les deux classes ; dans la classe, une telle distinction, ou deux noms
+      admissibles que K dit deux individus, donnent (1,1) (0.3 amendée) ;
     - distincts(X, Y) : positif si classes différentes et distinction établie, documentaire ou supposée (la
       table met la supposée dans la colonne de l'appui positif : « vraie sous hypothèse » ; elle n'est
       certifiable que comme hypothèse, § 4.3) ; jamais négatif (la même classe : (0,0)) ;
@@ -807,7 +865,8 @@ def valeur_contrainte(g, K, c, sigma) -> tuple:
     t = c[0]
     if t == "meme":
         r1, r2 = sigma[c[1]], sigma[c[2]]
-        neg = bool(distinction_etablie(g, r1, r2) or distinction_documentaire(g, K, r1, r2))
+        neg = bool(distinction_etablie(g, r1, r2) or distinction_documentaire(g, K, r1, r2)
+                   or (r1 == r2 and distinction_documentaire_interne(g, K, r1)))
         return (int(r1 == r2), int(neg))
     if t == "distincts":
         r1, r2 = sigma[c[1]], sigma[c[2]]
@@ -823,17 +882,28 @@ def valeur_contrainte(g, K, c, sigma) -> tuple:
 
 def contrainte_certifiee(g, K, c, sigma):
     """§ 4.3 : une contrainte sélectionnée est « vraie et certifiable (ou vraie sous hypothèse) ».
-    `nombre` n'est certifiable que si un membre présent selon l'auteur a ce nombre (§ 4.1).
+    `nombre` n'est certifiable que si un membre présent selon l'auteur a ce nombre (§ 4.1) ; une distinction établie
+    ou un nombre ne le sont que si l'existence de leurs entités n'est pas niée (0.3 amendée, existence_niee).
+    LECTURE (AMBIGUITES, distinction_existence_niee) : une distinction établie dont une entité a l'existence niée
+    ne certifie pas `distincts`, mais n'empêche pas une distinction documentaire, ni une supposée (hypothèse), si
+    elles tiennent par ailleurs.
     Rend 'vraie', ('hypothese', X, Y) ou None."""
     v = valeur_contrainte(g, K, c, sigma)
     if v != VRAI:
         return None
-    if c[0] == "nombre" and c[2] not in nombres_presents(g, sigma[c[1]], auteur_seul=True):
-        return None
+    if c[0] == "nombre":
+        r, k = sigma[c[1]], c[2]
+        if not any(n == k and representant(g, e) == r and presente_selon_auteur(g, e, FIGURATION)
+                   and not existence_niee(g, K, e) for e, n in g.nombres):
+            return None
     if c[0] == "distincts":
         r1, r2 = sigma[c[1]], sigma[c[2]]
-        if not (distinction_etablie(g, r1, r2) or distinction_documentaire(g, K, r1, r2)):
-            return ("hypothese", c[1], c[2])          # vraie par la seule distinction supposée
+        etablies = [(a, b) for a, b in distinction_etablie(g, r1, r2)
+                    if not existence_niee(g, K, a) and not existence_niee(g, K, b)]
+        if not (etablies or distinction_documentaire(g, K, r1, r2)):
+            if distinction_supposee(g, K, r1, r2):
+                return ("hypothese", c[1], c[2])      # vraie par la seule distinction supposée
+            return None                               # vraie par une distinction établie à l'existence niée
     return "vraie"
 
 
