@@ -102,7 +102,10 @@ clos_coref(G, Front, Vus, C) :-
 transmet(K, A, chemin(Mot, _)) :- !,
     categorie(A, Cat, T2), atom_concat('$noeud:', X, Mot), noeud_de(X, T1),
     noeuds(K, Cat, T1, N1), noeuds(K, Cat, T2, N2),
-    forall(member(S2, N2), ( member(S1, N1), inclus_ou_egal(K, S1, S2) )).
+    % une négation possible de Q2 (un couple) en est une de Q1 ; une négation certaine de Q2 (chaque nœud) aussi (D30)
+    N1 \== [], N2 \== [],
+    forall(member(S2, N2), ( member(S1, N1), inclus_ou_egal(K, S1, S2) )),
+    forall(member(S1, N1), ( member(S2, N2), inclus_ou_egal(K, S1, S2) )).
 transmet(_, _, _).                              % un nom (clé ou alias clos), un rôle : la négation suit (§ 1.1)
 
 categorie(type(_, T), n, T). categorie(genre(T), n, T). categorie(propriete(_, T), a, T).
@@ -110,7 +113,8 @@ categorie(evenement(_, T), v, T). categorie(relation(_, T, _), r, T).
 noeud_de(X, N) :- ( atom_number(X, N0), integer(N0) -> N = N0 ; N = X ).
 % les nœuds d'un type demandé, tels que le lien négatif du noyau les prend (NOYAU § 2)
 noeuds(_, _, T, [T]) :- integer(T), !.
-noeuds(K, Cat, T, Ns) :- findall(S, K:sens(Cat, T, S), Ns0), sort(Ns0, Ns).
+noeuds(K, Cat, T, Ns) :-                         % les sens conceptuels, comme le noyau les prend (NOYAU § 2, D30)
+    findall(S, K:sens(Cat, T, S), Ns0), sort(Ns0, Ns1), include(integer, Ns1, Is), ( Is == [] -> Ns = Ns1 ; Ns = Is ).
 inclus_ou_egal(K, S1, S2) :- clos_inclus(K, [S1], [S1], Ns), memberchk(S2, Ns).
 clos_inclus(K, Front, Vus, Ns) :-
     findall(Y, ( member(X, Front), K:inclus(X, Y), \+ memberchk(Y, Vus) ), Ys0), sort(Ys0, Ys),

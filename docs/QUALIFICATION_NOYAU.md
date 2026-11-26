@@ -65,8 +65,8 @@ Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audi
 | D27 | haute | Type entier jamais nié : le lien négatif passe le type demandé par `sens` (L-D5) | CORRIGÉ (cycle 3) |
 | D28 | haute | `nombre` lu sans qualificatifs : une hypothèse établit (L-D6) | CORRIGÉ (cycle 3) |
 | D29 | moyenne | Contraintes à trois valeurs : coréférence et distinction ensemble, deux nombres : `etablie` (L-D7) | CORRIGÉ (cycle 3) |
-| D30 | moyenne | Polysémie : un mot établit tous ses sens, nier un sens nie le lemme (L-D8) | décision du propriétaire (voir § 8) |
-| D31 | moyenne | Statut `ecartee` pour une réfutation inversée, ou d'une source citée seule (L-D9, L-D10) ; `meme` réfuté par K (L-D12) | décision du propriétaire |
+| D30 | moyenne | Polysémie : un mot établit tous ses sens, nier un sens nie le lemme (L-D8) | CORRIGÉ (cycle 8, décision du 27/11) : liens certains ou hypothèses de sens ; négations certaines ou possibles ; l'anglais prend tous les sens |
+| D31 | moyenne | Statut `ecartee` pour une réfutation inversée, ou d'une source citée seule (L-D9, L-D10) ; `meme` réfuté par K (L-D12) | CORRIGÉ (cycle 8, décision du 27/11) : réfutations gardées, avec leur portée (la substitution) et leurs fondements (auteur, source citée, documentaire avec sa source, texte) |
 | D32 | moyenne | Budget épuisé : `etablie_sous_hypotheses` affirme « aucune vraie » (L-D11) | CORRIGÉ (cycle 3) |
 | D33 | basse | Alias non clos (L-D14, I-D7) | CORRIGÉ (cycle 3) |
 | D34 | basse | Spécification : `non_certifiee` absent du § 4.4, ancrage au § 7 seul, porteur « positif » ambigu (L-D13, L-D15, O) | CORRIGÉ (cycle 3) |
@@ -81,7 +81,7 @@ Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audi
 | D47 | critique | Comparateur : un `meme` de Q2 sans coréférence correspondante dans Q1 donne des `oui` faux (F-B1) | CORRIGÉ (cycle 7) : contre-exemple « jumeau » |
 | D48 | haute | Prémisses non contrôlées : un rôle certifié par un événement que l'auteur nie (F-B2) ; un appui dont le porteur n'existe pas selon le texte (F-B3) ; distinction établie et nombre de même | CORRIGÉ (cycle 7) |
 | D49 | moyenne | Le vérificateur rejette une preuve juste (distinction vers une entité citée : F-N1) et accepte une requête mal formée (F-N4) ; `genre` nié par une description restreinte (F-N2) ; hypothèse malgré un nom possible partagé (F-N3) ; `meme` non réfuté par K dans une classe (F-N5) | CORRIGÉ (cycle 7) |
-| D50 | basse | Un nom nié dont le porteur n'est que possible, nié ou d'une autre portée contredit-il le nom de la classe ? Les moteurs : oui ; l'oracle (§ 1 : « aucun état sinon ») : non ; aucune lecture n'est uniformément prudente (O, cycle 7) | décision du propriétaire |
+| D50 | basse | Un nom nié dont le porteur n'est que possible, nié ou d'une autre portée contredit-il le nom de la classe ? Les moteurs : oui ; l'oracle (§ 1 : « aucun état sinon ») : non ; aucune lecture n'est uniformément prudente (O, cycle 7) | CORRIGÉ (cycle 8, décision du 27/11) : lecture de l'oracle ; l'information n'est pas une contestation logique |
 | D51 | moyenne | Une distinction établie dont l'existence d'une entité est niée empêchait la documentaire et la supposée (non monotone) ; le genre recevait une prémisse d'existence du contexte de la figuration (le moteur optimisé seul : les deux moteurs divergeaient) (O, cycle 7) | CORRIGÉ (cycle 7) |
 | D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | CORRIGÉ (cycle 5) |
 | D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | CORRIGÉ (cycle 5) |

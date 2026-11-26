@@ -81,6 +81,13 @@ FAUTES = {
     "identité contre K non réfutée": (
         "    ( ( distinction(K, M, A, B, D), D \\= supposee(_) ; A == B, documentee_dans(K, M, A) ) -> Neg = 1 ; Neg = 0 ),",
         "    ( distinction(K, M, A, B, D), D \\= supposee(_) -> Neg = 1 ; Neg = 0 ),"),
+    # D30 (décision du 27/11)
+    "lien d'un seul sens pris pour certain": (
+        "    sens_conceptuels(K, Cat, W, Ss), Ss \\== [], forall(member(S, Ss), once(chemin_court(K, sous, S, T, _))).",
+        "    sens_conceptuels(K, Cat, W, Ss), member(S, Ss), once(chemin_court(K, sous, S, T, _))."),
+    "négation d'un seul sens prise pour certaine": (
+        "    forall(( member(N, Ns), member(Sw, Ws) ), once(chemin_court(K, inclus, N, Sw, _))),",
+        "    once(( member(N, Ns), member(Sw, Ws), chemin_court(K, inclus, N, Sw, _) )),"),
     "type entier jamais nié": (
         "noeud_demande(_, _, T, T) :- integer(T), !.",
         "noeud_demande(_, _, T, _) :- integer(T), !, fail."),
@@ -134,6 +141,9 @@ FAUTES_VERIFICATEUR = {
     "événement d'un rôle non contrôlé": (
         "    \\+ ( member(j(_, role(_, _, _), appui(role(V, _, _), _, _, _)), Js), member(evenement(V, W, _), G),\n         appui_negatif(K, G, [v('$e')-V], evenement(v('$e'), W)) ).",
         "    true."),
+    "sens supposé non exigé": (
+        "    type_de(A, Cat, T), \\+ positif_certain(K, Cat, W, T).",
+        "    type_de(A, Cat, T), fail, \\+ positif_certain(K, Cat, W, T)."),
     "porteur d'une source citée accepté": (
         "porteur_admis(G, E) :- qualifie(G, E, pos, represente, auteur).",
         "porteur_admis(G, E) :- qualifie(G, E, pos, represente, _)."),

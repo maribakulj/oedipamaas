@@ -16,7 +16,7 @@ peut_etre(P) :- random(X), X < P.
 graphe_aleatoire(G) :-
     random_between(1, 5, NE), numlist(1, NE, Is),
     maplist([I, E]>>atom_concat(e, I, E), Is, Es),
-    findall(entite(E, T, p_0), ( member(E, Es), un_de([a, a1, a2, b, b1, top, c1, lemme_a, nom_propre], T) ), Ents),
+    findall(entite(E, T, p_0), ( member(E, Es), un_de([a, a1, a2, b, b1, top, c1, lemme_a, poly, nom_propre], T) ), Ents),
     findall(nom(N, E, Nm, p_0), ( member(E, Es), peut_etre(0.5), atom_concat(n_, E, N), un_de([x, xa, y, z], Nm) ), Noms1),
     % un second nom, parfois le même, pour que des appuis de signes opposés se rencontrent (contradictions)
     findall(nom(N, E, Nm, p_0), ( member(nom(_, E, Nm0, _), Noms1), peut_etre(0.4), atom_concat(m_, E, N),
@@ -66,7 +66,7 @@ formule(Pr, F) :-
 ref(v(V)) :- un_de([x, y, z], V).
 atome_gen(A) :-
     random_between(1, 7, I),
-    (   I =:= 1 -> ref(X), un_de([a, a1, b, top, c2, lemme_a], T), A = type(X, T)
+    (   I =:= 1 -> ref(X), un_de([a, a1, b, top, c2, lemme_a, poly, b1], T), A = type(X, T)
     ;   I =:= 2 -> ref(X), un_de([['X'], ['Y'], ['Z'], ['X', 'Y']], Ks), A = nom(X, Ks)
     ;   I =:= 3 -> ref(X), un_de([r, r1], P), A = propriete(X, P)
     ;   I =:= 4 -> un_de([p, p0, q], P), A = evenement(v(e), P)

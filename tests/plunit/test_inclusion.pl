@@ -92,6 +92,10 @@ test(meme_ne_transmet_pas_sans_meme_dans_q1) :-   % audit final B1
     cmp(et([type(v(x), saint), type(v(z), saint), meme(v(x), v(z))]), et([type(v(x), saint), type(v(y), homme), meme(v(x), v(y))]),
         equivalentes).
 
+test(polysemie) :-                             % D30 : le lemme polysémique n'implique pas l'un de ses sens
+    cmp(type(v(x), pomme), type(v(x), vegetal), incomparables(_, _)),
+    cmp(type(v(x), 2001), type(v(x), vegetal), incluse).
+
 :- end_tests(inclusion).
 
 % un graphe-témoin, évalué par le moteur seul (graphe_cas de test_noyau_semantique)

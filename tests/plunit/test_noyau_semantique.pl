@@ -261,6 +261,37 @@ cas(distinction_etablie_contestee_et_documentaire,
 cas(genre_et_negation_dans_l_image,
     [entite(e2, chien, p_1), por(e2, oeuvre), entite(n1, chien, p_2), neg(n1)], requete(q, genre(chien)), etablie,
     '« pas de chien » dans l’image ne nie pas que l’œuvre soit un chien (genre) : deux contextes (oracle, cycle 7)').
+% --- Décisions du propriétaire (27/11) : D50, D31, D30
+cas(nom_nie_d_un_porteur_possible_ne_conteste_pas,
+    [entite(e1, saint, p_1), mod(e1, possible), entite(e2, saint, p_2), coref(e1, e2), nom(a1, e2, goliath, p_3),
+     nom(a2, e1, goliath, p_4), neg(a2), nom(a3, e2, david, p_5)],
+    requete(q, et([nom(v(x), ['GOLIATH']), nom(v(y), ['GOLIATH']), meme(v(x), v(y))])), contradictoire,
+    'D50 : le nom nié d’un porteur seulement possible ne conteste pas GOLIATH ; reste que K dit DAVID et GOLIATH deux
+     individus, et la classe les porte tous deux : `meme` contredit par K (lecture de l’oracle)').
+% D30 : « pomme » a deux sens dans le K de test (2001, un fruit ; 2002, une pomme d'arrosoir), qui se lexicalisent tous
+% deux en « pomme »
+cas(pomme_n_est_pas_surement_un_vegetal,
+    [entite(e1, pomme, p_1)], requete(q, type(v(x), vegetal)), etablie_sous_hypotheses,
+    'un seul des deux sens mène à végétal : une hypothèse sur le sens, pas une conclusion déductive (D30)').
+cas(pomme_est_surement_une_pomme,
+    [entite(e1, pomme, p_1)], requete(q, type(v(x), pomme)), etablie,
+    'une conclusion commune à toutes les lectures est établie (D30)').
+cas(pomme_vegetal_et_objet,
+    [entite(e1, pomme, p_1)], requete(q, et([type(v(x), vegetal), type(v(x), objet)])), etablie_sous_hypotheses,
+    'les deux sens à la fois : chacun n’est qu’une hypothèse (audit L-D8a ; D30)').
+cas(pomme_qui_n_est_pas_un_vegetal,
+    [entite(e1, pomme, p_1), entite(e2, vegetal, p_2), neg(e2), coref(e1, e2)], requete(q, type(v(x), pomme)),
+    etablie_sous_hypotheses,
+    'la négation ne vise qu’un des sens de « pomme » : pas de contradiction déductive, une hypothèse (L-D8b ; D30)').
+cas(pas_de_pomme_ne_refute_pas_l_arrosoir,
+    [entite(e1, pomme, p_1), neg(e1)], requete(q, type(v(x), 2002)), inconnue,
+    '« pas de pomme » (un des sens) ne réfute pas déductivement le sens arrosoir (L-D8c ; D30)').
+cas(pas_de_pomme_ne_refute_pas_le_fruit,
+    [entite(e1, pomme, p_1), neg(e1)], requete(q, type(v(x), fruit)), inconnue,
+    'la lexicalisation n’est pas une inclusion : un fruit n’est pas une pomme (D30)').
+cas(une_pomme_et_pas_de_pomme,
+    [entite(e1, pomme, p_1), entite(e2, pomme, p_2), neg(e2)], requete(q, type(v(x), pomme)), etablie_sous_hypotheses,
+    'les deux « pomme » peuvent ne pas avoir le même sens : la conclusion suppose que la négation vise l’autre (D30)').
 cas(alias_en_chaine,
     [entite(e1, homme, p_1), nom(n1, e1, girolamo, p_2)], requete(q, nom(v(x), ['HIERONYMUS'])), etablie,
     'HIERONYMUS ~ JEROME ~ GIROLAMO : l’alias est clos (D33)').

@@ -54,7 +54,10 @@ forme_preuve(P) :-
     forall(member(X, S), ( X = v(N)-Val, atom(N), atom(Val) )),
     forall(member(J, Js), ( J = j(C, A, Ap), is_list(C), forall(member(I, C), ( integer(I), I >= 1 )),
                             ( atome(A) ; contrainte(A) ), forme_appui(A, Ap) )),
-    forall(member(H, Hs), ( H = distinction_supposee(v(X), v(Y), N1, N2), atom(X), atom(Y), is_list(N1), is_list(N2) )).
+    forall(member(H, Hs), forme_hypothese(H)).
+forme_hypothese(distinction_supposee(v(X), v(Y), N1, N2)) :- atom(X), atom(Y), is_list(N1), is_list(N2).
+forme_hypothese(sens_suppose(W, T)) :- atom(W), type_valide(T).
+forme_hypothese(negation_autre_sens(A)) :- compound(A).
 forme_appui(A, appui(_, E, P, _)) :- atome(A), atom(E), atom(P).
 forme_appui(A, contrainte(_)) :- contrainte(A).
 
@@ -83,9 +86,12 @@ etabli(appuis, K, G, _, preuve(_, _, _, S, Js, _)) :-
     forall(( member(j(_, A, Ap), Js), atome(A) ), appui_positif(K, G, S, A, Ap)).
 etabli(contraintes, K, G, _, preuve(_, _, _, S, Js, Hs)) :-
     forall(( member(j(_, Co, contrainte(J)), Js) ), contrainte_justifiee(K, G, S, Hs, Co, J)).
-etabli(hypotheses, _, _, _, preuve(_, _, _, _, Js, Hs)) :-
+etabli(hypotheses, K, G, _, preuve(_, _, _, S, Js, Hs)) :-
     findall(X-Y, member(j(_, distincts(X, Y), contrainte(hypothese)), Js), Us0), sort(Us0, Us),
-    findall(X-Y, member(distinction_supposee(X, Y, _, _), Hs), Hs1), msort(Hs1, Hs2), sort(Hs1, Hs2), Hs2 == Us.
+    findall(X-Y, member(distinction_supposee(X, Y, _, _), Hs), Hs1), msort(Hs1, Hs2), sort(Hs1, Hs2), Hs2 == Us,
+    % les hypothèses des atomes (D30) : exactement celles que demandent les appuis cités
+    findall(H, ( member(j(_, A, Ap), Js), atome(A), hypothese_requise(K, G, S, A, Ap, H) ), Hr0), sort(Hr0, Hr),
+    exclude([H]>>( H = distinction_supposee(_, _, _, _) ), Hs, Ha0), msort(Ha0, Ha), sort(Ha0, Ha), Ha == Hr.
 etabli(pas_d_appui_negatif, K, G, _, preuve(_, _, _, S, Js, _)) :-
     \+ ( member(j(_, A, _), Js), atome(A), appui_negatif(K, G, S, A) ),
     % ni contre l'assertion citée, prise avec son propre mot (une lionne niée ne prouve pas un lion)
@@ -100,6 +106,25 @@ entite_citee(G, appui(A, _, _, _), E2) :- memberchk(relation(A, _, _, E2, _), G)
 inexistante(K, G, E) :-
     member(entite(E, W, _), G), W \== nom_propre, member(entite(R, _, _), G), meme_classe(G, E, R), representant(G, R),
     appui_negatif(K, G, [v('$p')-R], type(v('$p'), W)), !.
+
+hypothese_requise(K, _, _, A, appui(_, _, _, chemin(W, _)), sens_suppose(W, T)) :-
+    type_de(A, Cat, T), \+ positif_certain(K, Cat, W, T).
+hypothese_requise(K, G, S, A, _, negation_autre_sens(Ai)) :- appui_negatif_possible(K, G, S, A), instancie(A, S, Ai).
+hypothese_requise(K, G, S, A, Ap, negation_autre_sens(Bi)) :-
+    assertion_citee(A, Ap, B), appui_negatif_possible(K, G, S, B), instancie(B, S, Bi).
+hypothese_requise(K, G, _, A, Ap, negation_autre_sens(type(R, W))) :-
+    A \= genre(_), entite_citee(G, Ap, E), member(entite(E, W, _), G), W \== nom_propre,
+    member(entite(R, _, _), G), meme_classe(G, E, R), representant(G, R),
+    appui_negatif_possible(K, G, [v('$p')-R], type(v('$p'), W)).
+hypothese_requise(K, G, _, role(_, _, _), appui(role(V, _, _), _, _, _), negation_autre_sens(evenement(V, W))) :-
+    member(evenement(V, W, _), G), appui_negatif_possible(K, G, [v('$e')-V], evenement(v('$e'), W)).
+type_de(type(_, T), n, T). type_de(genre(T), n, T). type_de(propriete(_, T), a, T). type_de(evenement(_, T), v, T).
+type_de(relation(_, T, _), r, T).
+instancie(v(N), S, X) :- !, memberchk(v(N)-X, S).
+instancie(T, S, Ti) :- compound(T), !, T =.. [F|As], instancie_liste(As, S, Bs), Ti =.. [F|Bs].
+instancie(T, _, T).
+instancie_liste([], _, []).
+instancie_liste([A|As], S, [B|Bs]) :- instancie(A, S, B), instancie_liste(As, S, Bs).
 
 assertion_citee(type(X, _), appui(_, _, _, chemin(W, _)), type(X, W)).
 assertion_citee(nom(X, _), appui(_, _, _, cle(C)), nom(X, [C])).
@@ -170,7 +195,7 @@ alias_ferme(K, Front, Vus, B) :-
     Ys \== [], append(Vus, Ys, Vus1), alias_ferme(K, Ys, Vus1, B).
 
 % un lien positif : sens puis des pas « sous », chemin simple, jusqu'au type demandé
-lien_positif(K, Cat, W, T, chemin(W, [S0|Ch])) :- K:sens(Cat, W, S0), pas_sous(K, [S0|Ch], T).
+lien_positif(K, Cat, W, T, chemin(W, [S0|Ch])) :- sens_du_mot(K, Cat, W, Ss), memberchk(S0, Ss), pas_sous(K, [S0|Ch], T).
 pas_sous(_, [T0], T) :- T0 == T, !.
 pas_sous(K, [S, S1|Ch], T) :- K:sous(S, S1), \+ memberchk(S, [S1|Ch]), pas_sous(K, [S1|Ch], T).
 
@@ -200,34 +225,57 @@ appui_positif(K, G, _, genre(T), appui(E, E, P, L)) :-
 
 % un appui négatif sous σ, de tout énonciateur, cherché dans tout le graphe (lien d'inclusion, dans l'autre sens)
 % une entité niée dont rien d'autre n'est dit : contre sa classe si un membre en est présent, contre tout référent sinon
-appui_negatif(K, G, S, type(X, T)) :-
+% appui_negatif : une négation certaine (pour chaque sens, D30) ; appui_negatif_possible : seulement pour un sens
+appui_negatif(K, G, S, A) :- appui_negatif_m(certain, K, G, S, A).
+appui_negatif_possible(K, G, S, A) :- A \= nom(_, _), appui_negatif_m(possible, K, G, S, A).
+appui_negatif_m(Mo, K, G, S, type(X, T)) :-
     val(S, X, R), member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, neg, represente, _),
-    sans_autre_dit(G, E), inclus_lien(K, n, T, W),
+    sans_autre_dit(G, E), inclus_mode(Mo, K, n, T, W),
     (   member(entite(E2, _, _), G), meme_classe(G, E2, E), present(G, E2) -> meme_classe(G, E, R)
     ;   \+ ( member(entite(E2, _, _), G), E2 \== E, meme_classe(G, E2, E) )
     ).
 % une liste de noms : chacun de ses noms nié
-appui_negatif(K, G, S, nom(X, Ks)) :-
+appui_negatif_m(certain, K, G, S, nom(X, Ks)) :-
     val(S, X, R),
     forall(member(Ki, Ks), ( member(nom(A, E, Nom, _), G), meme_classe(G, E, R), qualifie(G, A, neg, represente, _),
                               present(G, E), once(nom_valide(K, Nom, [Ki], _)) )).
-appui_negatif(K, G, S, propriete(X, Pr)) :-
+appui_negatif_m(Mo, K, G, S, propriete(X, Pr)) :-
     val(S, X, R), member(propriete(A, E, W, _), G), meme_classe(G, E, R), qualifie(G, A, neg, represente, _),
-    present(G, E), inclus_lien(K, a, Pr, W).
+    present(G, E), inclus_mode(Mo, K, a, Pr, W).
 % un événement nié : contre un autre événement présent qui a chacun de ses rôles, vers les mêmes référents
-appui_negatif(K, G, S, evenement(X, Pr)) :-
+appui_negatif_m(Mo, K, G, S, evenement(X, Pr)) :-
     val(S, X, V), qualifie(G, V, pos, represente, _),
-    member(evenement(N, W, _), G), N \== V, qualifie(G, N, neg, represente, _), inclus_lien(K, v, Pr, W),
+    member(evenement(N, W, _), G), N \== V, qualifie(G, N, neg, represente, _), inclus_mode(Mo, K, v, Pr, W),
     forall(member(role(N, Ro, E), G), ( present(G, E), member(role(V, Ro, E2), G), meme_classe(G, E2, E) )).
-appui_negatif(K, G, S, relation(X, Re, Y)) :-
+appui_negatif_m(Mo, K, G, S, relation(X, Re, Y)) :-
     val(S, X, R1), val(S, Y, R2), member(relation(A, E1, W, E2, _), G), meme_classe(G, E1, R1), meme_classe(G, E2, R2),
-    qualifie(G, A, neg, represente, _), present(G, E1), present(G, E2), inclus_lien(K, r, Re, W).
-appui_negatif(K, G, _, genre(T)) :-
+    qualifie(G, A, neg, represente, _), present(G, E1), present(G, E2), inclus_mode(Mo, K, r, Re, W).
+appui_negatif_m(Mo, K, G, _, genre(T)) :-
     member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, neg, oeuvre, _), sans_autre_dit(G, E),
-    inclus_lien(K, n, T, W).
+    inclus_mode(Mo, K, n, T, W).
 
 % T est inclus dans W : un sens de T monte par « inclus » jusqu'à un sens de W
-inclus_lien(K, Cat, T, W) :- ( integer(T) -> S0 = T ; K:sens(Cat, T, S0) ), K:sens(Cat, W, Sn), monte_inclus(K, S0, Sn, [S0]), !.
+% D30 : les sens conceptuels d'un mot (ses identifiants de concepts, s'il en a) ; les nœuds d'un type demandé
+sens_du_mot(K, Cat, W, Ss) :-
+    findall(S, K:sens(Cat, W, S), Ss0), sort(Ss0, Ss1), include(integer, Ss1, Is), ( Is == [] -> Ss = Ss1 ; Ss = Is ).
+noeuds_du_type(_, _, T, [T]) :- integer(T), !.
+noeuds_du_type(K, Cat, T, Ns) :- sens_du_mot(K, Cat, T, Ns).
+% inclusion certaine : chaque nœud du type dans chaque sens du mot ; possible : un couple, et pas certaine
+inclus_lien(K, Cat, T, W) :-
+    noeuds_du_type(K, Cat, T, Ns), Ns \== [], sens_du_mot(K, Cat, W, Ws), Ws \== [],
+    forall(( member(N, Ns), member(Sw, Ws) ), monte_inclus(K, N, Sw, [N])).
+inclus_possible(K, Cat, T, W) :-
+    noeuds_du_type(K, Cat, T, Ns), sens_du_mot(K, Cat, W, Ws), member(N, Ns), member(Sw, Ws), monte_inclus(K, N, Sw, [N]), !,
+    \+ inclus_lien(K, Cat, T, W).
+inclus_mode(certain, K, Cat, T, W) :- inclus_lien(K, Cat, T, W).
+inclus_mode(possible, K, Cat, T, W) :- inclus_possible(K, Cat, T, W).
+% un lien positif certain : chaque sens du mot atteint le type par « sous »
+positif_certain(K, Cat, W, T) :-
+    sens_du_mot(K, Cat, W, Ss), Ss \== [], forall(member(S0, Ss), sous_atteint(K, [S0], [S0], T)).
+sous_atteint(_, _, Vus, T) :- memberchk(T, Vus), !.
+sous_atteint(K, Front, Vus, T) :-
+    findall(Y, ( member(X, Front), K:sous(X, Y), \+ memberchk(Y, Vus) ), Ys0), sort(Ys0, Ys),
+    Ys \== [], append(Vus, Ys, Vus1), sous_atteint(K, Ys, Vus1, T).
 monte_inclus(K, S, T, _) :- inclus_atteints(K, [S], [S], Ns), memberchk(T, Ns).
 inclus_atteints(K, Front, Vus, Ns) :-
     findall(Y, ( member(X, Front), K:inclus(X, Y), \+ memberchk(Y, Vus) ), Ys0), sort(Ys0, Ys),
@@ -271,5 +319,5 @@ portes(K, G, R, Ns) :-
     findall(C, ( member(nom(A, E, Nom, _), G), meme_classe(G, E, R), memberchk(polarite(A, pos), G),
                  K:cle_de_nom(Nom, C) ), Ns0), sort(Ns0, Ns).
 nie_dans_la_classe(K, G, R, C) :-
-    member(nom(A2, E2, Nom2, _), G), meme_classe(G, E2, R), qualifie(G, A2, neg, represente, _),
+    member(nom(A2, E2, Nom2, _), G), meme_classe(G, E2, R), qualifie(G, A2, neg, represente, _), present(G, E2),
     K:cle_de_nom(Nom2, C2), cles_equivalentes(K, C, C2), !.

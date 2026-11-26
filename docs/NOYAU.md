@@ -106,9 +106,20 @@ mot : D27), `K:inclus(Si, Si+1)`, `K:sens(Cat, Mot, Sn)` (nier un type plus gén
 de félin » nie « lion » ; « pas de lion » ne nie pas « félin »). Les chemins sont simples : la hiérarchie peut avoir
 des cycles. **L'alias** est clos par le noyau (réflexif, symétrique, transitif), quel que soit K (D33).
 
-**La polysémie** (un mot qui désigne plusieurs types) est traitée sens par sens : un lien positif part de n'importe
-quel sens du mot, un lien négatif de n'importe quel sens du type demandé. Le choix d'un sens est une interprétation que
-le noyau ne fait pas ; c'est une limite ouverte, soumise au propriétaire (journal, D30).
+**La polysémie** (décision du propriétaire, 27/11 ; journal, D30). Les **sens conceptuels** d'un mot sont ses
+identifiants de concepts (les entiers que K lui donne), s'il en a ; sinon ses sens tels que K les donne (le mot
+lui-même, D20). Un mot polysémique n'établit pas tous ses sens à la fois :
+- un lien positif part d'un sens conceptuel du mot ; il est **certain** si chacun des sens conceptuels atteint le type
+  demandé (une conclusion commune à toutes les lectures), sinon il ne fonde qu'une **hypothèse** de sens
+  (`sens_suppose(Mot, Type)`) ;
+- une négation est **certaine** si chaque nœud du type demandé (le type lui-même s'il est un entier, sinon ses sens
+  conceptuels) est inclus dans chaque sens conceptuel du mot nié ; sinon, si un couple l'est, elle n'est que
+  **possible** : elle ne réfute rien et ne contredit rien déductivement, mais une conclusion positive qu'elle touche
+  n'est plus établie que sous l'hypothèse qu'elle vise un autre sens (`negation_autre_sens(Atome)`) ;
+- la lexicalisation (d'un concept vers son lemme) est un pas de `sous`, jamais d'`inclus` : « pas de pomme » ne nie pas
+  « fruit ».
+La désambiguïsation selon le contexte relève de C7 ; K ne choisit plus de sens en silence (l'anglais prenait le premier
+sens de WordNet : il les prend tous).
 
 ## 3. Le langage des requêtes
 
@@ -170,7 +181,7 @@ Une contrainte a, comme un atome, un appui positif et un appui négatif, indépe
 Une contrainte dont une variable n'est pas liée vaut inconnu. Ce qui réfute une contrainte est une assertion du graphe
 ou une distinction documentaire de K (la réfutation de `meme` par K est une conclusion relative à la source de K ;
 journal, D31). **La distinction documentaire** ne repose que sur des noms admissibles (de l'auteur, d'un porteur
-présent selon l'auteur, qu'aucune assertion niée de la classe ne contredit), et seulement si aucune des deux classes
+présent selon l'auteur, qu'aucune assertion niée de la classe, de porteur présent, ne contredit : D50), et seulement si aucune des deux classes
 ne porte, à alias près, le nom documenté de l'autre (D26). Les noms qu'une classe « porte », pour
 cette exclusion, sont tous ceux qu'une assertion positive lui donne, quels que soient leurs autres qualificatifs et leur
 porteur, contestés ou non (la lecture prudente). **La distinction supposée** ne repose que sur des noms d'un porteur
@@ -216,7 +227,7 @@ une variable liée à un référent dont rien n'est dit ne compte pas). On retie
 | `etablie_sous_hypotheses` | aucune vraie, une vraie sous hypothèses : une conclusion conditionnelle, ses hypothèses dans la preuve |
 | `contradictoire` | aucune certifiable, une substitution contradictoire |
 | `non_certifiee` | rien de cela, une substitution vraie non certifiable (sa vérité passe par la seule parole d'une source citée, ou par une prémisse niée) |
-| `ecartee` | rien de cela, une substitution fausse : écartée **pour ces référents** |
+| `ecartee` | rien de cela, une substitution fausse : écartée **pour ces référents**. Chaque élément est `refutation(Sigma, substitution, Fondements)` : la portée est la substitution partielle (jamais la notation, ni le document), les fondements sont l'énonciateur de chaque appui négatif (`auteur`, `cite(Source)`), une distinction documentaire de K avec sa source (`documentaire(Source)`), ou une contrainte du graphe (`texte`) (décision du 27/11, D31) |
 | `inconnue` | rien de cela ; `Partiel` dit quels atomes ont un appui positif quelque part (jamais une preuve) |
 | `incomplet` | le budget (ou le temps) est épuisé avant qu'une solution certifiable vraie soit trouvée : aucune conclusion négative, et pas `etablie_sous_hypotheses`, qui dirait « aucune vraie » (D32) |
 
@@ -253,7 +264,8 @@ preuve(Id, Versions, Regime, Sigma, Justifications, Hypotheses)
      Appui        appui(Assertion, Entite, Passage, Lien) pour un atome ;
                   contrainte(etablie(distinct(E1, E2))) | contrainte(documentaire(C1, C2, Source))
                   | contrainte(hypothese) | contrainte(egalite) | contrainte(difference) | contrainte(nombre(E))
-  Hypotheses      [distinction_supposee(X, Y, Noms1, Noms2), …]   vide pour une preuve déductive
+  Hypotheses      [distinction_supposee(X, Y, Noms1, Noms2) | sens_suppose(Mot, Type)
+                   | negation_autre_sens(Atome), …]                 vide pour une preuve déductive
 ```
 
 L'empreinte est celle du graphe validé (`variant_sha1` de ses assertions triées).
@@ -275,7 +287,9 @@ points suivants ; tout terme qu'il ne reconnaît pas est une raison de rejet.
 7. Chaque contrainte est vraie sous σ, par la justification qu'elle cite, et sans appui négatif (une classe dite une
    et deux, deux nombres) ; une distinction documentaire repose sur des noms admissibles et non partagés ; un nombre
    sur une entité présente selon l'auteur ; une hypothèse citée est dans la liste et y est légitime (les deux classes
-   portent des noms non contredits, différents, sans alias, même par une chaîne).
+   portent des noms non contredits, différents, sans alias, même par une chaîne) ; les hypothèses des atomes sont
+   exactement celles que demandent les appuis cités (un sens supposé pour un lien qui n'est pas certain, une négation
+   seulement possible de l'atome, de l'assertion citée, de l'existence d'une entité citée, de l'événement d'un rôle).
 8. Aucun atome justifié n'a d'appui négatif sous σ, d'aucun énonciateur (§ 1.1), ni l'assertion qu'il cite, reformée
    avec son propre mot.
 

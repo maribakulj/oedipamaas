@@ -11,7 +11,10 @@
         Resultat resultat(Statut, Elements, Complet)
           Statut   etablie | etablie_sous_hypotheses | contradictoire | non_certifiee | ecartee | inconnue | incomplet
           Elements etablie, etablie_sous_hypotheses : les preuves (preuve/6) ;
-                   contradictoire, non_certifiee, ecartee : les substitutions minimales, avec leur détail ;
+                   contradictoire, non_certifiee : les substitutions minimales, avec leur détail ;
+                   ecartee : refutation(Sigma, substitution, Fondements) pour chaque substitution minimale fausse
+                     (D31 : la portée est la substitution partielle, jamais la notation ni le document ; les
+                     fondements : auteur, cite(Source), documentaire(Source de K), texte (une contrainte du graphe)) ;
                    inconnue, incomplet : partiel(Satisfaits, Manquants) (jamais une preuve)
           Complet  complet | incomplet (budget épuisé)
 
@@ -125,13 +128,33 @@ predicative(M, R) :- M:classe(E, R), present(M, E), !.
 
 % --- Les liens (§ 2) -------------------------------------------------------------------------------------------------
 
-lien_pos(K, Cat, W, T, chemin(W, Ch)) :- K:sens(Cat, W, S0), chemin_court(K, sous, S0, T, Ch).
+% D30 (décision du propriétaire, 27/11) : un mot polysémique n'établit pas tous ses sens à la fois. Les sens
+% conceptuels d'un mot sont ses identifiants de concepts (entiers) s'il en a, sinon ses sens (le mot lui-même : D20).
+% Un lien positif part d'un de ces sens ; il est certain si chacun atteint le type (une conclusion commune à toutes les
+% lectures), sinon il ne fonde qu'une hypothèse (sens_suppose). Une négation est certaine si chaque nœud du type
+% demandé est inclus dans chaque sens du mot nié ; sinon, possible, elle ne réfute rien mais fait de la conclusion
+% positive une conclusion sous hypothèse (negation_autre_sens). La lexicalisation n'est jamais une inclusion.
+sens_conceptuels(K, Cat, W, Ss) :-
+    findall(S, K:sens(Cat, W, S), Ss0), sort(Ss0, Ss1), include(integer, Ss1, Is), ( Is \== [] -> Ss = Is ; Ss = Ss1 ).
+noeuds_demandes(_, _, T, [T]) :- integer(T), !.
+noeuds_demandes(K, Cat, T, Ns) :- sens_conceptuels(K, Cat, T, Ns).
+
+lien_pos(K, Cat, W, T, chemin(W, Ch)) :- sens_conceptuels(K, Cat, W, Ss), member(S0, Ss), chemin_court(K, sous, S0, T, Ch).
+lien_pos_certain(K, Cat, W, T) :-
+    sens_conceptuels(K, Cat, W, Ss), Ss \== [], forall(member(S, Ss), once(chemin_court(K, sous, S, T, _))).
 lien_neg(K, Cat, T, W, chemin_inclus(T, Ch, W)) :-
-    noeud_demande(K, Cat, T, S0), K:sens(Cat, W, Sn), chemin_court(K, inclus, S0, Sn, Ch).
+    noeuds_demandes(K, Cat, T, Ns), Ns \== [], sens_conceptuels(K, Cat, W, Ws), Ws \== [],
+    forall(( member(N, Ns), member(Sw, Ws) ), once(chemin_court(K, inclus, N, Sw, _))),
+    Ns = [N0|_], Ws = [Sw0|_], once(chemin_court(K, inclus, N0, Sw0, Ch)).
+lien_neg_possible(K, Cat, T, W, chemin_inclus(T, Ch, W)) :-
+    noeuds_demandes(K, Cat, T, Ns), sens_conceptuels(K, Cat, W, Ws),
+    once(( member(N, Ns), member(Sw, Ws), chemin_court(K, inclus, N, Sw, Ch) )),
+    \+ lien_neg(K, Cat, T, W, _).
+lien_signe(neg, K, Cat, T, W, L) :- lien_neg(K, Cat, T, W, L).
+lien_signe(negp, K, Cat, T, W, L) :- lien_neg_possible(K, Cat, T, W, L).
+signe_negatif(neg). signe_negatif(negp).
 % le type demandé comme nœud de départ : un identifiant de concept (entier) est lui-même son nœud (D27), un mot passe
 % par ses sens
-noeud_demande(_, _, T, T) :- integer(T), !.
-noeud_demande(K, Cat, T, S0) :- K:sens(Cat, T, S0).
 % un plus court chemin de S0 à T, par un parcours en largeur où chaque nœud n'est vu qu'une fois : le coût est celui du
 % nombre de nœuds atteignables, pas celui du nombre de chemins simples (exponentiel dans une hiérarchie à héritage
 % multiple, D43) ; T non lié : chaque nœud atteignable, avec un chemin
@@ -179,8 +202,9 @@ appui_(K, M, type(R, T), pos, Q, appui(E, E, P, L)) :-
 % de tout référent (docs/NOYAU.md, § 1)
 % une entité niée nue : prédicative (sa classe a un membre présent), elle nie le type de sa classe ; seule dans sa
 % classe, elle dit qu'aucun référent de ce type n'est figuré (« pas de lion ») et nie le type de tout référent (§ 1)
-appui_(K, M, type(R, T), neg, Q, appui(E, E, P, L)) :-
-    M:entite(E, W, P), W \== nom_propre, qualifie(M, E, neg, represente, Q), nue(M, E), lien_neg(K, n, T, W, L),
+appui_(K, M, type(R, T), Sg, Q, appui(E, E, P, L)) :-
+    signe_negatif(Sg),
+    M:entite(E, W, P), W \== nom_propre, qualifie(M, E, neg, represente, Q), nue(M, E), lien_signe(Sg, K, n, T, W, L),
     M:classe(E, R0),
     (   predicative(M, R0) -> R = R0
     ;   \+ ( M:classe(E2, R0), E2 \== E )              % seule dans sa classe : existentielle
@@ -195,14 +219,17 @@ appui_(K, M, nom(R, [K1|Kr]), neg, Q, Ap) :-
 appui_(K, M, propriete(R, Pr), pos, Q, appui(A, E, P, L)) :-
     M:propriete(A, E, W, P), M:classe(E, R), qualifie(M, A, pos, represente, Q0), present(M, E), lien_pos(K, a, W, Pr, L),
     effectif(M, Q0, [E], Q1), Q = Q1.
-appui_(K, M, propriete(R, Pr), neg, Q, appui(A, E, P, L)) :-
-    M:propriete(A, E, W, P), M:classe(E, R), qualifie(M, A, neg, represente, Q), present(M, E), lien_neg(K, a, Pr, W, L).
+appui_(K, M, propriete(R, Pr), Sg, Q, appui(A, E, P, L)) :-
+    signe_negatif(Sg),
+    M:propriete(A, E, W, P), M:classe(E, R), qualifie(M, A, neg, represente, Q), present(M, E),
+    lien_signe(Sg, K, a, Pr, W, L).
 appui_(K, M, evenement(V, Pr), pos, Q, appui(V, V, P, L)) :-
     M:evenement(V, W, P), qualifie(M, V, pos, represente, Q), lien_pos(K, v, W, Pr, L).
 % un événement nié nie une description (son prédicat et ses rôles) : il nie le prédicat d'un événement présent qui a
 % les mêmes rôles vers les mêmes référents, et rien d'autre ; ses rôles ne sont pas niés un à un (§ 1, D23)
-appui_(K, M, evenement(V, Pr), neg, Q, appui(N, N, P, L)) :-
-    M:evenement(N, W, P), qualifie(M, N, neg, represente, Q), lien_neg(K, v, Pr, W, L),
+appui_(K, M, evenement(V, Pr), Sg, Q, appui(N, N, P, L)) :-
+    signe_negatif(Sg),
+    M:evenement(N, W, P), qualifie(M, N, neg, represente, Q), lien_signe(Sg, K, v, Pr, W, L),
     M:evenement(V, _, _), V \== N, qualifie(M, V, pos, represente, _),
     forall(M:role(N, Ro, E), ( present(M, E), M:classe(E, C), M:role(V, Ro, E2), M:classe(E2, C) )).
 appui_(_, M, role(V, Ro, R), pos, Q, appui(role(V, Ro, E), E, P, egal)) :-
@@ -211,12 +238,15 @@ appui_(_, M, role(V, Ro, R), pos, Q, appui(role(V, Ro, E), E, P, egal)) :-
 appui_(K, M, relation(R1, Re, R2), pos, Q, appui(A, E1, P, L)) :-
     M:relation(A, E1, W, E2, P), M:classe(E1, R1), M:classe(E2, R2), qualifie(M, A, pos, represente, Q0),
     present(M, E1), present(M, E2), lien_pos(K, r, W, Re, L), effectif(M, Q0, [E1, E2], Q1), Q = Q1.
-appui_(K, M, relation(R1, Re, R2), neg, Q, appui(A, E1, P, L)) :-
+appui_(K, M, relation(R1, Re, R2), Sg, Q, appui(A, E1, P, L)) :-
+    signe_negatif(Sg),
     M:relation(A, E1, W, E2, P), M:classe(E1, R1), M:classe(E2, R2), qualifie(M, A, neg, represente, Q),
-    present(M, E1), present(M, E2), lien_neg(K, r, Re, W, L).
-appui_(K, M, genre(T), S, Q, appui(E, E, P, L)) :-
-    M:entite(E, W, P), W \== nom_propre, qualifie(M, E, S, oeuvre, Q),
-    ( S == pos -> lien_pos(K, n, W, T, L) ; nue(M, E), lien_neg(K, n, T, W, L) ).   % niée : nue seulement (§ 1.1)
+    present(M, E1), present(M, E2), lien_signe(Sg, K, r, Re, W, L).
+appui_(K, M, genre(T), pos, Q, appui(E, E, P, L)) :-
+    M:entite(E, W, P), W \== nom_propre, qualifie(M, E, pos, oeuvre, Q), lien_pos(K, n, W, T, L).
+appui_(K, M, genre(T), Sg, Q, appui(E, E, P, L)) :-                 % niée : nue seulement (§ 1.1)
+    signe_negatif(Sg),
+    M:entite(E, W, P), W \== nom_propre, qualifie(M, E, neg, oeuvre, Q), nue(M, E), lien_signe(Sg, K, n, T, W, L).
 
 nom_nie(K, M, R, Ki, Q, appui(A, E, P, L)) :-
     M:nom(A, E, Nom, P), M:classe(E, R), qualifie(M, A, neg, represente, Q), present(M, E), lien_de_nom(K, Nom, [Ki], L).
@@ -317,8 +347,11 @@ noms_admissibles(K, M, R, Ns) :-
     findall(C, ( M:classe(E, R), M:nom(A, E, Nom, _), qualifie(M, A, pos, represente, auteur), present_auteur(M, E),
                  K:cle_de_nom(Nom, C), \+ nom_conteste(K, M, R, C) ), Ns0),
     sort(Ns0, Ns).
+% un nom contesté : nié par une assertion admissible comme négation, de porteur présent (D50 : un nom nié d'un porteur
+% seulement possible, absent ou d'un autre contexte n'est pas une contestation logique)
 nom_conteste(K, M, R, C) :-
-    M:classe(E, R), M:nom(A, E, Nom, _), qualifie(M, A, neg, represente, _), K:cle_de_nom(Nom, C2), meme_nom(K, C, C2), !.
+    M:classe(E, R), M:nom(A, E, Nom, _), qualifie(M, A, neg, represente, _), present(M, E), K:cle_de_nom(Nom, C2),
+    meme_nom(K, C, C2), !.
 noms_de_classe(K, M, R, Ns) :-
     findall(C, ( M:classe(E, R), M:nom(A, E, Nom, _), qualifie(M, A, pos, represente, _), present(M, E),
                  K:cle_de_nom(Nom, C), \+ nom_conteste(K, M, R, C) ), Ns0),
@@ -408,13 +441,33 @@ vue(K, M, F, Opts, vue(Cert, Cmin, NCmin, Fmin)) :-
     findall(S, ( member(S, Ns), valeur(K, M, F, S, 0-1) ), Fs), minimales(Fs, Fmin).
 
 certifiable(K, M, S, Sel, Cl) :-
-    forall(( member(_-A, Sel), requetes:atome(A) ),
-           ( lie(A, S, Ai), \+ appui(K, M, Ai, neg, _, _), once(appui_sain(K, M, Ai, _)) )),
-    findall(H, ( member(_-Co, Sel), requetes:contrainte(Co), contrainte_valeur(K, M, Co, S, h(H)) ), Hs0), sort(Hs0, Hs),
+    findall(A, ( member(_-A, Sel), requetes:atome(A) ), As),
+    maplist(hypotheses_retenues(K, M, S), As, Hss),
+    findall(H, ( member(_-Co, Sel), requetes:contrainte(Co), contrainte_valeur(K, M, Co, S, h(H)) ), Hc),
+    append([Hc|Hss], Hs0), sort(Hs0, Hs),
     ( Hs == [] -> Cl = vraie ; Cl = sous_hypotheses(Hs) ).
 
 % un appui positif de l'auteur dont l'assertion elle-même n'est pas niée (« une lionne » quand le texte dit aussi « pas
 % de lionne » ne certifie pas « un lion ») : la preuve ne repose que sur des prémisses non contredites (§ 4.3)
+hypotheses_retenues(K, M, S, A, Hs) :- lie(A, S, Ai), \+ appui(K, M, Ai, neg, _, _), appui_retenu(K, M, Ai, _, Hs).
+% l'appui retenu d'un atome : un appui sain de l'auteur, celui qui demande le moins d'hypothèses (D30), le premier dans
+% l'ordre standard à égalité ; ses hypothèses : son sens supposé, les négations seulement possibles qui le touchent
+appui_retenu(K, M, Ai, Ap, Hs) :-
+    findall((L-Hs0)-Ap0, ( appui_sain(K, M, Ai, Ap0), hypotheses_d_appui(K, M, Ai, Ap0, Hs0), length(Hs0, L) ), Ps),
+    Ps \== [], msort(Ps, [(_-Hs)-Ap|_]).
+hypotheses_d_appui(K, M, Ai, Ap, Hs) :-
+    findall(H, hypothese_d_appui(K, M, Ai, Ap, H), Hs0), sort(Hs0, Hs).
+hypothese_d_appui(K, _, Ai, appui(_, _, _, chemin(W, _)), sens_suppose(W, T)) :-
+    categorie(Ai, Cat, T), \+ lien_pos_certain(K, Cat, W, T).
+% negation_autre_sens(Atome) : l'atome (instancié) n'a qu'une négation possible, supposée viser un autre sens
+hypothese_d_appui(K, M, Ai, _, negation_autre_sens(Ai)) :- once(appui_(K, M, Ai, negp, _, _)).
+hypothese_d_appui(K, M, Ai, Ap, negation_autre_sens(B)) :- base(Ai, Ap, B), once(appui_(K, M, B, negp, _, _)).
+hypothese_d_appui(K, M, Ai, Ap, negation_autre_sens(type(R, W))) :-
+    porteur(M, Ai, Ap, E), M:entite(E, W, _), W \== nom_propre, M:classe(E, R), once(appui_(K, M, type(R, W), negp, _, _)).
+hypothese_d_appui(K, M, role(V, _, _), _, negation_autre_sens(evenement(V, W))) :-
+    M:evenement(V, W, _), once(appui_(K, M, evenement(V, W), negp, _, _)).
+categorie(type(_, T), n, T). categorie(genre(T), n, T). categorie(propriete(_, T), a, T).
+categorie(evenement(_, T), v, T). categorie(relation(_, T, _), r, T).
 % (le réexamen d'un appui déjà compté par l'arbre ne l'est pas une seconde fois)
 appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \+ conteste(K, M, Ai, Ap).
 % les prémisses d'un appui (cycle 7) : l'assertion avec son mot ; l'existence de chaque porteur (le type de son entité
@@ -458,7 +511,7 @@ resoudre(K, M, Id, F, Opts, resultat(Statut, Elements, Complet)) :-
         (   statut_certifie(K, M, Id, F, Cert, Statut, Elements) -> true
         ;   Cmin \== [] -> Statut = contradictoire, maplist(contradiction(K, M, F), Cmin, Elements)
         ;   NCmin \== [] -> Statut = non_certifiee, Elements = NCmin
-        ;   Fmin \== [] -> Statut = ecartee, Elements = Fmin
+        ;   Fmin \== [] -> Statut = ecartee, maplist(refutation(K, M, F), Fmin, Elements)
         ;   Statut = inconnue, partiel(K, M, F, P), Elements = [P]
         )
     ).
@@ -476,13 +529,29 @@ contradiction(K, M, F, S, contradictoire(S, Nature, Atomes)) :-
                        setof(Q, Ap^appui(K, M, Ai, pos, Q, Ap), Qp), setof(Q, Ap^appui(K, M, Ai, neg, Q, Ap), Qn) ), Atomes),
     ( member(_-Qp-Qn, Atomes), member(Q, Qp), memberchk(Q, Qn) -> Nature = interne ; Nature = documentaire ).
 
+% une réfutation (D31) : sa portée (la substitution partielle qu'elle réfute, jamais la notation ni le document) et ses
+% fondements (l'énonciateur de chaque appui négatif d'un atome : auteur ou source citée ; une distinction documentaire
+% de K, avec sa source, pour une contrainte)
+refutation(K, M, F, S, refutation(S, substitution, Fondements)) :-
+    requetes:atomes(F, As),
+    findall(Q, ( member(_-A, As), requetes:atome(A), lie(A, S, Ai), appui(K, M, Ai, neg, Q, _) ), Qs),
+    findall(documentaire(Src),
+            ( member(_-Co, As), requetes:contrainte(Co), requetes:variables(Co, Vs), forall(member(V, Vs), memberchk(V-_, S)),
+              contrainte_valeur(K, M, Co, S, X), memberchk(X, [f, b]), Co = meme(X1, Y1), memberchk(X1-A1, S),
+              memberchk(Y1-B1, S), distinction(K, M, A1, B1, documentaire(_, _, Src)) ), Ds),
+    findall(texte, ( member(_-Co, As), requetes:contrainte(Co), requetes:variables(Co, Vs), forall(member(V, Vs), memberchk(V-_, S)),
+                     contrainte_valeur(K, M, Co, S, X), memberchk(X, [f, b]),
+                     \+ ( Co = meme(X1, Y1), memberchk(X1-A1, S), memberchk(Y1-B1, S),
+                          distinction(K, M, A1, B1, documentaire(_, _, _)) ) ), Ts),
+    append([Qs, Ds, Ts], Fs0), sort(Fs0, Fondements).
+
 regime(F, classement) :- requetes:atomes(F, As), forall(( member(_-A, As), requetes:atome(A) ), A = genre(_)), !.
 regime(_, figuration).
 
 preuve(K, M, Id, Rg, cert(Cl, S, Sel), preuve(Id, [noyau(V), connaissances(Vk), graphe(H)], Rg, S, Js, Hs)) :-
     version_noyau(V), K:version(Vk), M:empreinte(H),
     findall(j(C, A, Ap), ( member(C-A, Sel), requetes:atome(A), lie(A, S, Ai),
-                           once(appui_sain(K, M, Ai, Ap)) ), Ja),
+                           appui_retenu(K, M, Ai, Ap, _) ), Ja),
     findall(j(C, Co, contrainte(J)), ( member(C-Co, Sel), requetes:contrainte(Co),
                                        contrainte_valeur(K, M, Co, S, X), justification(X, J) ), Jc),
     append(Ja, Jc, Js0), sort(Js0, Js),

@@ -175,7 +175,9 @@ test(meme_explicite) :-
 
 test(union) :-
     graphe([entite(e1, lionne, p_1)], G), Q = requete(fauve, ou([type(v(x), tigre), type(v(x), lion)])),
-    resultat(G, Q, etablie, [preuve(_, _, _, _, [j(C, _, appui(e1, e1, p_1, chemin(lionne, [lionne, lion])))], [])]),
+    % depuis D30, le lien part du sens conceptuel du mot (1001, qui se lexicalise en « lionne ») : le chemin cité était
+    % [lionne, lion] avant
+    resultat(G, Q, etablie, [preuve(_, _, _, _, [j(C, _, appui(e1, e1, p_1, chemin(lionne, [1001, lionne, lion])))], [])]),
     C == [2], preuves_acceptees(G, Q).
 test(jamais_vers_le_bas) :-                     % « un animal » ne dit pas « un lion »
     graphe([entite(e1, animal, p_1)], G), resultat(G, requete(lion, type(v(x), lion)), inconnue).

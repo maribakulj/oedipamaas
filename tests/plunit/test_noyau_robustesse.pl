@@ -108,6 +108,16 @@ test(verificateur_contrainte_sur_evenements) :-
     P0 = preuve(I, V, R, S, Js, H), S = [_, v(f)-F],
     P = preuve(I, V, R, S, [j([3], meme(v(e), v(f)), contrainte(egalite))|Js], H), F == v1,
     verifier(K, G, requete(q, et([evenement(v(e), tenir), evenement(v(f), tenir), meme(v(e), v(f))])), P, rejete(_)).
+% D31 : une réfutation dit sa portée (la substitution) et ses fondements (sources, connaissance documentaire)
+test(refutation_par_une_source_citee) :-
+    graphe([entite(e1, homme, p_1), nom(n1, e1, pierre, p_2), neg(n1), enon(n1, cite(etude))], G), k(K),
+    satisfaire(K, G, requete(q, nom(v(x), ['PIERRE'])), resultat(ecartee, [refutation(S, substitution, Fs)], complet)),
+    S == [v(x)-e1], Fs == [cite(etude)].
+test(refutation_documentaire_garde_sa_source) :-
+    graphe([entite(e1, homme, p_1), nom(n1, e1, david, p_2), entite(e2, homme, p_3), nom(n2, e2, goliath, p_4)], G), k(K),
+    satisfaire(K, G, requete(q, et([nom(v(x), ['DAVID']), nom(v(y), ['GOLIATH']), meme(v(x), v(y))])),
+               resultat(ecartee, Els, complet)),
+    forall(member(E, Els), ( E = refutation(_, substitution, Fs), memberchk(documentaire('source de test'), Fs) )).
 test(verificateur_graphe_invalide) :-
     k(K), verifier(K, [bizarre], requete(q, type(v(x), lion)), preuve(q, [], figuration, [], [], []), rejete([graphe_invalide])).
 test(verificateur_preuve_non_close) :-
