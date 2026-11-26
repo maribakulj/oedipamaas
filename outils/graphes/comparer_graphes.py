@@ -39,6 +39,7 @@ l'alignement (le même passage)."""
 import argparse
 import collections
 import json
+import re
 import sys
 import unicodedata
 from pathlib import Path
@@ -51,6 +52,16 @@ QUALIF_DEFAUT = {"polarite": "pos", "modalite": "affirme", "portee": "represente
 def norm(x) -> str:
     s = unicodedata.normalize("NFC", str(x)).strip().lower().replace("_", " ")
     return " ".join(s.split())
+
+
+def norm_pred(x) -> str:
+    """Un prédicat : la forme pronominale française est celle du verbe (« se tenir », « s'asseoir » : tenir,
+    asseoir ; le guide ne l'avait pas fixé, les annotateurs l'ont écrite des deux façons)."""
+    s = norm(x).replace("’", "'")
+    for p in ("se ", "s'"):
+        if s.startswith(p):
+            return s[len(p):].strip()
+    return s
 
 
 def norm_nom(x) -> str:
@@ -87,20 +98,20 @@ class Graphe:
 
 def portee_de_mention(texte, mention, deja):
     """La portée (début, fin) de la n-ième occurrence de la mention dans le texte (n : le nombre de fois qu'elle a déjà
-    été prise), ou None si elle n'y est pas."""
+    été prise), ou None si elle n'y est pas. Les occurrences sont cherchées en mots entiers d'abord (« hold » n'est pas
+    dans « holds »), puis sans tenir compte de la casse, puis comme simple sous-chaîne."""
     if not mention:
         return None
     m = str(mention)
-    i, n = -1, deja.get(m, 0)
-    for _ in range(n + 1):
-        i = texte.find(m, i + 1)
-        if i < 0:
-            i = texte.lower().find(m.lower())
-            break
-    if i < 0:
-        return None
-    deja[m] = n + 1
-    return (i, i + len(m))
+    n = deja.get(m, 0)
+    motif = r"(?<!\w)" + re.escape(m) + r"(?!\w)"
+    for occ in (list(re.finditer(motif, texte)), list(re.finditer(motif, texte, re.I)),
+                list(re.finditer(re.escape(m), texte, re.I))):
+        if occ:
+            o = occ[min(n, len(occ) - 1)]
+            deja[m] = n + 1
+            return (o.start(), o.end())
+    return None
 
 
 def depuis_reference(r) -> Graphe:
@@ -108,7 +119,10 @@ def depuis_reference(r) -> Graphe:
     deja = {}
 
     def qualif(ident, obj):
-        g.qualif[ident] = {q: obj.get(q, d) for q, d in QUALIF_DEFAUT.items()}
+        q = {q: obj.get(q, d) for q, d in QUALIF_DEFAUT.items()}
+        if q["enonciateur"] != "auteur":           # {"cite": "Vasari"} : une source citée (la source n'est pas comparée)
+            q["enonciateur"] = "cite"
+        g.qualif[ident] = q
     for e in r.get("entites", []):
         g.entites[e["id"]] = (norm(e["tete"]), portee_de_mention(g.texte, e.get("mention"), deja))
         qualif(e["id"], e)
@@ -125,7 +139,7 @@ def depuis_reference(r) -> Graphe:
         if e.get("nombre") is not None and int(e["nombre"]) > 1:      # « un » n'est pas un nombre dit (guide, § 3)
             g.nombres.append((e["id"], int(e["nombre"]), None))
     for v in r.get("evenements", []):
-        g.evenements[v["id"]] = (norm(v["predicat"]), portee_de_mention(g.texte, v.get("mention"), deja),
+        g.evenements[v["id"]] = (norm_pred(v["predicat"]), portee_de_mention(g.texte, v.get("mention"), deja),
                                  norm(v["nom_d_action"]) if v.get("nom_d_action") else None)
         qualif(v["id"], v)
         for role, es in v.get("roles", {}).items():
@@ -158,7 +172,7 @@ def depuis_faits(r) -> Graphe:
         elif t == "entite":
             g.entites[f[1]] = ("", passages.get(f[3]))
         elif t == "evenement":
-            g.evenements[f[1]] = (norm(f[2]), passages.get(f[3]), None)
+            g.evenements[f[1]] = (norm_pred(f[2]), passages.get(f[3]), None)
         elif t == "nom":
             g.noms.append((f[2], norm_nom(f[3]), f[1]))
         elif t == "propriete":
@@ -189,7 +203,7 @@ def ajouter_faits(g: Graphe, faits):
         if t == "entite":
             h.entites[f[1]] = (norm(f[2]) if f[2] != "nom_propre" else "", None)
         elif t == "evenement":
-            h.evenements[f[1]] = (norm(f[2]), None, None)
+            h.evenements[f[1]] = (norm_pred(f[2]), None, None)
         elif t == "propriete":
             h.proprietes.append((f[2], norm(f[3]), f[1]))
         elif t == "role":
