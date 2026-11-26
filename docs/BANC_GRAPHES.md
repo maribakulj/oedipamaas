@@ -25,7 +25,7 @@ Un fichier JSON : une liste d'objets, un par texte.
 
 ```json
 {"k": 12, "genre": "positif", "langue": "en", "texte": "…",
- "entites":    [{"id": "e1", "tete": "man", "mention": "A young man", "proprietes": ["young"], "nombre": 1,
+ "entites":    [{"id": "e1", "tete": "man", "mention": "A young man", "proprietes": ["young"],
                  "noms": ["Jerome"], "polarite": "pos", "modalite": "affirme", "portee": "represente",
                  "enonciateur": "auteur"}],
  "evenements": [{"id": "v1", "predicat": "sing", "mention": "singing", "nom_d_action": null,
@@ -56,8 +56,9 @@ animaux, objets, lieux, parties du corps, vêtements, éléments du décor, l'œ
   `arbre`) ; un composé que le dictionnaire donne comme une unité garde ses mots (`ring finger`, `coat of arms`,
   `pomme de terre`, `mal de tête`) ; un nom propre seul (« Hercules ») a pour tête son nom en minuscules
   (`hercules`) et le nom dans `noms`.
-- Les **pronoms** ne sont pas des entités : leurs rôles et relations vont à l'entité qu'ils reprennent (la mention
-  la plus proche avant eux).
+- Les **pronoms** ne sont pas des entités : leurs rôles et relations vont à l'entité qu'ils désignent selon le sens
+  (« a bishop who anoints his head and consecrates him » : *his* et *him* sont le saint, non l'évêque) ; à sens égal,
+  la mention la plus proche avant eux.
 - Deux mentions du même référent (« a saint… the old man ») sont deux entités, réunies par `coref`. Un attribut
   nominal (« the man is a saint ») : deux entités et une `coref`.
 - `nombre` : seulement quand le texte dit un nombre (« two angels » : 2) ; un pluriel sans nombre n'en a pas.
@@ -71,9 +72,11 @@ animaux, objets, lieux, parties du corps, vêtements, éléments du décor, l'œ
   un nom d'action sans verbe usuel garde le nom comme prédicat (`battle`).
 - Un participe qui décrit une posture ou une action en cours (« a kneeling man », « the man, praying ») est un
   événement dont le référent a son rôle, non une propriété ; un participe qui décrit un état résultant (« a broken
-  sword », « crowned ») est une propriété.
+  sword », « crowned ») est une propriété ; un participe qui a son propre complément (« couronnés de myrte »,
+  « crowned with laurel ») est un événement, le complément en instrument.
 - Les verbes de simple présence ou de figuration (« is shown », « appears », « there is », « we see », « est
-  représenté ») ne sont pas des événements : ils disent seulement que l'entité est figurée.
+  représenté ») ne sont pas des événements : ils disent seulement que l'entité est figurée ; une apparition dans la
+  scène (« apparaît en songe à un évêque ») est un événement.
 
 **Les rôles** (`roles` : rôle → liste d'entités) :
 - `agent` : celui qui fait l'action ou qui l'éprouve (sujet d'un verbe actif, complément d'agent d'un passif ; le
@@ -83,7 +86,12 @@ animaux, objets, lieux, parties du corps, vêtements, éléments du décor, l'œ
 - `instrument` : ce avec quoi l'action est faite ; `destinataire` : à qui l'on donne, montre, dit ;
 - `lieu` : où se passe l'action (« stands in a meadow » : la prairie).
 Le passif se ramène à l'actif (« the lion is strangled by Hercules » : Hercule agent, le lion patient). Un rôle que
-le texte ne dit pas n'est pas écrit (pas d'agent supposé).
+le texte ne dit pas n'est pas écrit (pas d'agent supposé). Le lieu d'une action, complément du verbe (« stands on the
+bank », « se tient près d'un lit »), est le rôle `lieu` ; le lieu d'une entité, dit dans son groupe nominal ou par
+*être* (« a meadow beneath the trees », « le livre est sur la table »), est une relation. Un rôle et une relation ne
+relient que des **entités** : un nom d'action qui est lui-même participant (« la rupture… foudroyé ») est aussi
+annoté comme entité (sa tête : le nom), et c'est cette entité qui reçoit le rôle. La cause, le but et la manière sans
+préposition (« paisiblement », « au loin ») ne sont pas annotés.
 
 **Les relations** (`sujet`, `relation`, `objet`, orientées : le sujet est ce dont on dit la relation) :
 - les prépositions de lieu et de position, au lemme de la préposition dans la langue du texte (`in`, `on`, `beneath`,
@@ -91,7 +99,10 @@ le texte ne dit pas n'est pas écrit (pas d'agent supposé).
 - la possession et le complément du nom : `of` ou `de`, du possédé vers le possesseur (« his hand », « la main du
   saint » : la main, `of` / `de`, l'homme) ; les parties du corps aussi ;
 - un verbe de relation stative peut être un événement (« holds », « tient ») : on l'écrit en **événement** avec ses
-  rôles (agent, theme), jamais en relation.
+  rôles (agent, theme), jamais en relation ;
+- une préposition qui ne dit ni un lieu ni la possession et qu'aucun rôle ne couvre (la cause, l'origine, le résultat :
+  « grimaçant sous une migraine », « changed into a wolf », « snatched from ») : une relation, au lemme de la
+  préposition, du référent qu'elle qualifie vers son complément.
 
 **La négation, la modalité, la portée, l'énonciateur** (les qualificatifs d'une entité, d'un nom, d'une propriété,
 d'un événement ou d'une relation) :
@@ -113,6 +124,11 @@ d'un événement ou d'une relation) :
   l'autre ») ; sans cela, deux mentions non coréférentes n'ont pas d'identité dite.
 
 **Les cas difficiles** : choisir ce qui suit le sens, et le dire dans `notes`. Ne pas laisser un texte sans graphe.
+
+*Précisions du 26/11, après la double annotation du développement* : les pronoms (selon le sens), le participe à
+complément, l'apparition, les prépositions sans rôle, le lieu (rôle ou relation), les rôles et relations entre
+entités seulement. Elles disent ce que l'annotateur avait fait en suivant le sens ;
+les références du développement sont adjugées d'après elles.
 
 ## 4. Les mesures
 

@@ -12,7 +12,7 @@ Les mesures, par catégorie (précision, rappel, F1, et les comptes) :
   entites       une entité de référence alignée sur une entité du graphe de même tête
   noms          (référent, nom)                        sous l'alignement
   proprietes    (référent, propriété)
-  nombres       (référent, nombre)
+  nombres       (référent, nombre), les nombres supérieurs à 1 (un singulier n'est pas un nombre dit)
   evenements    un événement de référence aligné sur un événement de même prédicat
   roles         (événement, rôle, référent)            « Hercule étrangle le lion » : le rôle et son sens
   roles_macro   la même chose, patient et thème confondus (la question E3 de l'étude)
@@ -122,7 +122,7 @@ def depuis_reference(r) -> Graphe:
             ident = f"{e['id']}#prop{i}"
             g.proprietes.append((e["id"], norm(v), ident))
             qualif(ident, q)
-        if e.get("nombre") is not None:
+        if e.get("nombre") is not None and int(e["nombre"]) > 1:      # « un » n'est pas un nombre dit (guide, § 3)
             g.nombres.append((e["id"], int(e["nombre"]), None))
     for v in r.get("evenements", []):
         g.evenements[v["id"]] = (norm(v["predicat"]), portee_de_mention(g.texte, v.get("mention"), deja),
@@ -163,7 +163,7 @@ def depuis_faits(r) -> Graphe:
             g.noms.append((f[2], norm_nom(f[3]), f[1]))
         elif t == "propriete":
             g.proprietes.append((f[2], norm(f[3]), f[1]))
-        elif t == "nombre":
+        elif t == "nombre" and f[2] > 1:
             g.nombres.append((f[1], f[2], None))
         elif t == "role":
             g.roles.append((f[1], f[2], f[3]))
