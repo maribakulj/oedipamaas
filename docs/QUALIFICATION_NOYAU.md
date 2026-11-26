@@ -44,7 +44,7 @@ REJETÉ (examiné, pas un défaut : raison donnée).
 | D13 | moyenne | Reproductibilité (même entrée, même sortie, empreinte) non testée | CORRIGÉ (cycle 2) |
 | D14 | moyenne | Comparateur : transitivité, renommage, insatisfiables, taxinomie non testés ; pas de mutation du comparateur | CORRIGÉ (cycle 5) : `test_inclusion_generatif.pl` (modèles), 27 tests écrits, 7 défauts injectés détectés |
 | D15 | moyenne | Pas de mutation du vérificateur | CORRIGÉ (cycle 3) : 15 défauts injectés dans le vérificateur, tous détectés ; mutations du graphe à empreinte recalculée |
-| D16 | moyenne | Pas d'oracle indépendant des deux moteurs pour les fragments finis (les deux moteurs Prolog sont écrits d'après la même spécification) | OUVERT |
+| D16 | moyenne | Pas d'oracle indépendant des deux moteurs pour les fragments finis (les deux moteurs Prolog sont écrits d'après la même spécification) | CORRIGÉ (cycle 6) : oracle Python d'après NOYAU.md seul ; 0 désaccord sur 5 000 cas ; `tests/test_oracle.py` |
 | D17 | moyenne | Compilateur : couverture lexicale par sous-chaîne (`couvert/2`), fausse complétude (audit 1, § 11) | CORRIGÉ (cycle 1) |
 | D18 | moyenne | Compilateur : la personne héritée devient une variable indépendante (coprésence prise pour participation) (audit 1, § 11) | CORRIGÉ (cycle 1) |
 | D19 | basse | Contrat : les types des requêtes sont des atomes, les synsets des entiers (audit 2, § 6) | CORRIGÉ (cycle 2) |
@@ -77,6 +77,7 @@ Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audi
 | D43 | haute | Recherche des liens exponentielle (tous les chemins simples), hors budget ; vérificateur sans borne (V-X1) | CORRIGÉ (cycle 4) : parcours en largeur, chaque nœud vu une fois, dans les trois programmes ; essai sur 2^24 chemins |
 | D44 | moyenne | Requêtes non closes ou cycliques admises par `bien_formee` (V-R3, B1) ; `bien_formee` exponentiel en `ou` (V-X3) ; `valider` quadratique, hors limite de temps (V-X2) | CORRIGÉ en partie (cycle 4) : requêtes closes et acycliques exigées ; liaison des contraintes linéaire ; la limite de temps couvre la validation ; `valider` reste quadratique |
 | D45 | basse | Identifiants entiers, variables `v(1)`, options invalides, `satisfaire_lot` qui échoue en silence (V-R1, R2, B2 à B5) ; `distinct` vers une entité seulement possible (V-V4) ; passage d'un appui non contrôlé (V-V8) ; budget dépendant de l'ordre des faits et réinitialisé par un appel imbriqué (V-D1 à D3) | CORRIGÉ en partie (cycle 4) : identifiants atomiques, variables atomiques, options contrôlées, lot sans échec silencieux, distinction entre entités présentes selon l'auteur, passage contrôlé, budget propre à l'appel ; reste DOCUMENTÉ : sous un budget épuisé, ce qui est trouvé dépend de l'ordre d'exploration (le statut `incomplet` le dit) ; la preuve choisie parmi plusieurs dépend de l'ordre des faits (toutes sont valides) |
+| D46 | moyenne | Entité niée nue d'une classe sans membre présent lue comme existentielle (O-A) ; participants d'un événement nié non exigés présents (O-B) ; noms d'un porteur absent dans la distinction supposée (O-C) ; nom contesté non compté contre la documentaire (O-D) | CORRIGÉ (cycle 6) |
 | D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | CORRIGÉ (cycle 5) |
 | D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | CORRIGÉ (cycle 5) |
 | D39 | grave | Comparateur : distinction documentaire du graphe canonique, cas non contrôlés, insatisfiables, noms de variables (I-D2, D4, D5) | CORRIGÉ (cycle 5) |
@@ -201,6 +202,29 @@ python -m pytest -q
   donnent `indetermine` (pas de contre-exemple construit) ; la normalisation n'est pas intégrée (un graphe canonique
   qu'elle change est indéterminé) ; le fragment exclut deux prédicats pour un événement.
 
+### Cycle 6 (26/11) : l'oracle indépendant (D16, D46)
+
+- L'oracle Python (écrit par un agent qui n'a lu que NOYAU.md, ASSERTIONS.md, le K de test et le générateur) a été
+  remis à niveau pour la version 0.3 par le même procédé. Sur 2 × 500 et 2 × 2 000 cas (deux générateurs, plusieurs
+  graines), il restait quatre désaccords, tous des cas où les deux moteurs s'accordaient contre le texte ou sur une
+  lecture que le texte ne fixait pas :
+  - A (défaut des moteurs) : une entité niée nue dans une classe dont aucun membre n'est présent était lue comme
+    existentielle ; le § 1.1 ne le dit pas : rien ;
+  - B : un événement nié dont un participant n'est pas présent réfutait ; le § 1 demande présents ceux dont une
+    assertion niée parle : corrigé dans les trois programmes ;
+  - C et D : les noms d'une classe pour les distinctions ; tranché par la lecture prudente (hypothèse : porteur
+    présent, nom non contesté ; exclusion de la documentaire : tout nom affirmé), écrit au § 4.1 ; l'oracle a reçu
+    cette lecture (`LECTURES["exclusion_documentaire"]`), comme décision de la spécification, pas comme copie des
+    moteurs.
+- Après correction : 0 désaccord sur 5 000 cas (`python3 tests/oracle/differentiel.py`, `--jeu gen`, `--graine 7`,
+  `-n 2000`, `-n 2000 --jeu gen --graine 3`). Distribution (graine par défaut, 500 cas, jeu de l'oracle) : etablie 58,
+  ecartee 28, inconnue 380, non_certifiee 20, contradictoire 1, mal formées 13 ; jeu gen : etablie 65, sous
+  hypothèses 1, ecartee 30, inconnue 389, non_certifiee 14, contradictoire 1.
+- Quatre cas ajoutés au banc sémantique (51 cas). Mon attendu du cas D était faux (j'avais écrit `inconnue` ; le
+  § 4.1 donne `etablie_sous_hypotheses`, comme l'oracle) : corrigé, avec la raison.
+- Noté, non corrigé : le moteur de référence ne contrôle pas la forme des requêtes (il rend un statut sur une requête
+  mal formée) ; il n'est appelé que sur des requêtes déjà contrôlées.
+
 ## 7. Garanties établies, garanties absentes, limites
 
 Rien ci-dessous n'est une démonstration formelle : un test qui passe, ou l'accord de trois programmes, n'en est pas
@@ -227,9 +251,10 @@ confronté à des attendus qui ne dépendent d'aucun d'eux.
 **Absent (non garanti)**
 - Aucune preuve mécanique (ni de la sémantique, ni de l'équivalence des moteurs, ni de l'argument de sûreté du
   comparateur, NOYAU § 8).
-- L'oracle Python indépendant (D16) n'a pas encore été remis à niveau pour la version 0.3 (en cours) ; les deux
-  moteurs Prolog et le vérificateur sont écrits d'après la même spécification et peuvent partager une erreur de
-  conception : seuls les contre-exemples écrits à la main et l'oracle s'en protègent.
+- L'oracle Python, les deux moteurs Prolog et le vérificateur sont écrits d'après la même spécification : une erreur
+  de la spécification elle-même n'est vue par aucun d'eux ; seuls les contre-exemples écrits à la main et les audits
+  contradictoires s'en protègent. L'accord de l'oracle et des moteurs (0 désaccord sur 5 000 cas) porte sur les
+  fragments que les générateurs tirent.
 - Polysémie (D30) : un mot établit chacun de ses sens. Statut `ecartee` (D31) : réfutation par une source citée seule,
   réfutation sous des atomes d'identification inconnus. Décisions du propriétaire.
 - Réfutation d'une conjonction qui couvre une description niée (D41) ; alternatives couvertes par une requête
@@ -241,8 +266,6 @@ confronté à des attendus qui ne dépendent d'aucun d'eux.
 
 ## 8. Prochain travail
 
-1. D16 : l'oracle Python d'après NOYAU.md 0.3 seul, différentiel sur plusieurs graines ; traiter ses désaccords.
-2. Décisions du propriétaire : D30 (polysémie), D31 (sens d'`ecartee`).
-3. Mesures du compilateur avec le comparateur qualifié (provisoires) ; puis seulement, reprise de la compilation
-   d'Iconclass.
-4. D10 : contextes imbriqués et portées mêlées dans le générateur.
+1. Décisions du propriétaire : D30 (polysémie), D31 (sens d'`ecartee`).
+2. Mesures du compilateur avec le comparateur qualifié : faites (provisoires, `docs/mesures/V2.md`).
+3. D10 : contextes imbriqués et portées mêlées dans le générateur.

@@ -200,6 +200,27 @@ cas(negation_du_type_demande,
 cas(pas_de_felin_ne_nie_pas_le_mot_fauve,
     [entite(e1, fauve, p_1), entite(e2, felin, p_2), neg(e2)], requete(q, type(v(x), fauve)), etablie,
     'fauve → félin n’est pas une inclusion : nier félin ne nie pas fauve').
+% --- Désaccords de l'oracle Python (cycle 6), tranchés d'après le texte de NOYAU § 1 et § 1.1
+cas(entite_niee_d_une_classe_sans_membre_present,
+    [entite(e1, lion, p_1), neg(e1), entite(e3, lion, p_2), mod(e3, possible), coref(e1, e3)],
+    requete(q, type(v(x), lion)), inconnue,
+    'ni prédicative (aucun membre présent) ni seule dans sa classe : elle ne nie rien (§ 1.1)').
+cas(evenement_nie_d_un_participant_absent,
+    [entite(e1, homme, p_1), mod(e1, possible), evenement(v1, tenir, p_2), neg(v1), role(v1, agent, e1),
+     evenement(v2, tenir, p_3), role(v2, agent, e1)],
+    requete(q, evenement(v(e), tenir)), etablie,
+    'une assertion niée demande présents ceux dont elle parle (§ 1) : « l’homme, peut-être, ne tient pas »').
+cas(hypothese_sur_un_nom_sans_porteur,
+    [entite(e1, homme, p_1), nom(a1, e1, david, p_2), entite(e2, homme, p_3), entite(e3, homme, p_4), mod(e3, possible),
+     nom(a2, e3, jerome, p_5), coref(e2, e3)],
+    requete(q, et([nom(v(x), ['DAVID']), type(v(y), homme), distincts(v(x), v(y))])), inconnue,
+    'le nom d’un porteur seulement possible ne fonde aucune hypothèse de distinction').
+cas(nom_conteste_porte_contre_la_documentaire,
+    [entite(e1, homme, p_1), nom(a1, e1, david, p_2), entite(e2, homme, p_3), nom(a2, e2, goliath, p_4),
+     nom(a3, e2, david, p_5), nom(a4, e2, david, p_6), neg(a4)],
+    requete(q, et([nom(v(x), ['DAVID']), nom(v(y), ['GOLIATH']), distincts(v(x), v(y))])), etablie_sous_hypotheses,
+    'la seconde classe porte aussi DAVID (même contesté) : pas de distinction documentaire ; reste l’hypothèse sur
+     les noms non contestés (DAVID contre GOLIATH), comme le dit le § 4.1').
 cas(alias_en_chaine,
     [entite(e1, homme, p_1), nom(n1, e1, girolamo, p_2)], requete(q, nom(v(x), ['HIERONYMUS'])), etablie,
     'HIERONYMUS ~ JEROME ~ GIROLAMO : l’alias est clos (D33)').

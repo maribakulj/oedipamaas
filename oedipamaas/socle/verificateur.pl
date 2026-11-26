@@ -191,7 +191,9 @@ appui_positif(K, G, _, genre(T), appui(E, E, P, L)) :-
 appui_negatif(K, G, S, type(X, T)) :-
     val(S, X, R), member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, neg, represente, _),
     sans_autre_dit(G, E), inclus_lien(K, n, T, W),
-    ( member(entite(E2, _, _), G), meme_classe(G, E2, E), present(G, E2) -> meme_classe(G, E, R) ; true ).
+    (   member(entite(E2, _, _), G), meme_classe(G, E2, E), present(G, E2) -> meme_classe(G, E, R)
+    ;   \+ ( member(entite(E2, _, _), G), E2 \== E, meme_classe(G, E2, E) )
+    ).
 % une liste de noms : chacun de ses noms nié
 appui_negatif(K, G, S, nom(X, Ks)) :-
     val(S, X, R),
@@ -204,7 +206,7 @@ appui_negatif(K, G, S, propriete(X, Pr)) :-
 appui_negatif(K, G, S, evenement(X, Pr)) :-
     val(S, X, V), qualifie(G, V, pos, represente, _),
     member(evenement(N, W, _), G), N \== V, qualifie(G, N, neg, represente, _), inclus_lien(K, v, Pr, W),
-    forall(member(role(N, Ro, E), G), ( member(role(V, Ro, E2), G), meme_classe(G, E2, E) )).
+    forall(member(role(N, Ro, E), G), ( present(G, E), member(role(V, Ro, E2), G), meme_classe(G, E2, E) )).
 appui_negatif(K, G, S, relation(X, Re, Y)) :-
     val(S, X, R1), val(S, Y, R2), member(relation(A, E1, W, E2, _), G), meme_classe(G, E1, R1), meme_classe(G, E2, R2),
     qualifie(G, A, neg, represente, _), present(G, E1), present(G, E2), inclus_lien(K, r, Re, W).
@@ -230,7 +232,7 @@ contrainte_justifiee(_, G, S, _, distincts(X, Y), etablie(distinct(E1, E2))) :-
 contrainte_justifiee(K, G, S, _, distincts(X, Y), documentaire(C1, C2, Src)) :-
     val(S, X, A), val(S, Y, B), A \== B, nom_admissible(K, G, A, C1), nom_admissible(K, G, B, C2),
     ( K:distincts_documentes(C1, C2, Src) ; K:distincts_documentes(C2, C1, Src) ),
-    noms(K, G, A, N1), noms(K, G, B, N2),
+    portes(K, G, A, N1), portes(K, G, B, N2),
     \+ ( member(C, N2), cles_equivalentes(K, C1, C) ), \+ ( member(C, N1), cles_equivalentes(K, C2, C) ).
 contrainte_justifiee(K, G, S, Hs, distincts(X, Y), hypothese) :-
     val(S, X, A), val(S, Y, B), A \== B, memberchk(distinction_supposee(X, Y, N1, N2), Hs),
@@ -247,7 +249,10 @@ nom_admissible(K, G, R, C) :-
 
 noms(K, G, R, Ns) :-
     findall(C, ( member(nom(A, E, Nom, _), G), meme_classe(G, E, R), qualifie(G, A, pos, represente, _),
-                 K:cle_de_nom(Nom, C), \+ nie_dans_la_classe(K, G, R, C) ), Ns0), sort(Ns0, Ns).
+                 present(G, E), K:cle_de_nom(Nom, C), \+ nie_dans_la_classe(K, G, R, C) ), Ns0), sort(Ns0, Ns).
+portes(K, G, R, Ns) :-
+    findall(C, ( member(nom(A, E, Nom, _), G), meme_classe(G, E, R), memberchk(polarite(A, pos), G),
+                 K:cle_de_nom(Nom, C) ), Ns0), sort(Ns0, Ns).
 nie_dans_la_classe(K, G, R, C) :-
     member(nom(A2, E2, Nom2, _), G), meme_classe(G, E2, R), qualifie(G, A2, neg, represente, _),
     K:cle_de_nom(Nom2, C2), cles_equivalentes(K, C, C2), !.

@@ -73,8 +73,9 @@ d'un atome, ou là où la description niée est entièrement couverte :
 | `relation(A, E1, W, E2)`, présentes | `relation(X, R, Y)`, σ(X), σ(Y) les classes de E1, E2, R inclus dans W (orientée) |
 | `entite(E, W)` **nue** (rien d'autre n'en est dit : ni nom, propriété, relation, rôle, nombre, distinction), dans une classe qui a un membre présent | `type(X, T)`, σ(X) cette classe, T inclus dans W (« ce personnage n'est pas un saint ») |
 | `entite(E, W)` nue, seule dans sa classe | `type(X, T)` pour **tout** référent σ(X), T inclus dans W (« pas de lion » : aucun lion n'est figuré) |
+| `entite(E, W)` nue, dans une classe d'autres membres dont aucun n'est présent | rien |
 | `entite(E, W)` restreinte (« pas de lion mort ») | rien : la description niée n'est pas décomposée |
-| `evenement(N, W)` et ses rôles `role(N, Ro, E)` | `evenement(V, P)` pour un **autre** événement V présent qui a, pour chaque rôle de N, le même rôle vers un membre de la même classe, P inclus dans W (« Marie ne tient pas l'enfant » contredit « Marie tient l'enfant » ; un événement nié sans rôle nie tout événement de ce prédicat : la lecture la plus prudente) |
+| `evenement(N, W)` et ses rôles `role(N, Ro, E)`, chaque participant E présent | `evenement(V, P)` pour un **autre** événement V présent qui a, pour chaque rôle de N, le même rôle vers un membre de la même classe, P inclus dans W (« Marie ne tient pas l'enfant » contredit « Marie tient l'enfant » ; un événement nié sans rôle nie tout événement de ce prédicat : la lecture la plus prudente) |
 | `role(N, …)` d'un événement nié | rien : un rôle n'est pas nié seul |
 | `entite(E, W)` de portée `oeuvre` | `genre(T)`, T inclus dans W |
 
@@ -170,9 +171,11 @@ Une contrainte dont une variable n'est pas liée vaut inconnu. Ce qui réfute un
 ou une distinction documentaire de K (la réfutation de `meme` par K est une conclusion relative à la source de K ;
 journal, D31). **La distinction documentaire** ne repose que sur des noms admissibles (de l'auteur, d'un porteur
 présent selon l'auteur, qu'aucune assertion niée de la classe ne contredit), et seulement si aucune des deux classes
-ne porte, à alias près, le nom documenté de l'autre (D26). **La distinction supposée** ne repose que sur des noms
-qu'aucune assertion niée de la classe ne contredit, et suppose qu'aucun nom de l'une n'est, à alias près, un nom de
-l'autre.
+ne porte, à alias près, le nom documenté de l'autre (D26). Les noms qu'une classe « porte », pour
+cette exclusion, sont tous ceux qu'une assertion positive lui donne, quels que soient leurs autres qualificatifs et leur
+porteur, contestés ou non (la lecture prudente). **La distinction supposée** ne repose que sur des noms d'un porteur
+présent, qu'aucune assertion niée de la classe ne contredit, et suppose qu'aucun nom de l'une n'est, à alias près, un
+nom de l'autre.
 
 ### 4.2 La valeur d'une formule
 
@@ -310,7 +313,11 @@ un nombre seulement possible ou cité ; une distinction dans une classe dite une
      de la référence ;
   5. les distributions effectives sont publiées (`docs/mesures/V2.md`), et chaque statut et chaque opérateur
      apparaissent.
-- **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : 47 cas dont le statut attendu est
+- **L'oracle indépendant** (`tests/oracle/oracle_noyau.py`, Python, écrit d'après ce document seul, sans lire le code
+  Prolog ; `tests/oracle/differentiel.py`) : le statut de l'oracle est confronté à celui des deux moteurs sur des cas
+  tirés (graine fixe, deux générateurs) ; aucun désaccord exigé (`tests/test_oracle.py`). Ses lectures des points
+  ambigus de ce document sont listées en bas de l'oracle (`AMBIGUITES`).
+- **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : 51 cas dont le statut attendu est
   écrit d'après ce document seul, confrontés au moteur optimisé et au moteur de référence. Les deux moteurs peuvent
   partager une erreur de conception (ils sont écrits d'après la même spécification) ; ce banc n'en dépend pas.
 - **Les tests savent échouer** : `outils/noyau/injection.py` injecte dix-huit défauts dans une copie du moteur

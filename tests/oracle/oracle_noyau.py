@@ -636,6 +636,10 @@ LECTURES = {
                                       # exclusion de la documentaire) : état pos ('etat'), ou seulement les
                                       # qualificatifs du nom, porteur non vérifié ('qualifie')
     "porte_conteste": True,           # § 4.1 : un nom contesté est-il « porté » (exclusion de la documentaire) ?
+    # § 4.1 (version 0.3, décision du cycle 6) : l'exclusion de la documentaire compte tout nom affirmé positivement
+    # dans la classe, quels que soient ses qualificatifs et son porteur, contesté ou non ('polarite') ; l'ancienne
+    # lecture de l'oracle : les noms dans l'état pos ('etat')
+    "exclusion_documentaire": "polarite",
 }
 
 
@@ -720,6 +724,13 @@ def noms_portes(g: Graphe, K: Connaissances, r, auteur_seul: bool, porteur: bool
     return cles
 
 
+def noms_affirmes(g: Graphe, K: Connaissances, r) -> set:
+    """Les clés des noms de la classe r dont la polarité est positive, quels que soient leurs autres qualificatifs et
+    leur porteur (§ 4.1 : ce qu'une classe « porte » pour exclure une distinction documentaire)."""
+    return {K.cle_de_nom(nom) for a, e, nom in g.noms
+            if representant(g, e) == r and K.cle_de_nom(nom) is not None and g.qualif(a).polarite == "pos"}
+
+
 def noms_admissibles(g, K, r) -> set:
     """§ 4.1 : les noms admissibles : de l'auteur, d'un porteur présent selon l'auteur, qu'aucune assertion niée
     de la classe ne contredit."""
@@ -737,7 +748,10 @@ def distinction_documentaire(g, K, r1, r2) -> list:
         return []
     a1, a2 = noms_admissibles(g, K, r1), noms_admissibles(g, K, r2)
     porteur = LECTURES["noms_porteur"] == "etat"
-    p1, p2 = noms_portes(g, K, r1, False, porteur), noms_portes(g, K, r2, False, porteur)
+    if LECTURES["exclusion_documentaire"] == "polarite":
+        p1, p2 = noms_affirmes(g, K, r1), noms_affirmes(g, K, r2)
+    else:
+        p1, p2 = noms_portes(g, K, r1, False, porteur), noms_portes(g, K, r2, False, porteur)
     if not LECTURES["porte_conteste"]:
         p1 = {c for c in p1 if not nom_conteste(g, K, r1, c)}
         p2 = {c for c in p2 if not nom_conteste(g, K, r2, c)}

@@ -135,7 +135,7 @@ appui(K, G, S, type(X, T), pos, Q) :-
 appui(K, G, S, type(X, T), neg, Q) :-
     val(S, X, R), member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, neg, represente, Q),
     seule_le_type(G, E), negatif(K, n, T, W),
-    composante(G, [E], [E], C), ( member(E2, C), present(G, E2) -> memberchk(R, C) ; true ).
+    composante(G, [E], [E], C), ( member(E2, C), present(G, E2) -> memberchk(R, C) ; C == [E] ).
 appui(K, G, S, nom(X, Ks), pos, Q) :-
     val(S, X, R), member(nom(A, E, Nom, _), G), dans_la_classe(G, E, R), qualifie(G, A, pos, represente, Q0),
     present(G, E), nomme(K, Nom, Ks), source(G, Q0, [E], Q).
@@ -151,7 +151,7 @@ appui(K, G, S, evenement(X, P), neg, Q) :-
     val(S, X, V), member(evenement(V, _, _), G), qualifie(G, V, pos, represente, _),
     member(evenement(N, W, _), G), N \== V, qualifie(G, N, neg, represente, Q), negatif(K, v, P, W),
     forall(member(role(N, Ro, E), G),
-           ( member(role(V, Ro, E2), G), composante(G, [E], [E], C), memberchk(E2, C) )).
+           ( present(G, E), member(role(V, Ro, E2), G), composante(G, [E], [E], C), memberchk(E2, C) )).
 appui(_, G, S, role(X, Ro, Y), pos, Q) :-
     val(S, X, V), val(S, Y, R), member(role(V, Ro, E), G), dans_la_classe(G, E, R), member(evenement(V, _, _), G),
     qualifie(G, V, pos, represente, Q0), present(G, E), source(G, Q0, [E], Q).
@@ -195,7 +195,7 @@ distinctes(_, G, A, B, etablie) :-
 distinctes(K, G, A, B, documentaire) :-
     noms_surs(K, G, A, N1), noms_surs(K, G, B, N2), member(C1, N1), member(C2, N2),
     ( K:distincts_documentes(C1, C2, _) ; K:distincts_documentes(C2, C1, _) ),
-    noms(K, G, A, T1), noms(K, G, B, T2),
+    portes(K, G, A, T1), portes(K, G, B, T2),
     \+ ( member(T, T2), meme_cle(K, C1, T) ), \+ ( member(T, T1), meme_cle(K, C2, T) ), !.
 distinctes(K, G, A, B, supposee) :-
     noms(K, G, A, N1), N1 \== [], noms(K, G, B, N2), N2 \== [],
@@ -208,7 +208,10 @@ noms_surs(K, G, R, Ns) :-
     sort(Ns0, Ns).
 noms(K, G, R, Ns) :-
     findall(C, ( member(nom(A, E, Nom, _), G), dans_la_classe(G, E, R), qualifie(G, A, pos, represente, _),
-                 K:cle_de_nom(Nom, C), \+ cle_niee(K, G, R, C) ), Ns0), sort(Ns0, Ns).
+                 present(G, E), K:cle_de_nom(Nom, C), \+ cle_niee(K, G, R, C) ), Ns0), sort(Ns0, Ns).
+portes(K, G, R, Ns) :-
+    findall(C, ( member(nom(A, E, Nom, _), G), dans_la_classe(G, E, R), memberchk(polarite(A, pos), G),
+                 K:cle_de_nom(Nom, C) ), Ns0), sort(Ns0, Ns).
 cle_niee(K, G, R, C) :-
     member(nom(A, E, Nom, _), G), dans_la_classe(G, E, R), qualifie(G, A, neg, represente, _), K:cle_de_nom(Nom, C2),
     meme_cle(K, C, C2), !.

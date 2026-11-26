@@ -183,9 +183,9 @@ appui_(K, M, type(R, T), neg, Q, appui(E, E, P, L)) :-
     M:entite(E, W, P), W \== nom_propre, qualifie(M, E, neg, represente, Q), nue(M, E), lien_neg(K, n, T, W, L),
     M:classe(E, R0),
     (   predicative(M, R0) -> R = R0
-    ;   var(R) -> classes(M, Rs), member(R, Rs)
-    ;   true
-    ).
+    ;   \+ ( M:classe(E2, R0), E2 \== E )              % seule dans sa classe : existentielle
+    ->  ( var(R) -> classes(M, Rs), member(R, Rs) ; true )
+    ).                                                 % une classe d'autres membres, aucun présent : rien
 appui_(K, M, nom(R, Ks), pos, Q, appui(A, E, P, L)) :-
     M:nom(A, E, Nom, P), M:classe(E, R), qualifie(M, A, pos, represente, Q0), present(M, E), lien_de_nom(K, Nom, Ks, L),
     effectif(M, Q0, [E], Q1), Q = Q1.
@@ -204,7 +204,7 @@ appui_(K, M, evenement(V, Pr), pos, Q, appui(V, V, P, L)) :-
 appui_(K, M, evenement(V, Pr), neg, Q, appui(N, N, P, L)) :-
     M:evenement(N, W, P), qualifie(M, N, neg, represente, Q), lien_neg(K, v, Pr, W, L),
     M:evenement(V, _, _), V \== N, qualifie(M, V, pos, represente, _),
-    forall(M:role(N, Ro, E), ( M:classe(E, C), M:role(V, Ro, E2), M:classe(E2, C) )).
+    forall(M:role(N, Ro, E), ( present(M, E), M:classe(E, C), M:role(V, Ro, E2), M:classe(E2, C) )).
 appui_(_, M, role(V, Ro, R), pos, Q, appui(role(V, Ro, E), E, P, egal)) :-
     M:role(V, Ro, E), M:classe(E, R), M:evenement(V, _, P), qualifie(M, V, pos, represente, Q0), present(M, E),
     effectif(M, Q0, [E], Q1), Q = Q1.
@@ -290,11 +290,15 @@ distinction(_, M, A, B, etablie(distinct(E1, E2))) :-
 distinction(K, M, A, B, documentaire(C1, C2, Src)) :-
     noms_admissibles(K, M, A, Ns1), noms_admissibles(K, M, B, Ns2), member(C1, Ns1), member(C2, Ns2),
     ( K:distincts_documentes(C1, C2, Src) ; K:distincts_documentes(C2, C1, Src) ),
-    noms_de_classe(K, M, A, Ts1), noms_de_classe(K, M, B, Ts2),
+    noms_portes(K, M, A, Ts1), noms_portes(K, M, B, Ts2),
     \+ ( member(T, Ts2), meme_nom(K, C1, T) ), \+ ( member(T, Ts1), meme_nom(K, C2, T) ), !.
 distinction(K, M, A, B, supposee(Ns1-Ns2)) :-
     noms_de_classe(K, M, A, Ns1), Ns1 \== [], noms_de_classe(K, M, B, Ns2), Ns2 \== [],
     \+ ( member(C1, Ns1), member(C2, Ns2), meme_nom(K, C1, C2) ).
+% les noms qu'une classe porte, pour exclure une distinction documentaire : tout nom affirmé positivement, quels que
+% soient ses qualificatifs, contesté ou non (la lecture prudente)
+noms_portes(K, M, R, Ns) :-
+    findall(C, ( M:classe(E, R), M:nom(A, E, Nom, _), M:polarite(A, pos), K:cle_de_nom(Nom, C) ), Ns0), sort(Ns0, Ns).
 noms_admissibles(K, M, R, Ns) :-
     findall(C, ( M:classe(E, R), M:nom(A, E, Nom, _), qualifie(M, A, pos, represente, auteur), present_auteur(M, E),
                  K:cle_de_nom(Nom, C), \+ nom_conteste(K, M, R, C) ), Ns0),
@@ -302,8 +306,8 @@ noms_admissibles(K, M, R, Ns) :-
 nom_conteste(K, M, R, C) :-
     M:classe(E, R), M:nom(A, E, Nom, _), qualifie(M, A, neg, represente, _), K:cle_de_nom(Nom, C2), meme_nom(K, C, C2), !.
 noms_de_classe(K, M, R, Ns) :-
-    findall(C, ( M:classe(E, R), M:nom(A, E, Nom, _), qualifie(M, A, pos, represente, _), K:cle_de_nom(Nom, C),
-                 \+ nom_conteste(K, M, R, C) ), Ns0),
+    findall(C, ( M:classe(E, R), M:nom(A, E, Nom, _), qualifie(M, A, pos, represente, _), present(M, E),
+                 K:cle_de_nom(Nom, C), \+ nom_conteste(K, M, R, C) ), Ns0),
     sort(Ns0, Ns).
 
 % --- Les arbres (§ 4.5) ----------------------------------------------------------------------------------------------
