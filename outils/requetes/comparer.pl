@@ -10,7 +10,9 @@
       trop_forte      compilée ⊆ référence seulement : sûre, mais manquera des cas
       trop_faible     référence ⊆ compilée seulement : dangereuse, elle établirait des codes que le libellé ne dit pas
       incomparable    ni l'une ni l'autre : chacune a un contre-exemple (dangereuse jusqu'à preuve du contraire)
-      indetermine     l'inclusion n'est pas décidée par la méthode (hors du fragment, budget) : ni sûre ni dangereuse
+      indetermine     l'inclusion n'est pas décidée par la méthode (hors du fragment, budget, négation non transmise,
+                      distinction documentaire, normalisation qui change le graphe canonique) : ni sûre ni dangereuse
+      echec           le comparateur a échoué ou levé une erreur (signalée) : un défaut à corriger
     Les correspondances de mots passent par connaissances_en / connaissances_fr (WordNet, WOLF).  */
 :- initialization(main, main).
 :- prolog_load_context(directory, D), atom_concat(D, '/../../oedipamaas/socle', S), asserta(user:file_search_path(socle, S)).
@@ -47,8 +49,10 @@ terme(S, T) :- string(S), S \== "aucune", catch(term_string(T, S), _, fail), T =
 verdict(K, Qc, Qr, V) :-
     atom_concat(connaissances_, L, K),
     ( nb_getval(normaliser, oui) -> N = normalisation:enrichir(L) ; N = aucune ),
-    inclusion:comparer(K, N, Qc, Qr, R),
-    verdict_(R, V).
+    (   catch(inclusion:comparer(K, N, Qc, Qr, R), E, ( print_message(error, E), fail ))
+    ->  verdict_(R, V)
+    ;   V = echec                                  % jamais une paire perdue en silence
+    ).
 verdict_(equivalentes, exacte).
 verdict_(incluse, trop_forte).
 verdict_(contient, trop_faible).

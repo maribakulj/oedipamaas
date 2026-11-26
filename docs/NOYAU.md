@@ -330,17 +330,45 @@ libellé) : celles-là sont statistiques et se mesurent à part (`docs/mesures/`
 
 ## 8. L'inclusion des requêtes
 
-`inclusion.pl` décide si Q1 implique Q2 (tout modèle de Q1 établit Q2), pour comparer une requête compilée à une
-requête de référence. Le critère est celui de Chandra et Merlin : pour chaque cas de Q1 — une sélection, et un nom de
-chaque liste de noms alternatifs (`nom(x, [DAVID, GOLIATH])` est deux cas, jamais une conjonction) —, le graphe
-canonique du cas établit Q2. Il vaut dans la sémantique du noyau parce que ce graphe est un modèle universel du cas :
-chaque variable de référent est une entité positive, affirmée, de l'auteur, présente par une entité porteuse de type
-neutre ; chaque variable d'événement, un événement porteur ; deux variables, deux entités d'identité inconnue ; un
-atome, une assertion positive (rien n'y est réfuté) ; `meme` une coréférence, `distincts` une distinction établie,
-`nombre` un nombre ; et « établit » est le statut `etablie` (une conclusion sous hypothèse ne vaut pas dans tous les
-modèles). Le résultat est `oui`, `non(ContreExemple)` (le cas dont le graphe n'établit pas Q2 : un modèle de Q1 où Q2
-n'est pas établie), ou `indetermine(Raison)` hors du fragment (deux prédicats pour un même événement, une requête mal
-formée, un budget épuisé, un graphe canonique invalide). Le critère suppose les mêmes connaissances et la même
-normalisation des deux côtés, et que la normalisation (C7) est une équivalence. Les tests (`tests/plunit/
-test_inclusion.pl`) vérifient la réflexivité (y compris sur des requêtes tirées au hasard), l'hyperonymie, les noms
-alternatifs, la distinction, l'identité, l'union, l'orientation des relations, et donnent les contre-exemples.
+`inclusion.pl` décide si Q1 implique Q2, pour comparer une requête compilée à une requête de référence.
+
+**La définition.** Q1 ⊆ Q2 si tout graphe où Q1 est `etablie` établit Q2. Les graphes sont ceux de **K⁺** : K, plus,
+pour chaque nœud T de sa hiérarchie, un mot « $noeud:T » dont T est le seul sens, et pour chaque clé C un nom
+« $cle:C ». Un type de requête n'est donc jamais lu comme un mot du texte (le mot « lion » désigne aussi une
+célébrité, et `type(lion)` n'implique pas `type(félin)`) ; un contre-exemple peut employer un de ces mots.
+
+**La méthode** (Chandra et Merlin, corrigée pour la sémantique du noyau ; journal, D37 à D40). Pour chaque cas de Q1
+— une sélection, et un nom de chaque liste de noms (`nom(x, [DAVID, GOLIATH])` est deux cas, jamais une
+conjonction) —, le graphe canonique du cas : une entité porteuse positive, affirmée, de l'auteur par variable de
+référent, un événement porteur par variable d'événement, d'identifiants tirés d'une table ; un atome, une assertion
+positive dont le mot est « $noeud:T » ; `meme` une coréférence, `distincts` une distinction établie, `nombre` un
+nombre ; rien n'y est nié.
+1. Le graphe canonique doit établir Q1 ; sinon (un cas insatisfaisable, `meme` et `distincts` sur les mêmes
+   variables) : `indetermine(cas_non_etabli)`, jamais un contre-exemple.
+2. S'il n'établit pas Q2 : `non(Cas)`, un contre-exemple (le graphe canonique est un modèle de Q1).
+3. S'il l'établit par une preuve sans distinction documentaire (deux noms documentés ne disent pas que deux variables
+   sont deux classes dans tout modèle : la même classe peut porter les deux noms) et dont chaque lien **transmet la
+   négation** (pour chaque nœud S2 du type de Q2 que le lien négatif du noyau prend, un nœud du type de Q1 lui est
+   inclus par `inclus` : alors ce qui nie Q2 nie Q1), le cas est inclus. Les noms (alias clos, liste niée seulement si
+   chaque clé l'est), les rôles, les contraintes transmettent la négation par construction (§ 1.1, § 4.1).
+4. Sinon, pour un type : le graphe canonique plus « pas de T2 » ; s'il établit Q1 et pas Q2, c'est un contre-exemple
+   (`non(negation(Cas, T2))`) ; sinon `indetermine(negation_non_transmise)`.
+Q1 ⊆ Q2 si chaque cas est inclus. **Pourquoi c'est sûr** : dans un graphe G où Q1 est certifiée par une substitution
+σ, l'homomorphisme du graphe canonique vers G (σ) porte la preuve de Q2 ; chaque appui positif de Q2 est l'appui d'un
+atome de Q1 (même assertion, lien prolongé), donc de l'auteur, admissible, de prémisse non niée ; un appui négatif de
+Q2 serait, par la transmission, un appui négatif de Q1, exclu. Cet argument est écrit, non démontré mécaniquement ; il
+est mis à l'épreuve par les bancs ci-dessous.
+
+**Hors de la méthode** : `indetermine(Raison)` — deux prédicats pour un même événement, une requête mal formée, un
+budget épuisé, une normalisation qui échoue ou qui **change** le graphe canonique (la normalisation C7 n'est pas une
+équivalence : la règle du participant unique n'est pas monotone ; journal, D37). Un verdict `indetermine` n'est ni
+une inclusion ni une non-inclusion.
+
+**Les tests.** `tests/plunit/test_inclusion.pl` (27 tests, attendus écrits à la main, avec des graphes-témoins évalués
+par le moteur) : réflexivité, hyperonymie, transitivité, noms alternatifs, alias en chaîne, distinction, identité,
+union, orientation, contre-exemples, insatisfiables, types entiers, lexicalisation, distinction documentaire,
+hypothèse, normalisation. `tests/plunit/test_inclusion_generatif.pl` (300 paires tirées par affaiblissement et au
+hasard, graine fixe) : chaque `oui` est confronté à des modèles (le graphe canonique d'un cas de Q1, joint à un graphe
+tiré au hasard, à des coréférences vers ses porteurs et à des négations ciblées), chaque `non` à son contre-exemple ;
+réflexivité, indépendance des noms de variables, transitivité. `outils/noyau/injection.py` injecte sept défauts dans
+le comparateur ; chacun est détecté. Distribution (graine 20261130) : 228 `oui`, 70 `non`, 2 `indetermine`.

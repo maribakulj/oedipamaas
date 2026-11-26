@@ -42,7 +42,7 @@ REJETÉ (examiné, pas un défaut : raison donnée).
 | D11 | moyenne | Entrées invalides : comportement non testé (graphe invalide, requête mal formée, preuve mal formée) | CORRIGÉ (cycle 2) |
 | D12 | moyenne | Isolation et concurrence non testées au-delà d'un cas | CORRIGÉ (cycle 2) : concurrence et modules temporaires testés |
 | D13 | moyenne | Reproductibilité (même entrée, même sortie, empreinte) non testée | CORRIGÉ (cycle 2) |
-| D14 | moyenne | Comparateur : transitivité, renommage, insatisfiables, taxinomie non testés ; pas de mutation du comparateur | OUVERT |
+| D14 | moyenne | Comparateur : transitivité, renommage, insatisfiables, taxinomie non testés ; pas de mutation du comparateur | CORRIGÉ (cycle 5) : `test_inclusion_generatif.pl` (modèles), 27 tests écrits, 7 défauts injectés détectés |
 | D15 | moyenne | Pas de mutation du vérificateur | CORRIGÉ (cycle 3) : 15 défauts injectés dans le vérificateur, tous détectés ; mutations du graphe à empreinte recalculée |
 | D16 | moyenne | Pas d'oracle indépendant des deux moteurs pour les fragments finis (les deux moteurs Prolog sont écrits d'après la même spécification) | OUVERT |
 | D17 | moyenne | Compilateur : couverture lexicale par sous-chaîne (`couvert/2`), fausse complétude (audit 1, § 11) | CORRIGÉ (cycle 1) |
@@ -77,10 +77,10 @@ Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audi
 | D43 | haute | Recherche des liens exponentielle (tous les chemins simples), hors budget ; vérificateur sans borne (V-X1) | CORRIGÉ (cycle 4) : parcours en largeur, chaque nœud vu une fois, dans les trois programmes ; essai sur 2^24 chemins |
 | D44 | moyenne | Requêtes non closes ou cycliques admises par `bien_formee` (V-R3, B1) ; `bien_formee` exponentiel en `ou` (V-X3) ; `valider` quadratique, hors limite de temps (V-X2) | CORRIGÉ en partie (cycle 4) : requêtes closes et acycliques exigées ; liaison des contraintes linéaire ; la limite de temps couvre la validation ; `valider` reste quadratique |
 | D45 | basse | Identifiants entiers, variables `v(1)`, options invalides, `satisfaire_lot` qui échoue en silence (V-R1, R2, B2 à B5) ; `distinct` vers une entité seulement possible (V-V4) ; passage d'un appui non contrôlé (V-V8) ; budget dépendant de l'ordre des faits et réinitialisé par un appel imbriqué (V-D1 à D3) | CORRIGÉ en partie (cycle 4) : identifiants atomiques, variables atomiques, options contrôlées, lot sans échec silencieux, distinction entre entités présentes selon l'auteur, passage contrôlé, budget propre à l'appel ; reste DOCUMENTÉ : sous un budget épuisé, ce qui est trouvé dépend de l'ordre d'exploration (le statut `incomplet` le dit) ; la preuve choisie parmi plusieurs dépend de l'ordre des faits (toutes sont valides) |
-| D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | en cours |
-| D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | en cours |
-| D39 | grave | Comparateur : distinction documentaire du graphe canonique, cas non contrôlés, insatisfiables, noms de variables (I-D2, D4, D5) | en cours |
-| D40 | grave | Comparateur : certification non monotone (négation, lexicalisation hors `inclus`) (I-D1, D6) | en cours |
+| D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | CORRIGÉ (cycle 5) |
+| D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | CORRIGÉ (cycle 5) |
+| D39 | grave | Comparateur : distinction documentaire du graphe canonique, cas non contrôlés, insatisfiables, noms de variables (I-D2, D4, D5) | CORRIGÉ (cycle 5) |
+| D40 | grave | Comparateur : certification non monotone (négation, lexicalisation hors `inclus`) (I-D1, D6) | CORRIGÉ (cycle 5) |
 
 ## 4. Commandes de reproduction
 
@@ -174,14 +174,75 @@ python -m pytest -q
 - Résultats : `test_noyau` 51 / 51, `test_noyau_semantique` 141 sous-tests, `test_noyau_robustesse` 37 / 37,
   `test_noyau_generatif` 5 / 5, `test_inclusion` 13 / 13 ; injection : 33 défauts sur 33 détectés.
 
+### Cycle 5 (26/11) : le comparateur (D14, D37 à D40)
+
+- Définition récrite (NOYAU § 8) : Q1 ⊆ Q2 si tout graphe de K⁺ où Q1 est établie établit Q2 ; K⁺ ajoute à K un mot
+  par nœud (« $noeud:T ») et un nom par clé : un type de requête n'est plus lu comme un mot du texte (I-A2 : « lion »
+  est aussi une célébrité). Conséquence : sur les K réels, deux requêtes qui n'emploient pas le même lemme sont
+  rarement comparables (un lemme est un puits de la hiérarchie) ; c'est le sens strict, voulu.
+- Méthode : chaque cas est contrôlé (son graphe canonique doit établir Q1, sinon `indetermine(cas_non_etabli)` :
+  I-D4) ; une preuve de Q2 n'est acceptée que sans distinction documentaire (I-D2) et si chaque lien transmet la
+  négation (I-D6 et la non-monotonie de la certification) ; un lien qui ne la transmet pas donne un contre-exemple
+  construit (« pas de T2 ») ou `indetermine` ; une normalisation qui échoue ou change le graphe canonique donne
+  `indetermine` (I-N1 à N4) ; identifiants par table (I-D5) ; types entiers (I-D3) ; noms et alias (I-D1, I-D7)
+  corrigés par le noyau 0.3 (D24, D33). `outils/requetes/comparer.pl` ne perd plus une paire en silence (`echec`).
+- L'argument de sûreté est écrit (NOYAU § 8), non démontré mécaniquement. Il est mis à l'épreuve par
+  `test_inclusion_generatif.pl` : 300 paires (affaiblissements et tirages), chaque `oui` confronté à des modèles
+  (graphe canonique d'un cas + graphe aléatoire + coréférences vers les porteurs + négations ciblées), chaque `non` à
+  son contre-exemple, réflexivité, renommage, transitivité. Contre le comparateur ancien (commit 8b8cb9d), ce banc
+  échoue : un `oui` faux (lexicalisation `lemme_a` → `a` sous une négation) et un `non` dont le contre-exemple
+  n'établit pas Q1 ; contre le nouveau, il passe. Distribution des verdicts (graine 20261130) : 228 `oui`, 70 `non`,
+  2 `indetermine` (deux prédicats pour un événement) ; réflexivité : 296 `equivalentes`, 4 `indetermine`.
+- `test_inclusion.pl` : 13 → 27 tests (contre-exemples de l'audit I avec graphes-témoins évalués par le moteur).
+- Injection : 7 défauts du comparateur (cas non contrôlé, négation non transmise, distinction documentaire, normalisation
+  prise pour une équivalence, noms en conjonction, type pris pour un mot, sous hypothèses pris pour établi), tous
+  détectés.
+- Limites : la distinction documentaire, la négation non transmise d'une propriété, d'un prédicat ou d'une relation
+  donnent `indetermine` (pas de contre-exemple construit) ; la normalisation n'est pas intégrée (un graphe canonique
+  qu'elle change est indéterminé) ; le fragment exclut deux prédicats pour un événement.
+
 ## 7. Garanties établies, garanties absentes, limites
 
-(complété en fin de mission)
+Rien ci-dessous n'est une démonstration formelle : un test qui passe, ou l'accord de trois programmes, n'en est pas
+une. « Établi » veut dire : écrit dans la spécification, implanté dans les trois programmes écrits séparément, et
+confronté à des attendus qui ne dépendent d'aucun d'eux.
+
+**Établi au sens ci-dessus**
+- Composition des quatre valeurs (Belnap) des atomes et des contraintes ; certification séparée de la valeur.
+- Monde ouvert : aucune distinction implicite ; trois régimes de distinction ; une hypothèse ne donne jamais un
+  statut déductif (`etablie_sous_hypotheses`, liste d'hypothèses dans la preuve, contrôlée par le vérificateur).
+- Négation : seulement par inclusion, vers le bas ; jamais répartie sur une description (§ 1.1) ; une liste de noms
+  niée seulement si chaque nom l'est.
+- Admissibilité : porteurs présents selon l'auteur ; contexte, modalité, alternative, énonciateur ; prémisse non niée.
+- Aucune conclusion négative d'un calcul incomplet (budget, temps) ; aucune erreur interne changée en résultat.
+- Le vérificateur n'accepte qu'après contrôle positif de chaque point ; 15 défauts injectés, tous détectés ; aucune
+  preuve forgée acceptée hors des solutions de la référence (forgeur exhaustif de l'audit V, 3 000 + 1 500 cas).
+- Les deux moteurs ont la même vue sur 1 500 cas tirés (et 4 500 de l'audit L) ; 18 défauts injectés dans le moteur
+  optimisé, tous détectés.
+- Entrées invalides : erreurs structurées (graphe non clos, cyclique, identifiants, requête non close, options).
+- Coût des liens polynomial (parcours en largeur) ; liaison des contraintes vérifiée sans énumérer les sélections.
+- Comparateur : chaque `oui` des 300 paires tirées tient sur ses modèles tirés ; chaque `non` a un contre-exemple
+  valide ; 7 défauts injectés détectés.
+
+**Absent (non garanti)**
+- Aucune preuve mécanique (ni de la sémantique, ni de l'équivalence des moteurs, ni de l'argument de sûreté du
+  comparateur, NOYAU § 8).
+- L'oracle Python indépendant (D16) n'a pas encore été remis à niveau pour la version 0.3 (en cours) ; les deux
+  moteurs Prolog et le vérificateur sont écrits d'après la même spécification et peuvent partager une erreur de
+  conception : seuls les contre-exemples écrits à la main et l'oracle s'en protègent.
+- Polysémie (D30) : un mot établit chacun de ses sens. Statut `ecartee` (D31) : réfutation par une source citée seule,
+  réfutation sous des atomes d'identification inconnus. Décisions du propriétaire.
+- Réfutation d'une conjonction qui couvre une description niée (D41) ; alternatives couvertes par une requête
+  disjonctive (D36) : non dérivées (sens sûr).
+- Pas de limite de mémoire ; `valider` quadratique ; sous un budget épuisé, ce qui est trouvé dépend de l'ordre
+  d'exploration (le statut `incomplet` le dit).
+- La justesse du lecteur (graphe tiré d'un texte) et du compilateur (requête tirée d'un libellé) n'est pas l'objet de
+  ces tests ; elle se mesure à part (`docs/mesures/`).
 
 ## 8. Prochain travail
 
-1. D11, D12, D13 : tests des entrées invalides, de la concurrence, de la reproductibilité.
-2. D16 : un oracle indépendant (dans un autre langage, Python), pour un fragment fini, comparé aux deux moteurs.
-3. D14, D15 : qualification du comparateur (propriétés, mutations) ; mutations du vérificateur.
-4. Revue adversariale par des contradicteurs indépendants ; vérification de leurs contre-exemples.
-5. D17, D18 : pertes du compilateur.
+1. D16 : l'oracle Python d'après NOYAU.md 0.3 seul, différentiel sur plusieurs graines ; traiter ses désaccords.
+2. Décisions du propriétaire : D30 (polysémie), D31 (sens d'`ecartee`).
+3. Mesures du compilateur avec le comparateur qualifié (provisoires) ; puis seulement, reprise de la compilation
+   d'Iconclass.
+4. D10 : contextes imbriqués et portées mêlées dans le générateur.

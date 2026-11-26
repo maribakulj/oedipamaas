@@ -88,8 +88,6 @@ erreur(Fs, inconnu(F)) :- member(F, Fs), \+ terme_connu(F).
 erreur(Fs, non_clos(F)) :- member(F, Fs), \+ ground(F).               % une variable libre unifierait avec tout
 erreur(Fs, mot(F)) :-                                                    % un mot, un nom propre : un atome
     member(F, Fs), ground(F), mot_de(F, W), \+ atom(W).
-mot_de(entite(_, W, _), W). mot_de(nom(_, _, W, _), W). mot_de(propriete(_, _, W, _), W).
-mot_de(evenement(_, W, _), W). mot_de(relation(_, _, W, _, _), W).
 erreur(Fs, identifiant(I)) :-
     member(F, Fs), ( id_assertion(F, I) ; F = passage(I, _, _) ; F = alternative(I, _) ), \+ atom(I).
 erreur(Fs, texte(nombre(N))) :- aggregate_all(count, member(texte(_), Fs), N), N =\= 1.
@@ -161,3 +159,6 @@ entite_citee(coref(E, _), E).
 entite_citee(coref(_, E), E).
 entite_citee(distinct(E, _), E).
 entite_citee(distinct(_, E), E).
+
+mot_de(entite(_, W, _), W). mot_de(nom(_, _, W, _), W). mot_de(propriete(_, _, W, _), W).
+mot_de(evenement(_, W, _), W). mot_de(relation(_, _, W, _, _), W).

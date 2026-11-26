@@ -67,17 +67,6 @@ erreur(F, variable(V)) :- variables(F, Vs), member(V, Vs), V = v(N), \+ atom(N).
 % « ou », D44) : une contrainte est liée si chacune de ses variables est garantie par un frère d'un « et » sur le
 % chemin qui y mène ; un sous-arbre garantit une variable si toutes ses sélections la contiennent
 erreur(F, contrainte_non_liee(Co)) :- once(mal_liee(F, [], Co)).
-mal_liee(et(Fs), Ctx, Co) :- !,
-    nth1(I, Fs, Fi), findall(V, ( nth1(J, Fs, Fj), J \== I, garanties(Fj, Gs), member(V, Gs) ), Vs),
-    append(Ctx, Vs, Ctx1), mal_liee(Fi, Ctx1, Co).
-mal_liee(ou(Fs), Ctx, Co) :- !, member(Fi, Fs), mal_liee(Fi, Ctx, Co).
-mal_liee(Co, Ctx, Co) :- contrainte(Co), variables(Co, Vc), member(V, Vc), \+ memberchk(V, Ctx).
-garanties(et(Fs), Vs) :- !, findall(V, ( member(Fi, Fs), garanties(Fi, Gi), member(V, Gi) ), Vs0), sort(Vs0, Vs).
-garanties(ou([F|Fs]), Vs) :- !,
-    garanties(F, V0), foldl(garanties_communes, Fs, V0, Vs).
-garanties_communes(Fi, A0, A) :- garanties(Fi, Gi), intersection(A0, Gi, A).
-garanties(A, Vs) :- atome(A), !, variables(A, Vs).
-garanties(_, []).
 % une contrainte ne porte que sur des référents : les événements n'ont ni coréférence, ni distinction, ni nombre (D35)
 erreur(F, contrainte_sur_evenement(V)) :-
     atomes(F, As), member(_-Co, As), contrainte(Co), Co =.. [_|Args], member(V, Args), V = v(_), sorte(F, V, evenement).
@@ -90,6 +79,18 @@ forme_connue(et(L)) :- is_list(L).
 forme_connue(ou(L)) :- is_list(L).
 forme_connue(A) :- atome(A).
 forme_connue(C) :- contrainte(C).
+
+mal_liee(et(Fs), Ctx, Co) :- !,
+    nth1(I, Fs, Fi), findall(V, ( nth1(J, Fs, Fj), J \== I, garanties(Fj, Gs), member(V, Gs) ), Vs),
+    append(Ctx, Vs, Ctx1), mal_liee(Fi, Ctx1, Co).
+mal_liee(ou(Fs), Ctx, Co) :- !, member(Fi, Fs), mal_liee(Fi, Ctx, Co).
+mal_liee(Co, Ctx, Co) :- contrainte(Co), variables(Co, Vc), member(V, Vc), \+ memberchk(V, Ctx).
+garanties(et(Fs), Vs) :- !, findall(V, ( member(Fi, Fs), garanties(Fi, Gi), member(V, Gi) ), Vs0), sort(Vs0, Vs).
+garanties(ou([F|Fs]), Vs) :- !,
+    garanties(F, V0), foldl(garanties_communes, Fs, V0, Vs).
+garanties(A, Vs) :- atome(A), !, variables(A, Vs).
+garanties(_, []).
+garanties_communes(Fi, A0, A) :- garanties(Fi, Gi), intersection(A0, Gi, A).
 
 sous_terme_formule(F, F).
 sous_terme_formule(et(Fs), G) :- is_list(Fs), member(F, Fs), sous_terme_formule(F, G).

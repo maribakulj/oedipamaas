@@ -124,17 +124,47 @@ FAUTES_VERIFICATEUR = {
 }
 
 
-def essayer(d, nom, fichier, source, avant, apres):
+# les défauts du comparateur (inclusion.pl) : chacun doit faire rendre un verdict faux que les bancs de l'inclusion
+# (test_inclusion.pl, attendus écrits à la main ; test_inclusion_generatif.pl, confrontation à des modèles) voient
+FAUTES_COMPARATEUR = {
+    "cas non contrôlé (Q1 insatisfaisable)": (
+        "    ;   St1 \\== etablie -> R = indetermine(cas_non_etabli(As))\n",
+        ""),
+    "négation non transmise acceptée": (
+        "    forall(member(j(_, A, appui(_, _, _, L)), Js), transmet(K, A, L)).",
+        "    true."),
+    "distinction documentaire acceptée": (
+        "    \\+ member(j(_, _, contrainte(documentaire(_, _, _))), Js),",
+        "    true,"),
+    "normalisation prise pour une équivalence": (
+        "    ( S0 == S1 -> G = G0 ; throw(fragment(normalisation_non_equivalente)) ),",
+        "    G = G1, S0 = S1,"),
+    "noms alternatifs pris pour une conjonction": (
+        "cas_de(nom(X, Ks), [nom(X, [K])]) :- !, member(K, Ks).",
+        "cas_de(nom(X, Ks), [nom(X, Ks)]) :- !."),
+    "le type de Q1 pris pour un mot": (
+        "mot(T, M) :- format(atom(M), \"$noeud:~w\", [T]).",
+        "mot(T, T)."),
+    "statut sous hypothèses pris pour établi": (
+        "    ( Complet == incomplet -> St = incomplet ; St = St0 ).",
+        "    ( Complet == incomplet -> St = incomplet ; St0 == etablie_sous_hypotheses -> St = etablie ; St = St0 )."),
+}
+
+BANCS_NOYAU = ("test_noyau.pl", "test_noyau_semantique.pl", "test_noyau_robustesse.pl", "test_noyau_generatif.pl")
+BANCS_INCLUSION = ("test_inclusion.pl", "test_inclusion_generatif.pl")
+
+
+def essayer(d, nom, fichier, source, avant, apres, bancs=BANCS_NOYAU):
     if avant not in source:
         print(f"{nom} : motif introuvable (le code a changé, mettre l'injection à jour)")
         return False
     (d / "socle" / fichier).write_text(source.replace(avant, apres, 1), encoding="utf-8")
     par = []
-    for f in ("test_noyau.pl", "test_noyau_semantique.pl", "test_noyau_robustesse.pl", "test_noyau_generatif.pl"):
+    for f in bancs:
         r = subprocess.run(["swipl", "-g", "run_tests", "-t", "halt", f], cwd=d / "plunit",
                            capture_output=True, text=True, env={**os.environ, "LANG": "C.UTF-8"})
         if r.returncode:
-            par.append(f.replace("test_noyau", "").replace(".pl", "").strip("_") or "deterministes")
+            par.append(f.replace("test_noyau", "").replace("test_", "").replace(".pl", "").strip("_") or "deterministes")
     (d / "socle" / fichier).write_text(source, encoding="utf-8")
     print(f"{nom:42} {'détectée par ' + ', '.join(par) if par else 'NON DÉTECTÉE'}")
     return bool(par)
@@ -146,11 +176,12 @@ def main():
         d = Path(d)
         (d / "socle").mkdir()
         (d / "plunit").mkdir()
-        for f in ("requetes.pl", "satisfaction.pl", "satisfaction_reference.pl", "verificateur.pl", "assertions.pl"):
+        for f in ("requetes.pl", "satisfaction.pl", "satisfaction_reference.pl", "verificateur.pl", "assertions.pl",
+                  "inclusion.pl"):
             shutil.copy(SOCLE / f, d / "socle" / f)
-        for f in ("connaissances_gen.pl", "connaissances_essai.pl"):
+        for f in ("connaissances_gen.pl", "connaissances_essai.pl", "connaissances_losange.pl", "generateur_noyau.pl"):
             shutil.copy(TESTS / f, d / "plunit")
-        for f in ("test_noyau_generatif.pl", "test_noyau_semantique.pl", "test_noyau.pl", "test_noyau_robustesse.pl"):
+        for f in BANCS_NOYAU + BANCS_INCLUSION:
             test = (TESTS / f).read_text(encoding="utf-8")
             (d / "plunit" / f).write_text(test.replace("'../../oedipamaas/socle/", "'../socle/"), encoding="utf-8")
         print("— moteur optimisé —")
@@ -162,6 +193,11 @@ def main():
         source = (SOCLE / "verificateur.pl").read_text(encoding="utf-8")
         for nom, (avant, apres) in FAUTES_VERIFICATEUR.items():
             if not essayer(d, nom, "verificateur.pl", source, avant, apres):
+                non_detectees.append(nom)
+        print("— comparateur —")
+        source = (SOCLE / "inclusion.pl").read_text(encoding="utf-8")
+        for nom, (avant, apres) in FAUTES_COMPARATEUR.items():
+            if not essayer(d, nom, "inclusion.pl", source, avant, apres, BANCS_INCLUSION):
                 non_detectees.append(nom)
     sys.exit(1 if non_detectees else 0)
 
