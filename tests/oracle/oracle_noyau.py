@@ -1238,8 +1238,8 @@ def k_de_test() -> Connaissances:
               ("saint", "homme"), ("homme", "personne"), ("livre", "objet"),
               ("rouge", "couleur"), ("trancher", "tuer"), ("tuer", "frapper"), ("frapper", "agir"),
               ("agir", "faire"), ("faire", "agir"), ("tient", "touche")}
-    lexicalisations = {(3, "chat"), (2, "chat"), (8, "couronne"), (9, "couronne"), (4, "sur"), (5, "sur"),
-                       (6, "tenir"), (7, "tenir")}
+    lexicalisations = {(3, "chat"), (2, "chat"), (3, "matou"), (8, "couronne"), (9, "couronne"), (4, "sur"),
+                       (5, "sur"), (6, "tenir"), (7, "tenir")}
     sous = inclus | lexicalisations | {("animal", "bete"), ("tuer", "occire")}
     polysemes = {"chat": (3, 2), "couronne": (8, 9), "sur": (4, 5), "tenir": (6, 7), "matou": (3,)}
     mots = (set(t for t in TYPES_DEMANDES if not est_concept(t)) | set(PROPRIETES) | set(PREDICATS)
