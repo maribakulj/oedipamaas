@@ -338,7 +338,7 @@ un nombre seulement possible ou cité ; une distinction dans une classe dite une
   Prolog ; `tests/oracle/differentiel.py`) : le statut de l'oracle est confronté à celui des deux moteurs sur des cas
   tirés (graine fixe, deux générateurs) ; aucun désaccord exigé (`tests/test_oracle.py`). Ses lectures des points
   ambigus de ce document sont listées en bas de l'oracle (`AMBIGUITES`).
-- **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : 51 cas dont le statut attendu est
+- **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : 74 cas dont le statut attendu est
   écrit d'après ce document seul, confrontés au moteur optimisé et au moteur de référence. Les deux moteurs peuvent
   partager une erreur de conception (ils sont écrits d'après la même spécification) ; ce banc n'en dépend pas.
 - **Les tests savent échouer** : `outils/noyau/injection.py` injecte vingt-six défauts dans une copie du moteur
