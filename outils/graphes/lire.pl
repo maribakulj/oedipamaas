@@ -2,7 +2,8 @@
         OEDIPAMAAS_ANALYSEUR=stanza swipl outils/graphes/lire.pl BASE TEXTES.json SORTIE.json [PAS]
     TEXTES.json : [{k, langue, positif, negatif, indetermine, variantes?}] (le format des jeux de développement et de
     validation) ; PAS : une fiche sur PAS (le même échantillon que outils/vertical/coder.pl).
-    SORTIE.json : pour chaque texte, {k, genre, langue, texte, faits, derivations}
+    SORTIE.json : pour chaque texte, {k, genre, langue, texte, faits, derivations, phrases}
+      phrases      l'analyse en dépendances, chaque mot [Id, Forme, Lemme, Catégorie, Traits, Tête, Relation, Début, Fin]
       faits        les assertions du lecteur (interpretation.pl), chacune [Foncteur, Arg1, …] (les chaînes et les
                    atomes en chaînes, les nombres en nombres)
       derivations  les assertions que dériveraient les règles de la normalisation (normalisation:deriver/3, lot 3),
@@ -36,13 +37,21 @@ lire_lot(L, Xs, Js) :-
     udpipe:analyser_lot(Textes, L, Ps),
     findall(J, ( nth1(I, Xs, t(K, G, T)), nth1(I, Ps, Phrases), lire_texte(L, K, G, T, Phrases, J) ), Js).
 
-lire_texte(L, K, G, T, Phrases, _{k: K, genre: G, langue: L, texte: T, faits: Fj, derivations: Dj}) :-
+lire_texte(L, K, G, T, Phrases, _{k: K, genre: G, langue: L, texte: T, faits: Fj, derivations: Dj, phrases: Pj}) :-
+    maplist(phrase_json, Phrases, Pj),
     (   catch(interpretation:interpreter(T, L, description, 0, Phrases, Fs), E, ( print_message(error, E), fail ))
     ->  maplist(fait_json, Fs, Fj),
         ( catch(normalisation:deriver(L, Fs, Ds), E2, ( print_message(error, E2), fail )) -> true ; Ds = [] ),
         maplist(derivation_json, Ds, Dj)
     ;   Fj = erreur, Dj = []
     ).
+
+% l'analyse en dépendances (pour classer les erreurs par construction) : [Id, Forme, Lemme, Catégorie, Traits, Tête,
+% Relation, Début, Fin] par mot
+phrase_json(phrase(Ms), J) :- maplist(mot_json, Ms, J).
+mot_json(mot(I, Fo, Le, C, Tr, H, R, D, F), [I, Fos, Les, Cs, Trs, H, Rs, D, F]) :-
+    maplist(en_chaine, [Fo, Le, C, R], [Fos, Les, Cs, Rs]), format(string(Trs), "~w", [Tr]).
+en_chaine(X, S) :- ( string(X) -> S = X ; format(string(S), "~w", [X]) ).
 
 fait_json(F, [N|As]) :- F =.. [N0|As0], atom_string(N0, N), maplist(valeur_json, As0, As).
 valeur_json(X, X) :- number(X), !.

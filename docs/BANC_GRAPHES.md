@@ -125,6 +125,36 @@ d'un événement ou d'une relation) :
 
 **Les cas difficiles** : choisir ce qui suit le sens, et le dire dans `notes`. Ne pas laisser un texte sans graphe.
 
+*Décisions d'adjudication du 27/11* (après les deux vagues ; provisoires, à valider par la propriétaire ; elles
+tranchent les ambiguïtés que les annotateurs ont signalées, et l'adjudication les applique à tous les graphes) :
+- **la double négation** (« no snake is raised », « aucun maillet n'est frappé », « aucun nom n'accompagne ») :
+  l'entité est niée ; l'événement dont elle est participant prend `modalite: "non_affirme"` (rien ne dit qu'il a
+  lieu) ; un verbe nié sans quantificateur (« he does not hold a book ») : l'événement nié, l'objet `non_affirme` ;
+- **l'état dit par *être* et un participe** (« est assis », « est agenouillé », « is seated ») : l'événement de la
+  posture, son sujet en agent (ce n'est pas un passif) ;
+- **le peintre et la composition** (« the painter emphasises the light ») : le peintre a la portée `histoire`, ses
+  actes sur l'image la portée `oeuvre` ; une légende ou une inscription de l'œuvre : `oeuvre` ; un récit, une notice
+  citée : `source` ;
+- **une identité seulement possible** (« she could be Diana or a huntress ») : chaque identité est une entité de
+  modalité `possible`, réunies en `alternatives`, sans `coref` ; une seule identité possible (« it may be a
+  merchant's emblem ») : l'entité de modalité `possible`, sans `coref` ;
+- **des propriétés exclusives** (« réelle ou imaginaire ») : chacune avec `modalite: "possible"` ;
+- **les pronoms quantifiés** (« l'un… l'autre », « certains… d'autres », « one of them ») : des entités, de tête le
+  nom qu'ils reprennent s'il est dit (« l'un des hommes » : `homme`), sinon le pronom ; « chacun », « personne »,
+  « nothing » vont à leur référent, ou nient (« nothing lies in the pans » : l'événement nié) ;
+- **la direction** (« towards », « vers ») : le rôle `lieu` ; **le temps** (« pendant l'épidémie ») et **la manière**,
+  avec ou sans préposition : non annotés ;
+- **un objet qui « se dresse », « lies », « hangs », « s'élève »** : sa simple présence, et sa position en relation ;
+  un être animé : l'événement ;
+- **le complément d'agent d'un participe passif** (« accompagné d'un phylactère ») : `agent` ; un point de vue (« vu
+  du dehors ») : non annoté ;
+- **les entités du titre** reprises dans le corps : l'entité du titre a `modalite: "titre"`, une `coref` la relie à
+  sa reprise ;
+- **les composés** que le dictionnaire donne comme une unité restent une unité (« jeune fille », « vieil homme » non :
+  `homme` + `vieux`) ;
+- **le contenu d'une inscription** (« Jésus de Nazareth, roi des Juifs ») : l'inscription est une entité ; son texte
+  n'est pas annoté comme des assertions sur la scène.
+
 *Précisions du 26/11, après la double annotation du développement* : les pronoms (selon le sens), le participe à
 complément, l'apparition, les prépositions sans rôle, le lieu (rôle ou relation), les rôles et relations entre
 entités seulement. Elles disent ce que l'annotateur avait fait en suivant le sens ;
