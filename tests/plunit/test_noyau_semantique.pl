@@ -292,6 +292,10 @@ cas(pas_de_pomme_ne_refute_pas_le_fruit,
 cas(une_pomme_et_pas_de_pomme,
     [entite(e1, pomme, p_1), entite(e2, pomme, p_2), neg(e2)], requete(q, type(v(x), pomme)), etablie_sous_hypotheses,
     'les deux « pomme » peuvent ne pas avoir le même sens : la conclusion suppose que la négation vise l’autre (D30)').
+cas(negation_possible_n_ancre_rien,
+    [entite(e1, lion, p_1), nombre(e1, 2), entite(e2, pomme, p_2), neg(e2)],
+    requete(q, et([nombre(v(x), 3), type(v(x), pomme)])), inconnue,
+    'une négation seulement possible ne réfute rien : elle n’ancre pas la variable (oracle, cycle 8)').
 cas(alias_en_chaine,
     [entite(e1, homme, p_1), nom(n1, e1, girolamo, p_2)], requete(q, nom(v(x), ['HIERONYMUS'])), etablie,
     'HIERONYMUS ~ JEROME ~ GIROLAMO : l’alias est clos (D33)').

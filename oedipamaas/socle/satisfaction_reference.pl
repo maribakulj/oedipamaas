@@ -76,7 +76,8 @@ minimales(Ss0, Ms) :- sort(Ss0, Ss), findall(S, ( member(S, Ss), \+ ( member(T, 
 % chaque variable liée est ancrée par un atome de la formule, entièrement lié, qui a un appui sous S
 ancree(K, G, F, S) :-
     feuilles(F, Ls),
-    forall(member(V-_, S), ( member(A, Ls), atome(A), sous_terme(A, V), lies(A, S), once(appui(K, G, S, A, _, _)) )).
+    forall(member(V-_, S), ( member(A, Ls), atome(A), sous_terme(A, V), lies(A, S),
+                             once(( member(Sg, [pos, neg]), appui(K, G, S, A, Sg, _) )) )).   % negp n'ancre rien (D30)
 
 % --- Les classes de coréférence ----------------------------------------------------------------------------------
 

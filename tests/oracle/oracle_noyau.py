@@ -1,11 +1,14 @@
 """Oracle indépendant de la sémantique du noyau logique (docs/NOYAU.md, version 0.3, avec les amendements du
 cycle 7 : prémisses d'existence et d'événement d'un appui, distinction établie et nombre à existence niée, `meme`
-dans une classe, distinction supposée au sens large, genre nié par une entité nue seulement).
+dans une classe, distinction supposée au sens large, genre nié par une entité nue seulement ; et les décisions du
+27/11 : D30, la polysémie (sens conceptuels, liens certains ou hypothèses de sens, négations certaines ou seulement
+possibles, hypothèses sens_suppose et negation_autre_sens) ; D50, un nom nié d'un porteur absent ne conteste rien ;
+D31, la portée et les fondements des réfutations, que l'oracle ne calcule pas : le banc ne compare que les statuts).
 
 Ce module est écrit d'après docs/NOYAU.md (§ 1, § 1.1, § 2, § 3, § 4.1 à 4.5) et docs/ASSERTIONS.md seuls :
 aucun fichier Prolog du moteur (oedipamaas/) n'a été lu pour l'écrire. Les seuls fichiers Prolog lus sont les
-données des tests génératifs (tests/plunit/connaissances_gen.pl et le générateur de
-tests/plunit/test_noyau_generatif.pl), reproduits en Python au § 6 pour le banc « gen ». Il sert de troisième
+données des tests génératifs (tests/plunit/connaissances_gen.pl et le générateur
+tests/plunit/generateur_noyau.pl), reproduits en Python au § 6 pour le banc « gen ». Il sert de troisième
 voix dans un banc différentiel (differentiel.py) contre le moteur optimisé (satisfaction.pl) et le moteur de
 référence (satisfaction_reference.pl).
 
@@ -1664,13 +1667,11 @@ AMBIGUITES = [
      "assertion de nom positive, quels que soient ses qualificatifs et son porteur, contestée ou non : noms_affirmes). "
      "Moteurs : de même."),
     ("conteste_porteur", "§ 4.1 : « qu'aucune assertion niée de la classe ne contredit » (noms admissibles, noms de la "
-     "supposée) : l'assertion de nom niée doit-elle avoir l'état neg (§ 1 : son porteur présent ; « aucun état "
-     "sinon : l'assertion n'appuie rien ») ? Lecture : oui (LECTURES['conteste'] = 'etat'). Moteurs (avant comme "
-     "après le cycle 7) : un nom nié affirmé, de portée figuration, hors alternative, conteste le nom même si son "
-     "porteur n'est que possible, nié ou hors portée ('qualifie'). Ni l'une ni l'autre n'est uniformément prudente : "
-     "'qualifie' certifie moins de `distincts` documentaires, mais plus de `meme` (deux noms documentés dans une "
-     "classe dont l'un est « contesté » par un membre seulement possible : la lecture 'qualifie' ne voit plus le "
-     "(1,1)). Désaccord trouvé par un banc ciblé (pas par les bancs à graine fixe) ; à trancher dans le texte."),
+     "supposée) : l'assertion de nom niée doit-elle avoir l'état neg (§ 1 : son porteur présent) ? Tranché par la "
+     "décision D50 du 27/11 (§ 4.1 : « de porteur présent ») : oui, la lecture de l'oracle "
+     "(LECTURES['conteste'] = 'etat', par défaut). Moteurs : de même depuis D50 (banc ciblé : un nom nié d'un porteur "
+     "seulement possible, nié ou d'une autre portée ne conteste ni la documentaire, ni la supposée, ni le (1,1) de "
+     "`meme` ; la variante 'qualifie' y donne trois désaccords)."),
     ("premisse_existence", "§ 4.3 (amendé) : l'existence d'une entité citée par un appui : type(X, W) sous σ(X) sa "
      "classe, W son mot, sans appui négatif (§ 1.1, contexte de la figuration). Entités citées : l'entité d'un type, "
      "le porteur d'un nom ou d'une propriété, les deux entités d'une relation, le participant d'un rôle ; l'assertion "
@@ -1717,6 +1718,32 @@ AMBIGUITES = [
      "même sens pour les quatre catégories, la question ne se pose pas."),
     ("genre_tete", "§ 3 : genre(T) est lu sur les entités de portée oeuvre (§ 1.1, dernière ligne, et § 1 : "
      "contexte oeuvre pour le classement), avec un lien positif de leur tête vers T."),
+    ("polysemie_appui", "§ 2 (D30) : une négation seulement possible « ne réfute rien et ne contredit rien » : est-elle "
+     "un appui négatif pour l'ancrage (§ 4.4 : « un appui de l'un ou l'autre signe ») ? Lecture : non, elle n'est un "
+     "appui d'aucun signe (ni valeur négative, ni ancrage) ; elle ne fonde qu'une hypothèse sur ce qu'elle touche. "
+     "Moteurs : le moteur optimisé de même ; le moteur de référence ancre une variable sur une négation seulement "
+     "possible (et(nombre(x, 3), propriete(x, couronne)), le seul membre au nombre 2, « pas de couronne » polysémique : "
+     "ecartee contre inconnue) : les deux moteurs divergent, un défaut de la référence d'après le texte."),
+    ("polysemie_meme_mot", "§ 2 (D30) : « chaque nœud du type demandé [...] inclus dans chaque sens conceptuel du mot "
+     "nié » : type(X, poly) contre « pas de poly » (poly aux sens 801, 802) n'est qu'une négation possible (801 n'est "
+     "pas inclus dans 802). Lecture : littérale (chaque couple). Moteurs : de même."),
+    ("polysemie_lemme", "§ 2 : le lien positif finit au type demandé lui-même (Tn), quand ses nœuds (lien négatif) sont "
+     "ses sens conceptuels : un mot dont le seul sens est un entier n'atteint son propre lemme que si K a le pas de "
+     "lexicalisation (le K de l'oracle donne sous(3, matou)). Moteurs : de même."),
+    ("existence_contrainte", "§ 2 et § 4.3 (D30) : une négation seulement possible de l'existence d'une entité d'une "
+     "distinction établie ou d'un nombre demande-t-elle negation_autre_sens ? § 2 dit « une conclusion positive "
+     "qu'elle touche » ; § 6, point 7 n'énumère ces hypothèses que pour les atomes (l'atome, l'assertion citée, "
+     "l'existence d'une entité citée, l'événement d'un rôle). Lecture : non (LECTURES['existence_contrainte'] = "
+     "'ignoree') ; variante 'hypothese'. Moteurs : 'ignoree'. Moins prudent que le § 2 pris à la lettre "
+     "(distinct(e1, e2), e1 « matou » coréférent d'un lion, « pas de chat » : etablie, et non sous hypothèse) ; "
+     "à préciser dans le texte."),
+    ("hypotheses_termes", "§ 5 (D30) : les termes des hypothèses : sens_suppose(Mot, Type) (le mot de l'appui, le type "
+     "de l'atome) ; negation_autre_sens(A), A l'atome instancié par σ (référents par représentant, événements par "
+     "identifiant) : l'atome lui-même, l'assertion citée reformée avec son mot, type(R, W) pour l'existence d'une entité "
+     "de mot W et de classe R, evenement(V, P) pour l'événement V de prédicat P d'un rôle. Seul le statut est "
+     "comparé : qu'une solution ait ou non une hypothèse ne dépend pas du choix entre appuis à égalité."),
+    ("refutations_d31", "§ 4.4 (D31) : les éléments de `ecartee` (refutation(Sigma, substitution, Fondements)) ne sont "
+     "pas calculés par l'oracle ; le banc ne compare que les statuts."),
     ("forme_reference", "§ 3 et § 7 : le moteur de référence (statut_reference/4) ne contrôle pas la forme de la "
      "requête (il rend un statut pour distincts(X, X) ou une contrainte sur un événement) ; satisfaire/4 rend une "
      "erreur. Le banc ne compare que satisfaire/4 sur ces cas."),
