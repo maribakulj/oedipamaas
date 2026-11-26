@@ -245,6 +245,7 @@ cas(G, Q) :- graphe([entite(e1, lionne, p_1)], G), Q = requete(fauve, ou([type(v
 cas(G, Q) :- graphe([entite(e1, ange, p_1), nombre(e1, 3), entite(e2, ange, p_2)], G),
              Q = requete(trois, et([type(v(x), ange), nombre(v(x), 3)])).
 cas(G, Q) :- graphe([entite(e1, fauve, p_1)], G), Q = requete(felin, type(v(x), felin)).   % fauve → félin, hors inclusion
+cas(G, Q) :- tient(e1, e2, tenir, [], G), Q = requete(agent, et([type(v(x), femme), role(v(e), agent, v(x))])).  % rôle seul
 cas(G, Q) :- graphe([entite(e1, homme, p_1), entite(e2, saint, p_2), coref(e1, e2)], G),
              Q = requete(meme, et([type(v(x), homme), type(v(y), saint), meme(v(x), v(y))])).
 cas(G, Q) :- graphe([entite(e1, ange, p_1), entite(e2, ange, p_2), coref(e1, e2), nombre(e2, 3)], G),
@@ -293,6 +294,20 @@ mutation(G, P, G2, P2, type_demande_nie(T)) :-
     P = preuve(_, _, _, _, Js, _), member(j(_, type(_, T), appui(_, _, Pa, _)), Js), atom(T),
     append(G, [entite(t_nie, T, Pa), polarite(t_nie, neg), modalite(t_nie, affirme), portee(t_nie, represente),
                enonciateur(t_nie, cite(etude))], G2),
+    reforger(P, G2, P2).
+% l'existence d'une entité citée par un appui niée (« pas de W », W son mot), et l'événement d'un rôle nié par une autre
+% source (une copie niée, mêmes rôles)
+mutation(G, P, G2, P2, porteur_inexistant(E)) :-
+    P = preuve(_, _, _, _, Js, _), member(j(_, A, appui(X, E, Pa, _)), Js), A \= type(_, _), X \== E,
+    memberchk(entite(E, W, _), G), W \== nom_propre,
+    append(G, [entite(e_nie, W, Pa), polarite(e_nie, neg), modalite(e_nie, affirme), portee(e_nie, represente),
+               enonciateur(e_nie, cite(etude))], G2),
+    reforger(P, G2, P2).
+mutation(G, P, G2, P2, evenement_du_role_nie(V)) :-
+    P = preuve(_, _, _, _, Js, _), member(j(_, role(_, _, _), appui(role(V, _, _), _, Pa, _)), Js),
+    memberchk(evenement(V, W, _), G), findall(role(v_nie, Ro, E), memberchk(role(V, Ro, E), G), Rs),
+    append([G, [evenement(v_nie, W, Pa)|Rs], [polarite(v_nie, neg), modalite(v_nie, affirme), portee(v_nie, represente),
+                enonciateur(v_nie, cite(etude))]], G2),
     reforger(P, G2, P2).
 mutation(G, P, G2, P2, distinction_dans_la_classe(E1, E2)) :-
     P = preuve(_, _, _, _, Js, _), member(j(_, meme(_, _), contrainte(egalite)), Js), member(coref(E1, E2), G),

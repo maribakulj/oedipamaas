@@ -47,7 +47,7 @@ FAUTES = {
         "M:role(V, Ro, E), M:classe(E, R), M:evenement(V, _, P), qualifie(M, V, pos, represente, Q0), present(M, E),",
         "M:role(V, Ro, E), M:classe(E, R), M:evenement(V, _, P), Q0 = auteur, present(M, E),"),
     "nombre hors de la classe": (
-        "    (   M:classe(E, R), M:nombre(E, Nb), present_auteur(M, E) -> Pv = v(nombre(E))",
+        "    (   M:classe(E, R), M:nombre(E, Nb), present_auteur(M, E), \\+ porteur_nie(K, M, E) -> Pv = v(nombre(E))",
         "    (   M:nombre(E, Nb) -> Pv = v(nombre(E))"),
     # version 0.3 (journal, D23 à D33)
     "négation d'une description répartie": (
@@ -57,8 +57,8 @@ FAUTES = {
         "nom_nie(K, M, R, K1, Q, Ap), forall(member(Ki, Kr), nom_nie(K, M, R, Ki, _, _)).",
         "member(Ki, [K1|Kr]), nom_nie(K, M, R, Ki, Q, Ap)."),
     "prémisse contredite certifiée": (
-        "appui_(K, M, Ai, pos, auteur, Ap), \\+ ( base(Ai, Ap, B), once(appui_(K, M, B, neg, _, _)) ).",
-        "appui_(K, M, Ai, pos, auteur, Ap)."),
+        "conteste(K, M, Ai, Ap) :- base(Ai, Ap, B), once(appui_(K, M, B, neg, _, _)), !.",
+        "conteste(_, _, _, _) :- fail."),
     "porteur d'une source citée certifié": (
         "Q0 == auteur, member(E, Es), \\+ present_auteur(M, E) -> once(qualifie(M, E, pos, represente, Q1)), Q = Q1",
         "fail -> true"),
@@ -99,11 +99,11 @@ FAUTES_VERIFICATEUR = {
         "    \\+ ( member(j(_, A, _), Js), atome(A), appui_negatif(K, G, S, A) ),",
         "    true,"),
     "prémisse contredite acceptée": (
-        "    \\+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ).",
-        "    true."),
+        "    \\+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ),",
+        "    true,"),
     "contrainte contradictoire acceptée": (
-        "    \\+ ( member(distinct(E1, E2), G), meme_classe(G, E1, A), meme_classe(G, E2, A) ).",
-        "    true."),
+        "    \\+ ( member(distinct(E1, E2), G), meme_classe(G, E1, A), meme_classe(G, E2, A), porteur_admis(G, E1),\n         porteur_admis(G, E2) ),",
+        "    true,"),
     "nombre non admissible accepté": (
         "val(S, X, R), memberchk(nombre(E, N), G), meme_classe(G, E, R), porteur_admis(G, E),",
         "val(S, X, R), memberchk(nombre(E, N), G), meme_classe(G, E, R),"),
@@ -147,8 +147,8 @@ FAUTES_COMPARATEUR = {
         "    ;   St1 \\== etablie -> R = indetermine(cas_non_etabli(As))\n",
         ""),
     "négation non transmise acceptée": (
-        "    forall(member(j(_, A, appui(_, _, _, L)), Js), transmet(K, A, L)).",
-        "    true."),
+        "    forall(member(j(_, A, appui(_, _, _, L)), Js), transmet(K, A, L)),",
+        "    true,"),
     "distinction documentaire acceptée": (
         "    \\+ member(j(_, _, contrainte(documentaire(_, _, _))), Js),",
         "    true,"),

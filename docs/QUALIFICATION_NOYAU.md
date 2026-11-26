@@ -81,6 +81,8 @@ Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audi
 | D47 | critique | Comparateur : un `meme` de Q2 sans coréférence correspondante dans Q1 donne des `oui` faux (F-B1) | CORRIGÉ (cycle 7) : contre-exemple « jumeau » |
 | D48 | haute | Prémisses non contrôlées : un rôle certifié par un événement que l'auteur nie (F-B2) ; un appui dont le porteur n'existe pas selon le texte (F-B3) ; distinction établie et nombre de même | CORRIGÉ (cycle 7) |
 | D49 | moyenne | Le vérificateur rejette une preuve juste (distinction vers une entité citée : F-N1) et accepte une requête mal formée (F-N4) ; `genre` nié par une description restreinte (F-N2) ; hypothèse malgré un nom possible partagé (F-N3) ; `meme` non réfuté par K dans une classe (F-N5) | CORRIGÉ (cycle 7) |
+| D50 | basse | Un nom nié dont le porteur n'est que possible, nié ou d'une autre portée contredit-il le nom de la classe ? Les moteurs : oui ; l'oracle (§ 1 : « aucun état sinon ») : non ; aucune lecture n'est uniformément prudente (O, cycle 7) | décision du propriétaire |
+| D51 | moyenne | Une distinction établie dont l'existence d'une entité est niée empêchait la documentaire et la supposée (non monotone) ; le genre recevait une prémisse d'existence du contexte de la figuration (le moteur optimisé seul : les deux moteurs divergeaient) (O, cycle 7) | CORRIGÉ (cycle 7) |
 | D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | CORRIGÉ (cycle 5) |
 | D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | CORRIGÉ (cycle 5) |
 | D39 | grave | Comparateur : distinction documentaire du graphe canonique, cas non contrôlés, insatisfiables, noms de variables (I-D2, D4, D5) | CORRIGÉ (cycle 5) |
@@ -249,9 +251,11 @@ python -m pytest -q
   `nom_conteste_porte_contre_la_documentaire` passe de `etablie_sous_hypotheses` à `ecartee` (raison dans le cas).
 - Un défaut de ma correction, trouvé par un avertissement du compilateur : le vérificateur prenait K non lié dans la
   justification d'une distinction établie (elle aurait été rejetée par erreur) ; corrigé.
-- Tests : `test_noyau_semantique` 58 cas, `test_noyau_robustesse` 38, `test_inclusion` 28, `test_inclusion_generatif`
-  (les modèles ont maintenant des jumeaux). Le banc de l'oracle (`tests/test_oracle.py`) échoue tant que l'oracle
-  n'a pas reçu ces amendements de la spécification (en cours, par un agent qui ne lit que la spécification).
+- Tests : `test_noyau_semantique` 60 cas, `test_noyau_robustesse` 38, `test_inclusion` 28, `test_inclusion_generatif`
+  (les modèles ont maintenant des jumeaux) ; mutations du graphe « porteur inexistant » et « événement du rôle nié ».
+- L'oracle a reçu les amendements (agent qui ne lit que la spécification) ; 0 désaccord sur les bancs standard, mais
+  ceux-ci n'exercent presque pas les amendements : ses bancs ciblés (environ 12 000 cas) ont trouvé D51 (corrigé, deux
+  cas au banc sémantique) et D50 (soumis au propriétaire). Après correction : 0 désaccord sur les bancs standard.
 
 ## 7. Garanties établies, garanties absentes, limites
 

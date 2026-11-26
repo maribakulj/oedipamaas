@@ -91,7 +91,7 @@ etabli(pas_d_appui_negatif, K, G, _, preuve(_, _, _, S, Js, _)) :-
     % ni contre l'assertion citée, prise avec son propre mot (une lionne niée ne prouve pas un lion)
     \+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ),
     % ni contre l'existence d'une entité que l'appui cite, ni contre l'événement d'un rôle
-    \+ ( member(j(_, A, Ap), Js), atome(A), entite_citee(G, Ap, E), inexistante(K, G, E) ),
+    \+ ( member(j(_, A, Ap), Js), atome(A), A \= genre(_), entite_citee(G, Ap, E), inexistante(K, G, E) ),
     \+ ( member(j(_, role(_, _, _), appui(role(V, _, _), _, _, _)), Js), member(evenement(V, W, _), G),
          appui_negatif(K, G, [v('$e')-V], evenement(v('$e'), W)) ).
 entite_citee(_, appui(_, E, _, _), E).

@@ -253,6 +253,14 @@ cas(meme_dans_une_classe_que_k_dit_deux,
     [entite(e1, homme, p_1), nom(n1, e1, david, p_2), nom(n2, e1, goliath, p_3)],
     requete(q, et([nom(v(x), ['DAVID']), nom(v(y), ['GOLIATH']), meme(v(x), v(y))])), contradictoire,
     'l’auteur donne à une classe deux noms que K dit deux individus : `meme` est contredit par K').
+cas(distinction_etablie_contestee_et_documentaire,
+    [entite(e1, homme, p_1), entite(e3, lion, p_2), coref(e1, e3), entite(e2, chat, p_3), distinct(e1, e2),
+     entite(n1, homme, p_4), neg(n1), nom(a1, e3, david, p_5), nom(a2, e2, goliath, p_6)],
+    requete(q, et([nom(v(x), ['DAVID']), nom(v(y), ['GOLIATH']), distincts(v(x), v(y))])), etablie,
+    'une distinction établie dont l’existence d’une entité est niée n’empêche pas la documentaire (oracle, cycle 7)').
+cas(genre_et_negation_dans_l_image,
+    [entite(e2, chien, p_1), por(e2, oeuvre), entite(n1, chien, p_2), neg(n1)], requete(q, genre(chien)), etablie,
+    '« pas de chien » dans l’image ne nie pas que l’œuvre soit un chien (genre) : deux contextes (oracle, cycle 7)').
 cas(alias_en_chaine,
     [entite(e1, homme, p_1), nom(n1, e1, girolamo, p_2)], requete(q, nom(v(x), ['HIERONYMUS'])), etablie,
     'HIERONYMUS ~ JEROME ~ GIROLAMO : l’alias est clos (D33)').

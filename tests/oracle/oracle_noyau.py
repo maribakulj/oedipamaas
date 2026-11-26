@@ -1,4 +1,6 @@
-"""Oracle indépendant de la sémantique du noyau logique (docs/NOYAU.md, version 0.3).
+"""Oracle indépendant de la sémantique du noyau logique (docs/NOYAU.md, version 0.3, avec les amendements du
+cycle 7 : prémisses d'existence et d'événement d'un appui, distinction établie et nombre à existence niée, `meme`
+dans une classe, distinction supposée au sens large, genre nié par une entité nue seulement).
 
 Ce module est écrit d'après docs/NOYAU.md (§ 1, § 1.1, § 2, § 3, § 4.1 à 4.5) et docs/ASSERTIONS.md seuls :
 aucun fichier Prolog du moteur (oedipamaas/) n'a été lu pour l'écrire. Les seuls fichiers Prolog lus sont les
@@ -534,7 +536,10 @@ def appuis_positifs(g: Graphe, K: Connaissances, atome, sigma: dict) -> list:
             if lien_positif(K, tete, T):
                 st = etat(g, e, [], C)
                 if st and st[0] == "pos":
-                    res.append(Appui(st[1], e, tete))
+                    # AMBIGUITES, premisse_genre : l'existence de l'entité de portée oeuvre est-elle aussi lue dans
+                    # le contexte de la figuration ? Lecture : non (variante 'figuration' : oui).
+                    cites = (e,) if LECTURES["existence_genre"] == "figuration" else ()
+                    res.append(Appui(st[1], e, tete, cites))
     return res
 
 
@@ -643,6 +648,17 @@ LECTURES = {
     # dans la classe, quels que soient ses qualificatifs et son porteur, contesté ou non ('polarite') ; l'ancienne
     # lecture de l'oracle : les noms dans l'état pos ('etat')
     "exclusion_documentaire": "polarite",
+    # § 4.3 (0.3 amendée) : l'existence de l'entité qui appuie un genre (portée oeuvre) n'est lue que dans le contexte
+    # du classement, où elle est la prémisse reformée genre(W) ('oeuvre') ; variante : aussi comme type(X, W) dans le
+    # contexte de la figuration ('figuration' : « pas de chien » figuré ôte sa prémisse au genre « chien »)
+    "existence_genre": "oeuvre",
+    # § 4.3 (0.3 amendée) : une distinction établie à l'existence niée ne certifie pas `distincts`, sans empêcher une
+    # distinction documentaire ou supposée qui tient par ailleurs ('independante') ; variante : dès qu'une distinction
+    # établie existe entre les deux classes, seules les distinctions établies peuvent certifier ('etablie_prime')
+    "distinction_niee": "independante",
+    # § 4.1 : un nom « qu'une assertion niée de la classe contredit » : appui négatif, porteur présent ('etat') ; variante :
+    # toute assertion de nom niée affirmée, de portée figuration, hors alternative, porteur non vérifié ('qualifie')
+    "conteste": "etat",
 }
 
 
@@ -742,7 +758,12 @@ def distinction_etablie(g: Graphe, r1, r2) -> list:
 
 
 def nom_conteste(g: Graphe, K: Connaissances, r, cle) -> bool:
-    """§ 4.1 : un nom « qu'une assertion niée de la classe contredit » : nom(X, [Clé]) a un appui négatif."""
+    """§ 4.1 : un nom « qu'une assertion niée de la classe contredit » : nom(X, [Clé]) a un appui négatif (état neg,
+    § 1 : porteur présent). Variante LECTURES['conteste'] = 'qualifie' (AMBIGUITES, conteste_porteur) : une assertion
+    de nom niée de la classe, affirmée, de portée figuration, hors alternative, quel que soit l'état de son porteur."""
+    if LECTURES["conteste"] == "qualifie":
+        return any(representant(g, e) == r and cle_correspond(K, K.cle_de_nom(nom), [cle])
+                   and qualifiee(g, a, "neg", FIGURATION) for a, e, nom in g.noms)
     return bool(appuis_negatifs(g, K, ("nom", "_x", [cle]), {"_x": r}))
 
 
@@ -900,6 +921,9 @@ def contrainte_certifiee(g, K, c, sigma):
         r1, r2 = sigma[c[1]], sigma[c[2]]
         etablies = [(a, b) for a, b in distinction_etablie(g, r1, r2)
                     if not existence_niee(g, K, a) and not existence_niee(g, K, b)]
+        if (LECTURES["distinction_niee"] == "etablie_prime" and distinction_etablie(g, r1, r2)
+                and not etablies):
+            return None
         if not (etablies or distinction_documentaire(g, K, r1, r2)):
             if distinction_supposee(g, K, r1, r2):
                 return ("hypothese", c[1], c[2])      # vraie par la seule distinction supposée
@@ -1480,11 +1504,12 @@ AMBIGUITES = [
      "présent : aucune des deux lignes ne s'applique (le texte est explicite : « dans une classe qui a un membre "
      "présent »). Lecture : aucun appui négatif. Moteurs : appui négatif pour cette classe "
      "(LECTURES['classe_presente'] = False) : un écart au texte, pas une ambiguïté."),
-    ("genre_nu", "§ 1.1 : « entite(E, W) de portée oeuvre | genre(T) » ne dit pas si l'entité doit être nue. "
-     "Lecture : non (la ligne est littérale ; GENRE_NU = False). Moteurs : de même."),
-    ("distinct_present", "NOYAU.md ne dit pas qu'une distinction établie demande ses deux entités présentes ; le "
-     "journal (D45) et la consigne le disent (« entre entités présentes selon l'auteur »). Lecture : demandé, pour "
-     "la valeur comme pour la certification (DISTINCT_SELON_AUTEUR = True). Moteurs : de même."),
+    ("genre_nu", "§ 1.1 (tranché par l'amendement du cycle 7) : seule une entité **nue** de portée oeuvre nie "
+     "genre(T) (« pas un portrait mort » ne nie pas le genre). Lecture : nue au sens de la ligne 4 de la table "
+     "(entite_nue) ; GENRE_NU = True. Moteurs : de même."),
+    ("distinct_present", "§ 4.1 (amendé) le dit pour `meme` : une distinction établie ne compte qu'« entre entités "
+     "présentes selon l'auteur ». Lecture : de même pour `distincts`, pour la valeur comme pour la certification "
+     "(DISTINCT_SELON_AUTEUR = True). Moteurs : de même."),
     ("documentaire_sens", "§ 2 : distincts_documentes(C1, C2, S) est-il symétrique ? Lecture : oui, lu dans les deux "
      "sens (deux individus différents). Moteurs : de même."),
     ("documentaire_alias", "§ 4.1 : un nom admissible fonde-t-il la distinction documentaire s'il n'est qu'un alias "
@@ -1501,9 +1526,43 @@ AMBIGUITES = [
      "Moteurs : seuls les qualificatifs du nom comptent (LECTURES['noms_porteur'] = 'qualifie') ; c'est prudent pour "
      "l'exclusion (« tous différents »), mais pas pour le fondement : un nom porté par une entité seulement possible, "
      "ou niée, fonde une distinction supposée (etablie_sous_hypotheses où le texte donne inconnue)."),
-    ("supposee_noms", "§ 1 et § 4.1 : les noms d'une distinction supposée : de tout énonciateur ? Lecture : oui "
-     "(état pos, tout énonciateur) ; un nom contredit est ignoré, pour « porter des noms » comme pour « tous "
-     "différents ». Moteurs : de même pour l'énonciateur et la contestation."),
+    ("supposee_noms", "§ 1 et § 4.1 (amendé) : les noms qui fondent une distinction supposée : de tout énonciateur ? "
+     "Lecture : oui (état pos, porteur présent, tout énonciateur), un nom contredit ne fonde rien ; l'exclusion « aucun "
+     "nom que l'une porte n'est, à alias près, un nom que porte l'autre » compte les noms au sens large (toute "
+     "assertion de nom positive, quels que soient ses qualificatifs et son porteur, contestée ou non : noms_affirmes). "
+     "Moteurs : de même."),
+    ("conteste_porteur", "§ 4.1 : « qu'aucune assertion niée de la classe ne contredit » (noms admissibles, noms de la "
+     "supposée) : l'assertion de nom niée doit-elle avoir l'état neg (§ 1 : son porteur présent ; « aucun état "
+     "sinon : l'assertion n'appuie rien ») ? Lecture : oui (LECTURES['conteste'] = 'etat'). Moteurs (avant comme "
+     "après le cycle 7) : un nom nié affirmé, de portée figuration, hors alternative, conteste le nom même si son "
+     "porteur n'est que possible, nié ou hors portée ('qualifie'). Ni l'une ni l'autre n'est uniformément prudente : "
+     "'qualifie' certifie moins de `distincts` documentaires, mais plus de `meme` (deux noms documentés dans une "
+     "classe dont l'un est « contesté » par un membre seulement possible : la lecture 'qualifie' ne voit plus le "
+     "(1,1)). Désaccord trouvé par un banc ciblé (pas par les bancs à graine fixe) ; à trancher dans le texte."),
+    ("premisse_existence", "§ 4.3 (amendé) : l'existence d'une entité citée par un appui : type(X, W) sous σ(X) sa "
+     "classe, W son mot, sans appui négatif (§ 1.1, contexte de la figuration). Entités citées : l'entité d'un type, "
+     "le porteur d'un nom ou d'une propriété, les deux entités d'une relation, le participant d'un rôle ; l'assertion "
+     "d'un événement n'en cite aucune (evenement_parle). Moteurs : de même."),
+    ("premisse_evenement", "§ 4.3 (amendé) : l'événement d'un rôle est nié si evenement(E, P) sous σ(E) = cet "
+     "événement, P son propre prédicat, a un appui négatif (§ 1.1 : un autre événement nié qui a les mêmes rôles). "
+     "Moteurs : de même."),
+    ("premisse_genre", "§ 4.3 (amendé) : l'appui d'un genre est une entité de portée oeuvre ; son existence est-elle "
+     "lue aussi comme type(X, W) dans le contexte de la figuration (« pas de chien » figuré ôte-t-il sa prémisse au "
+     "genre chien) ? Lecture : non, le contexte est celui de la condition (§ 1 : oeuvre), où l'existence est la "
+     "prémisse reformée genre(W) (LECTURES['existence_genre'] = 'oeuvre'). Moteurs : ils divergent entre eux : le "
+     "moteur de référence lit 'oeuvre', le moteur optimisé 'figuration' (genre(chien) : etablie contre "
+     "non_certifiee) ; un défaut d'un des deux moteurs quelle que soit la lecture retenue."),
+    ("distinction_existence_niee", "§ 4.3 (amendé) : « une distinction établie [...] n'[est] certifiable que si "
+     "l'existence de [ses] entités n'est pas niée » : une telle distinction empêche-t-elle de certifier `distincts` "
+     "par une distinction documentaire, ou de le supposer ? Lecture : non, ce sont des appuis indépendants (§ 4.1 : "
+     "« distinction établie ou documentaire » ; LECTURES['distinction_niee'] = 'independante'). Moteurs (les deux) : "
+     "dès qu'une distinction établie existe entre les classes, seules les établies certifient ('etablie_prime') : "
+     "ajouter distinct(e1, e2) fait passer etablie à non_certifiee (non monotone) ; un défaut des moteurs d'après le "
+     "texte."),
+    ("meme_interne", "§ 4.1 (amendé) : dans une classe, « deux noms admissibles que K dit deux individus » donnent "
+     "(1,1). Lecture : les deux clés documentées elles-mêmes (pas un alias, comme documentaire_alias), toutes deux "
+     "admissibles pour la classe ; l'exclusion « à alias près » (D26), propre à deux classes, ne s'applique pas. "
+     "Moteurs : de même."),
     ("supposee_valeur", "§ 4.1 : la distinction supposée est-elle un appui positif de distincts(X, Y) (valeur "
      "(1,0)) ou seulement une hypothèse de certification ? La table la met dans la colonne de l'appui positif "
      "(« supposée : vraie sous hypothèse ») : elle donne la valeur (1,0), et n'est certifiable que comme hypothèse "
@@ -1519,8 +1578,9 @@ AMBIGUITES = [
      "sienne."),
     ("ancrage", "§ 4.4 : l'atome qui ancre une variable doit avoir toutes ses variables liées ; une contrainte "
      "n'ancre rien."),
-    ("premisse_role", "§ 4.3 : la prémisse d'un rôle est le rôle lui-même ; un rôle n'ayant jamais d'appui "
-     "négatif, elle n'est jamais niée."),
+    ("premisse_role", "§ 4.3 : la prémisse reformée d'un rôle est le rôle lui-même, jamais nié (§ 1.1) ; ses autres "
+     "prémisses (amendement du cycle 7) sont l'existence de son participant et son événement (premisse_existence, "
+     "premisse_evenement)."),
     ("sens_categorie", "§ 2 : la catégorie employée par chaque atome n'est pas dite ; les K de test donnent le "
      "même sens pour les quatre catégories, la question ne se pose pas."),
     ("genre_tete", "§ 3 : genre(T) est lu sur les entités de portée oeuvre (§ 1.1, dernière ligne, et § 1 : "

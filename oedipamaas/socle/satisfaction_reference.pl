@@ -185,7 +185,9 @@ contrainte_val(K, G, S, distincts(X, Y), V) :-
     ;   member(distinct(E1, E2), G), ( dans_la_classe(G, E1, A), dans_la_classe(G, E2, B) ; dans_la_classe(G, E1, B),
         dans_la_classe(G, E2, A) ), present_auteur(G, E1), present_auteur(G, E2), \+ existence_niee(K, G, E1),
         \+ existence_niee(K, G, E2) -> V = v
-    ;   distinctes(K, G, A, B, D) -> ( D == supposee -> V = h ; D == etablie -> V = p ; V = v )
+    ;   distinctes(K, G, A, B, documentaire) -> V = v
+    ;   distinctes(K, G, A, B, supposee) -> V = h
+    ;   distinctes(K, G, A, B, etablie) -> V = p
     ;   V = i
     ).
 contrainte_val(K, G, S, nombre(X, N), V) :-

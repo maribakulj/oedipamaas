@@ -268,11 +268,9 @@ contrainte_valeur(K, M, distincts(X, Y), S, V) :-
     memberchk(X-A, S), memberchk(Y-B, S),
     (   A == B -> V = i                    % une substitution invalide, pas une réfutation par le texte
     ;   etablie_saine(K, M, A, B, E1, E2) -> V = v(etablie(distinct(E1, E2)))
-    ;   distinction(K, M, A, B, D)
-    ->  (   D = supposee(Ns1-Ns2) -> V = h(distinction_supposee(X, Y, Ns1, Ns2))
-        ;   D = etablie(_) -> V = p                % ses entités n'existent pas selon le texte : non certifiable
-        ;   V = v(D)
-        )
+    ;   distinction_sans_etablie(K, M, A, B, D)
+    ->  ( D = supposee(Ns1-Ns2) -> V = h(distinction_supposee(X, Y, Ns1, Ns2)) ; V = v(D) )
+    ;   distinction(K, M, A, B, etablie(_)) -> V = p   % ses entités n'existent pas selon le texte : non certifiable
     ;   V = i
     ).
 % le nombre d'une entité ne compte que si elle est présente (D28) ; il n'est certifiable que de l'auteur
@@ -285,6 +283,9 @@ contrainte_valeur(K, M, nombre(X, Nb), S, V) :-
     ( M:classe(E2, R), M:nombre(E2, N2), N2 \== Nb, present(M, E2) -> Neg = 1 ; Neg = 0 ),
     ( Pv == non -> ( Neg == 1 -> V = f ; V = i ) ; Neg == 1 -> V = b ; V = Pv ).
 
+% la documentaire, sinon la supposée (une établie dont l'existence est niée n'empêche pas l'une ou l'autre)
+distinction_sans_etablie(K, M, A, B, D) :-
+    ( D = documentaire(_, _, _) ; D = supposee(_) ), distinction(K, M, A, B, D), !.
 % une distinction établie dont les deux entités existent selon le texte (cycle 7)
 etablie_saine(K, M, A, B, E1, E2) :-
     M:classe(E1, A), M:classe(E2, B), ( M:distinct(E1, E2) ; M:distinct(E2, E1) ),
@@ -422,7 +423,7 @@ appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \+ conteste(K, M,
 conteste(K, M, Ai, Ap) :- base(Ai, Ap, B), once(appui_(K, M, B, neg, _, _)), !.
 conteste(K, M, Ai, Ap) :- porteur(M, Ai, Ap, E), porteur_nie(K, M, E), !.
 conteste(K, M, role(V, _, _), _) :- M:evenement(V, W, _), once(appui_(K, M, evenement(V, W), neg, _, _)), !.
-porteur(_, _, appui(_, E, _, _), E).
+porteur(_, Ai, appui(_, E, _, _), E) :- Ai \= genre(_).     % le genre : sa prémisse est sa propre assertion
 porteur(M, relation(_, _, _), appui(A, _, _, _), E2) :- M:relation(A, _, _, E2, _).
 porteur_nie(K, M, E) :- M:entite(E, W, _), W \== nom_propre, M:classe(E, R), once(appui_(K, M, type(R, W), neg, _, _)).
 base(type(R, _), appui(_, _, _, chemin(W, _)), type(R, W)).
