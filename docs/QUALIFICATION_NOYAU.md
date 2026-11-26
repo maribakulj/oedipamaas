@@ -43,7 +43,7 @@ REJETÉ (examiné, pas un défaut : raison donnée).
 | D12 | moyenne | Isolation et concurrence non testées au-delà d'un cas | CORRIGÉ (cycle 2) : concurrence et modules temporaires testés |
 | D13 | moyenne | Reproductibilité (même entrée, même sortie, empreinte) non testée | CORRIGÉ (cycle 2) |
 | D14 | moyenne | Comparateur : transitivité, renommage, insatisfiables, taxinomie non testés ; pas de mutation du comparateur | CORRIGÉ (cycle 5) : `test_inclusion_generatif.pl` (modèles), 27 tests écrits, 7 défauts injectés détectés |
-| D15 | moyenne | Pas de mutation du vérificateur | CORRIGÉ (cycle 3) : 15 défauts injectés dans le vérificateur, tous détectés ; mutations du graphe à empreinte recalculée |
+| D15 | moyenne | Pas de mutation du vérificateur | CORRIGÉ (cycle 3) : 14 défauts injectés dans le vérificateur, tous détectés ; mutations du graphe à empreinte recalculée |
 | D16 | moyenne | Pas d'oracle indépendant des deux moteurs pour les fragments finis (les deux moteurs Prolog sont écrits d'après la même spécification) | CORRIGÉ (cycle 6) : oracle Python d'après NOYAU.md seul ; 0 désaccord sur 5 000 cas ; `tests/test_oracle.py` |
 | D17 | moyenne | Compilateur : couverture lexicale par sous-chaîne (`couvert/2`), fausse complétude (audit 1, § 11) | CORRIGÉ (cycle 1) |
 | D18 | moyenne | Compilateur : la personne héritée devient une variable indépendante (coprésence prise pour participation) (audit 1, § 11) | CORRIGÉ (cycle 1) |
@@ -152,7 +152,7 @@ python -m pytest -q
 - Erreur interne : `resoudre/6` rendait `inconnue` complète si la vue échouait (L-S4) ; c'est maintenant une erreur.
 - Résultats : `test_noyau` 51 / 51 ; `test_noyau_semantique` 3 tests, 144 sous-tests (48 cas × 3) ; `test_noyau_robustesse`
   22 / 22 ; `test_noyau_generatif` 5 / 5 ; `test_inclusion` 13 / 13 ; `test_compilateur` 6 / 6 ; injection : 18 défauts
-  du moteur et 15 du vérificateur, tous détectés. La reproduction de L donne l'attendu pour tous les cas du périmètre ;
+  du moteur et 14 du vérificateur, tous détectés (écrit d’abord « 15 » par erreur de compte). La reproduction de L donne l'attendu pour tous les cas du périmètre ;
   restent D30 (polysémie), D31 (sens d'`ecartee`), D36 (alternatives, nom propre nié), qui ne sont pas corrigés.
 - Questions pour le propriétaire (décisions non bloquantes, l'option prudente est prise en attendant) :
   1. **Polysémie (D30)** : faut-il exiger qu'un lien positif vaille pour chaque sens du mot (supervaluation), ce qui
@@ -173,7 +173,7 @@ python -m pytest -q
   seulement » : c'était faux pour les liens (V-X1) ; c'est vrai maintenant, le coût d'un lien étant borné par le
   nombre de nœuds atteignables de K.
 - Résultats : `test_noyau` 51 / 51, `test_noyau_semantique` 141 sous-tests, `test_noyau_robustesse` 37 / 37,
-  `test_noyau_generatif` 5 / 5, `test_inclusion` 13 / 13 ; injection : 33 défauts sur 33 détectés.
+  `test_noyau_generatif` 5 / 5, `test_inclusion` 13 / 13 ; injection : 32 défauts sur 32 détectés (18 + 14).
 
 ### Cycle 5 (26/11) : le comparateur (D14, D37 à D40)
 
@@ -239,7 +239,7 @@ confronté à des attendus qui ne dépendent d'aucun d'eux.
   niée seulement si chaque nom l'est.
 - Admissibilité : porteurs présents selon l'auteur ; contexte, modalité, alternative, énonciateur ; prémisse non niée.
 - Aucune conclusion négative d'un calcul incomplet (budget, temps) ; aucune erreur interne changée en résultat.
-- Le vérificateur n'accepte qu'après contrôle positif de chaque point ; 15 défauts injectés, tous détectés ; aucune
+- Le vérificateur n'accepte qu'après contrôle positif de chaque point ; 14 défauts injectés, tous détectés ; aucune
   preuve forgée acceptée hors des solutions de la référence (forgeur exhaustif de l'audit V, 3 000 + 1 500 cas).
 - Les deux moteurs ont la même vue sur 1 500 cas tirés (et 4 500 de l'audit L) ; 18 défauts injectés dans le moteur
   optimisé, tous détectés.

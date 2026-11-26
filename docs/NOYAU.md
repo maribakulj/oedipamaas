@@ -326,7 +326,7 @@ un nombre seulement possible ou cité ; une distinction dans une classe dite une
   suffit pas, budget épuisé pris pour une conclusion, rôle sans l'état de son événement, nombre hors de la classe ;
   et pour la version 0.3 : négation d'une description répartie, liste de noms niée par un seul nom, prémisse
   contredite certifiée, porteur d'une source citée certifié, nombre d'une entité seulement possible, contrainte à trois
-  valeurs, distinction documentaire sur un nom cité, type entier jamais nié) et quinze dans une copie du vérificateur ;
+  valeurs, distinction documentaire sur un nom cité, type entier jamais nié) et quatorze dans une copie du vérificateur (sept dans le comparateur, § 8) ;
   chacun doit faire échouer au moins un des bancs.
 
 **Ce que ces tests mesurent, et ce qu'ils ne mesurent pas.** Sur les graphes et les requêtes formellement définis,
