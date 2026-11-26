@@ -66,6 +66,9 @@ erreur(F, contrainte_non_liee(Co)) :-
     findall(V, ( member(A, Sel), atome(A), variables(A, Va), member(V, Va) ), Vs),
     member(V, Vc), \+ memberchk(V, Vs), !.
 % `distincts(X, X)` ne peut être vrai d'aucune substitution : une requête qui l'exige est mal formée
+% une contrainte ne porte que sur des référents : les événements n'ont ni coréférence, ni distinction, ni nombre (D35)
+erreur(F, contrainte_sur_evenement(V)) :-
+    atomes(F, As), member(_-Co, As), contrainte(Co), Co =.. [_|Args], member(V, Args), V = v(_), sorte(F, V, evenement).
 erreur(F, distincts_reflexive(X)) :- atomes(F, As), member(_-distincts(X, Y), As), X == Y.
 erreur(F, role_inconnu(R)) :- atomes(F, As), member(_-role(_, R, _), As), roles(Rs), \+ memberchk(R, Rs).
 erreur(F, argument(A)) :- atomes(F, As), member(_-A, As), \+ arguments_valides(A).
@@ -87,10 +90,10 @@ arguments_valides(evenement(v(_), P)) :- type_valide(P).
 arguments_valides(role(v(_), R, v(_))) :- atom(R).
 arguments_valides(relation(v(_), R, v(_))) :- type_valide(R).
 arguments_valides(genre(T)) :- type_valide(T).
-type_valide(T) :- ( atom(T) ; integer(T) ), !.
 arguments_valides(meme(v(_), v(_))).
 arguments_valides(distincts(v(_), v(_))).
 arguments_valides(nombre(v(_), K)) :- integer(K), K >= 1.
+type_valide(T) :- ( atom(T) ; integer(T) ), !.
 
 % les sélections d'une formule : tous les enfants d'un « et », un enfant d'un « ou »
 selection(et(Fs), Sel) :- !, is_list(Fs), maplist(selection, Fs, Ss), append(Ss, Sel).

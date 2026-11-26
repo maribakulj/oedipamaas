@@ -32,6 +32,18 @@ test(requete_mal_formee, [throws(error(requete_mal_formee(q, _), _))]) :-
     graphe([entite(e1, lion, p_1)], G), k(K), satisfaire(K, G, requete(q, ou([type(v(x), lion)])), _).
 test(requete_pas_une_requete, [throws(error(requete_mal_formee(_, _), _))]) :-
     graphe([entite(e1, lion, p_1)], G), k(K), satisfaire(K, G, pas_une_requete, _).
+% D35 : une contrainte ne porte que sur des référents
+test(contrainte_sur_un_evenement, [throws(error(requete_mal_formee(q, [contrainte_sur_evenement(v(e))]), _))]) :-
+    graphe([entite(e1, homme, p_1), evenement(v1, bercer, p_2), role(v1, agent, e1)], G), k(K),
+    satisfaire(K, G, requete(q, et([evenement(v(e), bercer), role(v(e), agent, v(x)), distincts(v(e), v(x))])), _).
+% D32 : un calcul interrompu qui n'a trouvé qu'une solution sous hypothèse ne dit pas « aucune vraie »
+test(budget_et_hypothese) :-
+    graphe([entite(e1, homme, p_1), nom(n1, e1, abel, p_2), entite(e2, homme, p_3), nom(n2, e2, cain, p_4),
+            entite(e3, lion, p_5)], G), k(K),
+    Q = requete(q, ou([et([nom(v(x), ['ABEL']), nom(v(y), ['CAIN']), distincts(v(x), v(y))]), type(v(z), lion)])),
+    satisfaire(K, G, Q, resultat(etablie, _, complet)),
+    forall(between(1, 6, B), ( satisfaire(K, G, Q, [budget(B)], resultat(St, _, C)),
+                               ( C == complet -> St == etablie ; memberchk(St, [etablie, incomplet]) ) )).
 test(verificateur_graphe_invalide) :-
     k(K), verifier(K, [bizarre], requete(q, type(v(x), lion)), preuve(q, [], figuration, [], [], []), rejete([graphe_invalide])).
 test(verificateur_preuve_non_close) :-

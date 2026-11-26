@@ -1,4 +1,4 @@
-/*  Le vérificateur des preuves (docs/NOYAU.md, version 0.2, § 6). Écrit à part du moteur (satisfaction.pl) et du
+/*  Le vérificateur des preuves (docs/NOYAU.md, version 0.3, § 6). Écrit à part du moteur (satisfaction.pl) et du
     moteur de référence, dont il ne réutilise aucun prédicat : il ne partage que la spécification, le graphe, le contrat
     des assertions (assertions.pl) et les primitives de K.
 
@@ -14,7 +14,7 @@
 :- use_module(assertions, [valider/2]).
 
 % la version du noyau pour laquelle ce vérificateur est écrit
-version_attendue('noyau 0.2').
+version_attendue('noyau 0.3').
 
 verifier(K, G, Q, P, Verdict) :-
     (   \+ assertions:valider(G, [])                    -> Verdict = rejete([graphe_invalide])
@@ -84,7 +84,17 @@ etabli(hypotheses, _, _, _, preuve(_, _, _, _, Js, Hs)) :-
     findall(X-Y, member(j(_, distincts(X, Y), contrainte(hypothese)), Js), Us0), sort(Us0, Us),
     findall(X-Y, member(distinction_supposee(X, Y, _, _), Hs), Hs1), msort(Hs1, Hs2), sort(Hs1, Hs2), Hs2 == Us.
 etabli(pas_d_appui_negatif, K, G, _, preuve(_, _, _, S, Js, _)) :-
-    \+ ( member(j(_, A, _), Js), atome(A), appui_negatif(K, G, S, A) ).
+    \+ ( member(j(_, A, _), Js), atome(A), appui_negatif(K, G, S, A) ),
+    % ni contre l'assertion citée, prise avec son propre mot (une lionne niée ne prouve pas un lion)
+    \+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ).
+
+assertion_citee(type(X, _), appui(_, _, _, chemin(W, _)), type(X, W)).
+assertion_citee(nom(X, _), appui(_, _, _, cle(C)), nom(X, [C])).
+assertion_citee(nom(X, _), appui(_, _, _, alias(C, _)), nom(X, [C])).
+assertion_citee(propriete(X, _), appui(_, _, _, chemin(W, _)), propriete(X, W)).
+assertion_citee(evenement(X, _), appui(_, _, _, chemin(W, _)), evenement(X, W)).
+assertion_citee(relation(X, _, Y), appui(_, _, _, chemin(W, _)), relation(X, W, Y)).
+assertion_citee(genre(_), appui(_, _, _, chemin(W, _)), genre(W)).
 
 % --- La formule ------------------------------------------------------------------------------------------------------
 
@@ -134,6 +144,17 @@ qualifie(G, A, Pol, Ctx, Q) :-
     memberchk(polarite(A, Pol), G), memberchk(modalite(A, affirme), G), memberchk(portee(A, Ctx), G),
     memberchk(enonciateur(A, Q), G), \+ ( member(alternative(_, As), G), memberchk(A, As) ).
 present(G, E) :- qualifie(G, E, pos, represente, _).
+porteur_admis(G, E) :- qualifie(G, E, pos, represente, auteur).      % un porteur que l'auteur dit présent (§ 1)
+sans_autre_dit(G, E) :-
+    \+ member(nom(_, E, _, _), G), \+ member(propriete(_, E, _, _), G), \+ member(relation(_, E, _, _, _), G),
+    \+ member(relation(_, _, _, E, _), G), \+ member(role(_, _, E), G), \+ member(nombre(E, _), G),
+    \+ member(distinct(E, _), G), \+ member(distinct(_, E), G).
+cles_equivalentes(_, A, B) :- A == B, !.
+cles_equivalentes(K, A, B) :- alias_ferme(K, [A], [A], B).
+alias_ferme(_, _, Vus, B) :- memberchk(B, Vus), !.
+alias_ferme(K, Front, Vus, B) :-
+    findall(Y, ( member(X, Front), ( K:alias(X, Y) ; K:alias(Y, X) ), \+ memberchk(Y, Vus) ), Ys0), sort(Ys0, Ys),
+    Ys \== [], append(Vus, Ys, Vus1), alias_ferme(K, Ys, Vus1, B).
 
 % un lien positif : sens puis des pas « sous », chemin simple, jusqu'au type demandé
 lien_positif(K, Cat, W, T, chemin(W, [S0|Ch])) :- K:sens(Cat, W, S0), pas_sous(K, [S0|Ch], T).
@@ -141,7 +162,7 @@ pas_sous(_, [T0], T) :- T0 == T, !.
 pas_sous(K, [S, S1|Ch], T) :- K:sous(S, S1), \+ memberchk(S, [S1|Ch]), pas_sous(K, [S1|Ch], T).
 
 nom_valide(K, Nom, Ks, cle(C)) :- K:cle_de_nom(Nom, C), memberchk(C, Ks).
-nom_valide(K, Nom, Ks, alias(C, Ka)) :- K:cle_de_nom(Nom, C), memberchk(Ka, Ks), ( K:alias(C, Ka) ; K:alias(Ka, C) ).
+nom_valide(K, Nom, Ks, alias(C, Ka)) :- K:cle_de_nom(Nom, C), memberchk(Ka, Ks), C \== Ka, cles_equivalentes(K, C, Ka).
 
 % un appui positif cité : il existe, de l'auteur, admissible, conforme à σ, de lien valide
 appui_positif(K, G, S, type(X, T), appui(E, E, _, L)) :-
@@ -149,36 +170,40 @@ appui_positif(K, G, S, type(X, T), appui(E, E, _, L)) :-
     qualifie(G, E, pos, represente, auteur), lien_positif(K, n, W, T, L).
 appui_positif(K, G, S, nom(X, Ks), appui(A, E, _, L)) :-
     member(nom(A, E, Nom, _), G), val(S, X, R), meme_classe(G, E, R),
-    qualifie(G, A, pos, represente, auteur), present(G, E), nom_valide(K, Nom, Ks, L).
+    qualifie(G, A, pos, represente, auteur), porteur_admis(G, E), nom_valide(K, Nom, Ks, L).
 appui_positif(K, G, S, propriete(X, Pr), appui(A, E, _, L)) :-
     member(propriete(A, E, W, _), G), val(S, X, R), meme_classe(G, E, R),
-    qualifie(G, A, pos, represente, auteur), present(G, E), lien_positif(K, a, W, Pr, L).
+    qualifie(G, A, pos, represente, auteur), porteur_admis(G, E), lien_positif(K, a, W, Pr, L).
 appui_positif(K, G, S, evenement(X, Pr), appui(V, V, _, L)) :-
     val(S, X, V), member(evenement(V, W, _), G), qualifie(G, V, pos, represente, auteur), lien_positif(K, v, W, Pr, L).
 appui_positif(_, G, S, role(X, Ro, Y), appui(role(V, Ro, E), E, _, egal)) :-
     val(S, X, V), val(S, Y, R), member(role(V, Ro, E), G), meme_classe(G, E, R),
-    qualifie(G, V, pos, represente, auteur), present(G, E).
+    qualifie(G, V, pos, represente, auteur), porteur_admis(G, E).
 appui_positif(K, G, S, relation(X, Re, Y), appui(A, E1, _, L)) :-
     member(relation(A, E1, W, E2, _), G), val(S, X, R1), val(S, Y, R2), meme_classe(G, E1, R1), meme_classe(G, E2, R2),
-    qualifie(G, A, pos, represente, auteur), present(G, E1), present(G, E2), lien_positif(K, r, W, Re, L).
+    qualifie(G, A, pos, represente, auteur), porteur_admis(G, E1), porteur_admis(G, E2), lien_positif(K, r, W, Re, L).
 appui_positif(K, G, _, genre(T), appui(E, E, _, L)) :-
     member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, pos, oeuvre, auteur), lien_positif(K, n, W, T, L).
 
 % un appui négatif sous σ, de tout énonciateur, cherché dans tout le graphe (lien d'inclusion, dans l'autre sens)
+% une entité niée dont rien d'autre n'est dit : contre sa classe si un membre en est présent, contre tout référent sinon
 appui_negatif(K, G, S, type(X, T)) :-
-    val(S, X, R), member(entite(E, W, _), G), W \== nom_propre, meme_classe(G, E, R),
-    qualifie(G, E, neg, represente, _), inclus_lien(K, n, T, W).
+    val(S, X, R), member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, neg, represente, _),
+    sans_autre_dit(G, E), inclus_lien(K, n, T, W),
+    ( member(entite(E2, _, _), G), meme_classe(G, E2, E), present(G, E2) -> meme_classe(G, E, R) ; true ).
+% une liste de noms : chacun de ses noms nié
 appui_negatif(K, G, S, nom(X, Ks)) :-
-    val(S, X, R), member(nom(A, E, Nom, _), G), meme_classe(G, E, R), qualifie(G, A, neg, represente, _),
-    present(G, E), once(nom_valide(K, Nom, Ks, _)).
+    val(S, X, R),
+    forall(member(Ki, Ks), ( member(nom(A, E, Nom, _), G), meme_classe(G, E, R), qualifie(G, A, neg, represente, _),
+                              present(G, E), once(nom_valide(K, Nom, [Ki], _)) )).
 appui_negatif(K, G, S, propriete(X, Pr)) :-
     val(S, X, R), member(propriete(A, E, W, _), G), meme_classe(G, E, R), qualifie(G, A, neg, represente, _),
     present(G, E), inclus_lien(K, a, Pr, W).
+% un événement nié : contre un autre événement présent qui a chacun de ses rôles, vers les mêmes référents
 appui_negatif(K, G, S, evenement(X, Pr)) :-
-    val(S, X, V), member(evenement(V, W, _), G), qualifie(G, V, neg, represente, _), inclus_lien(K, v, Pr, W).
-appui_negatif(_, G, S, role(X, Ro, Y)) :-
-    val(S, X, V), val(S, Y, R), member(role(V, Ro, E), G), meme_classe(G, E, R),
-    qualifie(G, V, neg, represente, _), present(G, E).
+    val(S, X, V), qualifie(G, V, pos, represente, _),
+    member(evenement(N, W, _), G), N \== V, qualifie(G, N, neg, represente, _), inclus_lien(K, v, Pr, W),
+    forall(member(role(N, Ro, E), G), ( member(role(V, Ro, E2), G), meme_classe(G, E2, E) )).
 appui_negatif(K, G, S, relation(X, Re, Y)) :-
     val(S, X, R1), val(S, Y, R2), member(relation(A, E1, W, E2, _), G), meme_classe(G, E1, R1), meme_classe(G, E2, R2),
     qualifie(G, A, neg, represente, _), present(G, E1), present(G, E2), inclus_lien(K, r, Re, W).
@@ -186,26 +211,39 @@ appui_negatif(K, G, _, genre(T)) :-
     member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, neg, oeuvre, _), inclus_lien(K, n, T, W).
 
 % T est inclus dans W : un sens de T monte par « inclus » jusqu'à un sens de W
-inclus_lien(K, Cat, T, W) :- K:sens(Cat, T, S0), K:sens(Cat, W, Sn), monte_inclus(K, S0, Sn, [S0]), !.
+inclus_lien(K, Cat, T, W) :- ( integer(T) -> S0 = T ; K:sens(Cat, T, S0) ), K:sens(Cat, W, Sn), monte_inclus(K, S0, Sn, [S0]), !.
 monte_inclus(_, S, T, _) :- S == T, !.
 monte_inclus(K, S, T, Vus) :- K:inclus(S, S1), \+ memberchk(S1, Vus), monte_inclus(K, S1, T, [S1|Vus]).
 
 % --- Les contraintes -------------------------------------------------------------------------------------------------
 
-contrainte_justifiee(_, _, S, _, meme(X, Y), egalite) :- val(S, X, A), val(S, Y, B), A == B.
+contrainte_justifiee(_, G, S, _, meme(X, Y), egalite) :-
+    val(S, X, A), val(S, Y, B), A == B,
+    \+ ( member(distinct(E1, E2), G), meme_classe(G, E1, A), meme_classe(G, E2, A) ).   % la classe n'est pas contredite
 contrainte_justifiee(_, G, S, _, distincts(X, Y), etablie(distinct(E1, E2))) :-
     val(S, X, A), val(S, Y, B), A \== B, meme_classe(G, E1, A), meme_classe(G, E2, B),
     ( memberchk(distinct(E1, E2), G) ; memberchk(distinct(E2, E1), G) ).
 contrainte_justifiee(K, G, S, _, distincts(X, Y), documentaire(C1, C2, Src)) :-
-    val(S, X, A), val(S, Y, B), A \== B, noms(K, G, A, N1), noms(K, G, B, N2), memberchk(C1, N1), memberchk(C2, N2),
-    ( K:distincts_documentes(C1, C2, Src) ; K:distincts_documentes(C2, C1, Src) ).
+    val(S, X, A), val(S, Y, B), A \== B, nom_admissible(K, G, A, C1), nom_admissible(K, G, B, C2),
+    ( K:distincts_documentes(C1, C2, Src) ; K:distincts_documentes(C2, C1, Src) ),
+    noms(K, G, A, N1), noms(K, G, B, N2),
+    \+ ( member(C, N2), cles_equivalentes(K, C1, C) ), \+ ( member(C, N1), cles_equivalentes(K, C2, C) ).
 contrainte_justifiee(K, G, S, Hs, distincts(X, Y), hypothese) :-
     val(S, X, A), val(S, Y, B), A \== B, memberchk(distinction_supposee(X, Y, N1, N2), Hs),
     noms(K, G, A, N1), noms(K, G, B, N2), N1 \== [], N2 \== [],
-    \+ ( member(C1, N1), member(C2, N2), ( C1 == C2 ; K:alias(C1, C2) ; K:alias(C2, C1) ) ).
+    \+ ( member(C1, N1), member(C2, N2), cles_equivalentes(K, C1, C2) ).
 contrainte_justifiee(_, G, S, _, nombre(X, N), nombre(E)) :-
-    val(S, X, R), memberchk(nombre(E, N), G), meme_classe(G, E, R).
+    val(S, X, R), memberchk(nombre(E, N), G), meme_classe(G, E, R), porteur_admis(G, E),
+    \+ ( member(nombre(E2, N2), G), N2 \== N, meme_classe(G, E2, R), present(G, E2) ).   % aucun autre nombre
+
+% un nom sur lequel une distinction documentaire repose : de l'auteur, porteur admis, non contredit dans la classe
+nom_admissible(K, G, R, C) :-
+    member(nom(A, E, Nom, _), G), meme_classe(G, E, R), qualifie(G, A, pos, represente, auteur), porteur_admis(G, E),
+    K:cle_de_nom(Nom, C), \+ nie_dans_la_classe(K, G, R, C).
 
 noms(K, G, R, Ns) :-
     findall(C, ( member(nom(A, E, Nom, _), G), meme_classe(G, E, R), qualifie(G, A, pos, represente, _),
-                 K:cle_de_nom(Nom, C) ), Ns0), sort(Ns0, Ns).
+                 K:cle_de_nom(Nom, C), \+ nie_dans_la_classe(K, G, R, C) ), Ns0), sort(Ns0, Ns).
+nie_dans_la_classe(K, G, R, C) :-
+    member(nom(A2, E2, Nom2, _), G), meme_classe(G, E2, R), qualifie(G, A2, neg, represente, _),
+    K:cle_de_nom(Nom2, C2), cles_equivalentes(K, C, C2), !.

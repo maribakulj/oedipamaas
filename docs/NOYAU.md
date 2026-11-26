@@ -1,9 +1,15 @@
-# Le noyau logique : requêtes, satisfaction, preuves (M0, version 0.2, 26 novembre 2026)
+# Le noyau logique : requêtes, satisfaction, preuves (M0, version 0.3, 26 novembre 2026)
 
 **Version 0.2** (qualification formelle, 26/11) : la négation descend la hiérarchie par la seule inclusion ;
 l'identité est en monde ouvert (trois régimes de distinction) ; la valeur d'une formule (Belnap) est séparée de sa
 certification ; l'admissibilité reprend le contrat des assertions ; un budget de calcul ; un vérificateur qui
 n'accepte qu'après avoir tout établi.
+
+**Version 0.3** (qualification, cycle 3 ; journal `docs/QUALIFICATION_NOYAU.md`, D22 à D35) : une assertion niée
+nie une description, qui ne se répartit pas sur ses atomes (§ 1.1) ; une liste de noms n'est niée que si chacun de
+ses noms l'est ; un porteur n'est admissible que présent selon l'auteur ; une prémisse niée ne certifie rien ; les
+contraintes ont quatre valeurs ; le nombre et les noms d'une distinction documentaire sont qualifiés ; un type entier
+est nié comme un mot ; l'alias est clos ; un calcul interrompu ne conclut pas « sous hypothèses ».
 
 **Indépendance.** Le noyau ne connaît ni Iconclass ni WordNet : ni notation, ni arbre, ni libellé, ni ressource de
 langue n'y entre. Ce qui est propre à Iconclass relève des connaissances (le module K), des définitions (les requêtes
@@ -37,16 +43,45 @@ donne une erreur structurée, jamais un résultat.
   hommes.
 - **L'état d'un appui**, pour une condition qui demande le contexte C (`represente` pour la figuration, `oeuvre` pour
   le classement) :
-  - `pos(Q)` : polarité positive, modalité « affirmé », portée C, hors de toute alternative, et chaque référent dont
-    l'assertion parle (l'entité d'un nom ou d'une propriété, les deux entités d'une relation, l'entité d'un rôle) a une
-    entité positive, affirmée, de portée C, hors de toute alternative ; Q est l'énonciateur ;
-  - `neg(Q)` : polarité négative, modalité « affirmé », portée C, hors de toute alternative, et chaque référent dont
-    elle parle, autre qu'elle-même, a une entité positive comme ci-dessus (« le lion n'est pas mort » parle d'un lion
-    qui est là) ;
+  - `pos(Q)` : polarité positive, modalité « affirmé », portée C, hors de toute alternative, et chaque entité dont
+    l'assertion parle (l'entité citée par un nom ou une propriété, les deux entités d'une relation, le participant
+    d'un rôle ; c'est l'entité citée elle-même, pas un autre membre de sa classe) est **présente** : positive,
+    affirmée, de portée C, hors de toute alternative ; Q est l'énonciateur de l'assertion si chacune de ces entités
+    est présente selon l'auteur, et sinon l'énonciateur de celle qui ne l'est pas (D25 : « l'auteur dit qu'il
+    s'appelle Pierre » d'un homme dont seul un catalogue dit qu'il est là n'est pas une prémisse de l'auteur) ;
+  - `neg(Q)` : polarité négative, modalité « affirmé », portée C, hors de toute alternative, et chaque entité dont
+    elle parle, autre qu'elle-même, présente (« le lion n'est pas mort » parle d'un lion qui est là) ; ce qu'un appui
+    négatif nie est fixé au § 1.1 ;
   - aucun état sinon (une hypothèse, un titre, une alternative, un autre contexte) : l'assertion n'appuie rien, dans
     un sens ni dans l'autre.
-  Un rôle a l'état de son événement, et demande l'entité de son participant positive. Positifs et négatifs portent leur
-  énonciateur : un désaccord entre sources est gardé, avec ses sources (§ 4.3).
+  Un rôle positif a l'état de son événement et demande son participant présent. Positifs et négatifs portent leur
+  énonciateur : un désaccord entre sources est gardé, avec ses sources (§ 4.3). `nombre/2` n'a pas de qualificatifs :
+  il vaut ce que vaut son entité (il ne compte que si elle est présente, et n'est certifiable que si elle l'est selon
+  l'auteur).
+
+### 1.1 Ce que nie une assertion niée
+
+La polarité porte sur toute la description que l'assertion introduit, et une négation de conjonction ne se répartit
+pas : ¬(A ∧ B) n'implique ni ¬A ni ¬B (« pas de lion mort » ne dit pas « pas de lion » ; « Goliath ne décapite pas
+David » ne dit rien d'une autre décapitation). Le noyau ne tire donc d'appui négatif que là où la négation est celle
+d'un atome, ou là où la description niée est entièrement couverte :
+
+| Assertion niée | Appui négatif de |
+|---|---|
+| `nom(A, E, Nom)`, E présente | `nom(X, Ks)` sous σ(X) la classe de E, si **chaque** clé de Ks est niée ainsi (une liste de noms est une disjonction, D24) |
+| `propriete(A, E, W)`, E présente | `propriete(X, P)`, σ(X) la classe de E, P inclus dans W |
+| `relation(A, E1, W, E2)`, présentes | `relation(X, R, Y)`, σ(X), σ(Y) les classes de E1, E2, R inclus dans W (orientée) |
+| `entite(E, W)` **nue** (rien d'autre n'en est dit : ni nom, propriété, relation, rôle, nombre, distinction), dans une classe qui a un membre présent | `type(X, T)`, σ(X) cette classe, T inclus dans W (« ce personnage n'est pas un saint ») |
+| `entite(E, W)` nue, seule dans sa classe | `type(X, T)` pour **tout** référent σ(X), T inclus dans W (« pas de lion » : aucun lion n'est figuré) |
+| `entite(E, W)` restreinte (« pas de lion mort ») | rien : la description niée n'est pas décomposée |
+| `evenement(N, W)` et ses rôles `role(N, Ro, E)` | `evenement(V, P)` pour un **autre** événement V présent qui a, pour chaque rôle de N, le même rôle vers un membre de la même classe, P inclus dans W (« Marie ne tient pas l'enfant » contredit « Marie tient l'enfant » ; un événement nié sans rôle nie tout événement de ce prédicat : la lecture la plus prudente) |
+| `role(N, …)` d'un événement nié | rien : un rôle n'est pas nié seul |
+| `entite(E, W)` de portée `oeuvre` | `genre(T)`, T inclus dans W |
+
+Ces règles sont saines (chaque appui négatif découle de l'assertion niée) mais incomplètes : la réfutation d'une
+conjonction de la requête qui couvre exactement une description niée (« la femme tient l'enfant » contre « la femme ne
+tient pas l'enfant » quand aucun autre événement n'est dit) n'est pas dérivée (journal, D41) ; c'est une perte dans le
+sens sûr (moins de réfutations, aucune certification de plus).
 
 ## 2. Les connaissances
 
@@ -64,9 +99,15 @@ Le moteur ne connaît aucun mot : il interroge un module de connaissances K.
 
 Un **lien positif** est un chemin simple `chemin(Mot, [T0, …, Tn])` : `K:sens(Cat, Mot, T0)`, `K:sous(Ti, Ti+1)`,
 Tn le type demandé (un mot du texte va vers un type plus général : un lion est un félin). Un **lien négatif** va dans
-l'autre sens et par la seule inclusion : `chemin_inclus(Type, [S0, …, Sn], Mot)` avec `K:sens(Cat, Type, S0)`,
-`K:inclus(Si, Si+1)`, `K:sens(Cat, Mot, Sn)` (nier un type plus général nie les plus spécifiques : « pas de félin »
-nie « lion » ; « pas de lion » ne nie pas « félin »). Les chemins sont simples : la hiérarchie peut avoir des cycles.
+l'autre sens et par la seule inclusion : `chemin_inclus(Type, [S0, …, Sn], Mot)` avec S0 le nœud du type demandé (le
+type lui-même si c'est un identifiant de concept, un entier ; un de ses sens, `K:sens(Cat, Type, S0)`, si c'est un
+mot : D27), `K:inclus(Si, Si+1)`, `K:sens(Cat, Mot, Sn)` (nier un type plus général nie les plus spécifiques : « pas
+de félin » nie « lion » ; « pas de lion » ne nie pas « félin »). Les chemins sont simples : la hiérarchie peut avoir
+des cycles. **L'alias** est clos par le noyau (réflexif, symétrique, transitif), quel que soit K (D33).
+
+**La polysémie** (un mot qui désigne plusieurs types) est traitée sens par sens : un lien positif part de n'importe
+quel sens du mot, un lien négatif de n'importe quel sens du type demandé. Le choix d'un sens est une interprétation que
+le noyau ne fait pas ; c'est une limite ouverte, soumise au propriétaire (journal, D30).
 
 ## 3. Le langage des requêtes
 
@@ -94,8 +135,9 @@ Contrainte ::= meme(X, Y) | distincts(X, Y) | nombre(X, K)
 - Une requête est **bien formée** si chaque variable apparaît dans au moins un atome (pas seulement dans une
   contrainte), si un `ou` a au moins deux branches et un `et` au moins une, si la sorte de chaque variable est unique
   (référent ou événement : premier argument de `evenement` et de `role`), si, dans chaque sélection qui contient une
-  contrainte, ses variables sont celles d'atomes de la même sélection, et si aucune contrainte n'est `distincts(X, X)`
-  (qu'aucune substitution ne peut satisfaire).
+  contrainte, ses variables sont celles d'atomes de la même sélection, si aucune contrainte n'est `distincts(X, X)`
+  (qu'aucune substitution ne peut satisfaire), et si aucune contrainte ne porte sur une variable d'événement (les
+  événements n'ont ni coréférence, ni distinction, ni nombre : `contrainte_sur_evenement`, D35).
 
 **Le fragment.** Ce sont des formules existentielles positives (∃, ∧, ∨) à atomes typés, avec égalité et
 différence, évaluées sur un graphe fini : l'équivalent d'unions de requêtes conjonctives. Il n'y a pas de négation
@@ -112,15 +154,21 @@ Une **substitution** σ lie des variables (pas forcément toutes) à des référ
 (liens positifs, état `pos`) et négatifs (liens négatifs, état `neg`), et sa valeur est la paire (positif, négatif)
 de Belnap : (0,0) inconnu, (1,0) vrai, (0,1) faux, (1,1) contradictoire.
 
-| Contrainte, variables liées | vrai (1,0) | faux (0,1) | inconnu (0,0) |
-|---|---|---|---|
-| `meme(X, Y)` | même classe | classes dont la distinction est établie ou documentaire | sinon |
-| `distincts(X, Y)` | distinction établie ou documentaire | jamais | sinon (la même classe : une substitution invalide, pas une réfutation par le texte) ; **supposée** : vraie sous hypothèse (§ 4.4) |
-| `nombre(X, K)` | un membre de la classe a le nombre K | un membre a un autre nombre | sinon |
+Une contrainte a, comme un atome, un appui positif et un appui négatif, indépendants (D29) :
 
-Une contrainte dont une variable n'est pas liée vaut inconnu. Seul le texte réfute : une contrainte n'est fausse que
-par une assertion du graphe (une distinction établie contre `meme`, un autre nombre contre `nombre`) ; une substitution
-qui viole sa propre contrainte (x et y sur la même classe sous `distincts`) n'est pas une solution, et ne réfute rien.
+| Contrainte, variables liées | appui positif | appui négatif |
+|---|---|---|
+| `meme(X, Y)` | même classe | une distinction établie ou documentaire entre les deux classes (ou dans la classe : coréférents et distincts à la fois donne (1,1)) |
+| `distincts(X, Y)` | classes différentes, distinction établie ou documentaire ; **supposée** : vraie sous hypothèse (§ 4.4) | aucun (la même classe : une substitution invalide, valeur (0,0), pas une réfutation) |
+| `nombre(X, K)` | un membre **présent** de la classe a le nombre K (certifiable s'il est présent selon l'auteur) | un membre présent a un autre nombre |
+
+Une contrainte dont une variable n'est pas liée vaut inconnu. Ce qui réfute une contrainte est une assertion du graphe
+ou une distinction documentaire de K (la réfutation de `meme` par K est une conclusion relative à la source de K ;
+journal, D31). **La distinction documentaire** ne repose que sur des noms admissibles (de l'auteur, d'un porteur
+présent selon l'auteur, qu'aucune assertion niée de la classe ne contredit), et seulement si aucune des deux classes
+ne porte, à alias près, le nom documenté de l'autre (D26). **La distinction supposée** ne repose que sur des noms
+qu'aucune assertion niée de la classe ne contredit, et suppose qu'aucun nom de l'une n'est, à alias près, un nom de
+l'autre.
 
 ### 4.2 La valeur d'une formule
 
@@ -132,8 +180,11 @@ question (§ 4.3).
 ### 4.3 La certification
 
 Une **solution certifiable** est une sélection (tous les enfants d'un `et`, un enfant d'un `ou`) et la substitution
-de ses seules variables, telle que chaque atome sélectionné est vrai (1,0) avec un appui positif de l'auteur du texte,
-et chaque contrainte sélectionnée vraie (ou vraie sous hypothèse). Elle est **vraie** si elle n'emploie aucune
+de ses seules variables, telle que chaque atome sélectionné est vrai (1,0) avec un appui positif de l'auteur du texte
+dont **la prémisse n'est pas niée** (l'atome reformé avec le mot même de l'appui, `type(X, W)` pour une entité de mot
+W, `nom(X, [Clé])` pour un nom, etc., n'a aucun appui négatif : « une lionne » ne certifie pas « un lion » quand le
+texte dit aussi « pas de lionne »), et chaque contrainte sélectionnée vraie et certifiable (ou vraie sous
+hypothèse). Elle est **vraie** si elle n'emploie aucune
 hypothèse, **vraie sous hypothèses** sinon (avec la liste de ses hypothèses).
 
 Une substitution de valeur vraie qui n'a aucune solution certifiable sous elle (sa vérité passe par un atome
@@ -142,7 +193,9 @@ si un même énonciateur appuie les deux signes d'un atome, **documentaire** sin
 
 ### 4.4 Le résultat d'une requête
 
-Les substitutions examinées : toutes les substitutions partielles des variables de la formule. On retient
+Les substitutions examinées : les substitutions partielles des variables de la formule dont chaque variable liée est
+**ancrée** (un atome de la formule qui la contient, entièrement lié, a sous elle un appui de l'un ou l'autre signe :
+une variable liée à un référent dont rien n'est dit ne compte pas). On retient
 - les solutions certifiables ;
 - les substitutions minimales (au sens de l'inclusion des liaisons) de valeur contradictoire, de valeur fausse, et
   de valeur vraie non certifiable.
@@ -151,10 +204,11 @@ Les substitutions examinées : toutes les substitutions partielles des variables
 |---|---|
 | `etablie` | une solution certifiable vraie (sans hypothèse) |
 | `etablie_sous_hypotheses` | aucune vraie, une vraie sous hypothèses : une conclusion conditionnelle, ses hypothèses dans la preuve |
-| `contradictoire` | aucune certifiable, une substitution contradictoire ou vraie non certifiable |
+| `contradictoire` | aucune certifiable, une substitution contradictoire |
+| `non_certifiee` | rien de cela, une substitution vraie non certifiable (sa vérité passe par la seule parole d'une source citée, ou par une prémisse niée) |
 | `ecartee` | rien de cela, une substitution fausse : écartée **pour ces référents** |
 | `inconnue` | rien de cela ; `Partiel` dit quels atomes ont un appui positif quelque part (jamais une preuve) |
-| `incomplet` | le budget de calcul est épuisé avant qu'une solution certifiable soit trouvée : aucune conclusion négative |
+| `incomplet` | le budget (ou le temps) est épuisé avant qu'une solution certifiable vraie soit trouvée : aucune conclusion négative, et pas `etablie_sous_hypotheses`, qui dirait « aucune vraie » (D32) |
 
 Un rôle inversé n'est pas une preuve négative (« Goliath tranche la tête de David » laisse « David tranche la tête de
 Goliath » inconnue) ; une substitution fausse n'écarte pas la configuration ailleurs dans l'œuvre.
@@ -174,8 +228,8 @@ fausse est exactement les liaisons d'un arbre négatif, une contradictoire celle
 négatif, une vraie non certifiable celles d'un arbre positif.
 
 Il lie d'abord les atomes les plus sélectifs. Son **budget** compte les appuis examinés (et les solutions gardées) ;
-épuisé, le résultat est `incomplet` s'il n'a pas de solution certifiable, et ce qui a été trouvé de certifiable reste
-vrai.
+épuisé, le résultat est `etablie` s'il a trouvé une solution certifiable vraie, `incomplet` sinon. Une erreur
+interne du calcul est une erreur, jamais un résultat de repli.
 
 ## 5. La preuve
 
@@ -206,10 +260,14 @@ points suivants ; tout terme qu'il ne reconnaît pas est une raison de rejet.
 4. La sélection justifiée satisfait la formule ; chaque chemin désigne l'atome cité ; aucun n'est justifié deux fois.
 5. σ lie exactement les variables des atomes justifiés, chacune une fois, à une valeur de la bonne sorte
    (représentant d'une classe, ou événement).
-6. Chaque appui existe, est positif, de l'auteur, admissible (§ 1), correspond à σ, et son lien est un chemin de K.
-7. Chaque contrainte est vraie sous σ, par la justification qu'elle cite ; une hypothèse citée est dans la liste et y
-   est légitime (les deux classes portent des noms différents, sans alias, sans distinction contraire).
-8. Aucun atome justifié n'a d'appui négatif sous σ, d'aucun énonciateur.
+6. Chaque appui existe, est positif, de l'auteur, admissible (§ 1 : ses porteurs présents selon l'auteur), correspond
+   à σ, et son lien est un chemin de K.
+7. Chaque contrainte est vraie sous σ, par la justification qu'elle cite, et sans appui négatif (une classe dite une
+   et deux, deux nombres) ; une distinction documentaire repose sur des noms admissibles et non partagés ; un nombre
+   sur une entité présente selon l'auteur ; une hypothèse citée est dans la liste et y est légitime (les deux classes
+   portent des noms non contredits, différents, sans alias, même par une chaîne).
+8. Aucun atome justifié n'a d'appui négatif sous σ, d'aucun énonciateur (§ 1.1), ni l'assertion qu'il cite, reformée
+   avec son propre mot.
 
 Il certifie qu'une conclusion découle de ses prémisses (le graphe, K, la requête, et les hypothèses listées). Il ne
 certifie ni que la requête dit le libellé, ni que le graphe dit le texte, ni que le texte dit vrai de l'image.
@@ -217,7 +275,11 @@ certifie ni que la requête dit le libellé, ni que le graphe dit le texte, ni q
 **Le banc de mutations** (§ 7) : chaque preuve d'un test est altérée de toutes les façons suivantes, et chaque
 altération doit être rejetée : un appui retiré, inexistant ou nié ; une valeur de σ changée ; une variable étrangère
 ajoutée ; une seconde liaison ajoutée ; un rôle changé ; un pas de lien inventé ; un chemin déplacé ; une version ou
-une empreinte changée ; le régime changé ; un terme parasite dans les justifications ; une hypothèse retirée.
+une empreinte changée ; le régime changé ; un terme parasite dans les justifications ; une hypothèse retirée ou
+ajoutée ; et, l'empreinte recalculée pour que ce soit le contrôle visé qui rejette, le graphe altéré : l'assertion
+citée niée, citée par une autre source, seulement possible, hors de l'image, doublée d'une négation d'une autre
+source ou mise dans une alternative ; son porteur seulement possible ou cité ; le type demandé nié ; un autre nombre,
+un nombre seulement possible ou cité ; une distinction dans une classe dite une.
 
 ## 7. Le moteur de référence, le moteur optimisé, et ce qui garantit qu'ils disent la même chose
 
@@ -244,14 +306,17 @@ une empreinte changée ; le régime changé ; un terme parasite dans les justifi
      de la référence ;
   5. les distributions effectives sont publiées (`docs/mesures/V2.md`), et chaque statut et chaque opérateur
      apparaissent.
-- **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : quinze cas dont le statut attendu est
+- **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : 48 cas dont le statut attendu est
   écrit d'après ce document seul, confrontés au moteur optimisé et au moteur de référence. Les deux moteurs peuvent
   partager une erreur de conception (ils sont écrits d'après la même spécification) ; ce banc n'en dépend pas.
-- **Les tests savent échouer** : `outils/noyau/injection.py` injecte dix défauts dans une copie du moteur optimisé
-  (négation qui remonte la hiérarchie, distinction en monde fermé, référent porteur non vérifié, négation d'une
-  alternative admise, certification malgré un appui négatif, source citée certifiée, conjonction où un faux ne suffit
-  pas, budget épuisé pris pour une conclusion, rôle sans l'état de son événement, nombre hors de la classe) ; chacun
-  doit faire échouer au moins un des bancs.
+- **Les tests savent échouer** : `outils/noyau/injection.py` injecte dix-huit défauts dans une copie du moteur
+  optimisé (négation qui remonte la hiérarchie, distinction en monde fermé, référent porteur non vérifié, négation
+  d'une alternative admise, certification malgré un appui négatif, source citée certifiée, conjonction où un faux ne
+  suffit pas, budget épuisé pris pour une conclusion, rôle sans l'état de son événement, nombre hors de la classe ;
+  et pour la version 0.3 : négation d'une description répartie, liste de noms niée par un seul nom, prémisse
+  contredite certifiée, porteur d'une source citée certifié, nombre d'une entité seulement possible, contrainte à trois
+  valeurs, distinction documentaire sur un nom cité, type entier jamais nié) et quinze dans une copie du vérificateur ;
+  chacun doit faire échouer au moins un des bancs.
 
 **Ce que ces tests mesurent, et ce qu'ils ne mesurent pas.** Sur les graphes et les requêtes formellement définis,
 dont les réponses sont connues (les tests écrits à la main, les contre-exemples) ou calculées par l'oracle (les tests

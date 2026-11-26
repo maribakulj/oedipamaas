@@ -43,13 +43,44 @@ REJETÉ (examiné, pas un défaut : raison donnée).
 | D12 | moyenne | Isolation et concurrence non testées au-delà d'un cas | CORRIGÉ (cycle 2) : concurrence et modules temporaires testés |
 | D13 | moyenne | Reproductibilité (même entrée, même sortie, empreinte) non testée | CORRIGÉ (cycle 2) |
 | D14 | moyenne | Comparateur : transitivité, renommage, insatisfiables, taxinomie non testés ; pas de mutation du comparateur | OUVERT |
-| D15 | moyenne | Pas de mutation du vérificateur | OUVERT |
+| D15 | moyenne | Pas de mutation du vérificateur | CORRIGÉ (cycle 3) : 15 défauts injectés dans le vérificateur, tous détectés ; mutations du graphe à empreinte recalculée |
 | D16 | moyenne | Pas d'oracle indépendant des deux moteurs pour les fragments finis (les deux moteurs Prolog sont écrits d'après la même spécification) | OUVERT |
 | D17 | moyenne | Compilateur : couverture lexicale par sous-chaîne (`couvert/2`), fausse complétude (audit 1, § 11) | CORRIGÉ (cycle 1) |
 | D18 | moyenne | Compilateur : la personne héritée devient une variable indépendante (coprésence prise pour participation) (audit 1, § 11) | CORRIGÉ (cycle 1) |
 | D19 | basse | Contrat : les types des requêtes sont des atomes, les synsets des entiers (audit 2, § 6) | CORRIGÉ (cycle 2) |
 | D20 | basse | `sens(_, _, W, W)` : un mot désigne le lemme lui-même ; mot, concept, référent confondus (audit 2, § 6) | DOCUMENTÉ (C7) |
 | D21 | basse | Pas de limite de temps ni de mémoire (seulement un budget d'appuis) | CORRIGÉ en partie (cycle 2) : limite de temps ; pas de limite de mémoire (celle de la pile de SWI-Prolog) |
+
+Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audit_logique/rapport.md` = L,
+`scratchpad/audit_inclusion/rapport.md` = I, oracle Python = O ; chaque cas reproduit est repris dans
+`tests/plunit/test_noyau_semantique.pl` ou `test_inclusion.pl`). Numérotation propre à ce journal :
+
+| # | Gravité | Défaut | Statut |
+|---|---|---|---|
+| D22 | haute | Entité niée lue comme « ce référent n'est pas un W » seulement : « un lion ; pas de lion » établi (mutation du vérificateur) | CORRIGÉ (cycle 3, avec D23) |
+| D23 | haute | La négation d'une description est répartie sur ses atomes : « l'homme ne terrasse pas » écarte « un homme attaque », « Goliath ne décapite pas David » écarte l'inverse, « pas de lion mort » écarte tout lion (L-D2, L-W) | CORRIGÉ (cycle 3) |
+| D24 | haute | Liste de noms réfutée par la négation d'un seul nom (L-D1, I-D1) | CORRIGÉ (cycle 3) |
+| D25 | haute | Porteur présent selon une source citée seulement : certifié (L-D3) | CORRIGÉ (cycle 3) |
+| D26 | haute | Distinction documentaire tirée de noms non admissibles, contredits ou partagés (L-D4) | CORRIGÉ (cycle 3) |
+| D27 | haute | Type entier jamais nié : le lien négatif passe le type demandé par `sens` (L-D5) | CORRIGÉ (cycle 3) |
+| D28 | haute | `nombre` lu sans qualificatifs : une hypothèse établit (L-D6) | CORRIGÉ (cycle 3) |
+| D29 | moyenne | Contraintes à trois valeurs : coréférence et distinction ensemble, deux nombres : `etablie` (L-D7) | CORRIGÉ (cycle 3) |
+| D30 | moyenne | Polysémie : un mot établit tous ses sens, nier un sens nie le lemme (L-D8) | décision du propriétaire (voir § 8) |
+| D31 | moyenne | Statut `ecartee` pour une réfutation inversée, ou d'une source citée seule (L-D9, L-D10) ; `meme` réfuté par K (L-D12) | décision du propriétaire |
+| D32 | moyenne | Budget épuisé : `etablie_sous_hypotheses` affirme « aucune vraie » (L-D11) | CORRIGÉ (cycle 3) |
+| D33 | basse | Alias non clos (L-D14, I-D7) | CORRIGÉ (cycle 3) |
+| D34 | basse | Spécification : `non_certifiee` absent du § 4.4, ancrage au § 7 seul, porteur « positif » ambigu (L-D13, L-D15, O) | CORRIGÉ (cycle 3) |
+| D35 | basse | Contrainte entre un événement et un référent acceptée (L-D17) | CORRIGÉ (cycle 3) |
+| D36 | basse | Alternatives jamais exploitées (L-D16, sens sûr) ; nom propre nié sans effet (L-D18, dépend du lecteur) | DOCUMENTÉ |
+| D41 | basse | Réfutation d'une conjonction de la requête qui couvre exactement une description niée (« la femme ne tient pas l'enfant ») non dérivée : perte dans le sens sûr | DOCUMENTÉ (NOYAU § 1.1) |
+| D42 | haute | Graphe non clos (variables libres) accepté par `valider` ; le vérificateur accepte une preuve forgée (V-V1) | OUVERT |
+| D43 | haute | Recherche des liens exponentielle (tous les chemins simples), hors budget ; vérificateur sans borne (V-X1) | OUVERT |
+| D44 | moyenne | Requêtes non closes ou cycliques admises par `bien_formee` (V-R3, B1) ; `bien_formee` exponentiel en `ou` (V-X3) ; `valider` quadratique, hors limite de temps (V-X2) | OUVERT |
+| D45 | basse | Identifiants entiers, variables `v(1)`, options invalides, `satisfaire_lot` qui échoue en silence (V-R1, R2, B2 à B5) ; `distinct` vers une entité seulement possible (V-V4) ; passage d'un appui non contrôlé (V-V8) ; budget dépendant de l'ordre des faits et réinitialisé par un appel imbriqué (V-D1 à D3) | OUVERT |
+| D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | en cours |
+| D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | en cours |
+| D39 | grave | Comparateur : distinction documentaire du graphe canonique, cas non contrôlés, insatisfiables, noms de variables (I-D2, D4, D5) | en cours |
+| D40 | grave | Comparateur : certification non monotone (négation, lexicalisation hors `inclus`) (I-D1, D6) | en cours |
 
 ## 4. Commandes de reproduction
 
@@ -95,6 +126,39 @@ python -m pytest -q
   événement absent (erreurs `graphe_invalide`) ; requête mal formée ; vérificateur sur graphe invalide, preuve non
   close, liste impropre ; reproductibilité, ordre des faits sans effet, empreinte indépendante de l'ordre ; appels
   concurrents égaux aux appels en série ; aucun module temporaire laissé, même après une erreur.
+
+### Cycle 3 (26/11) : négation des descriptions, qualifications, mutation du vérificateur (noyau 0.3)
+
+- Point de départ : la mutation du vérificateur (D15) ; quatre des dix défauts injectés n'étaient pas détectés, parce
+  que les altérations du graphe changeaient l'empreinte (rejet par le contrôle des versions, pas par le contrôle visé).
+  Mutations à empreinte recalculée : le vérificateur acceptait une preuve de « lion » sur « un lion ; une étude : pas
+  de lion » (D22).
+- Quatre contradicteurs indépendants (sémantique L, vérificateur et robustesse V, inclusion I, oracle Python O, ce
+  dernier écrit d'après NOYAU.md seul) ; leurs rapports sont dans le scratchpad de la session (`audit_logique/`,
+  `audit_verificateur/`, `audit_inclusion/`, `oracle/`). Chaque contre-exemple a été relancé ici ; ceux du noyau sont
+  repris dans `test_noyau_semantique.pl` (31 cas nouveaux), `test_noyau_robustesse.pl` (2), `test_noyau.pl`
+  (mutations, 3 cas).
+- Ma première correction de D22 (« une entité niée nie le type de tout référent ») était fausse : L a montré qu'elle
+  rendait contradictoires « un lion ; pas de lion mort » et « l'ange tient une épée ; le saint ne tient pas d'épée ».
+  La racine est D23 : la polarité nie une description. Règles retenues (NOYAU § 1.1) : entité nue prédicative ou
+  existentielle, entité restreinte sans appui négatif, événement nié contre un autre événement présent de mêmes rôles,
+  rôle jamais nié seul. Le cas `une_autre_action_niee_ne_nie_pas_celle_ci`, écrit au début du cycle avec l'attendu
+  `etablie`, est gardé sous un autre nom avec l'attendu `contradictoire` (lecture la plus prudente : un événement nié
+  sans rôle nie tout événement de ce prédicat) ; le test ancien `variantes:negation` passe de `ecartee` à `inconnue`
+  (la réfutation, juste, n'est plus dérivée : D41, perte dans le sens sûr), avec la raison en commentaire.
+- Ajouté sans contre-exemple d'audit : une prémisse niée ne certifie pas (« une lionne ; pas de lionne » ne certifie
+  pas « un lion » : `non_certifiee`), trouvé par la mutation `negation_ajoutee` sur le cas `fauve`.
+- Erreur interne : `resoudre/6` rendait `inconnue` complète si la vue échouait (L-S4) ; c'est maintenant une erreur.
+- Résultats : `test_noyau` 51 / 51 ; `test_noyau_semantique` 3 tests, 144 sous-tests (48 cas × 3) ; `test_noyau_robustesse`
+  22 / 22 ; `test_noyau_generatif` 5 / 5 ; `test_inclusion` 13 / 13 ; `test_compilateur` 6 / 6 ; injection : 18 défauts
+  du moteur et 15 du vérificateur, tous détectés. La reproduction de L donne l'attendu pour tous les cas du périmètre ;
+  restent D30 (polysémie), D31 (sens d'`ecartee`), D36 (alternatives, nom propre nié), qui ne sont pas corrigés.
+- Questions pour le propriétaire (décisions non bloquantes, l'option prudente est prise en attendant) :
+  1. **Polysémie (D30)** : faut-il exiger qu'un lien positif vaille pour chaque sens du mot (supervaluation), ce qui
+     ferait perdre beaucoup de rappel en français (WOLF prend tous les sens), ou garder la lecture actuelle ?
+  2. **`ecartee` (D31)** : une substitution fausse dont les atomes d'identification sont seulement inconnus (« Jean
+     n'aime pas Marie » pour « Marie aime Jean ») et une réfutation par une seule source citée donnent `ecartee` ;
+     faut-il un statut qui garde la source, ou exiger une réfutation de l'auteur ?
 
 ## 7. Garanties établies, garanties absentes, limites
 

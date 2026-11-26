@@ -95,8 +95,12 @@ test(autre_relation) :- tient(e1, e2, regarder, [], G), q_tenir(Q), resultat(G, 
 test(modalite_possible) :-
     tient(e1, e2, tenir, [mod(v1, possible)], G), q_tenir(Q), resultat(G, Q, inconnue, [partiel(Sat, Manq)]),
     memberchk([1]-type(v(x), femme), Sat), memberchk([3]-evenement(v(e), tenir), Manq).
-test(negation) :- tient(e1, e2, tenir, [neg(v1)], G), q_tenir(Q), resultat(G, Q, ecartee, Ss),
-    memberchk([v(e)-v1], Ss).
+% Attendu « ecartee » jusqu'à la version 0.2 : l'événement nié était lu comme « v1 n'est pas un tenir », et la
+% substitution e = v1 réfutait la requête ; cette lecture répartit la négation d'une description sur ses atomes et
+% écarte aussi « David décapite Goliath » de « Goliath ne décapite pas David » (journal, D23). La version 0.3 ne nie
+% que le prédicat d'un autre événement présent qui a les mêmes rôles : ici il n'y en a pas, et la réfutation, juste
+% dans ce cas, n'est plus dérivée : une perte dans le sens sûr (D41).
+test(negation) :- tient(e1, e2, tenir, [neg(v1)], G), q_tenir(Q), resultat(G, Q, inconnue).
 test(coprésence_seule) :- femme_enfant([], G), q_tenir(Q), resultat(G, Q, inconnue).
 test(hors_de_l_image) :-
     tient(e1, e2, tenir, [por(e1, histoire), por(e2, histoire), por(v1, histoire)], G), q_tenir(Q),
@@ -240,14 +244,63 @@ cas(G, Q) :- graphe([entite(e1, homme, p_1), entite(e2, saint, p_2), coref(e1, e
 cas(G, Q) :- graphe([entite(e1, lionne, p_1)], G), Q = requete(fauve, ou([type(v(x), tigre), type(v(x), lion)])).
 cas(G, Q) :- graphe([entite(e1, ange, p_1), nombre(e1, 3), entite(e2, ange, p_2)], G),
              Q = requete(trois, et([type(v(x), ange), nombre(v(x), 3)])).
+cas(G, Q) :- graphe([entite(e1, fauve, p_1)], G), Q = requete(felin, type(v(x), felin)).   % fauve → félin, hors inclusion
+cas(G, Q) :- graphe([entite(e1, homme, p_1), entite(e2, saint, p_2), coref(e1, e2)], G),
+             Q = requete(meme, et([type(v(x), homme), type(v(y), saint), meme(v(x), v(y))])).
+cas(G, Q) :- graphe([entite(e1, ange, p_1), entite(e2, ange, p_2), coref(e1, e2), nombre(e2, 3)], G),
+             Q = requete(trois_par_coreference, et([type(v(x), ange), nombre(v(x), 3)])).
 
 % mutation(+Graphe, +Preuve, -Graphe2, -Preuve2, -Nom)
 mutation(G, preuve(I, V, R, S, Js, H), G, preuve(I, V, R, S, Js1, H), retire(C)) :- select(j(C, _, _), Js, Js1).
 mutation(G, preuve(I, V, R, S, Js, H), G, preuve(I, V, R, S, Js1, H), inexistant(C)) :-
     select(j(C, A, appui(_, E, P, L)), Js, j(C, A, appui(x_inexistant, E, P, L)), Js1).
-mutation(G, P, G2, P, nie(X)) :-
-    P = preuve(_, _, _, _, Js, _), member(j(_, _, appui(X0, _, _, _)), Js),
-    ( X0 = role(X, _, _) -> true ; X = X0 ), selectchk(polarite(X, pos), G, polarite(X, neg), G2).
+% les altérations du graphe : l'empreinte de la preuve est recalculée sur le graphe altéré (une preuve forgée pour
+% lui), pour que ce soit le contrôle visé qui la rejette, et non celui de l'empreinte
+mutation(G, P, G2, P2, Nom) :-
+    P = preuve(_, _, _, _, Js, _), member(j(_, _, appui(X0, E, _, _)), Js), ( X0 = role(X, _, _) -> true ; X = X0 ),
+    alteration_du_graphe(G, X, E, G2, Nom), reforger(P, G2, P2).
+alteration_du_graphe(G, X, _, G2, nie(X)) :- selectchk(polarite(X, pos), G, polarite(X, neg), G2).
+alteration_du_graphe(G, X, _, G2, citee(X)) :- selectchk(enonciateur(X, auteur), G, enonciateur(X, cite(autre)), G2).
+alteration_du_graphe(G, X, _, G2, possible(X)) :- selectchk(modalite(X, affirme), G, modalite(X, possible), G2).
+alteration_du_graphe(G, X, _, G2, hors_image(X)) :- selectchk(portee(X, represente), G, portee(X, histoire), G2).
+alteration_du_graphe(G, X, E, G2, porteur_cite(E)) :-
+    E \== X, selectchk(enonciateur(E, auteur), G, enonciateur(E, cite(autre)), G2).
+alteration_du_graphe(G, X, E, G2, porteur_possible(E)) :-
+    E \== X, selectchk(modalite(E, affirme), G, modalite(E, possible), G2).
+alteration_du_graphe(G, X, _, G2, negation_ajoutee(X)) :-              % un double nié de l'assertion, d'une autre source
+    member(F, G), F =.. [P, X|As], memberchk(P, [entite, nom, propriete, evenement, relation]),
+    atom_concat(X, '_nie', Y), F2 =.. [P, Y|As], memberchk(portee(X, Po), G),
+    findall(role(Y, Ro, E), memberchk(role(X, Ro, E), G), Rs),          % un événement nié garde ses participants
+    append([G, [F2|Rs], [polarite(Y, neg), modalite(Y, affirme), portee(Y, Po), enonciateur(Y, cite(etude))]], G2).
+alteration_du_graphe(G, X, _, G2, dans_une_alternative(X)) :-
+    member(F, G), F =.. [P, X|As], memberchk(P, [entite, nom, propriete, evenement, relation]),
+    atom_concat(X, '_autre', Y), F2 =.. [P, Y|As],
+    append(G, [F2, polarite(Y, pos), modalite(Y, affirme), portee(Y, represente), enonciateur(Y, auteur),
+               alternative(g_mut, [X, Y])], G2).
+% les altérations qui visent une contrainte : un autre nombre, un nombre seulement possible ou cité, une distinction
+% dans une classe dite une
+mutation(G, P, G2, P2, Nom) :-
+    P = preuve(_, _, _, _, Js, _), member(j(_, nombre(_, N), contrainte(nombre(E))), Js),
+    member(Alt-Nom, [ajout(nombre(E, N1))-autre_nombre(E), modalite(E, possible)-nombre_possible(E),
+                     enonciateur(E, cite(autre))-nombre_cite(E)]),
+    N1 is N + 1,
+    (   Alt = ajout(F) -> append(G, [F], G2)
+    ;   Alt =.. [Q, _, V], Q0 =.. [Q, E, _], selectchk(Q0, G, Alt, G2), Q0 \== Alt, V \== x
+    ),
+    reforger(P, G2, P2).
+% « pas de T » ajouté, pour le type demandé lui-même (et non pour le mot du texte)
+mutation(G, P, G2, P2, type_demande_nie(T)) :-
+    P = preuve(_, _, _, _, Js, _), member(j(_, type(_, T), appui(_, _, Pa, _)), Js), atom(T),
+    append(G, [entite(t_nie, T, Pa), polarite(t_nie, neg), modalite(t_nie, affirme), portee(t_nie, represente),
+               enonciateur(t_nie, cite(etude))], G2),
+    reforger(P, G2, P2).
+mutation(G, P, G2, P2, distinction_dans_la_classe(E1, E2)) :-
+    P = preuve(_, _, _, _, Js, _), member(j(_, meme(_, _), contrainte(egalite)), Js), member(coref(E1, E2), G),
+    append(G, [distinct(E1, E2)], G2), reforger(P, G2, P2).
+reforger(preuve(I, [Vn, Vk, _], R, S, Js, H), G2, preuve(I, [Vn, Vk, graphe(H2)], R, S, Js, H)) :-
+    satisfaction:empreinte(G2, H2).
+mutation(G, preuve(I, V, R, S, Js, H), G, preuve(I, V, R, S, Js, [distinction_supposee(v(x), v(y), ['A'], ['B'])|H]),
+         hypothese_ajoutee).
 mutation(G, preuve(I, V, R, S, Js, H), G, preuve(I, V, R, S1, Js, H), sigma(Va)) :-
     select(Va-Val, S, Va-Autre, S1), member(Autre, [e1, e2, v1, x_ailleurs]), Autre \== Val.
 mutation(G, preuve(I, V, R, S, Js, H), G, preuve(I, V, R, [v(etrangere)-e1|S], Js, H), variable_etrangere).

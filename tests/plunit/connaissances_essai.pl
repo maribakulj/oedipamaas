@@ -23,14 +23,16 @@ sous(bercer, tenir).
 sous(terrasser, attaquer).
 sous(portrait_en_buste, portrait).
 sous(1001, 1000).
+sous(fauve, felin).               % un pas qui n'est pas une inclusion (comme une lexicalisation)
 sous(cycle_a, cycle_b).          % un cycle, comme dans la hiérarchie des verbes de WordNet
 sous(cycle_b, cycle_a).
 
-% ici, chaque pas de hiérarchie est une inclusion sémantique
-inclus(A, B) :- sous(A, B).
+% chaque pas de hiérarchie est une inclusion sémantique, sauf fauve → félin
+inclus(A, B) :- sous(A, B), A \== fauve.
 
 cle_de_nom(Nom, C) :- upcase_atom(Nom, C).
 
 distincts_documentes('DAVID', 'GOLIATH', 'source de test').
 
 alias('HIERONYMUS', 'JEROME').
+alias('JEROME', 'GIROLAMO').           % une chaîne : le noyau ferme l'alias
