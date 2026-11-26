@@ -41,7 +41,9 @@ lire(F, J) :- setup_call_cleanup(open(F, read, S, [encoding(utf8)]), json_read_d
 notations(_, Fs, Fs) :- Fs = [F|_], get_dict(notation, F, _), !.
 notations(Entree, Fs0, Fs) :-
     file_directory_name(Entree, D), directory_file_path(D, 'fiches.json', Ff), lire(Ff, Fis),
-    maplist([F0, F]>>( member(Fi, Fis), Fi.k =:= F0.k, F = F0.put(notation, Fi.notation) ), Fs0, Fs).
+    maplist(avec_notation(Fis), Fs0, Fs).
+% (un prédicat, pas une lambda : une variable libre d'une lambda de yall n'est pas partagée, et Fis y restait libre)
+avec_notation(Fis, F0, F) :- member(Fi, Fis), Fi.k =:= F0.k, !, F = F0.put(notation, Fi.notation).
 
 textes(Fi, G, T) :- member(G, [positif, negatif, indetermine]), T = Fi.get(G).
 textes(Fi, G, T) :- get_dict(variantes, Fi, Vs), dict_pairs(Vs, _, Ps), member(G0-T, Ps), atom_concat('variante_', G0, G).
