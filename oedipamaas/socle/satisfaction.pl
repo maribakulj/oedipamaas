@@ -166,6 +166,9 @@ chemin_court(K, P, S0, T, Ch) :-
     (   nonvar(T) -> member(T0-Ch0, Ns), T0 == T, !, Ch = Ch0
     ;   member(T-Ch, Ns)
     ).
+% mis en table : les connaissances K ne changent pas pendant une session ; le même nœud est atteint des centaines de
+% milliers de fois quand chaque sens est vérifié (D30) ; la table ne change aucun résultat, seulement le temps
+:- table atteignables/4.
 atteignables(K, P, S0, Ns) :-
     list_to_assoc([S0-t], Vus), parcours(K, P, [S0-[S0]], Vus, Ns0), reverse(Ns0, Ns1),
     findall(N-Ch, ( member(N-R, Ns1), reverse(R, Ch) ), Ns).

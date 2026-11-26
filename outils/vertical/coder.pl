@@ -7,11 +7,18 @@
     modes doivent donner les mêmes codes (C5, I4).
     SORTIE.json : pour chaque fiche et chaque texte, le statut de la notation visée (etabli, candidat, ecarte,
     contradictoire, absent), à part un descendant établi (ascendance documentaire : jamais compté comme la notation
-    visée, I11), les codes établis, ceux hors de la branche documentaire, et l'accord des deux modes.  */
+    visée, I11), les codes établis, ceux hors de la branche documentaire, et l'accord des deux modes ; et, pour la
+    mesure, le nombre de codes de chaque statut et le nombre de codes conditionnels dont une preuve suppose un sens.
+    Variables d'environnement (mesure) :
+      OEDIPAMAAS_NORMALISATION=non   le graphe du lecteur tel quel (codage:coder/5, normaliser(non))
+      OEDIPAMAAS_DELAI=S             S secondes au plus par texte et par mode ; au-delà, le statut « delai »
+      OEDIPAMAAS_SENS_EN=premier     (connaissances_commun.pl) l'anglais ne prend que le premier sens de WordNet,
+                                     comme avant D30 : pour mesurer l'effet de D30, jamais par défaut  */
 :- initialization(main, main).
 :- prolog_load_context(directory, D), atom_concat(D, '/../../oedipamaas/socle', S), asserta(user:file_search_path(socle, S)).
 :- use_module(socle(oedipamaas)).
 :- use_module(library(json)).
+:- use_module(library(time)).
 
 main :-
     current_prolog_flag(argv, [Base, Entree, Sortie|Opt]),
@@ -52,8 +59,13 @@ lire_et_coder(L, Xs, Controle, Rs) :-
             Rs).
 
 coder_texte(T, L, Phrases, Mode, Res) :-
-    (   catch(( interpretation:interpreter(T, L, description, 0, Phrases, Fs), codage:coder(L, Fs, Mode, Res0) ),
-              E, ( print_message(error, E), fail ))
+    ( getenv('OEDIPAMAAS_NORMALISATION', non) -> Opts = [normaliser(non)] ; Opts = [] ),
+    Coder = ( interpretation:interpreter(T, L, description, 0, Phrases, Fs), codage:coder(L, Fs, Mode, Opts, Res0) ),
+    (   getenv('OEDIPAMAAS_DELAI', D0), atom_number(D0, D)
+    ->  Appel = catch(call_with_time_limit(D, Coder), time_limit_exceeded, Res0 = delai)
+    ;   Appel = Coder
+    ),
+    (   catch(Appel, E, ( print_message(error, E), fail ))
     ->  Res = Res0
     ;   Res = erreur
     ).
@@ -64,8 +76,13 @@ fiche(Fi, Res, J) :-
     dict_pairs(J0, _, Vs), J = J0.put(_{k: K, notation: Fi.notation, langue: Fi.langue}).
 
 visee(_, erreur, _, _, _{statut: erreur}) :- !.
+visee(_, delai, _, Dt, _{statut: delai, temps: Dt}) :- !.
 visee(N, R, A, Dt, _{statut: St, complet: Co, necessaire: Ne, descendant_etabli: De, etablis: Es, etablissables: Eb,
-                     hors_branche: Hs, hors_branche_etablissables: Hb, accord: A, temps: Dt}) :-
+                     hors_branche: Hs, hors_branche_etablissables: Hb, accord: A, temps: Dt, comptes: Cp,
+                     conditionnels_par_sens: Nsens}) :-
+    findall(S, member(code(_, S, _, _), R), Ss), msort(Ss, Ss1), clumped(Ss1, Cl), dict_pairs(Cp, c, Cl),
+    aggregate_all(count, ( member(code(_, conditionnel, Ps, _), R), member(preuve(_, _, _, _, _, Hs0), Ps),
+                           memberchk(sens_suppose(_, _), Hs0) ), Nsens),
     ( memberchk(code(N, S0, _, annexe(C0, N0)), R) -> St = S0, Co = C0, Ne = N0 ; St = absent, Co = null, Ne = null ),
     ( member(code(N2, etabli, _, _), R), arbre:ancetre(N2, N) -> De = N2 ; De = null ),
     findall(E, member(code(E, etabli, _, _), R), Es),
