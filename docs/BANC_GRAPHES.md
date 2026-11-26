@@ -155,6 +155,15 @@ tranchent les ambiguïtés que les annotateurs ont signalées, et l'adjudication
 - **le contenu d'une inscription** (« Jésus de Nazareth, roi des Juifs ») : l'inscription est une entité ; son texte
   n'est pas annoté comme des assertions sur la scène.
 
+*Décisions d'harmonisation du 27/11* (après l'adjudication, pour que les six adjudicateurs disent la même chose ;
+appliquées par un script, avec un journal, `banc_graphes/outils/harmoniser.py`, hors du dépôt avec les données) :
+- **H1** un texte qui accompagne l'œuvre (« le texte qui accompagne l'œuvre », « la légende », « the caption »)
+  a la portée `oeuvre`, et ce qu'il énonce aussi (ses énoncés gardent leur énonciateur cité, s'il est dit) ;
+- **H2** « la notice », quand elle désigne le texte même que l'on lit, a la portée `non_ancre` ;
+- **H3** une inscription de la scène a la portée `represente` (elle est figurée) ;
+- **H4** une position statique d'un objet est une relation (« se dresse », « lies », « stretches », « sits », « se
+  détache ») ; un mouvement est un événement, même d'un objet (« la fusée monte »).
+
 *Précisions du 26/11, après la double annotation du développement* : les pronoms (selon le sens), le participe à
 complément, l'apparition, les prépositions sans rôle, le lieu (rôle ou relation), les rôles et relations entre
 entités seulement. Elles disent ce que l'annotateur avait fait en suivant le sens ;
@@ -173,3 +182,40 @@ texte. L'option `--derivations` juge chaque assertion dérivée par une règle d
 
 Ce que le banc ne mesure pas : la justesse des références (l'accord des annotateurs en donne une borne), les sens des
 mots (une tête synonyme est une erreur de tête ; les sens sont la mesure E5 de l'étude), et ce que l'image montre.
+
+## 5. Les données, les versions et la reproduction
+
+Les données du banc vivent sur une **branche orpheline du dépôt**, `donnees/banc-graphes` (sans historique commun avec
+le code, jamais fusionnée) : les textes, les lots, les annotations brutes, l'adjudication et ses journaux, les
+références (brutes, adjugées, harmonisées), les graphes du lecteur, les résultats bruts des mesures, la mesure de
+référence du lot 1, et `MANIFESTE.json` (chaque fichier : taille, empreinte SHA-256, rôle, statut « agents » ou
+« outil » ; les commits des passes). **Aucun élément n'a de statut « humain »** : tout ce qui vient des annotateurs et
+des adjudicateurs est un accord entre agents. L'échantillon de relecture humaine (`relecture/relecture.md` et
+`relecture.tsv`, 30 textes tirés par strates) attend ses jugements.
+
+Les commandes (du dépôt, branche du code ; `B` le dossier du banc, `D` celui des jeux de données) :
+
+```
+# les graphes du lecteur (et l'analyse en dépendances, et les dérivations)
+OEDIPAMAAS_ANALYSEUR=stanza swipl outils/graphes/lire.pl BASE D/vertical/textes.json B/lecteur_vertical.json 5
+# la forme des références
+python outils/graphes/valider_annotations.py B/reference_vertical.json B/textes_vertical.json
+# l'accord des annotateurs (brut), et de chaque annotation avec la référence
+python outils/graphes/comparer_graphes.py --accord B/reference_vertical_brute.json B/annotations/vertical_B1.json
+# le lecteur contre la référence : tables, sûreté, matrice des rôles, dérivations ; variantes de l'alignement
+python outils/graphes/comparer_graphes.py B/reference_vertical.json B/lecteur_vertical.json --derivations
+python outils/graphes/comparer_graphes.py B/reference_vertical.json B/lecteur_vertical.json --alignement glouton
+python outils/graphes/comparer_graphes.py B/reference_vertical.json B/lecteur_vertical.json --referents mentions
+python outils/graphes/comparer_graphes.py B/reference_vertical.json B/lecteur_vertical.json --ordre-inverse
+# les rôles par construction
+python outils/graphes/analyse_roles.py B/reference_vertical.json B/lecteur_vertical.json
+# l'effet de la lecture sur le codage
+python outils/graphes/vers_faits.py B/reference_vertical.json B/faits_reference_vertical.json
+OEDIPAMAAS_NORMALISATION=non swipl outils/graphes/coder_graphes.pl BASE B/faits_reference_vertical.json D/vertical/fiches.json B/mesures/codage_faits_reference_vertical.json
+OEDIPAMAAS_NORMALISATION=non swipl outils/graphes/coder_graphes.pl BASE B/lecteur_vertical.json D/vertical/fiches.json B/mesures/codage_lecteur_vertical.json
+python outils/graphes/effet_codage.py B/mesures/codage_faits_reference_vertical.json B/mesures/codage_lecteur_vertical.json
+# l'échantillon de relecture humaine ; le manifeste
+python outils/graphes/echantillon_relecture.py B/reference_vertical.json B/reference_validation_m1.json B/annotations/vertical_B1.json B/annotations/validation_m1_B1.json B/relecture
+python outils/graphes/archiver.py B REFERENCE_D30 archive.tar.gz
+```
+(de même pour `validation_m1`).
