@@ -44,6 +44,63 @@ test(budget_et_hypothese) :-
     satisfaire(K, G, Q, resultat(etablie, _, complet)),
     forall(between(1, 6, B), ( satisfaire(K, G, Q, [budget(B)], resultat(St, _, C)),
                                ( C == complet -> St == etablie ; memberchk(St, [etablie, incomplet]) ) )).
+% D43 : une hiérarchie à 2^24 chemins simples ; le lien est cherché en temps polynomial, dans les trois programmes
+test(hierarchie_en_losanges, [setup(use_module(connaissances_losange))]) :-
+    graphe([entite(e1, a0, p_1), entite(e2, cible, p_2), neg(e2)], G),
+    satisfaire(connaissances_losange, G, requete(q, type(v(x), cible)), [temps(20)], resultat(S1, _, complet)),
+    S1 == ecartee,
+    satisfaire(connaissances_losange, G, requete(q, type(v(x), b24)), [temps(20)], resultat(etablie, [P], complet)),
+    verifier(connaissances_losange, G, requete(q, type(v(x), b24)), P, accepte),
+    statut_reference(connaissances_losange, G, requete(q, type(v(x), cible)), ecartee).
+% D42 : un graphe non clos est invalide (une variable libre unifierait avec tout)
+test(graphe_non_clos, [throws(error(graphe_invalide(_), _))]) :-
+    graphe([entite(e1, lion, p_1)], G0), selectchk(entite(e1, lion, p_1), G0, entite(e1, _, p_1), G), k(K),
+    satisfaire(K, G, requete(q, type(v(x), lion)), _).
+test(verificateur_graphe_non_clos) :-
+    graphe([entite(e1, lion, p_1)], G0), k(K), satisfaire(K, G0, requete(q, type(v(x), lion)), resultat(etablie, [P], _)),
+    selectchk(entite(e1, lion, p_1), G0, entite(e1, _, p_1), G),
+    verifier(K, G, requete(q, type(v(x), tigre)), P, rejete(_)).
+test(identifiant_non_atomique, [throws(error(graphe_invalide(_), _))]) :-
+    graphe([entite(7, lion, p_1)], G), k(K), satisfaire(K, G, requete(q, type(v(x), lion)), _).
+% V-V8 : le passage cité par un appui est celui de l'assertion
+test(passage_de_l_appui_controle) :-
+    graphe([entite(e1, lion, p_1)], G), k(K), satisfaire(K, G, requete(q, type(v(x), lion)), resultat(etablie, [P0], _)),
+    P0 = preuve(I, V, R, S, [j(C, A, appui(X, E, _, L))], H),
+    verifier(K, G, requete(q, type(v(x), lion)), preuve(I, V, R, S, [j(C, A, appui(X, E, p_ailleurs, L))], H), rejete(_)).
+% V-V4 : une distinction vers une entité seulement possible ne distingue rien
+test(distinction_vers_un_possible) :-
+    graphe([entite(e1, homme, p_1), entite(e3, homme, p_2), mod(e3, possible), entite(e2, homme, p_3), coref(e2, e3),
+            distinct(e1, e3)], G), k(K),
+    Q = requete(q, et([type(v(x), homme), type(v(y), homme), distincts(v(x), v(y))])),
+    satisfaire(K, G, Q, resultat(St, _, _)), St \== etablie, statut_reference(K, G, Q, St).
+% D44 : requêtes non closes ou cycliques, options invalides, lots : des erreurs structurées, jamais un échec silencieux
+test(requete_non_close, [throws(error(requete_mal_formee(r, [non_close]), _))]) :-
+    graphe([entite(e1, lion, p_1)], G), k(K), satisfaire(K, G, requete(r, _), _).
+test(contrainte_non_close, [throws(error(requete_mal_formee(r, [non_close]), _))]) :-
+    graphe([entite(e1, lion, p_1)], G), k(K), satisfaire(K, G, requete(r, et([type(v(x), lion), distincts(v(x), _)])), _).
+test(requete_cyclique, [throws(error(requete_mal_formee(r, [cyclique]), _))]) :-
+    graphe([entite(e1, lion, p_1)], G), k(K), F = et([type(v(x), lion), F]), satisfaire(K, G, requete(r, F), _).
+test(verificateur_requete_cyclique) :-
+    graphe([entite(e1, lion, p_1)], G), k(K), satisfaire(K, G, requete(q, type(v(x), lion)), resultat(etablie, [P], _)),
+    F = et([type(v(x), lion), F]), verifier(K, G, requete(q, F), P, rejete(_)).
+test(variable_non_atomique, [throws(error(requete_mal_formee(r, [variable(v(1))]), _))]) :-
+    graphe([entite(e1, lion, p_1)], G), k(K), satisfaire(K, G, requete(r, type(v(1), lion)), _).
+test(options_invalides) :-
+    graphe([entite(e1, lion, p_1)], G), k(K), Q = requete(q, type(v(x), lion)),
+    forall(member(O, [[budget(abc)], [budget(_)], [budget(0)], [budget(-3)], [temps(abc)], [temps(0)], options]),
+           catch(( satisfaire(K, G, Q, O, _), fail ), error(options_invalides(_), _), true)).
+test(nom_non_atomique, [throws(error(graphe_invalide(_), _))]) :-
+    graphe([entite(e1, homme, p_1), nom(n1, e1, f(x), p_2)], G), k(K), satisfaire(K, G, requete(q, nom(v(x), ['X'])), _).
+test(lot_avec_un_intrus) :-
+    graphe([entite(e1, lion, p_1)], G), k(K),
+    satisfaire_lot(K, G, [requete(a, type(v(x), lion)), pas_une_requete], [a-resultat(etablie, _, _), inconnu-mal_formee(_)]).
+% D44 : la liaison des contraintes se vérifie sans énumérer les sélections (2^30 ici)
+test(liaison_sans_enumerer_les_selections) :-
+    numlist(1, 30, Is), findall(ou([type(v(x), lion), type(v(x), tigre)]), member(_, Is), Os),
+    append(Os, [distincts(v(x), v(y)), type(v(y), lion)], Fs),
+    call_with_time_limit(5, requetes:bien_formee(requete(r, et(Fs)), Es)), Es == [],
+    call_with_time_limit(5, requetes:bien_formee(requete(r, et([ou([type(v(x), lion), type(v(y), lion)]), distincts(v(x), v(y))])), Es2)),
+    Es2 = [contrainte_non_liee(_)].
 test(verificateur_graphe_invalide) :-
     k(K), verifier(K, [bizarre], requete(q, type(v(x), lion)), preuve(q, [], figuration, [], [], []), rejete([graphe_invalide])).
 test(verificateur_preuve_non_close) :-

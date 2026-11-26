@@ -17,7 +17,8 @@
 version_attendue('noyau 0.3').
 
 verifier(K, G, Q, P, Verdict) :-
-    (   \+ assertions:valider(G, [])                    -> Verdict = rejete([graphe_invalide])
+    (   \+ acyclic_term(Q-P)                            -> Verdict = rejete([terme_cyclique])
+    ;   \+ assertions:valider(G, [])                    -> Verdict = rejete([graphe_invalide])
     ;   \+ forme_requete(Q)                             -> Verdict = rejete([requete_mal_formee])
     ;   \+ forme_preuve(P)                              -> Verdict = rejete([preuve_mal_formee])
     ;   findall(R, ( controle(Nom, K, G, Q, P), \+ catch(etabli(Nom, K, G, Q, P), _, fail), R = Nom ), Rs),
@@ -165,25 +166,25 @@ nom_valide(K, Nom, Ks, cle(C)) :- K:cle_de_nom(Nom, C), memberchk(C, Ks).
 nom_valide(K, Nom, Ks, alias(C, Ka)) :- K:cle_de_nom(Nom, C), memberchk(Ka, Ks), C \== Ka, cles_equivalentes(K, C, Ka).
 
 % un appui positif cité : il existe, de l'auteur, admissible, conforme à σ, de lien valide
-appui_positif(K, G, S, type(X, T), appui(E, E, _, L)) :-
-    member(entite(E, W, _), G), W \== nom_propre, val(S, X, R), meme_classe(G, E, R),
+appui_positif(K, G, S, type(X, T), appui(E, E, P, L)) :-
+    member(entite(E, W, P), G), W \== nom_propre, val(S, X, R), meme_classe(G, E, R),
     qualifie(G, E, pos, represente, auteur), lien_positif(K, n, W, T, L).
-appui_positif(K, G, S, nom(X, Ks), appui(A, E, _, L)) :-
-    member(nom(A, E, Nom, _), G), val(S, X, R), meme_classe(G, E, R),
+appui_positif(K, G, S, nom(X, Ks), appui(A, E, P, L)) :-
+    member(nom(A, E, Nom, P), G), val(S, X, R), meme_classe(G, E, R),
     qualifie(G, A, pos, represente, auteur), porteur_admis(G, E), nom_valide(K, Nom, Ks, L).
-appui_positif(K, G, S, propriete(X, Pr), appui(A, E, _, L)) :-
-    member(propriete(A, E, W, _), G), val(S, X, R), meme_classe(G, E, R),
+appui_positif(K, G, S, propriete(X, Pr), appui(A, E, P, L)) :-
+    member(propriete(A, E, W, P), G), val(S, X, R), meme_classe(G, E, R),
     qualifie(G, A, pos, represente, auteur), porteur_admis(G, E), lien_positif(K, a, W, Pr, L).
-appui_positif(K, G, S, evenement(X, Pr), appui(V, V, _, L)) :-
-    val(S, X, V), member(evenement(V, W, _), G), qualifie(G, V, pos, represente, auteur), lien_positif(K, v, W, Pr, L).
-appui_positif(_, G, S, role(X, Ro, Y), appui(role(V, Ro, E), E, _, egal)) :-
-    val(S, X, V), val(S, Y, R), member(role(V, Ro, E), G), meme_classe(G, E, R),
+appui_positif(K, G, S, evenement(X, Pr), appui(V, V, P, L)) :-
+    val(S, X, V), member(evenement(V, W, P), G), qualifie(G, V, pos, represente, auteur), lien_positif(K, v, W, Pr, L).
+appui_positif(_, G, S, role(X, Ro, Y), appui(role(V, Ro, E), E, P, egal)) :-
+    val(S, X, V), val(S, Y, R), member(role(V, Ro, E), G), memberchk(evenement(V, _, P), G), meme_classe(G, E, R),
     qualifie(G, V, pos, represente, auteur), porteur_admis(G, E).
-appui_positif(K, G, S, relation(X, Re, Y), appui(A, E1, _, L)) :-
-    member(relation(A, E1, W, E2, _), G), val(S, X, R1), val(S, Y, R2), meme_classe(G, E1, R1), meme_classe(G, E2, R2),
+appui_positif(K, G, S, relation(X, Re, Y), appui(A, E1, P, L)) :-
+    member(relation(A, E1, W, E2, P), G), val(S, X, R1), val(S, Y, R2), meme_classe(G, E1, R1), meme_classe(G, E2, R2),
     qualifie(G, A, pos, represente, auteur), porteur_admis(G, E1), porteur_admis(G, E2), lien_positif(K, r, W, Re, L).
-appui_positif(K, G, _, genre(T), appui(E, E, _, L)) :-
-    member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, pos, oeuvre, auteur), lien_positif(K, n, W, T, L).
+appui_positif(K, G, _, genre(T), appui(E, E, P, L)) :-
+    member(entite(E, W, P), G), W \== nom_propre, qualifie(G, E, pos, oeuvre, auteur), lien_positif(K, n, W, T, L).
 
 % un appui négatif sous σ, de tout énonciateur, cherché dans tout le graphe (lien d'inclusion, dans l'autre sens)
 % une entité niée dont rien d'autre n'est dit : contre sa classe si un membre en est présent, contre tout référent sinon
@@ -212,8 +213,10 @@ appui_negatif(K, G, _, genre(T)) :-
 
 % T est inclus dans W : un sens de T monte par « inclus » jusqu'à un sens de W
 inclus_lien(K, Cat, T, W) :- ( integer(T) -> S0 = T ; K:sens(Cat, T, S0) ), K:sens(Cat, W, Sn), monte_inclus(K, S0, Sn, [S0]), !.
-monte_inclus(_, S, T, _) :- S == T, !.
-monte_inclus(K, S, T, Vus) :- K:inclus(S, S1), \+ memberchk(S1, Vus), monte_inclus(K, S1, T, [S1|Vus]).
+monte_inclus(K, S, T, _) :- inclus_atteints(K, [S], [S], Ns), memberchk(T, Ns).
+inclus_atteints(K, Front, Vus, Ns) :-
+    findall(Y, ( member(X, Front), K:inclus(X, Y), \+ memberchk(Y, Vus) ), Ys0), sort(Ys0, Ys),
+    ( Ys == [] -> Ns = Vus ; append(Vus, Ys, Vus1), inclus_atteints(K, Ys, Vus1, Ns) ).
 
 % --- Les contraintes -------------------------------------------------------------------------------------------------
 
@@ -222,7 +225,8 @@ contrainte_justifiee(_, G, S, _, meme(X, Y), egalite) :-
     \+ ( member(distinct(E1, E2), G), meme_classe(G, E1, A), meme_classe(G, E2, A) ).   % la classe n'est pas contredite
 contrainte_justifiee(_, G, S, _, distincts(X, Y), etablie(distinct(E1, E2))) :-
     val(S, X, A), val(S, Y, B), A \== B, meme_classe(G, E1, A), meme_classe(G, E2, B),
-    ( memberchk(distinct(E1, E2), G) ; memberchk(distinct(E2, E1), G) ).
+    ( memberchk(distinct(E1, E2), G) ; memberchk(distinct(E2, E1), G) ),
+    porteur_admis(G, E1), porteur_admis(G, E2).          % une distinction entre deux entités que l'auteur dit là
 contrainte_justifiee(K, G, S, _, distincts(X, Y), documentaire(C1, C2, Src)) :-
     val(S, X, A), val(S, Y, B), A \== B, nom_admissible(K, G, A, C1), nom_admissible(K, G, B, C2),
     ( K:distincts_documentes(C1, C2, Src) ; K:distincts_documentes(C2, C1, Src) ),

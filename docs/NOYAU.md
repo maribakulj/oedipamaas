@@ -142,8 +142,12 @@ Contrainte ::= meme(X, Y) | distincts(X, Y) | nombre(X, K)
 **Le fragment.** Ce sont des formules existentielles positives (∃, ∧, ∨) à atomes typés, avec égalité et
 différence, évaluées sur un graphe fini : l'équivalent d'unions de requêtes conjonctives. Il n'y a pas de négation
 dans une requête, et aucune négation par échec dans une preuve. L'évaluation termine : le graphe est fini, la requête
-aussi, et un lien est un chemin simple dans la hiérarchie de K (qui peut avoir des cycles : celle des verbes de WordNet en a). Son coût est celui d'un homomorphisme de graphes, exponentiel dans le
-nombre de variables seulement ; le moteur lie d'abord les atomes les plus sélectifs (§ 4).
+aussi, et un lien est un chemin simple dans la hiérarchie de K (qui peut avoir des cycles : celle des verbes de WordNet
+en a), cherché par un parcours en largeur où chaque nœud n'est vu qu'une fois (son coût est borné par le nombre de
+nœuds atteignables, non par celui des chemins, exponentiel quand l'héritage est multiple). Le coût d'une requête est
+celui d'un homomorphisme de graphes, exponentiel dans le nombre de variables ; le moteur lie d'abord les atomes les
+plus sélectifs (§ 4). Une requête est un terme clos et acyclique ; sa bonne forme se vérifie en temps polynomial (la
+liaison des contraintes sans énumérer les sélections).
 
 ## 4. La satisfaction
 
@@ -306,7 +310,7 @@ un nombre seulement possible ou cité ; une distinction dans une classe dite une
      de la référence ;
   5. les distributions effectives sont publiées (`docs/mesures/V2.md`), et chaque statut et chaque opérateur
      apparaissent.
-- **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : 48 cas dont le statut attendu est
+- **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : 47 cas dont le statut attendu est
   écrit d'après ce document seul, confrontés au moteur optimisé et au moteur de référence. Les deux moteurs peuvent
   partager une erreur de conception (ils sont écrits d'après la même spécification) ; ce banc n'en dépend pas.
 - **Les tests savent échouer** : `outils/noyau/injection.py` injecte dix-huit défauts dans une copie du moteur

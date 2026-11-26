@@ -73,10 +73,10 @@ Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audi
 | D35 | basse | Contrainte entre un événement et un référent acceptée (L-D17) | CORRIGÉ (cycle 3) |
 | D36 | basse | Alternatives jamais exploitées (L-D16, sens sûr) ; nom propre nié sans effet (L-D18, dépend du lecteur) | DOCUMENTÉ |
 | D41 | basse | Réfutation d'une conjonction de la requête qui couvre exactement une description niée (« la femme ne tient pas l'enfant ») non dérivée : perte dans le sens sûr | DOCUMENTÉ (NOYAU § 1.1) |
-| D42 | haute | Graphe non clos (variables libres) accepté par `valider` ; le vérificateur accepte une preuve forgée (V-V1) | OUVERT |
-| D43 | haute | Recherche des liens exponentielle (tous les chemins simples), hors budget ; vérificateur sans borne (V-X1) | OUVERT |
-| D44 | moyenne | Requêtes non closes ou cycliques admises par `bien_formee` (V-R3, B1) ; `bien_formee` exponentiel en `ou` (V-X3) ; `valider` quadratique, hors limite de temps (V-X2) | OUVERT |
-| D45 | basse | Identifiants entiers, variables `v(1)`, options invalides, `satisfaire_lot` qui échoue en silence (V-R1, R2, B2 à B5) ; `distinct` vers une entité seulement possible (V-V4) ; passage d'un appui non contrôlé (V-V8) ; budget dépendant de l'ordre des faits et réinitialisé par un appel imbriqué (V-D1 à D3) | OUVERT |
+| D42 | haute | Graphe non clos (variables libres) accepté par `valider` ; le vérificateur accepte une preuve forgée (V-V1) | CORRIGÉ (cycle 4) : `non_clos`, `cyclique`, `mot`, `identifiant` |
+| D43 | haute | Recherche des liens exponentielle (tous les chemins simples), hors budget ; vérificateur sans borne (V-X1) | CORRIGÉ (cycle 4) : parcours en largeur, chaque nœud vu une fois, dans les trois programmes ; essai sur 2^24 chemins |
+| D44 | moyenne | Requêtes non closes ou cycliques admises par `bien_formee` (V-R3, B1) ; `bien_formee` exponentiel en `ou` (V-X3) ; `valider` quadratique, hors limite de temps (V-X2) | CORRIGÉ en partie (cycle 4) : requêtes closes et acycliques exigées ; liaison des contraintes linéaire ; la limite de temps couvre la validation ; `valider` reste quadratique |
+| D45 | basse | Identifiants entiers, variables `v(1)`, options invalides, `satisfaire_lot` qui échoue en silence (V-R1, R2, B2 à B5) ; `distinct` vers une entité seulement possible (V-V4) ; passage d'un appui non contrôlé (V-V8) ; budget dépendant de l'ordre des faits et réinitialisé par un appel imbriqué (V-D1 à D3) | CORRIGÉ en partie (cycle 4) : identifiants atomiques, variables atomiques, options contrôlées, lot sans échec silencieux, distinction entre entités présentes selon l'auteur, passage contrôlé, budget propre à l'appel ; reste DOCUMENTÉ : sous un budget épuisé, ce qui est trouvé dépend de l'ordre d'exploration (le statut `incomplet` le dit) ; la preuve choisie parmi plusieurs dépend de l'ordre des faits (toutes sont valides) |
 | D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | en cours |
 | D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | en cours |
 | D39 | grave | Comparateur : distinction documentaire du graphe canonique, cas non contrôlés, insatisfiables, noms de variables (I-D2, D4, D5) | en cours |
@@ -159,6 +159,20 @@ python -m pytest -q
   2. **`ecartee` (D31)** : une substitution fausse dont les atomes d'identification sont seulement inconnus (« Jean
      n'aime pas Marie » pour « Marie aime Jean ») et une réfutation par une seule source citée donnent `ecartee` ;
      faut-il un statut qui garde la source, ou exiger une réfutation de l'auteur ?
+
+### Cycle 4 (26/11) : robustesse (D42 à D45)
+
+- Tests écrits d'après le rapport V, puis corrections : `test_noyau_robustesse.pl` passe de 22 à 37 tests (graphe non
+  clos, vérificateur sur graphe non clos, identifiant entier, passage de l'appui, distinction vers une entité
+  possible, hiérarchie en losanges à 2^24 chemins pour les deux moteurs et le vérificateur, requête non close,
+  contrainte non close, requête cyclique, vérificateur sur requête cyclique, variable non atomique, options
+  invalides, nom non atomique, lot avec un intrus, liaison des contraintes sur 2^30 sélections).
+- Les liens sont cherchés par un parcours en largeur (un plus court chemin) : les preuves peuvent citer un autre
+  chemin qu'avant, toujours valide. Le § 3 de NOYAU.md disait le coût « exponentiel dans le nombre de variables
+  seulement » : c'était faux pour les liens (V-X1) ; c'est vrai maintenant, le coût d'un lien étant borné par le
+  nombre de nœuds atteignables de K.
+- Résultats : `test_noyau` 51 / 51, `test_noyau_semantique` 141 sous-tests, `test_noyau_robustesse` 37 / 37,
+  `test_noyau_generatif` 5 / 5, `test_inclusion` 13 / 13 ; injection : 33 défauts sur 33 détectés.
 
 ## 7. Garanties établies, garanties absentes, limites
 

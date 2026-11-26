@@ -31,6 +31,7 @@
 :- use_module(library(solution_sequences)).
 :- use_module(library(yall)).
 :- use_module(library(time)).
+:- use_module(library(assoc)).
 :- use_module(requetes).
 :- use_module(assertions, [valider/2]).
 
@@ -39,21 +40,35 @@ budget(300000).                  % appuis examinés par requête
 
 satisfaire(K, G, Q, R) :- satisfaire(K, G, Q, [], R).
 satisfaire(K, G, Q, Opts, R) :-
-    ( Q = requete(Id, F) -> true ; throw(error(requete_mal_formee(inconnu, [pas_une_requete(Q)]), _)) ),
-    controler(G, requete(Id, F)),
-    (   memberchk(temps(T), Opts)
-    ->  catch(call_with_time_limit(T, in_temporary_module(M, charger(M, G), resoudre(K, M, Id, F, Opts, R))),
+    ( nonvar(Q), Q = requete(Id, F) -> true ; throw(error(requete_mal_formee(inconnu, [pas_une_requete(Q)]), _)) ),
+    options_valides(Opts),
+    (   memberchk(temps(T), Opts)                 % la limite de temps couvre aussi la validation (D44)
+    ->  catch(call_with_time_limit(T, ( controler(G, requete(Id, F)),
+                                        in_temporary_module(M, charger(M, G), resoudre(K, M, Id, F, Opts, R)) )),
               time_limit_exceeded, R = resultat(incomplet, [temps_depasse], incomplet))
-    ;   in_temporary_module(M, charger(M, G), resoudre(K, M, Id, F, Opts, R))
+    ;   controler(G, requete(Id, F)),
+        in_temporary_module(M, charger(M, G), resoudre(K, M, Id, F, Opts, R))
     ).
 
+% les options : une liste close de budget(N), N entier >= 1 ou inf, et temps(S), S nombre > 0 ; sinon une erreur
+options_valides(Opts) :-
+    (   is_list(Opts), ground(Opts), forall(member(O, Opts), option_valide(O)) -> true
+    ;   throw(error(options_invalides(Opts), _))
+    ).
+option_valide(budget(N)) :- ( N == inf -> true ; integer(N), N >= 1 ).
+option_valide(temps(S)) :- number(S), S > 0.
+
 satisfaire_lot(K, G, Qs, Rs) :-
+    ( is_list(Qs) -> true ; throw(error(requetes_pas_une_liste(Qs), _)) ),
     controler(G, requete(r, genre(x))),
     in_temporary_module(M, charger(M, G), resoudre_toutes(K, M, Qs, Rs)).
 resoudre_toutes(K, M, Qs, Rs) :- maplist(resoudre_une(K, M), Qs, Rs).
-resoudre_une(K, M, requete(Id, F), Id-R) :-
-    requetes:bien_formee(requete(Id, F), Es),
-    ( Es \== [] -> R = mal_formee(Es) ; resoudre(K, M, Id, F, [], R) ).
+resoudre_une(K, M, Q, Id-R) :-
+    (   nonvar(Q), Q = requete(Id, F)
+    ->  requetes:bien_formee(requete(Id, F), Es),
+        ( Es \== [] -> R = mal_formee(Es) ; resoudre(K, M, Id, F, [], R) )
+    ;   Id = inconnu, R = mal_formee([pas_une_requete(Q)])
+    ).
 
 solutions_classees(K, G, requete(Id, F), Vue) :-
     controler(G, requete(Id, F)),
@@ -71,7 +86,7 @@ empreinte(G, H) :- msort(G, Gs), variant_sha1(Gs, H).
 % --- Le graphe -------------------------------------------------------------------------------------------------------
 
 predicats([entite/3, nom/4, propriete/4, evenement/3, role/3, relation/5, coref/2, distinct/2, nombre/2, polarite/2,
-           modalite/2, portee/2, enonciateur/2, alternative/2, passage/3, classe/2, empreinte/1, cert/1, compteur/1]).
+           modalite/2, portee/2, enonciateur/2, alternative/2, passage/3, classe/2, empreinte/1, cert/1, compteur/1, limite/1]).
 
 charger(M, G) :-
     predicats(Ps), forall(member(P, Ps), dynamic(M:P)),
@@ -110,15 +125,33 @@ predicative(M, R) :- M:classe(E, R), present(M, E), !.
 
 % --- Les liens (§ 2) -------------------------------------------------------------------------------------------------
 
-lien_pos(K, Cat, W, T, chemin(W, Ch)) :- K:sens(Cat, W, S0), once(monte(K, sous, S0, T, [S0], Ch)).
+lien_pos(K, Cat, W, T, chemin(W, Ch)) :- K:sens(Cat, W, S0), chemin_court(K, sous, S0, T, Ch).
 lien_neg(K, Cat, T, W, chemin_inclus(T, Ch, W)) :-
-    noeud_demande(K, Cat, T, S0), K:sens(Cat, W, Sn), once(monte(K, inclus, S0, Sn, [S0], Ch)).
+    noeud_demande(K, Cat, T, S0), K:sens(Cat, W, Sn), chemin_court(K, inclus, S0, Sn, Ch).
 % le type demandé comme nœud de départ : un identifiant de concept (entier) est lui-même son nœud (D27), un mot passe
 % par ses sens
 noeud_demande(_, _, T, T) :- integer(T), !.
 noeud_demande(K, Cat, T, S0) :- K:sens(Cat, T, S0).
-monte(_, _, S, T, _, [S]) :- S == T, !.
-monte(K, P, S, T, Vus, [S|Ch]) :- pas(K, P, S, S1), \+ memberchk(S1, Vus), monte(K, P, S1, T, [S1|Vus], Ch).
+% un plus court chemin de S0 à T, par un parcours en largeur où chaque nœud n'est vu qu'une fois : le coût est celui du
+% nombre de nœuds atteignables, pas celui du nombre de chemins simples (exponentiel dans une hiérarchie à héritage
+% multiple, D43) ; T non lié : chaque nœud atteignable, avec un chemin
+chemin_court(K, P, S0, T, Ch) :-
+    atteignables(K, P, S0, Ns),
+    (   nonvar(T) -> member(T0-Ch0, Ns), T0 == T, !, Ch = Ch0
+    ;   member(T-Ch, Ns)
+    ).
+atteignables(K, P, S0, Ns) :-
+    list_to_assoc([S0-t], Vus), parcours(K, P, [S0-[S0]], Vus, Ns0), reverse(Ns0, Ns1),
+    findall(N-Ch, ( member(N-R, Ns1), reverse(R, Ch) ), Ns).
+parcours(_, _, [], _, []).
+parcours(K, P, [N-R|File], Vus0, [N-R|Ns]) :-
+    findall(S1, pas(K, P, N, S1), Ss0), list_to_set(Ss0, Ss),
+    foldl(voir(R), Ss, Vus0-[], Vus-Nouveaux0), reverse(Nouveaux0, Nouveaux),
+    append(File, Nouveaux, File1), parcours(K, P, File1, Vus, Ns).
+voir(R, S1, Vus0-Acc, Vus-Acc1) :-
+    (   get_assoc(S1, Vus0, _) -> Vus = Vus0, Acc1 = Acc
+    ;   put_assoc(S1, Vus0, t, Vus), Acc1 = [S1-[S1|R]|Acc]
+    ).
 pas(K, sous, S, S1) :- K:sous(S, S1).
 pas(K, inclus, S, S1) :- K:inclus(S, S1).
 
@@ -188,7 +221,7 @@ appui_(K, M, genre(T), S, Q, appui(E, E, P, L)) :-
 nom_nie(K, M, R, Ki, Q, appui(A, E, P, L)) :-
     M:nom(A, E, Nom, P), M:classe(E, R), qualifie(M, A, neg, represente, Q), present(M, E), lien_de_nom(K, Nom, [Ki], L).
 compter(M) :-
-    nb_getval(satisfaction_budget, B),
+    ( M:limite(B) -> true ; B = inf ),        % le budget est celui du module de l'appel : un appel imbriqué a le sien
     (   B == inf -> true
     ;   M:compteur(C0) -> C is C0 + 1, retract(M:compteur(C0)), assertz(M:compteur(C)),
         ( C > B -> throw(budget_epuise) ; true )
@@ -248,8 +281,10 @@ contrainte_valeur(_, M, nombre(X, Nb), S, V) :-
     ( Pv == non -> ( Neg == 1 -> V = f ; V = i ) ; Neg == 1 -> V = b ; V = Pv ).
 
 % la distinction de deux classes (§ 1) : etablie(distinct(E1, E2)) | documentaire(C1, C2, Source) | supposee(Noms)
+% établie : entre deux entités présentes selon l'auteur (une entité seulement possible ne distingue rien)
 distinction(_, M, A, B, etablie(distinct(E1, E2))) :-
-    M:classe(E1, A), M:classe(E2, B), ( M:distinct(E1, E2) ; M:distinct(E2, E1) ), !.
+    M:classe(E1, A), M:classe(E2, B), ( M:distinct(E1, E2) ; M:distinct(E2, E1) ),
+    present_auteur(M, E1), present_auteur(M, E2), !.
 % documentaire : des noms admissibles (de l'auteur, porteur présent selon l'auteur, non contredits), et aucune des
 % deux classes ne porte (à alias près) le nom de l'autre (D26)
 distinction(K, M, A, B, documentaire(C1, C2, Src)) :-
@@ -338,7 +373,7 @@ lier(Ls, S0, S) :- foldl([V-X, A0, A]>>( memberchk(V-Y, A0) -> Y == X, A = A0 ; 
 % --- La vue : certifiables, et minimales de chaque classe (§ 4.3, 4.4) -------------------------------------------
 
 vue(K, M, F, Opts, vue(Cert, Cmin, NCmin, Fmin)) :-
-    ( memberchk(budget(B), Opts) -> true ; budget(B) ), nb_setval(satisfaction_budget, B),
+    ( memberchk(budget(B), Opts) -> true ; budget(B) ), retractall(M:limite(_)), assertz(M:limite(B)),
     retractall(M:compteur(_)), retractall(M:cert(_)),
     % les certifiables : un arbre positif de l'auteur, sans appui négatif sous lui
     forall(distinct(X, ( arbre(pos(auteur), K, M, F, F, [], [], S0, [], Sel0), sort(S0, S), sort(Sel0, Sel),
@@ -384,7 +419,7 @@ resoudre(K, M, Id, F, Opts, resultat(Statut, Elements, Complet)) :-
     ->  true
     ;   throw(error(erreur_interne(vue_echouee(Id)), _))     % jamais un résultat de repli (L-S4)
     ),
-    nb_setval(satisfaction_budget, inf),          % la mise en forme du résultat (preuves) n'est pas comptée
+    retractall(M:limite(_)),                      % la mise en forme du résultat (preuves) n'est pas comptée
     (   Vue == epuise
     ->  findall(C, M:cert(C), Cert0), sort(Cert0, Cert),
         % un calcul interrompu n'établit que ce qu'il a trouvé de vrai : « sous hypothèses » dirait « aucune vraie »,
@@ -430,7 +465,7 @@ justification(h(_), hypothese).
 
 % une correspondance partielle : les atomes qui ont un appui positif quelque part
 partiel(K, M, F, partiel(Sat, Manq)) :-
-    nb_setval(satisfaction_budget, inf),
+    retractall(M:limite(_)),
     requetes:atomes(F, As),
     findall(C-A, ( member(C-A, As), requetes:atome(A), instancier(A, [], Ai, _), once(appui_(K, M, Ai, pos, _, _)) ), Sat),
     findall(C-A, ( member(C-A, As), requetes:atome(A), \+ memberchk(C-A, Sat) ), Manq).

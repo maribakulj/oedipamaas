@@ -108,8 +108,11 @@ seule_le_type(G, E) :-
 % --- Les liens, d'après le § 2 -------------------------------------------------------------------------------------
 
 monte(K, Rel, C, Mot, T) :- K:sens(C, Mot, S0), atteint(K, Rel, S0, T, [S0]), !.
-atteint(_, _, S, T, _) :- S == T, !.
-atteint(K, Rel, S, T, Vus) :- etape(K, Rel, S, S1), \+ memberchk(S1, Vus), atteint(K, Rel, S1, T, [S1|Vus]).
+% T est atteint depuis S : l'ensemble des nœuds atteignables, chacun vu une fois (pas d'énumération des chemins)
+atteint(K, Rel, S, T, _) :- clos(K, Rel, [S], [S], Ns), memberchk(T, Ns).
+clos(K, Rel, Front, Vus, Ns) :-
+    findall(Y, ( member(X, Front), etape(K, Rel, X, Y), \+ memberchk(Y, Vus) ), Ys0), sort(Ys0, Ys),
+    ( Ys == [] -> Ns = Vus ; append(Vus, Ys, Vus1), clos(K, Rel, Ys, Vus1, Ns) ).
 etape(K, sous, S, S1) :- K:sous(S, S1).
 etape(K, inclus, S, S1) :- K:inclus(S, S1).
 positif(K, C, W, T) :- monte(K, sous, C, W, T).
@@ -188,7 +191,7 @@ contrainte_val(_, G, S, nombre(X, N), V) :-
 
 distinctes(_, G, A, B, etablie) :-
     member(distinct(E1, E2), G), ( dans_la_classe(G, E1, A), dans_la_classe(G, E2, B) ; dans_la_classe(G, E1, B),
-    dans_la_classe(G, E2, A) ), !.
+    dans_la_classe(G, E2, A) ), present_auteur(G, E1), present_auteur(G, E2), !.
 distinctes(K, G, A, B, documentaire) :-
     noms_surs(K, G, A, N1), noms_surs(K, G, B, N2), member(C1, N1), member(C2, N2),
     ( K:distincts_documentes(C1, C2, _) ; K:distincts_documentes(C2, C1, _) ),

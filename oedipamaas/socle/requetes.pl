@@ -43,6 +43,8 @@ sous_terme_variable(T, V) :- compound(T), T \= v(_), T =.. [_|As], member(A, As)
 sorte(F, V, evenement) :- atomes(F, As), ( member(_-evenement(V, _), As) ; member(_-role(V, _, _), As) ), !.
 sorte(_, _, referent).
 
+bien_formee(requete(_, F), Es) :- \+ acyclic_term(F), !, Es = [cyclique].
+bien_formee(requete(_, F), Es) :- \+ ground(F), !, Es = [non_close].       % une variable libre unifierait avec tout
 bien_formee(requete(Id, F), Es) :- !,
     findall(E, erreur(F, E), Es0),
     ( atom(Id) -> Es = Es0 ; Es = [identifiant(Id)|Es0] ).
@@ -59,16 +61,27 @@ erreur(F, deux_sortes(V)) :-
     ( member(_-evenement(V, _), As) ; member(_-role(V, _, _), As) ),
     ( member(_-type(V, _), As) ; member(_-nom(V, _), As) ; member(_-propriete(V, _), As)
     ; member(_-role(_, _, V), As) ; member(_-relation(V, _, _), As) ; member(_-relation(_, _, V), As) ).
+erreur(F, variable(V)) :- variables(F, Vs), member(V, Vs), V = v(N), \+ atom(N).
 % une contrainte ne lie aucune variable : dans chaque sélection qui la contient, ses variables sont celles d'atomes
-% de la même sélection (docs/NOYAU.md, § 3)
-erreur(F, contrainte_non_liee(Co)) :-
-    selection(F, Sel), member(Co, Sel), contrainte(Co), variables(Co, Vc),
-    findall(V, ( member(A, Sel), atome(A), variables(A, Va), member(V, Va) ), Vs),
-    member(V, Vc), \+ memberchk(V, Vs), !.
-% `distincts(X, X)` ne peut être vrai d'aucune substitution : une requête qui l'exige est mal formée
+% de la même sélection (docs/NOYAU.md, § 3). Sans énumérer les sélections (leur nombre est exponentiel dans celui des
+% « ou », D44) : une contrainte est liée si chacune de ses variables est garantie par un frère d'un « et » sur le
+% chemin qui y mène ; un sous-arbre garantit une variable si toutes ses sélections la contiennent
+erreur(F, contrainte_non_liee(Co)) :- once(mal_liee(F, [], Co)).
+mal_liee(et(Fs), Ctx, Co) :- !,
+    nth1(I, Fs, Fi), findall(V, ( nth1(J, Fs, Fj), J \== I, garanties(Fj, Gs), member(V, Gs) ), Vs),
+    append(Ctx, Vs, Ctx1), mal_liee(Fi, Ctx1, Co).
+mal_liee(ou(Fs), Ctx, Co) :- !, member(Fi, Fs), mal_liee(Fi, Ctx, Co).
+mal_liee(Co, Ctx, Co) :- contrainte(Co), variables(Co, Vc), member(V, Vc), \+ memberchk(V, Ctx).
+garanties(et(Fs), Vs) :- !, findall(V, ( member(Fi, Fs), garanties(Fi, Gi), member(V, Gi) ), Vs0), sort(Vs0, Vs).
+garanties(ou([F|Fs]), Vs) :- !,
+    garanties(F, V0), foldl(garanties_communes, Fs, V0, Vs).
+garanties_communes(Fi, A0, A) :- garanties(Fi, Gi), intersection(A0, Gi, A).
+garanties(A, Vs) :- atome(A), !, variables(A, Vs).
+garanties(_, []).
 % une contrainte ne porte que sur des référents : les événements n'ont ni coréférence, ni distinction, ni nombre (D35)
 erreur(F, contrainte_sur_evenement(V)) :-
     atomes(F, As), member(_-Co, As), contrainte(Co), Co =.. [_|Args], member(V, Args), V = v(_), sorte(F, V, evenement).
+% `distincts(X, X)` ne peut être vrai d'aucune substitution : une requête qui l'exige est mal formée
 erreur(F, distincts_reflexive(X)) :- atomes(F, As), member(_-distincts(X, Y), As), X == Y.
 erreur(F, role_inconnu(R)) :- atomes(F, As), member(_-role(_, R, _), As), roles(Rs), \+ memberchk(R, Rs).
 erreur(F, argument(A)) :- atomes(F, As), member(_-A, As), \+ arguments_valides(A).
