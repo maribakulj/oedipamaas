@@ -259,45 +259,77 @@ python -m pytest -q
 
 ## 7. Garanties établies, garanties absentes, limites
 
-Rien ci-dessous n'est une démonstration formelle : un test qui passe, ou l'accord de trois programmes, n'en est pas
-une. « Établi » veut dire : écrit dans la spécification, implanté dans les trois programmes écrits séparément, et
-confronté à des attendus qui ne dépendent d'aucun d'eux.
+Rien ci-dessous n'est une démonstration formelle : un test qui passe, ou l'accord de quatre programmes, n'en est pas
+une. « Établi » veut dire : écrit dans la spécification, implanté dans les trois programmes Prolog écrits séparément
+et dans l'oracle Python écrit d'après la spécification seule, et confronté à des attendus qui ne dépendent d'aucun
+d'eux (contre-exemples écrits à la main, graphes-témoins, mutations).
 
-**Établi au sens ci-dessus**
+**Établi au sens ci-dessus (état final, commit de ce journal)**
 - Composition des quatre valeurs (Belnap) des atomes et des contraintes ; certification séparée de la valeur.
 - Monde ouvert : aucune distinction implicite ; trois régimes de distinction ; une hypothèse ne donne jamais un
-  statut déductif (`etablie_sous_hypotheses`, liste d'hypothèses dans la preuve, contrôlée par le vérificateur).
-- Négation : seulement par inclusion, vers le bas ; jamais répartie sur une description (§ 1.1) ; une liste de noms
-  niée seulement si chaque nom l'est.
-- Admissibilité : porteurs présents selon l'auteur ; contexte, modalité, alternative, énonciateur ; prémisse non niée.
-- Aucune conclusion négative d'un calcul incomplet (budget, temps) ; aucune erreur interne changée en résultat.
-- Le vérificateur n'accepte qu'après contrôle positif de chaque point ; 14 défauts injectés, tous détectés ; aucune
-  preuve forgée acceptée hors des solutions de la référence (forgeur exhaustif de l'audit V, 3 000 + 1 500 cas).
-- Les deux moteurs ont la même vue sur 1 500 cas tirés (et 4 500 de l'audit L) ; 18 défauts injectés dans le moteur
+  statut déductif ; aucune hypothèse entre deux classes qui portent un même nom, à quelque titre que ce soit.
+- Négation : par inclusion seulement, vers le bas ; jamais répartie sur une description (§ 1.1) ; une liste de noms
+  niée seulement si chaque nom l'est ; une assertion niée demande présents ceux dont elle parle.
+- Certification : appuis de l'auteur, porteurs présents selon l'auteur, aucune prémisse niée (l'assertion avec son
+  mot, l'existence de ses entités, l'événement d'un rôle) ; contraintes vraies et certifiables.
+- Aucune conclusion négative d'un calcul incomplet (budget, temps) ; aucune erreur interne changée en résultat ;
+  entrées invalides refusées par des erreurs structurées.
+- Vérificateur : contrôle positif de chaque point ; 16 défauts injectés, tous détectés ; forgeur exhaustif des audits
+  V et F (3 000 + 1 500 + 6 000 cas) : aucune preuve acceptée hors des solutions de la référence.
+- Les deux moteurs : même vue sur 1 500 cas tirés, et 4 500 + 3 000 des audits ; 21 défauts injectés dans le moteur
   optimisé, tous détectés.
-- Entrées invalides : erreurs structurées (graphe non clos, cyclique, identifiants, requête non close, options).
-- Coût des liens polynomial (parcours en largeur) ; liaison des contraintes vérifiée sans énumérer les sélections.
-- Comparateur : chaque `oui` des 300 paires tirées tient sur ses modèles tirés ; chaque `non` a un contre-exemple
-  valide ; 7 défauts injectés détectés.
+- Oracle : 0 désaccord avec les deux moteurs sur 5 000 cas tirés (deux générateurs, plusieurs graines) et sur les
+  bancs ciblés de l'agent, hors D50.
+- Coût polynomial des liens et de la bonne forme ; liaison des contraintes sans énumérer les sélections.
+- Comparateur : définition sur K⁺ ; chaque `oui` des 300 paires tirées tient sur ses modèles tirés (avec négations
+  ciblées et jumeaux) ; chaque `non` a un contre-exemple valide ; 8 défauts injectés, tous détectés ; le banc échoue
+  contre le comparateur ancien.
 
 **Absent (non garanti)**
-- Aucune preuve mécanique (ni de la sémantique, ni de l'équivalence des moteurs, ni de l'argument de sûreté du
-  comparateur, NOYAU § 8).
-- L'oracle Python, les deux moteurs Prolog et le vérificateur sont écrits d'après la même spécification : une erreur
-  de la spécification elle-même n'est vue par aucun d'eux ; seuls les contre-exemples écrits à la main et les audits
-  contradictoires s'en protègent. L'accord de l'oracle et des moteurs (0 désaccord sur 5 000 cas) porte sur les
-  fragments que les générateurs tirent.
-- Polysémie (D30) : un mot établit chacun de ses sens. Statut `ecartee` (D31) : réfutation par une source citée seule,
-  réfutation sous des atomes d'identification inconnus. Décisions du propriétaire.
-- Réfutation d'une conjonction qui couvre une description niée (D41) ; alternatives couvertes par une requête
-  disjonctive (D36) : non dérivées (sens sûr).
+- Aucune preuve mécanique : ni de la sémantique, ni de l'équivalence des moteurs, ni de l'argument de sûreté du
+  comparateur (NOYAU § 8, écrit, non démontré).
+- Une erreur de la spécification elle-même n'est vue par aucun des programmes : seuls les audits contradictoires s'en
+  protègent ; le dernier (F) en a trouvé trois, bloquantes, toutes corrigées ; aucun audit après lui.
+- Décisions du propriétaire, en attente : D30 (polysémie : un mot établit chacun de ses sens), D31 (sens d'`ecartee`
+  pour une réfutation d'une source citée seule, ou sous des atomes d'identification inconnus ; et `meme` réfuté par
+  K), D50 (nom nié d'un porteur absent).
+- Incomplétudes dans le sens sûr : D41 (réfutation d'une conjonction qui couvre une description niée), D36
+  (alternatives couvertes par une requête disjonctive) ; le comparateur rend `indetermine` pour une distinction
+  documentaire, une négation non transmise hors des types, une normalisation qui change le graphe canonique.
 - Pas de limite de mémoire ; `valider` quadratique ; sous un budget épuisé, ce qui est trouvé dépend de l'ordre
   d'exploration (le statut `incomplet` le dit).
-- La justesse du lecteur (graphe tiré d'un texte) et du compilateur (requête tirée d'un libellé) n'est pas l'objet de
-  ces tests ; elle se mesure à part (`docs/mesures/`).
+- La justesse du lecteur et du compilateur n'est pas l'objet de ces tests (`docs/mesures/`).
 
 ## 8. Prochain travail
 
-1. Décisions du propriétaire : D30 (polysémie), D31 (sens d'`ecartee`).
-2. Mesures du compilateur avec le comparateur qualifié : faites (provisoires, `docs/mesures/V2.md`).
+1. Décisions du propriétaire : D30, D31, D50.
+2. Un nouvel audit contradictoire indépendant de l'état final (le dernier a trouvé des défauts bloquants : la
+   correction n'a pas été revue par un contradicteur neuf).
 3. D10 : contextes imbriqués et portées mêlées dans le générateur.
+4. Reprise de la compilation d'Iconclass : après 1 et 2 ; les mesures provisoires du comparateur qualifié sont dans
+   `docs/mesures/V2.md` (cycle 5) et restent provisoires.
+
+## 9. Rapport final (26/11)
+
+**État initial** (commit a040a9b, noyau 0.2) : 51 tests déterministes, 15 contre-exemples, 1 500 cas génératifs,
+10 défauts injectés dans le moteur, aucun dans le vérificateur ni le comparateur, pas d'oracle indépendant, un
+comparateur dont les `oui` n'étaient pas contrôlés.
+
+**État final** (noyau 0.3) : `test_noyau` 51, `test_noyau_semantique` 60 cas × 3, `test_noyau_robustesse` 38,
+`test_noyau_generatif` 5 (1 500 cas), `test_inclusion` 28, `test_inclusion_generatif` 4 (300 paires),
+`test_compilateur` 6, `tests/test_oracle.py` 2 ; pytest complet vert, CI verte ; 45 défauts injectés (21 moteur, 16
+vérificateur, 8 comparateur), tous détectés.
+
+**Défauts** : D1 à D51 au § 3, avec gravité, statut, contre-exemple et correction ; les cycles 1 à 7 au § 6. Les plus
+graves trouvés pendant la mission : négation répartie sur les descriptions (D23), porteur d'une source citée (D25),
+contraintes à trois valeurs (D29), comparateur (D37 à D40, D47 : des `oui` faux), prémisses non contrôlées (D48),
+graphe non clos et recherche de liens exponentielle (D42, D43).
+
+**Mesures** : `docs/mesures/V2.md`, sections « Qualification formelle du noyau » et « Comparateur qualifié »
+(provisoires).
+
+**Recommandation sur la reprise de la compilation massive d'Iconclass** : pas encore. Le noyau et le comparateur
+sont en bien meilleur état, mais le dernier audit a encore trouvé des défauts bloquants, et leur correction n'a pas
+été revue par un contradicteur neuf ; trois décisions sémantiques (D30, D31, D50) changent ce que le noyau certifie.
+Reprendre après ces décisions et un audit sans défaut bloquant ; les mesures du compilateur seront alors refaites
+avec le comparateur de ce journal.

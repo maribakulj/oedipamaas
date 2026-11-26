@@ -129,7 +129,7 @@ FAUTES_VERIFICATEUR = {
         "present(G, E) :- qualifie(G, E, pos, represente, _).",
         "present(_, _)."),
     "existence du porteur non contrôlée": (
-        "    \\+ ( member(j(_, A, Ap), Js), atome(A), entite_citee(G, Ap, E), inexistante(K, G, E) ),",
+        "    \\+ ( member(j(_, A, Ap), Js), atome(A), A \\= genre(_), entite_citee(G, Ap, E), inexistante(K, G, E) ),",
         "    true,"),
     "événement d'un rôle non contrôlé": (
         "    \\+ ( member(j(_, role(_, _, _), appui(role(V, _, _), _, _, _)), Js), member(evenement(V, W, _), G),\n         appui_negatif(K, G, [v('$e')-V], evenement(v('$e'), W)) ).",

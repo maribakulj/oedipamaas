@@ -323,13 +323,15 @@ un nombre seulement possible ou cité ; une distinction dans une classe dite une
 - **Les contre-exemples sémantiques** (`tests/plunit/test_noyau_semantique.pl`) : 51 cas dont le statut attendu est
   écrit d'après ce document seul, confrontés au moteur optimisé et au moteur de référence. Les deux moteurs peuvent
   partager une erreur de conception (ils sont écrits d'après la même spécification) ; ce banc n'en dépend pas.
-- **Les tests savent échouer** : `outils/noyau/injection.py` injecte dix-huit défauts dans une copie du moteur
+- **Les tests savent échouer** : `outils/noyau/injection.py` injecte vingt et un défauts dans une copie du moteur
   optimisé (négation qui remonte la hiérarchie, distinction en monde fermé, référent porteur non vérifié, négation
   d'une alternative admise, certification malgré un appui négatif, source citée certifiée, conjonction où un faux ne
   suffit pas, budget épuisé pris pour une conclusion, rôle sans l'état de son événement, nombre hors de la classe ;
   et pour la version 0.3 : négation d'une description répartie, liste de noms niée par un seul nom, prémisse
   contredite certifiée, porteur d'une source citée certifié, nombre d'une entité seulement possible, contrainte à trois
-  valeurs, distinction documentaire sur un nom cité, type entier jamais nié) et quatorze dans une copie du vérificateur (sept dans le comparateur, § 8) ;
+  valeurs, distinction documentaire sur un nom cité, type entier jamais nié ; et, après l'audit final : existence du
+  porteur ignorée, événement d'un rôle ignoré, identité contre K non réfutée), seize dans une copie du vérificateur et
+  huit dans le comparateur (§ 8) ;
   chacun doit faire échouer au moins un des bancs.
 
 **Ce que ces tests mesurent, et ce qu'ils ne mesurent pas.** Sur les graphes et les requêtes formellement définis,
@@ -386,5 +388,5 @@ union, orientation, contre-exemples, insatisfiables, types entiers, lexicalisati
 hypothèse, normalisation. `tests/plunit/test_inclusion_generatif.pl` (300 paires tirées par affaiblissement et au
 hasard, graine fixe) : chaque `oui` est confronté à des modèles (le graphe canonique d'un cas de Q1, joint à un graphe
 tiré au hasard, à des coréférences vers ses porteurs et à des négations ciblées), chaque `non` à son contre-exemple ;
-réflexivité, indépendance des noms de variables, transitivité. `outils/noyau/injection.py` injecte sept défauts dans
+réflexivité, indépendance des noms de variables, transitivité. `outils/noyau/injection.py` injecte huit défauts dans
 le comparateur ; chacun est détecté. Distribution (graine 20261130) : 228 `oui`, 70 `non`, 2 `indetermine`.
