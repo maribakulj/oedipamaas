@@ -27,6 +27,7 @@ entree('C', requete('C', nom(v(x), ['HIERONYMUS'])), aucune, compilee).         
 entree('D', requete('D', et([type(v(x), homme), nom(v(x), ['PIERRE'])])), requete('D', type(v(x), homme)), compilee).
 entree('E', requete('E', role(v(e), agent, v(x))), aucune, partielle).            % sans atome lexical : « toujours »
 entree('F', requete('F', type(v(x), tigre)), requete('F', type(v(x), felin)), compilee).
+entree('G', requete('G', ou([type(v(x), lion)])), requete('G', type(v(x), lion)), compilee).   % suffisante mal formée
 
 graphe_essai(G) :-
     graphe_cas([entite(e1, lionne, p_1), entite(e2, homme, p_2), nom(n1, e2, pierre, p_3), neg(n1),
@@ -55,6 +56,8 @@ test(incomplet_garde_jusqu_a_la_sortie) :-
     coder_essai(exhaustif, [budget(1)], R),
     forall(member(code(_, S, _, annexe(C, _)), R), ( S == incomplet -> C == incomplet ; true )),
     once(member(code(_, _, _, annexe(incomplet, _)), R)).
+test(mal_formee_signalee_jamais_perdue) :-
+    coder_essai(exhaustif, [], R), memberchk(code('G', suffisante_mal_formee, _, annexe(complet, etablie)), R).
 test(rejet_explicite_de_rien) :-                          % aucun statut ne dit « notation réfutée »
     coder_essai(exhaustif, [], R), \+ member(code(_, ecarte, _, _), R).
 

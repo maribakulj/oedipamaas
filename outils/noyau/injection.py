@@ -88,6 +88,16 @@ FAUTES = {
     "négation d'un seul sens prise pour certaine": (
         "    forall(( member(N, Ns), member(Sw, Ws) ), once(chemin_court(K, inclus, N, Sw, _))),",
         "    once(( member(N, Ns), member(Sw, Ws), chemin_court(K, inclus, N, Sw, _) )),"),
+    # dernier audit (cycle 9)
+    "documentaire sur un porteur inexistant": (
+        "                 \\+ porteur_nie(K, M, E),                % le porteur existe selon le texte (audit final, B1)\n",
+        ""),
+    "existence d'une contrainte sans hypothèse": (
+        "hypotheses_de_contrainte(K, M, v(nombre(E)), Hs) :- !, existence_supposee(K, M, [E], Hs).",
+        "hypotheses_de_contrainte(_, _, v(nombre(_)), []) :- !."),
+    "hypothèses sans lecture": (
+        "appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \\+ conteste(K, M, Ai, Ap), lecture_possible(K, M, Ai, Ap).",
+        "appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \\+ conteste(K, M, Ai, Ap)."),
     "type entier jamais nié": (
         "noeud_demande(_, _, T, T) :- integer(T), !.",
         "noeud_demande(_, _, T, _) :- integer(T), !, fail."),

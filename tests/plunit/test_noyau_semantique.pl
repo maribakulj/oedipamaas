@@ -296,6 +296,30 @@ cas(negation_possible_n_ancre_rien,
     [entite(e1, lion, p_1), nombre(e1, 2), entite(e2, pomme, p_2), neg(e2)],
     requete(q, et([nombre(v(x), 3), type(v(x), pomme)])), inconnue,
     'une négation seulement possible ne réfute rien : elle n’ancre pas la variable (oracle, cycle 8)').
+% --- Dernier audit (cycle 9) : prémisses d'existence des contraintes, lectures sans issue
+cas(documentaire_sur_des_porteurs_inexistants,
+    [entite(e1, lion, p_1), nom(n1, e1, david, p_2), entite(e3, homme, p_3), coref(e1, e3),
+     entite(e2, lion, p_4), nom(n2, e2, goliath, p_5), entite(e4, femme, p_6), coref(e2, e4), entite(e5, felin, p_7), neg(e5)],
+    requete(q, et([type(v(x), homme), type(v(y), femme), distincts(v(x), v(y))])), etablie_sous_hypotheses,
+    '« il n’y a pas de félin » : les porteurs des noms n’existent pas, pas de distinction documentaire ; reste l’hypothèse
+     sur les noms (audit final, B1)').
+cas(nombre_d_une_entite_peut_etre_inexistante,
+    [entite(e1, pomme, p_1), nombre(e1, 2), entite(e3, homme, p_2), nom(n1, e3, pierre, p_3), coref(e1, e3),
+     entite(e2, fruit, p_4), neg(e2)],
+    requete(q, et([nom(v(x), ['PIERRE']), nombre(v(x), 2)])), etablie_sous_hypotheses,
+    '« pas de fruit » ne nie qu’un sens de « pomme » : le nombre de cette entité est une conclusion sous hypothèse (B2)').
+cas(distinction_entre_entites_peut_etre_inexistantes,
+    [entite(e1, pomme, p_1), entite(e2, pomme, p_2), distinct(e1, e2), entite(e3, homme, p_3), coref(e1, e3),
+     entite(e4, femme, p_4), coref(e2, e4), entite(e5, fruit, p_5), neg(e5)],
+    requete(q, et([type(v(x), homme), type(v(y), femme), distincts(v(x), v(y))])), etablie_sous_hypotheses,
+    'de même pour une distinction établie (B2)').
+cas(aucune_lecture_ne_mene_au_vegetal,
+    [entite(e1, pomme, p_1), entite(e2, fruit, p_2), neg(e2)], requete(q, type(v(x), vegetal)), non_certifiee,
+    'le seul sens qui mène à végétal est celui que « pas de fruit » nie : aucune lecture, aucune conclusion (B3)').
+cas(chaque_sens_de_pomme_nie,
+    [entite(e1, pomme, p_1), entite(e2, fruit, p_2), neg(e2), entite(e3, objet, p_3), neg(e3)],
+    requete(q, type(v(x), pomme)), non_certifiee,
+    '« pas de fruit », « pas d’objet » : chaque sens de « pomme » est nié, il n’y a pas d’autre sens (B3)').
 cas(alias_en_chaine,
     [entite(e1, homme, p_1), nom(n1, e1, girolamo, p_2)], requete(q, nom(v(x), ['HIERONYMUS'])), etablie,
     'HIERONYMUS ~ JEROME ~ GIROLAMO : l’alias est clos (D33)').

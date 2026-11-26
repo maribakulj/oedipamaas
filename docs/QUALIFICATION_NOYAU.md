@@ -87,7 +87,10 @@ Défauts trouvés au cycle 3 par les contradicteurs (rapports : `scratchpad/audi
 | D53 | haute | Codage : l'index excluait les types entiers et ne fermait pas les alias comme le noyau ; des requêtes établissables n'étaient pas essayées en mode indexé | CORRIGÉ (cycle 8) : test d'égalité des résultats positifs indexé / exhaustif, écrit et génératif |
 | D54 | haute | Codage : seule la condition suffisante évaluée ; une suffisante écartée donnait « ecarte » (une notation réfutée) | CORRIGÉ (cycle 8) : suffisante et nécessaire évaluées séparément ; `suffisante_ecartee` ne réfute pas la notation |
 | D55 | moyenne | Moteur de référence : une négation seulement possible ancrait une variable (statut `ecartee` là où l'optimisé dit `inconnue`) (oracle, cycle 8) | CORRIGÉ (cycle 8) |
-| D56 | basse | Une négation seulement possible de l'existence d'une entité d'une distinction établie ou d'un nombre ne donne pas d'hypothèse (les deux moteurs et l'oracle ; le § 2 pris à la lettre en demanderait une) | DOCUMENTÉ (limite : moins prudent dans ce seul cas) |
+| D56 | haute | Une négation seulement possible de l'existence d'une entité d'une distinction établie ou d'un nombre ne donne pas d'hypothèse (les deux moteurs et l'oracle ; le § 2 pris à la lettre en demanderait une) ; le dernier audit (U-B2) le tient pour bloquant | CORRIGÉ (cycle 9) |
+| D57 | haute | Distinction documentaire certifiée sur des noms dont le porteur n'existe pas selon le texte (U-B1) | CORRIGÉ (cycle 9) |
+| D58 | moyenne | Conclusions sous hypothèses qu'aucune lecture ne satisfait (hypothèses de sens et de négation non confrontées ; « pomme ; pas de fruit ; pas d'objet ») (U-B3) | CORRIGÉ (cycle 9) : un appui sans lecture ne certifie rien ; les hypothèses ne sont pas confrontées entre elles au-delà de cette condition |
+| D59 | basse | Fondements d'une réfutation : `texte` perdu quand K réfute aussi (U-N2) ; codage : une requête mal formée faisait disparaître la notation (U-N3) | CORRIGÉ (cycle 9) |
 | D37 | critique | Comparateur : la normalisation n'est pas une équivalence, `oui` faux (I-N1 à N4) | CORRIGÉ (cycle 5) |
 | D38 | critique | Comparateur : le type de Q1 devient un mot avec tous ses sens (I-A2), types entiers (I-D3) | CORRIGÉ (cycle 5) |
 | D39 | grave | Comparateur : distinction documentaire du graphe canonique, cas non contrôlés, insatisfiables, noms de variables (I-D2, D4, D5) | CORRIGÉ (cycle 5) |
@@ -281,6 +284,18 @@ python -m pytest -q
   et sur 120 graphes tirés, suffisante écartée et nécessaire établie, nécessaire seule, incomplétude jusqu'à la sortie,
   aucun statut de notation réfutée) ; `coder/5` (K, normalisation, budget en options) ; `satisfaire_lot/5`.
 
+### Cycle 9 (27/11) : le dernier audit (U)
+
+- Contradicteur neuf sur 4b35732 puis 438b05f (rapport : `scratchpad/audit_ultime/`). Trois défauts bloquants,
+  reproduits ici : U-B1 (D57), U-B2 (D56, que j'avais classé limite basse), U-B3 (D58). Corrigés dans les deux
+  moteurs et le vérificateur ; cinq cas au banc sémantique ; trois défauts injectés, détectés.
+- Non bloquants : U-N2 et U-N3 corrigés (D59) ; U-N4 (un porteur coréférent à une entité niée, conforme au § 4.3 qui
+  ne contrôle que l'entité citée) et U-N5 (hypothèses en trop dans le sens sûr ; avec WordNet, une négation certaine
+  est rare : « un lion ; pas de lion » sort `conditionnel`, pas `contradictoire`) sont des limites, inscrites au § 7.
+- Ce qui a tenu selon U : mutations des preuves D30 toutes rejetées ; aucune `etablie` démentie par une lecture hors
+  de la famille U-B2 sur 28 000 tirages ; aucun `oui` faux du comparateur sur 4 000 paires et 14 060 modèles ; index
+  du codage complet.
+
 ## 7. Garanties établies, garanties absentes, limites
 
 Rien ci-dessous n'est une démonstration formelle : un test qui passe, ou l'accord de quatre programmes, n'en est pas
@@ -320,6 +335,12 @@ d'eux (contre-exemples écrits à la main, graphes-témoins, mutations).
 - Incomplétudes dans le sens sûr : D41 (réfutation d'une conjonction qui couvre une description niée), D36
   (alternatives couvertes par une requête disjonctive) ; le comparateur rend `indetermine` pour une distinction
   documentaire, une négation non transmise hors des types, une normalisation qui change le graphe canonique.
+- D30 et WordNet : une négation certaine demande que chaque sens du type soit inclus dans chaque sens du mot nié ;
+  avec des mots très polysémiques, presque aucune négation ne l'est, et la protection contre les contradictions se
+  réduit à des conclusions conditionnelles (`conditionnel`, jamais `etabli`). Une désambiguïsation (C7) la rendra
+  plus fine. Les hypothèses d'une conclusion conditionnelle ne sont confrontées entre elles que par la condition
+  d'une lecture au moins par appui.
+- La prémisse d'existence porte sur l'entité citée, pas sur les autres membres de sa classe (U-N4).
 - Pas de limite de mémoire ; `valider` quadratique ; sous un budget épuisé, ce qui est trouvé dépend de l'ordre
   d'exploration (le statut `incomplet` le dit).
 - La justesse du lecteur et du compilateur n'est pas l'objet de ces tests (`docs/mesures/`).

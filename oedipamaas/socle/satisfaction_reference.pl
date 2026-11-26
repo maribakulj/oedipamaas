@@ -231,7 +231,7 @@ distinctes(K, G, A, B, supposee) :-
 % l'auteur, et qu'aucune assertion niée de la classe ne contredit
 noms_surs(K, G, R, Ns) :-
     findall(C, ( member(nom(A, E, Nom, _), G), dans_la_classe(G, E, R), qualifie(G, A, pos, represente, auteur),
-                 present_auteur(G, E), K:cle_de_nom(Nom, C), \+ cle_niee(K, G, R, C) ), Ns0),
+                 present_auteur(G, E), \+ existence_niee(K, G, E), K:cle_de_nom(Nom, C), \+ cle_niee(K, G, R, C) ), Ns0),
     sort(Ns0, Ns).
 noms(K, G, R, Ns) :-
     findall(C, ( member(nom(A, E, Nom, _), G), dans_la_classe(G, E, R), qualifie(G, A, pos, represente, _),
@@ -299,8 +299,40 @@ hypotheses_des_atomes([A|As], K, G, S, [H|Hs]) :-
     \+ appui(K, G, S, A, neg, _), hypotheses_atome(K, G, S, A, H), hypotheses_des_atomes(As, K, G, S, Hs).
 % les hypothèses retenues d'un atome : celles de l'appui qui en demande le moins (puis le premier dans l'ordre standard)
 hypotheses_atome(K, G, S, A, Hs) :-
-    findall((L-Hs0), ( premisse_non_niee(K, G, S, A, B, Es, Vs), hypotheses_de(K, G, S, A, B, Es, Vs, Hs0), length(Hs0, L) ),
+    findall((L-Hs0), ( premisse_non_niee(K, G, S, A, B, Es, Vs), une_lecture(K, G, S, A, B),
+                       hypotheses_de(K, G, S, A, B, Es, Vs, Hs0), length(Hs0, L) ),
             Ps), Ps \== [], msort(Ps, [_-Hs|_]).
+% une lecture au moins : un sens conceptuel du mot de l'appui atteint le type, et l'assertion prise en ce sens n'est pas
+% niée de façon certaine (audit final, B3)
+une_lecture(K, G, S, A, B) :-
+    (   mot_du_type(A, C, T), mot_du_type(B, C, W)
+    ->  conceptuels(K, C, W, Ss), member(Sn, Ss), atteint(K, sous, Sn, T, [Sn]), en_ce_sens(B, Sn, Bs),
+        \+ appui(K, G, S, Bs, neg, _), !
+    ;   true
+    ).
+en_ce_sens(type(X, _), Sn, type(X, Sn)). en_ce_sens(propriete(X, _), Sn, propriete(X, Sn)).
+en_ce_sens(evenement(X, _), Sn, evenement(X, Sn)). en_ce_sens(relation(X, _, Y), Sn, relation(X, Sn, Y)).
+en_ce_sens(genre(_), Sn, genre(Sn)).
+% les hypothèses d'existence d'une contrainte certifiable (distinction établie, nombre) : celles de la paire ou de
+% l'entité qui en demande le moins (audit final, B2)
+hypotheses_contrainte(K, G, S, distincts(X, Y), Hs) :-
+    val(S, X, A), val(S, Y, B), A \== B,
+    findall((L-H)-(E1-E2), ( member(distinct(F1, F2), G),
+                             ( dans_la_classe(G, F1, A), dans_la_classe(G, F2, B), E1 = F1, E2 = F2
+                             ; dans_la_classe(G, F1, B), dans_la_classe(G, F2, A), E1 = F2, E2 = F1 ),
+                             present_auteur(G, E1), present_auteur(G, E2), \+ existence_niee(K, G, E1),
+                             \+ existence_niee(K, G, E2), existence_possible(K, G, [E1, E2], H), length(H, L) ), Ps),
+    Ps \== [], !, msort(Ps, [(_-Hs)-_|_]).
+hypotheses_contrainte(K, G, S, nombre(X, N), Hs) :-
+    val(S, X, R),
+    findall((L-H)-E, ( member(nombre(E, N), G), dans_la_classe(G, E, R), present_auteur(G, E), \+ existence_niee(K, G, E),
+                       existence_possible(K, G, [E], H), length(H, L) ), Ps),
+    Ps \== [], !, msort(Ps, [(_-Hs)-_|_]).
+hypotheses_contrainte(_, _, _, _, []).
+existence_possible(K, G, Es, Hs) :-
+    findall(negation_autre_sens(type(R, W)),
+            ( member(E, Es), member(entite(E, W, _), G), W \== nom_propre, representant_de(G, R), dans_la_classe(G, E, R),
+              appui(K, G, [v('$p')-R], type(v('$p'), W), negp, _) ), Hs0), sort(Hs0, Hs).
 existence_niee(K, G, E) :-
     member(entite(E, W, _), G), W \== nom_propre, representant_de(G, R), dans_la_classe(G, E, R),
     appui(K, G, [v('$p')-R], type(v('$p'), W), neg, _), !.
@@ -331,5 +363,7 @@ certifiable(K, G, Sel, S, Cl) :-
     forall(( member(_-C, Sel), contrainte(C) ), ( lies(C, S), contrainte_val(K, G, S, C, X), memberchk(X, [v, h]) )),
     findall(H, ( member(_-distincts(X, Y), Sel), contrainte_val(K, G, S, distincts(X, Y), h), val(S, X, A), val(S, Y, B),
                  noms(K, G, A, N1), noms(K, G, B, N2), H = distinction_supposee(X, Y, N1, N2) ), Hc),
-    append([Hc|Hss], Hs0), sort(Hs0, Hs),
+    findall(H, ( member(_-C, Sel), contrainte(C), contrainte_val(K, G, S, C, v), hypotheses_contrainte(K, G, S, C, Hx),
+                 member(H, Hx) ), Hk),
+    append([Hc, Hk|Hss], Hs0), sort(Hs0, Hs),
     ( Hs == [] -> Cl = vraie ; Cl = sous_hypotheses(Hs) ).

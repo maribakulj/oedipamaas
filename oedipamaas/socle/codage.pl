@@ -24,6 +24,8 @@
                             suffisante réfutée ne dit rien de la notation)
             incomplet       le calcul de la suffisante s'est arrêté (budget) sans conclusion
             sans_suffisante la suffisante est inconnue ; le code n'est donné que pour sa condition nécessaire
+            suffisante_mal_formee  la suffisante n'est pas une requête bien formée (Detail : les erreurs) : un défaut du
+                            compilateur, signalé ; une nécessaire mal formée donne Necessaire = mal_formee
           Complet : complet | incomplet, si le calcul de l'une ou l'autre condition s'est arrêté avant la fin ; il est
                     gardé jusqu'à la sortie (un calcul incomplet ne donne jamais de conclusion négative)
           Necessaire : le statut du noyau pour la condition NÉCESSAIRE (etablie, ecartee, contradictoire, inconnue…),
@@ -135,8 +137,11 @@ coder(L, Fs, Mode, Opts, Resultats) :-
 % le code d'une notation : la suffisante et la nécessaire, chacune pour elle-même
 code(K, G, L, N, Rs, Rn, code(N, Statut, Detail, annexe(Complet, Necessaire))) :-
     requetes_index:requete_compilee(N, L, _, Qs, Qn, St, _, Fa),
-    ( Qs \== aucune, memberchk(N-Res, Rs) -> true ; Res = resultat(inconnue, [], complet) ),
-    ( Qn \== aucune, memberchk(N-Ren, Rn) -> Ren = resultat(Necessaire, _, Cn) ; Necessaire = aucune, Cn = complet ),
+    ( Qs \== aucune, memberchk(N-Res0, Rs) -> true ; Res0 = resultat(inconnue, [], complet) ),
+    ( Qn \== aucune, memberchk(N-Ren, Rn) -> true ; Ren = resultat(aucune, [], complet) ),
+    % une requête mal formée est une erreur du compilateur : elle est dite, jamais perdue en silence (audit final)
+    ( Res0 = mal_formee(Es) -> Res = resultat(mal_formee, Es, complet) ; Res = Res0 ),
+    ( Ren = mal_formee(_) -> Necessaire = mal_formee, Cn = complet ; Ren = resultat(Necessaire, _, Cn) ),
     Res = resultat(Ss, Els, Cs),
     statut(K, G, Qs, St, Fa, Ss, Els, Statut, Detail),
     ( ( Cs == incomplet ; Cn == incomplet ) -> Complet = incomplet ; Complet = complet ),
@@ -157,6 +162,7 @@ statut(_, _, _, _, _, non_certifiee, D, non_certifie, D) :- !.
 statut(_, _, _, _, _, ecartee, D, suffisante_ecartee, D) :- !.
 statut(_, _, _, _, _, incomplet, D, incomplet, D) :- !.
 statut(_, _, _, _, _, inconnue, _, sans_suffisante, []).
+statut(_, _, _, _, _, mal_formee, Es, suffisante_mal_formee, Es).
 
 % les familles de constructions dont la suffisance est justifiée (C3.3 : un échantillon jugé par famille, borne
 % supérieure de Wilson du taux de requêtes trop faibles ≤ 5 %) ; aucune ne l'est à ce jour

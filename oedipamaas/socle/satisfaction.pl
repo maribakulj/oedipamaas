@@ -309,7 +309,7 @@ contrainte_valeur(K, M, distincts(X, Y), S, V) :-
 % le nombre d'une entité ne compte que si elle est présente (D28) ; il n'est certifiable que de l'auteur
 contrainte_valeur(K, M, nombre(X, Nb), S, V) :-
     memberchk(X-R, S),
-    (   M:classe(E, R), M:nombre(E, Nb), present_auteur(M, E), \+ porteur_nie(K, M, E) -> Pv = v(nombre(E))
+    (   nombre_sain(K, M, R, Nb, E) -> Pv = v(nombre(E))
     ;   M:classe(E, R), M:nombre(E, Nb), present(M, E) -> Pv = p
     ;   Pv = non
     ),
@@ -320,9 +320,24 @@ contrainte_valeur(K, M, nombre(X, Nb), S, V) :-
 distinction_sans_etablie(K, M, A, B, D) :-
     ( D = documentaire(_, _, _) ; D = supposee(_) ), distinction(K, M, A, B, D), !.
 % une distinction établie dont les deux entités existent selon le texte (cycle 7)
+% (parmi plusieurs, celle qui demande le moins d'hypothèses sur l'existence de ses entités : D30, audit final B2)
 etablie_saine(K, M, A, B, E1, E2) :-
-    M:classe(E1, A), M:classe(E2, B), ( M:distinct(E1, E2) ; M:distinct(E2, E1) ),
-    present_auteur(M, E1), present_auteur(M, E2), \+ porteur_nie(K, M, E1), \+ porteur_nie(K, M, E2), !.
+    findall((L-Hs)-(F1-F2), ( M:classe(F1, A), M:classe(F2, B), ( M:distinct(F1, F2) ; M:distinct(F2, F1) ),
+                              present_auteur(M, F1), present_auteur(M, F2), \+ porteur_nie(K, M, F1),
+                              \+ porteur_nie(K, M, F2), existence_supposee(K, M, [F1, F2], Hs), length(Hs, L) ), Ps),
+    Ps \== [], msort(Ps, [_-(E1-E2)|_]).
+nombre_sain(K, M, R, Nb, E) :-
+    findall((L-Hs)-F, ( M:classe(F, R), M:nombre(F, Nb), present_auteur(M, F), \+ porteur_nie(K, M, F),
+                        existence_supposee(K, M, [F], Hs), length(Hs, L) ), Ps),
+    Ps \== [], msort(Ps, [_-E|_]).
+% les hypothèses d'existence : une négation seulement possible du type d'une entité (D30)
+existence_supposee(K, M, Es, Hs) :-
+    findall(negation_autre_sens(type(R, W)),
+            ( member(E, Es), M:entite(E, W, _), W \== nom_propre, M:classe(E, R), once(appui_(K, M, type(R, W), negp, _, _)) ),
+            Hs0), sort(Hs0, Hs).
+hypotheses_de_contrainte(K, M, v(etablie(distinct(E1, E2))), Hs) :- !, existence_supposee(K, M, [E1, E2], Hs).
+hypotheses_de_contrainte(K, M, v(nombre(E)), Hs) :- !, existence_supposee(K, M, [E], Hs).
+hypotheses_de_contrainte(_, _, _, []).
 % la distinction de deux classes (§ 1) : etablie(distinct(E1, E2)) | documentaire(C1, C2, Source) | supposee(Noms)
 % établie : entre deux entités présentes selon l'auteur (une entité seulement possible ne distingue rien)
 distinction(_, M, A, B, etablie(distinct(E1, E2))) :-
@@ -340,6 +355,8 @@ distinction(K, M, A, B, supposee(Ns1-Ns2)) :-
     noms_portes(K, M, A, Ps1), noms_portes(K, M, B, Ps2),      % aucun nom, même possible ou contesté, en commun
     \+ ( member(C1, Ps1), member(C2, Ps2), meme_nom(K, C1, C2) ).
 % une classe dont deux noms admissibles sont, selon K, deux individus : `meme` y est contredit (D12, cycle 7)
+source_documentee_dans(K, M, R, Src) :-
+    noms_admissibles(K, M, R, Ns), member(C1, Ns), member(C2, Ns), K:distincts_documentes(C1, C2, Src), !.
 documentee_dans(K, M, R) :-
     noms_admissibles(K, M, R, Ns), member(C1, Ns), member(C2, Ns), K:distincts_documentes(C1, C2, _), !.
 % les noms qu'une classe porte, pour exclure une distinction documentaire : tout nom affirmé positivement, quels que
@@ -348,6 +365,7 @@ noms_portes(K, M, R, Ns) :-
     findall(C, ( M:classe(E, R), M:nom(A, E, Nom, _), M:polarite(A, pos), K:cle_de_nom(Nom, C) ), Ns0), sort(Ns0, Ns).
 noms_admissibles(K, M, R, Ns) :-
     findall(C, ( M:classe(E, R), M:nom(A, E, Nom, _), qualifie(M, A, pos, represente, auteur), present_auteur(M, E),
+                 \+ porteur_nie(K, M, E),                % le porteur existe selon le texte (audit final, B1)
                  K:cle_de_nom(Nom, C), \+ nom_conteste(K, M, R, C) ), Ns0),
     sort(Ns0, Ns).
 % un nom contesté : nié par une assertion admissible comme négation, de porteur présent (D50 : un nom nié d'un porteur
@@ -447,7 +465,9 @@ certifiable(K, M, S, Sel, Cl) :-
     findall(A, ( member(_-A, Sel), requetes:atome(A) ), As),
     maplist(hypotheses_retenues(K, M, S), As, Hss),
     findall(H, ( member(_-Co, Sel), requetes:contrainte(Co), contrainte_valeur(K, M, Co, S, h(H)) ), Hc),
-    append([Hc|Hss], Hs0), sort(Hs0, Hs),
+    findall(H, ( member(_-Co, Sel), requetes:contrainte(Co), contrainte_valeur(K, M, Co, S, X),
+                 hypotheses_de_contrainte(K, M, X, Hx), member(H, Hx) ), Hk),
+    append([Hc, Hk|Hss], Hs0), sort(Hs0, Hs),
     ( Hs == [] -> Cl = vraie ; Cl = sous_hypotheses(Hs) ).
 
 % un appui positif de l'auteur dont l'assertion elle-même n'est pas niée (« une lionne » quand le texte dit aussi « pas
@@ -472,7 +492,19 @@ hypothese_d_appui(K, M, role(V, _, _), _, negation_autre_sens(evenement(V, W))) 
 categorie(type(_, T), n, T). categorie(genre(T), n, T). categorie(propriete(_, T), a, T).
 categorie(evenement(_, T), v, T). categorie(relation(_, T, _), r, T).
 % (le réexamen d'un appui déjà compté par l'arbre ne l'est pas une seconde fois)
-appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \+ conteste(K, M, Ai, Ap).
+appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \+ conteste(K, M, Ai, Ap), lecture_possible(K, M, Ai, Ap).
+% une lecture du mot de l'appui au moins : un de ses sens conceptuels atteint le type demandé, et l'assertion prise en ce
+% sens n'est pas niée de façon certaine (audit final, B3 : « une pomme ; pas de fruit ; pas d'objet » n'a aucune
+% lecture, et « pomme » ne s'y établit pas, même sous hypothèse)
+lecture_possible(K, M, Ai, Ap) :-
+    (   base(Ai, Ap, B), Ap = appui(_, _, _, chemin(W, _)), categorie(Ai, Cat, T)
+    ->  sens_conceptuels(K, Cat, W, Ss), member(S, Ss), once(chemin_court(K, sous, S, T, _)),
+        au_sens(B, S, Bs), \+ appui_(K, M, Bs, neg, _, _), !
+    ;   true
+    ).
+au_sens(type(R, _), S, type(R, S)). au_sens(propriete(R, _), S, propriete(R, S)).
+au_sens(evenement(V, _), S, evenement(V, S)). au_sens(relation(R1, _, R2), S, relation(R1, S, R2)).
+au_sens(genre(_), S, genre(S)).
 % les prémisses d'un appui (cycle 7) : l'assertion avec son mot ; l'existence de chaque porteur (le type de son entité
 % n'est pas nié : « un homme nommé Pierre ; il n'y a pas d'homme ») ; pour un rôle, son événement (« la femme ne tient
 % pas l'enfant » contre le rôle de « la femme tient l'enfant »)
@@ -541,11 +573,13 @@ refutation(K, M, F, S, refutation(S, substitution, Fondements)) :-
     findall(documentaire(Src),
             ( member(_-Co, As), requetes:contrainte(Co), requetes:variables(Co, Vs), forall(member(V, Vs), memberchk(V-_, S)),
               contrainte_valeur(K, M, Co, S, X), memberchk(X, [f, b]), Co = meme(X1, Y1), memberchk(X1-A1, S),
-              memberchk(Y1-B1, S), distinction(K, M, A1, B1, documentaire(_, _, Src)) ), Ds),
+              memberchk(Y1-B1, S),
+              ( A1 == B1 -> source_documentee_dans(K, M, A1, Src) ; distinction(K, M, A1, B1, documentaire(_, _, Src)) ) ),
+            Ds),
     findall(texte, ( member(_-Co, As), requetes:contrainte(Co), requetes:variables(Co, Vs), forall(member(V, Vs), memberchk(V-_, S)),
                      contrainte_valeur(K, M, Co, S, X), memberchk(X, [f, b]),
-                     \+ ( Co = meme(X1, Y1), memberchk(X1-A1, S), memberchk(Y1-B1, S),
-                          distinction(K, M, A1, B1, documentaire(_, _, _)) ) ), Ts),
+                     ( Co = meme(X1, Y1) -> memberchk(X1-A1, S), memberchk(Y1-B1, S), distinction(K, M, A1, B1, etablie(_))
+                     ; true ) ), Ts),
     append([Qs, Ds, Ts], Fs0), sort(Fs0, Fondements).
 
 regime(F, classement) :- requetes:atomes(F, As), forall(( member(_-A, As), requetes:atome(A) ), A = genre(_)), !.

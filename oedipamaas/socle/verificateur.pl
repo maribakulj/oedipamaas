@@ -90,7 +90,11 @@ etabli(hypotheses, K, G, _, preuve(_, _, _, S, Js, Hs)) :-
     findall(X-Y, member(j(_, distincts(X, Y), contrainte(hypothese)), Js), Us0), sort(Us0, Us),
     findall(X-Y, member(distinction_supposee(X, Y, _, _), Hs), Hs1), msort(Hs1, Hs2), sort(Hs1, Hs2), Hs2 == Us,
     % les hypothèses des atomes (D30) : exactement celles que demandent les appuis cités
-    findall(H, ( member(j(_, A, Ap), Js), atome(A), hypothese_requise(K, G, S, A, Ap, H) ), Hr0), sort(Hr0, Hr),
+    findall(H, ( member(j(_, A, Ap), Js), atome(A), hypothese_requise(K, G, S, A, Ap, H) ), Hr1),
+    % et celles des contraintes : l'existence seulement possiblement niée d'une entité (audit final, B2)
+    findall(H, ( member(j(_, _, contrainte(J)), Js), entites_de_justification(J, Es), member(E, Es),
+                 existence_seulement_possible(K, G, E, H) ), Hr2),
+    append(Hr1, Hr2, Hr0), sort(Hr0, Hr),
     exclude([H]>>( H = distinction_supposee(_, _, _, _) ), Hs, Ha0), msort(Ha0, Ha), sort(Ha0, Ha), Ha == Hr.
 etabli(pas_d_appui_negatif, K, G, _, preuve(_, _, _, S, Js, _)) :-
     \+ ( member(j(_, A, _), Js), atome(A), appui_negatif(K, G, S, A) ),
@@ -98,6 +102,7 @@ etabli(pas_d_appui_negatif, K, G, _, preuve(_, _, _, S, Js, _)) :-
     \+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ),
     % ni contre l'existence d'une entité que l'appui cite, ni contre l'événement d'un rôle
     \+ ( member(j(_, A, Ap), Js), atome(A), A \= genre(_), entite_citee(G, Ap, E), inexistante(K, G, E) ),
+    forall(( member(j(_, A, Ap), Js), atome(A) ), une_lecture(K, G, S, A, Ap)),
     \+ ( member(j(_, role(_, _, _), appui(role(V, _, _), _, _, _)), Js), member(evenement(V, W, _), G),
          appui_negatif(K, G, [v('$e')-V], evenement(v('$e'), W)) ).
 entite_citee(_, appui(_, E, _, _), E).
@@ -118,6 +123,22 @@ hypothese_requise(K, G, _, A, Ap, negation_autre_sens(type(R, W))) :-
     appui_negatif_possible(K, G, [v('$p')-R], type(v('$p'), W)).
 hypothese_requise(K, G, _, role(_, _, _), appui(role(V, _, _), _, _, _), negation_autre_sens(evenement(V, W))) :-
     member(evenement(V, W, _), G), appui_negatif_possible(K, G, [v('$e')-V], evenement(v('$e'), W)).
+entites_de_justification(etablie(distinct(E1, E2)), [E1, E2]).
+entites_de_justification(nombre(E), [E]).
+existence_seulement_possible(K, G, E, negation_autre_sens(type(R, W))) :-
+    member(entite(E, W, _), G), W \== nom_propre, member(entite(R, _, _), G), meme_classe(G, E, R), representant(G, R),
+    appui_negatif_possible(K, G, [v('$p')-R], type(v('$p'), W)).
+% une lecture au moins du mot de l'appui : un sens conceptuel qui atteint le type, l'assertion en ce sens non niée
+% (audit final, B3)
+une_lecture(K, G, S, A, Ap) :-
+    (   assertion_citee(A, Ap, B), type_de(A, Cat, T), Ap = appui(_, _, _, chemin(W, _))
+    ->  sens_du_mot(K, Cat, W, Ss), member(Sn, Ss), sous_atteint(K, [Sn], [Sn], T), au_sens(B, Sn, Bs),
+        \+ appui_negatif(K, G, S, Bs), !
+    ;   true
+    ).
+au_sens(type(X, _), Sn, type(X, Sn)). au_sens(propriete(X, _), Sn, propriete(X, Sn)).
+au_sens(evenement(X, _), Sn, evenement(X, Sn)). au_sens(relation(X, _, Y), Sn, relation(X, Sn, Y)).
+au_sens(genre(_), Sn, genre(Sn)).
 type_de(type(_, T), n, T). type_de(genre(T), n, T). type_de(propriete(_, T), a, T). type_de(evenement(_, T), v, T).
 type_de(relation(_, T, _), r, T).
 instancie(v(N), S, X) :- !, memberchk(v(N)-X, S).
@@ -310,6 +331,7 @@ contrainte_justifiee(K, G, S, _, nombre(X, N), nombre(E)) :-
 % un nom sur lequel une distinction documentaire repose : de l'auteur, porteur admis, non contredit dans la classe
 nom_admissible(K, G, R, C) :-
     member(nom(A, E, Nom, _), G), meme_classe(G, E, R), qualifie(G, A, pos, represente, auteur), porteur_admis(G, E),
+    \+ inexistante(K, G, E),                               % le porteur existe selon le texte (audit final, B1)
     K:cle_de_nom(Nom, C), \+ nie_dans_la_classe(K, G, R, C).
 
 noms(K, G, R, Ns) :-

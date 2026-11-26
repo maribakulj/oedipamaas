@@ -117,7 +117,10 @@ lui-même, D20). Un mot polysémique n'établit pas tous ses sens à la fois :
   **possible** : elle ne réfute rien et ne contredit rien déductivement, mais une conclusion positive qu'elle touche
   n'est plus établie que sous l'hypothèse qu'elle vise un autre sens (`negation_autre_sens(Atome)`) ;
 - la lexicalisation (d'un concept vers son lemme) est un pas de `sous`, jamais d'`inclus` : « pas de pomme » ne nie pas
-  « fruit ».
+  « fruit » ;
+- un appui ne certifie rien, même sous hypothèse, s'il n'a **aucune lecture** : aucun sens conceptuel du mot n'atteint
+  le type sans que l'assertion, prise en ce sens, soit niée de façon certaine (« une pomme ; pas de fruit ; pas
+  d'objet » : chaque sens de « pomme » est nié, et « pomme » ne s'y établit pas ; dernier audit, B3).
 La désambiguïsation selon le contexte relève de C7 ; K ne choisit plus de sens en silence (l'anglais prenait le premier
 sens de WordNet : il les prend tous).
 
@@ -181,7 +184,7 @@ Une contrainte a, comme un atome, un appui positif et un appui négatif, indépe
 Une contrainte dont une variable n'est pas liée vaut inconnu. Ce qui réfute une contrainte est une assertion du graphe
 ou une distinction documentaire de K (la réfutation de `meme` par K est une conclusion relative à la source de K ;
 journal, D31). **La distinction documentaire** ne repose que sur des noms admissibles (de l'auteur, d'un porteur
-présent selon l'auteur, qu'aucune assertion niée de la classe, de porteur présent, ne contredit : D50), et seulement si aucune des deux classes
+présent selon l'auteur et dont l'existence n'est pas niée, qu'aucune assertion niée de la classe, de porteur présent, ne contredit : D50 ; dernier audit, B1), et seulement si aucune des deux classes
 ne porte, à alias près, le nom documenté de l'autre (D26). Les noms qu'une classe « porte », pour
 cette exclusion, sont tous ceux qu'une assertion positive lui donne, quels que soient leurs autres qualificatifs et leur
 porteur, contestés ou non (la lecture prudente). **La distinction supposée** ne repose que sur des noms d'un porteur
@@ -205,7 +208,8 @@ lionne ») ; l'existence de chaque entité que l'appui cite (le type de son mot 
 homme nommé Pierre ; il n'y a pas d'homme ») ; pour un rôle, son événement (« la femme ne tient pas l'enfant » ôte au
 rôle de « la femme tient l'enfant » sa prémisse). Chaque contrainte sélectionnée est vraie et certifiable (ou vraie
 sous hypothèse) ; une distinction établie ou un nombre ne sont certifiables que si l'existence de leurs entités n'est
-pas niée. Elle est **vraie** si elle n'emploie aucune
+pas niée de façon certaine ; une négation seulement possible de cette existence en fait une conclusion sous hypothèse
+(`negation_autre_sens(type(R, W))` ; dernier audit, B2). Elle est **vraie** si elle n'emploie aucune
 hypothèse, **vraie sous hypothèses** sinon (avec la liste de ses hypothèses).
 
 Une substitution de valeur vraie qui n'a aucune solution certifiable sous elle (sa vérité passe par un atome
