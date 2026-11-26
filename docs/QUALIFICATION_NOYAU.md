@@ -417,7 +417,7 @@ deux mentions coréférentes de « pomme » reçoivent chacune son sens ; un cho
 (pomme, poire) ; une « lyre » dont le seul sens commun aux deux types est nié (les deux lectures séparées restent
 possibles). Mesures : banc différentiel (2 × 4 000 cas, graine 20261128) sans désaccord ; le même oracle contre les
 moteurs d'avant le lot 4 : 17 désaccords, tous `non_certifiee` contre `etablie_sous_hypotheses` (le banc voit donc la
-règle) ; injection de défauts : quatre défauts du moteur et un du vérificateur ajoutés. Reste : les négations
+règle) ; injection de défauts : quatre défauts du moteur et un du vérificateur ajoutés, 56 sur 56 détectés (30 du moteur, 18 du vérificateur, 8 du comparateur) ; deux mutants devenus équivalents (le filtre B3 des candidats, et le contrôle des lectures du vérificateur, que les lectures conjointes contiennent) retirent désormais les contrôles redondants ensemble. Reste : les négations
 seulement possibles ne sont pas confrontées aux sens supposés, et aucun sens n'est choisi d'après le texte (C7) ; les
 codes `conditionnel` restent non exploitables automatiquement.
 
