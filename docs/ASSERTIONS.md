@@ -32,6 +32,7 @@ d'une relation. Tous sont uniques dans le document.
 | `enonciateur(A, Qui)` | `auteur` (l'auteur du texte) ou `cite(X)` (une autorité citée) |
 | `alternative(G, [A1, A2, …])` | hypothèses mutuellement exclusives (au moins deux) |
 | `coref(E1, E2)` | deux entités désignent le même référent |
+| `distinct(E1, E2)` | le texte dit que deux entités désignent deux référents différents (« un autre homme », « l'un… l'autre ») ; sans elle, deux entités non coréférentes ont une identité inconnue (docs/NOYAU.md, § 1) |
 | `incompris(P, Raison)` | passage non interprété ; `Raison` : un atome (`analyse_incertaine`, `hors_couverture`…) |
 | `saillance(E, principal)` | le référent `E` est donné par le texte pour le sujet de l'image : complément d'un pont (« depicts X », « Portrait de X »), ou dans la première phrase figurée de la description (ancrage version 2, `mondes.pl`) ; les autres référents figurés sont des composants |
 

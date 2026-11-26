@@ -43,6 +43,8 @@ sous_terme_variable(T, V) :- compound(T), T \= v(_), T =.. [_|As], member(A, As)
 sorte(F, V, evenement) :- atomes(F, As), ( member(_-evenement(V, _), As) ; member(_-role(V, _, _), As) ), !.
 sorte(_, _, referent).
 
+bien_formee(requete(_, F), Es) :- \+ acyclic_term(F), !, Es = [cyclique].
+bien_formee(requete(_, F), Es) :- \+ ground(F), !, Es = [non_close].       % une variable libre unifierait avec tout
 bien_formee(requete(Id, F), Es) :- !,
     findall(E, erreur(F, E), Es0),
     ( atom(Id) -> Es = Es0 ; Es = [identifiant(Id)|Es0] ).
@@ -59,6 +61,17 @@ erreur(F, deux_sortes(V)) :-
     ( member(_-evenement(V, _), As) ; member(_-role(V, _, _), As) ),
     ( member(_-type(V, _), As) ; member(_-nom(V, _), As) ; member(_-propriete(V, _), As)
     ; member(_-role(_, _, V), As) ; member(_-relation(V, _, _), As) ; member(_-relation(_, _, V), As) ).
+erreur(F, variable(V)) :- variables(F, Vs), member(V, Vs), V = v(N), \+ atom(N).
+% une contrainte ne lie aucune variable : dans chaque sélection qui la contient, ses variables sont celles d'atomes
+% de la même sélection (docs/NOYAU.md, § 3). Sans énumérer les sélections (leur nombre est exponentiel dans celui des
+% « ou », D44) : une contrainte est liée si chacune de ses variables est garantie par un frère d'un « et » sur le
+% chemin qui y mène ; un sous-arbre garantit une variable si toutes ses sélections la contiennent
+erreur(F, contrainte_non_liee(Co)) :- once(mal_liee(F, [], Co)).
+% une contrainte ne porte que sur des référents : les événements n'ont ni coréférence, ni distinction, ni nombre (D35)
+erreur(F, contrainte_sur_evenement(V)) :-
+    atomes(F, As), member(_-Co, As), contrainte(Co), Co =.. [_|Args], member(V, Args), V = v(_), sorte(F, V, evenement).
+% `distincts(X, X)` ne peut être vrai d'aucune substitution : une requête qui l'exige est mal formée
+erreur(F, distincts_reflexive(X)) :- atomes(F, As), member(_-distincts(X, Y), As), X == Y.
 erreur(F, role_inconnu(R)) :- atomes(F, As), member(_-role(_, R, _), As), roles(Rs), \+ memberchk(R, Rs).
 erreur(F, argument(A)) :- atomes(F, As), member(_-A, As), \+ arguments_valides(A).
 
@@ -67,17 +80,36 @@ forme_connue(ou(L)) :- is_list(L).
 forme_connue(A) :- atome(A).
 forme_connue(C) :- contrainte(C).
 
+mal_liee(et(Fs), Ctx, Co) :- !,
+    nth1(I, Fs, Fi), findall(V, ( nth1(J, Fs, Fj), J \== I, garanties(Fj, Gs), member(V, Gs) ), Vs),
+    append(Ctx, Vs, Ctx1), mal_liee(Fi, Ctx1, Co).
+mal_liee(ou(Fs), Ctx, Co) :- !, member(Fi, Fs), mal_liee(Fi, Ctx, Co).
+mal_liee(Co, Ctx, Co) :- contrainte(Co), variables(Co, Vc), member(V, Vc), \+ memberchk(V, Ctx).
+garanties(et(Fs), Vs) :- !, findall(V, ( member(Fi, Fs), garanties(Fi, Gi), member(V, Gi) ), Vs0), sort(Vs0, Vs).
+garanties(ou([F|Fs]), Vs) :- !,
+    garanties(F, V0), foldl(garanties_communes, Fs, V0, Vs).
+garanties(A, Vs) :- atome(A), !, variables(A, Vs).
+garanties(_, []).
+garanties_communes(Fi, A0, A) :- garanties(Fi, Gi), intersection(A0, Gi, A).
+
 sous_terme_formule(F, F).
 sous_terme_formule(et(Fs), G) :- is_list(Fs), member(F, Fs), sous_terme_formule(F, G).
 sous_terme_formule(ou(Fs), G) :- is_list(Fs), member(F, Fs), sous_terme_formule(F, G).
 
-arguments_valides(type(v(_), T)) :- atom(T).
+% un type, un prédicat, une propriété, une relation : un lemme (atome) ou un identifiant de concept de K (entier)
+arguments_valides(type(v(_), T)) :- type_valide(T).
 arguments_valides(nom(v(_), Ks)) :- is_list(Ks), Ks \== [], maplist(atom, Ks).
-arguments_valides(propriete(v(_), P)) :- atom(P).
-arguments_valides(evenement(v(_), P)) :- atom(P).
+arguments_valides(propriete(v(_), P)) :- type_valide(P).
+arguments_valides(evenement(v(_), P)) :- type_valide(P).
 arguments_valides(role(v(_), R, v(_))) :- atom(R).
-arguments_valides(relation(v(_), R, v(_))) :- atom(R).
-arguments_valides(genre(T)) :- atom(T).
+arguments_valides(relation(v(_), R, v(_))) :- type_valide(R).
+arguments_valides(genre(T)) :- type_valide(T).
 arguments_valides(meme(v(_), v(_))).
 arguments_valides(distincts(v(_), v(_))).
 arguments_valides(nombre(v(_), K)) :- integer(K), K >= 1.
+type_valide(T) :- ( atom(T) ; integer(T) ), !.
+
+% les sélections d'une formule : tous les enfants d'un « et », un enfant d'un « ou »
+selection(et(Fs), Sel) :- !, is_list(Fs), maplist(selection, Fs, Ss), append(Ss, Sel).
+selection(ou(Fs), Sel) :- !, is_list(Fs), member(F, Fs), selection(F, Sel).
+selection(A, [A]).

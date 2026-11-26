@@ -317,6 +317,12 @@ fait(Ts, Ents, coref(E1, E2)) :-
     member(P, Ts), nominal(P), P = t(S, IP, _, _, _, _, _, _, _, _),
     enfant(Ts, S, IP, cop, _), enfant(Ts, S, IP, nsubj, Su),
     entite_du_jeton(Ts, Ents, Su, E1), entite_du_jeton(Ts, Ents, P, E2), E1 \== E2.
+% l'apposition (« a short mantelet, a little cape », « Anna, Dido's sister ») : les deux noms désignent le même
+% référent ; une coréférence établie (docs/PLAN_V1.md, C2.2)
+fait(Ts, Ents, coref(E1, E2)) :-
+    member(P, Ts), nominal(P), P = t(S, IP, _, _, _, _, _, _, _, _),
+    enfant(Ts, S, IP, appos, A), nominal(A),
+    entite_du_jeton(Ts, Ents, P, E1), entite_du_jeton(Ts, Ents, A, E2), E1 \== E2.
 % incompris : relations que l'analyseur n'a pas su nommer
 fait(Ts, _, incompris(passage_de(T), analyse_incertaine)) :-
     member(T, Ts), T = t(_, _, _, _, _, _, _, R, _, _), memberchk(R, [dep, orphan, reparandum]).

@@ -14,7 +14,9 @@ sens(L, C, W, S) :- atom(W), graphie(W, W2), sens_(L, C, W2, S).
 sens(L, C, W, S) :- sens_(L, C, W, S).
 graphie(W, W2) :- sub_atom(W, _, _, _, '-'), atomic_list_concat(Ps, '-', W), atomic_list_concat(Ps, ' ', W2).
 graphie(W, W2) :- sub_atom(W, _, _, _, ' '), atomic_list_concat(Ps, ' ', W), atomic_list_concat(Ps, '-', W2).
-sens_(en, C, W, S) :- pos(C, P), once(( between(1, 80, K), member(P1, P), wordnet:s(S, _, W, P1, K, _) )).
+% tous les sens du mot (D30, décision du 27/11) : le premier sens de WordNet n'est pas choisi en silence ; le choix
+% d'un sens est une désambiguïsation (C7), et le noyau ne tire d'un mot polysémique que ce que tous ses sens disent
+sens_(en, C, W, S) :- pos(C, P), member(P1, P), wordnet:s(S, _, W, P1, _, _).
 sens_(fr, C, W, S) :- prefixe(C, Pre), ressources:wolf(S, W), S // 100000000 =:= Pre.
 pos(n, [n]). pos(v, [v]). pos(a, [a, s]).
 prefixe(n, 1). prefixe(v, 2). prefixe(a, 3).
@@ -24,5 +26,8 @@ sous(_, S, P) :- integer(S), ( wordnet:hyp(S, P) ; wordnet:ins(S, P) ).
 sous(L, S, W) :- integer(S), lemme(L, S, W0), ( W = W0 ; graphie(W0, W) ).
 lemme(en, S, W) :- wordnet:s(S, _, W, _, _, _).
 lemme(fr, S, W) :- ressources:wolf(S, W).
+
+% l'inclusion sémantique : l'hyperonymie et l'instance de WordNet, jamais la lexicalisation (d'un sens vers un lemme)
+inclus(S, P) :- integer(S), ( wordnet:hyp(S, P) ; wordnet:ins(S, P) ).
 
 cle_de_nom(Nom, C) :- raisonnement:normaliser_nom(Nom, C).

@@ -46,6 +46,8 @@ compiler(N, L, compilation(N, L, Type, Suff, Nec, Statut, Raisons, Famille)) :-
             requetes:bien_formee(Suff, Es), requetes:bien_formee(Nec, Esn),
             append([Es, Esn], Ef),
             (   Ef \== [] -> Statut = invalide, append(Rs0, [mal_formee(Ef)], Raisons)
+            ;   member(R, Rs0), memberchk(R, [construction_negative(_), construction_modale(_)])
+            ->  Statut = non_prise_en_charge, Raisons = Rs0
             ;   Rs0 == [] -> Statut = compilee, Raisons = []
             ;   Statut = partielle, Raisons = Rs0
             ),
@@ -90,15 +92,15 @@ compiler_(N, L, genre, genre, F, F, []) :- !,
 compiler_(N, L, scene, scene, F, Fn, Rs) :- !,
     partie(N, L, Net, Ph), graphe(N, L, Net, Ph, Fs),
     graphe_requete(Fs, all, Cs0, Ra),
-    heritage(N, L, Cs0, Cs1),
+    heritage(N, L, Cs0, Cs1), liens_apres_heritage(Cs0, Cs1, Rh),
     aspects(N, L, Gs, Rg), append(Cs1, Gs, Cs),
     Cs \== [], et_ou_un(Cs, F), necessaire(Cs1, Fn), mots_non_couverts(L, Ph, Cs1, Rm),
-    parentheses_non_lues(N, L, Rp), append([Ra, Rm, Rg, Rp], Rs).
+    parentheses_non_lues(N, L, Rp), append([Ra, Rh, Rm, Rg, Rp], Rs).
 compiler_(N, L, classe, classe, F, Fn, Rs) :- !,
     partie(N, L, Net, Ph), graphe(N, L, Net, Ph, Fs),
     definitions:mots(Ph, Ws0), definitions:defini(Ws0, Ws), definitions:segments_complets(L, Ws, Ss),
-    findall(Cs-Ra-S, ( member(S, Ss), debuts_du_segment(S, Ds), graphe_requete(Fs, debuts(Ds), Cs0, Ra), Cs0 \== [],
-                       heritage(N, L, Cs0, Cs) ), Alts0),
+    findall(Cs1-Ra-S, ( member(S, Ss), debuts_du_segment(S, Ds), graphe_requete(Fs, debuts(Ds), Cs0, Ra0), Cs0 \== [],
+                       heritage(N, L, Cs0, Cs1), liens_apres_heritage(Cs0, Cs1, Rh), append(Ra0, Rh, Ra) ), Alts0),
     Alts0 \== [], tete_partagee_a_droite(L, Alts0, Alts),
     findall(Fa, ( member(Cs-_-_, Alts), et_ou_un(Cs, Fa) ), Fas), ou_ou_un(Fas, F0),
     aspects(N, L, Gs, Rg), ( Gs == [] -> F = F0 ; append([F0], Gs, Fg), F = et(Fg) ),
@@ -194,14 +196,23 @@ distribuer_a_droite(_, _, A, A).
 distinctions(Cs, Ds) :-
     findall(distincts(X, Y), ( member(nom(X, [K1]), Cs), member(nom(Y, [K2]), Cs), X @< Y, K1 \== K2 ), Ds).
 
+% une négation ou une modalité du libellé (« angels without wings », « possibly ») : le langage des requêtes n'a pas de
+% négation, et la condition deviendrait positive ; la construction n'est pas prise en charge (docs/NOYAU.md, § 3)
+raison(Fs, Es, Vs, _, construction_negative(A)) :-
+    member(polarite(A, neg), Fs), ( memberchk(A, Es) ; memberchk(A, Vs) ; assertion_de_portee(Fs, Es, A) ).
+raison(Fs, Es, Vs, _, construction_modale(M)) :-
+    member(modalite(A, M), Fs), M \== affirme, ( memberchk(A, Es) ; memberchk(A, Vs) ; assertion_de_portee(Fs, Es, A) ).
+assertion_de_portee(Fs, Es, A) :-
+    ( member(propriete(A, E, _, _), Fs) ; member(nom(A, E, _, _), Fs) ; member(relation(A, E, _, _, _), Fs) ), memberchk(E, Es), !.
 raison(Fs, Es, _, _, metalangage(W)) :- member(E, Es), member(propriete(_, E, P, _), Fs), mot(P, W), metalangage(W).
 raison(_, _, _, Cs, non_lie(Xs)) :- composantes(Cs, Ks), Ks = [_, _|_], maplist([K, X]>>( K = [X|_] ), Ks, Xs).
 raison(_, _, Vs, Cs, evenement_sans_participant(V)) :- member(V, Vs), \+ memberchk(role(v(V), _, _), Cs).
 
 % les composantes connexes du graphe de la requête (variables liées par rôle, relation, meme)
 composantes(Cs, Ks) :-
-    requetes:variables(Cs, Vs0), exclude([V]>>( V = v(_), \+ atome_sur(Cs, V) ), Vs0, Vs),
+    requetes:variables(Cs, Vs0), exclude(sans_atome(Cs), Vs0, Vs),
     composantes_(Vs, Cs, Ks).
+sans_atome(Cs, V) :- V = v(_), \+ atome_sur(Cs, V).
 atome_sur(Cs, V) :- member(A, Cs), requetes:atome(A), requetes:variables(A, Va), memberchk(V, Va), !.
 composantes_([], _, []).
 composantes_([V|Vs], Cs, [K|Ks]) :- atteint(Cs, [V], [V], K), subtract(Vs, K, Vs1), composantes_(Vs1, Cs, Ks).
@@ -222,8 +233,12 @@ mots_non_couverts(L, Ph, Cs, Rs) :-
                               memberchk(C, ['NOUN', 'VERB', 'ADJ']), \+ definitions:mot_ferme(F), \+ metalangage_mot(F),
                               definitions:lemme(L, M, W), \+ couvert(Cs, W) ), Rs0), sort(Rs0, Rs).
 metalangage_mot(F) :- downcase_atom(F, W), ( metalangage(W) ; definitions:metalangage(W) ), !.
-couvert(Cs, W) :- member(C, Cs), arg(_, C, X), atom(X), ( X == W ; sub_atom(X, _, _, _, W) ), !.
-couvert(Cs, W) :- member(nom(_, Ks), Cs), member(K, Ks), upcase_atom(W, Wu), sub_atom(K, _, _, _, Wu), !.
+% un mot est couvert par un atome qui le porte comme mot entier : l'argument lui-même, ou l'un des mots d'un composé
+% (séparés par une espace, un trait d'union ou une apostrophe) ; pour un nom, l'un de ses mots, en majuscules. Jamais
+% une sous-chaîne : « woman » ne couvre pas « man » (docs/QUALIFICATION_NOYAU.md, D17)
+couvert(Cs, W) :- member(C, Cs), arg(_, C, X), atom(X), mots_du_terme(X, Ms), memberchk(W, Ms), !.
+couvert(Cs, W) :- member(nom(_, Ks), Cs), member(K, Ks), upcase_atom(W, Wu), mots_du_terme(K, Ms), memberchk(Wu, Ms), !.
+mots_du_terme(X, Ms) :- split_string(X, " -'’", " -'’", Ps), exclude(==(""), Ps, Ps1), maplist(atom_string, Ms, Ps1).
 
 debuts_du_segment(S, Ds) :- findall(X, member(mot(_, _, _, _, _, _, _, X, _), S), Ds).
 
@@ -261,14 +276,31 @@ prefixer(_, T, T).
 
 % la personne du récit ou de l'individu dont la notation fait partie (FONDEMENTS § 3.4) : sur la variable qui porte
 % déjà l'un de ses noms, sinon sur une variable de plus (la personne est dans l'image, son rôle n'est pas dit)
+% la personne héritée ajoutée comme une variable de plus n'est liée à rien : la requête dirait sa présence, pas sa
+% participation (D18) ; le graphe de la requête n'est plus connexe, elle est partielle et ne peut rien établir
+liens_apres_heritage(Cs0, Cs1, Rs) :-
+    (   Cs0 == Cs1 -> Rs = []
+    ;   composantes(Cs1, Ks), Ks = [_, _|_] -> Rs = [personne_heritee_non_liee]
+    ;   Rs = []
+    ).
+
 heritage(N, L, Cs0, Cs) :-
-    (   arbre:ancetre(N, A), definitions:type_libelle(A, TA), memberchk(TA, [individu, recit]), noms(A, L, Ks)
+    (   arbre:ancetre(N, A), personne_de(A, L, Ks)
     ->  (   select(nom(X, [K]), Cs0, nom(X, Ks2), Cs), memberchk(K, Ks) -> union([K], Ks, Ks2)
         ;   member(nom(_, Ks1), Cs0), intersection(Ks1, Ks, [_|_]) -> Cs = Cs0
         ;   append(Cs0, [nom(v(personne), Ks)], Cs)
         )
     ;   Cs = Cs0
     ).
+
+% la personne d'une notation ancêtre : un individu, un récit « (story of) X », ou un libellé « story of X »,
+% « histoire de X » sans parenthèses (« story of Elijah (Elias) » : le même récit, que la typologie range en classe)
+personne_de(A, L, Ks) :- definitions:type_libelle(A, TA), memberchk(TA, [individu, recit]), noms(A, L, Ks), !.
+personne_de(A, L, Ks) :-
+    libelles_lus:partie(A, L, 1, _, Net, _, Ph),
+    member(Debut, ['story of ', 'the story of ', 'histoire de ', 'histoire d\'', 'l\'histoire de ']), atom_concat(Debut, _, Net),
+    graphe(A, L, Net, Ph, Fs), findall(K, ( member(nom(_, _, Nom, _), Fs), raisonnement:normaliser_nom(Nom, K) ), Ks0),
+    sort(Ks0, Ks), Ks \== [], !.
 
 % --- Les notations à nom construites sur un gabarit -------------------------------------------------------------------
 

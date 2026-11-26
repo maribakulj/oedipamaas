@@ -1,5 +1,7 @@
 /*  Le prototype vertical (25/11) : 200 définitions variées, à faire marcher de bout en bout avant les 40 000.
-        swipl outils/definitions/tirage_vertical.pl BASE SORTIE.json GRAINE
+        swipl outils/definitions/tirage_vertical.pl BASE SORTIE.json GRAINE [EXCLURE.json…]
+    (EXCLURE : des fiches déjà tirées, dont les notations sont exclues : l'ensemble de validation est disjoint de
+    celui de développement)
     Strates (type de libellé et division d'Iconclass) :
       objets et animaux      40   classe, divisions 2 et 4 (hors 41D, 31A)
       vêtements, anatomie    30   classe, 41D (vêtements) et 31A (corps humain)
@@ -13,9 +15,12 @@
 :- initialization(main, main).
 :- use_module(library(json)).
 :- use_module(library(random)).
+:- dynamic exclu/1.
 
 main :-
-    current_prolog_flag(argv, [Base, Sortie, G0|_]), atom_number(G0, G), set_random(seed(G)),
+    current_prolog_flag(argv, [Base, Sortie, G0|Exclus]), atom_number(G0, G), set_random(seed(G)),
+    forall(( member(X, Exclus), setup_call_cleanup(open(X, read, Sx, [encoding(utf8)]), json_read_dict(Sx, Fx), close(Sx)),
+             member(F, Fx), atom_string(Nx, F.notation) ), assertz(exclu(Nx))),
     atom_concat(Base, '/iconclass.qlf', Ic), load_files(Ic, []),
     atom_concat(Base, '/definitions_index', Di), load_files(Di, []),
     Strates = [s(objets, 40), s(vetements_anatomie, 30), s(personnes, 30), s(actions, 40), s(narratives, 30),
@@ -27,7 +32,7 @@ main :-
 
 tirer(s(St, K), Acc, [Pk|Acc]) :-
     findall(N, ( definitions_index:definition(N, en, def(T, _, _, _, _)), definitions_index:definition(N, fr, _),
-                 strate(St, T, N), \+ sub_atom(N, _, _, _, '(+') ), Ns0), sort(Ns0, Ns),
+                 strate(St, T, N), \+ sub_atom(N, _, _, _, '(+'), \+ exclu(N) ), Ns0), sort(Ns0, Ns),
     random_permutation(Ns, P), length(Pk0, K), append(Pk0, _, P),
     findall(St-N, member(N, Pk0), Pk).
 
