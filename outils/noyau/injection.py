@@ -32,8 +32,8 @@ FAUTES = {
         "    \\+ ( M:alternative(_, As), memberchk(A, As) ).\npresent(M, E)",
         "    true.\npresent(M, E)"),
     "certification malgré un appui négatif": (
-        "hypotheses_retenues(K, M, S, A, Hs) :- lie(A, S, Ai), \\+ appui(K, M, Ai, neg, _, _), appui_retenu(",
-        "hypotheses_retenues(K, M, S, A, Hs) :- lie(A, S, Ai), appui_retenu("),
+        "    lie(A, S, Ai), \\+ appui(K, M, Ai, neg, _, _),\n    findall((L-Hs)-Ap,",
+        "    lie(A, S, Ai),\n    findall((L-Hs)-Ap,"),
     "source citée certifiée": (
         "arbre(pos(auteur), K, M, F, F, [], [], S0, [], Sel0)",
         "arbre(pos(tout), K, M, F, F, [], [], S0, [], Sel0)"),
@@ -101,11 +101,27 @@ FAUTES = {
     "type entier jamais nié": (
         "noeuds_demandes(_, _, T, [T]) :- integer(T), !.",
         "noeuds_demandes(_, _, T, []) :- integer(T), !."),
+    # lot 4 (L1) : les hypothèses de sens par occurrence, leurs lectures conjointes
+    "lectures d'une occurrence non confrontées": (
+        "    lectures_conjointes(K, M, Acc1),\n    choix_conjoint(",
+        "    true,\n    choix_conjoint("),
+    "hypothèse de sens rattachée au lemme": (
+        "appui(O, _, _, chemin(W, _)), sens_suppose(O, W, T)) :-",
+        "appui(_, _, _, chemin(W, _)), sens_suppose(lemme, W, T)) :-"),
+    "choix des appuis sans retour arrière": (
+        "    member((_-Hs)-Ap, Cs), Acc1 = [r(Ai, Ap, Hs)|Acc],",
+        "    Cs = [(_-Hs)-Ap|_], Acc1 = [r(Ai, Ap, Hs)|Acc],"),
+    "lecture conjointe sans la négation au sens": (
+        "    forall(member(l(_, _, _, B), Is), ( au_sens(B, S, Bs), \\+ appui_(K, M, Bs, neg, _, _) )), !.",
+        "    !."),
 }
 
 
 # les défauts du vérificateur : chacun doit faire accepter une preuve fausse que les bancs contiennent
 FAUTES_VERIFICATEUR = {
+    "lectures conjointes non contrôlées": (
+        "hypotheses, pas_d_appui_negatif, lectures_conjointes]).",
+        "hypotheses, pas_d_appui_negatif])."),
     "régime non contrôlé": (
         "    ( forall(member(A, As), A = genre(_)) -> Rg == classement ; Rg == figuration ).",
         "    true."),
@@ -191,7 +207,8 @@ FAUTES_COMPARATEUR = {
         "    ( Complet == incomplet -> St = incomplet ; St0 == etablie_sous_hypotheses -> St = etablie ; St = St0 )."),
 }
 
-BANCS_NOYAU = ("test_noyau.pl", "test_noyau_semantique.pl", "test_noyau_robustesse.pl", "test_noyau_generatif.pl")
+BANCS_NOYAU = ("test_noyau.pl", "test_noyau_semantique.pl", "test_noyau_robustesse.pl", "test_noyau_generatif.pl",
+               "test_sens_occurrence.pl")
 BANCS_INCLUSION = ("test_inclusion.pl", "test_inclusion_generatif.pl")
 
 

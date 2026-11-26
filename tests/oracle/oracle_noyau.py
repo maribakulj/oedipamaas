@@ -810,7 +810,8 @@ def hypotheses_appui(g, K, atome, sigma, ap: Appui) -> set:
       l'existence d'une entité citée (type(X, W) de sa classe), de l'événement d'un rôle (evenement(V, P))."""
     h = set()
     if not ap.certain:
-        h.add(("sens_suppose", ap.mot, type_demande(atome)))
+        # lot 4 (L1) : l'hypothèse nomme l'occurrence, l'assertion de l'appui
+        h.add(("sens_suppose", ap.assertion, ap.mot, type_demande(atome)))
     h |= hypothese_negation(g, K, reforme(atome, ap.mot), sigma)
     for e in ap.cites:
         h |= hypothese_negation(g, K, *atome_existence(g, e))
@@ -819,26 +820,63 @@ def hypotheses_appui(g, K, atome, sigma, ap: Appui) -> set:
     return h
 
 
-def certification_atome(g, K, atome, sigma) -> Optional[tuple]:
+def candidats_atome(g, K, atome, sigma) -> Optional[list]:
     """§ 4.3 : l'atome est vrai (1,0) avec un appui positif de l'auteur du texte dont **aucune prémisse n'est
     niée** (premisse_niee). Un appui à prémisse niée laisse l'atome vrai, non certifiable.
-    D30 : parmi les appuis admissibles, celui qui demande le moins d'hypothèses (à égalité : le premier dans l'ordre
-    standard de la liste des hypothèses), plus l'hypothèse d'une négation seulement possible de l'atome lui-même.
-    Rend None (non certifiable) ou le tuple trié des hypothèses (vide : certifié sans hypothèse)."""
+    Rend None (non certifiable) ou la liste des appuis candidats, chacun avec le tuple trié de ses hypothèses
+    (D30 : plus l'hypothèse d'une négation seulement possible de l'atome lui-même)."""
     if valeur_atome(g, K, atome, sigma) != VRAI:
         return None
-    candidats = [tuple(sorted(hypotheses_appui(g, K, atome, sigma, ap), key=repr))
+    propres = hypothese_negation(g, K, atome, sigma)
+    candidats = [(ap, tuple(sorted(hypotheses_appui(g, K, atome, sigma, ap) | propres, key=repr)))
                  for ap in appuis_positifs(g, K, atome, sigma)
                  if ap.enonciateur == AUTEUR and not premisse_niee(g, K, atome, sigma, ap)]
-    if not candidats:
+    return candidats or None
+
+
+ATOMES_A_LIEN = ("type", "propriete", "evenement", "relation", "genre")
+
+
+def lectures_conjointes(g, K, choix, sigma) -> bool:
+    """§ 2 et § 4.3 (lot 4, L1 ; B3 en est le cas d'un atome) : les appuis retenus d'une solution, un par atome.
+    Pour chaque occurrence (l'assertion d'un appui à lien lexical), un même sens conceptuel du mot doit atteindre
+    chacun des types que lui demandent les atomes qu'elle appuie, sans que l'assertion, prise en ce sens (l'atome
+    reformé avec ce sens), soit niée de façon certaine."""
+    par_occurrence = {}
+    for atome, ap in choix:
+        if atome[0] in ATOMES_A_LIEN:
+            par_occurrence.setdefault(ap.assertion, []).append((atome, ap))
+    for occ, items in par_occurrence.items():
+        mot = items[0][1].mot
+        if not any(all(K.atteint("sous", s, type_demande(a)) for a, _ in items)
+                   and not any(appuis_negatifs(g, K, reforme(a, s), sigma) for a, _ in items)
+                   for s in sens_conceptuels(K, mot)):
+            return False
+    return True
+
+
+def certification_atomes(g, K, atomes, sigma) -> Optional[tuple]:
+    """§ 4.3 (lot 4) : les atomes sont certifiables ensemble s'il existe une combinaison de leurs appuis candidats,
+    un par atome, dont les lectures sont conjointes ; rend None ou les hypothèses d'une telle combinaison (une sans
+    hypothèse s'il en est : le statut ne dépend que de l'existence d'une combinaison, et de celle d'une combinaison
+    sans hypothèse)."""
+    listes = []
+    for a in atomes:
+        c = candidats_atome(g, K, a, sigma)
+        if c is None:
+            return None
+        listes.append(c)
+    trouvees = [tuple(sorted({h for _, hs in combi for h in hs}, key=repr))
+                for combi in itertools.product(*listes)
+                if lectures_conjointes(g, K, [(a, ap) for a, (ap, _) in zip(atomes, combi)], sigma)]
+    if not trouvees:
         return None
-    meilleur = min(candidats, key=lambda h: (len(h), repr(h)))
-    return tuple(sorted(set(meilleur) | hypothese_negation(g, K, atome, sigma), key=repr))
+    return min(trouvees, key=lambda h: (len(h), repr(h)))
 
 
 def atome_certifiable(g, K, atome, sigma) -> bool:
-    """§ 4.3 : certifiable, avec ou sans hypothèses (certification_atome)."""
-    return certification_atome(g, K, atome, sigma) is not None
+    """§ 4.3 : certifiable seul, avec ou sans hypothèses."""
+    return certification_atomes(g, K, [atome], sigma) is not None
 
 
 # --- § 1 et § 4.1 : les trois régimes de distinction ------------------------------------------------------
@@ -1124,14 +1162,14 @@ def solutions_certifiables(g, K, f) -> list:
         domaines = [domaine(g, f, v) for v in vs]
         for valeurs in itertools.product(*domaines):
             sigma = dict(zip(vs, valeurs))
-            ok, hyps = True, []
+            atomes = [x for _, x in sel if est_atome(x)]
+            ha = certification_atomes(g, K, atomes, sigma)
+            ok, hyps = ha is not None, list(ha or ())
             for _, x in sel:
+                if not ok:
+                    break
                 if est_atome(x):
-                    h = certification_atome(g, K, x, sigma)
-                    if h is None:
-                        ok = False
-                        break
-                    hyps.extend(h)
+                    continue
                 else:
                     c = contrainte_certifiee(g, K, x, sigma)
                     if c is None:
@@ -1393,6 +1431,14 @@ def requete_aleatoire(rng: random.Random, g: Graphe):
         corps = [("nom", "x", [k1]), ("nom", "y", [k2]), (rng.choice(("distincts", "distincts", "meme")), "x", "y")]
         if rng.random() < 0.4:
             corps.insert(0, ("type", "x", rng.choice(TYPES_DEMANDES)))
+        return ("et", corps)
+    # lot 4 (L1) : une fois sur huit, si le graphe a une entité de tête polysémique, deux types demandés au même
+    # référent, pour éprouver les lectures conjointes d'une occurrence (« chat » : le félin, 3, ou l'objet, 2)
+    if rng.random() < 0.125 and any(t in ("chat", "matou") for _, t in g.entites):
+        types = ("felin", "objet", "animal", "chat", "matou", 3, 2)
+        corps = [("type", "x", rng.choice(types)), ("type", "x", rng.choice(types))]
+        if rng.random() < 0.3:
+            corps.append(("type", "y", rng.choice(types)))
         return ("et", corps)
     while True:
         f = _formule_aleatoire(rng, g, rng.choice((1, 2, 2)))

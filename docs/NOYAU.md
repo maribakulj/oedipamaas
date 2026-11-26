@@ -110,22 +110,25 @@ des cycles. **L'alias** est clos par le noyau (réflexif, symétrique, transitif
 identifiants de concepts (les entiers que K lui donne), s'il en a ; sinon ses sens tels que K les donne (le mot
 lui-même, D20). Un mot polysémique n'établit pas tous ses sens à la fois :
 - un lien positif part d'un sens conceptuel du mot ; il est **certain** si chacun des sens conceptuels atteint le type
-  demandé (une conclusion commune à toutes les lectures), sinon il ne fonde qu'une **hypothèse** de sens
-  (`sens_suppose(Mot, Type)`) ;
+  demandé (une conclusion commune à toutes les lectures), sinon il ne fonde qu'une **hypothèse** de sens, attachée à
+  l'**occurrence** du mot, l'assertion de l'appui (`sens_suppose(Occurrence, Mot, Type)` ; lot 4, L1) ;
 - une négation est **certaine** si chaque nœud du type demandé (le type lui-même s'il est un entier, sinon ses sens
   conceptuels) est inclus dans chaque sens conceptuel du mot nié ; sinon, si un couple l'est, elle n'est que
   **possible** : elle ne réfute rien et ne contredit rien déductivement, mais une conclusion positive qu'elle touche
   n'est plus établie que sous l'hypothèse qu'elle vise un autre sens (`negation_autre_sens(Atome)`) ;
 - la lexicalisation (d'un concept vers son lemme) est un pas de `sous`, jamais d'`inclus` : « pas de pomme » ne nie pas
   « fruit » ;
-- **limite connue (L1, journal § 10)** : une hypothèse de sens est rattachée au lemme (`sens_suppose(Mot, Type)`),
-  non à l'occurrence, et les hypothèses d'une solution ne sont pas confrontées entre elles ; une même occurrence peut
-  ainsi recevoir deux lectures exclusives dans une seule conclusion conditionnelle (« une pomme » établie comme
-  végétal et comme objet, sous hypothèses). Une conclusion sous hypothèses de sens n'est donc pas une annotation
-  exploitable automatiquement ;
+- **les lectures d'une solution sont conjointes** (lot 4, qui lève la limite L1 du journal, § 10) : une occurrence n'a
+  qu'un sens à la fois. Pour chaque occurrence citée par les appuis à lien lexical d'une solution, un même sens
+  conceptuel de son mot doit atteindre chacun des types que lui demandent les atomes qu'elle appuie, sans que
+  l'assertion, prise en ce sens, soit niée de façon certaine (« une pomme » n'est pas établie à la fois comme végétal,
+  le fruit, et comme objet, la pomme d'arrosoir : la requête est vraie selon le graphe, non certifiable ; deux mentions
+  coréférentes de « pomme » peuvent, elles, recevoir chacune son sens). Les négations seulement possibles
+  (`negation_autre_sens`) ne sont pas confrontées entre elles ni aux sens supposés : une limite qui reste ;
 - un appui ne certifie rien, même sous hypothèse, s'il n'a **aucune lecture** : aucun sens conceptuel du mot n'atteint
   le type sans que l'assertion, prise en ce sens, soit niée de façon certaine (« une pomme ; pas de fruit ; pas
-  d'objet » : chaque sens de « pomme » est nié, et « pomme » ne s'y établit pas ; dernier audit, B3).
+  d'objet » : chaque sens de « pomme » est nié, et « pomme » ne s'y établit pas ; dernier audit, B3) ; c'est le cas
+  d'un seul atome des lectures conjointes.
 La désambiguïsation selon le contexte relève de C7 ; K ne choisit plus de sens en silence (l'anglais prenait le premier
 sens de WordNet : il les prend tous).
 
@@ -214,8 +217,18 @@ homme nommé Pierre ; il n'y a pas d'homme ») ; pour un rôle, son événement 
 rôle de « la femme tient l'enfant » sa prémisse). Chaque contrainte sélectionnée est vraie et certifiable (ou vraie
 sous hypothèse) ; une distinction établie ou un nombre ne sont certifiables que si l'existence de leurs entités n'est
 pas niée de façon certaine ; une négation seulement possible de cette existence en fait une conclusion sous hypothèse
-(`negation_autre_sens(type(R, W))` ; dernier audit, B2). Elle est **vraie** si elle n'emploie aucune
-hypothèse, **vraie sous hypothèses** sinon (avec la liste de ses hypothèses).
+(`negation_autre_sens(type(R, W))` ; dernier audit, B2). Les appuis retenus, un par atome, ont des lectures
+conjointes (§ 2). Elle est **vraie** si elle n'emploie aucune hypothèse, **vraie sous hypothèses** sinon (avec la
+liste de ses hypothèses).
+
+**Le choix des appuis** (lot 4). Les candidats d'un atome sont ses appuis certifiables, rangés par nombre
+d'hypothèses, puis dans l'ordre standard de (Hypothèses, Appui). Les appuis retenus d'une solution sont la première
+combinaison, dans l'ordre lexicographique des atomes de la sélection (dans l'ordre de leurs chemins), dont les lectures
+sont conjointes ; s'il n'y en a aucune, la solution n'est pas certifiable. Le moteur optimisé la trouve par un parcours
+en profondeur qui abandonne une combinaison partielle dès qu'elle n'a plus de lecture conjointe (une contrainte de plus
+ne la rend jamais possible) ; le moteur de référence énumère toutes les combinaisons dans le même ordre. S'il existe
+une combinaison sans hypothèse, c'est la première (chaque atome y prend un candidat sans hypothèse, et des lectures
+sans sens supposé sont conjointes dès que chacune est possible).
 
 Une substitution de valeur vraie qui n'a aucune solution certifiable sous elle (sa vérité passe par un atome
 contradictoire, ou par la seule parole d'une source citée) est **non certifiable**. Un contradictoire est **interne**
@@ -273,7 +286,7 @@ preuve(Id, Versions, Regime, Sigma, Justifications, Hypotheses)
      Appui        appui(Assertion, Entite, Passage, Lien) pour un atome ;
                   contrainte(etablie(distinct(E1, E2))) | contrainte(documentaire(C1, C2, Source))
                   | contrainte(hypothese) | contrainte(egalite) | contrainte(difference) | contrainte(nombre(E))
-  Hypotheses      [distinction_supposee(X, Y, Noms1, Noms2) | sens_suppose(Mot, Type)
+  Hypotheses      [distinction_supposee(X, Y, Noms1, Noms2) | sens_suppose(Occurrence, Mot, Type)
                    | negation_autre_sens(Atome), …]                 vide pour une preuve déductive
 ```
 
@@ -301,6 +314,10 @@ points suivants ; tout terme qu'il ne reconnaît pas est une raison de rejet.
    seulement possible de l'atome, de l'assertion citée, de l'existence d'une entité citée, de l'événement d'un rôle).
 8. Aucun atome justifié n'a d'appui négatif sous σ, d'aucun énonciateur (§ 1.1), ni l'assertion qu'il cite, reformée
    avec son propre mot.
+9. Les lectures des appuis cités sont conjointes (§ 2, lot 4) : pour chaque occurrence citée par un appui à lien
+   lexical, un sens conceptuel de son mot atteint chacun des types que lui demandent les atomes justifiés, l'assertion
+   citée, prise en ce sens, n'étant niée de façon certaine pour aucun d'eux. (Le vérificateur n'exige pas que les
+   appuis cités soient ceux que le moteur aurait choisis : une autre combinaison valide est une preuve valide.)
 
 Il certifie qu'une conclusion découle de ses prémisses (le graphe, K, la requête, et les hypothèses listées). Il ne
 certifie ni que la requête dit le libellé, ni que le graphe dit le texte, ni que le texte dit vrai de l'image.

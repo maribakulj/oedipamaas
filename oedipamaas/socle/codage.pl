@@ -17,10 +17,11 @@
             etablissable    tout cela, sauf que la famille n'est pas encore justifiée : un candidat, jamais un code
             candidat        la suffisante est établie, mais la compilation n'est que partielle
             conditionnel    la suffisante n'est établie que sous hypothèses (distinction, sens, négation possible).
-                            NE PAS EXPLOITER AUTOMATIQUEMENT (décision du 27/11) : les hypothèses de sens sont
-                            rattachées aux lemmes, non aux occurrences, et ne sont pas confrontées entre elles ; deux
-                            lectures exclusives d'une même occurrence peuvent justifier ensemble un code conditionnel
-                            (docs/QUALIFICATION_NOYAU.md, § 10, L1)
+                            NE PAS EXPLOITER AUTOMATIQUEMENT (décision du 27/11). Depuis le lot 4, une hypothèse de
+                            sens nomme son occurrence et les lectures d'une solution sont conjointes (une occurrence,
+                            un sens : NOYAU § 2) ; mais rien ne dit encore quel sens le texte veut (aucune
+                            désambiguïsation : un sens supposé n'est que possible), et les négations seulement
+                            possibles ne sont pas confrontées aux sens supposés
             conditionnel_par_derivation  (option derivations(oui) seulement) la suffisante, inconnue sur le graphe, est
                             établie sur le graphe augmenté d'assertions dérivées par des règles hypothétiques
                             (Detail : derivation(Hypotheses, Preuves), plus bas). NE PAS EXPLOITER AUTOMATIQUEMENT

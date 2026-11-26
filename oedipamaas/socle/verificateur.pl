@@ -26,7 +26,7 @@ verifier(K, G, Q, P, Verdict) :-
     ).
 
 controle(N, _, _, _, _) :- member(N, [requete, versions, regime, chemins, selection, sigma, appuis, contraintes,
-                                       hypotheses, pas_d_appui_negatif]).
+                                       hypotheses, pas_d_appui_negatif, lectures_conjointes]).
 
 % --- La forme (§ 5) --------------------------------------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ forme_preuve(P) :-
                             ( atome(A) ; contrainte(A) ), forme_appui(A, Ap) )),
     forall(member(H, Hs), forme_hypothese(H)).
 forme_hypothese(distinction_supposee(v(X), v(Y), N1, N2)) :- atom(X), atom(Y), is_list(N1), is_list(N2).
-forme_hypothese(sens_suppose(W, T)) :- atom(W), type_valide(T).
+forme_hypothese(sens_suppose(O, W, T)) :- atom(O), atom(W), type_valide(T).
 forme_hypothese(negation_autre_sens(A)) :- compound(A).
 forme_appui(A, appui(_, E, P, _)) :- atome(A), atom(E), atom(P).
 forme_appui(A, contrainte(_)) :- contrainte(A).
@@ -105,6 +105,20 @@ etabli(pas_d_appui_negatif, K, G, _, preuve(_, _, _, S, Js, _)) :-
     forall(( member(j(_, A, Ap), Js), atome(A) ), une_lecture(K, G, S, A, Ap)),
     \+ ( member(j(_, role(_, _, _), appui(role(V, _, _), _, _, _)), Js), member(evenement(V, W, _), G),
          appui_negatif(K, G, [v('$e')-V], evenement(v('$e'), W)) ).
+% les lectures conjointes (lot 4, L1) : chaque occurrence citée par un appui à lien lexical a un sens conceptuel de son
+% mot qui atteint chacun des types que lui demandent les atomes justifiés, l'assertion citée, prise en ce sens, n'étant
+% niée de façon certaine pour aucun d'eux (« une pomme » n'est pas à la fois un végétal et un objet)
+etabli(lectures_conjointes, K, G, _, preuve(_, _, _, S, Js, _)) :-
+    findall(O-c(Cat, W, T, B), ( member(j(_, A, Ap), Js), atome(A), Ap = appui(O, _, _, chemin(W, _)),
+                                 type_de(A, Cat, T), assertion_citee(A, Ap, B) ), Cs),
+    findall(O, member(O-_, Cs), Os0), sort(Os0, Os),
+    forall(member(O, Os), occurrence_lisible(K, G, S, O, Cs)).
+occurrence_lisible(K, G, S, O, Cs) :-
+    findall(c(Cat, W, T, B), member(O-c(Cat, W, T, B), Cs), Is), Is = [c(Cat, W, _, _)|_],
+    forall(member(c(Cat2, W2, _, _), Is), ( Cat2 == Cat, W2 == W )),          % une occurrence, un mot
+    sens_du_mot(K, Cat, W, Ss), member(Sn, Ss),
+    forall(member(c(_, _, T, _), Is), sous_atteint(K, [Sn], [Sn], T)),
+    forall(member(c(_, _, _, B), Is), ( au_sens(B, Sn, Bs), \+ appui_negatif(K, G, S, Bs) )), !.
 entite_citee(_, appui(_, E, _, _), E).
 entite_citee(G, appui(A, _, _, _), E2) :- memberchk(relation(A, _, _, E2, _), G).
 % le texte nie que cette entité existe : le type de son mot est nié pour sa classe
@@ -112,7 +126,7 @@ inexistante(K, G, E) :-
     member(entite(E, W, _), G), W \== nom_propre, member(entite(R, _, _), G), meme_classe(G, E, R), representant(G, R),
     appui_negatif(K, G, [v('$p')-R], type(v('$p'), W)), !.
 
-hypothese_requise(K, _, _, A, appui(_, _, _, chemin(W, _)), sens_suppose(W, T)) :-
+hypothese_requise(K, _, _, A, appui(O, _, _, chemin(W, _)), sens_suppose(O, W, T)) :-
     type_de(A, Cat, T), \+ positif_certain(K, Cat, W, T).
 hypothese_requise(K, G, S, A, _, negation_autre_sens(Ai)) :- appui_negatif_possible(K, G, S, A), instancie(A, S, Ai).
 hypothese_requise(K, G, S, A, Ap, negation_autre_sens(Bi)) :-

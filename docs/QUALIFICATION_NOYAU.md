@@ -401,6 +401,23 @@ ciblé, évalué et reproductible. Le centre du développement passe à C3, C6 e
 | L6 | Les mesures sur les connaissances réelles n'ont pas été refaites après D30 (l'anglais prend maintenant tous les sens de WordNet) ; performances et effet de la polysémie sur les statuts non mesurés | `docs/mesures/V2.md` | les mesures provisoires du cycle 5 sont antérieures à D30 | remesurer (dév., validation), temps et distribution des statuts, part des `conditionnel` |
 
 Autres limites du noyau, inchangées (§ 7) : aucune preuve mécanique ; incomplétudes dans le sens sûr (D36, D41) ;
-négations certaines rares avec WordNet ; l'oracle n'encode pas les règles B1 et B3 du dernier audit ; `valider`
-quadratique, pas de limite de mémoire. L'architecture du noyau n'est pas rouverte.
+négations certaines rares avec WordNet ; l'oracle n'encode pas la règle B1 du dernier audit (B3 l'est depuis le
+lot 4, comme le cas d'un atome des lectures conjointes) ; `valider` quadratique, pas de limite de mémoire.
+L'architecture du noyau n'est pas rouverte.
+
+**L1, lot 4 (branche `claude/c7-sens-par-occurrence`).** Une hypothèse de sens nomme son occurrence
+(`sens_suppose(Occurrence, Mot, Type)`, l'occurrence étant l'assertion de l'appui), et les lectures d'une solution
+sont conjointes : pour chaque occurrence, un même sens conceptuel atteint chacun des types demandés, sans que
+l'assertion, prise en ce sens, soit niée de façon certaine (NOYAU § 2, § 4.3, § 6 point 9). Le choix des appuis est
+fait ensemble (la première combinaison, dans l'ordre lexicographique, dont les lectures sont conjointes) dans les deux
+moteurs ; le vérificateur a un contrôle de plus (`lectures_conjointes`) ; l'oracle Python suit la même règle, écrite
+d'après le texte, et son générateur tire une fois sur huit deux types au même référent quand une tête est polysémique.
+Contre-exemples : `pomme_vegetal_et_objet` devient `non_certifiee` (attendu changé, raison gardée dans le cas) ;
+deux mentions coréférentes de « pomme » reçoivent chacune son sens ; un choix qui doit revenir sur le premier atome
+(pomme, poire) ; une « lyre » dont le seul sens commun aux deux types est nié (les deux lectures séparées restent
+possibles). Mesures : banc différentiel (2 × 4 000 cas, graine 20261128) sans désaccord ; le même oracle contre les
+moteurs d'avant le lot 4 : 17 désaccords, tous `non_certifiee` contre `etablie_sous_hypotheses` (le banc voit donc la
+règle) ; injection de défauts : quatre défauts du moteur et un du vérificateur ajoutés. Reste : les négations
+seulement possibles ne sont pas confrontées aux sens supposés, et aucun sens n'est choisi d'après le texte (C7) ; les
+codes `conditionnel` restent non exploitables automatiquement.
 

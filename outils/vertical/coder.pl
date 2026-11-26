@@ -88,7 +88,7 @@ visee(N, R, A, Dt, _{statut: St, complet: Co, necessaire: Ne, descendant_etabli:
                      conditionnels_par_sens: Nsens, derivations_par_regle: Dr, visee_derivations: Vd}) :-
     findall(S, member(code(_, S, _, _), R), Ss), msort(Ss, Ss1), clumped(Ss1, Cl), dict_pairs(Cp, c, Cl),
     aggregate_all(count, ( member(code(_, conditionnel, Ps, _), R), member(preuve(_, _, _, _, _, Hs0), Ps),
-                           memberchk(sens_suppose(_, _), Hs0) ), Nsens),
+                           memberchk(sens_suppose(_, _, _), Hs0) ), Nsens),
     % lot 3 : les règles des hypothèses de dérivation, sur tous les codes conditionnels par dérivation ; celles de la
     % notation visée
     findall(Rg, ( member(code(_, conditionnel_par_derivation, derivation(Hd, _), _), R), hyp_derivations(Hd, Hl),

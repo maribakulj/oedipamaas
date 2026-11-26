@@ -270,22 +270,23 @@ valeurs([F|Fs], K, G, S, [V|Vs]) :- valeur(K, G, F, S, V), valeurs(Fs, K, G, S, 
 % les prémisses d'un appui positif de l'auteur : l'assertion reformée avec son propre mot, l'existence de chaque entité
 % qu'elle cite (le type de son mot n'est pas nié pour sa classe), et, pour un rôle, son événement ; une seule prémisse
 % niée et l'appui ne certifie rien (§ 4.3)
-premisse_non_niee(K, G, S, A, B, Es, Vs) :-
-    mot_de_l_appui(K, G, S, A, B, Es, Vs), \+ appui(K, G, S, B, neg, _),
+premisse_non_niee(K, G, S, A, O, B, Es, Vs) :-
+    mot_de_l_appui(K, G, S, A, O, B, Es, Vs), \+ appui(K, G, S, B, neg, _),
     forall(member(E, Es), \+ existence_niee(K, G, E)),
     forall(( member(V, Vs), member(evenement(V, W, _), G) ), \+ appui(K, G, [v('$e')-V], evenement(v('$e'), W), neg, _)).
 % les hypothèses d'un appui (D30) : le sens supposé si le lien n'est pas certain ; une négation seulement possible de
 % l'atome, de l'assertion avec son mot, de l'existence d'une entité citée, de l'événement d'un rôle
-hypotheses_de(K, G, S, A, B, Es, Vs, Hs) :-
-    findall(H, hypothese_de(K, G, S, A, B, Es, Vs, H), Hs0), sort(Hs0, Hs).
-hypothese_de(K, _, _, A, B, _, _, sens_suppose(W, T)) :-
+hypotheses_de(K, G, S, A, O, B, Es, Vs, Hs) :-
+    findall(H, hypothese_de(K, G, S, A, O, B, Es, Vs, H), Hs0), sort(Hs0, Hs).
+% le sens supposé est celui d'une occurrence : l'assertion de l'appui (lot 4, L1)
+hypothese_de(K, _, _, A, O, B, _, _, sens_suppose(O, W, T)) :-
     mot_du_type(A, C, T), mot_du_type(B, C, W), \+ positif_certain(K, C, W, T).
-hypothese_de(K, G, S, A, _, _, _, negation_autre_sens(Ai)) :- appui(K, G, S, A, negp, _), instancie(A, S, Ai).
-hypothese_de(K, G, S, _, B, _, _, negation_autre_sens(Bi)) :- appui(K, G, S, B, negp, _), instancie(B, S, Bi).
-hypothese_de(K, G, _, _, _, Es, _, negation_autre_sens(type(R, W))) :-
+hypothese_de(K, G, S, A, _, _, _, _, negation_autre_sens(Ai)) :- appui(K, G, S, A, negp, _), instancie(A, S, Ai).
+hypothese_de(K, G, S, _, _, B, _, _, negation_autre_sens(Bi)) :- appui(K, G, S, B, negp, _), instancie(B, S, Bi).
+hypothese_de(K, G, _, _, _, _, Es, _, negation_autre_sens(type(R, W))) :-
     member(E, Es), member(entite(E, W, _), G), W \== nom_propre, representant_de(G, R), dans_la_classe(G, E, R),
     appui(K, G, [v('$p')-R], type(v('$p'), W), negp, _).
-hypothese_de(K, G, _, _, _, _, Vs, negation_autre_sens(evenement(V, W))) :-
+hypothese_de(K, G, _, _, _, _, _, Vs, negation_autre_sens(evenement(V, W))) :-
     member(V, Vs), member(evenement(V, W, _), G), appui(K, G, [v('$e')-V], evenement(v('$e'), W), negp, _).
 mot_du_type(type(_, T), n, T). mot_du_type(genre(T), n, T). mot_du_type(propriete(_, T), a, T).
 mot_du_type(evenement(_, T), v, T). mot_du_type(relation(_, T, _), r, T).
@@ -294,14 +295,34 @@ instancie(T, S, Ti) :- compound(T), !, T =.. [F|As], instancies(As, S, Bs), Ti =
 instancie(T, _, T).
 instancies([], _, []).
 instancies([A|As], S, [B|Bs]) :- instancie(A, S, B), instancies(As, S, Bs).
-hypotheses_des_atomes([], _, _, _, []).
-hypotheses_des_atomes([A|As], K, G, S, [H|Hs]) :-
-    \+ appui(K, G, S, A, neg, _), hypotheses_atome(K, G, S, A, H), hypotheses_des_atomes(As, K, G, S, Hs).
-% les hypothèses retenues d'un atome : celles de l'appui qui en demande le moins (puis le premier dans l'ordre standard)
-hypotheses_atome(K, G, S, A, Hs) :-
-    findall((L-Hs0), ( premisse_non_niee(K, G, S, A, B, Es, Vs), une_lecture(K, G, S, A, B),
-                       hypotheses_de(K, G, S, A, B, Es, Vs, Hs0), length(Hs0, L) ),
-            Ps), Ps \== [], msort(Ps, [_-Hs|_]).
+% les hypothèses retenues des atomes (lot 4, L1) : pour chaque atome, ses appuis candidats (prémisses non niées, une
+% lecture au moins), rangés par nombre d'hypothèses puis dans l'ordre standard ; toutes les combinaisons, dans l'ordre
+% lexicographique des atomes ; la première dont les lectures sont conjointement possibles (lectures_possibles/4)
+hypotheses_des_atomes(As, K, G, S, Hss) :-
+    candidats_des_atomes(As, K, G, S, Css),
+    findall(Co, combinaison(Css, Co), Cos),
+    member(Co, Cos), lectures_possibles(K, G, S, Co), !,
+    findall(Hs, member((_-Hs)-_, Co), Hss).
+candidats_des_atomes([], _, _, _, []).
+candidats_des_atomes([A|As], K, G, S, [Cs|Css]) :-
+    \+ appui(K, G, S, A, neg, _), candidats_atome(K, G, S, A, Cs), candidats_des_atomes(As, K, G, S, Css).
+candidats_atome(K, G, S, A, Cs) :-
+    findall((L-Hs0)-Lu, ( premisse_non_niee(K, G, S, A, O, B, Es, Vs), une_lecture(K, G, S, A, B),
+                          hypotheses_de(K, G, S, A, O, B, Es, Vs, Hs0), length(Hs0, L), lu(A, O, B, Lu) ),
+            Cs0), Cs0 \== [], msort(Cs0, Cs).
+% ce qu'un appui demande de son occurrence : lu(O, Categorie, Mot, Type, Assertion) pour un lien lexical
+lu(A, O, B, lu(O, C, W, T, B)) :- mot_du_type(A, C, T), mot_du_type(B, C, W), !.
+lu(_, O, _, sans_lecture(O)).
+combinaison([], []).
+combinaison([Cs|Css], [C|Co]) :- member(C, Cs), combinaison(Css, Co).
+% chaque occurrence a un sens conceptuel de son mot qui atteint chacun des types demandés, l'assertion prise en ce sens
+% n'étant niée de façon certaine pour aucun des atomes qu'elle appuie
+lectures_possibles(K, G, S, Co) :-
+    findall(O, member(_-lu(O, _, _, _, _), Co), Os0), sort(Os0, Os),
+    forall(member(O, Os),
+           ( findall(C-W, member(_-lu(O, C, W, _, _), Co), [C-W|_]), conceptuels(K, C, W, Ss), member(Sn, Ss),
+             forall(member(_-lu(O, _, _, T, _), Co), atteint(K, sous, Sn, T, [Sn])),
+             forall(member(_-lu(O, _, _, _, B), Co), ( en_ce_sens(B, Sn, Bs), \+ appui(K, G, S, Bs, neg, _) )), ! )).
 % une lecture au moins : un sens conceptuel du mot de l'appui atteint le type, et l'assertion prise en ce sens n'est pas
 % niée de façon certaine (audit final, B3)
 une_lecture(K, G, S, A, B) :-
@@ -336,25 +357,25 @@ existence_possible(K, G, Es, Hs) :-
 existence_niee(K, G, E) :-
     member(entite(E, W, _), G), W \== nom_propre, representant_de(G, R), dans_la_classe(G, E, R),
     appui(K, G, [v('$p')-R], type(v('$p'), W), neg, _), !.
-mot_de_l_appui(K, G, S, type(X, T), type(X, W), [E], []) :-
+mot_de_l_appui(K, G, S, type(X, T), E, type(X, W), [E], []) :-
     val(S, X, R), member(entite(E, W, _), G), W \== nom_propre, dans_la_classe(G, E, R),
     qualifie(G, E, pos, represente, auteur), positif(K, n, W, T).
-mot_de_l_appui(K, G, S, nom(X, Ks), nom(X, [C]), [E], []) :-
+mot_de_l_appui(K, G, S, nom(X, Ks), A, nom(X, [C]), [E], []) :-
     val(S, X, R), member(nom(A, E, Nom, _), G), dans_la_classe(G, E, R), qualifie(G, A, pos, represente, auteur),
     present_auteur(G, E), nomme(K, Nom, Ks), K:cle_de_nom(Nom, C).
-mot_de_l_appui(K, G, S, propriete(X, P), propriete(X, W), [E], []) :-
+mot_de_l_appui(K, G, S, propriete(X, P), A, propriete(X, W), [E], []) :-
     val(S, X, R), member(propriete(A, E, W, _), G), dans_la_classe(G, E, R), qualifie(G, A, pos, represente, auteur),
     present_auteur(G, E), positif(K, a, W, P).
-mot_de_l_appui(K, G, S, evenement(X, P), evenement(X, W), [], []) :-
+mot_de_l_appui(K, G, S, evenement(X, P), V, evenement(X, W), [], []) :-
     val(S, X, V), member(evenement(V, W, _), G), qualifie(G, V, pos, represente, auteur), positif(K, v, W, P).
-mot_de_l_appui(_, G, S, role(X, Ro, Y), role(X, Ro, Y), [E], [V]) :-
+mot_de_l_appui(_, G, S, role(X, Ro, Y), role(V, Ro, E), role(X, Ro, Y), [E], [V]) :-
     val(S, X, V), val(S, Y, R), member(role(V, Ro, E), G), dans_la_classe(G, E, R), member(evenement(V, _, _), G),
     qualifie(G, V, pos, represente, auteur), present_auteur(G, E).
-mot_de_l_appui(K, G, S, relation(X, Re, Y), relation(X, W, Y), [E1, E2], []) :-
+mot_de_l_appui(K, G, S, relation(X, Re, Y), A, relation(X, W, Y), [E1, E2], []) :-
     val(S, X, R1), val(S, Y, R2), member(relation(A, E1, W, E2, _), G), dans_la_classe(G, E1, R1),
     dans_la_classe(G, E2, R2), qualifie(G, A, pos, represente, auteur), present_auteur(G, E1), present_auteur(G, E2),
     positif(K, r, W, Re).
-mot_de_l_appui(K, G, _, genre(T), genre(W), [], []) :-
+mot_de_l_appui(K, G, _, genre(T), E, genre(W), [], []) :-
     member(entite(E, W, _), G), W \== nom_propre, qualifie(G, E, pos, oeuvre, auteur), positif(K, n, W, T).
 
 certifiable(K, G, Sel, S, Cl) :-
