@@ -292,6 +292,9 @@ python -m pytest -q
 - Non bloquants : U-N2 et U-N3 corrigés (D59) ; U-N4 (un porteur coréférent à une entité niée, conforme au § 4.3 qui
   ne contrôle que l'entité citée) et U-N5 (hypothèses en trop dans le sens sûr ; avec WordNet, une négation certaine
   est rare : « un lion ; pas de lion » sort `conditionnel`, pas `contradictoire`) sont des limites, inscrites au § 7.
+- L'oracle reçoit la lecture B2 par défaut (il l'avait déjà, en variante : c'est maintenant la lettre du § 4.3) ;
+  0 désaccord sur les bancs standard. Il n'encode pas B1 ni B3 : ces deux règles ne sont vérifiées que par les deux
+  moteurs Prolog, le vérificateur et les cas écrits (limite inscrite au § 7).
 - Ce qui a tenu selon U : mutations des preuves D30 toutes rejetées ; aucune `etablie` démentie par une lecture hors
   de la famille U-B2 sur 28 000 tirages ; aucun `oui` faux du comparateur sur 4 000 paires et 14 060 modèles ; index
   du codage complet.
@@ -340,6 +343,8 @@ d'eux (contre-exemples écrits à la main, graphes-témoins, mutations).
   réduit à des conclusions conditionnelles (`conditionnel`, jamais `etabli`). Une désambiguïsation (C7) la rendra
   plus fine. Les hypothèses d'une conclusion conditionnelle ne sont confrontées entre elles que par la condition
   d'une lecture au moins par appui.
+- L'oracle Python n'encode pas les règles du dernier audit B1 (documentaire et existence des porteurs) et B3 (appui
+  sans lecture).
 - La prémisse d'existence porte sur l'entité citée, pas sur les autres membres de sa classe (U-N4).
 - Pas de limite de mémoire ; `valider` quadratique ; sous un budget épuisé, ce qui est trouvé dépend de l'ordre
   d'exploration (le statut `incomplet` le dit).

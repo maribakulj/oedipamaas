@@ -702,7 +702,7 @@ LECTURES = {
     # D30 : une négation seulement possible de l'existence d'une entité d'une distinction établie ou d'un nombre :
     # sans effet ('ignoree', § 6 point 7 n'en parle que pour les atomes) ; variante : l'hypothèse negation_autre_sens
     # ('hypothese', § 2 : « une conclusion positive qu'elle touche »)
-    "existence_contrainte": "ignoree",
+    "existence_contrainte": "hypothese",   # § 4.3 depuis le dernier audit (B2, D56)
 }
 
 
