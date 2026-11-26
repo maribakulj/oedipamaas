@@ -27,7 +27,7 @@ from dataclasses import replace
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import oracle_noyau as O  # noqa: E402
 
-DEPOT = "/home/user/oedipamaas"
+DEPOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))   # la racine du dépôt
 # --depot permet de charger les mêmes deux fichiers d'une autre copie du dépôt (par exemple une extraction
 # de HEAD), par la même interface.
 SATISFACTION = f"{DEPOT}/oedipamaas/socle/satisfaction.pl"
@@ -40,8 +40,7 @@ def choisir_depot(depot):
     SATISFACTION = f"{depot}/oedipamaas/socle/satisfaction.pl"
     REFERENCE = f"{depot}/oedipamaas/socle/satisfaction_reference.pl"
     REP_PLUNIT = f"{depot}/tests/plunit"
-SORTIE = ("/tmp/claude-0/-home-user-oedipamaas/d0859811-5c3e-5c8f-a763-617b9258ee72/scratchpad/oracle/"
-          "desaccords.json")
+SORTIE = os.path.join(tempfile.gettempdir(), "oedipamaas_oracle_desaccords.json")   # hors du dépôt
 
 PILOTE = r"""
 :- use_module(library(time)).
