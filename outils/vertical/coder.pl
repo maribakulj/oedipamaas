@@ -11,6 +11,8 @@
     mesure, le nombre de codes de chaque statut et le nombre de codes conditionnels dont une preuve suppose un sens.
     Variables d'environnement (mesure) :
       OEDIPAMAAS_NORMALISATION=non   le graphe du lecteur tel quel (codage:coder/5, normaliser(non))
+      OEDIPAMAAS_DERIVATIONS=oui     la passe des assertions dérivées (lot 3 : codage:coder/5, derivations(oui)) ;
+                                     ses codes sont conditionnel_par_derivation, jamais déductifs
       OEDIPAMAAS_DELAI=S             S secondes au plus par texte et par mode ; au-delà, le statut « delai »
       OEDIPAMAAS_SENS_EN=premier     (connaissances_commun.pl) l'anglais ne prend que le premier sens de WordNet,
                                      comme avant D30 : pour mesurer l'effet de D30, jamais par défaut  */
@@ -59,7 +61,8 @@ lire_et_coder(L, Xs, Controle, Rs) :-
             Rs).
 
 coder_texte(T, L, Phrases, Mode, Res) :-
-    ( getenv('OEDIPAMAAS_NORMALISATION', non) -> Opts = [normaliser(non)] ; Opts = [] ),
+    ( getenv('OEDIPAMAAS_NORMALISATION', non) -> Opts0 = [normaliser(non)] ; Opts0 = [] ),
+    ( getenv('OEDIPAMAAS_DERIVATIONS', oui) -> Opts = [derivations(oui)|Opts0] ; Opts = Opts0 ),
     Coder = ( interpretation:interpreter(T, L, description, 0, Phrases, Fs), codage:coder(L, Fs, Mode, Opts, Res0) ),
     (   getenv('OEDIPAMAAS_DELAI', D0), atom_number(D0, D)
     ->  Appel = catch(call_with_time_limit(D, Coder), time_limit_exceeded, Res0 = delai)
@@ -75,14 +78,25 @@ fiche(Fi, Res, J) :-
     findall(G-V, ( member(r(K0, G, R, A, Dt), Res), K0 =:= K, visee(N, R, A, Dt, V) ), Vs),
     dict_pairs(J0, _, Vs), J = J0.put(_{k: K, notation: Fi.notation, langue: Fi.langue}).
 
+hyp_derivations(toutes(Hs), Hs) :- !.
+hyp_derivations(Hs, Hs).
+
 visee(_, erreur, _, _, _{statut: erreur}) :- !.
 visee(_, delai, _, Dt, _{statut: delai, temps: Dt}) :- !.
 visee(N, R, A, Dt, _{statut: St, complet: Co, necessaire: Ne, descendant_etabli: De, etablis: Es, etablissables: Eb,
                      hors_branche: Hs, hors_branche_etablissables: Hb, accord: A, temps: Dt, comptes: Cp,
-                     conditionnels_par_sens: Nsens}) :-
+                     conditionnels_par_sens: Nsens, derivations_par_regle: Dr, visee_derivations: Vd}) :-
     findall(S, member(code(_, S, _, _), R), Ss), msort(Ss, Ss1), clumped(Ss1, Cl), dict_pairs(Cp, c, Cl),
     aggregate_all(count, ( member(code(_, conditionnel, Ps, _), R), member(preuve(_, _, _, _, _, Hs0), Ps),
                            memberchk(sens_suppose(_, _), Hs0) ), Nsens),
+    % lot 3 : les règles des hypothèses de dérivation, sur tous les codes conditionnels par dérivation ; celles de la
+    % notation visée
+    findall(Rg, ( member(code(_, conditionnel_par_derivation, derivation(Hd, _), _), R), hyp_derivations(Hd, Hl),
+                  member(derivation(_, Rg, _, _), Hl) ), Rgs), msort(Rgs, Rgs1), clumped(Rgs1, ClR), dict_pairs(Dr, d, ClR),
+    (   memberchk(code(N, conditionnel_par_derivation, derivation(Hv, _), _), R)
+    ->  hyp_derivations(Hv, Hvl), findall(Rg, member(derivation(_, Rg, _, _), Hvl), Vd0), msort(Vd0, Vd)
+    ;   Vd = []
+    ),
     ( memberchk(code(N, S0, _, annexe(C0, N0)), R) -> St = S0, Co = C0, Ne = N0 ; St = absent, Co = null, Ne = null ),
     ( member(code(N2, etabli, _, _), R), arbre:ancetre(N2, N) -> De = N2 ; De = null ),
     findall(E, member(code(E, etabli, _, _), R), Es),

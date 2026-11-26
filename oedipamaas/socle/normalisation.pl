@@ -5,7 +5,12 @@
     patient ; le complément d'un nom d'action n'est pas toujours son patient ; une dérivation n'est pas toujours une
     équivalence ; un composé ne dit pas que son complément est figuré). enrichir/3 n'applique que les règles
     certaines : il rend le graphe inchangé. Les règles hypothétiques ne s'appliquent que sur demande (enrichir/4,
-    regles(toutes)), jamais pour certifier ; le lot 3 leur donnera une provenance et le statut d'hypothèse.
+    regles(toutes)), jamais pour certifier.
+
+    PROVENANCE (lot 3) : deriver/3 donne chaque assertion ajoutée avec sa règle, son statut et ses sources
+    (derivation(Fait, Regle, Statut, Sources)) ; enrichir/4 en est la projection. Le codage (codage.pl, option
+    derivations(oui)) s'en sert pour des conclusions conditionnelles qui citent les dérivations dont elles dépendent :
+    jamais comme prémisses déductives.
 
     enrichir(+Langue, +Graphe0, -Graphe)
         Ajoute à un graphe d'assertions la forme équivalente de chaque action dite par un verbe ou par un nom d'action :
@@ -37,11 +42,12 @@
     usuelle du génitif d'un verbe transitif. Pour un verbe intransitif (« death of Anna »), elle est fausse ; elle se
     mesure (docs/mesures/V2.md).
 */
-:- module(normalisation, [ enrichir/3, enrichir/4, regle/3, nominalisation/3 ]).
+:- module(normalisation, [ enrichir/3, enrichir/4, deriver/3, derivations_requises/3, regle/3, nominalisation/3 ]).
 :- encoding(utf8).
 :- use_module(library(lists)).
 :- use_module(library(apply)).
-:- discontiguous ajout/4.      % chaque règle est écrite avec ses prédicats auxiliaires
+:- use_module(library(ordsets)).
+:- discontiguous ajout/5.      % chaque règle est écrite avec ses prédicats auxiliaires
 
 lexfile_d_action(F) :- memberchk(F, ['noun.act', 'noun.event', 'noun.process', 'noun.phenomenon']).
 
@@ -78,35 +84,75 @@ enrichir(L, G0, G) :- enrichir(L, [], G0, G).
 % Options : regles(certaines) (par défaut) | regles(toutes) (les hypothétiques aussi : jamais pour certifier)
 enrichir(L, Opts, G0, G) :-
     ( memberchk(regles(toutes), Opts) -> Statuts = [certaine, hypothetique] ; Statuts = [certaine] ),
-    hors_alternatives(G0, Gs),
-    findall(F, ( regle(R, St, _), memberchk(St, Statuts), ajout(R, L, Gs, F) ), Fs0), sort(Fs0, Fs),
-    append(G0, Fs, G1), sort(G1, G2),
-    findall(F, ( regle(R, St, _), memberchk(St, Statuts), ajout_de_role(R, G2, F) ), Rs0), sort(Rs0, Rs),
-    append(G2, Rs, G3), sort(G3, G).
+    deriver(L, Statuts, G0, Ds),
+    findall(F, ( member(derivation(F, _, St, _), Ds), memberchk(St, Statuts) ), Fs),
+    append(G0, Fs, G1), sort(G1, G).
+
+% --- La provenance (lot 3) -------------------------------------------------------------------------------------------
+%
+% deriver(+Langue, +Graphe0, -Derivations) : chaque assertion que les règles ajoutent au graphe, avec sa provenance :
+%   derivation(Fait, Regle, Statut, Sources)
+%     Fait     l'assertion ajoutée (absente de Graphe0)
+%     Regle    le nom de la règle (regle/3), Statut le sien : certaine | hypothetique
+%     Sources  les assertions dont elle vient, triées : de Graphe0, ou d'autres dérivations (les rôles se dérivent
+%              aussi des événements dérivés : la provenance est alors une chaîne, que derivations_requises/3 suit)
+% Un même fait dérivé par deux règles, ou de deux façons, a une dérivation pour chacune. Le statut d'un fait dérivé est
+% celui de la plus faible des règles de sa chaîne : une dérivation dont une source est hypothétique l'est aussi.
+deriver(L, G0, Ds) :- deriver(L, [certaine, hypothetique], G0, Ds).
+% seules les règles des statuts donnés sont appliquées (aucune règle hypothétique n'est même essayée par défaut)
+deriver(L, Statuts, G0, Ds) :-
+    sort(G0, G0s), hors_alternatives(G0s, Gs),
+    findall(derivation(F, R, St, Ss),
+            ( regle(R, St, _), memberchk(St, Statuts), ajout(R, L, Gs, F, Ss0), \+ ord_memberchk(F, G0s), sort(Ss0, Ss) ),
+            D1s0),
+    sort(D1s0, D1s),
+    findall(F, member(derivation(F, _, _, _), D1s), F1s0), append(G0s, F1s0, G2s0), sort(G2s0, G2s),
+    findall(derivation(F, R, St, Ss),
+            ( regle(R, St0, _), memberchk(St0, Statuts), ajout_de_role(R, G2s, F, Ss0), \+ ord_memberchk(F, G2s), sort(Ss0, Ss),
+              statut_de_chaine(St0, Ss, D1s, St) ), D2s0),
+    sort(D2s0, D2s), append(D1s, D2s, Ds0), sort(Ds0, Ds).
+statut_de_chaine(St0, Ss, D1s, St) :-
+    (   St0 == hypothetique -> St = hypothetique
+    ;   member(S, Ss), \+ ( member(derivation(S, _, certaine, _), D1s) ), member(derivation(S, _, hypothetique, _), D1s)
+    ->  St = hypothetique
+    ;   St = St0
+    ).
+
+% derivations_requises(+Derivations, +Faits, -Requises) : les dérivations des faits donnés, et celles de leurs sources
+% dérivées, jusqu'au graphe d'origine (une dérivation par fait : la première, dans l'ordre des dérivations triées)
+derivations_requises(Ds, Fs, Rs) :- requises(Ds, Fs, [], Rs0), sort(Rs0, Rs).
+requises(_, [], Acc, Acc).
+requises(Ds, [F|Fs], Acc, Rs) :-
+    (   memberchk(derivation(F, _, _, _), Acc) -> requises(Ds, Fs, Acc, Rs)
+    ;   memberchk(derivation(F, R, St, Ss), Ds)
+    ->  findall(S, ( member(S, Ss), memberchk(derivation(S, _, _, _), Ds) ), Sd),
+        append(Fs, Sd, Fs1), requises(Ds, Fs1, [derivation(F, R, St, Ss)|Acc], Rs)
+    ;   requises(Ds, Fs, Acc, Rs)
+    ).
 
 % R1 : patient et thème
-ajout_de_role(r1, G, role(V, R2, X)) :-
+ajout_de_role(r1, G, role(V, R2, X), [role(V, R1, X)]) :-
     member(role(V, R1, X), G), ( R1 == patient -> R2 = theme ; R1 == theme -> R2 = patient ).
 % R2 : le participant unique d'un événement est agent, thème et patient (la syntaxe ne dit pas lequel)
-ajout_de_role(r2, G, role(V, R2, X)) :-
-    member(evenement(V, _, _), G), findall(R-Y, member(role(V, R, Y), G), [_-X]),
+ajout_de_role(r2, G, role(V, R2, X), [evenement(V, W, P), role(V, R1, X)]) :-
+    member(evenement(V, W, P), G), findall(R-Y, member(role(V, R, Y), G), [R1-X]),
     member(R2, [agent, theme, patient]).
 % P1 : un participe lu comme propriété (« swimming mammal », « sitting figure ») : le verbe est un événement dont le
 % référent est le participant unique ; un mot qui est aussi un adjectif de la langue reste une propriété seulement
-ajout(p1, L, G, F) :-
+ajout(p1, L, G, F, [propriete(Q, X, P, Pa)|Qs]) :-
     member(propriete(Q, X, P, Pa), G), atom(P), verbe_seulement(L, P),
     format(atom(Ev), "vp_~w", [Q]),
-    ( F = evenement(Ev, P, Pa) ; F = role(Ev, theme, X) ; qualificatif(G, Q, Ev, F) ).
+    ( F = evenement(Ev, P, Pa), Qs = [] ; F = role(Ev, theme, X), Qs = [] ; qualificatif(G, Q, Ev, F, Qq), Qs = [Qq] ).
 verbe_seulement(en, P) :- wordnet:s(_, _, P, v, _, _), \+ wordnet:s(_, _, P, a, _, _), \+ wordnet:s(_, _, P, s, _, _), !.
 verbe_seulement(fr, P) :- ressources:wolf(S, P), S // 100000000 =:= 2,
     \+ ( ressources:wolf(S2, P), S2 // 100000000 =:= 3 ), !.
 % C1 : un composé en « de » ou « of » non lexicalisé reçoit sa structure
-ajout(c1, L, G, F) :-
+ajout(c1, L, G, F, [entite(E, W, Pa)|Qs]) :-
     member(entite(E, W, Pa), G), atom(W), W \== nom_propre, compose_libre(L, W, A, B),
     format(atom(Ea), "ca_~w", [E]), format(atom(Eb), "cb_~w", [E]), format(atom(R), "cr_~w", [E]), genitif(L, Ge),
-    (   F = entite(Ea, A, Pa) ; F = entite(Eb, B, Pa) ; F = relation(R, Ea, Ge, Eb, Pa)
-    ;   member(X, [Ea, Eb, R]), qualificatif(G, E, X, F)
-    ;   F = coref(E, Ea)
+    (   F = entite(Ea, A, Pa), Qs = [] ; F = entite(Eb, B, Pa), Qs = [] ; F = relation(R, Ea, Ge, Eb, Pa), Qs = []
+    ;   member(X, [Ea, Eb, R]), qualificatif(G, E, X, F, Qq), Qs = [Qq]
+    ;   F = coref(E, Ea), Qs = []
     ).
 compose_libre(L, W, A, B) :-
     member(Sep, [' de ', ' du ', ' des ', ' d\'', ' of ']), sub_atom(W, Av, Ls, Ap, Sep), !,
@@ -119,34 +165,44 @@ lexicalise(en, W) :- wordnet:s(_, _, W, n, _, _), !.
 lexicalise(fr, W) :- ressources:wolf(S, W), S // 100000000 =:= 1, !.
 
 % E1 : un événement donne son nom d'action
-ajout(e1, L, G, F) :-
+ajout(e1, L, G, F, [evenement(V, P, Pa)|Qs]) :-
     member(evenement(V, P, Pa), G), atom(P), nominalisation(L, P, N),
     format(atom(E), "nv_~w_~w", [V, N]),
-    (   F = entite(E, N, Pa)
-    ;   qualificatif(G, V, E, F)
+    (   F = entite(E, N, Pa), Qs = []
+    ;   qualificatif(G, V, E, F, Qq), Qs = [Qq]
     ;   member(role(V, R, Y), G), memberchk(R, [patient, theme]), genitif(L, Ge),
         format(atom(A), "nr_~w_~w_~w", [V, N, Y]),
-        ( F = relation(A, E, Ge, Y, Pa) ; qualificatif(G, V, A, F) )
+        ( F = relation(A, E, Ge, Y, Pa), Qs = [role(V, R, Y)] ; qualificatif(G, V, A, F, Qq), Qs = [role(V, R, Y), Qq] )
     ).
 % E2 : un nom d'action donne son événement
-ajout(e2, L, G, F) :-
+ajout(e2, L, G, F, [entite(E, N, Pa)|Qs]) :-
     member(entite(E, N, Pa), G), atom(N), N \== nom_propre, nominalisation(L, V, N),
     format(atom(Ev), "ve_~w_~w", [E, V]),
-    (   F = evenement(Ev, V, Pa)
-    ;   qualificatif(G, E, Ev, F)
-    ;   member(relation(_, E2, R, Y, _), G), genitif_lu(L, R), meme_referent(G, E, E2), F = role(Ev, patient, Y)
+    (   F = evenement(Ev, V, Pa), Qs = []
+    ;   qualificatif(G, E, Ev, F, Qq), Qs = [Qq]
+    ;   member(relation(Ar, E2, R, Y, Pr), G), genitif_lu(L, R), meme_referent(G, E, E2, Cs),
+        F = role(Ev, patient, Y), append([relation(Ar, E2, R, Y, Pr)], Cs, Qs)
     ).
 
 % deux entités d'une même classe de coréférence (le complément d'un nom d'action peut être rattaché à une autre
 % mention du même référent)
-meme_referent(_, E, E) :- !.
-meme_referent(G, E1, E2) :- atteint_coref(G, [E1], [E1], E2).
+meme_referent(_, E, E, []) :- !.
+meme_referent(G, E1, E2, Cs) :- atteint_coref(G, [E1], [E1], E2), corefs_entre(G, E1, E2, Cs).
 atteint_coref(_, _, Vus, E) :- memberchk(E, Vus), !.
 atteint_coref(G, Front, Vus, E) :-
     findall(Y, ( member(X, Front), ( member(coref(X, Y), G) ; member(coref(Y, X), G) ), \+ memberchk(Y, Vus) ), Ys0),
     sort(Ys0, Ys), Ys \== [], append(Vus, Ys, Vus1), atteint_coref(G, Ys, Vus1, E).
+% les coréférences d'un chemin de E1 à E2 (un plus court, en largeur) : les sources du rattachement
+corefs_entre(G, E1, E2, Cs) :- chemin_coref(G, [E1-[]], [E1], E2, Cs).
+chemin_coref(G, [X-Ch|File], Vus, E2, Cs) :-
+    (   X == E2 -> reverse(Ch, Cs)
+    ;   findall(Y-[C|Ch], ( ( C = coref(X, Y), member(C, G) ; C = coref(Y, X), member(C, G) ), \+ memberchk(Y, Vus) ),
+                Ns),
+        findall(Y, member(Y-_, Ns), Ys), append(Vus, Ys, Vus1), append(File, Ns, File1),
+        chemin_coref(G, File1, Vus1, E2, Cs)
+    ).
 
-qualificatif(G, De, A, F) :-
+qualificatif(G, De, A, F, Q) :-
     member(Q, G), Q =.. [P, De, X], memberchk(P, [polarite, modalite, portee, enonciateur]), F =.. [P, A, X].
 % une assertion d'une alternative (une hypothèse parmi d'autres) n'est pas enrichie : elle n'appuie rien (NOYAU § 1)
 hors_alternatives(G, Gs) :-
