@@ -4,7 +4,8 @@ Usage : python outils/mesure/resume_reference.py SORTIE
 
 Pour chaque jeu et chaque réglage du codage : le statut de la notation visée par genre de texte ; le nombre moyen de
 codes de chaque statut par texte ; la part des textes au délai ou en erreur ; les temps (médiane, 95e centile) ; le
-nombre moyen de codes conditionnels dont une preuve suppose un sens (D30). Pour le comparateur : les verdicts des
+nombre moyen de preuves, parmi celles des codes conditionnels, qui supposent un sens (D30 ; un code peut en avoir
+plusieurs : ce n'est pas un nombre de codes). Pour le comparateur : les verdicts des
 requêtes compilées, avec et sans normalisation. Rien n'est jugé ici : ce sont des comptes."""
 import collections
 import json
@@ -60,7 +61,7 @@ def codage(sortie):
             lignes_temps.append(f"| {rn} | {statistics.median(temps) if temps else 0:.1f} | {centile(temps, .95):.1f} |"
                                 f" {max(temps) if temps else 0:.1f} |")
         print("\nCodes par texte (moyenne sur les textes codés) :\n")
-        print("| réglage | textes | " + " | ".join(STATUTS) + " | conditionnels par sens supposé |")
+        print("| réglage | textes | " + " | ".join(STATUTS) + " | preuves conditionnelles supposant un sens |")
         print("|---|---|" + "---|" * (len(STATUTS) + 1))
         print("\n".join(lignes_codes))
         print("\nTemps par texte (secondes) :\n")

@@ -12,6 +12,7 @@
     Variables d'environnement (mesure) :
       OEDIPAMAAS_NORMALISATION=non   le graphe du lecteur tel quel (codage:coder/5, normaliser(non))
       OEDIPAMAAS_DELAI=S             S secondes au plus par texte et par mode ; au-delà, le statut « delai »
+      OEDIPAMAAS_TRANCHE=I/N         la I-ième de N tranches de l'échantillon (pour des passes plus courtes)
       OEDIPAMAAS_SENS_EN=premier     (connaissances_commun.pl) l'anglais ne prend que le premier sens de WordNet,
                                      comme avant D30 : pour mesurer l'effet de D30, jamais par défaut  */
 :- initialization(main, main).
@@ -28,7 +29,8 @@ main :-
     forall(member(F, ['/ressources.qlf', '/requetes_index']), ( atom_concat(Base, F, C), load_files(C, []) )),
     use_module(socle(codage)), codage:indexer,
     lire(Entree, Fiches0), notations(Entree, Fiches0, Fiches1),
-    findall(F, ( nth1(I, Fiches1, F), (I - 1) mod Pas =:= 0 ), Fiches),
+    findall(F, ( nth1(I, Fiches1, F), (I - 1) mod Pas =:= 0 ), Fiches2),
+    tranche(Fiches2, Fiches),
     findall(L-t(K, Genre, T), ( member(Fi, Fiches), atom_string(L, Fi.langue), K = Fi.k, textes(Fi, Genre, T) ), Ts),
     findall(L, member(L-_, Ts), Ls0), sort(Ls0, Ls),
     findall(K, ( nth1(I, Fiches, Fi), I =< Controle, K = Fi.k ), Ks), nb_setval(controlees, Ks),
@@ -36,6 +38,14 @@ main :-
     findall(J, ( member(Fi, Fiches), fiche(Fi, Res, J) ), Js),
     setup_call_cleanup(open(Sortie, write, S, [encoding(utf8)]), json_write_dict(S, Js, [width(140)]), close(S)),
     length(Js, N), format("~d fiches~n", [N]).
+
+% OEDIPAMAAS_TRANCHE=I/N : la I-ième de N tranches de l'échantillon (une fiche sur N, à partir de la I-ième) ; les
+% tranches se réunissent (outils/mesure/reunir_tranches.py) en la mesure entière
+tranche(Fs0, Fs) :-
+    (   getenv('OEDIPAMAAS_TRANCHE', T), split_string(T, "/", "", [I0, N0]), number_string(I, I0), number_string(N, N0)
+    ->  findall(F, ( nth1(J, Fs0, F), (J - 1) mod N =:= I - 1 ), Fs)
+    ;   Fs = Fs0
+    ).
 
 lire(F, J) :- setup_call_cleanup(open(F, read, S, [encoding(utf8)]), json_read_dict(S, J), close(S)).
 notations(_, Fs, Fs) :- Fs = [F|_], get_dict(notation, F, _), !.
