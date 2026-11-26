@@ -118,6 +118,11 @@ lui-même, D20). Un mot polysémique n'établit pas tous ses sens à la fois :
   n'est plus établie que sous l'hypothèse qu'elle vise un autre sens (`negation_autre_sens(Atome)`) ;
 - la lexicalisation (d'un concept vers son lemme) est un pas de `sous`, jamais d'`inclus` : « pas de pomme » ne nie pas
   « fruit » ;
+- **limite connue (L1, journal § 10)** : une hypothèse de sens est rattachée au lemme (`sens_suppose(Mot, Type)`),
+  non à l'occurrence, et les hypothèses d'une solution ne sont pas confrontées entre elles ; une même occurrence peut
+  ainsi recevoir deux lectures exclusives dans une seule conclusion conditionnelle (« une pomme » établie comme
+  végétal et comme objet, sous hypothèses). Une conclusion sous hypothèses de sens n'est donc pas une annotation
+  exploitable automatiquement ;
 - un appui ne certifie rien, même sous hypothèse, s'il n'a **aucune lecture** : aucun sens conceptuel du mot n'atteint
   le type sans que l'assertion, prise en ce sens, soit niée de façon certaine (« une pomme ; pas de fruit ; pas
   d'objet » : chaque sens de « pomme » est nié, et « pomme » ne s'y établit pas ; dernier audit, B3).

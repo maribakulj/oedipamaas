@@ -384,3 +384,23 @@ désambiguïsation, ni les mesures de bout en bout.
 **Suite recommandée** (décision du propriétaire du 27/11) : intégrer ce lot comme version intermédiaire du noyau ;
 reprendre C3 (compilation des définitions), C6 (qualité des graphes extraits), C7 (désambiguïsation) et des mesures
 indépendantes de bout en bout ; un nouvel audit du noyau quand C7 changera les sens qu'il reçoit.
+
+## 10. Limites connues à l'intégration, et lots suivants (relecture du propriétaire du 27/11)
+
+La PR maribakulj/oedipamaas#6 est intégrée comme **version intermédiaire** du noyau, non comme une qualification
+définitive de M1. Les points suivants sont connus, documentés ici et dans le code, et chacun fera l'objet d'un lot
+ciblé, évalué et reproductible. Le centre du développement passe à C3, C6 et C7.
+
+| # | Limite | Où | Conséquence en attendant | Lot |
+|---|---|---|---|---|
+| L1 | Les hypothèses de sens sont rattachées aux lemmes, pas aux occurrences ni aux assertions, et ne sont pas confrontées entre elles : deux lectures exclusives d'une même occurrence justifient ensemble une conclusion conditionnelle (`pomme_vegetal_et_objet`) | `satisfaction.pl`, `satisfaction_reference.pl`, `verificateur.pl` ; NOYAU § 2 | les codes `conditionnel` ne sont pas des annotations exploitables automatiquement (dit dans `codage.pl`) | hypothèses par occurrence : `sens_suppose(Assertion, Sens)`, satisfaisabilité conjointe des hypothèses d'une solution |
+| L2 | `normalisation.pl` ajoute des inférences non valides : participant unique à la fois agent, patient et thème ; complément d'un nom d'action lu comme patient ; dérivation morphologique prise pour une équivalence | `normalisation.pl` | ses ajouts sont des prémisses certifiables ; le comparateur rend `indetermine` quand elle change un graphe canonique | prochain point critique (C7) |
+| L3 | Les assertions dérivées n'ont pas de provenance (règle, assertions sources, hypothèses), et rien ne distingue une transformation certaine d'une transformation hypothétique | `normalisation.pl`, ASSERTIONS.md | une normalisation incertaine peut introduire silencieusement une prémisse certifiable | avec L2 : assertions dérivées qualifiées (`derive(A, Regle, Sources, Hypotheses)`), les hypothétiques jamais prémisses déductives |
+| L4 | L'égalité indexé / exhaustif compare les notations et leurs statuts, pas les substitutions ni les référents | `tests/plunit/test_codage.pl` | une différence de preuve entre les modes passerait inaperçue | comparer les preuves (σ, appuis) |
+| L5 | Le codage ne garde de la condition nécessaire que son statut, pas ses éléments (preuves, réfutations, fondements) | `codage.pl` | la raison d'une nécessaire écartée ou contradictoire n'est pas visible | garder `resultat/3` entier dans l'annexe |
+| L6 | Les mesures sur les connaissances réelles n'ont pas été refaites après D30 (l'anglais prend maintenant tous les sens de WordNet) ; performances et effet de la polysémie sur les statuts non mesurés | `docs/mesures/V2.md` | les mesures provisoires du cycle 5 sont antérieures à D30 | remesurer (dév., validation), temps et distribution des statuts, part des `conditionnel` |
+
+Autres limites du noyau, inchangées (§ 7) : aucune preuve mécanique ; incomplétudes dans le sens sûr (D36, D41) ;
+négations certaines rares avec WordNet ; l'oracle n'encode pas les règles B1 et B3 du dernier audit ; `valider`
+quadratique, pas de limite de mémoire. L'architecture du noyau n'est pas rouverte.
+

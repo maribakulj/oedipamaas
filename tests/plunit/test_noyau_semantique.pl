@@ -276,6 +276,9 @@ cas(pomme_n_est_pas_surement_un_vegetal,
 cas(pomme_est_surement_une_pomme,
     [entite(e1, pomme, p_1)], requete(q, type(v(x), pomme)), etablie,
     'une conclusion commune à toutes les lectures est établie (D30)').
+% LIMITE CONNUE (L1, journal § 10) : ce cas fixe le comportement actuel, non le comportement voulu. Les deux
+% hypothèses de sens viennent de la même occurrence et s'excluent ; quand les hypothèses seront rattachées aux
+% occurrences, l'attendu deviendra non_certifiee (aucune lecture ne fait de la pomme un végétal et un objet).
 cas(pomme_vegetal_et_objet,
     [entite(e1, pomme, p_1)], requete(q, et([type(v(x), vegetal), type(v(x), objet)])), etablie_sous_hypotheses,
     'les deux sens à la fois : chacun n’est qu’une hypothèse (audit L-D8a ; D30)').

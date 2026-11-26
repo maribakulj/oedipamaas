@@ -15,7 +15,11 @@
                             preuve (Detail : les preuves)
             etablissable    tout cela, sauf que la famille n'est pas encore justifiée : un candidat, jamais un code
             candidat        la suffisante est établie, mais la compilation n'est que partielle
-            conditionnel    la suffisante n'est établie que sous hypothèses (distinction, sens, négation possible)
+            conditionnel    la suffisante n'est établie que sous hypothèses (distinction, sens, négation possible).
+                            NE PAS EXPLOITER AUTOMATIQUEMENT (décision du 27/11) : les hypothèses de sens sont
+                            rattachées aux lemmes, non aux occurrences, et ne sont pas confrontées entre elles ; deux
+                            lectures exclusives d'une même occurrence peuvent justifier ensemble un code conditionnel
+                            (docs/QUALIFICATION_NOYAU.md, § 10, L1)
             rejete_par_le_verificateur
             contradictoire  des appuis des deux signes
             non_certifie    vraie selon le graphe, non certifiable

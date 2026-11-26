@@ -1,5 +1,13 @@
 /*  La normalisation des nominalisations (docs/PLAN_V1.md, C7.3) : une couche de langue, hors du noyau.
 
+    LIMITES CONNUES (relecture du propriétaire du 27/11 ; docs/QUALIFICATION_NOYAU.md, § 10, L2 et L3) : ce module est
+    le prochain point critique. Ses ajouts sont des prémisses certifiables du noyau, alors que plusieurs de ses règles
+    ne sont pas des inférences valides : le participant unique reçoit à la fois agent, thème et patient ; le complément
+    d'un nom d'action n'est pas toujours son patient ; une dérivation morphologique n'est pas toujours une équivalence
+    sémantique. Les ajouts n'ont ni provenance (règle, assertions sources, hypothèses) ni distinction entre
+    transformations certaines et hypothétiques. Le comparateur (inclusion.pl) en tire déjà la conséquence : une
+    normalisation qui change le graphe canonique rend le verdict indéterminé. À traiter par un lot ciblé.
+
     enrichir(+Langue, +Graphe0, -Graphe)
         Ajoute à un graphe d'assertions la forme équivalente de chaque action dite par un verbe ou par un nom d'action :
           E1  un événement de prédicat V (« le chien est dressé ») donne aussi une entité de type N, le nom d'action de V
