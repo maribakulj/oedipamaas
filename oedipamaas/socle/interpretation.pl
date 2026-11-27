@@ -28,6 +28,16 @@
                           ]).
 :- encoding(utf8).
 :- use_module(mondes, []).                 % l'ancrage, version 2
+:- use_module(satisfaction, []).           % les liens lexicaux de K, pour les options de sûreté (X2)
+:- use_module(connaissances_en, []).       % K (WordNet), lu seulement par les options de sûreté
+:- use_module(connaissances_fr, []).       % K (WOLF)
+
+% --- Les options de sûreté (expériences X1 à X3 de docs/EXPERIENCES_C7.md ; docs/mesures/SURETE_LECTEUR.md) --------
+% OEDIPAMAAS_SURETE : une liste d'options séparées par des virgules ; sans elle, le lecteur est celui d'avant les
+% expériences (aucune option). nombres (X1) ; portees, citations (X2, approche A) ; doute (X2, approche C : « dans le
+% doute, non admissible ») ; certain (exploratoire, défini après la lecture de la validation : l'œuvre seulement par un
+% lien certain dans K, D30).
+option_surete(O) :- getenv('OEDIPAMAAS_SURETE', V), atomic_list_concat(Os, ',', V), memberchk(O, Os), !.
 
 % --- Lexique grammatical (FR, EN) -----------------------------------------------------------------------------------
 
@@ -40,6 +50,9 @@ negation_cc(ni). negation_cc(nor). negation_cc(neither).
 negation_adv(pas). negation_adv(not). negation_adv(jamais). negation_adv(never). negation_adv(point).
 negation_adv(plus). negation_adv(nullement).
 negation_adj(absent). negation_adj(absente). negation_adj(missing). negation_adj(invisible).
+% X3 (option negations) : les autres adjectifs d'absence (« le bras a disparu ») ; pas « gone » (« his lantern gone
+% out » : éteinte)
+negation_adj(X) :- option_surete(negations), memberchk(X, [disparu, disparue, manquant, manquante]).
 
 % verbes et adjectifs de présence : nier la présence nie ce qui est présenté
 presence(visible). presence(présent). presence(present). presence(représenter). presence(represent).
@@ -79,6 +92,7 @@ agent_case(par). agent_case(by).
 interpreter(Texte, Langue, Genre, Phrases, Faits) :- interpreter(Texte, Langue, Genre, 0, Phrases, Faits).
 % FinTitre : la fin du titre en tête du texte (0 sans titre) ; le titre n'est jamais ce qui annonce le sujet (D15)
 interpreter(Texte, Langue, Genre, FinTitre, Phrases, Faits) :-
+    b_setval(interpretation_langue, Langue),
     jetons(Phrases, Ts),
     entites(Ts, Ents),                       % liste de ent(E, Tete, ToksDuNom, TokTete, TokNom-ou-rien)
     findall(F, fait(Ts, Ents, F), Fs000),
@@ -312,6 +326,16 @@ fait(Ts, Ents, alternative(G, Es)) :-
     findall(E, ( member(X, [T1|T2s]), entite_du_jeton(Ts, Ents, X, E) ), Es0), sort(Es0, Es),
     Es = [_, _|_],
     atomic_list_concat([g, S, I1], '_', G).
+% X3 (option modalites) : des événements en alternative (« s'il souffre ou s'il réfléchit », « whether he has fallen
+% or is playing »)
+fait(Ts, _, alternative(G, Vs)) :-
+    option_surete(modalites),
+    member(V1, Ts), V1 = t(S, I1, _, _, 'VERB', _, _, _, _, _), evenement_jeton(Ts, V1),
+    findall(V, ( enfant(Ts, S, I1, conj, V2), V2 = t(_, I2, _, _, 'VERB', _, _, _, _, _), evenement_jeton(Ts, V2),
+                 enfant(Ts, S, I2, cc, CC), CC = t(_, _, _, L, _, _, _, _, _, _), alternative_cc(L),
+                 atomic_list_concat([v, S, I2], '_', V) ), Vs2),
+    Vs2 \== [], atomic_list_concat([v, S, I1], '_', V0), sort([V0|Vs2], Vs),
+    atomic_list_concat([g, S, I1], '_', G).
 % « la figure est saint Pierre », « the saint is Jerome » : le sujet et le prédicat nominal désignent le même référent
 fait(Ts, Ents, coref(E1, E2)) :-
     member(P, Ts), nominal(P), P = t(S, IP, _, _, _, _, _, _, _, _),
@@ -323,6 +347,14 @@ fait(Ts, Ents, coref(E1, E2)) :-
     member(P, Ts), nominal(P), P = t(S, IP, _, _, _, _, _, _, _, _),
     enfant(Ts, S, IP, appos, A), nominal(A),
     entite_du_jeton(Ts, Ents, P, E1), entite_du_jeton(Ts, Ents, A, E2), E1 \== E2.
+% X1 (docs/mesures/SURETE_LECTEUR.md) : un nombre dit (« two angels », « deux mains ») : un numéral cardinal
+% (`nummod`) d'un nom ; seulement à partir de deux (« un » n'est pas un nombre dit : le guide du banc) ; un numéral
+% qui ne se lit pas (« several », « quelques ») n'en donne aucun
+fait(Ts, Ents, nombre(E, N)) :-
+    option_surete(nombres),
+    member(X, Ts), X = t(S, _, Fo, L, 'NUM', _, H, R, _, _), rel_de_base(R, nummod),
+    jeton(Ts, S, H, Nn), nominal(Nn), entite_du_jeton(Ts, Ents, Nn, E),
+    valeur_numerale(Fo, L, N), N >= 2.
 % incompris : relations que l'analyseur n'a pas su nommer
 fait(Ts, _, incompris(passage_de(T), analyse_incertaine)) :-
     member(T, Ts), T = t(_, _, _, _, _, _, _, R, _, _), memberchk(R, [dep, orphan, reparandum]).
@@ -412,7 +444,35 @@ id_assertion(relation(A, _, _, _, _), A).
 qualificatif(Ts, Ents, Fs, A, polarite(A, Pol)) :- ( nie(Ts, Ents, Fs, A) -> Pol = neg ; Pol = pos ).
 qualificatif(Ts, Ents, Fs, A, modalite(A, Mod)) :- ( modalise(Ts, Ents, Fs, A, M) -> Mod = M ; Mod = affirme ).
 qualificatif(Ts, Ents, Fs, A, portee(A, Por)) :- ( porte(Ts, Ents, Fs, A, P) -> Por = P ; Por = represente ).
-qualificatif(_, _, _, A, enonciateur(A, auteur)).
+qualificatif(Ts, Ents, Fs, A, enonciateur(A, En)) :-
+    ( option_surete(citations), cite(Ts, Ents, Fs, A, Src) -> En = cite(Src) ; En = auteur ).
+
+% X2, les sources citées : « according to Vasari, … », « selon Vasari, … » : ce qui dépend du verbe que la citation
+% complète est énoncé par la source (le guide : `enonciateur`), sauf la source elle-même
+cite(Ts, Ents, Fs, A, Src) :-
+    jeton_de_assertion(Ts, Ents, Fs, A, T0),
+    (   memberchk(nom(A, E, _, _), Fs) -> member(ent(E, _, _, T, _), Ents) ; T = T0 ),
+    T = t(S, _, _, _, _, _, _, _, _, _),
+    member(X, Ts), X = t(S, IX, _, _, _, _, HX, RX, _, _), nominal(X), rel_de_base(RX, obl),
+    citation(Ts, X), HX > 0,
+    dans_le_sous_arbre(Ts, T, HX), \+ dans_le_sous_arbre(Ts, T, IX),
+    source_citee(Ts, Ents, X, Src), !.
+
+% la préposition de citation : « selon », « according (to) » (les seules du guide : « according to Vasari »)
+citation(Ts, t(S, I, _, _, _, _, _, _, _, _)) :-
+    enfant(Ts, S, I, case, C), C = t(_, _, Fo, _, _, _, _, _, _, _), downcase_atom(Fo, F),
+    memberchk(F, [selon, according]), !.
+
+% la source : son nom propre s'il en a un, sinon le lemme de sa tête (« la légende », « the text »)
+source_citee(_, Ents, X, Src) :-
+    (   member(ent(_, _, Ns, _, Ms), Ents), memberchk(X, Ms), Ns \== []
+    ->  findall(Fo, member(t(_, _, Fo, _, _, _, _, _, _, _), Ns), Fos), atomic_list_concat(Fos, ' ', Src)
+    ;   X = t(_, _, _, Src, _, _, _, _, _, _)
+    ).
+
+% T est dans le sous-arbre du jeton I (de la même phrase), I compris
+dans_le_sous_arbre(_, t(_, I, _, _, _, _, _, _, _, _), I) :- !.
+dans_le_sous_arbre(Ts, t(S, _, _, _, _, _, H, _, _, _), I) :- H > 0, jeton(Ts, S, H, P), dans_le_sous_arbre(Ts, P, I).
 
 jeton_de_assertion(_, Ents, Fs, A, T) :-
     (   member(ent(A, _, _, T, _), Ents) -> true
@@ -430,7 +490,10 @@ nie(Ts, Ents, Fs, A) :-
 
 nie_jeton(Ts, _, _, T) :-
     T = t(S, I, _, _, _, _, _, _, _, _),
-    (   enfant(Ts, S, I, det, D), D = t(_, _, _, L, _, _, _, _, _, _), negation_det(L)
+    (   % X3 (option negations) : un groupe nominal nié par « not », « pas » (« only the bone is drawn, not the body »)
+        option_surete(negations), nominal(T), enfant(Ts, S, I, advmod, N), N = t(_, _, _, LN, _, _, _, _, _, _),
+        memberchk(LN, [not, pas])
+    ;   enfant(Ts, S, I, det, D), D = t(_, _, _, L, _, _, _, _, _, _), negation_det(L)
     ;   enfant(Ts, S, I, case, C), C = t(_, _, _, L, _, _, _, _, _, _), negation_case(L)
     ;   enfant(Ts, S, I, cc, C), C = t(_, _, _, L, _, _, _, _, _, _), negation_cc(L)
     ;   enfant(Ts, S, I, J), J = t(_, _, Fo, _, _, _, _, RJ, _, _), rel_de_base(RJ, RBJ),
@@ -480,6 +543,19 @@ modalise(Ts, Ents, Fs, A, M) :-
     modalite_jeton(Ts, T, M), !.
 
 modalite_jeton(Ts, T, non_affirme) :- argument_non_affirme(Ts, T), !.
+% X3 (option modalites) : le contenu d'une question indirecte (« whether he has fallen or is playing », « s'il souffre
+% ou s'il réfléchit ») et ce que dit une proposition complément d'un verbe nié (« what passes between them cannot be
+% read ») ne sont pas affirmés (le guide : `non_affirme`, « le contenu d'une question »)
+modalite_jeton(Ts, T, non_affirme) :- option_surete(modalites), dans_un_contenu_non_affirme(Ts, T), !.
+% X3 : un être dont seule l'existence est modalisée (« où apparaissait peut-être la terre ») : le sujet d'un verbe de
+% présence modalisé prend sa modalité
+modalite_jeton(Ts, T, M) :-
+    option_surete(modalites),
+    T = t(S, _, _, _, _, _, H, R, _, _), H > 0, rel_de_base(R, nsubj),
+    jeton(Ts, S, H, V), V = t(_, IV, _, LV, _, _, _, _, _, _), ( presence(LV) ; memberchk(LV, [exister, exist]) ),
+    (   enfant(Ts, S, IV, advmod, X), X = t(_, _, _, L, _, _, _, _, _, _), modal_adv(L, M)
+    ;   enfant(Ts, S, IV, aux, X), X = t(_, _, _, L, _, _, _, _, _, _), modal_verbe(L, M)
+    ), !.
 modalite_jeton(Ts, T, M) :-
     T = t(S, I, _, _, _, _, H, R, _, _),
     (   enfant(Ts, S, I, advmod, X), X = t(_, _, _, L, _, _, _, _, _, _), modal_adv(L, M)
@@ -492,6 +568,24 @@ modalite_jeton(Ts, T, M) :-
         )
     ), !.
 
+dans_un_contenu_non_affirme(Ts, T) :-
+    T = t(S, I, _, _, _, _, _, _, _, _),
+    member(V, Ts), V = t(S, IV, _, _, 'VERB', _, HV, RV, _, _),
+    (   enfant(Ts, S, IV, mark, Mk), Mk = t(_, _, FoM, _, _, _, _, _, _, _), downcase_atom(FoM, FM),
+        memberchk(FM, [whether, if, si, 's\'', 's’'])
+    ;   rel_de_base(RV, RBV), memberchk(RBV, [ccomp, csubj, xcomp]), HV > 0, jeton(Ts, S, HV, P),
+        verbe_nie_ou_impossible(Ts, P)
+    ;   % la double négation (décision du 27/11) : l'événement dont le sujet est nié par « no », « aucun »
+        enfant(Ts, S, IV, nsubj, Su), Su = t(_, ISu, _, _, _, _, _, _, _, _),
+        enfant(Ts, S, ISu, det, D), D = t(_, _, _, LD, _, _, _, _, _, _), negation_det(LD), T == V
+    ),
+    dans_le_sous_arbre(Ts, T, IV), I \== HV, !.
+% un verbe nié (« ne … pas », « not », « cannot »)
+verbe_nie_ou_impossible(Ts, P) :- verbe_nie(Ts, P), !.
+verbe_nie_ou_impossible(Ts, t(S, I, _, _, 'VERB', _, _, _, _, _)) :-
+    enfant(Ts, S, I, aux, A), A = t(_, IA, _, _, _, _, _, _, _, _),
+    ( enfant(Ts, S, IA, advmod, N) ; enfant(Ts, S, I, advmod, N) ), N = t(_, _, _, L, _, _, _, _, _, _), negation_adv(L), !.
+
 % portée : ce qui dépend de « d'après », « after » est une autre œuvre ; un matériau, l'œuvre elle-même
 porte(Ts, Ents, Fs, A, P) :-
     jeton_de_assertion(Ts, Ents, Fs, A, T0),
@@ -500,6 +594,16 @@ porte(Ts, Ents, Fs, A, P) :-
     ;   T = T0
     ),
     portee_jeton(Ts, T, P), !.
+% X2 (option portees) : la portée dite par le discours sur l'œuvre ; pas pour une relation (« le centre de la
+% composition » est une relation de l'image : sa portée n'est pas celle de son complément)
+porte(Ts, Ents, Fs, A, P) :-
+    option_surete(portees), \+ memberchk(relation(A, _, _, _, _), Fs),
+    jeton_de_assertion(Ts, Ents, Fs, A, T0),
+    (   memberchk(nom(A, E, _, _), Fs) -> member(ent(E, _, _, T, _), Ents)
+    ;   memberchk(propriete(A, E, _, _), Fs) -> member(ent(E, _, _, T, _), Ents)
+    ;   T = T0
+    ),
+    portee_du_discours(Ts, T, P), !.
 
 % le support de l'œuvre (album, folio, recto, reliure, étiquette…) : une phrase dont la racine ou le sujet est un
 % support parle de l'objet, pas de l'image ; un nom complément d'un support aussi (« le dos de l'album ») ; une
@@ -533,6 +637,141 @@ portee_jeton(Ts, T, P) :-
     ;   materiau(L) -> P = oeuvre
     ;   H > 0, jeton(Ts, S, H, Par), nominal(Par), portee_jeton(Ts, Par, P), P == autre_oeuvre
     ).
+
+% X2 (option portees) : la portée dite par le discours sur l'œuvre, d'après le guide du banc (docs/BANC_GRAPHES.md,
+% « portee » et décisions du 27/11 : « le peintre a la portée histoire, ses actes sur l'image la portée oeuvre » ;
+% H1 : un texte qui accompagne l'œuvre, `oeuvre` ; H2 : la notice, `non_ancre`) :
+%   - l'auteur de l'œuvre, désigné (« le peintre », « the artist ») : `histoire` ;
+%   - l'œuvre elle-même, désignée (« l'image », « this engraving », « la composition ») : `oeuvre` ; une création au
+%     sens de K (WordNet : creation ; WOLF : création), hors de l'objet d'une action de figure (« il tient le livre ») ;
+%   - le spectateur, la notice, le catalogue, l'historien : `non_ancre` ;
+%   - un événement dont l'auteur ou l'œuvre est le sujet (« the painter places … », « the composition leads … ») :
+%     `oeuvre` ; dont la notice est le sujet : `non_ancre`.
+% « Désigné » : un déterminant défini, démonstratif ou possessif ; une mention indéfinie (« un peintre à son
+% chevalet ») est une figure de la scène. Option doute (approche C) : les mêmes règles, et aussi les parties du plan de
+% l'image (le premier plan, le fond : le cadre spatial) et la légende, `oeuvre`.
+portee_du_discours(Ts, T, non_ancre) :- nominal(T), complement_d_un_style(Ts, T), !.
+portee_du_discours(Ts, T, P) :- nominal(T), \+ propre(T), portee_nominale(Ts, T, P), !.
+portee_du_discours(Ts, T, P) :-
+    T = t(S, I, _, _, C, _, _, _, _, _), memberchk(C, ['VERB', 'ADJ']),
+    (   enfant(Ts, S, I, nsubj, X) ; complement_d_agent(Ts, T, X) ),
+    nominal(X), \+ propre(X), portee_nominale(Ts, X, P0),
+    ( memberchk(P0, [histoire, oeuvre]) -> P = oeuvre ; P = P0 ), !.
+
+portee_nominale(Ts, T, histoire) :- auteur_de_l_oeuvre(T), designe(Ts, T), !.
+portee_nominale(Ts, T, oeuvre) :-
+    ( option_surete(certain) -> l_oeuvre_certaine(T) ; l_oeuvre(T) ),
+    designe(Ts, T), \+ objet_d_une_action_de_figure(Ts, T), !.
+portee_nominale(Ts, T, oeuvre) :- sujet_d_une_figuration(Ts, T), !.
+% le contenant de la scène (« Dans une gravure fantastique, … ») : une œuvre de façon certaine dans K (toutes ses
+% lectures ; « dans un paysage », « on the ground » ne disent pas l'œuvre) ; avec l'option doute, possible suffit
+portee_nominale(Ts, T, oeuvre) :-
+    contenant_de_la_scene(Ts, T), ( option_surete(doute) -> l_oeuvre(T) ; l_oeuvre_certaine(T) ), !.
+portee_nominale(_, t(_, _, _, L, _, _, _, _, _, _), non_ancre) :- discours_sur_l_oeuvre(L), !.
+portee_nominale(Ts, T, oeuvre) :-
+    option_surete(doute), T = t(_, _, _, L, _, _, _, _, _, _),
+    ( cadre_spatial(L) ; texte_de_l_oeuvre(L), designe(Ts, T) ), !.
+
+% le complément du nom d'un style (« à la manière de Poussin », nom propre compris) : non ancré comme lui
+complement_d_un_style(Ts, t(S, _, _, _, _, _, H, R, _, _)) :-
+    H > 0, rel_de_base(R, nmod), jeton(Ts, S, H, P), P = t(_, _, _, LP, _, _, _, _, _, _), style(LP), !.
+
+% l'auteur : le praticien d'une technique de l'image (peindre, sculpter, photographier, graver, dessiner, illustrer,
+% enluminer), ou un hyponyme dans K (« miniaturist » : painter) ; « artist » / « artiste » seulement comme mot (ses
+% hyponymes dans K comprennent les musiciens, qui sont des figures)
+auteur_de_l_oeuvre(t(_, _, _, L, _, _, _, _, _, _)) :-
+    b_getval(interpretation_langue, La),
+    (   memberchk(La-L, [en-artist, fr-artiste]) -> true
+    ;   praticien(La, A), ( L == A -> true ; lien_lexical(La, L, A) )
+    ), !.
+praticien(en, A) :- member(A, [painter, sculptor, photographer, engraver, draftsman, draughtsman, illustrator, illuminator]).
+praticien(fr, A) :- member(A, [peintre, sculpteur, photographe, graveur, dessinateur, illustrateur, enlumineur]).
+
+% l'œuvre : une création, une représentation ou une œuvre d'art (art) dans K (WOLF n'a « tableau » que sous art) ;
+% et les mots que le guide nomme pour l'objet matériel (la toile, le panneau, l'état, la technique, le cadre), pour la
+% composition et pour le titre
+l_oeuvre(t(_, _, _, L, _, _, _, _, _, _)) :-
+    b_getval(interpretation_langue, La),
+    (   mot_de_l_objet(La, L) -> true
+    ;   ancre_de_l_oeuvre(La, A), lien_lexical(La, L, A)
+    ), !.
+l_oeuvre_certaine(t(_, _, _, L, _, _, _, _, _, _)) :-
+    b_getval(interpretation_langue, La),
+    (   mot_de_l_objet(La, L) -> true
+    ;   ancre_de_l_oeuvre(La, A), lien_lexical_certain(La, L, A)
+    ), !.
+ancre_de_l_oeuvre(La, A) :- member(La-A, [en-creation, en-representation, en-art, fr-création, fr-représentation, fr-art]).
+mot_de_l_objet(en, L) :- memberchk(L, [canvas, panel, sheet, state, technique, frame, composition, work, artwork, title]).
+mot_de_l_objet(fr, L) :- memberchk(L, [toile, panneau, feuille, état, technique, cadre, composition, œuvre, titre]).
+
+% ce qui parle de l'œuvre sans être figuré (guide : `non_ancre`, « biographie, style, jugement » ; H2 : la notice)
+discours_sur_l_oeuvre(L) :- style(L), !.
+discours_sur_l_oeuvre(L) :- memberchk(L, [viewer, spectator, beholder, catalogue, catalog, historian, scholar, critic,
+    spectateur, notice, historien, critique]).
+% le style (le guide : `non_ancre`)
+style(L) :- memberchk(L, [manière, style, manner, façon]).
+% le texte qui accompagne l'œuvre (H1) : approche C seulement (« legend », « légende » est aussi un récit)
+texte_de_l_oeuvre(L) :- memberchk(L, [caption, legend, label, légende, cartel]).
+
+designe(Ts, t(S, I, _, _, _, _, _, _, _, _)) :-
+    (   enfant(Ts, S, I, det, D), D = t(_, _, Fo, L, _, Tr, _, _, _, _), downcase_atom(Fo, F),
+        (   memberchk('Definite'='Def', Tr) ; memberchk('PronType'='Dem', Tr) ; memberchk('Poss'='Yes', Tr)
+        ;   memberchk(F, [the, this, that, these, those, le, la, les, 'l\'', 'l’', ce, cet, cette, ces])
+        ;   memberchk(L, [the, this, le, ce, son, sa, ses, his, her, its, their])
+        )
+    ;   enfant(Ts, S, I, 'nmod:poss', _)
+    ), !.
+
+% « Une affiche montre une jeune femme », « An anatomical plate shows a nude » : le sujet d'un verbe de figuration
+% employé transitivement, sans destinataire (« elle lui montre le livre » est une action de figure), est l'image
+sujet_d_une_figuration(Ts, t(S, _, _, _, _, _, H, R, _, _)) :-
+    H > 0, rel_de_base(R, nsubj), R \== 'nsubj:pass',
+    jeton(Ts, S, H, V), V = t(_, IV, _, LV, 'VERB', _, _, _, _, _), verbe_de_figuration(LV),
+    enfant(Ts, S, IV, obj, _), \+ enfant(Ts, S, IV, iobj, _), \+ destinataire_oblique(Ts, S, IV), !.
+verbe_de_figuration(L) :- memberchk(L, [représenter, montrer, dépeindre, illustrer, depict, represent, show, portray,
+    illustrate]).
+destinataire_oblique(Ts, S, IV) :-
+    enfant(Ts, S, IV, obl, X), X = t(_, IX, _, _, _, _, _, _, _, _),
+    enfant(Ts, S, IX, case, C), C = t(_, _, _, LC, _, _, _, _, _, _), memberchk(LC, ['à', to]), !.
+% « Dans une gravure fantastique, … », « dessinée sur la feuille », « in this painting » : le contenant de la scène
+contenant_de_la_scene(Ts, t(S, I, _, _, _, _, H, R, _, _)) :-
+    H > 0, rel_de_base(R, obl), jeton(Ts, S, H, V), V = t(_, _, _, _, C, _, _, _, _, _), memberchk(C, ['VERB', 'ADJ']),
+    enfant(Ts, S, I, case, Ca), Ca = t(_, _, _, LC, _, _, _, _, _, _), memberchk(LC, [dans, sur, in, on]), !.
+
+objet_d_une_action_de_figure(Ts, t(S, _, _, _, _, _, H, R, _, _)) :-
+    H > 0, rel_de_base(R, RB), memberchk(RB, [obj, obl, iobj]),
+    jeton(Ts, S, H, V), V = t(_, _, _, LV, _, _, _, _, _, _), action_de_figure(LV), !.
+
+% un lien de L vers A dans K (connaissances_en / connaissances_fr) ; possible suffit (la polysémie rend « image »,
+% « picture » seulement possibles) : la règle rend non admissible, elle n'établit rien
+lien_lexical(La, L, A) :-
+    k_langue(La, K),
+    (   once(K:sens(_, _, _)) -> true
+    ;   throw(error(existence_error(connaissances, K), option_surete(portees)))
+    ),
+    once(satisfaction:lien_pos(K, n, L, A, _)).
+lien_lexical_certain(La, L, A) :-
+    k_langue(La, K),
+    (   once(K:sens(_, _, _)) -> true
+    ;   throw(error(existence_error(connaissances, K), option_surete(portees)))
+    ),
+    satisfaction:lien_pos_certain(K, n, L, A).
+k_langue(en, connaissances_en). k_langue(fr, connaissances_fr).
+
+% X1 : la valeur d'un numéral : en chiffres, ou un nombre cardinal en lettres (la classe grammaticale fermée des
+% numéraux simples ; un composé « vingt-deux » n'est pas lu)
+valeur_numerale(Fo, _, N) :- atom_number(Fo, N), integer(N), !.
+valeur_numerale(Fo, L, N) :- downcase_atom(Fo, F), ( cardinal(F, N) -> true ; cardinal(L, N) ), !.
+cardinal(one, 1). cardinal(two, 2). cardinal(three, 3). cardinal(four, 4). cardinal(five, 5). cardinal(six, 6).
+cardinal(seven, 7). cardinal(eight, 8). cardinal(nine, 9). cardinal(ten, 10). cardinal(eleven, 11). cardinal(twelve, 12).
+cardinal(thirteen, 13). cardinal(fourteen, 14). cardinal(fifteen, 15). cardinal(sixteen, 16). cardinal(seventeen, 17).
+cardinal(eighteen, 18). cardinal(nineteen, 19). cardinal(twenty, 20). cardinal(thirty, 30). cardinal(forty, 40).
+cardinal(fifty, 50). cardinal(hundred, 100). cardinal(thousand, 1000).
+cardinal(un, 1). cardinal(une, 1). cardinal(deux, 2). cardinal(trois, 3). cardinal(quatre, 4). cardinal(cinq, 5).
+cardinal(six, 6). cardinal(sept, 7). cardinal(huit, 8). cardinal(neuf, 9). cardinal(dix, 10). cardinal(onze, 11).
+cardinal(douze, 12). cardinal(treize, 13). cardinal(quatorze, 14). cardinal(quinze, 15). cardinal(seize, 16).
+cardinal(vingt, 20). cardinal(trente, 30). cardinal(quarante, 40). cardinal(cinquante, 50). cardinal(cent, 100).
+cardinal(mille, 1000).
 
 % --- Passages -------------------------------------------------------------------------------------------------------
 
