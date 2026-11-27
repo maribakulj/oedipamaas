@@ -280,8 +280,27 @@ cas(pomme_est_surement_une_pomme,
 % hypothèses de sens viennent de la même occurrence et s'excluent ; quand les hypothèses seront rattachées aux
 % occurrences, l'attendu deviendra non_certifiee (aucune lecture ne fait de la pomme un végétal et un objet).
 cas(pomme_vegetal_et_objet,
-    [entite(e1, pomme, p_1)], requete(q, et([type(v(x), vegetal), type(v(x), objet)])), etablie_sous_hypotheses,
-    'les deux sens à la fois : chacun n’est qu’une hypothèse (audit L-D8a ; D30)').
+    [entite(e1, pomme, p_1)], requete(q, et([type(v(x), vegetal), type(v(x), objet)])), non_certifiee,
+    'une occurrence, un sens : « une pomme » n’est pas à la fois le fruit et la pomme d’arrosoir ; vraie selon le graphe, sans lecture conjointe (lot 4, L1 ; avant : etablie_sous_hypotheses, deux lectures exclusives d’une même occurrence)').
+cas(deux_pommes_vegetal_et_objet,
+    [entite(e1, pomme, p_1), entite(e2, pomme, p_2), coref(e1, e2)],
+    requete(q, et([type(v(x), vegetal), type(v(x), objet)])), etablie_sous_hypotheses,
+    'deux occurrences, chacune son sens : la seconde atome prend l’autre mention (lot 4)').
+cas(pomme_et_poire_le_choix_revient_sur_le_premier_atome,
+    [entite(e1, pomme, p_1), entite(e2, poire, p_2), coref(e1, e2)],
+    requete(q, et([type(v(x), vegetal), type(v(x), objet)])), etablie_sous_hypotheses,
+    'le premier atome prend d’abord la pomme, que le second demande comme objet : le choix revient sur le premier, qui prend la poire (lot 4)').
+cas(lyre_dont_le_seul_sens_commun_est_nie,
+    [entite(e1, lyre, p_1), entite(e2, lyre_celeste, p_2), neg(e2)],
+    requete(q, et([type(v(x), instrument), type(v(x), constellation)])), non_certifiee,
+    'chaque atome a une lecture (l’instrument seul, la constellation seule), mais le seul sens qui donne les deux est nié : pas de lecture conjointe (lot 4)').
+cas(lyre_instrument_sous_hypothese,
+    [entite(e1, lyre, p_1), entite(e2, lyre_celeste, p_2), neg(e2)],
+    requete(q, type(v(x), instrument)), etablie_sous_hypotheses,
+    'l’instrument seul reste lisible : le premier sens n’est pas nié (lot 4)').
+cas(pomme_vegetal_et_pomme,
+    [entite(e1, pomme, p_1)], requete(q, et([type(v(x), vegetal), type(v(x), pomme)])), etablie_sous_hypotheses,
+    'un lien certain ne contraint pas le sens : le fruit est une pomme (lot 4)').
 cas(pomme_qui_n_est_pas_un_vegetal,
     [entite(e1, pomme, p_1), entite(e2, vegetal, p_2), neg(e2), coref(e1, e2)], requete(q, type(v(x), pomme)),
     etablie_sous_hypotheses,

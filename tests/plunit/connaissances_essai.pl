@@ -29,12 +29,21 @@ sens(n, pomme, 2001).             % un mot polysémique (D30) : un fruit, ou une
 sens(n, pomme, 2002).
 sous(2001, fruit). sous(2002, objet). sous(fruit, vegetal).
 sous(2001, pomme). sous(2002, pomme).   % leur lexicalisation
+sens(n, poire, 2101).             % un autre mot polysémique (lot 4) : un fruit, ou une forme (sans objet)
+sens(n, poire, 2102).
+sous(2101, fruit). sous(2101, poire). sous(2102, forme). sous(2102, poire).
+sens(n, lyre, 2201).              % trois sens (lot 4) : un instrument ; l'instrument qui est aussi une constellation ;
+sens(n, lyre, 2202).              % une constellation
+sens(n, lyre, 2203).
+sens(n, lyre_celeste, 2202).      % un mot qui n'a que le sens du milieu
+sous(2201, instrument). sous(2202, instrument). sous(2202, constellation). sous(2203, constellation).
+sous(2201, lyre). sous(2202, lyre). sous(2203, lyre). sous(2202, lyre_celeste).
 sous(fauve, felin).               % un pas qui n'est pas une inclusion (comme une lexicalisation)
 sous(cycle_a, cycle_b).          % un cycle, comme dans la hiérarchie des verbes de WordNet
 sous(cycle_b, cycle_a).
 
 % chaque pas de hiérarchie est une inclusion sémantique, sauf fauve → félin
-inclus(A, B) :- sous(A, B), A \== fauve, \+ ( integer(A), B == pomme ).
+inclus(A, B) :- sous(A, B), A \== fauve, \+ ( integer(A), memberchk(B, [pomme, poire, lyre, lyre_celeste]) ).
 
 cle_de_nom(Nom, C) :- upcase_atom(Nom, C).
 

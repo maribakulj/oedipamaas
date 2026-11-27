@@ -32,8 +32,8 @@ FAUTES = {
         "    \\+ ( M:alternative(_, As), memberchk(A, As) ).\npresent(M, E)",
         "    true.\npresent(M, E)"),
     "certification malgré un appui négatif": (
-        "hypotheses_retenues(K, M, S, A, Hs) :- lie(A, S, Ai), \\+ appui(K, M, Ai, neg, _, _), appui_retenu(",
-        "hypotheses_retenues(K, M, S, A, Hs) :- lie(A, S, Ai), appui_retenu("),
+        "    lie(A, S, Ai), \\+ appui(K, M, Ai, neg, _, _),\n    findall((L-Hs)-Ap,",
+        "    lie(A, S, Ai),\n    findall((L-Hs)-Ap,"),
     "source citée certifiée": (
         "arbre(pos(auteur), K, M, F, F, [], [], S0, [], Sel0)",
         "arbre(pos(tout), K, M, F, F, [], [], S0, [], Sel0)"),
@@ -95,17 +95,37 @@ FAUTES = {
     "existence d'une contrainte sans hypothèse": (
         "hypotheses_de_contrainte(K, M, v(nombre(E)), Hs) :- !, existence_supposee(K, M, [E], Hs).",
         "hypotheses_de_contrainte(_, _, v(nombre(_)), []) :- !."),
+    # depuis le lot 4, la condition B3 (une lecture au moins) est aussi le cas d'un atome des lectures conjointes :
+    # retirer le seul filtre des candidats donne un mutant équivalent ; on retire les deux
     "hypothèses sans lecture": (
         "appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \\+ conteste(K, M, Ai, Ap), lecture_possible(K, M, Ai, Ap).",
-        "appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \\+ conteste(K, M, Ai, Ap)."),
+        "appui_sain(K, M, Ai, Ap) :- appui_(K, M, Ai, pos, auteur, Ap), \\+ conteste(K, M, Ai, Ap).",
+        "    lectures_conjointes(K, M, Acc1),\n    choix_conjoint(",
+        "    true,\n    choix_conjoint("),
     "type entier jamais nié": (
         "noeuds_demandes(_, _, T, [T]) :- integer(T), !.",
         "noeuds_demandes(_, _, T, []) :- integer(T), !."),
+    # lot 4 (L1) : les hypothèses de sens par occurrence, leurs lectures conjointes
+    "lectures d'une occurrence non confrontées": (
+        "    lectures_conjointes(K, M, Acc1),\n    choix_conjoint(",
+        "    true,\n    choix_conjoint("),
+    "hypothèse de sens rattachée au lemme": (
+        "appui(O, _, _, chemin(W, _)), sens_suppose(O, W, T)) :-",
+        "appui(_, _, _, chemin(W, _)), sens_suppose(lemme, W, T)) :-"),
+    "choix des appuis sans retour arrière": (
+        "    member((_-Hs)-Ap, Cs), Acc1 = [r(Ai, Ap, Hs)|Acc],",
+        "    Cs = [(_-Hs)-Ap|_], Acc1 = [r(Ai, Ap, Hs)|Acc],"),
+    "lecture conjointe sans la négation au sens": (
+        "    forall(member(l(_, _, _, B), Is), ( au_sens(B, S, Bs), \\+ appui_(K, M, Bs, neg, _, _) )), !.",
+        "    !."),
 }
 
 
 # les défauts du vérificateur : chacun doit faire accepter une preuve fausse que les bancs contiennent
 FAUTES_VERIFICATEUR = {
+    "lectures conjointes non contrôlées": (
+        "hypotheses, pas_d_appui_negatif, lectures_conjointes]).",
+        "hypotheses, pas_d_appui_negatif])."),
     # lot 1 (contrôle indexé / exhaustif) : une exception de ressource n'est pas un verdict
     "budget épuisé pris pour un rejet": (
         "echec_ou_ressource(E) :- ressource(E), !, throw(E).",
@@ -120,10 +140,13 @@ FAUTES_VERIFICATEUR = {
         "    \\+ ( member(j(_, A, _), Js), atome(A), appui_negatif(K, G, S, A) ),",
         "    true,"),
     # depuis le cycle 9, le contrôle de l'assertion citée est couvert par celui des lectures (une assertion niée de
-    # façon certaine n'a aucune lecture) : retirer l'un seul donne un mutant équivalent ; on retire les deux
+    # façon certaine n'a aucune lecture), et depuis le lot 4 celui-ci par les lectures conjointes : retirer l'un seul
+    # donne un mutant équivalent ; on retire les trois
     "prémisse contredite acceptée": (
         "    \\+ ( member(j(_, A, Ap), Js), atome(A), assertion_citee(A, Ap, B), appui_negatif(K, G, S, B) ),\n    % ni contre l'existence d'une entité que l'appui cite, ni contre l'événement d'un rôle\n    \\+ ( member(j(_, A, Ap), Js), atome(A), A \\= genre(_), entite_citee(G, Ap, E), inexistante(K, G, E) ),\n    forall(( member(j(_, A, Ap), Js), atome(A) ), une_lecture(K, G, S, A, Ap)),\n",
-        "    % ni contre l'existence d'une entité que l'appui cite, ni contre l'événement d'un rôle\n    \\+ ( member(j(_, A, Ap), Js), atome(A), A \\= genre(_), entite_citee(G, Ap, E), inexistante(K, G, E) ),\n"),
+        "    % ni contre l'existence d'une entité que l'appui cite, ni contre l'événement d'un rôle\n    \\+ ( member(j(_, A, Ap), Js), atome(A), A \\= genre(_), entite_citee(G, Ap, E), inexistante(K, G, E) ),\n",
+        "hypotheses, pas_d_appui_negatif, lectures_conjointes]).",
+        "hypotheses, pas_d_appui_negatif])."),
     "contrainte contradictoire acceptée": (
         "    \\+ ( member(distinct(E1, E2), G), meme_classe(G, E1, A), meme_classe(G, E2, A), porteur_admis(G, E1),\n         porteur_admis(G, E2) ),",
         "    true,"),
@@ -199,15 +222,20 @@ FAUTES_COMPARATEUR = {
 }
 
 BANCS_NOYAU = ("test_noyau.pl", "test_noyau_semantique.pl", "test_noyau_robustesse.pl", "test_noyau_generatif.pl",
-               "test_ressources.pl")
+               "test_sens_occurrence.pl", "test_ressources.pl")
 BANCS_INCLUSION = ("test_inclusion.pl", "test_inclusion_generatif.pl", "test_ressources.pl")
 
 
-def essayer(d, nom, fichier, source, avant, apres, bancs=BANCS_NOYAU):
-    if avant not in source:
-        print(f"{nom} : motif introuvable (le code a changé, mettre l'injection à jour)")
-        return False
-    (d / "socle" / fichier).write_text(source.replace(avant, apres, 1), encoding="utf-8")
+def essayer(d, nom, fichier, source, modifs, bancs=BANCS_NOYAU):
+    """modifs : (avant, après, avant, après, …) : un défaut peut demander plusieurs altérations (un mutant qui ne
+    retirerait qu'un de deux contrôles redondants serait équivalent)."""
+    altere = source
+    for avant, apres in zip(modifs[0::2], modifs[1::2]):
+        if avant not in altere:
+            print(f"{nom} : motif introuvable (le code a changé, mettre l'injection à jour)")
+            return False
+        altere = altere.replace(avant, apres, 1)
+    (d / "socle" / fichier).write_text(altere, encoding="utf-8")
     par = []
     for f in bancs:
         r = subprocess.run(["swipl", "-g", "run_tests", "-t", "halt", f], cwd=d / "plunit",
@@ -235,18 +263,18 @@ def main():
             (d / "plunit" / f).write_text(test.replace("'../../oedipamaas/socle/", "'../socle/"), encoding="utf-8")
         print("— moteur optimisé —")
         source = (SOCLE / "satisfaction.pl").read_text(encoding="utf-8")
-        for nom, (avant, apres) in FAUTES.items():
-            if not essayer(d, nom, "satisfaction.pl", source, avant, apres):
+        for nom, modifs in FAUTES.items():
+            if not essayer(d, nom, "satisfaction.pl", source, modifs):
                 non_detectees.append(nom)
         print("— vérificateur —")
         source = (SOCLE / "verificateur.pl").read_text(encoding="utf-8")
-        for nom, (avant, apres) in FAUTES_VERIFICATEUR.items():
-            if not essayer(d, nom, "verificateur.pl", source, avant, apres):
+        for nom, modifs in FAUTES_VERIFICATEUR.items():
+            if not essayer(d, nom, "verificateur.pl", source, modifs):
                 non_detectees.append(nom)
         print("— comparateur —")
         source = (SOCLE / "inclusion.pl").read_text(encoding="utf-8")
-        for nom, (avant, apres) in FAUTES_COMPARATEUR.items():
-            if not essayer(d, nom, "inclusion.pl", source, avant, apres, BANCS_INCLUSION):
+        for nom, modifs in FAUTES_COMPARATEUR.items():
+            if not essayer(d, nom, "inclusion.pl", source, modifs, BANCS_INCLUSION):
                 non_detectees.append(nom)
     sys.exit(1 if non_detectees else 0)
 

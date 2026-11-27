@@ -466,24 +466,55 @@ vue(K, M, F, Opts, vue(Cert, Cmin, NCmin, Fmin)) :-
 
 certifiable(K, M, S, Sel, Cl) :-
     findall(A, ( member(_-A, Sel), requetes:atome(A) ), As),
-    maplist(hypotheses_retenues(K, M, S), As, Hss),
+    retenus_conjoints(K, M, S, As, Choix),
+    findall(H, ( member(r(_, _, Ha0), Choix), member(H, Ha0) ), Ha),
     findall(H, ( member(_-Co, Sel), requetes:contrainte(Co), contrainte_valeur(K, M, Co, S, h(H)) ), Hc),
     findall(H, ( member(_-Co, Sel), requetes:contrainte(Co), contrainte_valeur(K, M, Co, S, X),
                  hypotheses_de_contrainte(K, M, X, Hx), member(H, Hx) ), Hk),
-    append([Hc, Hk|Hss], Hs0), sort(Hs0, Hs),
+    append([Hc, Hk, Ha], Hs0), sort(Hs0, Hs),
     ( Hs == [] -> Cl = vraie ; Cl = sous_hypotheses(Hs) ).
 
-% un appui positif de l'auteur dont l'assertion elle-même n'est pas niée (« une lionne » quand le texte dit aussi « pas
-% de lionne » ne certifie pas « un lion ») : la preuve ne repose que sur des prémisses non contredites (§ 4.3)
-hypotheses_retenues(K, M, S, A, Hs) :- lie(A, S, Ai), \+ appui(K, M, Ai, neg, _, _), appui_retenu(K, M, Ai, _, Hs).
-% l'appui retenu d'un atome : un appui sain de l'auteur, celui qui demande le moins d'hypothèses (D30), le premier dans
-% l'ordre standard à égalité ; ses hypothèses : son sens supposé, les négations seulement possibles qui le touchent
-appui_retenu(K, M, Ai, Ap, Hs) :-
-    findall((L-Hs0)-Ap0, ( appui_sain(K, M, Ai, Ap0), hypotheses_d_appui(K, M, Ai, Ap0, Hs0), length(Hs0, L) ), Ps),
-    Ps \== [], msort(Ps, [(_-Hs)-Ap|_]).
+% Les appuis retenus d'une solution (lot 4, L1) : un par atome, choisis ensemble. Les candidats d'un atome sont ses
+% appuis positifs de l'auteur dont l'assertion elle-même n'est pas niée (« une lionne » quand le texte dit aussi « pas
+% de lionne » ne certifie pas « un lion » : la preuve ne repose que sur des prémisses non contredites, § 4.3), rangés
+% par nombre d'hypothèses, puis dans l'ordre standard de (Hypothèses, Appui). La combinaison retenue est la première,
+% dans l'ordre lexicographique des atomes de la sélection, dont les lectures sont conjointement possibles
+% (lectures_conjointes/3) ; aucune : la substitution n'est pas certifiable. Les candidats sont calculés une fois par
+% atome (le budget compte leurs appuis comme avant).
+retenus_conjoints(K, M, S, As, Choix) :-
+    maplist(candidats_d_atome(K, M, S), As, Css),
+    once(choix_conjoint(K, M, Css, [], Choix)).
+candidats_d_atome(K, M, S, A, Ai-Cs) :-
+    lie(A, S, Ai), \+ appui(K, M, Ai, neg, _, _),
+    findall((L-Hs)-Ap, ( appui_sain(K, M, Ai, Ap), hypotheses_d_appui(K, M, Ai, Ap, Hs), length(Hs, L) ), Cs0),
+    Cs0 \== [], msort(Cs0, Cs).
+choix_conjoint(_, _, [], Acc, Choix) :- reverse(Acc, Choix).
+choix_conjoint(K, M, [Ai-Cs|Css], Acc, Choix) :-
+    member((_-Hs)-Ap, Cs), Acc1 = [r(Ai, Ap, Hs)|Acc],
+    lectures_conjointes(K, M, Acc1),
+    choix_conjoint(K, M, Css, Acc1, Choix).
+
+% Les lectures d'une solution sont conjointement possibles si, pour chaque occurrence (l'assertion d'un appui à lien
+% lexical : une entité, une propriété, un événement, une relation), un même sens conceptuel de son mot atteint chacun
+% des types que lui demandent les atomes qu'elle appuie, sans que l'assertion, prise en ce sens, soit niée de façon
+% certaine. C'est la condition B3 (« une lecture au moins ») étendue à tous les atomes d'une même occurrence : « une
+% pomme » ne s'établit pas à la fois comme végétal (le fruit) et comme objet (la pomme d'arrosoir).
+lectures_conjointes(K, M, Choix) :-
+    findall(O-l(Cat, W, T, B), ( member(r(Ai, Ap, _), Choix), lecture_d_appui(Ai, Ap, O, Cat, W, T, B) ), Ls0),
+    msort(Ls0, Ls), findall(O, member(O-_, Ls), Os0), sort(Os0, Os),
+    forall(member(O, Os), lecture_d_occurrence(K, M, O, Ls)).
+lecture_d_appui(Ai, Ap, O, Cat, W, T, B) :-
+    Ap = appui(O, _, _, chemin(W, _)), categorie(Ai, Cat, T), base(Ai, Ap, B).
+lecture_d_occurrence(K, M, O, Ls) :-
+    findall(l(Cat0, W0, T0, B0), member(O-l(Cat0, W0, T0, B0), Ls), Is), Is = [l(Cat, W, _, _)|_],
+    sens_conceptuels(K, Cat, W, Ss), member(S, Ss),
+    forall(member(l(_, _, T, _), Is), once(chemin_court(K, sous, S, T, _))),
+    forall(member(l(_, _, _, B), Is), ( au_sens(B, S, Bs), \+ appui_(K, M, Bs, neg, _, _) )), !.
+
 hypotheses_d_appui(K, M, Ai, Ap, Hs) :-
     findall(H, hypothese_d_appui(K, M, Ai, Ap, H), Hs0), sort(Hs0, Hs).
-hypothese_d_appui(K, _, Ai, appui(_, _, _, chemin(W, _)), sens_suppose(W, T)) :-
+% sens_suppose(Occurrence, Mot, Type) : l'occurrence est l'assertion de l'appui (lot 4, L1)
+hypothese_d_appui(K, _, Ai, appui(O, _, _, chemin(W, _)), sens_suppose(O, W, T)) :-
     categorie(Ai, Cat, T), \+ lien_pos_certain(K, Cat, W, T).
 % negation_autre_sens(Atome) : l'atome (instancié) n'a qu'une négation possible, supposée viser un autre sens
 hypothese_d_appui(K, M, Ai, _, negation_autre_sens(Ai)) :- once(appui_(K, M, Ai, negp, _, _)).
@@ -590,8 +621,9 @@ regime(_, figuration).
 
 preuve(K, M, Id, Rg, cert(Cl, S, Sel), preuve(Id, [noyau(V), connaissances(Vk), graphe(H)], Rg, S, Js, Hs)) :-
     version_noyau(V), K:version(Vk), M:empreinte(H),
-    findall(j(C, A, Ap), ( member(C-A, Sel), requetes:atome(A), lie(A, S, Ai),
-                           appui_retenu(K, M, Ai, Ap, _) ), Ja),
+    findall(C-A, ( member(C-A, Sel), requetes:atome(A) ), CAs), pairs_values(CAs, As),
+    retenus_conjoints(K, M, S, As, Choix),                 % les mêmes appuis que la certification (lot 4)
+    findall(j(C, A, Ap), ( nth1(I, CAs, C-A), nth1(I, Choix, r(_, Ap, _)) ), Ja),
     findall(j(C, Co, contrainte(J)), ( member(C-Co, Sel), requetes:contrainte(Co),
                                        contrainte_valeur(K, M, Co, S, X), justification(X, J) ), Jc),
     append(Ja, Jc, Js0), sort(Js0, Js),
