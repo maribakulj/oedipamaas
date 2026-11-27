@@ -1,6 +1,6 @@
 {
- "cree": "2026-11-27T11:24:30Z",
- "commit_de_l_archiveur": "04fe8bc9c1f7babd258e696468e9be377e4a0754",
+ "cree": "2026-11-27T11:24:42Z",
+ "commit_de_l_archiveur": "45f8d6ceb4254439faeb55db8b8dd6a26a239f74",
  "commits_des_passes_du_lot1": [
   "5a0e2225fa5f5f646768415f2be06d950b84b1f5"
  ],
@@ -1811,6 +1811,76 @@
    "taille": 825,
    "sha256": "0a4dc19b35a3cc3ea58cb2f443e3801069591ef0ccf1b390f075b4c02b90cd61",
    "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/causes_ref_ref.json",
+   "taille": 24884,
+   "sha256": "681ca28a9752b13b81e1043d2193009131b3857dfb8c5a5c946c9fc2fc4ed5f2",
+   "role": "les causes des échecs de (graphe de référence, requête de référence), décidées cas par cas par un agent ; provisoires",
+   "statut": "agents"
+  },
+  {
+   "chemin": "croise/classes_validation_m1.json",
+   "taille": 13144,
+   "sha256": "752401f207611471f89cb2eeac695d12420ce699170ada491556c75f408a51f8",
+   "role": "les classes mécaniques des atomes manquants (outils/croise/classer.py)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/classes_vertical.json",
+   "taille": 10635,
+   "sha256": "0ed335bb9af5fa99a2d59849f9768cfa5d941af7b1d873203f27a40665b3b28b",
+   "role": "les classes mécaniques des atomes manquants (outils/croise/classer.py)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/croise_validation_m1.json",
+   "taille": 418269,
+   "sha256": "f72d1fed26aef151a8eb578362262c7887fb65cb2d33bc7ef162a2a161108cc2",
+   "role": "les quatre conditions de l'expérience croisée (outils/croise/croiser.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/croise_vertical.json",
+   "taille": 202433,
+   "sha256": "594869356c7ddd7c6bb48634ca82684a8e5da45a9e3c427acbe038cf5d1ef093",
+   "role": "les quatre conditions de l'expérience croisée (outils/croise/croiser.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/echecs_ref_ref_validation_m1.json",
+   "taille": 49373,
+   "sha256": "8408a2ac5a613b934b22ac673edb3d4f4597c00f4066315909ccf3c1fb375605",
+   "role": "les échecs et leurs atomes manquants (outils/croise/diagnostiquer.py)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/echecs_ref_ref_vertical.json",
+   "taille": 28263,
+   "sha256": "e9ee61990ab3bb0c00ab5898a4b189f5d4ebc956d99c038dd47b76d60f826386",
+   "role": "les échecs et leurs atomes manquants (outils/croise/diagnostiquer.py)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/sonde_validation_m1.json",
+   "taille": 77910,
+   "sha256": "f96612d3a7d56c083965c93dc027d5e20e95b988fdebd8a5552ab53aab6bca29",
+   "role": "ce que K sait des atomes manquants (outils/croise/sonder.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/sonde_vertical.json",
+   "taille": 25225,
+   "sha256": "90ce508ec3281ed4fb9ea39e0c590b40fa054975da12e622f757916f8a817896",
+   "role": "ce que K sait des atomes manquants (outils/croise/sonder.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/tableaux.json",
+   "taille": 6729,
+   "sha256": "a00e7c3514d4cdc88314d3a55e4b03bd576074ccbefaf1ddb46c98f1fa8900db",
+   "role": "les tableaux (outils/croise/tableaux.py)",
    "statut": "outil"
   }
  ]
