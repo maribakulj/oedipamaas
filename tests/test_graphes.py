@@ -279,3 +279,26 @@ def test_intervalles_par_fiche():
     b, h = iv["intervalles"]["structure:roles"]
     assert 0 < b <= h <= 1
     assert iv == cg.intervalles(par_texte, tirages=200)                      # reproductible (graine)
+
+
+def test_precision_des_admissibles_compte_les_sans_correspondante():
+    juste = cg.metriques_surete(resultat(faits()).securite)
+    assert juste["precision_admissible"] == 1
+    lu = faits()
+    lu["faits"] += [["entite", "e_9", "dragon", "p9"]]          # admissible, sans correspondante dans la référence
+    S = resultat(lu).securite
+    assert S["graphe_admissible_sans_correspondante"] == 1
+    assert cg.metriques_surete(S)["precision_admissible"] < 1
+
+
+def test_intervalles_apparies_et_jalon():
+    a = {(1, "positif"): resultat(faits(pol_rel="pos")), (2, "positif"): resultat(faits(pol_rel="pos"))}
+    b = {(1, "positif"): resultat(faits()), (2, "positif"): resultat(faits())}
+    app = cg.intervalles_apparies(a, b, tirages=100)
+    assert app["fiches"] == 2 and app["a"]["surete:taux_promotion"] > 0 and app["b"]["surete:taux_promotion"] == 0
+    assert app["rapport_promotion"][1] == 0
+    j = cg.jalon(app)
+    assert j["promotions_divisees_par_deux"] and j["couverture_gardee"] and j["atteint"]
+    assert not cg.jalon(cg.intervalles_apparies(b, a, tirages=100))["atteint"]   # l'inverse : pas de réduction
+    same = cg.intervalles_apparies(a, a, tirages=100)
+    assert all(lo == hi == 0 for lo, hi in same["difference"].values())          # A contre A : différence nulle

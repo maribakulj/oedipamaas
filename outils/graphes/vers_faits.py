@@ -1,6 +1,6 @@
 """Les graphes annotés (le banc de référence) en assertions du noyau (docs/ASSERTIONS.md), au format de lire.pl.
 
-Usage : python outils/graphes/vers_faits.py REFERENCES.json SORTIE.json
+Usage : python outils/graphes/vers_faits.py REFERENCES.json SORTIE.json [--pronoms garder|retirer]
 
 Pour coder les graphes de référence comme ceux du lecteur (outils/graphes/coder_graphes.pl) : la différence des deux
 codages est l'effet de la lecture sur les codes Iconclass, toutes choses égales par ailleurs (mêmes requêtes, même
@@ -12,7 +12,11 @@ noyau). Conversion :
   - chaque assertion a ses quatre qualificatifs, explicitement ; les alternatives et les coréférences, distinctions
     sont recopiées.
 Les têtes et prédicats sont pris tels qu'annotés (lemmes de la langue du texte) : un lemme que les connaissances ne
-connaissent pas ne mène à rien, comme pour le lecteur."""
+connaissent pas ne mène à rien, comme pour le lecteur.
+Les prédicats pronominaux (« se tenir ») gardent leur pronom (--pronoms garder, par défaut depuis le 27/11) : K
+distingue « se tenir » (2 sens) de « tenir » (52 sens, dont avoir en main). Jusqu'au 27/11, la conversion retirait le
+pronom, comme le comparateur le fait pour comparer (--pronoms retirer reproduit les assertions de la version 1 du
+banc)."""
 import collections
 import importlib.util
 import json
@@ -25,8 +29,15 @@ cg = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(cg)
 
 
+PRONOMS = "garder"
+
+
 def atome(x):
     return cg.norm(x)
+
+
+def predicat(x):
+    return cg.norm_pred(x) if PRONOMS == "retirer" else cg.norm_nom(x)
 
 
 def vers_faits(r):
@@ -75,7 +86,7 @@ def vers_faits(r):
             F.append(["nombre", e["id"], int(e["nombre"])])
     for v in r.get("evenements", []):
         p = passage(v.get("mention"))
-        F.append(["evenement", v["id"], cg.norm_pred(v["predicat"]), p])
+        F.append(["evenement", v["id"], predicat(v["predicat"]), p])
         F += qualifs(v["id"], v)
         for role, es in (v.get("roles") or {}).items():
             for e in ([es] if isinstance(es, str) else es):
@@ -96,6 +107,11 @@ def vers_faits(r):
 
 
 def main():
+    global PRONOMS
+    if "--pronoms" in sys.argv:
+        PRONOMS = sys.argv[sys.argv.index("--pronoms") + 1]
+        if PRONOMS not in ("garder", "retirer"):
+            raise SystemExit("--pronoms garder|retirer")
     R = json.loads(Path(sys.argv[1]).read_text(encoding="utf-8"))
     out = [{"k": r["k"], "genre": r["genre"], "langue": r["langue"], "texte": r["texte"], "faits": vers_faits(r),
             "derivations": []} for r in R]
