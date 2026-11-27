@@ -1,6 +1,10 @@
-# Le jeu de qualification indépendant (scellé)
+# Le jeu de qualification indépendant (gelé, non scellé)
 
 Branche orpheline : aucune histoire commune avec le code, jamais fusionnée.
+
+**Gelé, non scellé** (précision de la propriétaire, 27/11) : une branche que les agents peuvent lire n'est pas hors de
+leur portée. La conservation hors de portée est à organiser avec la propriétaire (`docs/QUALIFICATION_SEMANTIQUE.md`,
+§ 4.1, sur la branche du code). Après une copie vérifiée, cette branche est à retirer.
 
 **Ne pas ouvrir `jeu.json`.** Il ne doit être lu qu'une fois, pour la qualification, après que la propriétaire a
 validé les bancs par famille (`docs/QUALIFICATION_SEMANTIQUE.md`, § 4, sur la branche du code). Aucun agent ne le lit
