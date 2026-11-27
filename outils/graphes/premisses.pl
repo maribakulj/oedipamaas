@@ -15,9 +15,17 @@
                             présentes) ;
       aucun                 l'assertion n'appuie rien, dans un sens ni dans l'autre (une hypothèse, un titre, une
                             alternative, un autre contexte, un porteur absent) ; un rôle d'un événement nié : aucun.
-    Ce que l'outil ne calcule pas : ce qui dépend de K (un porteur dont le type est nié par un lien lexical, la
-    négation seulement possible) ; ces cas restent ceux du noyau, en aval. Un graphe invalide est signalé, jamais
-    évalué (« invalide », avec les erreurs).  */
+    Trois niveaux, à ne pas confondre (décision de la propriétaire, 27/11) :
+      1. la qualification linguistique : les qualificatifs propres de l'assertion (ce que mesure le comparateur sans
+         --premisses) ;
+      2. l'appui contextuellement admissible : ce que cet outil calcule, l'état d'appui selon le noyau, porteurs,
+         participants et événement d'un rôle compris ;
+      3. la prémisse réellement certifiable : ce que la certification du noyau accepte en plus, et que cet outil NE
+         calcule PAS. Il ne calcule ni les contestations qui dépendent de K (un porteur dont le type est nié par un lien
+         lexical, une prémisse niée par un lien, la négation seulement possible d'un autre sens), ni les contraintes
+         (les nombres, contredits par un autre nombre ; les distinctions et identités ; les distinctions
+         documentaires), ni les lectures conjointes. Un appui de niveau 2 peut donc ne pas être certifiable.
+    Un graphe invalide est signalé, jamais évalué (« invalide », avec les erreurs).  */
 :- initialization(main, main).
 :- prolog_load_context(directory, D), atom_concat(D, '/../../oedipamaas/socle', S), asserta(user:file_search_path(socle, S)).
 :- use_module(socle(satisfaction)).

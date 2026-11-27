@@ -82,7 +82,8 @@ Elles ne coïncident pas.
 
 La seconde est celle des preuves. **La première devrait être alignée sur elle, ou retirée,** et c'est un défaut de
 maintenance, non une limite d'expressivité. La mesure de sûreté suit maintenant la seconde (`outils/graphes/premisses.pl`,
-`docs/mesures/V2.md`).
+`docs/mesures/V2.md`), au niveau de l'appui contextuellement admissible. Elle ne mesure pas encore la prémisse
+réellement certifiable, qui dépend aussi de K et des contraintes (`docs/mesures/V2.md`).
 
 ## 2. Deux résultats généraux
 

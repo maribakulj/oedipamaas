@@ -66,14 +66,30 @@ partir d'une spécification**, avant toute réalisation.
 | modalité, négation, contextes | négations atomiques et de descriptions ; alternatives ; sources ; contenus de vision, d'ordre, d'inscription | 80 × 8 |
 | niveaux de représentation | personnifications, symboles, allégories ; œuvre et figuré ; titre | 40 × 6 |
 | définitions et classification | une définition appariée (structure exacte, structure partielle, mots seulement) | 60 × 6 |
+| phénomènes iconographiques | narration continue ; juxtaposition d'épisodes ; personnifications ; représentations emboîtées (tableau dans le tableau, vision, miroir) ; événement historique et événement figuré ; niveaux de signification ; identification de personnages (par le nom, par les attributs) | 60 × 6 |
 
-**Ce qui assure l'indépendance des bancs :**
-- **le vocabulaire :** les cas de chaque banc sont écrits avec des **familles lexicales et des constructions
-  réservées**, non employées pour la mise au point. Une moitié de chaque banc, tirée avec une graine avant toute
-  réalisation, est mise sous scellé ;
-- **les auteurs :** les cas sont écrits par des agents qui ne voient ni le code ni les sorties, puis jugés par la
-  propriétaire sur un échantillon (D23). Comme pour le banc de graphes, l'accord entre agents n'est pas une validation
-  humaine.
+**Les phénomènes composés** (décision de la propriétaire) sont substantiellement représentés, pour que le système ne
+soit pas qualifié sur des cas isolés :
+- au moins **40 % des cas de base** de chaque banc combinent deux phénomènes ou plus, dont au moins un d'une autre
+  famille ;
+- au moins **10 %** en combinent trois ou plus.
+- Les compositions sont choisies dans une matrice famille × famille fixée à l'avance, couverte entièrement.
+
+**Ce qui assure l'indépendance des bancs** (décision de la propriétaire : la séparation se fait **avant** la génération
+des variantes, par cas de base, par familles lexicales et par constructions) :
+1. **l'inventaire d'abord :** pour chaque famille, la liste des **constructions** (les réalisations d'un phénomène) et
+   des **familles lexicales** (les fichiers lexicographiques de WordNet du mot pivot), écrite avant tout cas ;
+2. **la répartition, ensuite, tirée avec une graine :** chaque construction et chaque famille lexicale est mise en
+   développement ou en qualification (`outils/bancs/repartir.py`).
+   - **Un cas de développement** n'emploie que des constructions et des familles lexicales de développement.
+   - **Un cas de qualification** emploie au moins une construction ou une famille lexicale de qualification.
+3. **les cas de base, puis seulement leurs variantes :** les variantes d'un cas (§ 2.2) restent dans son côté. Une
+   paraphrase d'un cas de développement n'est jamais un cas de qualification ;
+4. **les auteurs :** les cas sont écrits par des agents qui ne voient ni le code ni les sorties.
+   - Les cas de développement sont écrits par des agents de la session de développement.
+   - Les cas de qualification sont écrits par des agents d'une **autre session**, lancée par la propriétaire, qui ne
+     reçoivent que l'inventaire, la répartition et le guide. Leurs sorties ne sont pas versées dans le dépôt (§ 4).
+   - Un échantillon est jugé par la propriétaire (D23). L'accord entre agents n'est pas une validation humaine.
 
 ### 2.4 Les tests génératifs et métamorphiques
 
@@ -131,7 +147,7 @@ Elles viennent de la typologie de `docs/FONDEMENTS.md`, § 3.2 :
   l'enfant.
 
 **Comment il est gardé :**
-- le jeu est écrit dans un dossier hors dépôt, avec une empreinte publiée dans le dépôt ;
+- le jeu est écrit hors de portée des agents de développement, avec une empreinte publiée dans le dépôt (§ 4.1) ;
 - il n'est ouvert qu'une fois, pour la qualification, et après que la propriétaire a validé les bancs du § 2 ;
 - les requêtes de référence et les textes de ce jeu sont écrits par des annotateurs qui n'ont travaillé sur aucun
   autre jeu ;
@@ -144,10 +160,27 @@ Elles viennent de la typologie de `docs/FONDEMENTS.md`, § 3.2 :
 - **les exclusions :** 2 114 notations exclues directement, puis leurs ancêtres et leurs descendants directs. Exclure
   tous les descendants retirerait des divisions entières, à cause des codes courts comme 25H ;
 - **l'empreinte SHA-256 du contenu :** `8d91ac6a57a0b6a58748510f799285b5abbfb6fd9c1aa94df126d2514dd2c927` ;
-- **la conservation :** sur la branche orpheline `donnees/qualification-independante`, que personne n'ouvre avant la
-  qualification. Ni l'agent qui l'a tiré ni personne n'a lu son contenu ; seul le résumé du tirage l'a été ;
-- **ce qui n'est pas vérifié :** le recouvrement avec les bancs scellés. Leurs références ne sont pas lues ; c'est à la
-  propriétaire de le vérifier, en relançant l'outil avec elles dans `--exclure`.
+- **la conservation, aujourd'hui :** sur la branche orpheline `donnees/qualification-independante`. Ni l'agent qui l'a
+  tiré ni personne n'a lu son contenu ; seul le résumé du tirage l'a été.
+  - **Ce jeu est gelé, non scellé** (précision de la propriétaire) : une branche d'un dépôt que les agents peuvent
+    lire n'est pas hors de leur portée. Il ne doit pas être ouvert ;
+- **ce qui n'est pas vérifié :** le recouvrement avec les bancs scellés anciens. Leurs références ne sont pas lues.
+
+### 4.1 La conservation hors de portée des agents (à organiser avec la propriétaire)
+
+Une proposition, qui demande des gestes de la propriétaire :
+1. **Copier** `jeu.json` et son résumé hors du dépôt, sur un support qu'aucune session de développement ne monte. Vérifier
+   l'empreinte publiée.
+2. **Vérifier le recouvrement** avec les anciens bancs scellés (`banc_qualif*`, `banc_scelle`), sur ce même support :
+   relancer `outils/qualification/tirer_jeu_independant.py` avec leurs références dans `--exclure`.
+   - Si le jeu change, l'ancien est gardé et la nouvelle empreinte publiée.
+   - L'outil ne lit les références que pour en extraire des notations.
+3. **Retirer la branche** `donnees/qualification-independante` du dépôt, une fois la copie vérifiée. C'est une
+   suppression : elle est faite par la propriétaire, ou à sa demande expresse.
+4. **Pour la suite,** les requêtes de référence et les textes de qualification sont écrits par une session distincte, et
+   déposés directement sur ce support, jamais dans le dépôt.
+5. **À la qualification,** une session de mesure reçoit le jeu, une seule fois, et le journal de son ouverture est
+   publié.
 
 **Les textes :** pour une part, des **descriptions réelles** (notices et cartels d'institutions, sous une licence
 compatible), et non seulement des textes écrits pour le banc. L'écart entre les deux est l'une des mesures.

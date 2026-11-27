@@ -1,4 +1,4 @@
-# La trajectoire d'implémentation (version 1, 27/11)
+# La trajectoire : l'ordre de spécification et l'ordre de réalisation (version 1.1, 27/11)
 
 **Ce qui est proposé.** Un ordre de travail qui préserve les acquis du noyau. Chaque phase :
 - a une spécification écrite avant le code ;
@@ -12,6 +12,32 @@ sûreté n'est perdue ailleurs.
 **Ce qui ne bouge pas :** la logique du noyau (Belnap, certification, identité, supervaluation des sens, lectures
 conjointes), le vérificateur indépendant, l'oracle et le principe « la précision d'abord ».
 
+## Deux ordres distincts
+
+**La précision de la propriétaire** (quatrième message, § 5) : distinguer l'ordre de spécification de l'ordre de
+réalisation. La réification des états, les contextes, la temporalité et les modificateurs non intersectifs doivent être
+**spécifiés assez tôt** pour guider la canonisation et la déduction, même s'ils sont **réalisés** plus tard.
+
+**L'ordre de spécification,** chaque point écrit et soumis avant que le suivant ne soit figé :
+
+| rang | ce qui est spécifié | document | ce qu'il guide |
+|---|---|---|---|
+| S1 | l'ontologie des éventualités : propriétés, états, processus, événements de changement, situations | `docs/ONTOLOGIE_EVENTUALITES.md` (étude faite ; syntaxe à fixer) | la canonisation des états et des noms d'action ; les bancs |
+| S2 | les contextes : l'emboîtement, ceux qu'ouvre une éventualité, l'accessibilité, les valeurs par contexte | une version 2 de `docs/ASSERTIONS.md`, puis une version 0.4 de `docs/NOYAU.md` | l'admissibilité ; les contenus ; les représentations emboîtées |
+| S3 | la temporalité : l'ancrage relatif à une situation, plusieurs situations, la narration | idem | la déduction des états résultants ; la narration |
+| S4 | les modificateurs non intersectifs, privatifs ou de mode d'existence ; les extensions réelle et figurée | idem | la classification ; les créatures fictives |
+| S5 | la quantification énoncée : collections, domaines, exceptions, distributivité | idem | les libellés exclusifs ; « tous », « chacun » |
+| S6 | la canonisation et la déduction, sur S1 à S5 | `docs/SPECIFICATION_OPERATIONS.md`, révisée | la phase de canonisation |
+| S7 | la base de définitions conceptuelles et la classification | idem | le dépliage |
+| S8 | l'abduction explicative | idem | l'abduction |
+
+**L'ordre de réalisation** est celui des phases ci-dessous. Il peut commencer plus tôt pour ce qui ne dépend pas de S2 à
+S5 : les bancs, la canonisation sur le langage actuel, `non/1`. Il ne réalise une extension qu'une fois **sa
+spécification et son banc validés**.
+
+**La conservation du noyau n'est pas un principe contre une extension démontrée nécessaire** : S2 à S5 touchent le
+langage et, par sa spécification, le noyau.
+
 ## Phase 0 — les instruments (faite le 27/11)
 
 - **La mesure de l'admissibilité effective** des prémisses, selon le noyau (`outils/graphes/premisses.pl`).
@@ -20,7 +46,7 @@ conjointes), le vérificateur indépendant, l'oracle et le principe « la préci
 - **Le jeu de qualification indépendant,** tiré et scellé.
 - **L'audit de l'expressivité** et les fondements sémantiques.
 
-## Phase 1 — les bancs par famille, avant tout code (à valider)
+## Phase 1 — les bancs par famille, avant tout code (lancée le 27/11)
 
 - **Les cas de base et leurs variations,** écrits d'après les fondements et la spécification des opérations, pour les
   huit familles. La moitié de chaque banc est mise sous scellé.
@@ -57,14 +83,20 @@ canonisation reste sous hypothèse de sens (D30). C'est mesuré, non contourné.
 **Pourquoi tôt :** l'extension est petite, la logique qui calcule les appuis négatifs existe, et environ 5 % des
 libellés en dépendent.
 
-## Phase 4 — la classification par dépliage des définitions
+## Phase 4 — la base de définitions conceptuelles, et la classification par dépliage
 
 **Ce qui est à faire :**
-- les définitions d'une ressource (les gloses de WordNet d'abord), **compilées en requêtes par le compilateur des
-  libellés** ;
-- chacune étiquetée équivalence ou typique, d'après une mesure par famille ;
-- le dépliage côté requête pour les équivalences, avec sa terminaison vérifiée et la définition citée par la preuve ;
-- le comparateur d'inclusion, pour vérifier le dépliage ;
+- **la base de définitions conceptuelles** (`docs/FONDEMENTS_SEMANTIQUES.md`, § 2.7) :
+  - des entrées par **sens**, à **structure** (des motifs d'assertions typés par des sens), partagées par les notations
+    qui emploient le concept ;
+  - les gloses d'une ressource (WordNet d'abord) compilées en structures par le compilateur des libellés ;
+- **le statut de chaque entrée, par direction :** équivalence établie, condition suffisante, condition nécessaire,
+  typique, relation inconnue.
+  - Il n'est établi que par une **attestation** (la ressource et une validation). Le défaut est « relation inconnue ».
+  - L'absence de contre-exemple dans K n'établit rien ; le comparateur d'inclusion sert à trouver des contre-exemples,
+    non à prouver une équivalence ;
+- **le dépliage côté requête** pour les entrées suffisantes ou équivalentes établies, avec sa terminaison vérifiée et
+  l'entrée citée par la preuve ;
 - le banc « définitions et classification », dont les faux positifs de la couche D (le moine pour la tonsure) sont des
   contre-exemples.
 
@@ -83,11 +115,17 @@ libellés en dépendent.
 
 Le prototype `outils/inference/` est la base d'essai, non la réalisation.
 
-## Phase 6 — l'ancrage temporel et les contextes de contenu (extensions du langage d'assertions)
+## Phase 6 — les éventualités, les contextes, le temps, les modificateurs, la quantification (extensions du langage)
+
+Elle réalise S1 à S5. Leur spécification, elle, vient plus tôt (§ « Deux ordres distincts »).
 
 **Ce qui est à faire :**
 - la version 2 de `docs/ASSERTIONS.md` ;
-- **l'ancrage des événements :** en cours, antérieur, imminent ;
+- **les états réifiés,** distincts des propriétés ordinaires, et les situations comme référents d'une sorte propre ;
+- **l'ancrage des éventualités** par rapport au moment de leur situation (en cours, antérieure, imminente), et
+  plusieurs situations par œuvre ;
+- **les modificateurs non intersectifs,** privatifs ou de mode d'existence ;
+- **les collections et les quantifications énoncées ;**
 - **les rôles dont la valeur est un événement,** avec le contexte du contenu (ordre, tentative, vision, rêve, parole,
   inscription) ;
 - **les référents conceptuels** et les relations de figuration ;
@@ -101,8 +139,9 @@ Le prototype `outils/inference/` est la base d'essai, non la réalisation.
 ## Phase 7 — l'abduction
 
 **Ce qui est à faire :**
-- `abduire/5` (§ 4 de la spécification) : des hypothèses dirigées, admissibles, conjointes, minimales, à coûts fixés à
-  l'avance ;
+- `abduire/4` (§ 4 de la spécification) : des **explications d'éléments observés**, chacune fondée sur une connaissance
+  identifiée, admissible, conjointe, minimale, à coûts fixés à l'avance, et comparée aux explications concurrentes
+  (une ambiguïté est rapportée, non tranchée) ;
 - des connaissances typiques réutilisées : les « possible attributes » d'Iconclass, FrameNet (relations entre cadres),
   ConceptNet en module à licence séparée ;
 - **jamais `etablie` :** toujours `etablie_sous_hypotheses`.
@@ -126,7 +165,9 @@ Elle court en parallèle des phases 2 à 7 :
 
 ## Ce qui est volontairement différé
 
-- la narration continue (plusieurs moments figurés) et les relations d'ordre entre événements figurés ;
+- **la réalisation** de la narration continue, de la juxtaposition d'épisodes et de l'identité d'un personnage à
+  travers les situations. Elles ne sont **pas exclues** par la représentation (S1, S3), et les bancs les couvrent
+  dès la phase 1 ;
 - les espèces et les génériques ;
 - le contenu textuel des inscriptions ;
 - toute ressource produite par un grand modèle de langue ;

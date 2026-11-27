@@ -30,7 +30,7 @@ Les formalismes riches lui apportent des **morceaux précis**, non un remplaceme
 
 | besoin établi par l'audit | ce que la littérature offre | ce que nous en prenons |
 |---|---|---|
-| la canonisation des états (chauve, calvitie) | états réifiés en éventualités (Parsons ; les états « kimiens » de Maienborn) | **à décider** (§ 3.1) : la propriété comme forme canonique, ou l'état réifié |
+| la canonisation des états (chauve, calvitie) | états réifiés en éventualités (Parsons ; les états « kimiens » de Maienborn) | **décidé** (§ 3) : l'état réifié, distinct des propriétés ordinaires |
 | l'ancrage temporel des événements | structure d'événement, état résultant, aspect (Moens et Steedman ; Pustejovsky ; le treillis d'aspect d'UMR ; Inchoative_of de FrameNet ; les post-situations d'ESO) | les **valeurs d'ancrage** (en cours, antérieur, imminent) et la relation événement → état résultant, avec deux statuts |
 | les contextes de contenu et l'emboîtement des sources | boîtes de la DRT, dépendances modales d'UMR vers des « conceveurs », sémantique de la dépiction | des **contextes emboîtés**, avec la règle d'accessibilité de la DRT pour les référents |
 | la classification par définition | logiques de description (EL), réécriture de requêtes | des **définitions de forme EL** (∃, ⊓, en arbre) dépliées dans les requêtes |
@@ -188,8 +188,8 @@ en général, et NP pour le cas de Horn.
 - des **hypothèses déclarées**, dirigées par la requête, à coûts fixés à l'avance, minimales et conjointement
   satisfaisables ;
 - jamais un statut `etablie` ;
-- **la question d'un statut intermédiaire** (« par définition lexicale », entre certain et sous hypothèse, l'une des
-  questions ouvertes de l'état de l'art) : **à décider** (§ 3.2).
+- **pas de statut intermédiaire** (décision du § 3) : une classification par une définition est déductive si la
+  suffisance de la définition est établie, une hypothèse sinon.
 
 ### 2.11 Les ontologies d'événements et de situations (DOLCE et DnS ; SEM ; LODE ; ESO ; le calcul des événements)
 
@@ -221,19 +221,17 @@ des fondements, et les post-situations d'ESO comme source candidate des conséqu
   - La phrase de la documentation ne contredit pas ce typage : un terme plus large d'une rubrique ne pose aucune
     condition.
 
-## 3. Ce qui reste à décider par la propriétaire
+## 3. Les décisions de la propriétaire (27/11, quatrième message)
 
-1. **La forme canonique des états.**
-   - **Option A : la propriété,** avec les équivalences nom d'état ↔ adjectif dans K. Elle ne change pas le langage.
-   - **Option B : l'état réifié en éventualité**, avec son porteur, à la manière de Parsons et de Maienborn. Elle unifie
-     « chauve » et « calvitie » par la représentation, et donne aux états le même ancrage temporel qu'aux événements
-     (« Orion, while asleep, is blinded »).
-   - **Mon avis :** B, si l'ancrage temporel de la phase 6 est adopté, parce qu'il faudrait sinon un second mécanisme
-     pour situer les états. A, sinon.
-2. **Un statut « par définition lexicale »** entre « établi » et « sous hypothèse », pour une classification par une
-   glose que la ressource ne donne pas pour une équivalence.
-   - **Mon avis :** ne pas l'ajouter maintenant. Une telle classification est une hypothèse, avec sa ressource et sa
-     glose dans la preuve. Un statut intermédiaire brouillerait la frontière qui fait la valeur du noyau.
+1. **La forme canonique des états : l'option B**, les états réifiés en éventualités, avec leur porteur, qualifiables,
+   situés dans le temps et reliés aux autres éventualités.
+   - **Pas indistinctement :** les propriétés ordinaires restent des propriétés, et on distingue les états, les
+     processus et les événements de changement.
+   - L'ontologie commune est étudiée avant la syntaxe : `docs/ONTOLOGIE_EVENTUALITES.md`.
+2. **Aucun statut intermédiaire « par définition lexicale ».**
+   - La provenance lexicale et le statut épistémique sont deux dimensions distinctes.
+   - Une définition lexicalement attestée fonde une conclusion déductive si sa suffisance est établie ; sinon, elle
+     reste une hypothèse (`docs/FONDEMENTS_SEMANTIQUES.md`, § 2.7).
 
 Les autres questions ouvertes de l'état de l'art (§ 15) sont rangées par la trajectoire :
 - la distributivité et le nombre : les bancs de la phase 1 ;
