@@ -22,6 +22,8 @@ reproduction sont sur la branche du code (`docs/BANC_GRAPHES.md`, § 5 ; `docs/m
   couches (`docs/INFERENCES.md`) ; `essai1/`, sa première passe, gardée.
 - `c3_corrections/` : les mesures avant / après des corrections du compilateur C3 (PR #16), et leurs passes
   intermédiaires ; son propre `MANIFESTE.json`.
+- `surete_lecteur/` : les expériences de sûreté du lecteur (PR #17), en une archive `tar.xz` (910 Mo décompressés),
+  et son `MANIFESTE.json` (l'empreinte de chaque fichier de l'archive).
 - `MANIFESTE.json` : chaque fichier (taille, SHA-256, rôle, statut), et les commits des passes.
 
 **Statut** : tout ce qui vient des annotateurs et des adjudicateurs est un **accord entre agents**, non une validation
