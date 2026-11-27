@@ -3,8 +3,9 @@
 Usage : python outils/mesure/reunir_tranches.py SORTIE.json TEXTES.json PAS TRANCHE1.json TRANCHE2.json …
 
 Contrôles (un seul défaut, et rien n'est écrit) :
-  - chaque tranche a sa description (TRANCHE.json.passe.json) ; toutes ont le même commit, le même réglage, la même
-    entrée et le même pas, et leurs numéros sont exactement 1/N … N/N ;
+  - chaque tranche a sa description (TRANCHE.json.passe.json) ; toutes ont le même commit (lu au départ de la passe,
+    sur un arbre de travail sans modification), le même réglage, la même entrée et le même pas, et leurs numéros sont
+    exactement 1/N … N/N ;
   - les fiches réunies sont exactement celles de l'échantillon (une fiche sur PAS de TEXTES.json), chacune dans une
     seule tranche, et celles que la description de sa tranche annonce ;
   - chaque texte de chaque fiche (positif, négatif, indéterminé, variantes) a un résultat, y compris « interrompu » ou
@@ -32,6 +33,8 @@ def main():
             continue
         passes.append(json.loads(p.read_text(encoding="utf-8")))
     if passes:
+        if any(p.get("arbre_modifie") for p in passes):
+            defauts.append("une tranche a tourné sur un arbre de travail modifié : son commit ne dit pas son code")
         for cle in ("commit", "reglage", "entree", "pas"):
             vs = {json.dumps(p[cle], sort_keys=True) for p in passes}
             if len(vs) > 1:

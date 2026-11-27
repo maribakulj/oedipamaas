@@ -31,6 +31,7 @@
 
 main :-
     get_time(D0), nb_setval(debut, D0),
+    version_du_code(Co, Mod), nb_setval(commit, Co), nb_setval(arbre_modifie, Mod),   % au départ : le code chargé
     current_prolog_flag(argv, [Base, Entree, Sortie|Opt]),
     ( Opt = [P0|_] -> atom_number(P0, Pas) ; Pas = 1 ),
     ( Opt = [_, C0|_] -> atom_number(C0, Controle) ; Controle = 0 ),
@@ -51,19 +52,28 @@ main :-
     setup_call_cleanup(open(Sp, write, S2, [encoding(utf8)]), json_write_dict(S2, Passe, [width(140)]), close(S2)).
 
 % La description de la passe, à côté de la sortie (SORTIE.passe.json) : de quoi la refaire et la contrôler
-passe(Entree, Pas, Fiches, _{entree: Entree, pas: Pas, tranche: Tr, fiches: Ks, reglage: Env, commit: Co, swipl: V,
+passe(Entree, Pas, Fiches, _{entree: Entree, pas: Pas, tranche: Tr, fiches: Ks, reglage: Env, commit: Co,
+                             arbre_modifie: Mod, swipl: V,
                              processeurs: Np, analyses: As, debut: D0, fin: D1}) :-
     findall(K, ( member(F, Fiches), K = F.k ), Ks),
     ( getenv('OEDIPAMAAS_TRANCHE', Tr0) -> atom_string(Tr0, Tr) ; Tr = "1/1" ),
     findall(Nm-Vl, ( member(Nm, ['OEDIPAMAAS_ANALYSEUR', 'OEDIPAMAAS_NORMALISATION', 'OEDIPAMAAS_SENS_EN',
                                   'OEDIPAMAAS_INFERENCES', 'OEDIPAMAAS_DELAI', 'OEDIPAMAAS_DERIVATIONS']),
                      getenv(Nm, Vl0), atom_string(Vl0, Vl) ), Ev), dict_pairs(Env, r, Ev),
-    prolog_load_context_dir(Dir),
-    ( catch(setup_call_cleanup(process_create(path(git), ['-C', Dir, 'rev-parse', 'HEAD'], [stdout(pipe(O))]),
-                               read_line_to_string(O, Co0), close(O)), _, fail) -> Co = Co0 ; Co = inconnu ),
+    nb_getval(commit, Co), nb_getval(arbre_modifie, Mod),
     current_prolog_flag(version, V), current_prolog_flag(cpu_count, Np),
     findall(A, analyse(A), As), nb_getval(debut, D0), get_time(D1).
 prolog_load_context_dir(D) :- source_file(main, F), file_directory_name(F, D).
+% le commit du code au départ de la passe, et si l'arbre de travail avait des modifications non commitées (alors le
+% commit ne dit pas tout le code exécuté : la passe le dit, reunir_tranches.py la refuse)
+version_du_code(Co, Mod) :-
+    prolog_load_context_dir(Dir),
+    ( git_ligne(Dir, ['rev-parse', 'HEAD'], Co0) -> Co = Co0 ; Co = inconnu ),
+    ( git_ligne(Dir, ['status', '--porcelain', '--untracked-files=no'], _) -> Mod = true ; Mod = false ).
+git_ligne(Dir, Args, L) :-
+    catch(setup_call_cleanup(process_create(path(git), ['-C', Dir|Args], [stdout(pipe(O))]),
+                             read_line_to_string(O, L), close(O)), _, fail),
+    L \== end_of_file.
 
 % OEDIPAMAAS_TRANCHE=I/N : la I-ième de N tranches de l'échantillon (une fiche sur N, à partir de la I-ième) ; les
 % tranches se réunissent (outils/mesure/reunir_tranches.py) en la mesure entière
