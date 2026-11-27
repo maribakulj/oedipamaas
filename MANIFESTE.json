@@ -1,8 +1,8 @@
 {
- "cree": "2026-11-26T23:11:13Z",
- "commit_de_l_archiveur": "f290a549bdc64e3a7476e4e87768a23fed2a5f78",
+ "cree": "2026-11-27T08:35:13Z",
+ "commit_de_l_archiveur": "c7dbebab6898264384c836db082d4a9c4adb55cd",
  "commits_des_passes_du_lot1": [
-  "f6dc80449ec8374b4aac12347a6e48d7f25a2562"
+  "5a0e2225fa5f5f646768415f2be06d950b84b1f5"
  ],
  "validation_humaine": "aucune à ce jour : tout ce qui est « agents » est un accord entre agents",
  "reproduction": "docs/BANC_GRAPHES.md, § 5 (commandes)",
@@ -261,15 +261,15 @@
   },
   {
    "chemin": "banc_graphes/lecteur_validation_m1.json.gz",
-   "taille": 1455138,
-   "sha256": "8def5f437adba3e86bbd999462a2ab8863a8e3d07c98567a628604fc12c91955",
+   "taille": 1772844,
+   "sha256": "9656ac12c50c40c67a6de4c4d9c66105f958dc29852d10ce821ac2f0f2a9eb13",
    "role": "les graphes du lecteur (outils/graphes/lire.pl)",
    "statut": "outil"
   },
   {
    "chemin": "banc_graphes/lecteur_vertical.json.gz",
    "taille": 247048,
-   "sha256": "a87e57edf209b48b003e62e829455c8d269995212a6d53a4e45af4d3a15a39ca",
+   "sha256": "804ca5faf3e47e042e4ceb8929d6ff58e016ec84a2bb6062b1622385a9313925",
    "role": "les graphes du lecteur (outils/graphes/lire.pl)",
    "statut": "outil"
   },
@@ -450,8 +450,8 @@
   },
   {
    "chemin": "banc_graphes/mesures/lecteur_validation_m1_detail.json",
-   "taille": 526982,
-   "sha256": "6ce8d5130ecb9a2503e73bd11d66cbc8d682b3b56ab6dc8251929497e75ecaa3",
+   "taille": 747791,
+   "sha256": "33dad99f2375c5001c652742a8d6f7988691d9496cc4b47e751d0993609245e5",
    "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
    "statut": "outil"
   },
@@ -499,8 +499,8 @@
   },
   {
    "chemin": "banc_graphes/mesures/lecteur_vertical_detail.json",
-   "taille": 164591,
-   "sha256": "5ae9f644e400fba3e24723da779444b745499da3a5e4ba36cfffd8a106552256",
+   "taille": 175217,
+   "sha256": "4f1ed6476fba9b1c1ecdc922514de4b16a1f124d1059339b4195e72ff3a43d8a",
    "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
    "statut": "outil"
   },
@@ -533,9 +533,23 @@
    "statut": "outil"
   },
   {
+   "chemin": "banc_graphes/mesures/roles_validation_m1_adjugee.json",
+   "taille": 14038,
+   "sha256": "66094d2273b8b06ccafec2dfde96d7fef796ed7c061b8363c42afb4e2967ee5c",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
    "chemin": "banc_graphes/mesures/roles_vertical.json",
    "taille": 6465,
    "sha256": "75acb35c2b3e0894d0ae11dc09d2a53be8eeb77bbef871154a47dc24531195c8",
+   "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/mesures/roles_vertical_adjugee.json",
+   "taille": 6944,
+   "sha256": "c8bb657deb45e3eaf561294a0cb24654020ea917772387e897c9329a33d9255d",
    "role": "les résultats bruts des mesures (comparateur, analyse des rôles, codage)",
    "statut": "outil"
   },
@@ -617,226 +631,919 @@
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t1de2.log",
-   "taille": 770,
-   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_validation_m1.json",
+   "taille": 230817,
+   "sha256": "fa88095309a8e80d0d8771d3a733f67860ecc2524447b2470d09cee3cda13f76",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t2de2.log",
-   "taille": 770,
-   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_validation_m1.json.passe.json",
+   "taille": 1194,
+   "sha256": "2ec7e99f7c5d32dce4c6efd4a347461328eaa574399f679d901b0de56d7e0c06",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_sans_norm_vertical.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_validation_m1_t1de2.json",
+   "taille": 99528,
+   "sha256": "7d8a20fc0391f3f2ccc532fda6b6626be5dedcd598986e9f0f45bc81c90ca8cc",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_validation_m1_t1de2.json.passe.json",
+   "taille": 593,
+   "sha256": "3b12586c848abdbce95cf96f97dcaf6cd90efc3dbcb12767187a2e57fbb81009",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_validation_m1_t1de2.log",
+   "taille": 826,
+   "sha256": "dbd8267b2a663b9ca59514ce51ef0c22d405310b992e0d476b7e087b6b76dda1",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_validation_m1_t2de2.json",
+   "taille": 101044,
+   "sha256": "36f0093372318655316440f0c709e0b6c5bf822b698d39a4c8fc294bb05900b9",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_validation_m1_t2de2.json.passe.json",
+   "taille": 593,
+   "sha256": "155eb9100aaa4a034bf51b78b74d8beaee2b7a0c2dc8282062368daf19e46e06",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_validation_m1_t2de2.log",
+   "taille": 827,
+   "sha256": "893a9571379820c7bb322649161d98926a1ea7ba3d7cf28e23080cb7441a6990",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_vertical.json",
    "taille": 110396,
    "sha256": "c284426b1801b486c58e228f6901b188cc451f7e0d4e934de5f9cc01edba76dc",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_sans_norm_vertical.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_vertical.json.passe.json",
    "taille": 1058,
    "sha256": "0cd403779f5c5c919e91761d0aa46a6f352fd31acd471a0d549b16380971f33e",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_sans_norm_vertical_t1de1.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_vertical_t1de1.json",
    "taille": 97880,
    "sha256": "53b754d320cee7c32053b18bcf7863ce20ef2a0853731c9bca2384dc1b461930",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_sans_norm_vertical_t1de1.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_vertical_t1de1.json.passe.json",
    "taille": 939,
    "sha256": "33c04b48a5bd543d2e378b5187c7d24f3987c4ab4e2d7ec05eb5d539f1e0aaa8",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_sans_norm_vertical_t1de1.log",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_vertical_t1de1.log",
    "taille": 825,
    "sha256": "987e72600d9b6a8286df68590e23676016cac921f195813c852793a0f2cce460",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_validation_m1_t1de6.log",
-   "taille": 770,
-   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t1de6.json",
+   "taille": 38419,
+   "sha256": "cf8421971782237a78847fbb4a701d92b5cf1616cbf5a6d1bd08dc8265d9441b",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_validation_m1_t2de6.log",
-   "taille": 770,
-   "sha256": "24c992066307c7fe92e2282fd5f6240e535362339b21d62315ab20f262b8ec9a",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t1de6.json.passe.json",
+   "taille": 525,
+   "sha256": "5192a88037233233af06f85d7fbdab2c3da5587b0580ee3b25cbbcb8ea3ce053",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t1de6.log",
+   "taille": 1163,
+   "sha256": "9a3ffa85a6bed8a3fdd7630d0ce181c7bf3d4b0b594f43305a9272d2cdbcd1e3",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t2de6.json",
+   "taille": 18799,
+   "sha256": "ebf9a797825a3e019c29c1d1a899312e8e17e3584dc097312509eeb167caf975",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t2de6.json.passe.json",
+   "taille": 525,
+   "sha256": "9cb7b37fdccc5816c56cf3ee02fdf8975406a54658a25bbfeba0978fce276886",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t2de6.log",
+   "taille": 1164,
+   "sha256": "32c6e92b28ccdc171cc903c63933a264e1939213d8bb1c83275d6d4ffa0c21c2",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t3de6.json",
+   "taille": 32242,
+   "sha256": "07e7ea56b6599ebfe6e6c213bec30d2f570a15dc9b30530af72ce752a760dc93",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t3de6.json.passe.json",
+   "taille": 528,
+   "sha256": "c9208b9416131d717dd764123c26e55b0920bf437068bf9fadd6fc4ec6fddad2",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t3de6.log",
+   "taille": 1164,
+   "sha256": "bfa9f9b2aed954d7f85efce0f9099daf8ed3ad7e36e7c1175b89a20cc4250edc",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t4de6.log",
+   "taille": 1109,
+   "sha256": "282c2c06d64803a48b54f26000c3a90de64c809912ea2ade7611d8dfe494eb8f",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t5de6.json",
+   "taille": 20531,
+   "sha256": "e103b5926d529a47e946305339f50cfbc43eeb47097726949c4fbdb330ddeb06",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t5de6.json.passe.json",
+   "taille": 521,
+   "sha256": "40c504f1c13ae6c013dba38ed5cbbfd9418ea201e57b0a52e58f7a7676d60c3d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t5de6.log",
+   "taille": 1164,
+   "sha256": "6a1e1efd7e1dd104381ca85a73a85e441d6f33a006842b352abb186861db76b1",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t6de6.json",
+   "taille": 16297,
+   "sha256": "dc65eb1a943a531236aefc57f2dd0824a733f3a4d608b54094a657cb30e6e657",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t6de6.json.passe.json",
+   "taille": 523,
+   "sha256": "3d1b108da6b1a20e2d884a0cc78a67385f1f126579b38308ff2b3e6837e8594e",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_validation_m1_t6de6.log",
+   "taille": 1164,
+   "sha256": "8f8ec4693b1315dc446a51b4faf2429f054c4f14ac8d6d3791d2e741ecd9a906",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical.json",
    "taille": 111296,
    "sha256": "b73a334ce45985a02cb4625bc5dd83e5733d5addee3fc29e6b31d5de7c970b5b",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical.json.passe.json",
    "taille": 1781,
    "sha256": "f4974620ea4dcf3a8e039ad52fcec14fd40b7cddde2da0e00d7acf6ed1ff4fda",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical_t1de3.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical_t1de3.json",
    "taille": 32432,
    "sha256": "e419b542c994e8e762008cf50c00add4867dcc985dafa218f257ed7786dc81cd",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical_t1de3.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical_t1de3.json.passe.json",
    "taille": 625,
    "sha256": "da553fa181a3adae673ede50fcb257d9a9bfad26c4c0d6c10111fba5e804a502",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical_t1de3.log",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical_t1de3.log",
    "taille": 825,
    "sha256": "32d9aec4edcaf646d173b3ab7892f33e275f9ce21d047e9dba141379e2fe105c",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical_t2de3.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical_t2de3.json",
    "taille": 30765,
    "sha256": "83bc78ab7f25d1f8c602e8e0f0bc5c1bb37c4ccfdc1b937190d154b8b9db94e2",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical_t2de3.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical_t2de3.json.passe.json",
    "taille": 619,
    "sha256": "dfcfb675e4303982f61c1a2574409064a1b75615cfef27417be432882a48abc7",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical_t2de3.log",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical_t2de3.log",
    "taille": 826,
    "sha256": "a9af9ae710fbdd8c50f94d61d98cbf4366ab9530eb430dc4e84d8308ce3a908b",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical_t3de3.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical_t3de3.json",
    "taille": 34327,
    "sha256": "47dd8c220ff512c0fb01753c362cb9f7220021876ab8e5e1f6d8e9291d3626a5",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical_t3de3.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical_t3de3.json.passe.json",
    "taille": 623,
    "sha256": "08ef8e0747abdb2225c3c60ffd5066475ffc06385955aa98e4c9615f9a8e0c19",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_d30_vertical_t3de3.log",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_d30_vertical_t3de3.log",
    "taille": 826,
    "sha256": "a9c64db6da3c975f6329d6cdd6b92746b0f12b8aca530c032484d5fc13b9f156",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical.json",
    "taille": 121190,
    "sha256": "acf7f25345683e3804f4a1a521f57f76234e9b17fe5b47f7654b6799256f344a",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical.json.passe.json",
    "taille": 1813,
    "sha256": "b2309d8bcb8e5376ea719372a8fe2f3bd959679e4184ec002772f04a03e7a136",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical_t1de3.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical_t1de3.json",
    "taille": 35580,
    "sha256": "5250a4d1d35411f015399a530cb1895eeb81ca4367e593f7bd84185b57e53df6",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical_t1de3.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical_t1de3.json.passe.json",
    "taille": 653,
    "sha256": "4e46da928ee73d7f7e5111d2cee3e7c42c9f836aebdd65c0c59705d7906d1bd4",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical_t1de3.log",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical_t1de3.log",
    "taille": 826,
    "sha256": "d032136998623f14f2490df1e1f49b995d344c7e328f33ae369fa2fe7817bdb5",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical_t2de3.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical_t2de3.json",
    "taille": 33161,
    "sha256": "db87cc9435443962b35e161f5935d032d8f1f3c91baf07a9736cabafd9956357",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical_t2de3.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical_t2de3.json.passe.json",
    "taille": 652,
    "sha256": "f72df9bda5a89160bade26cce40d77253fa55ff8ff98252bc3176842cd41b8d9",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical_t2de3.log",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical_t2de3.log",
    "taille": 826,
    "sha256": "44c4f67c6d858419f006169f754537b5c2c8986b5f72089da52ed3a1ff53a50d",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical_t3de3.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical_t3de3.json",
    "taille": 37094,
    "sha256": "6219b1e2f86bd23294221bab053c132a5874663928b937b8a7cab2faa47ade2a",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical_t3de3.json.passe.json",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical_t3de3.json.passe.json",
    "taille": 652,
    "sha256": "2ccd40dd514f0b5e846745e0e73db6a0c0a7709a29055ff4eaccb0a02e4747ef",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
-   "chemin": "reference_d30/codage_premier_sens_vertical_t3de3.log",
+   "chemin": "reference_d30/avant_correctif_ressources/codage_premier_sens_vertical_t3de3.log",
    "taille": 826,
    "sha256": "a6e379e3c67c2061b94fc5763cd2731a8011d692122eca1c281e59437d4c21fe",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
   {
+   "chemin": "reference_d30/avant_correctif_ressources/controle_validation_m1.json",
+   "taille": 24898,
+   "sha256": "b0ca1be084f4c038b9dfd26032a945371a8ae9c02e6930b0c88bb0c905e82c82",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/controle_validation_m1.json.passe.json",
+   "taille": 487,
+   "sha256": "bb44dd43592982ddea3c2871e4a63f481036352feeb890542ada49bfc566b7c4",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/controle_validation_m1.log",
+   "taille": 1118,
+   "sha256": "3338e1e339e06d7554a0ddbc609b477cb578f807e0dd8aab0fde22d5c907e4e9",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/controle_vertical.json",
+   "taille": 10608,
+   "sha256": "666e57b42ea6d48861226d292a42569e9943d0237c6edf2ebc07fd112470c7dc",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/controle_vertical.json.passe.json",
+   "taille": 484,
+   "sha256": "b52b4b9fad6f2b15c32e1e0d7a82657f8c77b36c3406ea3d8b1da752c7649683",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/controle_vertical.log",
+   "taille": 1118,
+   "sha256": "3338e1e339e06d7554a0ddbc609b477cb578f807e0dd8aab0fde22d5c907e4e9",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t1de6.json",
+   "taille": 38457,
+   "sha256": "1af6c4464a3e1060f2568120d380118559fe2921d2ba75b82e14978871e56464",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t1de6.json.passe.json",
+   "taille": 500,
+   "sha256": "125c3fadd89f95a8facbaafdcfccbe06078833c4611e59918ddc8858b8211693",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t1de6.log",
+   "taille": 825,
+   "sha256": "d59d547fb01d0ed7309be701baeab0eeb64313afd5d0e8ea736d0057425fd4b6",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t2de6.json",
+   "taille": 18791,
+   "sha256": "257952f3c93e6685c9fb72d1977012b29a1939e01bd9771eaa969c2757120e22",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t2de6.json.passe.json",
+   "taille": 500,
+   "sha256": "5cede9e1f5831086dd26e757a53bc406a5a2469082bc70cf70933d5bf37dbcdc",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t2de6.log",
+   "taille": 825,
+   "sha256": "cefc23ffa2a2436ec1ed0ca0309c256e3a0c2a69cb7382b2e249f4380f13099b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t3de6.json",
+   "taille": 32276,
+   "sha256": "e5a0e4bb0b4e8c2a7a1300442a2816a46be79120ff13914e761438a73c8e34c6",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t3de6.json.passe.json",
+   "taille": 502,
+   "sha256": "fffe990a6e27aaa19b66b200be25836404725c55c303538d3967a9282b5b1b49",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t3de6.log",
+   "taille": 825,
+   "sha256": "1010217d2c1d6e57f8eeef946e4b66b5f6e975db74ee4ec2c2e193077687d82b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t4de6.json",
+   "taille": 19880,
+   "sha256": "d201828d6155c2a063e35aa0d075f7c4b9ff45f1d1fdeba495a421c96ae18d94",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t4de6.json.passe.json",
+   "taille": 500,
+   "sha256": "411a25523b3d123b35eb0084c47111cb7dc7d26fcc2b74bff8c773d88c75f1d9",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t4de6.log",
+   "taille": 827,
+   "sha256": "b6fb3a6087f58027ce68c5131f99dc805f61b8956653bca6bab674a4e8cf7a1f",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t5de6.json",
+   "taille": 20508,
+   "sha256": "98c844b9aba78f77a2bc2d3bcd7b57523b701c4b89c71bf94fa90b90a025fc9c",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t5de6.json.passe.json",
+   "taille": 498,
+   "sha256": "bbdc41d5f7a85bf0b8b0beea673e4e17e4cd17d2d8c68aceda330de0b1dcb237",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t5de6.log",
+   "taille": 825,
+   "sha256": "421d6347bcb6d1b068f4c4a01f3cf1e44b08565472990c2797523c0730bfca14",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t6de6.json",
+   "taille": 16292,
+   "sha256": "b353c28c762178c2daa7604697d8d119e3ce207e8452de2792e650823f0ecad9",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t6de6.json.passe.json",
+   "taille": 498,
+   "sha256": "c888517153325f53787b68c60523868f645742455a9daadc3a62c6ba7ba3f1be",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/avant_correctif_ressources/tranches_refusees/codage_d30_validation_m1_t6de6.log",
+   "taille": 825,
+   "sha256": "aa8c2c3c795981bf54ec3fbc072dc0cbf5f50d3d64ec76e877206bc5c9165bd4",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1.json",
+   "taille": 230630,
+   "sha256": "7f7f776e816031a632531e81a3e2ea336a3ebba6af5fa6a9df61bb21dac871ed",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1.json.passe.json",
+   "taille": 1194,
+   "sha256": "77ea7c6dd17af28d05d5c5e81d94b98621420ddbeb579f3c94c902303cee2071",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t1de2.json",
+   "taille": 99412,
+   "sha256": "e3e7bdd884d056d51aaf7725e8573da93da0584a5e5a773d3f1bf7557354fa18",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t1de2.json.passe.json",
+   "taille": 618,
+   "sha256": "db8202ea68d93f1880bee9ca2cce379439bba292014651666dfd8e3537b4cf79",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t1de2.log",
+   "taille": 1164,
+   "sha256": "ac5fa355461c87443d17cf57c7eb0abcc64fe1c93308c738fc9f63d58ce791dc",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t2de2.json",
+   "taille": 100973,
+   "sha256": "c96a0f0207d86b7c1a03d7920fc9f7444f28bca3722d7897746a42739393b0b0",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t2de2.json.passe.json",
+   "taille": 618,
+   "sha256": "7aef70950fb9eb9b46f776d5c729ce7261147aec4ff8858b07dc424f985ff81a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_validation_m1_t2de2.log",
+   "taille": 1167,
+   "sha256": "b76e8879732d9fddadaebabd770ab02ab717eae23f868ed7fe34de1db9fc4a59",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical.json",
+   "taille": 110396,
+   "sha256": "1d83b935030d0ee3aafe60e99135f800b6db0afbf1b5ec757c6a5c1420e83af4",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical.json.passe.json",
+   "taille": 1057,
+   "sha256": "64a214133dfd8fc372097a3912b68128694b7a342ee16be000cf0ff36ccb488e",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical_t1de1.json",
+   "taille": 97880,
+   "sha256": "d0083a168d2911000d809d772e20de3f34a58ebf107000a761104c6c3972002d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical_t1de1.json.passe.json",
+   "taille": 963,
+   "sha256": "3ee8b15a2bcf6d1f481a6166a027722b8a9309d5705d730ee370f2744f8c903b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_sans_norm_vertical_t1de1.log",
+   "taille": 1165,
+   "sha256": "057ef76c828e2c6d9179cd63783ff8734b58541e5e2a864f5ed17b056c6036e6",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1.json",
+   "taille": 165058,
+   "sha256": "1b4f50cc69a856efe8819a080cf25e7e323bf95f59daf959342db6385dafb277",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1.json.passe.json",
+   "taille": 2173,
+   "sha256": "389fa025280bcd968e57e9274479961294490abe4c8f36837c39e981a15f63ac",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t1de6.json",
+   "taille": 37494,
+   "sha256": "a8c6c8cd9a81d5a9d6fedc9828a197cef047dca45dde320974d0df0b40d19cb7",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t1de6.json.passe.json",
+   "taille": 517,
+   "sha256": "d25dc8c9d64a41931833810c00e02991543c03cfc4df58d88a65e18582d5e4f6",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t1de6.log",
+   "taille": 1164,
+   "sha256": "523090bde7d5ef9c9f58b7064e4a4fc992355cc836e9d9cb694ecebdf708f8d0",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t2de6.json",
+   "taille": 18805,
+   "sha256": "d1e046551ad202e4a24b39fbcaac4ff936c4e88d9c0f6d29c1e01f3ba3b0c61b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t2de6.json.passe.json",
+   "taille": 526,
+   "sha256": "639d3f6c6fbd1d7b3ceb1085e8e4df1221fd77a927e2b434e27b9b9b4df7c6a2",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t2de6.log",
+   "taille": 1164,
+   "sha256": "26fd3a6e5178c73a4fbbe019c463d0bce2094191fe79c29628b19e93cfe77c01",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t3de6.json",
+   "taille": 31485,
+   "sha256": "3a2560c1902c1fc4dc67faf802fb6144dbc85450ae9951e18653aa981bf4196c",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t3de6.json.passe.json",
+   "taille": 527,
+   "sha256": "323cb8ea27f37a16a53a77e915b895252b51e9fe0267f16bba417d50f28bf0bb",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t3de6.log",
+   "taille": 1163,
+   "sha256": "417aa07725b4196e9990a9b40943f7cf085ce26888620b6fbdc52013055bc98e",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t4de6.json",
+   "taille": 19903,
+   "sha256": "3e8dfeb0092d357d529a78ba064168c2ca0fea282d09f6c0f5caa38113b86b99",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t4de6.json.passe.json",
+   "taille": 527,
+   "sha256": "9fc307e687f4fe35b5fecf665f662ca49779782644361c6828443aab03a735bc",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t4de6.log",
+   "taille": 1166,
+   "sha256": "6e3841a7275aa5309164f3f1ca9de42cc1ab4de21aa2f8aa29300e3dbebc1154",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t5de6.json",
+   "taille": 20509,
+   "sha256": "771dd128fe3f0ab4232b77f780be96be9b81fbd7b0fe035050fa5511c4cdae24",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t5de6.json.passe.json",
+   "taille": 523,
+   "sha256": "eabb97a73ebfb922887fd948aaf45c6406cd4b78defae6e1f53e31ac7ccaed68",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t5de6.log",
+   "taille": 1164,
+   "sha256": "bc3cca1f2ce7db1b68946403e77c23b0b639099b1375b29dba49c97aec23664b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t6de6.json",
+   "taille": 16302,
+   "sha256": "1a4fa0235a0c0ff2fdc5515a8d102614aad5a1a5cb9f1a9b28413e220699ac46",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t6de6.json.passe.json",
+   "taille": 522,
+   "sha256": "5a9b06fe28e881754b01a7c6e8e19bcbb9e212d8537cd8fc02d241733a7ccff5",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_validation_m1_t6de6.log",
+   "taille": 1164,
+   "sha256": "887b489ce06d104a42b92cc4a828142d5e12d3764c5335177839f16c5e142b05",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical.json",
+   "taille": 108528,
+   "sha256": "9f3b0016e8fc7d6eff7cb04cb4495eb9b80a785237b0569a73963829f97f5b95",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical.json.passe.json",
+   "taille": 1782,
+   "sha256": "47a157f62f08d380d3aea76f8c246d0cb3021b5df61234bca222867932ac870a",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t1de3.json",
+   "taille": 32021,
+   "sha256": "515e1b3cec042c8a74e04ddad231b78bb0f2ea1555f57c55c66fc4d175f94134",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t1de3.json.passe.json",
+   "taille": 649,
+   "sha256": "cf86fa5e10caa8769b190705a810a5df64e5912ad9f9f104aeb35c9d9d5791ec",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t1de3.log",
+   "taille": 1164,
+   "sha256": "ed6243a18cd16cf9d013bf0358724a7444c086f3fa321ac675ff0510d4932f7b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t2de3.json",
+   "taille": 29228,
+   "sha256": "ff678f582767760e974cd19f9dd49b0e3293fbdd3f01403069e7571a3f61d952",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t2de3.json.passe.json",
+   "taille": 647,
+   "sha256": "bbc14f48ceb608b5d0ffb399ae3192d7fdbf10b515fb5dbaa34826d18fa80f6b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t2de3.log",
+   "taille": 1165,
+   "sha256": "172c8a4211d49651d852c03ecb58ea2c14027e9629348610c4525e1388bac3eb",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t3de3.json",
+   "taille": 33893,
+   "sha256": "b3ddf88b2c3f7f5d60cd72193bc0257b3f62bac571093453bb59aea0476e92e8",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t3de3.json.passe.json",
+   "taille": 647,
+   "sha256": "ececd5be0195379eec8aeed42e4537cad15fe1227e691d6982bb80b762dc46f9",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_d30_vertical_t3de3.log",
+   "taille": 1165,
+   "sha256": "8b71fa353ef6d683ed7e88846af3b8d4053f1a0087b524d6ebb8d8d1c17c5456",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical.json",
+   "taille": 118413,
+   "sha256": "8138cab763a2605edf22f99b4b99a32282b7d4bb4b93f41d248a28f0f5d98613",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical.json.passe.json",
+   "taille": 1814,
+   "sha256": "282eb290e2250304a612d3318b40780a3ab2eaae3dfc07e46af768e6c453877d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t1de3.json",
+   "taille": 35193,
+   "sha256": "9a1df3c30639ae4b6204f8e366cefbe664dca51a757a79f2f2dda660c9303f0d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t1de3.json.passe.json",
+   "taille": 682,
+   "sha256": "e0cd3e2b4b9fe195bab02918f90ee78c6a7a84daa0be6c8f300e61cd2e4cec7c",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t1de3.log",
+   "taille": 1165,
+   "sha256": "7e52b97b74be939964e17f22826de15c22b3fc4317cdf5e2b4f4cd1a84f99774",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t2de3.json",
+   "taille": 31592,
+   "sha256": "80bef37696a44cc763cdca4fb37eadf7e74a6d5898938a34fe006cd69ec9ba46",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t2de3.json.passe.json",
+   "taille": 676,
+   "sha256": "ca8e2a210b85901c928b23f5214a4dbb36ef08e34427bda79e91042b964a802d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t2de3.log",
+   "taille": 1165,
+   "sha256": "95c2f05d057b076ba9e803adfcfa25159cfb1d591d711d778bfc390fd3df211b",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t3de3.json",
+   "taille": 36659,
+   "sha256": "ef5cfdfbb66025678d56894e68517d5efa1a467feca1927525e47e8275f4c141",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t3de3.json.passe.json",
+   "taille": 675,
+   "sha256": "599b7947108450811323dbb04296451acdbdcd3630bd60320998cde1a612f4fb",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/codage_premier_sens_vertical_t3de3.log",
+   "taille": 1165,
+   "sha256": "bf2a021dcfcd4d8d39d751d7e061650915d0f525314edb57d038a5bad48979ed",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
    "chemin": "reference_d30/commit",
    "taille": 41,
-   "sha256": "3a256361f5c277e8c53e47ecbc2f0020900afb202e548cdec6b06777d558a260",
+   "sha256": "548ecb6df4909746861023406a7907c9b75e3645926e76466bc635eb1c03db6a",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
@@ -899,7 +1606,7 @@
   {
    "chemin": "reference_d30/compilation.log",
    "taille": 562,
-   "sha256": "cdea963d233fd2fc7f28f973b6b3f58f34909bf520daa8c42d17e07dc8716a80",
+   "sha256": "482d9deceebd0faa08cc288e6b94f90295294a0fbe03efb100a021c99d4f86fb",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },
@@ -928,6 +1635,48 @@
    "chemin": "reference_d30/compiler_vertical.log",
    "taille": 435,
    "sha256": "e0f67ed1a33ad02ab6a11012ad5e4330b5f8873f54fdf5861706bf23df1b0e7d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/controle_validation_m1.json",
+   "taille": 23189,
+   "sha256": "bb5573402a7fe87e4847577dfb4893ee195cb30c804acc187760cb76a19a0e1d",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/controle_validation_m1.json.passe.json",
+   "taille": 514,
+   "sha256": "fc5e2f5e212f8973ede6e103a9d203c5f5c5abc70c589f78ad57c1adf57f6ea3",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/controle_validation_m1.log",
+   "taille": 1118,
+   "sha256": "ab0715fe9f8d45ec2e3e81be3e3e5c15ddaddb46c50915bab9d9f4c166922e00",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/controle_vertical.json",
+   "taille": 10611,
+   "sha256": "396cd52b8276fc9895bfdad1d660bb0822edf635cf1c3b782e359e1f3fd7b532",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/controle_vertical.json.passe.json",
+   "taille": 510,
+   "sha256": "3ee099614ab043d6c4714a63050538e3c37adf71743b835767fff8b4011fefad",
+   "role": "la mesure de référence du lot 1",
+   "statut": "outil"
+  },
+  {
+   "chemin": "reference_d30/controle_vertical.log",
+   "taille": 1118,
+   "sha256": "ab0715fe9f8d45ec2e3e81be3e3e5c15ddaddb46c50915bab9d9f4c166922e00",
    "role": "la mesure de référence du lot 1",
    "statut": "outil"
   },

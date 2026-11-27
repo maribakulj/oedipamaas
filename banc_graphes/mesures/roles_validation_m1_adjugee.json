@@ -1,0 +1,757 @@
+{
+ "par_forme": {
+  "actif": {
+   "juste": 608,
+   "absent": 472,
+   "lu_patient": 332,
+   "lu_agent": 13,
+   "lu_lieu": 12,
+   "lu_instrument": 8,
+   "lu_agent+patient": 1,
+   "evenement_non_aligne": 13
+  },
+  "participe": {
+   "absent": 93,
+   "lu_patient": 50,
+   "juste": 24,
+   "lu_lieu": 1,
+   "evenement_non_aligne": 5
+  },
+  "passif": {
+   "lu_patient": 99,
+   "absent": 160,
+   "evenement_non_aligne": 196,
+   "lu_lieu": 5,
+   "juste": 91,
+   "lu_agent": 4
+  },
+  "relative": {
+   "lu_agent": 4,
+   "absent": 99,
+   "juste": 111,
+   "lu_patient": 64,
+   "evenement_non_aligne": 5,
+   "lu_lieu": 1
+  },
+  "infinitif": {
+   "evenement_non_aligne": 1,
+   "absent": 164,
+   "lu_patient": 66,
+   "juste": 26,
+   "lu_lieu": 1,
+   "lu_agent": 1
+  },
+  "nom_d_action": {
+   "evenement_non_aligne": 137,
+   "absent": 1
+  },
+  "gerondif": {
+   "juste": 28,
+   "lu_patient": 21,
+   "evenement_non_aligne": 10,
+   "absent": 15,
+   "lu_agent": 1
+  },
+  "adjectif": {
+   "evenement_non_aligne": 4
+  }
+ },
+ "par_relation": {
+  "nsubj": {
+   "juste": 558,
+   "lu_agent": 17,
+   "absent": 12,
+   "evenement_non_aligne": 11
+  },
+  "indirecte": {
+   "absent": 752,
+   "evenement_non_aligne": 107,
+   "lu_agent": 1,
+   "lu_patient": 1
+  },
+  "obj": {
+   "lu_patient": 522,
+   "juste": 42,
+   "absent": 6,
+   "lu_agent+patient": 1,
+   "evenement_non_aligne": 1
+  },
+  "nsubj:pass": {
+   "lu_patient": 76,
+   "evenement_non_aligne": 38,
+   "absent": 3,
+   "juste": 14
+  },
+  "obl": {
+   "absent": 101,
+   "juste": 79,
+   "evenement_non_aligne": 25,
+   "lu_lieu": 10,
+   "lu_instrument": 5
+  },
+  "iobj": {
+   "juste": 11
+  },
+  "tete_du_participe": {
+   "evenement_non_aligne": 100,
+   "absent": 23,
+   "juste": 99,
+   "lu_patient": 31,
+   "lu_agent": 3,
+   "lu_lieu": 1
+  },
+  "obl:mod": {
+   "absent": 38,
+   "juste": 39,
+   "evenement_non_aligne": 10,
+   "lu_lieu": 9,
+   "lu_instrument": 2
+  },
+  "obl:arg": {
+   "absent": 60,
+   "evenement_non_aligne": 19,
+   "juste": 12,
+   "lu_patient": 1,
+   "lu_instrument": 1
+  },
+  "nmod": {
+   "evenement_non_aligne": 55
+  },
+  "nsubj:caus": {
+   "absent": 2
+  },
+  "obj:agent": {
+   "absent": 5
+  },
+  "advmod": {
+   "lu_patient": 1
+  },
+  "obl:agent": {
+   "juste": 34,
+   "lu_agent": 2,
+   "evenement_non_aligne": 1
+  },
+  "advcl": {
+   "absent": 1,
+   "evenement_non_aligne": 1
+  },
+  "xcomp": {
+   "absent": 1
+  },
+  "appos": {
+   "evenement_non_aligne": 2
+  },
+  "nmod:poss": {
+   "evenement_non_aligne": 1
+  }
+ },
+ "croise": {
+  "actif|nsubj|agent": {
+   "juste": 501,
+   "absent": 10,
+   "evenement_non_aligne": 7
+  },
+  "actif|indirecte|lieu": {
+   "absent": 57,
+   "evenement_non_aligne": 1
+  },
+  "participe|indirecte|agent": {
+   "absent": 61,
+   "evenement_non_aligne": 1
+  },
+  "participe|obj|theme": {
+   "lu_patient": 48
+  },
+  "participe|indirecte|theme": {
+   "absent": 15
+  },
+  "passif|nsubj:pass|theme": {
+   "lu_patient": 39,
+   "evenement_non_aligne": 30,
+   "absent": 2
+  },
+  "passif|indirecte|lieu": {
+   "absent": 22,
+   "evenement_non_aligne": 6
+  },
+  "passif|obl|lieu": {
+   "absent": 11,
+   "evenement_non_aligne": 11,
+   "juste": 16
+  },
+  "actif|obj|theme": {
+   "lu_patient": 305,
+   "absent": 5,
+   "lu_agent+patient": 1
+  },
+  "actif|iobj|destinataire": {
+   "juste": 5
+  },
+  "passif|indirecte|patient": {
+   "absent": 19,
+   "evenement_non_aligne": 6
+  },
+  "actif|indirecte|agent": {
+   "absent": 156,
+   "evenement_non_aligne": 1
+  },
+  "actif|obl|lieu": {
+   "juste": 39,
+   "absent": 39
+  },
+  "actif|obj|agent": {
+   "lu_patient": 3
+  },
+  "passif|tete_du_participe|theme": {
+   "evenement_non_aligne": 47,
+   "lu_patient": 16
+  },
+  "relative|nsubj|theme": {
+   "lu_agent": 2
+  },
+  "relative|tete_du_participe|lieu": {
+   "absent": 4,
+   "lu_patient": 1
+  },
+  "relative|tete_du_participe|agent": {
+   "juste": 63,
+   "absent": 4,
+   "evenement_non_aligne": 1
+  },
+  "relative|obl|lieu": {
+   "juste": 5,
+   "absent": 4
+  },
+  "passif|obl|instrument": {
+   "lu_lieu": 3,
+   "evenement_non_aligne": 8,
+   "absent": 2,
+   "juste": 2
+  },
+  "participe|obl|theme": {
+   "absent": 1
+  },
+  "passif|obl|destinataire": {
+   "absent": 4,
+   "evenement_non_aligne": 3
+  },
+  "passif|indirecte|destinataire": {
+   "absent": 1,
+   "evenement_non_aligne": 2,
+   "lu_agent": 1
+  },
+  "actif|obl:mod|agent": {
+   "absent": 2,
+   "lu_instrument": 1
+  },
+  "infinitif|indirecte|agent": {
+   "evenement_non_aligne": 1,
+   "absent": 102
+  },
+  "actif|obl:mod|lieu": {
+   "juste": 22,
+   "absent": 15
+  },
+  "passif|tete_du_participe|agent": {
+   "lu_patient": 2,
+   "evenement_non_aligne": 10,
+   "lu_lieu": 1
+  },
+  "passif|obl:mod|lieu": {
+   "juste": 12,
+   "absent": 9,
+   "evenement_non_aligne": 7
+  },
+  "actif|nsubj|theme": {
+   "lu_agent": 11,
+   "evenement_non_aligne": 1
+  },
+  "actif|obl:arg|destinataire": {
+   "absent": 13
+  },
+  "nom_d_action|tete_du_participe|agent": {
+   "evenement_non_aligne": 7
+  },
+  "actif|obj|patient": {
+   "juste": 31
+  },
+  "actif|indirecte|instrument": {
+   "absent": 7
+  },
+  "relative|obj|theme": {
+   "lu_patient": 48,
+   "evenement_non_aligne": 1
+  },
+  "actif|obl:arg|lieu": {
+   "absent": 2,
+   "juste": 3
+  },
+  "passif|indirecte|theme": {
+   "absent": 46,
+   "evenement_non_aligne": 13
+  },
+  "relative|obl|theme": {
+   "absent": 1
+  },
+  "gerondif|tete_du_participe|agent": {
+   "juste": 20,
+   "evenement_non_aligne": 5
+  },
+  "gerondif|obj|theme": {
+   "lu_patient": 19
+  },
+  "nom_d_action|nmod|theme": {
+   "evenement_non_aligne": 34
+  },
+  "relative|indirecte|theme": {
+   "absent": 23
+  },
+  "relative|indirecte|agent": {
+   "absent": 29,
+   "evenement_non_aligne": 1
+  },
+  "relative|tete_du_participe|theme": {
+   "absent": 9,
+   "lu_patient": 12,
+   "lu_agent": 2
+  },
+  "actif|indirecte|theme": {
+   "absent": 93,
+   "evenement_non_aligne": 2
+  },
+  "actif|obj|lieu": {
+   "lu_patient": 10
+  },
+  "infinitif|indirecte|theme": {
+   "absent": 24
+  },
+  "nom_d_action|indirecte|theme": {
+   "evenement_non_aligne": 12
+  },
+  "actif|obl:arg|theme": {
+   "absent": 18,
+   "lu_patient": 1
+  },
+  "infinitif|obj|theme": {
+   "lu_patient": 65,
+   "absent": 1
+  },
+  "participe|tete_du_participe|agent": {
+   "juste": 12,
+   "evenement_non_aligne": 2
+  },
+  "relative|obl:mod|instrument": {
+   "absent": 1
+  },
+  "passif|obl:mod|instrument": {
+   "absent": 1,
+   "evenement_non_aligne": 2
+  },
+  "passif|indirecte|agent": {
+   "absent": 27,
+   "evenement_non_aligne": 2
+  },
+  "passif|obj|theme": {
+   "lu_patient": 1
+  },
+  "infinitif|nsubj:caus|agent": {
+   "absent": 2
+  },
+  "infinitif|obj:agent|theme": {
+   "absent": 3
+  },
+  "infinitif|obl:mod|instrument": {
+   "absent": 1
+  },
+  "passif|obl:arg|destinataire": {
+   "evenement_non_aligne": 3
+  },
+  "gerondif|nsubj|agent": {
+   "juste": 1,
+   "absent": 1
+  },
+  "passif|advmod|theme": {
+   "lu_patient": 1
+  },
+  "nom_d_action|tete_du_participe|patient": {
+   "evenement_non_aligne": 4
+  },
+  "passif|tete_du_participe|patient": {
+   "evenement_non_aligne": 15,
+   "juste": 2
+  },
+  "passif|obl:arg|instrument": {
+   "evenement_non_aligne": 11,
+   "absent": 3
+  },
+  "infinitif|obl:arg|theme": {
+   "absent": 5
+  },
+  "relative|nsubj|agent": {
+   "juste": 36,
+   "evenement_non_aligne": 1,
+   "absent": 1
+  },
+  "passif|indirecte|instrument": {
+   "evenement_non_aligne": 4,
+   "absent": 2
+  },
+  "actif|obl:arg|instrument": {
+   "absent": 4
+  },
+  "passif|nsubj:pass|patient": {
+   "juste": 14,
+   "evenement_non_aligne": 5
+  },
+  "passif|obl:agent|agent": {
+   "juste": 34,
+   "evenement_non_aligne": 1
+  },
+  "relative|indirecte|lieu": {
+   "absent": 7
+  },
+  "nom_d_action|nmod|agent": {
+   "evenement_non_aligne": 10
+  },
+  "participe|indirecte|lieu": {
+   "absent": 6
+  },
+  "passif|obl|theme": {
+   "evenement_non_aligne": 1
+  },
+  "infinitif|obl|lieu": {
+   "juste": 1,
+   "absent": 4
+  },
+  "infinitif|nsubj|agent": {
+   "juste": 17
+  },
+  "nom_d_action|nsubj|agent": {
+   "evenement_non_aligne": 1
+  },
+  "nom_d_action|obl|theme": {
+   "evenement_non_aligne": 1
+  },
+  "passif|advcl|destinataire": {
+   "absent": 1
+  },
+  "relative|obl|destinataire": {
+   "absent": 1
+  },
+  "gerondif|indirecte|agent": {
+   "evenement_non_aligne": 2,
+   "absent": 8,
+   "lu_patient": 1
+  },
+  "gerondif|tete_du_participe|theme": {
+   "evenement_non_aligne": 1,
+   "lu_agent": 1
+  },
+  "gerondif|obl|lieu": {
+   "evenement_non_aligne": 1,
+   "juste": 4,
+   "absent": 3
+  },
+  "actif|obl|instrument": {
+   "juste": 6,
+   "absent": 2
+  },
+  "actif|obl|theme": {
+   "lu_lieu": 5,
+   "lu_instrument": 3,
+   "absent": 14
+  },
+  "actif|obl|destinataire": {
+   "absent": 7,
+   "lu_instrument": 1
+  },
+  "relative|indirecte|destinataire": {
+   "absent": 6
+  },
+  "infinitif|obl|instrument": {
+   "absent": 2
+  },
+  "nom_d_action|indirecte|agent": {
+   "evenement_non_aligne": 40
+  },
+  "nom_d_action|nmod|lieu": {
+   "evenement_non_aligne": 8
+  },
+  "actif|obj|destinataire": {
+   "lu_patient": 13
+  },
+  "infinitif|indirecte|lieu": {
+   "absent": 4
+  },
+  "infinitif|obl|theme": {
+   "absent": 1,
+   "lu_lieu": 1
+  },
+  "actif|obl|patient": {
+   "lu_lieu": 1,
+   "absent": 2
+  },
+  "infinitif|indirecte|instrument": {
+   "absent": 1
+  },
+  "passif|nsubj:pass|agent": {
+   "lu_patient": 35,
+   "evenement_non_aligne": 2,
+   "absent": 1
+  },
+  "infinitif|obl:mod|lieu": {
+   "absent": 1,
+   "juste": 2
+  },
+  "passif|obl:agent|instrument": {
+   "lu_agent": 2
+  },
+  "gerondif|indirecte|theme": {
+   "absent": 3,
+   "evenement_non_aligne": 1
+  },
+  "actif|nsubj|lieu": {
+   "lu_agent": 1
+  },
+  "relative|obl:arg|theme": {
+   "absent": 2
+  },
+  "infinitif|obl:arg|destinataire": {
+   "absent": 2
+  },
+  "nom_d_action|nmod|destinataire": {
+   "evenement_non_aligne": 1
+  },
+  "relative|obl:arg|destinataire": {
+   "absent": 3
+  },
+  "passif|obl:mod|agent": {
+   "absent": 1
+  },
+  "relative|obj|lieu": {
+   "lu_patient": 2
+  },
+  "gerondif|obl|instrument": {
+   "juste": 1
+  },
+  "passif|nsubj:pass|lieu": {
+   "lu_patient": 2
+  },
+  "actif|obl:mod|destinataire": {
+   "absent": 2,
+   "lu_instrument": 1
+  },
+  "actif|indirecte|destinataire": {
+   "absent": 14
+  },
+  "infinitif|obj|destinataire": {
+   "lu_patient": 1
+  },
+  "passif|obl:arg|lieu": {
+   "evenement_non_aligne": 2,
+   "absent": 4,
+   "juste": 9
+  },
+  "infinitif|tete_du_participe|agent": {
+   "juste": 1
+  },
+  "participe|iobj|destinataire": {
+   "juste": 5
+  },
+  "infinitif|obl:mod|theme": {
+   "absent": 2
+  },
+  "relative|obj:agent|patient": {
+   "absent": 1
+  },
+  "passif|obl:mod|destinataire": {
+   "evenement_non_aligne": 1,
+   "absent": 1
+  },
+  "participe|obl:arg|theme": {
+   "absent": 1
+  },
+  "participe|obl:mod|theme": {
+   "lu_lieu": 1
+  },
+  "nom_d_action|indirecte|lieu": {
+   "evenement_non_aligne": 6
+  },
+  "relative|obj:agent|theme": {
+   "absent": 1
+  },
+  "passif|obl:arg|theme": {
+   "absent": 1
+  },
+  "infinitif|obl:arg|instrument": {
+   "absent": 1
+  },
+  "infinitif|indirecte|patient": {
+   "absent": 4
+  },
+  "adjectif|tete_du_participe|agent": {
+   "evenement_non_aligne": 2
+  },
+  "actif|tete_du_participe|agent": {
+   "absent": 4
+  },
+  "nom_d_action|tete_du_participe|theme": {
+   "evenement_non_aligne": 2
+  },
+  "nom_d_action|indirecte|destinataire": {
+   "evenement_non_aligne": 3
+  },
+  "participe|obl|lieu": {
+   "absent": 1,
+   "juste": 4
+  },
+  "infinitif|obj|patient": {
+   "juste": 5
+  },
+  "actif|indirecte|patient": {
+   "absent": 5
+  },
+  "participe|tete_du_participe|patient": {
+   "evenement_non_aligne": 1
+  },
+  "participe|obl:arg|instrument": {
+   "evenement_non_aligne": 1
+  },
+  "actif|nsubj|patient": {
+   "lu_agent": 1
+  },
+  "actif|tete_du_participe|theme": {
+   "evenement_non_aligne": 1
+  },
+  "passif|nsubj|theme": {
+   "lu_agent": 1
+  },
+  "participe|obl:mod|lieu": {
+   "juste": 1,
+   "absent": 1
+  },
+  "relative|obl:mod|lieu": {
+   "juste": 1
+  },
+  "relative|obl:arg|patient": {
+   "absent": 1
+  },
+  "participe|obj|destinataire": {
+   "lu_patient": 2
+  },
+  "adjectif|indirecte|agent": {
+   "evenement_non_aligne": 2
+  },
+  "actif|obl:mod|instrument": {
+   "juste": 1,
+   "absent": 1
+  },
+  "gerondif|obj|patient": {
+   "juste": 2
+  },
+  "participe|indirecte|destinataire": {
+   "absent": 5
+  },
+  "participe|obl|destinataire": {
+   "absent": 1
+  },
+  "nom_d_action|nsubj|theme": {
+   "evenement_non_aligne": 1
+  },
+  "participe|obj|patient": {
+   "juste": 1
+  },
+  "actif|obl:mod|theme": {
+   "lu_lieu": 6
+  },
+  "infinitif|obl|agent": {
+   "absent": 1
+  },
+  "infinitif|nsubj|theme": {
+   "lu_agent": 1
+  },
+  "participe|xcomp|theme": {
+   "absent": 1
+  },
+  "relative|obl:mod|theme": {
+   "lu_lieu": 1
+  },
+  "infinitif|indirecte|destinataire": {
+   "absent": 3
+  },
+  "relative|obj|patient": {
+   "juste": 3
+  },
+  "relative|tete_du_participe|patient": {
+   "evenement_non_aligne": 1,
+   "juste": 1
+  },
+  "nom_d_action|appos|patient": {
+   "evenement_non_aligne": 1
+  },
+  "passif|obl:arg|agent": {
+   "evenement_non_aligne": 2
+  },
+  "passif|tete_du_participe|lieu": {
+   "absent": 2
+  },
+  "nom_d_action|indirecte|patient": {
+   "evenement_non_aligne": 1,
+   "absent": 1
+  },
+  "passif|nsubj|agent": {
+   "juste": 2
+  },
+  "nom_d_action|nmod|instrument": {
+   "evenement_non_aligne": 1
+  },
+  "passif|obl:mod|theme": {
+   "lu_lieu": 1
+  },
+  "passif|nsubj:pass|destinataire": {
+   "evenement_non_aligne": 1
+  },
+  "relative|iobj|destinataire": {
+   "juste": 1
+  },
+  "actif|obl|agent": {
+   "lu_instrument": 1
+  },
+  "gerondif|obj|destinataire": {
+   "lu_patient": 1
+  },
+  "nom_d_action|nmod:poss|agent": {
+   "evenement_non_aligne": 1
+  },
+  "relative|obj|destinataire": {
+   "lu_patient": 1
+  },
+  "nom_d_action|tete_du_participe|destinataire": {
+   "evenement_non_aligne": 1
+  },
+  "actif|obl:arg|agent": {
+   "lu_instrument": 1
+  },
+  "participe|nsubj|agent": {
+   "juste": 1
+  },
+  "relative|obl|instrument": {
+   "juste": 1
+  },
+  "relative|indirecte|instrument": {
+   "absent": 1
+  },
+  "nom_d_action|appos|theme": {
+   "evenement_non_aligne": 1
+  },
+  "passif|advcl|instrument": {
+   "evenement_non_aligne": 1
+  },
+  "nom_d_action|nmod|patient": {
+   "evenement_non_aligne": 1
+  },
+  "passif|obj|instrument": {
+   "lu_patient": 3
+  }
+ }
+}

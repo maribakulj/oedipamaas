@@ -1,0 +1,659 @@
+[
+  {
+    "indetermine": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":116.81336908700001,"inferences":999955986,"mur":118.39210438728333},
+	"lecture": {"cpu":0.002837696999989703,"inferences":44053,"mur":0.002858877182006836},
+	"total_mur":118.39496326446533
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":118.39496326446533
+    },
+    "k":6,
+    "langue":"fr",
+    "negatif": {
+      "accord":"non_controle",
+      "complet":"complet",
+      "comptes": {"candidat":15,"conditionnel":197,"etablissable":22,"sans_suffisante":590},
+      "conditionnels_par_sens":486,
+      "descendant_etabli":null,
+      "etablis": [],
+      "etablissables": [
+	"31A2245",
+	"31A2523",
+	"31A28",
+	"31D82",
+	"31F3",
+	"33A71",
+	"41A342",
+	"41A711",
+	"41A713",
+	"41B2",
+	"41B21",
+	"41B2133",
+	"41C351",
+	"42D38",
+	"44G562",
+	"45B11",
+	"46A821",
+	"46C112",
+	"47F",
+	"48B22",
+	"48C81",
+	"48C812"
+      ],
+      "hors_branche": [],
+      "hors_branche_etablissables": [
+	"31A2245",
+	"31A2523",
+	"31A28",
+	"31D82",
+	"31F3",
+	"33A71",
+	"41A342",
+	"41A711",
+	"41A713",
+	"41B2",
+	"41B21",
+	"41B2133",
+	"41C351",
+	"42D38",
+	"44G562",
+	"45B11",
+	"46A821",
+	"46C112",
+	"47F",
+	"48B22",
+	"48C81",
+	"48C812"
+      ],
+      "mesure": {
+	"assertions":103,
+	"codage": {"cpu":53.421040369999986,"inferences":550832700,"mur":54.20080375671387},
+	"lecture": {"cpu":0.0023305580000112514,"inferences":30260,"mur":0.002333402633666992},
+	"total_mur":54.203137159347534
+      },
+      "necessaire":"etablie_sous_hypotheses",
+      "statut":"sans_suffisante",
+      "temps":54.203137159347534
+    },
+    "notation":"42D36",
+    "positif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":140.648455248,"inferences":999940315,"mur":143.35654878616333},
+	"lecture": {"cpu":0.005000883999999317,"inferences":59730,"mur":0.005060434341430664},
+	"total_mur":143.36160922050476
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":143.36160922050476
+    }
+  },
+  {
+    "indetermine": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":138.31716459400002,"inferences":999866428,"mur":140.94289422035217},
+	"lecture": {"cpu":0.007224884000038401,"inferences":133624,"mur":0.0072286128997802734},
+	"total_mur":140.95012283325195
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":140.95012283325195
+    },
+    "k":36,
+    "langue":"fr",
+    "negatif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":144.86071069199994,"inferences":999842250,"mur":147.6382122039795},
+	"lecture": {"cpu":0.008135769000034543,"inferences":157790,"mur":0.008137702941894531},
+	"total_mur":147.6463499069214
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":147.6463499069214
+    },
+    "notation":"25FF38(PHEASANT)",
+    "positif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":140.18575230099998,"inferences":999873065,"mur":149.8049774169922},
+	"lecture": {"cpu":0.007159488000013425,"inferences":126982,"mur":0.007163047790527344},
+	"total_mur":149.81214046478271
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":149.81214046478271
+    }
+  },
+  {
+    "indetermine": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":130.22101726799997,"inferences":999917918,"mur":131.89107942581177},
+	"lecture": {"cpu":0.004570917000137342,"inferences":82133,"mur":0.004573822021484375},
+	"total_mur":131.89565324783325
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":131.89565324783325
+    },
+    "k":66,
+    "langue":"fr",
+    "negatif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":142.40592733199992,"inferences":999917639,"mur":145.32432103157043},
+	"lecture": {"cpu":0.004603262000046016,"inferences":82401,"mur":0.004607439041137695},
+	"total_mur":145.32892847061157
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":145.32892847061157
+    },
+    "notation":"31AA5333",
+    "positif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":140.65090140400002,"inferences":999852113,"mur":143.5476109981537},
+	"lecture": {"cpu":0.00842449399999623,"inferences":147934,"mur":0.008427143096923828},
+	"total_mur":143.5560381412506
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":143.5560381412506
+    }
+  },
+  {
+    "indetermine": {
+      "accord":"non_controle",
+      "complet":null,
+      "comptes": {"candidat":8,"conditionnel":204,"etablissable":16,"sans_suffisante":655},
+      "conditionnels_par_sens":440,
+      "descendant_etabli":null,
+      "etablis": [],
+      "etablissables": [
+	"11Q331",
+	"23B3",
+	"25H15",
+	"31A2255",
+	"31A2313",
+	"31A28",
+	"31D82",
+	"31F3",
+	"41A1",
+	"41A221",
+	"41D212",
+	"41D2122",
+	"44G51",
+	"44G544",
+	"45I53",
+	"49D3214"
+      ],
+      "hors_branche": [],
+      "hors_branche_etablissables": [
+	"11Q331",
+	"23B3",
+	"25H15",
+	"31A2255",
+	"31A2313",
+	"31A28",
+	"31D82",
+	"31F3",
+	"41A1",
+	"41A221",
+	"41D212",
+	"41D2122",
+	"44G51",
+	"44G544",
+	"45I53",
+	"49D3214"
+      ],
+      "mesure": {
+	"assertions":113,
+	"codage": {"cpu":87.323287961,"inferences":819586630,"mur":88.3765959739685},
+	"lecture": {"cpu":0.0018613699999150413,"inferences":29122,"mur":0.0018754005432128906},
+	"total_mur":88.37847137451172
+      },
+      "necessaire":null,
+      "statut":"absent",
+      "temps":88.37847137451172
+    },
+    "k":96,
+    "langue":"fr",
+    "negatif": {
+      "accord":"non_controle",
+      "complet":null,
+      "comptes": {"candidat":5,"conditionnel":134,"etablissable":6,"sans_suffisante":289},
+      "conditionnels_par_sens":215,
+      "descendant_etabli":null,
+      "etablis": [],
+      "etablissables": ["11K", "25H15", "25K16", "41A18", "71A4", "98B(MARK ANTONY)" ],
+      "hors_branche": [],
+      "hors_branche_etablissables": ["11K", "25H15", "25K16", "41A18", "71A4", "98B(MARK ANTONY)" ],
+      "mesure": {
+	"assertions":89,
+	"codage": {"cpu":9.293264759000067,"inferences":62330814,"mur":9.478106021881104},
+	"lecture": {"cpu":0.0015730289999282832,"inferences":20442,"mur":0.001577138900756836},
+	"total_mur":9.47968316078186
+      },
+      "necessaire":null,
+      "statut":"absent",
+      "temps":9.47968316078186
+    },
+    "notation":"11H(ANTONY ABBOT)119",
+    "positif": {
+      "accord":"non_controle",
+      "complet":null,
+      "comptes": {"candidat":15,"conditionnel":252,"etablissable":15,"sans_suffisante":719},
+      "conditionnels_par_sens":565,
+      "descendant_etabli":null,
+      "etablis": [],
+      "etablissables": [
+	"11Q331",
+	"25H15",
+	"31A28",
+	"31D16",
+	"31D82",
+	"31F3",
+	"41B2",
+	"41B21",
+	"41B2133",
+	"41D212",
+	"41D2122",
+	"41D263",
+	"41D2656",
+	"44G51",
+	"98B(MARK ANTONY)"
+      ],
+      "hors_branche": [],
+      "hors_branche_etablissables": [
+	"11Q331",
+	"25H15",
+	"31A28",
+	"31D16",
+	"31D82",
+	"31F3",
+	"41B2",
+	"41B21",
+	"41B2133",
+	"41D212",
+	"41D2122",
+	"41D263",
+	"41D2656",
+	"44G51",
+	"98B(MARK ANTONY)"
+      ],
+      "mesure": {
+	"assertions":195,
+	"codage": {"cpu":59.82044568399988,"inferences":575204458,"mur":60.79323196411133},
+	"lecture": {"cpu":0.004209265000099549,"inferences":68032,"mur":0.004213571548461914},
+	"total_mur":60.79744553565979
+      },
+      "necessaire":null,
+      "statut":"absent",
+      "temps":60.79744553565979
+    },
+    "variante_autre_relation": {
+      "accord":"non_controle",
+      "complet":null,
+      "comptes": {"candidat":6,"conditionnel":171,"etablissable":7,"sans_suffisante":437},
+      "conditionnels_par_sens":263,
+      "descendant_etabli":null,
+      "etablis": [],
+      "etablissables": ["25H15", "31A28", "31D82", "31F3", "44B152", "47I212", "98B(MARK ANTONY)" ],
+      "hors_branche": [],
+      "hors_branche_etablissables": ["25H15", "31A28", "31D82", "31F3", "44B152", "47I212", "98B(MARK ANTONY)" ],
+      "mesure": {
+	"assertions":76,
+	"codage": {"cpu":23.747493709999844,"inferences":190966695,"mur":24.022149085998535},
+	"lecture": {"cpu":0.0015990450001481804,"inferences":19494,"mur":0.0016207695007324219},
+	"total_mur":24.023769855499268
+      },
+      "necessaire":null,
+      "statut":"absent",
+      "temps":24.023769855499268
+    },
+    "variante_copresence": {
+      "accord":"non_controle",
+      "complet":null,
+      "comptes": {"candidat":1,"conditionnel":96,"etablissable":7,"sans_suffisante":267},
+      "conditionnels_par_sens":134,
+      "descendant_etabli":null,
+      "etablis": [],
+      "etablissables": ["13A35", "25H15", "31B2", "48C14111", "48C14251", "48C14351", "98B(MARK ANTONY)" ],
+      "hors_branche": [],
+      "hors_branche_etablissables": ["13A35", "25H15", "31B2", "48C14111", "48C14251", "48C14351", "98B(MARK ANTONY)" ],
+      "mesure": {
+	"assertions":87,
+	"codage": {"cpu":14.162177381999982,"inferences":116125376,"mur":14.389630556106567},
+	"lecture": {"cpu":0.0016788850000466482,"inferences":22365,"mur":0.0016951560974121094},
+	"total_mur":14.39132571220398
+      },
+      "necessaire":null,
+      "statut":"absent",
+      "temps":14.39132571220398
+    },
+    "variante_hors_image": {
+      "accord":"non_controle",
+      "complet":null,
+      "comptes": {"candidat":6,"conditionnel":166,"etablissable":12,"sans_suffisante":412},
+      "conditionnels_par_sens":241,
+      "descendant_etabli":null,
+      "etablis": [],
+      "etablissables": ["25H15", "41B2", "41B21", "41B2133", "43B8", "48A71", "48C14111", "48C14251", "48C14351", "49G4", "49M91", "98B(MARK ANTONY)" ],
+      "hors_branche": [],
+      "hors_branche_etablissables": ["25H15", "41B2", "41B21", "41B2133", "43B8", "48A71", "48C14111", "48C14251", "48C14351", "49G4", "49M91", "98B(MARK ANTONY)" ],
+      "mesure": {
+	"assertions":103,
+	"codage": {"cpu":18.929404449999993,"inferences":150460409,"mur":19.193362951278687},
+	"lecture": {"cpu":0.0024086670000542654,"inferences":35739,"mur":0.002423524856567383},
+	"total_mur":19.195786476135254
+      },
+      "necessaire":null,
+      "statut":"absent",
+      "temps":19.195786476135254
+    },
+    "variante_modalite": {
+      "accord":"non_controle",
+      "complet":null,
+      "comptes": {"candidat":2,"conditionnel":78,"etablissable":4,"sans_suffisante":176},
+      "conditionnels_par_sens":89,
+      "descendant_etabli":null,
+      "etablis": [],
+      "etablissables": ["25H15", "45K122", "47G", "98B(MARK ANTONY)" ],
+      "hors_branche": [],
+      "hors_branche_etablissables": ["25H15", "45K122", "47G", "98B(MARK ANTONY)" ],
+      "mesure": {
+	"assertions":88,
+	"codage": {"cpu":9.154522699999916,"inferences":62818714,"mur":9.323768615722656},
+	"lecture": {"cpu":0.0020355169999675127,"inferences":24597,"mur":0.002061128616333008},
+	"total_mur":9.32582974433899
+      },
+      "necessaire":null,
+      "statut":"absent",
+      "temps":9.32582974433899
+    },
+    "variante_negation": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":83.77930441400008,"inferences":999976946,"mur":84.74797296524048},
+	"lecture": {"cpu":0.0017424840000330732,"inferences":23093,"mur":0.001758575439453125},
+	"total_mur":84.74973154067993
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":84.74973154067993
+    },
+    "variante_roles_inverses": {
+      "accord":"non_controle",
+      "complet":null,
+      "comptes": {"candidat":7,"conditionnel":232,"etablissable":20,"sans_suffisante":622},
+      "conditionnels_par_sens":578,
+      "descendant_etabli":null,
+      "etablis": [],
+      "etablissables": [
+	"23K11",
+	"23K12",
+	"23K13",
+	"23K21",
+	"23K22",
+	"23K23",
+	"23K31",
+	"23K32",
+	"23K33",
+	"23K41",
+	"23K42",
+	"23K43",
+	"25H15",
+	"26B",
+	"41A7633",
+	"43C7361",
+	"44G163",
+	"46A170",
+	"48A71",
+	"98B(MARK ANTONY)"
+      ],
+      "hors_branche": [],
+      "hors_branche_etablissables": [
+	"23K11",
+	"23K12",
+	"23K13",
+	"23K21",
+	"23K22",
+	"23K23",
+	"23K31",
+	"23K32",
+	"23K33",
+	"23K41",
+	"23K42",
+	"23K43",
+	"25H15",
+	"26B",
+	"41A7633",
+	"43C7361",
+	"44G163",
+	"46A170",
+	"48A71",
+	"98B(MARK ANTONY)"
+      ],
+      "mesure": {
+	"assertions":75,
+	"codage": {"cpu":79.53168883500007,"inferences":806088180,"mur":80.41420602798462},
+	"lecture": {"cpu":0.0014196419999734644,"inferences":17693,"mur":0.0014219284057617188},
+	"total_mur":80.41562795639038
+      },
+      "necessaire":null,
+      "statut":"absent",
+      "temps":80.41562795639038
+    }
+  },
+  {
+    "indetermine": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":135.69722578399978,"inferences":999914586,"mur":137.30067682266235},
+	"lecture": {"cpu":0.004562076000183879,"inferences":85467,"mur":0.004566192626953125},
+	"total_mur":137.3052430152893
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":137.3052430152893
+    },
+    "k":126,
+    "langue":"fr",
+    "negatif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":135.13494642799992,"inferences":999900102,"mur":136.79329586029053},
+	"lecture": {"cpu":0.007866143999990527,"inferences":99955,"mur":0.007867097854614258},
+	"total_mur":136.80116295814514
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":136.80116295814514
+    },
+    "notation":"49BB4429",
+    "positif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":130.620363086,"inferences":999898122,"mur":132.42000579833984},
+	"lecture": {"cpu":0.00547454899992772,"inferences":101932,"mur":0.005506992340087891},
+	"total_mur":132.42551279067993
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":132.42551279067993
+    }
+  },
+  {
+    "indetermine": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":127.89127378800003,"inferences":999905981,"mur":129.79082226753235},
+	"lecture": {"cpu":0.005332084000201576,"inferences":94077,"mur":0.005333900451660156},
+	"total_mur":129.796156167984
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":129.796156167984
+    },
+    "k":156,
+    "langue":"fr",
+    "negatif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":141.54964085099982,"inferences":999885744,"mur":143.79840660095215},
+	"lecture": {"cpu":0.006366085000081512,"inferences":114296,"mur":0.006369113922119141},
+	"total_mur":143.80477571487427
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":143.80477571487427
+    },
+    "notation":"71A423",
+    "positif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":127.87231021199977,"inferences":999873452,"mur":129.2969844341278},
+	"lecture": {"cpu":0.014357453999991776,"inferences":126586,"mur":0.016223907470703125},
+	"total_mur":129.3132083415985
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":129.3132083415985
+    },
+    "variante_autre_relation": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":148.25967905700008,"inferences":999897879,"mur":150.89284086227417},
+	"lecture": {"cpu":0.0068841339998471085,"inferences":102172,"mur":0.007497549057006836},
+	"total_mur":150.90033841133118
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":150.90033841133118
+    },
+    "variante_copresence": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":147.00324920000003,"inferences":999914824,"mur":148.6880397796631},
+	"lecture": {"cpu":0.008943808000367426,"inferences":85228,"mur":0.008955240249633789},
+	"total_mur":148.69699501991272
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":148.69699501991272
+    },
+    "variante_hors_image": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":159.6820735499996,"inferences":999905805,"mur":161.83997631072998},
+	"lecture": {"cpu":0.005366319000131625,"inferences":94247,"mur":0.005367279052734375},
+	"total_mur":161.84534358978271
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":161.84534358978271
+    },
+    "variante_modalite": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":153.20864551800014,"inferences":999892137,"mur":155.28580451011658},
+	"lecture": {"cpu":0.005925215999923239,"inferences":107910,"mur":0.00592803955078125},
+	"total_mur":155.29173254966736
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":155.29173254966736
+    },
+    "variante_negation": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":153.77060537499983,"inferences":999908423,"mur":156.08875846862793},
+	"lecture": {"cpu":0.005189778999920236,"inferences":91626,"mur":0.005192995071411133},
+	"total_mur":156.09395146369934
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":156.09395146369934
+    },
+    "variante_roles_inverses": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":150.17289506399993,"inferences":999888554,"mur":153.2858874797821},
+	"lecture": {"cpu":0.006269523999890225,"inferences":111494,"mur":0.0062732696533203125},
+	"total_mur":153.29216074943542
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":153.29216074943542
+    }
+  },
+  {
+    "indetermine": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":141.68476913700033,"inferences":999893701,"mur":143.12816262245178},
+	"lecture": {"cpu":0.010347808999995323,"inferences":106345,"mur":0.010373115539550781},
+	"total_mur":143.13853573799133
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":143.13853573799133
+    },
+    "k":186,
+    "langue":"fr",
+    "negatif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":147.06635122800026,"inferences":999882603,"mur":148.76418805122375},
+	"lecture": {"cpu":0.006449363999763591,"inferences":117444,"mur":0.006451129913330078},
+	"total_mur":148.77063918113708
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":148.77063918113708
+    },
+    "notation":"11F111(PULCHRA UT LUNA)",
+    "positif": {
+      "interruption":"inferences",
+      "mesure": {
+	"assertions":null,
+	"codage": {"cpu":143.83349943599978,"inferences":999863965,"mur":145.77990674972534},
+	"lecture": {"cpu":0.007379248000233929,"inferences":136084,"mur":0.0073986053466796875},
+	"total_mur":145.78730535507202
+      },
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":145.78730535507202
+    }
+  }
+]

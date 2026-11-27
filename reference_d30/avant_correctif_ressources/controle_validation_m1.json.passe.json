@@ -1,0 +1,13 @@
+{
+  "analyses": [ {"cpu_prolog":0.03796719800000048,"langue":"en","mur":219.3594675064087,"textes":24} ],
+  "commit":"2d4506672f20bf6c9f30f2b1ede53ce3d66f7286",
+  "debut":1795744697.475865,
+  "entree":"/home/user/donnees/validation_m1/textes.json",
+  "fiches": [1, 51, 101, 151 ],
+  "fin":1795749684.440834,
+  "pas":50,
+  "processeurs":4,
+  "reglage": {"OEDIPAMAAS_ANALYSEUR":"stanza","OEDIPAMAAS_DELAI":"7000","OEDIPAMAAS_INFERENCES":"1000000000"},
+  "swipl":110000,
+  "tranche":"1/1"
+}

@@ -12,13 +12,13 @@
       "hors_branche_etablissables": ["11Q611", "13A1", "13A35", "13D2132" ],
       "mesure": {
 	"assertions":66,
-	"codage": {"cpu":1.2319537270000005,"inferences":7705047,"mur":1.539461374282837},
-	"lecture": {"cpu":0.0007821079999992264,"inferences":13289,"mur":0.000782012939453125},
-	"total_mur":1.54024338722229
+	"codage": {"cpu":1.4238933250000017,"inferences":7705047,"mur":1.4508566856384277},
+	"lecture": {"cpu":0.0010208929999997451,"inferences":13289,"mur":0.0010209083557128906},
+	"total_mur":1.4518775939941406
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.54024338722229
+      "temps":1.4518775939941406
     },
     "k":11,
     "langue":"en",
@@ -34,13 +34,13 @@
       "hors_branche_etablissables": ["11Q611", "13D2132", "22A", "41D253", "42E431", "46C361", "46E223" ],
       "mesure": {
 	"assertions":71,
-	"codage": {"cpu":1.0894217640000008,"inferences":6144300,"mur":1.3949382305145264},
-	"lecture": {"cpu":0.0008577879999993598,"inferences":13483,"mur":0.004183530807495117},
-	"total_mur":1.3991217613220215
+	"codage": {"cpu":1.2606464759999998,"inferences":6144300,"mur":1.2796592712402344},
+	"lecture": {"cpu":0.001059719999998876,"inferences":13483,"mur":0.0010602474212646484},
+	"total_mur":1.280719518661499
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.3991217613220215
+      "temps":1.280719518661499
     },
     "notation":"42E432",
     "positif": {
@@ -55,13 +55,13 @@
       "hors_branche_etablissables": ["11Q611", "13D2132", "25G", "25G1", "25G4", "41A54", "46A7", "46A821" ],
       "mesure": {
 	"assertions":85,
-	"codage": {"cpu":1.3785110560000007,"inferences":8867251,"mur":1.677600622177124},
-	"lecture": {"cpu":0.0020857529999993574,"inferences":22799,"mur":0.0020852088928222656},
-	"total_mur":1.6796858310699463
+	"codage": {"cpu":2.0571966659999994,"inferences":8867251,"mur":2.1050992012023926},
+	"lecture": {"cpu":0.003592784000000293,"inferences":22799,"mur":0.0036630630493164062},
+	"total_mur":2.108762264251709
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.6796858310699463
+      "temps":2.108762264251709
     }
   },
   {
@@ -77,13 +77,13 @@
       "hors_branche_etablissables": [],
       "mesure": {
 	"assertions":39,
-	"codage": {"cpu":1.0625303370000054,"inferences":7071873,"mur":1.6952662467956543},
-	"lecture": {"cpu":0.0006174230000013381,"inferences":8791,"mur":0.0006237030029296875},
-	"total_mur":1.695889949798584
+	"codage": {"cpu":1.5706502869999923,"inferences":7071873,"mur":1.5991137027740479},
+	"lecture": {"cpu":0.0007916840000063985,"inferences":8791,"mur":0.0007922649383544922},
+	"total_mur":1.5999059677124023
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.695889949798584
+      "temps":1.5999059677124023
     },
     "k":26,
     "langue":"fr",
@@ -99,13 +99,13 @@
       "hors_branche_etablissables": ["22A", "25G", "25G1", "25G21", "25G4", "25G4(ACANTHUS)", "31A28", "31D82", "31F3", "41C653", "43B8", "47I4222", "47I4223" ],
       "mesure": {
 	"assertions":87,
-	"codage": {"cpu":7.802428544999998,"inferences":72094749,"mur":12.023298263549805},
-	"lecture": {"cpu":0.0011738470000040024,"inferences":18638,"mur":0.0011854171752929688},
-	"total_mur":12.024483680725098
+	"codage": {"cpu":9.618996252999999,"inferences":72094749,"mur":9.714778661727905},
+	"lecture": {"cpu":0.0014279780000023834,"inferences":18638,"mur":0.0014293193817138672},
+	"total_mur":9.71620798110962
       },
       "necessaire":"etablie_sous_hypotheses",
       "statut":"sans_suffisante",
-      "temps":12.024483680725098
+      "temps":9.71620798110962
     },
     "notation":"48A9834",
     "positif": {
@@ -120,13 +120,13 @@
       "hors_branche_etablissables": ["43B8", "49G35" ],
       "mesure": {
 	"assertions":64,
-	"codage": {"cpu":5.890640792000006,"inferences":54319399,"mur":9.251317501068115},
-	"lecture": {"cpu":0.0009986479999994913,"inferences":13835,"mur":0.0055963993072509766},
-	"total_mur":9.256913900375366
+	"codage": {"cpu":7.5849149849999975,"inferences":54319399,"mur":7.743462562561035},
+	"lecture": {"cpu":0.0012188870000002794,"inferences":13835,"mur":0.0012853145599365234},
+	"total_mur":7.744747877120972
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":9.256913900375366
+      "temps":7.744747877120972
     }
   },
   {
@@ -142,13 +142,13 @@
       "hors_branche_etablissables": ["11Q611", "41A777", "41A778", "41C341", "41D268", "43B", "43B8", "45E", "46C361", "48C81" ],
       "mesure": {
 	"assertions":82,
-	"codage": {"cpu":0.9235557930000002,"inferences":7056800,"mur":1.2127602100372314},
-	"lecture": {"cpu":0.0010619729999987726,"inferences":17701,"mur":0.0010678768157958984},
-	"total_mur":1.2138280868530273
+	"codage": {"cpu":1.1549186720000009,"inferences":7056800,"mur":1.1636524200439453},
+	"lecture": {"cpu":0.0013412260000009724,"inferences":17701,"mur":0.0013706684112548828},
+	"total_mur":1.1650230884552002
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.2138280868530273
+      "temps":1.1650230884552002
     },
     "k":41,
     "langue":"en",
@@ -210,13 +210,13 @@
       ],
       "mesure": {
 	"assertions":78,
-	"codage": {"cpu":1.2156435420000005,"inferences":11264656,"mur":1.6448428630828857},
-	"lecture": {"cpu":0.001045312999998771,"inferences":15499,"mur":0.0010516643524169922},
-	"total_mur":1.6458945274353027
+	"codage": {"cpu":1.5186290200000023,"inferences":11264656,"mur":1.589247465133667},
+	"lecture": {"cpu":0.00113646499999831,"inferences":15499,"mur":0.0011379718780517578},
+	"total_mur":1.5903854370117188
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.6458945274353027
+      "temps":1.5903854370117188
     },
     "notation":"31AA4631",
     "positif": {
@@ -277,13 +277,13 @@
       ],
       "mesure": {
 	"assertions":78,
-	"codage": {"cpu":1.1949245990000001,"inferences":11170024,"mur":1.567115068435669},
-	"lecture": {"cpu":0.000948765999998713,"inferences":15671,"mur":0.0009531974792480469},
-	"total_mur":1.568068265914917
+	"codage": {"cpu":1.6964145580000007,"inferences":11170024,"mur":1.7218232154846191},
+	"lecture": {"cpu":0.0011462669999993125,"inferences":15671,"mur":0.001146554946899414},
+	"total_mur":1.7229697704315186
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.568068265914917
+      "temps":1.7229697704315186
     }
   },
   {
@@ -299,13 +299,13 @@
       "hors_branche_etablissables": ["46E221", "47D", "49C17", "49L1" ],
       "mesure": {
 	"assertions":75,
-	"codage": {"cpu":8.544961571999991,"inferences":67479908,"mur":12.889630317687988},
-	"lecture": {"cpu":0.0011185299999993958,"inferences":15540,"mur":0.0011332035064697266},
-	"total_mur":12.890763521194458
+	"codage": {"cpu":9.373336368000011,"inferences":67479908,"mur":9.477883338928223},
+	"lecture": {"cpu":0.0012523129999948424,"inferences":15540,"mur":0.001262664794921875},
+	"total_mur":9.479146003723145
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":12.890763521194458
+      "temps":9.479146003723145
     },
     "k":56,
     "langue":"fr",
@@ -509,13 +509,13 @@
       ],
       "mesure": {
 	"assertions":74,
-	"codage": {"cpu":21.785898181999997,"inferences":230849304,"mur":33.12509202957153},
-	"lecture": {"cpu":0.0008052289999938012,"inferences":12508,"mur":0.0008053779602050781},
-	"total_mur":33.12589740753174
+	"codage": {"cpu":25.103463805000004,"inferences":230849304,"mur":25.41810369491577},
+	"lecture": {"cpu":0.0012097289999957184,"inferences":12508,"mur":0.0013148784637451172},
+	"total_mur":25.419418573379517
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":33.12589740753174
+      "temps":25.419418573379517
     },
     "notation":"31A22361",
     "positif": {
@@ -718,13 +718,13 @@
       ],
       "mesure": {
 	"assertions":73,
-	"codage": {"cpu":18.967009993999994,"inferences":240558731,"mur":28.209813117980957},
-	"lecture": {"cpu":0.0008115239999995083,"inferences":12527,"mur":0.000812530517578125},
-	"total_mur":28.210625648498535
+	"codage": {"cpu":26.847081632,"inferences":240558731,"mur":27.33780860900879},
+	"lecture": {"cpu":0.0012961589999918033,"inferences":12527,"mur":0.0012989044189453125},
+	"total_mur":27.339107513427734
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":28.210625648498535
+      "temps":27.339107513427734
     }
   },
   {
@@ -740,13 +740,13 @@
       "hors_branche_etablissables": ["11Q611", "25I1412", "31A2245", "31A2523", "31D82", "31G", "41A61", "46A821", "46C361", "71E113" ],
       "mesure": {
 	"assertions":72,
-	"codage": {"cpu":1.7977820589999993,"inferences":13359689,"mur":2.2926888465881348},
-	"lecture": {"cpu":0.001325984000001057,"inferences":22421,"mur":0.0013358592987060547},
-	"total_mur":2.294024705886841
+	"codage": {"cpu":2.4467688770000002,"inferences":13359689,"mur":2.524102210998535},
+	"lecture": {"cpu":0.001719761000000375,"inferences":22421,"mur":0.0017189979553222656},
+	"total_mur":2.5258212089538574
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":2.294024705886841
+      "temps":2.5258212089538574
     },
     "k":71,
     "langue":"en",
@@ -762,13 +762,13 @@
       "hors_branche_etablissables": ["11Q611", "31D82", "31G", "41A3251", "46E", "49A", "49B24", "49B44", "71E113", "71W741" ],
       "mesure": {
 	"assertions":59,
-	"codage": {"cpu":1.292979453000001,"inferences":8945119,"mur":1.6113767623901367},
-	"lecture": {"cpu":0.00104286599999881,"inferences":16379,"mur":0.0010466575622558594},
-	"total_mur":1.6124234199523926
+	"codage": {"cpu":1.6859658789999976,"inferences":8945119,"mur":1.7135746479034424},
+	"lecture": {"cpu":0.0013145530000002736,"inferences":16379,"mur":0.0013151168823242188},
+	"total_mur":1.7148897647857666
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.6124234199523926
+      "temps":1.7148897647857666
     },
     "notation":"11H(CASSIAN)32",
     "positif": {
@@ -828,35 +828,27 @@
       ],
       "mesure": {
 	"assertions":86,
-	"codage": {"cpu":2.1061797690000006,"inferences":15048777,"mur":2.7260992527008057},
-	"lecture": {"cpu":0.0014810430000000707,"inferences":23170,"mur":0.001485586166381836},
-	"total_mur":2.7275848388671875
+	"codage": {"cpu":2.7087156770000007,"inferences":15048777,"mur":2.7813057899475098},
+	"lecture": {"cpu":0.0018701069999984554,"inferences":23170,"mur":0.0018768310546875},
+	"total_mur":2.7831826210021973
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":2.7275848388671875
+      "temps":2.7831826210021973
     }
   },
   {
     "indetermine": {
-      "accord":"non_controle",
-      "complet":null,
-      "comptes": {"candidat":16,"conditionnel":293,"etablissable":7,"rejete_par_le_verificateur":1,"sans_suffisante":783},
-      "conditionnels_par_sens":904,
-      "descendant_etabli":null,
-      "etablis": [],
-      "etablissables": ["11H", "11I4", "11Q7551", "31A222", "31A2226", "46C", "49L71" ],
-      "hors_branche": [],
-      "hors_branche_etablissables": ["11I4", "11Q7551", "31A222", "31A2226", "46C", "49L71" ],
+      "interruption":"inferences",
       "mesure": {
-	"assertions":64,
-	"codage": {"cpu":105.530344229,"inferences":1783616007,"mur":161.3789620399475},
-	"lecture": {"cpu":0.0009667929999892522,"inferences":14559,"mur":0.0009768009185791016},
-	"total_mur":161.3799388408661
+	"assertions":null,
+	"codage": {"cpu":117.75218412200002,"inferences":999985494,"mur":119.74097156524658},
+	"lecture": {"cpu":0.0012163039999961711,"inferences":14559,"mur":0.0012302398681640625},
+	"total_mur":119.74220180511475
       },
-      "necessaire":null,
-      "statut":"absent",
-      "temps":161.3799388408661
+      "phase":"codage",
+      "statut":"interrompu",
+      "temps":119.74220180511475
     },
     "k":86,
     "langue":"fr",
@@ -872,13 +864,13 @@
       "hors_branche_etablissables": ["11P4432", "31A2255", "31A2313", "31A28", "31D82", "31F3", "46A7", "48A" ],
       "mesure": {
 	"assertions":94,
-	"codage": {"cpu":3.2389132459999956,"inferences":30959738,"mur":4.267786502838135},
-	"lecture": {"cpu":0.001362498000005985,"inferences":23438,"mur":0.0016701221466064453},
-	"total_mur":4.269456624984741
+	"codage": {"cpu":5.201641211000009,"inferences":30959738,"mur":5.310209035873413},
+	"lecture": {"cpu":0.0019971940000118593,"inferences":23438,"mur":0.0020203590393066406},
+	"total_mur":5.31222939491272
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":4.269456624984741
+      "temps":5.31222939491272
     },
     "notation":"11H(ATHANASIUS)33",
     "positif": {
@@ -909,13 +901,13 @@
       "hors_branche_etablissables": ["11I4", "25H119", "25K16", "41A1", "41A221", "44B1621", "44B1622", "44B1623", "44G51", "44G544", "48A", "48C81", "49L71", "73C9" ],
       "mesure": {
 	"assertions":114,
-	"codage": {"cpu":17.039004414000004,"inferences":195955737,"mur":22.782636404037476},
-	"lecture": {"cpu":0.002027710999996657,"inferences":34303,"mur":0.0020415782928466797},
-	"total_mur":22.784677982330322
+	"codage": {"cpu":22.459126671999996,"inferences":195955737,"mur":23.039562940597534},
+	"lecture": {"cpu":0.00283322100000305,"inferences":34303,"mur":0.002846956253051758},
+	"total_mur":23.042409896850586
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":22.784677982330322
+      "temps":23.042409896850586
     }
   },
   {
@@ -931,13 +923,13 @@
       "hors_branche_etablissables": ["11Q611", "31D82", "31G", "43B", "43B8", "44B127", "45B4", "45E", "46E223", "48A71", "71E113" ],
       "mesure": {
 	"assertions":32,
-	"codage": {"cpu":0.9547073180000005,"inferences":4118718,"mur":1.241804599761963},
-	"lecture": {"cpu":0.0006542019999997706,"inferences":9664,"mur":0.0006656646728515625},
-	"total_mur":1.2424702644348145
+	"codage": {"cpu":1.1636367039999982,"inferences":4118718,"mur":1.1764168739318848},
+	"lecture": {"cpu":0.0008313849999979084,"inferences":9664,"mur":0.00083160400390625},
+	"total_mur":1.177248477935791
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.2424702644348145
+      "temps":1.177248477935791
     },
     "k":101,
     "langue":"en",
@@ -985,13 +977,13 @@
       ],
       "mesure": {
 	"assertions":65,
-	"codage": {"cpu":1.772391081000002,"inferences":12689136,"mur":2.2253689765930176},
-	"lecture": {"cpu":0.0009118189999988147,"inferences":14015,"mur":0.0009236335754394531},
-	"total_mur":2.226292610168457
+	"codage": {"cpu":2.308557504000003,"inferences":12689136,"mur":2.371088981628418},
+	"lecture": {"cpu":0.0010473339999990117,"inferences":14015,"mur":0.0010573863983154297},
+	"total_mur":2.3721463680267334
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":2.226292610168457
+      "temps":2.3721463680267334
     },
     "notation":"43C71253",
     "positif": {
@@ -1040,13 +1032,13 @@
       ],
       "mesure": {
 	"assertions":89,
-	"codage": {"cpu":2.183104857,"inferences":16324535,"mur":2.721792459487915},
-	"lecture": {"cpu":0.001254835000001009,"inferences":19915,"mur":0.0012645721435546875},
-	"total_mur":2.7230570316314697
+	"codage": {"cpu":2.8279137290000023,"inferences":16324535,"mur":2.856966257095337},
+	"lecture": {"cpu":0.0014570589999998163,"inferences":19915,"mur":0.00145721435546875},
+	"total_mur":2.8584234714508057
       },
       "necessaire":"etablie",
       "statut":"sans_suffisante",
-      "temps":2.7230570316314697
+      "temps":2.8584234714508057
     }
   },
   {
@@ -1062,13 +1054,13 @@
       "hors_branche_etablissables": ["11Q624", "25H2324", "31A224", "41D212", "41D2121" ],
       "mesure": {
 	"assertions":46,
-	"codage": {"cpu":3.9206591060000164,"inferences":27237091,"mur":6.0449628829956055},
-	"lecture": {"cpu":0.0005898470000147427,"inferences":7882,"mur":0.0006103515625},
-	"total_mur":6.0455732345581055
+	"codage": {"cpu":4.547181039999998,"inferences":27237091,"mur":4.677126169204712},
+	"lecture": {"cpu":0.0007527779999918494,"inferences":7882,"mur":0.0007519721984863281},
+	"total_mur":4.677878141403198
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":6.0455732345581055
+      "temps":4.677878141403198
     },
     "k":116,
     "langue":"fr",
@@ -1076,13 +1068,13 @@
       "interruption":"inferences",
       "mesure": {
 	"assertions":null,
-	"codage": {"cpu":77.923223941,"inferences":999987505,"mur":120.27972316741943},
-	"lecture": {"cpu":0.0009558620000120754,"inferences":12535,"mur":0.0009744167327880859},
-	"total_mur":120.28069758415222
+	"codage": {"cpu":105.13930016500001,"inferences":999987505,"mur":106.92139387130737},
+	"lecture": {"cpu":0.0010028179999608255,"inferences":12535,"mur":0.001010894775390625},
+	"total_mur":106.92240476608276
       },
       "phase":"codage",
       "statut":"interrompu",
-      "temps":120.28069758415222
+      "temps":106.92240476608276
     },
     "notation":"31A2515",
     "positif": {
@@ -1097,13 +1089,13 @@
       "hors_branche_etablissables": ["25H2324", "31A224", "31A2245", "31A2371", "31A2523", "31E3", "44B152", "46B314" ],
       "mesure": {
 	"assertions":78,
-	"codage": {"cpu":60.689980744999986,"inferences":735253461,"mur":92.56103372573853},
-	"lecture": {"cpu":0.0010096720000092319,"inferences":14754,"mur":0.001026153564453125},
-	"total_mur":92.56205987930298
+	"codage": {"cpu":80.49935607100002,"inferences":735253461,"mur":81.72526144981384},
+	"lecture": {"cpu":0.0012081840000064403,"inferences":14754,"mur":0.0012080669403076172},
+	"total_mur":81.72646951675415
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":92.56205987930298
+      "temps":81.72646951675415
     }
   },
   {
@@ -1119,13 +1111,13 @@
       "hors_branche_etablissables": ["11D3", "11D3281", "11Q611", "22A3", "31A2245", "31A2523", "31D82", "31G", "41D2665", "46C361", "46D", "48C7334", "71E113" ],
       "mesure": {
 	"assertions":53,
-	"codage": {"cpu":1.3297415169999987,"inferences":8343351,"mur":1.725130558013916},
-	"lecture": {"cpu":0.0006688100000005193,"inferences":9735,"mur":0.0006763935089111328},
-	"total_mur":1.7258069515228271
+	"codage": {"cpu":1.6155369869999987,"inferences":8343351,"mur":1.6255435943603516},
+	"lecture": {"cpu":0.0008376700000027881,"inferences":9735,"mur":0.0008375644683837891},
+	"total_mur":1.6263811588287354
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.7258069515228271
+      "temps":1.6263811588287354
     },
     "k":131,
     "langue":"en",
@@ -1141,13 +1133,13 @@
       "hors_branche_etablissables": ["11Q611", "22A", "31A2112", "31D82", "31G", "41C6", "41C6413", "41C7", "41D2665", "43B", "43B8", "45E", "46C361", "47I223", "71E113" ],
       "mesure": {
 	"assertions":78,
-	"codage": {"cpu":1.5530759490000001,"inferences":11871137,"mur":2.012711763381958},
-	"lecture": {"cpu":0.0010618589999999983,"inferences":16499,"mur":0.001207113265991211},
-	"total_mur":2.013918876647949
+	"codage": {"cpu":2.2550744320000007,"inferences":11871137,"mur":2.2796518802642822},
+	"lecture": {"cpu":0.0018303049999985888,"inferences":16499,"mur":0.0018281936645507812},
+	"total_mur":2.281480073928833
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":2.013918876647949
+      "temps":2.281480073928833
     },
     "notation":"42AA562",
     "positif": {
@@ -1198,13 +1190,13 @@
       ],
       "mesure": {
 	"assertions":78,
-	"codage": {"cpu":1.7861034870000019,"inferences":12953316,"mur":2.374418258666992},
-	"lecture": {"cpu":0.0010278560000003267,"inferences":16519,"mur":0.001033782958984375},
-	"total_mur":2.3754520416259766
+	"codage": {"cpu":2.569648089999994,"inferences":12953316,"mur":2.6595983505249023},
+	"lecture": {"cpu":0.0012791210000031583,"inferences":16519,"mur":0.0012788772583007812},
+	"total_mur":2.660877227783203
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":2.3754520416259766
+      "temps":2.660877227783203
     }
   },
   {
@@ -1220,13 +1212,13 @@
       "hors_branche_etablissables": ["11I62(NOAH'S SONS)", "26C", "43B", "48C514", "91A12" ],
       "mesure": {
 	"assertions":77,
-	"codage": {"cpu":19.468510718000005,"inferences":217736665,"mur":29.02774667739868},
-	"lecture": {"cpu":0.0010716950000073666,"inferences":17532,"mur":0.0010716915130615234},
-	"total_mur":29.028818368911743
+	"codage": {"cpu":30.330474564999918,"inferences":217736665,"mur":30.758239269256592},
+	"lecture": {"cpu":0.001439772000026096,"inferences":17532,"mur":0.001443624496459961},
+	"total_mur":30.75968289375305
       },
       "necessaire":"etablie",
       "statut":"candidat",
-      "temps":29.028818368911743
+      "temps":30.75968289375305
     },
     "k":146,
     "langue":"fr",
@@ -1234,13 +1226,13 @@
       "interruption":"inferences",
       "mesure": {
 	"assertions":null,
-	"codage": {"cpu":74.10662893800003,"inferences":999973433,"mur":112.44190001487732},
-	"lecture": {"cpu":0.0014192599999773847,"inferences":26607,"mur":0.0014286041259765625},
-	"total_mur":112.4433286190033
+	"codage": {"cpu":106.75940887099995,"inferences":999973433,"mur":108.81548118591309},
+	"lecture": {"cpu":0.001958712000032392,"inferences":26607,"mur":0.0019681453704833984},
+	"total_mur":108.81744933128357
       },
       "phase":"codage",
       "statut":"interrompu",
-      "temps":112.4433286190033
+      "temps":108.81744933128357
     },
     "notation":"71B3311",
     "positif": {
@@ -1255,13 +1247,13 @@
       "hors_branche_etablissables": ["11I62(NOAH'S SONS)", "26C", "43B" ],
       "mesure": {
 	"assertions":81,
-	"codage": {"cpu":11.519599534000008,"inferences":111183714,"mur":17.61606240272522},
-	"lecture": {"cpu":0.001143310999964342,"inferences":17837,"mur":0.0011539459228515625},
-	"total_mur":17.61721634864807
+	"codage": {"cpu":15.446689778000007,"inferences":111183714,"mur":15.65744686126709},
+	"lecture": {"cpu":0.0013114280000081635,"inferences":17837,"mur":0.0013141632080078125},
+	"total_mur":15.658761024475098
       },
       "necessaire":"etablie",
       "statut":"sans_suffisante",
-      "temps":17.61721634864807
+      "temps":15.658761024475098
     }
   },
   {
@@ -1277,13 +1269,13 @@
       "hors_branche_etablissables": ["11Q611", "25I1412", "31A224", "31A2514", "31A2515", "41A", "41A11", "41A12", "41A21", "41A211", "41D2665", "45C1", "45C13(DAGGER)" ],
       "mesure": {
 	"assertions":46,
-	"codage": {"cpu":0.6746714610000026,"inferences":3619822,"mur":0.8459782600402832},
-	"lecture": {"cpu":0.0005402500000002419,"inferences":7585,"mur":0.0005502700805664062},
-	"total_mur":0.8465285301208496
+	"codage": {"cpu":0.857840895999999,"inferences":3619822,"mur":0.8956782817840576},
+	"lecture": {"cpu":0.0006756889999977034,"inferences":7585,"mur":0.0006783008575439453},
+	"total_mur":0.8963565826416016
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":0.8465285301208496
+      "temps":0.8963565826416016
     },
     "k":161,
     "langue":"en",
@@ -1299,13 +1291,13 @@
       "hors_branche_etablissables": ["11Q611", "22A3", "24C12", "25F", "25F2", "25F23(WOLF)", "41A", "41A711", "42F34", "46A821", "46C361", "92A", "92B1" ],
       "mesure": {
 	"assertions":89,
-	"codage": {"cpu":2.002851151999998,"inferences":14554982,"mur":2.500666856765747},
-	"lecture": {"cpu":0.0014862840000020583,"inferences":23197,"mur":0.0015201568603515625},
-	"total_mur":2.5021870136260986
+	"codage": {"cpu":2.508353733,"inferences":14554982,"mur":2.5571086406707764},
+	"lecture": {"cpu":0.0016940160000018523,"inferences":23197,"mur":0.0017652511596679688},
+	"total_mur":2.5588738918304443
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":2.5021870136260986
+      "temps":2.5588738918304443
     },
     "notation":"97C41",
     "positif": {
@@ -1364,13 +1356,13 @@
       ],
       "mesure": {
 	"assertions":106,
-	"codage": {"cpu":3.118773816000001,"inferences":28844294,"mur":3.916337251663208},
-	"lecture": {"cpu":0.0017935179999994944,"inferences":31064,"mur":0.001802206039428711},
-	"total_mur":3.9181394577026367
+	"codage": {"cpu":4.191123566999998,"inferences":28844294,"mur":4.2530553340911865},
+	"lecture": {"cpu":0.0021929799999966804,"inferences":31064,"mur":0.0021927356719970703},
+	"total_mur":4.255248069763184
       },
       "necessaire":"etablie",
       "statut":"sans_suffisante",
-      "temps":3.9181394577026367
+      "temps":4.255248069763184
     }
   },
   {
@@ -1378,13 +1370,13 @@
       "interruption":"inferences",
       "mesure": {
 	"assertions":null,
-	"codage": {"cpu":94.69502510400002,"inferences":999991759,"mur":141.59032320976257},
-	"lecture": {"cpu":0.0006116040000279099,"inferences":8281,"mur":0.0006229877471923828},
-	"total_mur":141.59094619750977
+	"codage": {"cpu":128.152979706,"inferences":999991759,"mur":129.84047746658325},
+	"lecture": {"cpu":0.0007835029999796461,"inferences":8281,"mur":0.0007872581481933594},
+	"total_mur":129.84126472473145
       },
       "phase":"codage",
       "statut":"interrompu",
-      "temps":141.59094619750977
+      "temps":129.84126472473145
     },
     "k":176,
     "langue":"fr",
@@ -1400,26 +1392,26 @@
       "hors_branche_etablissables": ["31A2255", "31A2313", "31A28", "34B11", "34B12", "34B121" ],
       "mesure": {
 	"assertions":100,
-	"codage": {"cpu":36.96121424199998,"inferences":386317351,"mur":54.798752546310425},
-	"lecture": {"cpu":0.0012927489999583486,"inferences":23048,"mur":0.0012924671173095703},
-	"total_mur":54.800045013427734
+	"codage": {"cpu":53.46839028699992,"inferences":386317351,"mur":54.26179003715515},
+	"lecture": {"cpu":0.0024553760000571856,"inferences":23048,"mur":0.0024521350860595703},
+	"total_mur":54.26424217224121
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":54.800045013427734
+      "temps":54.26424217224121
     },
     "notation":"42D330",
     "positif": {
       "interruption":"inferences",
       "mesure": {
 	"assertions":null,
-	"codage": {"cpu":98.368990661,"inferences":999969495,"mur":144.42166090011597},
-	"lecture": {"cpu":0.0018412790000184032,"inferences":30558,"mur":0.0058286190032958984},
-	"total_mur":144.42748951911926
+	"codage": {"cpu":142.59359485799996,"inferences":999969495,"mur":145.1989288330078},
+	"lecture": {"cpu":0.002356678999944961,"inferences":30558,"mur":0.002440929412841797},
+	"total_mur":145.20136976242065
       },
       "phase":"codage",
       "statut":"interrompu",
-      "temps":144.42748951911926
+      "temps":145.20136976242065
     }
   },
   {
@@ -1472,13 +1464,13 @@
       ],
       "mesure": {
 	"assertions":55,
-	"codage": {"cpu":1.4828582219999973,"inferences":10038476,"mur":1.8398985862731934},
-	"lecture": {"cpu":0.0007106959999987339,"inferences":11140,"mur":0.0007154941558837891},
-	"total_mur":1.8406140804290771
+	"codage": {"cpu":1.8700894870000013,"inferences":10038476,"mur":1.9365885257720947},
+	"lecture": {"cpu":0.0008986190000044303,"inferences":11140,"mur":0.0009002685546875},
+	"total_mur":1.9374887943267822
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.8406140804290771
+      "temps":1.9374887943267822
     },
     "k":191,
     "langue":"en",
@@ -1494,13 +1486,13 @@
       "hors_branche_etablissables": ["11Q611", "31A2711", "31D82", "31G", "45D323", "45E", "46E224", "48C5", "48C52", "48C524", "71E113" ],
       "mesure": {
 	"assertions":60,
-	"codage": {"cpu":1.3563403499999964,"inferences":10057419,"mur":1.6987388134002686},
-	"lecture": {"cpu":0.0008076009999982148,"inferences":12376,"mur":0.0008153915405273438},
-	"total_mur":1.699554204940796
+	"codage": {"cpu":1.7026419640000015,"inferences":10057419,"mur":1.7206931114196777},
+	"lecture": {"cpu":0.0011242639999977655,"inferences":12376,"mur":0.0011248588562011719},
+	"total_mur":1.721817970275879
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.699554204940796
+      "temps":1.721817970275879
     },
     "notation":"46C215(WINDLASS)",
     "positif": {
@@ -1515,13 +1507,13 @@
       "hors_branche_etablissables": ["11Q611", "22A3", "26C", "31D82", "31G", "45D323", "45E", "46E224", "71E113" ],
       "mesure": {
 	"assertions":66,
-	"codage": {"cpu":1.374370435000003,"inferences":6898208,"mur":1.7233028411865234},
-	"lecture": {"cpu":0.0007929759999996122,"inferences":12911,"mur":0.0007979869842529297},
-	"total_mur":1.7241008281707764
+	"codage": {"cpu":1.7007395530000053,"inferences":6898208,"mur":1.729219675064087},
+	"lecture": {"cpu":0.0010454269999939925,"inferences":12911,"mur":0.0010464191436767578},
+	"total_mur":1.7302660942077637
       },
       "necessaire":null,
       "statut":"absent",
-      "temps":1.7241008281707764
+      "temps":1.7302660942077637
     }
   }
 ]

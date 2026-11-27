@@ -1,0 +1,16 @@
+{
+  "analyses": [
+    {"cpu_prolog":0.012961347999999262,"langue":"en","mur":174.2529101371765,"textes":18},
+    {"cpu_prolog":0.013301146000003428,"langue":"fr","mur":161.08361339569092,"textes":21}
+  ],
+  "commit":"f6dc80449ec8374b4aac12347a6e48d7f25a2562",
+  "debut":1795732061.3848763,
+  "entree":"/home/user/donnees/vertical/textes.json",
+  "fiches": [6, 21, 36, 51, 66, 81, 96, 111, 126, 141, 156, 171, 186 ],
+  "fin":1795734033.1994293,
+  "pas":5,
+  "processeurs":4,
+  "reglage": {"OEDIPAMAAS_ANALYSEUR":"stanza","OEDIPAMAAS_DELAI":"900","OEDIPAMAAS_INFERENCES":"1000000000","OEDIPAMAAS_SENS_EN":"premier"},
+  "swipl":110000,
+  "tranche":"2/3"
+}

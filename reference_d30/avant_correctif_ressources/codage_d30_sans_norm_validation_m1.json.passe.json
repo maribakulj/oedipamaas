@@ -1,0 +1,85 @@
+{
+ "commit": "f6dc80449ec8374b4aac12347a6e48d7f25a2562",
+ "reglage": {
+  "OEDIPAMAAS_ANALYSEUR": "stanza",
+  "OEDIPAMAAS_DELAI": "900",
+  "OEDIPAMAAS_INFERENCES": "1000000000",
+  "OEDIPAMAAS_NORMALISATION": "non"
+ },
+ "entree": "/home/user/donnees/validation_m1/textes.json",
+ "pas": 5,
+ "swipl": 110000,
+ "processeurs": 4,
+ "tranches": [
+  {
+   "tranche": "1/2",
+   "fiches": [
+    1,
+    11,
+    21,
+    31,
+    41,
+    51,
+    61,
+    71,
+    81,
+    91,
+    101,
+    111,
+    121,
+    131,
+    141,
+    151,
+    161,
+    171,
+    181,
+    191
+   ],
+   "debut": 1795734562.8080628,
+   "fin": 1795737891.9988933,
+   "analyses": [
+    {
+     "cpu_prolog": 0.08268987099999947,
+     "langue": "en",
+     "mur": 1118.3116438388824,
+     "textes": 96
+    }
+   ]
+  },
+  {
+   "tranche": "2/2",
+   "fiches": [
+    6,
+    16,
+    26,
+    36,
+    46,
+    56,
+    66,
+    76,
+    86,
+    96,
+    106,
+    116,
+    126,
+    136,
+    146,
+    156,
+    166,
+    176,
+    186,
+    196
+   ],
+   "debut": 1795734562.8856812,
+   "fin": 1795738984.8070047,
+   "analyses": [
+    {
+     "cpu_prolog": 0.10445026700000071,
+     "langue": "fr",
+     "mur": 940.8995649814606,
+     "textes": 108
+    }
+   ]
+  }
+ ]
+}

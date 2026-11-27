@@ -22,43 +22,43 @@
   },
   "qualificatif:modalites": {
    "vp": 1,
-   "ref": 41,
+   "ref": 32,
    "pred": 3,
    "precision": 0.3333333333333333,
-   "rappel": 0.024390243902439025,
-   "f1": 0.04545454545454545
+   "rappel": 0.03125,
+   "f1": 0.05714285714285714
   },
   "qualificatif:negations": {
-   "vp": 11,
-   "ref": 22,
+   "vp": 12,
+   "ref": 21,
    "pred": 14,
-   "precision": 0.7857142857142857,
-   "rappel": 0.5,
-   "f1": 0.6111111111111112
+   "precision": 0.8571428571428571,
+   "rappel": 0.5714285714285714,
+   "f1": 0.6857142857142857
   },
   "qualificatif:portees": {
    "vp": 9,
-   "ref": 75,
+   "ref": 73,
    "pred": 31,
    "precision": 0.2903225806451613,
-   "rappel": 0.12,
-   "f1": 0.169811320754717
+   "rappel": 0.1232876712328767,
+   "f1": 0.17307692307692307
   },
   "qualifiee:entites": {
-   "vp": 528,
-   "ref": 683,
+   "vp": 531,
+   "ref": 677,
    "pred": 699,
-   "precision": 0.7553648068669528,
-   "rappel": 0.7730600292825769,
-   "f1": 0.76410998552822
+   "precision": 0.759656652360515,
+   "rappel": 0.7843426883308715,
+   "f1": 0.7718023255813954
   },
   "qualifiee:evenements": {
-   "vp": 186,
-   "ref": 263,
+   "vp": 183,
+   "ref": 269,
    "pred": 263,
-   "precision": 0.7072243346007605,
-   "rappel": 0.7072243346007605,
-   "f1": 0.7072243346007604
+   "precision": 0.6958174904942965,
+   "rappel": 0.6802973977695167,
+   "f1": 0.68796992481203
   },
   "qualifiee:nombres": {
    "vp": 0,
@@ -69,52 +69,52 @@
    "f1": null
   },
   "qualifiee:noms": {
-   "vp": 42,
-   "ref": 67,
+   "vp": 38,
+   "ref": 63,
    "pred": 65,
-   "precision": 0.6461538461538462,
-   "rappel": 0.6268656716417911,
-   "f1": 0.6363636363636365
+   "precision": 0.5846153846153846,
+   "rappel": 0.6031746031746031,
+   "f1": 0.59375
   },
   "qualifiee:proprietes": {
-   "vp": 107,
-   "ref": 237,
+   "vp": 106,
+   "ref": 215,
    "pred": 214,
-   "precision": 0.5,
-   "rappel": 0.45147679324894513,
-   "f1": 0.4745011086474501
+   "precision": 0.4953271028037383,
+   "rappel": 0.4930232558139535,
+   "f1": 0.49417249417249415
   },
   "qualifiee:relations": {
-   "vp": 71,
-   "ref": 387,
+   "vp": 69,
+   "ref": 307,
    "pred": 127,
-   "precision": 0.5590551181102362,
-   "rappel": 0.1834625322997416,
-   "f1": 0.27626459143968873
+   "precision": 0.5433070866141733,
+   "rappel": 0.2247557003257329,
+   "f1": 0.31797235023041476
   },
   "qualifiee:roles": {
-   "vp": 165,
-   "ref": 472,
+   "vp": 177,
+   "ref": 535,
    "pred": 382,
-   "precision": 0.4319371727748691,
-   "rappel": 0.3495762711864407,
-   "f1": 0.3864168618266979
+   "precision": 0.46335078534031415,
+   "rappel": 0.33084112149532713,
+   "f1": 0.38604143947655395
   },
   "qualifiee:roles_macro": {
-   "vp": 231,
-   "ref": 472,
+   "vp": 245,
+   "ref": 535,
    "pred": 382,
-   "precision": 0.6047120418848168,
-   "rappel": 0.4894067796610169,
-   "f1": 0.5409836065573771
+   "precision": 0.6413612565445026,
+   "rappel": 0.45794392523364486,
+   "f1": 0.5343511450381679
   },
   "structure:coref": {
-   "vp": 14,
-   "ref": 31,
-   "pred": 42,
+   "vp": 12,
+   "ref": 23,
+   "pred": 36,
    "precision": 0.3333333333333333,
-   "rappel": 0.45161290322580644,
-   "f1": 0.3835616438356164
+   "rappel": 0.5217391304347826,
+   "f1": 0.4067796610169491
   },
   "structure:distinct": {
    "vp": 0,
@@ -125,20 +125,20 @@
    "f1": null
   },
   "structure:entites": {
-   "vp": 594,
-   "ref": 683,
+   "vp": 591,
+   "ref": 677,
    "pred": 699,
-   "precision": 0.8497854077253219,
-   "rappel": 0.8696925329428989,
-   "f1": 0.8596237337192475
+   "precision": 0.8454935622317596,
+   "rappel": 0.8729689807976366,
+   "f1": 0.8590116279069767
   },
   "structure:evenements": {
-   "vp": 202,
-   "ref": 263,
+   "vp": 198,
+   "ref": 269,
    "pred": 263,
-   "precision": 0.7680608365019012,
-   "rappel": 0.7680608365019012,
-   "f1": 0.7680608365019012
+   "precision": 0.752851711026616,
+   "rappel": 0.7360594795539034,
+   "f1": 0.7443609022556392
   },
   "structure:nombres": {
    "vp": 0,
@@ -149,79 +149,80 @@
    "f1": null
   },
   "structure:noms": {
-   "vp": 42,
-   "ref": 67,
+   "vp": 38,
+   "ref": 63,
    "pred": 65,
-   "precision": 0.6461538461538462,
-   "rappel": 0.6268656716417911,
-   "f1": 0.6363636363636365
+   "precision": 0.5846153846153846,
+   "rappel": 0.6031746031746031,
+   "f1": 0.59375
   },
   "structure:proprietes": {
-   "vp": 113,
-   "ref": 237,
+   "vp": 112,
+   "ref": 215,
    "pred": 214,
-   "precision": 0.5280373831775701,
-   "rappel": 0.4767932489451477,
-   "f1": 0.5011086474501109
+   "precision": 0.5233644859813084,
+   "rappel": 0.5209302325581395,
+   "f1": 0.5221445221445222
   },
   "structure:relations": {
-   "vp": 73,
-   "ref": 387,
+   "vp": 71,
+   "ref": 307,
    "pred": 127,
-   "precision": 0.5748031496062992,
-   "rappel": 0.18863049095607234,
-   "f1": 0.2840466926070039
+   "precision": 0.5590551181102362,
+   "rappel": 0.23127035830618892,
+   "f1": 0.32718894009216587
   },
   "structure:roles": {
-   "vp": 173,
-   "ref": 472,
+   "vp": 184,
+   "ref": 535,
    "pred": 382,
-   "precision": 0.45287958115183247,
-   "rappel": 0.3665254237288136,
-   "f1": 0.405152224824356
+   "precision": 0.4816753926701571,
+   "rappel": 0.34392523364485983,
+   "f1": 0.4013086150490731
   },
   "structure:roles_macro": {
-   "vp": 244,
-   "ref": 472,
+   "vp": 257,
+   "ref": 535,
    "pred": 382,
-   "precision": 0.6387434554973822,
-   "rappel": 0.5169491525423728,
-   "f1": 0.5714285714285714
+   "precision": 0.6727748691099477,
+   "rappel": 0.4803738317757009,
+   "f1": 0.5605234460196292
   }
  },
  "securite": {
-  "reference_admissible": 1002,
-  "reference_non_admissible": 108,
-  "promotion": 79,
-  "promotion_portee": 55,
-  "promotion_modalite": 22,
+  "reference_admissible": 994,
+  "reference_non_admissible": 99,
+  "promotion": 70,
+  "promotion_portee": 54,
+  "promotion_modalite": 16,
   "retrogradation": 15,
-  "promotion_neg": 5,
+  "promotion_neg": 3,
   "promotion_alternative": 3
  },
  "confusion": {
-  "aucun>lieu": 44,
-  "agent>agent": 128,
-  "lieu>lieu": 33,
-  "instrument>aucun": 8,
-  "agent>aucun": 93,
-  "theme>aucun": 34,
-  "aucun>patient": 28,
-  "aucun>agent": 30,
-  "lieu>patient": 4,
+  "agent>agent": 120,
+  "aucun>lieu": 25,
+  "lieu>lieu": 52,
+  "instrument>aucun": 14,
+  "agent>aucun": 90,
+  "aucun>patient": 26,
+  "theme>aucun": 36,
+  "aucun>agent": 38,
   "aucun>instrument": 6,
-  "theme>patient": 71,
-  "lieu>aucun": 36,
+  "lieu>patient": 4,
+  "theme>patient": 73,
+  "lieu>aucun": 69,
   "patient>patient": 7,
-  "patient>agent": 2,
   "instrument>instrument": 5,
   "agent>patient": 14,
-  "patient>aucun": 16,
-  "theme>instrument": 2,
+  "patient>aucun": 28,
+  "agent>instrument": 2,
   "theme>lieu": 5,
   "destinataire>aucun": 11,
+  "theme>agent": 1,
   "agent>lieu": 2,
-  "instrument>lieu": 1
+  "instrument>lieu": 1,
+  "patient>agent": 1
  },
  "par_langue": {
   "en": {
@@ -244,43 +245,43 @@
     },
     "qualificatif:modalites": {
      "vp": 1,
-     "ref": 13,
+     "ref": 14,
      "pred": 2,
      "precision": 0.5,
-     "rappel": 0.07692307692307693,
-     "f1": 0.13333333333333336
+     "rappel": 0.07142857142857142,
+     "f1": 0.125
     },
     "qualificatif:negations": {
      "vp": 5,
-     "ref": 11,
+     "ref": 10,
      "pred": 6,
      "precision": 0.8333333333333334,
-     "rappel": 0.45454545454545453,
-     "f1": 0.5882352941176471
+     "rappel": 0.5,
+     "f1": 0.625
     },
     "qualificatif:portees": {
      "vp": 1,
-     "ref": 25,
+     "ref": 24,
      "pred": 2,
      "precision": 0.5,
-     "rappel": 0.04,
-     "f1": 0.07407407407407407
+     "rappel": 0.041666666666666664,
+     "f1": 0.07692307692307693
     },
     "qualifiee:entites": {
-     "vp": 286,
-     "ref": 359,
+     "vp": 288,
+     "ref": 360,
      "pred": 349,
-     "precision": 0.8194842406876791,
-     "rappel": 0.7966573816155988,
-     "f1": 0.8079096045197739
+     "precision": 0.8252148997134671,
+     "rappel": 0.8,
+     "f1": 0.8124118476727786
     },
     "qualifiee:evenements": {
-     "vp": 101,
-     "ref": 148,
+     "vp": 102,
+     "ref": 151,
      "pred": 142,
-     "precision": 0.7112676056338029,
-     "rappel": 0.6824324324324325,
-     "f1": 0.696551724137931
+     "precision": 0.7183098591549296,
+     "rappel": 0.6754966887417219,
+     "f1": 0.6962457337883959
     },
     "qualifiee:nombres": {
      "vp": 0,
@@ -300,43 +301,43 @@
     },
     "qualifiee:proprietes": {
      "vp": 44,
-     "ref": 97,
+     "ref": 91,
      "pred": 87,
      "precision": 0.5057471264367817,
-     "rappel": 0.4536082474226804,
-     "f1": 0.4782608695652174
+     "rappel": 0.4835164835164835,
+     "f1": 0.4943820224719101
     },
     "qualifiee:relations": {
      "vp": 38,
-     "ref": 193,
+     "ref": 153,
      "pred": 56,
      "precision": 0.6785714285714286,
-     "rappel": 0.19689119170984457,
-     "f1": 0.30522088353413657
+     "rappel": 0.24836601307189543,
+     "f1": 0.36363636363636365
     },
     "qualifiee:roles": {
-     "vp": 100,
-     "ref": 263,
+     "vp": 114,
+     "ref": 294,
      "pred": 211,
-     "precision": 0.47393364928909953,
-     "rappel": 0.38022813688212925,
-     "f1": 0.4219409282700422
+     "precision": 0.5402843601895735,
+     "rappel": 0.3877551020408163,
+     "f1": 0.45148514851485144
     },
     "qualifiee:roles_macro": {
-     "vp": 135,
-     "ref": 263,
+     "vp": 149,
+     "ref": 294,
      "pred": 211,
-     "precision": 0.6398104265402843,
-     "rappel": 0.5133079847908745,
-     "f1": 0.569620253164557
+     "precision": 0.7061611374407583,
+     "rappel": 0.5068027210884354,
+     "f1": 0.5900990099009901
     },
     "structure:coref": {
      "vp": 6,
-     "ref": 22,
+     "ref": 17,
      "pred": 18,
      "precision": 0.3333333333333333,
-     "rappel": 0.2727272727272727,
-     "f1": 0.3
+     "rappel": 0.35294117647058826,
+     "f1": 0.34285714285714286
     },
     "structure:distinct": {
      "vp": 0,
@@ -347,20 +348,20 @@
      "f1": null
     },
     "structure:entites": {
-     "vp": 308,
-     "ref": 359,
+     "vp": 309,
+     "ref": 360,
      "pred": 349,
-     "precision": 0.8825214899713467,
-     "rappel": 0.8579387186629527,
-     "f1": 0.8700564971751413
+     "precision": 0.8853868194842407,
+     "rappel": 0.8583333333333333,
+     "f1": 0.8716502115655854
     },
     "structure:evenements": {
-     "vp": 107,
-     "ref": 148,
+     "vp": 108,
+     "ref": 151,
      "pred": 142,
-     "precision": 0.7535211267605634,
-     "rappel": 0.722972972972973,
-     "f1": 0.7379310344827587
+     "precision": 0.7605633802816901,
+     "rappel": 0.7152317880794702,
+     "f1": 0.7372013651877133
     },
     "structure:nombres": {
      "vp": 0,
@@ -380,44 +381,44 @@
     },
     "structure:proprietes": {
      "vp": 44,
-     "ref": 97,
+     "ref": 91,
      "pred": 87,
      "precision": 0.5057471264367817,
-     "rappel": 0.4536082474226804,
-     "f1": 0.4782608695652174
+     "rappel": 0.4835164835164835,
+     "f1": 0.4943820224719101
     },
     "structure:relations": {
      "vp": 38,
-     "ref": 193,
+     "ref": 153,
      "pred": 56,
      "precision": 0.6785714285714286,
-     "rappel": 0.19689119170984457,
-     "f1": 0.30522088353413657
+     "rappel": 0.24836601307189543,
+     "f1": 0.36363636363636365
     },
     "structure:roles": {
-     "vp": 103,
-     "ref": 263,
+     "vp": 117,
+     "ref": 294,
      "pred": 211,
-     "precision": 0.4881516587677725,
-     "rappel": 0.3916349809885932,
-     "f1": 0.4345991561181435
+     "precision": 0.5545023696682464,
+     "rappel": 0.3979591836734694,
+     "f1": 0.46336633663366333
     },
     "structure:roles_macro": {
-     "vp": 139,
-     "ref": 263,
+     "vp": 153,
+     "ref": 294,
      "pred": 211,
-     "precision": 0.6587677725118484,
-     "rappel": 0.5285171102661597,
-     "f1": 0.5864978902953587
+     "precision": 0.7251184834123223,
+     "rappel": 0.5204081632653061,
+     "f1": 0.6059405940594059
     }
    },
    "securite": {
-    "reference_admissible": 530,
+    "reference_admissible": 532,
     "reference_non_admissible": 37,
     "promotion": 27,
     "promotion_portee": 19,
-    "promotion_modalite": 5,
-    "promotion_neg": 3,
+    "promotion_modalite": 6,
+    "promotion_neg": 2,
     "promotion_alternative": 1
    }
   },
@@ -441,43 +442,43 @@
     },
     "qualificatif:modalites": {
      "vp": 0,
-     "ref": 28,
+     "ref": 18,
      "pred": 1,
      "precision": 0.0,
      "rappel": 0.0,
      "f1": 0.0
     },
     "qualificatif:negations": {
-     "vp": 6,
+     "vp": 7,
      "ref": 11,
      "pred": 8,
-     "precision": 0.75,
-     "rappel": 0.5454545454545454,
-     "f1": 0.631578947368421
+     "precision": 0.875,
+     "rappel": 0.6363636363636364,
+     "f1": 0.7368421052631579
     },
     "qualificatif:portees": {
      "vp": 8,
-     "ref": 50,
+     "ref": 49,
      "pred": 29,
      "precision": 0.27586206896551724,
-     "rappel": 0.16,
-     "f1": 0.20253164556962025
+     "rappel": 0.16326530612244897,
+     "f1": 0.20512820512820512
     },
     "qualifiee:entites": {
-     "vp": 242,
-     "ref": 324,
+     "vp": 243,
+     "ref": 317,
      "pred": 350,
-     "precision": 0.6914285714285714,
-     "rappel": 0.7469135802469136,
-     "f1": 0.7181008902077151
+     "precision": 0.6942857142857143,
+     "rappel": 0.7665615141955836,
+     "f1": 0.7286356821589205
     },
     "qualifiee:evenements": {
-     "vp": 85,
-     "ref": 115,
+     "vp": 81,
+     "ref": 118,
      "pred": 121,
-     "precision": 0.7024793388429752,
-     "rappel": 0.7391304347826086,
-     "f1": 0.7203389830508475
+     "precision": 0.6694214876033058,
+     "rappel": 0.6864406779661016,
+     "f1": 0.6778242677824267
     },
     "qualifiee:nombres": {
      "vp": 0,
@@ -488,52 +489,52 @@
      "f1": null
     },
     "qualifiee:noms": {
-     "vp": 23,
-     "ref": 30,
+     "vp": 19,
+     "ref": 26,
      "pred": 28,
-     "precision": 0.8214285714285714,
-     "rappel": 0.7666666666666667,
-     "f1": 0.793103448275862
+     "precision": 0.6785714285714286,
+     "rappel": 0.7307692307692307,
+     "f1": 0.7037037037037038
     },
     "qualifiee:proprietes": {
-     "vp": 63,
-     "ref": 140,
+     "vp": 62,
+     "ref": 124,
      "pred": 127,
-     "precision": 0.49606299212598426,
-     "rappel": 0.45,
-     "f1": 0.4719101123595506
+     "precision": 0.4881889763779528,
+     "rappel": 0.5,
+     "f1": 0.4940239043824701
     },
     "qualifiee:relations": {
-     "vp": 33,
-     "ref": 194,
+     "vp": 31,
+     "ref": 154,
      "pred": 71,
-     "precision": 0.4647887323943662,
-     "rappel": 0.17010309278350516,
-     "f1": 0.24905660377358493
+     "precision": 0.43661971830985913,
+     "rappel": 0.2012987012987013,
+     "f1": 0.27555555555555555
     },
     "qualifiee:roles": {
-     "vp": 65,
-     "ref": 209,
+     "vp": 63,
+     "ref": 241,
      "pred": 171,
-     "precision": 0.38011695906432746,
-     "rappel": 0.31100478468899523,
-     "f1": 0.34210526315789475
+     "precision": 0.3684210526315789,
+     "rappel": 0.26141078838174275,
+     "f1": 0.30582524271844663
     },
     "qualifiee:roles_macro": {
      "vp": 96,
-     "ref": 209,
+     "ref": 241,
      "pred": 171,
      "precision": 0.5614035087719298,
-     "rappel": 0.45933014354066987,
-     "f1": 0.5052631578947369
+     "rappel": 0.3983402489626556,
+     "f1": 0.4660194174757281
     },
     "structure:coref": {
-     "vp": 8,
-     "ref": 9,
-     "pred": 24,
+     "vp": 6,
+     "ref": 6,
+     "pred": 18,
      "precision": 0.3333333333333333,
-     "rappel": 0.8888888888888888,
-     "f1": 0.48484848484848486
+     "rappel": 1.0,
+     "f1": 0.5
     },
     "structure:distinct": {
      "vp": 0,
@@ -544,20 +545,20 @@
      "f1": null
     },
     "structure:entites": {
-     "vp": 286,
-     "ref": 324,
+     "vp": 282,
+     "ref": 317,
      "pred": 350,
-     "precision": 0.8171428571428572,
-     "rappel": 0.8827160493827161,
-     "f1": 0.8486646884272998
+     "precision": 0.8057142857142857,
+     "rappel": 0.889589905362776,
+     "f1": 0.8455772113943029
     },
     "structure:evenements": {
-     "vp": 95,
-     "ref": 115,
+     "vp": 90,
+     "ref": 118,
      "pred": 121,
-     "precision": 0.7851239669421488,
-     "rappel": 0.8260869565217391,
-     "f1": 0.8050847457627119
+     "precision": 0.743801652892562,
+     "rappel": 0.7627118644067796,
+     "f1": 0.7531380753138075
     },
     "structure:nombres": {
      "vp": 0,
@@ -568,84 +569,59 @@
      "f1": null
     },
     "structure:noms": {
-     "vp": 23,
-     "ref": 30,
+     "vp": 19,
+     "ref": 26,
      "pred": 28,
-     "precision": 0.8214285714285714,
-     "rappel": 0.7666666666666667,
-     "f1": 0.793103448275862
+     "precision": 0.6785714285714286,
+     "rappel": 0.7307692307692307,
+     "f1": 0.7037037037037038
     },
     "structure:proprietes": {
-     "vp": 69,
-     "ref": 140,
+     "vp": 68,
+     "ref": 124,
      "pred": 127,
-     "precision": 0.5433070866141733,
-     "rappel": 0.4928571428571429,
-     "f1": 0.5168539325842697
+     "precision": 0.5354330708661418,
+     "rappel": 0.5483870967741935,
+     "f1": 0.5418326693227092
     },
     "structure:relations": {
-     "vp": 35,
-     "ref": 194,
+     "vp": 33,
+     "ref": 154,
      "pred": 71,
-     "precision": 0.49295774647887325,
-     "rappel": 0.18041237113402062,
-     "f1": 0.2641509433962264
+     "precision": 0.4647887323943662,
+     "rappel": 0.21428571428571427,
+     "f1": 0.29333333333333333
     },
     "structure:roles": {
-     "vp": 70,
-     "ref": 209,
+     "vp": 67,
+     "ref": 241,
      "pred": 171,
-     "precision": 0.4093567251461988,
-     "rappel": 0.3349282296650718,
-     "f1": 0.3684210526315789
+     "precision": 0.391812865497076,
+     "rappel": 0.27800829875518673,
+     "f1": 0.32524271844660196
     },
     "structure:roles_macro": {
-     "vp": 105,
-     "ref": 209,
+     "vp": 104,
+     "ref": 241,
      "pred": 171,
-     "precision": 0.6140350877192983,
-     "rappel": 0.5023923444976076,
-     "f1": 0.5526315789473684
+     "precision": 0.6081871345029239,
+     "rappel": 0.4315352697095436,
+     "f1": 0.5048543689320388
     }
    },
    "securite": {
-    "reference_admissible": 472,
-    "reference_non_admissible": 71,
-    "promotion": 52,
-    "promotion_modalite": 17,
-    "promotion_portee": 36,
+    "reference_admissible": 462,
+    "reference_non_admissible": 62,
+    "promotion": 43,
+    "promotion_modalite": 10,
+    "promotion_portee": 35,
     "retrogradation": 15,
-    "promotion_neg": 2,
+    "promotion_neg": 1,
     "promotion_alternative": 2
    }
   }
  },
- "regles": {
-  "e1": {
-   "non_conforme": 3127,
-   "redondante": 3127
-  },
-  "e2": {
-   "erreur_regle": 400,
-   "erreur_heritee": 133,
-   "gain": 9
-  },
-  "p1": {
-   "erreur_regle": 105,
-   "erreur_heritee": 6,
-   "gain": 19
-  },
-  "r2": {
-   "erreur_regle": 285,
-   "erreur_heritee": 214,
-   "gain": 61
-  },
-  "r1": {
-   "erreur_regle": 139,
-   "erreur_heritee": 96,
-   "gain": 71
-  }
- },
+ "regles": {},
  "textes_detail": [
   {
    "k": 1,
@@ -699,7 +675,16 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e4",
+     "tete": "background",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 1,
@@ -746,12 +731,12 @@
     },
     "relations": {
      "manquants": [
-      "('e1', 'in', 'e2')",
       "('e4', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 1,
@@ -798,12 +783,12 @@
     },
     "relations": {
      "manquants": [
-      "('e1', 'in', 'e2')",
       "('e4', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 6,
@@ -869,7 +854,23 @@
       "('e2', 'à', ('hors', 'e_1_10'))"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e4",
+     "tete": "lieu",
+     "motifs": [
+      "modalite=non_affirme"
+     ]
+    },
+    {
+     "assertion": "e3",
+     "tete": "feuille",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 6,
@@ -939,7 +940,8 @@
       "(('hors', 'e_1_2'), 'entre', 'e2')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 6,
@@ -1009,7 +1011,8 @@
       "(('hors', 'e_1_2'), 'entre', 'e2')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 11,
@@ -1080,7 +1083,30 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v2",
+     "tete": "cut off",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e5",
+     "tete": "building",
+     "motifs": [
+      "modalite=possible"
+     ]
+    },
+    {
+     "assertion": "e4",
+     "tete": "frame",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 11,
@@ -1144,7 +1170,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 11,
@@ -1216,7 +1243,8 @@
      "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 16,
@@ -1272,7 +1300,16 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e1",
+     "tete": "affiche",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 16,
@@ -1346,7 +1383,16 @@
       "('e4', 'de', ('hors', 'e_1_26'))"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e1",
+     "tete": "affiche",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 16,
@@ -1409,7 +1455,16 @@
       "('e1', 'de', ('hors', 'e_1_4'))"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e1",
+     "tete": "affiche",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 21,
@@ -1472,7 +1527,16 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e3",
+     "tete": "horse",
+     "motifs": [
+      "neg=neg"
+     ]
+    }
+   ]
   },
   {
    "k": 21,
@@ -1530,17 +1594,16 @@
     },
     "relations": {
      "manquants": [
-      "('e2', 'into', 'e4')",
       "('e2', 'of', 'e6')",
       "('e4', 'of', 'e5')",
-      "('e5', 'of', 'e6')",
-      "('e6', 'into', 'e7')"
+      "('e5', 'of', 'e6')"
      ],
      "en_trop": [
       "('e4', \"'s\", 'e5')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 21,
@@ -1573,30 +1636,24 @@
     },
     "roles": {
      "manquants": [
-      "('v3', 'lieu', 'e6')",
-      "('v3', 'patient', 'e5')"
+      "('v3', 'lieu', 'e6')"
      ],
-     "en_trop": [
-      "('v3', 'agent', 'e5')"
-     ]
+     "en_trop": []
     },
     "roles_macro": {
      "manquants": [
-      "('v3', 'lieu', 'e6')",
-      "('v3', 'patient_theme', 'e5')"
+      "('v3', 'lieu', 'e6')"
      ],
-     "en_trop": [
-      "('v3', 'agent', 'e5')"
-     ]
+     "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e4', 'of', 'e1')",
-      "('e5', 'into', 'e6')"
+      "('e4', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 26,
@@ -1614,8 +1671,8 @@
     "proprietes": {
      "manquants": [
       "('e1', 'effacé')",
-      "('e3', 'simple')",
-      "('e3', 'végétal')"
+      "('e2', 'végétal')",
+      "('e3', 'simple')"
      ],
      "en_trop": [
       "('e1', 'effacer')"
@@ -1634,20 +1691,44 @@
     "roles": {
      "manquants": [],
      "en_trop": [
-      "(('hors', 'v_2_2'), 'agent', 'e3')"
+      "(('hors', 'v_2_2'), 'agent', 'e2')"
      ]
     },
     "roles_macro": {
      "manquants": [],
      "en_trop": [
-      "(('hors', 'v_2_2'), 'agent', 'e3')"
+      "(('hors', 'v_2_2'), 'agent', 'e2')"
      ]
     },
     "relations": {
      "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e2",
+     "tete": "trait",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e1",
+     "tete": "frise",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e3",
+     "tete": "volute",
+     "motifs": [
+      "modalite=possible",
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 26,
@@ -1708,7 +1789,16 @@
       "(('hors', 'e_1_20'), 'de', ('hors', 'e_1_22'))"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e1",
+     "tete": "frise",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 26,
@@ -1767,7 +1857,23 @@
      "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v2",
+     "tete": "reconnaître",
+     "motifs": [
+      "modalite=non_affirme"
+     ]
+    },
+    {
+     "assertion": "e1",
+     "tete": "frise",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 31,
@@ -1822,12 +1928,20 @@
     "relations": {
      "manquants": [
       "('e3', 'of', 'e1')",
-      "('e4', 'onto', 'e3')",
       "('e5', 'of', 'e4')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e5",
+     "tete": "content",
+     "motifs": [
+      "modalite=non_affirme"
+     ]
+    }
+   ]
   },
   {
    "k": 31,
@@ -1888,12 +2002,12 @@
      "manquants": [
       "('e5', 'of', 'e1')",
       "('e6', 'of', 'e4')",
-      "('e6', 'onto', 'e5')",
       "('e7', 'inside', 'e6')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 31,
@@ -1957,15 +2071,13 @@
     "relations": {
      "manquants": [
       "('e3', 'of', 'e1')",
-      "('e4', 'onto', 'e3')",
-      "('e5', 'inside', 'e4')",
-      "('e6', 'inside', 'e4')",
       "('e7', 'of', 'e5')",
       "('e7', 'of', 'e6')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 36,
@@ -1998,6 +2110,7 @@
     },
     "roles": {
      "manquants": [
+      "('v1', 'lieu', 'e2')",
       "('v2', 'theme', 'e4')"
      ],
      "en_trop": [
@@ -2005,17 +2118,50 @@
      ]
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v1', 'lieu', 'e2')"
+     ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e1', 'entre', 'e2')",
       "('e4', 'de', 'e5')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v2",
+     "tete": "juger",
+     "motifs": [
+      "neg=neg",
+      "portee=non_ancre"
+     ]
+    },
+    {
+     "assertion": "e5",
+     "tete": "paysage",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e4",
+     "tete": "caractère",
+     "motifs": [
+      "modalite=non_affirme",
+      "portee=non_ancre"
+     ]
+    },
+    {
+     "assertion": "e3",
+     "tete": "fragment",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 36,
@@ -2052,6 +2198,7 @@
     },
     "roles": {
      "manquants": [
+      "('v1', 'lieu', 'e5')",
       "('v2', 'theme', 'e4')",
       "('v2', 'theme', 'e6')",
       "('v2', 'theme', 'e7')"
@@ -2062,6 +2209,7 @@
     },
     "roles_macro": {
      "manquants": [
+      "('v1', 'lieu', 'e5')",
       "('v2', 'patient_theme', 'e4')",
       "('v2', 'patient_theme', 'e6')",
       "('v2', 'patient_theme', 'e7')"
@@ -2074,13 +2222,21 @@
      "manquants": [
       "('e2', 'de', 'e3')",
       "('e4', 'dans', 'e1')",
-      "('e4', 'entre', 'e5')",
       "('e6', 'de', 'e2')",
       "('e7', 'de', 'e2')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e1",
+     "tete": "vue",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 36,
@@ -2114,27 +2270,69 @@
      "en_trop": []
     },
     "roles": {
-     "manquants": [],
+     "manquants": [
+      "('v1', 'lieu', 'e5')",
+      "('v1', 'lieu', 'e6')",
+      "('v1', 'lieu', 'e7')"
+     ],
      "en_trop": [
       "('v1', 'lieu', 'e1')"
      ]
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v1', 'lieu', 'e5')",
+      "('v1', 'lieu', 'e6')",
+      "('v1', 'lieu', 'e7')"
+     ],
      "en_trop": [
       "('v1', 'lieu', 'e1')"
      ]
     },
     "relations": {
      "manquants": [
-      "('e4', 'dans', 'e1')",
-      "('e4', 'entre', 'e5')",
-      "('e4', 'parmi', 'e6')",
-      "('e4', 'parmi', 'e7')"
+      "('e4', 'dans', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "r1",
+     "tete": "assertion",
+     "motifs": [
+      "portee=non_ancre"
+     ]
+    },
+    {
+     "assertion": "e3",
+     "tete": "poussin",
+     "motifs": [
+      "portee=non_ancre"
+     ]
+    },
+    {
+     "assertion": "e1",
+     "tete": "paysage",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e2",
+     "tete": "manière",
+     "motifs": [
+      "portee=non_ancre"
+     ]
+    },
+    {
+     "assertion": "r2",
+     "tete": "assertion",
+     "motifs": [
+      "portee=non_ancre"
+     ]
+    }
+   ]
   },
   {
    "k": 41,
@@ -2198,7 +2396,23 @@
       "('e4', 'with', 'e3')"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e5",
+     "tete": "body",
+     "motifs": [
+      "neg=neg"
+     ]
+    },
+    {
+     "assertion": "e1",
+     "tete": "plate",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 41,
@@ -2268,7 +2482,16 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e1",
+     "tete": "plate",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 41,
@@ -2336,7 +2559,16 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e1",
+     "tete": "plate",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 46,
@@ -2401,14 +2633,31 @@
     },
     "relations": {
      "manquants": [
-      "('e1', 'à', 'e2')",
       "('e2', 'de', 'e1')",
       "('e3', 'de', 'e1')",
       "('e4', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v4",
+     "tete": "réfléchir",
+     "motifs": [
+      "modalite=non_affirme",
+      "alternative=True"
+     ]
+    },
+    {
+     "assertion": "v3",
+     "tete": "souffrir",
+     "motifs": [
+      "modalite=non_affirme",
+      "alternative=True"
+     ]
+    }
+   ]
   },
   {
    "k": 46,
@@ -2429,9 +2678,7 @@
      "en_trop": []
     },
     "proprietes": {
-     "manquants": [
-      "('e6', 'noué')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e1', 'asseoir')",
       "('e6', 'nouer')"
@@ -2445,7 +2692,8 @@
     },
     "evenements": {
      "manquants": [
-      "('v1', 'asseoir')"
+      "('v1', 'asseoir')",
+      "('v4', 'nouer')"
      ],
      "en_trop": []
     },
@@ -2456,7 +2704,9 @@
       "('v2', 'agent', 'e1')",
       "('v2', 'instrument', 'e4')",
       "('v2', 'theme', 'e3')",
-      "('v3', 'agent', 'e1')"
+      "('v3', 'agent', 'e1')",
+      "('v4', 'lieu', 'e7')",
+      "('v4', 'patient', 'e6')"
      ],
      "en_trop": [
       "('v2', 'patient', 'e1')",
@@ -2470,7 +2720,9 @@
       "('v1', 'lieu', 'e2')",
       "('v2', 'agent', 'e1')",
       "('v2', 'instrument', 'e4')",
-      "('v3', 'agent', 'e1')"
+      "('v3', 'agent', 'e1')",
+      "('v4', 'lieu', 'e7')",
+      "('v4', 'patient_theme', 'e6')"
      ],
      "en_trop": [
       "('v2', 'patient_theme', 'e1')",
@@ -2480,11 +2732,9 @@
     "relations": {
      "manquants": [
       "('e1', 'sous', 'e5')",
-      "('e1', 'à', 'e2')",
       "('e2', 'de', 'e1')",
       "('e3', 'de', 'e1')",
       "('e4', 'de', 'e1')",
-      "('e6', 'autour de', 'e7')",
       "('e7', 'de', 'e1')"
      ],
      "en_trop": [
@@ -2492,7 +2742,8 @@
       "('e5', 'de', ('hors', 'e_1_20'))"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 46,
@@ -2508,9 +2759,7 @@
      "en_trop": []
     },
     "proprietes": {
-     "manquants": [
-      "('e6', 'posé')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e1', 'asseoir')",
       "('e6', 'poser')"
@@ -2524,7 +2773,8 @@
     },
     "evenements": {
      "manquants": [
-      "('v1', 'asseoir')"
+      "('v1', 'asseoir')",
+      "('v4', 'poser')"
      ],
      "en_trop": []
     },
@@ -2535,7 +2785,9 @@
       "('v2', 'agent', 'e1')",
       "('v2', 'instrument', 'e4')",
       "('v2', 'theme', 'e3')",
-      "('v3', 'agent', 'e1')"
+      "('v3', 'agent', 'e1')",
+      "('v4', 'lieu', 'e7')",
+      "('v4', 'theme', 'e6')"
      ],
      "en_trop": [
       "('v2', 'patient', 'e1')",
@@ -2549,7 +2801,9 @@
       "('v1', 'lieu', 'e2')",
       "('v2', 'agent', 'e1')",
       "('v2', 'instrument', 'e4')",
-      "('v3', 'agent', 'e1')"
+      "('v3', 'agent', 'e1')",
+      "('v4', 'lieu', 'e7')",
+      "('v4', 'patient_theme', 'e6')"
      ],
      "en_trop": [
       "('v2', 'patient_theme', 'e1')",
@@ -2559,16 +2813,15 @@
     "relations": {
      "manquants": [
       "('e1', 'sous', 'e5')",
-      "('e1', 'à', 'e2')",
       "('e2', 'de', 'e1')",
       "('e3', 'de', 'e1')",
       "('e4', 'de', 'e1')",
-      "('e6', 'sur', 'e7')",
       "('e7', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 51,
@@ -2623,14 +2876,43 @@
     },
     "relations": {
      "manquants": [
-      "('e3', 'of', 'e2')",
-      "('e4', 'below', 'e3')"
+      "('e3', 'of', 'e2')"
      ],
      "en_trop": [
       "('e3', \"'s\", 'e2')"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e5",
+     "tete": "mantelet",
+     "motifs": [
+      "portee=source"
+     ]
+    },
+    {
+     "assertion": "e1",
+     "tete": "engraving",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "v1",
+     "tete": "mention",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e4",
+     "tete": "note",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 51,
@@ -2681,7 +2963,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 51,
@@ -2736,7 +3019,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 56,
@@ -2776,19 +3060,25 @@
      "manquants": [
       "('v1', 'découper')"
      ],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_2_2'), 'subsister')"
+     ]
     },
     "roles": {
      "manquants": [
       "('v1', 'patient', 'e2')"
      ],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_2_2'), 'agent', 'e3')"
+     ]
     },
     "roles_macro": {
      "manquants": [
       "('v1', 'patient_theme', 'e2')"
      ],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_2_2'), 'agent', 'e3')"
+     ]
     },
     "relations": {
      "manquants": [
@@ -2800,7 +3090,16 @@
       "(('hors', 'e_2_6'), 'de', 'e4')"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e3",
+     "tete": "lettre de renvoi",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 56,
@@ -2862,7 +3161,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 56,
@@ -2924,7 +3224,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 61,
@@ -2981,7 +3282,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 61,
@@ -3018,9 +3320,9 @@
     },
     "roles": {
      "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'agent', 'e3')",
       "('v1', 'lieu', 'e1')",
-      "('v1', 'theme', 'e2')",
-      "('v1', 'theme', 'e3')",
       "('v2', 'agent', 'e2')",
       "('v3', 'lieu', 'e7')",
       "('v4', 'theme', 'e9')"
@@ -3033,9 +3335,9 @@
     },
     "roles_macro": {
      "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'agent', 'e3')",
       "('v1', 'lieu', 'e1')",
-      "('v1', 'patient_theme', 'e2')",
-      "('v1', 'patient_theme', 'e3')",
       "('v2', 'agent', 'e2')",
       "('v3', 'lieu', 'e7')"
      ],
@@ -3047,13 +3349,15 @@
     "relations": {
      "manquants": [
       "('e3', 'of', 'e4')",
+      "('e9', 'against', 'e10')",
       "('e9', 'of', 'e8')"
      ],
      "en_trop": [
       "('e2', 'of', 'e4')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 61,
@@ -3094,8 +3398,7 @@
     "evenements": {
      "manquants": [
       "('v2', 'blossom')",
-      "('v4', 'breathe in')",
-      "('v5', 'delight')"
+      "('v4', 'breathe in')"
      ],
      "en_trop": [
       "('v4', 'breathe')"
@@ -3103,14 +3406,13 @@
     },
     "roles": {
      "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'agent', 'e3')",
       "('v1', 'lieu', 'e1')",
-      "('v1', 'theme', 'e2')",
-      "('v1', 'theme', 'e3')",
       "('v2', 'agent', 'e2')",
       "('v3', 'lieu', 'e7')",
       "('v3', 'theme', 'e6')",
-      "('v4', 'theme', 'e9')",
-      "('v5', 'agent', 'e8')"
+      "('v4', 'theme', 'e9')"
      ],
      "en_trop": [
       "('v1', 'instrument', 'e2')",
@@ -3122,13 +3424,12 @@
     },
     "roles_macro": {
      "manquants": [
+      "('v1', 'agent', 'e2')",
+      "('v1', 'agent', 'e3')",
       "('v1', 'lieu', 'e1')",
-      "('v1', 'patient_theme', 'e2')",
-      "('v1', 'patient_theme', 'e3')",
       "('v2', 'agent', 'e2')",
       "('v3', 'lieu', 'e7')",
-      "('v4', 'patient_theme', 'e9')",
-      "('v5', 'agent', 'e8')"
+      "('v4', 'patient_theme', 'e9')"
      ],
      "en_trop": [
       "('v1', 'instrument', 'e2')",
@@ -3141,7 +3442,8 @@
      "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 66,
@@ -3195,7 +3497,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 66,
@@ -3262,7 +3565,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 66,
@@ -3329,7 +3633,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 71,
@@ -3371,31 +3676,35 @@
     },
     "roles": {
      "manquants": [
-      "('v2', 'agent', 'e1')",
-      "('v2', 'agent', 'e5')"
+      "('v2', 'lieu', 'e1')",
+      "('v2', 'lieu', 'e5')"
      ],
-     "en_trop": [
-      "('v1', 'lieu', 'e5')"
-     ]
+     "en_trop": []
     },
     "roles_macro": {
      "manquants": [
-      "('v2', 'agent', 'e1')",
-      "('v2', 'agent', 'e5')"
+      "('v2', 'lieu', 'e1')",
+      "('v2', 'lieu', 'e5')"
      ],
-     "en_trop": [
-      "('v1', 'lieu', 'e5')"
-     ]
+     "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e1', 'beside', 'e5')",
       "('e1', 'of', 'e2')",
       "('e4', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v2",
+     "tete": "pass",
+     "motifs": [
+      "modalite=non_affirme"
+     ]
+    }
+   ]
   },
   {
    "k": 71,
@@ -3422,9 +3731,7 @@
      ]
     },
     "proprietes": {
-     "manquants": [
-      "('e1', 'bound')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e1', 'bind')"
      ]
@@ -3435,7 +3742,8 @@
     },
     "evenements": {
      "manquants": [
-      "('v2', 'die')"
+      "('v2', 'die')",
+      "('v4', 'bind')"
      ],
      "en_trop": []
     },
@@ -3443,7 +3751,9 @@
      "manquants": [
       "('v2', 'agent', 'e1')",
       "('v3', 'agent', 'e1')",
-      "('v3', 'destinataire', 'e4')"
+      "('v3', 'destinataire', 'e4')",
+      "('v4', 'lieu', 'e3')",
+      "('v4', 'patient', 'e1')"
      ],
      "en_trop": []
     },
@@ -3451,19 +3761,29 @@
      "manquants": [
       "('v2', 'agent', 'e1')",
       "('v3', 'agent', 'e1')",
-      "('v3', 'destinataire', 'e4')"
+      "('v3', 'destinataire', 'e4')",
+      "('v4', 'lieu', 'e3')",
+      "('v4', 'patient_theme', 'e1')"
      ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
       "('e1', 'of', 'e2')",
-      "('e1', 'to', 'e3')",
       "('e5', 'of', 'e4')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v3",
+     "tete": "teach",
+     "motifs": [
+      "portee=non_ancre"
+     ]
+    }
+   ]
   },
   {
    "k": 71,
@@ -3474,9 +3794,7 @@
      "manquants": [
       "('e2', 'imola')"
      ],
-     "en_trop": [
-      "(('hors', 'e_1_24'), 'altar')"
-     ]
+     "en_trop": []
     },
     "noms": {
      "manquants": [
@@ -3488,10 +3806,7 @@
      ]
     },
     "proprietes": {
-     "manquants": [
-      "('e5', 'laid')",
-      "('e7', 'altar')"
-     ],
+     "manquants": [],
      "en_trop": []
     },
     "nombres": {
@@ -3500,46 +3815,43 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": [
-      "(('hors', 'v_1_21'), 'lay')"
-     ]
+     "en_trop": []
     },
     "roles": {
      "manquants": [
       "('v3', 'agent', 'e3')",
-      "('v3', 'patient', 'e6')"
+      "('v3', 'patient', 'e6')",
+      "('v4', 'lieu', 'e6')",
+      "('v4', 'theme', 'e5')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e3')",
-      "(('hors', 'v_1_21'), 'agent', 'e5')",
-      "(('hors', 'v_1_21'), 'lieu', 'e7')"
+      "('v4', 'agent', 'e5')"
      ]
     },
     "roles_macro": {
      "manquants": [
       "('v3', 'agent', 'e3')",
-      "('v3', 'patient_theme', 'e6')"
+      "('v3', 'patient_theme', 'e6')",
+      "('v4', 'lieu', 'e6')",
+      "('v4', 'patient_theme', 'e5')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e3')",
-      "(('hors', 'v_1_21'), 'agent', 'e5')",
-      "(('hors', 'v_1_21'), 'lieu', 'e7')"
+      "('v4', 'agent', 'e5')"
      ]
     },
     "relations": {
      "manquants": [
       "('e4', 'of', 'e6')",
-      "('e5', 'beside', 'e6')",
       "('e5', 'of', 'e6')",
-      "('e5', 'on', 'e7')",
-      "('e6', 'before', 'e3')",
-      "('e6', 'of', 'e2')"
+      "('e6', 'of', 'e2')",
+      "('e7', 'of', 'e8')"
      ],
      "en_trop": [
       "('e5', \"'s\", 'e6')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 76,
@@ -3555,10 +3867,7 @@
      "en_trop": []
     },
     "proprietes": {
-     "manquants": [
-      "('e2', 'debout')",
-      "('e3', 'posé')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e3', 'poser')"
      ]
@@ -3568,12 +3877,16 @@
      "en_trop": []
     },
     "evenements": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'poser')"
+     ],
      "en_trop": []
     },
     "roles": {
      "manquants": [
-      "('v1', 'agent', 'e2')"
+      "('v1', 'agent', 'e2')",
+      "('v2', 'lieu', 'e2')",
+      "('v2', 'theme', 'e3')"
      ],
      "en_trop": [
       "('v1', 'patient', 'e2')"
@@ -3581,7 +3894,9 @@
     },
     "roles_macro": {
      "manquants": [
-      "('v1', 'agent', 'e2')"
+      "('v1', 'agent', 'e2')",
+      "('v2', 'lieu', 'e2')",
+      "('v2', 'patient_theme', 'e3')"
      ],
      "en_trop": [
       "('v1', 'patient_theme', 'e2')"
@@ -3589,12 +3904,12 @@
     },
     "relations": {
      "manquants": [
-      "('e3', 'de', 'e2')",
-      "('e3', 'près de', 'e2')"
+      "('e3', 'de', 'e2')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 76,
@@ -3613,7 +3928,9 @@
     },
     "proprietes": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "('e3', 'cloué')"
+     ]
     },
     "nombres": {
      "manquants": [],
@@ -3621,7 +3938,8 @@
     },
     "evenements": {
      "manquants": [
-      "('v1', 'martyriser')"
+      "('v1', 'martyriser')",
+      "('v2', 'clouer')"
      ],
      "en_trop": [
       "(('hors', 'v_1_17'), 'subir')"
@@ -3629,7 +3947,11 @@
     },
     "roles": {
      "manquants": [
-      "('v1', 'patient', 'e2')"
+      "('v1', 'lieu', 'e6')",
+      "('v1', 'patient', 'e2')",
+      "('v2', 'lieu', 'e4')",
+      "('v2', 'lieu', 'e5')",
+      "('v2', 'patient', 'e3')"
      ],
      "en_trop": [
       "(('hors', 'v_1_17'), 'agent', 'e2')",
@@ -3639,7 +3961,11 @@
     },
     "roles_macro": {
      "manquants": [
-      "('v1', 'patient_theme', 'e2')"
+      "('v1', 'lieu', 'e6')",
+      "('v1', 'patient_theme', 'e2')",
+      "('v2', 'lieu', 'e4')",
+      "('v2', 'lieu', 'e5')",
+      "('v2', 'patient_theme', 'e3')"
      ],
      "en_trop": [
       "(('hors', 'v_1_17'), 'agent', 'e2')",
@@ -3649,16 +3975,14 @@
     },
     "relations": {
      "manquants": [
-      "('e2', 'devant', 'e6')",
-      "('e3', 'au-dessus de', 'e4')",
-      "('e3', 'contre', 'e5')",
       "('e3', 'de', 'e2')",
       "('e4', 'de', 'e2')",
       "('e6', 'de', 'e2')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 76,
@@ -3677,8 +4001,7 @@
     },
     "proprietes": {
      "manquants": [
-      "('e2', 'seul')",
-      "('e3', 'posé')"
+      "('e2', 'seul')"
      ],
      "en_trop": [
       "('e3', 'poser')"
@@ -3690,35 +4013,35 @@
     },
     "evenements": {
      "manquants": [
-      "('v2', 'prier')"
+      "('v2', 'prier')",
+      "('v3', 'poser')"
      ],
      "en_trop": []
     },
     "roles": {
      "manquants": [
-      "('v2', 'agent', 'e2')"
+      "('v2', 'agent', 'e2')",
+      "('v3', 'lieu', 'e2')",
+      "('v3', 'theme', 'e3')"
      ],
-     "en_trop": [
-      "('v1', 'lieu', 'e4')"
-     ]
+     "en_trop": []
     },
     "roles_macro": {
      "manquants": [
-      "('v2', 'agent', 'e2')"
+      "('v2', 'agent', 'e2')",
+      "('v3', 'lieu', 'e2')",
+      "('v3', 'patient_theme', 'e3')"
      ],
-     "en_trop": [
-      "('v1', 'lieu', 'e4')"
-     ]
+     "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e2', 'devant', 'e4')",
-      "('e3', 'de', 'e2')",
-      "('e3', 'près de', 'e2')"
+      "('e3', 'de', 'e2')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 81,
@@ -3756,26 +4079,24 @@
     "roles": {
      "manquants": [],
      "en_trop": [
-      "('v1', 'instrument', 'e2')",
-      "('v1', 'lieu', 'e4')"
+      "('v1', 'instrument', 'e2')"
      ]
     },
     "roles_macro": {
      "manquants": [],
      "en_trop": [
-      "('v1', 'instrument', 'e2')",
-      "('v1', 'lieu', 'e4')"
+      "('v1', 'instrument', 'e2')"
      ]
     },
     "relations": {
      "manquants": [
-      "('e1', 'beside', 'e4')",
       "('e1', 'with', 'e2')",
       "('e1', 'with', 'e3')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 81,
@@ -3818,7 +4139,6 @@
       "('v1', 'lieu', 'e3')"
      ],
      "en_trop": [
-      "('v3', 'lieu', 'e8')",
       "(('hors', 'v_1_5'), 'agent', 'e1')",
       "(('hors', 'v_1_5'), 'agent', 'e2')"
      ]
@@ -3829,7 +4149,6 @@
       "('v1', 'lieu', 'e3')"
      ],
      "en_trop": [
-      "('v3', 'lieu', 'e8')",
       "(('hors', 'v_1_5'), 'agent', 'e1')",
       "(('hors', 'v_1_5'), 'agent', 'e2')"
      ]
@@ -3837,12 +4156,12 @@
     "relations": {
      "manquants": [
       "('e2', 'of', 'e1')",
-      "('e6', 'under', 'e8')",
       "('e8', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 81,
@@ -3890,7 +4209,6 @@
       "('v2', 'agent', 'e1')",
       "('v3', 'agent', 'e1')",
       "('v3', 'theme', 'e3')",
-      "('v4', 'lieu', 'e4')",
       "('v4', 'theme', 'e3')",
       "('v5', 'theme', 'e6')",
       "('v6', 'agent', 'e5')",
@@ -3908,7 +4226,6 @@
       "('v1', 'agent', 'e1')",
       "('v2', 'agent', 'e1')",
       "('v3', 'agent', 'e1')",
-      "('v4', 'lieu', 'e4')",
       "('v4', 'patient_theme', 'e3')",
       "('v6', 'agent', 'e5')",
       "('v6', 'patient_theme', 'e3')"
@@ -3921,11 +4238,21 @@
     "relations": {
      "manquants": [
       "('e2', 'of', 'e1')",
+      "('e3', 'from', 'e4')",
       "('e6', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v4",
+     "tete": "churn",
+     "motifs": [
+      "portee=source"
+     ]
+    }
+   ]
   },
   {
    "k": 86,
@@ -3974,7 +4301,16 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e4",
+     "tete": "buste",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 86,
@@ -4030,7 +4366,8 @@
      "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 86,
@@ -4069,14 +4406,13 @@
       "('v2', 'agent', 'e2')",
       "('v2', 'lieu', 'e5')",
       "('v2', 'lieu', 'e6')",
+      "('v3', 'instrument', 'e7')",
       "('v3', 'patient', 'e2')",
-      "('v3', 'theme', 'e7')",
       "('v4', 'agent', 'e2')",
       "('v5', 'agent', 'e2')"
      ],
      "en_trop": [
       "('v1', 'patient', 'e4')",
-      "('v5', 'lieu', 'e8')",
       "(('hors', 'v_1_14'), 'lieu', 'e6')"
      ]
     },
@@ -4085,24 +4421,23 @@
       "('v2', 'agent', 'e2')",
       "('v2', 'lieu', 'e5')",
       "('v2', 'lieu', 'e6')",
+      "('v3', 'instrument', 'e7')",
       "('v3', 'patient_theme', 'e2')",
-      "('v3', 'patient_theme', 'e7')",
       "('v4', 'agent', 'e2')",
       "('v5', 'agent', 'e2')"
      ],
      "en_trop": [
-      "('v5', 'lieu', 'e8')",
       "(('hors', 'v_1_14'), 'lieu', 'e6')"
      ]
     },
     "relations": {
      "manquants": [
-      "('e2', 'devant', 'e8')",
       "('e4', 'de', 'e2')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 91,
@@ -4137,13 +4472,17 @@
      "en_trop": []
     },
     "roles": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'lieu', 'e1')"
+     ],
      "en_trop": [
       "('v1', 'instrument', 'e6')"
      ]
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'lieu', 'e1')"
+     ],
      "en_trop": [
       "('v1', 'instrument', 'e6')"
      ]
@@ -4153,12 +4492,12 @@
       "('e1', 'of', 'e2')",
       "('e1', 'with', 'e6')",
       "('e4', 'of', 'e1')",
-      "('e5', 'of', 'e1')",
-      "('e7', 'beside', 'e1')"
+      "('e5', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 91,
@@ -4214,7 +4553,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 91,
@@ -4282,7 +4622,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 96,
@@ -4318,7 +4659,8 @@
     },
     "roles": {
      "manquants": [
-      "('v1', 'agent', 'e1')"
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e3')"
      ],
      "en_trop": [
       "('v1', 'patient', 'e1')"
@@ -4326,7 +4668,8 @@
     },
     "roles_macro": {
      "manquants": [
-      "('v1', 'agent', 'e1')"
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e3')"
      ],
      "en_trop": [
       "('v1', 'patient_theme', 'e1')"
@@ -4335,12 +4678,12 @@
     "relations": {
      "manquants": [
       "('e1', 'de', 'e2')",
-      "('e1', 'près de', 'e3')",
       "('e6', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 96,
@@ -4366,7 +4709,6 @@
     },
     "proprietes": {
      "manquants": [
-      "('e1', 'lié')",
       "('e1', 'vif')",
       "('e3', 'mort')"
      ],
@@ -4380,28 +4722,36 @@
      "en_trop": []
     },
     "evenements": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'lier')"
+     ],
      "en_trop": []
     },
     "roles": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'lieu', 'e3')",
+      "('v2', 'patient', 'e1')"
+     ],
      "en_trop": []
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'lieu', 'e3')",
+      "('v2', 'patient_theme', 'e1')"
+     ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
       "('e1', 'de', 'e2')",
-      "('e1', 'à', 'e3')",
       "('e3', 'au milieu de', 'e4')"
      ],
      "en_trop": [
       "(('hors', 'e_1_12'), 'de', 'e4')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 96,
@@ -4410,10 +4760,11 @@
    "detail": {
     "entites": {
      "manquants": [
-      "('e2', 'augsbourg')"
+      "('e2', 'augsbourg')",
+      "('e3', 'songe')"
      ],
      "en_trop": [
-      "(('hors', 'e_1_12'), 'songer')",
+      "('e3', 'songer')",
       "(('hors', 'e_1_4'), 'supplice')"
      ]
     },
@@ -4436,42 +4787,42 @@
     },
     "evenements": {
      "manquants": [
-      "('v1', 'supplicier')",
-      "('v3', 'songer')"
+      "('v1', 'supplicier')"
      ],
      "en_trop": []
     },
     "roles": {
      "manquants": [
       "('v1', 'patient', 'e1')",
-      "('v2', 'destinataire', 'e3')",
-      "('v3', 'agent', 'e3')",
-      "('v4', 'agent', 'e1')",
-      "('v4', 'destinataire', 'e3')",
-      "('v4', 'theme', 'e4')"
+      "('v2', 'destinataire', 'e4')",
+      "('v2', 'lieu', 'e3')",
+      "('v3', 'agent', 'e1')",
+      "('v3', 'destinataire', 'e4')",
+      "('v3', 'theme', 'e5')"
      ],
      "en_trop": [
-      "('v4', 'patient', 'e4')"
+      "('v3', 'patient', 'e5')"
      ]
     },
     "roles_macro": {
      "manquants": [
       "('v1', 'patient_theme', 'e1')",
-      "('v2', 'destinataire', 'e3')",
-      "('v3', 'agent', 'e3')",
-      "('v4', 'agent', 'e1')",
-      "('v4', 'destinataire', 'e3')"
+      "('v2', 'destinataire', 'e4')",
+      "('v2', 'lieu', 'e3')",
+      "('v3', 'agent', 'e1')",
+      "('v3', 'destinataire', 'e4')"
      ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
       "('e1', 'de', 'e2')",
-      "('e5', 'de', 'e1')"
+      "('e6', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 101,
@@ -4523,7 +4874,17 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v2",
+     "tete": "play",
+     "motifs": [
+      "modalite=non_affirme",
+      "alternative=True"
+     ]
+    }
+   ]
   },
   {
    "k": 101,
@@ -4562,8 +4923,7 @@
      ],
      "en_trop": [
       "('v1', 'lieu', 'e2')",
-      "('v1', 'lieu', 'e6')",
-      "('v2', 'lieu', 'e3')"
+      "('v1', 'lieu', 'e6')"
      ]
     },
     "roles_macro": {
@@ -4574,21 +4934,20 @@
      ],
      "en_trop": [
       "('v1', 'lieu', 'e2')",
-      "('v1', 'lieu', 'e6')",
-      "('v2', 'lieu', 'e3')"
+      "('v1', 'lieu', 'e6')"
      ]
     },
     "relations": {
      "manquants": [
       "('e2', 'in', 'e6')",
-      "('e2', 'on', 'e3')",
       "('e3', 'of', 'e2')",
       "('e4', 'in', 'e5')",
       "('e4', 'of', 'e2')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 101,
@@ -4657,7 +5016,16 @@
       "(('hors', 'e_1_10'), 'on', 'e5')"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e6",
+     "tete": "bear",
+     "motifs": [
+      "modalite=non_affirme"
+     ]
+    }
+   ]
   },
   {
    "k": 106,
@@ -4700,7 +5068,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 106,
@@ -4761,7 +5130,8 @@
       "('e4', 'de', ('hors', 'e_1_16'))"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 106,
@@ -4818,7 +5188,8 @@
       "('e4', 'de', ('hors', 'e_1_16'))"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 111,
@@ -4851,24 +5222,18 @@
     },
     "roles": {
      "manquants": [],
-     "en_trop": [
-      "('v1', 'lieu', 'e3')"
-     ]
+     "en_trop": []
     },
     "roles_macro": {
      "manquants": [],
-     "en_trop": [
-      "('v1', 'lieu', 'e3')"
-     ]
+     "en_trop": []
     },
     "relations": {
-     "manquants": [
-      "('e1', 'beside', 'e3')",
-      "('e1', 'on', 'e2')"
-     ],
+     "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 111,
@@ -4897,6 +5262,7 @@
     },
     "roles": {
      "manquants": [
+      "('v2', 'lieu', 'e1')",
       "('v2', 'theme', 'e6')"
      ],
      "en_trop": [
@@ -4905,21 +5271,22 @@
      ]
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'lieu', 'e1')"
+     ],
      "en_trop": [
       "('v1', 'lieu', 'e4')"
      ]
     },
     "relations": {
      "manquants": [
-      "('e1', 'on', 'e3')",
       "('e3', 'in', 'e4')",
-      "('e6', 'above', 'e1')",
       "('e6', 'of', 'e5')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 111,
@@ -4958,25 +5325,19 @@
       "('v2', 'theme', 'e7')"
      ],
      "en_trop": [
-      "('v2', 'lieu', 'e8')",
       "('v2', 'patient', 'e7')"
      ]
     },
     "roles_macro": {
      "manquants": [],
-     "en_trop": [
-      "('v2', 'lieu', 'e8')"
-     ]
+     "en_trop": []
     },
     "relations": {
-     "manquants": [
-      "('e1', 'in', 'e4')",
-      "('e1', 'on', 'e3')",
-      "('e7', 'in', 'e8')"
-     ],
+     "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 116,
@@ -4992,9 +5353,7 @@
      "en_trop": []
     },
     "proprietes": {
-     "manquants": [
-      "('e1', 'enveloppé')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e1', 'envelopper')"
      ]
@@ -5004,29 +5363,36 @@
      "en_trop": []
     },
     "evenements": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'envelopper')"
+     ],
      "en_trop": []
     },
     "roles": {
      "manquants": [
-      "('v1', 'theme', 'e3')"
+      "('v1', 'theme', 'e3')",
+      "('v2', 'instrument', 'e2')",
+      "('v2', 'patient', 'e1')"
      ],
      "en_trop": [
       "('v1', 'patient', 'e3')"
      ]
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'instrument', 'e2')",
+      "('v2', 'patient_theme', 'e1')"
+     ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e1', 'dans', 'e2')",
       "('e3', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 116,
@@ -5043,7 +5409,6 @@
     },
     "proprietes": {
      "manquants": [
-      "('e2', 'tendu')",
       "('e4', 'ouvert')"
      ],
      "en_trop": []
@@ -5055,13 +5420,14 @@
     "evenements": {
      "manquants": [],
      "en_trop": [
-      "(('hors', 'v_1_16'), 'ouvrir')",
-      "(('hors', 'v_1_9'), 'tendre')"
+      "(('hors', 'v_1_16'), 'ouvrir')"
      ]
     },
     "roles": {
      "manquants": [
-      "('v1', 'theme', 'e2')"
+      "('v1', 'theme', 'e2')",
+      "('v2', 'lieu', 'e3')",
+      "('v2', 'theme', 'e2')"
      ],
      "en_trop": [
       "('v1', 'patient', 'e2')",
@@ -5069,7 +5435,10 @@
      ]
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'lieu', 'e3')",
+      "('v2', 'patient_theme', 'e2')"
+     ],
      "en_trop": [
       "(('hors', 'v_1_16'), 'patient_theme', 'e4')"
      ]
@@ -5077,14 +5446,14 @@
     "relations": {
      "manquants": [
       "('e2', 'de', 'e1')",
-      "('e2', 'vers', 'e3')",
       "('e4', 'au-dessus de', 'e5')",
       "('e4', 'de', 'e1')",
       "('e5', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 116,
@@ -5103,7 +5472,6 @@
     },
     "proprietes": {
      "manquants": [
-      "('e2', 'tendu')",
       "('e4', 'ouvert')"
      ],
      "en_trop": []
@@ -5115,13 +5483,14 @@
     "evenements": {
      "manquants": [],
      "en_trop": [
-      "(('hors', 'v_1_10'), 'tendre')",
       "(('hors', 'v_1_17'), 'ouvrir')"
      ]
     },
     "roles": {
      "manquants": [
-      "('v2', 'theme', 'e2')"
+      "('v2', 'theme', 'e2')",
+      "('v3', 'lieu', 'e3')",
+      "('v3', 'theme', 'e2')"
      ],
      "en_trop": [
       "('v2', 'patient', 'e2')",
@@ -5130,7 +5499,10 @@
      ]
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v3', 'lieu', 'e3')",
+      "('v3', 'patient_theme', 'e2')"
+     ],
      "en_trop": [
       "(('hors', 'v_1_17'), 'patient_theme', 'e4')",
       "(('hors', 'v_1_17'), 'patient_theme', 'e5')"
@@ -5139,14 +5511,14 @@
     "relations": {
      "manquants": [
       "('e2', 'de', 'e1')",
-      "('e2', 'vers', 'e3')",
       "('e4', 'de', 'e1')",
       "('e4', 'le long de', 'e5')",
       "('e5', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 121,
@@ -5179,26 +5551,26 @@
     },
     "roles": {
      "manquants": [
+      "('v1', 'lieu', 'e3')",
       "('v2', 'agent', 'e1')"
      ],
      "en_trop": []
     },
     "roles_macro": {
      "manquants": [
+      "('v1', 'lieu', 'e3')",
       "('v2', 'agent', 'e1')"
      ],
      "en_trop": []
     },
     "relations": {
-     "manquants": [
-      "('e1', 'beside', 'e3')",
-      "('e1', 'in', 'e2')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e2', 'beside', 'e3')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 121,
@@ -5231,17 +5603,19 @@
      "en_trop": []
     },
     "roles": {
-     "manquants": [],
+     "manquants": [
+      "('v1', 'lieu', 'e4')"
+     ],
      "en_trop": []
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v1', 'lieu', 'e4')"
+     ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e1', 'beside', 'e4')",
-      "('e1', 'in', 'e3')",
       "('e1', 'of', 'e2')",
       "('e5', 'of', 'e1')"
      ],
@@ -5249,7 +5623,8 @@
       "('e3', 'beside', 'e4')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 121,
@@ -5268,7 +5643,6 @@
     },
     "proprietes": {
      "manquants": [
-      "('e1', 'frozen')",
       "('e6', 'gone out')"
      ],
      "en_trop": []
@@ -5282,13 +5656,14 @@
       "('v2', 'die')"
      ],
      "en_trop": [
-      "(('hors', 'v_1_21'), 'go')",
-      "(('hors', 'v_1_4'), 'freeze')"
+      "(('hors', 'v_1_21'), 'go')"
      ]
     },
     "roles": {
      "manquants": [
-      "('v2', 'agent', 'e1')"
+      "('v1', 'lieu', 'e3')",
+      "('v2', 'agent', 'e1')",
+      "('v3', 'patient', 'e1')"
      ],
      "en_trop": [
       "(('hors', 'v_1_21'), 'agent', 'e6')"
@@ -5296,7 +5671,9 @@
     },
     "roles_macro": {
      "manquants": [
-      "('v2', 'agent', 'e1')"
+      "('v1', 'lieu', 'e3')",
+      "('v2', 'agent', 'e1')",
+      "('v3', 'patient_theme', 'e1')"
      ],
      "en_trop": [
       "(('hors', 'v_1_21'), 'agent', 'e6')"
@@ -5304,8 +5681,6 @@
     },
     "relations": {
      "manquants": [
-      "('e1', 'beside', 'e3')",
-      "('e1', 'in', 'e2')",
       "('e5', 'of', 'e1')",
       "('e6', 'of', 'e1')"
      ],
@@ -5313,7 +5688,8 @@
       "('e2', 'beside', 'e3')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 126,
@@ -5346,25 +5722,27 @@
     },
     "roles": {
      "manquants": [
-      "('v1', 'agent', 'e1')"
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')"
      ],
      "en_trop": []
     },
     "roles_macro": {
      "manquants": [
-      "('v1', 'agent', 'e1')"
+      "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')"
      ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e1', 'près de', 'e2')",
       "('e3', 'de', 'e1')",
       "('e4', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 126,
@@ -5402,8 +5780,7 @@
      ],
      "en_trop": [
       "('v1', 'patient', 'e2')",
-      "('v2', 'patient', 'e1')",
-      "('v5', 'lieu', 'e5')"
+      "('v2', 'patient', 'e1')"
      ]
     },
     "roles_macro": {
@@ -5413,22 +5790,21 @@
       "('v4', 'patient_theme', 'e3')"
      ],
      "en_trop": [
-      "('v2', 'patient_theme', 'e1')",
-      "('v5', 'lieu', 'e5')"
+      "('v2', 'patient_theme', 'e1')"
      ]
     },
     "relations": {
      "manquants": [
       "('e3', 'de', 'e1')",
       "('e4', 'de', 'e1')",
-      "('e4', 'devant', 'e5')",
       "('e5', 'de', 'e1')",
       "('e6', 'de', 'e5')",
       "('e7', 'de', 'e3')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 126,
@@ -5486,11 +5862,13 @@
     },
     "relations": {
      "manquants": [
+      "('e1', 'de', 'e3')",
       "('e5', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 131,
@@ -5534,8 +5912,7 @@
       "('v2', 'theme', 'e3')"
      ],
      "en_trop": [
-      "('v1', 'patient', 'e2')",
-      "('v2', 'lieu', 'e4')"
+      "('v1', 'patient', 'e2')"
      ]
     },
     "roles_macro": {
@@ -5543,19 +5920,17 @@
       "('v2', 'agent', 'e1')",
       "('v2', 'patient_theme', 'e3')"
      ],
-     "en_trop": [
-      "('v2', 'lieu', 'e4')"
-     ]
+     "en_trop": []
     },
     "relations": {
      "manquants": [
       "('e2', 'of', 'e1')",
-      "('e3', 'in', 'e4')",
       "('e4', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 131,
@@ -5602,7 +5977,6 @@
      ],
      "en_trop": [
       "('v2', 'patient', 'e2')",
-      "('v4', 'lieu', 'e5')",
       "('v4', 'patient', 'e4')"
      ]
     },
@@ -5613,19 +5987,17 @@
       "('v3', 'patient_theme', 'e4')",
       "('v4', 'agent', 'e1')"
      ],
-     "en_trop": [
-      "('v4', 'lieu', 'e5')"
-     ]
+     "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e4', 'in', 'e5')",
       "('e4', 'of', 'e1')",
       "('e5', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 131,
@@ -5672,7 +6044,6 @@
      ],
      "en_trop": [
       "('v2', 'patient', 'e2')",
-      "('v4', 'lieu', 'e5')",
       "('v4', 'patient', 'e4')"
      ]
     },
@@ -5683,19 +6054,17 @@
       "('v3', 'patient_theme', 'e4')",
       "('v4', 'agent', 'e1')"
      ],
-     "en_trop": [
-      "('v4', 'lieu', 'e5')"
-     ]
+     "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e4', 'in', 'e5')",
       "('e4', 'of', 'e1')",
       "('e5', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 136,
@@ -5725,37 +6094,40 @@
     "roles": {
      "manquants": [
       "('v1', 'agent', 'e1')",
-      "('v4', 'agent', 'e1')"
+      "('v4', 'agent', 'e1')",
+      "('v4', 'lieu', 'e5')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e3')",
-      "('v1', 'patient', 'e1')",
-      "('v4', 'lieu', 'e4')"
+      "('v1', 'patient', 'e1')"
      ]
     },
     "roles_macro": {
      "manquants": [
       "('v1', 'agent', 'e1')",
-      "('v4', 'agent', 'e1')"
+      "('v4', 'agent', 'e1')",
+      "('v4', 'lieu', 'e5')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e3')",
-      "('v1', 'patient_theme', 'e1')",
-      "('v4', 'lieu', 'e4')"
+      "('v1', 'patient_theme', 'e1')"
      ]
     },
     "relations": {
      "manquants": [
-      "('e1', 'sous', 'e3')",
-      "('e1', 'sur', 'e2')",
-      "('e1', 'sur', 'e4')",
-      "('e1', 'sur', 'e5')",
       "('e4', 'de', 'e1')",
       "('e5', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v3",
+     "tete": "voir",
+     "motifs": [
+      "modalite=non_affirme"
+     ]
+    }
+   ]
   },
   {
    "k": 136,
@@ -5774,7 +6146,6 @@
     },
     "proprietes": {
      "manquants": [
-      "('e3', 'appuyé')",
       "('e4', 'replié')"
      ],
      "en_trop": [
@@ -5788,19 +6159,16 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": [
-      "(('hors', 'v_1_17'), 'appuyer')"
-     ]
+     "en_trop": []
     },
     "roles": {
      "manquants": [
-      "('v1', 'agent', 'e1')"
+      "('v1', 'agent', 'e1')",
+      "('v2', 'theme', 'e3')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e2')",
       "('v1', 'patient', 'e1')",
-      "(('hors', 'v_1_17'), 'lieu', 'e4')",
-      "(('hors', 'v_1_17'), 'patient', 'e3')"
+      "('v2', 'patient', 'e3')"
      ]
     },
     "roles_macro": {
@@ -5808,23 +6176,19 @@
       "('v1', 'agent', 'e1')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e2')",
-      "('v1', 'patient_theme', 'e1')",
-      "(('hors', 'v_1_17'), 'lieu', 'e4')",
-      "(('hors', 'v_1_17'), 'patient_theme', 'e3')"
+      "('v1', 'patient_theme', 'e1')"
      ]
     },
     "relations": {
      "manquants": [
-      "('e1', 'sur', 'e2')",
       "('e2', 'de', 'e1')",
       "('e3', 'de', 'e1')",
-      "('e3', 'sur', 'e4')",
       "('e4', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 136,
@@ -5843,7 +6207,6 @@
     },
     "proprietes": {
      "manquants": [
-      "('e3', 'appuyé')",
       "('e4', 'replié')"
      ],
      "en_trop": [
@@ -5857,19 +6220,16 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": [
-      "(('hors', 'v_1_17'), 'appuyer')"
-     ]
+     "en_trop": []
     },
     "roles": {
      "manquants": [
-      "('v1', 'agent', 'e1')"
+      "('v1', 'agent', 'e1')",
+      "('v2', 'theme', 'e3')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e2')",
       "('v1', 'patient', 'e1')",
-      "(('hors', 'v_1_17'), 'lieu', 'e4')",
-      "(('hors', 'v_1_17'), 'patient', 'e3')"
+      "('v2', 'patient', 'e3')"
      ]
     },
     "roles_macro": {
@@ -5877,23 +6237,19 @@
       "('v1', 'agent', 'e1')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e2')",
-      "('v1', 'patient_theme', 'e1')",
-      "(('hors', 'v_1_17'), 'lieu', 'e4')",
-      "(('hors', 'v_1_17'), 'patient_theme', 'e3')"
+      "('v1', 'patient_theme', 'e1')"
      ]
     },
     "relations": {
      "manquants": [
-      "('e1', 'sur', 'e2')",
       "('e2', 'de', 'e1')",
       "('e3', 'de', 'e1')",
-      "('e3', 'sur', 'e4')",
       "('e4', 'de', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 141,
@@ -5930,27 +6286,31 @@
      ]
     },
     "roles": {
-     "manquants": [],
+     "manquants": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'lieu', 'e3')"
+     ],
      "en_trop": [
       "(('hors', 'v_1_11'), 'lieu', ('hors', 'e_1_13'))"
      ]
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v1', 'lieu', 'e2')",
+      "('v1', 'lieu', 'e3')"
+     ],
      "en_trop": [
       "(('hors', 'v_1_11'), 'lieu', ('hors', 'e_1_13'))"
      ]
     },
     "relations": {
-     "manquants": [
-      "('e1', 'among', 'e3')",
-      "('e1', 'by', 'e2')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e2', 'among', 'e3')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 141,
@@ -5990,6 +6350,7 @@
     },
     "roles": {
      "manquants": [
+      "('v1', 'lieu', 'e2')",
       "('v2', 'agent', 'e3')",
       "('v3', 'agent', 'e3')",
       "('v3', 'destinataire', 'e1')",
@@ -6004,6 +6365,7 @@
     },
     "roles_macro": {
      "manquants": [
+      "('v1', 'lieu', 'e2')",
       "('v2', 'agent', 'e3')",
       "('v3', 'agent', 'e3')",
       "('v3', 'destinataire', 'e1')",
@@ -6014,12 +6376,11 @@
      "en_trop": []
     },
     "relations": {
-     "manquants": [
-      "('e1', 'by', 'e2')"
-     ],
+     "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 141,
@@ -6056,6 +6417,7 @@
     },
     "roles": {
      "manquants": [
+      "('v1', 'lieu', 'e2')",
       "('v2', 'agent', 'e3')",
       "('v3', 'agent', 'e3')",
       "('v3', 'destinataire', 'e1')",
@@ -6067,12 +6429,12 @@
      ],
      "en_trop": [
       "('v5', 'patient', 'e4')",
-      "('v6', 'lieu', 'e7')",
       "('v6', 'patient', 'e5')"
      ]
     },
     "roles_macro": {
      "manquants": [
+      "('v1', 'lieu', 'e2')",
       "('v2', 'agent', 'e3')",
       "('v3', 'agent', 'e3')",
       "('v3', 'destinataire', 'e1')",
@@ -6082,18 +6444,15 @@
       "('v6', 'patient_theme', 'e4')"
      ],
      "en_trop": [
-      "('v6', 'lieu', 'e7')",
       "('v6', 'patient_theme', 'e5')"
      ]
     },
     "relations": {
-     "manquants": [
-      "('e1', 'by', 'e2')",
-      "('e4', 'on', 'e7')"
-     ],
+     "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 146,
@@ -6127,18 +6486,23 @@
     "evenements": {
      "manquants": [],
      "en_trop": [
+      "(('hors', 'v_1_5'), 'flotter')",
       "(('hors', 'v_2_7'), 'apparaître')"
      ]
     },
     "roles": {
      "manquants": [],
      "en_trop": [
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'lieu', 'e3')",
       "(('hors', 'v_2_7'), 'agent', 'e6')"
      ]
     },
     "roles_macro": {
      "manquants": [],
      "en_trop": [
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'lieu', 'e3')",
       "(('hors', 'v_2_7'), 'agent', 'e6')"
      ]
     },
@@ -6150,7 +6514,30 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e5",
+     "tete": "tableau",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e6",
+     "tete": "terre",
+     "motifs": [
+      "modalite=possible"
+     ]
+    },
+    {
+     "assertion": "e4",
+     "tete": "bas",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 146,
@@ -6187,7 +6574,9 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_5'), 'flotter')"
+     ]
     },
     "roles": {
      "manquants": [
@@ -6196,7 +6585,9 @@
       "('v2', 'theme', 'e8')"
      ],
      "en_trop": [
-      "('v2', 'patient', 'e8')"
+      "('v2', 'patient', 'e8')",
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'lieu', 'e3')"
      ]
     },
     "roles_macro": {
@@ -6204,17 +6595,19 @@
       "('v2', 'agent', 'e7')",
       "('v2', 'lieu', 'e5')"
      ],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'lieu', 'e3')"
+     ]
     },
     "relations": {
      "manquants": [
-      "('e1', 'sur', 'e3')",
-      "('e6', 'à', 'e5')",
-      "('e7', 'à', 'e5')"
+      "('e1', 'sur', 'e3')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 146,
@@ -6248,15 +6641,23 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_5'), 'flotter')"
+     ]
     },
     "roles": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'lieu', 'e3')"
+     ]
     },
     "roles_macro": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_5'), 'agent', 'e1')",
+      "(('hors', 'v_1_5'), 'lieu', 'e3')"
+     ]
     },
     "relations": {
      "manquants": [
@@ -6264,7 +6665,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 151,
@@ -6310,7 +6712,8 @@
       "('e3', \"'s\", 'e2')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 151,
@@ -6333,9 +6736,7 @@
      ]
     },
     "proprietes": {
-     "manquants": [
-      "('e5', 'crowned')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e5', 'crown')"
      ]
@@ -6345,12 +6746,16 @@
      "en_trop": []
     },
     "evenements": {
-     "manquants": [],
+     "manquants": [
+      "('v3', 'crown')"
+     ],
      "en_trop": []
     },
     "roles": {
      "manquants": [
-      "('v2', 'patient', 'e5')"
+      "('v2', 'patient', 'e3')",
+      "('v3', 'instrument', 'e6')",
+      "('v3', 'patient', 'e5')"
      ],
      "en_trop": [
       "('v2', 'agent', ('hors', 'e_1_11'))"
@@ -6358,7 +6763,9 @@
     },
     "roles_macro": {
      "manquants": [
-      "('v2', 'patient_theme', 'e5')"
+      "('v2', 'patient_theme', 'e3')",
+      "('v3', 'instrument', 'e6')",
+      "('v3', 'patient_theme', 'e5')"
      ],
      "en_trop": [
       "('v2', 'agent', ('hors', 'e_1_11'))"
@@ -6366,15 +6773,16 @@
     },
     "relations": {
      "manquants": [
-      "('e5', 'from', 'e4')",
-      "('e5', 'of', 'e2')",
-      "('e5', 'with', 'e6')"
+      "('e3', 'from', 'e4')",
+      "('e3', 'into', 'e5')",
+      "('e3', 'of', 'e2')"
      ],
      "en_trop": [
-      "('e5', \"'s\", 'e2')"
+      "('e3', \"'s\", 'e2')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 151,
@@ -6435,7 +6843,8 @@
       "('e5', 'by', 'e7')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 156,
@@ -6467,6 +6876,7 @@
     "roles": {
      "manquants": [
       "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
       "('v2', 'lieu', 'e2')"
      ],
      "en_trop": [
@@ -6476,6 +6886,7 @@
     "roles_macro": {
      "manquants": [
       "('v1', 'agent', 'e1')",
+      "('v1', 'lieu', 'e2')",
       "('v2', 'lieu', 'e2')"
      ],
      "en_trop": [
@@ -6483,12 +6894,11 @@
      ]
     },
     "relations": {
-     "manquants": [
-      "('e1', 'près de', 'e2')"
-     ],
+     "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 156,
@@ -6550,7 +6960,23 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v4",
+     "tete": "ordonner",
+     "motifs": [
+      "portee=source"
+     ]
+    },
+    {
+     "assertion": "e7",
+     "tete": "seigneur",
+     "motifs": [
+      "portee=source"
+     ]
+    }
+   ]
   },
   {
    "k": 156,
@@ -6596,7 +7022,6 @@
       "('v4', 'theme', 'e8')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e2')",
       "('v1', 'patient', 'e1')",
       "('v1', 'patient', 'e4')",
       "('v2', 'lieu', 'e8')",
@@ -6611,7 +7036,6 @@
       "('v3', 'agent', 'e1')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e2')",
       "('v1', 'patient_theme', 'e1')",
       "('v1', 'patient_theme', 'e4')",
       "('v2', 'lieu', 'e8')"
@@ -6619,7 +7043,6 @@
     },
     "relations": {
      "manquants": [
-      "('e1', 'devant', 'e2')",
       "('e3', 'de', 'e1')",
       "('e4', 'de', 'e1')"
      ],
@@ -6627,7 +7050,23 @@
       "('e8', 'de', ('hors', 'e_1_32'))"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v4",
+     "tete": "vouloir",
+     "motifs": [
+      "portee=source"
+     ]
+    },
+    {
+     "assertion": "e9",
+     "tete": "seigneur",
+     "motifs": [
+      "portee=source"
+     ]
+    }
+   ]
   },
   {
    "k": 161,
@@ -6674,7 +7113,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 161,
@@ -6713,7 +7153,7 @@
       "('v1', 'destinataire', 'e3')",
       "('v1', 'theme', 'e2')",
       "('v2', 'agent', 'e3')",
-      "('v3', 'patient', 'e5')"
+      "('v3', 'patient', 'e1')"
      ],
      "en_trop": [
       "('v1', 'patient', 'e2')"
@@ -6723,18 +7163,20 @@
      "manquants": [
       "('v1', 'destinataire', 'e3')",
       "('v2', 'agent', 'e3')",
-      "('v3', 'patient_theme', 'e5')"
+      "('v3', 'patient_theme', 'e1')"
      ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e4', 'of', 'e3')",
-      "('e7', 'of', 'e5')"
+      "('e1', 'into', 'e5')",
+      "('e4', 'of', 'e1')",
+      "('e7', 'of', 'e1')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 161,
@@ -6771,40 +7213,44 @@
     },
     "roles": {
      "manquants": [
+      "('v1', 'lieu', 'e2')",
       "('v2', 'lieu', 'e2')",
       "('v3', 'agent', 'e1')",
-      "('v4', 'patient', 'e7')",
-      "('v4', 'patient', 'e9')"
+      "('v4', 'patient', 'e5')",
+      "('v4', 'patient', 'e8')"
      ],
      "en_trop": [
-      "('v4', 'agent', 'e7')",
+      "('v4', 'agent', 'e5')",
       "(('hors', 'v_1_13'), 'patient', 'e4')"
      ]
     },
     "roles_macro": {
      "manquants": [
+      "('v1', 'lieu', 'e2')",
       "('v2', 'lieu', 'e2')",
       "('v3', 'agent', 'e1')",
-      "('v4', 'patient_theme', 'e7')",
-      "('v4', 'patient_theme', 'e9')"
+      "('v4', 'patient_theme', 'e5')",
+      "('v4', 'patient_theme', 'e8')"
      ],
      "en_trop": [
-      "('v4', 'agent', 'e7')",
+      "('v4', 'agent', 'e5')",
       "(('hors', 'v_1_13'), 'patient_theme', 'e4')"
      ]
     },
     "relations": {
      "manquants": [
-      "('e1', 'to', 'e2')",
-      "('e7', 'of', 'e1')",
+      "('e5', 'into', 'e7')",
+      "('e5', 'of', 'e1')",
       "('e7', 'of', 'e6')",
-      "('e9', 'of', 'e1')"
+      "('e8', 'into', 'e9')",
+      "('e8', 'of', 'e1')"
      ],
      "en_trop": [
       "('e7', \"'s\", 'e6')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 166,
@@ -6860,7 +7306,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 166,
@@ -6868,15 +7315,18 @@
    "texte": "Un soldat, monté sur une échelle, cloue au sommet de la croix la tablette portant l'inscription « Jésus de Nazareth, roi des Juifs ».",
    "detail": {
     "entites": {
-     "manquants": [
-      "('e7', 'jésus')",
-      "('e8', 'nazareth')"
-     ],
-     "en_trop": []
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_25'), 'roi')",
+      "(('hors', 'e_1_27'), 'juif')"
+     ]
     },
     "noms": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'e_1_21'), 'jésus')",
+      "(('hors', 'e_1_23'), 'nazareth')"
+     ]
     },
     "proprietes": {
      "manquants": [],
@@ -6916,12 +7366,13 @@
      "en_trop": []
     },
     "relations": {
-     "manquants": [
-      "('e9', 'de', 'e10')"
-     ],
-     "en_trop": []
+     "manquants": [],
+     "en_trop": [
+      "(('hors', 'e_1_21'), 'de', ('hors', 'e_1_23'))"
+     ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 166,
@@ -6930,15 +7381,19 @@
    "detail": {
     "entites": {
      "manquants": [
-      "('e1', 'pilate')",
-      "('e6', 'jésus')",
-      "('e7', 'nazareth')"
+      "('e1', 'pilate')"
      ],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'e_1_22'), 'roi')",
+      "(('hors', 'e_1_24'), 'juif')"
+     ]
     },
     "noms": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'e_1_18'), 'jésus')",
+      "(('hors', 'e_1_20'), 'nazareth')"
+     ]
     },
     "proprietes": {
      "manquants": [],
@@ -6984,12 +7439,14 @@
     "relations": {
      "manquants": [
       "('e2', 'de', 'e1')",
-      "('e3', 'de', 'e1')",
-      "('e8', 'de', 'e9')"
+      "('e3', 'de', 'e1')"
      ],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'e_1_18'), 'de', ('hors', 'e_1_20'))"
+     ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 171,
@@ -7026,7 +7483,6 @@
       "('v2', 'agent', 'e4')"
      ],
      "en_trop": [
-      "('v1', 'lieu', 'e4')",
       "('v1', 'patient', 'e2')"
      ]
     },
@@ -7034,17 +7490,14 @@
      "manquants": [
       "('v2', 'agent', 'e4')"
      ],
-     "en_trop": [
-      "('v1', 'lieu', 'e4')"
-     ]
+     "en_trop": []
     },
     "relations": {
-     "manquants": [
-      "('e1', 'beside', 'e4')"
-     ],
+     "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 171,
@@ -7078,6 +7531,7 @@
     "roles": {
      "manquants": [
       "('v1', 'theme', 'e2')",
+      "('v2', 'lieu', 'e6')",
       "('v2', 'theme', 'e3')"
      ],
      "en_trop": [
@@ -7086,12 +7540,13 @@
      ]
     },
     "roles_macro": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'lieu', 'e6')"
+     ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e3', 'into', 'e6')",
       "('e6', 'of', 'e5')",
       "('e7', 'of', 'e5')"
      ],
@@ -7099,7 +7554,8 @@
       "('e6', \"'s\", 'e5')"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 171,
@@ -7176,7 +7632,23 @@
       "('e4', \"'s\", 'e3')"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e4",
+     "tete": "acquisto cattivo",
+     "motifs": [
+      "portee=source"
+     ]
+    },
+    {
+     "assertion": "e3",
+     "tete": "ripa",
+     "motifs": [
+      "portee=source"
+     ]
+    }
+   ]
   },
   {
    "k": 176,
@@ -7195,10 +7667,7 @@
      "en_trop": []
     },
     "proprietes": {
-     "manquants": [
-      "('e1', 'couronné')",
-      "('e2', 'couronné')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e1', 'couronner')"
      ]
@@ -7208,38 +7677,45 @@
      "en_trop": []
     },
     "evenements": {
-     "manquants": [],
+     "manquants": [
+      "('v1', 'couronner')"
+     ],
      "en_trop": []
     },
     "roles": {
      "manquants": [
-      "('v1', 'agent', 'e1')",
-      "('v1', 'agent', 'e2')"
+      "('v1', 'instrument', 'e3')",
+      "('v1', 'patient', 'e1')",
+      "('v1', 'patient', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v2', 'agent', 'e2')"
      ],
      "en_trop": [
-      "('v1', 'patient', 'e1')"
+      "('v2', 'patient', 'e1')"
      ]
     },
     "roles_macro": {
      "manquants": [
-      "('v1', 'agent', 'e1')",
-      "('v1', 'agent', 'e2')"
+      "('v1', 'instrument', 'e3')",
+      "('v1', 'patient_theme', 'e1')",
+      "('v1', 'patient_theme', 'e2')",
+      "('v2', 'agent', 'e1')",
+      "('v2', 'agent', 'e2')"
      ],
      "en_trop": [
-      "('v1', 'patient_theme', 'e1')"
+      "('v2', 'patient_theme', 'e1')"
      ]
     },
     "relations": {
      "manquants": [
-      "('e1', 'de', 'e3')",
-      "('e1', 'à côté de', 'e2')",
-      "('e2', 'de', 'e3')"
+      "('e1', 'à côté de', 'e2')"
      ],
      "en_trop": [
       "(('hors', 'e_1_11'), 'à', ('hors', 'e_1_13'))"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 176,
@@ -7303,7 +7779,8 @@
       "('e5', 'de', ('hors', 'e_1_19'))"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 176,
@@ -7326,8 +7803,6 @@
     },
     "proprietes": {
      "manquants": [
-      "('e3', 'couronné')",
-      "('e4', 'couronné')",
       "('e6', 'or')"
      ],
      "en_trop": [
@@ -7339,13 +7814,18 @@
      "en_trop": []
     },
     "evenements": {
-     "manquants": [],
+     "manquants": [
+      "('v2', 'couronner')"
+     ],
      "en_trop": []
     },
     "roles": {
      "manquants": [
       "('v1', 'agent', 'e4')",
-      "('v1', 'theme', 'e6')"
+      "('v1', 'theme', 'e6')",
+      "('v2', 'instrument', 'e5')",
+      "('v2', 'patient', 'e3')",
+      "('v2', 'patient', 'e4')"
      ],
      "en_trop": [
       "('v1', 'patient', 'e6')"
@@ -7353,14 +7833,15 @@
     },
     "roles_macro": {
      "manquants": [
-      "('v1', 'agent', 'e4')"
+      "('v1', 'agent', 'e4')",
+      "('v2', 'instrument', 'e5')",
+      "('v2', 'patient_theme', 'e3')",
+      "('v2', 'patient_theme', 'e4')"
      ],
      "en_trop": []
     },
     "relations": {
      "manquants": [
-      "('e3', 'de', 'e5')",
-      "('e4', 'de', 'e5')",
       "('e9', 'de', 'e3')",
       "('e9', 'de', 'e4')"
      ],
@@ -7368,7 +7849,8 @@
       "('e6', 'de', ('hors', 'e_1_23'))"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 181,
@@ -7417,7 +7899,23 @@
      "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "v2",
+     "tete": "explain",
+     "motifs": [
+      "modalite=non_affirme"
+     ]
+    },
+    {
+     "assertion": "e1",
+     "tete": "series",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 181,
@@ -7440,9 +7938,7 @@
      ]
     },
     "proprietes": {
-     "manquants": [
-      "('e4', 'entwined')"
-     ],
+     "manquants": [],
      "en_trop": [
       "('e1', 'personify')",
       "('e4', 'entwine')"
@@ -7454,7 +7950,8 @@
     },
     "evenements": {
      "manquants": [
-      "('v1', 'personify')"
+      "('v1', 'personify')",
+      "('v3', 'entwine')"
      ],
      "en_trop": []
     },
@@ -7462,7 +7959,9 @@
      "manquants": [
       "('v1', 'agent', 'e1')",
       "('v1', 'theme', 'e3')",
-      "('v2', 'theme', 'e4')"
+      "('v2', 'theme', 'e4')",
+      "('v3', 'instrument', 'e5')",
+      "('v3', 'patient', 'e4')"
      ],
      "en_trop": [
       "('v2', 'agent', 'e3')",
@@ -7472,19 +7971,20 @@
     "roles_macro": {
      "manquants": [
       "('v1', 'agent', 'e1')",
-      "('v1', 'patient_theme', 'e3')"
+      "('v1', 'patient_theme', 'e3')",
+      "('v3', 'instrument', 'e5')",
+      "('v3', 'patient_theme', 'e4')"
      ],
      "en_trop": [
       "('v2', 'agent', 'e3')"
      ]
     },
     "relations": {
-     "manquants": [
-      "('e4', 'with', 'e5')"
-     ],
+     "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 181,
@@ -7551,7 +8051,37 @@
      "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e12",
+     "tete": "quality",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e11",
+     "tete": "set",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e13",
+     "tete": "love",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e1",
+     "tete": "series",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 186,
@@ -7582,7 +8112,9 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_4'), 'émerger')"
+     ]
     },
     "roles": {
      "manquants": [
@@ -7590,14 +8122,17 @@
       "('v2', 'theme', 'e3')"
      ],
      "en_trop": [
-      "('v2', 'patient', 'e3')"
+      "('v2', 'patient', 'e3')",
+      "(('hors', 'v_1_4'), 'agent', 'e1')"
      ]
     },
     "roles_macro": {
      "manquants": [
       "('v2', 'agent', 'e1')"
      ],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_4'), 'agent', 'e1')"
+     ]
     },
     "relations": {
      "manquants": [
@@ -7605,7 +8140,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 186,
@@ -7634,30 +8170,36 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_11'), 'pendre')"
+     ]
     },
     "roles": {
      "manquants": [
       "('v1', 'agent', 'e2')",
-      "('v1', 'theme', 'e1')",
-      "('v2', 'lieu', 'e2')"
+      "('v1', 'theme', 'e1')"
      ],
      "en_trop": [
-      "('v1', 'patient', 'e1')"
+      "('v1', 'patient', 'e1')",
+      "(('hors', 'v_1_11'), 'agent', 'e3')"
      ]
     },
     "roles_macro": {
      "manquants": [
-      "('v1', 'agent', 'e2')",
-      "('v2', 'lieu', 'e2')"
+      "('v1', 'agent', 'e2')"
      ],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_11'), 'agent', 'e3')"
+     ]
     },
     "relations": {
-     "manquants": [],
+     "manquants": [
+      "('e3', 'dans', 'e2')"
+     ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 186,
@@ -7689,32 +8231,38 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_13'), 'pendre')"
+     ]
     },
     "roles": {
      "manquants": [
       "('v1', 'agent', 'e2')",
-      "('v1', 'theme', 'e1')",
-      "('v2', 'lieu', 'e2')"
+      "('v1', 'theme', 'e1')"
      ],
      "en_trop": [
-      "('v1', 'patient', 'e1')"
+      "('v1', 'patient', 'e1')",
+      "(('hors', 'v_1_13'), 'agent', 'e3')"
      ]
     },
     "roles_macro": {
      "manquants": [
-      "('v1', 'agent', 'e2')",
-      "('v2', 'lieu', 'e2')"
+      "('v1', 'agent', 'e2')"
      ],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_13'), 'agent', 'e3')"
+     ]
     },
     "relations": {
-     "manquants": [],
+     "manquants": [
+      "('e3', 'dans', 'e2')"
+     ],
      "en_trop": [
       "('e1', 'de', ('hors', 'e_1_5'))"
      ]
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 191,
@@ -7739,12 +8287,13 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_14'), 'run')"
+     ]
     },
     "roles": {
      "manquants": [
       "('v1', 'theme', 'e3')",
-      "('v2', 'agent', 'e3')",
       "('v3', 'theme', 'e4')"
      ],
      "en_trop": [
@@ -7754,8 +8303,7 @@
     },
     "roles_macro": {
      "manquants": [
-      "('v1', 'patient_theme', 'e3')",
-      "('v2', 'agent', 'e3')"
+      "('v1', 'patient_theme', 'e3')"
      ],
      "en_trop": [
       "('v1', 'lieu', 'e3')"
@@ -7767,7 +8315,8 @@
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 191,
@@ -7796,6 +8345,7 @@
     },
     "roles": {
      "manquants": [
+      "('v1', 'lieu', 'e3')",
       "('v2', 'agent', 'e2')",
       "('v2', 'theme', 'e4')",
       "('v3', 'agent', 'e2')",
@@ -7808,6 +8358,7 @@
     },
     "roles_macro": {
      "manquants": [
+      "('v1', 'lieu', 'e3')",
       "('v2', 'agent', 'e2')",
       "('v3', 'agent', 'e2')",
       "('v3', 'patient_theme', 'e5')"
@@ -7818,12 +8369,12 @@
     },
     "relations": {
      "manquants": [
-      "('e2', 'round', 'e3')",
       "('e4', 'of', 'e3')"
      ],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 191,
@@ -7881,7 +8432,8 @@
      "manquants": [],
      "en_trop": []
     }
-   }
+   },
+   "promotions": []
   },
   {
    "k": 196,
@@ -7938,7 +8490,58 @@
       "('e1', 'de', ('hors', 'e_1_4'))"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e5",
+     "tete": "image",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "v3",
+     "tete": "manquer",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e1",
+     "tete": "coquille de noix",
+     "motifs": [
+      "modalite=titre"
+     ]
+    },
+    {
+     "assertion": "e2",
+     "tete": "titre",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "v1",
+     "tete": "nommer",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e4",
+     "tete": "feuille",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e3",
+     "tete": "gravure",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 196,
@@ -7977,30 +8580,46 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_14'), 'reposer')"
+     ]
     },
     "roles": {
      "manquants": [],
      "en_trop": [
-      "('v1', 'lieu', 'e1')"
+      "(('hors', 'v_1_14'), 'agent', 'e2')",
+      "(('hors', 'v_1_14'), 'lieu', 'e1')",
+      "(('hors', 'v_1_14'), 'lieu', 'e3')"
      ]
     },
     "roles_macro": {
      "manquants": [],
      "en_trop": [
-      "('v1', 'lieu', 'e1')"
+      "(('hors', 'v_1_14'), 'agent', 'e2')",
+      "(('hors', 'v_1_14'), 'lieu', 'e1')",
+      "(('hors', 'v_1_14'), 'lieu', 'e3')"
      ]
     },
     "relations": {
      "manquants": [
       "('e2', 'dans', 'e1')",
-      "('e2', 'près de', 'e4')"
+      "('e2', 'près de', 'e4')",
+      "('e2', 'sur', 'e3')"
      ],
      "en_trop": [
       "('e2', 'de', ('hors', 'e_1_9'))"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e1",
+     "tete": "nature morte",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    }
+   ]
   },
   {
    "k": 196,
@@ -8030,7 +8649,9 @@
     },
     "evenements": {
      "manquants": [],
-     "en_trop": []
+     "en_trop": [
+      "(('hors', 'v_1_19'), 'sortir')"
+     ]
     },
     "roles": {
      "manquants": [
@@ -8040,7 +8661,8 @@
      "en_trop": [
       "('v1', 'lieu', 'e1')",
       "('v1', 'patient', 'e2')",
-      "('v3', 'patient', 'e5')"
+      "('v3', 'patient', 'e5')",
+      "(('hors', 'v_1_19'), 'agent', 'e4')"
      ]
     },
     "roles_macro": {
@@ -8049,7 +8671,8 @@
      ],
      "en_trop": [
       "('v1', 'lieu', 'e1')",
-      "('v1', 'patient_theme', 'e2')"
+      "('v1', 'patient_theme', 'e2')",
+      "(('hors', 'v_1_19'), 'agent', 'e4')"
      ]
     },
     "relations": {
@@ -8062,7 +8685,23 @@
       "('e2', 'de', ('hors', 'e_1_10'))"
      ]
     }
-   }
+   },
+   "promotions": [
+    {
+     "assertion": "e1",
+     "tete": "gravure",
+     "motifs": [
+      "portee=oeuvre"
+     ]
+    },
+    {
+     "assertion": "e3",
+     "tete": "barque",
+     "motifs": [
+      "modalite=non_affirme"
+     ]
+    }
+   ]
   }
  ]
 }

@@ -1,3 +1,8 @@
+Warning: /home/user/oedipamaas/outils/vertical/coder.pl:133:
+Warning:    Clauses of interrompu/1 are not together in the source-file
+Warning:    Earlier definition at /home/user/oedipamaas/outils/vertical/coder.pl:119
+Warning:    Current predicate: retablir_budget/1
+Warning:    Use :- discontiguous interrompu/1. to suppress this message
 Warning: /home/user/oedipamaas/oedipamaas/socle/normalisation.pl:87:
 Warning:    Clauses of normalisation:ajout/3 are not together in the source-file
 Warning:    Earlier definition at /home/user/oedipamaas/oedipamaas/socle/normalisation.pl:79
@@ -10,6 +15,6 @@ Warning:    Current predicate: normalisation:lexicalise/2
 Warning:    Use :- discontiguous normalisation:ajout/3. to suppress this message
 40 fiches
 
-real	22m3.959s
-user	18m44.346s
-sys	0m4.105s
+real	18m37.209s
+user	24m20.513s
+sys	0m5.763s
