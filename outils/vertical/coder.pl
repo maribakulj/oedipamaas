@@ -110,13 +110,21 @@ lire_et_coder(L, Xs, Controle, Rs) :-
                                      retablir_budget(Ancien)),
                   (   Rx = interrompu(_, _) -> Accord = exhaustif_interrompu
                   ;   Rx == Res -> Accord = egal
-                  ;   Accord = different
+                  ;   Accord = different, ecrire_desaccord(K, G, Res, Rx)
                   )
               ;   Accord = non_controle
               ) ),
             Rs).
 :- dynamic analyse/1.
 interrompu(erreur).
+% OEDIPAMAAS_CONTROLE_DIFF=DOSSIER : un désaccord des deux modes est écrit (les deux résultats, en termes) pour l'analyse
+ecrire_desaccord(K, G, Ri, Rx) :-
+    (   getenv('OEDIPAMAAS_CONTROLE_DIFF', D)
+    ->  format(atom(F), "~w/desaccord_~w_~w.pl", [D, K, G]),
+        setup_call_cleanup(open(F, write, S, [encoding(utf8)]),
+                           ( format(S, "indexe(~q).~nexhaustif(~q).~n", [Ri, Rx]) ), close(S))
+    ;   true
+    ).
 budget_exhaustif(Ancien) :-
     ( getenv('OEDIPAMAAS_INFERENCES', A) -> Ancien = A ; Ancien = aucun ),
     ( getenv('OEDIPAMAAS_INFERENCES_EXHAUSTIF', E) -> setenv('OEDIPAMAAS_INFERENCES', E) ; unsetenv('OEDIPAMAAS_INFERENCES') ).
