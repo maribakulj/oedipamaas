@@ -35,7 +35,8 @@ CONNAISSANCES = {"equivalence_etablie", "condition_suffisante", "condition_neces
 EXTENSIONS = {"aucune", "etat_reifie", "situation_referent", "plusieurs_situations", "ancrage_temporel",
               "evenement_participant", "contexte_d_eventualite", "contexte_emboite", "referent_conceptuel",
               "negation_dans_la_requete", "modificateur_non_intersectif", "quantification_enoncee", "collection",
-              "identite_entre_situations", "relation_entre_eventualites", "base_de_definitions", "abduction"}
+              "identite_entre_situations", "relation_entre_eventualites", "base_de_definitions", "abduction",
+              "contenu_d_inscription"}
 
 
 def lexfiles(dico):
@@ -121,6 +122,8 @@ def controler(cas, inv, rep, cote, lex=None):
             if not isinstance(k, dict) or k.get("sorte") not in CONNAISSANCES or "contenu" not in k \
                     or not isinstance(k.get("attestee"), bool):
                 err(c, f"connaissance supposée mal formée {k!r}")
+            elif k["attestee"] and not str(k.get("source", "")).strip():
+                err(c, f"connaissance attestée sans source (§ 4.1) : {k['contenu'][:60]!r}")
         d = c.get("decision_ouverte")
         if d is not None and (not isinstance(d, dict) or "question" not in d
                               or not all(x in STATUTS for x in d.get("statut_selon_l_option", {}).values())):
@@ -129,6 +132,9 @@ def controler(cas, inv, rep, cote, lex=None):
         for i, v in enumerate(c["variantes"]):
             if v.get("variation") not in VARIATIONS:
                 err(c, f"variante {i} : variation {v.get('variation')!r}")
+            for x in v.get("extensions_requises", []):
+                if x not in EXTENSIONS:
+                    err(c, f"variante {i} : extension {x!r}")
             un(c, v, f"variante {i}")
     return erreurs
 

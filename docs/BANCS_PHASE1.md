@@ -141,7 +141,7 @@ Un fichier par famille : une liste de cas de base, en JSON.
 | `definition` | une définition de style Iconclass, en anglais, **inventée** : jamais un libellé réel, jamais une notation |
 | `statut_attendu` | `etablie`, `etablie_sous_hypotheses`, `contradictoire`, `non_certifiee`, `ecartee`, `inconnue` (`docs/NOYAU.md`, § 4) |
 | `hypotheses_attendues` | si et seulement si `etablie_sous_hypotheses` : `sens`, `equivalence_non_attestee`, `condition_suffisante_non_attestee`, `consequence_conditionnelle`, `connaissance_typique`, `hypothese_interpretative`, `abduction`, `identite`, `relation_inconnue` |
-| `connaissances_supposees` | `[{sorte, contenu, attestee}]` : ce que K contient pour ce cas, **et rien d'autre**. Les sortes sont celles des fondements (§ 2.7) ; `attestee` dit si une attestation fonde l'entrée |
+| `connaissances_supposees` | `[{sorte, contenu, attestee, source}]` (`source` exigé si attestée, § 4.1) : ce que K contient pour ce cas, **et rien d'autre**. Les sortes sont celles des fondements (§ 2.7) ; `attestee` dit si une attestation fonde l'entrée |
 | `operations_requises` | `lecture`, `canonisation`, `deduction`, `classification`, `abduction`, ou `aucune` |
 | `extensions_requises` | les extensions du langage sans lesquelles le statut ne peut pas être atteint (voir la liste du validateur), ou `aucune` |
 | `justification` | pourquoi ce statut, avec la section des fondements, de l'ontologie ou de la spécification qui le fixe |
@@ -156,7 +156,7 @@ Un fichier par famille : une liste de cas de base, en JSON.
 - `hypotheses_attendues` : `abduction`, `condition_suffisante_non_attestee`, `connaissance_typique`, `consequence_conditionnelle`, `equivalence_non_attestee`, `hypothese_interpretative`, `identite`, `relation_inconnue`, `sens` ;
 - `connaissances_supposees[].sorte` : `condition_necessaire`, `condition_suffisante`, `connaissance_typique`, `consequence_conditionnelle`, `distinction_documentaire`, `equivalence_etablie`, `hypothese_interpretative`, `identite_documentaire`, `implication`, `relation_inconnue` ;
 - `operations_requises` : `abduction`, `aucune`, `canonisation`, `classification`, `deduction`, `lecture` ;
-- `extensions_requises` : `abduction`, `ancrage_temporel`, `aucune`, `base_de_definitions`, `collection`, `contexte_d_eventualite`, `contexte_emboite`, `etat_reifie`, `evenement_participant`, `identite_entre_situations`, `modificateur_non_intersectif`, `negation_dans_la_requete`, `plusieurs_situations`, `quantification_enoncee`, `referent_conceptuel`, `relation_entre_eventualites`, `situation_referent` ;
+- `extensions_requises` : `abduction`, `ancrage_temporel`, `aucune`, `base_de_definitions`, `collection`, `contenu_d_inscription`, `contexte_d_eventualite`, `contexte_emboite`, `etat_reifie`, `evenement_participant`, `identite_entre_situations`, `modificateur_non_intersectif`, `negation_dans_la_requete`, `plusieurs_situations`, `quantification_enoncee`, `referent_conceptuel`, `relation_entre_eventualites`, `situation_referent` ;
 - `variantes[].variation` : `ajout_figure_non_liee`, `ajout_negation_non_liee`, `changement_de_modalite`, `changement_de_participant`, `changement_de_portee`, `changement_de_temps`, `composition`, `inversion_des_roles`, `paraphrase`, `traduction`.
 
 **Les principes de rédaction :**
@@ -179,6 +179,43 @@ Un fichier par famille : une liste de cas de base, en JSON.
 - dont une **traduction** ;
 - et au moins une variante dont le statut **diffère** de celui du cas de base : un changement de portée, de modalité ou
   de temps, ou une inversion des rôles.
+
+### 4.1 Les précisions après la première relecture (27/11, provisoires jusqu'à la décision de la propriétaire)
+
+Trois relectures indépendantes ont trouvé 111 lignes de désaccord, dont 54 de sûreté, sur la version 1 des cas (gardée
+telle quelle : `v1_avant_relecture/`). Trois causes reviennent. Elles demandent une règle, non des corrections au cas
+par cas. Les règles ci-dessous sont **provisoires** : ce sont des décisions de la propriétaire (`docs/DECISIONS_PHASE1.md`), et chacune garde,
+par une `decision_ouverte`, le statut selon l'autre option.
+
+**1. Ce que contient K pour un cas.** « Les connaissances supposées, et rien d'autre » était trop strict pour être
+appliqué : presque tous les cas `etablie` reposent sur des inclusions de WordNet non écrites. La règle devient :
+- **implicites :** les relations de WordNet 3.0 dont le moteur se sert déjà, l'hyperonymie et l'instance (`@`, `@i`)
+  et la méronymie de partie (`%p`), entre **sens** ; le passage d'un mot français à un sens par WOLF ;
+- **à écrire, avec leur source :** tout le reste. Cela comprend les alias de noms entre langues (« l'Enfant » et
+  « the Christ Child »), les équivalences entre mots, les connaissances typiques, les conditions et les restrictions de
+  sélection ;
+- **ne valent pas attestation :** une glose seule (FONDEMENTS § 2.7 : c'est une relation inconnue), une antonymie
+  (elle ne donne pas d'appui négatif : NOYAU § 1.1), une hypothèse de rédaction ;
+- **le champ `source`** est exigé pour toute connaissance `attestee: true` : la ressource et l'élément (une clé de sens
+  et un pointeur, une entrée nommée). Le validateur le contrôle.
+
+**2. Le régime des sens.** NOYAU § 2 (D30) prend tous les sens que K donne au mot. Le protocole parlait des sens « que le
+texte laisse ouverts », c'est-à-dire d'une désambiguïsation par le contexte qui n'est pas spécifiée (X7).
+- **Quand le statut dépend de ce choix,** le cas porte une `decision_ouverte` avec deux options : `tous_les_sens`
+  (D30 sans désambiguïsation) et `sens_fixe_par_le_contexte`.
+- **Le statut retenu est le plus prudent.** D'ordinaire, `etablie_sous_hypotheses` avec `sens` pour un lien positif,
+  et `inconnue` pour une négation.
+
+**3. Les incompatibilités.** Aucune sorte de connaissance ne dit que deux types s'excluent (debout et assis, éveillé et
+endormi), et aucune antonymie n'en tient lieu. Un contre-modèle qui en dépend reste `inconnue` ; une `decision_ouverte`
+donne le statut si une sorte « incompatibilité attestée » était admise.
+
+**Les autres corrections du schéma :**
+- `extensions_requises` est admis aussi sur une variante, quand elle demande plus que son cas ;
+- l'extension `contenu_d_inscription` est ajoutée : ce que dit le texte d'une inscription. Sa réalisation est différée
+  (`docs/TRAJECTOIRE.md`), mais un cas peut en dépendre ;
+- entre `non_certifiee` et `inconnue`, le plus prudent est `inconnue` : `non_certifiee` dit qu'une substitution vraie
+  existe.
 
 ## 5. La composition et la couverture
 
