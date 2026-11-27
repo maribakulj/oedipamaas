@@ -1,0 +1,258 @@
+{
+ "cree": "2026-11-27T23:47:39Z",
+ "role": "les bancs de développement de la phase 1 (docs/BANCS_PHASE1.md) : les cas, leurs questions, les trois relectures indépendantes, les révisions et l'harmonisation, la couverture ; la version 1 d'avant relecture est gardée (v1_avant_relecture/)",
+ "statut": "développement ; accord entre agents, non validé par la propriétaire (D23)",
+ "repartition": "bancs/phase1/repartition.json du dépôt, graine 20261127",
+ "fichiers": [
+  {
+   "chemin": "dev/CONSOLIDATION.md",
+   "taille": 973,
+   "sha256": "a8ee526a6847898e84a7206b9153db08b5b3d4518ead53497ce390413dae54b3"
+  },
+  {
+   "chemin": "dev/COUVERTURE.md",
+   "taille": 57520,
+   "sha256": "f77eac9bcc7f7e1c8e98f1f09eeffdf1e437fb6bdc19bd3b0f4dc84adafa91c8"
+  },
+  {
+   "chemin": "dev/compositionnalite.json",
+   "taille": 127306,
+   "sha256": "37f836daa84610042b21a138574b90f332c410f30bf9c6b0b55c2dce654ca8ad"
+  },
+  {
+   "chemin": "dev/compositionnalite.questions.md",
+   "taille": 14927,
+   "sha256": "c8bf9e9b4636efcfc2917312a48e3cfc3cdce715128e4ad69c7af0472b1caa83"
+  },
+  {
+   "chemin": "dev/compositionnalite.revision.md",
+   "taille": 18128,
+   "sha256": "3eae7e271a366462b957a93376e191cfd54ea2c4e4d47c6eddaeca762086b64d"
+  },
+  {
+   "chemin": "dev/definitions_classification.json",
+   "taille": 122642,
+   "sha256": "486d0883219469e65c3fe57af8c556cdb613104f4a2e501618b20861a59679d1"
+  },
+  {
+   "chemin": "dev/definitions_classification.questions.md",
+   "taille": 12243,
+   "sha256": "b817994ddcb4392c3edcd0a8324e8bf20214f63281285c1961e73d3285e19fed"
+  },
+  {
+   "chemin": "dev/definitions_classification.revision.md",
+   "taille": 19007,
+   "sha256": "bebb7d9cdd242134dffb11dbfbc7708fc81b1ced3513791f75743e458981a8d5"
+  },
+  {
+   "chemin": "dev/espace_partie_temps.json",
+   "taille": 115840,
+   "sha256": "ad7cd3ede47ad5ba3a56633626880106c4cb3c19dd7d305c92ff7668defa881b"
+  },
+  {
+   "chemin": "dev/espace_partie_temps.questions.md",
+   "taille": 14872,
+   "sha256": "a5cb74de807b953e4a55d47886003a48eed7370868087ab40cfb4ea45f7e5424"
+  },
+  {
+   "chemin": "dev/espace_partie_temps.revision.md",
+   "taille": 23759,
+   "sha256": "6e0b809cd8f13152ee96c29ce189a1ef938a6b6c75cba05ba04fe11fa2651d44"
+  },
+  {
+   "chemin": "dev/evenements_etats.json",
+   "taille": 120423,
+   "sha256": "3d3095e219b24f358708ff89fdfcf6d674513b7fa160f7836f3d45888bdd3b0c"
+  },
+  {
+   "chemin": "dev/evenements_etats.questions.md",
+   "taille": 14157,
+   "sha256": "7517261f405653ca865b69e56936d3871ef8263a71135dbaabcf480df0b76025"
+  },
+  {
+   "chemin": "dev/evenements_etats.revision.md",
+   "taille": 20132,
+   "sha256": "ce8283df742b84b347a151d0aa81e83e499d89cd7f14c04be04d61273f6e31f8"
+  },
+  {
+   "chemin": "dev/modalite_negation_contextes.json",
+   "taille": 107581,
+   "sha256": "5a4b8aebec6e30c0ac6398ea18b82a8112242f5588cb5babc8624051e84f02cb"
+  },
+  {
+   "chemin": "dev/modalite_negation_contextes.questions.md",
+   "taille": 14406,
+   "sha256": "f2045e8ffc9ca2379431a04d96d2f2dc6336c2a84484f541d300cba891298732"
+  },
+  {
+   "chemin": "dev/modalite_negation_contextes.revision.md",
+   "taille": 12743,
+   "sha256": "5fd8e1376f492988b5a155072cf9aa71541267d6ac5915df6e49b676fbd94a43"
+  },
+  {
+   "chemin": "dev/niveaux_representation.json",
+   "taille": 104532,
+   "sha256": "82099b8b42cb083370b11142770d16c04ce4dcd00dacfeb044f66ffc2610e82b"
+  },
+  {
+   "chemin": "dev/niveaux_representation.questions.md",
+   "taille": 10123,
+   "sha256": "6c5c63ca696807d7b3bebf59cda39e1bc3b59b8f15b9cf437addeda0b5b9aee9"
+  },
+  {
+   "chemin": "dev/niveaux_representation.revision.md",
+   "taille": 11060,
+   "sha256": "63201486012478c9a2e2fd45758f1ab64e1891622122176eb914be350890ea7a"
+  },
+  {
+   "chemin": "dev/phenomenes_iconographiques.json",
+   "taille": 121889,
+   "sha256": "e1e80d8721e11cbfef247c14e01a9c8fbcd4ed044bf1e107d8125137acdea8f6"
+  },
+  {
+   "chemin": "dev/phenomenes_iconographiques.questions.md",
+   "taille": 14538,
+   "sha256": "7cc315c11318f9577f0f4c40c028aac946d695d835504c6f919c657b334c30b5"
+  },
+  {
+   "chemin": "dev/phenomenes_iconographiques.revision.md",
+   "taille": 14544,
+   "sha256": "af23c537a33540c023c8fdd2291d80948dca858f99aecdb874cf788498f765fb"
+  },
+  {
+   "chemin": "dev/reference_quantification.json",
+   "taille": 112514,
+   "sha256": "0b4d5e543c890d5f624a709cbab002dc9ff3855d504ac373db4654e689153515"
+  },
+  {
+   "chemin": "dev/reference_quantification.questions.md",
+   "taille": 13887,
+   "sha256": "e1e99ad91d66e0e8445509d59e8a055c21d34eed45ea6effe03fc3c07dbd0fea"
+  },
+  {
+   "chemin": "dev/reference_quantification.revision.md",
+   "taille": 22122,
+   "sha256": "72151f9959dbf8b60f7a089fe54231c61b2da8e9ba8deebc452829b2af7cfe56"
+  },
+  {
+   "chemin": "dev/relecture_A.md",
+   "taille": 23949,
+   "sha256": "879ca8fe9cee3e7b76f5bff3799b21b760236394b463d43e9acdc53a3f8768a0"
+  },
+  {
+   "chemin": "dev/relecture_B.md",
+   "taille": 22978,
+   "sha256": "5ad8774ee47094044b14f4a40f11af3a8521340ff85885b2704dd5d9272f7643"
+  },
+  {
+   "chemin": "dev/relecture_C.md",
+   "taille": 20232,
+   "sha256": "ac434b4831436d4485b8c300799cfa129f38a0e710ecb9b4f73692714c101d6d"
+  },
+  {
+   "chemin": "dev/structures_argumentales.json",
+   "taille": 139623,
+   "sha256": "005eff723399c9643ddbdfdf50aa6d6361a8d8409f25d42a797d28bbb1f9fc2c"
+  },
+  {
+   "chemin": "dev/structures_argumentales.questions.md",
+   "taille": 12165,
+   "sha256": "59a3c90078936f4d28b5234fc4d2e39a8e0d80159f5193525a496a4f9592bb81"
+  },
+  {
+   "chemin": "dev/structures_argumentales.revision.md",
+   "taille": 16686,
+   "sha256": "24cae3bf52e5888fba1da12b1407a751c79afb3b953317811d76c91e2fa80eba"
+  },
+  {
+   "chemin": "v1_avant_relecture/compositionnalite.json",
+   "taille": 103109,
+   "sha256": "561bc22fa8bf57ed6d190e854e93eb940837d180d4bd161a4d43c3b52964bdd8"
+  },
+  {
+   "chemin": "v1_avant_relecture/compositionnalite.questions.md",
+   "taille": 14927,
+   "sha256": "c8bf9e9b4636efcfc2917312a48e3cfc3cdce715128e4ad69c7af0472b1caa83"
+  },
+  {
+   "chemin": "v1_avant_relecture/definitions_classification.json",
+   "taille": 107271,
+   "sha256": "c0d2836ca7bdb75f18d9087ef0c72631a4093957f1417928872d67ea95c6a5e6"
+  },
+  {
+   "chemin": "v1_avant_relecture/definitions_classification.questions.md",
+   "taille": 12243,
+   "sha256": "b817994ddcb4392c3edcd0a8324e8bf20214f63281285c1961e73d3285e19fed"
+  },
+  {
+   "chemin": "v1_avant_relecture/espace_partie_temps.json",
+   "taille": 90421,
+   "sha256": "91c13ad2b31d69a9fdaf1af3c45e419934cf0a543a1ecbe2e6274c970b867bc3"
+  },
+  {
+   "chemin": "v1_avant_relecture/espace_partie_temps.questions.md",
+   "taille": 14872,
+   "sha256": "a5cb74de807b953e4a55d47886003a48eed7370868087ab40cfb4ea45f7e5424"
+  },
+  {
+   "chemin": "v1_avant_relecture/evenements_etats.json",
+   "taille": 102843,
+   "sha256": "e4dda5afc6fea0c509b2d635094d7b453e652baa8c7112a0426cbaf98265075d"
+  },
+  {
+   "chemin": "v1_avant_relecture/evenements_etats.questions.md",
+   "taille": 14157,
+   "sha256": "7517261f405653ca865b69e56936d3871ef8263a71135dbaabcf480df0b76025"
+  },
+  {
+   "chemin": "v1_avant_relecture/modalite_negation_contextes.json",
+   "taille": 90205,
+   "sha256": "6dc51bb8580dbf19a60e9b2cf98c7174696b490efe993feb4cef7e028a064247"
+  },
+  {
+   "chemin": "v1_avant_relecture/modalite_negation_contextes.questions.md",
+   "taille": 11133,
+   "sha256": "dc20486e9562d132fe694d2a5816bbf39bbc619427353ea5b764fe2a642c47db"
+  },
+  {
+   "chemin": "v1_avant_relecture/niveaux_representation.json",
+   "taille": 92458,
+   "sha256": "ebbeaaf7c6899cd5a37948345612d4dd6d8880ac2426bd726b08e89d51651d94"
+  },
+  {
+   "chemin": "v1_avant_relecture/niveaux_representation.questions.md",
+   "taille": 10123,
+   "sha256": "6c5c63ca696807d7b3bebf59cda39e1bc3b59b8f15b9cf437addeda0b5b9aee9"
+  },
+  {
+   "chemin": "v1_avant_relecture/phenomenes_iconographiques.json",
+   "taille": 104035,
+   "sha256": "e2f425f367397c7e59b5f49fbfba53766b6a8321113ce5ababab5aa909543e04"
+  },
+  {
+   "chemin": "v1_avant_relecture/phenomenes_iconographiques.questions.md",
+   "taille": 14538,
+   "sha256": "7cc315c11318f9577f0f4c40c028aac946d695d835504c6f919c657b334c30b5"
+  },
+  {
+   "chemin": "v1_avant_relecture/reference_quantification.json",
+   "taille": 99034,
+   "sha256": "61b9cae0d77293522b8f5a49bd4bf4fdfce6cb8298223d6e9b4c0e3aa12e204a"
+  },
+  {
+   "chemin": "v1_avant_relecture/reference_quantification.questions.md",
+   "taille": 13887,
+   "sha256": "e1e99ad91d66e0e8445509d59e8a055c21d34eed45ea6effe03fc3c07dbd0fea"
+  },
+  {
+   "chemin": "v1_avant_relecture/structures_argumentales.json",
+   "taille": 106519,
+   "sha256": "534cc890ee4ff8f127fcc99d45f4851e2bf71cbd89b37dee5de9d58695d38699"
+  },
+  {
+   "chemin": "v1_avant_relecture/structures_argumentales.questions.md",
+   "taille": 12165,
+   "sha256": "59a3c90078936f4d28b5234fc4d2e39a8e0d80159f5193525a496a4f9592bb81"
+  }
+ ]
+}

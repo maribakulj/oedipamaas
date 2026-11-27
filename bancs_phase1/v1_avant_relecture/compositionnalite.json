@@ -1,0 +1,2301 @@
+[
+ {
+  "id": "co-001",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_de_degre",
+    "construction": "age"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "evenement_en_cours",
+    "construction": "participe_adjoint"
+   }
+  ],
+  "pivot": {
+   "lemme": "old",
+   "cle_de_sens": "old%3:00:02::",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une vieille femme filant sa quenouille est assise près de la fenêtre. Un chat dort sur le carreau. La lumière vient de la gauche.",
+  "definition": "old woman spinning with a distaff",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« vieille » (fr), antéposé à un nom de personne ⇔ old%3:00:02:: (âgé, d'une personne)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« filer sa quenouille » (fr) ⇔ spin (faire du fil à la quenouille), avec la quenouille (distaff) pour instrument",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "femme (woman%1:18:00::) est le type demandé par « woman »",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "« vieille » est un adjectif de degré, une propriété ordinaire de l'individu, non réifiée (ONTOLOGIE_EVENTUALITES § 1, tableau ; FONDEMENTS_SEMANTIQUES § 2.2). Sa classe de comparaison (ONTOLOGIE § 6) est celle du libellé, « woman » : aucune question de classe ne se pose. Le participe adjoint « filant » est un événement en cours de même agent (ONTOLOGIE § 2). Toutes les prémisses sont de l'auteur, affirmées, figurées : établie (NOYAU § 4.4).",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Line engraving, c. 1650. In a peasant interior, an old woman spinning at her distaff sits by the window. A cat sleeps on the tiled floor. The light falls from the left.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une vieille femme, assise près de la fenêtre, file sa quenouille. Un chat dort sur le carreau. La lumière vient de la gauche.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, un vieil homme filant une quenouille est assis près de la fenêtre. Un chat dort sur le carreau. La lumière vient de la gauche.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une femme, peut-être âgée, filant sa quenouille, est assise près de la fenêtre. Un chat dort sur le carreau.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une vieille femme filant sa quenouille est assise près de la fenêtre. Un jeune garçon regarde par la porte entrouverte. Un chat dort sur le carreau.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une vieille femme filant sa quenouille est assise près de la fenêtre. Aucun feu ne brûle dans l'âtre. Un chat dort sur le carreau.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-002",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_de_degre",
+    "construction": "age"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "collection",
+    "construction": "groupe_nomme"
+   }
+  ],
+  "pivot": {
+   "lemme": "young",
+   "cle_de_sens": "young%3:00:00::",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. Saint John, the youngest of the apostles, sits writing in a book on a rocky island. An eagle stands at his side, holding an inkpot in its beak.",
+  "definition": "young man writing in a book, an eagle beside him",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "apostle (apostle%1:18:02::) ⊑ man (man%1:18:00::)",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "eagle (eagle%1:05:00::) est le type demandé par « eagle »",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Le texte ne dit pas que Jean est jeune : il dit qu'il est le plus jeune d'une collection nommée, les apôtres (FONDEMENTS_SEMANTIQUES § 2.6). Un adjectif de degré est relatif à une classe de comparaison (ONTOLOGIE_EVENTUALITES § 6), et K ne contient aucune connaissance qui relie le superlatif relatif au positif. Une connaissance absente de K n'existe pas pour le cas (BANCS_PHASE1 § 4) : l'atome « young » n'a aucun appui, ni positif ni négatif, d'où inconnue (NOYAU § 4.4). Les documents ne fixent pas ce que vaudrait une telle connaissance : voir la décision ouverte ; l'option la plus prudente est retenue.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Panneau d'un retable démembré, Ombrie, début du XVe siècle. Saint Jean, le plus jeune des apôtres, assis sur une île rocheuse, écrit dans un livre. Un aigle se tient à son côté, un encrier au bec.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. On a rocky island sits Saint John, youngest of the apostles, writing in a book, while an eagle beside him holds an inkpot in its beak.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. Saint John, a young man and the youngest of the apostles, sits writing in a book on a rocky island. An eagle stands at his side, holding an inkpot in its beak.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. Saint John, the youngest of the apostles, sits writing in a book on a rocky island. An eagle stands at his side, holding an inkpot in its beak. A ship passes in the distance.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. Saint John, the youngest of the apostles, sits writing in a book on a rocky island. An eagle stands at his side, holding an inkpot in its beak; it has no halo.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "Le superlatif relatif d'un adjectif de degré (« the youngest of the apostles ») implique-t-il le positif (« young ») ? ONTOLOGIE_EVENTUALITES § 6 laisse ouverte la classe de comparaison des adjectifs de degré, et aucune sorte de connaissance n'est prévue pour ce lien.",
+   "statut_selon_l_option": {
+    "le superlatif relatif n'implique pas le positif (classe de comparaison du groupe)": "inconnue",
+    "connaissance typique : le plus jeune d'un groupe d'adultes est jeune": "etablie_sous_hypotheses",
+    "implication analytique superlatif ⇒ positif": "etablie"
+   }
+  }
+ },
+ {
+  "id": "co-003",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_de_mode_d_existence",
+    "construction": "fabuleux"
+   },
+   {
+    "famille": "niveaux_representation",
+    "phenomene": "oeuvre_contre_figure",
+    "construction": "etat_de_conservation"
+   }
+  ],
+  "pivot": {
+   "lemme": "mythical",
+   "cle_de_sens": "mythical%5:00:00:unreal:00",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Tapestry fragment, Tournai, c. 1480; the lower border is badly faded and partly rewoven. In a flowery meadow a mythical winged lion guards a fountain. Two hunters approach from the right.",
+  "definition": "fabulous animal in the form of a winged lion",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "mythical%5:00:00:unreal:00 et fabulous%5:00:00:unreal:00 sont un même synset ; c'est un modificateur de mode d'existence : le référent garde son type dans le monde figuré et n'a pas d'extension réelle (FONDEMENTS_SEMANTIQUES § 1.2)",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "lion (lion%1:05:00::) ⊑ animal (animal%1:03:00::)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« mythique » (fr) ⇔ mythical%5:00:00:unreal:00",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "modificateur_non_intersectif"
+  ],
+  "justification": "Un adjectif de mode d'existence ne retire pas le type : un lion fabuleux est un lion du monde figuré, sans extension réelle, ce que demande justement la définition (FONDEMENTS_SEMANTIQUES § 1.2). « mythical » n'a qu'un sens dans WordNet : aucune hypothèse de sens (D30, BANCS_PHASE1 § 4). L'état de la bordure est de portée œuvre et n'appuie ni ne nie rien de la figure (FONDEMENTS § 2.5). Le langage actuel ne distingue pas ce modificateur d'une propriété (AUDIT_EXPRESSIVITE § 3.2 (4)) : l'extension est requise pour que « fabulous » soit lu sur le type.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Fragment de tapisserie, Tournai, vers 1480 ; la bordure inférieure est très passée et en partie retissée. Dans un pré fleuri, un lion ailé mythique garde une fontaine. Deux chasseurs approchent par la droite.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Tapestry fragment, Tournai, c. 1480, its lower border badly faded and partly rewoven. A winged lion, a mythical beast, guards a fountain in a flowery meadow, while two hunters approach from the right.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Tapestry fragment, Tournai, c. 1480; the lower border is badly faded. The verses woven in the upper border tell of a mythical winged lion guarding a fountain; the field shows a fountain in a flowery meadow, with two hunters approaching.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Tapestry fragment, Tournai, c. 1480; the lower border is badly faded and partly rewoven. In a flowery meadow a mythical winged horse guards a fountain. Two hunters approach from the right.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Tapestry fragment, Tournai, c. 1480. In a flowery meadow a creature traditionally identified as the mythical winged lion of the romance guards a fountain. Two hunters approach from the right.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Tapestry fragment, Tournai, c. 1480; the lower border is badly faded and partly rewoven. In a flowery meadow a mythical winged lion guards a fountain. A heron stands in the stream. Two hunters approach from the right.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-004",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_de_mode_d_existence",
+    "construction": "fabuleux"
+   },
+   {
+    "famille": "niveaux_representation",
+    "phenomene": "histoire_contre_figure",
+    "construction": "commentaire_de_style"
+   }
+  ],
+  "pivot": {
+   "lemme": "fabulous",
+   "cle_de_sens": "fabulous%5:00:00:unreal:00",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Feuille d'un recueil d'histoire naturelle, aquarelle et gouache sur vélin, vers 1590. Un lynx assis, vu de profil, lève la tête vers la gauche ; sa fourrure tachetée est rendue poil à poil. Le dessin, d'un naturalisme saisissant, fut exécuté d'après un spécimen de la ménagerie royale.",
+  "definition": "fabulous animal in the form of a lynx",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "fabulous%5:00:00:unreal:00 (même synset que mythical%5:00:00:unreal:00) est un modificateur de mode d'existence (FONDEMENTS_SEMANTIQUES § 1.2)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« mythique » (fr) ⇔ mythical%5:00:00:unreal:00",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« fabuleux » (fr) ⇔ fabulous, avec ses trois sens (incredible, pleasing, unreal)",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "lynx (lynx%1:05:00::) ⊑ animal",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "modificateur_non_intersectif"
+  ],
+  "justification": "Tout est satisfait sauf la condition distinctive : rien ne dit le lynx fabuleux. Le naturalisme est un commentaire de style et le spécimen de la ménagerie relève de l'histoire de l'œuvre : ni l'un ni l'autre n'est une assertion de la figuration, et ni l'un ni l'autre ne nie le mode d'existence (BANCS_PHASE1 § 4, le figuré distinct de l'œuvre et de l'histoire ; FONDEMENTS_SEMANTIQUES § 2.5). L'absence n'est pas une preuve négative (D31) : inconnue, non écartée.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Leaf from a natural history album, watercolour and bodycolour on vellum, c. 1590. A seated lynx, seen in profile, raises its head to the left; its spotted fur is rendered hair by hair. The drawing, strikingly naturalistic, was made from a specimen in the royal menagerie.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Aquarelle et gouache sur vélin, vers 1590, d'un recueil d'histoire naturelle : d'après un spécimen de la ménagerie royale, avec un naturalisme saisissant, l'artiste a peint un lynx assis, de profil, la tête levée vers la gauche, la fourrure tachetée rendue poil à poil.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Feuille d'un recueil d'histoire naturelle, aquarelle et gouache sur vélin, vers 1590. Un lynx fabuleux, à queue de serpent, est assis de profil et lève la tête vers la gauche ; sa fourrure tachetée est rendue poil à poil.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ]
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Feuille d'un recueil d'histoire naturelle, aquarelle et gouache sur vélin, vers 1590. Un lynx assis, vu de profil, lève la tête vers la gauche. Ce lynx n'a rien de mythique : c'est l'animal même de la ménagerie royale, rendu poil à poil.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Feuille d'un recueil d'histoire naturelle, aquarelle et gouache sur vélin, vers 1590. Un lynx assis, vu de profil, lève la tête vers la gauche. Un papillon est posé dans l'angle inférieur. Le dessin fut exécuté d'après un spécimen de la ménagerie royale.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Feuille d'un recueil d'histoire naturelle, aquarelle et gouache sur vélin, vers 1590. Un lynx assis, vu de profil, lève la tête vers la gauche. Aucun fond n'est peint : le vélin reste en réserve. Le dessin fut exécuté d'après un spécimen de la ménagerie royale.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-005",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_de_mode_d_existence",
+    "construction": "imaginaire"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "preposition_polysemique",
+    "construction": "de_partie"
+   }
+  ],
+  "pivot": {
+   "lemme": "imaginary",
+   "cle_de_sens": "imaginary%5:00:00:unreal:00",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Enluminure d'un bestiaire, Angleterre, XIIIe siècle. Dans un médaillon, une créature imaginaire à tête d'oiseau et à corps de poisson nage entre des vagues stylisées. Le fond est d'or bruni.",
+  "definition": "imaginary creature with a bird's head and a fish's body",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« imaginaire » (fr) ⇔ imaginary%5:00:00:unreal:00 (un seul sens)",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "imaginary%5:00:00:unreal:00 est un modificateur de mode d'existence : « une créature imaginaire » est une créature du monde figuré (FONDEMENTS_SEMANTIQUES § 1.2)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« à tête d'oiseau » (fr) ⇔ « with a bird's head » : une partie (tête) du référent, dont le complément dit l'espèce, sans référent d'oiseau présent",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "canonisation"
+  ],
+  "extensions_requises": [
+   "modificateur_non_intersectif"
+  ],
+  "justification": "Le modificateur de mode d'existence garde le type « créature » dans le monde figuré (FONDEMENTS_SEMANTIQUES § 1.2). « à tête d'oiseau » est une relation de partie entre la tête et la créature, et « d'oiseau » qualifie l'espèce de la partie, sans introduire un oiseau figuré ; la définition a la même structure, et la forme canonique est la même des deux côtés (FONDEMENTS § 2.4 et § 3.2, exigence de symétrie). « imaginaire » n'a qu'un sens : établie.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Illumination from a bestiary, England, thirteenth century. In a roundel, an imaginary creature with a bird's head and a fish's body swims among stylised waves. The ground is burnished gold.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Enluminure d'un bestiaire, Angleterre, XIIIe siècle. Dans un médaillon, entre des vagues stylisées, nage une créature imaginaire dont la tête est celle d'un oiseau et le corps celui d'un poisson. Le fond est d'or bruni.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Enluminure d'un bestiaire, Angleterre, XIIIe siècle. Le texte copié sous le médaillon décrit une créature imaginaire à tête d'oiseau et à corps de poisson ; le médaillon montre des vagues stylisées sur un fond d'or bruni.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Enluminure d'un bestiaire, Angleterre, XIIIe siècle. Dans un médaillon, une créature à tête d'oiseau et à corps de poisson, peut-être imaginaire, nage entre des vagues stylisées.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Enluminure d'un bestiaire, Angleterre, XIIIe siècle. Dans un médaillon, un poisson à tête d'oiseau nage entre des vagues stylisées. Le fond est d'or bruni.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Enluminure d'un bestiaire, Angleterre, XIIIe siècle. Dans un médaillon, une créature imaginaire à tête d'oiseau et à corps de poisson nage entre des vagues stylisées. Une petite barque flotte à droite. Le fond est d'or bruni.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-006",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_intersectif",
+    "construction": "epithete"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "patient_contre_theme",
+    "construction": "tenue_ou_port"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "propriete_ordinaire_contre_etat",
+    "construction": "couleur_ou_matiere"
+   }
+  ],
+  "pivot": {
+   "lemme": "red",
+   "cle_de_sens": "red%5:00:01:chromatic:00",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Oil on panel, Flemish, c. 1520. A young man in a red cloak holds a falcon on his gloved left hand. Behind him stretches a river landscape with a castle.",
+  "definition": "man in a red cloak holding a falcon",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "falcon (falcon%1:05:00::) est le type demandé par « falcon »",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« in a cloak » ⇔ porter (wear) un manteau : le vêtement est le thème du port",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« rouge » (fr) ⇔ red%5:00:01:chromatic:00, pour une couleur",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "« red » est intersectif : le manteau est un manteau et il est rouge (AUDIT_EXPRESSIVITE § 3.2 (1)). La couleur est une propriété ordinaire, non un état (ONTOLOGIE_EVENTUALITES § 1, tableau ; FONDEMENTS_SEMANTIQUES § 2.2). Le faucon est le thème de « holds » et le manteau celui du port. Les autres sens de « red » (visage empourpré, sanglant) ne s'appliquent pas à un vêtement : le texte ne les laisse pas ouverts, donc pas d'hypothèse de sens (BANCS_PHASE1 § 4 ; voir les questions). Établie.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Huile sur bois, Flandres, vers 1520. Un jeune homme vêtu d'un manteau rouge tient un faucon sur sa main gauche gantée. Derrière lui s'étend un paysage fluvial avec un château.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Oil on panel, Flemish, c. 1520. A falcon is held on the gloved left hand of a young man who wears a red cloak. Behind him stretches a river landscape with a castle.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Oil on panel, Flemish, c. 1520. A young man in a red cloak holds an open book in his gloved left hand. Behind him stretches a river landscape with a castle.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Oil on panel, Flemish, c. 1520. A young man in a blue cloak holds a falcon on his gloved left hand; a red cloak lies on the chair beside him.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Oil on panel, Flemish, c. 1520. A young man holds a falcon on his gloved left hand. According to the inventory of 1561 he wore a red cloak; today the cloak appears brown, the red lake having faded.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Oil on panel, Flemish, c. 1520. A young man in a red cloak holds a falcon on his gloved left hand. Behind him stretches a river landscape with a castle, which flies no flag.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-007",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_intersectif",
+    "construction": "epithete"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "negation_atomique",
+    "construction": "verbe_nie"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "coreference",
+    "construction": "designation_reprise"
+   }
+  ],
+  "pivot": {
+   "lemme": "dappled",
+   "cle_de_sens": "dappled%5:00:00:patterned:00",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "fr",
+  "sorte": "negatif",
+  "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. Le cheval du saint n'est pas pommelé : sa robe est d'un blanc uniforme.",
+  "definition": "saint on a dappled horse cutting his cloak in two with a sword",
+  "statut_attendu": "ecartee",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« pommelé » (fr), d'une robe de cheval ⇔ dappled%5:00:00:patterned:00 (un seul sens)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« trancher son manteau pour en donner la moitié » ⇔ cut the cloak in two, l'épée pour instrument",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "« le cheval du saint » reprend « un cheval » (désignation reprise, coréférence établie par la lecture). La propriété « pommelé » y est niée par l'auteur, de portée figurée, sur une entité présente : appui négatif de propriete(X, dappled) pour la classe de ce cheval (NOYAU § 1.1, tableau). « pommelé » n'a qu'un sens : la négation est certaine (NOYAU § 2). La conjonction est fausse sous cette substitution : écartée pour ces référents, avec l'auteur pour fondement (NOYAU § 4.4, D31).",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Stained-glass window in the north chapel, c. 1530. Saint Martin, mounted on a horse, cuts his cloak with his sword to give half of it to a poor man. The saint's horse is not dappled: its coat is a uniform white.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Vitrail de la chapelle nord, vers 1530. Monté sur un cheval qui n'est pas pommelé, mais d'un blanc uniforme, saint Martin tranche de son épée son manteau pour en donner la moitié à un pauvre.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. Le cheval du saint est pommelé de gris.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. Le cheval du saint n'est peut-être pas pommelé : le verre est très altéré.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. À l'arrière-plan, le cheval du pauvre n'est pas pommelé.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. Un chien court au premier plan. Le cheval du saint n'est pas pommelé : sa robe est d'un blanc uniforme.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-008",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_privatif",
+    "construction": "ancien"
+   },
+   {
+    "famille": "definitions_classification",
+    "phenomene": "attributs_identifiants",
+    "construction": "attribut_typique_d_un_seul"
+   }
+  ],
+  "pivot": {
+   "lemme": "former",
+   "cle_de_sens": "former%5:00:01:past:00",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "fr",
+  "sorte": "negatif",
+  "description": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant l'entrée d'une grotte. Sa mitre et sa crosse sont posées à terre près de lui. Au loin, une ville fortifiée.",
+  "definition": "bishop praying in the wilderness",
+  "statut_attendu": "ecartee",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« ancien » (fr), antéposé à un nom de fonction ⇔ former%5:00:01:past:00",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "former%5:00:01:past:00 est privatif dans le même contexte : « un ancien N » n'est pas un N au moment figuré (FONDEMENTS_SEMANTIQUES § 1.2)",
+    "attestee": true
+   },
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "une mitre et une crosse près d'une figure sont les attributs typiques d'un évêque",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« désert » (fr), lieu de retraite ⇔ wilderness%1:15:00::",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "modificateur_non_intersectif"
+  ],
+  "justification": "Un adjectif privatif retire le type dans le même contexte : un ancien évêque n'est pas évêque au moment figuré (FONDEMENTS_SEMANTIQUES § 1.2 ; AUDIT_EXPRESSIVITE § 3.2 (4)). La lecture en tire un appui négatif de l'auteur pour type(X, bishop) sous la classe de cette figure, et la conjonction est fausse : écartée pour ce référent (NOYAU § 4.4, D31). L'abduction par les attributs typiques (la mitre et la crosse) proposerait « évêque », mais cette hypothèse contredit une assertion de l'auteur : elle n'est pas admissible (FONDEMENTS § 5 ; SPECIFICATION_OPERATIONS § 4).",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Predella panel, Siena, c. 1440. A former bishop, withdrawn to the desert, kneels in prayer before the mouth of a cave. His mitre and crozier lie on the ground beside him. In the distance, a walled town.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Retiré au désert, un ancien évêque prie à genoux devant l'entrée d'une grotte, sa mitre et sa crosse posées à terre près de lui. Au loin, une ville fortifiée.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Un évêque, qui renoncera plus tard à sa charge, prie à genoux au désert devant l'entrée d'une grotte. Sa mitre et sa crosse sont posées à terre près de lui.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Un ermite prie à genoux au désert devant l'entrée d'une grotte. Une mitre et une crosse sont posées à terre près de lui. Au loin, une ville fortifiée.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique"
+    ]
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant l'entrée d'une grotte. Un lion est couché près d'un rocher. Sa mitre et sa crosse sont posées à terre près de lui.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant l'entrée d'une grotte. Sa mitre et sa crosse sont posées à terre près de lui. Au loin, une ville fortifiée, dont aucune tour n'a de toit.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-009",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_privatif",
+    "construction": "ancien"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "coreference",
+    "construction": "apposition"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "source_citee",
+    "construction": "selon"
+   }
+  ],
+  "pivot": {
+   "lemme": "former",
+   "cle_de_sens": "former%5:00:02:past:00",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Miniature from a Book of Hours, Bruges, c. 1500. Through the palace gate the former queen Vashti walks out, followed by a servant carrying a chest. On the terrace above, King Ahasuerus watches her go. According to the Book of Esther, she was banished for refusing to appear at the king's feast.",
+  "definition": "queen leaving the royal palace",
+  "statut_attendu": "ecartee",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "former%5:00:02:past:00 est privatif dans le même contexte : « the former queen » n'est pas reine au moment figuré (FONDEMENTS_SEMANTIQUES § 1.2)",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "palace (palace%1:06:00::, résidence d'un souverain) est le type demandé par « royal palace »",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« ancienne » (fr), antéposé à un nom de fonction ⇔ former%5:00:02:past:00",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "modificateur_non_intersectif"
+  ],
+  "justification": "Tout est satisfait (une femme royale quitte le palais) sauf la condition distinctive. « the former queen Vashti » : l'apposition fait de Vashti le porteur du nom à tête privative ; elle n'est pas reine au moment figuré (FONDEMENTS_SEMANTIQUES § 1.2), d'où un appui négatif de type(X, queen) sous la classe de Vashti et une substitution fausse : écartée pour ce référent (NOYAU § 4.4, D31). Le sens « le premier de deux nommés » de « former » exige deux antécédents que le texte ne donne pas : il n'est pas ouvert. Le bannissement relève de la source citée (« according to »), non de la figuration (FONDEMENTS § 2.5).",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Miniature d'un livre d'heures, Bruges, vers 1500. Par la porte du palais sort l'ancienne reine Vasthi, suivie d'une servante qui porte un coffre. Sur la terrasse, le roi Assuérus la regarde partir. Selon le livre d'Esther, elle fut bannie pour avoir refusé de paraître au festin du roi.",
+    "sorte": "contre_modele",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Miniature from a Book of Hours, Bruges, c. 1500. Followed by a servant carrying a chest, the former queen Vashti walks out through the palace gate, watched by King Ahasuerus from the terrace above.",
+    "sorte": "contre_modele",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Miniature from a Book of Hours, Bruges, c. 1500. Queen Vashti, who will soon be banished, walks out through the palace gate, followed by a servant carrying a chest. On the terrace above, King Ahasuerus watches her go.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Miniature from a Book of Hours, Bruges, c. 1500. King Ahasuerus sits at table on the palace terrace. According to the Book of Esther, Queen Vashti left the palace after refusing to appear at the feast.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Miniature from a Book of Hours, Bruges, c. 1500. Through the palace gate the former queen Vashti walks out, followed by a servant carrying a chest. A peacock struts in the courtyard. On the terrace above, King Ahasuerus watches her go.",
+    "sorte": "contre_modele",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-010",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_privatif",
+    "construction": "pretendu"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "titre",
+    "construction": "titre_seul"
+   }
+  ],
+  "pivot": {
+   "lemme": "alleged",
+   "cle_de_sens": "alleged%5:00:00:declared:00",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "fr",
+  "sorte": "indetermine",
+  "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prétendu prophète, debout sur une borne, harangue un groupe de soldats. Un capitaine à cheval lève la main pour le faire taire.",
+  "definition": "prophet preaching to soldiers",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« prétendu » (fr) ⇔ alleged%5:00:00:declared:00 (déclaré mais non prouvé)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« haranguer » (fr) ⇔ preach / harangue : l'auditoire (les soldats) en est le destinataire",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "modificateur_non_intersectif"
+  ],
+  "justification": "« prétendu » n'est ni intersectif ni de mode d'existence, et FONDEMENTS_SEMANTIQUES § 1.2 ne range que deux sortes de modificateurs non intersectifs : un prétendu prophète peut l'être ou ne pas l'être. Le titre « Le Faux Prophète » est une modalité de titre : un indice, jamais une preuve, ni positive ni négative (ASSERTIONS, modalite(titre) ; NOYAU § 1). Aucun appui ne fixe le type « prophète » : les documents ne fixent pas le statut (voir la décision ouverte), et l'option la plus prudente, inconnue, est retenue.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Canvas, Neapolitan school, c. 1660, titled 'The False Prophet'. In a prison yard, the alleged prophet, standing on a bollard, harangues a group of soldiers. A mounted captain raises his hand to silence him.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, debout sur une borne, le soi-disant prophète harangue un groupe de soldats, qu'un capitaine à cheval veut faire taire d'un geste.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prophète, debout sur une borne, harangue un groupe de soldats. Un capitaine à cheval lève la main pour le faire taire.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Selon la chronique, ce prétendu prophète prêchait aux soldats de la garnison ; la toile montre une cour de prison où un capitaine à cheval lève la main.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prétendu prophète, debout sur une borne, harangue un groupe de soldats. Un chien aboie près de la porte.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prétendu prophète, debout sur une borne, harangue un groupe de soldats, qui ne portent pas de casque.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "Que fait « prétendu » (alleged, soi-disant) du type de sa tête ? FONDEMENTS_SEMANTIQUES § 1.2 ne connaît que les privatifs et les modificateurs de mode d'existence ; l'inventaire range « prétendu » parmi les privatifs, alors que l'adjectif est non engageant.",
+   "statut_selon_l_option": {
+    "non engageant : ni N ni non-N": "inconnue",
+    "privatif comme « faux » (FONDEMENTS § 1.2)": "ecartee",
+    "marque d'énonciation : le type est dit par d'autres, comme sous « selon »": "non_certifiee"
+   }
+  }
+ },
+ {
+  "id": "co-011",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "compose_a_relation_implicite",
+    "construction": "agent_du_compose"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "resultat_d_un_evenement_accompli",
+    "construction": "corps_ou_objet_resultant"
+   }
+  ],
+  "pivot": {
+   "lemme": "slayer",
+   "cle_de_sens": "slayer%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Misericord, carved oak, choir stalls of a Norfolk parish church, c. 1420. A dragon-slayer sits resting against a tree, his sword sheathed and his shield propped at his side. The dead dragon lies at his feet.",
+  "definition": "person who has slain a dragon, the dead beast lying at his feet",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "connaissance_typique"
+  ],
+  "connaissances_supposees": [
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "slayer%1:18:00:: (nom d'agent) : son porteur est typiquement l'agent d'événements de mise à mort ; dans « dragon-slayer », le modificateur est le patient de ces événements",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "kill (kill%2:35:00::) ⇒ die du patient ; dead (état) ⇐ die antérieur (ONTOLOGIE_EVENTUALITES § 5)",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "slayer%1:18:00:: ⊑ person",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "deduction",
+   "abduction"
+  ],
+  "extensions_requises": [
+   "ancrage_temporel",
+   "etat_reifie",
+   "abduction"
+  ],
+  "justification": "Le composé d'agent ne dit aucun événement figuré : le nom d'agent et un participant d'événement sont reliés par une connaissance typique, non par une canonisation (FONDEMENTS_SEMANTIQUES § 3.2). Le dragon mort donne une mort antérieure, non une mise à mort en cours (FONDEMENTS § 3.4 ; ONTOLOGIE § 5). L'abduction explique deux observations, le dragon mort et le nom « dragon-slayer », par l'hypothèse que cet homme a tué ce dragon ; K ne contient aucune explication concurrente. Statut : établie sous l'hypothèse typique, jamais établie (SPECIFICATION_OPERATIONS § 4).",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Miséricorde en chêne sculpté, stalles du chœur d'une église paroissiale du Norfolk, vers 1420. Un tueur de dragons se repose, adossé à un arbre, l'épée au fourreau et l'écu posé près de lui. Le dragon mort gît à ses pieds.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique"
+    ]
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Misericord, carved oak, choir stalls of a Norfolk parish church, c. 1420. At the feet of a dragon-slayer, who rests against a tree with his sword sheathed and his shield beside him, lies the dead dragon.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique"
+    ]
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Misericord, carved oak, choir stalls of a Norfolk parish church, c. 1420. A dragon-slayer drives his sword into the throat of a rearing dragon. His shield lies at his side.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Misericord, carved oak, choir stalls of a Norfolk parish church, c. 1420. A swineherd sits resting against a tree, his staff at his side. The dead dragon lies at his feet.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Misericord, carved oak, choir stalls of a Norfolk parish church, c. 1420. A dragon rests against a tree; the dead dragon-slayer lies at its feet, his sword broken.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Misericord, carved oak, choir stalls of a Norfolk parish church, c. 1420. A dragon-slayer sits resting against a tree, his sword sheathed. The dead dragon lies at his feet. A hare runs along the moulding.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "co-012",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "compose_a_relation_implicite",
+    "construction": "lieu"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "propriete_ordinaire_contre_etat",
+    "construction": "origine"
+   }
+  ],
+  "pivot": {
+   "lemme": "shepherd",
+   "cle_de_sens": "shepherd%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Eau-forte, vers 1780, d'une suite de types populaires. Sur la place du marché d'une ville, un berger des montagnes, en manteau de peau, présente un agneau à une marchande. Derrière eux, la façade d'une église et des étals de fruits.",
+  "definition": "shepherd with a lamb in a mountain landscape",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« berger » (fr) ⇔ shepherd%1:18:00::",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« agneau » (fr) ⇔ lamb%1:05:00::",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Tout est satisfait sauf le lieu. « berger des montagnes » est un composé à relation implicite : il caractérise le berger par son origine ou son lieu d'activité, propriété ordinaire de l'individu, et ne situe pas la scène (FONDEMENTS_SEMANTIQUES § 3.2 : la relation implicite d'un composé n'est pas une propriété ni un lieu par la seule syntaxe ; SPECIFICATION_OPERATIONS § 1, « parish church »). Le lieu figuré est une place de ville ; K ne dit pas qu'une ville exclut un paysage de montagne, et l'absence n'est pas une preuve négative (D31) : inconnue.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Etching, c. 1780, from a series of popular types. In the market square of a town, a mountain shepherd in a sheepskin coat shows a lamb to a market woman. Behind them, a church façade and fruit stalls.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Eau-forte, vers 1780, d'une suite de types populaires. Un berger venu des montagnes, en manteau de peau, présente un agneau à une marchande sur la place du marché d'une ville, devant une église et des étals de fruits.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Eau-forte, vers 1780, d'une suite de types populaires. Sur un alpage, au pied de hautes montagnes, un berger en manteau de peau présente un agneau à une marchande.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Eau-forte, vers 1780, d'une suite de types populaires. Sur la place du marché d'une ville, un marchand des montagnes, en manteau de peau, présente un agneau à une marchande.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Eau-forte, vers 1780, d'une suite de types populaires. Sur la place du marché d'une ville, un berger des montagnes, en manteau de peau, présente un agneau à une marchande. Un enfant mange une pomme près des étals.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Eau-forte, vers 1780, d'une suite de types populaires. Sur la place du marché d'une ville, un berger des montagnes, en manteau de peau, présente un agneau à une marchande, qui ne porte pas de coiffe.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-013",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "compose_a_relation_implicite",
+    "construction": "matiere"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "propriete_ordinaire_contre_etat",
+    "construction": "couleur_ou_matiere"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "patient_contre_theme",
+    "construction": "tenue_ou_port"
+   }
+  ],
+  "pivot": {
+   "lemme": "crown",
+   "cle_de_sens": "crown%1:06:01::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Reliquary bust, silver-gilt, Cologne, c. 1350. The young martyr wears a gold crown set with cabochons; her hair falls loose over her shoulders. The base bears an engraved inscription.",
+  "definition": "martyr wearing a crown of gold",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "connaissance_typique"
+  ],
+  "connaissances_supposees": [
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "dans un composé « N(matière) N(artefact) » (gold crown), la relation implicite est typiquement la matière : gold%1:27:00:: est la matière de crown%1:06:01::",
+    "attestee": false
+   },
+   {
+    "sorte": "implication",
+    "contenu": "martyr (martyr%1:18:00::) est le type demandé par « martyr »",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« wears » ⇔ porter : la couronne est le thème du port",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "abduction"
+  ],
+  "extensions_requises": [
+   "abduction"
+  ],
+  "justification": "La relation implicite d'un composé n'est ni une propriété ni une relation de matière par la seule syntaxe (FONDEMENTS_SEMANTIQUES § 3.2 ; SPECIFICATION_OPERATIONS § 1, « trade card ») : K ne la donne qu'en connaissance typique, et la matière n'est établie que sous cette hypothèse, qui explique le composé observé (SPECIFICATION § 4). La matière est une propriété ordinaire, non un état (ONTOLOGIE_EVENTUALITES § 1). Le buste est d'argent doré : c'est la matière de l'œuvre, de portée œuvre, qui ne contredit pas l'or de la couronne figurée (FONDEMENTS § 2.5).",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Buste-reliquaire en argent doré, Cologne, vers 1350. La jeune martyre porte une couronne d'or sertie de cabochons ; ses cheveux tombent librement sur ses épaules. Le socle porte une inscription gravée.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ]
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Reliquary bust, silver-gilt, Cologne, c. 1350. A gold crown set with cabochons is worn by the young martyr, whose hair falls loose over her shoulders. The base bears an engraved inscription.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique"
+    ]
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Reliquary bust, silver-gilt, Cologne, c. 1350. The young martyr wears a crown set with cabochons. The inventory of 1611 records that the crown was originally of gold and was later replaced.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Reliquary bust, silver-gilt, Cologne, c. 1350. The young martyr wears a gold necklace; a crown of flowers rests on her loose hair.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Reliquary bust, silver-gilt, Cologne, c. 1350. The young martyr wears a gold crown set with cabochons; her hair falls loose over her shoulders. A kneeling donor is engraved on the base.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique"
+    ]
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Reliquary bust, silver-gilt, Cologne, c. 1350. The young martyr wears a gold crown set with cabochons; she holds no palm.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "co-014",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "compose_a_relation_implicite",
+    "construction": "matiere"
+   },
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "representation_emboitee",
+    "construction": "tapisserie_ou_decor"
+   }
+  ],
+  "pivot": {
+   "lemme": "angel",
+   "cle_de_sens": "angel%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "fr",
+  "sorte": "indetermine",
+  "description": "Huile sur toile, vers 1830. Dans un cimetière sous la neige, une jeune veuve en deuil dépose une couronne de fleurs sur une tombe. Un ange de marbre, les ailes repliées, veille sur la tombe. Au fond, un clocher dans la brume.",
+  "definition": "angel watching over a tomb",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« ange » (fr) ⇔ angel%1:18:00::",
+    "attestee": true
+   },
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "« un N(être animé) de N(matière) » (un ange de marbre) désigne typiquement une sculpture représentant un N",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "contexte_emboite"
+  ],
+  "justification": "« de marbre » sur un nom d'être animé ne se lit pas comme sur un artefact : un ange de marbre est, au plus naturel, une statue d'ange, c'est-à-dire un ange figuré dans une représentation emboîtée (le décor sculpté de la scène), non un ange du monde figuré (FONDEMENTS_SEMANTIQUES § 2.3 et § 2.5 ; un référent d'un contexte emboîté n'est pas un référent du monde figuré). Les documents ne disent ni comment lire la matière d'un nom animé, ni si une définition de figuration est satisfaite par le contenu d'une représentation emboîtée : voir la décision ouverte ; l'option la plus prudente est retenue.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Oil on canvas, c. 1830. In a snow-covered cemetery, a young widow in mourning lays a wreath on a grave. A marble angel, wings folded, watches over the grave. In the background, a steeple in the mist.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Huile sur toile, vers 1830. Sur la tombe où une jeune veuve en deuil dépose une couronne de fleurs, dans un cimetière enneigé, veille un ange de marbre aux ailes repliées.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Huile sur toile, vers 1830. Dans un cimetière sous la neige, une jeune veuve en deuil dépose une couronne de fleurs sur une tombe. Un ange, les ailes repliées, veille sur la tombe.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Huile sur toile, vers 1830. Dans un cimetière sous la neige, une jeune veuve en deuil dépose une couronne de fleurs au pied d'une statue de marbre représentant un ange qui veille sur la tombe.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Huile sur toile, vers 1830. Dans un cimetière sous la neige, une jeune veuve en deuil dépose une couronne de fleurs sur une tombe. Un ange de marbre, les ailes repliées, veille sur la tombe. Un corbeau est posé sur le mur.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Huile sur toile, vers 1830. Dans un cimetière sous la neige, une jeune veuve en deuil, qui ne pleure pas, dépose une couronne de fleurs sur une tombe. Un ange de marbre, les ailes repliées, veille sur la tombe.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "« Un ange de marbre » : un ange figuré dont la matière est le marbre (le type gardé), ou une statue d'ange (une représentation emboîtée dans le décor) ? Et, dans le second cas, une définition de figuration est-elle satisfaite par le contenu d'une représentation emboîtée ?",
+   "statut_selon_l_option": {
+    "statue : représentation emboîtée, non satisfaite dans le monde figuré": "inconnue",
+    "statue : représentation emboîtée, satisfaite à travers l'emboîtement": "etablie",
+    "ange figuré de matière marbre, type gardé": "etablie",
+    "lecture de la statue par connaissance typique, comme hypothèse": "etablie_sous_hypotheses"
+   }
+  }
+ },
+ {
+  "id": "co-015",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "compose_lexicalise",
+    "construction": "compose_a_trait_d_union"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "destinataire",
+    "construction": "donner_a"
+   }
+  ],
+  "pivot": {
+   "lemme": "stepmother",
+   "cle_de_sens": "stepmother%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une belle-mère tend une pomme à la fillette de son époux, qui détourne la tête. Une servante récure un chaudron près de l'âtre.",
+  "definition": "mother giving an apple to her daughter",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« belle-mère » (fr), composé lexicalisé ⇔ stepmother%1:18:00:: ou mother-in-law%1:18:00:: ; ni l'un ni l'autre n'est ⊑ mother%1:18:00::",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« tendre une pomme à » ⇔ give (offrir) : la pomme est le thème, la fillette la destinataire",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "canonisation"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Un composé à trait d'union lexicalisé est un seul mot, de sens propre : « belle-mère » n'est ni « belle » ni « mère » (FONDEMENTS_SEMANTIQUES § 3.2 : le composé n'est pas une propriété par la seule syntaxe). Aucun de ses sens n'atteint mother dans K : pas d'appui positif, sous aucune lecture (NOYAU § 2, D30). La fillette est celle de l'époux, non dite la sienne. Rien n'est nié : inconnue (D31).",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Genre scene, oil on panel, Leiden, c. 1660. In a kitchen, a stepmother holds out an apple to her husband's little daughter, who turns her head away. A maid scours a cauldron by the hearth.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, la fillette de l'époux détourne la tête de la pomme que lui tend sa belle-mère, tandis qu'une servante récure un chaudron.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une mère tend une pomme à sa fillette, qui détourne la tête. Une servante récure un chaudron près de l'âtre.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, la fillette tend une pomme à sa belle-mère, qui détourne la tête. Une servante récure un chaudron près de l'âtre.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une belle-mère tend une pomme à la fillette de son époux, qui détourne la tête. Un chat guette sous la table.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une belle-mère tend une pomme à la fillette de son époux, qui détourne la tête. La servante, près de l'âtre, ne regarde pas la scène.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-016",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "compose_lexicalise",
+    "construction": "nom_nom_lexicalise"
+   }
+  ],
+  "pivot": {
+   "lemme": "guardian angel",
+   "cle_de_sens": "guardian_angel%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Holy card, chromolithograph, c. 1890. A guardian angel with outspread wings leads a little girl by the hand across a broken footbridge over a torrent. Below, the dark water foams over the rocks.",
+  "definition": "angel leading a child by the hand",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "guardian_angel%1:18:00:: ⊑ angel%1:18:00:: (hyperonymie de WordNet 3.0)",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "little girl (little_girl%1:18:00::) ⊑ child (child%1:18:00::)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« ange gardien » (fr) ⇔ guardian_angel%1:18:00::",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Un composé nom-nom lexicalisé est un seul sens, que K ordonne comme tout type : « guardian angel » est un sens unique de WordNet, hyponyme de angel (FONDEMENTS_SEMANTIQUES § 2.1 : le type vient de la tête nominale par ses sens). Le lien positif est certain, sans hypothèse de sens (NOYAU § 2). Le composé n'est pas lu comme « guardian » et « angel » : c'est ce qui sépare le composé lexicalisé du composé à relation implicite (FONDEMENTS § 3.2). Établie.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Image pieuse, chromolithographie, vers 1890. Un ange gardien aux ailes déployées conduit par la main une fillette sur une passerelle brisée au-dessus d'un torrent. En contrebas, l'eau sombre écume sur les rochers.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Holy card, chromolithograph, c. 1890. A little girl is led by the hand across a broken footbridge over a torrent by a guardian angel with outspread wings.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Holy card, chromolithograph, c. 1890. A guardian, lantern in hand, leads a little girl by the hand across a broken footbridge over a torrent.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Holy card, chromolithograph, c. 1890. The verse printed beneath invokes the guardian angel who leads children across perilous bridges; the image shows a little girl crossing a broken footbridge over a torrent.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Holy card, chromolithograph, c. 1890. A guardian angel with outspread wings leads a little girl by the hand across a broken footbridge over a torrent. A shepherd watches from the far bank.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Holy card, chromolithograph, c. 1890. A guardian angel with outspread wings leads a little girl, who wears no shoes, by the hand across a broken footbridge over a torrent.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-017",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "coordination_de_libelle",
+    "construction": "complement_partage"
+   }
+  ],
+  "pivot": {
+   "lemme": "founder",
+   "cle_de_sens": "founder%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Votive panel, Cologne, c. 1460. The Virgin, enthroned, holds the Child on her knee. At her feet kneel the founder and first abbess of the convent, their hands joined in prayer. A view of the convent buildings fills the background.",
+  "definition": "founder of a convent kneeling at the feet of the Virgin and Child",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "convent (convent%1:06:00::) est le type demandé par « convent »",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« the Virgin holds the Child » ⇔ the Virgin and Child (le groupe de la Vierge à l'Enfant)",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Le complément « of the convent » est partagé par les deux têtes coordonnées sous un seul déterminant : il se distribue sur « founder » comme sur « first abbess » ; le verbe au pluriel dit deux référents. La relation (fondateur de) est donc dite du fondateur (FONDEMENTS_SEMANTIQUES § 2.4 ; la coordination n'est pas une règle de virgule, § 3.2). Les prémisses sont de l'auteur, affirmées, figurées : établie (NOYAU § 4.4). La lecture structurale est retenue parce que le texte la fixe ; les documents ne prévoient aucune hypothèse de lecture structurale si elle restait ouverte (voir les questions).",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Panneau votif, Cologne, vers 1460. La Vierge, trônant, tient l'Enfant sur ses genoux. À ses pieds sont agenouillés le fondateur et la première abbesse du couvent, les mains jointes. Une vue des bâtiments du couvent emplit le fond.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Votive panel, Cologne, c. 1460. The founder and first abbess of the convent kneel, hands joined, at the feet of the Virgin, who sits enthroned with the Child on her knee.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Votive panel, Cologne, c. 1460. The Virgin, enthroned, holds the Child on her knee. At her feet kneel the founder of the hospital and the first abbess of the convent, their hands joined in prayer.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Votive panel, Cologne, c. 1460. The Virgin, enthroned, holds the Child on her knee. According to the convent chronicle, the panel was commissioned by the founder and first abbess of the convent.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Votive panel, Cologne, c. 1460. The Virgin, enthroned, holds the Child on her knee. At her feet kneel the founder and first abbess of the convent, their hands joined in prayer. Saint Ursula stands behind them with her arrow.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-018",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "coordination_de_libelle",
+    "construction": "enumeration_alternative"
+   }
+  ],
+  "pivot": {
+   "lemme": "nun",
+   "cle_de_sens": "nun%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Miniature from a psalter, Paris, c. 1320. In a vaulted cell, a seated nun reads an open book placed on a lectern. Through the window a walled garden can be seen.",
+  "definition": "hermit, monk or nun reading a book",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« moniale » (fr) ⇔ nun%1:18:00::",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "« reads a book » : read (read%2:31:00::), le livre pour thème",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "L'énumération « hermit, monk or nun » est, par le type du libellé, une disjonction sur le type d'une même variable : une branche suffit (FONDEMENTS_SEMANTIQUES § 3.2 : l'énumération et la disjonction sont une affaire de type de libellé, non de virgule). La branche « nun » est satisfaite par des prémisses de l'auteur, et la valeur d'un « ou » est vraie dès qu'une branche l'est sans appui négatif complet (NOYAU § 4.2) : établie.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Miniature d'un psautier, Paris, vers 1320. Dans une cellule voûtée, une moniale assise lit un livre ouvert posé sur un pupitre. Par la fenêtre, on aperçoit un jardin clos.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Miniature from a psalter, Paris, c. 1320. Seated in a vaulted cell, a nun is reading an open book on a lectern, a walled garden visible through the window.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Miniature from a psalter, Paris, c. 1320. In a vaulted chamber, a lady in court dress reads an open book placed on a lectern.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Miniature from a psalter, Paris, c. 1320. In a vaulted cell, a seated figure, either a monk or a nun, reads an open book placed on a lectern.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Miniature from a psalter, Paris, c. 1320. In a vaulted cell, a seated nun does not read: she sleeps, her head resting on the open book.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Miniature from a psalter, Paris, c. 1320. In a vaulted cell, a seated nun reads an open book placed on a lectern. A cat sleeps on the threshold.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-019",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "coordination_de_libelle",
+    "construction": "liste_d_exemples"
+   },
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "niveaux_de_signification",
+    "construction": "iconologique"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "au_dessus_au_dessous"
+   }
+  ],
+  "pivot": {
+   "lemme": "musical instrument",
+   "cle_de_sens": "musical_instrument%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a lute, an open songbook and a skull; a candle has just been snuffed out. The objects allude to the transience of earthly pleasures.",
+  "definition": "musical instruments (e.g. lute, viol, harp) lying on a table",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "lute%1:06:00:: ⊑ musical_instrument%1:06:00:: (hyperonymie de WordNet 3.0)",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "shawm%1:06:00:: ⊑ musical_instrument%1:06:00:: (hyperonymie de WordNet 3.0)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« lie on a table » ⇔ relation sur (on) de l'objet vers la table",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Le luth est à la fois un instrument de musique (le terme général) et l'un des exemples : sous toute lecture admissible de la liste (exemples illustratifs du terme général, ou disjonction fermée de ses membres), la définition est satisfaite ; seule la lecture conjonctive, que FONDEMENTS_SEMANTIQUES § 3.2 exclut (la coordination est une affaire de type de libellé), ne le serait pas. Le sens « substance » de « lute » ne s'applique pas à un objet posé sur une table. La vanité est un énoncé du signifié, qui n'ajoute ni ne retire rien à la figure (FONDEMENTS § 2.5). Établie.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Vanité, huile sur toile, Leyde, vers 1640. Sur une table couverte d'un tapis sombre reposent un luth, un recueil de chansons ouvert et un crâne ; une chandelle vient d'être soufflée. Les objets évoquent la fugacité des plaisirs terrestres.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. A lute, an open songbook and a skull lie on a table covered with a dark cloth, beside a candle just snuffed out; together they allude to the transience of earthly pleasures.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a shawm, an open songbook and a skull; a candle has just been snuffed out.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a pewter jug, an open songbook and a skull; a candle has just been snuffed out.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie an open songbook and a skull. The inventory of 1680 describes a lute beside them, since painted out.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a lute, an open songbook and a skull; a fly has settled on the skull.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-020",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "participe_inaccusatif",
+    "construction": "participe_passe"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "direction_source_destination",
+    "construction": "depuis"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "resultat_d_un_evenement_accompli",
+    "construction": "corps_ou_objet_resultant"
+   }
+  ],
+  "pivot": {
+   "lemme": "fall",
+   "cle_de_sens": "fall%2:38:03::",
+   "famille_lexicale": "verb.motion"
+  },
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Beneath the throne of Christ, fallen angels lie chained in a fiery pit, their wings broken. Above them, the archangel Michael sheathes his sword.",
+  "definition": "angels falling from heaven",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "fall%2:38:03:: est un événement de changement inaccusatif : son participe passé dit l'état résultant de son thème, l'événement étant antérieur (ONTOLOGIE_EVENTUALITES § 5)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« déchu » (fr), d'un ange ⇔ fallen, participe de fall",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "deduction"
+  ],
+  "extensions_requises": [
+   "ancrage_temporel",
+   "etat_reifie"
+  ],
+  "justification": "« fallen angels » est un participe d'un verbe inaccusatif : l'ange en est le thème, et le participe dit l'état résultant d'une chute antérieure (ONTOLOGIE_EVENTUALITES § 5 ; aucun rôle par la seule syntaxe, FONDEMENTS_SEMANTIQUES § 3.2 et SPECIFICATION_OPERATIONS § 1, « a fallen angel »). La définition demande la chute en cours, avec le ciel pour source. Une conséquence n'est pas l'événement (FONDEMENTS § 3.4) : la chute antérieure n'établit pas la chute figurée en cours, et rien ne la nie. Inconnue. Tous les sens de « fallen » conduisent à la même conclusion : aucune hypothèse de sens.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Fresque, mur sud d'une chapelle de cimetière, Ombrie, vers 1500. Sous le trône du Christ, des anges déchus gisent enchaînés dans une fosse de feu, les ailes brisées. Au-dessus d'eux, l'archange Michel remet son épée au fourreau.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Beneath the throne of Christ, angels who have fallen lie chained in a fiery pit, their wings broken, while above them the archangel Michael sheathes his sword.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Rebel angels fall headlong from heaven, driven out by the archangel Michael, who brandishes his sword.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. At the edge of heaven, the archangel Michael raises his sword against the rebel angels, who are about to fall.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Beneath the throne of Christ, fallen angels lie chained in a fiery pit, their wings broken. A donor kneels in the lower left corner.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Beneath the throne of Christ, fallen angels lie chained in a fiery pit. Above them, the archangel Michael, who wears no helmet, sheathes his sword.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-021",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "participe_inaccusatif",
+    "construction": "participe_passe"
+   },
+   {
+    "famille": "niveaux_representation",
+    "phenomene": "oeuvre_contre_figure",
+    "construction": "inscription_sur_l_oeuvre"
+   },
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "niveaux_de_signification",
+    "construction": "iconologique"
+   }
+  ],
+  "pivot": {
+   "lemme": "wither",
+   "cle_de_sens": "wither%2:30:00::",
+   "famille_lexicale": "verb.change"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, un arbre desséché se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son tronc. La devise, gravée sur un cartouche, en fait l'image de l'amitié fidèle jusqu'après la mort.",
+  "definition": "withered tree entwined by a vine",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« desséché » (fr), d'un arbre ⇔ état résultant de wither%2:30:00:: (se dessécher), porté par le thème",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« withered » (définition) ⇔ le même état résultant de wither%2:30:00::",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« s'enrouler autour de » (fr) ⇔ entwine : la vigne enlace l'arbre",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "canonisation"
+  ],
+  "extensions_requises": [
+   "etat_reifie"
+  ],
+  "justification": "Le participe d'un verbe inaccusatif dit l'état résultant de son thème : l'arbre est desséché (ONTOLOGIE_EVENTUALITES § 5). La définition demande le même état : la forme canonique, l'état réifié, est la même des deux côtés (FONDEMENTS_SEMANTIQUES § 3.2, exigence de symétrie). La devise est une inscription sur l'œuvre, et son contenu n'est pas une assertion de la figure ; le sens moral est du signifié (FONDEMENTS § 2.5) : ni l'un ni l'autre n'interviennent. Établie.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Copper engraving, frontispiece of an emblem book, Antwerp, 1613. In the centre, a withered tree stands beside a spring; a vine laden with grapes twines about its trunk. The motto, engraved on a cartouche, makes it an image of faithful friendship beyond death.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Autour du tronc d'un arbre desséché, dressé au bord d'une source, s'enroule une vigne chargée de grappes ; la devise du cartouche en fait l'image de l'amitié fidèle.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, un arbre qui commence à se dessécher se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son tronc.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. La devise, gravée sur un cartouche, parle d'un arbre desséché qu'embrasse une vigne ; l'image montre une vigne chargée de grappes au bord d'une source.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, une colonne brisée se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son fût.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, un arbre desséché se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son tronc. Au loin, un village.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-022",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "participe_inergatif",
+    "construction": "participe_passe_d_un_inergatif"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "destinataire",
+    "construction": "donner_a"
+   }
+  ],
+  "pivot": {
+   "lemme": "dance",
+   "cle_de_sens": "dance%2:38:01::",
+   "famille_lexicale": "verb.motion"
+  },
+  "langue": "fr",
+  "sorte": "indetermine",
+  "description": "Huile sur toile, Lombardie, vers 1520. Salomé, ayant dansé devant Hérode, reçoit des mains d'un bourreau la tête de Jean-Baptiste sur un plat. Hérode, attablé, détourne le regard. Une servante tient une aiguière.",
+  "definition": "Salome dancing before Herod",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "dance%2:38:01:: est un processus (verbe inergatif) : il n'a pas d'état résultant (ONTOLOGIE_EVENTUALITES § 1)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« Salomé » (fr) ⇔ « Salome » ; « Hérode » ⇔ « Herod » (alias établis)",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "ancrage_temporel"
+  ],
+  "justification": "Le participe composé d'un verbe inergatif (« ayant dansé ») dit un processus antérieur au moment figuré, dont Salomé est l'agent ; il ne dit aucun état résultant, puisqu'un processus n'en a pas (ONTOLOGIE_EVENTUALITES § 1.2 et § 2, ancrage antérieur). La définition demande la danse en cours. L'antériorité n'est pas une négation de la danse au moment figuré : inconnue, non écartée (D31). Sans l'ancrage temporel, la danse serait écrite comme figurée et établirait à tort la définition (AUDIT_EXPRESSIVITE § 3.1 (4)).",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Oil on canvas, Lombardy, c. 1520. Salome, having danced before Herod, receives from an executioner the head of John the Baptist on a dish. Herod, seated at table, looks away. A maidservant holds a ewer.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Huile sur toile, Lombardie, vers 1520. Après avoir dansé devant Hérode, Salomé reçoit des mains d'un bourreau la tête de Jean-Baptiste sur un plat, tandis qu'Hérode, attablé, détourne le regard.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Huile sur toile, Lombardie, vers 1520. Salomé danse devant Hérode, attablé avec ses convives. Une servante tient une aiguière.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "composition",
+    "description": "Huile sur toile, Lombardie, vers 1520. Au premier plan, Salomé, ayant dansé devant Hérode, reçoit des mains d'un bourreau la tête de Jean-Baptiste sur un plat. Au fond, dans une loggia, la même Salomé danse devant Hérode et ses convives.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Huile sur toile, Lombardie, vers 1520. Salomé, qui selon l'Évangile avait dansé devant Hérode, reçoit des mains d'un bourreau la tête de Jean-Baptiste sur un plat.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Huile sur toile, Lombardie, vers 1520. Salomé, ayant dansé devant Hérode, reçoit des mains d'un bourreau la tête de Jean-Baptiste sur un plat. Un chien ronge un os sous la table.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-023",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "participe_resultatif_transitif",
+    "construction": "participe_passe_attribut"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "posture_et_porteur",
+    "construction": "assis_ou_debout"
+   }
+  ],
+  "pivot": {
+   "lemme": "crown",
+   "cle_de_sens": "crown%2:41:00::",
+   "famille_lexicale": "verb.social"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Apse mosaic, Rome, late thirteenth century. The Virgin sits crowned at the right hand of Christ, sharing his wide throne. Angels in white crowd the gold ground; below, the apostles stand in a row.",
+  "definition": "the Virgin, crowned, seated beside Christ",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "crown%2:41:00:: est un événement de changement transitif : son participe passé attribut dit l'état résultant de son patient (ONTOLOGIE_EVENTUALITES § 5)",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« crowned » (définition) ⇔ le même état résultant de crown%2:41:00::",
+    "attestee": true
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« sits at the right hand of » ⇔ être assis à côté de (beside), la Vierge pour porteur de la posture",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "canonisation"
+  ],
+  "extensions_requises": [
+   "etat_reifie"
+  ],
+  "justification": "Le participe passé attribut d'un verbe transitif résultatif (« sits crowned ») dit l'état résultant de son patient, la Vierge ; l'événement est antérieur, son agent n'est pas dit (ONTOLOGIE_EVENTUALITES § 5 ; le rôle vient de la classe du verbe, non de la syntaxe, FONDEMENTS_SEMANTIQUES § 3.2). La définition demande cet état et une posture assise, dont la Vierge est le porteur : même forme canonique des deux côtés. Établie.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Mosaïque d'abside, Rome, fin du XIIIe siècle. La Vierge siège couronnée à la droite du Christ, sur son large trône. Des anges vêtus de blanc emplissent le fond d'or ; en bas, les apôtres se tiennent en rang.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Apse mosaic, Rome, late thirteenth century. Crowned, the Virgin sits at the right hand of Christ on the wide throne they share, against a gold ground crowded with angels in white.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Apse mosaic, Rome, late thirteenth century. The Virgin sits at the right hand of Christ, who is about to crown her: he holds the crown above her head.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Apse mosaic, Rome, late thirteenth century. The Virgin sits at the right hand of Christ, sharing his wide throne; she was perhaps crowned, but the upper part of the mosaic is lost.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Apse mosaic, Rome, late thirteenth century. The Virgin sits uncrowned at the right hand of Christ; her crown lies on a cushion at her feet.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Apse mosaic, Rome, late thirteenth century. The Virgin sits crowned at the right hand of Christ, sharing his wide throne. A small donor kneels at the foot of the throne.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "co-024",
+  "famille": "compositionnalite",
+  "phenomenes": [
+   {
+    "famille": "compositionnalite",
+    "phenomene": "participe_resultatif_transitif",
+    "construction": "participe_passe_attribut"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "nombre",
+    "construction": "groupe_de_n"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "etat_simultane",
+    "construction": "etat_pendant_evenement"
+   }
+  ],
+  "pivot": {
+   "lemme": "imprison",
+   "cle_de_sens": "imprison%2:41:00::",
+   "famille_lexicale": "verb.social"
+  },
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Fresque de la chapelle d'un palais épiscopal, vers 1480. Saint Pierre est emprisonné dans un cachot voûté ; il dort, enchaîné, entre deux soldats assoupis. Par une lucarne, un rayon de lumière annonce l'arrivée de l'ange.",
+  "definition": "soldiers imprisoning Saint Peter",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« emprisonner » (fr) ⇔ imprison%2:41:00::",
+    "attestee": true
+   },
+   {
+    "sorte": "implication",
+    "contenu": "imprison%2:41:00:: est un événement de changement transitif : son participe passé attribut dit l'état résultant (emprisonné) de son patient (ONTOLOGIE_EVENTUALITES § 5)",
+    "attestee": true
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "deduction"
+  ],
+  "extensions_requises": [
+   "etat_reifie",
+   "ancrage_temporel"
+  ],
+  "justification": "Tout est là (Pierre, des soldats, la prison) sauf la condition distinctive : l'événement d'emprisonner avec les soldats pour agents. « est emprisonné » dit l'état résultant de Pierre, patient ; l'événement est antérieur et son agent n'est pas dit (ONTOLOGIE_EVENTUALITES § 5 ; une conséquence n'est pas l'événement, FONDEMENTS_SEMANTIQUES § 3.4). Les deux soldats sont les participants d'un autre état (assoupis), simultané ; en faire les agents serait un rôle par la seule proximité (FONDEMENTS § 3.2). Même la lecture d'un passif d'action laisserait l'agent inconnu. Rien n'est nié : inconnue.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Fresco in the chapel of a bishop's palace, c. 1480. Saint Peter is imprisoned in a vaulted dungeon; he sleeps, chained, between two drowsy soldiers. Through a small window, a ray of light announces the coming of the angel.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Fresque de la chapelle d'un palais épiscopal, vers 1480. Emprisonné dans un cachot voûté, saint Pierre dort, enchaîné, entre deux soldats assoupis, tandis qu'un rayon de lumière tombe d'une lucarne.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Fresque de la chapelle d'un palais épiscopal, vers 1480. Deux soldats emprisonnent saint Pierre : ils le poussent dans un cachot voûté et l'enchaînent au mur.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Fresque de la chapelle d'un palais épiscopal, vers 1480. Saint Pierre emprisonne deux soldats dans un cachot voûté et les enchaîne au mur.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Fresque de la chapelle d'un palais épiscopal, vers 1480. Selon les Actes des Apôtres, Hérode fit emprisonner Pierre par ses soldats ; la fresque montre l'apôtre endormi dans un cachot voûté.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Fresque de la chapelle d'un palais épiscopal, vers 1480. Saint Pierre est emprisonné dans un cachot voûté ; il dort, enchaîné, entre deux soldats assoupis. Un rat traverse le sol du cachot.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ }
+]

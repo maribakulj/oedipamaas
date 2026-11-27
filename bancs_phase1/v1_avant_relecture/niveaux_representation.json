@@ -1,0 +1,739 @@
+[
+ {
+  "id": "nr-001",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "autre_oeuvre", "construction": "copie"},
+   {"famille": "evenements_etats", "phenomene": "resultat_d_un_evenement_accompli", "construction": "corps_ou_objet_resultant"},
+   {"famille": "structures_argumentales", "phenomene": "posture_et_porteur", "construction": "couche"}
+  ],
+  "pivot": {"lemme": "copy", "cle_de_sens": "copy%1:06:00::", "famille_lexicale": "noun.artifact"},
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Copie d'atelier, huile sur toile, d'une Lamentation peinte vers 1520 et aujourd'hui perdue. Dans la copie, le corps sans vie du Christ est étendu sur les genoux de la Vierge. À droite, Marie-Madeleine pleure, les mains jointes. Le copiste a simplifié le paysage du fond.",
+  "definition": "Lamentation: the dead Christ lying across the lap of the Virgin, Mary Magdalene weeping beside them",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "« le corps sans vie de X » (lifeless%5:00:01:dead:01) et « X mort » (dead) : le même état, porteur X, résultat d'une mort antérieure", "attestee": true},
+   {"sorte": "equivalence_etablie", "contenu": "« être étendu sur » et lie (posture couchée, porteur la figure) : la même posture ; « sur les genoux de » et « across the lap of » : la même relation de position", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "canonisation"],
+  "extensions_requises": ["etat_reifie"],
+  "justification": "La copie est décrite pour elle-même (« dans la copie ») : ses figures sont dans le contexte du figuré de l'œuvre décrite, non dans celui de l'autre œuvre, la Lamentation perdue (fondements § 2.5 ; protocole § 4, contextes distincts). « Le corps sans vie du Christ » et « le Christ mort » sont le même état réifié, porteur le Christ (équivalence attestée, fondements § 3.2 ; ontologie § 5), et la mort est antérieure : c'est ce que demande « the dead Christ », sans exiger une mort figurée en cours (fondements § 3.4). La posture couchée a le même porteur. Établie (NOYAU § 4.4).",
+  "variantes": [
+   {"variation": "traduction", "description": "Workshop copy, oil on canvas, of a Lamentation painted around 1520 and now lost. In the copy, the lifeless body of Christ lies across the Virgin's knees. On the right, Mary Magdalene weeps with clasped hands. The copyist simplified the background landscape.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Cette toile d'atelier reprend une Lamentation disparue, peinte vers 1520. On y voit le Christ mort, étendu sur les genoux de la Vierge, tandis qu'à droite Marie-Madeleine pleure, les mains jointes. Le fond de paysage est simplifié.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Copie d'atelier d'une Lamentation peinte vers 1520 et aujourd'hui perdue. Selon l'inventaire de 1602, l'original montrait le corps sans vie du Christ étendu sur les genoux de la Vierge, et Marie-Madeleine en pleurs. La copie elle-même, très usée, n'est plus lisible.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_temps", "description": "Copie d'atelier d'une Lamentation peinte vers 1520 et aujourd'hui perdue. Dans la copie, le Christ, encore vivant, expire sur les genoux de la Vierge. À droite, Marie-Madeleine pleure, les mains jointes.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Copie d'atelier, huile sur toile, d'une Lamentation peinte vers 1520 et aujourd'hui perdue. Dans la copie, le corps sans vie du Christ est étendu sur les genoux de la Vierge. À droite, Marie-Madeleine pleure, les mains jointes. Au premier plan à gauche, un donateur agenouillé tient un chapelet.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-002",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "autre_oeuvre", "construction": "copie"},
+   {"famille": "evenements_etats", "phenomene": "situation_comme_referent", "construction": "la_scene_nommee"}
+  ],
+  "pivot": {"lemme": "copy", "cle_de_sens": "copy%1:06:00::", "famille_lexicale": "noun.artifact"},
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Copy of an Adoration of the Magi by a Flemish master, whose original panel was destroyed by fire in 1945. The copy, on oak, was cut down on all four sides in the nineteenth century. A collector's wax seal is fixed to the reverse.",
+  "definition": "the Adoration of the Magi: the three kings worshipping the Christ-child",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "« an Adoration of the Magi » nomme une situation qui satisfait la description de scène de la définition (la même description de situation)", "attestee": true},
+   {"sorte": "relation_inconnue", "contenu": "copy%1:06:00:: « a thing made to be similar or identical to another thing » : une copie figure-t-elle ce que figure son modèle ? La glose ne dit ni la suffisance, ni la nécessité, ni le caractère typique", "attestee": false}
+  ],
+  "operations_requises": ["lecture"],
+  "extensions_requises": ["aucune"],
+  "justification": "Le sujet n'est dit que de l'original (« Copy of an Adoration of the Magi »), contexte de l'autre œuvre ; rien n'est dit du figuré de la copie (fondements § 2.5 ; protocole § 4 : ce qui n'est pas dans le contexte de la figuration n'établit rien). La seule connaissance qui relierait les deux est une relation inconnue (fondements § 2.7), qui ne fonde au mieux qu'une dérivation sous hypothèse, soumise aux exigences de l'abduction (spécification § 3.2) ; son admissibilité est la décision ouverte, et l'option la plus prudente, inconnue, est retenue.",
+  "decision_ouverte": {
+   "question": "La relation de copie, connue par une glose de statut inconnu, permet-elle de proposer que la copie figure la scène de son modèle ? L'hypothèse « la copie figure une Adoration » n'explique aucune assertion figurée de la copie ; elle transporte le sujet du modèle. Les fondements (§ 5) demandent qu'une explication explique des éléments observés : la mention « copy of an Adoration » en est-elle un ?",
+   "statut_selon_l_option": {
+    "la glose fonde une dérivation sous hypothèse, la mention de la copie étant l'observation expliquée": "etablie_sous_hypotheses",
+    "aucune observation du figuré de la copie n'est expliquée : rien n'est établi": "inconnue"
+   }
+  },
+  "variantes": [
+   {"variation": "traduction", "description": "Copie d'une Adoration des mages d'un maître flamand, dont le panneau original a brûlé en 1945. La copie, sur chêne, a été rognée sur ses quatre côtés au XIXe siècle. Un cachet de cire de collectionneur est fixé au revers.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "This oak panel reproduces a lost Adoration of the Magi by a Flemish master; the original burned in 1945. It was trimmed on all four sides in the nineteenth century, and a collector's seal is attached to the back.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Copy of an Adoration of the Magi by a Flemish master, whose original panel was destroyed by fire in 1945. Like its model, the copy shows the three kings worshipping the Christ-child on the Virgin's lap. It was cut down on all four sides in the nineteenth century.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "ajout_negation_non_liee", "description": "Copy of an Adoration of the Magi by a Flemish master, whose original panel was destroyed by fire in 1945. The copy, on oak, was cut down on all four sides in the nineteenth century. The reverse bears no inventory number.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Probably a copy of an Adoration of the Magi by a Flemish master, whose original panel was destroyed by fire in 1945. The panel, on oak, was cut down on all four sides in the nineteenth century.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-003",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "autre_oeuvre", "construction": "copie"},
+   {"famille": "modalite_negation_contextes", "phenomene": "negation_atomique", "construction": "aucun"},
+   {"famille": "espace_partie_temps", "phenomene": "position_relative", "construction": "au_dessus_au_dessous"}
+  ],
+  "pivot": {"lemme": "copy", "cle_de_sens": "copy%1:06:00::", "famille_lexicale": "noun.artifact"},
+  "langue": "fr",
+  "sorte": "negatif",
+  "description": "Copie réduite, sur cuivre, d'une Nativité conservée à Anvers. La Vierge et saint Joseph sont agenouillés devant l'Enfant couché dans la crèche. Contrairement à l'original, la copie ne montre aucun ange au-dessus de l'étable : le ciel nocturne y est vide.",
+  "definition": "Nativity: the Virgin and Joseph kneeling before the Child in the manger, angels hovering above the stable",
+  "statut_attendu": "ecartee",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "« crèche » et manger%1:06:00:: : le même objet", "attestee": true},
+   {"sorte": "implication", "contenu": "hover above ⇒ être au-dessus de (relation de position orientée) ; la négation de « au-dessus de » se transmet à « hover above » par contraposition", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "deduction"],
+  "extensions_requises": ["aucune"],
+  "justification": "« Aucun ange au-dessus de l'étable » est une négation dite par l'auteur, dans le contexte du figuré de la copie ; les anges de l'original sont dans celui de l'autre œuvre et ne comptent ni pour ni contre (fondements § 2.5). La description niée (un ange, au-dessus de l'étable) couvre exactement la partie de la définition qui la demande, et « hovering above » implique « au-dessus de » (contraposition, fondements § 3.3) : la conjonction est fausse pour l'étable figurée, écartée pour ces référents (NOYAU § 4.4, D31). Le noyau 0.3 ne dérive pas encore cette réfutation d'une conjonction couverte par une description niée (NOYAU § 1.1, D41) : c'est une perte dans le sens sûr, non le statut cible.",
+  "variantes": [
+   {"variation": "traduction", "description": "Reduced copy on copper of a Nativity in Antwerp. The Virgin and Saint Joseph kneel before the Child lying in the manger. Unlike the original, the copy shows no angel above the stable: the night sky there is empty.", "sorte": "negatif", "statut_attendu": "ecartee", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Sur cette petite plaque de cuivre, un copiste a réduit une Nativité d'Anvers. Agenouillés, la Vierge et saint Joseph adorent l'Enfant couché dans la crèche. Au-dessus de l'étable, à la différence de l'original, la copie ne montre aucun ange.", "sorte": "negatif", "statut_attendu": "ecartee", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Copie réduite, sur cuivre, d'une Nativité conservée à Anvers. La Vierge et saint Joseph sont agenouillés devant l'Enfant couché dans la crèche. L'original ne montre aucun ange ; la copie, elle, en ajoute deux qui planent au-dessus de l'étable.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Copie réduite, sur cuivre, d'une Nativité conservée à Anvers. La Vierge et saint Joseph sont agenouillés devant l'Enfant couché dans la crèche. La copie ne montre peut-être aucun ange au-dessus de l'étable : la couche picturale du ciel est trop usée pour en juger.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Copie réduite, sur cuivre, d'une Nativité conservée à Anvers. La Vierge et saint Joseph sont agenouillés devant l'Enfant couché dans la crèche. Contrairement à l'original, la copie ne montre aucun ange au-dessus de l'étable. Au loin, un berger garde ses moutons.", "sorte": "negatif", "statut_attendu": "ecartee", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-004",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "autre_oeuvre", "construction": "d_apres"},
+   {"famille": "structures_argumentales", "phenomene": "destinataire", "construction": "donner_a"}
+  ],
+  "pivot": {"lemme": "engraving", "cle_de_sens": "engraving%1:06:01::", "famille_lexicale": "noun.artifact"},
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Gravure au burin d'après un tableau d'autel de l'école d'Utrecht, publiée vers 1610. On y voit saint Martin, à cheval, donner la moitié de son manteau à un mendiant assis au bord du chemin. Dans la marge, la lettre reproduit une dédicace au chapitre de la cathédrale.",
+  "definition": "St Martin on horseback giving half of his cloak to a beggar",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "« à cheval » et on horseback : le cavalier monté sur un cheval", "attestee": true},
+   {"sorte": "implication", "contenu": "mendiant ⊑ beggar%1:18:00:: ; manteau ⊑ cloak%1:06:00::", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "canonisation"],
+  "extensions_requises": ["aucune"],
+  "justification": "« On y voit » place la scène dans le figuré de la gravure elle-même ; le tableau dont elle est tirée est un autre contexte, qui n'apporte ni ne retire rien (fondements § 2.5). Le don a saint Martin pour agent et le mendiant pour destinataire, comme le demande la définition (NOYAU § 3, rôle destinataire). La lettre est une inscription sur l'œuvre, sans effet sur le figuré. Établie (NOYAU § 4.4).",
+  "variantes": [
+   {"variation": "traduction", "description": "Engraving after an altarpiece of the Utrecht school, published around 1610. It shows Saint Martin on horseback giving half of his cloak to a beggar seated by the roadside. In the margin, the lettering reproduces a dedication to the cathedral chapter.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Publiée vers 1610, cette gravure reproduit un tableau d'autel utrechtois. Saint Martin, qui est à cheval, donne à un mendiant assis au bord du chemin la moitié de son manteau. La lettre porte une dédicace au chapitre.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "inversion_des_roles", "description": "Gravure au burin d'après un tableau d'autel de l'école d'Utrecht, publiée vers 1610. On y voit un mendiant, à cheval, donner la moitié de son manteau à saint Martin assis au bord du chemin. Dans la marge, la lettre reproduit une dédicace.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Gravure au burin d'après un tableau d'autel de l'école d'Utrecht, publiée vers 1610. Le tableau, détruit en 1672, montrait saint Martin à cheval donnant la moitié de son manteau à un mendiant. Dans la marge, la lettre reproduit une dédicace au chapitre de la cathédrale.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_negation_non_liee", "description": "Gravure au burin d'après un tableau d'autel de l'école d'Utrecht, publiée vers 1610. On y voit saint Martin, à cheval, donner la moitié de son manteau à un mendiant assis au bord du chemin. Le cheval ne porte pas de selle.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-005",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "autre_oeuvre", "construction": "d_apres"},
+   {"famille": "evenements_etats", "phenomene": "nominalisation_evenement", "construction": "genitif_sujet"}
+  ],
+  "pivot": {"lemme": "weave", "cle_de_sens": "weave%2:36:00::", "famille_lexicale": "verb.creation"},
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Tapestry woven in Brussels after a cartoon by an unidentified painter. The cartoon, now in a private collection, shows Dido's death on the pyre, with her sister Anna rushing towards her. The weaving contract of 1586 required the border of the cartoon to be replaced by a garland of fruit.",
+  "definition": "the death of Dido on the funeral pyre",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "« Dido's death » (death%1:11:00::, sens d'événement) et « Dido dies » : le même événement, Dido pour participant", "attestee": true},
+   {"sorte": "equivalence_etablie", "contenu": "pyre%1:06:00:: et funeral pyre : le même objet", "attestee": true}
+  ],
+  "operations_requises": ["lecture"],
+  "extensions_requises": ["aucune"],
+  "justification": "La mort de Didon est dite du carton (« the cartoon ... shows »), une autre œuvre, et non de la tapisserie ; « woven after » relie les deux œuvres sans dire ce que la tapisserie figure, et K ne contient aucune connaissance qui transfère le sujet du modèle (fondements § 2.5 ; protocole § 4 : ce qui n'est pas dans le contexte de la figuration n'établit rien). Le contrat, contexte de l'histoire, ne parle que de la bordure. Rien n'est nié : inconnue.",
+  "variantes": [
+   {"variation": "traduction", "description": "Tapisserie tissée à Bruxelles d'après un carton d'un peintre non identifié. Le carton, aujourd'hui en collection particulière, montre la mort de Didon sur le bûcher, sa sœur Anne accourant vers elle. Le contrat de tissage de 1586 imposait de remplacer la bordure du carton par une guirlande de fruits.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Woven in Brussels, this tapestry follows a cartoon by an unknown painter, which depicts the death of Dido on the pyre while Anna runs to her. Under the contract of 1586, the weavers replaced the cartoon's border with a garland of fruit.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Tapestry woven in Brussels after a cartoon by an unidentified painter. Like the cartoon, the tapestry shows Dido's death on the pyre, with her sister Anna rushing towards her. The weavers replaced the cartoon's border with a garland of fruit.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Tapestry woven in Brussels after a cartoon by an unidentified painter. The cartoon shows Dido's death on the pyre; the tapestry, heavily faded, possibly repeats that scene. The weaving contract of 1586 required a new border of fruit.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Tapestry woven in Brussels after a cartoon by an unidentified painter. The cartoon, now in a private collection, shows Dido's death on the pyre, with her sister Anna rushing towards her. A hound sleeps in the lower border of the tapestry.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-006",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "autre_oeuvre", "construction": "d_apres"},
+   {"famille": "espace_partie_temps", "phenomene": "position_relative", "construction": "gauche_droite_de_la_figure"},
+   {"famille": "evenements_etats", "phenomene": "imminence", "construction": "geste_suspendu"}
+  ],
+  "pivot": {"lemme": "etching", "cle_de_sens": "etching%1:06:01::", "famille_lexicale": "noun.artifact"},
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Eau-forte d'après un tableau de Cornelis Vermaelen, tirée en contrepartie. Comme souvent dans l'estampe de reproduction, l'image est inversée : Abraham, qui dans le tableau lève le couteau de la main droite, le lève ici de la main gauche au-dessus d'Isaac agenouillé sur le bûcher. Un ange surgit d'un nuage à droite.",
+  "definition": "Abraham about to sacrifice Isaac, raising the knife in his right hand",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "hypothese_interpretative", "contenu": "un couteau levé au-dessus d'une figure agenouillée sur un bûcher : l'imminence d'un sacrifice (l'intention de frapper)", "attestee": false},
+   {"sorte": "implication", "contenu": "main droite (right_hand%1:08:00::) et main gauche (left_hand%1:08:00::) : deux parties distinctes du corps ; la droite et la gauche sont celles de la figure", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "abduction"],
+  "extensions_requises": ["aucune"],
+  "justification": "Dans l'estampe, le couteau est dans la main gauche ; la main droite n'est dite que du tableau, une autre œuvre (fondements § 2.5). Tenir de la main gauche ne nie pas tenir de la main droite sans une connaissance d'exclusion, absente de K ; l'absence n'est pas une preuve négative (protocole § 4, D31). L'imminence du sacrifice n'est de toute façon qu'une hypothèse interprétative (fondements § 2.7). La lecture du contraste comme négation est la décision ouverte ; l'option la plus prudente, inconnue, est retenue.",
+  "decision_ouverte": {
+   "question": "Le contraste explicite entre le tableau (main droite) et l'estampe (main gauche) est-il une négation dite de « de la main droite » dans le figuré de l'estampe, ou une simple affirmation de la main gauche, qui laisse la droite inconnue ?",
+   "statut_selon_l_option": {
+    "le contraste vaut négation dite de la main droite": "ecartee",
+    "seule la main gauche est affirmée, sans négation": "inconnue"
+   }
+  },
+  "variantes": [
+   {"variation": "traduction", "description": "Etching after a painting by Cornelis Vermaelen, printed in reverse. As often in reproductive prints, the image is mirrored: Abraham, who in the painting raises the knife in his right hand, here raises it in his left above Isaac kneeling on the pyre. An angel bursts from a cloud on the right.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Cette eau-forte reproduit, à l'envers, un tableau de Cornelis Vermaelen. Le couteau qu'Abraham lève de la main droite dans le tableau passe ici dans sa main gauche, levé au-dessus d'Isaac à genoux sur le bûcher. À droite, un ange sort d'un nuage.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Eau-forte d'après un tableau de Cornelis Vermaelen. Le graveur a conservé le sens du tableau : Abraham lève le couteau de la main droite au-dessus d'Isaac agenouillé sur le bûcher. Un ange surgit d'un nuage à gauche.", "sorte": "positif", "statut_attendu": "etablie_sous_hypotheses", "hypotheses_attendues": ["hypothese_interpretative"]},
+   {"variation": "inversion_des_roles", "description": "Eau-forte d'après un tableau de Cornelis Vermaelen, tirée en contrepartie. L'image est inversée : Isaac, qui dans le tableau lève le couteau de la main droite, le lève ici de la main gauche au-dessus d'Abraham agenouillé sur le bûcher. Un ange surgit d'un nuage à droite.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Eau-forte d'après un tableau de Cornelis Vermaelen, tirée en contrepartie. L'image est inversée : Abraham, qui dans le tableau lève le couteau de la main droite, le lève ici de la main gauche au-dessus d'Isaac agenouillé sur le bûcher. Au second plan, un bélier est pris par les cornes dans un buisson.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-007",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "histoire_contre_figure", "construction": "attribution"},
+   {"famille": "phenomenes_iconographiques", "phenomene": "identification_de_personnage", "construction": "par_le_nom"}
+  ],
+  "pivot": {"lemme": "attribute", "cle_de_sens": "attribute%2:31:00::", "famille_lexicale": "verb.cognition"},
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Panneau donné à Jérôme Bosch par l'inventaire de 1574, aujourd'hui attribué à un suiveur anonyme. Un ermite à longue barbe, vêtu d'une robe grise, prie à genoux devant une grotte, face à un crucifix posé sur un rocher. Au loin, une ville brûle.",
+  "definition": "St Jerome as a hermit, kneeling in prayer before a crucifix",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "implication", "contenu": "ermite ⊑ hermit%1:18:01:: (one retired from society for religious reasons)", "attestee": true},
+   {"sorte": "equivalence_etablie", "contenu": "« prier à genoux » : prier (pray), le porteur agenouillé (kneel) ; la même configuration que « kneeling in prayer »", "attestee": true}
+  ],
+  "operations_requises": ["lecture"],
+  "extensions_requises": ["aucune"],
+  "justification": "Le nom « Jérôme » est porté par le peintre, dans le contexte de l'histoire (une attribution, ancienne puis révisée) ; sous la figuration, un nom ne désigne qu'un personnage figuré (fondements § 1.2), et aucun personnage figuré n'est nommé. L'ermite n'est identifié ni par un nom, ni par une connaissance de K (aucun attribut de saint Jérôme n'y est supposé) : la désignation est inconnue, non écartée (protocole § 4 : l'absence n'est pas une preuve négative ; D31).",
+  "variantes": [
+   {"variation": "traduction", "description": "Panel given to Jerome Bosch by the inventory of 1574, now attributed to an anonymous follower. A long-bearded hermit in a grey robe kneels in prayer before a cave, facing a crucifix set on a rock. In the distance a town is burning.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Panneau donné à Jérôme Bosch par l'inventaire de 1574, aujourd'hui attribué à un suiveur anonyme. Saint Jérôme, ermite à longue barbe vêtu d'une robe grise, prie à genoux devant une grotte, face à un crucifix posé sur un rocher. Au loin, une ville brûle.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "L'inventaire de 1574 donnait ce panneau à Jérôme Bosch ; on y reconnaît aujourd'hui la main d'un suiveur. Devant une grotte, un ermite barbu en robe grise prie à genoux, tourné vers un crucifix posé sur un rocher.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Panneau peut-être de Jérôme Bosch, selon une tradition que rien ne confirme. Un ermite à longue barbe, vêtu d'une robe grise, prie à genoux devant une grotte, face à un crucifix posé sur un rocher. Au loin, une ville brûle.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Panneau donné à Jérôme Bosch par l'inventaire de 1574, aujourd'hui attribué à un suiveur anonyme. Un ermite à longue barbe, vêtu d'une robe grise, prie à genoux devant une grotte, face à un crucifix posé sur un rocher. À droite, un cerf boit à une source.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-008",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "histoire_contre_figure", "construction": "attribution"},
+   {"famille": "modalite_negation_contextes", "phenomene": "modalite", "construction": "traditionnellement"},
+   {"famille": "espace_partie_temps", "phenomene": "preposition_polysemique", "construction": "de_partie"}
+  ],
+  "pivot": {"lemme": "attribute", "cle_de_sens": "attribute%2:31:00::", "famille_lexicale": "verb.cognition"},
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Engraving traditionally attributed to the Nuremberg goldsmith Jörg Mertz, although the monogram is now thought to be a later addition. Saint Eustace kneels on the bank of a stream before a stag; a crucifix shines between the antlers of the stag. His horse and two hunting dogs wait behind him.",
+  "definition": "St Eustace kneeling before a stag with a crucifix between its antlers",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "implication", "contenu": "antler%1:05:00:: est une partie d'un cervidé (méronymie WordNet) : dans « the antlers of the stag », « of » a le sens de partie, ce que demande « its antlers »", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "deduction"],
+  "extensions_requises": ["aucune"],
+  "justification": "« Traditionally attributed » qualifie l'attribution, assertion du contexte de l'histoire ; la modalité est une propriété du chemin de contextes (fondements § 2.5) et ne touche pas les assertions figurées, que l'auteur affirme. « The antlers of the stag » est une relation de partie (K, attestée ; fondements § 2.4), ce que demande « between its antlers » ; le sens de « of » est fixé par K, sans hypothèse de sens. Établie (NOYAU § 4.4).",
+  "variantes": [
+   {"variation": "traduction", "description": "Gravure traditionnellement attribuée à l'orfèvre nurembergeois Jörg Mertz, bien que le monogramme passe aujourd'hui pour un ajout. Saint Eustache est agenouillé au bord d'un ruisseau devant un cerf ; un crucifix brille entre les bois du cerf. Son cheval et deux chiens de chasse attendent derrière lui.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Engraving attributed to the Nuremberg goldsmith Jörg Mertz. A kneeling hunter, traditionally identified as Saint Eustace, faces a stag on the bank of a stream; a crucifix shines between the antlers of the stag. His horse and two hunting dogs wait behind him.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Tradition gives this engraving to Jörg Mertz, a Nuremberg goldsmith, though its monogram is probably later. On a stream bank, Saint Eustace is on his knees before a stag, with a crucifix shining between the antlers of the stag. Behind him wait his horse and two hounds.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "ajout_negation_non_liee", "description": "Engraving traditionally attributed to the Nuremberg goldsmith Jörg Mertz. Saint Eustace kneels on the bank of a stream before a stag; a crucifix shines between the antlers of the stag. No inscription appears on the plate.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Engraving traditionally attributed to the Nuremberg goldsmith Jörg Mertz, after a lost window. According to a description of 1590, the window showed Saint Eustace kneeling before a stag, with a crucifix between the antlers of the stag. The plate itself is worn beyond reading.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-009",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "histoire_contre_figure", "construction": "commentaire_de_style"},
+   {"famille": "compositionnalite", "phenomene": "compose_a_relation_implicite", "construction": "agent_du_compose"},
+   {"famille": "modalite_negation_contextes", "phenomene": "source_citee", "construction": "selon"}
+  ],
+  "pivot": {"lemme": "manner", "cle_de_sens": "manner%1:07:02::", "famille_lexicale": "noun.attribute"},
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Still life of dead partridges, a hunting horn and a powder flask on a stone ledge. The painter handles the plumage in the manner of a battle painter, all smoke and fury. According to an eighteenth-century critic, the picture is 'a cavalry charge in feathers'.",
+  "definition": "battle scene: a cavalry charge",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "implication", "contenu": "cavalry charge ⊑ attack, partie d'une bataille (battle%1:04:00::)", "attestee": true},
+   {"sorte": "implication", "contenu": "battle painter ⊑ painter%1:18:00:: ; la relation implicite du composé (peindre des batailles) n'est ni une propriété ni un événement figuré", "attestee": true}
+  ],
+  "operations_requises": ["lecture"],
+  "extensions_requises": ["aucune"],
+  "justification": "« In the manner of a battle painter » est un commentaire de style, non ancré dans l'image (portée non_ancre, ASSERTIONS ; fondements § 2.5) ; « battle painter » est un composé dont la relation implicite ne fait pas exister une bataille (fondements § 3.2). La « cavalry charge » est la métaphore d'un critique cité, qui parle du tableau, non de ce qu'il figure. Rien ne place une bataille dans le figuré ; rien ne la nie non plus : inconnue, et non écartée (D31).",
+  "variantes": [
+   {"variation": "traduction", "description": "Nature morte de perdrix mortes, d'une trompe de chasse et d'une poire à poudre sur un rebord de pierre. Le peintre traite le plumage à la manière d'un peintre de batailles, tout en fumée et en fureur. Selon un critique du XVIIIe siècle, le tableau est « une charge de cavalerie en plumes ».", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Dead partridges, a hunting horn and a powder flask lie on a stone ledge. The feathers are painted in the smoky, furious manner of a battle painter, and for an eighteenth-century critic the canvas was 'a cavalry charge in feathers'.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Battle scene painted in the manner of a still-life painter. In the foreground lie dead partridges and a hunting horn; behind them a cavalry charge sweeps across the plain in smoke and fury.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Still life of dead partridges, a hunting horn and a powder flask on a stone ledge. The painter handles the plumage in the manner of a battle painter, all smoke and fury. A cat crouches beneath the ledge.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Still life of dead partridges, a hunting horn and a powder flask on a stone ledge. The plumage is handled in the manner of a battle painter, and the picture may perhaps be read as 'a cavalry charge in feathers'.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-010",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "histoire_contre_figure", "construction": "commentaire_de_style"},
+   {"famille": "compositionnalite", "phenomene": "adjectif_de_degre", "construction": "age"},
+   {"famille": "structures_argumentales", "phenomene": "patient_contre_theme", "construction": "tenue_ou_port"}
+  ],
+  "pivot": {"lemme": "manner", "cle_de_sens": "manner%1:07:02::", "famille_lexicale": "noun.attribute"},
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Toile peinte à la manière caravagesque par un peintre lorrain actif à Rome, d'une facture brutale et d'un clair-obscur violent. Judith tranche la tête d'Holopherne, étendu sur son lit. À droite, une vieille servante tient ouvert un sac pour recevoir la tête.",
+  "definition": "Judith beheading Holofernes, an old maidservant holding a sack ready",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "« trancher la tête de X » et behead%2:35:00:: : le même événement, X patient", "attestee": true},
+   {"sorte": "implication", "contenu": "servante ⊑ maidservant%1:18:00:: (a female domestic) ; « vieille » et old%3:00:02:: : le même sens, relatif à la classe des personnes", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "canonisation"],
+  "extensions_requises": ["aucune"],
+  "justification": "La manière caravagesque, la facture brutale et le clair-obscur violent sont un commentaire de style (portée non_ancre), qui ne fonde ni ne retire aucune assertion figurée (fondements § 2.5) : « violent » qualifie la peinture, non la scène. La scène est affirmée dans le figuré : Judith agent et Holopherne patient de la décapitation (canonisation, fondements § 3.2) ; la servante, vieille, tient le sac, son thème. Établie (NOYAU § 4.4).",
+  "variantes": [
+   {"variation": "traduction", "description": "Canvas painted in the Caravaggesque manner by a Lorraine painter active in Rome, with brutal handling and violent chiaroscuro. Judith beheads Holofernes, who lies on his bed. On the right, an old maidservant holds open a sack to receive the head.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "inversion_des_roles", "description": "Toile peinte à la manière caravagesque par un peintre lorrain actif à Rome. Holopherne tranche la tête de Judith, étendue sur un lit. À droite, une vieille servante tient ouvert un sac pour recevoir la tête.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Dans cette toile d'un Lorrain de Rome, peinte à la manière caravagesque, la tête d'Holopherne, étendu sur son lit, est tranchée par Judith. Une vieille servante, à droite, tient un sac ouvert pour la recevoir.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_participant", "description": "Toile peinte à la manière caravagesque par un peintre lorrain actif à Rome, d'une facture brutale. Judith tranche la tête d'Holopherne, étendu sur son lit. À droite, une jeune servante tient ouvert un sac pour recevoir la tête.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_negation_non_liee", "description": "Toile peinte à la manière caravagesque par un peintre lorrain actif à Rome, d'un clair-obscur violent. Judith tranche la tête d'Holopherne, étendu sur son lit. À droite, une vieille servante tient ouvert un sac pour recevoir la tête. Le lit n'a pas de baldaquin.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-011",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "oeuvre_contre_figure", "construction": "etat_de_conservation"},
+   {"famille": "compositionnalite", "phenomene": "participe_resultatif_transitif", "construction": "participe_passe_attribut"},
+   {"famille": "espace_partie_temps", "phenomene": "partie_tout", "construction": "partie_obligatoire"}
+  ],
+  "pivot": {"lemme": "broken", "cle_de_sens": "broken%3:00:01::", "famille_lexicale": "adj.all"},
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Statue en marbre d'un guerrier debout, provenant d'un monument funéraire. Le bras droit est brisé à hauteur du coude et le fragment manque ; le nez et deux doigts de la main gauche sont restaurés en plâtre. Le guerrier porte une cuirasse et un manteau agrafé sur l'épaule.",
+  "definition": "a wounded warrior with a broken arm",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "implication", "contenu": "un bras brisé (fracture) d'une personne est une blessure : bras brisé ⇒ blessé (wounded)", "attestee": true},
+   {"sorte": "implication", "contenu": "arm%1:08:00:: : partie obligatoire d'une personne ; le bras d'une figure est une partie de la figure", "attestee": true}
+  ],
+  "operations_requises": ["lecture"],
+  "extensions_requises": ["aucune"],
+  "justification": "« Brisé à hauteur du coude », « manque », « restaurés en plâtre » disent l'état du marbre, contexte de l'œuvre comme objet (portée oeuvre, ASSERTIONS ; fondements § 1, § 2.5) : le bras brisé est une partie de la statue, non un bras blessé du guerrier figuré. L'implication « bras brisé ⇒ blessé » ne s'applique qu'à une prémisse figurée, et aucune ne dit le guerrier blessé. Rien ne le nie non plus : inconnue (D31).",
+  "variantes": [
+   {"variation": "traduction", "description": "Marble statue of a standing warrior from a funerary monument. The right arm is broken at the elbow and the fragment is missing; the nose and two fingers of the left hand are restored in plaster. The warrior wears a cuirass and a cloak clasped at the shoulder.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Statue en marbre d'un guerrier blessé, provenant d'un monument funéraire. Son bras droit est brisé et repose dans une écharpe nouée à son cou ; le sculpteur a marqué la douleur sur le visage. Le nez est restauré en plâtre.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Il manque à cette statue funéraire de guerrier, en marbre, l'avant-bras droit : le bras est cassé au coude. Le nez et deux doigts de la main gauche sont des restaurations en plâtre. Le guerrier, debout, porte cuirasse et manteau.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Statue en marbre d'un guerrier debout, provenant d'un monument funéraire. Le bras droit semble avoir été brisé dès l'Antiquité, et le fragment manque. Le guerrier porte une cuirasse et un manteau agrafé sur l'épaule.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Statue en marbre d'un guerrier debout, provenant d'un monument funéraire. Le bras droit est brisé à hauteur du coude et le fragment manque. Le guerrier porte une cuirasse ; à ses pieds, un chien est couché.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-012",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "oeuvre_contre_figure", "construction": "etat_de_conservation"},
+   {"famille": "evenements_etats", "phenomene": "resultat_d_un_evenement_accompli", "construction": "vestiges"},
+   {"famille": "structures_argumentales", "phenomene": "posture_et_porteur", "construction": "assis_ou_debout"}
+  ],
+  "pivot": {"lemme": "survive", "cle_de_sens": "survive%2:42:02::", "famille_lexicale": "verb.stative"},
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Fragment of a fresco detached from a chapel wall. Of the Virgin enthroned, the head and hands are well preserved; of the Christ Child once seated on her lap, only the feet survive, the rest of the paint layer having flaked away. A later repainting covers the lower edge.",
+  "definition": "the Virgin enthroned with the Christ-child seated on her lap",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "implication", "contenu": "foot%1:08:01:: : partie obligatoire d'une personne ; des pieds figurés impliquent la figure dont ils sont la partie", "attestee": true},
+   {"sorte": "equivalence_etablie", "contenu": "« enthroned » : assis sur un trône (posture assise, porteur la figure)", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "deduction"],
+  "extensions_requises": ["aucune"],
+  "justification": "Les pieds sont figurés, et K les donne pour une partie obligatoire : une figure de l'Enfant est impliquée (fondements § 2.4). Mais « once seated on her lap » est dit au passé de l'objet : la posture assise appartient à l'état ancien de l'œuvre, non à son figuré présent, et aucun document ne fixe le rapport entre l'état de conservation et le contenu figuré, ni l'ancrage d'un « once » dit de l'œuvre (ontologie § 3). L'option la plus prudente, inconnue, est retenue.",
+  "decision_ouverte": {
+   "question": "Une figure dont il ne reste que des vestiges est-elle encore figurée par l'œuvre, avec ce qu'on dit qu'elle était (« once seated on her lap ») ? « Once » date-t-il l'état ancien de l'œuvre (son histoire d'objet) ou une situation figurée ?",
+   "statut_selon_l_option": {
+    "l'œuvre figure ce qu'elle a été faite pour figurer ; vestiges et partie obligatoire suffisent": "etablie",
+    "seuls les pieds sont figurés aujourd'hui ; la posture assise est dite de l'état ancien": "inconnue"
+   }
+  },
+  "variantes": [
+   {"variation": "traduction", "description": "Fragment de fresque déposé d'un mur de chapelle. De la Vierge en trône, la tête et les mains sont bien conservées ; de l'Enfant Jésus autrefois assis sur ses genoux, seuls les pieds subsistent, le reste de la couche picturale s'étant écaillé. Un repeint postérieur couvre le bord inférieur.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "This fragment of a detached chapel fresco keeps the head and hands of the enthroned Virgin. Of the Christ Child who once sat on her lap only the feet survive; everything else has flaked off. The lower edge is overpainted.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_temps", "description": "Fragment of a fresco detached from a chapel wall. The Virgin is enthroned, and the Christ Child, seated on her lap, is fully preserved. A later repainting covers the lower edge.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "ajout_negation_non_liee", "description": "Fragment of a fresco detached from a chapel wall. Of the Virgin enthroned, the head and hands are well preserved; of the Christ Child once seated on her lap, only the feet survive. No trace of the original inscription remains.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Fragment of a fresco detached from a chapel wall. Of the Virgin enthroned, the head and hands are well preserved; of the Christ Child, who was perhaps seated on her lap, only the feet survive.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-013",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "oeuvre_contre_figure", "construction": "etat_de_conservation"},
+   {"famille": "evenements_etats", "phenomene": "etat_adjectival_de_stade", "construction": "attribut"}
+  ],
+  "pivot": {"lemme": "yellow", "cle_de_sens": "yellow%2:30:00::", "famille_lexicale": "verb.change"},
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Panneau très encrassé : le vernis a fortement jauni et une large fente verticale traverse la planche de haut en bas. On distingue néanmoins saint Sébastien, qui est attaché à un arbre, le corps percé de flèches. Deux archers s'éloignent vers la gauche.",
+  "definition": "St Sebastian tied to a tree, his body pierced by arrows",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "« être attaché à » et tied to (tie, état résultant, porteur la figure) : le même état", "attestee": true},
+   {"sorte": "equivalence_etablie", "contenu": "« percé de flèches » et pierced by arrows : le même état résultant, les flèches pour instrument", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "canonisation"],
+  "extensions_requises": ["aucune"],
+  "justification": "Le vernis jauni et la fente sont dits de l'objet (portée oeuvre) ; ils ne retirent rien au figuré, que l'auteur affirme (« on distingue néanmoins » : le descripteur voit et affirme, sans modalité). Les états « attaché » et « percé de flèches » sont ceux de la définition (canonisation, fondements § 3.2 ; ontologie § 5). Établie (NOYAU § 4.4).",
+  "variantes": [
+   {"variation": "traduction", "description": "A very dirty panel: the varnish has yellowed heavily and a wide vertical split runs through the board from top to bottom. Saint Sebastian can nevertheless be made out; he is tied to a tree, his body pierced with arrows. Two archers walk away to the left.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Panneau très encrassé : le vernis a fortement jauni et une large fente verticale traverse la planche. On croit deviner, sous le vernis, un saint Sébastien qui serait attaché à un arbre, le corps percé de flèches.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Panneau très encrassé : le vernis a fortement jauni et une large fente verticale traverse la planche de haut en bas. On distingue néanmoins saint Sébastien, qui est attaché à un arbre, le corps percé de flèches. Au fond, une femme tient un pot d'onguent.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Sous un vernis très jauni, et malgré la fente qui ouvre le panneau sur toute sa hauteur, saint Sébastien reste lisible : il est attaché à un arbre, le corps percé de flèches. Deux archers partent vers la gauche.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Panneau très encrassé, au vernis fortement jauni. La réflectographie infrarouge révèle, dans le dessin sous-jacent, saint Sébastien attaché à un arbre, le corps percé de flèches ; la couche picturale, elle, figure un paysage boisé.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-014",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "oeuvre_contre_figure", "construction": "inscription_sur_l_oeuvre"},
+   {"famille": "modalite_negation_contextes", "phenomene": "contenu_d_une_eventualite", "construction": "inscription"},
+   {"famille": "reference_quantification", "phenomene": "noms_propres", "construction": "alias_traduit"}
+  ],
+  "pivot": {"lemme": "sign", "cle_de_sens": "sign%2:32:02::", "famille_lexicale": "verb.communication"},
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Signed and dated on the stone in the lower right corner, 'IACOBVS F. 1531'. A pilgrim in a broad-brimmed hat rests under an oak, his staff and gourd laid beside him. A walled town is visible in the distance.",
+  "definition": "St James the Greater as a pilgrim, with staff and gourd",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "IACOBVS (latin), JAMES, JACQUES : formes traduites d'un même nom propre (une même clé de nom) ; cela relie deux noms, non deux individus", "attestee": true},
+   {"sorte": "implication", "contenu": "pèlerin : pilgrim%1:18:01:: ; staff et gourd : des objets tenus ou portés", "attestee": true}
+  ],
+  "operations_requises": ["lecture"],
+  "extensions_requises": ["contexte_emboite"],
+  "justification": "« IACOBVS F. » est le contenu d'une inscription portée par l'œuvre, une signature (« signed ») : le nom désigne l'auteur de l'œuvre, dans le contexte de l'histoire, et non un personnage figuré (fondements § 1.2, § 2.5 : ce qu'une inscription porte est un contexte). Que IACOBVS soit une forme traduite de James ne donne pas ce nom au pèlerin : l'alias relie deux noms, il ne nomme pas une figure. Aucun attribut de saint Jacques n'est supposé dans K : inconnue. L'extension est requise pour que le contenu de l'inscription ne soit pas lu comme un nom de figure.",
+  "variantes": [
+   {"variation": "traduction", "description": "Signé et daté sur la pierre, en bas à droite, « IACOBVS F. 1531 ». Un pèlerin coiffé d'un chapeau à larges bords se repose sous un chêne, son bourdon et sa gourde posés près de lui. Une ville fortifiée se voit au loin.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Signed and dated on the stone in the lower right corner, 'IACOBVS F. 1531'. Saint James the Greater, dressed as a pilgrim in a broad-brimmed hat, rests under an oak, his staff and gourd laid beside him. A walled town is visible in the distance.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "The painter signed and dated the work 'IACOBVS F. 1531' on a stone at lower right. Under an oak rests a pilgrim with a wide-brimmed hat; beside him lie his staff and his gourd.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_participant", "description": "Signed and dated on the stone in the lower right corner, 'PETRVS F. 1531'. A pilgrim in a broad-brimmed hat rests under an oak, his staff and gourd laid beside him. A walled town is visible in the distance.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Signed and dated on the stone in the lower right corner, 'IACOBVS F. 1531'. A pilgrim in a broad-brimmed hat rests under an oak, his staff and gourd laid beside him. A dog sleeps at his feet.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-015",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "oeuvre_contre_figure", "construction": "inscription_sur_l_oeuvre"},
+   {"famille": "phenomenes_iconographiques", "phenomene": "identification_de_personnage", "construction": "par_une_inscription"}
+  ],
+  "pivot": {"lemme": "inscribe", "cle_de_sens": "inscribe%2:32:03::", "famille_lexicale": "verb.communication"},
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Volet de retable, détrempe sur bois. Une jeune sainte couronnée tient une roue brisée et une palme. Sur le fond d'or, à hauteur de sa tête, est inscrit en capitales S. KATHERINA. Le cadre d'origine est perdu.",
+  "definition": "St Catherine holding her broken wheel",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": ["connaissance_typique"],
+  "connaissances_supposees": [
+   {"sorte": "connaissance_typique", "contenu": "un nom inscrit sur le fond, à hauteur de la tête d'une figure, nomme ordinairement cette figure (titulus)", "attestee": false},
+   {"sorte": "equivalence_etablie", "contenu": "KATHERINA et CATHERINE : un même nom propre (une même clé de nom)", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "abduction"],
+  "extensions_requises": ["contexte_emboite"],
+  "justification": "L'inscription est portée par l'œuvre (sur le fond d'or) ; son contenu, le nom KATHERINA, est celui de l'inscription, non une assertion de l'auteur sur la sainte (fondements § 2.5 : un contexte ouvert par l'inscription). Le rattacher à la figure demande la connaissance typique du titulus, non attestée : l'abduction explique la présence du nom près de la tête, et la conclusion est établie sous cette hypothèse, jamais établie (fondements § 2.7, § 5 ; spécification § 4).",
+  "variantes": [
+   {"variation": "traduction", "description": "Altarpiece wing, tempera on panel. A young crowned female saint holds a broken wheel and a palm. On the gold ground, level with her head, S. KATHERINA is inscribed in capitals. The original frame is lost.", "sorte": "positif", "statut_attendu": "etablie_sous_hypotheses", "hypotheses_attendues": ["connaissance_typique"]},
+   {"variation": "changement_de_portee", "description": "Volet de retable, détrempe sur bois. Sainte Catherine, jeune et couronnée, tient une roue brisée et une palme. Sur le fond d'or, à hauteur de sa tête, est inscrit en capitales S. KATHERINA. Le cadre d'origine est perdu.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Volet de retable, détrempe sur bois. Une jeune sainte couronnée tient une roue brisée et une palme. Sur le fond d'or, à hauteur de sa tête, une inscription à demi effacée porte peut-être S. KATHERINA.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Sur ce volet peint à la détrempe, une sainte jeune et couronnée présente une roue brisée et une palme ; près de sa tête, les capitales S. KATHERINA sont inscrites sur l'or du fond. Le cadre d'origine a disparu.", "sorte": "positif", "statut_attendu": "etablie_sous_hypotheses", "hypotheses_attendues": ["connaissance_typique"]},
+   {"variation": "ajout_negation_non_liee", "description": "Volet de retable, détrempe sur bois. Une jeune sainte couronnée tient une roue brisée et une palme. Sur le fond d'or, à hauteur de sa tête, est inscrit en capitales S. KATHERINA. Le fond ne porte aucun motif poinçonné.", "sorte": "positif", "statut_attendu": "etablie_sous_hypotheses", "hypotheses_attendues": ["connaissance_typique"]}
+  ]
+ },
+ {
+  "id": "nr-016",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "personnification", "construction": "attribut_allegorique"},
+   {"famille": "phenomenes_iconographiques", "phenomene": "identification_de_personnage", "construction": "par_les_attributs"},
+   {"famille": "definitions_classification", "phenomene": "attributs_identifiants", "construction": "attribut_typique_d_un_seul"}
+  ],
+  "pivot": {"lemme": "mirror", "cle_de_sens": "mirror%1:06:00::", "famille_lexicale": "noun.artifact"},
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Ceiling painted for the council chamber of a merchant city. Seated on a cloud, a woman looks at herself in a mirror held in her right hand; a snake coils around her left arm. Two putti hold up a drapery above her.",
+  "definition": "Prudence personified as a woman with a mirror and a snake",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": ["connaissance_typique"],
+  "connaissances_supposees": [
+   {"sorte": "connaissance_typique", "contenu": "une femme qui tient un miroir et porte un serpent personnifie la Prudence (prudence%1:07:00::) ; K ne donne ces deux attributs réunis à aucun autre concept", "attestee": false}
+  ],
+  "operations_requises": ["lecture", "abduction"],
+  "extensions_requises": ["referent_conceptuel"],
+  "justification": "Le concept n'est pas nommé : seuls les attributs sont figurés. La connaissance typique, non attestée, propose que la femme personnifie la Prudence, ce qui explique le miroir et le serpent (fondements § 2.7 et § 5 ; spécification § 4) ; K n'en donne pas d'autre lecture, donc aucune ambiguïté à rapporter. La personnification demande un référent conceptuel et la relation de figuration (audit § 3.7). Sous hypothèse, jamais établie.",
+  "variantes": [
+   {"variation": "traduction", "description": "Plafond peint pour la salle du conseil d'une ville marchande. Assise sur un nuage, une femme se regarde dans un miroir qu'elle tient de la main droite ; un serpent s'enroule autour de son bras gauche. Deux putti soutiennent une draperie au-dessus d'elle.", "sorte": "positif", "statut_attendu": "etablie_sous_hypotheses", "hypotheses_attendues": ["connaissance_typique"]},
+   {"variation": "changement_de_modalite", "description": "Ceiling painted for the council chamber of a merchant city. Seated on a cloud, a woman looks at herself in a mirror held in her right hand; a snake coils around her left arm. She is not Prudence: in this cycle she personifies Truth.", "sorte": "negatif", "statut_attendu": "ecartee", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "On a cloud sits a woman who gazes into a mirror held in her right hand, while a snake winds around her left arm; above her, two putti lift a drapery. The ceiling decorated the council chamber of a merchant city.", "sorte": "positif", "statut_attendu": "etablie_sous_hypotheses", "hypotheses_attendues": ["connaissance_typique"]},
+   {"variation": "ajout_figure_non_liee", "description": "Ceiling painted for the council chamber of a merchant city. Seated on a cloud, a woman looks at herself in a mirror held in her right hand; a snake coils around her left arm. In a corner, an old man reads a book.", "sorte": "positif", "statut_attendu": "etablie_sous_hypotheses", "hypotheses_attendues": ["connaissance_typique"]},
+   {"variation": "changement_de_participant", "description": "Ceiling painted for the council chamber of a merchant city. Seated on a cloud, a man looks at himself in a mirror held in his right hand; a snake coils around his left arm. Two putti hold up a drapery above him.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-017",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "personnification", "construction": "attribut_allegorique"},
+   {"famille": "definitions_classification", "phenomene": "condition_necessaire", "construction": "refutation_par_la_negation_d_une_condition"},
+   {"famille": "modalite_negation_contextes", "phenomene": "negation_atomique", "construction": "aucun"}
+  ],
+  "pivot": {"lemme": "blindfold", "cle_de_sens": "blindfold%1:06:00::", "famille_lexicale": "noun.artifact"},
+  "langue": "fr",
+  "sorte": "negatif",
+  "description": "Vitrail civil, vers 1540. La Justice, figurée en femme couronnée, tient une balance et une épée. Contrairement à l'usage, elle ne porte aucun bandeau : ses yeux grands ouverts fixent le spectateur. Les armoiries du donateur occupent le bas du panneau.",
+  "definition": "Justice personified as a blindfolded woman holding scales and a sword",
+  "statut_attendu": "ecartee",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "condition_necessaire", "contenu": "blindfolded ⇒ porte un bandeau sur les yeux (blindfold%1:06:00::) : condition nécessaire, qui transmet la négation par contraposition", "attestee": true},
+   {"sorte": "equivalence_etablie", "contenu": "« balance » et scales (scale, l'instrument de pesée) : le même objet", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "deduction"],
+  "extensions_requises": ["base_de_definitions"],
+  "justification": "« Elle ne porte aucun bandeau » est une négation dite par l'auteur, d'une entité nue (NOYAU § 1.1). K donne le port d'un bandeau pour condition nécessaire, attestée, de « blindfolded » : la contraposition réfute « blindfolded » pour cette figure (fondements § 2.7, § 3.3 ; spécification § 3). La conjonction de la définition est fausse pour ce référent, quoi qu'il en soit de la Justice, de la balance et de l'épée : écartée pour ces référents (NOYAU § 4.4, D31). Relier une entité niée à une propriété d'un autre référent demande une connaissance sur des structures, non sur des types (audit F6) : la base de définitions.",
+  "variantes": [
+   {"variation": "traduction", "description": "Civic stained-glass panel, around 1540. Justice, shown as a crowned woman, holds scales and a sword. Contrary to custom she wears no blindfold: her wide-open eyes stare at the viewer. The donor's arms fill the bottom of the panel.", "sorte": "negatif", "statut_attendu": "ecartee", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Vitrail civil, vers 1540. Figurée en femme couronnée, la Justice tient balance et épée ; elle n'a aucun bandeau sur les yeux et regarde le spectateur. Le bas du panneau porte les armoiries du donateur.", "sorte": "negatif", "statut_attendu": "ecartee", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Vitrail civil, vers 1540. La Justice, figurée en femme couronnée, tient une balance et une épée. Elle ne porte peut-être aucun bandeau : le visage, très restauré, ne permet pas d'en juger.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Vitrail civil, vers 1540. La Justice, figurée en femme couronnée, tient une balance et une épée. Contrairement à l'usage, elle ne porte aucun bandeau. Un chien est couché à ses pieds.", "sorte": "negatif", "statut_attendu": "ecartee", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Vitrail civil, vers 1540. Sur le carton préparatoire, conservé aux archives, la Justice ne porte aucun bandeau ; dans le vitrail, figurée en femme couronnée, elle a les yeux bandés et tient une balance et une épée.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-018",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "personnification", "construction": "attribut_allegorique"},
+   {"famille": "compositionnalite", "phenomene": "adjectif_de_degre", "construction": "age"}
+  ],
+  "pivot": {"lemme": "hourglass", "cle_de_sens": "hourglass%1:06:00::", "famille_lexicale": "noun.artifact"},
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Allegorical drawing in pen and brown ink, heightened with white. A winged youth, nude but for a scarf, holds up an hourglass and points to a sundial. At his feet lie a scythe and a broken column.",
+  "definition": "Time personified as an old winged man holding an hourglass",
+  "statut_attendu": "ecartee",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "connaissance_typique", "contenu": "des ailes, un sablier et une faux : attributs typiques du Temps personnifié", "attestee": false},
+   {"sorte": "implication", "contenu": "youth%1:18:00:: (a young person) ⇒ young%3:00:00::", "attestee": true},
+   {"sorte": "implication", "contenu": "young%3:00:00:: ⇒ non old%3:00:02:: (antonymes dans WordNet), pour une même classe de comparaison, les personnes", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "deduction", "abduction"],
+  "extensions_requises": ["base_de_definitions"],
+  "justification": "Les attributs figurés (ailes, sablier, faux) proposent le Temps par connaissance typique ; mais la définition demande un vieillard. « Youth » implique « young », et K donne « young » pour exclusif de « old », par une implication attestée : l'appui négatif de « old » est déduit (fondements § 3.3), et la conjonction est fausse pour cette figure, quelle que soit l'hypothèse sur le concept. C'est le contre-modèle : tout sauf la condition distinctive. Écartée pour ce référent (NOYAU § 4.4, D31). Passer d'un nom (youth) à une propriété (young) puis à la négation d'une autre demande des relations entre types de catégories différentes (audit § 4) : la base de définitions.",
+  "variantes": [
+   {"variation": "traduction", "description": "Dessin allégorique à la plume et à l'encre brune, rehaussé de blanc. Un jeune homme ailé, nu à l'exception d'une écharpe, brandit un sablier et désigne un cadran solaire. À ses pieds gisent une faux et une colonne brisée.", "sorte": "contre_modele", "statut_attendu": "ecartee", "hypotheses_attendues": []},
+   {"variation": "changement_de_participant", "description": "Allegorical drawing in pen and brown ink, heightened with white. A winged old man, nude but for a scarf, holds up an hourglass and points to a sundial. At his feet lie a scythe and a broken column.", "sorte": "positif", "statut_attendu": "etablie_sous_hypotheses", "hypotheses_attendues": ["connaissance_typique"]},
+   {"variation": "paraphrase", "description": "In this pen drawing heightened with white, a young winged man wearing only a scarf raises an hourglass and gestures towards a sundial, with a scythe and a broken column lying at his feet.", "sorte": "contre_modele", "statut_attendu": "ecartee", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Allegorical drawing in pen and brown ink. A winged youth, nude but for a scarf, holds up an hourglass and points to a sundial. Beside him a putto blows soap bubbles.", "sorte": "contre_modele", "statut_attendu": "ecartee", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Allegorical drawing in pen and brown ink, heightened with white. A winged figure, perhaps a youth, nude but for a scarf, holds up an hourglass and points to a sundial. At his feet lie a scythe and a broken column.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-019",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "personnification", "construction": "concept_nomme"},
+   {"famille": "structures_argumentales", "phenomene": "instrument_et_moyen", "construction": "avec_un_instrument"}
+  ],
+  "pivot": {"lemme": "fortitude", "cle_de_sens": "fortitude%1:07:00::", "famille_lexicale": "noun.attribute"},
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Marble relief from the tomb of a cloth merchant. Fortitude, represented as a young woman in armour, breaks a column with a club. A laurel wreath frames the scene, and the merchant's mark is carved below.",
+  "definition": "Fortitude personified as a woman in armour breaking a column with a club",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "implication", "contenu": "young woman ⊑ woman ; club%1:06:00:: : un objet, instrument possible d'un bris", "attestee": true}
+  ],
+  "operations_requises": ["lecture"],
+  "extensions_requises": ["referent_conceptuel"],
+  "justification": "Le concept est nommé et la figure est dite le représenter (« Fortitude, represented as a young woman ») : un référent conceptuel, signifié par la figure, non présent dans l'image (fondements § 2.1 ; audit § 3.7). La relation de figuration est affirmée par l'auteur ; le bris de la colonne a la massue pour instrument (NOYAU § 3, rôle instrument). Établie, une fois le référent conceptuel représentable : sans lui, « Fortitude » serait un nom de la figure, et rien ne la séparerait d'une femme nommée ainsi.",
+  "variantes": [
+   {"variation": "traduction", "description": "Relief de marbre du tombeau d'un marchand drapier. La Force, figurée en jeune femme cuirassée, brise une colonne avec une massue. Une couronne de laurier encadre la scène, et la marque du marchand est sculptée au-dessous.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Marble relief from the tomb of a cloth merchant. The contract asked the sculptor for 'a Fortitude breaking a column'; the relief shows a young woman in armour breaking a column with a club. A laurel wreath frames the scene.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "On this cloth merchant's tomb, a young woman in armour, the personification of Fortitude, breaks a column with a club, framed by a laurel wreath.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "ajout_negation_non_liee", "description": "Marble relief from the tomb of a cloth merchant. Fortitude, represented as a young woman in armour, breaks a column with a club. She wears no helmet.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Marble relief from the tomb of a cloth merchant. A young woman in armour, probably Fortitude, breaks a column with a club. A laurel wreath frames the scene.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-020",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "personnification", "construction": "concept_nomme"},
+   {"famille": "reference_quantification", "phenomene": "noms_propres", "construction": "nom_complet"}
+  ],
+  "pivot": {"lemme": "prudence", "cle_de_sens": "prudence%1:07:00::", "famille_lexicale": "noun.attribute"},
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Portrait en buste de Prudence Maréchal, fille cadette du commanditaire, peint pour son mariage en 1658. Vêtue de satin gris, elle tient un petit miroir à monture d'écaille. Un rideau vert ferme le fond.",
+  "definition": "Prudence personified as a woman holding a mirror",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "« miroir » et mirror%1:06:00:: : le même objet", "attestee": true}
+  ],
+  "operations_requises": ["lecture"],
+  "extensions_requises": ["referent_conceptuel"],
+  "justification": "« Prudence Maréchal » est le nom complet d'une personne portraiturée, que la figure désigne (fondements § 1.2) ; ce n'est pas le concept de prudence. Sans référent conceptuel, le langage actuel fait du concept un nom de la figure (audit § 3.7) et ne distinguerait pas ce portrait d'une personnification : l'extension est requise pour ne pas établir. Rien ne nie non plus une personnification (un portrait historié reste possible) : inconnue, non écartée (D31).",
+  "variantes": [
+   {"variation": "traduction", "description": "Bust portrait of Prudence Maréchal, the patron's younger daughter, painted for her marriage in 1658. Dressed in grey satin, she holds a small tortoiseshell-framed mirror. A green curtain closes the background.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Portrait historié de Prudence Maréchal, fille cadette du commanditaire, peint pour son mariage en 1658. Elle y est figurée en Prudence, personnification de la vertu dont elle porte le nom, et tient un petit miroir. Un rideau vert ferme le fond.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "La fille cadette du commanditaire, Prudence Maréchal, est représentée en buste pour son mariage, en 1658, vêtue de satin gris et tenant un petit miroir à monture d'écaille, devant un rideau vert.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_participant", "description": "Portrait en buste de Marie Maréchal, fille cadette du commanditaire, peint pour son mariage en 1658. Vêtue de satin gris, elle tient un petit miroir à monture d'écaille. Un rideau vert ferme le fond.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Portrait en buste de Prudence Maréchal, fille cadette du commanditaire, peint pour son mariage en 1658. Vêtue de satin gris, elle tient un petit miroir à monture d'écaille. Un épagneul est couché contre elle.", "sorte": "contre_modele", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-021",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "personnification", "construction": "concept_nomme"},
+   {"famille": "phenomenes_iconographiques", "phenomene": "representation_emboitee", "construction": "vision_figuree"},
+   {"famille": "reference_quantification", "phenomene": "nombre", "construction": "groupe_de_n"}
+  ],
+  "pivot": {"lemme": "charity", "cle_de_sens": "charity%1:07:00::", "famille_lexicale": "noun.attribute"},
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Altarpiece for a confraternity chapel. Saint Bernard kneels at a lectern, his book open before him. In a vision above him, among clouds, appears Charity, a woman with two children at her breast.",
+  "definition": "Charity personified as a woman with two children",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "implication", "contenu": "child%1:18:00:: ⊑ person ; « two children » : une collection de deux enfants (nombre dit)", "attestee": true}
+  ],
+  "operations_requises": ["lecture"],
+  "extensions_requises": ["referent_conceptuel", "contexte_emboite"],
+  "justification": "La Charité est nommée et la figure est dite la représenter, mais dans le contenu de la vision de saint Bernard, un contexte ouvert par une éventualité (fondements § 2.5 : un référent du contenu d'une vision n'est pas un référent du monde figuré). Le protocole (§ 4) dit que ce qui n'est pas dans le contexte de la figuration n'établit rien ; l'ontologie (§ 3) traite pourtant la vision comme une représentation emboîtée, figurée elle aussi. Aucun document ne dit si une définition sans contexte est satisfaite par une figuration emboîtée : l'option la plus prudente, inconnue, est retenue.",
+  "decision_ouverte": {
+   "question": "Une personnification figurée dans le contenu d'une vision (contexte de figuration emboîté) satisfait-elle une définition qui ne précise pas le contexte ?",
+   "statut_selon_l_option": {
+    "la figuration emboîtée compte comme figuration de l'œuvre": "etablie",
+    "seul le monde figuré de premier niveau satisfait la définition": "inconnue"
+   }
+  },
+  "variantes": [
+   {"variation": "traduction", "description": "Retable pour la chapelle d'une confrérie. Saint Bernard est agenouillé devant un lutrin, son livre ouvert devant lui. Dans une vision, au-dessus de lui, parmi les nuées, apparaît la Charité, une femme qui allaite deux enfants.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Altarpiece for a confraternity chapel. Saint Bernard kneels at a lectern, his book open before him. Beside him stands Charity, a woman with two children at her breast.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Above Saint Bernard, who kneels at his lectern with an open book, a vision opens in the clouds: Charity appears there as a woman with two children at her breast. The altarpiece was made for a confraternity chapel.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Altarpiece for a confraternity chapel. Saint Bernard kneels at a lectern; an angel holds his crozier. In a vision above him, among clouds, appears Charity, a woman with two children at her breast.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_participant", "description": "Altarpiece for a confraternity chapel. Saint Bernard kneels at a lectern, his book open before him. In a vision above him, among clouds, appears Hope, a woman leaning on an anchor.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-022",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "symbole", "construction": "couleur_symbolique"}
+  ],
+  "pivot": {"lemme": "whiteness", "cle_de_sens": "whiteness%1:07:00::", "famille_lexicale": "noun.attribute"},
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Vitrail de l'Annonciation, baie nord du chœur, vers 1260. L'ange Gabriel présente à la Vierge un lis dont la blancheur symbolise ici sa pureté. Une bordure de feuillages encadre le médaillon.",
+  "definition": "the colour white as a symbol of purity",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "whiteness%1:07:00:: et white%3:00:01:: : la même couleur, sous forme de nom et d'adjectif", "attestee": true},
+   {"sorte": "equivalence_etablie", "contenu": "« pureté » et purity%1:07:00:: : le même concept", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "canonisation"],
+  "extensions_requises": ["referent_conceptuel"],
+  "justification": "L'auteur affirme la relation de symbole entre la couleur du lis figuré et un concept, la pureté : un référent conceptuel, signifié, non présent (fondements § 2.1 ; audit § 3.7). « Blancheur » et « blanc » sont la même couleur (canonisation, fondements § 3.2). Établie, une fois la relation de symbole représentable.",
+  "variantes": [
+   {"variation": "traduction", "description": "Annunciation window, north bay of the choir, around 1260. The angel Gabriel offers the Virgin a lily whose whiteness here symbolizes her purity. A border of foliage frames the medallion.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Vitrail de l'Annonciation, baie nord du chœur, vers 1260. L'ange Gabriel présente à la Vierge un lis dont la blancheur symbolise peut-être sa pureté. Une bordure de feuillages encadre le médaillon.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "Vitrail de l'Annonciation, vers 1260. Le lis que l'ange Gabriel tend à la Vierge a une blancheur qui, ici, symbolise la pureté de celle-ci. Le médaillon est entouré de feuillages.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Vitrail de l'Annonciation, baie nord du chœur, vers 1260. L'ange Gabriel présente à la Vierge un lis dont la blancheur symbolise ici sa pureté. Au-dessus, une colombe descend vers la Vierge.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "ajout_negation_non_liee", "description": "Vitrail de l'Annonciation, baie nord du chœur, vers 1260. L'ange Gabriel présente à la Vierge un lis dont la blancheur symbolise ici sa pureté. La Vierge ne porte pas de couronne.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-023",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "symbole", "construction": "couleur_symbolique"},
+   {"famille": "phenomenes_iconographiques", "phenomene": "niveaux_de_signification", "construction": "iconologique"},
+   {"famille": "compositionnalite", "phenomene": "adjectif_intersectif", "construction": "epithete"}
+  ],
+  "pivot": {"lemme": "blue", "cle_de_sens": "blue%5:00:00:chromatic:00", "famille_lexicale": "adj.all"},
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Panel from a small devotional diptych. The Virgin, in a deep blue mantle lined with green, holds the Child against her cheek. The blue is ground lapis lazuli, the costliest pigment in the workshop's accounts. Gold rays surround her head.",
+  "definition": "the colour blue as a symbol of heaven",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "hypothese_interpretative", "contenu": "dans une image de la Vierge, le bleu de son manteau peut signifier le ciel (heaven%1:15:00::)", "attestee": false}
+  ],
+  "operations_requises": ["lecture", "abduction"],
+  "extensions_requises": ["referent_conceptuel"],
+  "justification": "Le texte dit la couleur du manteau, sa matière et son prix ; il ne dit aucun symbole. Le niveau iconologique n'est pas un contenu figuré (fondements § 2.5 : le signifié est un contexte propre). La seule voie serait l'abduction par une hypothèse interprétative (fondements § 2.7), qui doit expliquer une observation et être comparée aux explications concurrentes (fondements § 5) ; or le texte explique déjà le bleu par le prix du pigment. Son admissibilité est la décision ouverte ; l'option la plus prudente, inconnue, est retenue.",
+  "decision_ouverte": {
+   "question": "Une hypothèse interprétative qui lit une couleur comme symbole, quand le texte ne dit aucun symbole, explique-t-elle une observation (le manteau bleu), alors que le texte en donne une autre raison (le lapis-lazuli, pigment coûteux) ? Le niveau iconologique peut-il être atteint par abduction ?",
+   "statut_selon_l_option": {
+    "hypothèse interprétative admissible, l'explication concurrente étant rapportée": "etablie_sous_hypotheses",
+    "le symbole n'explique rien que le texte n'explique déjà ; niveau iconologique non atteint": "inconnue"
+   }
+  },
+  "variantes": [
+   {"variation": "traduction", "description": "Volet d'un petit diptyque de dévotion. La Vierge, dans un manteau d'un bleu profond doublé de vert, serre l'Enfant contre sa joue. Le bleu est du lapis-lazuli broyé, le pigment le plus coûteux des comptes de l'atelier. Des rayons d'or entourent sa tête.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Panel from a small devotional diptych. The Virgin, in a deep blue mantle whose colour here symbolizes heaven, holds the Child against her cheek. Gold rays surround her head.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "On this diptych wing the Virgin presses the Child to her cheek; her mantle, lined with green, is a deep blue made of ground lapis lazuli, the most expensive pigment the workshop bought.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Panel from a small devotional diptych. The Virgin, in a deep blue mantle lined with green, holds the Child against her cheek. A goldfinch perches on the Child's hand.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []},
+   {"variation": "ajout_negation_non_liee", "description": "Panel from a small devotional diptych. The Virgin, in a deep blue mantle lined with green, holds the Child against her cheek. The blue is ground lapis lazuli. The mantle has no embroidered hem.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ },
+ {
+  "id": "nr-024",
+  "famille": "niveaux_representation",
+  "phenomenes": [
+   {"famille": "niveaux_representation", "phenomene": "symbole", "construction": "couleur_symbolique"},
+   {"famille": "modalite_negation_contextes", "phenomene": "source_citee", "construction": "selon"}
+  ],
+  "pivot": {"lemme": "green", "cle_de_sens": "green%5:00:00:chromatic:00", "famille_lexicale": "adj.all"},
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Fresco of the Last Judgement over the chancel arch. Saint John the Evangelist, seated among the apostles, wears a green mantle. According to the programme drawn up by Abbot Hugo, kept in the abbey archive, the green of his mantle signifies hope. The upper zone is heavily retouched.",
+  "definition": "the colour green as a symbol of hope",
+  "statut_attendu": "non_certifiee",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {"sorte": "equivalence_etablie", "contenu": "« signify » et symbolize%2:32:00:: : la même relation entre une couleur figurée et un concept", "attestee": true}
+  ],
+  "operations_requises": ["lecture", "canonisation"],
+  "extensions_requises": ["referent_conceptuel"],
+  "justification": "La couleur est affirmée par l'auteur dans le figuré ; la relation de symbole n'est dite que selon l'abbé Hugues, une source citée (énonciateur cite(Hugo), ASSERTIONS). La valeur est vraie, mais sa vérité passe par la seule parole de cette source : non certifiée (NOYAU § 4.3, § 4.4 ; fondements § 2.5 : l'énonciateur est une propriété du chemin). Le statut demande aussi le référent conceptuel.",
+  "variantes": [
+   {"variation": "traduction", "description": "Fresque du Jugement dernier sur l'arc triomphal. Saint Jean l'Évangéliste, assis parmi les apôtres, porte un manteau vert. Selon le programme rédigé par l'abbé Hugues, conservé aux archives de l'abbaye, le vert de son manteau signifie l'espérance. La zone supérieure est très retouchée.", "sorte": "indetermine", "statut_attendu": "non_certifiee", "hypotheses_attendues": []},
+   {"variation": "changement_de_portee", "description": "Fresco of the Last Judgement over the chancel arch. Saint John the Evangelist, seated among the apostles, wears a green mantle; the green of his mantle here signifies hope. The upper zone is heavily retouched.", "sorte": "positif", "statut_attendu": "etablie", "hypotheses_attendues": []},
+   {"variation": "paraphrase", "description": "In Abbot Hugo's programme, kept in the abbey archive, the green of the mantle worn by Saint John the Evangelist, who sits among the apostles of this Last Judgement over the chancel arch, signifies hope.", "sorte": "indetermine", "statut_attendu": "non_certifiee", "hypotheses_attendues": []},
+   {"variation": "ajout_figure_non_liee", "description": "Fresco of the Last Judgement over the chancel arch. Saint John the Evangelist, seated among the apostles, wears a green mantle; above him an angel sounds a trumpet. According to the programme drawn up by Abbot Hugo, the green of his mantle signifies hope.", "sorte": "indetermine", "statut_attendu": "non_certifiee", "hypotheses_attendues": []},
+   {"variation": "changement_de_modalite", "description": "Fresco of the Last Judgement over the chancel arch. Saint John the Evangelist, seated among the apostles, wears a green mantle. According to the programme drawn up by Abbot Hugo, the green of his mantle may signify hope.", "sorte": "indetermine", "statut_attendu": "inconnue", "hypotheses_attendues": []}
+  ]
+ }
+]

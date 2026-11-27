@@ -26,6 +26,9 @@ reproduction sont sur la branche du code (`docs/BANC_GRAPHES.md`, § 5 ; `docs/m
   et son `MANIFESTE.json` (l'empreinte de chaque fichier de l'archive).
 - `c3_contre_expertise/` : la contre-expertise de #16 (PR #18) ; `jugements.json` : des décisions d'agent,
   **provisoires** ; son propre `MANIFESTE.json`.
+- `bancs_phase1/` : les bancs de développement de la phase 1 (`docs/BANCS_PHASE1.md`) : `dev/` (les cas par famille, les
+  questions, les relectures, les révisions, la couverture), `v1_avant_relecture/` (la première version, gardée) ; son
+  propre `MANIFESTE.json`. Accord entre agents, non validé par la propriétaire. Aucun cas de qualification ici.
 - `premisses/` : l'admissibilité effective des prémisses selon le noyau, et les comparaisons appariées des versions
   A et S de la sûreté du lecteur sur cette mesure ; son propre `MANIFESTE.json`.
 - `MANIFESTE.json` : chaque fichier (taille, SHA-256, rôle, statut), et les commits des passes.
