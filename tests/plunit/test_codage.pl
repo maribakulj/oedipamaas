@@ -63,6 +63,44 @@ test(rejet_explicite_de_rien) :-                          % aucun statut ne dit 
 
 :- end_tests(codage).
 
+% --- Les assertions dérivées (lot 3) : jamais des prémisses déductives ; une conclusion qui en dépend les cite -------
+
+index_derivations :-
+    retractall(requetes_index:requete_compilee(_, _, _, _, _, _, _, _)),
+    forall(entree_d(N, Su, St), assertz(requetes_index:requete_compilee(N, essai, classe, Su, aucune, St, [], f))),
+    codage:reindexer.
+% « l'arche flotte » : l'agent n'est pas dit (R2, hypothétique : le participant unique est aussi agent)
+entree_d('H', requete('H', et([type(v(x), arche), evenement(v(e), flotter), role(v(e), agent, v(x))])), compilee).
+entree_d('I', requete('I', et([type(v(x), arche), evenement(v(e), flotter), role(v(e), theme, v(x))])), compilee).
+arche_d(G) :- graphe_cas([entite(e1, arche, p_1), evenement(v1, flotter, p_2), role(v1, theme, e1)], G).
+coder_d(Opts, R) :- arche_d(G), coder(essai, G, indexe, [k(connaissances_essai)|Opts], R).
+
+:- begin_tests(codage_derivations, [setup(index_derivations)]).
+
+test(sans_l_option_rien_n_est_derive) :-
+    coder_d([], R), \+ memberchk(code('H', conditionnel_par_derivation, _, _), R),
+    \+ ( memberchk(code('H', S, _, _), R), memberchk(S, [etabli, etablissable, candidat, conditionnel]) ).
+test(conditionnel_par_derivation_avec_sa_provenance) :-
+    coder_d([derivations(oui)], R),
+    memberchk(code('H', conditionnel_par_derivation, derivation(Hs, Ps), annexe(complet, aucune)), R),
+    Hs == [derivation(role(v1, agent, e1), r2, hypothetique, [evenement(v1, flotter, p_2), role(v1, theme, e1)])],
+    Ps = [_|_].
+test(les_preuves_valent_sur_le_graphe_et_les_seules_hypotheses) :-
+    coder_d([derivations(oui)], R), memberchk(code('H', _, derivation(Hs, Ps), _), R),
+    arche_d(G0), findall(F, member(derivation(F, _, _, _), Hs), Fs), append(G0, Fs, G1), sort(G1, G),
+    requetes_index:requete_compilee('H', essai, _, Q, _, _, _, _),
+    forall(member(P, Ps), verificateur:verifier(connaissances_essai, G, Q, P, accepte)),
+    arche_d(Gs), \+ forall(member(P, Ps), verificateur:verifier(connaissances_essai, Gs, Q, P, accepte)).
+test(le_codage_deductif_est_inchange) :-
+    coder_d([], R0), coder_d([derivations(oui)], R1),
+    exclude([code(_, S, _, _)]>>(S == conditionnel_par_derivation), R1, R1d),
+    findall(N, member(code(N, conditionnel_par_derivation, _, _), R1), Nd),
+    exclude([code(N, _, _, _)]>>memberchk(N, ['H']), R0, R0d),
+    Nd == ['H'], R1d == R0d,
+    memberchk(code('I', etablissable, _, _), R1).
+
+:- end_tests(codage_derivations).
+
 % --- Indexé et exhaustif : mêmes résultats positifs, sur des graphes et des requêtes tirés ---------------------------
 
 index_genere(N) :-

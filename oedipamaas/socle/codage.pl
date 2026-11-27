@@ -7,7 +7,8 @@
     coder(+Langue, +Faits, +Mode, +Options, -Resultats)
         Faits : les assertions d'un document (interpretation.pl, ancrage compris) ; Mode : indexe | exhaustif
         Options : k(K) (le module de connaissances, sinon celui de la langue) ; normaliser(non) (le graphe tel quel) ;
-                  budget(N) (par requête)
+                  budget(N) (par requête) ; derivations(oui) (la passe des assertions dérivées par les règles
+                  hypothétiques de la normalisation, avec leur provenance : plus bas, lot 3)
         Resultats : [code(N, Statut, Detail, annexe(Complet, Necessaire))], triés.
           Statut, d'après la condition SUFFISANTE seule :
             etabli          la suffisante est établie, la compilation est « compilee », sa famille de constructions est
@@ -20,6 +21,9 @@
                             rattachées aux lemmes, non aux occurrences, et ne sont pas confrontées entre elles ; deux
                             lectures exclusives d'une même occurrence peuvent justifier ensemble un code conditionnel
                             (docs/QUALIFICATION_NOYAU.md, § 10, L1)
+            conditionnel_par_derivation  (option derivations(oui) seulement) la suffisante, inconnue sur le graphe, est
+                            établie sur le graphe augmenté d'assertions dérivées par des règles hypothétiques
+                            (Detail : derivation(Hypotheses, Preuves), plus bas). NE PAS EXPLOITER AUTOMATIQUEMENT
             rejete_par_le_verificateur
             contradictoire  des appuis des deux signes
             non_certifie    vraie selon le graphe, non certifiable
@@ -38,7 +42,9 @@
         réduction aux plus précises : l'arbre d'Iconclass est une ascendance documentaire, pas une implication
         (docs/PLAN_V1.md, I11) ; la réduction est une présentation, à part.
 
-    Le graphe est d'abord normalisé (normalisation.pl : les deux formes d'une action, les rôles, les composés).
+    Le graphe est d'abord normalisé par les seules règles certaines de normalisation.pl (aucune à ce jour : le graphe
+    est inchangé, lot 2) ; les règles hypothétiques ne servent que dans la passe des dérivations, sans jamais fonder
+    un code déductif.
 
     L'index et sa complétude (docs/PLAN_V1.md, C5.3). Chaque requête (suffisante et nécessaire) est rangée sous une
     clé par clause de sa forme normale disjonctive : un atome lexical de la clause (un nom, sinon un type, un genre, un
@@ -54,6 +60,7 @@
 :- use_module(library(lists)).
 :- use_module(library(apply)).
 :- use_module(library(pairs)).
+:- use_module(library(ordsets)).
 :- use_module(satisfaction).
 :- use_module(verificateur).
 :- use_module(normalisation, []).
@@ -123,20 +130,99 @@ coder(L, Fs, Mode, Resultats) :- coder(L, Fs, Mode, [], Resultats).
 coder(L, Fs, Mode, Opts, Resultats) :-
     indexer, k_de(L, Opts, K),
     ( memberchk(normaliser(non), Opts) -> G = Fs ; normalisation:enrichir(L, Fs, G) ),
+    candidates(K, L, G, Mode, Ns),
+    ( memberchk(budget(B), Opts) -> Ob = [budget(B)] ; Ob = [] ),
+    codes(K, L, G, Ns, Ob, R1),
+    (   memberchk(derivations(oui), Opts) -> sous_derivations(K, L, G, Mode, Ob, R1, Resultats)
+    ;   Resultats = R1
+    ).
+
+candidates(K, L, G, Mode, Ns) :-
     (   Mode == exhaustif
     ->  findall(N, ( requetes_index:requete_compilee(N, L, _, _, _, St, _, _), memberchk(St, [compilee, partielle]) ),
                 Ns0)
     ;   cles_du_graphe(K, G, Cs), findall(N, ( member(C, Cs), cle(C, L, N) ), Ns0)
     ),
-    sort(Ns0, Ns),
+    sort(Ns0, Ns).
+
+codes(K, L, G, Ns, Ob, Resultats) :-
     findall(N-(Qs-Qn), ( member(N, Ns), requetes_index:requete_compilee(N, L, _, Qs, Qn, _, _, _) ), NQs),
     findall(Q, ( member(_-(Q-_), NQs), Q \== aucune ), Suff),
     findall(Q, ( member(_-(_-Q), NQs), Q \== aucune ), Nec),
-    ( memberchk(budget(B), Opts) -> Ob = [budget(B)] ; Ob = [] ),
     satisfaction:satisfaire_lot(K, G, Suff, Ob, Rs),
     satisfaction:satisfaire_lot(K, G, Nec, Ob, Rn),
     findall(Code, ( member(N-_, NQs), code(K, G, L, N, Rs, Rn, Code) ), Resultats0),
     sort(Resultats0, Resultats).
+
+% --- Les assertions dérivées (lot 3) ----------------------------------------------------------------------------------
+%
+% Option derivations(oui) : les règles hypothétiques de la normalisation (normalisation:deriver/3) ajoutent au graphe
+% des assertions dont la provenance est gardée. Elles ne sont jamais des prémisses déductives : le codage déductif est
+% celui du graphe sans elles (ci-dessus), inchangé ; une notation dont la suffisante n'y est qu'inconnue
+% (sans_suffisante, ou pas même candidate) et qui est établie sur le graphe augmenté devient
+%     code(N, conditionnel_par_derivation, derivation(Hypotheses, Preuves), annexe(Complet, Necessaire))
+%   Hypotheses  [derivation(Fait, Regle, hypothetique, Sources)] : les assertions dérivées que demandent les preuves,
+%               avec les dérivations de leurs sources dérivées (normalisation:derivations_requises/3) ; la conclusion
+%               vaut si chacune est vraie
+%   Preuves     les preuves du noyau sur le graphe d'origine augmenté de ces seules hypothèses (leur empreinte est
+%               celle de ce graphe), acceptées par le vérificateur ; si les hypothèses tirées des preuves ne suffisent
+%               pas (un appui dérivé que les preuves ne citent pas), toutes les dérivations sont prises, et la
+%               liste le dit : derivation(toutes(Hypotheses), Preuves)
+%   Necessaire  celle du graphe d'origine
+% NE PAS EXPLOITER AUTOMATIQUEMENT : une lecture hypothétique du texte (docs/QUALIFICATION_NOYAU.md, § 10, L3).
+% Une notation que le graphe d'origine dit contradictoire, écartée, non certifiée ou incomplète n'est jamais reprise
+% (une assertion ajoutée peut retirer une négation : une entité niée cesse d'être « nue », NOYAU § 1).
+sous_derivations(K, L, G0, Mode, Ob, R1, Resultats) :-
+    normalisation:deriver(L, G0, Ds0),
+    include(hypothetique, Ds0, Ds),
+    findall(F, member(derivation(F, _, _, _), Ds), Fs0), append(G0, Fs0, Gd0), sort(Gd0, Gd), msort(G0, G0s),
+    (   Gd == G0s -> Resultats = R1
+    ;   candidates(K, L, Gd, Mode, Nd),
+        findall(N, ( member(N, Nd), \+ ( member(code(N, S, _, _), R1), S \== sans_suffisante ) ), Ns),
+        findall(N-Q, ( member(N, Ns), requetes_index:requete_compilee(N, L, _, Q, _, _, _, _), Q \== aucune ), NQs),
+        pairs_values(NQs, Qs), satisfaction:satisfaire_lot(K, Gd, Qs, Ob, Rd),
+        findall(N, ( member(N-Q, NQs), memberchk(N-resultat(St, _, _), Rd), memberchk(St, [etablie, etablie_sous_hypotheses]) ),
+                Nouveaux),
+        findall(C, ( member(N, Nouveaux), code_derive(K, L, G0, Gd, Ds, Ob, R1, Rd, N, C) ), Cs),
+        findall(N, member(code(N, _, _, _), Cs), Ncs),
+        exclude(code_de(Ncs), R1, R1b),
+        append(R1b, Cs, R2), sort(R2, Resultats)
+    ).
+
+hypothetique(derivation(_, _, hypothetique, _)).
+code_de(Ns, code(N, _, _, _)) :- memberchk(N, Ns).
+
+code_derive(K, L, G0, Gd, Ds, Ob, R1, Rd, N, code(N, conditionnel_par_derivation, Detail, annexe(Complet, Necessaire))) :-
+    requetes_index:requete_compilee(N, L, _, Q, Qn, _, _, _),
+    memberchk(N-resultat(_, Ps0, _), Rd),
+    hypotheses_des_preuves(Ds, Ps0, Hs),
+    findall(F, member(derivation(F, _, _, _), Hs), Fh), append(G0, Fh, G10), sort(G10, G1),
+    (   etablie_verifiee(K, G1, Q, Ob, Ps, C1) -> Detail = derivation(Hs, Ps)
+    ;   etablie_verifiee(K, Gd, Q, Ob, Ps, C1) -> Detail = derivation(toutes(Ds), Ps)
+    ),
+    (   memberchk(code(N, _, _, annexe(Cn, Necessaire)), R1) -> true
+    ;   Qn == aucune -> Necessaire = aucune, Cn = complet
+    ;   satisfaction:satisfaire_lot(K, G0, [Qn], Ob, [_-Rn]),
+        ( Rn = mal_formee(_) -> Necessaire = mal_formee, Cn = complet ; Rn = resultat(Necessaire, _, Cn) )
+    ),
+    ( ( C1 == incomplet ; Cn == incomplet ) -> Complet = incomplet ; Complet = complet ).
+
+etablie_verifiee(K, G, Q, Ob, Ps, C) :-
+    satisfaction:satisfaire(K, G, Q, Ob, resultat(St, Ps, C)), memberchk(St, [etablie, etablie_sous_hypotheses]),
+    forall(member(P, Ps), verifier(K, G, Q, P, accepte)).
+
+% les dérivations que citent les preuves : un fait dérivé dont l'identifiant (le premier argument ; un rôle : le rôle
+% lui-même ; une coréférence : l'une de ses entités) est cité par une justification ou par σ, et ses sources dérivées
+hypotheses_des_preuves(Ds, Ps, Hs) :-
+    findall(X, ( member(preuve(_, _, _, S, Js, _), Ps), member(T, [S, Js]), sous_terme(X, T), atomic(X) ), Ids0),
+    sort(Ids0, Ids),
+    findall(F, ( member(derivation(F, _, _, _), Ds), cite(F, Ps, Ids) ), Fs0), sort(Fs0, Fs),
+    normalisation:derivations_requises(Ds, Fs, Hs).
+cite(role(V, R, X), Ps, _) :- !, member(preuve(_, _, _, _, Js, _), Ps), sous_terme(T, Js), T == role(V, R, X), !.
+cite(coref(A, B), _, Ids) :- !, ( ord_memberchk(A, Ids) ; ord_memberchk(B, Ids) ), !.
+cite(F, _, Ids) :- arg(1, F, A), ord_memberchk(A, Ids).
+sous_terme(X, X).
+sous_terme(X, T) :- compound(T), arg(_, T, A), sous_terme(X, A).
 
 % le code d'une notation : la suffisante et la nécessaire, chacune pour elle-même
 code(K, G, L, N, Rs, Rn, code(N, Statut, Detail, annexe(Complet, Necessaire))) :-
