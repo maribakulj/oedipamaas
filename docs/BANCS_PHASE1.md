@@ -217,6 +217,14 @@ texte laisse ouverts », c'est-à-dire d'une désambiguïsation par le contexte 
   - **pour un mot français,** les sens sont ceux de WOLF (`outils/bancs/sens_fr.py`), non ceux du mot anglais
     correspondant ;
   - **ce n'est pas le pivot seul :** la règle vaut pour chaque mot dont un atome de la définition dépend.
+  - **les rôles et les relations ne passent pas par K :** un rôle (agent, patient, thème…) et une relation spatiale,
+    méréologique ou temporelle (« au-dessus de », « à droite de », « pendant que », « de » de partie) sont des
+    **concepts du langage d'assertions**, que la lecture produit à partir de la préposition ou de la construction, en
+    français comme en anglais. Ils ne sont pas soumis à la règle des sens de K. Une préposition **polysémique** (le
+    « de » de partie, de possession, de matière, de représentation) donne plusieurs lectures. Si l'atome de la
+    définition dépend de laquelle, c'est une hypothèse `sens`, avec une `decision_ouverte`. C'est le phénomène
+    `preposition_polysemique`, non un défaut de K. Le cadre de référence de « à droite » et « à gauche » reste une
+    question ouverte.
 
 **3. Les incompatibilités.** Aucune sorte de connaissance ne dit que deux types s'excluent (debout et assis, éveillé et
 endormi), et aucune antonymie n'en tient lieu. Un contre-modèle qui en dépend reste `inconnue` ; une `decision_ouverte`
