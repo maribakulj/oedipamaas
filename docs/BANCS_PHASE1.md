@@ -211,7 +211,8 @@ endormi), et aucune antonymie n'en tient lieu. Un contre-modèle qui en dépend 
 donne le statut si une sorte « incompatibilité attestée » était admise.
 
 **Les autres corrections du schéma :**
-- `extensions_requises` est admis aussi sur une variante, quand elle demande plus que son cas ;
+- `extensions_requises` et `decision_ouverte` sont admis aussi sur une variante, quand elle demande plus que son cas
+  ou que son statut dépend d'une autre décision ;
 - l'extension `contenu_d_inscription` est ajoutée : ce que dit le texte d'une inscription. Sa réalisation est différée
   (`docs/TRAJECTOIRE.md`), mais un cas peut en dépendre ;
 - entre `non_certifiee` et `inconnue`, le plus prudent est `inconnue` : `non_certifiee` dit qu'une substitution vraie

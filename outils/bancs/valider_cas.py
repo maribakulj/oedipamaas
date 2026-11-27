@@ -135,6 +135,10 @@ def controler(cas, inv, rep, cote, lex=None):
             for x in v.get("extensions_requises", []):
                 if x not in EXTENSIONS:
                     err(c, f"variante {i} : extension {x!r}")
+            dv = v.get("decision_ouverte")
+            if dv is not None and (not isinstance(dv, dict) or "question" not in dv
+                                   or not all(x in STATUTS for x in dv.get("statut_selon_l_option", {}).values())):
+                err(c, f"variante {i} : decision_ouverte mal formée {dv!r}")
             un(c, v, f"variante {i}")
     return erreurs
 
