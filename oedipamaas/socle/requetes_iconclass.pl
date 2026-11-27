@@ -566,7 +566,8 @@ enumeration([phrase(Ms0)], Ss) :-
     \+ ( member(M, Ms), arg(4, M, C), ( C == 'AUX' ; C == 'VERB', arg(5, M, Ft), memberchk('VerbForm'='Fin', Ft) ) ),
     definitions:segments(Ms, Ss0),
     exclude(definitions:segment_exemple, Ss0, Ss1), exclude(segment_etc, Ss1, Ss),
-    Ss = [_, _|_], maplist(segment_a_tete, Ss), Ss = [_|Ss2], maplist(segment_parallele, Ss2),
+    Ss = [_, _|_], maplist(segment_a_tete, Ss), Ss = [_|Ss2], include(segment_parallele, Ss2, Sp), Sp \== [],
+    forall(member(S, Ss2), ( memberchk(S, Sp) ; gerondif_de_liste(S) )),
     \+ ( member(M, Ms), arg(4, M, 'PROPN') ).    % un nom propre : une apposition (« Shiva, god of fertility »)
 segment_etc(S) :- exclude([M]>>arg(4, M, 'PUNCT'), S, [mot(_, F, _, _, _, _, _, _, _)]), downcase_atom(F, W), memberchk(W, ['etc.', etc]).
 segment_a_tete(S) :- member(M, S), arg(4, M, C), memberchk(C, ['NOUN', 'VERB']), !.
@@ -576,6 +577,12 @@ segment_a_tete(S) :- member(M, S), arg(4, M, C), memberchk(C, ['NOUN', 'VERB']),
 segment_parallele(S) :-
     member(M, S), arg(6, M, H), \+ ( member(M2, S), arg(1, M2, H) ), arg(4, M, C), C \== 'PUNCT', !,
     arg(7, M, D), memberchk(D, [conj, list, parataxis, root]).
+% dans une liste dont un autre segment est coordonné, un gérondif que l'analyseur rattache au premier comme modifieur
+% (« baptism, consecration, taking vows… » : acl) est un segment parallèle ; seul, il resterait un modifieur
+% (« a woman, holding a child »)
+gerondif_de_liste(S) :-
+    member(M, S), arg(6, M, H), \+ ( member(M2, S), arg(1, M2, H) ), arg(4, M, 'VERB'), !,
+    arg(7, M, acl), arg(5, M, Ft), memberchk('VerbForm'='Part', Ft), memberchk('Tense'='Pres', Ft).
 
 % une partie de libellé (un aspect) : sa requête ; une énumération y est une disjonction (D1)
 requete_de_partie(Fs, Ph, F, Ra) :-

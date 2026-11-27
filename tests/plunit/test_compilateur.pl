@@ -129,6 +129,17 @@ test(enumeration_pas_d_apposition, fail) :-
 test(enumeration_pas_de_modifieur, fail) :-
     requetes_iconclass:enumeration([phrase([mot(1, animals, animal, 'NOUN', [], 0, root, 0, 7),
         mot(2, ',', ',', 'PUNCT', [], 3, punct, 7, 8), mot(3, kept, keep, 'VERB', ['VerbForm'='Part'], 1, acl, 9, 13)])], _).
+test(enumeration_gerondif_de_liste, N == 3) :-
+    requetes_iconclass:enumeration([phrase([mot(1, baptism, baptism, 'NOUN', [], 0, root, 0, 7),
+        mot(2, ',', ',', 'PUNCT', [], 3, punct, 7, 8), mot(3, consecration, consecration, 'NOUN', [], 1, conj, 9, 21),
+        mot(4, ',', ',', 'PUNCT', [], 5, punct, 21, 22),
+        mot(5, taking, take, 'VERB', ['Tense'='Pres', 'VerbForm'='Part'], 1, acl, 23, 29),
+        mot(6, vows, vow, 'NOUN', [], 5, obj, 30, 34)])], Ss), length(Ss, N).
+test(enumeration_gerondif_seul_modifieur, fail) :-
+    requetes_iconclass:enumeration([phrase([mot(1, woman, woman, 'NOUN', [], 0, root, 0, 5),
+        mot(2, ',', ',', 'PUNCT', [], 3, punct, 5, 6),
+        mot(3, holding, hold, 'VERB', ['Tense'='Pres', 'VerbForm'='Part'], 1, acl, 7, 14),
+        mot(4, child, child, 'NOUN', [], 3, obj, 15, 20)])], _).
 test(enumeration_pas_de_verbe_conjugue, fail) :-
     requetes_iconclass:enumeration([phrase([mot(1, man, man, 'NOUN', [], 2, nsubj, 0, 3),
         mot(2, sings, sing, 'VERB', ['VerbForm'='Fin'], 0, root, 4, 9), mot(3, ',', ',', 'PUNCT', [], 4, punct, 9, 10),
