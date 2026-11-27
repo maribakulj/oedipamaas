@@ -43,13 +43,15 @@ langage et, par sa spécification, le noyau.
 - **La mesure de l'admissibilité effective** des prémisses, selon le noyau (`outils/graphes/premisses.pl`).
 - **La présence des textes** dans les comparaisons appariées (`apparier.py`).
 - **La monotonie mise à l'épreuve,** et corrigée (`tests/plunit/test_monotonie.pl`).
-- **Le jeu de qualification indépendant,** tiré et scellé.
+- **Le jeu de qualification indépendant,** tiré et gelé, non scellé (sa garde : `docs/QUALIFICATION_SEMANTIQUE.md`, § 4.1).
 - **L'audit de l'expressivité** et les fondements sémantiques.
 
 ## Phase 1 — les bancs par famille, avant tout code (lancée le 27/11)
 
 - **Les cas de base et leurs variations,** écrits d'après les fondements et la spécification des opérations, pour les
-  huit familles. La moitié de chaque banc est mise sous scellé.
+  neuf familles, les phénomènes iconographiques compris. La séparation entre développement et qualification se fait
+  par cas de base, familles lexicales et constructions, **avant** la génération des variantes ; les cas de qualification
+  sont écrits par une session distincte (`docs/QUALIFICATION_SEMANTIQUE.md`, § 2).
 - **Le jugement humain d'un échantillon** (D23).
 - **La fin de la phase :** les bancs sont validés par la propriétaire.
 - **Ce qui ne se fait pas encore :** aucune règle, aucune extension.
