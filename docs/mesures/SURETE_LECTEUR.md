@@ -32,8 +32,14 @@ négation de 47G3355, établissable) disparaît dans toutes les versions.
   | C | A + `doute` |
   | S (exploratoire) | A + `certain` |
 
-- **La mise au point s'est faite sur le développement.** La validation a été lue pour décider, et une seule fois pour
-  un diagnostic (§ 4), sans réglage.
+- **La mise au point s'est faite sur le développement.**
+  - La validation a été lue pour décider, à trois reprises : une version intermédiaire (A4, C4), l'ablation, puis les
+    versions finales.
+  - Elle a été lue une fois pour un diagnostic (§ 4), sans réglage de A ni de C.
+  - Après la première lecture, deux règles ont changé, d'après les fausses décisions du développement seulement :
+    le contenant de la scène doit être une œuvre certaine, et « gone » n'est plus un adjectif d'absence.
+  - La lecture de la validation a pu orienter ce choix. Les sorties intermédiaires sont gardées (`relu_JEU_A4.json`,
+    `relu_JEU_A5.json`…).
   - Les règles de X2 viennent du texte du guide : « le peintre a la portée `histoire`, ses actes sur l'image la
     portée `oeuvre` » ; H1 ; H2 ; la liste de `portee`.
   - Le résumé des promotions de la validation (portées « image », « composition », « peintre ») était déjà connu,
