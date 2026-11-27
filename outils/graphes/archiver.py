@@ -22,6 +22,8 @@ import time
 from pathlib import Path
 
 ROLES = [
+    ("v2/errata", "les errata de la version 2 du banc : les erreurs manifestes décidées par un agent ; provisoires", "agents"),
+    ("v2/journal", "le journal des errata appliqués (outils/graphes/version_banc.py)", "outil"),
     ("guide_annotateur.md", "le guide remis aux annotateurs (§ 2 et § 3 de docs/BANC_GRAPHES.md)", "outil"),
     ("textes_", "les textes du banc (échantillon : une fiche sur cinq)", "outil"),
     ("lots/", "les lots remis aux annotateurs", "outil"),
@@ -38,9 +40,14 @@ ROLES = [
 ]
 
 
+def correspond(rel, p):
+    """Le préfixe vaut pour le chemin, ou pour le nom du fichier (une version du banc range ses fichiers dans v2/)."""
+    return rel.startswith(p) or (not p.endswith("/") and Path(rel).name.startswith(p))
+
+
 def role(rel):
     for p, r, s in ROLES:
-        if rel.startswith(p):
+        if correspond(rel, p):
             return r, s
     return "autre", "outil"
 
@@ -58,7 +65,7 @@ CROISE = [
 
 def role_croise(rel):
     for p, r, s in CROISE:
-        if rel.startswith(p):
+        if correspond(rel, p):
             return r, s
     return "autre", "outil"
 
@@ -76,7 +83,7 @@ INFERENCE = [
 
 def role_inference(rel):
     for p, r, s in INFERENCE:
-        if rel.startswith(p):
+        if correspond(rel, p):
             return r, s
     return "autre", "outil"
 
