@@ -1,12 +1,11 @@
 /*  La normalisation des nominalisations (docs/PLAN_V1.md, C7.3) : une couche de langue, hors du noyau.
 
-    LIMITES CONNUES (relecture du propriétaire du 27/11 ; docs/QUALIFICATION_NOYAU.md, § 10, L2 et L3) : ce module est
-    le prochain point critique. Ses ajouts sont des prémisses certifiables du noyau, alors que plusieurs de ses règles
-    ne sont pas des inférences valides : le participant unique reçoit à la fois agent, thème et patient ; le complément
-    d'un nom d'action n'est pas toujours son patient ; une dérivation morphologique n'est pas toujours une équivalence
-    sémantique. Les ajouts n'ont ni provenance (règle, assertions sources, hypothèses) ni distinction entre
-    transformations certaines et hypothétiques. Le comparateur (inclusion.pl) en tire déjà la conséquence : une
-    normalisation qui change le graphe canonique rend le verdict indéterminé. À traiter par un lot ciblé.
+    NEUTRALISÉE (lot 2, 27/11 ; docs/QUALIFICATION_NOYAU.md, § 10, L2) : chaque règle a un statut épistémique
+    (regle/3) ; aucune n'est une inférence certaine (le participant unique n'est pas à la fois agent, thème et
+    patient ; le complément d'un nom d'action n'est pas toujours son patient ; une dérivation n'est pas toujours une
+    équivalence ; un composé ne dit pas que son complément est figuré). enrichir/3 n'applique que les règles
+    certaines : il rend le graphe inchangé. Les règles hypothétiques ne s'appliquent que sur demande (enrichir/4,
+    regles(toutes)), jamais pour certifier ; le lot 3 leur donnera une provenance et le statut d'hypothèse.
 
     enrichir(+Langue, +Graphe0, -Graphe)
         Ajoute à un graphe d'assertions la forme équivalente de chaque action dite par un verbe ou par un nom d'action :
@@ -38,10 +37,11 @@
     usuelle du génitif d'un verbe transitif. Pour un verbe intransitif (« death of Anna »), elle est fausse ; elle se
     mesure (docs/mesures/V2.md).
 */
-:- module(normalisation, [ enrichir/3, nominalisation/3 ]).
+:- module(normalisation, [ enrichir/3, enrichir/4, regle/3, nominalisation/3 ]).
 :- encoding(utf8).
 :- use_module(library(lists)).
 :- use_module(library(apply)).
+:- discontiguous ajout/4.      % chaque règle est écrite avec ses prédicats auxiliaires
 
 lexfile_d_action(F) :- memberchk(F, ['noun.act', 'noun.event', 'noun.process', 'noun.phenomenon']).
 
@@ -60,23 +60,40 @@ genitif(fr, de).
 genitif_lu(en, R) :- R == of.
 genitif_lu(fr, R) :- memberchk(R, [de, du, des, 'd\'', 'd’']).
 
-enrichir(L, G0, G) :-
+% --- Le statut épistémique des règles (lot 2 de la phase C3/C6/C7, décision du 27/11) --------------------------------
+%
+% regle(Nom, Statut, Raison) : Statut est certaine (une inférence valide : ce qu'elle ajoute est vrai partout où ses
+% prémisses le sont) ou hypothetique (une lecture plausible, qui peut être fausse). Une règle hypothétique ne doit
+% jamais introduire une prémisse que le noyau certifie : enrichir/3 n'applique que les règles certaines. Les règles
+% hypothétiques ne s'appliquent que sur demande explicite (enrichir/4, regles(toutes)) : pour mesurer, et pour le lot 3,
+% qui leur donnera une provenance et un statut d'hypothèse dans le graphe. Aucune des règles actuelles n'est certaine.
+regle(r1, hypothetique, 'patient et thème ne sont pas équivalents (« la barque porte l’homme » : l’homme est le thème, rien ne le subit)').
+regle(r2, hypothetique, 'le participant unique est l’agent ou le thème selon le verbe, jamais les deux (« l’arche flotte » : thème ; « l’homme court » : agent)').
+regle(p1, hypothetique, 'un participe lu comme propriété dit un événement dont le rôle du référent dépend du verbe (« fallen angel » : thème ; « praying figure » : agent)').
+regle(c1, hypothetique, 'un composé en « de » non lexicalisé ne dit pas que son complément est figuré (« chaland de trait » : il n’y a pas de trait dans l’image) ni que la tête est un hyperonyme sûr').
+regle(e1, hypothetique, 'un nom dérivé d’un verbe n’en est pas toujours le nom d’action (« building » : le bâtiment ; « drawing » : le dessin), et le complément du nom n’est pas toujours le patient (« death of Anna » : Anna meurt)').
+regle(e2, hypothetique, 'même raison que e1, dans l’autre sens : un nom d’action n’est pas toujours l’événement figuré, ni son complément le patient').
+
+enrichir(L, G0, G) :- enrichir(L, [], G0, G).
+% Options : regles(certaines) (par défaut) | regles(toutes) (les hypothétiques aussi : jamais pour certifier)
+enrichir(L, Opts, G0, G) :-
+    ( memberchk(regles(toutes), Opts) -> Statuts = [certaine, hypothetique] ; Statuts = [certaine] ),
     hors_alternatives(G0, Gs),
-    findall(F, ajout(L, Gs, F), Fs0), sort(Fs0, Fs),
+    findall(F, ( regle(R, St, _), memberchk(St, Statuts), ajout(R, L, Gs, F) ), Fs0), sort(Fs0, Fs),
     append(G0, Fs, G1), sort(G1, G2),
-    findall(F, ajout_de_role(G2, F), Rs0), sort(Rs0, Rs),        % les rôles, sur tout ce qui précède
+    findall(F, ( regle(R, St, _), memberchk(St, Statuts), ajout_de_role(R, G2, F) ), Rs0), sort(Rs0, Rs),
     append(G2, Rs, G3), sort(G3, G).
 
 % R1 : patient et thème
-ajout_de_role(G, role(V, R2, X)) :-
+ajout_de_role(r1, G, role(V, R2, X)) :-
     member(role(V, R1, X), G), ( R1 == patient -> R2 = theme ; R1 == theme -> R2 = patient ).
 % R2 : le participant unique d'un événement est agent, thème et patient (la syntaxe ne dit pas lequel)
-ajout_de_role(G, role(V, R2, X)) :-
+ajout_de_role(r2, G, role(V, R2, X)) :-
     member(evenement(V, _, _), G), findall(R-Y, member(role(V, R, Y), G), [_-X]),
     member(R2, [agent, theme, patient]).
 % P1 : un participe lu comme propriété (« swimming mammal », « sitting figure ») : le verbe est un événement dont le
 % référent est le participant unique ; un mot qui est aussi un adjectif de la langue reste une propriété seulement
-ajout(L, G, F) :-
+ajout(p1, L, G, F) :-
     member(propriete(Q, X, P, Pa), G), atom(P), verbe_seulement(L, P),
     format(atom(Ev), "vp_~w", [Q]),
     ( F = evenement(Ev, P, Pa) ; F = role(Ev, theme, X) ; qualificatif(G, Q, Ev, F) ).
@@ -84,7 +101,7 @@ verbe_seulement(en, P) :- wordnet:s(_, _, P, v, _, _), \+ wordnet:s(_, _, P, a, 
 verbe_seulement(fr, P) :- ressources:wolf(S, P), S // 100000000 =:= 2,
     \+ ( ressources:wolf(S2, P), S2 // 100000000 =:= 3 ), !.
 % C1 : un composé en « de » ou « of » non lexicalisé reçoit sa structure
-ajout(L, G, F) :-
+ajout(c1, L, G, F) :-
     member(entite(E, W, Pa), G), atom(W), W \== nom_propre, compose_libre(L, W, A, B),
     format(atom(Ea), "ca_~w", [E]), format(atom(Eb), "cb_~w", [E]), format(atom(R), "cr_~w", [E]), genitif(L, Ge),
     (   F = entite(Ea, A, Pa) ; F = entite(Eb, B, Pa) ; F = relation(R, Ea, Ge, Eb, Pa)
@@ -102,7 +119,7 @@ lexicalise(en, W) :- wordnet:s(_, _, W, n, _, _), !.
 lexicalise(fr, W) :- ressources:wolf(S, W), S // 100000000 =:= 1, !.
 
 % E1 : un événement donne son nom d'action
-ajout(L, G, F) :-
+ajout(e1, L, G, F) :-
     member(evenement(V, P, Pa), G), atom(P), nominalisation(L, P, N),
     format(atom(E), "nv_~w_~w", [V, N]),
     (   F = entite(E, N, Pa)
@@ -112,7 +129,7 @@ ajout(L, G, F) :-
         ( F = relation(A, E, Ge, Y, Pa) ; qualificatif(G, V, A, F) )
     ).
 % E2 : un nom d'action donne son événement
-ajout(L, G, F) :-
+ajout(e2, L, G, F) :-
     member(entite(E, N, Pa), G), atom(N), N \== nom_propre, nominalisation(L, V, N),
     format(atom(Ev), "ve_~w_~w", [E, V]),
     (   F = evenement(Ev, V, Pa)
