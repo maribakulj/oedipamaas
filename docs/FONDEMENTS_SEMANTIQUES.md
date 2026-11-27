@@ -77,6 +77,8 @@ porter les liens par les sens.
   et des participants par rôles. C'est la forme du langage actuel. Elle est gardée : c'est elle qui permet de compter,
   de qualifier, de nier un événement sans nier ses participants (§ 1.1 de NOYAU).
 - **Un état** est ce qui tient au moment figuré, sans changement : « nu », « mort », « endormi », « chauve ».
+  Sa forme canonique est une décision ouverte (`docs/COMPARAISON_FORMALISMES.md`, § 3) : une propriété, ou un état
+  réifié en éventualité, avec le même ancrage temporel qu'un événement. Ce qui suit vaut pour la première option.
   - Il s'écrit comme une propriété du référent quand la langue l'exprime par un adjectif ou un participe adjectival.
   - Le choix entre propriété et nom d'état (« chauve » ou « calvitie ») est une affaire de **canonisation**, non de
     sens : l'un et l'autre ont les mêmes conditions de vérité, et la forme canonique est fixée une fois, des deux
