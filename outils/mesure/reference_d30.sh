@@ -47,16 +47,17 @@ reunir () {  # REGLAGE JEU N
   for I in $(seq 1 "$N"); do ts+=("$SORTIE/codage_${R}_${J}_t${I}de${N}.json"); done
   python3 "$ICI/outils/mesure/reunir_tranches.py" "$SORTIE/codage_${R}_$J.json" "$DONNEES/$J/textes.json" "$PAS" "${ts[@]}"
 }
-controle () {  # JEU : les 3 premières fiches de l'échantillon, en mode indexé et exhaustif
-  local J=$1
-  OEDIPAMAAS_INFERENCES="$INFERENCES" OEDIPAMAAS_DELAI="$DELAI" swipl "$ICI/outils/vertical/coder.pl" "$BASE" \
-    "$DONNEES/$J/textes.json" "$SORTIE/controle_$J.json" 50 3 > "$SORTIE/controle_$J.log" 2>&1
+controle () {  # JEU [FICHES] : les premières fiches (3 par défaut) d'une fiche sur 50, en mode indexé et exhaustif ;
+  # le mode exhaustif essaie toutes les requêtes : sans limite d'inférences, un garde-fou de mur de DELAI_EXHAUSTIF
+  local J=$1 F=${2:-3}
+  OEDIPAMAAS_INFERENCES="$INFERENCES" OEDIPAMAAS_DELAI="${DELAI_EXHAUSTIF:-7000}" swipl "$ICI/outils/vertical/coder.pl" \
+    "$BASE" "$DONNEES/$J/textes.json" "$SORTIE/controle_$J.json" 50 "$F" > "$SORTIE/controle_$J.log" 2>&1
 }
 case $ETAPE in
   preparer) preparer ;;
   tranche) tranche "$5" "$6" "$7" "$8" ;;
   reunir) reunir "$5" "$6" "$7" ;;
-  controle) controle "$5" ;;
+  controle) controle "$5" "${6:-3}" ;;
   tout)
     preparer
     for R in d30 d30_sans_norm premier_sens; do for J in vertical validation_m1; do

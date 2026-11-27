@@ -14,6 +14,8 @@
       OEDIPAMAAS_INFERENCES=N        N inférences au plus par texte (lecture et codage) ; au-delà, le statut
                                      « interrompu » (cause inferences, et la phase) : la limite d'une mesure
       OEDIPAMAAS_DELAI=S             S secondes de mur au plus par texte : un garde-fou (cause mur)
+      OEDIPAMAAS_INFERENCES_EXHAUSTIF=N  le budget du mode exhaustif (le contrôle ; sans limite par défaut) ; un
+                                     contrôle interrompu donne l'accord « exhaustif_interrompu », jamais « different »
     Chaque texte a sa mesure (temps de mur et processeur, inférences, de la lecture et du codage ; taille du graphe) ;
     SORTIE.json.passe.json décrit la passe (réglage, tranche, fiches, commit, analyses, début et fin).
       OEDIPAMAAS_TRANCHE=I/N         la I-ième de N tranches de l'échantillon (pour des passes plus courtes)
@@ -92,12 +94,24 @@ lire_et_coder(L, Xs, Controle, Rs) :-
             ( nth1(I, Xs, t(K, G, T)), nth1(I, Ps, Phrases),
               coder_texte(T, L, Phrases, indexe, Res, Me),
               (   Controle > 0, nb_getval(controlees, Ks), memberchk(K, Ks), \+ interrompu(Res)
-              ->  coder_texte(T, L, Phrases, exhaustif, Rx, _), ( Rx == Res -> Accord = egal ; Accord = different )
+              ->  % le mode exhaustif essaie toutes les requêtes : son budget est le sien (OEDIPAMAAS_INFERENCES_EXHAUSTIF,
+                  % sans limite par défaut) ; interrompu, il ne dit rien de l'accord (jamais « different »)
+                  setup_call_cleanup(budget_exhaustif(Ancien), coder_texte(T, L, Phrases, exhaustif, Rx, _),
+                                     retablir_budget(Ancien)),
+                  (   Rx = interrompu(_, _) -> Accord = exhaustif_interrompu
+                  ;   Rx == Res -> Accord = egal
+                  ;   Accord = different
+                  )
               ;   Accord = non_controle
               ) ),
             Rs).
 :- dynamic analyse/1.
 interrompu(erreur).
+budget_exhaustif(Ancien) :-
+    ( getenv('OEDIPAMAAS_INFERENCES', A) -> Ancien = A ; Ancien = aucun ),
+    ( getenv('OEDIPAMAAS_INFERENCES_EXHAUSTIF', E) -> setenv('OEDIPAMAAS_INFERENCES', E) ; unsetenv('OEDIPAMAAS_INFERENCES') ).
+retablir_budget(aucun) :- !, unsetenv('OEDIPAMAAS_INFERENCES').
+retablir_budget(A) :- setenv('OEDIPAMAAS_INFERENCES', A).
 interrompu(interrompu(_, _)).
 
 % La mesure d'un texte (lot 1, instrumentée) : pour la lecture (interprétation, ancrage) et pour le codage, le temps
