@@ -149,6 +149,16 @@ Un fichier par famille : une liste de cas de base, en JSON.
 | `decision_ouverte` | facultatif : `{question, statut_selon_l_option: {option: statut}}`, quand les documents ne fixent pas le statut |
 | `graphe_attendu`, `requete_attendue` | facultatifs : quand la représentation est déjà fixée par le langage actuel |
 
+
+**Les valeurs admises** (les mêmes que celles du validateur) :
+- `sorte` : `contre_modele`, `indetermine`, `negatif`, `positif` ;
+- `statut_attendu` : `contradictoire`, `ecartee`, `etablie`, `etablie_sous_hypotheses`, `inconnue`, `non_certifiee` ;
+- `hypotheses_attendues` : `abduction`, `condition_suffisante_non_attestee`, `connaissance_typique`, `consequence_conditionnelle`, `equivalence_non_attestee`, `hypothese_interpretative`, `identite`, `relation_inconnue`, `sens` ;
+- `connaissances_supposees[].sorte` : `condition_necessaire`, `condition_suffisante`, `connaissance_typique`, `consequence_conditionnelle`, `distinction_documentaire`, `equivalence_etablie`, `hypothese_interpretative`, `identite_documentaire`, `implication`, `relation_inconnue` ;
+- `operations_requises` : `abduction`, `aucune`, `canonisation`, `classification`, `deduction`, `lecture` ;
+- `extensions_requises` : `abduction`, `ancrage_temporel`, `aucune`, `base_de_definitions`, `collection`, `contexte_d_eventualite`, `contexte_emboite`, `etat_reifie`, `evenement_participant`, `identite_entre_situations`, `modificateur_non_intersectif`, `negation_dans_la_requete`, `plusieurs_situations`, `quantification_enoncee`, `referent_conceptuel`, `relation_entre_eventualites`, `situation_referent` ;
+- `variantes[].variation` : `ajout_figure_non_liee`, `ajout_negation_non_liee`, `changement_de_modalite`, `changement_de_participant`, `changement_de_portee`, `changement_de_temps`, `composition`, `inversion_des_roles`, `paraphrase`, `traduction`.
+
 **Les principes de rédaction :**
 - **le statut se lit sur la définition et K seuls,** jamais sur une connaissance du monde implicite. Ce que le cas
   suppose est écrit dans `connaissances_supposees`. Une connaissance absente de cette liste n'existe pas pour le cas ;
