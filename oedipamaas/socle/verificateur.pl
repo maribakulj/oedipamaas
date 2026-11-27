@@ -21,9 +21,22 @@ verifier(K, G, Q, P, Verdict) :-
     ;   \+ assertions:valider(G, [])                    -> Verdict = rejete([graphe_invalide])
     ;   \+ forme_requete(Q)                             -> Verdict = rejete([requete_mal_formee])
     ;   \+ forme_preuve(P)                              -> Verdict = rejete([preuve_mal_formee])
-    ;   findall(R, ( controle(Nom, K, G, Q, P), \+ catch(etabli(Nom, K, G, Q, P), _, fail), R = Nom ), Rs),
+    ;   findall(R, ( controle(Nom, K, G, Q, P), \+ catch(etabli(Nom, K, G, Q, P), E, echec_ou_ressource(E)), R = Nom ), Rs),
         ( Rs == [] -> Verdict = accepte ; Verdict = rejete(Rs) )
     ).
+
+% une erreur dans un contrôle est un contrôle non établi (une raison de rejet) ; une exception de ressource (un budget
+% d'inférences, une limite de temps, la mémoire, un abandon) n'est pas un verdict sur la preuve : elle est relancée
+% (contrôle du lot 1 : un budget épuisé pendant la vérification rendait « rejete_par_le_verificateur » une preuve que
+% le mode sans limite acceptait)
+echec_ou_ressource(E) :- ressource(E), !, throw(E).
+echec_ou_ressource(_) :- fail.
+ressource(time_limit_exceeded).
+ressource(time_limit_exceeded(_)).
+ressource(inference_limit_exceeded).
+ressource('$aborted').
+ressource(unwind(_)).
+ressource(error(resource_error(_), _)).
 
 controle(N, _, _, _, _) :- member(N, [requete, versions, regime, chemins, selection, sigma, appuis, contraintes,
                                        hypotheses, pas_d_appui_negatif, lectures_conjointes]).
