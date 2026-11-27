@@ -198,3 +198,33 @@ Il faut encore :
 - la relecture humaine d'un échantillon de chaque jeu (la propriétaire, D23), qui mesure l'accord agents / humain ;
 - un **corpus indépendant de descriptions réelles** (notices et cartels d'institutions, en français et en anglais),
   annoté humainement d'après le guide, sur lequel les approches retenues seront qualifiées une fois.
+
+## 8. L'évolution des priorités (27/11, second message)
+
+**Ce que la propriétaire a validé :**
+- **le premier jalon expérimental :** les promotions au moins divisées par deux, avec au plus cinq points de couverture
+  perdus. Il se lit sur les bornes appariées par fiche (`outils/graphes/apparier.py`) : borne haute du rapport des
+  promotions ≤ 0,5, borne basse de la différence de couverture ≥ −0,05 ;
+- **une mesure de plus :** la précision de l'ensemble des assertions admissibles, y compris celles qui n'ont aucune
+  correspondante dans la référence.
+
+Pour le lecteur actuel, cette précision est de 72 % en développement et 57 % en validation.
+
+**L'expérience croisée et l'expérience contrôlée des couches d'inférence** (`docs/INFERENCES.md`) changent l'ordre de
+ce qui suit la sûreté :
+
+1. **La sûreté du lecteur** (X1 à X3) reste la première.
+2. **Les corrections prioritaires de C3** sont menées en parallèle (§ 6).
+3. **La canonisation des rôles et des relations** (X6) : patient ou thème, relation ou lieu d'un événement, propriété
+   ou événement. Ce sont les échecs de représentation que les ressources lexicales ne touchent pas.
+4. **La désambiguïsation** (X7) devient une condition de la déduction.
+   - Sans sens choisis, une canonisation ou une implication lexicale reste une hypothèse, puisque D30 exige que tous
+     les sens portent le lien.
+   - Aucune conclusion déductive n'a été gagnée par les couches C, L et S.
+5. **La couche d'inférence,** mesurée une ressource à la fois par la même expérience :
+   - **la classification par des définitions structurées** : des gloses compilées en graphes par le lecteur, et non
+     appariées comme des sacs de mots. Les sacs de mots ont produit 3 faux positifs pour 1 positif repris ;
+   - **les connaissances d'état et de situation** : les relations entre cadres de FrameNet, les post-états de VerbNet,
+     puis ConceptNet comme générateur d'hypothèses ;
+   - **un statut « sous hypothèse d'inférence » dans le codage,** en étendant celui des dérivations du lot 3. Le noyau
+     n'est pas changé.

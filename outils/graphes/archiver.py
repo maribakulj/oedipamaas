@@ -1,9 +1,11 @@
 """L'archive du banc de graphes (lot 5) : un manifeste et une archive compressée, pour que les données, les résultats
 bruts, les versions et les commandes de reproduction restent accessibles hors de la machine de travail.
 
-Usage : python outils/graphes/archiver.py DOSSIER_DU_BANC DOSSIER_DE_MESURE_LOT1 SORTIE.tar.gz [DOSSIER_CROISE]
+Usage : python outils/graphes/archiver.py DOSSIER_DU_BANC DOSSIER_DE_MESURE_LOT1 SORTIE.tar.gz [DOSSIER_CROISE
+        [DOSSIER_INFERENCE]]
 
 DOSSIER_CROISE (facultatif) : l'expérience croisée (outils/croise/) ; ses causes d'échecs sont des décisions d'agent.
+DOSSIER_INFERENCE (facultatif, après DOSSIER_CROISE) : l'expérience contrôlée des couches (outils/inference/).
 
 Écrit, dans DOSSIER_DU_BANC, MANIFESTE.json : chaque fichier (chemin relatif, taille, empreinte SHA-256, rôle), les
 versions (commit du code de chaque passe, d'après les descriptions de passe), et le statut de chaque élément :
@@ -61,6 +63,24 @@ def role_croise(rel):
     return "autre", "outil"
 
 
+INFERENCE = [
+    ("catalogue", "le catalogue des inférences contextuelles, décidé cas par cas par un agent ; provisoire", "agents"),
+    ("morphosemantique", "les liens morphosémantiques de WordNet 3.0 en faits Prolog (outils/inference/morphosemantique.py)",
+     "outil"),
+    ("cibles_", "les textes de l'expérience contrôlée", "outil"),
+    ("experience_", "l'expérience contrôlée des couches (outils/inference/experience.pl)", "outil"),
+    ("analyse", "son analyse (outils/inference/analyser.py)", "outil"),
+    ("essai1/", "la première passe, sans la couche D, gardée", "outil"),
+]
+
+
+def role_inference(rel):
+    for p, r, s in INFERENCE:
+        if rel.startswith(p):
+            return r, s
+    return "autre", "outil"
+
+
 def sha(p):
     h = hashlib.sha256()
     with open(p, "rb") as f:
@@ -72,14 +92,17 @@ def sha(p):
 def main():
     banc, lot1, sortie = Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3])
     croise = Path(sys.argv[4]) if len(sys.argv) > 4 else None
+    inference = Path(sys.argv[5]) if len(sys.argv) > 5 else None
     depot = Path(__file__).resolve().parents[2]
     fichiers = []
-    dossiers = [(banc, "banc_graphes"), (lot1, "reference_d30")] + ([(croise, "croise")] if croise else [])
+    dossiers = ([(banc, "banc_graphes"), (lot1, "reference_d30")] + ([(croise, "croise")] if croise else [])
+                + ([(inference, "inference")] if inference else []))
     for base, nom in dossiers:
         for p in sorted(base.rglob("*")):
             if p.is_file() and p.name != "MANIFESTE.json":
                 rel = str(p.relative_to(base))
                 r, s = (role(rel) if nom == "banc_graphes" else role_croise(rel) if nom == "croise"
+                        else role_inference(rel) if nom == "inference"
                         else ("la mesure de référence du lot 1", "outil"))
                 fichiers.append({"chemin": f"{nom}/{rel}", "taille": p.stat().st_size, "sha256": sha(p), "role": r,
                                  "statut": s})
@@ -98,6 +121,8 @@ def main():
         t.add(lot1, arcname="reference_d30")
         if croise:
             t.add(croise, arcname="croise")
+        if inference:
+            t.add(inference, arcname="inference")
     print(f"{len(fichiers)} fichiers ; {sortie} : {sortie.stat().st_size / 1e6:.1f} Mo")
 
 
