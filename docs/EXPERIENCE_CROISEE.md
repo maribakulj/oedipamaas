@@ -67,6 +67,10 @@ condition lecteur et requête compilée, qualifiée `etablissable`.
 
 ## 3. L'attribution
 
+> Les tableaux de ce § et des §§ 2 et 4 sont ceux de la version 1 du banc et de la définition v1 des échecs
+> (`tableaux.py --definition v1` les reproduit). La version 2, la séparation des conclusions déductives et des
+> conclusions sous hypothèses, et la complétude sont au § 10.
+
 Sur les textes positifs, on compare les conditions deux à deux :
 
 | | développement | validation M1 |
@@ -263,8 +267,118 @@ Puis, une fois les causes décidées :
 
 ```bash
 python outils/croise/tableaux.py croise/causes_ref_ref.json vertical=croise/croise_vertical.json \
-  validation_m1=croise/croise_validation_m1.json --json croise/tableaux.json
+  validation_m1=croise/croise_validation_m1.json --definition v1 --json croise/tableaux.json
 ```
 
 `tableaux.py` refuse d'écrire si un échec n'a pas de cause, si une cause n'a pas d'échec, ou si une cause est mal
 formée (`tests/test_croise.py`).
+
+## 10. La version 2 du banc, et des conclusions séparées
+
+Les demandes du 27/11 (second message) :
+- séparer les conclusions établies déductivement des conclusions sous hypothèses ;
+- garder les indicateurs de complétude, en distinguant les requêtes absentes, les erreurs, les interruptions et les
+  vrais échecs sémantiques ;
+- corriger les erreurs manifestes des références dans une nouvelle version du banc, sans toucher aux anciennes mesures ;
+- ne pas tenir les diagnostics pour validés.
+
+**Les issues** (`outils/croise/tableaux.py`). Chaque texte reçoit une seule issue par condition.
+- **Non évaluées :**
+  - `requete_absente` ;
+  - `gabarit_non_instancie` : une notation « (...) » dont la clé du nom reste `A_REMPLIR` ;
+  - `conteste` : retiré par un erratum ;
+  - `graphe_en_erreur`, `erreur`, `interrompue` (la limite d'inférences de la condition) et `incomplete` (le budget du
+    noyau).
+- **Évaluées :** `etablie` (déductivement), `etablie_sous_hypotheses`, `ecartee`, `non_certifiee`, `contradictoire`
+  et `inconnue`.
+
+Dans cette expérience, aucune erreur, aucune interruption et aucun budget épuisé ne se produisent : les tableaux le
+montrent par des zéros, et non par leur absence. Les graphes que la validation des assertions signale sont comptés à
+part ; ils sont quand même évalués.
+
+**La définition v2 d'un échec,** la seule utilisée depuis :
+- un positif évalué dont la suffisante n'est pas établie **déductivement**. Une conclusion seulement sous hypothèses
+  est un échec de la déduction, compté à part ;
+- un négatif évalué dont la suffisante est établie.
+
+La v1 reste reproductible (`--definition v1`).
+
+**La version 2 du banc** (`outils/graphes/version_banc.py`, `banc_graphes/v2/errata.json`). Dix errata, chacun avec sa
+valeur avant, sa valeur après et sa raison. Le contrôle refuse un erratum qui ne s'applique pas exactement.
+- **E1 à E8 :** « se tenir » lemmatisé `tenir` dans huit événements de deux fiches (31A46331 et 71A423).
+- **E9 :** la requête de référence de 46B3312, écrite en français pour une fiche anglaise, est traduite mot pour mot.
+- **E10 :** le négatif de 44G83 est contesté, parce que le libellé le couvre.
+- **Ce qui n'est pas corrigé,** faute d'être manifeste, et attend votre décision (liste dans l'errata) :
+  - 14 prédicats pronominaux passifs ou réfléchis ;
+  - « fusée de signalisation » ;
+  - 46B910 et 48A9834.
+  - Les gabarits `A_REMPLIR` sont une convention, non une erreur : ils deviennent `gabarit_non_instancie`.
+- **Une erreur de conversion, trouvée en chemin.** `vers_faits.py` retirait le pronom de tous les prédicats
+  pronominaux (65 dans les références), comme le comparateur le fait pour comparer. Or K distingue « se tenir »
+  (2 sens) de « tenir » (52, dont avoir en main).
+  - La conversion garde maintenant le pronom ; `--pronoms retirer` reproduit les assertions de la v1.
+  - Le lecteur n'écrit jamais le pronom : c'est une question de canonisation commune, à trancher des deux côtés (§ 11).
+
+**Les mesures.** Trois passes, sur les mêmes graphes du lecteur et les mêmes requêtes compilées :
+1. la v1 ;
+2. la v1 avec les pronoms gardés ;
+3. la v2.
+
+- **Aucune issue ne change, ni aucune qualification, dans aucune condition, sur aucun jeu.**
+  - 46B3312 corrigée trouve son type et son événement, mais l'événement weigh() n'a pas de participant.
+  - 71A423 échoue encore : aucun patient de « tenir ».
+- **Le plafond n'est donc pas un artefact des erreurs manifestes.**
+
+**L'attribution v2** (positifs ; trois niveaux : déductive, sous hypothèses, non établie) :
+
+| | développement | validation M1 |
+|---|---|---|
+| (référence, référence) | 5 déductives, 34 inconnues, 1 requête absente | 0 déductive, 1 sous hypothèses (47C35), 37 inconnues, 2 gabarits non instanciés |
+| le lecteur perd la déduction | 2 : 11H(CASSIAN)32 (non établie), 11HH(LIDWYNA)12 (sous l'hypothèse sit → study, un sens faux) | 0 |
+| le lecteur gagne | 0 déduction | 1 sous hypothèses : 41C67 (gravy → sauce) |
+| le compilateur perd la déduction | 2 : 11H(CASSIAN)32, 42A111 | 0 ; 47C35 passe de sous hypothèses à non établie |
+| le compilateur gagne | 0 déduction | 1 sous hypothèses : 46B355 (fortuit, § 3) |
+| requêtes compilées absentes (non évaluées) | 15 | 12 |
+
+Dans aucune des deux conditions croisées, une conclusion n'est gagnée **déductivement**. Les seuls gains sont sous
+hypothèses de sens, et l'un d'eux est fortuit.
+
+**Les causes v2** (`croise/v2/causes_ref_ref_v2.json`). Les 72 échecs sont ceux de la v1, à trois changements près :
+- deux gabarits et le négatif contesté quittent le compte ;
+- 47C35, établie sous hypothèse, y entre (désambiguïsation) ;
+- le diagnostic de 46B3312 est refait après sa correction (représentation, inférence).
+
+Les causes principales :
+- développement (34) : représentation 18, inférence 11, lexique 4, erreur de référence 1 ;
+- validation (38) : inférence 17, représentation 12, lexique 7, désambiguïsation 2.
+
+**Le statut des diagnostics.** Les 74 diagnostics de la v1, comme les 72 de la v2, sont des décisions d'agent : chacun
+porte le statut `decision_d_agent_provisoire`, et aucun n'est validé. Ils servent à orienter l'expérience contrôlée
+(§ 11), non à conclure.
+
+**Ce que « aucune cause noyau » ne dit pas.** Qu'aucun échec ne soit attribué au noyau ne démontre pas que son
+expressivité suffit au raisonnement iconographique. Cela dit seulement que, dans ces 72 cas, les échecs surviennent
+avant le noyau : le graphe et la requête ne se rencontrent pas. Ce que le noyau devra exprimer (des hypothèses
+abductives distinctes des assertions, des conséquences d'événements, des états) se mesure dans l'expérience contrôlée.
+
+Reproduction (BASE la base compilée, B le banc, D les données) :
+
+```bash
+python outils/graphes/version_banc.py B/v2/errata.json B/v2 \
+  vertical=B/reference_vertical.json,D/vertical/requetes_reference.json \
+  validation_m1=B/reference_validation_m1.json,D/validation_m1/requetes_reference.json
+```
+
+```bash
+python outils/graphes/vers_faits.py B/v2/reference_JEU_v2.json B/v2/faits_reference_JEU_v2.json
+```
+
+```bash
+swipl outils/croise/croiser.pl BASE B/lecteur_JEU.json B/v2/faits_reference_JEU_v2.json \
+  reference_d30/compilees_JEU.json B/v2/requetes_reference_JEU_v2.json D/JEU/fiches.json croise/v2/croise_v2_JEU.json
+```
+
+```bash
+python outils/croise/tableaux.py croise/v2/causes_ref_ref_v2.json vertical=croise/v2/croise_v2_vertical.json \
+  validation_m1=croise/v2/croise_v2_validation_m1.json --errata B/v2/errata.json --json croise/v2/tableaux_v2.json
+```
