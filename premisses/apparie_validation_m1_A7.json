@@ -1,0 +1,223 @@
+{
+ "apparie": {
+  "fiches": 40,
+  "tirages": 1000,
+  "graine": 20261127,
+  "niveau": 0.95,
+  "a": {
+   "qualificatif:alternatives": 0.40860215053763443,
+   "qualificatif:modalites": 0.10850439882697947,
+   "qualificatif:negations": 0.5640243902439025,
+   "qualificatif:portees": 0.07474639615589962,
+   "qualifiee:entites": 0.5849652558433354,
+   "qualifiee:evenements": 0.35250000000000004,
+   "qualifiee:noms": 0.794871794871795,
+   "qualifiee:proprietes": 0.6131078224101479,
+   "qualifiee:relations": 0.39662447257383965,
+   "qualifiee:roles": 0.19653869106823157,
+   "qualifiee:roles_macro": 0.2916252237915258,
+   "structure:coref": 0.07326732673267326,
+   "structure:entites": 0.9046114971572963,
+   "structure:evenements": 0.741875,
+   "structure:noms": 0.8269230769230769,
+   "structure:proprietes": 0.627906976744186,
+   "structure:relations": 0.464,
+   "structure:roles": 0.35329222200119353,
+   "structure:roles_macro": 0.5744977123532923,
+   "surete:taux_promotion": 0.8198158702323542,
+   "surete:couverture_admissible": 0.7285766158315178,
+   "surete:precision_admissible": 0.573758865248227,
+   "surete:taux_promotion_effectif": 0.811804008908686,
+   "surete:couverture_effective": 0.7543346563609776,
+   "surete:precision_effective": 0.5243867243867244,
+   "surete:taux_promotion_effectif_roles": 0.8533333333333334,
+   "surete:couverture_effective_roles": 0.5237084217975938,
+   "surete:precision_effective_roles": 0.39361702127659576
+  },
+  "b": {
+   "qualificatif:alternatives": 0.4854368932038835,
+   "qualificatif:citations": 0.11570247933884298,
+   "qualificatif:modalites": 0.26865671641791045,
+   "qualificatif:negations": 0.5625,
+   "qualificatif:portees": 0.3764387271496276,
+   "qualifiee:entites": 0.6120025268477576,
+   "qualifiee:evenements": 0.41125,
+   "qualifiee:nombres": 0.5641025641025641,
+   "qualifiee:noms": 0.7603833865814696,
+   "qualifiee:proprietes": 0.5412262156448203,
+   "qualifiee:relations": 0.39381153305203936,
+   "qualifiee:roles": 0.23194748358862144,
+   "qualifiee:roles_macro": 0.34891585438631395,
+   "structure:coref": 0.07326732673267326,
+   "structure:entites": 0.9046114971572963,
+   "structure:evenements": 0.741875,
+   "structure:nombres": 0.9090909090909091,
+   "structure:noms": 0.8269230769230769,
+   "structure:proprietes": 0.627906976744186,
+   "structure:relations": 0.464,
+   "structure:roles": 0.35329222200119353,
+   "structure:roles_macro": 0.5744977123532923,
+   "surete:taux_promotion": 0.5155633494081543,
+   "surete:couverture_admissible": 0.6545025417574437,
+   "surete:precision_admissible": 0.6300918703414803,
+   "surete:taux_promotion_effectif": 0.520415738678545,
+   "surete:couverture_effective": 0.6693127219552956,
+   "surete:precision_effective": 0.583966702859211,
+   "surete:taux_promotion_effectif_roles": 0.37454545454545457,
+   "surete:couverture_effective_roles": 0.4437367303609342,
+   "surete:precision_effective_roles": 0.5211970074812967
+  },
+  "difference": {
+   "structure:roles_macro": [
+    0.0,
+    0.0
+   ],
+   "qualifiee:roles": [
+    0.022876841115637703,
+    0.048640915593705286
+   ],
+   "qualifiee:entites": [
+    0.01094462540716612,
+    0.04335694355011799
+   ],
+   "surete:precision_admissible": [
+    0.04720069360959889,
+    0.06494292690129899
+   ],
+   "qualifiee:relations": [
+    -0.007364544976328269,
+    0.0009182736455463636
+   ],
+   "surete:taux_promotion_effectif": [
+    -0.3263214670981662,
+    -0.25860719874804383
+   ],
+   "qualifiee:evenements": [
+    0.03557085484796324,
+    0.08123904149620104
+   ],
+   "qualificatif:portees": [
+    0.2503443648491307,
+    0.3460059693252967
+   ],
+   "surete:precision_effective_roles": [
+    0.11090840644053801,
+    0.1462364162699445
+   ],
+   "surete:couverture_effective_roles": [
+    -0.1000610128126907,
+    -0.060185185185185175
+   ],
+   "structure:proprietes": [
+    0.0,
+    0.0
+   ],
+   "surete:taux_promotion": [
+    -0.3381517811048012,
+    -0.2704556589906908
+   ],
+   "surete:couverture_admissible": [
+    -0.08389527965093224,
+    -0.0640439158279964
+   ],
+   "qualificatif:negations": [
+    -0.011468359614990709,
+    0.009443298969072145
+   ],
+   "structure:entites": [
+    0.0,
+    0.0
+   ],
+   "structure:noms": [
+    0.0,
+    0.0
+   ],
+   "structure:roles": [
+    0.0,
+    0.0
+   ],
+   "qualifiee:noms": [
+    -0.07407407407407407,
+    -0.00937764010137987
+   ],
+   "qualificatif:alternatives": [
+    0.015465757227267285,
+    0.14937290231407874
+   ],
+   "qualifiee:roles_macro": [
+    0.035582822085889476,
+    0.07958676104840245
+   ],
+   "structure:coref": [
+    0.0,
+    0.0
+   ],
+   "structure:evenements": [
+    0.0,
+    0.0
+   ],
+   "structure:relations": [
+    0.0,
+    0.0
+   ],
+   "surete:couverture_effective": [
+    -0.09600154529650384,
+    -0.07282741738066101
+   ],
+   "qualificatif:modalites": [
+    0.11426250058034262,
+    0.21073558026678751
+   ],
+   "qualifiee:proprietes": [
+    -0.0940568475452197,
+    -0.05056759545923628
+   ],
+   "surete:taux_promotion_effectif_roles": [
+    -0.5298602287166455,
+    -0.4371002132196162
+   ],
+   "surete:precision_effective": [
+    0.05124759551378233,
+    0.06864844433928663
+   ]
+  },
+  "rapport_promotion": [
+   0.5854519774011299,
+   0.6672463768115942
+  ],
+  "rapport_promotion_effectif": [
+   0.595460614152203,
+   0.6781877627276973
+  ]
+ },
+ "jalon": {
+  "promotions_divisees_par_deux": false,
+  "couverture_gardee": false,
+  "atteint": false,
+  "rapport_promotion": [
+   0.5854519774011299,
+   0.6672463768115942
+  ],
+  "difference_couverture": [
+   -0.08389527965093224,
+   -0.0640439158279964
+  ]
+ },
+ "jalon_effectif": {
+  "promotions_divisees_par_deux": false,
+  "couverture_gardee": false,
+  "atteint": false,
+  "rapport_promotion": [
+   0.595460614152203,
+   0.6781877627276973
+  ],
+  "difference_couverture": [
+   -0.09600154529650384,
+   -0.07282741738066101
+  ]
+ },
+ "erreurs": {
+  "A": [],
+  "B": []
+ }
+}

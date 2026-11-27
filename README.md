@@ -26,6 +26,8 @@ reproduction sont sur la branche du code (`docs/BANC_GRAPHES.md`, § 5 ; `docs/m
   et son `MANIFESTE.json` (l'empreinte de chaque fichier de l'archive).
 - `c3_contre_expertise/` : la contre-expertise de #16 (PR #18) ; `jugements.json` : des décisions d'agent,
   **provisoires** ; son propre `MANIFESTE.json`.
+- `premisses/` : l'admissibilité effective des prémisses selon le noyau, et les comparaisons appariées des versions
+  A et S de la sûreté du lecteur sur cette mesure ; son propre `MANIFESTE.json`.
 - `MANIFESTE.json` : chaque fichier (taille, SHA-256, rôle, statut), et les commits des passes.
 
 **Statut** : tout ce qui vient des annotateurs et des adjudicateurs est un **accord entre agents**, non une validation

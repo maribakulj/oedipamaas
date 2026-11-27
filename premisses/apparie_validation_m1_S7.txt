@@ -1,0 +1,29 @@
+204 textes présents des deux côtés (échantillon complet) ; graphes en erreur : A 0, B 0
+40 fiches, 1000 tirages appariés (graine 20261127)
+
+| mesure | A | B | B − A (95 %) |
+|---|---|---|---|
+| surete:taux_promotion | 0.820 | 0.600 | [-0.249 ; -0.192] |
+| surete:couverture_admissible | 0.729 | 0.708 | [-0.028 ; -0.014] |
+| surete:precision_admissible | 0.574 | 0.623 | [+0.042 ; +0.056] |
+| surete:taux_promotion_effectif | 0.812 | 0.608 | [-0.235 ; -0.176] |
+| surete:couverture_effective | 0.754 | 0.737 | [-0.027 ; -0.010] |
+| surete:precision_effective | 0.524 | 0.576 | [+0.044 ; +0.059] |
+| surete:taux_promotion_effectif_roles | 0.853 | 0.518 | [-0.385 ; -0.295] |
+| surete:couverture_effective_roles | 0.524 | 0.507 | [-0.027 ; -0.007] |
+| surete:precision_effective_roles | 0.394 | 0.490 | [+0.083 ; +0.112] |
+| structure:roles | 0.353 | 0.353 | [+0.000 ; +0.000] |
+| qualifiee:roles | 0.197 | 0.247 | [+0.038 ; +0.061] |
+| structure:relations | 0.464 | 0.464 | [+0.000 ; +0.000] |
+| qualifiee:relations | 0.397 | 0.394 | [-0.007 ; +0.001] |
+| structure:entites | 0.905 | 0.905 | [+0.000 ; +0.000] |
+| qualifiee:entites | 0.585 | 0.635 | [+0.037 ; +0.062] |
+| structure:evenements | 0.742 | 0.742 | [+0.000 ; +0.000] |
+| qualifiee:evenements | 0.353 | 0.435 | [+0.063 ; +0.103] |
+| qualificatif:negations | 0.564 | 0.562 | [-0.011 ; +0.009] |
+| qualificatif:modalites | 0.109 | 0.269 | [+0.114 ; +0.211] |
+| qualificatif:portees | 0.075 | 0.356 | [+0.232 ; +0.331] |
+
+Rapport des promotions B / A : [0.70 ; 0.76]
+Jalon : promotions divisées par deux non ; couverture gardée (−5 points au plus) oui ; non atteint (sur les annotations)
+Rapport des promotions effectives B / A : [0.71 ; 0.78] ; jalon sur les prémisses du noyau : non atteint

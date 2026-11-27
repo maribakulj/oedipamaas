@@ -1,0 +1,2643 @@
+[
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_22":"aucun",
+      "e_1_24":"aucun",
+      "e_1_3":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "r_1_11":"pos_auteur",
+      "v_1_19":"pos_auteur",
+      "v_1_4":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":1,
+    "roles": [ ["v_1_4", "agent", "e_1_3", "pos_auteur" ],  ["v_1_4", "lieu", "e_1_8", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_22":"aucun",
+      "e_1_24":"aucun",
+      "e_1_3":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "r_1_11":"pos_auteur",
+      "v_1_19":"pos_auteur",
+      "v_1_4":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":1,
+    "roles": [ ["v_1_4", "agent", "e_1_3", "pos_auteur" ],  ["v_1_4", "lieu", "e_1_8", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "v_1_20":"pos_auteur",
+      "v_1_3":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":1,
+    "roles": [ ["v_1_3", "agent", "e_1_2", "pos_auteur" ],  ["v_1_3", "lieu", "e_1_10", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_12":"pos_auteur",
+      "q_1_21":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_18":"pos_auteur",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":11,
+    "roles": [
+      ["v_1_10", "agent", "e_1_8", "pos_auteur" ],
+      ["v_1_10", "patient", "e_1_14", "pos_auteur" ],
+      ["v_1_18", "agent", "e_1_22", "pos_auteur" ],
+      ["v_1_6", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_6", "patient", "e_1_8", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_17":"neg_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":11,
+    "roles": [ ["v_1_6", "agent", "e_1_1", "pos_auteur" ],  ["v_1_6", "instrument", "e_1_17", "aucun" ],  ["v_1_6", "patient", "e_1_10", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_12":"aucun",
+      "e_1_16":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "v_1_13":"aucun",
+      "v_1_18":"aucun",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":11,
+    "roles": [
+      ["v_1_13", "agent", "e_1_12", "aucun" ],
+      ["v_1_18", "agent", "e_1_16", "aucun" ],
+      ["v_1_6", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_6", "lieu", "e_1_9", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_11":"pos_auteur",
+      "v_1_13":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_3":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":21,
+    "roles": [
+      ["v_1_13", "agent", "e_1_12", "pos_auteur" ],
+      ["v_1_17", "agent", "e_1_16", "pos_auteur" ],
+      ["v_1_3", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_3", "instrument", "e_1_8", "pos_auteur" ],
+      ["v_1_3", "patient", "e_1_5", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "r_1_8":"pos_auteur",
+      "v_1_20":"pos_auteur",
+      "v_1_3":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":21,
+    "roles": [ ["v_1_20", "patient", "e_1_18", "pos_auteur" ],  ["v_1_3", "agent", "e_1_2", "pos_auteur" ],  ["v_1_3", "patient", "e_1_5", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_12":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_20":"neg_auteur",
+      "v_1_3":"pos_auteur",
+      "v_1_4":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":21,
+    "roles": [ ["v_1_17", "agent", "e_1_16", "pos_auteur" ],  ["v_1_3", "agent", "e_1_2", "pos_auteur" ],  ["v_1_4", "lieu", "e_1_7", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_11":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_2":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":31,
+    "roles": [
+      ["v_1_17", "agent", "e_1_14", "pos_auteur" ],
+      ["v_1_17", "patient", "e_1_19", "pos_auteur" ],
+      ["v_1_2", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_2", "patient", "e_1_4", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "v_1_19":"pos_auteur",
+      "v_1_2":"pos_auteur",
+      "v_1_20":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":31,
+    "roles": [ ["v_1_19", "agent", "e_1_18", "pos_auteur" ],  ["v_1_2", "agent", "e_1_1", "pos_auteur" ],  ["v_1_2", "patient", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "v_1_2":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":31,
+    "roles": [ ["v_1_2", "agent", "e_1_1", "pos_auteur" ],  ["v_1_2", "patient", "e_1_4", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_3":"aucun",
+      "e_1_8":"pos_auteur",
+      "q_1_10":"pos_auteur",
+      "q_1_2":"aucun",
+      "q_1_22":"pos_auteur",
+      "q_1_6":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "v_1_13":"pos_auteur",
+      "v_1_4":"aucun"
+    },
+    "genre":"positif",
+    "k":41,
+    "roles": [ ["v_1_13", "patient", "e_1_11", "pos_auteur" ],  ["v_1_4", "agent", "e_1_3", "aucun" ],  ["v_1_4", "patient", "e_1_8", "aucun" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_3":"aucun",
+      "e_1_8":"pos_auteur",
+      "q_1_10":"pos_auteur",
+      "q_1_2":"aucun",
+      "q_1_22":"pos_auteur",
+      "q_1_6":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "v_1_13":"pos_auteur",
+      "v_1_4":"aucun"
+    },
+    "genre":"negatif",
+    "k":41,
+    "roles": [ ["v_1_13", "patient", "e_1_11", "pos_auteur" ],  ["v_1_4", "agent", "e_1_3", "aucun" ],  ["v_1_4", "patient", "e_1_8", "aucun" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_22":"neg_auteur",
+      "e_1_3":"aucun",
+      "e_1_7":"pos_auteur",
+      "q_1_11":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "q_1_18":"pos_auteur",
+      "q_1_2":"aucun",
+      "q_1_6":"pos_auteur",
+      "r_1_10":"pos_auteur",
+      "v_1_24":"pos_auteur",
+      "v_1_4":"aucun"
+    },
+    "genre":"indetermine",
+    "k":41,
+    "roles": [ ["v_1_4", "agent", "e_1_3", "aucun" ],  ["v_1_4", "patient", "e_1_7", "aucun" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_10":"pos_auteur",
+      "q_1_5":"pos_auteur",
+      "v_1_14":"pos_auteur",
+      "v_1_18":"pos_auteur",
+      "v_1_3":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":51,
+    "roles": [
+      ["v_1_14", "agent", "e_1_11", "pos_auteur" ],
+      ["v_1_14", "patient", "e_1_16", "pos_auteur" ],
+      ["v_1_18", "instrument", "e_1_23", "pos_auteur" ],
+      ["v_1_18", "lieu", "e_1_21", "pos_auteur" ],
+      ["v_1_3", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_3", "patient", "e_1_7", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_5":"pos_auteur",
+      "q_1_6":"pos_auteur",
+      "v_1_14":"pos_auteur",
+      "v_1_3":"pos_auteur",
+      "v_1_9":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":51,
+    "roles": [
+      ["v_1_14", "instrument", "e_1_19", "pos_auteur" ],
+      ["v_1_14", "lieu", "e_1_17", "pos_auteur" ],
+      ["v_1_3", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_3", "patient", "e_1_7", "pos_auteur" ],
+      ["v_1_9", "agent", "e_1_7", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_2":"aucun",
+      "e_1_6":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "r_1_6":"pos_auteur",
+      "v_1_15":"pos_auteur",
+      "v_1_3":"aucun"
+    },
+    "genre":"indetermine",
+    "k":51,
+    "roles": [
+      ["v_1_15", "agent", "e_1_12", "pos_auteur" ],
+      ["v_1_15", "patient", "e_1_17", "pos_auteur" ],
+      ["v_1_3", "agent", "e_1_2", "aucun" ],
+      ["v_1_3", "patient", "e_1_8", "aucun" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_30":"pos_auteur",
+      "e_1_32":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_18":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "r_1_14":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_27":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":61,
+    "roles": [
+      ["v_1_17", "agent", "e_1_16", "pos_auteur" ],
+      ["v_1_17", "patient", "e_1_19", "pos_auteur" ],
+      ["v_1_27", "agent", "e_1_26", "pos_auteur" ],
+      ["v_1_27", "instrument", "e_1_32", "pos_auteur" ],
+      ["v_1_27", "lieu", "e_1_30", "pos_auteur" ],
+      ["v_1_5", "instrument", "e_1_9", "pos_auteur" ],
+      ["v_1_5", "patient", "e_1_3", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_28":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_31":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "r_1_12":"pos_auteur",
+      "r_1_17":"pos_auteur",
+      "v_1_18":"pos_auteur",
+      "v_1_26":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":61,
+    "roles": [
+      ["v_1_18", "agent", "e_1_14", "pos_auteur" ],
+      ["v_1_26", "agent", "e_1_25", "pos_auteur" ],
+      ["v_1_26", "patient", "e_1_28", "pos_auteur" ],
+      ["v_1_5", "instrument", "e_1_8", "pos_auteur" ],
+      ["v_1_5", "patient", "e_1_3", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_19":"aucun",
+      "e_1_2":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":61,
+    "roles": [ ["v_1_8", "agent", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "r_1_18":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_14":"pos_auteur",
+      "v_1_21":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":71,
+    "roles": [
+      ["v_1_10", "agent", "e_1_8", "pos_auteur" ],
+      ["v_1_10", "patient", "e_1_12", "pos_auteur" ],
+      ["v_1_21", "agent", "e_1_20", "pos_auteur" ],
+      ["v_1_21", "lieu", "e_1_25", "pos_auteur" ],
+      ["v_1_5", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_5", "lieu", "e_1_8", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_6":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_23":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":71,
+    "roles": [
+      ["v_1_12", "agent", "e_1_20", "pos_auteur" ],
+      ["v_1_12", "instrument", "e_1_17", "pos_auteur" ],
+      ["v_1_12", "patient", "e_1_1", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_19":"aucun",
+      "e_1_6":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_21":"aucun",
+      "r_1_8":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_24":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":71,
+    "roles": [ ["v_1_10", "agent", "e_1_1", "pos_auteur" ],  ["v_1_10", "lieu", "e_1_13", "pos_auteur" ],  ["v_1_10", "lieu", "e_1_16", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_22":"pos_auteur",
+      "q_1_18":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_15":"pos_auteur",
+      "v_1_23":"pos_auteur",
+      "v_1_27":"pos_auteur",
+      "v_1_5":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":81,
+    "roles": [
+      ["v_1_12", "patient", "e_1_14", "pos_auteur" ],
+      ["v_1_23", "agent", "e_1_22", "pos_auteur" ],
+      ["v_1_23", "patient", "e_1_25", "pos_auteur" ],
+      ["v_1_5", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_8", "lieu", "e_1_10", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_28":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_17":"pos_auteur",
+      "r_1_14":"pos_auteur",
+      "r_1_24":"pos_auteur",
+      "v_1_18":"pos_auteur",
+      "v_1_25":"pos_auteur",
+      "v_1_5":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":81,
+    "roles": [
+      ["v_1_18", "agent", "e_1_17", "pos_auteur" ],
+      ["v_1_25", "agent", "e_1_22", "pos_auteur" ],
+      ["v_1_25", "lieu", "e_1_28", "pos_auteur" ],
+      ["v_1_5", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_5", "agent", "e_1_4", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_10":"pos_auteur",
+      "n_e_1_12":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":81,
+    "roles": [
+      ["v_1_8", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_8", "instrument", "e_1_4", "pos_auteur" ],
+      ["v_1_8", "lieu", "e_1_10", "pos_auteur" ],
+      ["v_1_8", "lieu", "e_1_12", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "r_1_9":"pos_auteur",
+      "v_1_11":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_24":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":91,
+    "roles": [
+      ["v_1_11", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_11", "lieu", "e_1_15", "pos_auteur" ],
+      ["v_1_17", "patient", "e_1_19", "pos_auteur" ],
+      ["v_1_24", "agent", "e_1_22", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "r_1_9":"pos_auteur",
+      "v_1_11":"pos_auteur",
+      "v_1_16":"pos_auteur",
+      "v_1_18":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":91,
+    "roles": [ ["v_1_11", "agent", "e_1_1", "pos_auteur" ],  ["v_1_11", "lieu", "e_1_14", "pos_auteur" ],  ["v_1_18", "patient", "e_1_20", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "r_1_9":"pos_auteur",
+      "v_1_11":"pos_auteur",
+      "v_1_21":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":91,
+    "roles": [
+      ["v_1_11", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_11", "instrument", "e_1_17", "pos_auteur" ],
+      ["v_1_11", "lieu", "e_1_14", "pos_auteur" ],
+      ["v_1_21", "agent", "e_1_20", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_27":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "r_1_17":"pos_auteur",
+      "r_1_19":"pos_auteur",
+      "r_1_25":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":101,
+    "roles": [ ["v_1_5", "lieu", "e_1_10", "pos_auteur" ],  ["v_1_5", "lieu", "e_1_23", "pos_auteur" ],  ["v_1_5", "lieu", "e_1_4", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "r_1_24":"pos_auteur",
+      "v_1_5":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":101,
+    "roles": [ ["v_1_5", "lieu", "e_1_22", "pos_auteur" ],  ["v_1_5", "lieu", "e_1_4", "pos_auteur" ],  ["v_1_8", "lieu", "e_1_11", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {"e_1_10":"pos_auteur","e_1_3":"pos_auteur","e_1_5":"pos_auteur","v_1_18":"aucun","v_1_21":"pos_auteur"},
+    "genre":"indetermine",
+    "k":101,
+    "roles": [],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_11":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_14":"pos_auteur",
+      "r_1_15":"pos_auteur",
+      "r_1_4":"pos_auteur",
+      "v_1_20":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":111,
+    "roles": [
+      ["v_1_20", "agent", "e_1_19", "pos_auteur" ],
+      ["v_1_20", "lieu", "e_1_25", "pos_auteur" ],
+      ["v_1_20", "patient", "e_1_22", "pos_auteur" ],
+      ["v_1_5", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_5", "lieu", "e_1_11", "pos_auteur" ],
+      ["v_1_5", "lieu", "e_1_7", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "r_1_4":"pos_auteur",
+      "v_1_16":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":111,
+    "roles": [
+      ["v_1_16", "agent", "e_1_15", "pos_auteur" ],
+      ["v_1_16", "patient", "e_1_18", "pos_auteur" ],
+      ["v_1_5", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_5", "lieu", "e_1_11", "pos_auteur" ],
+      ["v_1_5", "lieu", "e_1_8", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_16":"aucun",
+      "e_1_19":"aucun",
+      "e_1_2":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "v_1_3":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":111,
+    "roles": [ ["v_1_3", "agent", "e_1_2", "pos_auteur" ],  ["v_1_3", "lieu", "e_1_5", "pos_auteur" ],  ["v_1_3", "lieu", "e_1_9", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "r_1_12":"pos_auteur",
+      "r_1_17":"pos_auteur",
+      "v_1_21":"pos_auteur",
+      "v_1_3":"pos_auteur",
+      "v_1_4":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":121,
+    "roles": [ ["v_1_21", "agent", "e_1_20", "pos_auteur" ],  ["v_1_3", "agent", "e_1_2", "pos_auteur" ],  ["v_1_3", "lieu", "e_1_9", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_17":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "r_1_13":"pos_auteur",
+      "v_1_3":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":121,
+    "roles": [ ["v_1_3", "agent", "e_1_2", "pos_auteur" ],  ["v_1_3", "lieu", "e_1_10", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {"e_1_10":"pos_auteur","e_1_2":"pos_auteur","e_1_7":"pos_auteur","r_1_10":"pos_auteur","v_1_3":"pos_auteur"},
+    "genre":"indetermine",
+    "k":121,
+    "roles": [ ["v_1_3", "agent", "e_1_2", "pos_auteur" ],  ["v_1_3", "lieu", "e_1_7", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "q_1_20":"pos_auteur",
+      "v_1_18":"pos_auteur",
+      "v_1_4":"pos_auteur",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":131,
+    "roles": [
+      ["v_1_18", "lieu", "e_1_24", "pos_auteur" ],
+      ["v_1_18", "patient", "e_1_21", "pos_auteur" ],
+      ["v_1_4", "agent", "e_1_3", "pos_auteur" ],
+      ["v_1_6", "patient", "e_1_8", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "q_1_20":"pos_auteur",
+      "v_1_18":"pos_auteur",
+      "v_1_4":"pos_auteur",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":131,
+    "roles": [
+      ["v_1_18", "lieu", "e_1_24", "pos_auteur" ],
+      ["v_1_18", "patient", "e_1_21", "pos_auteur" ],
+      ["v_1_4", "agent", "e_1_3", "pos_auteur" ],
+      ["v_1_6", "patient", "e_1_8", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_16":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_4":"pos_auteur",
+      "v_1_7":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":131,
+    "roles": [ ["v_1_10", "lieu", "e_1_16", "pos_auteur" ],  ["v_1_4", "agent", "e_1_3", "pos_auteur" ],  ["v_1_4", "patient", "e_1_6", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_27":"pos_auteur",
+      "e_1_30":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_11":"pos_auteur",
+      "q_1_21":"pos_auteur",
+      "q_1_26":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "r_1_22":"pos_auteur",
+      "v_1_14":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_2":"pos_auteur",
+      "v_1_23":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":141,
+    "roles": [
+      ["v_1_17", "patient", "e_1_19", "pos_auteur" ],
+      ["v_1_2", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_23", "agent", "e_1_27", "pos_auteur" ],
+      ["v_1_23", "lieu", "e_1_30", "pos_auteur" ],
+      ["v_1_23", "patient", "e_1_22", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_11":"pos_auteur",
+      "q_1_25":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "r_1_20":"pos_auteur",
+      "r_1_26":"pos_auteur",
+      "v_1_14":"pos_auteur",
+      "v_1_2":"pos_auteur",
+      "v_1_21":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":141,
+    "roles": [ ["v_1_2", "agent", "e_1_1", "pos_auteur" ],  ["v_1_21", "agent", "e_1_18", "pos_auteur" ],  ["v_1_21", "patient", "e_1_23", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "r_1_9":"pos_auteur",
+      "v_1_11":"pos_auteur",
+      "v_1_2":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":141,
+    "roles": [ ["v_1_11", "lieu", "e_1_13", "pos_auteur" ],  ["v_1_2", "agent", "e_1_1", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_15":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "n_e_1_5":"pos_auteur",
+      "n_e_1_7":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "q_1_20":"pos_auteur",
+      "r_1_18":"pos_auteur",
+      "r_1_21":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "r_1_7":"pos_auteur",
+      "v_1_12":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":151,
+    "roles": [ ["v_1_12", "patient", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_11":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_11":"pos_auteur",
+      "n_e_1_3":"pos_auteur",
+      "q_1_16":"pos_auteur",
+      "r_1_3":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_7":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":151,
+    "roles": [ ["v_1_12", "agent", "e_1_11", "pos_auteur" ],  ["v_1_7", "agent", "e_1_1", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_3":"pos_auteur",
+      "r_1_13":"pos_auteur",
+      "r_1_3":"pos_auteur",
+      "v_1_7":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":151,
+    "roles": [ ["v_1_7", "agent", "e_1_1", "pos_auteur" ],  ["v_1_7", "lieu", "e_1_10", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_29":"pos_auteur",
+      "e_1_32":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_8":"pos_auteur",
+      "r_1_24":"pos_auteur",
+      "v_1_13":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_2":"pos_auteur",
+      "v_1_21":"pos_auteur",
+      "v_1_9":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":161,
+    "roles": [
+      ["v_1_13", "patient", "e_1_12", "pos_auteur" ],
+      ["v_1_2", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_21", "agent", "e_1_20", "pos_auteur" ],
+      ["v_1_9", "agent", "e_1_8", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_11":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_6":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "v_1_15":"pos_auteur",
+      "v_1_2":"pos_auteur",
+      "v_1_21":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":161,
+    "roles": [
+      ["v_1_2", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_2", "patient", "e_1_4", "pos_auteur" ],
+      ["v_1_21", "agent", "e_1_20", "pos_auteur" ],
+      ["v_1_21", "patient", "e_1_23", "pos_auteur" ],
+      ["v_1_8", "lieu", "e_1_11", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "v_1_2":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":161,
+    "roles": [ ["v_1_2", "agent", "e_1_1", "pos_auteur" ],  ["v_1_2", "lieu", "e_1_9", "pos_auteur" ],  ["v_1_2", "patient", "e_1_4", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_27":"pos_auteur",
+      "e_1_31":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "n_e_1_10":"pos_auteur",
+      "n_e_1_5":"pos_auteur",
+      "n_e_1_7":"pos_auteur",
+      "q_1_19":"pos_auteur",
+      "q_1_22":"pos_auteur",
+      "q_1_23":"pos_auteur",
+      "q_1_28":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "r_1_18":"pos_auteur",
+      "r_1_7":"pos_auteur",
+      "v_1_14":"pos_auteur",
+      "v_1_3":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":171,
+    "roles": [
+      ["v_1_14", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_14", "patient", "e_1_16", "pos_auteur" ],
+      ["v_1_3", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_3", "patient", "e_1_5", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "n_e_1_4":"pos_auteur",
+      "r_1_12":"pos_auteur",
+      "r_1_17":"pos_auteur",
+      "r_1_9":"pos_auteur",
+      "v_1_3":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":171,
+    "roles": [
+      ["v_1_3", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_3", "patient", "e_1_4", "pos_auteur" ],
+      ["v_1_5", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_5", "patient", "e_1_7", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_10":"pos_auteur",
+      "q_1_11":"pos_auteur",
+      "r_1_7":"pos_auteur",
+      "v_1_3":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":171,
+    "roles": [ ["v_1_3", "agent", "e_1_2", "pos_auteur" ],  ["v_1_3", "lieu", "e_1_12", "pos_auteur" ],  ["v_1_3", "patient", "e_1_5", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_27":"pos_auteur",
+      "e_1_32":"pos_auteur",
+      "e_1_35":"pos_auteur",
+      "e_1_37":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "n_e_1_12":"pos_auteur",
+      "n_e_1_14":"pos_auteur",
+      "n_e_1_19":"pos_auteur",
+      "n_e_1_35":"pos_auteur",
+      "n_e_1_37":"pos_auteur",
+      "q_1_31":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "r_1_12":"pos_auteur",
+      "r_1_17":"pos_auteur",
+      "r_1_22":"pos_auteur",
+      "r_1_27":"pos_auteur",
+      "r_1_35":"pos_auteur",
+      "r_1_37":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "v_1_29":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":181,
+    "roles": [
+      ["v_1_29", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_29", "patient", "e_1_32", "pos_auteur" ],
+      ["v_1_8", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_8", "patient", "e_1_10", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_13":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_21":"neg_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "n_e_1_23":"pos_auteur",
+      "n_e_1_5":"pos_auteur",
+      "n_e_1_8":"pos_auteur",
+      "q_1_14":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "q_1_20":"aucun",
+      "q_1_4":"pos_auteur",
+      "r_1_23":"aucun",
+      "v_1_11":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":181,
+    "roles": [ ["v_1_11", "agent", "e_1_3", "pos_auteur" ],  ["v_1_11", "agent", "e_1_5", "pos_auteur" ],  ["v_1_11", "patient", "e_1_13", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_14":"neg_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "q_1_10":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "v_1_15":"aucun",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":181,
+    "roles": [
+      ["v_1_15", "agent", "e_1_14", "aucun" ],
+      ["v_1_15", "agent", "e_1_2", "aucun" ],
+      ["v_1_8", "agent", "e_1_5", "pos_auteur" ],
+      ["v_1_8", "patient", "e_1_11", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_13":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_12":"pos_auteur",
+      "r_1_13":"pos_auteur",
+      "v_1_15":"pos_auteur",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":191,
+    "roles": [
+      ["v_1_15", "lieu", "e_1_19", "pos_auteur" ],
+      ["v_1_6", "agent", "e_1_5", "pos_auteur" ],
+      ["v_1_6", "lieu", "e_1_3", "pos_auteur" ],
+      ["v_1_6", "lieu", "e_1_9", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_16":"pos_auteur",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":191,
+    "roles": [
+      ["v_1_12", "patient", "e_1_14", "pos_auteur" ],
+      ["v_1_16", "lieu", "e_1_19", "pos_auteur" ],
+      ["v_1_6", "agent", "e_1_5", "pos_auteur" ],
+      ["v_1_6", "lieu", "e_1_3", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "v_1_14":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":191,
+    "roles": [
+      ["v_1_17", "agent", "e_1_20", "pos_auteur" ],
+      ["v_1_17", "patient", "e_1_12", "pos_auteur" ],
+      ["v_1_6", "agent", "e_1_5", "pos_auteur" ],
+      ["v_1_6", "lieu", "e_1_3", "pos_auteur" ],
+      ["v_1_6", "lieu", "e_1_9", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_27":"pos_auteur",
+      "e_1_30":"pos_auteur",
+      "e_1_32":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_24":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "r_1_12":"pos_auteur",
+      "r_1_14":"pos_auteur",
+      "r_1_19":"pos_auteur",
+      "r_1_27":"pos_auteur",
+      "r_1_32":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "r_1_7":"pos_auteur",
+      "v_1_22":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":6,
+    "roles": [ ["v_1_22", "lieu", "e_1_30", "pos_auteur" ],  ["v_1_22", "patient", "e_1_25", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_27":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_19":"pos_auteur",
+      "r_1_11":"pos_auteur",
+      "r_1_22":"pos_auteur",
+      "r_1_27":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "r_1_7":"pos_auteur",
+      "v_1_17":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":6,
+    "roles": [ ["v_1_17", "lieu", "e_1_25", "pos_auteur" ],  ["v_1_17", "patient", "e_1_20", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_16":"aucun",
+      "e_1_20":"neg_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "r_1_10":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "r_1_8":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_26":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":6,
+    "roles": [ ["v_1_12", "lieu", "e_1_16", "aucun" ],  ["v_1_12", "patient", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_2":"aucun",
+      "e_1_21":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_27":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "q_1_5":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "r_1_14":"pos_auteur",
+      "r_1_4":"aucun",
+      "v_1_10":"pos_auteur",
+      "v_1_6":"aucun"
+    },
+    "genre":"positif",
+    "k":16,
+    "roles": [
+      ["v_1_10", "agent", "e_1_9", "pos_auteur" ],
+      ["v_1_10", "patient", "e_1_12", "pos_auteur" ],
+      ["v_1_6", "agent", "e_1_2", "aucun" ],
+      ["v_1_6", "patient", "e_1_9", "aucun" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_15":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_2":"aucun",
+      "e_1_21":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_11":"pos_auteur",
+      "q_1_18":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "r_1_17":"pos_auteur",
+      "r_1_26":"pos_auteur",
+      "r_1_4":"aucun",
+      "v_1_13":"pos_auteur",
+      "v_1_5":"aucun"
+    },
+    "genre":"negatif",
+    "k":16,
+    "roles": [
+      ["v_1_13", "agent", "e_1_8", "pos_auteur" ],
+      ["v_1_13", "patient", "e_1_15", "pos_auteur" ],
+      ["v_1_5", "agent", "e_1_2", "aucun" ],
+      ["v_1_5", "patient", "e_1_8", "aucun" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_13":"pos_auteur",
+      "e_1_16":"aucun",
+      "e_1_2":"aucun",
+      "e_1_9":"pos_auteur",
+      "q_1_12":"pos_auteur",
+      "q_1_18":"aucun",
+      "q_1_5":"aucun",
+      "q_1_8":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_6":"aucun"
+    },
+    "genre":"indetermine",
+    "k":16,
+    "roles": [
+      ["v_1_10", "agent", "e_1_9", "pos_auteur" ],
+      ["v_1_10", "patient", "e_1_13", "pos_auteur" ],
+      ["v_1_6", "agent", "e_1_2", "aucun" ],
+      ["v_1_6", "patient", "e_1_9", "aucun" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_22":"neg_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "v_1_20":"pos_auteur",
+      "v_1_4":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":26,
+    "roles": [ ["v_1_20", "patient", "e_1_22", "aucun" ],  ["v_1_4", "agent", "e_1_2", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_17":"pos_auteur",
+      "r_1_10":"pos_auteur",
+      "r_1_15":"pos_auteur",
+      "r_1_22":"pos_auteur",
+      "r_1_8":"pos_auteur",
+      "v_1_4":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":26,
+    "roles": [ ["v_1_4", "agent", "e_1_2", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_2":"pos_auteur",
+      "e_2_10":"pos_auteur",
+      "e_2_4":"pos_auteur",
+      "q_1_6":"pos_auteur",
+      "q_2_5":"pos_auteur",
+      "v_2_2":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":26,
+    "roles": [ ["v_2_2", "agent", "e_2_4", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_7":"aucun",
+      "e_1_9":"aucun",
+      "n_e_1_9":"aucun",
+      "q_1_18":"pos_auteur",
+      "q_1_23":"pos_auteur",
+      "q_1_27":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "r_1_7":"aucun",
+      "r_1_9":"aucun",
+      "v_1_13":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":36,
+    "roles": [ ["v_1_13", "agent", "e_1_12", "pos_auteur" ],  ["v_1_13", "lieu", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_28":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "n_e_1_10":"pos_auteur",
+      "q_1_19":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "q_1_5":"pos_auteur",
+      "r_1_8":"pos_auteur",
+      "v_1_14":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":36,
+    "roles": [ ["v_1_14", "agent", "e_1_13", "pos_auteur" ],  ["v_1_14", "lieu", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_2":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_2_10":"pos_auteur",
+      "e_2_12":"pos_auteur",
+      "e_2_2":"pos_auteur",
+      "q_2_3":"pos_auteur",
+      "q_2_6":"pos_auteur",
+      "v_1_3":"pos_auteur",
+      "v_2_8":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":36,
+    "roles": [ ["v_1_3", "agent", "e_1_2", "pos_auteur" ],  ["v_2_8", "patient", "e_2_10", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_18":"pos_auteur",
+      "q_1_23":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "v_1_15":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":46,
+    "roles": [ ["v_1_15", "lieu", "e_1_19", "pos_auteur" ],  ["v_1_8", "patient", "e_1_10", "pos_auteur" ],  ["v_1_8", "patient", "e_1_2", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_28":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_24":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "r_1_13":"pos_auteur",
+      "r_1_20":"pos_auteur",
+      "v_1_15":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":46,
+    "roles": [ ["v_1_15", "lieu", "e_1_18", "pos_auteur" ],  ["v_1_8", "patient", "e_1_10", "pos_auteur" ],  ["v_1_8", "patient", "e_1_2", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "v_1_8":"pos_auteur",
+      "v_2_10":"aucun",
+      "v_2_3":"pos_auteur",
+      "v_2_6":"aucun"
+    },
+    "genre":"indetermine",
+    "k":46,
+    "roles": [ ["v_1_8", "patient", "e_1_10", "pos_auteur" ],  ["v_1_8", "patient", "e_1_2", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"aucun",
+      "e_1_12":"aucun",
+      "e_1_16":"aucun",
+      "e_1_2":"aucun",
+      "e_1_20":"aucun",
+      "e_1_6":"aucun",
+      "q_1_3":"aucun",
+      "q_1_7":"aucun",
+      "q_1_8":"aucun",
+      "v_1_17":"aucun",
+      "v_1_4":"aucun"
+    },
+    "genre":"positif",
+    "k":56,
+    "roles": [
+      ["v_1_17", "agent", "e_1_20", "aucun" ],
+      ["v_1_17", "patient", "e_1_16", "aucun" ],
+      ["v_1_4", "agent", "e_1_2", "aucun" ],
+      ["v_1_4", "instrument", "e_1_16", "aucun" ],
+      ["v_1_4", "patient", "e_1_6", "aucun" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"aucun",
+      "e_1_12":"aucun",
+      "e_1_16":"aucun",
+      "e_1_2":"aucun",
+      "e_1_20":"aucun",
+      "e_1_6":"aucun",
+      "q_1_3":"aucun",
+      "q_1_7":"aucun",
+      "q_1_8":"aucun",
+      "v_1_17":"aucun",
+      "v_1_4":"aucun"
+    },
+    "genre":"negatif",
+    "k":56,
+    "roles": [
+      ["v_1_17", "agent", "e_1_20", "aucun" ],
+      ["v_1_17", "patient", "e_1_16", "aucun" ],
+      ["v_1_4", "agent", "e_1_2", "aucun" ],
+      ["v_1_4", "instrument", "e_1_16", "aucun" ],
+      ["v_1_4", "patient", "e_1_6", "aucun" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_2":"aucun",
+      "e_1_6":"aucun",
+      "e_2_4":"pos_auteur",
+      "e_2_6":"pos_auteur",
+      "e_2_9":"pos_auteur",
+      "q_1_3":"aucun",
+      "q_1_9":"aucun",
+      "q_2_10":"pos_auteur",
+      "q_2_12":"pos_auteur",
+      "r_2_6":"pos_auteur",
+      "r_2_9":"pos_auteur",
+      "v_2_2":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":56,
+    "roles": [ ["v_2_2", "agent", "e_2_4", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_21":"pos_auteur",
+      "v_1_23":"pos_auteur",
+      "v_1_9":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":66,
+    "roles": [ ["v_1_10", "patient", "e_1_12", "pos_auteur" ],  ["v_1_21", "agent", "e_1_19", "pos_auteur" ],  ["v_1_9", "agent", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_21":"pos_auteur",
+      "v_1_23":"pos_auteur",
+      "v_1_9":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":66,
+    "roles": [ ["v_1_10", "patient", "e_1_12", "pos_auteur" ],  ["v_1_21", "agent", "e_1_19", "pos_auteur" ],  ["v_1_9", "agent", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_4":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":66,
+    "roles": [
+      ["v_1_17", "agent", "e_1_16", "pos_auteur" ],
+      ["v_1_17", "patient", "e_1_19", "pos_auteur" ],
+      ["v_1_4", "agent", "e_1_3", "pos_auteur" ],
+      ["v_1_4", "patient", "e_1_6", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "v_1_15":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":76,
+    "roles": [ ["v_1_15", "agent", "e_1_1", "pos_auteur" ],  ["v_1_15", "lieu", "e_1_21", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "v_1_17":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":76,
+    "roles": [ ["v_1_17", "agent", "e_1_1", "pos_auteur" ],  ["v_1_17", "lieu", "e_1_22", "pos_auteur" ],  ["v_1_17", "patient", "e_1_19", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "v_1_15":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":76,
+    "roles": [ ["v_1_15", "lieu", "e_1_19", "pos_auteur" ],  ["v_1_15", "patient", "e_1_1", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_11":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_32":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_6":"pos_auteur",
+      "q_1_24":"pos_auteur",
+      "r_1_6":"pos_auteur",
+      "v_1_13":"pos_auteur",
+      "v_1_14":"pos_auteur",
+      "v_1_21":"pos_auteur",
+      "v_1_27":"pos_auteur",
+      "v_1_29":"pos_auteur",
+      "v_1_9":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":86,
+    "roles": [
+      ["v_1_14", "lieu", "e_1_19", "pos_auteur" ],
+      ["v_1_29", "lieu", "e_1_32", "pos_auteur" ],
+      ["v_1_9", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_9", "patient", "e_1_11", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_18":"pos_auteur",
+      "n_e_1_6":"pos_auteur",
+      "q_1_11":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "r_1_10":"pos_auteur",
+      "r_1_6":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":86,
+    "roles": [],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_6":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "r_1_6":"pos_auteur",
+      "v_1_12":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":86,
+    "roles": [ ["v_1_12", "agent", "e_1_1", "pos_auteur" ],  ["v_1_12", "patient", "e_1_14", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_4":"aucun",
+      "e_1_6":"pos_auteur",
+      "n_e_1_6":"pos_auteur",
+      "q_1_16":"pos_auteur",
+      "r_1_24":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_19":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":96,
+    "roles": [ ["v_1_10", "agent", "e_1_6", "pos_auteur" ],  ["v_1_19", "patient", "e_1_21", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_10":"pos_auteur",
+      "q_1_6":"pos_auteur",
+      "r_1_15":"pos_auteur",
+      "r_1_17":"pos_auteur",
+      "v_1_20":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":96,
+    "roles": [ ["v_1_20", "lieu", "e_1_24", "pos_auteur" ],  ["v_1_20", "patient", "e_1_1", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_11":"pos_auteur",
+      "r_1_16":"pos_auteur",
+      "r_1_19":"pos_auteur",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":96,
+    "roles": [ ["v_1_6", "patient", "e_1_1", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_25":"pos_auteur",
+      "r_1_16":"pos_auteur",
+      "r_1_6":"pos_auteur",
+      "r_1_8":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_18":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":106,
+    "roles": [
+      ["v_1_12", "agent", "e_1_11", "pos_auteur" ],
+      ["v_1_12", "patient", "e_1_14", "pos_auteur" ],
+      ["v_1_18", "agent", "e_1_14", "pos_auteur" ],
+      ["v_1_18", "lieu", "e_1_21", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "r_1_16":"pos_auteur",
+      "r_1_6":"pos_auteur",
+      "r_1_8":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_18":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":106,
+    "roles": [ ["v_1_12", "agent", "e_1_11", "pos_auteur" ],  ["v_1_12", "patient", "e_1_14", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_14":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "e_2_11":"aucun",
+      "e_2_8":"aucun",
+      "q_1_10":"pos_auteur",
+      "r_1_6":"pos_auteur",
+      "v_1_11":"pos_auteur",
+      "v_2_3":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":106,
+    "roles": [ ["v_1_11", "agent", "e_1_9", "pos_auteur" ],  ["v_1_11", "lieu", "e_1_14", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_13":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_4":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":116,
+    "roles": [
+      ["v_1_17", "patient", "e_1_16", "pos_auteur" ],
+      ["v_1_17", "patient", "e_1_21", "pos_auteur" ],
+      ["v_1_4", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_5", "patient", "e_1_7", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "v_1_16":"pos_auteur",
+      "v_1_4":"pos_auteur",
+      "v_1_9":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":116,
+    "roles": [ ["v_1_16", "patient", "e_1_15", "pos_auteur" ],  ["v_1_4", "agent", "e_1_2", "pos_auteur" ],  ["v_1_4", "patient", "e_1_6", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_13":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_5":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "v_1_11":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":116,
+    "roles": [ ["v_1_11", "agent", "e_1_9", "pos_auteur" ],  ["v_1_11", "patient", "e_1_13", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_13":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "e_2_2":"pos_auteur",
+      "q_1_17":"pos_auteur",
+      "q_1_6":"pos_auteur",
+      "v_1_11":"pos_auteur",
+      "v_1_4":"pos_auteur",
+      "v_1_9":"pos_auteur",
+      "v_2_10":"pos_auteur",
+      "v_2_4":"pos_auteur",
+      "v_2_8":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":126,
+    "roles": [
+      ["v_1_11", "agent", "e_1_16", "pos_auteur" ],
+      ["v_1_4", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_4", "patient", "e_1_7", "pos_auteur" ],
+      ["v_1_9", "patient", "e_1_2", "pos_auteur" ],
+      ["v_2_4", "agent", "e_2_2", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_14":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "e_2_2":"pos_auteur",
+      "e_2_7":"pos_auteur",
+      "e_2_9":"neg_auteur",
+      "q_1_6":"pos_auteur",
+      "v_1_11":"pos_auteur",
+      "v_1_4":"pos_auteur",
+      "v_1_9":"pos_auteur",
+      "v_2_4":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":126,
+    "roles": [
+      ["v_1_11", "agent", "e_1_14", "pos_auteur" ],
+      ["v_1_4", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_4", "patient", "e_1_7", "pos_auteur" ],
+      ["v_1_9", "patient", "e_1_2", "pos_auteur" ],
+      ["v_2_4", "agent", "e_2_2", "pos_auteur" ],
+      ["v_2_4", "lieu", "e_2_7", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "q_1_8":"pos_auteur",
+      "r_1_15":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":126,
+    "roles": [],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "q_1_21":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":136,
+    "roles": [
+      ["v_1_17", "lieu", "e_1_20", "pos_auteur" ],
+      ["v_1_17", "patient", "e_1_16", "pos_auteur" ],
+      ["v_1_5", "lieu", "e_1_12", "pos_auteur" ],
+      ["v_1_5", "patient", "e_1_2", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "q_1_21":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":136,
+    "roles": [
+      ["v_1_17", "lieu", "e_1_20", "pos_auteur" ],
+      ["v_1_17", "patient", "e_1_16", "pos_auteur" ],
+      ["v_1_5", "lieu", "e_1_12", "pos_auteur" ],
+      ["v_1_5", "patient", "e_1_2", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_23":"aucun",
+      "e_1_27":"aucun",
+      "e_1_7":"pos_auteur",
+      "v_1_14":"neg_auteur",
+      "v_1_17":"aucun",
+      "v_1_20":"aucun",
+      "v_1_4":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":136,
+    "roles": [
+      ["v_1_14", "agent", "e_1_11", "aucun" ],
+      ["v_1_20", "lieu", "e_1_23", "aucun" ],
+      ["v_1_4", "lieu", "e_1_11", "pos_auteur" ],
+      ["v_1_4", "lieu", "e_1_7", "pos_auteur" ],
+      ["v_1_4", "patient", "e_1_2", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_2_2":"neg_auteur",
+      "e_2_5":"neg_auteur",
+      "n_e_1_4":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "q_2_6":"aucun",
+      "r_1_12":"pos_auteur",
+      "r_1_4":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":146,
+    "roles": [ ["v_1_5", "agent", "e_1_2", "pos_auteur" ],  ["v_1_5", "lieu", "e_1_10", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_14":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_2_14":"pos_auteur",
+      "e_2_3":"pos_auteur",
+      "e_2_6":"pos_auteur",
+      "e_2_9":"pos_auteur",
+      "n_e_1_4":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "q_2_10":"pos_auteur",
+      "q_2_12":"pos_auteur",
+      "q_2_2":"pos_auteur",
+      "r_1_16":"pos_auteur",
+      "r_1_4":"pos_auteur",
+      "v_1_5":"pos_auteur",
+      "v_2_11":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":146,
+    "roles": [
+      ["v_1_5", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_5", "lieu", "e_1_14", "pos_auteur" ],
+      ["v_2_11", "agent", "e_2_6", "pos_auteur" ],
+      ["v_2_11", "patient", "e_2_14", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_2":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "e_2_10":"aucun",
+      "e_2_2":"aucun",
+      "e_2_4":"pos_auteur",
+      "n_e_1_4":"pos_auteur",
+      "q_2_11":"aucun",
+      "q_2_14":"aucun",
+      "r_1_4":"pos_auteur",
+      "v_1_5":"pos_auteur",
+      "v_2_7":"aucun"
+    },
+    "genre":"indetermine",
+    "k":146,
+    "roles": [ ["v_1_5", "agent", "e_1_2", "pos_auteur" ],  ["v_1_5", "lieu", "e_1_8", "pos_auteur" ],  ["v_2_7", "agent", "e_2_10", "aucun" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_18":"neg_auteur",
+      "e_1_20":"neg_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_30":"pos_auteur",
+      "e_1_32":"pos_auteur",
+      "e_1_36":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_15":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "r_1_32":"pos_auteur",
+      "r_1_8":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_27":"pos_auteur",
+      "v_1_33":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":156,
+    "roles": [
+      ["v_1_12", "lieu", "e_1_5", "pos_auteur" ],
+      ["v_1_12", "patient", "e_1_1", "pos_auteur" ],
+      ["v_1_12", "patient", "e_1_14", "pos_auteur" ],
+      ["v_1_27", "agent", "e_1_25", "pos_auteur" ],
+      ["v_1_27", "lieu", "e_1_30", "pos_auteur" ],
+      ["v_1_33", "agent", "e_1_36", "pos_auteur" ],
+      ["v_1_33", "patient", "e_1_30", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_12":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_31":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "v_1_10":"pos_auteur",
+      "v_1_21":"pos_auteur",
+      "v_1_29":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":156,
+    "roles": [
+      ["v_1_10", "agent", "e_1_1", "pos_auteur" ],
+      ["v_1_10", "instrument", "e_1_18", "pos_auteur" ],
+      ["v_1_10", "patient", "e_1_12", "pos_auteur" ],
+      ["v_1_21", "lieu", "e_1_24", "pos_auteur" ],
+      ["v_1_29", "agent", "e_1_31", "pos_auteur" ],
+      ["v_1_8", "agent", "e_1_5", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_11":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "v_1_3":"pos_auteur",
+      "v_1_9":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":156,
+    "roles": [ ["v_1_3", "patient", "e_1_1", "pos_auteur" ],  ["v_1_9", "agent", "e_1_11", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_11":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_18":"pos_auteur",
+      "e_1_20":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_24":"pos_auteur",
+      "e_1_29":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "n_e_1_18":"pos_auteur",
+      "n_e_1_20":"pos_auteur",
+      "q_1_26":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "r_1_20":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":166,
+    "roles": [ ["v_1_8", "agent", "e_1_1", "pos_auteur" ],  ["v_1_8", "lieu", "e_1_14", "pos_auteur" ],  ["v_1_8", "patient", "e_1_16", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_14":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_27":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "n_e_1_21":"pos_auteur",
+      "n_e_1_23":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "r_1_14":"pos_auteur",
+      "r_1_23":"pos_auteur",
+      "v_1_17":"pos_auteur",
+      "v_1_9":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":166,
+    "roles": [
+      ["v_1_17", "agent", "e_1_16", "pos_auteur" ],
+      ["v_1_17", "patient", "e_1_19", "pos_auteur" ],
+      ["v_1_9", "agent", "e_1_2", "pos_auteur" ],
+      ["v_1_9", "patient", "e_1_16", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_1":"pos_auteur",
+      "e_1_10":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "n_e_1_1":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "v_1_8":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":166,
+    "roles": [ ["v_1_8", "agent", "e_1_1", "pos_auteur" ],  ["v_1_8", "patient", "e_1_10", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_16":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_28":"pos_auteur",
+      "e_1_31":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "n_e_1_6":"pos_auteur",
+      "q_1_14":"pos_auteur",
+      "q_1_20":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "r_1_23":"pos_auteur",
+      "r_1_28":"pos_auteur",
+      "r_1_31":"pos_auteur",
+      "r_1_6":"pos_auteur",
+      "v_1_17":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":176,
+    "roles": [ ["v_1_17", "agent", "e_1_10", "pos_auteur" ],  ["v_1_17", "patient", "e_1_21", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_17":"pos_auteur",
+      "e_1_19":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_23":"pos_auteur",
+      "e_1_26":"pos_auteur",
+      "e_1_31":"pos_auteur",
+      "e_1_6":"pos_auteur",
+      "q_1_20":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "r_1_19":"pos_auteur",
+      "r_1_6":"pos_auteur",
+      "v_1_15":"pos_auteur",
+      "v_1_28":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":176,
+    "roles": [ ["v_1_15", "agent", "e_1_10", "pos_auteur" ],  ["v_1_15", "patient", "e_1_17", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_11":"pos_auteur",
+      "e_1_13":"pos_auteur",
+      "e_1_2":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_6":"pos_auteur",
+      "r_1_13":"pos_auteur",
+      "v_1_10":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":176,
+    "roles": [ ["v_1_10", "patient", "e_1_2", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_5":"pos_auteur",
+      "q_1_11":"pos_auteur",
+      "q_1_16":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "r_1_5":"pos_auteur",
+      "v_1_13":"pos_auteur",
+      "v_1_7":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":186,
+    "roles": [ ["v_1_13", "agent", "e_1_15", "pos_auteur" ],  ["v_1_7", "patient", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_14":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_13":"pos_auteur",
+      "q_1_2":"pos_auteur",
+      "q_1_9":"pos_auteur",
+      "v_1_11":"pos_auteur",
+      "v_1_5":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":186,
+    "roles": [ ["v_1_11", "agent", "e_1_14", "pos_auteur" ],  ["v_1_5", "patient", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_2":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "e_2_2":"pos_auteur",
+      "q_1_3":"pos_auteur",
+      "q_2_7":"pos_auteur",
+      "v_1_4":"pos_auteur",
+      "v_2_5":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":186,
+    "roles": [ ["v_1_4", "agent", "e_1_2", "pos_auteur" ],  ["v_2_5", "patient", "e_2_2", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_10":"pos_auteur",
+      "e_1_15":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_25":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_8":"pos_auteur",
+      "q_1_26":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "q_1_7":"pos_auteur",
+      "r_1_10":"pos_auteur",
+      "v_1_12":"pos_auteur",
+      "v_1_19":"pos_auteur",
+      "v_1_23":"pos_auteur"
+    },
+    "genre":"positif",
+    "k":196,
+    "roles": [
+      ["v_1_12", "lieu", "e_1_3", "pos_auteur" ],
+      ["v_1_12", "patient", "e_1_8", "pos_auteur" ],
+      ["v_1_19", "agent", "e_1_21", "pos_auteur" ],
+      ["v_1_23", "agent", "e_1_21", "pos_auteur" ],
+      ["v_1_23", "patient", "e_1_25", "pos_auteur" ]
+    ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_17":"pos_auteur",
+      "e_1_21":"pos_auteur",
+      "e_1_3":"pos_auteur",
+      "e_1_7":"pos_auteur",
+      "e_1_9":"pos_auteur",
+      "q_1_10":"pos_auteur",
+      "q_1_12":"pos_auteur",
+      "q_1_4":"pos_auteur",
+      "r_1_9":"pos_auteur",
+      "v_1_14":"pos_auteur"
+    },
+    "genre":"negatif",
+    "k":196,
+    "roles": [ ["v_1_14", "agent", "e_1_7", "pos_auteur" ],  ["v_1_14", "lieu", "e_1_17", "pos_auteur" ],  ["v_1_14", "lieu", "e_1_3", "pos_auteur" ] ],
+    "statut":"valide"
+  },
+  {
+    "etats": {
+      "e_1_12":"pos_auteur",
+      "e_1_16":"aucun",
+      "e_1_2":"pos_auteur",
+      "e_1_22":"pos_auteur",
+      "e_1_4":"pos_auteur",
+      "e_1_9":"aucun",
+      "q_1_19":"aucun",
+      "r_1_12":"aucun",
+      "r_1_4":"pos_auteur",
+      "v_1_23":"pos_auteur",
+      "v_1_6":"pos_auteur"
+    },
+    "genre":"indetermine",
+    "k":196,
+    "roles": [ ["v_1_23", "agent", "e_1_22", "pos_auteur" ],  ["v_1_6", "lieu", "e_1_9", "aucun" ],  ["v_1_6", "patient", "e_1_2", "pos_auteur" ] ],
+    "statut":"valide"
+  }
+]
