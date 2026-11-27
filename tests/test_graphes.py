@@ -155,7 +155,9 @@ def test_e1_non_conforme_et_redondante():
                           "regle": "e1", "statut": "hypothetique",
                           "sources": [["evenement", "v_1", "strangle", "p5"], ["role", "v_1", "patient", "e_2"]]}]
     j = juger(lu)["e1"]
-    assert j["non_conforme"] == 2 and j["redondante"] == 2
+    # non évaluée, jamais « redondante » ni juste : le contenu canonisé est déjà lu, la forme propre d'E1 n'est pas jugée
+    assert j["non_conforme"] == 2 and j["non_evaluee"] == 2 and j["redondante"] == 0
+    assert j["non_evaluee_sources_justes"] == 2
     assert j["gain"] == 0 and j["erreur_regle"] == 0 and j["erreur_heritee"] == 0
 
 
@@ -191,3 +193,89 @@ def test_dependances_suivies():
           "sources": [["entite", "e_2", "lion", "p2"]]}
     chaine = cg.requises(d2, [d1, d2, d3], lu["faits"])
     assert {d["regle"] for d in chaine} == {"e2", "r2"} and len(chaine) == 3
+
+
+def test_gain_et_erreur_d_une_meme_transformation():
+    lu = faits()
+    lu["faits"] = [f for f in lu["faits"] if f != ["role", "v_1", "agent", "e_1"]]
+    d1 = {"fait": ["role", "v_1", "agent", "e_1"], "regle": "r2", "statut": "hypothetique",
+          "sources": [["evenement", "v_1", "strangle", "p5"], ["role", "v_1", "patient", "e_2"]]}
+    # d2 dépend de d1 (non lue) : sa chaîne ajoute l'agent juste et le thème faux
+    d2 = {"fait": ["role", "v_1", "theme", "e_4"], "regle": "r1", "statut": "hypothetique",
+          "sources": [["role", "v_1", "agent", "e_1"]]}
+    lu["derivations"] = [d1, d2]
+    j = juger(lu)
+    assert j["r2"]["gain"] == 1 and j["r2"]["elements_faux"] == 0
+    assert j["r1"]["gain"] == 0 and j["r1"]["gain_et_erreur_regle"] == 1
+    assert j["r1"]["elements_justes"] >= 1 and j["r1"]["elements_faux"] >= 1
+
+
+def derivation_fausse(regle, source):
+    return {"fait": ["relation", "rx", "e_2", "near", "e_4", "p2"], "regle": regle, "statut": "hypothetique",
+            "sources": [source]}
+
+
+def test_sources_etiquette_du_role():
+    lu = faits()
+    lu["faits"] = [f for f in lu["faits"] if f != ["role", "v_1", "patient", "e_2"]] + [["role", "v_1", "theme", "e_2"]]
+    source = ["role", "v_1", "theme", "e_2"]          # la référence dit patient
+    lu["derivations"] = [derivation_fausse("p1", source)]
+    j = juger(lu)["p1"]
+    assert j["erreur_heritee"] == 1 and j["sources_fausses:etiquette_role"] == 1
+    lu["derivations"] = [derivation_fausse("r1", source)]   # R1 réécrit cette étiquette : elle n'est pas jugée
+    assert juger(lu)["r1"]["erreur_regle"] == 1
+
+
+def test_sources_qualificatifs():
+    lu = faits()
+    source = ["entite", "e_4", "club", "p4"]
+    lu["derivations"] = [derivation_fausse("p1", source)]
+    assert juger(lu)["p1"]["erreur_regle"] == 1             # le club est nié des deux côtés : la source est juste
+    lu["faits"] = [f for f in lu["faits"] if f != ["polarite", "e_4", "neg"]]
+    j = juger(lu)["p1"]
+    assert j["erreur_heritee"] == 1 and j["sources_fausses:qualificatifs"] == 1
+
+
+def test_sources_predicat_de_relation():
+    lu = faits()
+    lu["faits"] = [f if f[:2] != ["relation", "r_1"] else ["relation", "r_1", "e_3", "carry", "e_4", "p3"]
+                   for f in lu["faits"]]
+    lu["derivations"] = [derivation_fausse("p1", ["relation", "r_1", "e_3", "carry", "e_4", "p3"])]
+    j = juger(lu)["p1"]
+    assert j["erreur_heritee"] == 1 and j["sources_fausses:relation"] == 1
+
+
+def test_source_reecrite_par_p1():
+    lu = faits()
+    lu["faits"].append(["propriete", "q_1", "e_2", "crouching", "p2"])     # la référence n'a pas cette propriété
+    d = {"fait": ["evenement", "v_9", "crouch", "p2"], "regle": "p1", "statut": "hypothetique",
+         "sources": [["propriete", "q_1", "e_2", "crouching", "p2"]]}
+    lu["derivations"] = [d]
+    assert juger(lu)["p1"]["erreur_regle"] == 1      # le porteur (le lion) est juste : l'erreur est celle de la règle
+    lu["derivations"] = [dict(d, sources=[["propriete", "q_1", "e_9", "crouching", "p2"]])]
+    lu["faits"] += [["entite", "e_9", "cat", "p9"], ["propriete", "q_1", "e_9", "crouching", "p2"]]
+    j = juger(lu)["p1"]
+    assert j["erreur_heritee"] == 1 and j["sources_fausses:mention"] == 1
+
+
+# --- la couverture des assertions admissibles, et les intervalles par fiche -------------------------------------------
+
+def test_couverture_et_promotion_se_lisent_ensemble():
+    juste = cg.metriques_surete(resultat(faits()).securite)
+    assert juste["taux_promotion"] == 0 and juste["couverture_admissible"] == 1
+    tout_nie = faits()
+    tout_nie["faits"] += [["polarite", x, "neg"] for x in ("e_1", "e_2", "e_3", "v_1", "n1")]
+    m = cg.metriques_surete(resultat(tout_nie).securite)
+    assert m["taux_promotion"] == 0 and m["couverture_admissible"] == 0     # aucune promotion, aucune couverture
+    rien_nie = faits(pol_rel="pos")
+    assert cg.metriques_surete(resultat(rien_nie).securite)["taux_promotion"] > 0
+
+
+def test_intervalles_par_fiche():
+    r1, r2 = resultat(faits()), resultat(faits(role_patient="e_4"))
+    par_texte = {(1, "positif"): r1, (1, "variante_negation"): r1, (2, "positif"): r2}
+    iv = cg.intervalles(par_texte, tirages=200)
+    assert iv["fiches"] == 2                       # deux fiches, non trois textes
+    b, h = iv["intervalles"]["structure:roles"]
+    assert 0 < b <= h <= 1
+    assert iv == cg.intervalles(par_texte, tirages=200)                      # reproductible (graine)

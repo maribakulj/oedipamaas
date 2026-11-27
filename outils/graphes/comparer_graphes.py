@@ -42,12 +42,26 @@ Dérivations (--derivations), chacune avec les dérivations dont elle dépend (s
 proche), canonisée selon le guide (une action est un événement : l'entité « nom d'action » d'E1 est la forme non
 conforme de son événement source, et sa relation « of » / « de » celle du rôle source), puis classée :
   non_conforme   sa forme n'est pas celle du guide (E1) ; son contenu canonisé est jugé ensuite (compté deux fois)
-  redondante     son contenu canonisé est déjà dans le graphe, ou n'y change rien
-  gain           elle ajoute un élément de la référence qui manquait
-  erreur_regle   elle ajoute un élément absent de la référence, alors que ses sources lues sont justes
-  erreur_heritee elle ajoute un élément absent de la référence, et l'une de ses sources lues est déjà fausse (une
-                 mention non alignée, un événement de prédicat faux, un rôle entre deux référents que la référence ne
-                 relie pas) : l'erreur vient de la lecture
+  non_evaluee    (E1) son contenu canonisé est déjà dans le graphe : la dérivation n'ajoute rien de comparable, et sa
+                 forme propre (le nom d'action, son sens, le complément pris pour le patient) n'a pas d'équivalent dans
+                 le guide. Ce n'est PAS un jugement de justesse : seules ses sources sont jugées (sources_justes,
+                 sources_fausses), et ce qu'elle dit de plus n'est pas évalué
+  redondante     (hors E1) son contenu canonisé est déjà dans le graphe, ou n'y change rien
+  gain           elle ajoute au moins un élément juste, et aucun faux
+  gain_et_erreur elle ajoute au moins un élément juste et au moins un faux (une même transformation) : comptée
+                 ici, jamais comme un gain ; l'origine de son erreur est comptée à part (_regle, _heritee)
+  erreur         elle n'ajoute que des éléments faux ; _regle si ses sources lues sont justes, _heritee sinon
+Les éléments ajoutés sont aussi comptés un à un, par règle : elements_justes (vrais positifs ajoutés) et elements_faux
+(prédictions ajoutées qui ne sont pas des vrais positifs).
+Une source lue est juste si la référence a le même élément, entièrement : une entité alignée de même tête ; un
+événement aligné de même prédicat ; un rôle entre l'événement et le référent que la référence relie, avec la même
+étiquette ; une relation de même étiquette entre les mêmes référents ; une propriété de même mot sur le même référent ;
+et, pour chacune, les mêmes qualificatifs (polarité, modalité, portée, énonciateur, alternative ; ceux de l'événement
+pour un rôle). La source qu'une règle réécrit, dans une forme que le guide n'a pas, n'est jugée que sur ce que la règle
+garde (REECRIT : l'étiquette du rôle de R1 et R2, la propriété participe de P1, le nom d'action et sa relation
+génitive d'E2 ; leurs qualificatifs n'ont pas de correspondant et ne sont pas comparés). La raison de
+chaque source fausse est comptée (sources_fausses:mention, :tete, :predicat, :role, :etiquette_role, :relation,
+:propriete, :qualificatifs).
 
 Rien ne dépend d'une ressource lexicale : têtes et prédicats comparés comme écrits (minuscules, espaces et traits bas
 confondus ; la forme pronominale française d'un prédicat est celle du verbe)."""
@@ -466,6 +480,8 @@ def comparer(r: Graphe, g: Graphe, methode="optimal", referents="classes", deriv
     for gi, ri in correspondance.items():
         inv_corr[ri].append(gi)
     for ri in ids_r:
+        if r.admissible(ri):
+            res.securite["reference_admissible_total"] += 1      # avec ou sans correspondante : la couverture
         if ri not in inv_corr:
             continue
         qr = r.q(ri)
@@ -485,6 +501,8 @@ def comparer(r: Graphe, g: Graphe, methode="optimal", referents="classes", deriv
             res.securite["reference_admissible"] += 1
             if not adm_g:
                 res.securite["retrogradation"] += 1
+            else:
+                res.securite["admissible_garde"] += 1
     # la matrice de confusion des rôles
     ref_pairs = collections.defaultdict(set)
     for v, ro, e in r.roles:
@@ -541,31 +559,95 @@ def canoniser(chaine):
     return faits, non_conforme
 
 
-def sources_justes(chaine, faits_lus, r: Graphe, g: Graphe, methode, referents):
-    """Les sources lues (non dérivées) de la chaîne sont-elles justes au regard de la référence ?"""
+# la source qu'une règle réécrit, par construction, dans une forme que le guide n'a pas : elle n'est jugée que sur ce que
+# la règle garde (R1, R2 : l'événement et le participant, non l'étiquette ; P1 : le porteur de la propriété participe ;
+# E2 : la mention du nom d'action, qui doit être dans la référence comme entité ou comme événement, et le complément
+# de sa relation « of » / « de »)
+REECRIT = {"r1": {"role"}, "r2": {"role"}, "p1": {"propriete"}, "e2": {"entite", "relation"}}
+
+
+def raisons_sources(chaine, faits_lus, r: Graphe, g: Graphe, methode, referents):
+    """Les raisons pour lesquelles des sources lues (non dérivées) de la chaîne sont fausses au regard de la référence ;
+    [] si toutes sont justes. Chaque source est comparée entièrement : son mot, ses référents, son étiquette, ses
+    qualificatifs."""
     lus = {json.dumps(f) for f in faits_lus}
-    srcs = [s for d in chaine for s in d["sources"] if json.dumps(s) in lus]
+    srcs = [(d["regle"], s) for d in chaine for s in d["sources"] if json.dumps(s) in lus]
     inv_e = {j: i for i, j in aligner(r.entites, g.entites, methode).items()}
     inv_v = {j: i for i, j in aligner(r.evenements, g.evenements, methode).items()}
     cr = r.classes() if referents == "classes" else {e: e for e in r.entites}
-    relies = {(v, cr.get(e)) for v, _, e in r.roles}
-    for s in srcs:
+    roles_ref = collections.defaultdict(set)
+    for v, ro, e in r.roles:
+        roles_ref[(v, cr.get(e))].add(ro)
+    rels_ref = {(cr.get(a), rel, cr.get(b)): i for a, rel, b, i in r.relations}
+    props_ref = {(cr.get(e), v): i for e, v, i in r.proprietes}
+    raisons = []
+
+    def qualifies(id_g, id_r):
+        if g.q(id_g) != r.q(id_r):
+            raisons.append("qualificatifs")
+    for regle, s in srcs:
         t = s[0]
+        reecrit = t in REECRIT.get(regle, ())
+        if reecrit and t == "entite":
+            pos = g.entites.get(s[1], ("", None))[1]
+            if not pos or not any(x[1] and (dans(pos, x[1]) or chevauche(pos, x[1]))
+                                  for x in list(r.entites.values()) + list(r.evenements.values())):
+                raisons.append("mention")
+            continue
+        if reecrit and t in ("relation", "propriete"):
+            porteur = s[4] if t == "relation" else s[2]
+            if porteur not in inv_e:
+                raisons.append("mention")
+            continue
         if t == "entite" and s[2] != "nom_propre":
             if s[1] not in inv_e:
-                return False
+                raisons.append("mention")
+            elif r.entites[inv_e[s[1]]][0] != norm(s[2]):
+                raisons.append("tete")
+            else:
+                qualifies(s[1], inv_e[s[1]])
         elif t == "evenement":
-            if s[1] not in inv_v or r.evenements[inv_v[s[1]]][0] != norm_pred(s[2]):
-                return False
+            if s[1] not in inv_v:
+                raisons.append("mention")
+            elif r.evenements[inv_v[s[1]]][0] != norm_pred(s[2]):
+                raisons.append("predicat")
+            else:
+                qualifies(s[1], inv_v[s[1]])
         elif t == "role":
-            # un rôle source n'est faux que si la référence ne relie pas ces deux-là : le nom du rôle est ce que les
-            # règles de rôle (R1, R2) remettent en cause
-            if s[1] not in inv_v or s[3] not in inv_e or (inv_v[s[1]], cr.get(inv_e[s[3]])) not in relies:
-                return False
-        elif t in ("relation", "propriete"):
-            if (t == "relation" and (s[2] not in inv_e or s[4] not in inv_e)) or (t == "propriete" and s[2] not in inv_e):
-                return False
-    return True
+            if s[1] not in inv_v or s[3] not in inv_e:
+                raisons.append("mention")
+                continue
+            ref = roles_ref.get((inv_v[s[1]], cr.get(inv_e[s[3]])))
+            if not ref:
+                raisons.append("role")
+            elif s[2] not in ref and not reecrit:
+                raisons.append("etiquette_role")
+            else:
+                qualifies(s[1], inv_v[s[1]])
+        elif t == "relation":
+            if s[2] not in inv_e or s[4] not in inv_e:
+                raisons.append("mention")
+                continue
+            k = (cr.get(inv_e[s[2]]), norm(s[3]), cr.get(inv_e[s[4]]))
+            if k not in rels_ref:
+                raisons.append("relation")
+            else:
+                qualifies(s[1], rels_ref[k])
+        elif t == "propriete":
+            if s[2] not in inv_e:
+                raisons.append("mention")
+                continue
+            k = (cr.get(inv_e[s[2]]), norm(s[3]))
+            if k not in props_ref:
+                raisons.append("propriete")
+            else:
+                qualifies(s[1], props_ref[k])
+    return raisons
+
+
+def sources_justes(chaine, faits_lus, r: Graphe, g: Graphe, methode, referents):
+    """Les sources lues (non dérivées) de la chaîne sont-elles toutes justes, entièrement, au regard de la référence ?"""
+    return not raisons_sources(chaine, faits_lus, r, g, methode, referents)
 
 
 def juger_derivations(rlu, gref: Graphe, glu: Graphe, methode, referents):
@@ -583,11 +665,19 @@ def juger_derivations(rlu, gref: Graphe, glu: Graphe, methode, referents):
             continue                                  # un qualificatif dérivé suit son assertion
         chaine = requises(d, toutes, faits)
         canon, non_conforme = canoniser(chaine)
+        n = out[d["regle"]]
         if non_conforme:
-            out[d["regle"]]["non_conforme"] += 1
+            n["non_conforme"] += 1
         nouveaux = [f for f in canon if json.dumps(f) not in lus]
         if not nouveaux:
-            out[d["regle"]]["redondante"] += 1
+            if non_conforme:
+                n["non_evaluee"] += 1
+                raisons = raisons_sources(chaine, faits, gref, glu, methode, referents)
+                n["non_evaluee_sources_justes" if not raisons else "non_evaluee_sources_fausses"] += 1
+                for x in sorted(set(raisons)):
+                    n["sources_fausses:" + x] += 1
+            else:
+                n["redondante"] += 1
             continue
         h = glu.copie()
         for f in nouveaux:
@@ -596,16 +686,25 @@ def juger_derivations(rlu, gref: Graphe, glu: Graphe, methode, referents):
                 ajouter(h, qf)
         ids = {f[1] for f in nouveaux if f[0] in ("entite", "evenement")}
         t2 = comparer(gref, h, methode, referents, derivees=ids).comptes.table()
-        gain = sum(t2[c]["vp"] - tb[c]["vp"] for c in cats)
-        ajout = sum(t2[c]["pred"] - tb[c]["pred"] for c in cats)
-        if gain > 0:
-            out[d["regle"]]["gain"] += 1
-        elif ajout <= 0:
-            out[d["regle"]]["redondante"] += 1
-        elif sources_justes(chaine, faits, gref, glu, methode, referents):
-            out[d["regle"]]["erreur_regle"] += 1
-        else:
-            out[d["regle"]]["erreur_heritee"] += 1
+        vp = max(0, sum(t2[c]["vp"] - tb[c]["vp"] for c in cats))
+        fp = max(0, sum(t2[c]["pred"] - tb[c]["pred"] for c in cats) - vp)
+        n["elements_justes"] += vp
+        n["elements_faux"] += fp
+        if fp == 0 and (vp > 0 or not non_conforme):
+            n["gain" if vp > 0 else "redondante"] += 1
+            continue
+        if fp == 0:                                   # E1 qui n'ajoute rien de comparable : non évaluée
+            raisons = raisons_sources(chaine, faits, gref, glu, methode, referents)
+            n["non_evaluee"] += 1
+            n["non_evaluee_sources_justes" if not raisons else "non_evaluee_sources_fausses"] += 1
+            for x in sorted(set(raisons)):
+                n["sources_fausses:" + x] += 1
+            continue
+        raisons = raisons_sources(chaine, faits, gref, glu, methode, referents)
+        origine = "heritee" if raisons else "regle"
+        n[("gain_et_erreur_" if vp > 0 else "erreur_") + origine] += 1
+        for x in sorted(set(raisons)):
+            n["sources_fausses:" + x] += 1
     return out
 
 
@@ -652,6 +751,51 @@ def imprimer(titre, res: Resultat):
               f"{S['promotion_modalite']}, d'une autre portée {S['promotion_portee']}, citées {S['promotion_cite']}, "
               f"en alternative {S['promotion_alternative']}. Rétrogradées : {S['retrogradation']} sur "
               f"{S['reference_admissible']} admissibles.")
+    m = metriques_surete(S)
+    if m["couverture_admissible"] is not None:
+        print(f"Couverture : {S['admissible_garde']} des {S['reference_admissible_total']} assertions admissibles de la "
+              f"référence ont une correspondante admissible ({m['couverture_admissible']:.0%}) ; taux de promotion "
+              f"{m['taux_promotion']:.0%}. Les deux se lisent ensemble : ne rien rendre admissible n'a aucune "
+              f"promotion et aucune couverture.")
+
+
+def metriques_surete(S):
+    """Le taux de promotion (parmi les assertions non admissibles de la référence qui ont une correspondante) et la
+    couverture des assertions admissibles (parmi toutes celles de la référence, avec ou sans correspondante : la part
+    qui a une correspondante admissible)."""
+    n, t = S["reference_non_admissible"], S["reference_admissible_total"]
+    return {"taux_promotion": S["promotion"] / n if n else None,
+            "couverture_admissible": S["admissible_garde"] / t if t else None}
+
+
+def intervalles(par_texte, tirages=1000, graine=20261127, niveau=0.95):
+    """Les intervalles de rééchantillonnage, par fiche : les textes d'une même fiche (positif, négatif, indéterminé,
+    variantes) ne sont pas indépendants ; on tire des fiches avec remise, chacune avec tous ses textes. Pour chaque
+    catégorie, le F1 structure et qualifié ; pour la sûreté, le taux de promotion et la couverture admissible.
+    {mesure: [borne basse, borne haute]} (percentiles)."""
+    import random
+    par_fiche = collections.defaultdict(Resultat)
+    for (k, _), res in par_texte.items():
+        par_fiche[k].fusion(res)
+    fiches = sorted(par_fiche)
+    alea = random.Random(graine)
+    valeurs = collections.defaultdict(list)
+    for _ in range(tirages):
+        tot = Resultat()
+        for _ in fiches:
+            tot.fusion(par_fiche[alea.choice(fiches)])
+        for cat, v in tot.comptes.table().items():
+            if v["f1"] is not None:
+                valeurs[cat].append(v["f1"])
+        for nom, v in metriques_surete(tot.securite).items():
+            if v is not None:
+                valeurs["surete:" + nom].append(v)
+    a = (1 - niveau) / 2
+    out = {}
+    for nom, vs in valeurs.items():
+        vs.sort()
+        out[nom] = [vs[int(a * (len(vs) - 1))], vs[int((1 - a) * (len(vs) - 1))]]
+    return {"fiches": len(fiches), "tirages": tirages, "graine": graine, "niveau": niveau, "intervalles": out}
 
 
 def imprimer_confusion(res: Resultat):
@@ -669,11 +813,13 @@ def evaluer(R, G, accord=False, derivations=False, alignement="optimal", referen
     total, par_langue, details = Resultat(), collections.defaultdict(Resultat), []
     regles = collections.defaultdict(collections.Counter)
     erreurs = 0
+    par_texte = {}
     for k in communs:
         r = depuis_reference(R[k], ordre_inverse)
         g = depuis_reference(G[k], ordre_inverse) if accord else depuis_faits(G[k])
         erreurs += g.erreur
         res = comparer(r, g, alignement, referents, detail=detail)
+        par_texte[k] = res
         total.fusion(res)
         par_langue[R[k]["langue"]].fusion(res)
         if detail:
@@ -682,7 +828,7 @@ def evaluer(R, G, accord=False, derivations=False, alignement="optimal", referen
         if derivations and not accord and not g.erreur:
             for rg, c in juger_derivations(G[k], r, g, alignement, referents).items():
                 regles[rg].update(c)
-    return communs, erreurs, total, par_langue, regles, details
+    return communs, erreurs, total, par_langue, regles, details, par_texte
 
 
 def main():
@@ -696,10 +842,12 @@ def main():
     ap.add_argument("--ordre-inverse", action="store_true")
     ap.add_argument("--detail")
     ap.add_argument("--json")
+    ap.add_argument("--intervalles", type=int, default=0, metavar="TIRAGES",
+                    help="intervalles à 95 %% par rééchantillonnage des fiches (0 : aucun)")
     a = ap.parse_args()
     R = {cle(x): x for x in charger(a.references)}
     G = {cle(x): x for x in charger(a.graphes)}
-    communs, erreurs, total, par_langue, regles, details = evaluer(
+    communs, erreurs, total, par_langue, regles, details, par_texte = evaluer(
         R, G, a.accord, a.derivations, a.alignement, a.referents, a.ordre_inverse, bool(a.detail))
     if not communs:
         sys.exit("aucun texte commun")
@@ -711,17 +859,32 @@ def main():
         imprimer(f"langue {l}", res)
     if regles:
         print("\n### Dérivations, canonisées, avec leurs dépendances\n")
-        cats = ("non_conforme", "redondante", "gain", "erreur_regle", "erreur_heritee")
+        cats = ("non_conforme", "non_evaluee", "redondante", "gain", "gain_et_erreur_regle", "gain_et_erreur_heritee",
+                "erreur_regle", "erreur_heritee", "elements_justes", "elements_faux")
+        exclusives = cats[1:8]
         print("| règle | jugées | " + " | ".join(cats) + " |\n|---|---|" + "---|" * len(cats))
         for rg, n in sorted(regles.items()):
-            tot = n["redondante"] + n["gain"] + n["erreur_regle"] + n["erreur_heritee"]
+            tot = sum(n[c] for c in exclusives)
             print(f"| {rg} | {tot} | " + " | ".join(str(n[c]) for c in cats) + " |")
+        print("\nSources fausses, par raison : " + "; ".join(
+            f"{rg} " + ", ".join(f"{k.split(':')[1]} {v}" for k, v in sorted(n.items()) if k.startswith("sources_fausses:"))
+            for rg, n in sorted(regles.items())))
     sortie = {"textes": len(communs), "alignement": a.alignement, "referents": a.referents,
               "ordre_inverse": a.ordre_inverse, "total": total.comptes.table(), "securite": dict(total.securite),
               "confusion": {f"{x}>{y}": n for (x, y), n in total.confusion.items()},
               "par_langue": {l: {"comptes": v.comptes.table(), "securite": dict(v.securite)}
                              for l, v in par_langue.items()},
-              "regles": {k: dict(v) for k, v in regles.items()}}
+              "regles": {k: dict(v) for k, v in regles.items()},
+              "surete": metriques_surete(total.securite)}
+    if a.intervalles:
+        iv = intervalles(par_texte, a.intervalles)
+        sortie["intervalles"] = iv
+        print(f"\nIntervalles à 95 % (rééchantillonnage de {iv['fiches']} fiches, {iv['tirages']} tirages) :")
+        for nom in ("structure:roles", "qualifiee:roles", "structure:relations", "qualifiee:relations",
+                    "surete:taux_promotion", "surete:couverture_admissible"):
+            if nom in iv["intervalles"]:
+                b, h = iv["intervalles"][nom]
+                print(f"  {nom} : [{b:.3f} ; {h:.3f}]")
     if a.json:
         Path(a.json).write_text(json.dumps(sortie, ensure_ascii=False, indent=1), encoding="utf-8")
     if a.detail:
