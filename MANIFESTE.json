@@ -1,6 +1,6 @@
 {
- "cree": "2026-11-27T11:24:42Z",
- "commit_de_l_archiveur": "45f8d6ceb4254439faeb55db8b8dd6a26a239f74",
+ "cree": "2026-11-27T12:21:11Z",
+ "commit_de_l_archiveur": "dfce5aa6c2c24252e563d2750e9fbea9e0c97431",
  "commits_des_passes_du_lot1": [
   "5a0e2225fa5f5f646768415f2be06d950b84b1f5"
  ],
@@ -670,6 +670,76 @@
    "taille": 22961,
    "sha256": "8447b46f6aba383eb43843fac4269eaf0cbd478776f14cf25b0419cd2d9f3eb1",
    "role": "les textes du banc (échantillon : une fiche sur cinq)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/errata.json",
+   "taille": 5456,
+   "sha256": "7178b77b2af9693ed0f6b4e0f7c83adce7ec82560167c7ac375f56c6cbfcf196",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/faits_reference_validation_m1_v1_pronoms.json",
+   "taille": 2918162,
+   "sha256": "a6918f77751a74a8f00ddff69bf86ecaa8d680c5fa76dc782269d81362f827f2",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/faits_reference_validation_m1_v2.json",
+   "taille": 2918177,
+   "sha256": "43d1b663b513df8e2f9e3eb8027dc2489480ad36889b21b16c1a43305a30bc3c",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/faits_reference_vertical_v1_pronoms.json",
+   "taille": 544736,
+   "sha256": "d3a47c39f3d3f016c4e3ff6053f353b8a6c5b8d18d4a5b07f5ad6e9fabfec03f",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/faits_reference_vertical_v2.json",
+   "taille": 544745,
+   "sha256": "86cd97939e88fc8c2ddd350cee63efd42e6e249a4e0fe2b42e394abfbd002607",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/journal_v2.json",
+   "taille": 4375,
+   "sha256": "05ee5ebaa5c69e649ab4b3c321037c16170ab7e087310776a2d23574e7bebc58",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/reference_validation_m1_v2.json",
+   "taille": 1057965,
+   "sha256": "cf623ab67dd5e598774e39d4ed93b2ec64c8ed56759aac8ef9f974155a72e450",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/reference_vertical_v2.json",
+   "taille": 206420,
+   "sha256": "f641861ec1eb1e2aab73c10316b9e95d27a2fc5741b6caa96a36c2e0019b16ee",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/requetes_reference_validation_m1_v2.json",
+   "taille": 116008,
+   "sha256": "1d1c5cbbca53e2cdf6d5b2a71734500016d83c3627639a2e53ab02aef97d780d",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "banc_graphes/v2/requetes_reference_vertical_v2.json",
+   "taille": 116902,
+   "sha256": "eba48009c053121c12d195aaccad67e98ac038e121c58df78a8d16fd0a11e94e",
+   "role": "autre",
    "statut": "outil"
   },
   {
@@ -1881,6 +1951,202 @@
    "taille": 6729,
    "sha256": "a00e7c3514d4cdc88314d3a55e4b03bd576074ccbefaf1ddb46c98f1fa8900db",
    "role": "les tableaux (outils/croise/tableaux.py)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/causes_ref_ref_v2.json",
+   "taille": 25618,
+   "sha256": "5da1d20b1001fbb930f3a63f00009de83c778a15ce0d3741cff5379b0f027c26",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/croise_v1_pronoms_validation_m1.json",
+   "taille": 418240,
+   "sha256": "c2f58d5944a66d490b15cf283c315bfb35e3effa1bc0ed9c0d3f1175b99c91cb",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/croise_v1_pronoms_validation_m1.log",
+   "taille": 20,
+   "sha256": "87b6f5e257ea3ad210da0e5b2f5fa22183e47563549b3e086210e90932b168b7",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/croise_v1_pronoms_vertical.json",
+   "taille": 202409,
+   "sha256": "89b88c8a635275cdcc303c801fec2d638357a260166b525f48dcc3e6c5f8c1f1",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/croise_v1_pronoms_vertical.log",
+   "taille": 20,
+   "sha256": "6977d6792ed091576bdca91f03b6176a825d765f30a163c1067f6fa392036c7c",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/croise_v2_validation_m1.json",
+   "taille": 418101,
+   "sha256": "448674ab65915f98c459c2288d77754bfbcc725f028f0475639949d8f851bd21",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/croise_v2_validation_m1.log",
+   "taille": 20,
+   "sha256": "87b6f5e257ea3ad210da0e5b2f5fa22183e47563549b3e086210e90932b168b7",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/croise_v2_vertical.json",
+   "taille": 202409,
+   "sha256": "89b88c8a635275cdcc303c801fec2d638357a260166b525f48dcc3e6c5f8c1f1",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/croise_v2_vertical.log",
+   "taille": 20,
+   "sha256": "6977d6792ed091576bdca91f03b6176a825d765f30a163c1067f6fa392036c7c",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/tableaux_v1_pronoms.json",
+   "taille": 9355,
+   "sha256": "fe1023ac25cf269b70957adf4450e416ea5284caaab877d283d7b2cdc4584318",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/tableaux_v1_pronoms.txt",
+   "taille": 5657,
+   "sha256": "2962ad98b97aa908d1915fa990acf2b8d1c28a14f46f49d088b1ab9c3237ff50",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/tableaux_v2.json",
+   "taille": 9355,
+   "sha256": "fe1023ac25cf269b70957adf4450e416ea5284caaab877d283d7b2cdc4584318",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "croise/v2/tableaux_v2.txt",
+   "taille": 5657,
+   "sha256": "2962ad98b97aa908d1915fa990acf2b8d1c28a14f46f49d088b1ab9c3237ff50",
+   "role": "autre",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/analyse.json",
+   "taille": 14460,
+   "sha256": "1febffdfab219848c09d2a0d558ef068e2e4df42f3e5de2e67610ba8fdfeccd4",
+   "role": "son analyse (outils/inference/analyser.py)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/catalogue.json",
+   "taille": 25667,
+   "sha256": "e8e7d985ccba223aa8a5cb95dce3ba03737f25f93cff5dcebc3b891049d4a4ae",
+   "role": "le catalogue des inférences contextuelles, décidé cas par cas par un agent ; provisoire",
+   "statut": "agents"
+  },
+  {
+   "chemin": "inference/catalogue_source.py",
+   "taille": 15839,
+   "sha256": "5711142c31c3c168c25f8828846bd2c8af6a55f954ff02360bb972ba4579428e",
+   "role": "le catalogue des inférences contextuelles, décidé cas par cas par un agent ; provisoire",
+   "statut": "agents"
+  },
+  {
+   "chemin": "inference/cibles_validation_m1.json",
+   "taille": 7442,
+   "sha256": "41df5d41d3a7844b3a4201724b690e5c970501ce20b7126d8b3db2d33023407e",
+   "role": "les textes de l'expérience contrôlée",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/cibles_vertical.json",
+   "taille": 3834,
+   "sha256": "527f03b77ba3ed3f85774ed944373c3c178b5aa565a6e1e1dc94875aaff02939",
+   "role": "les textes de l'expérience contrôlée",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/essai1/analyse.json",
+   "taille": 8785,
+   "sha256": "07389feb56c539231a6937250d7f4a6c267a1451b13efce07bbc834729302cfe",
+   "role": "la première passe, sans la couche D, gardée",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/essai1/experience_validation_m1.json",
+   "taille": 240691,
+   "sha256": "9378c395f605751a21c0e24858966d8aa297448d6d88e04308d6b20b9ae40a72",
+   "role": "la première passe, sans la couche D, gardée",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/essai1/experience_validation_m1.log",
+   "taille": 11,
+   "sha256": "3c016b415f74a9aa4e31c53e98eca6873e15e5987ae6bfcd7c0b9eb34a1499ce",
+   "role": "la première passe, sans la couche D, gardée",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/essai1/experience_vertical.json",
+   "taille": 138932,
+   "sha256": "6e0bebac1c12d515978028121489a2edb24a1d1eba7f745b58bf68afbba2bf18",
+   "role": "la première passe, sans la couche D, gardée",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/essai1/experience_vertical.log",
+   "taille": 11,
+   "sha256": "140479586fdeca41231a013de07253d1a313eeca2a91c605727b1a04281120a3",
+   "role": "la première passe, sans la couche D, gardée",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/experience_validation_m1.json",
+   "taille": 567832,
+   "sha256": "5017a97e180163395dc1301a8e8e2e8a03e750cf6dde16afb42b536c518bda4c",
+   "role": "l'expérience contrôlée des couches (outils/inference/experience.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/experience_validation_m1.log",
+   "taille": 11,
+   "sha256": "3c016b415f74a9aa4e31c53e98eca6873e15e5987ae6bfcd7c0b9eb34a1499ce",
+   "role": "l'expérience contrôlée des couches (outils/inference/experience.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/experience_vertical.json",
+   "taille": 287733,
+   "sha256": "14b542c4fb34c2158c380094ea6c9fb8273c589f3b38e8f0a0eba1628b403384",
+   "role": "l'expérience contrôlée des couches (outils/inference/experience.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/experience_vertical.log",
+   "taille": 11,
+   "sha256": "140479586fdeca41231a013de07253d1a313eeca2a91c605727b1a04281120a3",
+   "role": "l'expérience contrôlée des couches (outils/inference/experience.pl)",
+   "statut": "outil"
+  },
+  {
+   "chemin": "inference/morphosemantique.pl",
+   "taille": 492104,
+   "sha256": "aeef40ab19344b5ec860f6f83623e506a5a869521085bbcf26456d5dbda27bc7",
+   "role": "les liens morphosémantiques de WordNet 3.0 en faits Prolog (outils/inference/morphosemantique.py)",
    "statut": "outil"
   }
  ]

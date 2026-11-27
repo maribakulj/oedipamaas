@@ -1,0 +1,523 @@
+{
+ "vertical": {
+  "definition": "v2",
+  "issues": {
+   "lecteur_compilee": {
+    "positif": {
+     "requete_absente": 15,
+     "inconnue": 23,
+     "etablie": 2
+    },
+    "negatif": {
+     "requete_absente": 15,
+     "inconnue": 25
+    },
+    "indetermine": {
+     "requete_absente": 15,
+     "inconnue": 23,
+     "etablie_sous_hypotheses": 1,
+     "etablie": 1
+    }
+   },
+   "lecteur_reference": {
+    "positif": {
+     "inconnue": 35,
+     "etablie": 3,
+     "etablie_sous_hypotheses": 1,
+     "requete_absente": 1
+    },
+    "negatif": {
+     "inconnue": 39,
+     "requete_absente": 1
+    },
+    "indetermine": {
+     "inconnue": 38,
+     "etablie_sous_hypotheses": 1,
+     "requete_absente": 1
+    }
+   },
+   "reference_compilee": {
+    "positif": {
+     "requete_absente": 15,
+     "inconnue": 23,
+     "etablie": 2
+    },
+    "negatif": {
+     "requete_absente": 15,
+     "inconnue": 25
+    },
+    "indetermine": {
+     "requete_absente": 15,
+     "inconnue": 25
+    }
+   },
+   "reference_reference": {
+    "positif": {
+     "inconnue": 34,
+     "etablie": 5,
+     "requete_absente": 1
+    },
+    "negatif": {
+     "inconnue": 39,
+     "requete_absente": 1
+    },
+    "indetermine": {
+     "inconnue": 39,
+     "requete_absente": 1
+    }
+   }
+  },
+  "graphes_signales_par_la_validation": {
+   "lecteur_compilee": {
+    "positif": {
+     "false": 40
+    },
+    "negatif": {
+     "false": 40
+    },
+    "indetermine": {
+     "false": 40
+    }
+   },
+   "lecteur_reference": {
+    "positif": {
+     "false": 40
+    },
+    "negatif": {
+     "false": 40
+    },
+    "indetermine": {
+     "false": 40
+    }
+   },
+   "reference_compilee": {
+    "positif": {
+     "false": 40
+    },
+    "negatif": {
+     "false": 40
+    },
+    "indetermine": {
+     "false": 40
+    }
+   },
+   "reference_reference": {
+    "positif": {
+     "false": 40
+    },
+    "negatif": {
+     "false": 40
+    },
+    "indetermine": {
+     "false": 40
+    }
+   }
+  },
+  "qualification": {
+   "lecteur_compilee": {
+    "positif": {
+     "sans_requete": 15,
+     "sans_suffisante": 23,
+     "etablissable": 2
+    },
+    "negatif": {
+     "sans_requete": 15,
+     "sans_suffisante": 25
+    },
+    "indetermine": {
+     "sans_requete": 15,
+     "sans_suffisante": 23,
+     "conditionnel": 1,
+     "candidat": 1
+    }
+   },
+   "lecteur_reference": {
+    "positif": {
+     "sans_suffisante": 35,
+     "etablissable": 3,
+     "conditionnel": 1,
+     "sans_requete": 1
+    },
+    "negatif": {
+     "sans_suffisante": 39,
+     "sans_requete": 1
+    },
+    "indetermine": {
+     "sans_suffisante": 38,
+     "conditionnel": 1,
+     "sans_requete": 1
+    }
+   },
+   "reference_compilee": {
+    "positif": {
+     "sans_requete": 15,
+     "sans_suffisante": 23,
+     "etablissable": 2
+    },
+    "negatif": {
+     "sans_requete": 15,
+     "sans_suffisante": 25
+    },
+    "indetermine": {
+     "sans_requete": 15,
+     "sans_suffisante": 25
+    }
+   },
+   "reference_reference": {
+    "positif": {
+     "sans_suffisante": 34,
+     "etablissable": 5,
+     "sans_requete": 1
+    },
+    "negatif": {
+     "sans_suffisante": 39,
+     "sans_requete": 1
+    },
+    "indetermine": {
+     "sans_suffisante": 39,
+     "sans_requete": 1
+    }
+   }
+  },
+  "attribution": {
+   "positifs": 40,
+   "reference_reference": {
+    "inconnue": 34,
+    "etablie": 5,
+    "requete_absente": 1
+   },
+   "lecteur": {
+    "passages": {
+     "deductive->non_etablie": [
+      "11H(CASSIAN)32"
+     ],
+     "deductive->sous_hypotheses": [
+      "11HH(LIDWYNA)12"
+     ]
+    },
+    "perd_la_deduction": 2,
+    "gagne_la_deduction": 0,
+    "non_evaluables": {
+     "requete_absente": 1
+    }
+   },
+   "compilateur": {
+    "passages": {
+     "deductive->non_etablie": [
+      "11H(CASSIAN)32",
+      "42A111"
+     ]
+    },
+    "perd_la_deduction": 2,
+    "gagne_la_deduction": 0,
+    "non_evaluables": {
+     "requete_absente": 15
+    }
+   }
+  },
+  "causes": {
+   "echecs": 34,
+   "dont_etablis_sous_hypotheses": 0,
+   "principale": {
+    "representation": 18,
+    "inference": 11,
+    "lexique": 4,
+    "erreur_reference": 1
+   },
+   "toutes": {
+    "representation": 27,
+    "inference": 17,
+    "lexique": 14,
+    "erreur_reference": 3,
+    "desambiguisation": 1
+   },
+   "seule": {
+    "representation": 8,
+    "inference": 4
+   },
+   "statut": {
+    "decision_d_agent_provisoire": 34
+   }
+  }
+ },
+ "validation_m1": {
+  "definition": "v2",
+  "issues": {
+   "lecteur_compilee": {
+    "positif": {
+     "inconnue": 26,
+     "etablie": 1,
+     "etablie_sous_hypotheses": 1,
+     "requete_absente": 12
+    },
+    "negatif": {
+     "inconnue": 27,
+     "requete_absente": 12,
+     "conteste": 1
+    },
+    "indetermine": {
+     "inconnue": 28,
+     "requete_absente": 12
+    },
+    "variante": {
+     "inconnue": 83,
+     "etablie": 1
+    }
+   },
+   "lecteur_reference": {
+    "positif": {
+     "inconnue": 36,
+     "etablie_sous_hypotheses": 2,
+     "gabarit_non_instancie": 2
+    },
+    "negatif": {
+     "inconnue": 37,
+     "gabarit_non_instancie": 2,
+     "conteste": 1
+    },
+    "indetermine": {
+     "inconnue": 38,
+     "gabarit_non_instancie": 2
+    },
+    "variante": {
+     "inconnue": 84
+    }
+   },
+   "reference_compilee": {
+    "positif": {
+     "inconnue": 26,
+     "etablie_sous_hypotheses": 1,
+     "requete_absente": 12,
+     "ecartee": 1
+    },
+    "negatif": {
+     "inconnue": 27,
+     "requete_absente": 12,
+     "conteste": 1
+    },
+    "indetermine": {
+     "inconnue": 28,
+     "requete_absente": 12
+    },
+    "variante": {
+     "inconnue": 84
+    }
+   },
+   "reference_reference": {
+    "positif": {
+     "inconnue": 37,
+     "gabarit_non_instancie": 2,
+     "etablie_sous_hypotheses": 1
+    },
+    "negatif": {
+     "inconnue": 37,
+     "gabarit_non_instancie": 2,
+     "conteste": 1
+    },
+    "indetermine": {
+     "inconnue": 38,
+     "gabarit_non_instancie": 2
+    },
+    "variante": {
+     "inconnue": 83,
+     "ecartee": 1
+    }
+   }
+  },
+  "graphes_signales_par_la_validation": {
+   "lecteur_compilee": {
+    "positif": {
+     "false": 40
+    },
+    "negatif": {
+     "false": 40
+    },
+    "indetermine": {
+     "false": 40
+    },
+    "variante": {
+     "false": 84
+    }
+   },
+   "lecteur_reference": {
+    "positif": {
+     "false": 40
+    },
+    "negatif": {
+     "false": 40
+    },
+    "indetermine": {
+     "false": 40
+    },
+    "variante": {
+     "false": 84
+    }
+   },
+   "reference_compilee": {
+    "positif": {
+     "false": 40
+    },
+    "negatif": {
+     "false": 40
+    },
+    "indetermine": {
+     "false": 40
+    },
+    "variante": {
+     "false": 84
+    }
+   },
+   "reference_reference": {
+    "positif": {
+     "false": 40
+    },
+    "negatif": {
+     "false": 40
+    },
+    "indetermine": {
+     "false": 40
+    },
+    "variante": {
+     "false": 84
+    }
+   }
+  },
+  "qualification": {
+   "lecteur_compilee": {
+    "positif": {
+     "sans_suffisante": 26,
+     "candidat": 1,
+     "conditionnel": 1,
+     "sans_requete": 12
+    },
+    "negatif": {
+     "sans_suffisante": 27,
+     "sans_requete": 12,
+     "conditionnel": 1
+    },
+    "indetermine": {
+     "sans_suffisante": 28,
+     "sans_requete": 12
+    },
+    "variante": {
+     "sans_suffisante": 83,
+     "etablissable": 1
+    }
+   },
+   "lecteur_reference": {
+    "positif": {
+     "sans_suffisante": 38,
+     "conditionnel": 2
+    },
+    "negatif": {
+     "sans_suffisante": 39,
+     "conditionnel": 1
+    },
+    "indetermine": {
+     "sans_suffisante": 40
+    },
+    "variante": {
+     "sans_suffisante": 84
+    }
+   },
+   "reference_compilee": {
+    "positif": {
+     "sans_suffisante": 26,
+     "conditionnel": 1,
+     "sans_requete": 12,
+     "suffisante_ecartee": 1
+    },
+    "negatif": {
+     "sans_suffisante": 27,
+     "sans_requete": 12,
+     "conditionnel": 1
+    },
+    "indetermine": {
+     "sans_suffisante": 28,
+     "sans_requete": 12
+    },
+    "variante": {
+     "sans_suffisante": 84
+    }
+   },
+   "reference_reference": {
+    "positif": {
+     "sans_suffisante": 39,
+     "conditionnel": 1
+    },
+    "negatif": {
+     "sans_suffisante": 39,
+     "conditionnel": 1
+    },
+    "indetermine": {
+     "sans_suffisante": 40
+    },
+    "variante": {
+     "sans_suffisante": 83,
+     "suffisante_ecartee": 1
+    }
+   }
+  },
+  "attribution": {
+   "positifs": 40,
+   "reference_reference": {
+    "inconnue": 37,
+    "gabarit_non_instancie": 2,
+    "etablie_sous_hypotheses": 1
+   },
+   "lecteur": {
+    "passages": {
+     "non_etablie->sous_hypotheses": [
+      "41C67"
+     ]
+    },
+    "perd_la_deduction": 0,
+    "gagne_la_deduction": 0,
+    "non_evaluables": {
+     "gabarit_non_instancie": 2
+    }
+   },
+   "compilateur": {
+    "passages": {
+     "non_etablie->sous_hypotheses": [
+      "46B355"
+     ],
+     "sous_hypotheses->non_etablie": [
+      "47C35"
+     ]
+    },
+    "perd_la_deduction": 0,
+    "gagne_la_deduction": 0,
+    "non_evaluables": {
+     "requete_absente": 12
+    }
+   }
+  },
+  "causes": {
+   "echecs": 38,
+   "dont_etablis_sous_hypotheses": 1,
+   "principale": {
+    "inference": 17,
+    "representation": 12,
+    "lexique": 7,
+    "desambiguisation": 2
+   },
+   "toutes": {
+    "inference": 24,
+    "representation": 22,
+    "lexique": 16,
+    "desambiguisation": 7,
+    "erreur_reference": 1
+   },
+   "seule": {
+    "inference": 6,
+    "representation": 5,
+    "lexique": 2,
+    "desambiguisation": 1
+   },
+   "statut": {
+    "decision_d_agent_provisoire": 38
+   }
+  }
+ }
+}

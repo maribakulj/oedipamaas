@@ -1,0 +1,167 @@
+{
+ "version": "v2",
+ "date": "2026-11-27",
+ "base": "v1 (reference_JEU.json harmonisée, requetes_reference.json des jeux)",
+ "principe": "seules les erreurs manifestes sont corrigées ; les fichiers v1 et les mesures faites sur v1 ne changent pas",
+ "non_corrige": [
+  {
+   "jeu": "validation_m1",
+   "k": [
+    16,
+    61
+   ],
+   "raison": "requêtes gabarits (« avec NOM ») à clé A_REMPLIR : une convention, non une erreur ; comptées « gabarit non instancié », hors des échecs sémantiques"
+  },
+  {
+   "jeu": "*",
+   "raison": "14 autres prédicats pronominaux sans « se » (se lit → lire, s'organise → organiser…) : passifs ou réfléchis, le guide ne tranche pas ; à décider par la propriétaire"
+  },
+  {
+   "jeu": "vertical",
+   "k": 106,
+   "raison": "« fusée de signalisation » gardée comme unité : le guide garde les composés que le dictionnaire donne comme unité ; non manifeste"
+  },
+  {
+   "jeu": "vertical",
+   "k": [
+    171,
+    26
+   ],
+   "raison": "46B910 et 48A9834 : diagnostiqués « erreur de référence » le 27/11, non manifestes ; à relire"
+  }
+ ],
+ "errata": [
+  {
+   "id": "E1",
+   "jeu": "vertical",
+   "k": 46,
+   "genre": "positif",
+   "objet": "graphe",
+   "operation": "predicat",
+   "element": "v2",
+   "avant": "tenir",
+   "apres": "se tenir",
+   "raison": "« se tient » : le verbe pronominal se tenir (être debout, se trouver), non tenir (avoir en main) ; le guide (§ 2, rôles) écrit « se tenir »",
+   "nature": "erreur_manifeste"
+  },
+  {
+   "id": "E2",
+   "jeu": "vertical",
+   "k": 46,
+   "genre": "negatif",
+   "objet": "graphe",
+   "operation": "predicat",
+   "element": "v2",
+   "avant": "tenir",
+   "apres": "se tenir",
+   "raison": "« se tient » : le verbe pronominal se tenir (être debout, se trouver), non tenir (avoir en main) ; le guide (§ 2, rôles) écrit « se tenir »",
+   "nature": "erreur_manifeste"
+  },
+  {
+   "id": "E3",
+   "jeu": "vertical",
+   "k": 46,
+   "genre": "indetermine",
+   "objet": "graphe",
+   "operation": "predicat",
+   "element": "v2",
+   "avant": "tenir",
+   "apres": "se tenir",
+   "raison": "« se tient » : le verbe pronominal se tenir (être debout, se trouver), non tenir (avoir en main) ; le guide (§ 2, rôles) écrit « se tenir »",
+   "nature": "erreur_manifeste"
+  },
+  {
+   "id": "E4",
+   "jeu": "validation_m1",
+   "k": 156,
+   "genre": "positif",
+   "objet": "graphe",
+   "operation": "predicat",
+   "element": "v1",
+   "avant": "tenir",
+   "apres": "se tenir",
+   "raison": "« se tiennent » : le verbe pronominal se tenir (être debout, se trouver), non tenir (avoir en main) ; le guide (§ 2, rôles) écrit « se tenir »",
+   "nature": "erreur_manifeste"
+  },
+  {
+   "id": "E5",
+   "jeu": "validation_m1",
+   "k": 156,
+   "genre": "positif",
+   "objet": "graphe",
+   "operation": "predicat",
+   "element": "v3",
+   "avant": "tenir",
+   "apres": "se tenir",
+   "raison": "« se tient » : le verbe pronominal se tenir (être debout, se trouver), non tenir (avoir en main) ; le guide (§ 2, rôles) écrit « se tenir »",
+   "nature": "erreur_manifeste"
+  },
+  {
+   "id": "E6",
+   "jeu": "validation_m1",
+   "k": 156,
+   "genre": "negatif",
+   "objet": "graphe",
+   "operation": "predicat",
+   "element": "v4",
+   "avant": "tenir",
+   "apres": "se tenir",
+   "raison": "« se tient » : le verbe pronominal se tenir (être debout, se trouver), non tenir (avoir en main) ; le guide (§ 2, rôles) écrit « se tenir »",
+   "nature": "erreur_manifeste"
+  },
+  {
+   "id": "E7",
+   "jeu": "validation_m1",
+   "k": 156,
+   "genre": "variante_modalite",
+   "objet": "graphe",
+   "operation": "predicat",
+   "element": "v1",
+   "avant": "tenir",
+   "apres": "se tenir",
+   "raison": "« se tiennent » : le verbe pronominal se tenir (être debout, se trouver), non tenir (avoir en main) ; le guide (§ 2, rôles) écrit « se tenir »",
+   "nature": "erreur_manifeste"
+  },
+  {
+   "id": "E8",
+   "jeu": "validation_m1",
+   "k": 156,
+   "genre": "variante_negation",
+   "objet": "graphe",
+   "operation": "predicat",
+   "element": "v6",
+   "avant": "tenir",
+   "apres": "se tenir",
+   "raison": "« se tiennent » : le verbe pronominal se tenir (être debout, se trouver), non tenir (avoir en main) ; le guide (§ 2, rôles) écrit « se tenir »",
+   "nature": "erreur_manifeste"
+  },
+  {
+   "id": "E9",
+   "jeu": "validation_m1",
+   "k": 111,
+   "genre": "*",
+   "objet": "requete",
+   "operation": "remplacer",
+   "avant": {
+    "suffisante": "requete('46B3312', et([type(v(p), poids), evenement(v(e), peser), role(v(e), instrument, v(p))]))",
+    "necessaire": "requete('46B3312', type(v(p), poids))"
+   },
+   "apres": {
+    "suffisante": "requete('46B3312', et([type(v(p), weight), evenement(v(e), weigh), role(v(e), instrument, v(p))]))",
+    "necessaire": "requete('46B3312', type(v(p), weight))"
+   },
+   "raison": "la requête de référence est écrite en français (poids, peser) pour une fiche anglaise : traduite mot pour mot, même structure",
+   "nature": "erreur_manifeste"
+  },
+  {
+   "id": "E10",
+   "jeu": "validation_m1",
+   "k": 136,
+   "genre": "negatif",
+   "objet": "fiche",
+   "operation": "contester",
+   "raison": "le texte négatif (un juge libère le prisonnier par un acte de grâce) est couvert par le libellé « délivrer un prisonnier » : la fiche fonde le contraste sur la violence, absente du libellé ; le texte n'est plus compté comme négatif",
+   "nature": "erreur_manifeste"
+  }
+ ]
+}

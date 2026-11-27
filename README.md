@@ -15,6 +15,11 @@ reproduction sont sur la branche du code (`docs/BANC_GRAPHES.md`, § 5 ; `docs/m
 - `croise/` : l'expérience croisée du 27/11 (`docs/EXPERIENCE_CROISEE.md` sur la branche du code) : les quatre
   conditions par texte, les échecs, les sondes de K, et `causes_ref_ref.json`, les causes de chaque échec, **décidées
   par un agent, provisoires**.
+- `banc_graphes/v2/` : la version 2 du banc, par errata (`errata.json`, `journal_v2.json`) ; la version 1 est
+  intacte (`docs/EXPERIENCE_CROISEE.md`, § 10). `croise/v2/` : l'expérience croisée sur v1 avec pronoms et sur v2,
+  ses tableaux, et `causes_ref_ref_v2.json` (décisions d'agent, **provisoires**).
+- `inference/` : le catalogue des inférences (décisions d'agent, **provisoires**) et l'expérience contrôlée des
+  couches (`docs/INFERENCES.md`) ; `essai1/`, sa première passe, gardée.
 - `MANIFESTE.json` : chaque fichier (taille, SHA-256, rôle, statut), et les commits des passes.
 
 **Statut** : tout ce qui vient des annotateurs et des adjudicateurs est un **accord entre agents**, non une validation

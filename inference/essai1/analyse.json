@@ -1,0 +1,467 @@
+{
+ "vertical": {
+  "textes": 117,
+  "configurations": {
+   "base": {
+    "comptes": {
+     "ajoutees": 0
+    },
+    "inflation": 0.0,
+    "repris": [],
+    "faux_positifs": [],
+    "regles_repris": {},
+    "regles_faux_positifs": {}
+   },
+   "c": {
+    "comptes": {
+     "ajoutees": 10,
+     "repris_sous_hypotheses": 1
+    },
+    "inflation": 0.08547008547008547,
+    "repris": [
+     {
+      "notation": "44G31",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "c_nom_de_role"
+      ]
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "c_nom_de_role": 1
+    },
+    "regles_faux_positifs": {}
+   },
+   "l": {
+    "comptes": {
+     "ajoutees": 34
+    },
+    "inflation": 0.2905982905982906,
+    "repris": [],
+    "faux_positifs": [],
+    "regles_repris": {},
+    "regles_faux_positifs": {}
+   },
+   "s": {
+    "comptes": {
+     "ajoutees": 9,
+     "repris_sous_hypotheses": 1
+    },
+    "inflation": 0.07692307692307693,
+    "repris": [
+     {
+      "notation": "46C215(WINDLASS)",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "s_partie_tout"
+      ]
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "s_partie_tout": 1
+    },
+    "regles_faux_positifs": {}
+   },
+   "cl": {
+    "comptes": {
+     "ajoutees": 44,
+     "repris_sous_hypotheses": 1
+    },
+    "inflation": 0.37606837606837606,
+    "repris": [
+     {
+      "notation": "44G31",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "c_nom_de_role"
+      ]
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "c_nom_de_role": 1
+    },
+    "regles_faux_positifs": {}
+   },
+   "cs": {
+    "comptes": {
+     "ajoutees": 19,
+     "repris_sous_hypotheses": 2
+    },
+    "inflation": 0.1623931623931624,
+    "repris": [
+     {
+      "notation": "44G31",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "c_nom_de_role"
+      ]
+     },
+     {
+      "notation": "46C215(WINDLASS)",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "s_partie_tout"
+      ]
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "c_nom_de_role": 1,
+     "s_partie_tout": 1
+    },
+    "regles_faux_positifs": {}
+   },
+   "ls": {
+    "comptes": {
+     "ajoutees": 43,
+     "repris_sous_hypotheses": 1
+    },
+    "inflation": 0.36752136752136755,
+    "repris": [
+     {
+      "notation": "46C215(WINDLASS)",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "s_partie_tout"
+      ]
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "s_partie_tout": 1
+    },
+    "regles_faux_positifs": {}
+   },
+   "cls": {
+    "comptes": {
+     "ajoutees": 53,
+     "repris_sous_hypotheses": 2
+    },
+    "inflation": 0.452991452991453,
+    "repris": [
+     {
+      "notation": "44G31",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "c_nom_de_role"
+      ]
+     },
+     {
+      "notation": "46C215(WINDLASS)",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "s_partie_tout"
+      ]
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "c_nom_de_role": 1,
+     "s_partie_tout": 1
+    },
+    "regles_faux_positifs": {}
+   }
+  },
+  "positifs": 39,
+  "echecs_a_la_base": 34,
+  "repris_par_couche_minimale": [
+   {
+    "k": 111,
+    "notation": "44G31",
+    "minimale": "C",
+    "couches_seules": [
+     "C"
+    ],
+    "conclusion": "sous_hypotheses",
+    "regles": [
+     "c_nom_de_role"
+    ],
+    "causes_diagnostiquees": [
+     "inference",
+     "representation",
+     "lexique"
+    ],
+    "principale": "inference"
+   },
+   {
+    "k": 191,
+    "notation": "46C215(WINDLASS)",
+    "minimale": "S",
+    "couches_seules": [
+     "S"
+    ],
+    "conclusion": "sous_hypotheses",
+    "regles": [
+     "s_partie_tout"
+    ],
+    "causes_diagnostiquees": [
+     "inference"
+    ],
+    "principale": "inference"
+   }
+  ],
+  "couche_minimale": {
+   "C": 1,
+   "S": 1
+  }
+ },
+ "validation_m1": {
+  "textes": 197,
+  "configurations": {
+   "base": {
+    "comptes": {
+     "ajoutees": 0,
+     "repris_sous_hypotheses": 1
+    },
+    "inflation": 0.0,
+    "repris": [
+     {
+      "notation": "47C35",
+      "conclusion": "sous_hypotheses",
+      "regles": []
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {},
+    "regles_faux_positifs": {}
+   },
+   "c": {
+    "comptes": {
+     "ajoutees": 45,
+     "repris_sous_hypotheses": 1
+    },
+    "inflation": 0.22842639593908629,
+    "repris": [
+     {
+      "notation": "47C35",
+      "conclusion": "sous_hypotheses",
+      "regles": []
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {},
+    "regles_faux_positifs": {}
+   },
+   "l": {
+    "comptes": {
+     "ajoutees": 43,
+     "repris_sous_hypotheses": 1
+    },
+    "inflation": 0.2182741116751269,
+    "repris": [
+     {
+      "notation": "47C35",
+      "conclusion": "sous_hypotheses",
+      "regles": []
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {},
+    "regles_faux_positifs": {}
+   },
+   "s": {
+    "comptes": {
+     "ajoutees": 55,
+     "repris_sous_hypotheses": 2
+    },
+    "inflation": 0.27918781725888325,
+    "repris": [
+     {
+      "notation": "31A4155",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "s_partie_tout"
+      ]
+     },
+     {
+      "notation": "47C35",
+      "conclusion": "sous_hypotheses",
+      "regles": []
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "s_partie_tout": 1
+    },
+    "regles_faux_positifs": {}
+   },
+   "cl": {
+    "comptes": {
+     "ajoutees": 88,
+     "repris_sous_hypotheses": 2
+    },
+    "inflation": 0.4467005076142132,
+    "repris": [
+     {
+      "notation": "11I72(JUDAS ISCARIOT)1",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "c_role_vers_nom",
+       "l_nom_partiel"
+      ]
+     },
+     {
+      "notation": "47C35",
+      "conclusion": "sous_hypotheses",
+      "regles": []
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "c_role_vers_nom": 1,
+     "l_nom_partiel": 1
+    },
+    "regles_faux_positifs": {}
+   },
+   "cs": {
+    "comptes": {
+     "ajoutees": 100,
+     "repris_sous_hypotheses": 2
+    },
+    "inflation": 0.5076142131979695,
+    "repris": [
+     {
+      "notation": "31A4155",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "s_partie_tout"
+      ]
+     },
+     {
+      "notation": "47C35",
+      "conclusion": "sous_hypotheses",
+      "regles": []
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "s_partie_tout": 1
+    },
+    "regles_faux_positifs": {}
+   },
+   "ls": {
+    "comptes": {
+     "ajoutees": 98,
+     "repris_sous_hypotheses": 2
+    },
+    "inflation": 0.49746192893401014,
+    "repris": [
+     {
+      "notation": "31A4155",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "s_partie_tout"
+      ]
+     },
+     {
+      "notation": "47C35",
+      "conclusion": "sous_hypotheses",
+      "regles": []
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "s_partie_tout": 1
+    },
+    "regles_faux_positifs": {}
+   },
+   "cls": {
+    "comptes": {
+     "ajoutees": 143,
+     "repris_sous_hypotheses": 3
+    },
+    "inflation": 0.7258883248730964,
+    "repris": [
+     {
+      "notation": "31A4155",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "s_partie_tout"
+      ]
+     },
+     {
+      "notation": "11I72(JUDAS ISCARIOT)1",
+      "conclusion": "sous_hypotheses",
+      "regles": [
+       "c_role_vers_nom",
+       "l_nom_partiel"
+      ]
+     },
+     {
+      "notation": "47C35",
+      "conclusion": "sous_hypotheses",
+      "regles": []
+     }
+    ],
+    "faux_positifs": [],
+    "regles_repris": {
+     "s_partie_tout": 1,
+     "c_role_vers_nom": 1,
+     "l_nom_partiel": 1
+    },
+    "regles_faux_positifs": {}
+   }
+  },
+  "positifs": 38,
+  "echecs_a_la_base": 38,
+  "repris_par_couche_minimale": [
+   {
+    "k": 51,
+    "notation": "31A4155",
+    "minimale": "S",
+    "couches_seules": [
+     "S"
+    ],
+    "conclusion": "sous_hypotheses",
+    "regles": [
+     "s_partie_tout"
+    ],
+    "causes_diagnostiquees": [
+     "lexique"
+    ],
+    "principale": "lexique"
+   },
+   {
+    "k": 71,
+    "notation": "11I72(JUDAS ISCARIOT)1",
+    "minimale": "C+L",
+    "couches_seules": [],
+    "conclusion": "sous_hypotheses",
+    "regles": [
+     "c_role_vers_nom",
+     "l_nom_partiel"
+    ],
+    "causes_diagnostiquees": [
+     "inference",
+     "desambiguisation",
+     "representation"
+    ],
+    "principale": "inference"
+   },
+   {
+    "k": 121,
+    "notation": "47C35",
+    "minimale": "C",
+    "couches_seules": [
+     "C",
+     "L",
+     "S"
+    ],
+    "conclusion": "sous_hypotheses",
+    "regles": [],
+    "causes_diagnostiquees": [
+     "desambiguisation"
+    ],
+    "principale": "desambiguisation"
+   }
+  ],
+  "couche_minimale": {
+   "S": 1,
+   "C+L": 1,
+   "C": 1
+  }
+ }
+}

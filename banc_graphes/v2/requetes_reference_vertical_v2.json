@@ -1,0 +1,3447 @@
+[
+ {
+  "k": 1,
+  "notation": "48CC75511",
+  "langue": "en",
+  "suffisante": "requete('48CC75511', et([type(v(x), singer), propriete(v(x), male), relation(v(x), in, v(l)), type(v(l), 'open air')]))",
+  "necessaire": "requete('48CC75511', type(v(x), singer))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "48CC7: trait CC = out of doors (en plein air)"
+  ],
+  "gabarit": false,
+  "note": "Le trait « without accompaniment » du parent (48C7551) n'est pas exprimable sans négation et n'est pas exigé ; CC rendu par relation in + type 'open air'."
+ },
+ {
+  "k": 2,
+  "notation": "46AA179",
+  "langue": "fr",
+  "suffisante": "requete('46AA179', et([type(v(x), femme), propriete(v(x), 'au chômage')]))",
+  "necessaire": "requete('46AA179', type(v(x), femme))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "46AA17: trait AA = femmes"
+  ],
+  "gabarit": false,
+  "note": "Le chômage est une notion ; figuré par une femme au chômage (propriété)."
+ },
+ {
+  "k": 3,
+  "notation": "41A163",
+  "langue": "en",
+  "suffisante": "requete('41A163', type(v(x), cottage))",
+  "necessaire": "requete('41A163', type(v(x), cottage))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 4,
+  "notation": "25F37(WOODCOCK)",
+  "langue": "fr",
+  "suffisante": "requete('25F37(WOODCOCK)', type(v(x), 'bécasse'))",
+  "necessaire": "requete('25F37(WOODCOCK)', type(v(x), 'bécasse'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La catégorie (échassiers et oiseaux riverains) est impliquée par bécasse ; non répétée."
+ },
+ {
+  "k": 5,
+  "notation": "49D461",
+  "langue": "en",
+  "suffisante": "requete('49D461', ou([type(v(x), helix), et([type(v(x), spiral), propriete(v(x), 'three-dimensional')])]))",
+  "necessaire": "requete('49D461', ou([type(v(x), helix), type(v(x), spiral)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "three-dimensional spiral (variante définitoire de helix)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 6,
+  "notation": "44G1231",
+  "langue": "fr",
+  "suffisante": "requete('44G1231', et([type(v(x), croix), type(v(y), 'place du marché'), relation(v(x), sur, v(y))]))",
+  "necessaire": "requete('44G1231', type(v(x), croix))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 7,
+  "notation": "46B54",
+  "langue": "en",
+  "suffisante": "requete('46B54', type(v(x), giro))",
+  "necessaire": "requete('46B54', type(v(x), giro))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Notion financière (virement postal) ; figurée seulement par l'objet ou le service nommé « giro »."
+ },
+ {
+  "k": 8,
+  "notation": "48CC753",
+  "langue": "fr",
+  "suffisante": "requete('48CC753', et([type(v(x), musicien), type(v(y), musicien), distincts(v(x), v(y)), type(v(i), 'instrument de musique'), relation(v(x), avec, v(i)), type(v(j), 'instrument de musique'), relation(v(y), avec, v(j)), evenement(v(e), concert), role(v(e), agent, v(x)), role(v(e), agent, v(y)), role(v(e), lieu, v(l)), type(v(l), campagne)]))",
+  "necessaire": "requete('48CC753', type(v(x), musicien))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "48C7: instrument = instrument de musique",
+   "48CC7: trait CC (en plein air), ici nommé « concert champêtre »"
+  ],
+  "gabarit": false,
+  "note": "« plusieurs » rendu par deux musiciens distincts ; le trait CC « concert champêtre » rendu par un concert à la campagne (on aurait pu le lire comme genre('concert champêtre'))."
+ },
+ {
+  "k": 9,
+  "notation": "42D12",
+  "langue": "en",
+  "suffisante": "requete('42D12', et([evenement(v(e), consent), role(v(e), theme, v(m)), type(v(m), marriage)]))",
+  "necessaire": "requete('42D12', evenement(v(e), consent))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La parenthèse « (of marriage) » est exigée : elle distingue le consentement matrimonial."
+ },
+ {
+  "k": 10,
+  "notation": "48B111",
+  "langue": "fr",
+  "suffisante": "requete('48B111', et([ou([type(v(x), article), type(v(x), accessoire)]), relation(v(x), dans, v(a)), type(v(a), atelier)]))",
+  "necessaire": "requete('48B111', ou([type(v(x), article), type(v(x), accessoire)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "articles / accessoires",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "(en général) : portée générique de la rubrique (l'artiste en général)",
+    "categorie": "definition"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« (en général) » tenu pour une précision de portée documentaire, non figurable ; « d'atelier » rendu par la relation dans."
+ },
+ {
+  "k": 11,
+  "notation": "42E432",
+  "langue": "en",
+  "suffisante": "requete('42E432', ou([type(v(x), churchyard), et([type(v(x), cemetery), type(v(y), church), relation(v(x), around, v(y))])]))",
+  "necessaire": "requete('42E432', ou([type(v(x), churchyard), type(v(x), cemetery)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(around church) : définition de churchyard, reprise comme seconde branche",
+    "categorie": "definition"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 12,
+  "notation": "48C241",
+  "langue": "fr",
+  "suffisante": "requete('48C241', et([type(v(x), galerie), type(v(y), sculpture), relation(v(y), dans, v(x))]))",
+  "necessaire": "requete('48C241', type(v(x), galerie))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 13,
+  "notation": "48A252",
+  "langue": "en",
+  "suffisante": "requete('48A252', et([type(v(r), reputation), propriete(v(r), unfavourable), relation(v(r), of, v(x)), type(v(x), artist)]))",
+  "necessaire": "requete('48A252', type(v(r), reputation))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Notion non figurable par elle-même ; « (of artist) » est exigé (distinction)."
+ },
+ {
+  "k": 14,
+  "notation": "49E39311(PELICAN)",
+  "langue": "fr",
+  "suffisante": "requete('49E39311(PELICAN)', et([type(v(x), 'pélican'), type(v(x), bouteille)]))",
+  "necessaire": "requete('49E39311(PELICAN)', type(v(x), 'pélican'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Le vase alchimique dit « pélican » : la catégorie bouteille est gardée, sinon l'oiseau satisferait la requête."
+ },
+ {
+  "k": 15,
+  "notation": "46AA126",
+  "langue": "en",
+  "suffisante": "requete('46AA126', et([type(v(x), woman), propriete(v(x), worthy), nombre(v(x), 9)]))",
+  "necessaire": "requete('46AA126', type(v(x), woman))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "46A126: the nine worthies ; trait AA = femmes"
+  ],
+  "gabarit": false,
+  "note": "Groupe pluriel : un référent de type woman au nombre de 9."
+ },
+ {
+  "k": 16,
+  "notation": "42A111",
+  "langue": "fr",
+  "suffisante": "requete('42A111', ou([type(v(x), 'contrôle des naissances'), type(v(x), contraception)]))",
+  "necessaire": "requete('42A111', ou([type(v(x), 'contrôle des naissances'), type(v(x), contraception)]))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "contrôle des naissances / contraception",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Notion ; figurée seulement si le texte la nomme (ou nomme un moyen plus spécifique)."
+ },
+ {
+  "k": 17,
+  "notation": "43C75",
+  "langue": "en",
+  "suffisante": "requete('43C75', et([evenement(v(e), 'make mischief'), role(v(e), agent, v(x)), type(v(x), child)]))",
+  "necessaire": "requete('43C75', evenement(v(e), 'make mischief'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "43C7: children's games and plays (agent : child)"
+  ],
+  "gabarit": false,
+  "note": "L'agent enfant est pris de la rubrique 43C7 (jeux d'enfants)."
+ },
+ {
+  "k": 18,
+  "notation": "42E211",
+  "langue": "fr",
+  "suffisante": "requete('42E211', et([evenement(v(e), annoncer), role(v(e), agent, v(x)), type(v(x), 'employé des pompes funèbres'), role(v(e), theme, v(d)), type(v(d), 'décès')]))",
+  "necessaire": "requete('42E211', ou([evenement(v(e), annoncer), type(v(x), 'employé des pompes funèbres')]))",
+  "nature": "exacte",
+  "ambigue": true,
+  "lectures": [
+   "ou([annonce orale d'un décès ; employé des pompes funèbres]) : deux sujets distincts de la rubrique"
+  ],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Coordination lue de façon exigeante : l'annonce orale faite par l'employé des pompes funèbres ; « (d'un décès) » exigé ; « orale » n'est pas exprimable sur l'événement."
+ },
+ {
+  "k": 19,
+  "notation": "43C7815",
+  "langue": "en",
+  "suffisante": "requete('43C7815', et([evenement(v(e), build), role(v(e), agent, v(x)), type(v(x), child), role(v(e), patient, v(h)), type(v(h), 'model house')]))",
+  "necessaire": "requete('43C7815', evenement(v(e), build))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "43C7: children's games and plays (agent : child)"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 20,
+  "notation": "46C231",
+  "langue": "fr",
+  "suffisante": "requete('46C231', ou([type(v(x), toueur), type(v(x), 'chaland de trait'), type(v(x), 'chaland de halage')]))",
+  "necessaire": "requete('46C231', ou([type(v(x), toueur), type(v(x), chaland)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "toueur / chaland de trait / de halage",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 21,
+  "notation": "46C14963",
+  "langue": "en",
+  "suffisante": "requete('46C14963', et([type(v(w), whip), evenement(v(a), accident)]))",
+  "necessaire": "requete('46C14963', type(v(w), whip))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« ~ » ne nomme pas de relation précise : conjonction sans lien ; le contexte du parent (véhicule à traction animale) n'est pas exigé."
+ },
+ {
+  "k": 22,
+  "notation": "43C11127",
+  "langue": "fr",
+  "suffisante": "requete('43C11127', et([evenement(v(e), chasser), role(v(e), patient, v(y)), type(v(y), 'mammifère'), propriete(v(y), aquatique)]))",
+  "necessaire": "requete('43C11127', evenement(v(e), chasser))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« ~ » lu comme l'objet de la chasse (rubrique gibier)."
+ },
+ {
+  "k": 23,
+  "notation": "25H142",
+  "langue": "en",
+  "suffisante": "requete('25H142', type(v(x), isthmus))",
+  "necessaire": "requete('25H142', type(v(x), isthmus))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 24,
+  "notation": "25FF711(ICHNEUMON-FLY)",
+  "langue": "fr",
+  "suffisante": "requete('25FF711(ICHNEUMON-FLY)', et([type(v(x), ichneumon), type(v(x), insecte), propriete(v(x), fabuleux)]))",
+  "necessaire": "requete('25FF711(ICHNEUMON-FLY)', type(v(x), ichneumon))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "25FF: trait FF = animal fabuleux"
+  ],
+  "gabarit": false,
+  "note": "« insecte » gardé : en français « ichneumon » désigne aussi la mangouste."
+ },
+ {
+  "k": 25,
+  "notation": "23U22",
+  "langue": "en",
+  "suffisante": "requete('23U22', type(v(x), hourglass))",
+  "necessaire": "requete('23U22', type(v(x), hourglass))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 26,
+  "notation": "48A9834",
+  "langue": "fr",
+  "suffisante": "requete('48A9834', et([type(v(o), ornement), type(v(f), forme), relation(v(f), de, v(p)), type(v(p), plante), propriete(v(f), 'indéfinissable')]))",
+  "necessaire": "requete('48A9834', type(v(o), ornement))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« ~ » : conjonction sans relation précise entre l'ornement et les formes."
+ },
+ {
+  "k": 27,
+  "notation": "25F36",
+  "langue": "en",
+  "suffisante": "requete('25F36', type(v(x), 'water bird'))",
+  "necessaire": "requete('25F36', type(v(x), 'water bird'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 28,
+  "notation": "43C7124",
+  "langue": "fr",
+  "suffisante": "requete('43C7124', ou([et([evenement(v(e), jouer), role(v(e), theme, v(m)), type(v(m), marelle)]), evenement(v(e), 'sauter à cloche-pied')]))",
+  "necessaire": "requete('43C7124', ou([type(v(m), marelle), evenement(v(e), 'sauter à cloche-pied')]))",
+  "nature": "exacte",
+  "ambigue": true,
+  "lectures": [
+   "et : jouer à la marelle en sautant à cloche-pied"
+  ],
+  "facultatif": [
+   {
+    "partie": "à cloche-pied (variante du nom du jeu)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Lu comme variante (l'anglais ne dit que « hop-scotch ») ; la lecture exigeante (et) est donnée en lecture."
+ },
+ {
+  "k": 29,
+  "notation": "46B112",
+  "langue": "en",
+  "suffisante": "requete('46B112', type(v(x), 'market hall'))",
+  "necessaire": "requete('46B112', type(v(x), 'market hall'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 30,
+  "notation": "49E2515",
+  "langue": "fr",
+  "suffisante": "requete('49E2515', type(v(x), 'stéréoscope'))",
+  "necessaire": "requete('49E2515', type(v(x), 'stéréoscope'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 31,
+  "notation": "47K13",
+  "langue": "en",
+  "suffisante": "requete('47K13', et([evenement(v(e), fish), role(v(e), patient, v(y)), type(v(y), crustacean)]))",
+  "necessaire": "requete('47K13', evenement(v(e), fish))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 32,
+  "notation": "49M124",
+  "langue": "fr",
+  "suffisante": "requete('49M124', et([type(v(x), correcteur), type(v(y), imprimerie)]))",
+  "necessaire": "requete('49M124', type(v(x), correcteur))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« ~ imprimerie » exigé : il distingue le correcteur d'imprimerie ; conjonction sans relation précise."
+ },
+ {
+  "k": 33,
+  "notation": "25G3(ALMOND-TREE)",
+  "langue": "en",
+  "suffisante": "requete('25G3(ALMOND-TREE)', type(v(x), 'almond tree'))",
+  "necessaire": "requete('25G3(ALMOND-TREE)', type(v(x), 'almond tree'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 34,
+  "notation": "25F62(SARDINE)",
+  "langue": "fr",
+  "suffisante": "requete('25F62(SARDINE)', type(v(x), sardine))",
+  "necessaire": "requete('25F62(SARDINE)', type(v(x), sardine))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 35,
+  "notation": "41C621",
+  "langue": "en",
+  "suffisante": "requete('41C621', ou([type(v(x), bread), type(v(x), loaf)]))",
+  "necessaire": "requete('41C621', ou([type(v(x), bread), type(v(x), loaf)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "bread / loaf",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 36,
+  "notation": "25HH216",
+  "langue": "fr",
+  "suffisante": "requete('25HH216', et([type(v(x), cascade), genre('paysage idéal')]))",
+  "necessaire": "requete('25HH216', type(v(x), cascade))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "25HH: trait HH = paysage idéal"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 37,
+  "notation": "47D8(AXE)",
+  "langue": "en",
+  "suffisante": "requete('47D8(AXE)', type(v(x), axe))",
+  "necessaire": "requete('47D8(AXE)', type(v(x), axe))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La hache comme outil ; le contexte « crafts and industries » n'est pas exigé (une hache-arme est classée ailleurs, 45C)."
+ },
+ {
+  "k": 38,
+  "notation": "25GG4(FIELD ERYNGO)",
+  "langue": "fr",
+  "suffisante": "requete('25GG4(FIELD ERYNGO)', et([type(v(x), 'panicaut champêtre'), propriete(v(x), fantastique)]))",
+  "necessaire": "requete('25GG4(FIELD ERYNGO)', type(v(x), 'panicaut champêtre'))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "végétation fictive (variante du nom du trait GG)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "25GG: trait GG = plante fantastique"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 39,
+  "notation": "46B57",
+  "langue": "en",
+  "suffisante": "requete('46B57', ou([type(v(x), trust), type(v(x), cartel), type(v(x), monopoly)]))",
+  "necessaire": "requete('46B57', ou([type(v(x), trust), type(v(x), cartel), type(v(x), monopoly)]))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "trust / cartel / monopoly",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Notions économiques ; « trust » est polysémique (confiance)."
+ },
+ {
+  "k": 40,
+  "notation": "49C2131",
+  "langue": "fr",
+  "suffisante": "requete('49C2131', ou([type(v(x), 'antre de platon'), type(v(x), 'antrum platonicum')]))",
+  "necessaire": "requete('49C2131', ou([type(v(x), 'antre de platon'), type(v(x), 'antrum platonicum')]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "'antrum Platonicum'",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Composé lexicalisé (l'allégorie de la caverne), non décomposé : Platon n'est pas dans l'antre."
+ },
+ {
+  "k": 41,
+  "notation": "31AA4631",
+  "langue": "en",
+  "suffisante": "requete('31AA4631', et([type(v(f), fracture), relation(v(f), of, v(b)), type(v(b), bone), relation(v(b), of, v(w)), type(v(w), woman)]))",
+  "necessaire": "requete('31AA4631', type(v(f), fracture))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31AA: trait AA = female human figure"
+  ],
+  "gabarit": false,
+  "note": "« female human figure » rendu par le type woman."
+ },
+ {
+  "k": 42,
+  "notation": "31AA2141",
+  "langue": "fr",
+  "suffisante": "requete('31AA2141', et([ou([type(v(x), 'humérus'), et([type(v(x), os), relation(v(x), de, v(p)), type(v(p), partie), propriete(v(p), 'supérieur'), relation(v(p), de, v(b)), type(v(b), bras)])]), relation(v(x), de, v(w)), type(v(w), femme)]))",
+  "necessaire": "requete('31AA2141', ou([type(v(x), 'humérus'), type(v(x), os)]))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "os de la partie supérieure du bras (variante définitoire)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "31AA: trait AA = figure féminine"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 43,
+  "notation": "31AA4526",
+  "langue": "en",
+  "suffisante": "requete('31AA4526', et([type(v(x), monster), type(v(x), woman), type(v(x), rodent)]))",
+  "necessaire": "requete('31AA4526', type(v(x), monster))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31A45: monsters of mixed human and animal shape (un même référent humain et animal)",
+   "31AA: trait AA = female human figure"
+  ],
+  "gabarit": false,
+  "note": "Un seul référent à la fois femme et rongeur, d'après la rubrique « mixed human and animal shape »."
+ },
+ {
+  "k": 44,
+  "notation": "31AA22152",
+  "langue": "fr",
+  "suffisante": "requete('31AA22152', et([type(v(x), 'cavité nasale'), relation(v(x), de, v(w)), type(v(w), femme)]))",
+  "necessaire": "requete('31AA22152', type(v(x), 'cavité nasale'))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31AA: trait AA = figure féminine"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 45,
+  "notation": "31A4624",
+  "langue": "en",
+  "suffisante": "requete('31A4624', et([type(v(x), 'skin disease'), type(v(y), 'venereal disease')]))",
+  "necessaire": "requete('31A4624', ou([type(v(x), 'skin disease'), type(v(y), 'venereal disease')]))",
+  "nature": "exacte",
+  "ambigue": true,
+  "lectures": [
+   "ou([skin disease ; venereal disease]) : union de deux classes de maladies (lecture de rubrique)"
+  ],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Coordination « and » lue de façon exigeante (les deux) ; x et y peuvent être la même maladie (syphilis)."
+ },
+ {
+  "k": 46,
+  "notation": "31A46331",
+  "langue": "fr",
+  "suffisante": "requete('31A46331', type(v(x), 'mal de tête'))",
+  "necessaire": "requete('31A46331', type(v(x), 'mal de tête'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 47,
+  "notation": "31AA5151",
+  "langue": "en",
+  "suffisante": "requete('31AA5151', et([evenement(v(e), tattoo), role(v(e), patient, v(w)), type(v(w), woman)]))",
+  "necessaire": "requete('31AA5151', evenement(v(e), tattoo))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31AA51: trait AA = (for) women"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 48,
+  "notation": "31AA4624(SYPHILIS)",
+  "langue": "fr",
+  "suffisante": "requete('31AA4624(SYPHILIS)', et([type(v(x), syphilis), ou([propriete(v(x), 'épidémique'), type(v(x), pestilence)])]))",
+  "necessaire": "requete('31AA4624(SYPHILIS)', type(v(x), syphilis))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "pestilences (variante de « maladies épidémiques »)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "31AA462: dans cette branche le trait AA = maladies épidémiques, pestilences (et non figure féminine)"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 49,
+  "notation": "31A22464",
+  "langue": "en",
+  "suffisante": "requete('31A22464', type(v(x), 'ring finger'))",
+  "necessaire": "requete('31A22464', type(v(x), 'ring finger'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 50,
+  "notation": "31A532",
+  "langue": "fr",
+  "suffisante": "requete('31A532', et([evenement(v(e), couper), role(v(e), patient, v(c)), type(v(c), cheveu)]))",
+  "necessaire": "requete('31A532', et([evenement(v(e), couper), type(v(c), cheveu)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 51,
+  "notation": "41D2122(MANTELET)",
+  "langue": "en",
+  "suffisante": "requete('41D2122(MANTELET)', et([type(v(x), mantelet), type(v(x), cape)]))",
+  "necessaire": "requete('41D2122(MANTELET)', type(v(x), mantelet))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« cape » gardé : mantelet désigne aussi un abri de siège."
+ },
+ {
+  "k": 52,
+  "notation": "31A2122",
+  "langue": "fr",
+  "suffisante": "requete('31A2122', type(v(x), 'colonne vertébrale'))",
+  "necessaire": "requete('31A2122', type(v(x), 'colonne vertébrale'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 53,
+  "notation": "31A22626",
+  "langue": "en",
+  "suffisante": "requete('31A22626', type(v(x), freckle))",
+  "necessaire": "requete('31A22626', type(v(x), freckle))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 54,
+  "notation": "31A417",
+  "langue": "fr",
+  "suffisante": "requete('31A417', type(v(x), bossu))",
+  "necessaire": "requete('31A417', type(v(x), bossu))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 55,
+  "notation": "31A66",
+  "langue": "en",
+  "suffisante": "requete('31A66', ou([evenement(v(e), sweat), evenement(v(e), perspiration)]))",
+  "necessaire": "requete('31A66', ou([evenement(v(e), sweat), evenement(v(e), perspiration)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "sweating / perspiration",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 56,
+  "notation": "31A22361",
+  "langue": "fr",
+  "suffisante": "requete('31A22361', et([type(v(x), 'organe sexuel'), propriete(v(x), 'mâle')]))",
+  "necessaire": "requete('31A22361', type(v(x), 'organe sexuel'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 57,
+  "notation": "31A422",
+  "langue": "en",
+  "suffisante": "requete('31A422', type(v(x), dwarf))",
+  "necessaire": "requete('31A422', type(v(x), dwarf))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 58,
+  "notation": "31AA343",
+  "langue": "fr",
+  "suffisante": "requete('31AA343', et([type(v(w), femme), evenement(v(e), 'goûter'), role(v(e), agent, v(w)), role(v(e), patient, v(s)), propriete(v(s), 'salé')]))",
+  "necessaire": "requete('31AA343', propriete(v(s), 'salé'))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31AA34: le goût, goûter",
+   "31AA: trait AA = figure féminine"
+  ],
+  "gabarit": false,
+  "note": "« (goût) » exigé : il distingue le salé comme saveur ; figuré par une femme goûtant quelque chose de salé."
+ },
+ {
+  "k": 59,
+  "notation": "31AA4131",
+  "langue": "en",
+  "suffisante": "requete('31AA4131', et([type(v(x), harelip), relation(v(x), of, v(w)), type(v(w), woman)]))",
+  "necessaire": "requete('31AA4131', type(v(x), harelip))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31AA: trait AA = female human figure"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 60,
+  "notation": "31A729",
+  "langue": "fr",
+  "suffisante": "requete('31A729', ou([type(v(x), virago), et([type(v(x), femme), propriete(v(x), masculin)])]))",
+  "necessaire": "requete('31A729', ou([type(v(x), virago), type(v(x), femme)]))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "dragon, gendarme (variantes familières)",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "femme à l'allure masculine (variante définitoire)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Les variantes « dragon » et « gendarme » sont écartées de la disjonction : prises au sens propre, elles rendraient la requête fausse-positive."
+ },
+ {
+  "k": 61,
+  "notation": "31A3333",
+  "langue": "en",
+  "suffisante": "requete('31A3333', et([type(v(x), space), propriete(v(x), fragrant)]))",
+  "necessaire": "requete('31A3333', type(v(x), space))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« space » est très général ; la propriété fragrant porte la distinction."
+ },
+ {
+  "k": 62,
+  "notation": "31A4561",
+  "langue": "fr",
+  "suffisante": "requete('31A4561', ou([et([type(v(x), triton), type(v(x), monstre)]), et([type(v(x), homme), type(v(x), poisson)])]))",
+  "necessaire": "requete('31A4561', type(v(x), triton))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31A45: monstres anthropo-zoomorphiques ; 31A456: monstres ~ poissons"
+  ],
+  "gabarit": false,
+  "note": "« triton » désigne aussi l'amphibien : la catégorie monstre (ou le mélange homme-poisson) est exigée."
+ },
+ {
+  "k": 63,
+  "notation": "31AA251",
+  "langue": "en",
+  "suffisante": "requete('31AA251', et([ou([et([type(v(a), arm), type(v(b), arm)]), et([type(v(a), hand), type(v(b), hand)])]), distincts(v(a), v(b)), ou([type(v(g), posture), type(v(g), gesture)]), relation(v(g), of, v(a)), relation(v(g), of, v(b))]))",
+  "necessaire": "requete('31AA251', ou([type(v(g), posture), type(v(g), gesture)]))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "in general : portée générique de la rubrique",
+    "categorie": "definition"
+   },
+   {
+    "partie": "postures / gestures",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "31AA25: dans cette branche le trait AA = both arms or hands"
+  ],
+  "gabarit": false,
+  "note": "« arms and hands » et « arms or hands » lus comme alternative (le trait AA dit « or »)."
+ },
+ {
+  "k": 64,
+  "notation": "31A2124",
+  "langue": "fr",
+  "suffisante": "requete('31A2124', type(v(x), omoplate))",
+  "necessaire": "requete('31A2124', type(v(x), omoplate))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 65,
+  "notation": "31A59",
+  "langue": "en",
+  "suffisante": "requete('31A59', et([type(v(x), person), propriete(v(x), unclean)]))",
+  "necessaire": "requete('31A59', propriete(v(x), unclean))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "absence of hygiene (variante négative de uncleanliness)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "31A: the human figure (le porteur : person)"
+  ],
+  "gabarit": false,
+  "note": "« absence of hygiene » n'est pas exprimable sans négation ; rendu par sa variante positive."
+ },
+ {
+  "k": 66,
+  "notation": "31AA5339",
+  "langue": "fr",
+  "suffisante": "requete('31AA5339', et([type(v(c), calvitie), relation(v(c), de, v(w)), type(v(w), femme)]))",
+  "necessaire": "requete('31AA5339', type(v(c), calvitie))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31AA53: trait AA = ~ femme"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 67,
+  "notation": "31AA19",
+  "langue": "en",
+  "suffisante": null,
+  "necessaire": "requete('31AA19', type(v(x), woman))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "'animal bipes implume' (variante latine)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "31AA: trait AA = female human figure"
+  ],
+  "gabarit": false,
+  "note": "Suffisante nulle : la définition platonicienne de l'homme est une notion (canon, proportions), sans contenu figuré propre ; seul le trait AA est nécessaire."
+ },
+ {
+  "k": 68,
+  "notation": "31A22624(...)",
+  "langue": "fr",
+  "suffisante": "requete('31A22624(...)', et([type(v(c), couleur), relation(v(c), de, v(p)), type(v(p), peau), nom(v(c), ['A_REMPLIR'])]))",
+  "necessaire": "requete('31A22624(...)', et([type(v(c), couleur), type(v(p), peau)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": true,
+  "note": "Gabarit : le numéro FITZPATRICK à remplir porte la clé A_REMPLIR."
+ },
+ {
+  "k": 69,
+  "notation": "31A2554",
+  "langue": "en",
+  "suffisante": "requete('31A2554', et([ou([type(v(g), posture), type(v(g), gesture)]), relation(v(g), of, v(t)), type(v(t), thumb), relation(v(g), of, v(f)), type(v(f), finger), distincts(v(t), v(f))]))",
+  "necessaire": "requete('31A2554', ou([type(v(g), posture), type(v(g), gesture)]))",
+  "nature": "exacte",
+  "ambigue": true,
+  "lectures": [
+   "ou : geste du pouce ou des autres doigts"
+  ],
+  "facultatif": [
+   {
+    "partie": "postures / gestures",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« thumb and other fingers » lu de façon exigeante (les deux) ; « other » donne distincts."
+ },
+ {
+  "k": 70,
+  "notation": "31AA22621",
+  "langue": "fr",
+  "suffisante": "requete('31AA22621', et([type(v(x), cheveu), relation(v(x), de, v(w)), type(v(w), femme)]))",
+  "necessaire": "requete('31AA22621', type(v(x), cheveu))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31AA: trait AA = figure féminine"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 71,
+  "notation": "11H(CASSIAN)32",
+  "langue": "en",
+  "suffisante": "requete('11H(CASSIAN)32', et([nom(v(s), ['CASSIAN', 'CASSIANUS', 'CASSIAN OF IMOLA', 'CASSIEN', 'CASSIEN D IMOLA']), ou([et([evenement(v(e), baptize), role(v(e), patient, v(s))]), et([evenement(v(e), consecrate), role(v(e), patient, v(s))]), et([evenement(v(e), 'take vows'), role(v(e), agent, v(s))])])]))",
+  "necessaire": "requete('11H(CASSIAN)32', nom(v(s), ['CASSIAN', 'CASSIANUS', 'CASSIAN OF IMOLA', 'CASSIEN', 'CASSIEN D IMOLA']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "the schoolmaster, martyr and bishop",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "possible attributes: style",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative."
+ },
+ {
+  "k": 72,
+  "notation": "11HH(BARBARA)32",
+  "langue": "fr",
+  "suffisante": "requete('11HH(BARBARA)32', et([nom(v(s), ['BARBARA', 'BARBE']), ou([et([evenement(v(e), baptiser), role(v(e), patient, v(s))]), et([evenement(v(e), consacrer), role(v(e), patient, v(s))]), et([evenement(v(e), 'prononcer des voeux'), role(v(e), agent, v(s))])])]))",
+  "necessaire": "requete('11HH(BARBARA)32', nom(v(s), ['BARBARA', 'BARBE']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "vierge et martyre",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "attributs possibles : livre, canon, couronne, ... tour",
+    "categorie": "attributs possibles"
+   },
+   {
+    "partie": "(boulet de), (son père) : parenthèses internes aux attributs",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative."
+ },
+ {
+  "k": 73,
+  "notation": "11HH(SCHOLASTICA)3",
+  "langue": "en",
+  "suffisante": "requete('11HH(SCHOLASTICA)3', et([nom(v(s), ['SCHOLASTICA', 'SCOLASTIQUE']), et([evenement(v(e), devotion), role(v(e), agent, v(s))])]))",
+  "necessaire": "requete('11HH(SCHOLASTICA)3', nom(v(s), ['SCHOLASTICA', 'SCOLASTIQUE']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "the Benedictine abbess, sister of Benedict of Nursia",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "possible attributes: book, crucifix, dove, lily, staff",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« personal » est rendu par le rôle d'agent de la sainte dans la dévotion."
+ },
+ {
+  "k": 74,
+  "notation": "11HH(GUDULA)2",
+  "langue": "fr",
+  "suffisante": "requete('11HH(GUDULA)2', et([nom(v(s), ['GUDULA', 'GUDULE']), propriete(v(s), jeune)]))",
+  "necessaire": "requete('11HH(GUDULA)2', nom(v(s), ['GUDULA', 'GUDULE']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "vierge et martyre, patronne de Bruxelles",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "attributs possibles : ange, livre, diable, lanterne, torche",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« jeunesse » rendue par la propriété jeune de la sainte."
+ },
+ {
+  "k": 75,
+  "notation": "11H(DIONYSIUS THE AREOPAGITE)83",
+  "langue": "en",
+  "suffisante": "requete('11H(DIONYSIUS THE AREOPAGITE)83', et([nom(v(s), ['DIONYSIUS THE AREOPAGITE', 'DIONYSIUS AREOPAGITA', 'DENYS L AREOPAGITE']), ou([et([evenement(v(e), act), role(v(e), agent, v(s))]), et([evenement(v(e), appear), role(v(e), agent, v(s))])]), propriete(v(s), dead)]))",
+  "necessaire": "requete('11H(DIONYSIUS THE AREOPAGITE)83', nom(v(s), ['DIONYSIUS THE AREOPAGITE', 'DIONYSIUS AREOPAGITA', 'DENYS L AREOPAGITE']))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« posthumous » exigé par la propriété dead, qu'un texte peut taire ; « Dionysius » seul est évité (confusion avec Denis de Paris, Dionysos)."
+ },
+ {
+  "k": 76,
+  "notation": "11H(PANTALEON)3",
+  "langue": "fr",
+  "suffisante": "requete('11H(PANTALEON)3', et([nom(v(s), ['PANTALEON', 'PANTALEON DE NICOMEDIE', 'PANTALEON OF NICOMEDIA']), et([evenement(v(e), 'dévotion'), role(v(e), agent, v(s))])]))",
+  "necessaire": "requete('11H(PANTALEON)3', nom(v(s), ['PANTALEON', 'PANTALEON DE NICOMEDIE', 'PANTALEON OF NICOMEDIA']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "médecin et martyr de Nicomédie",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "attributs possibles : instruments chirurgicaux, (lié à) un olivier, ...",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« personnelle » rendue par le rôle d'agent du saint."
+ },
+ {
+  "k": 77,
+  "notation": "11H(WENCESLAS)31",
+  "langue": "en",
+  "suffisante": "requete('11H(WENCESLAS)31', et([nom(v(s), ['WENCESLAS', 'WENCESLAUS']), ou([et([evenement(v(e), vocation), role(v(e), theme, v(s))]), et([evenement(v(e), convert), role(v(e), theme, v(s))])])]))",
+  "necessaire": "requete('11H(WENCESLAS)31', nom(v(s), ['WENCESLAS', 'WENCESLAUS']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "the martyr and duke of Bohemia",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "possible attributes: bunch of grapes, ... wine press",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative. Le saint est thème (il est appelé, il se convertit)."
+ },
+ {
+  "k": 78,
+  "notation": "11H(JOHN THE BAPTIST)81",
+  "langue": "fr",
+  "suffisante": "requete('11H(JOHN THE BAPTIST)81', et([nom(v(s), ['JOHN THE BAPTIST', 'JEAN BAPTISTE', 'JEAN LE BAPTISTE']), type(v(r), relique), relation(v(r), de, v(s)), ou([et([evenement(v(e), 'découvrir'), role(v(e), patient, v(r))]), et([evenement(v(e), 'transférer'), role(v(e), patient, v(r))])])]))",
+  "necessaire": "requete('11H(JOHN THE BAPTIST)81', nom(v(s), ['JOHN THE BAPTIST', 'JEAN BAPTISTE', 'JEAN LE BAPTISTE']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "attributs possibles : livre, croix de roseau, ... bâton",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative. « translation » rendu par transférer."
+ },
+ {
+  "k": 79,
+  "notation": "11H(FRANCIS BORGIA)33",
+  "langue": "en",
+  "suffisante": "requete('11H(FRANCIS BORGIA)33', et([nom(v(s), ['FRANCIS BORGIA', 'FRANCOIS BORGIA']), ou([et([evenement(v(e), renounce), role(v(e), agent, v(s)), role(v(e), theme, v(g)), type(v(g), 'worldly goods')]), propriete(v(s), ascetic)])]))",
+  "necessaire": "requete('11H(FRANCIS BORGIA)33', nom(v(s), ['FRANCIS BORGIA', 'FRANCOIS BORGIA']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "Jesuit priest and duke of Gandia",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "possible attributes: book, ducal hat, monstrance, skull with crown",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative."
+ },
+ {
+  "k": 80,
+  "notation": "11H(EWALD)82",
+  "langue": "fr",
+  "suffisante": "requete('11H(EWALD)82', et([nom(v(s), ['EWALD']), type(v(r), relique), relation(v(r), de, v(s)), evenement(v(m), miracle), evenement(v(h), manier), role(v(h), patient, v(r))]))",
+  "necessaire": "requete('11H(EWALD)82', nom(v(s), ['EWALD']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« pendant » (simultanéité du miracle et du maniement) n'est pas exprimable : deux événements non liés entre eux."
+ },
+ {
+  "k": 81,
+  "notation": "12H13(SHIVA)6",
+  "langue": "en",
+  "suffisante": "requete('12H13(SHIVA)6', et([nom(v(s), ['SHIVA', 'SIVA']), ou([et([evenement(v(e), suffer), role(v(e), theme, v(s))]), et([evenement(v(e), misfortune), role(v(e), theme, v(s))])])]))",
+  "necessaire": "requete('12H13(SHIVA)6', nom(v(s), ['SHIVA', 'SIVA']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "god of fertility of nature",
+    "categorie": "biographie de l'individu"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative."
+ },
+ {
+  "k": 82,
+  "notation": "11H(THOMAS AQUINAS)6",
+  "langue": "fr",
+  "suffisante": "requete('11H(THOMAS AQUINAS)6', et([nom(v(s), ['THOMAS AQUINAS', 'THOMAS D AQUIN', 'THOMAS OF AQUINO']), ou([et([evenement(v(e), martyre), role(v(e), patient, v(s))]), et([evenement(v(e), souffrir), role(v(e), theme, v(s))]), et([evenement(v(e), malheur), role(v(e), theme, v(s))]), et([evenement(v(e), mourir), role(v(e), theme, v(s))])])]))",
+  "necessaire": "requete('11H(THOMAS AQUINAS)6', nom(v(s), ['THOMAS AQUINAS', 'THOMAS D AQUIN', 'THOMAS OF AQUINO']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "théologien dominicain, 'Docteur angélique'",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "attributs possibles : livre, (chaîne avec) soleil, ... étoile (sur la poitrine)",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative."
+ },
+ {
+  "k": 83,
+  "notation": "11HH(FAITH)5",
+  "langue": "en",
+  "suffisante": "requete('11HH(FAITH)5', et([nom(v(s), ['FAITH', 'FIDES', 'FOI', 'FOY', 'FAITH OF AGEN', 'FOY D AGEN']), type(v(s), saint), evenement(v(e), miracle), role(v(e), agent, v(s))]))",
+  "necessaire": "requete('11HH(FAITH)5', nom(v(s), ['FAITH', 'FIDES', 'FOI', 'FOY', 'FAITH OF AGEN', 'FOY D AGEN']))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "the virgin martyr, of Agen (or Conques)",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "(Fides, Foi)",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "possible attributes: bundle of rods, ... sword",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [
+   "11HH: female saints (type saint)"
+  ],
+  "gabarit": false,
+  "note": "type saint ajouté pour écarter la vertu Foi (Fides) ; « activities and events » lu exigeant : la sainte agent du miracle."
+ },
+ {
+  "k": 84,
+  "notation": "11H(FIDELIS)13",
+  "langue": "fr",
+  "suffisante": "requete('11H(FIDELIS)13', et([nom(v(s), ['FIDELIS', 'FIDELIS OF SIGMARINGEN', 'FIDELE', 'FIDELE DE SIGMARINGEN']), type(v(s), fondateur), relation(v(s), de, v(o)), type(v(o), 'ordre religieux')]))",
+  "necessaire": "requete('11H(FIDELIS)13', nom(v(s), ['FIDELIS', 'FIDELIS OF SIGMARINGEN', 'FIDELE', 'FIDELE DE SIGMARINGEN']))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "aspects spécifiques ~ (rubrique de regroupement)",
+    "categorie": "definition"
+   }
+  ],
+  "heritage": [
+   "11H(FIDELIS): le saint"
+  ],
+  "gabarit": false,
+  "note": "« Ordre » (majuscule) rendu par ordre religieux pour écarter les autres sens."
+ },
+ {
+  "k": 85,
+  "notation": "98B(VIRGIL)69",
+  "langue": "en",
+  "suffisante": "requete('98B(VIRGIL)69', et([nom(v(s), ['VIRGIL', 'VIRGILIUS', 'VIRGILE']), ou([evenement(v(e), apotheosis), evenement(v(e), deify)]), role(v(e), patient, v(s))]))",
+  "necessaire": "requete('98B(VIRGIL)69', nom(v(s), ['VIRGIL', 'VIRGILIUS', 'VIRGILE']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "the poet",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "apotheosis / deification",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 86,
+  "notation": "11H(ATHANASIUS)33",
+  "langue": "fr",
+  "suffisante": "requete('11H(ATHANASIUS)33', et([nom(v(s), ['ATHANASIUS', 'ATHANASIUS THE GREAT', 'ATHANASE', 'ATHANASE LE GRAND']), ou([et([evenement(v(e), renoncer), role(v(e), agent, v(s)), role(v(e), theme, v(g)), type(v(g), 'bien terrestre')]), propriete(v(s), 'ascétique')])]))",
+  "necessaire": "requete('11H(ATHANASIUS)33', nom(v(s), ['ATHANASIUS', 'ATHANASIUS THE GREAT', 'ATHANASE', 'ATHANASE LE GRAND']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "évêque d'Alexandrie",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "attributs possibles : livre, des hérétiques foulés aux pieds, rouleau",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative."
+ },
+ {
+  "k": 87,
+  "notation": "11H(SEVEN SLEEPERS)11",
+  "langue": "en",
+  "suffisante": "requete('11H(SEVEN SLEEPERS)11', et([nom(v(s), ['SEVEN SLEEPERS', 'SEVEN SLEEPERS OF EPHESUS', 'SEPT DORMANTS', 'SEPT DORMANTS D EPHESE']), ou([type(v(s), patron), et([evenement(v(e), protect), role(v(e), agent, v(s))]), et([evenement(v(e), intercede), role(v(e), agent, v(s))])])]))",
+  "necessaire": "requete('11H(SEVEN SLEEPERS)11', nom(v(s), ['SEVEN SLEEPERS', 'SEVEN SLEEPERS OF EPHESUS', 'SEPT DORMANTS', 'SEPT DORMANTS D EPHESE']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(children) : variante du nom (les Sept Enfants d'Éphèse)",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "possible attributes: shepherd's pouch (bag), shepherd's crook",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« (children) » tenu pour une variante du nom, non exigée."
+ },
+ {
+  "k": 88,
+  "notation": "11H(JOSEPH OF ARIMATHAEA)81",
+  "langue": "fr",
+  "suffisante": "requete('11H(JOSEPH OF ARIMATHAEA)81', et([nom(v(s), ['JOSEPH OF ARIMATHAEA', 'JOSEPH OF ARIMATHEA', 'JOSEPH D ARIMATHIE']), type(v(r), relique), relation(v(r), de, v(s)), ou([et([evenement(v(e), 'découvrir'), role(v(e), patient, v(r))]), et([evenement(v(e), 'transférer'), role(v(e), patient, v(r))])])]))",
+  "necessaire": "requete('11H(JOSEPH OF ARIMATHAEA)81', nom(v(s), ['JOSEPH OF ARIMATHAEA', 'JOSEPH OF ARIMATHEA', 'JOSEPH D ARIMATHIE']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "notable Juif",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "attributs possibles : Saint-Graal, instruments de la Passion",
+    "categorie": "attributs possibles"
+   },
+   {
+    "partie": "(p.ex. trois clous, couronne d'épines)",
+    "categorie": "exemple"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative."
+ },
+ {
+  "k": 89,
+  "notation": "11I62(DOEG)7",
+  "langue": "en",
+  "suffisante": null,
+  "necessaire": "requete('11I62(DOEG)7', nom(v(s), ['DOEG']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "possible attributes: armour",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Suffisante nulle : « other activities » est résiduelle et « (not in biblical context) » est exigé mais négatif ; seul le nom reste, qui ne suffit pas."
+ },
+ {
+  "k": 90,
+  "notation": "11HH(MARY MAGDALENE)11",
+  "langue": "fr",
+  "suffisante": "requete('11HH(MARY MAGDALENE)11', et([nom(v(s), ['MARY MAGDALENE', 'MARIE MADELEINE', 'MARIE-MADELEINE']), ou([type(v(s), patron), et([evenement(v(e), 'protéger'), role(v(e), agent, v(s))]), et([evenement(v(e), 'intercéder'), role(v(e), agent, v(s))])])]))",
+  "necessaire": "requete('11HH(MARY MAGDALENE)11', nom(v(s), ['MARY MAGDALENE', 'MARIE MADELEINE', 'MARIE-MADELEINE']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "pécheresse pénitente",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "attributs possibles : livre (ou rouleau), couronne, ... fléau",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative. patronne/protectrice/intercesseur : lemme patron."
+ },
+ {
+  "k": 91,
+  "notation": "11HH(LIDWYNA)12",
+  "langue": "en",
+  "suffisante": "requete('11HH(LIDWYNA)12', et([nom(v(s), ['LIDWYNA', 'LYDWINE', 'LIDWYNA OF SCHIEDAM', 'LYDWINE DE SCHIEDAM']), ou([et([evenement(v(e), write), role(v(e), agent, v(s))]), et([evenement(v(e), study), role(v(e), agent, v(s))]), et([evenement(v(e), teach), role(v(e), agent, v(s))]), et([evenement(v(e), dictate), role(v(e), agent, v(s))])])]))",
+  "necessaire": "requete('11HH(LIDWYNA)12', nom(v(s), ['LIDWYNA', 'LYDWINE', 'LIDWYNA OF SCHIEDAM', 'LYDWINE DE SCHIEDAM']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "the virgin, of Schiedam",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "(Lydwine)",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "possible attributes: crucifix, branch of roses in hand, roses in hair",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative."
+ },
+ {
+  "k": 92,
+  "notation": "11HH(GERTRUDE)84",
+  "langue": "fr",
+  "suffisante": "requete('11HH(GERTRUDE)84', et([nom(v(s), ['GERTRUDE', 'GERTRUDE LA GRANDE', 'GERTRUDE DE HELFTA', 'GERTRUDE THE GREAT', 'GERTRUDE OF HELFTA']), ou([et([evenement(v(e), 'béatifier'), role(v(e), patient, v(s))]), et([evenement(v(e), canoniser), role(v(e), patient, v(s))])])]))",
+  "necessaire": "requete('11HH(GERTRUDE)84', nom(v(s), ['GERTRUDE', 'GERTRUDE LA GRANDE', 'GERTRUDE DE HELFTA', 'GERTRUDE THE GREAT', 'GERTRUDE OF HELFTA']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "religieuse et abbesse cistercienne",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "attributs possibles : coeur enflammé, coeur avec l'enfant Jésus, houlette",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative."
+ },
+ {
+  "k": 93,
+  "notation": "11H(MATTHIAS)69",
+  "langue": "en",
+  "suffisante": "requete('11H(MATTHIAS)69', et([nom(v(s), ['MATTHIAS', 'MATHIAS']), type(v(c), corpse), relation(v(c), of, v(s)), evenement(v(e), maltreat), role(v(e), patient, v(c))]))",
+  "necessaire": "requete('11H(MATTHIAS)69', nom(v(s), ['MATTHIAS', 'MATHIAS']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "the apostle and martyr",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "possible attributes: axe, book, cross, halberd, scroll, sword",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 94,
+  "notation": "11HH(THERESA)1",
+  "langue": "fr",
+  "suffisante": null,
+  "necessaire": "requete('11HH(THERESA)1', nom(v(s), ['THERESA', 'THERESE', 'THERESE D AVILA', 'TERESA OF AVILA']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Suffisante nulle : « aspects spécifiques » est une rubrique de regroupement ; le nom seul ne suffit pas."
+ },
+ {
+  "k": 95,
+  "notation": "11I62(ADAM)11",
+  "langue": "en",
+  "suffisante": "requete('11I62(ADAM)11', et([nom(v(s), ['ADAM']), type(v(s), founder), relation(v(s), of, v(r)), type(v(r), art)]))",
+  "necessaire": "requete('11I62(ADAM)11', nom(v(s), ['ADAM']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Le « not in biblical context » de l'ancêtre (négatif) n'est pas exprimé."
+ },
+ {
+  "k": 96,
+  "notation": "11HH(AFRA)83",
+  "langue": "fr",
+  "suffisante": "requete('11HH(AFRA)83', et([nom(v(s), ['AFRA', 'AFRE', 'AFRA OF AUGSBURG', 'AFRE D AUGSBOURG']), ou([et([evenement(v(e), 'événement'), role(v(e), theme, v(s))]), et([evenement(v(e), 'apparaître'), role(v(e), agent, v(s))])]), propriete(v(s), mort)]))",
+  "necessaire": "requete('11HH(AFRA)83', nom(v(s), ['AFRA', 'AFRE', 'AFRA OF AUGSBURG', 'AFRE D AUGSBOURG']))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "prostituée et martyre",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "attributs possibles : arbre mort, vase d'onguents, bûcher, tas de bois",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« posthumes » exigé par la propriété mort, qu'un texte peut taire."
+ },
+ {
+  "k": 97,
+  "notation": "11HH(VERONICA)8",
+  "langue": "en",
+  "suffisante": "requete('11HH(VERONICA)8', et([nom(v(s), ['VERONICA', 'VERONIQUE']), propriete(v(s), dead), evenement(v(e), event), role(v(e), theme, v(s))]))",
+  "necessaire": "requete('11HH(VERONICA)8', nom(v(s), ['VERONICA', 'VERONIQUE']))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "possible attributes: 'Sudarium' (veil with the image of Christ)",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« post-mortem » exigé par la propriété dead ; « occurrences » rendu par un événement générique."
+ },
+ {
+  "k": 98,
+  "notation": "11HH(ELISABETH OF PORTUGAL)34",
+  "langue": "fr",
+  "suffisante": "requete('11HH(ELISABETH OF PORTUGAL)34', et([nom(v(s), ['ELISABETH DE PORTUGAL', 'ISABELLE DE PORTUGAL', 'ELISABETH OF PORTUGAL', 'ELIZABETH OF PORTUGAL']), ou([et([evenement(v(e), vision), role(v(e), agent, v(s))]), et([evenement(v(e), 'mariage mystique'), role(v(e), agent, v(s))])])]))",
+  "necessaire": "requete('11HH(ELISABETH OF PORTUGAL)34', nom(v(s), ['ELISABETH DE PORTUGAL', 'ISABELLE DE PORTUGAL', 'ELISABETH OF PORTUGAL', 'ELIZABETH OF PORTUGAL']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "épouse et veuve du roi du Portugal, tertiaire franciscaine",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "(Isabelle)",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "(s) de vision(s) : marque de pluriel",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "attributs possibles : couronne, roses, voile, jarre de vin",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative. Le prénom seul n'est pas une clé (confusion avec Élisabeth mère du Baptiste)."
+ },
+ {
+  "k": 99,
+  "notation": "11H(FIDELIS)11",
+  "langue": "en",
+  "suffisante": "requete('11H(FIDELIS)11', et([nom(v(s), ['FIDELIS', 'FIDELIS OF SIGMARINGEN', 'FIDELE DE SIGMARINGEN']), evenement(v(e), trample), role(v(e), agent, v(s)), role(v(e), patient, v(h)), ou([type(v(h), heresy), nom(v(h), ['HERESY', 'HERESIE'])])]))",
+  "necessaire": "requete('11H(FIDELIS)11', et([nom(v(s), ['FIDELIS', 'FIDELIS OF SIGMARINGEN', 'FIDELE DE SIGMARINGEN']), ou([type(v(h), heresy), nom(v(h), ['HERESY', 'HERESIE'])])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Hérésie (majuscule) : personnification, acceptée comme type ou comme nom."
+ },
+ {
+  "k": 100,
+  "notation": "11HH(FAITH)12",
+  "langue": "fr",
+  "suffisante": "requete('11HH(FAITH)12', et([nom(v(s), ['FAITH', 'FIDES', 'FOI', 'FOY', 'FOY D AGEN']), ou([et([evenement(v(e), 'écrire'), role(v(e), agent, v(s))]), et([evenement(v(e), 'étudier'), role(v(e), agent, v(s))]), et([evenement(v(e), enseigner), role(v(e), agent, v(s))]), et([evenement(v(e), dicter), role(v(e), agent, v(s))])]), type(v(s), saint)]))",
+  "necessaire": "requete('11HH(FAITH)12', nom(v(s), ['FAITH', 'FIDES', 'FOI', 'FOY', 'FOY D AGEN']))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "vierge et martyre, d'Agen (ou de Conques)",
+    "categorie": "biographie de l'individu"
+   },
+   {
+    "partie": "(Foi)",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "attributs possibles : faisceau de branchages, ... épée",
+    "categorie": "attributs possibles"
+   }
+  ],
+  "heritage": [
+   "11HH: les saintes (type saint)"
+  ],
+  "gabarit": false,
+  "note": "La liste d'événements de la subdivision (virgules) est lue comme alternative. type saint ajouté pour écarter la vertu Foi."
+ },
+ {
+  "k": 101,
+  "notation": "43C71253",
+  "langue": "en",
+  "suffisante": "requete('43C71253', et([evenement(v(e), 'walk on all fours'), role(v(e), agent, v(x)), type(v(x), child), type(v(g), 'jumping game')]))",
+  "necessaire": "requete('43C71253', evenement(v(e), 'walk on all fours'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "43C7: children's games and plays (agent : child)"
+  ],
+  "gabarit": false,
+  "note": "« ~ jumping games » : conjonction sans relation précise."
+ },
+ {
+  "k": 102,
+  "notation": "45H54",
+  "langue": "fr",
+  "suffisante": "requete('45H54', et([evenement(v(m), 'mettre hors d\\'action'), role(v(m), patient, v(n)), type(v(n), ennemi), evenement(v(e), couper), role(v(e), patient, v(l)), type(v(l), 'ligne d\\'approvisionnement')]))",
+  "necessaire": "requete('45H54', evenement(v(e), couper))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "45H5: mettre l'ennemi hors d'action (patient : ennemi)"
+  ],
+  "gabarit": false,
+  "note": "« en coupant » (moyen) n'est pas exprimable entre deux événements : les deux sont exigés sans lien."
+ },
+ {
+  "k": 103,
+  "notation": "45K27",
+  "langue": "en",
+  "suffisante": "requete('45K27', et([evenement(v(e), 'break into'), role(v(e), lieu, v(c)), ou([type(v(c), city), type(v(c), fortress)]), evenement(v(s), siege)]))",
+  "necessaire": "requete('45K27', evenement(v(e), 'break into'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« or » explicite : disjonction ; « ~ siege » : conjonction sans lien."
+ },
+ {
+  "k": 104,
+  "notation": "33C452",
+  "langue": "fr",
+  "suffisante": "requete('33C452', et([evenement(v(e), 'relation sexuelle'), role(v(e), agent, v(x)), role(v(e), agent, v(y)), type(v(x), enfant), type(v(y), enfant), distincts(v(x), v(y))]))",
+  "necessaire": "requete('33C452', evenement(v(e), 'relation sexuelle'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 105,
+  "notation": "45L13",
+  "langue": "en",
+  "suffisante": "requete('45L13', et([evenement(v(e), retreat), role(v(e), agent, v(x)), propriete(v(x), defeated)]))",
+  "necessaire": "requete('45L13', evenement(v(e), retreat))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 106,
+  "notation": "46E43(ROCKET)",
+  "langue": "fr",
+  "suffisante": "requete('46E43(ROCKET)', et([type(v(x), 'fusée'), evenement(v(e), signaler), role(v(e), instrument, v(x))]))",
+  "necessaire": "requete('46E43(ROCKET)', type(v(x), 'fusée'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "lumière, feu, fumée, etc. (exemples de la rubrique)",
+    "categorie": "exemple"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "L'usage de signalisation est gardé : fusée désigne aussi l'engin spatial ou le feu d'artifice."
+ },
+ {
+  "k": 107,
+  "notation": "45H11",
+  "langue": "en",
+  "suffisante": "requete('45H11', et([type(v(s), signal), relation(v(s), to, v(a)), type(v(a), attack)]))",
+  "necessaire": "requete('45H11', type(v(s), signal))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« attack » pris comme nom (référent) pour être lié au signal."
+ },
+ {
+  "k": 108,
+  "notation": "31EE23461",
+  "langue": "fr",
+  "suffisante": "requete('31EE23461', et([evenement(v(e), blesser), role(v(e), patient, v(p)), type(v(p), personne), role(v(e), instrument, v(f)), type(v(f), 'flèche')]))",
+  "necessaire": "requete('31EE23461', type(v(f), 'flèche'))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(des), (s) : marques de pluriel",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "31EE23: trait EE = mort incertaine ; personne blessée (remplace « tué »)"
+  ],
+  "gabarit": false,
+  "note": "Le trait EE remplace la mort par la blessure."
+ },
+ {
+  "k": 109,
+  "notation": "41C1",
+  "langue": "en",
+  "suffisante": "requete('41C1', et([evenement(v(e), eat), evenement(v(d), drink)]))",
+  "necessaire": "requete('41C1', ou([evenement(v(e), eat), evenement(v(d), drink)]))",
+  "nature": "exacte",
+  "ambigue": true,
+  "lectures": [
+   "ou([eat ; drink]) : union de rubrique"
+  ],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« and » lu de façon exigeante."
+ },
+ {
+  "k": 110,
+  "notation": "49M3",
+  "langue": "fr",
+  "suffisante": "requete('49M3', type(v(x), 'imprimé'))",
+  "necessaire": "requete('49M3', type(v(x), 'imprimé'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 111,
+  "notation": "44G31",
+  "langue": "en",
+  "suffisante": "requete('44G31', evenement(v(e), imprison))",
+  "necessaire": "requete('44G31', evenement(v(e), imprison))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 112,
+  "notation": "41B123",
+  "langue": "fr",
+  "suffisante": "requete('41B123', et([type(v(g), gaz), evenement(v(e), 'dégager'), role(v(e), theme, v(g)), role(v(e), agent, v(c)), type(v(c), combustion)]))",
+  "necessaire": "requete('41B123', type(v(g), gaz))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 113,
+  "notation": "49G23",
+  "langue": "en",
+  "suffisante": "requete('49G23', et([evenement(v(e), heal), role(v(e), patient, v(p)), type(v(p), 'sick person')]))",
+  "necessaire": "requete('49G23', evenement(v(e), heal))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 114,
+  "notation": "31E23111",
+  "langue": "fr",
+  "suffisante": "requete('31E23111', ou([et([evenement(v(e), noyer), role(v(e), patient, v(p))]), et([evenement(v(e), 'supplice de la planche'), role(v(e), patient, v(p))])]))",
+  "necessaire": "requete('31E23111', ou([evenement(v(e), noyer), evenement(v(e), 'supplice de la planche')]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "être noyé / subir le supplice de la planche",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "(mort violente ~ eau) : rappel de la rubrique parente",
+    "categorie": "definition"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 115,
+  "notation": "34A3",
+  "langue": "en",
+  "suffisante": "requete('34A3', et([evenement(v(e), train), role(v(e), patient, v(d)), type(v(d), dog)]))",
+  "necessaire": "requete('34A3', et([evenement(v(e), train), type(v(d), dog)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 116,
+  "notation": "31A2515",
+  "langue": "fr",
+  "suffisante": "requete('31A2515', et([type(v(b), bras), propriete(v(b), 'tenu vers le bas')]))",
+  "necessaire": "requete('31A2515', type(v(b), bras))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 117,
+  "notation": "47H34",
+  "langue": "en",
+  "suffisante": "requete('47H34', et([evenement(v(e), dye), role(v(e), patient, v(y)), type(v(y), yarn)]))",
+  "necessaire": "requete('47H34', evenement(v(e), dye))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 118,
+  "notation": "31A281",
+  "langue": "fr",
+  "suffisante": "requete('31A281', et([type(v(o), ombre), evenement(v(e), vendre), role(v(e), theme, v(o)), role(v(e), destinataire, v(d)), type(v(d), diable)]))",
+  "necessaire": "requete('31A281', et([type(v(o), ombre), type(v(d), diable)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Le vendeur (l'homme dont c'est l'ombre, rubrique 31A28) n'est pas exigé."
+ },
+ {
+  "k": 119,
+  "notation": "43C71123",
+  "langue": "en",
+  "suffisante": "requete('43C71123', et([ou([evenement(v(e), catch), evenement(v(e), touch)]), role(v(e), agent, v(x)), type(v(x), child), relation(v(x), in, v(g)), type(v(g), group)]))",
+  "necessaire": "requete('43C71123', ou([evenement(v(e), catch), evenement(v(e), touch)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "to catch / to touch",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 120,
+  "notation": "44B134",
+  "langue": "fr",
+  "suffisante": "requete('44B134', et([type(v(s), souverain), evenement(v(e), saluer), role(v(e), patient, v(s)), role(v(e), instrument, v(c)), type(v(c), canon)]))",
+  "necessaire": "requete('44B134', et([type(v(s), souverain), type(v(c), canon)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 121,
+  "notation": "31E2222",
+  "langue": "en",
+  "suffisante": "requete('31E2222', et([type(v(d), death), propriete(v(d), accidental), type(v(c), cold)]))",
+  "necessaire": "requete('31E2222', type(v(d), death))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La mort prise comme nom (référent) pour porter « accidental » ; « ~ cold » : conjonction."
+ },
+ {
+  "k": 122,
+  "notation": "43A4123",
+  "langue": "fr",
+  "suffisante": "requete('43A4123', et([type(v(f), 'fête'), propriete(v(f), public), relation(v(f), 'à l\\'occasion de', v(v)), type(v(v), 'événement'), propriete(v(v), royal)]))",
+  "necessaire": "requete('43A4123', type(v(f), 'fête'))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Catégorie résiduelle : l'exclusion « non mentionnés ou impliqués ci-dessus » n'est pas exprimable ; la requête dit la partie positive."
+ },
+ {
+  "k": 123,
+  "notation": "46C1211",
+  "langue": "en",
+  "suffisante": "requete('46C1211', et([evenement(v(e), carry), role(v(e), theme, v(o)), relation(v(o), in, v(c)), ou([type(v(c), basket), type(v(c), bag), type(v(c), rucksack)])]))",
+  "necessaire": "requete('46C1211', evenement(v(e), carry))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "basket, bag, rucksack, etc. : liste ouverte d'exemples",
+    "categorie": "exemple"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La disjonction des exemples est plus forte que la rubrique (contenant quelconque), donc suffisante."
+ },
+ {
+  "k": 124,
+  "notation": "43C4133",
+  "langue": "fr",
+  "suffisante": "requete('43C4133', et([evenement(v(e), jouer), role(v(e), agent, v(x)), role(v(e), theme, v(p)), type(v(p), polo), relation(v(x), sur, v(c)), type(v(c), cheval)]))",
+  "necessaire": "requete('43C4133', type(v(p), polo))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« (à cheval) » exigé : il distingue du water-polo."
+ },
+ {
+  "k": 125,
+  "notation": "41A71",
+  "langue": "en",
+  "suffisante": "requete('41A71', et([type(v(f), furniture), type(v(t), thing), relation(v(t), on, v(f))]))",
+  "necessaire": "requete('41A71', type(v(f), furniture))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "La destination (« to put things on ») est rendue par un objet posé sur le meuble, plus fort que la fonction."
+ },
+ {
+  "k": 126,
+  "notation": "31EE223",
+  "langue": "fr",
+  "suffisante": "requete('31EE223', et([type(v(b), blessure), propriete(v(b), accidentel), relation(v(b), de, v(p)), type(v(p), personne), type(v(c), cause), propriete(v(c), interne)]))",
+  "necessaire": "requete('31EE223', type(v(b), blessure))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31EE22: trait EE = être blessé accidentellement (remplace la mort)"
+  ],
+  "gabarit": false,
+  "note": "« (sans que la mort s'en suive) » est exigé mais négatif, non exprimable."
+ },
+ {
+  "k": 127,
+  "notation": "45F2",
+  "langue": "en",
+  "suffisante": "requete('45F2', et([type(v(x), 'intelligence service'), propriete(v(x), military)]))",
+  "necessaire": "requete('45F2', type(v(x), 'intelligence service'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« (military) » exigé."
+ },
+ {
+  "k": 128,
+  "notation": "48B1241",
+  "langue": "fr",
+  "suffisante": "requete('48B1241', et([type(v(a), artiste), evenement(v(e), travailler), role(v(e), agent, v(a)), role(v(e), theme, v(m)), type(v(m), 'modèle'), propriete(v(m), 'habillé')]))",
+  "necessaire": "requete('48B1241', et([type(v(a), artiste), type(v(m), 'modèle')]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(en général) : portée générique de la rubrique",
+    "categorie": "definition"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« d'après » rendu par le rôle theme du modèle."
+ },
+ {
+  "k": 129,
+  "notation": "34B1",
+  "langue": "en",
+  "suffisante": "requete('34B1', et([type(v(a), 'domestic animal'), relation(v(a), in, v(h)), type(v(h), house)]))",
+  "necessaire": "requete('34B1', type(v(a), 'domestic animal'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« kept in the house » est exigé : il distingue de 34B2 (hors de la maison)."
+ },
+ {
+  "k": 130,
+  "notation": "41A322",
+  "langue": "fr",
+  "suffisante": "requete('41A322', et([evenement(v(e), fermer), role(v(e), patient, v(p)), type(v(p), porte)]))",
+  "necessaire": "requete('41A322', et([evenement(v(e), fermer), type(v(p), porte)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 131,
+  "notation": "42AA562",
+  "langue": "en",
+  "suffisante": "requete('42AA562', et([type(v(c), girl), evenement(v(e), shed), role(v(e), agent, v(c)), role(v(e), patient, v(t)), type(v(t), tooth), relation(v(t), of, v(c))]))",
+  "necessaire": "requete('42AA562', type(v(t), tooth))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "42AA5: trait AA = girl"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 132,
+  "notation": "33A15",
+  "langue": "fr",
+  "suffisante": "requete('33A15', et([evenement(v(e), poser), role(v(e), agent, v(x)), role(v(e), patient, v(m)), type(v(m), main), relation(v(m), de, v(x)), relation(v(m), sur, v(s)), type(v(s), 'épaule'), relation(v(s), de, v(y)), type(v(y), personne), distincts(v(x), v(y))]))",
+  "necessaire": "requete('33A15', et([type(v(m), main), type(v(s), 'épaule')]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« une autre personne » donne distincts."
+ },
+ {
+  "k": 133,
+  "notation": "47B18111",
+  "langue": "en",
+  "suffisante": "requete('47B18111', et([type(v(b), baker), evenement(v(e), blow), role(v(e), agent, v(b)), role(v(e), patient, v(h)), type(v(h), horn)]))",
+  "necessaire": "requete('47B18111', type(v(b), baker))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 134,
+  "notation": "31AA2544",
+  "langue": "fr",
+  "suffisante": "requete('31AA2544', et([evenement(v(e), saisir), role(v(e), agent, v(x)), role(v(e), patient, v(t)), type(v(t), 'tête'), relation(v(t), de, v(y)), type(v(y), personne), distincts(v(x), v(y)), ou([et([type(v(a), main), type(v(b), main)]), et([type(v(a), bras), type(v(b), bras)])]), distincts(v(a), v(b)), role(v(e), instrument, v(a)), role(v(e), instrument, v(b))]))",
+  "necessaire": "requete('31AA2544', et([evenement(v(e), saisir), type(v(t), 'tête')]))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "31AA25: dans cette branche le trait AA = deux bras ou mains"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 135,
+  "notation": "44G13(...)",
+  "langue": "en",
+  "suffisante": "requete('44G13(...)', et([ou([type(v(j), magistracy), type(v(j), judge)]), nom(v(j), ['A_REMPLIR'])]))",
+  "necessaire": "requete('44G13(...)', ou([type(v(j), magistracy), type(v(j), judge)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "magistracy / judges",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": true,
+  "note": "Gabarit : le nom de la fonction (un nom commun une fois rempli) porte la clé A_REMPLIR."
+ },
+ {
+  "k": 136,
+  "notation": "31AA2363",
+  "langue": "fr",
+  "suffisante": "requete('31AA2363', et([type(v(f), femme), propriete(v(f), 'couché sur le flanc'), propriete(v(f), 'étendu')]))",
+  "necessaire": "requete('31AA2363', et([type(v(f), femme), propriete(v(f), 'couché sur le flanc')]))",
+  "nature": "convention",
+  "ambigue": true,
+  "lectures": [
+   "ou : « étendu » comme variante de « couché sur un flanc »"
+  ],
+  "facultatif": [],
+  "heritage": [
+   "31AA: trait AA = figure féminine"
+  ],
+  "gabarit": false,
+  "note": "La virgule est lue comme une seconde précision exigée (couché sur le flanc et étendu), lecture la plus exigeante."
+ },
+ {
+  "k": 137,
+  "notation": "41A251",
+  "langue": "en",
+  "suffisante": "requete('41A251', ou([type(v(x), study), type(v(x), studiolo), type(v(x), library)]))",
+  "necessaire": "requete('41A251', ou([type(v(x), study), type(v(x), studiolo), type(v(x), library)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "study / 'studiolo' / library",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 138,
+  "notation": "33A132",
+  "langue": "fr",
+  "suffisante": "requete('33A132', et([ou([evenement(v(e), 'reconnaître'), evenement(v(e), identifier)]), role(v(e), agent, v(x)), role(v(e), patient, v(y)), type(v(x), personne), type(v(y), personne), distincts(v(x), v(y))]))",
+  "necessaire": "requete('33A132', ou([evenement(v(e), 'reconnaître'), evenement(v(e), identifier)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "reconnaître / identifier",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "33: relations entre personnes individuelles (deux personnes distinctes)"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 139,
+  "notation": "45A233",
+  "langue": "en",
+  "suffisante": "requete('45A233', et([nom(v(p), ['PEACE', 'PAX', 'PAIX']), nom(v(j), ['JUSTICE', 'JUSTITIA']), distincts(v(p), v(j)), evenement(v(e), kiss), ou([et([role(v(e), agent, v(p)), role(v(e), patient, v(j))]), et([role(v(e), agent, v(j)), role(v(e), patient, v(p))]), et([role(v(e), agent, v(p)), role(v(e), agent, v(j))])])]))",
+  "necessaire": "requete('45A233', et([nom(v(p), ['PEACE', 'PAX', 'PAIX']), nom(v(j), ['JUSTICE', 'JUSTITIA'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(cf. Ps. 85:10)",
+    "categorie": "renvoi"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Personnifications nommées ; le baiser réciproque admet les deux orientations."
+ },
+ {
+  "k": 140,
+  "notation": "31B6211",
+  "langue": "fr",
+  "suffisante": "requete('31B6211', et([evenement(v(e), 'regarder vers le haut'), role(v(e), agent, v(x))]))",
+  "necessaire": "requete('31B6211', evenement(v(e), regarder))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Locution prise comme prédicat composé ; la nécessaire demande seulement regarder."
+ },
+ {
+  "k": 141,
+  "notation": "92D192172",
+  "langue": "en",
+  "suffisante": "requete('92D192172', et([nom(v(p), ['PSYCHE']), evenement(v(c), collect), role(v(c), agent, v(p)), role(v(c), patient, v(w)), type(v(w), wool), propriete(v(w), golden), relation(v(w), from, v(s)), type(v(s), sheep), evenement(v(d), direct), role(v(d), agent, v(r)), type(v(r), reed), role(v(d), patient, v(p))]))",
+  "necessaire": "requete('92D192172', et([nom(v(p), ['PSYCHE']), type(v(s), sheep)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 142,
+  "notation": "73F221",
+  "langue": "fr",
+  "suffisante": "requete('73F221', et([nom(v(p), ['PAUL', 'PAULUS', 'SAUL']), evenement(v(e), convertir), role(v(e), theme, v(p))]))",
+  "necessaire": "requete('73F221', nom(v(p), ['PAUL', 'PAULUS', 'SAUL']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(Actes 9:1-18)",
+    "categorie": "reference de source"
+   },
+   {
+    "partie": "récit de : rubrique de cycle",
+    "categorie": "definition"
+   }
+  ],
+  "heritage": [
+   "73F22: vie et actes de Paul (Saul) : variante SAUL"
+  ],
+  "gabarit": false,
+  "note": "Titre de cycle : la suffisante exige l'événement même de la conversion, plus fort que « un épisode du récit »."
+ },
+ {
+  "k": 143,
+  "notation": "71K27213",
+  "langue": "en",
+  "suffisante": "requete('71K27213', et([type(v(d), deputation), propriete(v(d), new), evenement(v(a), ask), role(v(a), agent, v(d)), role(v(a), theme, v(g)), type(v(g), gold), role(v(a), theme, v(s)), type(v(s), silver), role(v(a), theme, v(w)), type(v(w), woman), role(v(a), theme, v(c)), type(v(c), child), nom(v(h), ['AHAB', 'ACHAB']), evenement(v(x), discuss), role(v(x), agent, v(h)), role(v(x), destinataire, v(u)), type(v(u), subject), evenement(v(r), decide), role(v(r), agent, v(h)), evenement(v(t), resist), role(v(t), agent, v(h))]))",
+  "necessaire": "requete('71K27213', nom(v(h), ['AHAB', 'ACHAB']))",
+  "nature": "exacte",
+  "ambigue": true,
+  "lectures": [
+   "ou : l'une ou l'autre des deux scènes (la demande de la députation ; la décision d'Achab)"
+  ],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Les deux propositions (séparées par « ; ») sont exigées ; « still more » n'est pas exprimé ; « decides to resist » rendu par deux événements non liés."
+ },
+ {
+  "k": 144,
+  "notation": "71O322",
+  "langue": "fr",
+  "suffisante": "requete('71O322', et([nom(v(i), ['ISAIE', 'ESAIE', 'ISAIAH']), type(v(a), ange), evenement(v(t), toucher), role(v(t), agent, v(a)), role(v(t), patient, v(l)), type(v(l), 'lèvre'), relation(v(l), de, v(i)), role(v(t), instrument, v(b)), type(v(b), braise), evenement(v(p), prendre), role(v(p), agent, v(a)), role(v(p), theme, v(b)), role(v(p), instrument, v(n)), type(v(n), pince), role(v(p), lieu, v(o)), type(v(o), autel)]))",
+  "necessaire": "requete('71O322', et([nom(v(i), ['ISAIE', 'ESAIE', 'ISAIAH']), type(v(a), ange)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(Isaïe 6:5-13)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [
+   "71O32: les visions d'Isaïe (le contexte « ~ visions d'Isaïe » est porté par la scène)"
+  ],
+  "gabarit": false,
+  "note": "« purification d'Isaïe : » est le titre dont la suite donne le contenu ; il n'ajoute pas d'atome. ÉSAÏE vient de l'ancêtre."
+ },
+ {
+  "k": 145,
+  "notation": "92B42321",
+  "langue": "en",
+  "suffisante": "requete('92B42321', et([nom(v(m), ['MARS', 'ARES']), nom(v(v), ['VENUS', 'APHRODITE']), distincts(v(m), v(v)), evenement(v(e), 'make love'), role(v(e), agent, v(m)), role(v(e), agent, v(v)), nom(v(g), ['GALLUS', 'ALECTRYON']), evenement(v(c), change), role(v(c), theme, v(g)), relation(v(g), into, v(k)), type(v(k), cock)]))",
+  "necessaire": "requete('92B42321', et([nom(v(m), ['MARS', 'ARES']), nom(v(v), ['VENUS', 'APHRODITE'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(Alectryon)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "92B4: Mars (Ares) ; 92C4: Venus (Aphrodite) : variantes de nom"
+  ],
+  "gabarit": false,
+  "note": "La virgule relie deux moments d'une même scène : les deux sont exigés."
+ },
+ {
+  "k": 146,
+  "notation": "71B3311",
+  "langue": "fr",
+  "suffisante": "requete('71B3311', et([type(v(a), arche), relation(v(a), de, v(n)), nom(v(n), ['NOE', 'NOAH']), evenement(v(f), flotter), role(v(f), theme, v(a)), relation(v(a), sur, v(w)), type(v(w), eau)]))",
+  "necessaire": "requete('71B3311', type(v(a), arche))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "71B3: histoire de Noé (l'arche est celle de Noé)"
+  ],
+  "gabarit": false,
+  "note": "La parenthèse est exigée mais négative (rien de l'anéantissement n'est visible) : non exprimable, la suffisante est plus faible sur ce point."
+ },
+ {
+  "k": 147,
+  "notation": "73A423",
+  "langue": "en",
+  "suffisante": "requete('73A423', et([nom(v(j), ['JOSEPH']), nom(v(m), ['MARY', 'MARIA', 'MARIE']), distincts(v(j), v(m)), evenement(v(e), lead), role(v(e), agent, v(j)), role(v(e), patient, v(m)), role(v(e), lieu, v(h)), type(v(h), house), relation(v(h), of, v(j))]))",
+  "necessaire": "requete('73A423', et([nom(v(j), ['JOSEPH']), nom(v(m), ['MARY', 'MARIA', 'MARIE'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 148,
+  "notation": "73EE132",
+  "langue": "fr",
+  "suffisante": "requete('73EE132', et([nom(v(c), ['CHRIST', 'JESUS', 'JESUS CHRIST', 'JESUS-CHRIST']), propriete(v(c), assis), relation(v(c), sur, v(t)), type(v(t), tombeau), relation(v(t), de, v(c)), relation(v(c), sur, v(r)), type(v(r), 'trône'), propriete(v(t), 'fermé')]))",
+  "necessaire": "requete('73EE132', et([nom(v(c), ['CHRIST', 'JESUS', 'JESUS CHRIST', 'JESUS-CHRIST']), type(v(t), tombeau)]))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(with unbroken seals) : seulement dans le libellé anglais",
+    "categorie": "definition"
+   }
+  ],
+  "heritage": [
+   "73EE1: trait EE = le tombeau fermé"
+  ],
+  "gabarit": false,
+  "note": "« (sur un trône) » exigé par principe (parenthèse en minuscules) : plus fort que la scène habituelle où le Christ trône sur le tombeau sans trône distinct."
+ },
+ {
+  "k": 149,
+  "notation": "71F5324",
+  "langue": "en",
+  "suffisante": "requete('71F5324', et([nom(v(b), ['BENJAMITES', 'BENJAMITE', 'BENJAMINITES']), nombre(v(b), 600), evenement(v(e), flee), role(v(e), agent, v(b)), role(v(e), lieu, v(r)), type(v(r), rock), nom(v(r), ['RIMMON'])]))",
+  "necessaire": "requete('71F5324', nom(v(b), ['BENJAMITES', 'BENJAMITE', 'BENJAMINITES']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Ethnonyme traité comme nom propre ; le nombre 600 est exigé."
+ },
+ {
+  "k": 150,
+  "notation": "94M6121",
+  "langue": "fr",
+  "suffisante": "requete('94M6121', et([nom(v(h), ['HERCULE', 'HERCULES', 'HERACLES']), nom(v(t), ['THESEE', 'THESEUS']), distincts(v(h), v(t)), evenement(v(e), 'libérer'), role(v(e), agent, v(h)), role(v(e), patient, v(t)), role(v(e), lieu, v(u)), type(v(u), enfers)]))",
+  "necessaire": "requete('94M6121', et([nom(v(h), ['HERCULE', 'HERCULES', 'HERACLES']), nom(v(t), ['THESEE', 'THESEUS'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« des Enfers » (point de départ) rendu par le rôle lieu."
+ },
+ {
+  "k": 151,
+  "notation": "96D(ANNA)68",
+  "langue": "en",
+  "suffisante": "requete('96D(ANNA)68', et([nom(v(a), ['ANNA', 'ANNE']), evenement(v(e), die), role(v(e), theme, v(a))]))",
+  "necessaire": "requete('96D(ANNA)68', nom(v(a), ['ANNA', 'ANNE']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "Dido's sister",
+    "categorie": "biographie de l'individu"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« suffering, misfortune » est la rubrique parente, précisée par « death »."
+ },
+ {
+  "k": 152,
+  "notation": "96B813",
+  "langue": "fr",
+  "suffisante": "requete('96B813', et([type(v(t), 'trêve'), evenement(v(c), conclure), role(v(c), theme, v(t)), role(v(c), agent, v(x)), role(v(c), agent, v(y)), nom(v(x), ['TROYENS', 'TROYEN', 'TROJANS']), nom(v(y), ['LATINS', 'LATIN']), distincts(v(x), v(y)), evenement(v(h), 'rendre les derniers honneurs'), role(v(h), destinataire, v(m)), type(v(m), mort)]))",
+  "necessaire": "requete('96B813', et([type(v(t), 'trêve'), nom(v(x), ['TROYENS', 'TROYEN', 'TROJANS']), nom(v(y), ['LATINS', 'LATIN'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Le but (« pour rendre les derniers honneurs ») est exigé comme second événement, non lié à la trêve ; Énée (récit 96B) n'est pas ajouté : les parties sont nommées collectivement."
+ },
+ {
+  "k": 153,
+  "notation": "71T6311",
+  "langue": "en",
+  "suffisante": "requete('71T6311', et([type(v(a), angel), evenement(v(e), join), role(v(e), agent, v(a)), role(v(e), patient, v(h1)), type(v(h1), hand), relation(v(h1), of, v(t)), role(v(e), patient, v(h2)), type(v(h2), hand), relation(v(h2), of, v(s)), nom(v(t), ['TOBIAS', 'TOBIE']), nom(v(s), ['SARAH', 'SARA']), distincts(v(t), v(s))]))",
+  "necessaire": "requete('71T6311', et([type(v(a), angel), nom(v(t), ['TOBIAS', 'TOBIE']), nom(v(s), ['SARAH', 'SARA'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 154,
+  "notation": "94I2111",
+  "langue": "fr",
+  "suffisante": "requete('94I2111', et([nom(v(u), ['ULYSSE', 'ULYSSES', 'ODYSSEUS']), propriete(v(u), 'mal du pays')]))",
+  "necessaire": "requete('94I2111', nom(v(u), ['ULYSSE', 'ULYSSES', 'ODYSSEUS']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Le cadre (île de Calypso, ancêtres 94I21) n'est pas exigé."
+ },
+ {
+  "k": 155,
+  "notation": "71E3",
+  "langue": "en",
+  "suffisante": "requete('71E3', et([nom(v(i), ['ISRAELITES', 'ISRAELITE']), evenement(v(w), wander), role(v(w), agent, v(i)), role(v(w), lieu, v(d)), type(v(d), wilderness), evenement(v(l), leave), role(v(l), agent, v(i)), role(v(l), lieu, v(s)), nom(v(s), ['MOUNT SINAI', 'SINAI']), evenement(v(r), reach), role(v(r), agent, v(i)), role(v(r), lieu, v(c)), nom(v(c), ['CANAAN'])]))",
+  "necessaire": "requete('71E3', nom(v(i), ['ISRAELITES', 'ISRAELITE']))",
+  "nature": "exacte",
+  "ambigue": true,
+  "lectures": [
+   "la seconde proposition explique la première (apposition) : seule l'errance dans le désert est exigée",
+   "titre de cycle : un épisode quelconque du livre des Nombres"
+  ],
+  "facultatif": [
+   {
+    "partie": "Numbers: (titre du livre biblique)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Lecture la plus exigeante : errance, départ du Sinaï et arrivée en Canaan ; c'est un titre de cycle qu'une seule scène ne montre guère."
+ },
+ {
+  "k": 156,
+  "notation": "71O925",
+  "langue": "fr",
+  "suffisante": "requete('71O925', et([nom(v(z), ['EZECHIEL', 'EZEKIEL']), evenement(v(o), ordonner), role(v(o), destinataire, v(z)), type(v(f), femme), relation(v(f), de, v(z)), propriete(v(f), mort)]))",
+  "necessaire": "requete('71O925', nom(v(z), ['EZECHIEL', 'EZEKIEL']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(Ézéchiel 24:12-27)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Le contenu de l'ordre (« ne pas pleurer en public ») est négatif, non exprimable : la suffisante est plus faible sur ce point."
+ },
+ {
+  "k": 157,
+  "notation": "71L233",
+  "langue": "en",
+  "suffisante": "requete('71L233', et([nom(v(a), ['AHAZ', 'ACHAZ']), evenement(v(e), ask), role(v(e), agent, v(a)), role(v(e), destinataire, v(s)), nom(v(s), ['ASSYRIA', 'ASSYRIANS', 'ASSYRIENS']), role(v(e), theme, v(h)), type(v(h), help), type(v(w), war), relation(v(w), with, v(y)), nom(v(y), ['SYRIA', 'SYRIE']), relation(v(w), with, v(i)), nom(v(i), ['ISRAEL']), distincts(v(y), v(i))]))",
+  "necessaire": "requete('71L233', nom(v(a), ['AHAZ', 'ACHAZ']))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Le contexte « ~ war with Syria and Israel » est exigé comme le dit le libellé, plus fort que la scène de la demande seule."
+ },
+ {
+  "k": 158,
+  "notation": "92L55",
+  "langue": "fr",
+  "suffisante": null,
+  "necessaire": "requete('92L55', nom(v(p), ['PAN']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Suffisante nulle : catégorie définie par la négation (non agressives) et par « neutres », sans contenu positif propre ; seul le nom de Pan est nécessaire."
+ },
+ {
+  "k": 159,
+  "notation": "94E231",
+  "langue": "en",
+  "suffisante": "requete('94E231', et([type(v(g), gold), evenement(v(e), find), role(v(e), patient, v(g)), role(v(e), lieu, v(t)), type(v(t), tent), relation(v(t), of, v(p)), nom(v(p), ['PALAMEDES', 'PALAMEDE'])]))",
+  "necessaire": "requete('94E231', et([type(v(g), gold), nom(v(p), ['PALAMEDES', 'PALAMEDE'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 160,
+  "notation": "71F522",
+  "langue": "fr",
+  "suffisante": "requete('71F522', et([evenement(v(e), offrir), role(v(e), agent, v(h)), type(v(h), homme), propriete(v(h), vieux), role(v(e), theme, v(l)), type(v(l), logement), role(v(e), destinataire, v(v)), type(v(v), 'lévite'), role(v(e), destinataire, v(c)), type(v(c), concubine), relation(v(c), de, v(v)), distincts(v(v), v(h)), role(v(e), lieu, v(r)), type(v(r), rue), relation(v(r), de, v(g)), nom(v(g), ['GIBEA', 'GIBEAH'])]))",
+  "necessaire": "requete('71F522', et([type(v(v), 'lévite'), type(v(c), concubine), type(v(h), homme)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 161,
+  "notation": "97C41",
+  "langue": "en",
+  "suffisante": "requete('97C41', et([nom(v(l), ['LYCAON']), evenement(v(c), change), role(v(c), theme, v(l)), relation(v(l), into, v(w)), type(v(w), wolf), evenement(v(k), 'attempt to kill'), role(v(k), agent, v(l)), role(v(k), patient, v(j)), nom(v(j), ['JUPITER']), propriete(v(j), lying), relation(v(j), in, v(b)), type(v(b), bed)]))",
+  "necessaire": "requete('97C41', et([nom(v(l), ['LYCAON']), type(v(w), wolf)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« attempting to kill » pris comme prédicat composé (la tentative n'est pas un meurtre affirmé) ; « when » (simultanéité) non exprimable."
+ },
+ {
+  "k": 162,
+  "notation": "71E117313",
+  "langue": "fr",
+  "suffisante": "requete('71E117313', et([evenement(v(e), 'célébrer'), role(v(e), agent, v(i)), nom(v(i), ['ISRAELITES', 'ISRAELITE', 'ISRAEL']), role(v(e), theme, v(p)), type(v(p), 'pâque'), propriete(v(p), premier)]))",
+  "necessaire": "requete('71E117313', type(v(p), 'pâque'))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "71E11: le départ d'Égypte du peuple d'Israël (agent : les Israélites)"
+  ],
+  "gabarit": false,
+  "note": "Les célébrants (le peuple d'Israël) sont pris de l'héritage ; Moïse (71E1) n'est pas exigé."
+ },
+ {
+  "k": 163,
+  "notation": "71H1636",
+  "langue": "en",
+  "suffisante": "requete('71H1636', et([nom(v(s), ['SAUL']), nom(v(m), ['MICHAL', 'MIKAL']), distincts(v(s), v(m)), evenement(v(e), interrogate), role(v(e), agent, v(s)), role(v(e), patient, v(m))]))",
+  "necessaire": "requete('71H1636', et([nom(v(s), ['SAUL']), nom(v(m), ['MICHAL', 'MIKAL'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "David (histoire 71H) n'est pas ajouté : il a fui et n'est pas dans la scène."
+ },
+ {
+  "k": 164,
+  "notation": "71E12",
+  "langue": "fr",
+  "suffisante": "requete('71E12', et([nom(v(i), ['ISRAEL', 'ISRAELITES']), evenement(v(e), marcher), role(v(e), agent, v(i)), role(v(e), lieu, v(s)), nom(v(s), ['SINAI', 'MONT SINAI']), type(v(s), mont)]))",
+  "necessaire": "requete('71E12', nom(v(i), ['ISRAEL', 'ISRAELITES']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "Exode (2ième part.) : titre du livre",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« vers » (destination) rendu par le rôle lieu."
+ },
+ {
+  "k": 165,
+  "notation": "98C(OLYMPIAS)211",
+  "langue": "en",
+  "suffisante": "requete('98C(OLYMPIAS)211', et([nom(v(p), ['PHILIP OF MACEDON', 'PHILIPPE DE MACEDOINE']), nom(v(o), ['OLYMPIAS']), nom(v(n), ['NECTANEBUS', 'NECTANEBO']), distincts(v(p), v(o)), distincts(v(p), v(n)), distincts(v(o), v(n)), type(v(s), suspicion), relation(v(s), of, v(p)), relation(v(s), about, v(f)), type(v(f), fidelity), relation(v(f), of, v(o)), evenement(v(l), lull), role(v(l), agent, v(n)), role(v(l), patient, v(s)), evenement(v(a), appear), role(v(a), agent, v(n)), ou([type(v(n), serpent), type(v(n), dragon)])]))",
+  "necessaire": "requete('98C(OLYMPIAS)211', et([nom(v(p), ['PHILIP OF MACEDON', 'PHILIPPE DE MACEDOINE']), nom(v(n), ['NECTANEBUS', 'NECTANEBO'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "« serpent or dragon » : disjonction explicite ; la forme est un type du même référent que Nectanebus."
+ },
+ {
+  "k": 166,
+  "notation": "73D581",
+  "langue": "fr",
+  "suffisante": "requete('73D581', et([nom(v(p), ['PILATE', 'PONCE PILATE']), evenement(v(e), 'rédiger'), role(v(e), agent, v(p)), role(v(e), patient, v(i)), type(v(i), inscription), evenement(v(c), crucifier), role(v(c), patient, v(j)), nom(v(j), ['CHRIST', 'JESUS', 'JESUS CHRIST', 'JESUS-CHRIST'])]))",
+  "necessaire": "requete('73D581', nom(v(p), ['PILATE', 'PONCE PILATE']))",
+  "nature": "conservatrice",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "73D58: l'inscription INRI"
+  ],
+  "gabarit": false,
+  "note": "Le contexte « ~ la crucifixion » est exigé comme événement : plus fort que la scène de Pilate écrivant seule."
+ },
+ {
+  "k": 167,
+  "notation": "92C461",
+  "langue": "en",
+  "suffisante": "requete('92C461', et([nom(v(v), ['VENUS', 'APHRODITE']), evenement(v(w), wound), role(v(w), patient, v(v)), role(v(w), instrument, v(t)), type(v(t), thorn), relation(v(t), of, v(b)), type(v(b), 'rose bush'), evenement(v(c), change), role(v(c), theme, v(r)), type(v(r), rose), propriete(v(r), white), propriete(v(r), red)]))",
+  "necessaire": "requete('92C461', et([nom(v(v), ['VENUS', 'APHRODITE']), type(v(t), thorn)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(possibly combined with the story of Adonis)",
+    "categorie": "renvoi"
+   }
+  ],
+  "heritage": [
+   "92C4: Venus (Aphrodite) : variante de nom"
+  ],
+  "gabarit": false,
+  "note": "Le changement de couleur est rendu par les deux propriétés successives de la rose."
+ },
+ {
+  "k": 168,
+  "notation": "71F66",
+  "langue": "fr",
+  "suffisante": "requete('71F66', et([nom(v(b), ['BOOZ', 'BOAZ']), evenement(v(e), racheter), role(v(e), agent, v(b)), role(v(e), patient, v(s)), type(v(s), succession), relation(v(s), de, v(l)), nom(v(l), ['ELIMELEK', 'ELIMELECH'])]))",
+  "necessaire": "requete('71F66', nom(v(b), ['BOOZ', 'BOAZ']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(Ruth 4:1-12)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Ruth (histoire 71F6) n'est pas ajoutée : la scène à la porte de la ville ne la montre pas."
+ },
+ {
+  "k": 169,
+  "notation": "98B(AUGUSTUS)57",
+  "langue": "en",
+  "suffisante": "requete('98B(AUGUSTUS)57', et([nom(v(o), ['OCTAVIAN', 'OCTAVE', 'AUGUSTUS']), nom(v(a), ['MARK ANTONY', 'ANTOINE', 'MARC ANTOINE']), nom(v(l), ['LEPIDUS', 'LEPIDE']), distincts(v(o), v(a)), distincts(v(o), v(l)), distincts(v(a), v(l)), evenement(v(e), meet), role(v(e), agent, v(o)), role(v(e), agent, v(a)), role(v(e), agent, v(l)), role(v(e), lieu, v(n)), type(v(n), neighbourhood), relation(v(n), of, v(m)), nom(v(m), ['MUTINA', 'MODENE'])]))",
+  "necessaire": "requete('98B(AUGUSTUS)57', et([nom(v(o), ['OCTAVIAN', 'OCTAVE', 'AUGUSTUS']), nom(v(a), ['MARK ANTONY', 'ANTOINE', 'MARC ANTOINE']), nom(v(l), ['LEPIDUS', 'LEPIDE'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "the triumvirs (apposition aux trois noms)",
+    "categorie": "definition"
+   }
+  ],
+  "heritage": [
+   "98B(AUGUSTUS): clé AUGUSTUS pour Octavien"
+  ],
+  "gabarit": false,
+  "note": "« secretly » n'est pas exprimable sur l'événement."
+ },
+ {
+  "k": 170,
+  "notation": "73F2641",
+  "langue": "fr",
+  "suffisante": "requete('73F2641', et([nom(v(p), ['PHILIPPE', 'PHILIP']), evenement(v(e), crucifier), role(v(e), patient, v(p))]))",
+  "necessaire": "requete('73F2641', nom(v(p), ['PHILIPPE', 'PHILIP']))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(parfois la tête en bas) : variante iconographique",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 171,
+  "notation": "46B910",
+  "langue": "en",
+  "suffisante": "requete('46B910', nom(v(x), ['ACQUISTO CATTIVO']))",
+  "necessaire": "requete('46B910', nom(v(x), ['ACQUISTO CATTIVO']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(Ripa)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Personnification de Ripa : figurée par son nom."
+ },
+ {
+  "k": 172,
+  "notation": "48C910",
+  "langue": "fr",
+  "suffisante": "requete('48C910', ou([et([type(v(p), 'poète'), evenement(v(e), inspirer), role(v(e), patient, v(p))]), nom(v(f), ['FURORE POETICO'])]))",
+  "necessaire": "requete('48C910', ou([type(v(p), 'poète'), nom(v(f), ['FURORE POETICO'])]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "'Furore poetico' (personnification de Ripa, variante)",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "(Ripa)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 173,
+  "notation": "51M11",
+  "langue": "en",
+  "suffisante": "requete('51M11', nom(v(x), ['SWIFTNESS', 'SPEED', 'AGILITA', 'CELERITA', 'VELOCITA', 'RAPIDITE', 'VITESSE']))",
+  "necessaire": "requete('51M11', nom(v(x), ['SWIFTNESS', 'SPEED', 'AGILITA', 'CELERITA', 'VELOCITA', 'RAPIDITE', 'VITESSE']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "Speed, 'Agilità', 'Celerità', 'Velocità'",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "(Ripa)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Concept abstrait (division 5) : figuré par sa personnification nommée."
+ },
+ {
+  "k": 174,
+  "notation": "51FF51",
+  "langue": "fr",
+  "suffisante": "requete('51FF51', nom(v(x), ['ANCIENNETE', 'VIEILLESSE', 'OLDNESS']))",
+  "necessaire": "requete('51FF51', nom(v(x), ['ANCIENNETE', 'VIEILLESSE', 'OLDNESS']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "Vieillesse",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Concept abstrait : figuré par sa personnification nommée ; le FF (concept opposé) est déjà porté par le libellé."
+ },
+ {
+  "k": 175,
+  "notation": "57AA71",
+  "langue": "en",
+  "suffisante": "requete('57AA71', nom(v(x), ['ILLIBERALITY', 'INTRANSIGEANCE']))",
+  "necessaire": "requete('57AA71', nom(v(x), ['ILLIBERALITY', 'INTRANSIGEANCE']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Concept abstrait : figuré par sa personnification nommée."
+ },
+ {
+  "k": 176,
+  "notation": "42D330",
+  "langue": "fr",
+  "suffisante": "requete('42D330', nom(v(x), ['BENEVOLENZA ET UNIONE MATRIMONIALE', 'CONCORDIA MARITALE']))",
+  "necessaire": "requete('42D330', nom(v(x), ['BENEVOLENZA ET UNIONE MATRIMONIALE', 'CONCORDIA MARITALE']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "'Concordia maritale'",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "(Ripa)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 177,
+  "notation": "44B51",
+  "langue": "en",
+  "suffisante": "requete('44B51', et([type(v(r), 'popular representation'), type(v(g), government)]))",
+  "necessaire": "requete('44B51', type(v(r), 'popular representation'))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Notion institutionnelle ; « representation » est polysémique (une image)."
+ },
+ {
+  "k": 178,
+  "notation": "48C85450",
+  "langue": "fr",
+  "suffisante": "requete('48C85450', nom(v(x), ['TRAGEDIA']))",
+  "necessaire": "requete('48C85450', nom(v(x), ['TRAGEDIA']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "(Ripa)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 179,
+  "notation": "51L51",
+  "langue": "en",
+  "suffisante": "requete('51L51', nom(v(x), ['RESURRECTION', 'RESSURRETTIONE']))",
+  "necessaire": "requete('51L51', nom(v(x), ['RESURRECTION', 'RESSURRETTIONE']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "'Ressurrettione'",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "(Ripa)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Le concept (division 5), non la Résurrection du Christ (73E1) : figuré par la personnification nommée."
+ },
+ {
+  "k": 180,
+  "notation": "59AA3",
+  "langue": "fr",
+  "suffisante": "requete('59AA3', nom(v(x), ['VULGARITE', 'VULGARITY']))",
+  "necessaire": "requete('59AA3', nom(v(x), ['VULGARITE', 'VULGARITY']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 181,
+  "notation": "56F251",
+  "langue": "en",
+  "suffisante": null,
+  "necessaire": null,
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Suffisante et nécessaire nulles : « first series » est un regroupement documentaire des qualités de l'Amour, sans contenu figuré propre."
+ },
+ {
+  "k": 182,
+  "notation": "52BB6",
+  "langue": "fr",
+  "suffisante": "requete('52BB6', nom(v(x), ['FRENESIE', 'FRENZY']))",
+  "necessaire": "requete('52BB6', nom(v(x), ['FRENESIE', 'FRENZY']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 183,
+  "notation": "31A30",
+  "langue": "en",
+  "suffisante": "requete('31A30', nom(v(x), ['SENSI', 'SENSI COME SI POSSONO RAPPRESENTARE IN UNA FIGURA SOLA', 'SENSO', 'SENTIMENTI DEL CORPO']))",
+  "necessaire": "requete('31A30', nom(v(x), ['SENSI', 'SENSI COME SI POSSONO RAPPRESENTARE IN UNA FIGURA SOLA', 'SENSO', 'SENTIMENTI DEL CORPO']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "les quatre titres de Ripa sont des variantes",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "(Ripa)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 184,
+  "notation": "12B14",
+  "langue": "fr",
+  "suffisante": null,
+  "necessaire": "requete('12B14', type(v(p), 'phénomène naturel'))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Suffisante nulle : catégorie de concepts visualisés ; « (religions non-chrétiennes) » est exigé mais défini négativement, et la représentation d'un phénomène naturel n'a pas de forme figurée propre."
+ },
+ {
+  "k": 185,
+  "notation": "25A90",
+  "langue": "en",
+  "suffisante": "requete('25A90', nom(v(x), ['COROGRAFIA', 'GEOGRAFIA', 'HIDROGRAFIA']))",
+  "necessaire": "requete('25A90', nom(v(x), ['COROGRAFIA', 'GEOGRAFIA', 'HIDROGRAFIA']))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "les trois titres de Ripa",
+    "categorie": "alternative / variante de nom"
+   },
+   {
+    "partie": "(Ripa)",
+    "categorie": "reference de source"
+   }
+  ],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 186,
+  "notation": "11QQ7121(STEEPLE)",
+  "langue": "fr",
+  "suffisante": "requete('11QQ7121(STEEPLE)', et([type(v(c), clocher), relation(v(c), de, v(e)), ou([et([type(v(e), 'église'), propriete(v(e), petit)]), type(v(e), chapelle)])]))",
+  "necessaire": "requete('11QQ7121(STEEPLE)', type(v(c), clocher))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "11QQ712: trait QQ = petite église, chapelle"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 187,
+  "notation": "11Q7131(AMBULATORY)",
+  "langue": "en",
+  "suffisante": "requete('11Q7131(AMBULATORY)', type(v(a), ambulatory))",
+  "necessaire": "requete('11Q7131(AMBULATORY)', type(v(a), ambulatory))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "L'église n'est pas répétée : le déambulatoire est une partie d'église."
+ },
+ {
+  "k": 188,
+  "notation": "11QQ7121(PORTAL)",
+  "langue": "fr",
+  "suffisante": "requete('11QQ7121(PORTAL)', et([type(v(p), portail), relation(v(p), de, v(e)), ou([et([type(v(e), 'église'), propriete(v(e), petit)]), type(v(e), chapelle)])]))",
+  "necessaire": "requete('11QQ7121(PORTAL)', type(v(p), portail))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "11QQ712: trait QQ = petite église, chapelle"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 189,
+  "notation": "11Q7121(TRANSEPT)",
+  "langue": "en",
+  "suffisante": "requete('11Q7121(TRANSEPT)', type(v(t), transept))",
+  "necessaire": "requete('11Q7121(TRANSEPT)', type(v(t), transept))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 190,
+  "notation": "46C215(FIGURE-HEAD)",
+  "langue": "fr",
+  "suffisante": "requete('46C215(FIGURE-HEAD)', type(v(f), 'figure de proue'))",
+  "necessaire": "requete('46C215(FIGURE-HEAD)', type(v(f), 'figure de proue'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 191,
+  "notation": "46C215(WINDLASS)",
+  "langue": "en",
+  "suffisante": "requete('46C215(WINDLASS)', et([type(v(w), windlass), relation(v(w), of, v(s)), type(v(s), ship)]))",
+  "necessaire": "requete('46C215(WINDLASS)', type(v(w), windlass))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "Le navire est gardé : le guindeau existe aussi à terre (treuil)."
+ },
+ {
+  "k": 192,
+  "notation": "45C131(POMMEL)",
+  "langue": "fr",
+  "suffisante": "requete('45C131(POMMEL)', et([type(v(p), pommeau), relation(v(p), de, v(a)), type(v(a), 'arme tranchante')]))",
+  "necessaire": "requete('45C131(POMMEL)', type(v(p), pommeau))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "L'arme est gardée : le pommeau est aussi celui d'une selle ou d'une canne."
+ },
+ {
+  "k": 193,
+  "notation": "92C28(OWL)",
+  "langue": "en",
+  "suffisante": "requete('92C28(OWL)', et([nom(v(m), ['MINERVA', 'MINERVE', 'PALLAS', 'ATHENA']), type(v(o), owl), relation(v(m), with, v(o))]))",
+  "necessaire": "requete('92C28(OWL)', et([nom(v(m), ['MINERVA', 'MINERVE', 'PALLAS', 'ATHENA']), type(v(o), owl)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "92C2: Minerva (Pallas, Athena) : variantes de nom"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 194,
+  "notation": "46CC215(RUDDER)",
+  "langue": "fr",
+  "suffisante": "requete('46CC215(RUDDER)', et([type(v(g), gouvernail), relation(v(g), de, v(n)), type(v(n), navire), type(v(m), navire), distincts(v(n), v(m))]))",
+  "necessaire": "requete('46CC215(RUDDER)', type(v(g), gouvernail))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "46CC21: trait CC = plus d'un navire"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 195,
+  "notation": "11Q7121(WEST FACADE)",
+  "langue": "en",
+  "suffisante": "requete('11Q7121(WEST FACADE)', et([type(v(f), facade), propriete(v(f), west), relation(v(f), of, v(c)), type(v(c), church)]))",
+  "necessaire": "requete('11Q7121(WEST FACADE)', type(v(f), facade))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "L'église est gardée : une façade ouest n'est pas propre aux églises."
+ },
+ {
+  "k": 196,
+  "notation": "25GG211(NUTSHELL)",
+  "langue": "fr",
+  "suffisante": "requete('25GG211(NUTSHELL)', et([type(v(c), 'coquille de noix'), propriete(v(c), fantastique)]))",
+  "necessaire": "requete('25GG211(NUTSHELL)', type(v(c), 'coquille de noix'))",
+  "nature": "convention",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [
+   {
+    "partie": "végétation fictive (variante du nom du trait GG)",
+    "categorie": "alternative / variante de nom"
+   }
+  ],
+  "heritage": [
+   "25GG: trait GG = plante fantastique"
+  ],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 197,
+  "notation": "41D2513(CORSET)",
+  "langue": "en",
+  "suffisante": "requete('41D2513(CORSET)', type(v(c), corset))",
+  "necessaire": "requete('41D2513(CORSET)', type(v(c), corset))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": ""
+ },
+ {
+  "k": 198,
+  "notation": "11Q7121(PORTAL)",
+  "langue": "fr",
+  "suffisante": "requete('11Q7121(PORTAL)', et([type(v(p), portail), relation(v(p), de, v(e)), type(v(e), 'église')]))",
+  "necessaire": "requete('11Q7121(PORTAL)', type(v(p), portail))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "L'église est gardée : un portail n'est pas propre aux églises."
+ },
+ {
+  "k": 199,
+  "notation": "11F111(ROSA MYSTICA)",
+  "langue": "en",
+  "suffisante": "requete('11F111(ROSA MYSTICA)', ou([nom(v(r), ['ROSA MYSTICA']), et([type(v(r), rose), relation(v(r), of, v(m)), nom(v(m), ['MARY', 'MARIA', 'VIRGIN MARY'])])]))",
+  "necessaire": "requete('11F111(ROSA MYSTICA)', ou([nom(v(r), ['ROSA MYSTICA']), type(v(r), rose)]))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [
+   "11F11: symbols of Mary (la rose comme symbole de Marie)"
+  ],
+  "gabarit": false,
+  "note": "Le texte de la litanie (gabarit « with TEXT » rempli) ou la rose rapportée à Marie."
+ },
+ {
+  "k": 200,
+  "notation": "11Q7131(DOME)",
+  "langue": "fr",
+  "suffisante": "requete('11Q7131(DOME)', et([type(v(d), 'dôme'), relation(v(d), de, v(e)), type(v(e), 'église')]))",
+  "necessaire": "requete('11Q7131(DOME)', type(v(d), 'dôme'))",
+  "nature": "exacte",
+  "ambigue": false,
+  "lectures": [],
+  "facultatif": [],
+  "heritage": [],
+  "gabarit": false,
+  "note": "L'église est gardée : dôme désigne aussi une cathédrale (Duomo) ou une coupole civile."
+ }
+]
