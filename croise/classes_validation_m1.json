@@ -1,0 +1,719 @@
+[
+ {
+  "k": 1,
+  "genre": "positif",
+  "notation": "42D21",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),bride)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(y),groom)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(d1),'wedding dress')",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "relation(v(x),in,v(d1))",
+    "classe": "appuye_seul"
+   },
+   {
+    "atome": "type(v(d2),'wedding dress')",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "relation(v(y),in,v(d2))",
+    "classe": "appuye_seul"
+   }
+  ]
+ },
+ {
+  "k": 11,
+  "genre": "positif",
+  "notation": "46B355",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),'trade mark')",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(x),'trade token')",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(x),'trade sign')",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(x),'trade card')",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 21,
+  "genre": "positif",
+  "notation": "41C67",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),oil)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(x),vinegar)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(x),sauce)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 31,
+  "genre": "positif",
+  "notation": "47G3355",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),upholster)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 41,
+  "genre": "positif",
+  "notation": "31A454",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(m),monster)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 51,
+  "genre": "positif",
+  "notation": "31A4155",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),brace)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(x),calliper)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 61,
+  "genre": "positif",
+  "notation": "31A4623(...)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "propriete(v(d),contagious)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "nom(v(d),['A_REMPLIR'])",
+    "classe": "nom"
+   }
+  ]
+ },
+ {
+  "k": 71,
+  "genre": "positif",
+  "notation": "11I72(JUDAS ISCARIOT)1",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "nom(v(x),['JUDAS ISCARIOT','JUDAS ISCARIOTE'])",
+    "classe": "nom"
+   },
+   {
+    "atome": "type(v(x),founder)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(x),initiator)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 81,
+  "genre": "positif",
+  "notation": "11H(MATTHEW)13",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),found)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "role(v(e),patient,v(o))",
+    "classe": "role"
+   }
+  ]
+ },
+ {
+  "k": 91,
+  "genre": "positif",
+  "notation": "11H(QUINTIN)0",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(g),group)",
+    "classe": "appuye_seul"
+   }
+  ]
+ },
+ {
+  "k": 101,
+  "genre": "positif",
+  "notation": "42D254",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(c),celebrate)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(a),'wedding anniversary')",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 111,
+  "genre": "positif",
+  "notation": "46B3312",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(p),poids)",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "evenement(v(e),peser)",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "role(v(e),instrument,v(p))",
+    "classe": "role"
+   }
+  ]
+ },
+ {
+  "k": 131,
+  "genre": "positif",
+  "notation": "45E4",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(u),use)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(r),army)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 141,
+  "genre": "positif",
+  "notation": "71E3242",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "propriete(v(s),brass)",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(p),pole)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "relation(v(s),on,v(p))",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 151,
+  "genre": "positif",
+  "notation": "71E11727",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(b),rod)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "relation(v(b),towards,v(s))",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(h),hail)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(f),fire)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 161,
+  "genre": "positif",
+  "notation": "71O7315",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(c),condemn)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "propriete(v(u),insincerity)",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 171,
+  "genre": "positif",
+  "notation": "52EE11",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),personification)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "nom(v(x),['INQUIRY','INVESTIGATION','INVESTIGATIONE','ENQUETE'])",
+    "classe": "nom"
+   }
+  ]
+ },
+ {
+  "k": 181,
+  "genre": "positif",
+  "notation": "59CC22",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),personification)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "nom(v(x),['PARTIALITY','PARTIALITA','PARTIALITE'])",
+    "classe": "nom"
+   }
+  ]
+ },
+ {
+  "k": 191,
+  "genre": "positif",
+  "notation": "31A22111(NOSE)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(n),nose)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 6,
+  "genre": "positif",
+  "notation": "42D36",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "propriete(v(x),mauvais)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 16,
+  "genre": "positif",
+  "notation": "48C7326(...)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "propriete(v(x),pincé)",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "propriete(v(x),gratté)",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "nom(v(x),['A_REMPLIR'])",
+    "classe": "nom"
+   }
+  ]
+ },
+ {
+  "k": 26,
+  "genre": "positif",
+  "notation": "25FF6",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),poisson)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "propriete(v(x),fabuleux)",
+    "classe": "appuye_seul"
+   }
+  ]
+ },
+ {
+  "k": 36,
+  "genre": "positif",
+  "notation": "25FF38(PHEASANT)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),faisan)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "propriete(v(x),fabuleux)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 46,
+  "genre": "positif",
+  "notation": "31A25231",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "role(v(e),patient,v(b2))",
+    "classe": "role"
+   }
+  ]
+ },
+ {
+  "k": 56,
+  "genre": "positif",
+  "notation": "41D211(CHEMISE À LA REINE)",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),'chemise à la reine')",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 66,
+  "genre": "positif",
+  "notation": "31AA5333",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(t),tonsure)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 76,
+  "genre": "positif",
+  "notation": "11H(IGNATIUS OF ANTIOCH)131",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "nom(v(x),['IGNATIUS OF ANTIOCH','IGNACE D\\'ANTIOCHE','THEOPHOROS'])",
+    "classe": "nom"
+   },
+   {
+    "atome": "evenement(v(c),approuver)",
+    "classe": "appuye_seul"
+   }
+  ]
+ },
+ {
+  "k": 86,
+  "genre": "positif",
+  "notation": "11H(JOHN DAMASCENE)0",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(g),groupe)",
+    "classe": "appuye_seul"
+   },
+   {
+    "atome": "relation(v(x),dans,v(g))",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(y),saint)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "relation(v(y),dans,v(g))",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 96,
+  "genre": "positif",
+  "notation": "11H(ANTONY ABBOT)119",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "nom(v(x),['ANTONY ABBOT','ANTOINE ABBE'])",
+    "classe": "nom"
+   },
+   {
+    "atome": "relation(v(x),contre,v(p))",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(p),peste)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "relation(v(f),sous,v(m))",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(m),schützmantel)",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 106,
+  "genre": "positif",
+  "notation": "46A637",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "role(v(e),patient,v(r))",
+    "classe": "role"
+   },
+   {
+    "atome": "evenement(v(e),'lever la séance')",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 116,
+  "genre": "positif",
+  "notation": "31A523",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "nom(v(c),['SPINARIO'])",
+    "classe": "nom"
+   },
+   {
+    "atome": "type(v(c),enfant)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "role(v(e),patient,v(t))",
+    "classe": "role"
+   },
+   {
+    "atome": "type(v(t),épine)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(p),pied)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 126,
+  "genre": "positif",
+  "notation": "49BB4429",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(s),étudiante)",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(s),bettelstudent)",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "propriete(v(s),féminin)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 136,
+  "genre": "positif",
+  "notation": "44G83",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),délivrer)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 136,
+  "genre": "negatif",
+  "notation": "44G83",
+  "compilation": "compilee",
+  "satisfaction": "etablie_sous_hypotheses",
+  "atomes": []
+ },
+ {
+  "k": 146,
+  "genre": "positif",
+  "notation": "73C7251",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(d1),disciple)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(d2),disciple)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "nom(v(j),['JEAN BAPTISTE','JEAN-BAPTISTE','JOHN THE BAPTIST'])",
+    "classe": "nom"
+   },
+   {
+    "atome": "evenement(v(e),envoyer)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 156,
+  "genre": "positif",
+  "notation": "71A423",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": []
+ },
+ {
+  "k": 166,
+  "genre": "positif",
+  "notation": "71C3223",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": []
+ },
+ {
+  "k": 176,
+  "genre": "positif",
+  "notation": "51EE",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),personnification)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "nom(v(x),['ORDRE HIERARCHIQUE','HIERARCHICAL ORDER'])",
+    "classe": "nom"
+   }
+  ]
+ },
+ {
+  "k": 186,
+  "genre": "positif",
+  "notation": "11F111(PULCHRA UT LUNA)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "nom(v(s),['PULCHRA UT LUNA'])",
+    "classe": "nom"
+   },
+   {
+    "atome": "nom(v(m),['MARIE','MARY'])",
+    "classe": "nom"
+   }
+  ]
+ },
+ {
+  "k": 196,
+  "genre": "positif",
+  "notation": "11QQ7121(TRANSEPT)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(t),transept)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(c),chapelle)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(c),église)",
+    "classe": "sans_lien"
+   }
+  ]
+ }
+]

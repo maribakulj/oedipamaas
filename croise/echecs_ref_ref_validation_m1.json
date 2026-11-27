@@ -1,0 +1,943 @@
+[
+ {
+  "k": 1,
+  "genre": "positif",
+  "notation": "42D21",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('42D21', et([type(v(x), bride), type(v(y), groom), distincts(v(x), v(y)), type(v(d1), 'wedding dress'), relation(v(x), in, v(d1)), type(v(d2), 'wedding dress'), relation(v(y), in, v(d2))]))",
+  "nature_ref": "exacte",
+  "texte": "In the foreground of this formal studio portrait, a young man and a young woman stand arm in arm, posing on the very day they are joined as husband and wife. She is dressed in a long white gown, and a lace veil falls from the crown of orange blossom set on her hair. He wears a black tailcoat with a white flower pinned at the lapel. Behind the pair, closing off the space, hangs a painted backdrop of the kind used in photographers' studios. The picture is entirely given over to the couple and to their ceremonial outfits: no officiant stands beside them, and no guests are present anywhere in the frame.",
+  "manquants": [
+   "type(v(x),bride)",
+   "type(v(y),groom)",
+   "type(v(d1),'wedding dress')",
+   "relation(v(x),in,v(d1))",
+   "type(v(d2),'wedding dress')",
+   "relation(v(y),in,v(d2))"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« bride » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« groom » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« wedding dress » absent ; proche : dress (predicat)",
+   "« in » est bien un(e) relation du graphe : la contrainte jointe échoue (variables, rôles, autres atomes)",
+   "« wedding dress » absent ; proche : dress (predicat)",
+   "« in » est bien un(e) relation du graphe : la contrainte jointe échoue (variables, rôles, autres atomes)"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 11,
+  "genre": "positif",
+  "notation": "46B355",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('46B355', ou([type(v(x), 'trade mark'), type(v(x), 'trade token'), type(v(x), 'trade sign'), type(v(x), 'trade card')]))",
+  "nature_ref": "exacte",
+  "texte": "This small engraved slip is the advertising card of a London tea merchant. At its centre stands his emblem, a man in Chinese dress holding a teapot. Below or around the figure the engraver has set out the merchant's address, and beneath that runs a list of the goods he sells. The sheet was meant to be handed to customers, slipped into a purchase or given across the counter. It belongs to the eighteenth-century ephemera of trade, and its plain layout keeps the emblem, the address and the list of goods clearly legible from top to bottom.",
+  "manquants": [
+   "type(v(x),'trade mark')",
+   "type(v(x),'trade token')",
+   "type(v(x),'trade sign')",
+   "type(v(x),'trade card')"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« trade mark » absent ; proche : trade (tete)",
+   "« trade token » absent ; proche : trade (tete)",
+   "« trade sign » absent ; proche : trade (tete)",
+   "« trade card » absent ; proche : trade (tete), card (tete)"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 21,
+  "genre": "positif",
+  "notation": "41C67",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "requete": "requete('41C67', ou([type(v(x), oil), type(v(x), vinegar), type(v(x), sauce)]))",
+  "nature_ref": "exacte",
+  "texte": "This still life is built around a silver cruet stand, placed in the foreground of the table. It holds two glass flasks. One contains a golden liquid pressed from olives; the other holds soured red wine of the kind used for dressing salads, its colour darker against the light. Beside the stand sits a gravy boat filled with a brown pouring liquid, its spout turned slightly towards the viewer. Behind these objects the background is left plain and unobtrusive, so that the gleam of the silver and the transparency of the glass hold the eye across the whole composition.",
+  "manquants": [
+   "type(v(x),oil)",
+   "type(v(x),vinegar)",
+   "type(v(x),sauce)"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« oil » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« vinegar » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« sauce » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 31,
+  "genre": "positif",
+  "notation": "47G3355",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "requete": "requete('47G3355', evenement(v(e), upholster))",
+  "nature_ref": "exacte",
+  "texte": "Set in a workshop interior, the painting shows a craftsman in an apron stretching damask fabric over the padded seat of an armchair. He secures the material with small tacks, hammered one after another along the frame, while horsehair stuffing lies scattered on the floor at his feet. The artist dwells on the materials of the trade: the sheen of the damask contrasts with the coarse fibres below, and the rhythm of the tacks gives structure to the gesture. Scenes of skilled manual labour of this kind enjoyed considerable favour among nineteenth-century genre painters, who found in the artisan's absorbed concentration a subject at once modest and dignified.",
+  "manquants": [
+   "evenement(v(e),upholster)"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« upholster » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 41,
+  "genre": "positif",
+  "notation": "31A454",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('31A454', et([type(v(m), monster), type(v(m), reptile)]))",
+  "nature_ref": "exacte",
+  "texte": "A hybrid being rears up from the mouth of a cave, the dark opening framing it from behind. Above the waist it is human, with a head and torso of ordinary form. Below the waist, however, its body turns into the long scaly coils of a serpent, which spill forward out of the cave and loop across the foreground. The scales are carefully drawn along the whole length of the coils. Behind the creature, the cave recedes into shadow, and nothing else interrupts the view of this strange combination of human and reptilian parts.",
+  "manquants": [
+   "type(v(m),monster)"
+  ],
+  "satisfaits": [
+   "type(v(m),reptile)"
+  ],
+  "indices": [
+   "« monster » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 51,
+  "genre": "positif",
+  "notation": "31A4155",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "requete": "requete('31A4155', ou([type(v(x), brace), type(v(x), calliper)]))",
+  "nature_ref": "exacte",
+  "texte": "This hospital photograph shows a boy whose leg was weakened by polio. He walks with a metal splint strapped along the limb from thigh to boot, held in place by leather straps. The image records the device in use, the boy upright and in motion, and documents both the support and the way it is fitted. Its clinical framing reflects the purposes of medical photography of the period.",
+  "manquants": [
+   "type(v(x),brace)",
+   "type(v(x),calliper)"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« brace » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« calliper » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 61,
+  "genre": "positif",
+  "notation": "31A4623(...)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('31A4623(...)', et([type(v(d), disease), propriete(v(d), contagious), nom(v(d), ['A_REMPLIR'])]))",
+  "nature_ref": "convention",
+  "texte": "The scene is set in a cholera ward, the illness being named in the caption. Patients with sunken eyes and bluish skin lie on cots arranged along the room, while nurses burn tar to keep the infection from spreading. The artist records both the physical signs of the disease and the measures taken against contagion, giving the image a documentary character. The smoke of the tar and the rows of cots set a sombre tone throughout.",
+  "manquants": [
+   "propriete(v(d),contagious)",
+   "nom(v(d),['A_REMPLIR'])"
+  ],
+  "satisfaits": [
+   "type(v(d),disease)"
+  ],
+  "indices": [
+   "« contagious » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« a remplir » absent du graphe (composé) : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 71,
+  "genre": "positif",
+  "notation": "11I72(JUDAS ISCARIOT)1",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('11I72(JUDAS ISCARIOT)1', et([nom(v(x), ['JUDAS ISCARIOT', 'JUDAS ISCARIOTE']), ou([type(v(x), founder), type(v(x), initiator)])]))",
+  "nature_ref": "convention",
+  "texte": "The First of the Line\nEngraving, c. 1540\nPurse in hand, Judas heads a long line of later betrayers who follow in his footsteps; he is presented as the first of their kind, the one who began it all. An allegorical print, not a scene from the Gospel narrative.",
+  "manquants": [
+   "nom(v(x),['JUDAS ISCARIOT','JUDAS ISCARIOTE'])",
+   "type(v(x),founder)",
+   "type(v(x),initiator)"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« judas iscariot , judas iscariote » absent ; proche : judas (tete), judas (nom)",
+   "« founder » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« initiator » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 81,
+  "genre": "positif",
+  "notation": "11H(MATTHEW)13",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('11H(MATTHEW)13', et([nom(v(x), ['MATTHEW', 'MATTHIEU']), evenement(v(e), found), role(v(e), agent, v(x)), role(v(e), patient, v(o)), type(v(o), order)]))",
+  "nature_ref": "exacte",
+  "texte": "In the foreground, Matthew stands holding a book. Before him kneel Iphigenia and a community of maidens who have vowed chastity in Ethiopia, and he gives them a written rule and a veil. Through this gesture they become a religious house under his guidance. The women are grouped together on one side, their heads bowed as they receive what he hands them. Behind the figures, the background opens onto a simple architectural setting, kept discreet so that the exchange between the apostle and the community remains the clear centre of the picture.",
+  "manquants": [
+   "evenement(v(e),found)",
+   "role(v(e),patient,v(o))"
+  ],
+  "satisfaits": [
+   "nom(v(x),['MATTHEW','MATTHIEU'])",
+   "role(v(e),agent,v(x))",
+   "type(v(o),order)"
+  ],
+  "indices": [
+   "« found » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "rôle patient"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 91,
+  "genre": "positif",
+  "notation": "11H(QUINTIN)0",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('11H(QUINTIN)0', et([nom(v(x), ['QUINTIN', 'QUINTINUS', 'QUENTIN']), type(v(g), group), relation(v(x), in, v(g))]))",
+  "nature_ref": "exacte",
+  "texte": "On this multi-panel altarpiece, Quentin, a young Roman in a cloak, stands holding two iron spikes among other holy figures, including Denis and Crispin. All are shown frontally and haloed, each occupying a place in the sequence of panels. The spikes serve as Quentin's attribute, allowing the faithful to recognise him among his companions. The work belongs to a type of altarpiece in which saints are presented as a gallery of patrons.",
+  "manquants": [
+   "type(v(g),group)"
+  ],
+  "satisfaits": [
+   "nom(v(x),['QUINTIN','QUINTINUS','QUENTIN'])",
+   "relation(v(x),in,v(g))"
+  ],
+  "indices": [
+   "« group » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 101,
+  "genre": "positif",
+  "notation": "42D254",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('42D254', et([evenement(v(c), celebrate), role(v(c), theme, v(a)), type(v(a), 'wedding anniversary')]))",
+  "nature_ref": "exacte",
+  "texte": "This family photograph shows an elderly couple seated at the head of a festive table, crowned with gilded wreaths and honoured by their children and grandchildren for fifty years of married life. Toasts are raised, and a cake bears the number 50. The photographer adopts the frontal arrangement typical of commemorative images, placing the couple at the centre and distributing the family around them in a hierarchy of generations. Such photographs, preserved in family albums, served to record and transmit the memory of domestic milestones, and their conventions, the wreaths, the raised glasses, the inscribed cake, made the occasion legible to later viewers.",
+  "manquants": [
+   "evenement(v(c),celebrate)",
+   "type(v(a),'wedding anniversary')"
+  ],
+  "satisfaits": [
+   "role(v(c),theme,v(a))"
+  ],
+  "indices": [
+   "« celebrate » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« wedding anniversary » absent du graphe (composé) : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 111,
+  "genre": "positif",
+  "notation": "46B3312",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('46B3312', et([type(v(p), poids), evenement(v(e), peser), role(v(e), instrument, v(p))]))",
+  "nature_ref": "conservatrice",
+  "texte": "On a shop counter, a nest of brass cup-shaped pieces of standard mass sits beside a balance. The grocer drops one of them into the pan in order to measure out sugar. The painter captures the precise gesture of the shopkeeper and the gleam of the brass, giving the everyday operation of weighing a quiet dignity. The counter, the balance and the sugar together set the scene firmly within the trade of the grocery.",
+  "manquants": [
+   "type(v(p),poids)",
+   "evenement(v(e),peser)",
+   "role(v(e),instrument,v(p))"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« poids » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« peser » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "rôle instrument"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 131,
+  "genre": "positif",
+  "notation": "45E4",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('45E4', et([type(v(a), animal), evenement(v(u), use), role(v(u), theme, v(a)), type(v(r), army), relation(v(a), in, v(r))]))",
+  "nature_ref": "exacte",
+  "texte": "Animals are shown in a military context. Mules carry mountain guns for a column of troops; carrier pigeons are released from a trench; a dog brings a message. The image brings together several forms of animal service in wartime, from transport to communication. The artist treats each episode with documentary precision, and the juxtaposition of the scenes underlines the variety of tasks entrusted to animals in the field.",
+  "manquants": [
+   "evenement(v(u),use)",
+   "type(v(r),army)"
+  ],
+  "satisfaits": [
+   "type(v(a),animal)",
+   "role(v(u),theme,v(a))",
+   "relation(v(a),in,v(r))"
+  ],
+  "indices": [
+   "« use » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« army » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 141,
+  "genre": "positif",
+  "notation": "71E3242",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('71E3242', et([type(v(s), serpent), propriete(v(s), brass), evenement(v(m), make), role(v(m), patient, v(s)), evenement(v(t), set), role(v(t), theme, v(s)), type(v(p), pole), relation(v(s), on, v(p))]))",
+  "nature_ref": "exacte",
+  "texte": "The Bronze Snake\nEngraving, c. 1580\nIn the wilderness, Moses directs a metalworker who casts a bronze snake, which is then hoisted atop a tall staff; Israelites bitten by fiery snakes turn their eyes toward it.",
+  "manquants": [
+   "propriete(v(s),brass)",
+   "type(v(p),pole)",
+   "relation(v(s),on,v(p))"
+  ],
+  "satisfaits": [
+   "type(v(s),serpent)",
+   "evenement(v(m),make)",
+   "role(v(m),patient,v(s))",
+   "evenement(v(t),set)",
+   "role(v(t),theme,v(s))"
+  ],
+  "indices": [
+   "« brass » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« pole » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« on » absent ; proche : bronze (propriete)"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 151,
+  "genre": "positif",
+  "notation": "71E11727",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('71E11727', et([nom(v(m), ['MOSES', 'MOISE']), evenement(v(r), raise), role(v(r), agent, v(m)), role(v(r), patient, v(b)), type(v(b), rod), relation(v(b), of, v(m)), type(v(s), sky), relation(v(b), towards, v(s)), type(v(h), hail), type(v(f), fire), evenement(v(fa), fall), role(v(fa), theme, v(h)), role(v(fa), theme, v(f)), type(v(g), ground), role(v(fa), lieu, v(g))]))",
+  "nature_ref": "exacte",
+  "texte": "In the foreground, Moses lifts his staff upward towards the sky. From the heavens, balls of ice mixed with lightning pound the Egyptian fields that stretch out behind him. Cattle fall in the pastures and the crops are flattened and destroyed. The storm fills the upper part of the picture with dark clouds torn by flashes of light. In the background, Pharaoh watches from his palace, a small figure standing on a terrace. The painter links the raised staff and the falling ice in a single dramatic movement across the whole composition.",
+  "manquants": [
+   "type(v(b),rod)",
+   "relation(v(b),towards,v(s))",
+   "type(v(h),hail)",
+   "type(v(f),fire)"
+  ],
+  "satisfaits": [
+   "nom(v(m),['MOSES','MOISE'])",
+   "evenement(v(r),raise)",
+   "role(v(r),agent,v(m))",
+   "role(v(r),patient,v(b))",
+   "relation(v(b),of,v(m))",
+   "type(v(s),sky)",
+   "evenement(v(fa),fall)",
+   "role(v(fa),theme,v(h))",
+   "role(v(fa),theme,v(f))",
+   "type(v(g),ground)",
+   "role(v(fa),lieu,v(g))"
+  ],
+  "indices": [
+   "« rod » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« towards » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« hail » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« fire » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 161,
+  "genre": "positif",
+  "notation": "71O7315",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "requete": "requete('71O7315', et([nom(v(j), ['JEREMIAH', 'JEREMIE']), evenement(v(c), condemn), role(v(c), agent, v(j)), role(v(c), patient, v(u)), nom(v(u), ['JUDAH', 'JUDA']), propriete(v(u), insincerity)]))",
+  "nature_ref": "exacte",
+  "texte": "Jeremiah stands in the Temple gate and rebukes the people of Judah. They claim to have turned back to God, but only in pretence, with lying lips, and the prophet denounces this hollow repentance. The people listen; some of them mock him. The painter places Jeremiah on the threshold, a position that gives his words a public and solemn character, while the crowd before him is divided between attention and derision. The subject belongs to the prophetic repertory favoured by artists who sought to dramatise moral confrontation, and the contrast between the prophet's earnest gesture and the sneering faces gives the composition its tension.",
+  "manquants": [
+   "evenement(v(c),condemn)",
+   "propriete(v(u),insincerity)"
+  ],
+  "satisfaits": [
+   "nom(v(j),['JEREMIAH','JEREMIE'])",
+   "role(v(c),agent,v(j))",
+   "role(v(c),patient,v(u))",
+   "nom(v(u),['JUDAH','JUDA'])"
+  ],
+  "indices": [
+   "« condemn » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« insincerity » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 171,
+  "genre": "positif",
+  "notation": "52EE11",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('52EE11', et([type(v(x), personification), nom(v(x), ['INQUIRY', 'INVESTIGATION', 'INVESTIGATIONE', 'ENQUETE'])]))",
+  "nature_ref": "convention",
+  "texte": "An allegorical woman occupies the foreground, leaning forward with keen eyes, her gaze fixed ahead. In one hand she holds a leash, at the end of which a hunting hound sniffs the ground, its nose lowered to follow a trail. The pair moves together across the picture. The figure is an emblem of searching out hidden things, and every element of the composition, from her forward posture to the dog's attentive muzzle, expresses inquiry. Behind them, the background is kept simple, a plain landscape that leaves the allegory clearly legible.",
+  "manquants": [
+   "type(v(x),personification)",
+   "nom(v(x),['INQUIRY','INVESTIGATION','INVESTIGATIONE','ENQUETE'])"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« personification » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« inquiry , investigation , investigatione , enquete » absent ; proche : inquiry (tete), inquiry (predicat)"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 181,
+  "genre": "positif",
+  "notation": "59CC22",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('59CC22', et([type(v(x), personification), nom(v(x), ['PARTIALITY', 'PARTIALITA', 'PARTIALITE'])]))",
+  "nature_ref": "convention",
+  "texte": "An allegorical judge lifts her blindfold in order to favour one of the litigants. She lets a purse tip one pan of her balance and turns her back on the poor plaintiff. The artist subverts the familiar iconography of Justice, whose blindfold and level scales normally signify impartiality, by showing each attribute corrupted: the raised blindfold reveals partiality, the purse distorts the balance, and the turned back expresses contempt for the weak. Such satirical inversions of virtue allegories were a powerful vehicle of social criticism, and the clarity of the visual language made the denunciation accessible to a broad public.",
+  "manquants": [
+   "type(v(x),personification)",
+   "nom(v(x),['PARTIALITY','PARTIALITA','PARTIALITE'])"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« personification » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« partiality , partialita , partialite » absent ; proche : partiality (tete)"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 191,
+  "genre": "positif",
+  "notation": "31A22111(NOSE)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('31A22111(NOSE)', et([type(v(n), nose), type(v(f), face), relation(v(n), of, v(f))]))",
+  "nature_ref": "exacte",
+  "texte": "This drawing study, among Leonardo's grotesque studies, is devoted to the organ of smell, shown both in profile and from the front. In each view the draughtsman traces the bridge, the tip and the nostrils, comparing their shapes and proportions. The two versions sit side by side on the sheet, the profile emphasising the line of the bridge and the frontal view the spread of the nostrils. The rest of the face is only lightly indicated or omitted. The paper around the drawings is left blank, so that the studies stand out clearly against it.",
+  "manquants": [
+   "type(v(n),nose)"
+  ],
+  "satisfaits": [
+   "type(v(f),face)",
+   "relation(v(n),of,v(f))"
+  ],
+  "indices": [
+   "« nose » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 6,
+  "genre": "positif",
+  "notation": "42D36",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "requete": "requete('42D36', et([type(v(x), femme), propriete(v(x), mauvais)]))",
+  "nature_ref": "exacte",
+  "texte": "Le Ménage en querelle\nGravure sur bois coloriée, vers 1820\nDans la cuisine, une épouse acariâtre frappe à coups de quenouille son mari agenouillé, qui se protège la tête, tandis que les voisins rient à la fenêtre. La légende moralisante tire de la scène une leçon sur le ménage.",
+  "manquants": [
+   "propriete(v(x),mauvais)"
+  ],
+  "satisfaits": [
+   "type(v(x),femme)"
+  ],
+  "indices": [
+   "« mauvais » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 16,
+  "genre": "positif",
+  "notation": "48C7326(...)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('48C7326(...)', et([type(v(x), 'instrument à cordes'), ou([propriete(v(x), 'pincé'), propriete(v(x), 'gratté')]), nom(v(x), ['A_REMPLIR'])]))",
+  "nature_ref": "convention",
+  "texte": "Cette gravure ethnographique représente un musicien russe tenant une balalaïka, reconnaissable à sa caisse triangulaire et à son long manche. Le graveur a saisi l'instant du jeu : du bout des doigts, l'homme fait vibrer les trois fils de l'instrument. Le personnage, campé de face, est traité avec le souci documentaire propre à ce type de planches, qui visaient à faire connaître les costumes et les usages des peuples. La précision accordée à la forme de la caisse et au geste de la main souligne l'intérêt porté à l'instrument lui-même.",
+  "manquants": [
+   "propriete(v(x),pincé)",
+   "propriete(v(x),gratté)",
+   "nom(v(x),['A_REMPLIR'])"
+  ],
+  "satisfaits": [
+   "type(v(x),'instrument à cordes')"
+  ],
+  "indices": [
+   "« pincé » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« gratté » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« a remplir » absent du graphe (composé) : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 26,
+  "genre": "positif",
+  "notation": "25FF6",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('25FF6', et([type(v(x), poisson), propriete(v(x), fabuleux)]))",
+  "nature_ref": "exacte",
+  "texte": "La planche, extraite d'un bestiaire, figure une créature imaginaire qui surgit des vagues. Son corps est couvert d'écailles, pourvu de nageoires et terminé par une queue fourchue, mais il porte une tête de lion. Cet assemblage hybride illustre bien la logique des bestiaires, où l'on composait des êtres fabuleux en associant des parties empruntées à des animaux connus. L'enlumineur exploite le contraste entre la crinière du fauve et la souplesse aquatique du corps, et le mouvement de la bête jaillissant hors de l'eau confère à l'image une vivacité remarquable. La mer, réduite à des ondulations stylisées, sert de simple cadre à l'apparition.",
+  "manquants": [
+   "type(v(x),poisson)",
+   "propriete(v(x),fabuleux)"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« poisson » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« fabuleux » est bien un(e) propriete du graphe : la contrainte jointe échoue (variables, rôles, autres atomes)"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 36,
+  "genre": "positif",
+  "notation": "25FF38(PHEASANT)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('25FF38(PHEASANT)', et([type(v(x), faisan), propriete(v(x), fabuleux)]))",
+  "nature_ref": "convention",
+  "texte": "Cette créature imaginaire, tirée d'un bestiaire, occupe tout le premier plan. Sa silhouette est celle d'un gibier à plume, avec une longue queue barrée et une collerette rousse autour du cou ; mais elle porte trois têtes et se termine par une queue de serpent. La créature crache des flammes, dont les langues rouges se détachent en avant d'elle. Derrière elle, le fond est laissé presque nu, de sorte que rien ne détourne l'attention de ce mélange inquiétant de traits familiers et d'attributs monstrueux.",
+  "manquants": [
+   "type(v(x),faisan)",
+   "propriete(v(x),fabuleux)"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« faisan » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« fabuleux » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 46,
+  "genre": "positif",
+  "notation": "31A25231",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('31A25231', et([type(v(m1), main), type(v(m2), main), distincts(v(m1), v(m2)), type(v(d1), doigt), relation(v(d1), de, v(m1)), type(v(d2), doigt), relation(v(d2), de, v(m2)), type(v(b1), bout), relation(v(b1), de, v(d1)), type(v(b2), bout), relation(v(b2), de, v(d2)), evenement(v(e), toucher), role(v(e), agent, v(b1)), role(v(e), patient, v(b2))]))",
+  "nature_ref": "exacte",
+  "texte": "Le tableau montre un homme assis, les coudes posés sur la table, qui rapproche ses paumes sans les joindre : seules les extrémités de ses dix phalanges s'appuient les unes contre les autres, formant un clocher. Ce geste, que le peintre place au centre de la composition, traduit une attitude de réflexion. Le choix est significatif : plutôt que de recourir aux attributs traditionnels de la méditation, livre ou crâne, l'artiste confie l'expression de la pensée à la seule disposition des mains. La lumière, concentrée sur les doigts et le visage, accentue cette lecture et fait du portrait une véritable étude de l'intériorité.",
+  "manquants": [
+   "role(v(e),patient,v(b2))"
+  ],
+  "satisfaits": [
+   "type(v(m1),main)",
+   "type(v(m2),main)",
+   "type(v(d1),doigt)",
+   "relation(v(d1),de,v(m1))",
+   "type(v(d2),doigt)",
+   "relation(v(d2),de,v(m2))",
+   "type(v(b1),bout)",
+   "relation(v(b1),de,v(d1))",
+   "type(v(b2),bout)",
+   "relation(v(b2),de,v(d2))",
+   "evenement(v(e),toucher)",
+   "role(v(e),agent,v(b1))"
+  ],
+  "indices": [
+   "rôle patient"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 56,
+  "genre": "positif",
+  "notation": "41D211(CHEMISE À LA REINE)",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('41D211(CHEMISE À LA REINE)', type(v(x), 'chemise à la reine'))",
+  "nature_ref": "exacte",
+  "texte": "Ce portrait d'une dame, vers 1783, la montre en buste et à mi-corps au premier plan. Elle porte une toilette de mousseline blanche fluide, froncée à l'encolure et serrée à la taille par une large ceinture de soie. Un chapeau de paille couronne sa tête. Ce costume correspond au style lancé par Marie-Antoinette dans le portrait de Vigée Le Brun. Derrière elle, le fond reste neutre et lumineux, de sorte que la légèreté de la mousseline et la souplesse des plis occupent tout le regard.",
+  "manquants": [
+   "type(v(x),'chemise à la reine')"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« chemise à la reine » absent du graphe (composé) : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 66,
+  "genre": "positif",
+  "notation": "31AA5333",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('31AA5333', et([type(v(t), tonsure), type(v(f), femme), relation(v(t), de, v(f))]))",
+  "nature_ref": "convention",
+  "texte": "Claire d'Assise est représentée agenouillée devant François, qui lui fait couper sa longue chevelure en signe de son entrée en religion. Le sommet de son crâne apparaît dégagé, rasé en couronne. L'artiste a placé la scène sous le signe du renoncement, le geste de la coupe marquant le passage de la vie séculière à la vie consacrée. Les deux figures, disposées face à face, donnent à la composition un caractère solennel et recueilli.",
+  "manquants": [
+   "type(v(t),tonsure)"
+  ],
+  "satisfaits": [
+   "type(v(f),femme)",
+   "relation(v(t),de,v(f))"
+  ],
+  "indices": [
+   "« tonsure » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 76,
+  "genre": "positif",
+  "notation": "11H(IGNATIUS OF ANTIOCH)131",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('11H(IGNATIUS OF ANTIOCH)131', et([nom(v(x), ['IGNATIUS OF ANTIOCH', 'IGNACE D\\'ANTIOCHE', 'THEOPHOROS']), ou([et([evenement(v(c), consacrer), role(v(c), patient, v(o)), type(v(o), ordre)]), et([evenement(v(c), approuver), role(v(c), patient, v(r)), type(v(r), 'règle')])])]))",
+  "nature_ref": "exacte",
+  "texte": "Ignatius, prélat d'Antioche revêtu de ses vêtements épiscopaux, s'agenouille devant un pape qui lui accorde la reconnaissance officielle de la communauté qu'il a fondée ainsi que de ses statuts écrits ; le parchemin scellé lui est remis. Le peintre traite l'épisode comme une scène d'institution, où l'autorité pontificale consacre l'œuvre d'un fondateur. La composition, centrée sur le document qui passe d'une main à l'autre, s'inscrit dans une tradition d'images commandées par les ordres religieux pour légitimer leurs origines. La solennité des costumes et la symétrie de la mise en scène renforcent le caractère juridique de l'acte représenté.",
+  "manquants": [
+   "nom(v(x),['IGNATIUS OF ANTIOCH','IGNACE D\\'ANTIOCHE','THEOPHOROS'])",
+   "evenement(v(c),approuver)"
+  ],
+  "satisfaits": [
+   "evenement(v(c),consacrer)",
+   "role(v(c),patient,v(o))",
+   "type(v(o),ordre)",
+   "role(v(c),patient,v(r))",
+   "type(v(r),règle)"
+  ],
+  "indices": [
+   "« ignatius of antioch , ignace d\\ antioche , theophoros » absent ; proche : antioche (tete), ignatius (tete), ignatius (nom), antioche (nom)",
+   "« approuver » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 86,
+  "genre": "positif",
+  "notation": "11H(JOHN DAMASCENE)0",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('11H(JOHN DAMASCENE)0', et([nom(v(x), ['JEAN DAMASCENE', 'JEAN DE DAMAS', 'JOHN DAMASCENE', 'JOHN OF DAMASCUS']), type(v(g), groupe), relation(v(x), dans, v(g)), type(v(y), saint), relation(v(y), dans, v(g)), distincts(v(x), v(y))]))",
+  "nature_ref": "exacte",
+  "texte": "Les Pères de l'Église\nTempera sur bois, XVe siècle\nSur cette icône réunissant plusieurs Pères, Jean de Damas, en habit de religieux oriental coiffé d'un turban, se tient aux côtés de Grégoire de Nazianze et d'Athanase, tous debout et de face.",
+  "manquants": [
+   "type(v(g),groupe)",
+   "relation(v(x),dans,v(g))",
+   "type(v(y),saint)",
+   "relation(v(y),dans,v(g))"
+  ],
+  "satisfaits": [
+   "nom(v(x),['JEAN DAMASCENE','JEAN DE DAMAS','JOHN DAMASCENE','JOHN OF DAMASCUS'])"
+  ],
+  "indices": [
+   "« groupe » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« dans » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« saint » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« dans » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 96,
+  "genre": "positif",
+  "notation": "11H(ANTONY ABBOT)119",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('11H(ANTONY ABBOT)119', et([nom(v(x), ['ANTONY ABBOT', 'ANTOINE ABBE']), type(v(x), patron), relation(v(x), contre, v(p)), type(v(p), peste), ou([et([evenement(v(e), 'protéger'), role(v(e), agent, v(x)), role(v(e), patient, v(f)), type(v(f), 'fidèle'), type(v(m), manteau), relation(v(m), de, v(x)), relation(v(f), sous, v(m))]), et([type(v(m), 'schützmantel'), relation(v(m), de, v(x))])])]))",
+  "nature_ref": "exacte",
+  "texte": "Antoine protecteur\nHuile sur bois, vers 1520\nAntoine l'ermite, vieillard barbu au bâton en forme de tau, ouvre largement sa cape pour abriter des hommes et des femmes agenouillés ; au loin, des malades couverts de bubons, et les flèches de l'épidémie se brisent sur la cape.",
+  "manquants": [
+   "nom(v(x),['ANTONY ABBOT','ANTOINE ABBE'])",
+   "relation(v(x),contre,v(p))",
+   "type(v(p),peste)",
+   "relation(v(f),sous,v(m))",
+   "type(v(m),schützmantel)"
+  ],
+  "satisfaits": [
+   "type(v(x),patron)",
+   "evenement(v(e),protéger)",
+   "role(v(e),agent,v(x))",
+   "role(v(e),patient,v(f))",
+   "type(v(f),fidèle)",
+   "type(v(m),manteau)",
+   "relation(v(m),de,v(x))",
+   "relation(v(m),de,v(x))"
+  ],
+  "indices": [
+   "« antony abbot , antoine abbe » absent ; proche : antoine (tete), antoine (nom)",
+   "« contre » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« peste » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« sous » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« schützmantel » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 106,
+  "genre": "positif",
+  "notation": "46A637",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('46A637', ou([et([evenement(v(e), 'clôturer'), role(v(e), patient, v(r)), type(v(r), 'réunion')]), evenement(v(e), 'lever la séance')]))",
+  "nature_ref": "exacte",
+  "texte": "Au premier plan, le président d'une assemblée se tient debout et frappe la table de son maillet pour annoncer la fin des débats. Autour de lui, les membres rassemblent déjà leurs papiers ; certains se lèvent, d'autres se dirigent vers la sortie, au fond de la salle. Le mouvement de la foule vers la porte anime l'arrière-plan, tandis que la table, couverte de documents, occupe le centre de la composition. La lumière tombe sur le geste du président, qui donne le signal de la dispersion et marque la clôture de la séance.",
+  "manquants": [
+   "role(v(e),patient,v(r))",
+   "evenement(v(e),'lever la séance')"
+  ],
+  "satisfaits": [
+   "evenement(v(e),clôturer)",
+   "type(v(r),réunion)"
+  ],
+  "indices": [
+   "rôle patient",
+   "« lever la séance » absent ; proche : séance (tete)"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 116,
+  "genre": "positif",
+  "notation": "31A523",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "requete": "requete('31A523', ou([nom(v(c), ['SPINARIO']), et([type(v(c), enfant), evenement(v(e), tirer), role(v(e), agent, v(c)), role(v(e), patient, v(t)), type(v(t), 'épine'), type(v(p), pied), relation(v(p), de, v(c)), relation(v(t), de, v(p))])]))",
+  "nature_ref": "exacte",
+  "texte": "Garçon à l'écharde\nBronze antique, Ier siècle av. J.-C., Capitole\nUn jeune garçon nu, assis sur un rocher, une jambe croisée sur l'autre, se penche pour extraire une écharde de sa plante.",
+  "manquants": [
+   "nom(v(c),['SPINARIO'])",
+   "type(v(c),enfant)",
+   "role(v(e),patient,v(t))",
+   "type(v(t),épine)",
+   "type(v(p),pied)"
+  ],
+  "satisfaits": [
+   "evenement(v(e),tirer)",
+   "role(v(e),agent,v(c))",
+   "relation(v(p),de,v(c))",
+   "relation(v(t),de,v(p))"
+  ],
+  "indices": [
+   "« spinario » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« enfant » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "rôle patient",
+   "« épine » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« pied » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 126,
+  "genre": "positif",
+  "notation": "49BB4429",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('49BB4429', ou([et([type(v(s), 'étudiante'), evenement(v(e), vagabonder), role(v(e), agent, v(s))]), et([type(v(s), bettelstudent), propriete(v(s), 'féminin')])]))",
+  "nature_ref": "convention",
+  "texte": "Une jeune fille des universités, vêtue d'un manteau usé, va de ville en ville sur les routes. Elle mendie son pain et son gîte en chantant, et des livres dépassent de sa besace. L'artiste associe ainsi l'errance et le savoir, la pauvreté du costume et la présence des volumes. La figure, saisie en chemin, incarne une forme de vie itinérante où l'étude se mêle à la quête quotidienne de subsistance.",
+  "manquants": [
+   "type(v(s),étudiante)",
+   "type(v(s),bettelstudent)",
+   "propriete(v(s),féminin)"
+  ],
+  "satisfaits": [
+   "evenement(v(e),vagabonder)",
+   "role(v(e),agent,v(s))"
+  ],
+  "indices": [
+   "« étudiante » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« bettelstudent » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« féminin » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 136,
+  "genre": "positif",
+  "notation": "44G83",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "requete": "requete('44G83', et([evenement(v(e), 'délivrer'), role(v(e), patient, v(p)), type(v(p), prisonnier)]))",
+  "nature_ref": "exacte",
+  "texte": "Des paysans armés de haches forcent la porte d'une geôle et en font sortir un captif enchaîné. Le geôlier, maîtrisé, ne peut s'y opposer. La scène relève d'une justice populaire, rendue sans tribunal par ceux-là mêmes qui ont pris l'initiative de la délivrance. L'artiste insiste sur la violence de l'irruption et sur les chaînes du prisonnier, qui disent la brutalité de la détention.",
+  "manquants": [
+   "evenement(v(e),délivrer)"
+  ],
+  "satisfaits": [
+   "role(v(e),patient,v(p))",
+   "type(v(p),prisonnier)"
+  ],
+  "indices": [
+   "« délivrer » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 136,
+  "genre": "negatif",
+  "notation": "44G83",
+  "compilation": "compilee",
+  "satisfaction": "etablie_sous_hypotheses",
+  "requete": "requete('44G83', et([evenement(v(e), 'délivrer'), role(v(e), patient, v(p)), type(v(p), prisonnier)]))",
+  "nature_ref": "exacte",
+  "texte": "Le captif est libéré officiellement par un juge qui lit un acte de grâce. La scène se déroule selon les formes de la justice : le magistrat, document en main, prononce la libération devant le prisonnier. Aucune violence n'accompagne cette délivrance, qui relève d'une décision légale. L'artiste ordonne la composition autour de la lecture de l'acte, dans un cadre solennel et réglé.",
+  "manquants": [],
+  "satisfaits": [],
+  "indices": [],
+  "hypotheses": [
+   "sens_suppose(v1,libérer,délivrer)"
+  ]
+ },
+ {
+  "k": 146,
+  "genre": "positif",
+  "notation": "73C7251",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('73C7251', et([type(v(d1), disciple), type(v(d2), disciple), distincts(v(d1), v(d2)), nom(v(j), ['JEAN BAPTISTE', 'JEAN-BAPTISTE', 'JOHN THE BAPTIST']), relation(v(d1), de, v(j)), relation(v(d2), de, v(j)), evenement(v(e), envoyer), role(v(e), theme, v(d1)), role(v(e), theme, v(d2)), role(v(e), destinataire, v(c)), nom(v(c), ['JESUS-CHRIST', 'CHRIST', 'JESUS'])]))",
+  "nature_ref": "exacte",
+  "texte": "Depuis sa geôle, Jean dépêche une paire de ses suiveurs auprès du Christ, chargés de lui demander s'il est celui qui doit venir. Le Christ, entouré de malades qu'il a guéris, leur répond. Le peintre articule ainsi deux espaces, la prison d'où part le message et le lieu où il est reçu, en faisant des malades guéris la réponse visible à la question posée. La composition se lit comme un dialogue à distance, dont les deux envoyés assurent le passage.",
+  "manquants": [
+   "type(v(d1),disciple)",
+   "type(v(d2),disciple)",
+   "nom(v(j),['JEAN BAPTISTE','JEAN-BAPTISTE','JOHN THE BAPTIST'])",
+   "evenement(v(e),envoyer)"
+  ],
+  "satisfaits": [
+   "relation(v(d1),de,v(j))",
+   "relation(v(d2),de,v(j))",
+   "role(v(e),theme,v(d1))",
+   "role(v(e),theme,v(d2))",
+   "role(v(e),destinataire,v(c))",
+   "nom(v(c),['JESUS-CHRIST','CHRIST','JESUS'])"
+  ],
+  "indices": [
+   "« disciple » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« disciple » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« jean baptiste , jean-baptiste , john the baptist » absent ; proche : jean (tete), jean (nom)",
+   "« envoyer » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 156,
+  "genre": "positif",
+  "notation": "71A423",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "requete": "requete('71A423', et([nom(v(a), ['ADAM']), nom(v(e), ['EVE']), distincts(v(a), v(e)), evenement(v(t1), tenir), role(v(t1), agent, v(a)), role(v(t1), patient, v(f1)), type(v(f1), fruit), evenement(v(t2), tenir), role(v(t2), agent, v(e)), role(v(t2), patient, v(f2)), type(v(f2), fruit)]))",
+  "nature_ref": "exacte",
+  "texte": "Adam et Ève se tiennent debout au paradis, chacun une pomme à la main. Ève mord dans la sienne, tandis que le reptile se tient dans le tronc de l'arbre qui les sépare. La composition, symétrique, s'organise autour de cet axe végétal, et le geste d'Ève donne à la scène son instant décisif. L'artiste rend avec soin la nudité des corps et la présence discrète de l'animal tentateur.",
+  "manquants": [],
+  "satisfaits": [
+   "nom(v(a),['ADAM'])",
+   "nom(v(e),['EVE'])",
+   "evenement(v(t1),tenir)",
+   "role(v(t1),agent,v(a))",
+   "role(v(t1),patient,v(f1))",
+   "type(v(f1),fruit)",
+   "evenement(v(t2),tenir)",
+   "role(v(t2),agent,v(e))",
+   "role(v(t2),patient,v(f2))",
+   "type(v(f2),fruit)"
+  ],
+  "indices": [],
+  "hypotheses": []
+ },
+ {
+  "k": 166,
+  "genre": "positif",
+  "notation": "71C3223",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "requete": "requete('71C3223', et([nom(v(j), ['JACOB']), evenement(v(n), nommer), role(v(n), agent, v(j)), role(v(n), patient, v(l)), type(v(l), endroit), nom(v(l), ['PENIEL', 'PENUEL'])]))",
+  "nature_ref": "exacte",
+  "texte": "Penuel\nHuile sur toile, vers 1650\nÀ l'aube, après la lutte, Jacob boitant se retourne et proclame que ce lieu s'appellera Penuel, « j'ai vu Dieu face à face » ; il grave une pierre.",
+  "manquants": [],
+  "satisfaits": [
+   "nom(v(j),['JACOB'])",
+   "evenement(v(n),nommer)",
+   "role(v(n),agent,v(j))",
+   "role(v(n),patient,v(l))",
+   "type(v(l),endroit)",
+   "nom(v(l),['PENIEL','PENUEL'])"
+  ],
+  "indices": [],
+  "hypotheses": []
+ },
+ {
+  "k": 176,
+  "genre": "positif",
+  "notation": "51EE",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('51EE', et([type(v(x), personnification), nom(v(x), ['ORDRE HIERARCHIQUE', 'HIERARCHICAL ORDER'])]))",
+  "nature_ref": "convention",
+  "texte": "Cette allégorie représente une pyramide humaine disposée en gradins. Au sommet se tiennent le pape et le roi ; au-dessous, les nobles, le clergé, les bourgeois, et en bas les paysans. Chacun occupe son rang, subordonné à celui du dessus, de sorte que l'image donne à voir l'ordre de la société comme une architecture hiérarchique. La composition, très lisible, traduit en termes spatiaux une conception du monde où la place de chacun est fixée.",
+  "manquants": [
+   "type(v(x),personnification)",
+   "nom(v(x),['ORDRE HIERARCHIQUE','HIERARCHICAL ORDER'])"
+  ],
+  "satisfaits": [],
+  "indices": [
+   "« personnification » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« ordre hierarchique , hierarchical order » absent ; proche : ordre (tete)"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 186,
+  "genre": "positif",
+  "notation": "11F111(PULCHRA UT LUNA)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('11F111(PULCHRA UT LUNA)', et([type(v(s), symbole), nom(v(s), ['PULCHRA UT LUNA']), relation(v(s), de, v(m)), nom(v(m), ['MARIE', 'MARY'])]))",
+  "nature_ref": "exacte",
+  "texte": "Autour de la Vierge de l'Immaculée Conception se déploient des emblèmes tirés des invocations qu'on lui adresse. Parmi eux figure le disque argenté de l'astre nocturne, accompagné d'un phylactère latin qui compare sa beauté à celle de cet astre. Le peintre traite ce motif avec la même précision que les autres symboles qui entourent la figure centrale, chacun étant rendu lisible par son inscription. Le disque argenté se détache sur le ciel, dans une composition où chaque emblème renvoie à une louange mariale.",
+  "manquants": [
+   "nom(v(s),['PULCHRA UT LUNA'])",
+   "nom(v(m),['MARIE','MARY'])"
+  ],
+  "satisfaits": [
+   "type(v(s),symbole)",
+   "relation(v(s),de,v(m))"
+  ],
+  "indices": [
+   "« pulchra ut luna » absent du graphe (composé) : lexique (hyperonymie, synonymie) ou inférence",
+   "« marie , mary » absent du graphe (composé) : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ },
+ {
+  "k": 196,
+  "genre": "positif",
+  "notation": "11QQ7121(TRANSEPT)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "requete": "requete('11QQ7121(TRANSEPT)', et([type(v(t), transept), relation(v(t), de, v(c)), ou([type(v(c), chapelle), et([type(v(c), 'église'), propriete(v(c), petit)])])]))",
+  "nature_ref": "convention",
+  "texte": "Vu du dehors, un modeste sanctuaire de campagne en croix latine occupe le centre de l'image. Le bras transversal dépasse de la nef de part et d'autre, formant deux saillies qui interrompent la longueur du corps principal. Chacune se termine par un pignon percé de baies, dont les ouvertures se découpent dans la pierre. Au premier plan, l'herbe et un chemin conduisent vers l'édifice. Au fond, quelques arbres et un ciel clair encadrent la silhouette simple et robuste de l'ensemble, dont les volumes se lisent nettement.",
+  "manquants": [
+   "type(v(t),transept)",
+   "type(v(c),chapelle)",
+   "type(v(c),église)"
+  ],
+  "satisfaits": [
+   "relation(v(t),de,v(c))",
+   "propriete(v(c),petit)"
+  ],
+  "indices": [
+   "« transept » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« chapelle » absent du graphe : lexique (hyperonymie, synonymie) ou inférence",
+   "« église » absent du graphe : lexique (hyperonymie, synonymie) ou inférence"
+  ],
+  "hypotheses": []
+ }
+]

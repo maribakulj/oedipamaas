@@ -1,0 +1,583 @@
+[
+ {
+  "k": 1,
+  "genre": "positif",
+  "notation": "48CC75511",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),singer)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "propriete(v(x),male)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "relation(v(x),in,v(l))",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(l),'open air')",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 11,
+  "genre": "positif",
+  "notation": "42E432",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),churchyard)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(x),cemetery)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(y),church)",
+    "classe": "graphe_inconnu_de_K"
+   },
+   {
+    "atome": "relation(v(x),around,v(y))",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 21,
+  "genre": "positif",
+  "notation": "46C14963",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(a),accident)",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 31,
+  "genre": "positif",
+  "notation": "47K13",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),fish)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "role(v(e),patient,v(y))",
+    "classe": "role"
+   }
+  ]
+ },
+ {
+  "k": 41,
+  "genre": "positif",
+  "notation": "31AA4631",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(f),fracture)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(b),bone)",
+    "classe": "graphe_inconnu_de_K"
+   },
+   {
+    "atome": "type(v(w),woman)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 61,
+  "genre": "positif",
+  "notation": "31A3333",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),space)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "propriete(v(x),fragrant)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 81,
+  "genre": "positif",
+  "notation": "12H13(SHIVA)6",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),misfortune)",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 101,
+  "genre": "positif",
+  "notation": "43C71253",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),'walk on all fours')",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(g),'jumping game')",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 111,
+  "genre": "positif",
+  "notation": "44G31",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),imprison)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 121,
+  "genre": "positif",
+  "notation": "31E2222",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(d),death)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "propriete(v(d),accidental)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(c),cold)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 131,
+  "genre": "positif",
+  "notation": "42AA562",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),shed)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "role(v(e),patient,v(t))",
+    "classe": "role"
+   }
+  ]
+ },
+ {
+  "k": 141,
+  "genre": "positif",
+  "notation": "92D192172",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "role(v(c),patient,v(w))",
+    "classe": "role"
+   },
+   {
+    "atome": "relation(v(w),from,v(s))",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "evenement(v(d),direct)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "role(v(d),patient,v(p))",
+    "classe": "role"
+   }
+  ]
+ },
+ {
+  "k": 151,
+  "genre": "positif",
+  "notation": "96D(ANNA)68",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),die)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 161,
+  "genre": "positif",
+  "notation": "97C41",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "role(v(c),theme,v(l))",
+    "classe": "role"
+   },
+   {
+    "atome": "evenement(v(k),'attempt to kill')",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "propriete(v(j),lying)",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "relation(v(j),in,v(b))",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 171,
+  "genre": "positif",
+  "notation": "46B910",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "nom(v(x),['ACQUISTO CATTIVO'])",
+    "classe": "nom"
+   }
+  ]
+ },
+ {
+  "k": 191,
+  "genre": "positif",
+  "notation": "46C215(WINDLASS)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(s),ship)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 6,
+  "genre": "positif",
+  "notation": "44G1231",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(y),'place du marché')",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 26,
+  "genre": "positif",
+  "notation": "48A9834",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(o),ornement)",
+    "classe": "appuye_seul"
+   },
+   {
+    "atome": "relation(v(f),de,v(p))",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(p),plante)",
+    "classe": "appuye_seul"
+   },
+   {
+    "atome": "propriete(v(f),indéfinissable)",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 36,
+  "genre": "positif",
+  "notation": "25HH216",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "genre('paysage idéal')",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 56,
+  "genre": "positif",
+  "notation": "31A22361",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": []
+ },
+ {
+  "k": 66,
+  "genre": "positif",
+  "notation": "31AA5339",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(c),calvitie)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 76,
+  "genre": "positif",
+  "notation": "11H(PANTALEON)3",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),dévotion)",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 86,
+  "genre": "positif",
+  "notation": "11H(ATHANASIUS)33",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),renoncer)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "type(v(g),'bien terrestre')",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "propriete(v(s),ascétique)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 96,
+  "genre": "positif",
+  "notation": "11HH(AFRA)83",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),événement)",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "propriete(v(s),mort)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 106,
+  "genre": "positif",
+  "notation": "46E43(ROCKET)",
+  "compilation": "compilee",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "type(v(x),fusée)",
+    "classe": "graphe_inconnu_de_K"
+   },
+   {
+    "atome": "evenement(v(e),signaler)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "role(v(e),instrument,v(x))",
+    "classe": "role"
+   }
+  ]
+ },
+ {
+  "k": 116,
+  "genre": "positif",
+  "notation": "31A2515",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "propriete(v(b),'tenu vers le bas')",
+    "classe": "requete_inconnue_de_K"
+   }
+  ]
+ },
+ {
+  "k": 126,
+  "genre": "positif",
+  "notation": "31EE223",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "propriete(v(b),accidentel)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "propriete(v(c),interne)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 136,
+  "genre": "positif",
+  "notation": "31AA2363",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "propriete(v(f),'couché sur le flanc')",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "propriete(v(f),étendu)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 146,
+  "genre": "positif",
+  "notation": "71B3311",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(f),flotter)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "role(v(f),theme,v(a))",
+    "classe": "role"
+   }
+  ]
+ },
+ {
+  "k": 156,
+  "genre": "positif",
+  "notation": "71O925",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(o),ordonner)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 166,
+  "genre": "positif",
+  "notation": "73D581",
+  "compilation": "partielle",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "evenement(v(e),rédiger)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "role(v(e),patient,v(i))",
+    "classe": "role"
+   },
+   {
+    "atome": "evenement(v(c),crucifier)",
+    "classe": "sans_lien"
+   },
+   {
+    "atome": "role(v(c),patient,v(j))",
+    "classe": "role"
+   },
+   {
+    "atome": "nom(v(j),['CHRIST','JESUS','JESUS CHRIST','JESUS-CHRIST'])",
+    "classe": "nom"
+   }
+  ]
+ },
+ {
+  "k": 176,
+  "genre": "positif",
+  "notation": "42D330",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "nom(v(x),['BENEVOLENZA ET UNIONE MATRIMONIALE','CONCORDIA MARITALE'])",
+    "classe": "nom"
+   }
+  ]
+ },
+ {
+  "k": 186,
+  "genre": "positif",
+  "notation": "11QQ7121(STEEPLE)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "relation(v(c),de,v(e))",
+    "classe": "requete_inconnue_de_K"
+   },
+   {
+    "atome": "type(v(e),église)",
+    "classe": "sans_lien"
+   }
+  ]
+ },
+ {
+  "k": 196,
+  "genre": "positif",
+  "notation": "25GG211(NUTSHELL)",
+  "compilation": "non_prise_en_charge",
+  "satisfaction": "inconnue",
+  "atomes": [
+   {
+    "atome": "propriete(v(c),fantastique)",
+    "classe": "appuye_seul"
+   }
+  ]
+ }
+]

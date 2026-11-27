@@ -1,0 +1,919 @@
+[
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(x),singer)",
+	"categorie":"n",
+	"mot":"singer",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"accompanist","sens":1},
+	  {"certain":null,"lien":null,"mot":"instrument","sens":6},
+	  {"certain":null,"lien":null,"mot":"man","sens":10},
+	  {"certain":null,"lien":null,"mot":"meadow","sens":1},
+	  {"certain":null,"lien":null,"mot":"mouth","sens":8},
+	  {"certain":null,"lien":null,"mot":"tree","sens":2}
+	],
+	"sens_demande":1
+      },
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(x),male)",
+	"categorie":"a",
+	"mot":"male",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"alone","sens":4},
+	  {"certain":null,"lien":null,"mot":"open","sens":21},
+	  {"certain":null,"lien":null,"mot":"young","sens":5}
+	],
+	"sens_demande":3
+      },
+      {
+	"ailleurs": [],
+	"atome":"relation(v(x),in,v(l))",
+	"categorie":"r",
+	"mot":"in",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"beneath","sens":0},  {"certain":null,"lien":null,"mot":"of","sens":0} ],
+	"sens_demande":0
+      },
+      {
+	"ailleurs": [],
+	"atome":"type(v(l),'open air')",
+	"categorie":"n",
+	"mot":"open air",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"accompanist","sens":1},
+	  {"certain":null,"lien":null,"mot":"instrument","sens":6},
+	  {"certain":null,"lien":null,"mot":"man","sens":10},
+	  {"certain":null,"lien":null,"mot":"meadow","sens":1},
+	  {"certain":null,"lien":null,"mot":"mouth","sens":8},
+	  {"certain":null,"lien":null,"mot":"tree","sens":2}
+	],
+	"sens_demande":1
+      }
+    ],
+    "genre":"positif",
+    "k":1,
+    "notation":"48CC75511"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(x),churchyard)",
+	"categorie":"n",
+	"mot":"churchyard",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"cross","sens":5},
+	  {"certain":null,"lien":null,"mot":"grass","sens":4},
+	  {"certain":null,"lien":null,"mot":"gravestone","sens":1},
+	  {"certain":null,"lien":null,"mot":"parish church","sens":0},
+	  {"certain":null,"lien":null,"mot":"wall","sens":8},
+	  {"certain":null,"lien":null,"mot":"whole","sens":2}
+	],
+	"sens_demande":1
+      },
+      {
+	"ailleurs": [],
+	"atome":"type(v(x),cemetery)",
+	"categorie":"n",
+	"mot":"cemetery",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"cross","sens":5},
+	  {"certain":null,"lien":null,"mot":"grass","sens":4},
+	  {"certain":null,"lien":null,"mot":"gravestone","sens":1},
+	  {"certain":null,"lien":null,"mot":"parish church","sens":0},
+	  {"certain":null,"lien":null,"mot":"wall","sens":8},
+	  {"certain":null,"lien":null,"mot":"whole","sens":2}
+	],
+	"sens_demande":1
+      },
+      {
+	"ailleurs": [],
+	"atome":"type(v(y),church)",
+	"categorie":"n",
+	"mot":"church",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"cross","sens":5},
+	  {"certain":null,"lien":null,"mot":"grass","sens":4},
+	  {"certain":null,"lien":null,"mot":"gravestone","sens":1},
+	  {"certain":null,"lien":null,"mot":"parish church","sens":0},
+	  {"certain":null,"lien":null,"mot":"wall","sens":8},
+	  {"certain":null,"lien":null,"mot":"whole","sens":2}
+	],
+	"sens_demande":4
+      },
+      {"ailleurs": [],"atome":"relation(v(x),around,v(y))","categorie":"r","mot":"around","mots_du_graphe": [],"sens_demande":0}
+    ],
+    "genre":"positif",
+    "k":11,
+    "notation":"42E432"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(a),accident)",
+	"categorie":"v",
+	"mot":"accident",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"bolt","sens":7},
+	  {"certain":null,"lien":null,"mot":"lash","sens":4},
+	  {"certain":null,"lien":null,"mot":"overturn","sens":6}
+	],
+	"sens_demande":0
+      }
+    ],
+    "genre":"positif",
+    "k":21,
+    "notation":"46C14963"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),fish)",
+	"categorie":"v",
+	"mot":"fish",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"haul","sens":2},  {"certain":null,"lien":null,"mot":"wave","sens":5} ],
+	"sens_demande":2
+      },
+      {"atome":"role(v(e),patient,v(y))","categorie":"sans_lien_lexical"}
+    ],
+    "genre":"positif",
+    "k":31,
+    "notation":"47K13"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(f),fracture)",
+	"categorie":"n",
+	"mot":"fracture",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"fragment","sens":3},
+	  {"certain":null,"lien":null,"mot":"nude","sens":4},
+	  {"certain":null,"lien":null,"mot":"plate","sens":15},
+	  {"certain":null,"lien":null,"mot":"skin","sens":6},
+	  {"certain":null,"lien":null,"mot":"thigh-bone","sens":0}
+	],
+	"sens_demande":3
+      },
+      {
+	"ailleurs": [],
+	"atome":"type(v(b),bone)",
+	"categorie":"n",
+	"mot":"bone",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"fragment","sens":3},
+	  {"certain":null,"lien":null,"mot":"nude","sens":4},
+	  {"certain":null,"lien":null,"mot":"plate","sens":15},
+	  {"certain":null,"lien":null,"mot":"skin","sens":6},
+	  {"certain":null,"lien":null,"mot":"thigh-bone","sens":0}
+	],
+	"sens_demande":3
+      },
+      {
+	"ailleurs": [],
+	"atome":"type(v(w),woman)",
+	"categorie":"n",
+	"mot":"woman",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"fragment","sens":3},
+	  {"certain":null,"lien":null,"mot":"nude","sens":4},
+	  {"certain":null,"lien":null,"mot":"plate","sens":15},
+	  {"certain":null,"lien":null,"mot":"skin","sens":6},
+	  {"certain":null,"lien":null,"mot":"thigh-bone","sens":0}
+	],
+	"sens_demande":4
+      }
+    ],
+    "genre":"positif",
+    "k":41,
+    "notation":"31AA4631"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(x),space)",
+	"categorie":"n",
+	"mot":"space",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"air","sens":9},
+	  {"certain":null,"lien":null,"mot":"bowl","sens":9},
+	  {"certain":null,"lien":null,"mot":"censer","sens":1},
+	  {"certain":null,"lien":null,"mot":"orange tree","sens":1},
+	  {"certain":null,"lien":null,"mot":"pavilion","sens":1},
+	  {"certain":null,"lien":null,"mot":"petal","sens":1},
+	  {"certain":null,"lien":null,"mot":"scent","sens":3},
+	  {"certain":null,"lien":null,"mot":"smoke","sens":8},
+	  {"certain":null,"lien":null,"mot":"visitor","sens":1}
+	],
+	"sens_demande":9
+      },
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(x),fragrant)",
+	"categorie":"a",
+	"mot":"fragrant",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"garden","sens":0},
+	  {"certain":null,"lien":null,"mot":"perfumed","sens":2},
+	  {"certain":null,"lien":null,"mot":"rose","sens":1}
+	],
+	"sens_demande":1
+      }
+    ],
+    "genre":"positif",
+    "k":61,
+    "notation":"31A3333"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),misfortune)",
+	"categorie":"v",
+	"mot":"misfortune",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"churn","sens":2},
+	  {"certain":null,"lien":null,"mot":"hold back","sens":6},
+	  {"certain":null,"lien":null,"mot":"pain","sens":2},
+	  {"certain":null,"lien":null,"mot":"press","sens":14},
+	  {"certain":null,"lien":null,"mot":"swallow","sens":8},
+	  {"certain":null,"lien":null,"mot":"writhe","sens":1}
+	],
+	"sens_demande":0
+      }
+    ],
+    "genre":"positif",
+    "k":81,
+    "notation":"12H13(SHIVA)6"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),'walk on all fours')",
+	"categorie":"v",
+	"mot":"walk on all fours",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"leap","sens":4},
+	  {"certain":null,"lien":null,"mot":"race","sens":4},
+	  {"certain":null,"lien":null,"mot":"scramble","sens":5}
+	],
+	"sens_demande":0
+      },
+      {
+	"ailleurs": [],
+	"atome":"type(v(g),'jumping game')",
+	"categorie":"n",
+	"mot":"jumping game",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"bear","sens":2},
+	  {"certain":null,"lien":null,"mot":"boy","sens":4},
+	  {"certain":null,"lien":null,"mot":"foot","sens":11},
+	  {"certain":null,"lien":null,"mot":"game","sens":11},
+	  {"certain":null,"lien":null,"mot":"ground","sens":11},
+	  {"certain":null,"lien":null,"mot":"hand","sens":14},
+	  {"certain":null,"lien":null,"mot":"leap","sens":4},
+	  {"certain":null,"lien":null,"mot":"schoolyard","sens":1},
+	  {"certain":null,"lien":null,"mot":"scramble","sens":2}
+	],
+	"sens_demande":0
+      }
+    ],
+    "genre":"positif",
+    "k":101,
+    "notation":"43C71253"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),imprison)",
+	"categorie":"v",
+	"mot":"imprison",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"sit","sens":10},  {"certain":null,"lien":null,"mot":"turn","sens":26} ],
+	"sens_demande":2
+      }
+    ],
+    "genre":"positif",
+    "k":111,
+    "notation":"44G31"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(d),death)",
+	"categorie":"n",
+	"mot":"death",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"beard","sens":5},
+	  {"certain":null,"lien":null,"mot":"frost","sens":3},
+	  {"certain":null,"lien":null,"mot":"lantern","sens":1},
+	  {"certain":null,"lien":null,"mot":"road","sens":2},
+	  {"certain":null,"lien":null,"mot":"snow","sens":3},
+	  {"certain":null,"lien":null,"mot":"traveller","sens":1}
+	],
+	"sens_demande":7
+      },
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(d),accidental)",
+	"categorie":"a",
+	"mot":"accidental",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"gone out","sens":0} ],
+	"sens_demande":1
+      },
+      {
+	"ailleurs": [],
+	"atome":"type(v(c),cold)",
+	"categorie":"n",
+	"mot":"cold",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"beard","sens":5},
+	  {"certain":null,"lien":null,"mot":"frost","sens":3},
+	  {"certain":null,"lien":null,"mot":"lantern","sens":1},
+	  {"certain":null,"lien":null,"mot":"road","sens":2},
+	  {"certain":null,"lien":null,"mot":"snow","sens":3},
+	  {"certain":null,"lien":null,"mot":"traveller","sens":1}
+	],
+	"sens_demande":3
+      }
+    ],
+    "genre":"positif",
+    "k":121,
+    "notation":"31E2222"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),shed)",
+	"categorie":"v",
+	"mot":"shed",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"come out","sens":11},
+	  {"certain":null,"lien":null,"mot":"grin","sens":1},
+	  {"certain":null,"lien":null,"mot":"hold","sens":36},
+	  {"certain":null,"lien":null,"mot":"show","sens":12}
+	],
+	"sens_demande":4
+      },
+      {"atome":"role(v(e),patient,v(t))","categorie":"sans_lien_lexical"}
+    ],
+    "genre":"positif",
+    "k":131,
+    "notation":"42AA562"
+  },
+  {
+    "atomes": [
+      {"atome":"role(v(c),patient,v(w))","categorie":"sans_lien_lexical"},
+      {
+	"ailleurs": [],
+	"atome":"relation(v(w),from,v(s))",
+	"categorie":"r",
+	"mot":"from",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"of","sens":0} ],
+	"sens_demande":0
+      },
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(d),direct)",
+	"categorie":"v",
+	"mot":"direct",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"gather","sens":9},
+	  {"certain":null,"lien":null,"mot":"leave","sens":14},
+	  {"certain":null,"lien":null,"mot":"stand","sens":12},
+	  {"certain":null,"lien":null,"mot":"tell","sens":8},
+	  {"certain":null,"lien":null,"mot":"wait","sens":4},
+	  {"certain":null,"lien":null,"mot":"whisper","sens":1}
+	],
+	"sens_demande":13
+      },
+      {"atome":"role(v(d),patient,v(p))","categorie":"sans_lien_lexical"}
+    ],
+    "genre":"positif",
+    "k":141,
+    "notation":"92D192172"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),die)",
+	"categorie":"v",
+	"mot":"die",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"draw","sens":36},  {"certain":null,"lien":null,"mot":"grieve","sens":2} ],
+	"sens_demande":11
+      }
+    ],
+    "genre":"positif",
+    "k":151,
+    "notation":"96D(ANNA)68"
+  },
+  {
+    "atomes": [
+      {"atome":"role(v(c),theme,v(l))","categorie":"sans_lien_lexical"},
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(k),'attempt to kill')",
+	"categorie":"v",
+	"mot":"attempt to kill",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"creep","sens":4},
+	  {"certain":null,"lien":null,"mot":"lie","sens":7},
+	  {"certain":null,"lien":null,"mot":"strike","sens":21},
+	  {"certain":null,"lien":null,"mot":"turn","sens":26}
+	],
+	"sens_demande":0
+      },
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(j),lying)",
+	"categorie":"a",
+	"mot":"lying",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"asleep","sens":3},  {"certain":null,"lien":null,"mot":"raised","sens":3} ],
+	"sens_demande":0
+      },
+      {
+	"ailleurs": [],
+	"atome":"relation(v(j),in,v(b))",
+	"categorie":"r",
+	"mot":"in",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"into","sens":0},  {"certain":null,"lien":null,"mot":"of","sens":0} ],
+	"sens_demande":0
+      }
+    ],
+    "genre":"positif",
+    "k":161,
+    "notation":"97C41"
+  },
+  {
+    "atomes": [ {"atome":"nom(v(x),['ACQUISTO CATTIVO'])","categorie":"sans_lien_lexical"} ],
+    "genre":"positif",
+    "k":171,
+    "notation":"46B910"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(s),ship)",
+	"categorie":"n",
+	"mot":"ship",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"anchor cable","sens":0},
+	  {"certain":null,"lien":null,"mot":"bar","sens":14},
+	  {"certain":null,"lien":null,"mot":"foredeck","sens":1},
+	  {"certain":null,"lien":null,"mot":"sailor","sens":3},
+	  {"certain":null,"lien":null,"mot":"windlass","sens":1}
+	],
+	"sens_demande":1
+      }
+    ],
+    "genre":"positif",
+    "k":191,
+    "notation":"46C215(WINDLASS)"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(y),'place du marché')",
+	"categorie":"n",
+	"mot":"place du marché",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"croix","sens":7},
+	  {"certain":null,"lien":null,"mot":"légume","sens":7},
+	  {"certain":null,"lien":null,"mot":"panier","sens":6},
+	  {"certain":null,"lien":null,"mot":"place","sens":33},
+	  {"certain":null,"lien":null,"mot":"socle","sens":3},
+	  {"certain":null,"lien":null,"mot":"volaille","sens":4},
+	  {"certain":null,"lien":null,"mot":"étal","sens":0}
+	],
+	"sens_demande":1
+      }
+    ],
+    "genre":"positif",
+    "k":6,
+    "notation":"44G1231"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(o),ornement)",
+	"categorie":"n",
+	"mot":"ornement",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"feuille","sens":12},
+	  {"certain":false,"lien":"chemin(frise,[103397087,102734423,103169390,ornement])","mot":"frise","sens":2},
+	  {"certain":null,"lien":null,"mot":"plante","sens":2},
+	  {"certain":null,"lien":null,"mot":"rinceau","sens":0},
+	  {"certain":null,"lien":null,"mot":"vrille","sens":2}
+	],
+	"sens_demande":1
+      },
+      {"ailleurs": [],"atome":"relation(v(f),de,v(p))","categorie":"r","mot":"de","mots_du_graphe": [],"sens_demande":0},
+      {
+	"ailleurs": [],
+	"atome":"type(v(p),plante)",
+	"categorie":"n",
+	"mot":"plante",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"feuille","sens":12},
+	  {"certain":null,"lien":null,"mot":"frise","sens":2},
+	  {"certain":true,"lien":"chemin(plante,[100017222,plante])","mot":"plante","sens":2},
+	  {"certain":null,"lien":null,"mot":"rinceau","sens":0},
+	  {"certain":null,"lien":null,"mot":"vrille","sens":2}
+	],
+	"sens_demande":2
+      },
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(f),indéfinissable)",
+	"categorie":"a",
+	"mot":"indéfinissable",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"inventé","sens":0},
+	  {"certain":null,"lien":null,"mot":"stylisé","sens":0},
+	  {"certain":null,"lien":null,"mot":"végétal","sens":0}
+	],
+	"sens_demande":0
+      }
+    ],
+    "genre":"positif",
+    "k":26,
+    "notation":"48A9834"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"genre('paysage idéal')",
+	"categorie":"n",
+	"mot":"paysage idéal",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"berger","sens":3},
+	  {"certain":null,"lien":null,"mot":"cascade","sens":1},
+	  {"certain":null,"lien":null,"mot":"manière","sens":16},
+	  {"certain":null,"lien":null,"mot":"paysage","sens":7},
+	  {"certain":null,"lien":null,"mot":"rocher","sens":7},
+	  {"certain":null,"lien":null,"mot":"temple","sens":3}
+	],
+	"sens_demande":0
+      }
+    ],
+    "genre":"positif",
+    "k":36,
+    "notation":"25HH216"
+  },
+  {"atomes": [],"genre":"positif","k":56,"notation":"31A22361"},
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(c),calvitie)",
+	"categorie":"n",
+	"mot":"calvitie",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"bonnet","sens":2},
+	  {"certain":null,"lien":null,"mot":"crâne","sens":2},
+	  {"certain":null,"lien":null,"mot":"femme","sens":8},
+	  {"certain":null,"lien":null,"mot":"perruque","sens":4},
+	  {"certain":null,"lien":null,"mot":"servante","sens":2}
+	],
+	"sens_demande":1
+      }
+    ],
+    "genre":"positif",
+    "k":66,
+    "notation":"31AA5339"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),dévotion)",
+	"categorie":"v",
+	"mot":"dévotion",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"agenouiller","sens":1},
+	  {"certain":null,"lien":null,"mot":"poser","sens":30},
+	  {"certain":null,"lien":null,"mot":"prier","sens":8}
+	],
+	"sens_demande":0
+      }
+    ],
+    "genre":"positif",
+    "k":76,
+    "notation":"11H(PANTALEON)3"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),renoncer)",
+	"categorie":"v",
+	"mot":"renoncer",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"dépouiller","sens":3},
+	  {"certain":null,"lien":null,"mot":"jeûner","sens":2},
+	  {"certain":null,"lien":null,"mot":"prier","sens":8},
+	  {"certain":null,"lien":null,"mot":"vivre","sens":11},
+	  {"certain":null,"lien":null,"mot":"vêtir","sens":2}
+	],
+	"sens_demande":8
+      },
+      {
+	"ailleurs": [],
+	"atome":"type(v(g),'bien terrestre')",
+	"categorie":"n",
+	"mot":"bien terrestre",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"désert","sens":4},
+	  {"certain":null,"lien":null,"mot":"grotte","sens":2},
+	  {"certain":null,"lien":null,"mot":"ornement","sens":1},
+	  {"certain":null,"lien":null,"mot":"rouleau","sens":5},
+	  {"certain":null,"lien":null,"mot":"saint","sens":4},
+	  {"certain":null,"lien":null,"mot":"tunique","sens":2},
+	  {"certain":null,"lien":null,"mot":"évêque","sens":3}
+	],
+	"sens_demande":0
+      },
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(s),ascétique)",
+	"categorie":"a",
+	"mot":"ascétique",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"caché","sens":4},  {"certain":null,"lien":null,"mot":"simple","sens":9} ],
+	"sens_demande":2
+      }
+    ],
+    "genre":"positif",
+    "k":86,
+    "notation":"11H(ATHANASIUS)33"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),événement)",
+	"categorie":"v",
+	"mot":"événement",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"apparaître","sens":13},
+	  {"certain":null,"lien":null,"mot":"indiquer","sens":17},
+	  {"certain":null,"lien":null,"mot":"supplicier","sens":0}
+	],
+	"sens_demande":0
+      },
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(s),mort)",
+	"categorie":"a",
+	"mot":"mort",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"endormi","sens":2} ],
+	"sens_demande":19
+      }
+    ],
+    "genre":"positif",
+    "k":96,
+    "notation":"11HH(AFRA)83"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"type(v(x),fusée)",
+	"categorie":"n",
+	"mot":"fusée",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"fusée de signalisation","sens":0},
+	  {"certain":null,"lien":null,"mot":"marin","sens":4},
+	  {"certain":null,"lien":null,"mot":"navire","sens":6},
+	  {"certain":null,"lien":null,"mot":"nuit","sens":8},
+	  {"certain":null,"lien":null,"mot":"pont","sens":13},
+	  {"certain":null,"lien":null,"mot":"traînée","sens":0}
+	],
+	"sens_demande":5
+      },
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),signaler)",
+	"categorie":"v",
+	"mot":"signaler",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"monter","sens":6},  {"certain":null,"lien":null,"mot":"tirer","sens":63} ],
+	"sens_demande":6
+      },
+      {"atome":"role(v(e),instrument,v(x))","categorie":"sans_lien_lexical"}
+    ],
+    "genre":"positif",
+    "k":106,
+    "notation":"46E43(ROCKET)"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(b),'tenu vers le bas')",
+	"categorie":"a",
+	"mot":"tenu vers le bas",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"debout","sens":2},
+	  {"certain":null,"lien":null,"mot":"droit","sens":29},
+	  {"certain":null,"lien":null,"mot":"ouvert","sens":23}
+	],
+	"sens_demande":0
+      }
+    ],
+    "genre":"positif",
+    "k":116,
+    "notation":"31A2515"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(b),accidentel)",
+	"categorie":"a",
+	"mot":"accidentel",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"blessé","sens":1},
+	  {"certain":null,"lien":null,"mot":"lourd","sens":26},
+	  {"certain":null,"lien":null,"mot":"soudain","sens":2},
+	  {"certain":null,"lien":null,"mot":"vivant","sens":10}
+	],
+	"sens_demande":3
+      },
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(c),interne)",
+	"categorie":"a",
+	"mot":"interne",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"blessé","sens":1},
+	  {"certain":null,"lien":null,"mot":"lourd","sens":26},
+	  {"certain":null,"lien":null,"mot":"soudain","sens":2},
+	  {"certain":null,"lien":null,"mot":"vivant","sens":10}
+	],
+	"sens_demande":7
+      }
+    ],
+    "genre":"positif",
+    "k":126,
+    "notation":"31EE223"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(f),'couché sur le flanc')",
+	"categorie":"a",
+	"mot":"couché sur le flanc",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"gauche","sens":7},
+	  {"certain":null,"lien":null,"mot":"nu","sens":12},
+	  {"certain":null,"lien":null,"mot":"replié","sens":0}
+	],
+	"sens_demande":0
+      },
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(f),étendu)",
+	"categorie":"a",
+	"mot":"étendu",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"gauche","sens":7},
+	  {"certain":null,"lien":null,"mot":"nu","sens":12},
+	  {"certain":null,"lien":null,"mot":"replié","sens":0}
+	],
+	"sens_demande":11
+      }
+    ],
+    "genre":"positif",
+    "k":136,
+    "notation":"31AA2363"
+  },
+  {
+    "atomes": [
+      {"ailleurs": [],"atome":"evenement(v(f),flotter)","categorie":"v","mot":"flotter","mots_du_graphe": [],"sens_demande":9},
+      {"atome":"role(v(f),theme,v(a))","categorie":"sans_lien_lexical"}
+    ],
+    "genre":"positif",
+    "k":146,
+    "notation":"71B3311"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(o),ordonner)",
+	"categorie":"v",
+	"mot":"ordonner",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"deuil","sens":0},
+	  {"certain":null,"lien":null,"mot":"interroger","sens":7},
+	  {"certain":null,"lien":null,"mot":"tenir","sens":52},
+	  {"certain":null,"lien":null,"mot":"vouloir","sens":9}
+	],
+	"sens_demande":1
+      }
+    ],
+    "genre":"positif",
+    "k":156,
+    "notation":"71O925"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(e),rédiger)",
+	"categorie":"v",
+	"mot":"rédiger",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"asseoir","sens":9},
+	  {"certain":null,"lien":null,"mot":"destiner","sens":5},
+	  {"certain":null,"lien":null,"mot":"tracer","sens":0}
+	],
+	"sens_demande":15
+      },
+      {"atome":"role(v(e),patient,v(i))","categorie":"sans_lien_lexical"},
+      {
+	"ailleurs": [],
+	"atome":"evenement(v(c),crucifier)",
+	"categorie":"v",
+	"mot":"crucifier",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"asseoir","sens":9},
+	  {"certain":null,"lien":null,"mot":"destiner","sens":5},
+	  {"certain":null,"lien":null,"mot":"tracer","sens":0}
+	],
+	"sens_demande":2
+      },
+      {"atome":"role(v(c),patient,v(j))","categorie":"sans_lien_lexical"},
+      {"atome":"nom(v(j),['CHRIST','JESUS','JESUS CHRIST','JESUS-CHRIST'])","categorie":"sans_lien_lexical"}
+    ],
+    "genre":"positif",
+    "k":166,
+    "notation":"73D581"
+  },
+  {
+    "atomes": [ {"atome":"nom(v(x),['BENEVOLENZA ET UNIONE MATRIMONIALE','CONCORDIA MARITALE'])","categorie":"sans_lien_lexical"} ],
+    "genre":"positif",
+    "k":176,
+    "notation":"42D330"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"relation(v(c),de,v(e))",
+	"categorie":"r",
+	"mot":"de",
+	"mots_du_graphe": [ {"certain":null,"lien":null,"mot":"dans","sens":0} ],
+	"sens_demande":0
+      },
+      {
+	"ailleurs": [],
+	"atome":"type(v(e),église)",
+	"categorie":"n",
+	"mot":"église",
+	"mots_du_graphe": [
+	  {"certain":null,"lien":null,"mot":"chapelle","sens":2},
+	  {"certain":null,"lien":null,"mot":"cloche","sens":8},
+	  {"certain":null,"lien":null,"mot":"clocher","sens":2}
+	],
+	"sens_demande":6
+      }
+    ],
+    "genre":"positif",
+    "k":186,
+    "notation":"11QQ7121(STEEPLE)"
+  },
+  {
+    "atomes": [
+      {
+	"ailleurs": [],
+	"atome":"propriete(v(c),fantastique)",
+	"categorie":"a",
+	"mot":"fantastique",
+	"mots_du_graphe": [
+	  {"certain":true,"lien":"chemin(fantastique,[300967646,fantastique])","mot":"fantastique","sens":4},
+	  {"certain":null,"lien":null,"mot":"humain","sens":5},
+	  {"certain":null,"lien":null,"mot":"immense","sens":1}
+	],
+	"sens_demande":4
+      }
+    ],
+    "genre":"positif",
+    "k":196,
+    "notation":"25GG211(NUTSHELL)"
+  }
+]

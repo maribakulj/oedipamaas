@@ -12,6 +12,9 @@ reproduction sont sur la branche du code (`docs/BANC_GRAPHES.md`, § 5 ; `docs/m
 - `reference_d30/` : la mesure de référence du lot 1 (codage de bout en bout, trois réglages, par tranches, avec la
   description de chaque passe ; le comparateur des requêtes ; `protocole_delai_mur/` : les passes du premier
   protocole, à délai de mur, gardées).
+- `croise/` : l'expérience croisée du 27/11 (`docs/EXPERIENCE_CROISEE.md` sur la branche du code) : les quatre
+  conditions par texte, les échecs, les sondes de K, et `causes_ref_ref.json`, les causes de chaque échec, **décidées
+  par un agent, provisoires**.
 - `MANIFESTE.json` : chaque fichier (taille, SHA-256, rôle, statut), et les commits des passes.
 
 **Statut** : tout ce qui vient des annotateurs et des adjudicateurs est un **accord entre agents**, non une validation

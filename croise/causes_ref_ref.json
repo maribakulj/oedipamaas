@@ -1,0 +1,953 @@
+[
+ {
+  "jeu": "vertical",
+  "k": 1,
+  "genre": "positif",
+  "notation": "48CC75511",
+  "causes": [
+   "representation",
+   "inference"
+  ],
+  "principale": "representation",
+  "raison": "singer pour man + sing (le chanteur est un nom, la requête un homme qui chante) ; male pour man ; « open air » ne dit pas meadow",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 11,
+  "genre": "positif",
+  "notation": "42E432",
+  "causes": [
+   "inference",
+   "lexique",
+   "representation"
+  ],
+  "principale": "inference",
+  "raison": "l'église est dite « parish church », sans concept dans K ; « around » est une relation où la requête attend l'événement surround ; le reste se déduit du contexte",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 21,
+  "genre": "positif",
+  "notation": "46C14963",
+  "causes": [
+   "inference",
+   "representation"
+  ],
+  "principale": "inference",
+  "raison": "l'accident n'est pas nommé : il se déduit de la scène ; le graphe écrit un nom là où la requête attend evenement(accident)",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 31,
+  "genre": "positif",
+  "notation": "47K13",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "la requête demande fish ; le texte décrit des casiers à homard relevés",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 41,
+  "genre": "positif",
+  "notation": "31AA4631",
+  "causes": [
+   "representation",
+   "lexique"
+  ],
+  "principale": "representation",
+  "raison": "fracture contre la propriété broken ; thigh-bone sans concept, donc sans lien vers bone ; woman pour female nude",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 61,
+  "genre": "positif",
+  "notation": "31A3333",
+  "causes": [
+   "inference",
+   "lexique"
+  ],
+  "principale": "inference",
+  "raison": "pavilion atteint structure, pas space ; perfumed n'atteint pas fragrant (la similarité des adjectifs n'est pas dans K) ; le parfum est porté par la fumée",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 81,
+  "genre": "positif",
+  "notation": "12H13(SHIVA)6",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "la requête met Shiva en theme ; le guide en fait l'agent ou l'expérienceur",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 101,
+  "genre": "positif",
+  "notation": "43C71253",
+  "causes": [
+   "lexique",
+   "representation",
+   "inference"
+  ],
+  "principale": "lexique",
+  "raison": "composés sans concept dans K ; le reste est dit autrement ou implicite",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 111,
+  "genre": "positif",
+  "notation": "44G31",
+  "causes": [
+   "inference",
+   "representation",
+   "lexique"
+  ],
+  "principale": "inference",
+  "raison": "prisoner, chains, dungeon cell, jailer, mais pas d'imprison ; il manque la dérivation prisoner ↔ imprison ; la requête compilée dit imprisonment (un nom), la requête de référence imprison (un événement)",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 121,
+  "genre": "positif",
+  "notation": "31E2222",
+  "causes": [
+   "representation",
+   "inference"
+  ],
+  "principale": "representation",
+  "raison": "death (un nom) contre die (un événement) ; la mort est en partie implicite",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 131,
+  "genre": "positif",
+  "notation": "42AA562",
+  "causes": [
+   "representation",
+   "lexique"
+  ],
+  "principale": "representation",
+  "raison": "mots dits autrement et sans lien dans K",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 141,
+  "genre": "positif",
+  "notation": "92D192172",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "theme tuft contre patient wool : conventions de rôle différentes",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 151,
+  "genre": "positif",
+  "notation": "96D(ANNA)68",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "« lifeless body » implique die",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 161,
+  "genre": "positif",
+  "notation": "97C41",
+  "causes": [
+   "representation",
+   "inference",
+   "lexique"
+  ],
+  "principale": "representation",
+  "raison": "forme différente ; le reste est implicite ou sans lien",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 171,
+  "genre": "positif",
+  "notation": "46B910",
+  "causes": [
+   "representation",
+   "erreur_reference"
+  ],
+  "principale": "representation",
+  "raison": "le nom de la personnification est porté par une entité citée ; le graphe applique mal le guide",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 191,
+  "genre": "positif",
+  "notation": "46C215(WINDLASS)",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "foredeck implique ship",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 6,
+  "genre": "positif",
+  "notation": "44G1231",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "le marché est un lieu, pas une tête d'entité ; « au centre de » contre « sur »",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 26,
+  "genre": "positif",
+  "notation": "48A9834",
+  "causes": [
+   "representation",
+   "erreur_reference"
+  ],
+  "principale": "representation",
+  "raison": "la requête veut une plante affirmée ; le graphe la nie",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 36,
+  "genre": "positif",
+  "notation": "25HH216",
+  "causes": [
+   "representation",
+   "lexique"
+  ],
+  "principale": "representation",
+  "raison": "le genre « paysage idéal » est sans concept dans K et dit autrement",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 56,
+  "genre": "positif",
+  "notation": "31A22361",
+  "causes": [
+   "lexique",
+   "representation",
+   "desambiguisation"
+  ],
+  "principale": "lexique",
+  "raison": "appareil génital : 0 concept ; pénis sans lien vers organe sexuel ; testicule → organe sexuel seulement possible (D30) ; masculin porte sur le tout, le type n'est atteint que par une partie",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 66,
+  "genre": "positif",
+  "notation": "31AA5339",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "chauve (propriété) contre calvitie (nom)",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 76,
+  "genre": "positif",
+  "notation": "11H(PANTALEON)3",
+  "causes": [
+   "representation",
+   "inference",
+   "lexique"
+  ],
+  "principale": "representation",
+  "raison": "la dévotion est un événement dans la requête ; le graphe la dit autrement",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 86,
+  "genre": "positif",
+  "notation": "11H(ATHANASIUS)33",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "l'épisode se déduit de la scène",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 96,
+  "genre": "positif",
+  "notation": "11HH(AFRA)83",
+  "causes": [
+   "inference",
+   "representation"
+  ],
+  "principale": "inference",
+  "raison": "la mort est impliquée par le supplice",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 106,
+  "genre": "positif",
+  "notation": "46E43(ROCKET)",
+  "causes": [
+   "erreur_reference",
+   "representation"
+  ],
+  "principale": "erreur_reference",
+  "raison": "« fusée de signalisation » gardée en un seul mot sans concept (mauvaise application du guide) ; la fonction de signal est dans le composé, la requête veut un événement et son instrument",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 116,
+  "genre": "positif",
+  "notation": "31A2515",
+  "causes": [
+   "representation",
+   "lexique"
+  ],
+  "principale": "representation",
+  "raison": "forme différente et mot sans lien",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 126,
+  "genre": "positif",
+  "notation": "31EE223",
+  "causes": [
+   "lexique",
+   "inference"
+  ],
+  "principale": "lexique",
+  "raison": "hernie n'atteint pas blessure",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 136,
+  "genre": "positif",
+  "notation": "31AA2363",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "la posture est une propriété ; la requête veut l'événement s'étendre",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 146,
+  "genre": "positif",
+  "notation": "71B3311",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "la décision H4 a retiré l'événement flotter ; la relation passe par « étendue »",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 156,
+  "genre": "positif",
+  "notation": "71O925",
+  "causes": [
+   "inference",
+   "representation"
+  ],
+  "principale": "inference",
+  "raison": "implicite, et dit autrement",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 166,
+  "genre": "positif",
+  "notation": "73D581",
+  "causes": [
+   "inference",
+   "lexique"
+  ],
+  "principale": "inference",
+  "raison": "implicite ; mot sans lien",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 176,
+  "genre": "positif",
+  "notation": "42D330",
+  "causes": [
+   "lexique",
+   "representation"
+  ],
+  "principale": "lexique",
+  "raison": "alias par traduction absent",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 186,
+  "genre": "positif",
+  "notation": "11QQ7121(STEEPLE)",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "surmonter (un événement) contre une relation « de »",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "vertical",
+  "k": 196,
+  "genre": "positif",
+  "notation": "25GG211(NUTSHELL)",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "« fantastique » porte sur la gravure, pas sur la coquille",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 1,
+  "genre": "positif",
+  "notation": "42D21",
+  "causes": [
+   "inference",
+   "lexique",
+   "representation"
+  ],
+  "principale": "inference",
+  "raison": "husband et wife dans un portrait de mariage ne disent pas bride et groom ; gown est l'hyperonyme de wedding dress, pas l'inverse ; la tenue est un événement (dress, wear), la requête veut la relation in",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 11,
+  "genre": "positif",
+  "notation": "46B355",
+  "causes": [
+   "lexique",
+   "inference"
+  ],
+  "principale": "lexique",
+  "raison": "trade mark, trade token, trade sign et trade card sont sans concept dans K ; le graphe a card{advertising}",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 21,
+  "genre": "positif",
+  "notation": "41C67",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "des périphrases : un liquide doré pressé d'olives (oil), un vin aigri (vinegar), une saucière pleine (sauce)",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 31,
+  "genre": "positif",
+  "notation": "47G3355",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "le métier est décrit par ses gestes (tendre l'étoffe, la clouer) ; upholster n'est jamais dit",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 41,
+  "genre": "positif",
+  "notation": "31A454",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "un être hybride, humain et serpent, est un monstre : rien ne le dit ; reptile est atteint par serpent",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 51,
+  "genre": "positif",
+  "notation": "31A4155",
+  "causes": [
+   "lexique"
+  ],
+  "principale": "lexique",
+  "raison": "splint est un co-hyponyme de brace et de calliper, sans lien dans K",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 61,
+  "genre": "positif",
+  "notation": "31A4623(...)",
+  "causes": [
+   "erreur_reference",
+   "representation"
+  ],
+  "principale": "erreur_reference",
+  "raison": "la requête de référence a gardé le nom à remplir (A_REMPLIR) ; la contagion est un nom et un événement modalisé, pas une propriété",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 71,
+  "genre": "positif",
+  "notation": "11I72(JUDAS ISCARIOT)1",
+  "causes": [
+   "inference",
+   "desambiguisation",
+   "representation"
+  ],
+  "principale": "inference",
+  "raison": "« premier d'une lignée de traîtres » et begin ne disent pas founder ; « Judas » seul n'est pas un alias de JUDAS ISCARIOT",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 81,
+  "genre": "positif",
+  "notation": "11H(MATTHEW)13",
+  "causes": [
+   "inference",
+   "representation"
+  ],
+  "principale": "inference",
+  "raison": "« elles deviennent une maison religieuse sous sa conduite » : la fondation se déduit ; aucun événement n'a order pour patient",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 91,
+  "genre": "positif",
+  "notation": "11H(QUINTIN)0",
+  "causes": [
+   "representation",
+   "inference"
+  ],
+  "principale": "representation",
+  "raison": "« parmi d'autres figures saintes » est le lieu de stand ; le guide ne crée pas d'entité collective ; group n'est atteint que (possible) par faithful",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 101,
+  "genre": "positif",
+  "notation": "42D254",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "le couple couronné, les années de vie conjugale et le gâteau impliquent l'anniversaire de mariage ; celebrate n'est pas dit (honour, toast)",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 111,
+  "genre": "positif",
+  "notation": "46B3312",
+  "causes": [
+   "erreur_reference",
+   "inference"
+  ],
+  "principale": "erreur_reference",
+  "raison": "la requête de référence est en français (poids, peser) pour un texte anglais ; weigh() n'a pas de participant",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 131,
+  "genre": "positif",
+  "notation": "45E4",
+  "causes": [
+   "inference",
+   "representation",
+   "lexique"
+  ],
+  "principale": "inference",
+  "raison": "l'usage est dit par entrust, service ; army par troop et context{military} (troop n'atteint pas army)",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 141,
+  "genre": "positif",
+  "notation": "71E3242",
+  "causes": [
+   "representation",
+   "lexique"
+  ],
+  "principale": "representation",
+  "raison": "la matière est une propriété dans la requête (brass, sans sens adjectival dans K) ; le texte dit bronze ; staff n'atteint pas pole ; « on » est le lieu de hoist, pas une relation",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 151,
+  "genre": "positif",
+  "notation": "71E11727",
+  "causes": [
+   "lexique",
+   "inference",
+   "representation"
+  ],
+  "principale": "lexique",
+  "raison": "staff n'atteint pas rod ; « balls of ice » pour hail, lightning pour fire ; towards est le lieu de lift",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 161,
+  "genre": "positif",
+  "notation": "71O7315",
+  "causes": [
+   "representation",
+   "lexique"
+  ],
+  "principale": "representation",
+  "raison": "l'insincérité est un nom dans le graphe (pretence, repentance{hollow}), une propriété dans la requête ; rebuke et denounce n'atteignent pas condemn",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 171,
+  "genre": "positif",
+  "notation": "52EE11",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "la personnification est une femme allégorique qui exprime l'enquête ; la requête veut type personification et un nom",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 181,
+  "genre": "positif",
+  "notation": "59CC22",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "même forme : un juge allégorique, et la partialité est une entité révélée",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 191,
+  "genre": "positif",
+  "notation": "31A22111(NOSE)",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "« l'organe de l'odorat » pour nose",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 6,
+  "genre": "positif",
+  "notation": "42D36",
+  "causes": [
+   "lexique"
+  ],
+  "principale": "lexique",
+  "raison": "acariâtre n'atteint pas mauvais (la similarité des adjectifs n'est pas dans K)",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 16,
+  "genre": "positif",
+  "notation": "48C7326(...)",
+  "causes": [
+   "erreur_reference",
+   "lexique",
+   "representation"
+  ],
+  "principale": "erreur_reference",
+  "raison": "la requête de référence a gardé A_REMPLIR ; pincé et gratté sont sans concept dans K ; le jeu est un événement (jouer, vibrer)",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 26,
+  "genre": "positif",
+  "notation": "25FF6",
+  "causes": [
+   "inference",
+   "representation"
+  ],
+  "principale": "inference",
+  "raison": "une créature à écailles, nageoires et queue fourchue n'est pas dite poisson ; fabuleux porte sur « être », hors de la portée ancrée",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 36,
+  "genre": "positif",
+  "notation": "25FF38(PHEASANT)",
+  "causes": [
+   "inference",
+   "lexique"
+  ],
+  "principale": "inference",
+  "raison": "la silhouette d'un gibier à plume à longue queue barrée et collerette rousse pour faisan ; imaginaire n'atteint pas fabuleux",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 46,
+  "genre": "positif",
+  "notation": "31A25231",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "le contact réciproque (« s'appuient les unes contre les autres ») est noté appuyer(agent, lieu) sur une seule entité ; la requête veut agent et patient distincts",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 56,
+  "genre": "positif",
+  "notation": "41D211(CHEMISE À LA REINE)",
+  "causes": [
+   "inference",
+   "lexique"
+  ],
+  "principale": "inference",
+  "raison": "la robe est décrite (mousseline, ceinture, Marie-Antoinette), jamais nommée ; « chemise à la reine » sans concept",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 66,
+  "genre": "positif",
+  "notation": "31AA5333",
+  "causes": [
+   "inference"
+  ],
+  "principale": "inference",
+  "raison": "« le sommet du crâne rasé en couronne » pour tonsure",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 76,
+  "genre": "positif",
+  "notation": "11H(IGNATIUS OF ANTIOCH)131",
+  "causes": [
+   "desambiguisation",
+   "inference",
+   "representation"
+  ],
+  "principale": "desambiguisation",
+  "raison": "« Ignatius » seul n'est pas un alias ; la reconnaissance du pape et le parchemin scellé pour approuver la règle",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 86,
+  "genre": "positif",
+  "notation": "11H(JOHN DAMASCENE)0",
+  "causes": [
+   "representation",
+   "inference"
+  ],
+  "principale": "representation",
+  "raison": "le groupe est dit par réunir et la liste des lieux de « se tenir » ; « père » pour saint",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 96,
+  "genre": "positif",
+  "notation": "11H(ANTONY ABBOT)119",
+  "causes": [
+   "inference",
+   "representation",
+   "desambiguisation"
+  ],
+  "principale": "inference",
+  "raison": "la peste est dite par les bubons et les flèches de l'épidémie ; abriter et la cape pour « sous le manteau » ; « Antoine » seul n'est pas un alias",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 106,
+  "genre": "positif",
+  "notation": "46A637",
+  "causes": [
+   "representation",
+   "lexique"
+  ],
+  "principale": "representation",
+  "raison": "« la clôture de la séance » : le complément du nom d'action est une relation, pas un rôle ; « lever la séance » sans concept",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 116,
+  "genre": "positif",
+  "notation": "31A523",
+  "causes": [
+   "inference",
+   "lexique",
+   "desambiguisation"
+  ],
+  "principale": "inference",
+  "raison": "Spinario n'est pas nommé (le titre dit « Garçon à l'écharde ») ; garçon n'atteint pas enfant ; écharde n'est pas épine ; « plante » (du pied) n'est pas pied",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 126,
+  "genre": "positif",
+  "notation": "49BB4429",
+  "causes": [
+   "lexique",
+   "inference",
+   "representation"
+  ],
+  "principale": "lexique",
+  "raison": "étudiante et Bettelstudent sans concept ; « jeune fille des universités » pour étudiante ; le sexe est dans le nom, la requête veut la propriété féminin",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 136,
+  "genre": "positif",
+  "notation": "44G83",
+  "causes": [
+   "lexique",
+   "representation"
+  ],
+  "principale": "lexique",
+  "raison": "« faire sortir » sans concept ; la délivrance est un nom (initiative de la délivrance)",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 136,
+  "genre": "negatif",
+  "notation": "44G83",
+  "causes": [
+   "erreur_reference"
+  ],
+  "principale": "erreur_reference",
+  "raison": "faux positif sous hypothèse (libérer → délivrer) : le texte négatif décrit un juge qui libère le prisonnier, ce que le libellé « délivrer un prisonnier » couvre ; la fiche fonde sa distinction sur la violence, absente du libellé",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 146,
+  "genre": "positif",
+  "notation": "73C7251",
+  "causes": [
+   "lexique",
+   "desambiguisation"
+  ],
+  "principale": "lexique",
+  "raison": "suiveur n'atteint pas disciple ; dépêcher sans concept ; « Jean » seul n'est pas un alias de JEAN BAPTISTE",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 156,
+  "genre": "positif",
+  "notation": "71A423",
+  "causes": [
+   "representation",
+   "erreur_reference"
+  ],
+  "principale": "representation",
+  "raison": "« une pomme à la main » est une relation, pas le patient de tenir ; le tenir du graphe est « se tenir debout », lemmatisé sans son pronom",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 166,
+  "genre": "positif",
+  "notation": "71C3223",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "« proclame que ce lieu s'appellera Penuel » : l'agent est celui de proclamer, le lieu le thème de s'appeler ; la requête veut un seul événement nommer",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 176,
+  "genre": "positif",
+  "notation": "51EE",
+  "causes": [
+   "representation"
+  ],
+  "principale": "representation",
+  "raison": "l'allégorie et l'ordre de la société ; la requête veut type personnification et un nom",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 186,
+  "genre": "positif",
+  "notation": "11F111(PULCHRA UT LUNA)",
+  "causes": [
+   "inference",
+   "desambiguisation"
+  ],
+  "principale": "inference",
+  "raison": "l'invocation n'est pas citée (le phylactère compare la beauté à l'astre) ; « Vierge » n'est pas un alias de MARIE",
+  "statut": "decision_d_agent_provisoire"
+ },
+ {
+  "jeu": "validation_m1",
+  "k": 196,
+  "genre": "positif",
+  "notation": "11QQ7121(TRANSEPT)",
+  "causes": [
+   "inference",
+   "lexique"
+  ],
+  "principale": "inference",
+  "raison": "« le bras transversal » pour transept ; sanctuaire n'atteint ni chapelle ni église",
+  "statut": "decision_d_agent_provisoire"
+ }
+]
