@@ -6,7 +6,7 @@
 :- use_module(library(plunit)).
 :- encoding(utf8).
 
-:- dynamic wordnet:s/6, wordnet:lexfile/2, wordnet:der/4, wordnet:hyp/2, wordnet:ins/2, wordnet:exc/3,
+:- dynamic sujets:ferme/2, wordnet:s/6, wordnet:lexfile/2, wordnet:der/4, wordnet:hyp/2, wordnet:ins/2, wordnet:exc/3,
            ressources:wolf/2, ressources:morphosem/5, libelles_lus:partie/7.
 
 % le petit lexique : synset, numéro du mot, mot, catégorie, rang du sens, occurrences annotées
@@ -98,7 +98,7 @@ test(matiere, Cs == [ou([propriete(v(s), brass), et([relation(v(s), of, v(b)), t
 test(pas_de_matiere, Cs == [relation(v(s), of, v(b)), type(v(b), card), type(v(s), serpent)]) :-
     langue(en), requetes_iconclass:matieres(en, [relation(v(s), of, v(b)), type(v(b), card), type(v(s), serpent)], Cs).
 % D7 : deux participes coordonnés partagent le sujet (« a serpent is made and is set on a pole »)
-test(sujet_partage, memberchk(role(v(v9), patient, v(e2)), Cs)) :-
+test(sujet_partage, [true(memberchk(role(v(v9), patient, v(e2)), Cs))]) :-
     Ph = [phrase([mot(2, serpent, serpent, 'NOUN', [], 6, 'nsubj:pass', 2, 9),
                   mot(6, made, make, 'VERB', ['Voice'='Pass'], 0, root, 22, 26),
                   mot(9, set, set, 'VERB', ['Voice'='Pass'], 6, conj, 34, 37)])],
@@ -152,6 +152,12 @@ test(glose) :-
 test(pas_de_glose, fail) :-
     requetes_iconclass:glose_faits([entite(e1, nom_propre, p1), nom(n1, e1, 'Adam', p1), entite(e2, founder, p2),
                                     relation(r1, e1, as, e2, p2)]).
+
+% « différents mammifères » : plusieurs individus distincts, que les requêtes ne comptent pas ; la requête est partielle
+test(pluralite, [true(memberchk(pluralite(différents), Rs))]) :-
+    langue(fr),
+    requetes_iconclass:mots_non_couverts(fr, [phrase([mot(1, différents, différent, 'ADJ', [], 2, amod, 0, 10),
+        mot(2, mammifères, mammifère, 'NOUN', [], 0, root, 11, 21)])], [type(v(x), mammifère)], Rs).
 
 :- end_tests(corrections_c3).
 

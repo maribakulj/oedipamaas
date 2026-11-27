@@ -262,8 +262,14 @@ mots_non_couverts(L, Ph, Cs, Rs) :-
     findall(non_couvert(W), ( member(phrase(Ms), Ph), member(M, Ms), M = mot(_, F, _, C, _, _, _, _, _),
                               memberchk(C, ['NOUN', 'VERB', 'ADJ']), \+ definitions:mot_ferme(F), \+ metalangage_mot(F),
                               definitions:lemme(L, M, W), \+ couvert(Cs, W), \+ couvert_soude(Ph, Cs, W),
-                              \+ ( singulier_de(L, W, Sg), couvert(Cs, Sg) ) ), Rs0),
-    sort(Rs0, Rs).
+                              \+ ( singulier_de(L, W, Sg), couvert(Cs, Sg) ) ), Rs1),
+    % un mot qui dit plusieurs individus distincts (« différents mammifères », « various ») : les requêtes compilées ne
+    % comptent pas les référents ; la requête est partielle (27/11 : 43C11121 devenait compilée et trop faible une fois
+    % son lemme pluriel couvert, D4)
+    findall(pluralite(W), ( member(phrase(Ms), Ph), member(M, Ms), arg(2, M, F), downcase_atom(F, W),
+                            pluralite_distincte(W) ), Rs2),
+    append(Rs1, Rs2, Rs0), sort(Rs0, Rs).
+pluralite_distincte(W) :- memberchk(W, [different, various, several, différents, différentes, divers, diverses, plusieurs]).
 % un composé que la langue écrit soudé (« trademark » pour « trade mark », D3) couvre ses deux mots du libellé
 couvert_soude(Ph, Cs, W) :-
     sous_condition(Cs, type(_, X)), atom(X), member(phrase(Ms), Ph), member(M1, Ms), member(M2, Ms),
