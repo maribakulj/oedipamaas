@@ -1,6 +1,6 @@
 {
- "cree": "2026-11-27T12:21:34Z",
- "commit_de_l_archiveur": "dfce5aa6c2c24252e563d2750e9fbea9e0c97431",
+ "cree": "2026-11-27T12:21:50Z",
+ "commit_de_l_archiveur": "3e31289857fdd8cb5be3edff0bb8cba588f7ec50",
  "commits_des_passes_du_lot1": [
   "5a0e2225fa5f5f646768415f2be06d950b84b1f5"
  ],
@@ -732,15 +732,15 @@
    "chemin": "banc_graphes/v2/requetes_reference_validation_m1_v2.json",
    "taille": 116008,
    "sha256": "1d1c5cbbca53e2cdf6d5b2a71734500016d83c3627639a2e53ab02aef97d780d",
-   "role": "autre",
-   "statut": "outil"
+   "role": "les requêtes de référence d'une version du banc (écrites par des agents, errata compris)",
+   "statut": "agents"
   },
   {
    "chemin": "banc_graphes/v2/requetes_reference_vertical_v2.json",
    "taille": 116902,
    "sha256": "eba48009c053121c12d195aaccad67e98ac038e121c58df78a8d16fd0a11e94e",
-   "role": "autre",
-   "statut": "outil"
+   "role": "les requêtes de référence d'une version du banc (écrites par des agents, errata compris)",
+   "statut": "agents"
   },
   {
    "chemin": "reference_d30/avant_correctif_ressources/codage_d30_sans_norm_validation_m1.json",
