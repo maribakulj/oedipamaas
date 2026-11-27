@@ -24,6 +24,7 @@ from pathlib import Path
 ROLES = [
     ("v2/errata", "les errata de la version 2 du banc : les erreurs manifestes décidées par un agent ; provisoires", "agents"),
     ("v2/journal", "le journal des errata appliqués (outils/graphes/version_banc.py)", "outil"),
+    ("requetes_reference_", "les requêtes de référence d'une version du banc (écrites par des agents, errata compris)", "agents"),
     ("guide_annotateur.md", "le guide remis aux annotateurs (§ 2 et § 3 de docs/BANC_GRAPHES.md)", "outil"),
     ("textes_", "les textes du banc (échantillon : une fiche sur cinq)", "outil"),
     ("lots/", "les lots remis aux annotateurs", "outil"),
