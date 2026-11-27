@@ -1,0 +1,38 @@
+{
+ "graine": 20261127,
+ "notations": 400,
+ "textes": 100,
+ "pool": 37266,
+ "exclues_directement": 2114,
+ "exclusion_par_fichier": {
+  "vertical/fiches.json": 200,
+  "validation_m1/fiches.json": 200,
+  "vertical/requetes_reference.json": 200,
+  "validation_m1/requetes_reference.json": 200,
+  "codes_j2.txt": 122,
+  "codes_j2b.txt": 54,
+  "j2_echantillon.json": 126,
+  "mesure-J0/reference.jsonl": 806,
+  "mesure-J1/reference_en.jsonl": 1073,
+  "mesure-J1/reference_fr.jsonl": 612,
+  "joconde/tirage.jsonl": 0,
+  "joconde/tirage3.jsonl": 2,
+  "banc_graphes/v2/requetes_reference_vertical_v2.json": 200,
+  "banc_graphes/v2/requetes_reference_validation_m1_v2.json": 200
+ },
+ "lignes_illisibles": {
+  "joconde/tirage3.jsonl": 2
+ },
+ "strates": {
+  "1": 114,
+  "2": 26,
+  "3": 27,
+  "4": 65,
+  "5": 9,
+  "6": 1,
+  "7": 52,
+  "8": 14,
+  "9": 92
+ },
+ "sha256": "8d91ac6a57a0b6a58748510f799285b5abbfb6fd9c1aa94df126d2514dd2c927"
+}
