@@ -395,6 +395,13 @@ class Resultat:
         self.confusion.update(autre.confusion)
 
 
+def assertions(g: Graphe):
+    """Les identifiants des assertions qualifiables d'un graphe : entités (têtes), noms, propriétés, événements,
+    relations."""
+    return (set(g.entites) | set(g.evenements) | {a for _, _, a in g.noms} | {a for _, _, a in g.proprietes}
+            | {i for _, _, _, i in g.relations})
+
+
 def comparer(r: Graphe, g: Graphe, methode="optimal", referents="classes", derivees=None, detail=False) -> Resultat:
     res = Resultat()
     if g.erreur:
@@ -503,6 +510,16 @@ def comparer(r: Graphe, g: Graphe, methode="optimal", referents="classes", deriv
                 res.securite["retrogradation"] += 1
             else:
                 res.securite["admissible_garde"] += 1
+    # la précision des assertions admissibles du graphe : toutes, y compris celles qui n'ont aucune correspondante dans
+    # la référence (une prémisse admissible que la référence n'a pas est une prémisse fausse)
+    for gi in assertions(g):
+        if g.admissible(gi):
+            res.securite["graphe_admissible_total"] += 1
+            ri = correspondance.get(gi)
+            if ri is not None and not isinstance(ri, tuple) and r.admissible(ri):
+                res.securite["graphe_admissible_juste"] += 1
+            elif ri is None or isinstance(ri, tuple):
+                res.securite["graphe_admissible_sans_correspondante"] += 1
     # la matrice de confusion des rôles
     ref_pairs = collections.defaultdict(set)
     for v, ro, e in r.roles:
@@ -757,15 +774,21 @@ def imprimer(titre, res: Resultat):
               f"référence ont une correspondante admissible ({m['couverture_admissible']:.0%}) ; taux de promotion "
               f"{m['taux_promotion']:.0%}. Les deux se lisent ensemble : ne rien rendre admissible n'a aucune "
               f"promotion et aucune couverture.")
+    if m["precision_admissible"] is not None:
+        print(f"Précision : {S['graphe_admissible_juste']} des {S['graphe_admissible_total']} assertions admissibles du "
+              f"graphe ont une correspondante admissible ({m['precision_admissible']:.0%}) ; "
+              f"{S['graphe_admissible_sans_correspondante']} n'ont aucune correspondante.")
 
 
 def metriques_surete(S):
-    """Le taux de promotion (parmi les assertions non admissibles de la référence qui ont une correspondante) et la
+    """Le taux de promotion (parmi les assertions non admissibles de la référence qui ont une correspondante), la
     couverture des assertions admissibles (parmi toutes celles de la référence, avec ou sans correspondante : la part
-    qui a une correspondante admissible)."""
-    n, t = S["reference_non_admissible"], S["reference_admissible_total"]
+    qui a une correspondante admissible), et la précision des assertions admissibles du graphe (parmi toutes celles du
+    graphe, avec ou sans correspondante : la part dont la correspondante de référence existe et est admissible)."""
+    n, t, a = S["reference_non_admissible"], S["reference_admissible_total"], S["graphe_admissible_total"]
     return {"taux_promotion": S["promotion"] / n if n else None,
-            "couverture_admissible": S["admissible_garde"] / t if t else None}
+            "couverture_admissible": S["admissible_garde"] / t if t else None,
+            "precision_admissible": S["graphe_admissible_juste"] / a if a else None}
 
 
 def intervalles(par_texte, tirages=1000, graine=20261127, niveau=0.95):
@@ -773,29 +796,81 @@ def intervalles(par_texte, tirages=1000, graine=20261127, niveau=0.95):
     variantes) ne sont pas indépendants ; on tire des fiches avec remise, chacune avec tous ses textes. Pour chaque
     catégorie, le F1 structure et qualifié ; pour la sûreté, le taux de promotion et la couverture admissible.
     {mesure: [borne basse, borne haute]} (percentiles)."""
-    import random
+    par_fiche = par_fiches(par_texte)
+    fiches = sorted(par_fiche)
+    valeurs = collections.defaultdict(list)
+    for tirage in tirer(fiches, tirages, graine):
+        for nom, v in mesures(fusionner(par_fiche, tirage)).items():
+            valeurs[nom].append(v)
+    return {"fiches": len(fiches), "tirages": tirages, "graine": graine, "niveau": niveau,
+            "intervalles": {nom: bornes(vs, niveau) for nom, vs in valeurs.items()}}
+
+
+def par_fiches(par_texte):
     par_fiche = collections.defaultdict(Resultat)
     for (k, _), res in par_texte.items():
         par_fiche[k].fusion(res)
-    fiches = sorted(par_fiche)
+    return par_fiche
+
+
+def tirer(fiches, tirages, graine):
+    """Les tirages de fiches avec remise (une liste de fiches par tirage), reproductibles."""
+    import random
     alea = random.Random(graine)
-    valeurs = collections.defaultdict(list)
-    for _ in range(tirages):
-        tot = Resultat()
-        for _ in fiches:
-            tot.fusion(par_fiche[alea.choice(fiches)])
-        for cat, v in tot.comptes.table().items():
-            if v["f1"] is not None:
-                valeurs[cat].append(v["f1"])
-        for nom, v in metriques_surete(tot.securite).items():
-            if v is not None:
-                valeurs["surete:" + nom].append(v)
+    return [[alea.choice(fiches) for _ in fiches] for _ in range(tirages)]
+
+
+def fusionner(par_fiche, tirage):
+    tot = Resultat()
+    for k in tirage:
+        tot.fusion(par_fiche[k])
+    return tot
+
+
+def mesures(res: Resultat):
+    """Les mesures d'un résultat : le F1 de chaque catégorie, et les trois mesures de sûreté."""
+    m = {cat: v["f1"] for cat, v in res.comptes.table().items() if v["f1"] is not None}
+    m.update({"surete:" + k: v for k, v in metriques_surete(res.securite).items() if v is not None})
+    return m
+
+
+def bornes(vs, niveau=0.95):
+    vs = sorted(vs)
     a = (1 - niveau) / 2
-    out = {}
-    for nom, vs in valeurs.items():
-        vs.sort()
-        out[nom] = [vs[int(a * (len(vs) - 1))], vs[int((1 - a) * (len(vs) - 1))]]
-    return {"fiches": len(fiches), "tirages": tirages, "graine": graine, "niveau": niveau, "intervalles": out}
+    return [vs[int(a * (len(vs) - 1))], vs[int((1 - a) * (len(vs) - 1))]]
+
+
+def intervalles_apparies(par_texte_a, par_texte_b, tirages=1000, graine=20261127, niveau=0.95):
+    """La comparaison appariée de deux lectures B et A du même banc : les mêmes fiches tirées pour les deux, et, pour
+    chaque mesure, l'intervalle de la différence B − A ; pour le taux de promotion, aussi celui du rapport B / A. Seules
+    les fiches communes aux deux sont tirées."""
+    fa, fb = par_fiches(par_texte_a), par_fiches(par_texte_b)
+    fiches = sorted(set(fa) & set(fb))
+    diff, rapport = collections.defaultdict(list), []
+    for tirage in tirer(fiches, tirages, graine):
+        ma, mb = mesures(fusionner(fa, tirage)), mesures(fusionner(fb, tirage))
+        for nom in set(ma) & set(mb):
+            diff[nom].append(mb[nom] - ma[nom])
+        pa, pb = ma.get("surete:taux_promotion"), mb.get("surete:taux_promotion")
+        if pa and pb is not None:
+            rapport.append(pb / pa)
+    tot_a, tot_b = fusionner(fa, fiches), fusionner(fb, fiches)
+    return {"fiches": len(fiches), "tirages": tirages, "graine": graine, "niveau": niveau,
+            "a": mesures(tot_a), "b": mesures(tot_b),
+            "difference": {nom: bornes(vs, niveau) for nom, vs in diff.items()},
+            "rapport_promotion": bornes(rapport, niveau) if rapport else None}
+
+
+def jalon(app, rapport_max=0.5, perte_couverture_max=0.05):
+    """Le premier jalon de C7, validé le 27/11 : les promotions au moins divisées par deux (borne haute du rapport
+    apparié B / A au plus rapport_max) et au plus cinq points de couverture perdus (borne basse de la différence
+    appariée B − A au moins −perte_couverture_max)."""
+    r = app["rapport_promotion"]
+    c = app["difference"].get("surete:couverture_admissible")
+    promotions = r is not None and r[1] <= rapport_max
+    couverture = c is not None and c[0] >= -perte_couverture_max
+    return {"promotions_divisees_par_deux": promotions, "couverture_gardee": couverture,
+            "atteint": promotions and couverture, "rapport_promotion": r, "difference_couverture": c}
 
 
 def imprimer_confusion(res: Resultat):
