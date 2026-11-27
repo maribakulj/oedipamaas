@@ -236,8 +236,7 @@ assertion_de_portee(Fs, Es, A) :-
     ( member(propriete(A, E, _, _), Fs) ; member(nom(A, E, _, _), Fs) ; member(relation(A, E, _, _, _), Fs) ), memberchk(E, Es), !.
 raison(Fs, Es, _, _, metalangage(W)) :- member(E, Es), member(propriete(_, E, P, _), Fs), mot(P, W), metalangage(W).
 raison(_, _, _, Cs, non_lie(Xs)) :- composantes(Cs, Ks), Ks = [_, _|_], maplist([K, X]>>( K = [X|_] ), Ks, Xs).
-raison(_, _, Vs, Cs, evenement_sans_participant(V)) :-
-    member(V, Vs), \+ memberchk(role(v(V), _, _), Cs), Cs \= [evenement(v(V), _)].   % une action seule (« abrading »)
+raison(_, _, Vs, Cs, evenement_sans_participant(V)) :- member(V, Vs), \+ memberchk(role(v(V), _, _), Cs).
 
 % les composantes connexes du graphe de la requête (variables liées par rôle, relation, meme)
 composantes(Cs, Ks) :-
