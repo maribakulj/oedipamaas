@@ -1,0 +1,1892 @@
+{
+ "cree": "2026-11-27T21:37:14Z",
+ "role": "la contre-expertise de #16 (docs/mesures/C3_CONTRE_EXPERTISE.md, PR #18) : sites, échantillons, jugements (décisions d'agent, provisoires), contrôles, mesures avant / après",
+ "statut": "outil ; jugements.json : agents",
+ "fichiers": [
+  {
+   "chemin": "actions_sens.json",
+   "taille": 67047,
+   "sha256": "a49c8526f56e45d2c7ae0cca441c7033e7d270b8066edc1be6a350960e072ce8"
+  },
+  {
+   "chemin": "apres/arbre_modifie",
+   "taille": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "chemin": "apres/commit",
+   "taille": 41,
+   "sha256": "9f9f1319129601e41f49db65c617c5b936c62da24f4c4859e681a3b0211df217"
+  },
+  {
+   "chemin": "apres/comparaison_validation_m1.json",
+   "taille": 100845,
+   "sha256": "dc4d285e9cbe4afa01af27adaf6bf4caec96ce9f157cc4ec0b1091314df54234"
+  },
+  {
+   "chemin": "apres/comparaison_validation_m1_sans_norm.json",
+   "taille": 100845,
+   "sha256": "dc4d285e9cbe4afa01af27adaf6bf4caec96ce9f157cc4ec0b1091314df54234"
+  },
+  {
+   "chemin": "apres/comparaison_vertical.json",
+   "taille": 99353,
+   "sha256": "f1ee45d0c02e6d5aae68c4b8704ccf8d30da7ad3566baa97549d7a1eaffd2116"
+  },
+  {
+   "chemin": "apres/comparaison_vertical_sans_norm.json",
+   "taille": 99353,
+   "sha256": "f1ee45d0c02e6d5aae68c4b8704ccf8d30da7ad3566baa97549d7a1eaffd2116"
+  },
+  {
+   "chemin": "apres/comparer_validation_m1.log",
+   "taille": 17,
+   "sha256": "ce92e20aa8eedff697051fd8577c3b37568692b155524f944846b3c8004e63e3"
+  },
+  {
+   "chemin": "apres/comparer_validation_m1_sans_norm.log",
+   "taille": 17,
+   "sha256": "ce92e20aa8eedff697051fd8577c3b37568692b155524f944846b3c8004e63e3"
+  },
+  {
+   "chemin": "apres/comparer_vertical.log",
+   "taille": 17,
+   "sha256": "ce92e20aa8eedff697051fd8577c3b37568692b155524f944846b3c8004e63e3"
+  },
+  {
+   "chemin": "apres/comparer_vertical_sans_norm.log",
+   "taille": 17,
+   "sha256": "ce92e20aa8eedff697051fd8577c3b37568692b155524f944846b3c8004e63e3"
+  },
+  {
+   "chemin": "apres/compilees_validation_m1.json",
+   "taille": 84935,
+   "sha256": "725c38bf17ba34c44a934268cad9059f6bf46d2395e827fb662bfc7e097c9a7c"
+  },
+  {
+   "chemin": "apres/compilees_vertical.json",
+   "taille": 84951,
+   "sha256": "fab85d1c57258adafd365500b1082386f3d67c0e5b3ad0ffdc22c78a6ab4edb6"
+  },
+  {
+   "chemin": "apres/compiler_validation_m1.log",
+   "taille": 519,
+   "sha256": "dda438b8fc967858cff4e9915b53d5a146948e81d1e01135c4bc974c30858810"
+  },
+  {
+   "chemin": "apres/compiler_vertical.log",
+   "taille": 519,
+   "sha256": "dda438b8fc967858cff4e9915b53d5a146948e81d1e01135c4bc974c30858810"
+  },
+  {
+   "chemin": "apres/croise_validation_m1.json",
+   "taille": 405369,
+   "sha256": "0bd5928d202c729153c1c180b2ffc50318770878b804f5a843b3d09cf1d33c43"
+  },
+  {
+   "chemin": "apres/croise_validation_m1.log",
+   "taille": 20,
+   "sha256": "87b6f5e257ea3ad210da0e5b2f5fa22183e47563549b3e086210e90932b168b7"
+  },
+  {
+   "chemin": "apres/croise_vertical.json",
+   "taille": 193081,
+   "sha256": "dd15b13f97a15b8f5d538708dc7ebd83e68048f34af20a55739ddae1c332a872"
+  },
+  {
+   "chemin": "apres/croise_vertical.log",
+   "taille": 20,
+   "sha256": "6977d6792ed091576bdca91f03b6176a825d765f30a163c1067f6fa392036c7c"
+  },
+  {
+   "chemin": "apres.log",
+   "taille": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "chemin": "avant/arbre_modifie",
+   "taille": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "chemin": "avant/commit",
+   "taille": 41,
+   "sha256": "bc5f916d736055baea438bff21642d8574688f29959ed7455f41f0b2a52ff451"
+  },
+  {
+   "chemin": "avant/comparaison_validation_m1.json",
+   "taille": 102780,
+   "sha256": "db6783cbf4f0d9d5f1e1a2cf80296bbcd466d3ee0fd93ca475da75213f3fa61c"
+  },
+  {
+   "chemin": "avant/comparaison_validation_m1_sans_norm.json",
+   "taille": 102780,
+   "sha256": "db6783cbf4f0d9d5f1e1a2cf80296bbcd466d3ee0fd93ca475da75213f3fa61c"
+  },
+  {
+   "chemin": "avant/comparaison_vertical.json",
+   "taille": 101150,
+   "sha256": "85526594e4b7993b26b602053fd336b055463ff1fd514a5d49b3af2ed5b6ced8"
+  },
+  {
+   "chemin": "avant/comparaison_vertical_sans_norm.json",
+   "taille": 101150,
+   "sha256": "85526594e4b7993b26b602053fd336b055463ff1fd514a5d49b3af2ed5b6ced8"
+  },
+  {
+   "chemin": "avant/comparer_validation_m1.log",
+   "taille": 17,
+   "sha256": "ce92e20aa8eedff697051fd8577c3b37568692b155524f944846b3c8004e63e3"
+  },
+  {
+   "chemin": "avant/comparer_validation_m1_sans_norm.log",
+   "taille": 17,
+   "sha256": "ce92e20aa8eedff697051fd8577c3b37568692b155524f944846b3c8004e63e3"
+  },
+  {
+   "chemin": "avant/comparer_vertical.log",
+   "taille": 17,
+   "sha256": "ce92e20aa8eedff697051fd8577c3b37568692b155524f944846b3c8004e63e3"
+  },
+  {
+   "chemin": "avant/comparer_vertical_sans_norm.log",
+   "taille": 17,
+   "sha256": "ce92e20aa8eedff697051fd8577c3b37568692b155524f944846b3c8004e63e3"
+  },
+  {
+   "chemin": "avant/compilees_validation_m1.json",
+   "taille": 89055,
+   "sha256": "5c671395db87ba0233784027fc8c29e49770728c37298c5f7260b5cbfcae5f94"
+  },
+  {
+   "chemin": "avant/compilees_vertical.json",
+   "taille": 88631,
+   "sha256": "d01ec6283f6104fe4ad0a419b53b8c1cfa97be97f3286c75fdb625afe1f2bfca"
+  },
+  {
+   "chemin": "avant/compiler_validation_m1.log",
+   "taille": 575,
+   "sha256": "8df69b64299d31e39daba59da1b9a658edfd921f4e450a19e9ca7fcbf351b1b4"
+  },
+  {
+   "chemin": "avant/compiler_vertical.log",
+   "taille": 575,
+   "sha256": "8df69b64299d31e39daba59da1b9a658edfd921f4e450a19e9ca7fcbf351b1b4"
+  },
+  {
+   "chemin": "avant/croise_validation_m1.json",
+   "taille": 418269,
+   "sha256": "f72d1fed26aef151a8eb578362262c7887fb65cb2d33bc7ef162a2a161108cc2"
+  },
+  {
+   "chemin": "avant/croise_validation_m1.log",
+   "taille": 20,
+   "sha256": "87b6f5e257ea3ad210da0e5b2f5fa22183e47563549b3e086210e90932b168b7"
+  },
+  {
+   "chemin": "avant/croise_vertical.json",
+   "taille": 202433,
+   "sha256": "594869356c7ddd7c6bb48634ca82684a8e5da45a9e3c427acbe038cf5d1ef093"
+  },
+  {
+   "chemin": "avant/croise_vertical.log",
+   "taille": 20,
+   "sha256": "6977d6792ed091576bdca91f03b6176a825d765f30a163c1067f6fa392036c7c"
+  },
+  {
+   "chemin": "avant.log",
+   "taille": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "chemin": "coherence.json",
+   "taille": 502,
+   "sha256": "34faae4996d0c71d3ac2a8374fdfa2c09f62eafaa2b952878feebd96cd71ba49"
+  },
+  {
+   "chemin": "composes.json",
+   "taille": 173936,
+   "sha256": "6c5df83a21f1471aa5d3a040d05d56503bc9abb4a99b405acc8f4a74ad68ed98"
+  },
+  {
+   "chemin": "echantillons.json",
+   "taille": 61018,
+   "sha256": "69915469e481523a38312b83d884e818b0ee024ab1aabfc4cb5898196b4418c0"
+  },
+  {
+   "chemin": "jugements.json",
+   "taille": 5071,
+   "sha256": "35f2cec29c8a979e90be9db982b4f48291b9ce57eb5b3e7de276d6dfc1782890"
+  },
+  {
+   "chemin": "resume.json",
+   "taille": 18525,
+   "sha256": "8097855efe1bdfe5feb81d796a37b5611bd54caf65a8f48543f268e15cb4f313"
+  },
+  {
+   "chemin": "roles_verbnet.json",
+   "taille": 277011,
+   "sha256": "44c05b425a0eb93da0c7781558c0537f6a534190282b2c462ce722ac959acd46"
+  },
+  {
+   "chemin": "sites_pr16.jsonl",
+   "taille": 6936957,
+   "sha256": "edb24c6ec2feaa14933e9edfa1c3bae206c1884737a62cbcf6853fd63dab636b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/absorb-39.8.xml",
+   "taille": 2643,
+   "sha256": "a793385301fba11beb6dedf788f85689e6c6d023a10eec99b229b27bc7e5ba50"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/accept-77.1.xml",
+   "taille": 5658,
+   "sha256": "ac6b7645f5783312ad6e621db68c5115961b5ef7cdf319ef1a8fd6c284544c8a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/accompany-51.7.xml",
+   "taille": 9861,
+   "sha256": "4839a4dc92ebaf0d6092410183ad82cbee17ff8de147fa45f259acf481912b08"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/acquiesce-95.1.xml",
+   "taille": 4415,
+   "sha256": "87af932848889e101b5ce131e22167a013953165fb7ab7135384db83c3777d11"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/act-114.xml",
+   "taille": 6725,
+   "sha256": "3d4f42a671e0838cd2919c00996207db346152a1ec09e78d2a0400ad9c564727"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/addict-96.xml",
+   "taille": 4423,
+   "sha256": "ae772d6ca07fdfe907e38bb7cbd7829efede1cf0dd6847d8d75d07e40072666d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/adjust-26.9.xml",
+   "taille": 9906,
+   "sha256": "011ae3ba668848fbb5bf3e6c7ec19e342827ac1384ff21273703f438872d5140"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/admire-31.2.xml",
+   "taille": 13701,
+   "sha256": "7830458400673be8166860bbded8e3584807aad66a3599fcee2b1dce4908789e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/admit-64.3.xml",
+   "taille": 4099,
+   "sha256": "47eaf8fe9dbff9c918d5d5b2360f0c95523ed639061e5ffe1b4a8456d4a8e95d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/adopt-93.xml",
+   "taille": 2024,
+   "sha256": "2f83a80cd05c195661b146491d477ba0f48c4da22802dee7ae0a9a1f1202efaa"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/advise-37.9.xml",
+   "taille": 28208,
+   "sha256": "fb5326786118cdef4d213f1ecca3d7de9fad054bfb1e64bf8d53416914728bec"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/allow-64.1.xml",
+   "taille": 5275,
+   "sha256": "06145456606a34ca9049e4b2c4cf639c71ee4a5a88c260b23c71c399a2bf94d1"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/amalgamate-22.2.xml",
+   "taille": 33819,
+   "sha256": "463797c6977c161fc9ba99d4df9473ca22520f1597eff2fddea7cc068c7fb744"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/amuse-31.1.xml",
+   "taille": 25248,
+   "sha256": "36f85cd4a4e7660e517413013b49d30702afdca0d2cc09cda087703726c2aae2"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/animal_sounds-38.xml",
+   "taille": 10787,
+   "sha256": "5f03e2fcb8a9e16a88b7a74d00a6c9cc9bdded70d03cf353554a67a0dcb74320"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/appeal-31.4.xml",
+   "taille": 6808,
+   "sha256": "3e2abcd39e8d0c551a8c2cfd9861775454affed272adc65d2bcd1e1b4f24cf6b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/appear-48.1.1.xml",
+   "taille": 10522,
+   "sha256": "9d4319a1fb74aeea860e7942521da498d4bc709a0044b69565dd01b436c502e2"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/appoint-29.1.xml",
+   "taille": 6757,
+   "sha256": "acf8cc5aee1cd3441148d40913515b23ade6a5a93838615593126a5ce6335bba"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/assessment-34.1.xml",
+   "taille": 6500,
+   "sha256": "aa8994cd514dd492b04ddab012113ee048c795dc2e37f03a4d62cd36b1ff49de"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/assuming_position-50.xml",
+   "taille": 5786,
+   "sha256": "2fa98722c29d5dadd5c0912862f57e78c85ca69c345614a0cd40f771c1da0e81"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/attack-60.1.xml",
+   "taille": 5298,
+   "sha256": "a147f8b09302f682ce0f6798ad46cdfc52e121dc3cee9efb73d38ffe8d3a6f7e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/attend-107.4.xml",
+   "taille": 3390,
+   "sha256": "5aac0794a54c3a29856e1d71f60f7948fb782efbc04fe6c457b3f0bd98bcf592"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/avoid-52.xml",
+   "taille": 5028,
+   "sha256": "83e5943aca9ba18663177405e0d25d6e5de8374454265a44d0d8e79ffe5dca95"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/banish-10.2.xml",
+   "taille": 7758,
+   "sha256": "fea8b164af36c154c6ff2fc7bd6af05536185df8daa12ad94412d1c16692ac5f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/base-97.1.xml",
+   "taille": 6460,
+   "sha256": "5868a3d2c20baf7cc5fb0fcfe7c6f587c54f9a745d1b0ace80132f42679e6778"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/battle-36.4.xml",
+   "taille": 40068,
+   "sha256": "e0c26cddd9b74e59023b9c3538182ef0024c7a3ce40f959101ca36bbd1fbf1fb"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/become-109.1.xml",
+   "taille": 6083,
+   "sha256": "f3fb95ddc5d728059cd9b9ed9ea7250c61fab2c50bd317e296cbac4550fed0f7"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/beg-58.2.xml",
+   "taille": 5751,
+   "sha256": "295111ef1eca47a1b20dcca84bb417dcd1edac4979709087438b739268275862"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/begin-55.1.xml",
+   "taille": 8195,
+   "sha256": "7362cce51ced1e7f525102f6e43ab6d1656eba0f7ef70b4628e980537d070b80"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/being_dressed-41.3.3.xml",
+   "taille": 2639,
+   "sha256": "52609f5c25c906c7476cff8c6287f566134b1553a7ff31321784fe3350f94105"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/bend-45.2.xml",
+   "taille": 21161,
+   "sha256": "8143c2dbe3b280377854621c953e1059e1ab6ea322d097bcabfd0e5b4a8938f3"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/benefit-72.2.xml",
+   "taille": 3515,
+   "sha256": "081fb4c3b75b65fef36b4a9a8a0a47117afd6e7d92e8f3a852881fd34db12cc7"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/berry-13.7.xml",
+   "taille": 6461,
+   "sha256": "bca5511421e1269cd753f2263fb68c6a2a4a86446f2c2563cdd22601ac1e737e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/bill-54.5.xml",
+   "taille": 3927,
+   "sha256": "498020ad9602e7723e64df05f33c035e3028f579aa1c7ca012efa958fb1eb82e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/birth-28.2.xml",
+   "taille": 4691,
+   "sha256": "a401d26801f37b8e62ea27657fc28b5f5eb5879579d6a1189ba9e103bfa509f1"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/body_internal_motion-49.1.xml",
+   "taille": 2492,
+   "sha256": "f305f6d13e4da2b94f608ddee59c448655556ae78f6843dccf5883d6ab960d6e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/body_internal_states-40.6.xml",
+   "taille": 5447,
+   "sha256": "c850823efa4eaabd40315e025e3d8fd1e08d7a3826372fc969d28572d61f94cc"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/body_motion-49.2.xml",
+   "taille": 11032,
+   "sha256": "a3841a108e28b05ad50be55e273cd1801a089c19f9f03d84dbacaf78adf7e2d4"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/braid-41.2.2.xml",
+   "taille": 4830,
+   "sha256": "2a959851fdcd0cff759f1c1157510c33d33b6ac2774890bb67aeb78ae8a26089"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/break-45.1.xml",
+   "taille": 28636,
+   "sha256": "3cd3aa5c965db140f3c517cf1fa5ab1d7d70d690b0113f929c074ba424c3b63b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/break_down-45.8.xml",
+   "taille": 1690,
+   "sha256": "429a1440e9bd8ff02438e8a57d3d34059cb178f0828ab9872a8af0671b1211db"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/breathe-40.1.2.xml",
+   "taille": 10501,
+   "sha256": "b77df07f0121812ee351624d1732f144cefc9ffba83d5fbc86b96ec196eb16ec"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/bring-11.3.xml",
+   "taille": 22174,
+   "sha256": "4a997c98c901d18cca7996c7172491ae2bc50bd2e469f1b3620218ed69903866"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/build-26.1.xml",
+   "taille": 56755,
+   "sha256": "13b84857a7d7b928c35d9e0ce85b50e1a3170e8d180d52d29869dba9ad2385bb"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/bulge-47.5.3.xml",
+   "taille": 2684,
+   "sha256": "40f1b4ba91f3721122218342706a0149bc569fec58f1c9deef4095af0e944670"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/bully-59.5.xml",
+   "taille": 7352,
+   "sha256": "eda0bcb082115c7744f3315927312eb984deb262de75438831efaec0aaab3bc4"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/bump-18.4.xml",
+   "taille": 7267,
+   "sha256": "139e77841fc1da9394ea6656bcaa215bb596b5c4c68a429bef26374559b73e74"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/butter-9.9.xml",
+   "taille": 14101,
+   "sha256": "58b320c54a55e237a38849ee22e18fae28d8d223f71cad6dc50c6cb3261012f4"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/calibratable_cos-45.6.1.xml",
+   "taille": 29503,
+   "sha256": "a5b209762990813367572a9326e61c8a9dcc0500b4b67cb93f556771b6f74d32"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/calve-28.1.xml",
+   "taille": 2263,
+   "sha256": "14ec2d30fe8a8216593cac55ca3439c08a978f5e56cf4fa28793d324eab854c7"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/captain-29.8.xml",
+   "taille": 8750,
+   "sha256": "4a07389c32f0f05e0a47e7001ce79ed8d95a552db3d880861072f0bc2dc474d6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/care-88.1.xml",
+   "taille": 9080,
+   "sha256": "867be6401ad416bab4858355ab38f5ce8b6716c993a49be7b62ed3205778f5db"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/caring-75.2.xml",
+   "taille": 5579,
+   "sha256": "97c99f52a6cfbcde0e212d9c4701949101857b854afa99f68c5caa4f749acddb"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/carry-11.4.xml",
+   "taille": 31780,
+   "sha256": "96632ead63eb36c5128af2c8c3cbb2cbe53e098b58242eb63e06bd5bc82d54c6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/carve-21.2.xml",
+   "taille": 22727,
+   "sha256": "fa8a0b5ba40ec83bd341e377d7faf54849f3c57bb59de851b1f9ac4b6d7c4ac9"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/caused_calibratable_cos-45.6.2.xml",
+   "taille": 26583,
+   "sha256": "1a4031a6012f3acad3a4fefb0afc16adcdb04bf82f4c3565814421d712482ff8"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/change_bodily_state-40.8.4.xml",
+   "taille": 5785,
+   "sha256": "1e3285adb88e5ef1eb5f3ca4aa1585362e7d2e59c1ab0e2b807f06df34d55eac"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/characterize-29.2.xml",
+   "taille": 24464,
+   "sha256": "0cc7ab24b29b75f0c342551bf2ec0f46af69c384172e457be60373f7fc7edf14"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/chase-51.6.xml",
+   "taille": 14190,
+   "sha256": "548f5748fef030c50238680fdf0f61fd85c77a7f8294d502740cf61d5c2dfc0d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/cheat-10.6.1.xml",
+   "taille": 13576,
+   "sha256": "5f5031ecaaafe3afd7344a3224a55992b39631ecd1091e861919a94b1c4f4e12"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/chew-39.2.xml",
+   "taille": 10079,
+   "sha256": "3fa0912eeea03eee7922ad4322ba534c4ebe6e1b1741bd5742da4eb9bdaaa4aa"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/chit_chat-37.6.xml",
+   "taille": 56122,
+   "sha256": "a6b1b79ee06fe26798c1e4eb6ad44d3c0769a4221a0301e55d03c78e9d91d914"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/classify-29.10.xml",
+   "taille": 5735,
+   "sha256": "ab68e2b15a3b0e9fbc9bd9c83a54bc554e90736f33db9ae6ab01e06d7345263f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/clear-10.3.xml",
+   "taille": 10606,
+   "sha256": "02de2814a1e0401b7cbbef04400841658006cb3ca14e32ca86a7fdbf10fd07ae"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/cling-22.5.xml",
+   "taille": 2728,
+   "sha256": "7e4eee49f112d9f0cf34307f5e347a878a2b6cb63f9c454a13a14a2e6449563e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/cognize-85.xml",
+   "taille": 4695,
+   "sha256": "52b869ae428cc7251f94fe9dcf993d5576c13d919198ef9b72c4361fbbd88019"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/coil-9.6.xml",
+   "taille": 9783,
+   "sha256": "5e3f86b11d9d6687c8064d69e9ef0b25c1ffa24d7b86c7a2ebfef415c1362dad"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/coloring-24.xml",
+   "taille": 9037,
+   "sha256": "4436e1eafba5dbeddf0ea44f26d56333c1bcc03c4ae210c6b26ea3607dbea721"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/compel-59.1.xml",
+   "taille": 8710,
+   "sha256": "7ba00390502d9d2a3b220838575d4acbdb1628c44b607d920dda0d7c323b2ee5"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/complain-37.8.xml",
+   "taille": 23963,
+   "sha256": "65475e2e5128317028091e87d41b289220b7118693b82b41a480a19d5f4a9f26"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/complete-55.2.xml",
+   "taille": 3269,
+   "sha256": "9249b1649667d4977f1fd07da6db8f605f8059025867791fba179eea7ef307a8"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/comprehend-87.2.xml",
+   "taille": 23305,
+   "sha256": "46e71c4544cadcd9424dc8bd4cd2c634700a972ccb27875676767dcd92be714e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/comprise-107.2.xml",
+   "taille": 3677,
+   "sha256": "043f974b1696b70ecdceb6d9bed0f7b58b7950cd0ffeeeddb8846ff1d8ee0543"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/concealment-16.xml",
+   "taille": 11584,
+   "sha256": "21d367983411c2ef08734f16ed1409a50a380ad5f901465c2fbcec963242393d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/conduct-111.1.xml",
+   "taille": 2562,
+   "sha256": "e7818667fcfda481eff0d6f82eb535f58f99dfd8633ec4438470b5330e336f10"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/confess-37.10.xml",
+   "taille": 25188,
+   "sha256": "b59d3fdd7f1ae3ddfd425b0fb1c4061b0e31a09e4b1b2cb5dfa91277fba9eb50"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/confine-92.xml",
+   "taille": 6383,
+   "sha256": "ada076232cfee4d2f608583c5fe55c5567f6876cd8601290e8dc0d03fd287fc3"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/confront-98.xml",
+   "taille": 4101,
+   "sha256": "aeff4cf3a5b81d44509e49c76922f24c2e86f06f033c8feb529411fd3b85dac7"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/conjecture-29.5.xml",
+   "taille": 7926,
+   "sha256": "d9b96f228ded0b46694b4dc10ab9c28422ffdc199af484a152ec1738861ad3d9"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/consider-29.9.xml",
+   "taille": 32095,
+   "sha256": "7e85c18e52ab87c59fdb22f45c1077eb8fa3ae8c8525dbdf2c1257989cfce2ce"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/conspire-71.xml",
+   "taille": 5684,
+   "sha256": "71000ba2437799ca32f1f187cb35d1c494b586c4fe8ff3731c6eb06d4cc9fb0a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/consume-66.xml",
+   "taille": 13751,
+   "sha256": "fca765f2818392dbc5d785c5d0ce05ab40a07a612548974faec73a3576e93e38"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/contain-15.4.xml",
+   "taille": 1456,
+   "sha256": "24ea26729a1de4a21647453a6d0ec0843e2255f9b2dbb6371455ac8eb324caf2"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/contiguous_location-47.8.xml",
+   "taille": 7783,
+   "sha256": "cec48fb39f379bec1a382669ceb164487e4d6bdc2e2401b9e3e5272619cfffb6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/continue-55.3.xml",
+   "taille": 7045,
+   "sha256": "91a0da6643f686febe56f938fea84fa360e5cb6939eaaa4d81122248538a9834"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/contribute-13.2.xml",
+   "taille": 25451,
+   "sha256": "2f6df7d1135281b53e245fc91cab68a92848257c8910a4888598749c688cfd0e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/convert-26.6.2.xml",
+   "taille": 18671,
+   "sha256": "3374c44c63272ca7a2a9ecb75a4be218589270b4d00bcde0dcf5c0d6d335cca5"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/cooking-45.3.xml",
+   "taille": 25199,
+   "sha256": "867aafd444ed5b152edfe7c5282267070b290dc217c334870f3617aa19a894ec"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/cooperate-73.1.xml",
+   "taille": 18643,
+   "sha256": "a5c54e265a87aa10d9c6ca3b50ec018e195df1ff0541faadf2fb3f68cd43d3bd"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/cope-83.xml",
+   "taille": 4772,
+   "sha256": "27f826bd441c7bf926b8e06c13bcd83f751f3d17bed65661519e3b778fc7dd54"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/correlate-86.1.xml",
+   "taille": 3410,
+   "sha256": "97ce0f8b7be7923ec1458e2084785d1123f2780b3846334a9bbcbf408ec20168"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/correspond-36.1.1.xml",
+   "taille": 29969,
+   "sha256": "e9b938775ab6c007ea4ffb0e74855ee3dab5de75bca4bf881b6458211672d91f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/cost-54.2.xml",
+   "taille": 3109,
+   "sha256": "9e71e88c909eae2323804fd19b33861f1d9df56a5c31d320765997f67cde67d0"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/crane-40.3.2.xml",
+   "taille": 12467,
+   "sha256": "b61bddc694e59d76db58a8f80df58d0412b945d6e32f1cda84ae5ac4895beb59"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/create-26.4.xml",
+   "taille": 19079,
+   "sha256": "bcf313b40d0745fdc039861a7340f18a8b7d457710615d57fa02e0888c578fe6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/curtsey-40.3.3.xml",
+   "taille": 10694,
+   "sha256": "aef2bd421daf876c8adcd852edca9ef744e999a89790443a8ffe6bdf3437b1dc"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/cut-21.1.xml",
+   "taille": 40201,
+   "sha256": "43921f71c3d15e0858f725b6390a317b13406439e3142580a0fdc5411f7daf3b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/debone-10.8.xml",
+   "taille": 5831,
+   "sha256": "cb98ed7cd255c0a6e23186ac2ca72ec97db98400efc8b79069082b538b716144"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/declare-29.4.xml",
+   "taille": 23584,
+   "sha256": "f7933351f23bbf96e8b67dede3f51a28c0e5d0cecc4afaa6d277c6cf07fb1534"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/dedicate-79.xml",
+   "taille": 3298,
+   "sha256": "7c7dad56191131752a840477f379be92fabbb24dfc3d691617ba65dc7966abce"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/deduce-97.2.xml",
+   "taille": 5838,
+   "sha256": "a1c8d75a5574768328a5b0ab966e423bc4735db59e00ed32a596cce484c464ee"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/defend-72.3.xml",
+   "taille": 5644,
+   "sha256": "32156439581f7add05293a6d37bb0eb0276b85ca45cec2f617ae25497083e80e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/deprive-10.6.2.xml",
+   "taille": 6571,
+   "sha256": "e160b842d4e1867fe1bc3dc6b5ae70f7de7bcb3e686ec252377c69e5b5d0b3a1"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/destroy-44.xml",
+   "taille": 6928,
+   "sha256": "0aeaafbf500fc422ac254dc0ba0a4cc3fe4bb454efb6e9d5f321ad910a4518b6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/devour-39.4.xml",
+   "taille": 1847,
+   "sha256": "4f914bfcc80012a5beb5e9144e542017922d6961a44ab9e4ed422606edfe029a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/die-42.4.xml",
+   "taille": 3787,
+   "sha256": "3ec79052de4c4d4b4a725fb82d8d2bf5df96e581c37b28da041308485f062a80"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/differ-23.4.xml",
+   "taille": 2745,
+   "sha256": "f6994b344c7142becd40197a6fe74bfef7f7da768cc5cb590d1bd7731e0cedcc"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/dine-39.5.xml",
+   "taille": 3149,
+   "sha256": "1ab259b665684911bf363bfca88932aad0eca2f47d4789cd19f1e9b0fdbc24a0"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/disappearance-48.2.xml",
+   "taille": 5891,
+   "sha256": "545bab106afa0a16f47593c11aeb48a6afe60d49a7a011d6e4358c2ef15576e6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/disassemble-23.3.xml",
+   "taille": 7747,
+   "sha256": "ca7ed1f71e1ea659a123433e0adb587ff42a291efd0be54f37ec07e35fc401cc"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/discover-84.xml",
+   "taille": 29023,
+   "sha256": "854691a860d87bbfbd42cb84aae0ba4e4e64c85864ee4db340e8a6d3e18adf79"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/disfunction-105.2.2.xml",
+   "taille": 1654,
+   "sha256": "fefadd3d9b4a2be33285f20710607f7295bec9497712a57d7b8cb72dbe5cfe2d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/distinguish-23.5.xml",
+   "taille": 7057,
+   "sha256": "b95165e4c9a63e922a60103a01a527ccae3739442ed5d049d2c23116c8a2d939"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/dress-41.1.1.xml",
+   "taille": 7279,
+   "sha256": "c98a22bf9cddaf8527b6657eb4e0be4807616bc9d8f4d179bf412dda0f374274"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/dressing_well-41.3.2.xml",
+   "taille": 4448,
+   "sha256": "4794c5bf557d0d3f368f19563a571dd11569e02765c8a1fbbfe4ec14d230374d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/drive-11.5.xml",
+   "taille": 28403,
+   "sha256": "d7ba1d520859a3f75a6c9a15ad5361ffb277ed1c24a6449d6957ad674331b1b4"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/dub-29.3.xml",
+   "taille": 4600,
+   "sha256": "ddedb5d30efe8610c2cc9f840779c879f3a2bcfc572a8e60d120604ab18975de"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/earn-54.6.xml",
+   "taille": 1572,
+   "sha256": "6038c2ae818f418b318d6dd17776f59659d561e146e3fd2fc381fdf6f66aa15f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/eat-39.1.xml",
+   "taille": 11608,
+   "sha256": "e125609fafea3d60ae17575c9133e25b5039b32b5e82d3ccd74f90064eb8a7c7"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/empathize-88.2.xml",
+   "taille": 5580,
+   "sha256": "87b125d750ddf46e803e77a5471516b55da6fcee5510f52f3ce07df0a3ccb10f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/employment-95.3.xml",
+   "taille": 6609,
+   "sha256": "dcd408f619109cb0b33e03b29915d096a0bbd42788796f1a831ecedea9aa3875"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/encounter-30.5.xml",
+   "taille": 1605,
+   "sha256": "7967a267e034efd80edcaeea0c4d61ad4d52e06201a22c39c2ed220049c91145"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/enforce-63.xml",
+   "taille": 2584,
+   "sha256": "6c2a1a673a4b4154adef6e5e431de5fd9b9a8d4c085244cbc14fd5d1c66880ee"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/engender-27.1.xml",
+   "taille": 6002,
+   "sha256": "c6807068a69ffee8eb94856340c1b30a73a6d5bf06d79b109bf30a3f50115c13"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/ensure-99.xml",
+   "taille": 5881,
+   "sha256": "d7f691d29691da6732662c2546b15ae87e15729b36ecfe88aff235e1ede5d943"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/entity_specific_cos-45.5.xml",
+   "taille": 4554,
+   "sha256": "bed17ad15f3074dfb00b2a8962e1db5b919f313d70af9997ca56ffee13fadd3b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/entity_specific_modes_being-47.2.xml",
+   "taille": 7545,
+   "sha256": "be7964b246b904155308193774b5ff134065aeceb432e816d026f21c6e013ad6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/equip-13.4.2.xml",
+   "taille": 9360,
+   "sha256": "d7c554f7ba57ac251f27b44f84e086ad04549577d6392d8e4b86bd350c4160bb"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/escape-51.1.xml",
+   "taille": 25683,
+   "sha256": "e635c89459d258a505499b3ebfa5a2ec89bf45359b07f0f2e6bf73f61d5cf5ca"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/establish-55.5.xml",
+   "taille": 6368,
+   "sha256": "dd6d35ac8c400db9db3560b211d36ca84c42f92d60003af5d1c7d4b143b6c4ae"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/estimate-34.2.xml",
+   "taille": 6759,
+   "sha256": "bdcab3abc3b07a3306bb2d8cb2db8b9dbde85c07c21c779b3762e87f62fabe90"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/exceed-90.xml",
+   "taille": 4160,
+   "sha256": "3be06105ae66202cb913908a8f91889cdc7bd488b9299c1b423911337a71a345"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/exchange-13.6.1.xml",
+   "taille": 19346,
+   "sha256": "8efdb4301b0651d743ecb6b1e3fab2a67acd5f9c6f50c38945aa20e99af15e6f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/exclude-107.3.xml",
+   "taille": 4425,
+   "sha256": "47a3cfaa35a7fed04e70d06585b3c14cf60e1a83f8098d6929e8d9c2d99014b0"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/exhale-40.1.3.xml",
+   "taille": 6571,
+   "sha256": "f5c058bb3cc41fc8e7667dfed9f26f4c811ee1ccc5fbe35b582f7076cc36a08c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/exist-47.1.xml",
+   "taille": 8011,
+   "sha256": "2fafbe981549b2bcc717904fec25dc00ba902efdd416f308f3b6cc7c430e79d3"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/feeding-39.7.xml",
+   "taille": 4833,
+   "sha256": "fe391411436c3f5945178f5b3493c942c0888b6cbb48e41046bd550f1d9d6f1a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/ferret-35.6.xml",
+   "taille": 1979,
+   "sha256": "1835aa2f764bd55a1fe978c1c887adc158dfe33f2d6eee5ca241c9069167e902"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/fill-9.8.xml",
+   "taille": 17707,
+   "sha256": "3db674bc582fc8a31199d974af62f8b1a5087f727556be53e31833e2b5f9d65e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/fire-10.10.xml",
+   "taille": 7696,
+   "sha256": "585f893951f62412e92f2ed7ef45fe7bee6ad60c7de9f3218befadb6f9b063eb"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/fit-54.3.xml",
+   "taille": 3751,
+   "sha256": "e94d974d529ddc021d92cae653a6865a68d43e17b6c3c4cceb9860e031ab874e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/flinch-40.5.xml",
+   "taille": 5196,
+   "sha256": "c893aa8d113bf3ff47746f6b73e4d6c52394e49bd2d1e923aa7459ec1f80ec78"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/floss-41.2.1.xml",
+   "taille": 8754,
+   "sha256": "daa84271b4c1becf82a31ada837a2823716b6ee7b60d16076ae63cb7c8c35b12"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/focus-87.1.xml",
+   "taille": 12160,
+   "sha256": "bac72cbfdaf2dc7bb4fcaf177aaa13f1e0d75a385662fa3b6152e9077e6d0088"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/forbid-64.4.xml",
+   "taille": 6537,
+   "sha256": "66947b55f71ee53e08286a8cc1103b96a3911b4a29cd8b5802579e575324f666"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/free-10.6.3.xml",
+   "taille": 9052,
+   "sha256": "59d6dbd1887df7bcdba9f10b5f4a1e9f31fd5c443c14a4f24f84c94c029cba40"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/free-80.xml",
+   "taille": 9040,
+   "sha256": "becf078667c8130b35e69f8386007cbbda51aa87ba8527fc1efd3c2698fadff4"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/fulfilling-13.4.1.xml",
+   "taille": 14873,
+   "sha256": "5fbeafc9288fc4fcc1b81396dc88c7b2a04ef1460409de41a32bf19c69aa1062"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/function-105.2.1.xml",
+   "taille": 3269,
+   "sha256": "4b975961e95bb38ff3159fcda9c3a514ebc1838e01adfd4d374a24c5ccb0078f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/funnel-9.3.xml",
+   "taille": 13689,
+   "sha256": "b1c4dd4a9e3e0f7e780801a4c763579a0abd190da682e1feb0e326a0997cb04d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/future_having-13.3.xml",
+   "taille": 14527,
+   "sha256": "ce8e9f885e0dfbb2147a262c978efba7ec6d67e31531f172f489f9b7cce3395a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/get-13.5.1.xml",
+   "taille": 23940,
+   "sha256": "115fcd3334ff5c0aa1e9d81311fc1f12c3d3eb9800deb0ffaf59dc1f741bcdd9"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/give-13.1.xml",
+   "taille": 23546,
+   "sha256": "89aa075bbea653b05df6bc4cb0d6e7abdce26242bf648d23c1e1a2778df70c50"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/gobble-39.3.xml",
+   "taille": 7386,
+   "sha256": "7eb515ac556f9538b832dd1d36708598827f3570edadab4bc7a6231f89292600"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/gorge-39.6.xml",
+   "taille": 2107,
+   "sha256": "a3c20e0ec77f0166ef37ca840a2488c9a036f40263234142d205f3cc2221326d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/groom-41.1.2.xml",
+   "taille": 2577,
+   "sha256": "82cb5d0ff4263978767f283c09bbd624197453395c8c36da9e7ad93706e3dfe9"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/grow-26.2.1.xml",
+   "taille": 10545,
+   "sha256": "ef4139a651b6ef58d701312707d6735a5ca0a47f965ad57076aea1c0454ba62a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/harmonize-22.6.xml",
+   "taille": 4405,
+   "sha256": "71ccaf54ec071ea0a052a57c20d89ebb23884668873c778574c2a2e2da304a43"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/help-72.1.xml",
+   "taille": 11502,
+   "sha256": "e6a28d81cf0b020a11338c40f51d2b4325eac46dd59ca61adec354b1fd4ca970"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/herd-47.5.2.xml",
+   "taille": 5988,
+   "sha256": "daa587616394e3a0435c133a199f808fe3b624d7a96a567d6e5fbeadd4137eaa"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/hiccup-40.1.1.xml",
+   "taille": 2585,
+   "sha256": "d63fe45f59c56abd5e1388aa00d2f2a7154738d91f3246954d61b5152d926ecc"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/hire-13.5.3.xml",
+   "taille": 6282,
+   "sha256": "67c886d28ed4811444e41bd88bd9fcfc7dc424a42364a1c2d971eece0e7a91cd"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/hit-18.1.xml",
+   "taille": 38701,
+   "sha256": "c821710952e908efc33ff94e98e98dc0f64b9d777ee2f741de93df67a24f7927"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/hold-15.1.xml",
+   "taille": 4028,
+   "sha256": "46a0bb1aeb3d10b63dc3e07f987fa92195e75bbd9c3025853b06883b970fa56b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/hunt-35.1.xml",
+   "taille": 7870,
+   "sha256": "6f827d44b53ee04e3c22058d08ef6514004a8798d0af926c57a066631efb32f4"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/hurt-40.8.3.xml",
+   "taille": 15188,
+   "sha256": "f3fab0e643d478a1ea1234e7312bbd72834b61d78760e08c8865805879c299b6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/illustrate-25.3.xml",
+   "taille": 6951,
+   "sha256": "fb6608482852ec7bb15a75da68c7db49d3db417a10acf13ff04afc9ac99ccbc5"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/image_impression-25.1.xml",
+   "taille": 13788,
+   "sha256": "0da522d214b6b2c5be3840642daa4be2909e12b68b4706862db1edcd08795758"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/indicate-78.xml",
+   "taille": 15487,
+   "sha256": "200fe176c684edaf68779ede8e77e67093094816afa2a4debf54b00d8f5b0ccf"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/initiate_communication-37.4.2.xml",
+   "taille": 6519,
+   "sha256": "d9a8936f074e1302395f77446061eb9997f37d7c2b6ae722123e11702c4450b6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/inquire-37.1.2.xml",
+   "taille": 71432,
+   "sha256": "12a17bf4cc599ec5d73974325d504a832380aaac66c3754e46b3c4601acc5d04"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/instr_communication-37.4.1.xml",
+   "taille": 43831,
+   "sha256": "49485e762cdde6b493a744f1c3d921a38cad95136258e9c425e89030386c208d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/intend-61.2.xml",
+   "taille": 6659,
+   "sha256": "7308ccb8a6259291e49e8524fc73aa0fd376c6e00c56a6d81359541445f106fe"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/interact-36.6.xml",
+   "taille": 3668,
+   "sha256": "6ad1c555bdda0ce999c9477e3dd07f43801843ca6961e9f7bdc6fd25bcf070f5"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/interrogate-37.1.3.xml",
+   "taille": 9299,
+   "sha256": "6ec0e3ab7f59a676c4d8931b45838963d2f89dc8bbab52b12733318231c8e1a9"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/invest-13.5.4.xml",
+   "taille": 7218,
+   "sha256": "4d7db77f6b86fc067e56161b484796219fc090603c1d44623c7a10b74ea4e74c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/investigate-35.4.xml",
+   "taille": 4268,
+   "sha256": "eaa74995e3de73b53c0b7316c7182828eba3f4609bcdbf4c785c409d0af0c684"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/involve-107.1.xml",
+   "taille": 3154,
+   "sha256": "c219c77f2db389927132d299dc73967f7d0f1ff517d0190d357db497ee7d4954"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/judgment-33.1.xml",
+   "taille": 11331,
+   "sha256": "c96b5a1044fa671bb7ebcd6da190181bc1a603c4623573a214c9bfb53209faaa"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/keep-15.2.xml",
+   "taille": 3583,
+   "sha256": "c21a0407ea25153a3c75797aef1f021adea51eb3c2350a433c8df1f21d21194d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/knead-26.5.xml",
+   "taille": 9165,
+   "sha256": "51bc508e3e4ad8a1ebe6ef2c5c5196b9f3194d3ef6220857291616569ca6c1c7"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/learn-14.xml",
+   "taille": 24917,
+   "sha256": "a109f6cd0d2cc99c2ca4612708917fb6ad2eb4bc48599f47f3094d0e45b8eb47"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/leave-51.2.xml",
+   "taille": 5722,
+   "sha256": "d93ed5b4a763f308780e97d21a259207c4b93ab3c642b43536daa35d9333f801"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/lecture-37.11.xml",
+   "taille": 23640,
+   "sha256": "9f132da8859444f99f8776f4d5d043b042fe1a54f228c68033395e1e4fb8d170"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/let-64.2.xml",
+   "taille": 1725,
+   "sha256": "46bb99a706a3861aaf6d35e15597665e3ed02269082b2cb76df3013f13f43a99"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/light_emission-43.1.xml",
+   "taille": 9620,
+   "sha256": "963b0821568e9426e8fe629c0557ab4aaabcf47605174e4ec6b3d2a3389d449b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/limit-76.xml",
+   "taille": 5510,
+   "sha256": "991f6624d4082a55caba5ec9ede15ea778c68a1205a0926389d226161b5cfe32"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/linger-53.1.xml",
+   "taille": 5408,
+   "sha256": "457733ab628c514d21dc485b794a9bee1c3c75d49762f5f84433d57711bd4cb4"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/lodge-46.xml",
+   "taille": 4499,
+   "sha256": "923a68d66156faa9038f0e35594c4834973f928c963f71d5412ef3f184c2757f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/long-32.2.xml",
+   "taille": 5551,
+   "sha256": "3c8ad87915578d8a260837090b96cbbeb86d08c322a18c27a348154d61dcae02"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/lure-59.3.xml",
+   "taille": 6552,
+   "sha256": "5231ec88d69cb4fdce2fd883ff1cad5f21c721d82d2e13d4c6d823de00e151bb"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/manner_speaking-37.3.xml",
+   "taille": 40592,
+   "sha256": "7d044a17bc85f4a8c3cf38b1414135c6c0e9e0d74ce44cf6d8d4699c41780ac3"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/marry-36.2.xml",
+   "taille": 3193,
+   "sha256": "028c8e82fba770ffddb84bf0d7f069f4ddb267f43735d423b2fb843af7e87eef"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/marvel-31.3.xml",
+   "taille": 7723,
+   "sha256": "ed9cb20a6854019ef4115be5276eefd3f795f4046095f9a2d3188c7155e25ad4"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/masquerade-29.6.xml",
+   "taille": 6034,
+   "sha256": "52d792ffd66a1ccd763c071ca09ffae00b6b5c3b9fcce74762334e4843af99f2"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/matter-91.xml",
+   "taille": 6583,
+   "sha256": "f4e8e833118090dc3751960a728d1582de6405d03f536e80301124c5319b2554"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/meander-47.7.xml",
+   "taille": 10125,
+   "sha256": "148f3810a7fe9f9450f331eecd059708b4debe32ece5578501c36756397021e0"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/meet-36.3.xml",
+   "taille": 12063,
+   "sha256": "3ea90c7fb5c11f2342dc6de6a7f304650188f99ffb2731bf9dfd21e14ecd4866"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/mine-10.9.xml",
+   "taille": 4748,
+   "sha256": "822aeb87b7c8743be6eab5a8093c124780e3fbeb611e9d4902a6c9b73a1b5df7"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/mix-22.1.xml",
+   "taille": 34867,
+   "sha256": "23af31a4accef790282916bd9021dd8cb7ba1cf15e54f471071d4450c159354f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/modes_of_being_with_motion-47.3.xml",
+   "taille": 10331,
+   "sha256": "f94c43af0db13c8deda81f02650ce9ffb5ea920cb30c52fd25bcbd0fbc95a0a9"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/multiply-108.xml",
+   "taille": 6683,
+   "sha256": "c09b8e5340065cf36bd94b526dec407b4374285873dbb82f23d273374e78198c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/murder-42.1.xml",
+   "taille": 10421,
+   "sha256": "1b11ea6a41e5de20a53cf1872d2d094583f5d611ffdcc29a6515ac41cd991595"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/neglect-75.1.xml",
+   "taille": 3663,
+   "sha256": "31f3a352d90bf64637e50e2f20d77b2fd56403fa25a676588ec544141ec1da68"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/nonvehicle-51.4.2.xml",
+   "taille": 18521,
+   "sha256": "3c299a5f79b8126b2530cab743c609b795ce69d6b795d88d2ffb5d9ea7d380d0"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/nonverbal_expression-40.2.xml",
+   "taille": 16822,
+   "sha256": "6e3b813942093a014b2c94cd57f81430712a66a29a5b90d36c916999d9097f75"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/obtain-13.5.2.xml",
+   "taille": 13827,
+   "sha256": "d742863fd8e487a4e5721021c1a8552217188386768c7f0664b7ab5a27a549bd"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/occur-48.3.xml",
+   "taille": 6768,
+   "sha256": "736fc2bdb7774551ce7ed1fad18a94e6b0596f5c463205b84082cfbff209a6f5"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/orbit-51.9.2.xml",
+   "taille": 3165,
+   "sha256": "666d0a69cf38a31d5ac741e061ff5fa0ca2e1a1495fc67568d990ca1228bef92"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/order-58.3.xml",
+   "taille": 6134,
+   "sha256": "f21d1887677a43378c7f07f685ed3ec37329ad3cfaf2080cf19040982aaf817c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/orphan-29.7.xml",
+   "taille": 2361,
+   "sha256": "db93575514a085abfe71dcabccaa55978053b66f43bb9c3534f37f81eb763db2"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/other_cos-45.4.xml",
+   "taille": 37395,
+   "sha256": "fc7a2cf0b3ab792930bafe6ca1b48173a190c510c30ef7ee0027dbd2261d084d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/overstate-37.12.xml",
+   "taille": 3341,
+   "sha256": "4b76c94a0c638b08ef926026465add141afd1249638993cbd948eba997c5214c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/own-100.1.xml",
+   "taille": 1714,
+   "sha256": "f762bd2262316b6d53967beae5fd82a142e91622c90b63fc14c3bd7396c426ae"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/pain-40.8.1.xml",
+   "taille": 8065,
+   "sha256": "758811291dfb9f7c08a8b23aff77b4319564ff08281ac8b4c2853c5c73078e06"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/patent-101.xml",
+   "taille": 2504,
+   "sha256": "d2fb98483f76ceec56b444e226aa6613055a4974a985f5ef638fa64301a6f0fb"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/pay-68.xml",
+   "taille": 16253,
+   "sha256": "eb15216b9061707f8d555781f3a19646194a73a07ca53c7cc9ad39c22b63260e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/peer-30.3.xml",
+   "taille": 3086,
+   "sha256": "0d95d1efa369222bc3ef32c1234c2478e8fa30d5e6c62b172d396e4798f58b48"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/pelt-17.2.xml",
+   "taille": 6013,
+   "sha256": "ff85511a0e479234773d8c03e854efefb7790eb30f33f1ea6ca018c04dedc877"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/performance-26.7.xml",
+   "taille": 7334,
+   "sha256": "c68eb6ef060bb113d0d9b35cf87c3276dc61df5640254365ce13edc3fdf7388e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/pit-10.7.xml",
+   "taille": 5004,
+   "sha256": "e11bd0a7262b1364a07e7bf0e1c8903de5d2b2a6834b90ec39230b91a60d0eae"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/play-114.2.xml",
+   "taille": 13392,
+   "sha256": "f8366cb384fd756e498f992bc7b9a618c2e82b385c8e7bde043c69d6a443f04b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/pocket-9.10.xml",
+   "taille": 13880,
+   "sha256": "027092f8cfc0e31f356c70eedbd2172a7b2c7297c634a7ce2342c6451a01ab2b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/poison-42.2.xml",
+   "taille": 11821,
+   "sha256": "3b8e61ca106ca5a776e84e659fbc322a02b6b76839f5c0ea31020705b43c38a0"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/poke-19.xml",
+   "taille": 12659,
+   "sha256": "d2f972fe986ea092b2a50b22d710c394972e5e85ce74c90dc216a9c5d709e69d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/pour-9.5.xml",
+   "taille": 12722,
+   "sha256": "2c61b814813532f4387dcb908c4cb4b118153d743f93dbe6cbe91a7a6f9b1624"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/preparing-26.3.xml",
+   "taille": 20050,
+   "sha256": "469b796e5773e796c3774598998b2559f19f2498ed6ab82a645b38b3f6aa8edf"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/price-54.4.xml",
+   "taille": 4211,
+   "sha256": "76e90984f3320aff51cda0b7c977234dfbedf0a3b7f8625cdd1ef6a97a993744"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/promise-37.13.xml",
+   "taille": 13112,
+   "sha256": "e53251bbd23a881b08ab8b7426d57397bd0e2400e290a596a18027006badf8a9"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/promote-102.xml",
+   "taille": 4045,
+   "sha256": "a4af2bf28e7d727afb62648a5005fb319002e83ea3bea1fa1e49f720b8ebbb15"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/pronounce-29.3.1.xml",
+   "taille": 4340,
+   "sha256": "01569b1f825dd633a39a38873df628a50fcc9ea0546a04c0528170cfca268a99"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/prosecute-33.2.xml",
+   "taille": 8730,
+   "sha256": "97154e9e5061c9786c1d6bb729efc8a2d32ea1be4d7454459c47ed968ae293f8"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/push-12.xml",
+   "taille": 17130,
+   "sha256": "d3f31e409c40c46224a0b2e2f7e3b56fa98f1d73c3ebb32cf2f11b3c51dbab9e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/put-9.1.xml",
+   "taille": 13691,
+   "sha256": "49f1ddee737dacf934d22fe4311c05d1c2651a208845266de3d00e9a2bfd9960"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/put_direction-9.4.xml",
+   "taille": 10385,
+   "sha256": "4c3a59809f5c09595b9fed06701c3f1bae8a216054fc5ac257fe3dc082c087ef"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/put_spatial-9.2.xml",
+   "taille": 10343,
+   "sha256": "5f0291831e5f72d3096be5d23af65fbf7811434e0edf4dcc3af0b06bbd9d0a15"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/reach-51.8.xml",
+   "taille": 2994,
+   "sha256": "94aa274d714ae92613b9a6950b1c017a491b1d381fb43e4942bfa9445d88b142"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/rear-26.2.2.xml",
+   "taille": 3933,
+   "sha256": "b01766bf016d8d5726337afc6e444d08a97980451b4377c8ca3c0e631108b401"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/reciprocate-112.xml",
+   "taille": 4797,
+   "sha256": "9ca64e470f538396aad8d2b45e8f390d92ffb067a04480dd127d6acb5a725e79"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/reflexive_appearance-48.1.2.xml",
+   "taille": 5611,
+   "sha256": "0d0dfd703d9651a8f375cae9bb4777d8a99c7868e00a42ee962b6344e6d7db9a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/refrain-69.xml",
+   "taille": 3776,
+   "sha256": "28aaac5c1aa7b7b9e457ed2aaf68ee1db21fe4b0abbe8b318de1ab2a96a83011"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/register-54.1.xml",
+   "taille": 8882,
+   "sha256": "4c1e22169847f09a9d314446d504895685b2037c716f9eb431e3b976447ccd89"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/rehearse-26.8.xml",
+   "taille": 3503,
+   "sha256": "0b78365202d4d05ddd9fe7258023e38dae55ee8c39a67e773e97ba431f4f0687"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/reject-77.2.xml",
+   "taille": 4748,
+   "sha256": "96b70f34ceb353bcf901cfc24817803c07f9bb267134e576defecf7f8cd6aa19"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/relate-86.2.xml",
+   "taille": 3608,
+   "sha256": "345951b5c376ecb66d41686527b1c070a6e1dbf3fa63df94268b3e774e82577a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/rely-70.xml",
+   "taille": 6548,
+   "sha256": "1d2390aa735af36db88e58bf18c0908d6c18a743ad4d750b5db4fe79d6486eba"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/remedy-45.7.xml",
+   "taille": 15663,
+   "sha256": "099dfedc325b9be6c542ef675a0f40c16623eba276ba326d8286f9e01034fcac"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/remove-10.1.xml",
+   "taille": 9284,
+   "sha256": "78c22cb92d3236b0b03ea9934f69e2bbb7e67db42a2f4e9be1d0d24f05e50bfd"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/render-29.90.xml",
+   "taille": 8050,
+   "sha256": "d6500d031e08e166c64d10959567efd3256eaef60e7e4311533fe3dd26d07336"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/representation-110.1.xml",
+   "taille": 2959,
+   "sha256": "c40682b516d2b3d18b352fc2bf904a6821c78c5a5df773ef20800b09a6650e2e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/require-103.xml",
+   "taille": 8360,
+   "sha256": "786da124a29181927c3ca7837e541550ad73f681a688dead0afcc33c5b49c1fe"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/resign-10.11.xml",
+   "taille": 6690,
+   "sha256": "1841510b32d651743c8d5aff558c26d3080ac450616bc9ff1428cf06baafb745"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/respond-113.xml",
+   "taille": 5686,
+   "sha256": "183c9a0ffa81f63ec74ffeacdb623d50ffa48ac5503a6d892e03d851e38046c3"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/result-27.2.xml",
+   "taille": 2105,
+   "sha256": "b1d68d556e5565c4cec7a4d97d3f0c05da33b55f45beaa9889d3ac489c144952"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/risk-94.xml",
+   "taille": 4307,
+   "sha256": "e9c33b5f3df9b7104afc957c5c62532319b75932ea079c3407af62d9aedd9de6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/rob-10.6.4.xml",
+   "taille": 11844,
+   "sha256": "2183fc4b7efd734ab6f3e7122a7e664af98f3e9831d0f55bd3475e8518d46708"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/roll-51.3.1.xml",
+   "taille": 19903,
+   "sha256": "e3526377081934469a7c026097c366dc34f65351216cae6d206c4ddfdb129da8"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/rotate-51.9.1.xml",
+   "taille": 7451,
+   "sha256": "9c1f5cd783ae88f49cf8b65b59fbcace963fa732e4aa3851c7e915305740563c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/rummage-35.5.xml",
+   "taille": 5717,
+   "sha256": "3211b4edf9769bf2a0ad483887e015b2ce96df5c780899f474ce4ae3be4d2256"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/run-51.3.2.xml",
+   "taille": 46749,
+   "sha256": "829c2ea021e1d831865250d0ce84512c350c2e71ce966ca2d20e7346506c94b4"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/rush-53.2.xml",
+   "taille": 4221,
+   "sha256": "b6d61806d24bef491d3440ca97ae27416122ba7ddad90f6f6d3930f6b5ef1ca5"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/satisfy-55.7.xml",
+   "taille": 2172,
+   "sha256": "e9caa47110a7f6e447a39d68f8a1ab6642ba0372439ce5922c5646131899d693"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/say-37.7.xml",
+   "taille": 77686,
+   "sha256": "ea59a459e41af3f8a9601763bb247fed7b9f2ef765e0380f55dbf99233230078"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/scribble-25.2.xml",
+   "taille": 10005,
+   "sha256": "776a8396e9336705a728c15f3729c0fae2e93cb8647fab07522e70713f683f96"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/search-35.2.xml",
+   "taille": 7341,
+   "sha256": "d604d736b133b162a911164bcc1c4ecf00a04ad0e2ebbefcf5f4d969704aa658"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/see-30.1.xml",
+   "taille": 14288,
+   "sha256": "743362edeba71e3fb93ef2feac334811bbba4b27851c8f31020577a261c12bcc"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/seem-109.xml",
+   "taille": 5226,
+   "sha256": "40a94b7ec522ed47f27e5686fe64b987fe4c087704a72062eb6825b23f539f3e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/send-11.1.xml",
+   "taille": 15697,
+   "sha256": "5cd3e3fedcea74909474af186ce38d3f0a348c257f2d14234af70cb86f6b5ccd"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/separate-23.1.xml",
+   "taille": 12728,
+   "sha256": "ae851cf32f1774a942d43f3b6bbc32463292d9b0a6fc3b35def483f2df1512bc"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/settle-36.1.2.xml",
+   "taille": 8755,
+   "sha256": "4557b55836e35d1f6ab30a12570252a4b3323b26b81ba1fa81094e48e799c2dc"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/shake-22.3.xml",
+   "taille": 20688,
+   "sha256": "01bed050334474ceeb064ca2ca536f83bf477c5180f33154d7e527d8a6ec9a18"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/sight-30.2.xml",
+   "taille": 3382,
+   "sha256": "e36f2f9f85a3b4735b7c7c2f1afd8d82d3567ca2cf9135fad789a7f0755ac06b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/simple_dressing-41.3.1.xml",
+   "taille": 2538,
+   "sha256": "05befa3dbbe25bb42aa3b71903fcae768fc062fd54d227263521eef9ee8fc57f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/slide-11.2.xml",
+   "taille": 17249,
+   "sha256": "b20470ac855c6690823ee379c8190bc2164fe11f92b6de576f6a4ed5fb685168"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/smell_emission-43.3.xml",
+   "taille": 3877,
+   "sha256": "afaeb49309646cefad7748180f3b222a0a6928025d31319ee98cfc6db7c69344"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/snooze-40.4.xml",
+   "taille": 5776,
+   "sha256": "a1f0efccd7e0b44dbe09a55556bc3e208d97441d3167c7ca6ae04e72ead7fc46"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/sound_emission-43.2.xml",
+   "taille": 17696,
+   "sha256": "ffff73623534bb8e1ee1a215112af3ef510b34a01c493a6da6efa860bfadf376"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/sound_existence-47.4.xml",
+   "taille": 6483,
+   "sha256": "d4cff59fc5e55fb4afb1fb9d5463ba2c0b3a53ec29b1b289e2d6bd177103552a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/spank-18.3.xml",
+   "taille": 25225,
+   "sha256": "f2530311055bef05442a8498105f0e0d7a74e3a1f5b27c39e71e4091c06fd7a1"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/spatial_configuration-47.6.xml",
+   "taille": 11998,
+   "sha256": "51a5228a76fa3c9cc324e710b8d586ddda57a1144c6e2e6c2f31e1c171efb5a1"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/spend_time-104.xml",
+   "taille": 5102,
+   "sha256": "dd5552f0f2fa6ec3a6cea85caea9974c85ccd2b53ac249e3f2b2cbc3ff1b29e9"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/split-23.2.xml",
+   "taille": 10643,
+   "sha256": "545eb1ba34e7d317b2eaf1e97bc201db95632b26a875ff1d7b64a1260c96458c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/spray-9.7.xml",
+   "taille": 21558,
+   "sha256": "63d1059e7fe92110a783edf740652e14a3ada37b85f5aa09e07702b90816c681"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/stalk-35.3.xml",
+   "taille": 4203,
+   "sha256": "b41dcdce10606a73e43c5cfbbaeb15e8b6c3ff9ff7764fb7926bab95c74aa31b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/steal-10.5.xml",
+   "taille": 18401,
+   "sha256": "a2a7a11bc8b07862130f0fe7cf585dc0b30777d8c30d85bd49aaff9d192d12dd"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/stimulate-59.4.xml",
+   "taille": 5129,
+   "sha256": "3461b5fe0ffb807e81a6d861768fe317c4fecd8a1f81b1d7535c9e92be658a4e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/stimulus_subject-30.4.xml",
+   "taille": 4395,
+   "sha256": "4abbc123ea31a3fdcba82adf80fb35654fe8748f82fd2ef934d958529940af98"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/stop-55.4.xml",
+   "taille": 5587,
+   "sha256": "d58bc378f1c64e77d0ec3eb8cb2628e6dd2d528dd5707e4d2200f271de6f7c29"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/subjugate-42.3.xml",
+   "taille": 7715,
+   "sha256": "13a6adec46f7ece6bacddaf6c73d16264bb27ffdbbf698e224693ebec1ce751c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/subordinate-95.2.1.xml",
+   "taille": 1751,
+   "sha256": "e7b2f1e40204c8b76f5aab57ba454a9663fe2e8942c81aa113f4a33f9975be8d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/substance_emission-43.4.xml",
+   "taille": 12411,
+   "sha256": "a784dade574f600ecee4b5ee7d1da9e7875a2e62355d9e82b3157ef545981d66"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/substitute-13.6.2.xml",
+   "taille": 14585,
+   "sha256": "502fa6376872ac92a6418c3249508eb9d043c06933a40251a7d82b6371cec536"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/succeed-74.xml",
+   "taille": 17215,
+   "sha256": "811bdaf7efdc267e23b3f2e1dc20f0f581b47779d11488d160bf60633fcd048f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/suffocate-40.7.xml",
+   "taille": 9731,
+   "sha256": "fac5a45365e771366d2f2bd5c8c96f8e1975f23b0fc33219d54a8853afbb52dd"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/supervision-95.2.2.xml",
+   "taille": 1984,
+   "sha256": "1a7f9ca0e713eae62e5d56e21ccefa28dfa08f458b5c67c6ae3962df6e3c46c5"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/support-15.3.xml",
+   "taille": 3170,
+   "sha256": "82f331f84821206e7b8f26abe5923bb20e4d4c6a32cedae783c8d5df88663a38"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/suspect-81.xml",
+   "taille": 4359,
+   "sha256": "b1b5d7e4e9a1693654b5505a7418164c55ba5769a2e7d851bd25bfd6e5ae97a5"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/sustain-55.6.xml",
+   "taille": 4602,
+   "sha256": "bdc2db30bc57d313d60ede49014cd90f7800ccccd30c71c6b6257db903dac758"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/swarm-47.5.1.xml",
+   "taille": 14843,
+   "sha256": "a6d55145c6418e98ef7189f5ca8bb8a83d2b790a248d82cb7b1c2a6a5f342f98"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/swat-18.2.xml",
+   "taille": 25819,
+   "sha256": "6e1c4360a404d66d95770a2240b83dee5d5c98e3d3edc708482f851ed1bd047b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/talk-37.5.xml",
+   "taille": 37048,
+   "sha256": "112248738ec6e51b642233585373949a0650d6ab0a0fb932d6668e53c6950514"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/tape-22.4.xml",
+   "taille": 21289,
+   "sha256": "ef3dc94945e0cb92c9c72ba9fca834177d7b76b08805821f4f90ff68f760395e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/tell-37.2.xml",
+   "taille": 8506,
+   "sha256": "527bc6c3988992d157ff7e9ae7921a6b0ac1c89d81730bffdf0b51eb4f8e3f0b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/terminus-47.9.xml",
+   "taille": 1816,
+   "sha256": "4cffe954e72dca7c52f5e0780daadb4d5e105362e64890d5fc1890416f2b1e5f"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/throw-17.1.xml",
+   "taille": 26646,
+   "sha256": "fcfc3d642673c6438bce5f1197110e971fde8cf1e99d58276e0526f9ae206bf2"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/tingle-40.8.2.xml",
+   "taille": 6554,
+   "sha256": "9d868bea3701f722279c278258ea6f0f796cef66b5228b3688e9518e1baf6b57"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/touch-20.xml",
+   "taille": 9836,
+   "sha256": "7917b7c7d030a2d5d25c9d46f74e0d0c8438716aa736325dc42176ea12002b64"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/transcribe-25.4.xml",
+   "taille": 7150,
+   "sha256": "829ebe95cd699a57a2a77f77c8f8d13812767ec27bb3434e5f80260df344f618"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/transfer_mesg-37.1.1.xml",
+   "taille": 54602,
+   "sha256": "8d20095648d67576a03af0548edfbf61c3ef7932b30323bf75aaef1eda089246"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/trick-59.2.xml",
+   "taille": 6788,
+   "sha256": "05d771a4c733a2d73dc2649043bf2773319d39cac69e127ab380f7a9e225a21e"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/trifle-105.3.xml",
+   "taille": 1940,
+   "sha256": "54bcf3f6148a74292afeaa897aaa342fb0a0eb5532549461812f8f020d4314f0"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/try-61.1.xml",
+   "taille": 3634,
+   "sha256": "412f6f6e9db683d9eb5cb6ce428b84339c149392e8ce65e3b9b6d52ad0b8d44d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/turn-26.6.1.xml",
+   "taille": 19354,
+   "sha256": "0459ab37f00d9bfacc94225b83858a88f8f3c6c345a292609c712eafad1c7900"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/urge-58.1.xml",
+   "taille": 6142,
+   "sha256": "ae9352423133d5146decba1bb877d13c5fe3407ae6921bd0341b28f8090a7e33"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/use-105.1.xml",
+   "taille": 5387,
+   "sha256": "b1b137854ba949d59f3ad4f0c1535bdc7d691131bed5af877eb7ccdfdbd66ee6"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/vehicle-51.4.1.xml",
+   "taille": 20296,
+   "sha256": "ab969575e1192dc67eb6077098d2324d9b614a1cd7802f81c525af78883f140d"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/vehicle_path-51.4.3.xml",
+   "taille": 22105,
+   "sha256": "8ca06fca010c5f8f53514903dbaf76157808e1d7ec4af77ee06f7362a2d55e64"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/vn_class-3.dtd",
+   "taille": 2127,
+   "sha256": "7e30f32a6eb10a2b13d5a0c2300d820ada9f111282e7509892f259f0cc3bad30"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/vn_schema-3.xsd",
+   "taille": 44212,
+   "sha256": "3d6fcde8f67b2f844b18db8642508846645477337a94f2642359bfa618684f0a"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/void-106.xml",
+   "taille": 2987,
+   "sha256": "8dfc13021edebe689b38ec98c84ad8fe8e4c0a6787681004e3ac9db8b082799c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/volunteer-95.4.xml",
+   "taille": 6224,
+   "sha256": "534ccdc6ec2e20b506ad99981809ab8aaf4629cfe4095ddf0618d9a39cfd3312"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/waltz-51.5.xml",
+   "taille": 14313,
+   "sha256": "ceeee470af2fe9856938c9deadd144db004e275c393ab2b4b766b0cb83bd3191"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/want-32.1.xml",
+   "taille": 14335,
+   "sha256": "75681abc2e396d219756990cacefaf71f18d7a9b364e76737074aab5fc819eb1"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/weather-57.xml",
+   "taille": 4937,
+   "sha256": "24fcc706e8ae9a84cbd163764bfefc6a70ced65341e35f3c4848d04323e2356b"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/weekend-56.xml",
+   "taille": 2288,
+   "sha256": "c58c586824f2bdd065a825966c89aa3f7e4f83d39b21c7b988fa0303b2560147"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/wink-40.3.1.xml",
+   "taille": 20023,
+   "sha256": "eab5962b993aa06e258d80f722754d35e83f31c7a93658b6b0dac00456e81e16"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/wipe_instr-10.4.2.xml",
+   "taille": 13813,
+   "sha256": "a9189f173bb53a65301908f7397495bd5a8842bab4571eac6eaf281790c3264c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/wipe_manner-10.4.1.xml",
+   "taille": 11987,
+   "sha256": "f94d450e92604eb40488f283575d76057bebe1e43061075b522a25014485a2ba"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/wish-62.xml",
+   "taille": 6992,
+   "sha256": "c4534ce127c3d0a6e82b03e844c0472480fbaf515e2213cb946d4d61eb87622c"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/withdraw-82.xml",
+   "taille": 11062,
+   "sha256": "c9d113cdb495562dc49b76e199d54589db1e717a51e9c4222c588a298af65495"
+  },
+  {
+   "chemin": "verbnet/verbnet3.3/work-73.2.xml",
+   "taille": 5240,
+   "sha256": "668cc7440d925fc6b2802a1b3b99f8225443783a80e8fc3eb2c572cca66702fe"
+  }
+ ]
+}
