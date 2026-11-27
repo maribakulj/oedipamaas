@@ -177,8 +177,18 @@ les références du développement sont adjugées d'après elles.
 patient et thème confondus, **relations orientées**, coréférences (paires de mentions), distinctions, négations,
 modalités, portées, citations. Un référent est une classe de coréférence : un rôle est juste si son participant est
 aligné sur une mention du même référent. Les mentions sont alignées une à une, par la tête et par la portée dans le
-texte. L'option `--derivations` juge chaque assertion dérivée par une règle de la normalisation contre la référence
-(juste, fausse, sans effet), par règle : la mesure des règles hypothétiques sur des références construites sans elles.
+texte. L'option `--derivations` juge chaque assertion dérivée par une règle de la normalisation contre la référence,
+par règle : la mesure des règles hypothétiques sur des références construites sans elles. Chaque dérivation est
+canonisée et jugée avec ses dépendances. Elle reçoit l'une des catégories suivantes :
+- non évaluée : E1, dont la forme n'a pas d'équivalent dans le guide ; la redondance n'est pas une preuve de justesse ;
+- redondante ;
+- gain ;
+- gain et erreur : une même transformation qui ajoute du juste et du faux ;
+- erreur de la règle, ou erreur héritée, selon que ses sources lues sont justes ou non. Les sources sont jugées
+  entièrement : prédicat, étiquette du rôle, relation, propriété, qualificatifs.
+
+Les éléments justes et faux qu'elle ajoute sont aussi comptés (docstring du comparateur ; `docs/mesures/V2.md`, « Le
+jugement des dérivations, corrigé »).
 
 Ce que le banc ne mesure pas : la justesse des références (l'accord des annotateurs en donne une borne), les sens des
 mots (une tête synonyme est une erreur de tête ; les sens sont la mesure E5 de l'étude), et ce que l'image montre.
