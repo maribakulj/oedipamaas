@@ -106,6 +106,10 @@ FAUTES = {
 
 # les défauts du vérificateur : chacun doit faire accepter une preuve fausse que les bancs contiennent
 FAUTES_VERIFICATEUR = {
+    # lot 1 (contrôle indexé / exhaustif) : une exception de ressource n'est pas un verdict
+    "budget épuisé pris pour un rejet": (
+        "echec_ou_ressource(E) :- ressource(E), !, throw(E).",
+        "echec_ou_ressource(_) :- fail, !."),
     "régime non contrôlé": (
         "    ( forall(member(A, As), A = genre(_)) -> Rg == classement ; Rg == figuration ).",
         "    true."),
@@ -165,6 +169,9 @@ FAUTES_VERIFICATEUR = {
 # les défauts du comparateur (inclusion.pl) : chacun doit faire rendre un verdict faux que les bancs de l'inclusion
 # (test_inclusion.pl, attendus écrits à la main ; test_inclusion_generatif.pl, confrontation à des modèles) voient
 FAUTES_COMPARATEUR = {
+    "budget épuisé pris pour indéterminé": (
+        "          ;   ressource(E) -> throw(E)                  % un budget ou une limite de temps : jamais un verdict\n",
+        ""),
     "cas non contrôlé (Q1 insatisfaisable)": (
         "    ;   St1 \\== etablie -> R = indetermine(cas_non_etabli(As))\n",
         ""),
@@ -191,8 +198,9 @@ FAUTES_COMPARATEUR = {
         "    ( Complet == incomplet -> St = incomplet ; St0 == etablie_sous_hypotheses -> St = etablie ; St = St0 )."),
 }
 
-BANCS_NOYAU = ("test_noyau.pl", "test_noyau_semantique.pl", "test_noyau_robustesse.pl", "test_noyau_generatif.pl")
-BANCS_INCLUSION = ("test_inclusion.pl", "test_inclusion_generatif.pl")
+BANCS_NOYAU = ("test_noyau.pl", "test_noyau_semantique.pl", "test_noyau_robustesse.pl", "test_noyau_generatif.pl",
+               "test_ressources.pl")
+BANCS_INCLUSION = ("test_inclusion.pl", "test_inclusion_generatif.pl", "test_ressources.pl")
 
 
 def essayer(d, nom, fichier, source, avant, apres, bancs=BANCS_NOYAU):

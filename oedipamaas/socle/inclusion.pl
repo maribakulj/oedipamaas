@@ -58,7 +58,17 @@ inclusion(K, N, Q1, Q2, R) :-
     k_etendu(K, Ke),
     findall(As, cas_de(F1, As), Cas),
     catch(premier_contre_exemple(Ke, N, Cas, Q1, Q2, R), E,
-          ( E = fragment(X) -> R = indetermine(X) ; R = indetermine(erreur(E)) )).
+          (   E = fragment(X) -> R = indetermine(X)
+          ;   ressource(E) -> throw(E)                  % un budget ou une limite de temps : jamais un verdict
+          ;   R = indetermine(erreur(E))
+          )).
+
+ressource(time_limit_exceeded).
+ressource(time_limit_exceeded(_)).
+ressource(inference_limit_exceeded).
+ressource('$aborted').
+ressource(unwind(_)).
+ressource(error(resource_error(_), _)).
 
 premier_contre_exemple(_, _, [], _, _, oui).
 premier_contre_exemple(K, N, [As|Cas], Q1, Q2, R) :-
