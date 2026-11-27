@@ -274,13 +274,17 @@ distribuer(_, [S], [S]) :- !.
 distribuer(en, [S1|Ss], [S1|Ss1]) :- !,
     ( append(Contexte, [T|Reste], S1), nom_ou_connu(T), \+ ( member(T2, Reste), nom_ou_connu(T2) ) -> true ; Contexte = [] ),
     maplist(reprendre_avant(Contexte), Ss, Ss1).
-distribuer(_, Ss0, Ss1) :-                               % en français : le contexte avant, puis le contexte après
-    distribuer(en, Ss0, Ss),
+distribuer(_, [S1|Ss0], Ss1) :-                          % en français : le contexte avant la tête (le premier nom :
+    ( append(Cav, [T0|_], S1), nom_ou_connu(T0) -> true ; Cav = [] ),           % « contrôle des naissances » n'a
+    maplist(reprendre_avant(Cav), Ss0, Ss00), Ss = [S1|Ss00],                   % pas de contexte avant), puis après
     last(Ss, Sd), ( append(Avant, [T|Contexte], Sd), nom_ou_connu(T), \+ ( member(T2, Avant), nom_ou_connu(T2) ) -> true ; Contexte = [] ),
     append(Av, [Sd], Ss), maplist(reprendre_apres(Contexte), Av, Av1), append(Av1, [Sd], Ss1).
 
-reprendre_avant(C, S, S1) :- ( elliptique(S), C \== [] -> append(C, S, S1) ; S1 = S ).
-reprendre_apres(C, S, S1) :- ( elliptique(S), C \== [] -> append(S, C, S1) ; S1 = S ).
+reprendre_avant(C, S, S1) :- ( elliptique(S), un_seul_mot_plein(S), C \== [] -> append(C, S, S1) ; S1 = S ).
+reprendre_apres(C, S, S1) :- ( elliptique(S), un_seul_mot_plein(S), C \== [] -> append(S, C, S1) ; S1 = S ).
+% un segment qui a déjà son propre modifieur (« trade token » après « trade mark ») n'est pas elliptique : il ne
+% reprend pas le contexte du premier (27/11, docs/mesures/C3_CORRECTIONS.md, D3)
+un_seul_mot_plein(S) :- include([M]>>( arg(4, M, C), \+ memberchk(C, ['DET', 'ADP', 'PUNCT', 'CCONJ']) ), S, [_]).
 
 % un segment elliptique : sans verbe, sans nom propre, sans préposition (un ou quelques mots autour d'un nom)
 elliptique(S0) :-                       % (une préposition ou un article en tête : « de fruits »)
