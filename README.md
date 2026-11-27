@@ -20,6 +20,8 @@ reproduction sont sur la branche du code (`docs/BANC_GRAPHES.md`, § 5 ; `docs/m
   ses tableaux, et `causes_ref_ref_v2.json` (décisions d'agent, **provisoires**).
 - `inference/` : le catalogue des inférences (décisions d'agent, **provisoires**) et l'expérience contrôlée des
   couches (`docs/INFERENCES.md`) ; `essai1/`, sa première passe, gardée.
+- `c3_corrections/` : les mesures avant / après des corrections du compilateur C3 (PR #16), et leurs passes
+  intermédiaires ; son propre `MANIFESTE.json`.
 - `MANIFESTE.json` : chaque fichier (taille, SHA-256, rôle, statut), et les commits des passes.
 
 **Statut** : tout ce qui vient des annotateurs et des adjudicateurs est un **accord entre agents**, non une validation

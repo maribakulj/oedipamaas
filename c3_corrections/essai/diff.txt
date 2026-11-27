@@ -1,0 +1,259 @@
+vertical statuts: [(('compilee', 'compilee'), 46), (('compilee', 'partielle'), 2), (('non_prise_en_charge', 'non_prise_en_charge'), 68), (('partielle', 'compilee'), 10), (('partielle', 'partielle'), 74)]
+ requêtes changées: 40
+  4 25F37(WOODCOCK) [fr] compilee -> compilee
+    avant: requete('25F37(WOODCOCK)',et([ou([type(v(x),bécasse),type(v(x),bécasses)]),ou([type(v(x),oiseau),type(v(x),échassiers)])]))
+    après: requete('25F37(WOODCOCK)',et([type(v(x),bécasse),ou([type(v(x),oiseau),type(v(x),échassiers)])])) []
+  6 44G1231 [fr] partielle -> compilee
+    avant: requete('44G1231',et([type(v(e_1_1),croix),type(v(e_1_4),place),type(v(e_1_6),marché),relation(v(e_1_1),sur,v(e_1_4))]))
+    après: requete('44G1231',et([relation(v(e_1_4),de,v(e_1_6)),type(v(e_1_1),croix),type(v(e_1_4),place),type(v(e_1_6),marché),relation(v(e_1_1),sur,v(e_1_4))])) []
+  14 49E39311(PELICAN) [fr] compilee -> partielle
+    avant: requete('49E39311(PELICAN)',et([ou([type(v(x),pelecanidae),type(v(x),pélican),type(v(x),pélécanidés)]),type(v(x),bouteille)]))
+    après: requete('49E39311(PELICAN)',type(v(x),pélican)) [genre_du_gabarit_incompatible('49E39311(...)')]
+  16 42A111 [fr] partielle -> compilee
+    avant: requete('42A111',ou([et([type(v(e_1_1),contrôle),type(v(e_1_3),naissance),type(v(e_1_5),contraception)]),et([type(v(e_1_1),contrôle),type(v(e_1_5),contraception)])]))
+    après: requete('42A111',ou([et([relation(v(e_1_1),de,v(e_1_3)),type(v(e_1_1),contrôle),type(v(e_1_3),naissance)]),type(v(e_1_5),contraception)])) []
+  18 42E211 [fr] partielle -> partielle
+    avant: requete('42E211',ou([et([type(v(e_1_1),annonce),type(v(e_1_6),pompe),propriete(v(e_1_1),oral),propriete(v(e_1_6),funèbre)]),et([type(v(e_1_4),employé),type(v(e_1_6),pompe),propriete(v(e_1_6),funèbre)])]))
+    après: requete('42E211',ou([et([type(v(e_1_1),annonce),propriete(v(e_1_1),oral)]),et([relation(v(e_1_4),de,v(e_1_6)),type(v(e_1_4),employé),type(v(e_1_6),pompe),propriete(v(e_1_6),funèbre)])])) [parenthese_non_lue("d'un décès")]
+  19 43C7815 [en] partielle -> compilee
+    avant: requete('43C7815',et([type(v(e_1_2),model),type(v(e_1_3),house),propriete(v(e_1_3),building)]))
+    après: requete('43C7815',et([propriete(v(e_1_3),model),type(v(e_1_3),house),propriete(v(e_1_3),building)])) []
+  22 43C11127 [fr] partielle -> partielle
+    avant: requete('43C11127',et([type(v(e_1_1),chasse),et([type(v(a1_e_1_1),mammifère),propriete(v(a1_e_1_1),aquatique)])]))
+    après: requete('43C11127',et([evenement(v(e_1_1),chasser),et([type(v(a1_e_1_1),mammifère),propriete(v(a1_e_1_1),aquatique)])])) [aspect_non_lie_a_la_personne]
+  31 47K13 [en] partielle -> compilee
+    avant: requete('47K13',et([type(v(e_1_1),crustacean),type(v(e_1_2),fishery)]))
+    après: requete('47K13',et([propriete(v(e_1_2),crustacean),type(v(e_1_2),fishery)])) []
+  55 31A66 [en] compilee -> compilee
+    avant: requete('31A66',ou([type(v(e_1_1),sweat),type(v(e_1_3),perspiration)]))
+    après: requete('31A66',ou([evenement(v(e_1_1),sweat),type(v(e_1_3),perspiration)])) []
+  56 31A22361 [fr] compilee -> compilee
+    avant: requete('31A22361',et([type(v(e_1_1),organes),propriete(v(e_1_1),sexuel),propriete(v(e_1_1),mâle)]))
+    après: requete('31A22361',et([type(v(e_1_1),'organe sexuel'),propriete(v(e_1_1),mâle)])) []
+  71 11H(CASSIAN)32 [en] partielle -> partielle
+    avant: requete('11H(CASSIAN)32',et([type(v(e_1_2),schoolmaster),type(v(e_1_4),martyr),type(v(e_1_6),bishop),nom(v(e_1_10),['IMOLA']),nom(v(e_1_8),['CASSIAN','CASSIEN D\'IMOLA']),relation(v(e_1_8),of,v(e_1_10)),distincts(v(e_1_10),v(e_1_8)),et([type(v(a1_e_1_1),baptism),type(v(a1_e_1_3),consecration),type(v
+    après: requete('11H(CASSIAN)32',et([nom(v(p),['CASSIAN','CASSIEN D\'IMOLA']),et([type(v(a1_e_1_1),baptism),type(v(a1_e_1_3),consecration),type(v(a1_e_1_6),vow),type(v(a1_e_1_9),saint),propriete(v(a1_e_1_9),male),evenement(v(a1_v_1_5),take),role(v(a1_v_1_5),agent,v(a1_e_1_1)),role(v(a1_v_1_5),patient,v(a1_e [aspect_non_lie_a_la_personne,non_lie([v(e_1_1),v(e_1_3)])]
+  75 11H(DIONYSIUS THE AREOPAGITE)83 [en] partielle -> partielle
+    avant: requete('11H(DIONYSIUS THE AREOPAGITE)83',et([nom(v(e_1_1),['DIONYSIUS']),nom(v(e_1_3),['AREOPAGITE','DIONYSIUS THE AREOPAGITE']),meme(v(e_1_1),v(e_1_3)),distincts(v(e_1_1),v(e_1_3)),et([type(v(a1_e_1_2),deed),type(v(a1_e_1_4),appearance),type(v(a1_e_1_7),saint),propriete(v(a1_e_1_2),posthumous),pro
+    après: requete('11H(DIONYSIUS THE AREOPAGITE)83',et([nom(v(p),['AREOPAGITE','DIONYSIUS THE AREOPAGITE']),ou([et([type(v(a1_e_1_2),deed),propriete(v(a1_e_1_2),posthumous)]),et([type(v(a1_e_1_4),appearance),type(v(a1_e_1_7),saint),propriete(v(a1_e_1_7),male),relation(v(a1_e_1_4),of,v(a1_e_1_7))])])])) [aspect_non_lie_a_la_personne]
+  76 11H(PANTALEON)3 [fr] partielle -> partielle
+    avant: requete('11H(PANTALEON)3',et([type(v(e_1_3),médecin),type(v(e_1_5),martyr),nom(v(e_1_1),['PANTALEON']),nom(v(e_1_7),['NICOMEDIE']),relation(v(e_1_5),de,v(e_1_7)),meme(v(e_1_1),v(e_1_3)),distincts(v(e_1_1),v(e_1_7)),et([type(v(a1_e_1_1),dévotion),type(v(a1_e_1_4),saint),propriete(v(a1_e_1_1),personne
+    après: requete('11H(PANTALEON)3',et([nom(v(p),['PANTALEON']),et([relation(v(a1_e_1_1),de,v(a1_e_1_4)),type(v(a1_e_1_1),dévotion),type(v(a1_e_1_4),saint),propriete(v(a1_e_1_1),personnel)])])) [aspect_non_lie_a_la_personne]
+  77 11H(WENCESLAS)31 [en] partielle -> partielle
+    avant: requete('11H(WENCESLAS)31',et([type(v(e_1_2),martyr),type(v(e_1_4),duke),nom(v(e_1_6),['BOHEMIA']),nom(v(e_1_8),['WENCESLAS']),relation(v(e_1_2),of,v(e_1_6)),meme(v(e_1_6),v(e_1_8)),distincts(v(e_1_6),v(e_1_8)),et([type(v(a1_e_1_1),vocation),type(v(a1_e_1_3),conversion),type(v(a1_e_1_6),saint),propr
+    après: requete('11H(WENCESLAS)31',et([nom(v(p),['WENCESLAS']),et([type(v(a1_e_1_1),vocation),type(v(a1_e_1_3),conversion),type(v(a1_e_1_6),saint),propriete(v(a1_e_1_6),male),relation(v(a1_e_1_3),of,v(a1_e_1_6)),meme(v(a1_e_1_1),v(a1_e_1_3))])])) [aspect_non_lie_a_la_personne]
+  78 11H(JOHN THE BAPTIST)81 [fr] partielle -> partielle
+    avant: requete('11H(JOHN THE BAPTIST)81',et([nom(v(e_1_1),['JEAN BAPTISTE','JOHN THE BAPTIST']),et([type(v(a1_e_1_1),découverte),type(v(a1_e_1_3),translation),type(v(a1_e_1_5),relique),type(v(a1_e_1_7),saint)])]))
+    après: requete('11H(JOHN THE BAPTIST)81',et([nom(v(p),['JEAN BAPTISTE','JOHN THE BAPTIST']),et([relation(v(a1_e_1_5),de,v(a1_e_1_7)),relation(v(a1_e_1_1),de,v(a1_e_1_5)),type(v(a1_e_1_1),découverte),type(v(a1_e_1_3),translation),type(v(a1_e_1_5),relique),type(v(a1_e_1_7),saint)])])) [aspect_non_lie_a_la_personne,non_lie([v(e_1_5),v(e_1_3)])]
+  79 11H(FRANCIS BORGIA)33 [en] partielle -> partielle
+    avant: requete('11H(FRANCIS BORGIA)33',et([type(v(e_1_5),priest),type(v(e_1_7),duke),nom(v(e_1_1),['FRANCIS BORGIA','FRANCOIS BORGIA']),nom(v(e_1_4),['JESUIT']),nom(v(e_1_9),['GANDIA']),relation(v(e_1_7),of,v(e_1_9)),distincts(v(e_1_1),v(e_1_4)),distincts(v(e_1_1),v(e_1_9)),distincts(v(e_1_4),v(e_1_9)),et(
+    après: requete('11H(FRANCIS BORGIA)33',et([nom(v(p),['FRANCIS BORGIA','FRANCOIS BORGIA']),ou([et([type(v(a1_e_1_3),'worldly good'),evenement(v(a1_v_1_1),renounce),role(v(a1_v_1_1),patient,v(a1_e_1_3))]),et([type(v(a1_e_1_6),life),type(v(a1_e_1_9),saint),propriete(v(a1_e_1_6),ascetic),propriete(v(a1_e_1_9), [aspect_non_lie_a_la_personne]
+  80 11H(EWALD)82 [fr] partielle -> partielle
+    avant: requete('11H(EWALD)82',et([type(v(e_1_1),st),nom(v(e_1_1),['EWALD']),et([type(v(a1_e_1_1),miracle),type(v(a1_e_1_10),saint),type(v(a1_e_1_3),lieu),type(v(a1_e_1_6),maniement),type(v(a1_e_1_8),relique),evenement(v(a1_v_1_2),avoir),role(v(a1_v_1_2),agent,v(a1_e_1_1)),meme(v(a1_e_1_6),v(a1_e_1_8)),meme
+    après: requete('11H(EWALD)82',et([nom(v(p),['EWALD']),et([type(v(a1_e_1_1),miracle),type(v(a1_e_1_10),saint),type(v(a1_e_1_3),lieu),type(v(a1_e_1_6),maniement),type(v(a1_e_1_8),relique),evenement(v(a1_v_1_2),avoir),role(v(a1_v_1_2),agent,v(a1_e_1_1)),meme(v(a1_e_1_6),v(a1_e_1_8)),meme(v(a1_e_1_8),v(a1_e_1_ [aspect_non_lie_a_la_personne,non_lie([v(e_1_1),v(e_1_10),v(e_1_3)])]
+  81 12H13(SHIVA)6 [en] partielle -> partielle
+    avant: requete('12H13(SHIVA)6',et([type(v(e_1_3),god),type(v(e_1_5),fertility),type(v(e_1_7),nature),type(v(e_1_1),shiva),relation(v(e_1_3),of,v(e_1_5)),relation(v(e_1_5),of,v(e_1_7)),nom(v(personne),['SHIVA']),et([type(v(a1_e_1_1),suffering),type(v(a1_e_1_3),misfortune),type(v(a1_e_1_6),god),type(v(a1_e_1
+    après: requete('12H13(SHIVA)6',et([type(v(e_1_3),god),type(v(e_1_5),fertility),type(v(e_1_7),nature),type(v(e_1_1),shiva),relation(v(e_1_3),of,v(e_1_5)),relation(v(e_1_5),of,v(e_1_7)),nom(v(personne),['SHIVA']),ou([et([type(v(a1_e_1_3),misfortune),type(v(a1_e_1_6),god),propriete(v(a1_e_1_6),'non-christian' [non_lie([v(e_1_3),v(e_1_1)]),personne_heritee_non_liee,aspect_non_lie_a_la_personne]
+  82 11H(THOMAS AQUINAS)6 [fr] partielle -> partielle
+    avant: requete('11H(THOMAS AQUINAS)6',et([type(v(e_1_5),théologien),type(v(e_1_9),docteur),nom(v(e_1_1),['THOMAS']),nom(v(e_1_3),['AQUIN']),propriete(v(e_1_5),dominicain),propriete(v(e_1_9),angélique),relation(v(e_1_1),de,v(e_1_3)),meme(v(e_1_1),v(e_1_5)),meme(v(e_1_5),v(e_1_9)),distincts(v(e_1_1),v(e_1_3)
+    après: requete('11H(THOMAS AQUINAS)6',et([nom(v(p),['DOMINICAN','THOMAS AQUINAS','THOMAS D\'AQUIN']),ou([et([relation(v(a1_e_1_7),de,v(a1_e_1_9)),type(v(a1_e_1_7),mort),type(v(a1_e_1_9),saint)]),type(v(a1_e_1_1),martyre),type(v(a1_e_1_3),souffrance),type(v(a1_e_1_5),malheur)])])) [aspect_non_lie_a_la_personne]
+  85 98B(VIRGIL)69 [en] partielle -> partielle
+    avant: requete('98B(VIRGIL)69',et([type(v(e_1_2),poet),nom(v(e_1_3),['VIRGIL','VIRGILE','VIRGILIUS']),et([type(v(a1_e_1_1),apotheosis),type(v(a1_e_1_3),deification),type(v(a1_e_1_5),person),type(v(a1_e_1_8),history),propriete(v(a1_e_1_8),classical),relation(v(a1_e_1_3),of,v(a1_e_1_5)),relation(v(a1_e_1_5),
+    après: requete('98B(VIRGIL)69',et([nom(v(p),['VIRGIL','VIRGILE','VIRGILIUS']),et([type(v(a1_e_1_1),apotheosis),type(v(a1_e_1_3),deification),type(v(a1_e_1_5),person),type(v(a1_e_1_8),history),propriete(v(a1_e_1_8),classical),relation(v(a1_e_1_3),of,v(a1_e_1_5)),relation(v(a1_e_1_5),from,v(a1_e_1_8)),meme(v [aspect_non_lie_a_la_personne]
+  86 11H(ATHANASIUS)33 [fr] partielle -> partielle
+    avant: requete('11H(ATHANASIUS)33',et([type(v(e_1_5),évêque),nom(v(e_1_1),['ATHANASE LE GRAND']),nom(v(e_1_7),['ALEXANDRIE']),relation(v(e_1_5),de,v(e_1_7)),meme(v(e_1_1),v(e_1_5)),distincts(v(e_1_1),v(e_1_7)),nom(v(personne),['ATHANASIUS','ATHANASIUS THE GREAT']),et([type(v(a1_e_1_3),bien),type(v(a1_e_1_6
+    après: requete('11H(ATHANASIUS)33',et([nom(v(p),['ATHANASIUS','ATHANASIUS THE GREAT']),et([relation(v(a1_e_1_6),de,v(a1_e_1_9)),type(v(a1_e_1_3),bien),type(v(a1_e_1_6),vie),type(v(a1_e_1_9),saint),propriete(v(a1_e_1_3),terrestre),propriete(v(a1_e_1_6),ascétique),evenement(v(a1_v_1_1),renoncer),role(v(a1_v_ [aspect_non_lie_a_la_personne]
+  87 11H(SEVEN SLEEPERS)11 [en] partielle -> partielle
+    avant: requete('11H(SEVEN SLEEPERS)11',et([nom(v(e_1_3),['SLEEPERS']),nom(v(e_1_5),['EPHESUS']),relation(v(e_1_3),of,v(e_1_5)),distincts(v(e_1_3),v(e_1_5)),nom(v(personne),['SEPT DORMANTS D\'EPHESE','SEVEN SLEEPERS','SEVEN SLEEPERS OF EPHESUS']),et([type(v(a1_e_1_2),saint),type(v(a1_e_1_4),patron),type(v(a
+    après: requete('11H(SEVEN SLEEPERS)11',et([nom(v(p),['SEPT DORMANTS D\'EPHESE','SEVEN SLEEPERS','SEVEN SLEEPERS OF EPHESUS']),ou([et([type(v(a1_e_1_2),saint),type(v(a1_e_1_4),patron),propriete(v(a1_e_1_2),male),relation(v(a1_e_1_2),as,v(a1_e_1_4))]),type(v(a1_e_1_6),protector),type(v(a1_e_1_8),intercessor) [aspect_non_lie_a_la_personne]
+  88 11H(JOSEPH OF ARIMATHAEA)81 [fr] partielle -> partielle
+    avant: requete('11H(JOSEPH OF ARIMATHAEA)81',et([type(v(e_1_5),notable),nom(v(e_1_1),['JOSEPH']),nom(v(e_1_3),['ARIMATHIE']),propriete(v(e_1_5),juif),relation(v(e_1_1),de,v(e_1_3)),meme(v(e_1_1),v(e_1_5)),distincts(v(e_1_1),v(e_1_3)),nom(v(personne),['JOSEPH D\'ARIMATHIE','JOSEPH OF ARIMATHAEA']),et([type(
+    après: requete('11H(JOSEPH OF ARIMATHAEA)81',et([nom(v(p),['JOSEPH D\'ARIMATHIE','JOSEPH OF ARIMATHAEA']),et([relation(v(a1_e_1_5),de,v(a1_e_1_7)),relation(v(a1_e_1_1),de,v(a1_e_1_5)),type(v(a1_e_1_1),découverte),type(v(a1_e_1_3),translation),type(v(a1_e_1_5),relique),type(v(a1_e_1_7),saint)])])) [aspect_non_lie_a_la_personne,non_lie([v(e_1_5),v(e_1_3)])]
+  93 11H(MATTHIAS)69 [en] partielle -> partielle
+    avant: requete('11H(MATTHIAS)69',et([type(v(e_1_2),apostle),type(v(e_1_4),martyr),nom(v(e_1_5),['MATTHIAS']),et([type(v(a1_e_1_1),maltreatment),type(v(a1_e_1_3),corpse),type(v(a1_e_1_6),saint),propriete(v(a1_e_1_6),male),relation(v(a1_e_1_1),of,v(a1_e_1_3)),relation(v(a1_e_1_3),of,v(a1_e_1_6))])]))
+    après: requete('11H(MATTHIAS)69',et([nom(v(p),['MATTHIAS']),et([type(v(a1_e_1_1),maltreatment),type(v(a1_e_1_3),corpse),type(v(a1_e_1_6),saint),propriete(v(a1_e_1_6),male),relation(v(a1_e_1_1),of,v(a1_e_1_3)),relation(v(a1_e_1_3),of,v(a1_e_1_6))])])) [aspect_non_lie_a_la_personne]
+  106 46E43(ROCKET) [fr] compilee -> partielle
+    avant: requete('46E43(ROCKET)',et([ou([type(v(x),'Moteur-fusée'),type(v(x),'eruca sativa'),type(v(x),fusée),type(v(x),missile),type(v(x),'moteur-fusée'),type(v(x),'moteurs-fusées'),type(v(x),roquette)]),ou([type(v(x),feu),type(v(x),fumée),type(v(x),lumière),type(v(x),moyen)])]))
+    après: requete('46E43(ROCKET)',type(v(x),fusée)) [genre_du_gabarit_incompatible('46E43(...)')]
+  111 44G31 [en] compilee -> compilee
+    avant: requete('44G31',type(v(e_1_1),imprisonment))
+    après: requete('44G31',evenement(v(e_1_1),imprison)) []
+  114 31E23111 [fr] partielle -> partielle
+    avant: requete('31E23111',et([type(v(e_1_11),mort),type(v(e_1_6),supplice),type(v(e_1_9),planche),propriete(v(e_1_11),violent),evenement(v(v_1_2),noyer),evenement(v(v_1_4),subir),role(v(v_1_4),patient,v(e_1_6)),relation(v(e_1_6),de,v(e_1_9)),meme(v(e_1_6),v(e_1_11)),type(v(a1_e_1_1),eau)]))
+    après: requete('31E23111',et([ou([propriete(v(e_1_6),planche),et([relation(v(e_1_6),de,v(e_1_9)),type(v(e_1_9),planche)])]),type(v(e_1_11),mort),type(v(e_1_6),supplice),propriete(v(e_1_11),violent),evenement(v(v_1_2),noyer),evenement(v(v_1_4),subir),role(v(v_1_4),patient,v(e_1_6)),meme(v(e_1_6),v(e_1_11)), [evenement_sans_participant(v_1_2),non_lie([v(e_1_6),v(v_1_2)]),aspect_non_lie_a_la_personne]
+  116 31A2515 [fr] partielle -> partielle
+    avant: requete('31A2515',et([type(v(e_1_1),bras),type(v(e_1_5),bas),propriete(v(e_1_1),tenir)]))
+    après: requete('31A2515',et([evenement(v(q_1_2),tenir),role(v(q_1_2),patient,v(e_1_1)),type(v(e_1_1),bras),type(v(e_1_5),bas)])) [non_lie([v(q_1_2),v(e_1_5)])]
+  118 31A281 [fr] partielle -> partielle
+    avant: requete('31A281',et([type(v(e_1_1),ombre),type(v(e_1_4),diable),propriete(v(e_1_1),vendre)]))
+    après: requete('31A281',et([evenement(v(q_1_2),vendre),role(v(q_1_2),patient,v(e_1_1)),type(v(e_1_1),ombre),type(v(e_1_4),diable)])) [non_lie([v(q_1_2),v(e_1_4)])]
+  120 44B134 [fr] partielle -> partielle
+    avant: requete('44B134',et([type(v(e_1_1),souverain),type(v(e_1_4),coup),type(v(e_1_6),canon),propriete(v(e_1_1),saluer),relation(v(e_1_4),de,v(e_1_6))]))
+    après: requete('44B134',et([evenement(v(q_1_2),saluer),role(v(q_1_2),patient,v(e_1_1)),type(v(e_1_1),souverain),type(v(e_1_4),coup),type(v(e_1_6),canon),relation(v(e_1_4),de,v(e_1_6))])) [non_lie([v(q_1_2),v(e_1_4)])]
+  122 43A4123 [fr] partielle -> partielle
+    avant: requete('43A4123',et([type(v(e_1_1),fête),type(v(e_1_5),occasion),type(v(e_1_7),événement),propriete(v(e_1_1),public),propriete(v(e_1_7),mentionner),propriete(v(e_1_7),royal),evenement(v(v_1_12),impliquer),relation(v(e_1_1),à,v(e_1_5)),relation(v(e_1_5),de,v(e_1_7))]))
+    après: requete('43A4123',et([evenement(v(q_1_10),mentionner),role(v(q_1_10),patient,v(e_1_7)),type(v(e_1_1),fête),type(v(e_1_5),occasion),type(v(e_1_7),événement),propriete(v(e_1_1),public),propriete(v(e_1_7),royal),evenement(v(v_1_12),impliquer),relation(v(e_1_1),à,v(e_1_5)),relation(v(e_1_5),de,v(e_1_7)) [evenement_sans_participant(v_1_12),non_lie([v(q_1_10),v(v_1_12)])]
+  123 46C1211 [en] partielle -> partielle
+    avant: requete('46C1211',et([type(v(e_1_10),'etc.'),type(v(e_1_4),basket),type(v(e_1_6),bag),type(v(e_1_8),rucksack),evenement(v(v_1_1),carry)]))
+    après: requete('46C1211',ou([et([type(v(e_1_4),basket),evenement(v(v_1_1),carry)]),type(v(e_1_6),bag),type(v(e_1_8),rucksack)])) [evenement_sans_participant(v_1_1),non_lie([v(e_1_4),v(v_1_1)])]
+  127 45F2 [en] partielle -> partielle
+    avant: requete('45F2',et([type(v(e_1_1),intelligence),type(v(e_1_2),service)]))
+    après: requete('45F2',type(v(e_1_2),'intelligence service')) [parenthese_non_lue("military")]
+  128 48B1241 [fr] partielle -> partielle
+    avant: requete('48B1241',et([type(v(e_1_2),artiste),type(v(e_1_7),modèle),propriete(v(e_1_7),habiller),evenement(v(v_1_3),travailler),role(v(v_1_3),agent,v(e_1_2))]))
+    après: requete('48B1241',et([evenement(v(q_1_8),habiller),role(v(q_1_8),patient,v(e_1_7)),type(v(e_1_2),artiste),type(v(e_1_7),modèle),evenement(v(v_1_3),travailler),role(v(v_1_3),agent,v(e_1_2))])) [non_lie([v(q_1_8),v(e_1_2)])]
+  129 34B1 [en] partielle -> partielle
+    avant: requete('34B1',et([type(v(e_1_2),'domestic animal'),type(v(e_1_7),house),propriete(v(e_1_2),keep)]))
+    après: requete('34B1',et([evenement(v(q_1_4),keep),role(v(q_1_4),patient,v(e_1_2)),type(v(e_1_2),'domestic animal'),type(v(e_1_7),house)])) [non_lie([v(q_1_4),v(e_1_7)])]
+  138 33A132 [fr] partielle -> compilee
+    avant: requete('33A132',et([evenement(v(v_1_1),reconnaître),evenement(v(v_1_3),identifier)]))
+    après: requete('33A132',ou([evenement(v(v_1_1),reconnaître),evenement(v(v_1_3),identifier)])) []
+  139 45A233 [en] partielle -> partielle
+    avant: requete('45A233',et([type(v(e_1_1),peace),type(v(e_1_3),justice),type(v(e_1_4),kissing)]))
+    après: requete('45A233',et([propriete(v(e_1_4),peace),type(v(e_1_3),justice),type(v(e_1_4),kissing)])) [non_lie([v(e_1_4),v(e_1_3)])]
+  144 71O322 [fr] partielle -> partielle
+    avant: requete('71O322',et([type(v(e_1_1),purification),type(v(e_1_15),braise),type(v(e_1_19),pince),type(v(e_1_22),autel),type(v(e_1_6),ange),type(v(e_1_9),lèvre),nom(v(e_1_11),['ISAIE']),nom(v(e_1_3),['ISAIE']),propriete(v(e_1_15),prendre),evenement(v(v_1_7),toucher),role(v(v_1_7),agent,v(e_1_6)),role(v(
+    après: requete('71O322',et([evenement(v(q_1_16),prendre),role(v(q_1_16),patient,v(e_1_15)),type(v(e_1_1),purification),type(v(e_1_15),braise),type(v(e_1_19),pince),type(v(e_1_22),autel),type(v(e_1_6),ange),type(v(e_1_9),lèvre),nom(v(e_1_11),['ISAIE']),nom(v(e_1_3),['ISAIE']),evenement(v(v_1_7),toucher),rol [non_lie([v(q_1_16),v(e_1_1),v(e_1_19)]),aspect_non_lie_a_la_personne]
+  151 96D(ANNA)68 [en] partielle -> partielle
+    avant: requete('96D(ANNA)68',et([type(v(e_1_3),misfortune),type(v(e_1_9),sister),nom(v(e_1_5),['ANNA','ANNE']),nom(v(e_1_7),['DIDO']),evenement(v(v_1_1),suffer),role(v(v_1_1),patient,v(e_1_3)),relation(v(e_1_3),of,v(e_1_5)),relation(v(e_1_9),'\'s',v(e_1_7)),meme(v(e_1_5),v(e_1_9)),distincts(v(e_1_5),v(e_1_
+    après: requete('96D(ANNA)68',et([type(v(e_1_3),misfortune),type(v(e_1_9),sister),nom(v(e_1_5),['ANNA','ANNE']),nom(v(e_1_7),['DIDO']),evenement(v(v_1_1),suffer),role(v(v_1_1),patient,v(e_1_3)),relation(v(e_1_3),of,v(e_1_5)),relation(v(e_1_9),'\'s',v(e_1_7)),meme(v(e_1_5),v(e_1_9)),distincts(v(e_1_5),v(e_1_ [aspect_non_lie_a_la_personne]
+  170 73F2641 [fr] partielle -> partielle
+    avant: requete('73F2641',et([nom(v(e_1_1),['PHILIPPE']),propriete(v(e_1_1),crucifier)]))
+    après: requete('73F2641',et([evenement(v(q_1_3),crucifier),role(v(q_1_3),patient,v(e_1_1)),nom(v(e_1_1),['PHILIPPE'])])) [parenthese_non_lue("parfois la tête en bas")]
+validation_m1 statuts: [(('compilee', 'compilee'), 41), (('non_prise_en_charge', 'non_prise_en_charge'), 67), (('partielle', 'compilee'), 13), (('partielle', 'partielle'), 79)]
+ requêtes changées: 45
+  11 46B355 [en] partielle -> compilee
+    avant: requete('46B355',ou([et([type(v(e_1_1),trade),type(v(e_1_10),trade),type(v(e_1_11),card)]),et([type(v(e_1_1),trade),type(v(e_1_2),mark)]),et([type(v(e_1_1),trade),type(v(e_1_4),trade),type(v(e_1_5),token)]),et([type(v(e_1_1),trade),type(v(e_1_7),trade),type(v(e_1_8),sign)])]))
+    après: requete('46B355',ou([et([propriete(v(e_1_11),trade),type(v(e_1_11),card)]),et([propriete(v(e_1_5),trade),type(v(e_1_5),token)]),et([propriete(v(e_1_8),trade),type(v(e_1_8),sign)]),type(v(e_1_2),trademark)])) []
+  14 41C7422 [fr] partielle -> compilee
+    avant: requete('41C7422',ou([et([type(v(e_1_1),étui),type(v(e_1_3),cigare),relation(v(e_1_1),à,v(e_1_3))]),et([type(v(e_1_1),étui),type(v(e_1_5),'porte-cigare')])]))
+    après: requete('41C7422',ou([et([type(v(e_1_1),étui),type(v(e_1_3),cigare),relation(v(e_1_1),à,v(e_1_3))]),type(v(e_1_5),'porte-cigare')])) []
+  24 26C21 [fr] partielle -> compilee
+    avant: requete('26C21',et([type(v(e_1_1),terme),type(v(e_1_5),force),type(v(e_1_7),vent),propriete(v(e_1_1),maritime),relation(v(e_1_1),pour,v(e_1_5))]))
+    après: requete('26C21',et([relation(v(e_1_5),de,v(e_1_7)),type(v(e_1_1),terme),type(v(e_1_5),force),type(v(e_1_7),vent),propriete(v(e_1_1),maritime),relation(v(e_1_1),pour,v(e_1_5))])) []
+  29 23U23 [en] partielle -> compilee
+    avant: requete('23U23',et([type(v(e_1_1),water),type(v(e_1_2),clock)]))
+    après: requete('23U23',type(v(e_1_2),'water clock')) []
+  31 47G3355 [en] compilee -> compilee
+    avant: requete('47G3355',type(v(e_1_1),upholstering))
+    après: requete('47G3355',evenement(v(e_1_1),upholster)) []
+  33 46C151 [en] partielle -> compilee
+    avant: requete('46C151',ou([et([type(v(e_1_5),rack),type(v(e_1_6),railway)]),type(v(e_1_1),railway),type(v(e_1_3),tramway)]))
+    après: requete('46C151',ou([type(v(e_1_1),railway),type(v(e_1_3),tramway),type(v(e_1_6),'rack railway')])) []
+  34 25F35(PEACOCK) [fr] compilee -> compilee
+    avant: requete('25F35(PEACOCK)',et([ou([type(v(x),'inachis io'),type(v(x),paon),type(v(x),'paon du jour')]),type(v(x),oiseau)]))
+    après: requete('25F35(PEACOCK)',et([type(v(x),paon),type(v(x),oiseau)])) []
+  46 31A25231 [fr] partielle -> partielle
+    avant: requete('31A25231',et([type(v(e_1_1),main),type(v(e_1_4),doigt),type(v(e_1_9),bouts),evenement(v(v_1_6),toucher),role(v(v_1_6),agent,v(e_1_4))]))
+    après: requete('31A25231',et([type(v(e_1_1),main),type(v(e_1_4),doigt),type(v(e_1_9),bout),evenement(v(v_1_6),toucher),role(v(v_1_6),agent,v(e_1_4))])) [non_lie([v(e_1_1),v(e_1_4),v(e_1_9)])]
+  65 41D14 [en] partielle -> compilee
+    avant: requete('41D14',et([type(v(e_1_1),fashion),type(v(e_1_2),designer)]))
+    après: requete('41D14',type(v(e_1_2),'fashion designer')) []
+  71 11I72(JUDAS ISCARIOT)1 [en] partielle -> partielle
+    avant: requete('11I72(JUDAS ISCARIOT)1',et([nom(v(e_1_1),['JUDAS ISCARIOT','JUDAS ISCARIOTE']),et([type(v(a1_e_1_1),founder),type(v(a1_e_1_3),initiator),meme(v(a1_e_1_1),v(a1_e_1_3))]),et([nom(v(a2_e_1_3),['TESTAMENT']),propriete(v(a2_e_1_3),new)])]))
+    après: requete('11I72(JUDAS ISCARIOT)1',et([nom(v(p),['JUDAS ISCARIOT','JUDAS ISCARIOTE']),et([type(v(a1_e_1_1),founder),type(v(a1_e_1_3),initiator),meme(v(a1_e_1_1),v(a1_e_1_3))]),et([nom(v(a2_e_1_3),['TESTAMENT']),propriete(v(a2_e_1_3),new)])])) [aspect_non_lie_a_la_personne]
+  72 11H(ACHATIUS)37 [fr] partielle -> partielle
+    avant: requete('11H(ACHATIUS)37',et([type(v(e_1_3),guerrier),nom(v(e_1_1),['ACACE','ACHATIUS']),propriete(v(e_1_3),martyr),meme(v(e_1_1),v(e_1_3)),et([type(v(a1_e_1_1),saint),type(v(a1_e_1_3),méditation),type(v(a1_e_1_6),extase),relation(v(a1_e_1_1),en,v(a1_e_1_3)),relation(v(a1_e_1_1),en,v(a1_e_1_6))])]))
+    après: requete('11H(ACHATIUS)37',et([nom(v(p),['ACACE','ACHATIUS']),et([type(v(a1_e_1_1),saint),type(v(a1_e_1_3),méditation),type(v(a1_e_1_6),extase),relation(v(a1_e_1_1),en,v(a1_e_1_3)),relation(v(a1_e_1_1),en,v(a1_e_1_6))])])) [aspect_non_lie_a_la_personne]
+  74 11H(MAURICE)34 [fr] partielle -> partielle
+    avant: requete('11H(MAURICE)34',et([type(v(e_1_11),légion),type(v(e_1_3),guerrier),type(v(e_1_8),chef),nom(v(e_1_1),['MAURICE','MAURICE OF AGAUNUM']),nom(v(e_1_6),['AGAUNE']),propriete(v(e_1_11),thébain),propriete(v(e_1_3),martyr),relation(v(e_1_8),de,v(e_1_11)),relation(v(e_1_3),de,v(e_1_6)),meme(v(e_1_1)
+    après: requete('11H(MAURICE)34',et([type(v(e_1_11),légion),type(v(e_1_3),guerrier),type(v(e_1_8),chef),nom(v(e_1_1),['MAURICE','MAURICE OF AGAUNUM']),nom(v(e_1_6),['AGAUNE']),propriete(v(e_1_11),thébain),propriete(v(e_1_3),martyr),relation(v(e_1_8),de,v(e_1_11)),relation(v(e_1_3),de,v(e_1_6)),meme(v(e_1_1) [aspect_non_lie_a_la_personne,non_lie([v(e_1_3),v(e_1_1)]),parenthese_non_lue("Saint-Maurice")]
+  76 11H(IGNATIUS OF ANTIOCH)131 [fr] partielle -> partielle
+    avant: requete('11H(IGNATIUS OF ANTIOCH)131',et([type(v(e_1_5),évêque),nom(v(e_1_1),['IGNACE']),nom(v(e_1_3),['ANTIOCHE']),relation(v(e_1_1),de,v(e_1_3)),meme(v(e_1_1),v(e_1_5)),distincts(v(e_1_1),v(e_1_3)),nom(v(personne),['ANTIOCH','IGNACE D\'ANTIOCHE','IGNATIUS OF ANTIOCH']),type(v(a1_e_1_1),saint),et([
+    après: requete('11H(IGNATIUS OF ANTIOCH)131',et([nom(v(p),['ANTIOCH','IGNACE D\'ANTIOCHE','IGNATIUS OF ANTIOCH']),type(v(a1_e_1_1),saint),et([type(v(a2_e_1_1),consécration),type(v(a2_e_1_4),ordre),type(v(a2_e_1_6),approbation),type(v(a2_e_1_9),règle),relation(v(a2_e_1_1),de,v(a2_e_1_4)),relation(v(a2_e_1_6 [aspect_non_lie_a_la_personne,non_lie([v(e_1_1),v(e_1_6)])]
+  79 11I62(ENOCH)5 [en] partielle -> partielle
+    avant: requete('11I62(ENOCH)5',et([nom(v(e_1_1),['ENOCH','HENOK']),et([type(v(a1_e_1_9),'male person'),type(v(a1_e_1_4),addition),type(v(a1_e_1_6),'life-story'),nom(v(a1_e_1_13),['TESTAMENT']),propriete(v(a1_e_1_13),old),propriete(v(a1_e_1_4),legendary),relation(v(a1_e_1_9),from,v(a1_e_1_13)),relation(v(a1
+    après: requete('11I62(ENOCH)5',et([nom(v(p),['ENOCH','HENOK']),et([type(v(a1_e_1_9),'male person'),type(v(a1_e_1_4),addition),type(v(a1_e_1_6),'life-story'),nom(v(a1_e_1_13),['TESTAMENT']),propriete(v(a1_e_1_13),old),propriete(v(a1_e_1_4),legendary),relation(v(a1_e_1_9),from,v(a1_e_1_13)),relation(v(a1_e_1 [aspect_non_lie_a_la_personne]
+  80 11I62(OBADIAH)6 [fr] partielle -> partielle
+    avant: requete('11I62(OBADIAH)6',et([type(v(e_1_2),prophète),nom(v(e_1_3),['OBADIAH']),meme(v(e_1_2),v(e_1_3)),et([type(v(a1_e_1_1),événement),type(v(a1_e_1_13),ex),type(v(a1_e_1_15),découverte),type(v(a1_e_1_17),translation),type(v(a1_e_1_19),relique),type(v(a1_e_1_4),personnage),type(v(a1_e_1_9),testamen
+    après: requete('11I62(OBADIAH)6',et([nom(v(p),['OBADIAH']),ou([et([type(v(a1_e_1_1),événement),type(v(a1_e_1_4),personnage),type(v(a1_e_1_9),testament),propriete(v(a1_e_1_1),posthume),propriete(v(a1_e_1_4),masculin),propriete(v(a1_e_1_9),ancien),relation(v(a1_e_1_1),de,v(a1_e_1_4)),relation(v(a1_e_1_4),de, [aspect_non_lie_a_la_personne,non_lie([v(e_1_17),v(e_1_19)])]
+  82 11H(GEREON)12 [fr] partielle -> partielle
+    avant: requete('11H(GEREON)12',et([type(v(e_1_5),soldat),nom(v(e_1_1),['GEREON','GEREON DE COLOGNE','GEREON OF COLOGNE']),nom(v(e_1_3),['COLOGNE']),propriete(v(e_1_5),martyr),relation(v(e_1_1),de,v(e_1_3)),meme(v(e_1_1),v(e_1_5)),distincts(v(e_1_1),v(e_1_3)),et([type(v(a1_e_1_1),saint),type(v(a1_e_1_4),étu
+    après: requete('11H(GEREON)12',et([nom(v(p),['GEREON','GEREON DE COLOGNE','GEREON OF COLOGNE']),et([evenement(v(a1_q_1_2),écrire),role(v(a1_q_1_2),agent,v(a1_e_1_1)),type(v(a1_e_1_1),saint),type(v(a1_e_1_4),étudiant),type(v(a1_e_1_6),enseignant),type(v(a1_e_1_8),dictant),meme(v(a1_e_1_1),v(a1_e_1_4))])])) [aspect_non_lie_a_la_personne,non_lie([v(q_1_2),v(e_1_6),v(e_1_8)])]
+  85 11H(JOACHIM)12 [en] partielle -> partielle
+    avant: requete('11H(JOACHIM)12',et([type(v(e_1_2),father),nom(v(e_1_4),['JOACHIM','MARY']),nom(v(e_1_6),['JOACHIM']),relation(v(e_1_2),of,v(e_1_4)),meme(v(e_1_4),v(e_1_6)),distincts(v(e_1_4),v(e_1_6)),et([type(v(a1_e_1_2),saint),type(v(a1_e_1_3),writing),type(v(a1_e_1_7),teaching),propriete(v(a1_e_1_3),mal
+    après: requete('11H(JOACHIM)12',et([nom(v(p),['JOACHIM','MARY']),et([evenement(v(a1_q_1_5),study),role(v(a1_q_1_5),agent,v(a1_e_1_3)),propriete(v(a1_e_1_3),saint),type(v(a1_e_1_3),writing),type(v(a1_e_1_7),teaching),propriete(v(a1_e_1_3),male),evenement(v(a1_v_1_9),dictate)])])) [aspect_non_lie_a_la_personne,evenement_sans_participant(v_1_9),non_lie([v(q_1_5),v(e_1_7),v(v_1_9)])]
+  86 11H(JOHN DAMASCENE)0 [fr] partielle -> partielle
+    avant: requete('11H(JOHN DAMASCENE)0',et([type(v(e_1_4),moine),type(v(e_1_6),théologien),nom(v(e_1_1),['JEAN DAMASCENE','JOHN DAMASCENE']),meme(v(e_1_1),v(e_1_4)),et([type(v(a1_e_1_1),groupe),type(v(a1_e_1_3),saint),relation(v(a1_e_1_1),de,v(a1_e_1_3))])]))
+    après: requete('11H(JOHN DAMASCENE)0',et([nom(v(p),['JEAN DAMASCENE','JOHN DAMASCENE']),et([type(v(a1_e_1_1),groupe),type(v(a1_e_1_3),saint),relation(v(a1_e_1_1),de,v(a1_e_1_3))])])) [aspect_non_lie_a_la_personne]
+  87 11H(COSMAS & DAMIAN)37 [en] partielle -> partielle
+    avant: requete('11H(COSMAS & DAMIAN)37',et([type(v(e_1_2),'twin-brother'),type(v(e_1_7),martyr),type(v(e_1_9),physician),nom(v(e_1_3),['COME','COSMAS','COSMAS & DAMIAN']),nom(v(e_1_5),['DAMIAN']),meme(v(e_1_2),v(e_1_3)),distincts(v(e_1_3),v(e_1_5)),et([type(v(a1_e_1_2),saint),type(v(a1_e_1_3),meditate),typ
+    après: requete('11H(COSMAS & DAMIAN)37',et([nom(v(p),['COME','COSMAS','COSMAS & DAMIAN']),et([type(v(a1_e_1_2),saint),type(v(a1_e_1_3),meditate),type(v(a1_e_1_6),ecstasy),propriete(v(a1_e_1_2),male)])])) [aspect_non_lie_a_la_personne,non_lie([v(e_1_2),v(e_1_3),v(e_1_6)])]
+  88 11H(HUGH OF LINCOLN)33 [fr] partielle -> partielle
+    avant: requete('11H(HUGH OF LINCOLN)33',et([type(v(e_1_5),évêque),nom(v(e_1_1),['HUGH OF LINCOLN','HUGUES']),nom(v(e_1_3),['CHARTREUX']),nom(v(e_1_7),['LINCOLN']),relation(v(e_1_5),de,v(e_1_7)),distincts(v(e_1_1),v(e_1_3)),distincts(v(e_1_1),v(e_1_7)),distincts(v(e_1_3),v(e_1_7)),et([type(v(a1_e_1_3),bien)
+    après: requete('11H(HUGH OF LINCOLN)33',et([nom(v(p),['HUGH OF LINCOLN','HUGUES']),et([relation(v(a1_e_1_6),de,v(a1_e_1_9)),type(v(a1_e_1_3),bien),type(v(a1_e_1_6),vie),type(v(a1_e_1_9),saint),propriete(v(a1_e_1_3),terrestre),propriete(v(a1_e_1_6),ascétique),evenement(v(a1_v_1_1),renoncer),role(v(a1_v_1_1) [aspect_non_lie_a_la_personne]
+  89 11H(STEPHEN)34 [en] partielle -> partielle
+    avant: requete('11H(STEPHEN)34',et([type(v(e_1_2),deacon),type(v(e_1_4),martyr),nom(v(e_1_5),['ETIENNE','STEPHEN']),et([type(v(a1_e_1_1),vision),type(v(a1_e_1_4),marriage),type(v(a1_e_1_7),saint),propriete(v(a1_e_1_4),mystic),propriete(v(a1_e_1_7),male),relation(v(a1_e_1_4),of,v(a1_e_1_7))])]))
+    après: requete('11H(STEPHEN)34',et([nom(v(p),['ETIENNE','STEPHEN']),ou([et([type(v(a1_e_1_4),marriage),type(v(a1_e_1_7),saint),propriete(v(a1_e_1_4),mystic),propriete(v(a1_e_1_7),male),relation(v(a1_e_1_4),of,v(a1_e_1_7))]),type(v(a1_e_1_1),vision)])])) [aspect_non_lie_a_la_personne]
+  90 11I62(THREE HEBREWS)4 [fr] partielle -> partielle
+    avant: requete('11I62(THREE HEBREWS)4',et([type(v(e_1_2),hébreu),nom(v(personne),['THREE HEBREWS','TROIS HEBREUX']),et([type(v(a1_e_1_1),dévotion),type(v(a1_e_1_11),p),type(v(a1_e_1_13),ex),type(v(a1_e_1_15),vision),type(v(a1_e_1_17),prière),type(v(a1_e_1_19),pénitence),type(v(a1_e_1_4),personnage),type(v(
+    après: requete('11I62(THREE HEBREWS)4',et([type(v(e_1_2),hébreu),nom(v(personne),['THREE HEBREWS','TROIS HEBREUX']),ou([et([type(v(a1_e_1_1),dévotion),type(v(a1_e_1_4),personnage),type(v(a1_e_1_9),testament),propriete(v(a1_e_1_1),personnel),propriete(v(a1_e_1_4),masculin),propriete(v(a1_e_1_9),ancien),rela [personne_heritee_non_liee,aspect_non_lie_a_la_personne]
+  91 11H(QUINTIN)0 [en] partielle -> partielle
+    avant: requete('11H(QUINTIN)0',et([type(v(e_1_2),martyr),nom(v(e_1_3),['QUENTIN','QUINTIN','QUINTIN OF VERMAND']),nom(v(e_1_5),['VERMAND']),relation(v(e_1_2),of,v(e_1_5)),meme(v(e_1_2),v(e_1_3)),distincts(v(e_1_3),v(e_1_5)),et([type(v(a1_e_1_2),saint),type(v(a1_e_1_6),group),propriete(v(a1_e_1_2),male),eve
+    après: requete('11H(QUINTIN)0',et([nom(v(p),['QUENTIN','QUINTIN','QUINTIN OF VERMAND']),et([type(v(a1_e_1_2),saint),type(v(a1_e_1_6),group),propriete(v(a1_e_1_2),male),evenement(v(a1_v_1_3),represent),role(v(a1_v_1_3),agent,v(a1_e_1_2)),role(v(a1_v_1_3),lieu,v(a1_e_1_6))])])) [aspect_non_lie_a_la_personne]
+  92 11H(GERVASE & PROTASE)2 [fr] partielle -> partielle
+    avant: requete('11H(GERVASE & PROTASE)2',et([type(v(e_1_5),diacre),nom(v(e_1_1),['GERVAIS','GERVASE','GERVASE & PROTASE','PROTAIS','PROTASE']),nom(v(e_1_3),['PROTAIS']),propriete(v(e_1_5),martyr),meme(v(e_1_1),v(e_1_5)),distincts(v(e_1_1),v(e_1_3)),et([type(v(a1_e_1_1),jeunesse),type(v(a1_e_1_3),saint)])])
+    après: requete('11H(GERVASE & PROTASE)2',et([nom(v(p),['GERVAIS','GERVASE & PROTASE']),et([relation(v(a1_e_1_1),de,v(a1_e_1_3)),type(v(a1_e_1_1),jeunesse),type(v(a1_e_1_3),saint)])])) [aspect_non_lie_a_la_personne]
+  93 11H(THOMAS)6 [en] partielle -> partielle
+    avant: requete('11H(THOMAS)6',et([type(v(e_1_2),apostle),nom(v(e_1_3),['THOMAS']),et([type(v(a1_e_1_1),martyrdom),type(v(a1_e_1_10),saint),type(v(a1_e_1_3),suffering),type(v(a1_e_1_5),misfortune),type(v(a1_e_1_7),death),propriete(v(a1_e_1_10),male),relation(v(a1_e_1_7),of,v(a1_e_1_10))])]))
+    après: requete('11H(THOMAS)6',et([nom(v(p),['THOMAS']),ou([et([type(v(a1_e_1_10),saint),type(v(a1_e_1_7),death),propriete(v(a1_e_1_10),male),relation(v(a1_e_1_7),of,v(a1_e_1_10))]),type(v(a1_e_1_1),martyrdom),type(v(a1_e_1_3),suffering),type(v(a1_e_1_5),misfortune)])])) [aspect_non_lie_a_la_personne]
+  96 11H(ANTONY ABBOT)119 [fr] partielle -> partielle
+    avant: requete('11H(ANTONY ABBOT)119',et([type(v(e_1_1),st),type(v(e_1_4),patron),type(v(e_1_8),peste),nom(v(e_1_1),['ANTOINE','ANTONY ABBOT']),propriete(v(e_1_4),invoquer),meme(v(e_1_1),v(e_1_4)),et([type(v(a1_e_1_1),saint),type(v(a1_e_1_4),fidèle),type(v(a1_e_1_7),manteau),nom(v(a1_e_1_10),['SCHUTZMANTEL
+    après: requete('11H(ANTONY ABBOT)119',et([nom(v(p),['ANTOINE','ANTONY ABBOT']),et([type(v(a1_e_1_1),saint),type(v(a1_e_1_4),fidèle),type(v(a1_e_1_7),manteau),nom(v(a1_e_1_10),['SCHUTZMANTEL']),evenement(v(a1_v_1_2),protéger),role(v(a1_v_1_2),agent,v(a1_e_1_1)),role(v(a1_v_1_2),lieu,v(a1_e_1_7)),role(v(a1_v [aspect_non_lie_a_la_personne]
+  97 11H(SIXTUS II)32 [en] partielle -> partielle
+    avant: requete('11H(SIXTUS II)32',et([type(v(e_1_2),pope),type(v(e_1_4),martyr),nom(v(e_1_5),['SIXTUS']),meme(v(e_1_2),v(e_1_5)),nom(v(personne),['SIXTE II','SIXTUS II']),et([type(v(a1_e_1_1),baptism),type(v(a1_e_1_3),consecration),type(v(a1_e_1_6),vow),type(v(a1_e_1_9),saint),propriete(v(a1_e_1_9),male),e
+    après: requete('11H(SIXTUS II)32',et([nom(v(p),['SIXTE II','SIXTUS II']),et([type(v(a1_e_1_1),baptism),type(v(a1_e_1_3),consecration),type(v(a1_e_1_6),vow),type(v(a1_e_1_9),saint),propriete(v(a1_e_1_9),male),evenement(v(a1_v_1_5),take),role(v(a1_v_1_5),agent,v(a1_e_1_1)),role(v(a1_v_1_5),patient,v(a1_e_1_6 [aspect_non_lie_a_la_personne,non_lie([v(e_1_1),v(e_1_3)])]
+  100 11H(BLAISE)2 [fr] partielle -> partielle
+    avant: requete('11H(BLAISE)2',et([type(v(e_1_3),évêque),type(v(e_1_7),martyr),nom(v(e_1_1),['BLAISE']),nom(v(e_1_5),['SEBASTE']),relation(v(e_1_3),de,v(e_1_5)),meme(v(e_1_1),v(e_1_3)),distincts(v(e_1_1),v(e_1_5)),et([type(v(a1_e_1_1),jeunesse),type(v(a1_e_1_3),saint)])]))
+    après: requete('11H(BLAISE)2',et([nom(v(p),['BLAISE']),et([relation(v(a1_e_1_1),de,v(a1_e_1_3)),type(v(a1_e_1_1),jeunesse),type(v(a1_e_1_3),saint)])])) [aspect_non_lie_a_la_personne]
+  104 43C14 [fr] partielle -> partielle
+    avant: requete('43C14',et([type(v(e_1_5),animal),evenement(v(v_1_1),tourmenter),evenement(v(v_1_3),torturer),role(v(v_1_3),patient,v(e_1_5)),et([type(v(a1_e_1_1),sport),type(v(a1_e_1_3),récréation)])]))
+    après: requete('43C14',et([ou([et([type(v(e_1_5),animal),evenement(v(v_1_3),torturer),role(v(v_1_3),patient,v(e_1_5))]),evenement(v(v_1_1),tourmenter)]),et([type(v(a1_e_1_1),sport),type(v(a1_e_1_3),récréation)])])) [aspect_non_lie_a_la_personne,non_lie([v(e_1_1),v(e_1_3)])]
+  105 31E2362192 [en] partielle -> partielle
+    avant: requete('31E2362192',et([type(v(e_1_1),head),type(v(e_1_5),person),type(v(e_1_7),post),type(v(e_1_9),pole),propriete(v(e_1_5),behead),relation(v(e_1_1),of,v(e_1_5)),relation(v(e_1_5),on,v(e_1_7))]))
+    après: requete('31E2362192',et([evenement(v(q_1_4),behead),role(v(q_1_4),patient,v(e_1_5)),type(v(e_1_1),head),type(v(e_1_5),person),type(v(e_1_7),post),type(v(e_1_9),pole),relation(v(e_1_1),of,v(e_1_5)),relation(v(e_1_5),on,v(e_1_7))])) [non_lie([v(q_1_4),v(e_1_9)])]
+  106 46A637 [fr] partielle -> compilee
+    avant: requete('46A637',et([type(v(e_1_3),réunion),type(v(e_1_7),séance),evenement(v(v_1_1),clôturer),evenement(v(v_1_5),lever),role(v(v_1_1),patient,v(e_1_3)),role(v(v_1_5),patient,v(e_1_7))]))
+    après: requete('46A637',ou([et([type(v(e_1_3),réunion),evenement(v(v_1_1),clôturer),role(v(v_1_1),patient,v(e_1_3))]),et([type(v(e_1_7),séance),evenement(v(v_1_5),lever),role(v(v_1_5),patient,v(e_1_7))])])) []
+  109 47G3 [en] partielle -> partielle
+    avant: requete('47G3',et([type(v(e_1_3),overground),type(v(e_1_4),structure),evenement(v(v_1_1),make),role(v(v_1_1),patient,v(e_1_4))]))
+    après: requete('47G3',et([propriete(v(e_1_4),overground),type(v(e_1_4),structure),evenement(v(v_1_1),make),role(v(v_1_1),patient,v(e_1_4))])) [parenthese_non_lue("~ building activities")]
+  111 46B3312 [en] partielle -> partielle
+    avant: requete('46B3312',et([type(v(e_1_1),weight),type(v(e_1_4),scale),propriete(v(e_1_1),use)]))
+    après: requete('46B3312',et([evenement(v(q_1_2),use),role(v(q_1_2),patient,v(e_1_1)),type(v(e_1_1),weight),type(v(e_1_4),scale)])) [non_lie([v(q_1_2),v(e_1_4)])]
+  120 45A1411 [fr] partielle -> partielle
+    avant: requete('45A1411',et([type(v(e_1_1),massacre),type(v(a1_e_1_1),guerre)]))
+    après: requete('45A1411',et([evenement(v(e_1_1),massacrer),type(v(a1_e_1_1),guerre)])) [aspect_non_lie_a_la_personne]
+  121 47C35 [en] partielle -> partielle
+    avant: requete('47C35',et([type(v(e_1_1),plane),type(v(e_1_3),filing),evenement(v(v_1_5),abrade)]))
+    après: requete('47C35',ou([evenement(v(e_1_1),plane),evenement(v(v_1_5),abrade),type(v(e_1_3),filing)])) [parenthese_non_lue("industrial processes")]
+  125 44C41 [en] partielle -> partielle
+    avant: requete('44C41',type(v(e_1_1),strike))
+    après: requete('44C41',evenement(v(e_1_1),strike)) [parenthese_non_lue("political demonstration")]
+  129 31A235 [en] compilee -> compilee
+    avant: requete('31A235',et([type(v(e_1_2),figure),propriete(v(e_1_2),sit)]))
+    après: requete('31A235',et([evenement(v(q_1_1),sit),role(v(q_1_1),agent,v(e_1_2)),type(v(e_1_2),figure)])) []
+  130 43C11121 [fr] partielle -> compilee
+    avant: requete('43C11121',et([type(v(e_1_1),groupe),type(v(e_1_4),mammifère),propriete(v(e_1_4),traquer),relation(v(e_1_1),de,v(e_1_4))]))
+    après: requete('43C11121',et([evenement(v(q_1_5),traquer),role(v(q_1_5),patient,v(e_1_4)),type(v(e_1_1),groupe),type(v(e_1_4),mammifère),relation(v(e_1_1),de,v(e_1_4))])) []
+  131 45E4 [en] partielle -> partielle
+    avant: requete('45E4',et([type(v(e_1_1),animal),type(v(e_1_5),army),propriete(v(e_1_1),use)]))
+    après: requete('45E4',et([evenement(v(q_1_2),use),role(v(q_1_2),patient,v(e_1_1)),type(v(e_1_1),animal),type(v(e_1_5),army)])) [non_lie([v(q_1_2),v(e_1_5)])]
+  134 31A27111 [fr] partielle -> partielle
+    avant: requete('31A27111',et([type(v(e_1_6),enjambée),propriete(v(e_1_6),grand),evenement(v(v_1_1),arpenter),evenement(v(v_1_3),aller)]))
+    après: requete('31A27111',ou([et([type(v(e_1_6),enjambée),propriete(v(e_1_6),grand),evenement(v(v_1_3),aller)]),evenement(v(v_1_1),arpenter)])) [evenement_sans_participant(v_1_3),non_lie([v(e_1_6),v(v_1_3)])]
+  138 41A672 [fr] partielle -> partielle
+    avant: requete('41A672',et([type(v(e_1_1),oeuvres),type(v(e_1_4),bonsaï),type(v(e_1_6),arbre),type(v(e_1_8),espalier),propriete(v(e_1_1),topiaire),relation(v(e_1_6),en,v(e_1_8))]))
+    après: requete('41A672',ou([et([type(v(e_1_1),oeuvres),propriete(v(e_1_1),topiaire)]),et([type(v(e_1_6),arbre),type(v(e_1_8),espalier),relation(v(e_1_6),en,v(e_1_8))]),type(v(e_1_4),bonsaï)])) [parenthese_non_lue("buissons et arbres taillés en formes ornementales")]
+  141 71E3242 [en] partielle -> compilee
+    avant: requete('71E3242',et([type(v(e_1_12),pole),type(v(e_1_2),serpent),type(v(e_1_4),brass),propriete(v(e_1_2),make),evenement(v(v_1_9),set),role(v(v_1_9),lieu,v(e_1_12)),relation(v(e_1_2),of,v(e_1_4))]))
+    après: requete('71E3242',et([role(v(v_1_9),patient,v(e_1_2)),evenement(v(q_1_6),make),role(v(q_1_6),patient,v(e_1_2)),ou([propriete(v(e_1_2),brass),et([relation(v(e_1_2),of,v(e_1_4)),type(v(e_1_4),brass)])]),type(v(e_1_12),pole),type(v(e_1_2),serpent),evenement(v(v_1_9),set),role(v(v_1_9),lieu,v(e_1_12))]) []
+  163 73C8645 [en] partielle -> partielle
+    avant: requete('73C8645',et([type(v(e_1_11),trough),type(v(e_1_3),son),type(v(e_1_6),swine),propriete(v(e_1_3),prodigal),evenement(v(v_1_4),tend),evenement(v(v_1_8),eat),role(v(v_1_4),agent,v(e_1_3)),role(v(v_1_4),patient,v(e_1_6))]))
+    après: requete('73C8645',et([role(v(v_1_8),agent,v(e_1_3)),type(v(e_1_11),trough),type(v(e_1_3),son),type(v(e_1_6),swine),propriete(v(e_1_3),prodigal),evenement(v(v_1_4),tend),evenement(v(v_1_8),eat),role(v(v_1_4),agent,v(e_1_3)),role(v(v_1_4),patient,v(e_1_6))])) [non_lie([v(v_1_8),v(e_1_11)])]
+  165 73C8412 [en] partielle -> partielle
+    avant: requete('73C8412',et([type(v(e_1_12),virgin),type(v(e_1_16),virgin),type(v(e_1_17),oil),type(v(e_1_20),lamp),type(v(e_1_3),bridegroom),propriete(v(e_1_12),foolish),propriete(v(e_1_17),wise),evenement(v(v_1_13),ask),evenement(v(v_1_4),arrive),evenement(v(v_1_7),wake),role(v(v_1_13),agent,v(e_1_12)),r
+    après: requete('73C8412',et([propriete(v(e_1_17),virgin),type(v(e_1_12),virgin),type(v(e_1_17),oil),type(v(e_1_20),lamp),type(v(e_1_3),bridegroom),propriete(v(e_1_12),foolish),propriete(v(e_1_17),wise),evenement(v(v_1_13),ask),evenement(v(v_1_4),arrive),evenement(v(v_1_7),wake),role(v(v_1_13),agent,v(e_1_1 [evenement_sans_participant(v_1_7),non_lie([v(e_1_17),v(e_1_3),v(v_1_7)])]
+  169 71N15 [en] partielle -> partielle
+    avant: requete('71N15',et([type(v(e_1_8),'loaf of bread'),type(v(e_1_14),barley),type(v(e_1_15),bread),type(v(e_1_18),'first-fruit'),type(v(e_1_21),sack),type(v(e_1_23),corn),type(v(e_1_3),man),type(v(e_1_31),man),nom(v(e_1_12),['ELISHA']),evenement(v(v_1_13),receive),evenement(v(v_1_26),multiply),evenemen
+    après: requete('71N15',et([type(v(e_1_8),'loaf of bread'),propriete(v(e_1_15),barley),type(v(e_1_15),bread),type(v(e_1_18),'first-fruit'),type(v(e_1_21),sack),type(v(e_1_23),corn),type(v(e_1_3),man),type(v(e_1_31),man),nom(v(e_1_12),['ELISHA']),evenement(v(v_1_13),receive),evenement(v(v_1_26),multiply),eve [evenement_sans_participant(v_1_26),non_lie([v(e_1_8),v(e_1_15),v(e_1_21),v(e_1_31),v(v_1_26)])]
