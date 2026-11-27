@@ -205,6 +205,18 @@ texte laisse ouverts », c'est-à-dire d'une désambiguïsation par le contexte 
   (D30 sans désambiguïsation) et `sens_fixe_par_le_contexte`.
 - **Le statut retenu est le plus prudent.** D'ordinaire, `etablie_sous_hypotheses` avec `sens` pour un lien positif,
   et `inconnue` pour une négation.
+- **Ce que D30 dit exactement** (`docs/NOYAU.md`, § 2), et que les cas appliquent tous de la même façon :
+  - **un mot de la définition est un type lemme,** comme le compilateur le produit, sauf si la définition donne une
+    clé de sens. Ce n'est pas un sens choisi ;
+  - **un lien positif** va d'un mot du **texte** vers ce type. Il est **certain** si **chacun des sens du mot du texte**
+    atteint le type, par hyperonymie et instance, puis par la lexicalisation vers le lemme de la définition. Sinon, il
+    ne fonde qu'une hypothèse de sens. En particulier, **le même lemme des deux côtés donne un lien certain**, car
+    chaque sens se lexicalise vers son lemme ;
+  - **une négation** du texte est **certaine** si chaque sens du type demandé est inclus dans chaque sens du mot nié,
+    par la seule inclusion, sans lexicalisation. Sinon, elle n'est que possible : elle ne réfute rien ;
+  - **pour un mot français,** les sens sont ceux de WOLF (`outils/bancs/sens_fr.py`), non ceux du mot anglais
+    correspondant ;
+  - **ce n'est pas le pivot seul :** la règle vaut pour chaque mot dont un atome de la définition dépend.
 
 **3. Les incompatibilités.** Aucune sorte de connaissance ne dit que deux types s'excluent (debout et assis, éveillé et
 endormi), et aucune antonymie n'en tient lieu. Un contre-modèle qui en dépend reste `inconnue` ; une `decision_ouverte`
