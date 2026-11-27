@@ -66,13 +66,13 @@ k_de(L, Opts, K) :- ( memberchk(k(K0), Opts) -> K = K0 ; k(L, K) ).
 
 % --- L'index --------------------------------------------------------------------------------------------------------
 
-:- dynamic cle/3, indexe/0.        % cle(Langue, Cle, N) ; Cle : nom(K) | mot(T) | toujours
+:- dynamic cle/3, indexe/0.        % cle(Cle, Langue, N) ; Cle : nom(K) | mot(T) | toujours (la clé en tête : l'index)
 
 indexer :- indexe, !.
 indexer :-
     forall(( requetes_index:requete_compilee(N, L, _, Qs, Qn, St, _, _), memberchk(St, [compilee, partielle]),
              member(requete(_, F), [Qs, Qn]), cas_dnf(F, As), cle_de_clause(As, C) ),
-           assertz(cle(L, C, N))),
+           assertz(cle(C, L, N))),
     assertz(indexe).
 % un index refait (après un changement des requêtes compilées)
 reindexer :- retractall(cle(_, _, _)), retractall(indexe), indexer.
@@ -126,7 +126,7 @@ coder(L, Fs, Mode, Opts, Resultats) :-
     (   Mode == exhaustif
     ->  findall(N, ( requetes_index:requete_compilee(N, L, _, _, _, St, _, _), memberchk(St, [compilee, partielle]) ),
                 Ns0)
-    ;   cles_du_graphe(K, G, Cs), findall(N, ( member(C, Cs), cle(L, C, N) ), Ns0)
+    ;   cles_du_graphe(K, G, Cs), findall(N, ( member(C, Cs), cle(C, L, N) ), Ns0)
     ),
     sort(Ns0, Ns),
     findall(N-(Qs-Qn), ( member(N, Ns), requetes_index:requete_compilee(N, L, _, Qs, Qn, _, _, _) ), NQs),
