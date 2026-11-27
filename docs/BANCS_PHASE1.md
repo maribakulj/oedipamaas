@@ -245,7 +245,9 @@ principal ou composé.
 - ni le jeu indépendant.
 
 Ils lisent les documents de fondements, ce protocole et la vue de développement. Ils peuvent consulter WordNet par
-`outils/bancs/sens.py`, qui ne lit que WordNet.
+`outils/bancs/sens.py`, qui ne lit que WordNet, et les sens d'un mot français dans WOLF par `outils/bancs/sens_fr.py`
+(l'Open Multilingual Wordnet 1.4, `wn-data-fra.tab`), qui ne lit que WordNet et WOLF. La polysémie d'un mot français
+est celle de WOLF, non celle du mot anglais correspondant : « couronne » y a, entre autres, le sens de Stan Laurel.
 
 **La relecture :**
 - chaque fichier est contrôlé par `outils/bancs/valider_cas.py`, pour la forme, le côté, les clés de sens et les
