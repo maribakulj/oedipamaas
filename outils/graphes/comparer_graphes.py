@@ -395,6 +395,73 @@ class Resultat:
         self.confusion.update(autre.confusion)
 
 
+PREMISSE = "pos_auteur"
+
+
+def id_reference(i):
+    """L'identifiant du comparateur pour une assertion de référence convertie par vers_faits.py (e1_n0 → e1#nom0,
+    e1_q0 → e1#prop0)."""
+    m = re.match(r"^(.*)_n(\d+)$", i)
+    if m:
+        return f"{m.group(1)}#nom{m.group(2)}"
+    m = re.match(r"^(.*)_q(\d+)$", i)
+    return f"{m.group(1)}#prop{m.group(2)}" if m else i
+
+
+def surete_effective(res, r, g, premisses, correspondance, inv_corr, ev_g, classe_g, classe_r):
+    """Les trois mesures de sûreté, sur les prémisses que le noyau admet (état pos_auteur), et non sur les seuls
+    qualificatifs : une assertion de l'auteur dont le porteur, un participant ou l'événement n'est pas présent n'est
+    pas une prémisse. Les rôles sont comptés par paire (événement, référent), sans leur étiquette."""
+    (er, rr), (eg, rg) = premisses
+    S = res.securite
+    etat_r = {id_reference(i): e for i, e in er.items()}
+    for ri, sr in etat_r.items():
+        corr = inv_corr.get(ri, [])
+        premisse_g = any(eg.get(gi) == PREMISSE for gi in corr)
+        if sr == PREMISSE:
+            S["eff_reference_premisse_total"] += 1
+            S["eff_premisse_gardee"] += premisse_g
+        elif corr:
+            S["eff_reference_non_premisse"] += 1
+            S["eff_promotion"] += premisse_g
+    for gi, sg in eg.items():
+        if sg == PREMISSE:
+            S["eff_graphe_premisse_total"] += 1
+            ri = correspondance.get(gi)
+            ok = ri is not None and not isinstance(ri, tuple) and etat_r.get(ri) == PREMISSE
+            S["eff_graphe_premisse_juste"] += ok
+    roles_r = collections.defaultdict(set)
+    for v, _, e, st in rr:
+        roles_r[(v, classe_r(e))].add(st)
+    roles_g = collections.defaultdict(set)
+    for v, _, e, st in rg:
+        roles_g[(ev_g(v), classe_g(e))].add(st)
+    for k, sts in roles_r.items():
+        prem_r, prem_g = PREMISSE in sts, PREMISSE in roles_g.get(k, set())
+        if prem_r:
+            S["eff_role_reference_premisse_total"] += 1
+            S["eff_role_premisse_gardee"] += prem_g
+        elif k in roles_g:
+            S["eff_role_reference_non_premisse"] += 1
+            S["eff_role_promotion"] += prem_g
+    for k, sts in roles_g.items():
+        if PREMISSE in sts:
+            S["eff_role_graphe_premisse_total"] += 1
+            S["eff_role_graphe_premisse_juste"] += PREMISSE in roles_r.get(k, set())
+
+
+def metriques_surete_effective(S):
+    """Les mesures de surete_effective : assertions (entités, noms, propriétés, événements, relations), et rôles."""
+    def q(a, b):
+        return S[a] / S[b] if S[b] else None
+    return {"taux_promotion_effectif": q("eff_promotion", "eff_reference_non_premisse"),
+            "couverture_effective": q("eff_premisse_gardee", "eff_reference_premisse_total"),
+            "precision_effective": q("eff_graphe_premisse_juste", "eff_graphe_premisse_total"),
+            "taux_promotion_effectif_roles": q("eff_role_promotion", "eff_role_reference_non_premisse"),
+            "couverture_effective_roles": q("eff_role_premisse_gardee", "eff_role_reference_premisse_total"),
+            "precision_effective_roles": q("eff_role_graphe_premisse_juste", "eff_role_graphe_premisse_total")}
+
+
 def assertions(g: Graphe):
     """Les identifiants des assertions qualifiables d'un graphe : entités (têtes), noms, propriétés, événements,
     relations."""
@@ -402,7 +469,8 @@ def assertions(g: Graphe):
             | {i for _, _, _, i in g.relations})
 
 
-def comparer(r: Graphe, g: Graphe, methode="optimal", referents="classes", derivees=None, detail=False) -> Resultat:
+def comparer(r: Graphe, g: Graphe, methode="optimal", referents="classes", derivees=None, detail=False,
+             premisses=None) -> Resultat:
     res = Resultat()
     if g.erreur:
         g = Graphe(g.texte)
@@ -520,6 +588,10 @@ def comparer(r: Graphe, g: Graphe, methode="optimal", referents="classes", deriv
                 res.securite["graphe_admissible_juste"] += 1
             elif ri is None or isinstance(ri, tuple):
                 res.securite["graphe_admissible_sans_correspondante"] += 1
+    # l'admissibilité effective des prémisses (premisses.pl : l'état d'appui que le noyau donne à chaque assertion,
+    # porteurs, participants et événement d'un rôle compris), à côté de la sûreté des annotations ci-dessus
+    if premisses is not None:
+        surete_effective(res, r, g, premisses, correspondance, inv_corr, ev_g, classe_g, classe_r)
     # la matrice de confusion des rôles
     ref_pairs = collections.defaultdict(set)
     for v, ro, e in r.roles:
@@ -768,6 +840,14 @@ def imprimer(titre, res: Resultat):
               f"{S['promotion_modalite']}, d'une autre portée {S['promotion_portee']}, citées {S['promotion_cite']}, "
               f"en alternative {S['promotion_alternative']}. Rétrogradées : {S['retrogradation']} sur "
               f"{S['reference_admissible']} admissibles.")
+    if S.get("eff_reference_premisse_total") or S.get("eff_graphe_premisse_total"):
+        e = metriques_surete_effective(S)
+        f = lambda x: "—" if x is None else f"{x:.0%}"
+        print(f"Admissibilité effective (les prémisses que le noyau admet : porteurs, participants et événement "
+              f"compris) : promotions {f(e['taux_promotion_effectif'])} ({S['eff_promotion']} sur "
+              f"{S['eff_reference_non_premisse']}), couverture {f(e['couverture_effective'])}, précision "
+              f"{f(e['precision_effective'])} ; rôles : promotions {f(e['taux_promotion_effectif_roles'])}, couverture "
+              f"{f(e['couverture_effective_roles'])}, précision {f(e['precision_effective_roles'])}.")
     m = metriques_surete(S)
     if m["couverture_admissible"] is not None:
         print(f"Couverture : {S['admissible_garde']} des {S['reference_admissible_total']} assertions admissibles de la "
@@ -831,6 +911,8 @@ def mesures(res: Resultat):
     """Les mesures d'un résultat : le F1 de chaque catégorie, et les trois mesures de sûreté."""
     m = {cat: v["f1"] for cat, v in res.comptes.table().items() if v["f1"] is not None}
     m.update({"surete:" + k: v for k, v in metriques_surete(res.securite).items() if v is not None})
+    if res.securite.get("eff_reference_premisse_total") or res.securite.get("eff_graphe_premisse_total"):
+        m.update({"surete:" + k: v for k, v in metriques_surete_effective(res.securite).items() if v is not None})
     return m
 
 
@@ -846,27 +928,30 @@ def intervalles_apparies(par_texte_a, par_texte_b, tirages=1000, graine=20261127
     les fiches communes aux deux sont tirées."""
     fa, fb = par_fiches(par_texte_a), par_fiches(par_texte_b)
     fiches = sorted(set(fa) & set(fb))
-    diff, rapport = collections.defaultdict(list), []
+    diff, rapport, rapport_eff = collections.defaultdict(list), [], []
     for tirage in tirer(fiches, tirages, graine):
         ma, mb = mesures(fusionner(fa, tirage)), mesures(fusionner(fb, tirage))
         for nom in set(ma) & set(mb):
             diff[nom].append(mb[nom] - ma[nom])
-        pa, pb = ma.get("surete:taux_promotion"), mb.get("surete:taux_promotion")
-        if pa and pb is not None:
-            rapport.append(pb / pa)
+        for cle_, liste in (("surete:taux_promotion", rapport), ("surete:taux_promotion_effectif", rapport_eff)):
+            pa, pb = ma.get(cle_), mb.get(cle_)
+            if pa and pb is not None:
+                liste.append(pb / pa)
     tot_a, tot_b = fusionner(fa, fiches), fusionner(fb, fiches)
     return {"fiches": len(fiches), "tirages": tirages, "graine": graine, "niveau": niveau,
             "a": mesures(tot_a), "b": mesures(tot_b),
             "difference": {nom: bornes(vs, niveau) for nom, vs in diff.items()},
-            "rapport_promotion": bornes(rapport, niveau) if rapport else None}
+            "rapport_promotion": bornes(rapport, niveau) if rapport else None,
+            "rapport_promotion_effectif": bornes(rapport_eff, niveau) if rapport_eff else None}
 
 
-def jalon(app, rapport_max=0.5, perte_couverture_max=0.05):
+def jalon(app, rapport_max=0.5, perte_couverture_max=0.05, effectif=False):
     """Le premier jalon de C7, validé le 27/11 : les promotions au moins divisées par deux (borne haute du rapport
     apparié B / A au plus rapport_max) et au plus cinq points de couverture perdus (borne basse de la différence
-    appariée B − A au moins −perte_couverture_max)."""
-    r = app["rapport_promotion"]
-    c = app["difference"].get("surete:couverture_admissible")
+    appariée B − A au moins −perte_couverture_max). effectif : sur les prémisses que le noyau admet (premisses.pl)
+    plutôt que sur les seuls qualificatifs des annotations."""
+    r = app["rapport_promotion_effectif" if effectif else "rapport_promotion"]
+    c = app["difference"].get("surete:couverture_effective" if effectif else "surete:couverture_admissible")
     promotions = r is not None and r[1] <= rapport_max
     couverture = c is not None and c[0] >= -perte_couverture_max
     return {"promotions_divisees_par_deux": promotions, "couverture_gardee": couverture,
@@ -883,7 +968,9 @@ def imprimer_confusion(res: Resultat):
 
 
 def evaluer(R, G, accord=False, derivations=False, alignement="optimal", referents="classes", ordre_inverse=False,
-            detail=False):
+            detail=False, premisses=None):
+    """premisses : (PR, PG), les sorties de premisses.pl pour les références et pour les graphes, indexées par (k,
+    genre) ; un texte sans état d'un côté ou de l'autre est une erreur, jamais un zéro."""
     communs = sorted(set(R) & set(G))
     total, par_langue, details = Resultat(), collections.defaultdict(Resultat), []
     regles = collections.defaultdict(collections.Counter)
@@ -893,7 +980,13 @@ def evaluer(R, G, accord=False, derivations=False, alignement="optimal", referen
         r = depuis_reference(R[k], ordre_inverse)
         g = depuis_reference(G[k], ordre_inverse) if accord else depuis_faits(G[k])
         erreurs += g.erreur
-        res = comparer(r, g, alignement, referents, detail=detail)
+        pm = None
+        if premisses is not None:
+            pr, pg = premisses
+            if k not in pr or k not in pg:
+                raise SystemExit(f"le texte {k} n'a pas ses prémisses ({'référence' if k not in pr else 'graphe'})")
+            pm = ((pr[k]["etats"], pr[k]["roles"]), (pg[k]["etats"], pg[k]["roles"]))
+        res = comparer(r, g, alignement, referents, detail=detail, premisses=pm)
         par_texte[k] = res
         total.fusion(res)
         par_langue[R[k]["langue"]].fusion(res)
@@ -917,13 +1010,18 @@ def main():
     ap.add_argument("--ordre-inverse", action="store_true")
     ap.add_argument("--detail")
     ap.add_argument("--json")
+    ap.add_argument("--premisses", nargs=2, metavar=("PREMISSES_REFERENCE", "PREMISSES_GRAPHES"),
+                    help="les sorties de premisses.pl : l'admissibilité effective des prémisses selon le noyau")
     ap.add_argument("--intervalles", type=int, default=0, metavar="TIRAGES",
                     help="intervalles à 95 %% par rééchantillonnage des fiches (0 : aucun)")
     a = ap.parse_args()
     R = {cle(x): x for x in charger(a.references)}
     G = {cle(x): x for x in charger(a.graphes)}
+    prem = None
+    if a.premisses:
+        prem = tuple({cle(x): x for x in charger(f)} for f in a.premisses)
     communs, erreurs, total, par_langue, regles, details, par_texte = evaluer(
-        R, G, a.accord, a.derivations, a.alignement, a.referents, a.ordre_inverse, bool(a.detail))
+        R, G, a.accord, a.derivations, a.alignement, a.referents, a.ordre_inverse, bool(a.detail), prem)
     if not communs:
         sys.exit("aucun texte commun")
     print(f"{len(communs)} textes comparés ({len(R)} références, {len(G)} graphes) ; graphes en erreur : {erreurs} ;"
@@ -950,7 +1048,8 @@ def main():
               "par_langue": {l: {"comptes": v.comptes.table(), "securite": dict(v.securite)}
                              for l, v in par_langue.items()},
               "regles": {k: dict(v) for k, v in regles.items()},
-              "surete": metriques_surete(total.securite)}
+              "surete": metriques_surete(total.securite),
+              "surete_effective": metriques_surete_effective(total.securite) if prem else None}
     if a.intervalles:
         iv = intervalles(par_texte, a.intervalles)
         sortie["intervalles"] = iv

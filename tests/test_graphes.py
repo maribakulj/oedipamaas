@@ -302,3 +302,72 @@ def test_intervalles_apparies_et_jalon():
     assert not cg.jalon(cg.intervalles_apparies(b, a, tirages=100))["atteint"]   # l'inverse : pas de réduction
     same = cg.intervalles_apparies(a, a, tirages=100)
     assert all(lo == hi == 0 for lo, hi in same["difference"].values())          # A contre A : différence nulle
+
+
+# --- l'admissibilité effective des prémisses (premisses.pl), et la présence des textes (apparier.py) ------------------
+
+import json as _json
+import shutil as _shutil
+import subprocess as _subprocess
+
+import pytest as _pytest
+
+
+def test_id_reference():
+    assert cg.id_reference("e1_n0") == "e1#nom0" and cg.id_reference("e12_q3") == "e12#prop3"
+    assert cg.id_reference("v1") == "v1" and cg.id_reference("r_1") == "r_1"
+
+
+def test_surete_effective_compte_ce_que_le_noyau_admet():
+    lu = faits()
+    pr = ({"e1": "pos_auteur", "e2": "aucun", "e3": "pos_auteur", "e4": "neg_auteur", "v1": "pos_auteur",
+           "e1_n0": "pos_auteur", "r1": "neg_auteur"},
+          [["v1", "agent", "e1", "pos_auteur"], ["v1", "patient", "e2", "aucun"]])
+    pg = ({"e_1": "pos_auteur", "e_2": "pos_auteur", "e_3": "pos_auteur", "e_4": "neg_auteur", "v_1": "pos_auteur",
+           "n1": "pos_auteur", "r_1": "neg_auteur"},
+          [["v_1", "agent", "e_1", "pos_auteur"], ["v_1", "patient", "e_2", "pos_auteur"]])
+    S = cg.comparer(cg.depuis_reference(REF), cg.depuis_faits(lu), premisses=(pr, pg)).securite
+    m = cg.metriques_surete_effective(S)
+    assert S["eff_promotion"] == 1 and S["eff_reference_non_premisse"] >= 1      # le lion : pas une prémisse
+    assert m["taux_promotion_effectif_roles"] == 1 and m["couverture_effective_roles"] == 1
+
+
+@_pytest.mark.skipif(_shutil.which("swipl") is None, reason="swipl absent")
+def test_premisses_pl_suit_la_semantique_du_noyau(tmp_path):
+    f = [["texte", "t"], ["doc", "fr", "description"], ["entite", "e1", "lion", "p1"], ["polarite", "e1", "neg"], ["modalite", "e1", "affirme"],
+         ["portee", "e1", "represente"], ["enonciateur", "e1", "auteur"],
+         ["propriete", "q1", "e1", "mort", "p1"], ["polarite", "q1", "pos"], ["modalite", "q1", "affirme"],
+         ["portee", "q1", "represente"], ["enonciateur", "q1", "auteur"],
+         ["entite", "e2", "homme", "p2"], ["polarite", "e2", "pos"], ["modalite", "e2", "affirme"],
+         ["portee", "e2", "represente"], ["enonciateur", "e2", "auteur"],
+         ["evenement", "v1", "tuer", "p3"], ["polarite", "v1", "pos"], ["modalite", "v1", "affirme"],
+         ["portee", "v1", "represente"], ["enonciateur", "v1", "auteur"],
+         ["role", "v1", "agent", "e2"], ["role", "v1", "patient", "e1"],
+         ["passage", "p1", 0, 1], ["passage", "p2", 0, 1], ["passage", "p3", 0, 1]]
+    entree, sortie = tmp_path / "g.json", tmp_path / "p.json"
+    entree.write_text(_json.dumps([{"k": 1, "genre": "positif", "faits": f}]), encoding="utf-8")
+    _subprocess.run(["swipl", str(ICI / "outils" / "graphes" / "premisses.pl"), str(entree), str(sortie)], check=True,
+                    capture_output=True)
+    x = _json.loads(sortie.read_text(encoding="utf-8"))[0]
+    assert x["statut"] == "valide"
+    # la propriété est affirmée, positive, de l'image : ses qualificatifs la diraient admissible ; son porteur est nié
+    assert x["etats"]["q1"] == "aucun" and x["etats"]["e1"] == "neg_auteur" and x["etats"]["e2"] == "pos_auteur"
+    roles = {(v, r): e for v, r, _, e in x["roles"]}
+    assert roles[("v1", "agent")] == "pos_auteur" and roles[("v1", "patient")] == "aucun"
+
+
+spec_ap = importlib.util.spec_from_file_location("ap", ICI / "outils" / "graphes" / "apparier.py")
+ap = importlib.util.module_from_spec(spec_ap)
+spec_ap.loader.exec_module(ap)
+
+
+def test_presence_de_tous_les_textes():
+    R = {(1, "positif"): {}, (1, "negatif"): {}}
+    A = {(1, "positif"): {"faits": []}, (1, "negatif"): {"faits": "erreur"}}
+    B = {(1, "positif"): {"faits": []}}
+    defauts, erreurs = ap.controler_presence(R, A, B)
+    assert defauts and "absents de B" in defauts[0] and erreurs["A"] == [(1, "negatif")]
+    assert ap.controler_presence(R, A, A)[0] == []
+    att = ap.textes_attendus([{"k": 1, "positif": "x", "negatif": "y", "variantes": {"negation": "z"}}], 5)
+    assert att == {(1, "positif"), (1, "negatif"), (1, "variante_negation")}
+    assert "attendus absents" in ap.controler_presence(R, A, A, att)[0][0]
