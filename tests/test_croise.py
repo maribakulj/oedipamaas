@@ -33,10 +33,29 @@ def test_echec_sans_requete():
     assert not tb.echec(texte(6, "positif", reference_reference="sans_requete"))
 
 
-def test_attribution():
+def test_attribution_par_niveau():
     a = tb.attribution(X)
-    assert a["lecteur_perd"] == ["N1"] and a["lecteur_gagne"] == ["N2"]
-    assert a["compilateur_sans_requete"] == 1 and a["compilateur_perd"] == [] and a["echecs_reference_reference"] == 1
+    assert a["lecteur"]["passages"] == {"deductive->non_etablie": ["N1"], "non_etablie->sous_hypotheses": ["N2"]}
+    assert a["lecteur"]["perd_la_deduction"] == 1 and a["lecteur"]["gagne_la_deduction"] == 0
+    assert a["compilateur"]["passages"] == {} and a["compilateur"]["non_evaluables"] == {"requete_absente": 1}
+
+
+def test_issues_non_evaluees():
+    x = texte(7, "positif", reference_reference="interrompu")
+    assert tb.issue(x, "reference_reference") == "interrompue" and not tb.echec(x)
+    g = dict(texte(8, "positif"), notation="31A4623(...)")
+    assert tb.issue(g, "reference_reference") == "gabarit_non_instancie" and not tb.echec(g)
+    assert tb.echec(g, definition="v1")                       # la v1 le comptait comme un échec
+    n = texte(9, "negatif", reference_reference="etablie_sous_hypotheses")
+    assert tb.echec(n) and not tb.echec(n, contestes={(9, "negatif")})
+    assert tb.issue(n, "reference_reference", {(9, "negatif")}) == "conteste"
+    with pytest.raises(SystemExit):
+        tb.issue(texte(10, "positif", reference_reference="statut_inconnu"), "reference_reference")
+
+
+def test_sous_hypotheses_est_un_echec_de_la_deduction():
+    x = texte(11, "positif", reference_reference="etablie_sous_hypotheses")
+    assert tb.echec(x) and not tb.echec(x, definition="v1")
 
 
 def cause(k, genre, cs=("inference",)):
@@ -70,3 +89,34 @@ def test_incomplet(tmp_path, monkeypatch, causes):
     with pytest.raises(SystemExit):
         lancer(tmp_path, causes, monkeypatch)
     assert not (tmp_path / "sortie.json").exists()
+
+
+# --- les versions du banc (outils/graphes/version_banc.py) -------------------------------------------------------------
+
+spec_v = importlib.util.spec_from_file_location("vb", ICI / "outils" / "graphes" / "version_banc.py")
+vb = importlib.util.module_from_spec(spec_v)
+spec_v.loader.exec_module(vb)
+
+REFS = [{"k": 1, "genre": "positif", "evenements": [{"id": "v1", "predicat": "tenir", "mention": "se tient"}]}]
+REQS = [{"k": 1, "suffisante": "requete('X', type(v(x), poids))", "necessaire": None}]
+
+
+def erratum(**kw):
+    e = {"id": "E1", "jeu": "j", "k": 1, "genre": "positif", "objet": "graphe", "operation": "predicat",
+         "element": "v1", "avant": "tenir", "apres": "se tenir", "raison": "", "nature": "erreur_manifeste"}
+    e.update(kw)
+    return e
+
+
+def test_version_applique_sans_toucher_l_ancienne():
+    sorties, journal, defauts = vb.appliquer({"errata": [erratum()]}, {"j": (REFS, REQS)})
+    assert not defauts and len(journal) == 1
+    assert sorties["j"][0][0]["evenements"][0]["predicat"] == "se tenir"
+    assert REFS[0]["evenements"][0]["predicat"] == "tenir"              # la version précédente est intacte
+
+
+def test_version_refuse_un_erratum_qui_ne_s_applique_pas():
+    for e in (erratum(avant="porter"), erratum(element="v9"), erratum(jeu="autre"),
+              erratum(objet="requete", operation="remplacer", avant={"suffisante": "autre"}, apres={})):
+        assert vb.appliquer({"errata": [e]}, {"j": (REFS, REQS)})[2]
+    assert vb.appliquer({"errata": [erratum(), erratum()]}, {"j": (REFS, REQS)})[2]     # en double
