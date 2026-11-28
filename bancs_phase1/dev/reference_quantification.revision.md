@@ -224,3 +224,90 @@ fermetures d'hyperonymie et d'instance sont calculées sur `data.*` de WordNet 3
 - 10 positifs (42 %) ;
 - 6 négatifs ou contre-modèles (25 %) ;
 - 8 indéterminés (33 %).
+
+## 5. Rétablissement (28/11)
+
+**La décision de la propriétaire :** les textes et les définitions modifiés pour éviter une lacune de WOLF ou de
+WordNet reviennent à leur forme d'origine. Leur statut est recalculé selon la règle actuelle (BANCS § 4.1, point 2,
+sens WOLF par `sens_fr.py`) ; c'est le statut démontrable relativement à K.
+
+**Les sources :**
+- la version d'origine : `v1_avant_relecture/reference_quantification.json` ;
+- la version d'avant le rétablissement : `scratchpad/rq/v3_avant_retablissement.json` ;
+- les vérifications : `scratchpad/rq/atteint.py`.
+
+**Ce qui n'est pas rétabli, et pourquoi :**
+- **les corrections de fond demandées par la relecture B :**
+  - rq-002, « à la droite de l'évêque » : l'antécédent de « sa » était ambigu, il pouvait être l'autel ;
+  - rq-006#2 : la paraphrase disait une coordination, non une collection ;
+  - rq-017#4 et #5 : des variantes sans effet ;
+  - les connaissances retirées ou passées à `attestee: false` ;
+  - les statuts de sûreté (rq-007, rq-023, rq-014…) ;
+- **rq-015 :** la définition « Lot given wine by one of his two daughters » corrigeait une question de pluriel
+  distributif ou collectif, soulevée par la relecture, et non une lacune de la ressource. Elle est gardée ;
+- **les variantes ajoutées pour la relecture,** de portée ou de modalité, dans la langue du cas : rq-002#7,
+  rq-005#7, rq-009#7, rq-010#7, rq-011#8, rq-020#7. Elles sont gardées, avec leur statut recalculé ;
+- **rq-004#7,** un nom nié. Ce n'est pas un contournement : il ajoute un test et ne masque aucune lacune. Il est gardé
+  (dans le doute, je le signale).
+
+**Les éléments rétablis :**
+
+| identifiant | ce qui revient | ancien statut | nouveau statut |
+|---|---|---|---|
+| rq-002 | la définition « bishop elevating the chalice… » | base `inconnue` | `inconnue` (élever → elevate : 5 sens WOLF sur 26 ; raise : 4 sur 27) |
+| rq-002#8 et #9 | retirées : des variantes rédigées en anglais avec les lemmes de la définition | `etablie` et `non_certifiee` | — |
+| rq-006 | la définition « married couple seated side by side… » | base `inconnue` | `inconnue`. Aucun sens de couple n'atteint married_couple. La `decision_ouverte` est mise à jour. |
+| rq-006#1 | le texte d'origine (« sit side by side ») | `etablie` | `inconnue` (sit n'atteint pas seated ; couple et spouses n'atteignent pas married_couple) |
+| rq-008#1 | le texte d'origine (« naked ») | `etablie` | `etablie_sous_hypotheses` [sens] (naked → nude : 1 sens sur 5) |
+| rq-009, base et #1 à #6 | la définition « St Peter grieving at the bier of the Virgin » et les textes d'origine (deathbed, « bowing their heads in grief ») | base `inconnue` | `inconnue` |
+| rq-009#3 | idem | `etablie` | `inconnue` (le nom grief n'atteint pas grieve ; la coréférence du lit de mort et de la civière n'est pas dite) |
+| rq-009#7 | réalignée sur le texte d'origine | `non_certifiee` | `inconnue` (la civière n'est pas dite celle de la Vierge) |
+| rq-010#3 | le texte d'origine (« set a single crown on her head ») | `etablie` | `inconnue` (aucun sens de set n'atteint crown) |
+| rq-011 | la définition « … to the Christ Child » | base `inconnue` | `inconnue` |
+| rq-011#3 | idem | `etablie_sous_hypotheses` | `inconnue` (« enfant » n'atteint pas un Christ Child, absent de WordNet et de K) |
+| rq-011#8 | idem | `non_certifiee` | `inconnue` |
+| rq-012, base et #1, #2, #4, #5, #6 | la définition « carrying together a huge bunch of grapes on a pole » et les textes d'origine (jointly, enormous, « slung from a pole ») | base `etablie` ; #1 et #2 `etablie_sous_hypotheses` ; #6 `etablie` | toutes `inconnue`. jointly n'atteint pas together, enormous n'atteint pas huge, « slung from » ne donne pas « on » sans K. |
+| rq-016 | la définition « Heracles fighting the Lernaean Hydra, striking it… » | base `etablie_sous_hypotheses` [identite, sens] | `inconnue`. Lernaean n'a aucun sens dans WordNet ni dans WOLF ; frapper → fight : 1 sens sur 12. Une `decision_ouverte` dit ce que donnerait la lecture de « Lernaean Hydra » comme nom propre. |
+| rq-016#1 | idem | `etablie` | `etablie_sous_hypotheses` [sens] (même expression « Lernaean Hydra » ; strike → fight : 1 sens sur 21) |
+| rq-016#2, #6, #7 | idem | `etablie_sous_hypotheses` | `inconnue` |
+| rq-017#7 | retirée : écrite avec les mots de la définition pour éviter le pas hold → with | `etablie` | — |
+| rq-023 | la définition « … the empty sepulchre … » | base `inconnue` | `inconnue` (ni tombeau ni tomb n'atteignent sepulchre) |
+| rq-023#7 | retirée : une variante anglaise ajoutée | `etablie` | — |
+| rq-024 | la définition « Peter asleep while Christ prays in the Garden of Gethsemane » | base `etablie_sous_hypotheses` [identite, sens] | `inconnue`. Gethsemane n'est pas dans WordNet ni dans K ; dormir n'atteint pas asleep. La `decision_ouverte` est retirée : le statut ne dépend plus d'aucun choix. |
+| rq-024#1 | le texte d'origine (« all are asleep ») | `etablie` | `inconnue` (Gethsemane) |
+| rq-024#2, #6, #7 | idem | `etablie_sous_hypotheses` | `inconnue` |
+| sortes | relabellisées à l'harmonisation à cause d'une lacune de WOLF, elles reviennent à leur valeur : rq-006, rq-013 et rq-019 (bases et variantes), et rq-002#4, rq-004#1, rq-017#3, rq-023#3 | `indetermine` | `positif`. La sorte dit ce que le cas construit ; le statut dit ce qui est démontrable. Je le signale : c'est mon interprétation, et elle garde le quota des positifs. |
+
+**Le bilan des statuts changés :**
+- **cas de base :** 3 plus faibles, rq-012, rq-016 et rq-024 ;
+- **variantes :** 18 plus faibles (dont 2 de `etablie` vers `etablie_sous_hypotheses`), 0 plus fort, et 4 variantes retirées.
+
+**Les cas de base par statut :**
+
+| statut | nombre |
+|---|---|
+| `inconnue` | 16 |
+| `etablie` | 4 |
+| `etablie_sous_hypotheses` | 3 |
+| `ecartee` | 1 |
+
+**Les sortes :**
+- 13 positifs ;
+- 6 négatifs ou contre-modèles ;
+- 5 indéterminés.
+
+**Les cas sans variante de statut différent,** notés sans rien réécrire, comme la consigne le demande. Le validateur
+contrôle maintenant une variante de portée, de modalité, de temps ou d'inversion dont le statut diffère.
+- **Ce que le rétablissement fait perdre :** rq-002, rq-009, rq-011, rq-012, rq-016, rq-023 et rq-024.
+- **Ce qui manquait déjà avant :**
+  - rq-006, rq-013, rq-017 et rq-019, depuis l'harmonisation ;
+  - rq-022, depuis la révision (#5, une négation de « seul » sous D30).
+
+**Le schéma :** le validateur exige désormais qu'une traduction déclare sa langue. Le champ `langue` a été ajouté aux
+24 variantes de traduction.
+
+**La sortie du validateur :**
+- 24 cas de base, 159 variantes ;
+- 0 erreur ;
+- 12 exigences non remplies, toutes de la forme « aucune variante de portée, de modalité, de temps ou d'inversion
+  dont le statut diffère », pour les 12 cas listés ci-dessus.

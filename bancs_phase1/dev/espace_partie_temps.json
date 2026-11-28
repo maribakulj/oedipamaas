@@ -55,7 +55,7 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Le vessel n'est pas nommé : il n'est atteint que par la règle partie ⇒ tout, qui ne s'applique déductivement que si la partie est obligatoire (FONDEMENTS § 2.4 ; SPECIFICATION_OPERATIONS § 2). La méronymie de WordNet (implicite dans K, BANCS § 4.1) dit que deck%1:06:00:: est partie de ship, non que tout deck a un ship : la condition n'est pas établie, et la règle ne s'applique que sous hypothèse (SPECIFICATION_OPERATIONS § 2, « Elle peut s'appliquer sous hypothèse ») : consequence_conditionnelle. De plus « deck » a quatre sens, dont un seul a ce tout (NOYAU § 2, D30) : avec tous les sens, il faut aussi l'hypothèse de sens (BANCS § 4.1, point 2). Le statut retenu est le plus prudent.",
+  "justification": "Le vessel n'est pas nommé : il n'est atteint que par la règle partie ⇒ tout, qui ne s'applique déductivement que si la partie est obligatoire (FONDEMENTS § 2.4 ; SPECIFICATION_OPERATIONS § 2). La méronymie de WordNet (implicite dans K, BANCS § 4.1) dit que deck%1:06:00:: est partie de ship, non que tout deck a un ship : la condition n'est pas établie, et la règle ne s'applique que sous hypothèse (SPECIFICATION_OPERATIONS § 2, « Elle peut s'appliquer sous hypothèse ») : consequence_conditionnelle. De plus « deck » a quatre sens, dont un seul a ce tout (NOYAU § 2, D30) : avec tous les sens, il faut aussi l'hypothèse de sens (BANCS § 4.1, point 2). Le statut retenu est le plus prudent. Sous les deux options du sens de « deck », le statut est le même (sous hypothèses) ; seule l'hypothèse de sens disparaît si le contexte fixe deck%1:06:00::, la condition de partie obligatoire restant supposée.",
   "variantes": [
    {
     "variation": "paraphrase",
@@ -75,7 +75,8 @@
     "hypotheses_attendues": [
      "sens",
      "consequence_conditionnelle"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_participant",
@@ -110,14 +111,7 @@
      "consequence_conditionnelle"
     ]
    }
-  ],
-  "decision_ouverte": {
-   "question": "« deck » a quatre sens dans WordNet ; le contexte (marins, mer) fixe-t-il deck%1:06:00:: sans hypothèse ? Sous les deux options, la condition « partie obligatoire » reste supposée (consequence_conditionnelle) ; seule l'hypothèse de sens disparaît avec le sens fixé par le contexte.",
-   "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie_sous_hypotheses"
-   }
-  }
+  ]
  },
  {
   "id": "ep-002",
@@ -174,7 +168,8 @@
     "description": "Votive panel painted on wood. In the storm, lightning strikes the mainmast, which splits; three kneeling sailors implore the Virgin, who has appeared in the clouds. The lower part of the panel, where the hull was, is lost.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_participant",
@@ -282,7 +277,8 @@
     "description": "Eau-forte représentant une cour de ferme au crépuscule. Une fillette jette du grain aux poules ; derrière elle, une roue isolée est appuyée contre le mur de la grange. Un chat observe la scène depuis le fenil.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_participant",
@@ -386,7 +382,8 @@
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "sens"
-    ]
+    ],
+    "langue": "en"
    },
    {
     "variation": "changement_de_participant",
@@ -447,7 +444,7 @@
   "langue": "en",
   "sorte": "positif",
   "description": "Stained-glass panel. Christ stands waist-deep in the Jordan and John the Baptist pours water over his head from a shell. Directly above Christ's head hovers a white dove.",
-  "definition": "a dove hovering above Christ's head",
+  "definition": "a dove hovering above the head of Christ",
   "statut_attendu": "etablie",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -463,7 +460,7 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "La relation spatiale orientée est dite par l'auteur, dans les mots de la définition (AUDIT § 3.5, (1)). Établie (NOYAU § 4.4). La paraphrase passe par la converse, qui n'est pas attestée (une antonymie n'est pas une attestation, BANCS § 4.1) et que FONDEMENTS § 3.2 ne range pas parmi les canonisations : elle ne donne au mieux qu'un statut sous hypothèse. L'inversion des rôles, sans connaissance d'asymétrie, n'est pas une preuve négative (NOYAU § 4.4). Harmonisation : la traduction française dit « plane » (absent de WOLF : aucun lien vers hover) et « de la tête du Christ » (« de » contre « 's », deux mots de relation sans sens) : inconnue.",
+  "justification": "La relation spatiale orientée est dite par l'auteur, dans les mots de la définition (AUDIT § 3.5, (1)). Établie (NOYAU § 4.4). La paraphrase passe par la converse, qui n'est pas attestée (une antonymie n'est pas une attestation, BANCS § 4.1) et que FONDEMENTS § 3.2 ne range pas parmi les canonisations : elle ne donne au mieux qu'un statut sous hypothèse. L'inversion des rôles, sans connaissance d'asymétrie, n'est pas une preuve négative (NOYAU § 4.4). Harmonisation : la traduction française dit « plane » (absent de WOLF : aucun lien vers hover) et « de la tête du Christ » (« de » contre « 's », deux mots de relation sans sens) : inconnue. Rétablissement (28/11) : la définition d'origine (« above the head of Christ ») revient. « Christ's head » et « the head of Christ » sont la même relation de génitif, produite par la lecture (§ 4.1) : établie, inchangé.",
   "variantes": [
    {
     "variation": "paraphrase",
@@ -479,7 +476,8 @@
     "description": "Panneau de vitrail. Le Christ se tient dans le Jourdain, de l'eau jusqu'à la taille, et Jean-Baptiste lui verse de l'eau sur la tête avec une coquille. Juste au-dessus de la tête du Christ plane une colombe blanche.",
     "sorte": "positif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "inversion_des_roles",
@@ -569,7 +567,8 @@
     "description": "Miniature from a book of hours. The Virgin is enthroned in the centre; the crown already rests on her head. Two angels, one on either side, lift the hem of her blue mantle.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_temps",
@@ -660,7 +659,7 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Les deux relations spatiales orientées sont dites par l'auteur (AUDIT § 3.5, (1)). « D'après un tableau perdu » met le tableau dans le contexte d'une autre œuvre, mais les phrases suivantes décrivent la gravure elle-même, de portée represente (FONDEMENTS § 2.5 ; AUDIT § 3.7). Établie (NOYAU § 4.4), sous réserve du passage des prépositions françaises aux relations, que la lecture fait et que la phase ne spécifie pas (revision, point général). Ce qui n'est dit que du tableau perdu n'établit rien pour la gravure. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « est couché » : WOLF ne donne pour coucher que lay/put_down, qui n'atteint pas lie ; « couché » n'est pas dans WOLF. L'atome « lying » n'a aucun lien. De plus « devant » et « derrière » n'atteignent before et behind que par une partie de leurs sens. Inconnue ; la traduction anglaise, mêmes mots que la définition, reste établie. La variante qui nie l'agenouillement est écartée : « s'agenouiller » n'a dans WOLF qu'un sens, kneel%2:35:00::, et kneel n'en a qu'un : la négation est certaine (NOYAU § 1.1 et § 2).",
+  "justification": "Les deux relations spatiales orientées sont dites par l'auteur (AUDIT § 3.5, (1)). « D'après un tableau perdu » met le tableau dans le contexte d'une autre œuvre, mais les phrases suivantes décrivent la gravure elle-même, de portée represente (FONDEMENTS § 2.5 ; AUDIT § 3.7). Établie (NOYAU § 4.4), sous réserve du passage des prépositions françaises aux relations, que la lecture fait et que la phase ne spécifie pas (revision, point général). Ce qui n'est dit que du tableau perdu n'établit rien pour la gravure. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « est couché » : WOLF ne donne pour coucher que lay/put_down, qui n'atteint pas lie ; « couché » n'est pas dans WOLF. L'atome « lying » n'a aucun lien. De plus « devant » et « derrière » n'atteignent before et behind que par une partie de leurs sens. Inconnue ; la traduction anglaise, mêmes mots que la définition, reste établie. Rétablissement (28/11) : la variante écartée ajoutée à l'harmonisation sur un mot à un seul sens est retirée (DECISIONS_PHASE1 § 3.3).",
   "variantes": [
    {
     "variation": "paraphrase",
@@ -674,7 +673,8 @@
     "description": "Engraving after a lost painting. St Jerome, kneeling before a crucifix fixed to a tree trunk, beats his breast with a stone. Behind him a lion lies on the ground. In the distance, a monastery.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "inversion_des_roles",
@@ -702,13 +702,6 @@
     "description": "Gravure d'après un tableau perdu. Saint Jérôme, agenouillé devant un crucifix fixé à un tronc d'arbre, se frappe la poitrine avec une pierre. Derrière lui, un lion est couché. Le chapeau de cardinal n'est pas figuré.",
     "sorte": "positif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
-   },
-   {
-    "variation": "changement_de_modalite",
-    "description": "Gravure d'après un tableau perdu. Saint Jérôme ne s'agenouille pas : il se tient debout devant un crucifix fixé à un tronc d'arbre. Derrière lui, un lion est couché.",
-    "sorte": "negatif",
-    "statut_attendu": "ecartee",
     "hypotheses_attendues": []
    }
   ],
@@ -774,7 +767,8 @@
     "description": "Panneau de prédelle. Dans un jardin, à l'aube, le Christ ressuscité, une bêche à la main, s'éloigne vers la droite. Marie-Madeleine est agenouillée derrière lui et tend la main vers son manteau.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_modalite",
@@ -868,7 +862,8 @@
     "description": "Carved tympanum. Christ the Judge is enthroned in the centre, frontal, his arms open. On the right, the elect ascend towards the heavenly Jerusalem; on the left, demons drive the damned towards the mouth of hell.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_participant",
@@ -952,7 +947,7 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "La latéralité d'une main dite « his left » est celle de la figure : le cadre de référence n'est pas en jeu (AUDIT § 3.5, (3)), et la définition emploie la même tournure. Le type « apostle » vient du nom par l'instance de WordNet (implicite, BANCS § 4.1). La tenue est dite. Établie (NOYAU § 4.4). L'état de la peinture est de portée oeuvre et ne touche rien. Harmonisation : le cas de base, en anglais, dit les mots de la définition (St._Peter n'a qu'un sens, instance d'Apostle) : établie. La traduction française n'est établie que sous hypothèse de sens (WOLF).",
+  "justification": "La latéralité d'une main dite « his left » est celle de la figure : le cadre de référence n'est pas en jeu (AUDIT § 3.5, (3)), et la définition emploie la même tournure. Le type « apostle » vient du nom par l'instance de WordNet (implicite, BANCS § 4.1). La tenue est dite. Établie (NOYAU § 4.4). L'état de la peinture est de portée oeuvre et ne touche rien. Harmonisation : le cas de base, en anglais, dit les mots de la définition (St._Peter n'a qu'un sens, instance d'Apostle) : établie. La traduction française n'est établie que sous hypothèse de sens (WOLF). Rétablissement (28/11) : la variante d'origine où l'auteur se contredit (« holds no book ») revient, en #6 : sous hypothèse de sens (la négation d'un mot polysémique n'est que possible, NOYAU § 2), contradictoire avec le sens fixé.",
   "variantes": [
    {
     "variation": "paraphrase",
@@ -975,7 +970,8 @@
       "tous_les_sens": "etablie_sous_hypotheses",
       "sens_fixe_par_le_contexte": "etablie"
      }
-    }
+    },
+    "langue": "fr"
    },
    {
     "variation": "inversion_des_roles",
@@ -997,6 +993,22 @@
     "sorte": "positif",
     "statut_attendu": "etablie",
     "hypotheses_attendues": []
+   },
+   {
+    "variation": "composition",
+    "description": "Polychrome wooden statue, about 1500. St Peter stands barefoot; he holds the keys in his right hand and a closed book in his left. In his left hand St Peter holds no book.",
+    "sorte": "indetermine",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "decision_ouverte": {
+     "question": "« holds no book » : « hold » et « book » sont polysémiques, la négation n'est que possible ; elle ne contredit rien, mais la conclusion positive n'est plus établie que sous l'hypothèse qu'elle vise un autre sens (NOYAU § 2). Avec le sens fixé, la négation est certaine et le cas contradictoire.",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "contradictoire"
+     }
+    }
    },
    {
     "variation": "changement_de_portee",
@@ -1060,7 +1072,7 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "« De » a plusieurs sens de relation (AUDIT § 3.5, (3)). Sans restriction de sélection attestée (BANCS § 4.1 : elles doivent être écrites, avec leur source), la matière n'est établie que sous hypothèse de sens (D30 ; BANCS § 4.1, point 2). Côté définition, la relation implicite du composé n'est pas attestée (FONDEMENTS § 3.2 : le composé nominal n'est pas une propriété par la seule syntaxe ; § 2.7 : le défaut est relation inconnue) : equivalence_non_attestee. La lecture lexicalisée (crown_of_thorns) ne fait pas mieux : trois sens, et une glose seule. Statut le plus prudent : sous hypothèses. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « posée sur la tête » : « sur » n'est ni dans WordNet ni dans WOLF, et n'a aucun lien vers le « on » de la définition (D20). Inconnue, au lieu de sous hypothèses. La traduction anglaise (« on his head ») reste sous hypothèses : crown_of_thorns n'atteint crown que par un de ses trois sens, et le composé de la définition n'est pas attesté. Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « sur » est une relation de la lecture, sans polysémie qui compte ici : il ne bloque plus rien. Restent le « de » polysémique de « couronne d'épines » (la définition fixe la matière : hypothèse de sens), le composé non attesté de la définition, et les sens WOLF d'épine, de couronne et de tête. Sous hypothèses, et non plus inconnue.",
+  "justification": "« De » a plusieurs sens de relation (AUDIT § 3.5, (3)). Sans restriction de sélection attestée (BANCS § 4.1 : elles doivent être écrites, avec leur source), la matière n'est établie que sous hypothèse de sens (D30 ; BANCS § 4.1, point 2). Côté définition, la relation implicite du composé n'est pas attestée (FONDEMENTS § 3.2 : le composé nominal n'est pas une propriété par la seule syntaxe ; § 2.7 : le défaut est relation inconnue) : equivalence_non_attestee. La lecture lexicalisée (crown_of_thorns) ne fait pas mieux : trois sens, et une glose seule. Statut le plus prudent : sous hypothèses. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « posée sur la tête » : « sur » n'est ni dans WordNet ni dans WOLF, et n'a aucun lien vers le « on » de la définition (D20). Inconnue, au lieu de sous hypothèses. La traduction anglaise (« on his head ») reste sous hypothèses : crown_of_thorns n'atteint crown que par un de ses trois sens, et le composé de la définition n'est pas attesté. Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « sur » est une relation de la lecture, sans polysémie qui compte ici : il ne bloque plus rien. Restent le « de » polysémique de « couronne d'épines » (la définition fixe la matière : hypothèse de sens), le composé non attesté de la définition, et les sens WOLF d'épine, de couronne et de tête. Sous hypothèses, et non plus inconnue. Sous les deux options de sens, le statut est le même (sous hypothèses) : si le contexte fixe le « de » de matière et les sens WOLF, il reste l'équivalence non attestée du composé.",
   "variantes": [
    {
     "variation": "paraphrase",
@@ -1080,7 +1092,8 @@
     "hypotheses_attendues": [
      "sens",
      "equivalence_non_attestee"
-    ]
+    ],
+    "langue": "en"
    },
    {
     "variation": "changement_de_participant",
@@ -1113,14 +1126,7 @@
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "Le « de » de matière et les sens WOLF d'épine, de couronne et de tête sont-ils fixés par le contexte ? L'équivalence du composé reste supposée dans les deux options.",
-   "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie_sous_hypotheses"
-   }
-  }
+  ]
  },
  {
   "id": "ep-012",
@@ -1144,11 +1150,16 @@
   },
   "langue": "en",
   "sorte": "contre_modele",
-  "description": "Fresco fragment. Adam and Eve, the first couple, leave the garden, driven out by an angel with a raised sword. Each of them wears a garment of skins; they walk with bowed heads.",
-  "definition": "Adam and Eve each wearing a garment of fig leaves",
+  "description": "Fresco fragment. Adam and Eve leave the garden, driven out by an angel with a raised sword. The couple are clothed in garments of skins and walk with bowed heads.",
+  "definition": "Adam and Eve wearing garments of fig leaves",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "be clothed in X ⇔ wear X ; clothe et wear sont deux synsets, reliés par la seule glose de wear",
+    "attestee": false
+   },
    {
     "sorte": "implication",
     "contenu": "fig_leaf%1:20:00:: ⊑ leaf%1:20:00::",
@@ -1167,48 +1178,51 @@
   "extensions_requises": [
    "collection"
   ],
-  "justification": "Tout est satisfait (Adam, Ève, chacun portant un vêtement, dans les mots de la définition) sauf la matière : peaux au lieu de feuilles. Aucune incompatibilité attestée n'est admise (BANCS § 4.1, point 3), et le silence ne nie pas : inconnue. « The first couple » est une apposition qui nomme la collection (FONDEMENTS § 2.6). « Of » est le même mot des deux côtés : la relation de matière n'y demande pas de choix de sens. La variante qui nie les feuilles reste inconnue : « leaf » a trois sens, et la négation n'est que possible (D30 ; BANCS § 4.1, point 2).",
+  "justification": "Tout est satisfait (Adam, Ève, chacun portant un vêtement, dans les mots de la définition) sauf la matière : peaux au lieu de feuilles. Aucune incompatibilité attestée n'est admise (BANCS § 4.1, point 3), et le silence ne nie pas : inconnue. « The first couple » est une apposition qui nomme la collection (FONDEMENTS § 2.6). « Of » est le même mot des deux côtés : la relation de matière n'y demande pas de choix de sens. La variante qui nie les feuilles reste inconnue : « leaf » a trois sens, et la négation n'est que possible (D30 ; BANCS § 4.1, point 2). Rétablissement (28/11) : les textes et la définition d'origine reviennent (« clothed in garments of », « Adam and Eve wearing garments of fig leaves »). Aucun sens de clothe n'atteint wear (WordNet) : le lien ne passe que par l'équivalence non attestée. La variante aux feuilles est sous hypothèse equivalence_non_attestee ; la variante citée n'a plus de valeur vraie (aucun lien positif) : inconnue. Le cas n'a plus de variante de statut différent par la portée, la modalité, le temps ou l'inversion.",
   "variantes": [
    {
     "variation": "paraphrase",
-    "description": "Fresco fragment. Each wearing a garment of skins, Adam and Eve, the first couple, walk out of the garden with bowed heads, driven out by an angel with a raised sword.",
+    "description": "Fresco fragment. Clothed in garments of skins, the couple, Adam and Eve, walk out of the garden with bowed heads, driven out by an angel with a raised sword.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "traduction",
-    "description": "Fragment de fresque. Adam et Ève, le premier couple, quittent le jardin, chassés par un ange à l'épée levée. Chacun d'eux porte un vêtement de peau ; ils marchent tête basse.",
+    "description": "Fragment de fresque. Adam et Ève quittent le jardin, chassés par un ange à l'épée levée. Le couple, vêtu de tuniques de peau, marche tête basse.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_participant",
-    "description": "Fresco fragment. Adam and Eve, the first couple, leave the garden, driven out by an angel with a raised sword. Each of them wears a garment of fig leaves; they walk with bowed heads.",
+    "description": "Fresco fragment. Adam and Eve leave the garden, driven out by an angel with a raised sword. The couple are clothed in garments of fig leaves and walk with bowed heads.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "equivalence_non_attestee"
+    ]
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Fresco fragment. Adam and Eve, the first couple, leave the garden, driven out by an angel with a raised sword. Each of them wears a garment; the garments are not made of leaves but of skins.",
+    "description": "Fresco fragment. Adam and Eve leave the garden, driven out by an angel with a raised sword. The couple's garments are not made of leaves but of skins.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Fresco fragment. Adam and Eve, the first couple, leave the garden, driven out by an angel with a raised sword. Each of them wears a garment of skins. Behind them, a serpent coils around a tree.",
+    "description": "Fresco fragment. Adam and Eve leave the garden, driven out by an angel with a raised sword. The couple are clothed in garments of skins and walk with bowed heads. Behind them, a serpent coils around a tree.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
-    "description": "Fresco fragment. According to the old guidebook quoted on the label, the fresco shows Adam and Eve, the first couple, each wearing a garment of fig leaves as they leave the garden.",
+    "description": "Fresco fragment. According to the old guidebook quoted on the label, the fresco shows Adam and Eve leaving the garden, the couple clothed in garments of fig leaves.",
     "sorte": "indetermine",
-    "statut_attendu": "non_certifiee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ],
@@ -1242,12 +1256,10 @@
   },
   "langue": "en",
   "sorte": "positif",
-  "description": "Panel painting. At Herod's table, Salome holds a silver dish bearing the head of the Baptist, while Herodias looks on with satisfaction.",
+  "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing the head of the Baptist, while Herodias looks on with satisfaction.",
   "definition": "Salome holding a dish bearing the head of John the Baptist",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "identite"
-  ],
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "identite_documentaire",
@@ -1261,65 +1273,50 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Salomé tient le plat (« holds », le verbe de la définition). « Of » est le même mot des deux côtés. Le nom partiel n'est relié au nom complet par aucune ressource : l'alias n'est pas établi (NOYAU § 2), et une connaissance non attestée donne au mieux un statut sous hypothèse (FONDEMENTS § 2.7 ; BANCS § 4.1) : identite. La tête est une partie détachée ; le tout n'a pas à être figuré, et la définition ne le demande pas (FONDEMENTS § 2.4 et § 3.4). Harmonisation : la traduction française dit « la tête du Baptiste » : « de » n'a aucun lien vers « of » (D20), et « Baptiste » n'a dans WOLF que le sens baptist%1:18:00:: (follower of Baptistic doctrines). Inconnue. Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « de » et « of » sont la même relation de génitif ; la traduction française n'est plus inconnue, mais sous hypothèse d'identité (l'alias) et de sens (WOLF).",
+  "justification": "Salomé tient le plat (« holds », le verbe de la définition). « Of » est le même mot des deux côtés. Le nom partiel n'est relié au nom complet par aucune ressource : l'alias n'est pas établi (NOYAU § 2), et une connaissance non attestée donne au mieux un statut sous hypothèse (FONDEMENTS § 2.7 ; BANCS § 4.1) : identite. La tête est une partie détachée ; le tout n'a pas à être figuré, et la définition ne le demande pas (FONDEMENTS § 2.4 et § 3.4). Harmonisation : la traduction française dit « la tête du Baptiste » : « de » n'a aucun lien vers « of » (D20), et « Baptiste » n'a dans WOLF que le sens baptist%1:18:00:: (follower of Baptistic doctrines). Inconnue. Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « de » et « of » sont la même relation de génitif ; la traduction française n'est plus inconnue, mais sous hypothèse d'identité (l'alias) et de sens (WOLF). Rétablissement (28/11) : les textes d'origine reviennent (« holds out », « est held out », « présente »). Aucun des sens de hold_out (5) ni de présenter (61, WOLF) n'atteint hold : l'atome « holding » n'a aucun lien. Inconnue, pour le cas et toutes ses variantes ; le cas n'a plus de variante de statut différent.",
   "variantes": [
    {
     "variation": "paraphrase",
-    "description": "Panel painting. A silver dish bearing the head of the Baptist is held by Salome at Herod's table; Herodias looks on with satisfaction.",
+    "description": "Panel painting. A silver dish bearing the Baptist's head is held out by Salome at Herod's table; Herodias looks on with satisfaction.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "traduction",
-    "description": "Peinture sur panneau. À la table d'Hérode, Salomé tient un plat d'argent portant la tête du Baptiste, sous le regard satisfait d'Hérodiade.",
+    "description": "Peinture sur panneau. À la table d'Hérode, Salomé présente un plat d'argent portant la tête du Baptiste, sous le regard satisfait d'Hérodiade.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite",
-     "sens"
-    ],
-    "decision_ouverte": {
-     "question": "« tête », « tenir », « plat » n'atteignent leur lemme que par une partie de leurs sens WOLF : le contexte les fixe-t-il ? L'alias du Baptiste reste supposé.",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie_sous_hypotheses"
-     }
-    }
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_participant",
-    "description": "Panel painting. At Herod's table, Salome holds a silver dish bearing a sculpted head of the Baptist, while Herodias looks on with satisfaction.",
+    "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing a sculpted head of the Baptist, while Herodias looks on with satisfaction.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Panel painting. At Herod's table, Salome holds a silver dish bearing a head, probably that of the Baptist, while Herodias looks on.",
+    "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing a head, probably that of the Baptist, while Herodias looks on.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Panel painting. At Herod's table, Salome holds a silver dish bearing the head of the Baptist, while Herodias looks on with satisfaction. A dog sleeps under the table.",
+    "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing the head of the Baptist, while Herodias looks on with satisfaction. A dog sleeps under the table.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Panel painting. At Herod's table, Salome holds a silver dish bearing the head of the Baptist. No blood stains the white cloth.",
+    "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing the head of the Baptist. No blood stains the white cloth.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
   ]
  },
@@ -1341,7 +1338,7 @@
   "langue": "fr",
   "sorte": "indetermine",
   "description": "Relief en ivoire. Au sommet, la main de Dieu sort d'un nuage et bénit le martyr, que deux bourreaux lapident. Le fond est ajouré.",
-  "definition": "God blessing a martyr from the clouds",
+  "definition": "God the Father blessing a martyr from the clouds",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -1355,6 +1352,16 @@
     "sorte": "relation_inconnue",
     "contenu": "« la main de Dieu » : de se lit partie_de ; Dieu n'est pas un homo, et aucune ressource ne restreint « de » à partie_de ici",
     "attestee": false
+   },
+   {
+    "sorte": "hypothese_interpretative",
+    "contenu": "« Dieu », dans ce contexte iconographique, désigne Dieu le Père (God the Father) ; ni WordNet ni WOLF n'ont God the Father",
+    "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "« Dieu le Père » et « God the Father » sont deux noms du même individu ; aucune ressource consultable",
+    "attestee": false
    }
   ],
   "operations_requises": [
@@ -1363,7 +1370,7 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "« La main de Dieu » est une partie figurée seule : le tout est un autre référent (FONDEMENTS § 2.4), et une partie n'est pas son tout (FONDEMENTS § 3.4). Deux questions ne sont pas fixées : le tout d'une partie figurée est-il un référent présent dans le monde figuré (NOYAU § 1), et l'agent de « la main bénit » est-il le tout ? Sous l'option qui le fait présent, la lecture partie_de de « de » n'est elle-même pas attestée : ce serait au mieux un statut sous hypothèse de sens. On retient l'option la plus prudente, inconnue. La variante « Dieu lui-même n'est pas figuré » dépend de la même décision (écartée sous la première option, contradictoire sous la seconde) : elle est mise à inconnue. Harmonisation : « sort d'un nuage » est une source de l'événement (un rôle, sans mot de relation) ; mais « Dieu » et « bénir » ne sont reliés à god et bless que sous hypothèse de sens (WOLF). Correction de l'harmonisation, pour la variante citée : La valeur vraie vient d'un lien positif, même incertain : un lien partiel est un appui, l'hypothèse de sens ne porte que sur la certification (NOYAU § 2 et § 4.3). Une source citée n'est jamais certifiable : non_certifiee, sous les deux options.",
+  "justification": "« La main de Dieu » est une partie figurée seule : le tout est un autre référent (FONDEMENTS § 2.4), et une partie n'est pas son tout (FONDEMENTS § 3.4). Deux questions ne sont pas fixées : le tout d'une partie figurée est-il un référent présent dans le monde figuré (NOYAU § 1), et l'agent de « la main bénit » est-il le tout ? Sous l'option qui le fait présent, la lecture partie_de de « de » n'est elle-même pas attestée : ce serait au mieux un statut sous hypothèse de sens. On retient l'option la plus prudente, inconnue. La variante « Dieu lui-même n'est pas figuré » dépend de la même décision (écartée sous la première option, contradictoire sous la seconde) : elle est mise à inconnue. Harmonisation : « sort d'un nuage » est une source de l'événement (un rôle, sans mot de relation) ; mais « Dieu » et « bénir » ne sont reliés à god et bless que sous hypothèse de sens (WOLF). Correction de l'harmonisation, pour la variante citée : La valeur vraie vient d'un lien positif, même incertain : un lien partiel est un appui, l'hypothèse de sens ne porte que sur la certification (NOYAU § 2 et § 4.3). Une source citée n'est jamais certifiable : non_certifiee, sous les deux options. Rétablissement (28/11) : la définition d'origine (« God the Father ») et la variante « Dieu le Père, en buste » reviennent. Le nom n'est relié à God the Father que par un alias non attesté : la variante est sous hypothèses d'identité et de sens ; la notice citée (« Dieu bénissant ») n'a plus de valeur vraie : inconnue. Le cas n'a plus de variante de statut différent par la portée, la modalité, le temps ou l'inversion. Variante #4 : avec ou sans le sens de « bénir » fixé, le statut est le même (sous hypothèses), l'alias Dieu le Père / God the Father restant supposé.",
   "decision_ouverte": {
    "question": "Le tout d'une partie figurée seule (la main de Dieu sortant d'un nuage) est-il un référent figuré présent, et reçoit-il le rôle d'agent de l'événement dont la partie est le sujet ?",
    "statut_selon_l_option": {
@@ -1384,7 +1391,8 @@
     "description": "Ivory relief. At the top, the hand of God emerges from a cloud and blesses the martyr, who is being stoned by two executioners. The background is pierced.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_modalite",
@@ -1395,19 +1403,13 @@
    },
    {
     "variation": "changement_de_participant",
-    "description": "Relief en ivoire. Au sommet, Dieu, en buste, sort d'un nuage et bénit le martyr, que deux bourreaux lapident. Le fond est ajouré.",
+    "description": "Relief en ivoire. Au sommet, Dieu le Père, en buste, sort d'un nuage et bénit le martyr, que deux bourreaux lapident. Le fond est ajouré.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
+     "identite",
      "sens"
-    ],
-    "decision_ouverte": {
-     "question": "« Dieu » (7 sens WOLF, dont divinity et theology) et « bénir » (dont ordain) n'atteignent god et bless que par une partie de leurs sens : le contexte les fixe-t-il ?",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie"
-     }
-    }
+    ]
    },
    {
     "variation": "ajout_figure_non_liee",
@@ -1427,7 +1429,7 @@
     "variation": "changement_de_portee",
     "description": "Relief en ivoire. Selon la notice ancienne que cite le catalogue, le relief montre Dieu bénissant le martyr depuis un nuage, au sommet ; deux bourreaux lapident le martyr.",
     "sorte": "indetermine",
-    "statut_attendu": "non_certifiee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ]
@@ -1459,16 +1461,19 @@
   },
   "langue": "fr",
   "sorte": "positif",
-  "description": "Miniature d'une bible moralisée. Goliath, le géant philistin, gît à terre, le front ouvert par la pierre. David, debout sur son corps, le décapite avec l'épée du géant. Les Philistins s'enfuient à l'arrière-plan.",
-  "definition": "David beheading Goliath with Goliath's own sword",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "sens"
-  ],
+  "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre. David, debout sur le corps du géant, lui tranche la tête avec l'épée de Goliath. Les Philistins s'enfuient à l'arrière-plan.",
+  "definition": "David cutting off Goliath's head with Goliath's own sword",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "relation_inconnue",
-    "contenu": "« de » (l'épée du géant) peut se lire possession, partie, matière ou représentation ; la définition (« own ») demande la possession ; aucune restriction de sélection attestée n'exclut les autres sens",
+    "contenu": "« de » (l'épée de Goliath) peut se lire possession, partie, matière ou représentation ; la définition (« own ») demande la possession",
+    "attestee": false
+   },
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "« le géant » pourrait reprendre Goliath ; WordNet fait de Goliath une instance de warrior, non de giant (goliath%1:18:00:: @i warrior) : rien ne fonde la reprise",
     "attestee": false
    }
   ],
@@ -1478,69 +1483,57 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "« Le géant » reprend l'apposition « Goliath, le géant philistin » (coréférence par apposition et reprise du même nom, NOYAU § 1). « Décapiter » est behead. Mais « de » a plusieurs sens de relation (AUDIT § 3.5) et aucune restriction de sélection attestée ne réduit « l'épée du géant » à la possession (BANCS § 4.1) : avec tous les sens, la possession n'est établie que sous hypothèse de sens ; avec le sens fixé par le contexte, établie. Statut le plus prudent : sous hypothèse. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « l'épée du géant » : « de » (du) n'a aucun lien vers le « 's » de la définition (D20) : inconnue, au lieu de sous hypothèse de sens. La traduction anglaise dit « the giant's sword » : le même mot de relation que la définition, et la reprise par l'apposition : établie (remontée). La variante qui nie la décapitation est écartée : « décapiter » n'a dans WOLF qu'un sens, celui de behead%2:35:00::, qui n'en a qu'un : la négation de l'événement, avec ses rôles, est certaine (NOYAU § 1.1 et § 2). Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « l'épée du géant » : le « de » est une relation de la lecture, polysémique ; « Goliath's own sword » fixe la possession. L'atome dépend de la lecture : hypothèse de sens, et non plus inconnue. Les mots lexicaux (David, Goliath, décapiter, épée) sont certains par WOLF. La traduction anglaise (« the giant's sword ») a le même génitif polysémique : elle redescend d'établie à sous hypothèse de sens.",
+  "justification": "« Le géant » reprend l'apposition « Goliath, le géant philistin » (coréférence par apposition et reprise du même nom, NOYAU § 1). « Décapiter » est behead. Mais « de » a plusieurs sens de relation (AUDIT § 3.5) et aucune restriction de sélection attestée ne réduit « l'épée du géant » à la possession (BANCS § 4.1) : avec tous les sens, la possession n'est établie que sous hypothèse de sens ; avec le sens fixé par le contexte, établie. Statut le plus prudent : sous hypothèse. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « l'épée du géant » : « de » (du) n'a aucun lien vers le « 's » de la définition (D20) : inconnue, au lieu de sous hypothèse de sens. La traduction anglaise dit « the giant's sword » : le même mot de relation que la définition, et la reprise par l'apposition : établie (remontée). Rétablissement (28/11) : la variante écartée ajoutée à l'harmonisation sur un mot à un seul sens est retirée (DECISIONS_PHASE1 § 3.3). Rétablissement (28/11) : les textes et la définition d'origine reviennent (« debout sur le corps du géant, lui tranche la tête avec l'épée de Goliath », « cutting off Goliath's head »). L'inclusion fausse Goliath ⊑ géant reste retirée de K : la reprise « le géant » n'est pas fondée, et la tête coupée n'est pas établie comme celle de Goliath. Inconnue pour le cas et ses variantes ; le cas n'a plus de variante de statut différent.",
   "variantes": [
    {
     "variation": "paraphrase",
-    "description": "Miniature d'une bible moralisée. Le front ouvert par la pierre, Goliath, le géant philistin, gît à terre ; c'est avec l'épée du géant que David, debout sur son corps, le décapite. Les Philistins s'enfuient.",
+    "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre ; debout sur le corps du géant, David lui tranche la tête avec l'épée qui appartient à Goliath. Les Philistins s'enfuient.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "traduction",
-    "description": "Miniature from a moralised Bible. Goliath, the Philistine giant, lies on the ground, his forehead split by the stone. Standing on his body, David beheads him with the giant's sword. The Philistines flee in the background.",
+    "description": "Miniature from a moralised Bible. Goliath lies on the ground, his forehead split by the stone. Standing on the giant's body, David cuts off his head with Goliath's own sword. The Philistines flee in the background.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_participant",
-    "description": "Miniature d'une bible moralisée. Goliath, le géant philistin, gît à terre, le front ouvert par la pierre. David, debout sur son corps, le décapite avec sa propre épée. Les Philistins s'enfuient à l'arrière-plan.",
+    "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre. David, debout sur le corps du géant, lui tranche la tête avec sa propre épée. Les Philistins s'enfuient à l'arrière-plan.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "inversion_des_roles",
-    "description": "Miniature d'une bible moralisée. David gît à terre. Goliath, le géant philistin, debout sur son corps, le décapite avec l'épée de David.",
+    "description": "Miniature d'une bible moralisée. David gît à terre. Goliath, debout sur son corps, lui tranche la tête avec l'épée de David.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Miniature d'une bible moralisée. Goliath, le géant philistin, gît à terre, le front ouvert par la pierre. David, debout sur son corps, lève l'épée du géant et s'apprête à le décapiter.",
+    "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre. David, debout sur le corps du géant, lève l'épée de Goliath et s'apprête à lui trancher la tête.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Miniature d'une bible moralisée. Goliath, le géant philistin, gît à terre, le front ouvert par la pierre. David, debout sur son corps, le décapite avec l'épée du géant. Le roi Saül observe la scène depuis une colline.",
+    "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre. David, debout sur le corps du géant, lui tranche la tête avec l'épée de Goliath. Le roi Saül observe la scène depuis une colline.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
-   },
-   {
-    "variation": "changement_de_modalite",
-    "description": "Miniature d'une bible moralisée. Goliath, le géant philistin, gît à terre, le front ouvert par la pierre. David, debout sur son corps, ne le décapite pas : il brandit l'épée du géant vers les Philistins qui s'enfuient.",
-    "sorte": "negatif",
-    "statut_attendu": "ecartee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "La lecture possession de « de » (l'épée du géant) est-elle fixée par le contexte ?",
+   "question": "« Le géant » (et « lui ») reprennent-ils Goliath ? Sans connaissance qui fasse de Goliath un géant, la coréférence n'est que possible (NOYAU § 1, C9). Si la lecture la résolvait, il resterait les hypothèses de sens : trancher (1 sens WOLF sur 37 atteint cut_off), tête, et le « de » de possession.",
    "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie"
+    "coréférence seulement possible": "inconnue",
+    "coréférence résolue par la lecture": "etablie_sous_hypotheses"
    }
   }
  },
@@ -1597,7 +1590,8 @@
     "description": "Scène de genre. Dans une rue de village, une paysanne s'incline pour baiser l'anneau du vieil évêque, qui lève son autre main pour bénir son enfant.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_participant",
@@ -1658,13 +1652,17 @@
   },
   "langue": "fr",
   "sorte": "positif",
-  "description": "Panneau de prédelle. Dans un même paysage, Samson est figuré deux fois. Il tue le lion à mains nues avant de prendre du miel dans sa carcasse : la mise à mort occupe la gauche du panneau, la récolte du miel la droite.",
-  "definition": "Samson killing a lion before taking honey from its carcass",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "sens"
+  "description": "Panneau de prédelle. Dans un même paysage fluvial, Tobie est figuré deux fois : à gauche, il saisit le poisson au bord de l'eau avant de le vider, à droite, sous le regard de l'ange Raphaël.",
+  "definition": "Tobias seizing the fish before gutting it",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "« Tobie » et « Tobias » sont deux noms du même individu ; ni WordNet ni WOLF ne les donnent",
+    "attestee": false
+   }
   ],
-  "connaissances_supposees": [],
   "operations_requises": [
    "lecture"
   ],
@@ -1673,60 +1671,57 @@
    "identite_entre_situations",
    "situation_referent"
   ],
-  "justification": "La précédence entre les deux événements est dite par « avant de » ; elle ne s'écrit que par une relation entre éventualités (AUDIT § 3.5, (4)). Les deux événements sont figurés dans deux situations d'un même espace, et les deux figures sont le même individu, sans fusion (ONTOLOGIE_EVENTUALITES § 3 ; FONDEMENTS § 2.3). Le nom est le même dans les deux langues (samson%1:18:00::) : aucun alias n'est requis. Tout est dit par l'auteur : établie, une fois ces extensions données. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « tuer » (die), « lion » (capricorn…), « prendre » et « avant » (ahead, above…) n'atteignent kill, lion, take et before que par une partie de leurs sens WOLF. « Dans sa carcasse » est la source de l'événement (un rôle). Sous hypothèse de sens ; la traduction anglaise, mêmes mots, est établie.",
+  "justification": "La précédence entre les deux événements est dite par « avant de » ; elle ne s'écrit que par une relation entre éventualités (AUDIT § 3.5, (4)). Les deux événements sont figurés dans deux situations d'un même espace, et les deux figures sont le même individu (ONTOLOGIE_EVENTUALITES § 3 ; FONDEMENTS § 2.3). Rétablissement (28/11) : Tobie revient à la place de Samson (DECISIONS_PHASE1 § 3.3), avec les textes d'origine. « Vider » n'atteint pas gut (WOLF : un seul sens, consume) : inconnue. L'alias Tobie / Tobias n'est pas attesté. La traduction anglaise (Tobias, seizes, gutting, before : les mots de la définition) est établie. Le cas n'a plus de variante de statut différent par la portée, la modalité, le temps ou l'inversion.",
   "variantes": [
    {
     "variation": "paraphrase",
-    "description": "Panneau de prédelle. Samson apparaît deux fois dans le même paysage : avant de prendre du miel dans la carcasse du lion, à droite, il tue la bête à mains nues, à gauche.",
+    "description": "Panneau de prédelle. Tobie apparaît deux fois dans le même paysage fluvial : avant de vider le poisson, à droite, sous le regard de l'ange Raphaël, il le saisit, à gauche, au bord de l'eau.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
-   },
-   {
-    "variation": "traduction",
-    "description": "Predella panel. Samson is shown twice in a single landscape. He kills the lion with his bare hands before taking honey from its carcass: the killing fills the left of the panel, the gathering of the honey the right.",
-    "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
+    "variation": "traduction",
+    "description": "Predella panel. In a single river landscape Tobias is shown twice: on the left he seizes the fish at the water's edge before gutting it, on the right, watched by the angel Raphael.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
     "variation": "inversion_des_roles",
-    "description": "Panneau de prédelle. Dans un même paysage, Samson est figuré deux fois. Il prend du miel dans la carcasse du lion avant de tuer la bête : la récolte occupe la gauche du panneau, la mise à mort la droite.",
+    "description": "Panneau de prédelle. Dans un même paysage fluvial, Tobie est figuré deux fois : à gauche, il vide le poisson avant de le saisir, à droite, au bord de l'eau, sous le regard de l'ange Raphaël.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Panneau de prédelle. Samson tue le lion à mains nues ; il prendra plus tard du miel dans sa carcasse, sur le chemin de Timna.",
+    "description": "Panneau de prédelle. Au bord du fleuve, Tobie saisit le poisson sous le regard de l'ange Raphaël ; il le videra plus tard, sur la route.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
-    "description": "Panneau de prédelle. Selon le livre des Juges, Samson tua le lion avant de prendre du miel dans sa carcasse ; le panneau ne montre que la mise à mort.",
+    "description": "Panneau de prédelle. Selon le livre de Tobie, le jeune homme saisit le poisson avant de le vider ; le panneau ne montre que la capture, au bord du fleuve, sous le regard de l'ange Raphaël.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Panneau de prédelle. Dans un même paysage, Samson est figuré deux fois. Il tue le lion à mains nues avant de prendre du miel dans sa carcasse : la mise à mort occupe la gauche, la récolte la droite. Un essaim d'abeilles tourne au-dessus de la carcasse.",
+    "description": "Panneau de prédelle. Dans un même paysage fluvial, Tobie est figuré deux fois : à gauche, il saisit le poisson au bord de l'eau avant de le vider, à droite, sous le regard de l'ange Raphaël. Un chien suit l'ange.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "Le contexte fixe-t-il les sens de tuer, lion, prendre et avant ?",
+   "question": "« vider » n'a dans WOLF qu'un sens (consume, eat_up), qui n'atteint pas gut : l'atome « gutting » n'a aucun lien. S'il en avait un, resteraient l'alias Tobie / Tobias (non attesté) et les sens de saisir, poisson, avant.",
    "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie"
+    "tous_les_sens, sans lien pour vider": "inconnue",
+    "vider relié à gut": "etablie_sous_hypotheses"
    }
   }
  },
@@ -1785,7 +1780,8 @@
     "description": "Chapiteau roman sculpté sur deux registres. Au registre supérieur, Caïn tue Abel avec une massue ; au registre inférieur, Caïn et Abel offrent leurs sacrifices, un agneau et une gerbe de blé.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_temps",
@@ -1863,7 +1859,7 @@
    "relation_entre_eventualites",
    "evenement_participant"
   ],
-  "justification": "La définition fait d'une éventualité le but d'une autre : cela ne s'écrit que par une relation entre éventualités (AUDIT § 3.5, (4), fréquence de la cause et du but), et l'éventualité visée (voir le Christ) est sous le contexte du but, non affirmée de la scène (AUDIT § 3.3, (4) : un événement comme participant, avec son contexte ; FONDEMENTS § 2.5). Le texte dit exactement cette configuration : établie, ces extensions données. Une finalité qui n'est dite que par la source n'établit rien pour la figure (variante de portée). Harmonisation : la traduction française dit « pour voir » : « pour » n'est ni dans WordNet ni dans WOLF, et n'a aucun lien vers « in order to » : inconnue. Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « pour » (le but) est une relation de la lecture. La traduction française n'est plus inconnue : grimper et sycomore sont certains par WOLF, « voir » ne l'est pas, et l'alias Zachée / Zacchaeus n'est pas attesté.",
+  "justification": "La définition fait d'une éventualité le but d'une autre : cela ne s'écrit que par une relation entre éventualités (AUDIT § 3.5, (4), fréquence de la cause et du but), et l'éventualité visée (voir le Christ) est sous le contexte du but, non affirmée de la scène (AUDIT § 3.3, (4) : un événement comme participant, avec son contexte ; FONDEMENTS § 2.5). Le texte dit exactement cette configuration : établie, ces extensions données. Une finalité qui n'est dite que par la source n'établit rien pour la figure (variante de portée). Harmonisation : la traduction française dit « pour voir » : « pour » n'est ni dans WordNet ni dans WOLF, et n'a aucun lien vers « in order to » : inconnue. Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « pour » (le but) est une relation de la lecture. La traduction française n'est plus inconnue : grimper et sycomore sont certains par WOLF, « voir » ne l'est pas, et l'alias Zachée / Zacchaeus n'est pas attesté. Variante #2 : avec ou sans le sens de « voir » fixé, le statut est le même (sous hypothèses), l'alias Zachée / Zacchaeus restant supposé.",
   "variantes": [
    {
     "variation": "paraphrase",
@@ -1881,13 +1877,7 @@
      "identite",
      "sens"
     ],
-    "decision_ouverte": {
-     "question": "« voir » (WOLF, 25 sens sur 34) est-il fixé par le contexte ? L'alias Zachée / Zacchaeus reste supposé.",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie_sous_hypotheses"
-     }
-    }
+    "langue": "fr"
    },
    {
     "variation": "changement_de_portee",
@@ -1980,7 +1970,8 @@
     "description": "Stained-glass window. Moses, standing before the rock, raises his staff in order to strike it; behind him the thirsty people wait, holding their empty jugs.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_temps",
@@ -2075,7 +2066,8 @@
     "description": "Eau-forte pour une chronique urbaine. Sur la tour, le guetteur allume le feu d'alarme avec sa torche. Selon le chroniqueur cité sur le cartel, il le fait pour avertir la ville de l'approche de la flotte. Aucun navire n'est visible à l'horizon.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_portee",
@@ -2143,7 +2135,7 @@
    "relation_entre_eventualites",
    "etat_reifie"
   ],
-  "justification": "La simultanéité entre l'événement et l'état est dite par « pendant que » ; elle ne s'écrit que par une relation entre éventualités (AUDIT § 3.5, (4) ; ONTOLOGIE_EVENTUALITES § 2). Le sommeil est une éventualité réifiée (FONDEMENTS § 2.2). Mais le texte dit « sort du tombeau », la définition « rising » : le passage est une identification interprétative (FONDEMENTS § 2.7), qui ne donne qu'un statut sous hypothèse. La traduction dit « comes out of the tomb », pour garder le même besoin de K. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « pendant que » (et « tandis que ») n'est ni dans WordNet ni dans WOLF : aucun lien vers le « while » de la définition (D20), et la relation de simultanéité n'a pas d'appui. Inconnue. La traduction anglaise (« while ») reste sous hypothèse interprétative. La variante « aucun tombeau n'est figuré » est écartée : « tombeau » n'a dans WOLF qu'un sens, tomb%1:06:00::, et tomb n'en a qu'un : la négation de l'entité nue est certaine (NOYAU § 1.1 et § 2). Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « pendant que » est une relation temporelle de la lecture : il ne bloque plus rien. Restent l'identification interprétative (sortir du tombeau, rise) et « soldat » (WOLF : 2 sens sur 3 atteignent soldier). Sous hypothèses, et non plus inconnue.",
+  "justification": "La simultanéité entre l'événement et l'état est dite par « pendant que » ; elle ne s'écrit que par une relation entre éventualités (AUDIT § 3.5, (4) ; ONTOLOGIE_EVENTUALITES § 2). Le sommeil est une éventualité réifiée (FONDEMENTS § 2.2). Mais le texte dit « sort du tombeau », la définition « rising » : le passage est une identification interprétative (FONDEMENTS § 2.7), qui ne donne qu'un statut sous hypothèse. La traduction dit « comes out of the tomb », pour garder le même besoin de K. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « pendant que » (et « tandis que ») n'est ni dans WordNet ni dans WOLF : aucun lien vers le « while » de la définition (D20), et la relation de simultanéité n'a pas d'appui. Inconnue. La traduction anglaise (« while ») reste sous hypothèse interprétative. Rétablissement (28/11) : la variante écartée ajoutée à l'harmonisation sur un mot à un seul sens est retirée (DECISIONS_PHASE1 § 3.3). Sous les deux options de sens (soldat), le statut est le même (sous hypothèses) : l'hypothèse interprétative reste.",
   "variantes": [
    {
     "variation": "paraphrase",
@@ -2162,7 +2154,8 @@
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "hypothese_interpretative"
-    ]
+    ],
+    "langue": "en"
    },
    {
     "variation": "changement_de_temps",
@@ -2194,22 +2187,8 @@
      "sens",
      "hypothese_interpretative"
     ]
-   },
-   {
-    "variation": "changement_de_modalite",
-    "description": "Retable peint. Le Christ apparaît debout, l'étendard à la main, pendant que les soldats dorment, appuyés sur leurs lances. Aucun tombeau n'est figuré.",
-    "sorte": "negatif",
-    "statut_attendu": "ecartee",
-    "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "« soldat » est-il fixé par le contexte (non le sens troop) ? L'hypothèse interprétative reste dans les deux options.",
-   "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie_sous_hypotheses"
-   }
-  }
+  ]
  },
  {
   "id": "ep-023",
@@ -2258,7 +2237,8 @@
     "description": "Enluminure. Dans la cour du grand prêtre, Pierre se chauffe les mains au brasero et renie le Christ devant une servante. Le coq perché sur le mur ne chante pas.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_modalite",
@@ -2356,7 +2336,8 @@
     "description": "Peinture sur panneau. Dans la maison du pharisien, une femme agenouillée aux pieds du Christ les essuie avec ses cheveux. Elle ne les lave pas de ses larmes : le bassin posé près d'elle est vide.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_modalite",

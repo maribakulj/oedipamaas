@@ -188,3 +188,67 @@ Les pas lexicaux qu'elles évitaient sont gardés, avec leur statut prudent. Qua
 Le seul cas de base anglais établi est ee-007. Tous les cas de base français positifs sont sous hypothèse de sens, la polysémie de WOLF étant large pour les mots courants (homme, femme, tenir, porter, donner).
 
 **Une question qui reste, et qui pèse sur la mesure : la traduction n'est plus invariante.** Avec WOLF, la traduction d'un cas anglais établi est souvent `etablie_sous_hypotheses` (ee-007#1), parfois `inconnue` (ee-011#1, faute d'un lien laboureur → ploughman), et celle d'un cas français est souvent `etablie` (ee-002#1, ee-008#1, ee-014#1, ee-016#1, ee-022#1). La relation métamorphique « traduction : même statut » (QUALIFICATION § 2.2) est donc violée par la sémantique cible elle-même, et non par le moteur. Il faudrait la redéfinir relativement à K et à WOLF, ou ne mesurer que l'invariance sous le régime `sens_fixe_par_le_contexte`.
+
+## 5. Rétablissement (28/11)
+
+**La décision de la propriétaire** : rétablir les textes et les définitions modifiés pour éviter une lacune de WOLF ou de WordNet. Ces lacunes font partie de ce que le banc mesure.
+- Les statuts sont recalculés selon la règle actuelle (BANCS_PHASE1 § 4.1, 2, avec les sens WOLF de `sens_fr.py`). C'est le statut démontrable relativement à K, et je n'ai cherché à en remonter aucun.
+- La version d'avant ce rétablissement est gardée dans le scratchpad (`v3_avant_retablissement.json`).
+
+**Ce qui n'est pas rétabli, parce que c'étaient des corrections de fond demandées par la relecture :**
+- ee-006#2 : la paraphrase garde « who is in a rage » (une incohérence de statut) ;
+- ee-005#2 : la paraphrase garde « qui a peur » au lieu d'« effrayé », pour la même raison ;
+- ee-009#5 : la description réécrite pour la plausibilité ;
+- ee-013#3 : « to the walled town » reste ; « towards » ne réalisait pas le terme ;
+- ee-015#3 : « before Perseus » reste ; il manquait l'appui d'un atome (sûreté) ;
+- ee-020#3 : la variante réécrite pour réaliser sa variation reste ;
+- les connaissances retirées ou passées à `attestee: false` restent ainsi.
+
+Les six définitions réécrites (ee-001, ee-004, ee-010, ee-017, ee-018, ee-019) avaient déjà été rétablies à l'harmonisation (§ 4).
+
+**Les éléments rétablis et leurs statuts :**
+
+| élément | ce qui revient | statut avant → après |
+|---|---|---|
+| ee-002 (base et variantes) | « tend », « hands » (et non « donne », « gives ») | #1 : `etablie` → `etablie_sous_hypotheses` [`sens`] (hand : un sens sur deux vers give). Les autres statuts sont inchangés. |
+| ee-003 (base et variantes) | « surrounded by his courtiers », « a curtained bed » ; la paraphrase de la version 1 | #3 : `etablie` → `inconnue`. « Surround » n'atteint pas la relation « around », et le lit n'est pas dit le sien. |
+| ee-004 (base et variantes) | « The giant hunter », « Le chasseur géant », « His bow » | base, #1, #2, #3, #6 : `etablie_sous_hypotheses` → `inconnue`. La tête « hunter » (« chasseur ») n'atteint pas « giant ». **Dans le doute :** c'était un écart de composition plus qu'une lacune de WOLF ; je rétablis et je le dis. |
+| ee-005 (base et variantes) | « au bord d'un fleuve », « surgit de l'eau et se jette vers lui », « at him » | base, #1, #2, #7 : `etablie_sous_hypotheses` → `inconnue`. Ni « bord » → riverbank, ni « surgir » ou « se jeter » → leap n'ont de lien. |
+| ee-008#2 | « se prépare à immoler » | inchangé (`etablie_sous_hypotheses`) ; « immoler » est certain. |
+| ee-010 (base, #2 à #7) | « bourreaux », « Deux bourreaux flagellent » | base, #2, #7 : `etablie_sous_hypotheses` → `inconnue` (« bourreau » n'atteint pas torturer). #3 (« un seul bourreau ») : `ecartee` → `inconnue`, le référent n'étant ancré par aucun atome. |
+| ee-011 (base et variantes) | le texte sans « landscape » ni « at work » | base, #2, #7 : `etablie_sous_hypotheses` → `inconnue` ; #3 : `etablie` → `inconnue`. **Dans le doute**, comme pour ee-004. |
+| ee-013#3 | « walk with a stranger » (et non « accompanied by ») | `etablie` → `inconnue`. Par contrecoup, #8 (source citée) : `non_certifiee` → `inconnue`. |
+| ee-016#1 | « Gaulish » | `etablie` → `inconnue` (absent de WordNet 3.0). |
+| ee-018 (base et variantes) | « Behind them », « Derrière eux », la paraphrase « stands in front of the ruins » | #2 : `etablie_sous_hypotheses` → `inconnue` (« carries » n'est plus dit). Les autres statuts sont inchangés. |
+| ee-019 (base et variantes) | « s'adresse à », « addresses » | #3 : `etablie_sous_hypotheses` → `inconnue` (« s'adresser » n'atteint pas speak dans WOLF). |
+| ee-020#3 | « sits » (et non « is seated ») | `etablie` → `inconnue` (sit → seated : aucun lien). |
+| ee-023 (base et variantes) | « hands », « tendant » | #3 : `etablie` → `etablie_sous_hypotheses` [`sens`]. |
+
+**Le bilan : 26 statuts changés, tous plus faibles**, dont 6 cas de base (ee-004, ee-005, ee-010, ee-011 : de `etablie_sous_hypotheses` à `inconnue`).
+
+**Les cas de base par statut, après :**
+
+| statut | cas |
+|---|---|
+| `inconnue` | 14 |
+| `etablie_sous_hypotheses` | 8 |
+| `etablie` | 1 (ee-007) |
+| `non_certifiee` | 1 (ee-021) |
+
+**Les cas qui perdent leur variante de statut différent** (point 4 de la consigne : noté, rien de réécrit) :
+- **plus aucune variante de statut différent :** ee-003, ee-004, ee-005, ee-011, ee-019, ee-020 ;
+- **ee-010 et ee-013** n'ont plus de variante de portée, de modalité, de temps ou d'inversion qui diffère. Il ne leur reste qu'une traduction (ee-010#1, `etablie_sous_hypotheses`) ou un changement de participant (ee-013#5, `ecartee`).
+
+Le validateur compte ces 8 cas comme « exigences non remplies ». Ce ne sont pas des erreurs, et je ne les ai pas contournées.
+
+**Deux mises en forme demandées par le validateur, sans effet sur les statuts :**
+- chaque variante de traduction déclare sa `langue` ;
+- les deux `decision_ouverte` dont les options donnaient le même statut sont retirées : ee-001#3 et ee-002#4, deux incompatibilités qui restent `inconnue` même admises, l'événement demandé étant antérieur.
+
+Il reste 9 `decision_ouverte` sur des cas de base et 17 sur des variantes.
+
+**La sortie du validateur :**
+```
+24 cas de base, 157 variantes, 0 erreurs, 8 exigences non remplies
+  evenements_etats : 24 cas, composés ≥2 : 21, ≥3 : 9
+```

@@ -63,7 +63,8 @@
     "hypotheses_attendues": [
      "equivalence_non_attestee",
      "sens"
-    ]
+    ],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -85,14 +86,7 @@
      "etat_reifie",
      "relation_entre_eventualites",
      "ancrage_temporel"
-    ],
-    "decision_ouverte": {
-     "question": "Incompatibilité éveillé / endormi (« s'est réveillé ») : BANCS_PHASE1 § 4.1, 3. Même admise, la coupe serait antérieure.",
-     "statut_selon_l_option": {
-      "sans incompatibilité attestée": "inconnue",
-      "incompatibilité attestée": "inconnue"
-     }
-    }
+    ]
    },
    {
     "variation": "changement_de_modalite",
@@ -152,7 +146,7 @@
   },
   "langue": "fr",
   "sorte": "positif",
-  "description": "Vitrail, deuxième quart du XVIe siècle, baie sud du chœur. Un cavalier en armure, monté sur un cheval blanc, donne son manteau rouge à un mendiant nu, assis au bord du chemin. Le paysage se réduit à quelques arbres. La bordure porte les armoiries du donateur.",
+  "description": "Vitrail, deuxième quart du XVIe siècle, baie sud du chœur. Un cavalier en armure, monté sur un cheval blanc, tend son manteau rouge à un mendiant nu, assis au bord du chemin. Le paysage se réduit à quelques arbres. La bordure porte les armoiries du donateur.",
   "definition": "a horseman giving his cloak to a naked beggar",
   "statut_attendu": "etablie_sous_hypotheses",
   "hypotheses_attendues": [
@@ -165,18 +159,28 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "« Nu » est un état d'un stade, porté par le mendiant (ONTOLOGIE_EVENTUALITES § 1, § 1.1) ; « donne » donne au mendiant le rôle de destinataire. Chaque mot de la définition est un type lemme ; les mots français du texte n'y vont que par une partie de leurs sens WOLF : hypothèse de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). La traduction anglaise emploie les mêmes lemmes que la définition : établie.",
+  "justification": "« Nu » est un état d'un stade, porté par le mendiant (ONTOLOGIE_EVENTUALITES § 1, § 1.1) ; « donne » donne au mendiant le rôle de destinataire. Chaque mot de la définition est un type lemme ; les mots français du texte n'y vont que par une partie de leurs sens WOLF : hypothèse de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). La traduction anglaise emploie les mêmes lemmes que la définition : établie. Rétablissement (28/11) : le texte de la version 1 revient (« tend », « hands »). « Tendre » n'atteint give que par un sens WOLF sur neuf, « hand » par un sens sur deux : hypothèse de sens. La traduction passe d'établie à sous hypothèse.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Stained-glass window, second quarter of the sixteenth century, south bay of the choir. A horseman in armour, mounted on a white horse, gives his red cloak to a naked beggar sitting by the roadside. The landscape is reduced to a few trees. The border bears the donor's arms.",
+    "description": "Stained-glass window, second quarter of the sixteenth century, south bay of the choir. A horseman in armour, mounted on a white horse, hands his red cloak to a naked beggar sitting by the roadside. The landscape is reduced to a few trees. The border bears the donor's arms.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "decision_ouverte": {
+     "question": "« Hands » : hand%2:40:00:: est dans un synset qui contient give, hand%2:38:00:: (« guide ») non : le contexte fixe-t-il le sens ?",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    },
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
-    "description": "Vitrail, deuxième quart du XVIe siècle. À un mendiant qui est nu et assis au bord du chemin, un cavalier en armure, monté sur un cheval blanc, donne son manteau rouge.",
+    "description": "Vitrail, deuxième quart du XVIe siècle. À un mendiant qui est nu et assis au bord du chemin, un cavalier en armure, monté sur un cheval blanc, tend son manteau rouge.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
@@ -185,7 +189,7 @@
    },
    {
     "variation": "inversion_des_roles",
-    "description": "Vitrail, deuxième quart du XVIe siècle. Un mendiant nu, assis au bord du chemin, donne un manteau rouge à un cavalier en armure monté sur un cheval blanc.",
+    "description": "Vitrail, deuxième quart du XVIe siècle. Un mendiant nu, assis au bord du chemin, tend un manteau rouge à un cavalier en armure monté sur un cheval blanc.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
@@ -198,18 +202,11 @@
     "hypotheses_attendues": [],
     "extensions_requises": [
      "ancrage_temporel"
-    ],
-    "decision_ouverte": {
-     "question": "Incompatibilité vêtu / nu (« désormais vêtu ») : BANCS_PHASE1 § 4.1, 3. Même admise, le don serait antérieur.",
-     "statut_selon_l_option": {
-      "sans incompatibilité attestée": "inconnue",
-      "incompatibilité attestée": "inconnue"
-     }
-    }
+    ]
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Vitrail, deuxième quart du XVIe siècle. Un cavalier en armure donne son manteau rouge à un mendiant assis au bord du chemin ; le mendiant n'est pas nu, mais couvert de haillons.",
+    "description": "Vitrail, deuxième quart du XVIe siècle. Un cavalier en armure tend son manteau rouge à un mendiant assis au bord du chemin ; le mendiant n'est pas nu, mais couvert de haillons.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": [],
@@ -233,7 +230,7 @@
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Vitrail, deuxième quart du XVIe siècle. Un cavalier en armure, monté sur un cheval blanc, donne son manteau rouge à un mendiant nu, assis au bord du chemin. Un chien suit le cheval.",
+    "description": "Vitrail, deuxième quart du XVIe siècle. Un cavalier en armure, monté sur un cheval blanc, tend son manteau rouge à un mendiant nu, assis au bord du chemin. Un chien suit le cheval.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
@@ -242,7 +239,7 @@
    }
   ],
   "decision_ouverte": {
-   "question": "Les mots français (« cavalier », « donne », « manteau », « nu », « mendiant ») ont des sens WOLF qui n'atteignent pas horseman, give, cloak, naked, beggar : le contexte fixe-t-il leurs sens ?",
+   "question": "Les mots français (« cavalier », « tend » (WOLF : un sens sur neuf vers give), « manteau », « nu », « mendiant ») ont des sens WOLF qui n'atteignent pas horseman, give, cloak, naked, beggar : le contexte fixe-t-il leurs sens ?",
    "statut_selon_l_option": {
     "tous_les_sens": "etablie_sous_hypotheses",
     "sens_fixe_par_le_contexte": "etablie"
@@ -271,7 +268,7 @@
   },
   "langue": "en",
   "sorte": "negatif",
-  "description": "Oil on panel, Flemish, c. 1530. An old king lies on his curtained bed, his courtiers around him. The king is not dead: his eyes are open and he stretches out a hand towards his eldest son, who kneels at the bedside. By the window a physician examines a flask.",
+  "description": "Oil on panel, Flemish, c. 1530. An old king lies on a curtained bed, surrounded by his courtiers. The king is not dead: his eyes are open and he stretches out a hand towards his eldest son, who kneels at the bedside. By the window a physician examines a flask.",
   "definition": "a dead king lying on his bed, his courtiers around him",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
@@ -282,39 +279,40 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "L'attribut nié « is not dead » nie l'état « mort » d'un porteur présent (ONTOLOGIE_EVENTUALITES § 2). Mais la négation n'est certaine que si chaque sens du type demandé (le lemme « dead », dix-sept sens) est inclus dans chaque sens du mot nié : ce n'est pas le cas, et elle ne réfute rien (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)) : inconnue, statut retenu sous `tous_les_sens`. Si le sens est fixé, la conjonction est fausse pour ce roi (NOYAU § 1.1, § 4.4). La variante affirmée « The king is dead » a le même lemme des deux côtés : un lien certain, établie. Le texte dit « his courtiers around him », la relation de la définition.",
+  "justification": "L'attribut nié « is not dead » nie l'état « mort » d'un porteur présent (ONTOLOGIE_EVENTUALITES § 2). Mais la négation n'est certaine que si chaque sens du type demandé (le lemme « dead », dix-sept sens) est inclus dans chaque sens du mot nié : ce n'est pas le cas, et elle ne réfute rien (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)) : inconnue, statut retenu sous `tous_les_sens`. Si le sens est fixé, la conjonction est fausse pour ce roi (NOYAU § 1.1, § 4.4). La variante affirmée « The king is dead » a le même lemme des deux côtés : un lien certain, établie. Le texte dit « his courtiers around him », la relation de la définition. Rétablissement (28/11) : le texte de la version 1 revient (« surrounded by his courtiers », « a curtained bed »). « Surround » n'atteint pas la relation « around », et rien ne dit que le lit est le sien : ces atomes n'ont aucun appui. La variante affirmée « The king is dead » passe d'établie à inconnue. Le cas n'a plus de variante de statut différent (BANCS_PHASE1 § 4 ; rétablissement, point 4) : noté, non réécrit.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Huile sur bois, Flandres, vers 1530. Un vieux roi est couché dans son lit à courtines, ses courtisans autour de lui. Le roi n'est pas mort : il a les yeux ouverts et tend la main vers son fils aîné, agenouillé au chevet. Près de la fenêtre, un médecin examine un flacon.",
+    "description": "Huile sur bois, Flandres, vers 1530. Un vieux roi est couché dans un lit à courtines, entouré de ses courtisans. Le roi n'est pas mort : il a les yeux ouverts et tend la main vers son fils aîné, agenouillé au chevet. Près de la fenêtre, un médecin examine un flacon.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Oil on panel, Flemish, c. 1530. On his curtained bed, his courtiers around him, lies an old king who is not dead, for his eyes are open and he stretches out a hand towards his kneeling eldest son.",
+    "description": "Oil on panel, Flemish, c. 1530. On a curtained bed, surrounded by his courtiers, lies an old king who is not dead, for his eyes are open and he stretches out a hand towards his kneeling eldest son.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Oil on panel, Flemish, c. 1530. An old king lies on his curtained bed, his courtiers around him. The king is dead: his eyes are closed and his hands are folded on the sheet. His eldest son kneels at the bedside.",
+    "description": "Oil on panel, Flemish, c. 1530. An old king lies on a curtained bed, surrounded by his courtiers. The king is dead: his eyes are closed and his hands are folded on the sheet. His eldest son kneels at the bedside.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Oil on panel, Flemish, c. 1530. An old king lies on his curtained bed, his courtiers around him. The king may already be dead; his eldest son kneels at the bedside.",
+    "description": "Oil on panel, Flemish, c. 1530. An old king lies on a curtained bed, surrounded by his courtiers. The king may already be dead; his eldest son kneels at the bedside.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Oil on panel, Flemish, c. 1530. An old king lies on his curtained bed, his courtiers around him. The king is about to die; a priest raises the host above him while his eldest son kneels at the bedside.",
+    "description": "Oil on panel, Flemish, c. 1530. An old king lies on a curtained bed, surrounded by his courtiers. The king is about to die; a priest raises the host above him while his eldest son kneels at the bedside.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": [],
@@ -324,14 +322,14 @@
    },
    {
     "variation": "changement_de_portee",
-    "description": "Oil on panel, Flemish, c. 1530. An old king lies on his curtained bed, his courtiers around him. The king is not dead: his eyes are open. According to the chronicle the panel illustrates, he died three days later.",
+    "description": "Oil on panel, Flemish, c. 1530. An old king lies on a curtained bed, surrounded by his courtiers. The king is not dead: his eyes are open. According to the chronicle the panel illustrates, he died three days later.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Oil on panel, Flemish, c. 1530. An old king lies on his curtained bed, his courtiers around him. The king is not dead: his eyes are open. No crown is visible anywhere in the room.",
+    "description": "Oil on panel, Flemish, c. 1530. An old king lies on a curtained bed, surrounded by his courtiers. The king is not dead: his eyes are open. No crown is visible anywhere in the room.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
@@ -367,13 +365,10 @@
   },
   "langue": "en",
   "sorte": "indetermine",
-  "description": "Drawing in pen and brown ink, Italian, late sixteenth century. The giant, blind, strides towards the rising sun; a small boy, perched on his shoulders, guides him. A hunter's bow hangs at his back. A cliff and the sea close the composition on the left.",
+  "description": "Drawing in pen and brown ink, Italian, late sixteenth century. The giant hunter, blind, strides towards the rising sun; a small boy, perched on his shoulders, guides him. His bow hangs at his back. A cliff and the sea close the composition on the left.",
   "definition": "a blinded giant walking towards the rising sun, guided by a boy on his shoulders",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "consequence_conditionnelle",
-   "sens"
-  ],
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "consequence_conditionnelle",
@@ -389,67 +384,50 @@
    "etat_reifie",
    "ancrage_temporel"
   ],
-  "justification": "« Blinded » demande l'état résultant d'un aveuglement antérieur (ONTOLOGIE_EVENTUALITES § 1.2, § 5). « Blind » n'atteint pas le lemme « blinded » ; il n'y va que par une conséquence conditionnelle que K contient sans attestation, et dont la condition n'est pas établie : sous hypothèse (FONDEMENTS § 2.7 ; BANCS_PHASE1 § 4). « Strides » n'atteint « walk » que par un de ses deux sens : hypothèse de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)) ; le statut reste le même si le sens est fixé. Le texte dit « The giant », tête nominale, au lieu de « The giant hunter », où « giant » n'était qu'un modificateur.",
+  "justification": "« Blinded » demande l'état résultant d'un aveuglement antérieur (ONTOLOGIE_EVENTUALITES § 1.2, § 5). « Blind » n'atteint pas le lemme « blinded » ; il n'y va que par une conséquence conditionnelle que K contient sans attestation, et dont la condition n'est pas établie : sous hypothèse (FONDEMENTS § 2.7 ; BANCS_PHASE1 § 4). « Strides » n'atteint « walk » que par un de ses deux sens : hypothèse de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)) ; le statut reste le même si le sens est fixé. Le texte dit « The giant », tête nominale, au lieu de « The giant hunter », où « giant » n'était qu'un modificateur. Rétablissement (28/11) : le texte de la version 1 revient (« The giant hunter », « Le chasseur géant »). « Giant » n'y est qu'un modificateur d'un composé ; la tête « hunter » (« chasseur ») n'atteint pas le lemme « giant » : l'atome n'a aucun appui, et le cas et toutes ses variantes sont inconnus. Le cas n'a plus de variante de statut différent : noté, non réécrit.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Dessin à la plume et encre brune, Italie, fin du XVIe siècle. Le géant, aveugle, marche vers le soleil levant ; un petit garçon, juché sur ses épaules, le guide. Un arc de chasseur pend dans son dos. Une falaise et la mer ferment la composition à gauche.",
+    "description": "Dessin à la plume et encre brune, Italie, fin du XVIe siècle. Le chasseur géant, aveugle, marche vers le soleil levant ; un petit garçon, juché sur ses épaules, le guide. Son arc pend dans son dos. Une falaise et la mer ferment la composition à gauche.",
     "sorte": "indetermine",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "consequence_conditionnelle",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. Guided by a small boy perched on his shoulders, the blind giant strides towards the rising sun.",
+    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. Guided by a small boy perched on his shoulders, the blind giant hunter strides towards the rising sun.",
     "sorte": "indetermine",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "consequence_conditionnelle",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. The giant, blinded the night before by the king, strides towards the rising sun; a small boy, perched on his shoulders, guides him.",
+    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. The giant hunter, blinded the night before by the king, strides towards the rising sun; a small boy, perched on his shoulders, guides him.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ],
-    "decision_ouverte": {
-     "question": "« Strides » (deux sens, dont un seul atteint walk) : le contexte fixe-t-il le sens ?",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie"
-     }
-    }
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. The giant, who seems to be blind, strides towards the rising sun; a small boy, perched on his shoulders, guides him.",
+    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. The giant hunter, who seems to be blind, strides towards the rising sun; a small boy, perched on his shoulders, guides him.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "inversion_des_roles",
-    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. A small blind boy, perched on the shoulders of a giant, is carried by him towards the rising sun; the giant guides the boy.",
+    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. A small blind boy, perched on the shoulders of a giant hunter, is carried by him towards the rising sun; the giant guides the boy.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. The giant, blind, strides towards the rising sun; a small boy, perched on his shoulders, guides him. A hound runs at his heels.",
+    "description": "Drawing in pen and brown ink, Italian, late sixteenth century. The giant hunter, blind, strides towards the rising sun; a small boy, perched on his shoulders, guides him. A hound runs at his heels.",
     "sorte": "indetermine",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "consequence_conditionnelle",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
   ]
  },
@@ -480,13 +458,10 @@
   },
   "langue": "fr",
   "sorte": "positif",
-  "description": "Huile sur toile, école vénitienne, vers 1560. Sur la rive d'un fleuve, le jeune Tobie a peur : un énorme poisson bondit hors de l'eau vers lui. L'ange Raphaël, debout derrière le garçon, lui désigne la bête. Le chien de Tobie aboie sur la rive.",
+  "description": "Huile sur toile, école vénitienne, vers 1560. Au bord d'un fleuve, le jeune Tobie a peur : un énorme poisson surgit de l'eau et se jette vers lui. L'ange Raphaël, debout derrière le garçon, lui désigne la bête. Le chien de Tobie aboie sur la rive.",
   "definition": "a frightened boy on a riverbank, a huge fish leaping out of the water towards him",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "equivalence_non_attestee",
-   "sens"
-  ],
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "equivalence_etablie",
@@ -501,38 +476,33 @@
   "extensions_requises": [
    "etat_reifie"
   ],
-  "justification": "« Avoir peur » et « frightened » seraient un même type d'état ; mais l'équivalence n'est pas attestée (relecture A : WordNet ne relie pas fear à frightened), et une équivalence non attestée ne canonise rien et ne donne au mieux qu'une conclusion sous hypothèse (FONDEMENTS § 2.7, § 3.2 ; SPECIFICATION_OPERATIONS § 1 ; BANCS_PHASE1 § 4). Elle ne propage pas non plus la négation de la variante « n'a pas peur » (FONDEMENTS § 3.3), qui reste `inconnue`. « Peur » (fear) a trois sens : hypothèse de sens aussi, sans effet sur le statut. Le porteur est repris par « le garçon » ; « bondit hors de l'eau » donne la source du mouvement. La paraphrase garde la construction « avoir peur » : l'adjectif « effrayé » aurait changé le statut par la seule forme. Lien par lien (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)) : « rive », « énorme », « poisson », « eau », « garçon » n'atteignent riverbank, huge, fish, water, boy que par une partie de leurs sens WOLF ; « bondir » est certain. Le texte dit « sur la rive » : « au bord », de la version 1, n'atteint pas riverbank.",
+  "justification": "« Avoir peur » et « frightened » seraient un même type d'état ; mais l'équivalence n'est pas attestée (relecture A : WordNet ne relie pas fear à frightened), et une équivalence non attestée ne canonise rien et ne donne au mieux qu'une conclusion sous hypothèse (FONDEMENTS § 2.7, § 3.2 ; SPECIFICATION_OPERATIONS § 1 ; BANCS_PHASE1 § 4). Elle ne propage pas non plus la négation de la variante « n'a pas peur » (FONDEMENTS § 3.3), qui reste `inconnue`. « Peur » (fear) a trois sens : hypothèse de sens aussi, sans effet sur le statut. Le porteur est repris par « le garçon » ; « bondit hors de l'eau » donne la source du mouvement. La paraphrase garde la construction « avoir peur » : l'adjectif « effrayé » aurait changé le statut par la seule forme. Lien par lien (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)) : « rive », « énorme », « poisson », « eau », « garçon » n'atteignent riverbank, huge, fish, water, boy que par une partie de leurs sens WOLF ; « bondir » est certain. Le texte dit « sur la rive » : « au bord », de la version 1, n'atteint pas riverbank. Rétablissement (28/11) : le texte de la version 1 revient (« au bord d'un fleuve », « surgit de l'eau et se jette vers lui », « at him »). « Bord » n'atteint pas riverbank, ni « surgir » ou « se jeter » leap (WOLF) ; dans la traduction, « at him » ne dit pas la direction « towards him ». Le cas et ses variantes sont inconnus ; il n'a plus de variante de statut différent : noté, non réécrit. La paraphrase garde « qui a peur » au lieu d'« effrayé » : ce changement corrigeait une incohérence relevée par la relecture, non une lacune de la ressource.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Oil on canvas, Venetian school, c. 1560. On a riverbank the young Tobias is gripped by fear: a huge fish leaps out of the water towards him. The angel Raphael, standing behind the boy, points to the creature. Tobias's dog barks on the bank.",
+    "description": "Oil on canvas, Venetian school, c. 1560. On a riverbank the young Tobias is gripped by fear: a huge fish leaps out of the water at him. The angel Raphael, standing behind the boy, points to the creature. Tobias's dog barks on the bank.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "equivalence_non_attestee",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
-    "description": "Huile sur toile, école vénitienne, vers 1560. Sur la rive d'un fleuve, le jeune Tobie, qui a peur, recule devant un énorme poisson qui bondit hors de l'eau vers lui ; l'ange, derrière le garçon, lui désigne la bête.",
+    "description": "Huile sur toile, école vénitienne, vers 1560. Au bord d'un fleuve, le jeune Tobie, qui a peur, recule devant un énorme poisson qui surgit de l'eau et se jette vers lui ; l'ange, derrière le garçon, lui désigne la bête.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "equivalence_non_attestee",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Huile sur toile, école vénitienne, vers 1560. Sur la rive d'un fleuve, un énorme poisson bondit hors de l'eau vers le jeune Tobie. Le garçon n'a pas peur : il tend calmement les mains vers la bête.",
+    "description": "Huile sur toile, école vénitienne, vers 1560. Au bord d'un fleuve, un énorme poisson surgit de l'eau et se jette vers le jeune Tobie. Le garçon n'a pas peur : il tend calmement les mains vers la bête.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Huile sur toile, école vénitienne, vers 1560. Sur la rive d'un fleuve, le chien du jeune Tobie a peur : un énorme poisson bondit hors de l'eau vers lui. Tobie, un garçon, regarde la scène, debout près de l'ange.",
+    "description": "Huile sur toile, école vénitienne, vers 1560. Au bord d'un fleuve, le chien du jeune Tobie a peur : un énorme poisson surgit de l'eau et se jette vers lui. Tobie, un garçon, regarde la scène, debout près de l'ange.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
@@ -550,20 +520,17 @@
    },
    {
     "variation": "changement_de_portee",
-    "description": "Huile sur toile, école vénitienne, vers 1560. Le cartel rappelle que, selon le livre de Tobie, le garçon eut peur. Sur la toile, le jeune Tobie se tient sur la rive d'un fleuve, tandis qu'un énorme poisson bondit hors de l'eau vers lui.",
+    "description": "Huile sur toile, école vénitienne, vers 1560. Le cartel rappelle que, selon le livre de Tobie, le garçon eut peur. Sur la toile, le jeune Tobie se tient au bord d'un fleuve, tandis qu'un énorme poisson surgit de l'eau et se jette vers lui.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Huile sur toile, école vénitienne, vers 1560. Sur la rive d'un fleuve, le jeune Tobie a peur : un énorme poisson bondit hors de l'eau vers lui ; l'ange désigne la bête au garçon. Aucun nuage ne trouble le ciel.",
+    "description": "Huile sur toile, école vénitienne, vers 1560. Au bord d'un fleuve, le jeune Tobie a peur : un énorme poisson surgit de l'eau et se jette vers lui ; l'ange désigne la bête au garçon. Aucun nuage ne trouble le ciel.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "equivalence_non_attestee",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
   ]
  },
@@ -632,7 +599,8 @@
     "hypotheses_attendues": [
      "equivalence_non_attestee",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -737,7 +705,8 @@
       "tous_les_sens": "etablie_sous_hypotheses",
       "sens_fixe_par_le_contexte": "etablie"
      }
-    }
+    },
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -833,18 +802,19 @@
   "extensions_requises": [
    "ancrage_temporel"
   ],
-  "justification": "« S'apprêter à sacrifier » figure la phase préparatoire, rangée dans l'en cours (ONTOLOGIE_EVENTUALITES § 1.2). Les mots français n'atteignent les lemmes de la définition que par une partie de leurs sens WOLF : hypothèse de sens, statut de `tous_les_sens` (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). La traduction anglaise a les mêmes lemmes que la définition : établie. La paraphrase garde « sacrifier » ; « immoler » (WOLF : immolate seul, ⊑ sacrifice) aurait été certain.",
+  "justification": "« S'apprêter à sacrifier » figure la phase préparatoire, rangée dans l'en cours (ONTOLOGIE_EVENTUALITES § 1.2). Les mots français n'atteignent les lemmes de la définition que par une partie de leurs sens WOLF : hypothèse de sens, statut de `tous_les_sens` (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). La traduction anglaise a les mêmes lemmes que la définition : établie. La paraphrase garde « sacrifier » ; « immoler » (WOLF : immolate seul, ⊑ sacrifice) aurait été certain. Rétablissement (28/11) : la paraphrase de la version 1 revient (« immoler »). « Immoler » est certain (WOLF : immolate ⊑ sacrifice) ; « prêtre », « bélier », « autel » gardent l'hypothèse de sens : statut inchangé.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Marble relief, Roman, second century. Before an altar hung with garlands, a veiled priest is preparing to sacrifice a ram held by two attendants. A flute-player stands at the left. The deeply undercut drapery betrays a workshop of the capital.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
-    "description": "Relief en marbre, art romain, IIe siècle. Un prêtre voilé se prépare à sacrifier, devant un autel orné de guirlandes, un bélier maintenu par deux serviteurs.",
+    "description": "Relief en marbre, art romain, IIe siècle. Un prêtre voilé se prépare à immoler, devant un autel orné de guirlandes, un bélier maintenu par deux serviteurs.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
@@ -951,7 +921,8 @@
     "description": "Huile sur cuivre, Pays-Bas, début du XVIIe siècle. Dans une tente éclairée d'une seule chandelle, Judith se tient au-dessus d'Holopherne endormi, l'épée levée haut au-dessus de son cou, sur le point de frapper. Sa vieille servante tient un sac ouvert. L'armure d'Holopherne est entassée au pied du lit.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1017,12 +988,10 @@
   },
   "langue": "fr",
   "sorte": "positif",
-  "description": "Feuillet d'un livre d'heures, enluminure, Paris, vers 1420. La miniature montre la flagellation du Christ par deux tortionnaires. Le Christ, attaché à une colonne, baisse la tête ; les tortionnaires brandissent des verges. Une bordure de rinceaux encadre la scène.",
+  "description": "Feuillet d'un livre d'heures, enluminure, Paris, vers 1420. La miniature montre la flagellation du Christ par deux bourreaux. Le Christ, attaché à une colonne, baisse la tête ; les bourreaux brandissent des verges. Une bordure de rinceaux encadre la scène.",
   "definition": "a person tied to a column being flogged by two torturers",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "sens"
-  ],
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "equivalence_etablie",
@@ -1045,7 +1014,7 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Le nom d'action devient l'événement par une équivalence dont la source est un pointeur de dérivation (FONDEMENTS § 3.2 ; SPECIFICATION_OPERATIONS § 1). « Flagellation » n'a qu'un sens dans WOLF, relié à flagellate ⊑ flog ; « tortionnaire » et « Christ » sont certains. Mais « attaché » et « colonne » n'atteignent tie et column que par une partie de leurs sens WOLF : hypothèse de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). Dans la traduction, « flagellation » a deux sens anglais, dont un seul relié à flog.",
+  "justification": "Le nom d'action devient l'événement par une équivalence dont la source est un pointeur de dérivation (FONDEMENTS § 3.2 ; SPECIFICATION_OPERATIONS § 1). « Flagellation » n'a qu'un sens dans WOLF, relié à flagellate ⊑ flog ; « tortionnaire » et « Christ » sont certains. Mais « attaché » et « colonne » n'atteignent tie et column que par une partie de leurs sens WOLF : hypothèse de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). Dans la traduction, « flagellation » a deux sens anglais, dont un seul relié à flog. Rétablissement (28/11) : le texte de la version 1 revient (« bourreaux », « flagellent »). « Bourreau » (WOLF, deux sens) n'atteint pas torturer : l'atome n'a aucun appui, et le cas passe d'établi sous hypothèse à inconnu. La variante « un seul bourreau » n'est plus écartée : le référent n'est ancré par aucun atome (NOYAU § 4.4), le nombre ne réfute donc rien. La traduction (« torturers ») reste sous hypothèse de sens : elle est la variante de statut différent.",
   "variantes": [
    {
     "variation": "traduction",
@@ -1054,27 +1023,33 @@
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "sens"
-    ]
+    ],
+    "decision_ouverte": {
+     "question": "« Flagellation » (deux sens anglais, un seul relié à flog) : le contexte fixe-t-il le sens ?",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    },
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
-    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. Deux tortionnaires infligent la flagellation au Christ, attaché à une colonne ; il baisse la tête sous les verges.",
+    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. Deux bourreaux flagellent le Christ, attaché à une colonne ; il baisse la tête sous les verges.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. La miniature montre la flagellation du Christ par un seul tortionnaire. Le Christ, attaché à une colonne, baisse la tête.",
+    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. La miniature montre la flagellation du Christ par un seul bourreau. Le Christ, attaché à une colonne, baisse la tête.",
     "sorte": "negatif",
-    "statut_attendu": "ecartee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. Après sa flagellation par deux tortionnaires, le Christ, détaché de la colonne, se penche pour ramasser ses vêtements ; les tortionnaires s'éloignent.",
+    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. Après sa flagellation par deux bourreaux, le Christ, détaché de la colonne, se penche pour ramasser ses vêtements ; les bourreaux s'éloignent.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": [],
@@ -1084,35 +1059,26 @@
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. La miniature, très usée, représente peut-être la flagellation du Christ par deux tortionnaires ; on distingue une figure attachée à une colonne.",
+    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. La miniature, très usée, représente peut-être la flagellation du Christ par deux bourreaux ; on distingue une figure attachée à une colonne.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
-    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. La rubrique annonce la flagellation du Christ par deux tortionnaires ; la miniature qu'elle accompagnait a été découpée.",
+    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. La rubrique annonce la flagellation du Christ par deux bourreaux ; la miniature qu'elle accompagnait a été découpée.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. La miniature montre la flagellation du Christ par deux tortionnaires ; le Christ est attaché à une colonne. Aucun spectateur n'assiste à la scène.",
+    "description": "Feuillet d'un livre d'heures, Paris, vers 1420. La miniature montre la flagellation du Christ par deux bourreaux ; le Christ est attaché à une colonne. Aucun spectateur n'assiste à la scène.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "« Attaché » (WOLF, seize sens, onze vers tie), « colonne » et, dans la traduction, « flagellation » (deux sens anglais, un seul relié à flog) n'atteignent la définition que par une partie de leurs sens : le contexte les fixe-t-il ? (« flagellation » français n'a qu'un sens WOLF, relié à flagellate.)",
-   "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie"
-   }
-  }
+  ]
  },
  {
   "id": "ee-011",
@@ -1136,12 +1102,10 @@
   },
   "langue": "en",
   "sorte": "positif",
-  "description": "Oil on panel, Antwerp, mid-sixteenth century. In a wide coastal landscape a ploughman at work guides his horse along a furrow above a bay full of ships. The fall of Icarus is relegated to the lower right corner, near a merchant ship. A shepherd gazes up at the sky, his back to the sea.",
+  "description": "Oil on panel, Antwerp, mid-sixteenth century. A ploughman guides his horse along a furrow above a wide bay full of ships. The fall of Icarus is relegated to the lower right corner, near a merchant ship. A shepherd gazes up at the sky, his back to the sea.",
   "definition": "Icarus falling, in a landscape with a ploughman at work",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "sens"
-  ],
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "equivalence_etablie",
@@ -1157,67 +1121,57 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Le génitif sujet donne le thème de l'événement nominalisé (SPECIFICATION_OPERATIONS § 1, « death of Anna » ; FONDEMENTS § 3.2). « Fall » (nom) n'atteint le lemme verbal de la définition que par celui de ses sens qui est relié à fall%2:38:03:: : hypothèse de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). La paraphrase verbale a le même lemme que la définition : établie. La traduction est inconnue : « laboureur » (WOLF, trois sens) n'atteint pas « ploughman » ; c'est la polysémie de WOLF, non celle de l'anglais. Le texte dit « landscape » et « at work », que la définition demande.",
-  "decision_ouverte": {
-   "question": "« Fall » (nom, douze sens) n'atteint le verbe de la définition que par fall%1:11:00:: (dérivation vers fall%2:38:03::) : la localisation dans l'image (« relegated to the lower right corner ») fixe-t-elle ce sens ?",
-   "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie"
-   }
-  },
+  "justification": "Le génitif sujet donne le thème de l'événement nominalisé (SPECIFICATION_OPERATIONS § 1, « death of Anna » ; FONDEMENTS § 3.2). « Fall » (nom) n'atteint le lemme verbal de la définition que par celui de ses sens qui est relié à fall%2:38:03:: : hypothèse de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). La paraphrase verbale a le même lemme que la définition : établie. La traduction est inconnue : « laboureur » (WOLF, trois sens) n'atteint pas « ploughman » ; c'est la polysémie de WOLF, non celle de l'anglais. Le texte dit « landscape » et « at work », que la définition demande. Rétablissement (28/11) : le texte de la version 1 revient, sans « landscape » ni « at work ». La définition demande ces deux atomes, que le texte n'appuie pas : le cas passe à inconnu, et la paraphrase verbale aussi. Le cas n'a plus de variante de statut différent : noté, non réécrit. (Le doute : ces ajouts corrigeaient un écart entre le texte et la définition plutôt qu'une lacune de WOLF ; je les rétablis, comme la consigne le demande dans le doute.)",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Huile sur bois, Anvers, milieu du XVIe siècle. Dans un vaste paysage côtier, un laboureur au travail guide son cheval le long d'un sillon, au-dessus d'une baie pleine de navires. La chute d'Icare est reléguée dans l'angle inférieur droit, près d'un navire marchand. Un berger lève les yeux vers le ciel, le dos tourné à la mer.",
+    "description": "Huile sur bois, Anvers, milieu du XVIe siècle. Un laboureur guide son cheval le long d'un sillon, au-dessus d'une large baie pleine de navires. La chute d'Icare est reléguée dans l'angle inférieur droit, près d'un navire marchand. Un berger lève les yeux vers le ciel, le dos tourné à la mer.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Oil on panel, Antwerp, mid-sixteenth century. A ploughman guides his horse along a furrow; Icarus's fall is relegated to the lower right corner, near a merchant ship.",
     "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "paraphrase",
-    "description": "Oil on panel, Antwerp, mid-sixteenth century. In a wide coastal landscape a ploughman at work guides his horse along a furrow; Icarus's fall is relegated to the lower right corner, near a merchant ship.",
+    "description": "Oil on panel, Antwerp, mid-sixteenth century. A ploughman guides his horse along a furrow; in the lower right corner, near a merchant ship, Icarus falls headlong into the sea.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
-   },
-   {
-    "variation": "paraphrase",
-    "description": "Oil on panel, Antwerp, mid-sixteenth century. In a wide coastal landscape a ploughman at work guides his horse along a furrow; in the lower right corner, near a merchant ship, Icarus falls headlong into the sea.",
-    "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Oil on panel, Antwerp, mid-sixteenth century. In a wide coastal landscape a ploughman at work guides his horse along a furrow. In the lower right corner only the legs of Icarus, who has already fallen, still show above the waves.",
+    "description": "Oil on panel, Antwerp, mid-sixteenth century. A ploughman guides his horse along a furrow. In the lower right corner only the legs of Icarus, who has already fallen, still show above the waves.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
-    "description": "Oil on panel, Antwerp, mid-sixteenth century. The picture is known as « The Fall of Icarus ». It shows a wide coastal landscape, with a ploughman at work guiding his horse along a furrow above a bay full of ships.",
+    "description": "Oil on panel, Antwerp, mid-sixteenth century. The picture is known as « The Fall of Icarus ». It shows a ploughman guiding his horse along a furrow above a wide bay full of ships.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Oil on panel, Antwerp, mid-sixteenth century. In a wide coastal landscape a ploughman at work guides his horse along a furrow. The fall of Phaethon is relegated to the lower right corner, near a merchant ship.",
+    "description": "Oil on panel, Antwerp, mid-sixteenth century. A ploughman guides his horse along a furrow. The fall of Phaethon is relegated to the lower right corner, near a merchant ship.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Oil on panel, Antwerp, mid-sixteenth century. In a wide coastal landscape a ploughman at work guides his horse along a furrow. The fall of Icarus is relegated to the lower right corner. On the shore an angler casts his line.",
+    "description": "Oil on panel, Antwerp, mid-sixteenth century. A ploughman guides his horse along a furrow. The fall of Icarus is relegated to the lower right corner. On the shore an angler casts his line.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
   ]
  },
@@ -1264,7 +1218,8 @@
     "description": "Predella panel, Tuscany, c. 1400. Baptism on a riverbank under a gold sky. Several figures in long robes stand on the bank; a young man, bare-chested, kneels in the water. Two angels hold cloths.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "composition",
@@ -1357,14 +1312,15 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "La définition demande un accomplissement avec son terme (marcher jusqu'à une ville) ; la description ne dit qu'un processus sans terme (marcher le long d'une route : ONTOLOGIE_EVENTUALITES § 1 et § 1.2, « l'événement de changement a une culmination, le processus n'en a pas »). La ville est présente, mais rien ne dit qu'elle est le but du mouvement : le rôle de destination n'a aucun appui, et sa présence ne le fonde pas (BANCS_PHASE1 § 4, monde clos refusé ; SPECIFICATION_OPERATIONS § 4, une hypothèse qui satisfait la requête sans expliquer une observation est inadmissible). Inconnue. Les énoncés sur l'état de la fresque sont de portée `oeuvre`. La variante qui donne le terme compose la construction de direction : elle dit « to », et non plus « towards », la question direction / destination restant ouverte (relecture A).",
+  "justification": "La définition demande un accomplissement avec son terme (marcher jusqu'à une ville) ; la description ne dit qu'un processus sans terme (marcher le long d'une route : ONTOLOGIE_EVENTUALITES § 1 et § 1.2, « l'événement de changement a une culmination, le processus n'en a pas »). La ville est présente, mais rien ne dit qu'elle est le but du mouvement : le rôle de destination n'a aucun appui, et sa présence ne le fonde pas (BANCS_PHASE1 § 4, monde clos refusé ; SPECIFICATION_OPERATIONS § 4, une hypothèse qui satisfait la requête sans expliquer une observation est inadmissible). Inconnue. Les énoncés sur l'état de la fresque sont de portée `oeuvre`. La variante qui donne le terme compose la construction de direction : elle dit « to », et non plus « towards », la question direction / destination restant ouverte (relecture A). Rétablissement (28/11) : « with a stranger » revient dans la variante de composition (« accompanied by » contournait le pas lexical) ; « to », qui réalise le terme demandé par la relecture, reste. « With » n'atteint pas « accompanied » : la variante passe d'établie à inconnue, de même que la variante de source citée (non certifiée → inconnue). La variante « three travellers » reste écartée.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Fresque, Ombrie, XVe siècle, en mauvais état. Deux voyageurs marchent sur une route poudreuse avec un inconnu coiffé d'un chapeau de pèlerin. Au loin, une ville fortifiée s'élève sur une colline. Le ciel a été largement repeint.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1375,9 +1331,9 @@
    },
    {
     "variation": "composition",
-    "description": "Fresco, Umbria, fifteenth century. Two travellers, accompanied by a stranger in a pilgrim's hat, walk to the walled town on the hill and are reaching its gate.",
+    "description": "Fresco, Umbria, fifteenth century. Two travellers walk with a stranger in a pilgrim's hat to the walled town on the hill, and are reaching its gate.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
@@ -1412,7 +1368,7 @@
     "variation": "changement_de_modalite",
     "description": "Fresco, Umbria, fifteenth century. Two travellers walk along a dusty road with a stranger in a pilgrim's hat. According to the sacristy inventory, quoted on the label, they are walking to the walled town that rises on a distant hill.",
     "sorte": "indetermine",
-    "statut_attendu": "non_certifiee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ]
@@ -1459,7 +1415,8 @@
     "description": "Wool and silk tapestry, Tournai, c. 1470, heavily restored in its upper part. Masons are building a tall tower: the lower storeys are finished, while on the upper storeys workmen are still laying stones on a scaffold. A king, at the left, watches the work. The lower border is fragmentary.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -1554,7 +1511,8 @@
     "description": "Huile sur toile, Italie, XVIIe siècle. Persée, à droite, tend la tête de Méduse vers les compagnons de Phinée. Au centre, un guerrier, le bras levé, est entièrement gris, couleur de pierre ; derrière lui, ses compagnons détournent les yeux. Une table de banquet a été renversée.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1672,14 +1630,15 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "« Gaulois » et « romain » sont des propriétés d'origine, non réifiées (ONTOLOGIE_EVENTUALITES § 1, § 5) ; « enchaîné » est un état résultant. « Romain » de l'atelier est de portée `histoire` (FONDEMENTS § 2.5). Lien par lien (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)) : « légionnaire », « gaulois », « enchaîné » sont absents de WOLF, et « emmener » n'y a qu'un sens étranger (convene) ; ils ne vont à la définition que par des équivalences que K contient sans attestation. « Romain » est certain ; « chef » n'atteint chieftain que par un sens. Statut : sous hypothèses d'équivalence et de sens, le même si le sens est fixé. La traduction anglaise (« legionaries », « Gallic », « lead away », « chained ») a les lemmes de la définition : établie.",
+  "justification": "« Gaulois » et « romain » sont des propriétés d'origine, non réifiées (ONTOLOGIE_EVENTUALITES § 1, § 5) ; « enchaîné » est un état résultant. « Romain » de l'atelier est de portée `histoire` (FONDEMENTS § 2.5). Lien par lien (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)) : « légionnaire », « gaulois », « enchaîné » sont absents de WOLF, et « emmener » n'y a qu'un sens étranger (convene) ; ils ne vont à la définition que par des équivalences que K contient sans attestation. « Romain » est certain ; « chef » n'atteint chieftain que par un sens. Statut : sous hypothèses d'équivalence et de sens, le même si le sens est fixé. La traduction anglaise (« legionaries », « Gallic », « lead away », « chained ») a les lemmes de la définition : établie. Rétablissement (28/11) : la traduction de la version 1 revient (« Gaulish »). Le mot est absent de WordNet 3.0 : l'atome « Gallic » n'a aucun appui, et la traduction passe d'établie à inconnue.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Marble relief from a sarcophagus, attributed to a Roman workshop of the third century. Two Roman legionaries lead a chained Gallic chieftain away to the left. The captive, bearded, wears a torque. A trophy of arms fills the background.",
+    "description": "Marble relief from a sarcophagus, attributed to a Roman workshop of the third century. Two Roman legionaries lead a chained Gaulish chieftain away to the left. The captive, bearded, wears a torque. A trophy of arms fills the background.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -1782,7 +1741,8 @@
     "description": "Woodcut, Germany, c. 1490, illustrating a universal chronicle. The lifeless body of Abel lies in a field, near an altar where an offering is still smoking. Cain flees to the right, an ass's jawbone in his hand, looking back.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -1857,7 +1817,7 @@
   },
   "langue": "en",
   "sorte": "positif",
-  "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground a young man carries an old man on his shoulders and leads a child by the hand. Behind the young man lie the ruins of a city, its towers roofless. A woman follows at a distance.",
+  "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground a young man carries an old man on his shoulders and leads a child by the hand. Behind them lie the ruins of a city, its towers roofless. A woman follows at a distance.",
   "definition": "a man carrying an old man on his shoulders, in front of the ruins of a destroyed city",
   "statut_attendu": "etablie_sous_hypotheses",
   "hypotheses_attendues": [
@@ -1884,32 +1844,30 @@
   "extensions_requises": [
    "ancrage_temporel"
   ],
-  "justification": "Les vestiges impliquent un événement antérieur, mais seulement par une conséquence conditionnelle sans attestation, dont la condition n'est pas établie (ONTOLOGIE_EVENTUALITES § 5 ; FONDEMENTS § 2.7). « In front of » n'est atteint que par la converse de « behind », que K contient sans attestation. Les autres mots ont les lemmes de la définition (« ruins », « man », « old man », « carries ») : aucun choix de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). La traduction ajoute une hypothèse de sens (« porter », « épaule », « ville » dans WOLF ; « ruine » est certain).",
+  "justification": "Les vestiges impliquent un événement antérieur, mais seulement par une conséquence conditionnelle sans attestation, dont la condition n'est pas établie (ONTOLOGIE_EVENTUALITES § 5 ; FONDEMENTS § 2.7). « In front of » n'est atteint que par la converse de « behind », que K contient sans attestation. Les autres mots ont les lemmes de la définition (« ruins », « man », « old man », « carries ») : aucun choix de sens (BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement »)). La traduction ajoute une hypothèse de sens (« porter », « épaule », « ville » dans WOLF ; « ruine » est certain). Rétablissement (28/11) : le texte de la version 1 revient (« Behind them », « Derrière eux », et la paraphrase « stands in front of the ruins »). La paraphrase ne dit plus « carries » : l'événement de porter n'a pas d'appui, elle passe à inconnue. La base reste sous hypothèses (la converse et la conséquence conditionnelle).",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Plaque d'émail peint, Limoges, vers 1540. Au premier plan, un jeune homme porte un vieillard sur ses épaules et tient un enfant par la main. Derrière le jeune homme s'étendent les ruines d'une ville, aux tours sans toit. Une femme suit à distance.",
+    "description": "Plaque d'émail peint, Limoges, vers 1540. Au premier plan, un jeune homme porte un vieillard sur ses épaules et tient un enfant par la main. Derrière eux s'étendent les ruines d'une ville, aux tours sans toit. Une femme suit à distance.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "consequence_conditionnelle",
      "equivalence_non_attestee",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Painted enamel plaque, Limoges, c. 1540. A young man, an old man on his shoulders and a child by the hand, walks away from the ruins of a city, which lie behind him; their towers are roofless.",
+    "description": "Painted enamel plaque, Limoges, c. 1540. A young man, an old man on his shoulders and a child by the hand, stands in front of the ruins of a city whose towers are roofless.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "consequence_conditionnelle",
-     "equivalence_non_attestee"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground a young man carries an old man on his shoulders. Behind the young man lie the ruins of a city destroyed by the Greeks, its towers roofless.",
+    "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground a young man carries an old man on his shoulders. Behind them lie the ruins of a city destroyed by the Greeks, its towers roofless.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
@@ -1918,7 +1876,7 @@
    },
    {
     "variation": "changement_de_temps",
-    "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground a young man carries an old man on his shoulders. Behind the young man the city is burning, its towers collapsing in the flames.",
+    "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground a young man carries an old man on his shoulders. Behind them the city is burning, its towers collapsing in the flames.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": [],
@@ -1928,7 +1886,7 @@
    },
    {
     "variation": "inversion_des_roles",
-    "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground an old man carries a young man on his shoulders. Behind the young man lie the ruins of a city, its towers roofless.",
+    "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground an old man carries a young man on his shoulders. Behind them lie the ruins of a city, its towers roofless.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
@@ -1942,7 +1900,7 @@
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground a young man carries an old man on his shoulders. Behind the young man lie the ruins of a city, its towers roofless. No god appears in the sky.",
+    "description": "Painted enamel plaque, Limoges, c. 1540. In the foreground a young man carries an old man on his shoulders. Behind them lie the ruins of a city, its towers roofless. No god appears in the sky.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
@@ -1979,7 +1937,7 @@
   },
   "langue": "fr",
   "sorte": "contre_modele",
-  "description": "Antependium peint, Catalogne, vers 1200. Le panneau est divisé en deux registres. Dans la scène du registre supérieur, un ange parle à une jeune femme assise. Dans la scène du registre inférieur, la même jeune femme tient un nouveau-né sur ses genoux, entre un bœuf et un âne.",
+  "description": "Antependium peint, Catalogne, vers 1200. Le panneau est divisé en deux registres. Dans la scène du registre supérieur, un ange s'adresse à une jeune femme assise. Dans la scène du registre inférieur, la même jeune femme tient un nouveau-né sur ses genoux, entre un bœuf et un âne.",
   "definition": "a young woman holding a newborn child while an angel speaks to her",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
@@ -1992,7 +1950,7 @@
    "identite_entre_situations",
    "relation_entre_eventualites"
   ],
-  "justification": "Le texte nomme deux scènes, deux situations figurées, chacune avec son moment (ONTOLOGIE_EVENTUALITES § 3 et § 4 ; FONDEMENTS § 2.2-2.3). « La même jeune femme » relie deux figures d'un même individu dans deux situations, sans les fusionner (ONTOLOGIE § 3, narration et juxtaposition). La définition demande que la tenue de l'enfant et la parole de l'ange soient simultanées, donc dans une même situation ; aucune des deux ne satisfait toutes les conditions. Rien n'est nié : inconnue, non écartée. Sur le graphe plat actuel, la requête serait établie à tort. Voir `decision_ouverte`. Le texte dit « parle à » : « s'adresser à », de la version 2, n'atteint pas « speak » dans WOLF.",
+  "justification": "Le texte nomme deux scènes, deux situations figurées, chacune avec son moment (ONTOLOGIE_EVENTUALITES § 3 et § 4 ; FONDEMENTS § 2.2-2.3). « La même jeune femme » relie deux figures d'un même individu dans deux situations, sans les fusionner (ONTOLOGIE § 3, narration et juxtaposition). La définition demande que la tenue de l'enfant et la parole de l'ange soient simultanées, donc dans une même situation ; aucune des deux ne satisfait toutes les conditions. Rien n'est nié : inconnue, non écartée. Sur le graphe plat actuel, la requête serait établie à tort. Voir `decision_ouverte`. Le texte dit « parle à » : « s'adresser à », de la version 2, n'atteint pas « speak » dans WOLF. Rétablissement (28/11) : le texte de la version 1 revient (« s'adresse à », « addresses »). « S'adresser à » n'atteint pas speak dans WOLF : la variante à une seule scène passe d'établie sous hypothèse à inconnue. Le cas n'a plus de variante de statut différent : noté, non réécrit.",
   "decision_ouverte": {
    "question": "Une définition dont les conditions sont reliées par une simultanéité (« while ») doit-elle être satisfaite dans une seule situation, ou la satisfaction sur l'œuvre entière suffit-elle (ONTOLOGIE_EVENTUALITES § 6, dernier point) ?",
    "statut_selon_l_option": {
@@ -2003,10 +1961,11 @@
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Painted altar frontal, Catalonia, c. 1200. The panel is divided into two registers. In the scene of the upper register an angel speaks to a seated young woman. In the scene of the lower register the same young woman holds a newborn child on her lap, between an ox and an ass.",
+    "description": "Painted altar frontal, Catalonia, c. 1200. The panel is divided into two registers. In the scene of the upper register an angel addresses a seated young woman. In the scene of the lower register the same young woman holds a newborn child on her lap, between an ox and an ass.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -2017,37 +1976,28 @@
    },
    {
     "variation": "changement_de_temps",
-    "description": "Antependium peint, Catalogne, vers 1200. Dans une seule scène, un ange parle à une jeune femme assise, qui tient un nouveau-né sur ses genoux, entre un bœuf et un âne.",
+    "description": "Antependium peint, Catalogne, vers 1200. Dans une seule scène, un ange s'adresse à une jeune femme assise, qui tient un nouveau-né sur ses genoux, entre un bœuf et un âne.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ],
-    "decision_ouverte": {
-     "question": "« Parler » (WOLF, huit sens, cinq vers speak), « femme », « nouveau-né », « ange » : le contexte fixe-t-il leurs sens ?",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie"
-     }
-    }
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Antependium peint, Catalogne, vers 1200. Dans la scène du registre supérieur, un ange parle à une jeune femme assise. Dans la scène du registre inférieur, une autre jeune femme tient un nouveau-né sur ses genoux.",
+    "description": "Antependium peint, Catalogne, vers 1200. Dans la scène du registre supérieur, un ange s'adresse à une jeune femme assise. Dans la scène du registre inférieur, une autre jeune femme tient un nouveau-né sur ses genoux.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Antependium peint, Catalogne, vers 1200. Dans la scène du registre supérieur, un ange, à ce qu'il semble, parle à une jeune femme assise. Dans la scène du registre inférieur, la même jeune femme tient un nouveau-né.",
+    "description": "Antependium peint, Catalogne, vers 1200. Dans la scène du registre supérieur, un ange, à ce qu'il semble, s'adresse à une jeune femme assise. Dans la scène du registre inférieur, la même jeune femme tient un nouveau-né.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Antependium peint, Catalogne, vers 1200. Dans la scène du registre supérieur, un ange parle à une jeune femme assise. Dans la scène du registre inférieur, la même jeune femme tient un nouveau-né. Un berger joue de la flûte dans l'angle.",
+    "description": "Antependium peint, Catalogne, vers 1200. Dans la scène du registre supérieur, un ange s'adresse à une jeune femme assise. Dans la scène du registre inférieur, la même jeune femme tient un nouveau-né. Un berger joue de la flûte dans l'angle.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
@@ -2095,14 +2045,15 @@
    "situation_referent",
    "abduction"
   ],
-  "justification": "« La mariée » est un nom de rôle de cadre : il désigne un participant d'une situation, non la situation, et ne la fait pas exister à lui seul (ONTOLOGIE_EVENTUALITES § 4 ; FONDEMENTS § 2.2). L'abduction peut expliquer la mariée par une noce, mais une noce qui n'est pas figurée en cours (SPECIFICATION_OPERATIONS § 4, contre-exemple « un portrait de mariage : des mariés, non une noce figurée en cours ») ; et la table du banquet n'est expliquée par rien. Les indices ne suffisent pas à la définition : inconnue. La variante établie montre le même couple au moment de la noce : une variation de temps, non plus une description remplacée (relecture A).",
+  "justification": "« La mariée » est un nom de rôle de cadre : il désigne un participant d'une situation, non la situation, et ne la fait pas exister à lui seul (ONTOLOGIE_EVENTUALITES § 4 ; FONDEMENTS § 2.2). L'abduction peut expliquer la mariée par une noce, mais une noce qui n'est pas figurée en cours (SPECIFICATION_OPERATIONS § 4, contre-exemple « un portrait de mariage : des mariés, non une noce figurée en cours ») ; et la table du banquet n'est expliquée par rien. Les indices ne suffisent pas à la définition : inconnue. La variante établie montre le même couple au moment de la noce : une variation de temps, non plus une description remplacée (relecture A). Rétablissement (28/11) : « sits » revient dans la variante de temps (« is seated » contournait le pas sit → seated, sans lien dans WordNet). La variante passe d'établie à inconnue ; le cas n'a plus de variante de statut différent : noté, non réécrit. La réécriture de la variante elle-même, demandée par la relecture, est gardée.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Double portrait sur bois, Bruges, 1528. Un couple de jeunes mariés se tient côte à côte devant un drap d'honneur vert. La mariée porte une couronne nuptiale et tient un œillet ; le marié porte une chaîne d'or. Leurs armoiries figurent dans les angles supérieurs.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -2113,9 +2064,9 @@
    },
    {
     "variation": "changement_de_temps",
-    "description": "Double portrait on panel, Bruges, 1528. The newly married couple is shown during their wedding feast: the bride, wearing a bridal crown, is seated at the banquet table beside the groom, who wears a gold chain.",
+    "description": "Double portrait on panel, Bruges, 1528. The newly married couple is shown during their wedding feast: the bride, wearing a bridal crown, sits at the banquet table beside the groom, who wears a gold chain.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
@@ -2193,7 +2144,8 @@
     "description": "Line engraving after a lost painting, Rome, 1612. In a cave a long-haired woman kneels before a skull and a crucifix. According to the 1790 catalogue, quoted on the label, the woman, praying, raises her eyes towards a glimmer of light. An open book lies on a rock.",
     "sorte": "indetermine",
     "statut_attendu": "non_certifiee",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -2290,7 +2242,8 @@
     "description": "Fresco, Florence, c. 1490. In the centre Truth, personified by a young woman, is naked; she holds a mirror and raises her other hand towards the sky. To her left Calumny, richly dressed, drags a young man by the hair.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -2369,7 +2322,7 @@
   },
   "langue": "en",
   "sorte": "indetermine",
-  "description": "Oil on canvas, Dutch, c. 1660. A young woman sits reading a letter in an interior, her maid standing beside her. On the back wall hangs a large tapestry whose scene shows a shepherd giving an apple to one of three goddesses. A rolled map lies on the table.",
+  "description": "Oil on canvas, Dutch, c. 1660. A young woman sits reading a letter in an interior, her maid standing beside her. On the back wall hangs a large tapestry whose scene shows a shepherd handing an apple to one of three goddesses. A rolled map lies on the table.",
   "definition": "a shepherd giving an apple to one of three goddesses",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
@@ -2381,7 +2334,7 @@
    "contexte_emboite",
    "situation_referent"
   ],
-  "justification": "La scène du berger est une situation figurée dans un contexte de figuration emboîté, la tapisserie, avec son propre moment (ONTOLOGIE_EVENTUALITES § 3, représentations emboîtées ; FONDEMENTS § 2.3 et § 2.5). Ses référents ne sont pas des référents du monde figuré principal. Les documents ne disent pas si une définition est satisfaite par une situation d'un contexte emboîté : le statut le plus prudent est retenu, voir `decision_ouverte`. Le texte dit maintenant « giving », le verbe de la définition : « hands » (hand%2:40:00::) n'est pas inclus dans give%2:40:00:: (relecture A).",
+  "justification": "La scène du berger est une situation figurée dans un contexte de figuration emboîté, la tapisserie, avec son propre moment (ONTOLOGIE_EVENTUALITES § 3, représentations emboîtées ; FONDEMENTS § 2.3 et § 2.5). Ses référents ne sont pas des référents du monde figuré principal. Les documents ne disent pas si une définition est satisfaite par une situation d'un contexte emboîté : le statut le plus prudent est retenu, voir `decision_ouverte`. Le texte dit maintenant « giving », le verbe de la définition : « hands » (hand%2:40:00::) n'est pas inclus dans give%2:40:00:: (relecture A). Rétablissement (28/11) : le texte de la version 1 revient (« hands », « tendant »). « Hand » n'atteint give que par un de ses deux sens : la variante de la figuration principale passe d'établie à sous hypothèse de sens.",
   "decision_ouverte": {
    "question": "Une définition est-elle satisfaite quand sa configuration n'est figurée que dans une représentation emboîtée (tapisserie, tableau dans le tableau) de l'œuvre ?",
    "statut_selon_l_option": {
@@ -2392,42 +2345,52 @@
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Huile sur toile, Hollande, vers 1660. Une jeune femme lit une lettre dans un intérieur, sa servante debout près d'elle. Au mur du fond est tendue une grande tapisserie dont la scène montre un berger donnant une pomme à l'une de trois déesses. Une carte roulée est posée sur la table.",
+    "description": "Huile sur toile, Hollande, vers 1660. Une jeune femme lit une lettre dans un intérieur, sa servante debout près d'elle. Au mur du fond est tendue une grande tapisserie dont la scène montre un berger tendant une pomme à l'une de trois déesses. Une carte roulée est posée sur la table.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Oil on canvas, Dutch, c. 1660. The tapestry on the back wall, behind a young woman reading a letter, depicts a shepherd who gives an apple to one of three goddesses.",
+    "description": "Oil on canvas, Dutch, c. 1660. The tapestry on the back wall, behind a young woman reading a letter, depicts a shepherd who hands an apple to one of three goddesses.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
-    "description": "Oil on canvas, Dutch, c. 1660. In a wooded landscape a shepherd gives an apple to one of three goddesses; a messenger god stands behind him.",
+    "description": "Oil on canvas, Dutch, c. 1660. In a wooded landscape a shepherd hands an apple to one of three goddesses; a messenger god stands behind him.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "decision_ouverte": {
+     "question": "« Hands » : un sens sur deux atteint give : le contexte fixe-t-il le sens ?",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    }
    },
    {
     "variation": "inversion_des_roles",
-    "description": "Oil on canvas, Dutch, c. 1660. A young woman reads a letter; on the back wall a tapestry shows one of three goddesses giving an apple to a shepherd.",
+    "description": "Oil on canvas, Dutch, c. 1660. A young woman reads a letter; on the back wall a tapestry shows one of three goddesses handing an apple to a shepherd.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Oil on canvas, Dutch, c. 1660. A young woman sits reading a letter; on the back wall a tapestry shows a shepherd giving an apple to one of three goddesses. A dog sleeps under the chair.",
+    "description": "Oil on canvas, Dutch, c. 1660. A young woman sits reading a letter; on the back wall a tapestry shows a shepherd handing an apple to one of three goddesses. A dog sleeps under the chair.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Oil on canvas, Dutch, c. 1660. A young woman sits reading a letter; on the back wall hangs a tapestry, too dark to read, that may show a shepherd giving an apple to a goddess.",
+    "description": "Oil on canvas, Dutch, c. 1660. A young woman sits reading a letter; on the back wall hangs a tapestry, too dark to read, that may show a shepherd handing an apple to a goddess.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
@@ -2474,7 +2437,8 @@
     "description": "Huile sur toile, France, années 1780. Une fillette se tient près d'une fontaine, les yeux baissés, une cruche à ses pieds. La cruche n'est pas cassée : elle se dresse intacte sur la margelle. Certains critiques lisent le vase intact comme le signe d'une innocence préservée.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_modalite",

@@ -1,0 +1,77 @@
+{
+ "textes_total": 751,
+ "textes_uniques": 751,
+ "tokens_pleins": 15258,
+ "NOUN": {
+  "types": 970,
+  "types_presents_toutes_pos": 875,
+  "types_presents_meme_pos": 869,
+  "absents_pct": 10.4,
+  "tokens": 8261,
+  "tokens_couverts_pct": 94.6,
+  "synsets_moy_par_lemme": 5.56,
+  "synsets_mediane": 4,
+  "synsets_moy_pondere_tokens": 7.15,
+  "monosemiques_pct": 14.4
+ },
+ "VERB": {
+  "types": 424,
+  "types_presents_toutes_pos": 351,
+  "types_presents_meme_pos": 344,
+  "absents_pct": 18.9,
+  "tokens": 3310,
+  "tokens_couverts_pct": 88.5,
+  "synsets_moy_par_lemme": 11.87,
+  "synsets_mediane": 7.0,
+  "synsets_moy_pondere_tokens": 18.86,
+  "monosemiques_pct": 11.0
+ },
+ "ADJ": {
+  "types": 227,
+  "types_presents_toutes_pos": 172,
+  "types_presents_meme_pos": 155,
+  "absents_pct": 31.7,
+  "tokens": 1467,
+  "tokens_couverts_pct": 77.2,
+  "synsets_moy_par_lemme": 6.44,
+  "synsets_mediane": 4,
+  "synsets_moy_pondere_tokens": 10.13,
+  "monosemiques_pct": 22.6
+ },
+ "ADV": {
+  "types": 49,
+  "types_presents_toutes_pos": 47,
+  "types_presents_meme_pos": 45,
+  "absents_pct": 8.2,
+  "tokens": 631,
+  "tokens_couverts_pct": 93.8,
+  "synsets_moy_par_lemme": 5.33,
+  "synsets_mediane": 4,
+  "synsets_moy_pondere_tokens": 3.96,
+  "monosemiques_pct": 11.1
+ },
+ "PROPN": {
+  "types": 222,
+  "types_presents_toutes_pos": 139,
+  "types_presents_meme_pos": 0,
+  "absents_pct": 37.4,
+  "tokens": 1589,
+  "tokens_couverts_pct": 76.6,
+  "synsets_moy_par_lemme": 2.24,
+  "synsets_mediane": 2,
+  "synsets_moy_pondere_tokens": 3.92,
+  "monosemiques_pct": 48.9
+ },
+ "ALL4": {
+  "types": 1670,
+  "types_presents_toutes_pos": 1445,
+  "types_presents_meme_pos": 1413,
+  "absents_pct": 15.4,
+  "tokens": 13669,
+  "tokens_couverts_pct": 91.2,
+  "synsets_moy_par_lemme": 7.18,
+  "synsets_mediane": 5,
+  "synsets_moy_pondere_tokens": 10.02,
+  "monosemiques_pct": 14.4
+ }
+}

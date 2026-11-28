@@ -43,7 +43,8 @@
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -144,7 +145,8 @@
     "description": "Engraving, second state, about 1630. On the threshold of a palace, a nobleman in a short cloak does not give his purse to the beggar who implores him: he clutches it to his chest and turns his head away. The beggar, leaning on a crutch, holds out his bowl. Verse caption below the borderline.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -244,7 +246,8 @@
       "tous_les_sens": "etablie_sous_hypotheses",
       "sens_fixe_par_le_contexte": "etablie"
      }
-    }
+    },
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -332,7 +335,8 @@
     "description": "Canvas, Lombard school, 17th century. Mary, the Child in her arms, sits on the donkey that Joseph leads by the bridle. Fearing Archelaus, the Holy Family flees from Judaea towards Galilee, where Nazareth appears on a hill. An angel goes before them; palm trees at sunset.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_participant",
@@ -427,7 +431,8 @@
     "description": "Fresco on the vault of a chapel, about 1340. An angel descends from heaven, wings spread, above a sleeping old man, Saint Joachim, lying among his sheep on a rocky slope. Two shepherds talk at the right. The plaster is damaged in the lower corner.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -504,6 +509,11 @@
     "contenu": "« Vénus » (français) et « Venus » : deux noms du même individu",
     "attestee": true,
     "source": "WordNet 3.0, venus%1:18:00:: (synset d'instance) ; forme française par WOLF, rattachée à ce synset (§ 4.1.1)"
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« sortir » (français) correspond à « emerge » : WOLF ne relie aucun sens de « sortir » à ce lemme ; correspondance supposée par le cas, sans attestation",
+    "attestee": false
    }
   ],
   "operations_requises": [
@@ -512,14 +522,15 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "L'auteur décrit Vénus debout sur la coquille, près du rivage, sans mouvement depuis la mer ; seul l'inventaire cité affirme qu'elle y est figurée émergeant de la mer. La description est réécrite pour que l'inventaire soit un énonciateur cité qui décrit le figuré, et non un titre entre guillemets (relecture A, question 8). La substitution est vraie par la seule parole d'une source citée : non_certifiee (NOYAU § 4.3, § 4.4 ; FONDEMENTS_SEMANTIQUES § 2.5). Rien de ce que dit l'auteur ne nie la sortie de la mer. Harmonisation : emerging → emerge et sea : même lemme. La variante où l'auteur affirme est etablie (et non sous hypothèse). La traduction disait « sortant », et WOLF ne relie aucun sens de « sortir » à emerge (0/14) : elle dit maintenant « émergeant » (émerger → emerge 5/5), la traduction exacte ; mer → sea 3/4 : la valeur reste vraie par la source citée, non_certifiee. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical.",
+  "justification": "L'auteur décrit Vénus debout sur la coquille, près du rivage, sans mouvement depuis la mer ; seul l'inventaire cité affirme qu'elle y est figurée sortant de la mer. La description est réécrite pour que l'inventaire soit un énonciateur cité qui décrit le figuré, et non un titre entre guillemets (relecture A, question 8). La substitution est vraie par la seule parole d'une source citée : non_certifiee (NOYAU § 4.3, § 4.4 ; FONDEMENTS_SEMANTIQUES § 2.5). Rien de ce que dit l'auteur ne nie la sortie de la mer. Harmonisation : emerging → emerge et sea : même lemme. La variante où l'auteur affirme est etablie (et non sous hypothèse). La traduction disait « sortant », et WOLF ne relie aucun sens de « sortir » à emerge (0/14) : elle dit maintenant « émergeant » (émerger → emerge 5/5), la traduction exacte ; mer → sea 3/4 : la valeur reste vraie par la source citée, non_certifiee. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical. Rétablissement (28/11) : la traduction dit de nouveau « sortant ». Aucun des 14 sens de « sortir » dans WOLF n'atteint emerge : la valeur n'est vraie, par la source citée, que sous une correspondance non attestée, et entre non_certifiee et inconnue le plus prudent est inconnue (§ 4.1). La traduction passe de non_certifiee à inconnue.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Face d'un cassone, tempera et or sur bois, Florence, vers 1470. Vénus se tient nue sur une coquille Saint-Jacques près du rivage, tordant sa chevelure, tandis que deux vents soufflent depuis la gauche. Selon l'inventaire des Médicis de 1492, Vénus y était figurée émergeant de la mer. Une nymphe accourt de droite avec un manteau fleuri.",
+    "description": "Face d'un cassone, tempera et or sur bois, Florence, vers 1470. Vénus se tient nue sur une coquille Saint-Jacques près du rivage, tordant sa chevelure, tandis que deux vents soufflent depuis la gauche. Selon l'inventaire des Médicis de 1492, Vénus y était figurée sortant de la mer. Une nymphe accourt de droite avec un manteau fleuri.",
     "sorte": "indetermine",
-    "statut_attendu": "non_certifiee",
-    "hypotheses_attendues": []
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_portee",
@@ -611,7 +622,8 @@
     "description": "Panel, Flanders, about 1500. Seated before an easel, Saint Luke paints the Virgin with a fine brush; on the panel set on the easel, the Virgin's portrait is half finished. The Virgin, who poses with the Child in a loggia, looks at the painter. The evangelist's ox lies at his feet.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -698,7 +710,8 @@
     "description": "Retable de saint Paul, tempera et or sur bois, Sienne, vers 1380. Au panneau principal, l'apôtre se tient debout, un livre et une épée en main. À la prédelle, son martyre : le corps décapité de Paul gît sur l'herbe, et le bourreau qui l'a mis à mort s'essuie les mains à sa tunique. Une épée est posée à terre près du corps.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_participant",
@@ -793,7 +806,8 @@
       "tous_les_sens": "etablie_sous_hypotheses",
       "sens_fixe_par_le_contexte": "etablie"
      }
-    }
+    },
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -858,13 +872,18 @@
   "langue": "fr",
   "sorte": "indetermine",
   "description": "Présentation au Temple, vitrail, Bourges, vers 1215. Sous une arcature, le vieillard Siméon reçoit l'Enfant des mains de Marie, le bénissant. Joseph porte deux colombes dans un panier ; la prophétesse Anne se tient derrière l'autel.",
-  "definition": "Simeon blessing the Child",
+  "definition": "Simeon blessing the Christ child",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "identite_documentaire",
     "contenu": "« Siméon » (français) et « Simeon » : deux noms du même individu ; simeon%1:18:00:: de WordNet 3.0 est le patriarche, fils de Jacob, un autre individu : non attesté",
+    "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "« l'Enfant » / « the Child » d'une Présentation ou d'une Adoration désigne l'Enfant Jésus (« the Christ child ») ; christ_child n'a pas d'entrée dans WordNet 3.0 : non attesté",
     "attestee": false
    }
   ],
@@ -874,14 +893,15 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Le participe « le bénissant », en fin de phrase après « des mains de Marie », peut se rattacher au sujet (Siméon) ou au complément le plus proche (Marie). Les documents ne fixent pas la lecture d'un rattachement ambigu (FONDEMENTS_SEMANTIQUES § 8 ; AUDIT_EXPRESSIVITE § 3.3 (2)). Représentée comme une alternative, l'ambiguïté n'appuie rien (NOYAU § 1) : inconnue, l'option la plus faible, retenue. Même rattaché à Siméon, le cas ne serait qu'etablie_sous_hypotheses : bless a quatre sens, et l'alias Siméon / Simeon n'est pas attesté (le Simeon de WordNet 3.0 est un autre individu). La négation dite de la variante n'est que possible pour un verbe polysémique (NOYAU § 2, D30 ; BANCS_PHASE1 § 4.1.2) : inconnue. La variante du catalogue cité est vraie par la seule parole d'une source : non_certifiee. Harmonisation : bénir → bless 4/5, enfant → child 6/12 : les options rattachées au sujet restent sous hypothèse ; statuts inchangés. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical.",
+  "justification": "Le participe « le bénissant », en fin de phrase après « des mains de Marie », peut se rattacher au sujet (Siméon) ou au complément le plus proche (Marie). Les documents ne fixent pas la lecture d'un rattachement ambigu (FONDEMENTS_SEMANTIQUES § 8 ; AUDIT_EXPRESSIVITE § 3.3 (2)). Représentée comme une alternative, l'ambiguïté n'appuie rien (NOYAU § 1) : inconnue, l'option la plus faible, retenue. Même rattaché à Siméon, le cas ne serait qu'etablie_sous_hypotheses : bless a quatre sens, et l'alias Siméon / Simeon n'est pas attesté (le Simeon de WordNet 3.0 est un autre individu). La négation dite de la variante n'est que possible pour un verbe polysémique (NOYAU § 2, D30 ; BANCS_PHASE1 § 4.1.2) : inconnue. La variante du catalogue cité est vraie par la seule parole d'une source : non_certifiee. Harmonisation : bénir → bless 4/5, enfant → child 6/12 : les options rattachées au sujet restent sous hypothèse ; statuts inchangés. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical. Rétablissement (28/11) : la définition d'origine (« the Christ child ») revient. christ_child est absent de WordNet 3.0 : l'atome n'a d'appui que par une identité non attestée. La variante du catalogue cité, qui était non_certifiee, n'est plus vraie que sous hypothèse : inconnue, le plus prudent (§ 4.1). Le cas n'a plus de variante de statut différent.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Presentation in the Temple, stained glass, Bourges, about 1215. Beneath an arcade, the aged Simeon receives the Child from the hands of Mary, blessing him. Joseph carries two doves in a basket; the prophetess Anna stands behind the altar.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_modalite",
@@ -915,12 +935,12 @@
     "variation": "changement_de_portee",
     "description": "Présentation au Temple, vitrail, Bourges, vers 1215. Sous une arcature, le vieillard Siméon reçoit l'Enfant des mains de Marie. Selon le catalogue de la restauration de 1890, Siméon y bénit l'Enfant de la main droite, aujourd'hui refaite.",
     "sorte": "indetermine",
-    "statut_attendu": "non_certifiee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "Le participe détaché « le bénissant », en fin de phrase après un complément qui nomme un autre personnage, se rattache-t-il au sujet par la norme grammaticale, ou l'ambiguïté doit-elle être une alternative, ou une hypothèse de lecture nommée ? Rattaché au sujet, le lien dépend encore du sens de « bénir » (quatre sens) et de l'alias Siméon / Simeon, non attesté.",
+   "question": "Le participe détaché « le bénissant », en fin de phrase après un complément qui nomme un autre personnage, se rattache-t-il au sujet par la norme grammaticale, ou l'ambiguïté doit-elle être une alternative, ou une hypothèse de lecture nommée ? Rattaché au sujet, le lien dépend encore du sens de « bénir » (quatre sens) et de l'alias Siméon / Simeon, non attesté. La définition demande aussi « the Christ child », que « l'Enfant » n'atteint que par une identité non attestée.",
    "statut_selon_l_option": {
     "alternative_de_lecture": "inconnue",
     "rattachement_au_sujet_tous_les_sens": "etablie_sous_hypotheses",
@@ -944,9 +964,9 @@
    "cle_de_sens": "pour%2:38:03::",
    "famille_lexicale": "verb.motion"
   },
-  "langue": "en",
+  "langue": "fr",
   "sorte": "indetermine",
-  "description": "Genre scene, oil on canvas, Delft, about 1660. In a kitchen paved in black and white, the maidservant of the lady who pours water from a jug into a basin looks towards the window. A boy brings an armful of wood. A map of Holland hangs on the wall.",
+  "description": "Scène de genre, huile sur toile, Delft, vers 1660. Dans une cuisine dallée de blanc et de noir, la servante de la dame qui verse l'eau d'une cruche dans un bassin regarde vers la fenêtre. Un garçon apporte une brassée de bois. Une carte de Hollande pend au mur.",
   "definition": "a maidservant pouring water from a jug into a basin",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
@@ -963,39 +983,43 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "La relative « who pours water » peut se rattacher à « the maidservant » (le nom tête) ou à « the lady » (le nom le plus proche) ; le texte ne tranche pas. Les documents ne fixent pas le traitement d'un rattachement ambigu (FONDEMENTS_SEMANTIQUES § 8 ; AUDIT_EXPRESSIVITE § 3.3 (2)) ; représentée comme une alternative, l'ambiguïté n'appuie rien (NOYAU § 1). Le statut le plus faible, inconnue, est retenu. La négation de la variante niée n'est que possible (NOYAU § 2, D30 ; BANCS_PHASE1 § 4.1.2) : inconnue. La variante du catalogue cité est vraie par la seule parole d'une source : non_certifiee. Harmonisation : WOLF ne relie aucun mot français du récipient à jug (cruche est absent ; pichet, broc, carafe : 0 sens) : en français, l'atome jug n'aurait jamais d'appui, et aucune variante ne pourrait différer du cas par la portée, la modalité, le temps ou les rôles. La description de base est donc la version anglaise, et la française devient la traduction (avec une correspondance non attestée cruche / jug). En anglais, les mots sont ceux de la définition : la variante sans ambiguïté est etablie, la variante du catalogue cité non_certifiee, la négation de pour (6 sens) reste possible : inconnue. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical.",
+  "justification": "La relative « qui verse l'eau » peut se rattacher à « la servante » (le nom tête) ou à « la dame » (le nom le plus proche) ; le texte ne tranche pas. Les documents ne fixent pas le traitement d'un rattachement ambigu (FONDEMENTS_SEMANTIQUES § 8 ; AUDIT_EXPRESSIVITE § 3.3 (2)) ; représentée comme une alternative, l'ambiguïté n'appuie rien (NOYAU § 1). Le statut le plus faible, inconnue, est retenu. La négation de la variante niée n'est que possible (NOYAU § 2, D30 ; BANCS_PHASE1 § 4.1.2) : inconnue. Régime des sens (BANCS_PHASE1 § 4.1.2) : aucun mot français du récipient n'atteint jug dans WOLF (cruche est absent ; pichet, broc, carafe : 0 sens) ; l'atome jug n'a d'appui que par la correspondance non attestée de K. Rattachée à la servante, la relative ne donnerait donc qu'etablie_sous_hypotheses [equivalence_non_attestee, sens] (servante 1/2, verser 4/7, eau 6/9, bassin 2/13). La variante du catalogue cité n'est vraie que sous ces hypothèses : inconnue, le plus prudent (§ 4.1). La traduction anglaise reste ambiguë : inconnue. Rétablissement (28/11) : le français, passé en anglais lors de l'harmonisation pour éviter la lacune de WOLF, redevient la langue de base. Le cas n'a plus de variante de statut différent par la portée, la modalité, le temps ou les rôles.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Scène de genre, huile sur toile, Delft, vers 1660. Dans une cuisine dallée de blanc et de noir, la servante de la dame qui verse l'eau d'une cruche dans un bassin regarde vers la fenêtre. Un garçon apporte une brassée de bois. Une carte de Hollande pend au mur.",
+    "description": "Genre scene, oil on canvas, Delft, about 1660. In a kitchen paved in black and white, the maidservant of the lady who pours water from a jug into a basin looks towards the window. A boy brings an armful of wood. A map of Holland hangs on the wall.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_participant",
-    "description": "Genre scene, oil on canvas, Delft, about 1660. In a kitchen paved in black and white, the maidservant, who pours water from a jug into a basin, looks towards the window, while her mistress sews by the hearth. A boy brings an armful of wood.",
+    "description": "Scène de genre, huile sur toile, Delft, vers 1660. Dans une cuisine dallée de blanc et de noir, la servante, qui verse l'eau d'une cruche dans un bassin, regarde vers la fenêtre, tandis que sa maîtresse coud près de l'âtre. Un garçon apporte une brassée de bois.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "equivalence_non_attestee",
+     "sens"
+    ]
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Genre scene, oil on canvas, Delft, about 1660. In a kitchen paved in black and white, the lady pours water from a jug into a basin; her maidservant, who does not pour the water, looks towards the window. A boy brings an armful of wood.",
+    "description": "Scène de genre, huile sur toile, Delft, vers 1660. Dans une cuisine dallée de blanc et de noir, la dame verse l'eau d'une cruche dans un bassin ; sa servante, qui ne verse pas l'eau, regarde vers la fenêtre. Un garçon apporte une brassée de bois.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "inversion_des_roles",
-    "description": "Genre scene, oil on canvas, Delft, about 1660. In a kitchen paved in black and white, the lady, who pours water from a jug into a basin, looks towards the window; her maidservant holds the basin. A boy brings an armful of wood.",
+    "description": "Scène de genre, huile sur toile, Delft, vers 1660. Dans une cuisine dallée de blanc et de noir, la dame, qui verse l'eau d'une cruche dans un bassin, regarde vers la fenêtre ; sa servante tient le bassin. Un garçon apporte une brassée de bois.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Genre scene, oil on canvas, Delft, about 1660. In a kitchen paved in black and white, the maidservant, who has just poured water from a jug into a basin, looks towards the window. The empty jug stands on the table.",
+    "description": "Scène de genre, huile sur toile, Delft, vers 1660. Dans une cuisine dallée de blanc et de noir, la servante, qui vient de verser l'eau d'une cruche dans un bassin, regarde vers la fenêtre. La cruche vide est posée sur la table.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": [],
@@ -1005,24 +1029,24 @@
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Genre scene, oil on canvas, Delft, about 1660. In a kitchen paved in black and white, the maidservant of the lady who pours water from a jug into a basin looks towards the window. No cat is to be seen by the hearth.",
+    "description": "Scène de genre, huile sur toile, Delft, vers 1660. Dans une cuisine dallée de blanc et de noir, la servante de la dame qui verse l'eau d'une cruche dans un bassin regarde vers la fenêtre. Aucun chat n'est visible près de l'âtre.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
-    "description": "Genre scene, oil on canvas, Delft, about 1660. In a kitchen paved in black and white, a maidservant looks towards the window. According to the sale catalogue of 1696, she was shown pouring water from a jug into a basin; this part is now overpainted.",
+    "description": "Scène de genre, huile sur toile, Delft, vers 1660. Dans une cuisine dallée de blanc et de noir, une servante regarde vers la fenêtre. Selon le catalogue de la vente de 1696, elle y versait l'eau d'une cruche dans un bassin ; cette partie est aujourd'hui repeinte.",
     "sorte": "indetermine",
-    "statut_attendu": "non_certifiee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "Une relative qui suit un complément du nom (« the maidservant of the lady who pours ») et que la syntaxe peut rattacher à l'un ou l'autre nom : faut-il une alternative, ou une lecture préférée (le nom tête, ou le nom le plus proche) ?",
+   "question": "Une relative qui suit un complément du nom (« la servante de la dame qui verse ») et que la syntaxe peut rattacher à l'un ou l'autre nom : faut-il une alternative, ou une lecture préférée ? Rattachée à la servante, le lien dépend encore du sens de « verser » (pour a six sens).",
    "statut_selon_l_option": {
     "alternative_de_lecture": "inconnue",
-    "rattachement_au_nom_tete": "etablie",
+    "rattachement_au_nom_tete": "etablie_sous_hypotheses",
     "rattachement_au_nom_le_plus_proche": "inconnue"
    }
   }
@@ -1050,31 +1074,40 @@
   "langue": "en",
   "sorte": "negatif",
   "description": "Adoration of the Shepherds, oil on panel, attributed to the workshop of a Haarlem master, about 1520. At the left kneels an old shepherd who does not offer the lamb he carries on his shoulders to the Child: he holds it tight and gazes at the Virgin. The Child lies on a sheaf of straw. Formerly given to the master himself, the panel was reattributed in 1958.",
-  "definition": "a shepherd offering a lamb to the Child",
+  "definition": "a shepherd offering a lamb to the Christ child",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
-  "connaissances_supposees": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "« l'Enfant » / « the Child » d'une Présentation ou d'une Adoration désigne l'Enfant Jésus (« the Christ child ») ; christ_child n'a pas d'entrée dans WordNet 3.0 : non attesté",
+    "attestee": false
+   }
+  ],
   "operations_requises": [
    "lecture"
   ],
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "La relative attribue au vieux berger un événement offrir nié, avec ses rôles (agent le berger, thème l'agneau, destinataire l'Enfant), présents. Sens fixé, la conjonction de la définition serait fausse pour ces référents : ecartee (FONDEMENTS_SEMANTIQUES § 1.1 ; NOYAU § 1.1, § 4.4). Mais offer a treize sens, et par D30 la négation d'un mot polysémique n'est que possible : le statut le plus prudent est inconnue (NOYAU § 2 ; BANCS_PHASE1 § 4.1.2, decision_ouverte). La définition dit maintenant « the Child », le mot du texte, au lieu de « the Christ child », qui demandait un alias non écrit. Les attributions sont des assertions de l'histoire de l'œuvre, sans effet sur le figuré (FONDEMENTS_SEMANTIQUES § 2.5). Harmonisation : la négation de offer reste possible (13 sens demandés, 13 niés). La variante affirmée (shepherd, offer, lamb, child) est etablie, et non sous hypothèse. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical.",
+  "justification": "La relative attribue au vieux berger un événement offrir nié, avec ses rôles (agent le berger, thème l'agneau, destinataire l'Enfant), présents. Sens fixé, la conjonction de la définition serait fausse pour ces référents : ecartee (FONDEMENTS_SEMANTIQUES § 1.1 ; NOYAU § 1.1, § 4.4). Mais offer a treize sens, et par D30 la négation d'un mot polysémique n'est que possible : le statut le plus prudent est inconnue (NOYAU § 2 ; BANCS_PHASE1 § 4.1.2, decision_ouverte). La définition dit maintenant « the Child », le mot du texte, au lieu de « the Christ child », qui demandait un alias non écrit. Les attributions sont des assertions de l'histoire de l'œuvre, sans effet sur le figuré (FONDEMENTS_SEMANTIQUES § 2.5). Harmonisation : la négation de offer reste possible (13 sens demandés, 13 niés). La variante affirmée (shepherd, offer, lamb, child) est etablie, et non sous hypothèse. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical. Rétablissement (28/11) : la définition d'origine (« the Christ child ») revient ; la variante affirmée passe par l'identité non attestée the Child / the Christ child : etablie_sous_hypotheses [identite].",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Adoration des bergers, huile sur bois, attribuée à l'atelier d'un maître de Haarlem, vers 1520. À gauche s'agenouille un vieux berger qui n'offre pas à l'Enfant l'agneau qu'il porte sur les épaules : il le serre contre lui et regarde la Vierge. L'Enfant repose sur une gerbe de paille. Autrefois donné au maître lui-même, le panneau a été réattribué en 1958.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_modalite",
     "description": "Adoration of the Shepherds, oil on panel, attributed to the workshop of a Haarlem master, about 1520. At the left kneels an old shepherd who offers the lamb he carries on his shoulders to the Child, gazing at the Virgin. The Child lies on a sheaf of straw.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "identite"
+    ]
    },
    {
     "variation": "paraphrase",
@@ -1179,7 +1212,8 @@
     "description": "Oil on canvas, Naples, about 1620. In the tent, Judith seizes the hair of the sleeping Holofernes and raises the sword above him. Her maidservant, at the right, holds open a linen sack. A candle lights the scene from below.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -1270,7 +1304,8 @@
     "description": "Miniature d'un livre d'heures, Rouen, vers 1470. Dans une chambre, le jeune Tobie s'agenouille devant son père aveugle, Tobit, et lui oint peut-être les yeux avec le fiel du poisson. L'ange Raphaël se tient derrière lui, un bâton à la main. Anne, la mère, file près du foyer.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_modalite",
@@ -1369,7 +1404,8 @@
     "hypotheses_attendues": [
      "equivalence_non_attestee",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1437,12 +1473,13 @@
   "langue": "fr",
   "sorte": "positif",
   "description": "Peinture murale, nef d'une église de Catalogne, vers 1100. Aux portes de Naïm, le Christ relève le fils de la veuve, étendu sur une civière que portent deux hommes. La mère, voilée, lève les mains. Une bande de rinceaux court au-dessus de la scène.",
-  "definition": "Christ raising the widow's son from the dead",
+  "definition": "Christ raising the son of the widow of Nain from the dead",
   "statut_attendu": "etablie_sous_hypotheses",
   "hypotheses_attendues": [
    "equivalence_non_attestee",
    "sens",
-   "relation_inconnue"
+   "relation_inconnue",
+   "identite"
   ],
   "connaissances_supposees": [
    {
@@ -1460,6 +1497,11 @@
     "sorte": "relation_inconnue",
     "contenu": "raise%2:29:00:: (« cause to become alive again ») : le patient était mort auparavant ; tiré de la seule glose",
     "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "« Naïm » (français) et « Nain » : le même lieu ; Nain n'a pas d'entrée dans WordNet 3.0 : non attesté",
+    "attestee": false
    }
   ],
   "operations_requises": [
@@ -1468,7 +1510,7 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "« relève » a deux sens que le texte laisse ouverts : soulever (raise%2:38:00 : le jeune homme est le thème d'un déplacement) ou ressusciter (raise%2:29:00 : il est le patient d'un changement d'état). La civière ne dit pas qu'il est mort, et « étendu », participe résultatif d'un verbe transitif, dit un état, non une mort (FONDEMENTS_SEMANTIQUES § 3.2). La définition n'est satisfaite que dans le sens raise%2:29:00. Le contexte ne ferme pas le sens, et le statut ne dépend pas de la seule option de sens : aucune decision_ouverte. La glose de raise%2:29:00 n'est pas une attestation (§ 4.1.1) : elle est écrite comme une relation inconnue. « Naïm » est retiré de la définition, faute d'un alias attestable (Nain est absent de WordNet 3.0). « s'apprête à relever » est la phase préparatoire, que l'ontologie range dans l'en cours (ONTOLOGIE_EVENTUALITES § 1.2) : même statut que le cas. Seulement traditionnel (« dit-on »), l'événement n'appuie rien (QUALIFICATION_SEMANTIQUE § 2.2). Harmonisation : aucun des 11 sens de « relever » dans WOLF n'atteint raise : le pas passe par une correspondance non attestée, puis par le choix du sens raise%2:29:00, et « from the dead » ne vient que de sa glose (relation inconnue). En anglais, « raises » atteint le lemme raise par tous ses sens, mais « from the dead » reste une relation inconnue tirée du sens raise%2:29:00 : etablie_sous_hypotheses [sens, relation_inconnue]. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical.",
+  "justification": "« relève » a deux sens que le texte laisse ouverts : soulever (raise%2:38:00 : le jeune homme est le thème d'un déplacement) ou ressusciter (raise%2:29:00 : il est le patient d'un changement d'état). La civière ne dit pas qu'il est mort, et « étendu », participe résultatif d'un verbe transitif, dit un état, non une mort (FONDEMENTS_SEMANTIQUES § 3.2). La définition n'est satisfaite que dans le sens raise%2:29:00. Le contexte ne ferme pas le sens, et le statut ne dépend pas de la seule option de sens : aucune decision_ouverte. La glose de raise%2:29:00 n'est pas une attestation (§ 4.1.1) : elle est écrite comme une relation inconnue. « Naïm » est retiré de la définition, faute d'un alias attestable (Nain est absent de WordNet 3.0). « s'apprête à relever » est la phase préparatoire, que l'ontologie range dans l'en cours (ONTOLOGIE_EVENTUALITES § 1.2) : même statut que le cas. Seulement traditionnel (« dit-on »), l'événement n'appuie rien (QUALIFICATION_SEMANTIQUE § 2.2). Harmonisation : aucun des 11 sens de « relever » dans WOLF n'atteint raise : le pas passe par une correspondance non attestée, puis par le choix du sens raise%2:29:00, et « from the dead » ne vient que de sa glose (relation inconnue). En anglais, « raises » atteint le lemme raise par tous ses sens, mais « from the dead » reste une relation inconnue tirée du sens raise%2:29:00 : etablie_sous_hypotheses [sens, relation_inconnue]. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical. Rétablissement (28/11) : la définition d'origine (« of Nain ») revient. Naïm / Nain passe par une identité non attestée (Nain est absent de WordNet 3.0) : l'hypothèse identite s'ajoute au cas et aux variantes françaises. La traduction anglaise dit « Nain », le nom de la définition : inchangée.",
   "variantes": [
    {
     "variation": "traduction",
@@ -1478,7 +1520,8 @@
     "hypotheses_attendues": [
      "sens",
      "relation_inconnue"
-    ]
+    ],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -1488,7 +1531,8 @@
     "hypotheses_attendues": [
      "equivalence_non_attestee",
      "sens",
-     "relation_inconnue"
+     "relation_inconnue",
+     "identite"
     ]
    },
    {
@@ -1506,7 +1550,8 @@
     "hypotheses_attendues": [
      "equivalence_non_attestee",
      "sens",
-     "relation_inconnue"
+     "relation_inconnue",
+     "identite"
     ]
    },
    {
@@ -1524,7 +1569,8 @@
     "hypotheses_attendues": [
      "equivalence_non_attestee",
      "sens",
-     "relation_inconnue"
+     "relation_inconnue",
+     "identite"
     ]
    }
   ]
@@ -1567,6 +1613,11 @@
     "sorte": "connaissance_typique",
     "contenu": "la couronne de roses et la corbeille de fruits sont des attributs de sainte Dorothée (attributs possibles d'une sainte, connaissance typique d'identification)",
     "attestee": false
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« couronne » (français) correspond à « wreath » : WOLF ne relie aucun sens de « couronne » à ce lemme ; correspondance supposée par le cas, sans attestation",
+    "attestee": false
    }
   ],
   "operations_requises": [
@@ -1576,17 +1627,19 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Le port est établi par l'auteur : la jeune femme est le porteur de wear, la couronne de roses son thème, distinct de la corbeille, qui est tenue (AUDIT_EXPRESSIVITE § 3.3 (2)). Le nom de Dorothée n'est pas dit : il est proposé par abduction, la connaissance typique de K expliquant deux éléments observés, la couronne et la corbeille (SPECIFICATION_OPERATIONS § 4 ; FONDEMENTS_SEMANTIQUES § 2.7). K ne contient aucune explication concurrente. La négation du port, dans la variante, n'est que possible pour un verbe polysémique : inconnue (§ 4.1.2). Harmonisation : wears → wear, wreath, rose : même lemme ; l'hypothèse de sens est retirée. Traduction : « couronne » n'atteint pas wreath dans WOLF (0/8) ; la traduction dit maintenant « guirlande » (1/1), la traduction exacte de wreath ; porter → wear 5/42, rose 3/9 : etablie_sous_hypotheses [connaissance_typique, sens]. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical.",
+  "justification": "Le port est établi par l'auteur : la jeune femme est le porteur de wear, la couronne de roses son thème, distinct de la corbeille, qui est tenue (AUDIT_EXPRESSIVITE § 3.3 (2)). Le nom de Dorothée n'est pas dit : il est proposé par abduction, la connaissance typique de K expliquant deux éléments observés, la couronne et la corbeille (SPECIFICATION_OPERATIONS § 4 ; FONDEMENTS_SEMANTIQUES § 2.7). K ne contient aucune explication concurrente. La négation du port, dans la variante, n'est que possible pour un verbe polysémique : inconnue (§ 4.1.2). Harmonisation : wears → wear, wreath, rose : même lemme ; l'hypothèse de sens est retirée. Traduction : « couronne » n'atteint pas wreath dans WOLF (0/8) ; la traduction dit maintenant « guirlande » (1/1), la traduction exacte de wreath ; porter → wear 5/42, rose 3/9 : etablie_sous_hypotheses [connaissance_typique, sens]. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical. Rétablissement (28/11) : la traduction dit de nouveau « couronne de roses ». Aucun des 8 sens de « couronne » dans WOLF n'atteint wreath : correspondance non attestée ; etablie_sous_hypotheses [connaissance_typique, equivalence_non_attestee, sens].",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Statuette, tilleul peint, Malines, vers 1500. Une jeune femme porte une guirlande de roses sur ses cheveux dénoués et tient une corbeille de fruits de la main gauche. Son manteau est doré ; la main droite est perdue. Aucune inscription ne subsiste sur la terrasse.",
+    "description": "Statuette, tilleul peint, Malines, vers 1500. Une jeune femme porte une couronne de roses sur ses cheveux dénoués et tient une corbeille de fruits de la main gauche. Son manteau est doré ; la main droite est perdue. Aucune inscription ne subsiste sur la terrasse.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "connaissance_typique",
+     "equivalence_non_attestee",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_participant",
@@ -1686,7 +1739,8 @@
     "description": "Woodcut from a Passion series, Nuremberg, 1509. Christ, seated on a block of stone with bound hands, does not yet wear the crown of thorns: behind him a soldier holds it raised above his head, ready to drive it down with two crossed staves. Two other soldiers bow and jeer.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_temps",
@@ -1788,7 +1842,8 @@
     "hypotheses_attendues": [
      "equivalence_non_attestee",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1861,7 +1916,7 @@
   "langue": "fr",
   "sorte": "indetermine",
   "description": "Volet gauche d'un triptyque, huile sur bois, Bruges, vers 1480. Saint Jean-Baptiste, vêtu d'une peau de chameau, désigne de l'index l'agneau couché sur le livre qu'il tient de l'autre main. Le bas du panneau, sous la taille, est perdu : le saint était soit debout, soit assis sur un rocher. Le fond montre un paysage traversé par une rivière.",
-  "definition": "Saint John the Baptist standing, pointing at a lamb",
+  "definition": "Saint John the Baptist standing, pointing at the Lamb",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -1883,14 +1938,15 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "La posture n'est dite que dans une alternative (« soit debout, soit assis ») : une assertion dans une alternative n'est pas une prémisse (NOYAU § 1, l'état d'un appui). La connaissance typique de K ne fonde pas d'abduction : la posture debout n'expliquerait aucun élément observé (le geste, l'agneau, le livre ne s'en déduisent pas), et une hypothèse qui n'explique rien est inadmissible (FONDEMENTS_SEMANTIQUES § 5 ; SPECIFICATION_OPERATIONS § 4). La perte du bas du panneau est une assertion sur l'œuvre (FONDEMENTS_SEMANTIQUES § 2.5). Statut inconnue ; affirmée, la posture établit la définition. La définition dit maintenant « a lamb », le mot du texte, au lieu de « the Lamb ». Affirmée, la posture n'est établie que sous une hypothèse de sens : standing a six sens adjectivaux, dont standing%3:00:02 « not moving or flowing » (NOYAU § 2, D30 ; BANCS_PHASE1 § 4.1.2). Harmonisation : debout → standing 1/2, désigner → point 1/13, agneau → lamb 5/5 : la variante affirmée reste etablie_sous_hypotheses [sens]. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical.",
+  "justification": "La posture n'est dite que dans une alternative (« soit debout, soit assis ») : une assertion dans une alternative n'est pas une prémisse (NOYAU § 1, l'état d'un appui). La connaissance typique de K ne fonde pas d'abduction : la posture debout n'expliquerait aucun élément observé (le geste, l'agneau, le livre ne s'en déduisent pas), et une hypothèse qui n'explique rien est inadmissible (FONDEMENTS_SEMANTIQUES § 5 ; SPECIFICATION_OPERATIONS § 4). La perte du bas du panneau est une assertion sur l'œuvre (FONDEMENTS_SEMANTIQUES § 2.5). Statut inconnue ; affirmée, la posture établit la définition. La définition dit maintenant « a lamb », le mot du texte, au lieu de « the Lamb ». Affirmée, la posture n'est établie que sous une hypothèse de sens : standing a six sens adjectivaux, dont standing%3:00:02 « not moving or flowing » (NOYAU § 2, D30 ; BANCS_PHASE1 § 4.1.2). Harmonisation : debout → standing 1/2, désigner → point 1/13, agneau → lamb 5/5 : la variante affirmée reste etablie_sous_hypotheses [sens]. Régime des sens (BANCS_PHASE1 § 4.1.2, « Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte l'atteint (hyperonymie, instance, puis lexicalisation), ce que donne le même lemme des deux côtés ; un mot français prend ses sens dans WOLF (sens_fr.py) ; les rôles et les relations spatiales viennent de la lecture, non d'un lien lexical. Rétablissement (28/11) : la définition d'origine (« the Lamb ») revient ; le type est le lemme lamb, qu'agneau atteint par ses 5 sens : statuts inchangés.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Left wing of a triptych, oil on panel, Bruges, about 1480. Saint John the Baptist, clad in a camel skin, points with his forefinger at the lamb lying on the book he holds in his other hand. The lower part of the panel, below the waist, is lost: the saint was either standing or seated on a rock. The background shows a landscape crossed by a river.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_modalite",
@@ -1980,7 +2036,8 @@
     "hypotheses_attendues": [
      "equivalence_non_attestee",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -2070,7 +2127,8 @@
     "description": "Miniature from a Bible historiale, Paris, about 1400. Jacob lies on his back, his head resting on a stone, at the foot of a ladder that reaches to heaven. He is awake and watches the angels climbing the rungs. A landscape of blue hills closes the horizon.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_modalite",
@@ -2184,7 +2242,8 @@
     "description": "Tapestry, wool and silk, Brussels, about 1530. A crowned woman, Justice, holding a pair of scales, presents a sword to the young king kneeling before her. Behind the king, two counsellors in gowns converse. A border of flowers and fruit frames the scene.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -2286,7 +2345,8 @@
     "description": "Gravure, Anvers, vers 1560. Dans son étude, saint Jérôme est assis à un pupitre incliné devant un livre ouvert ; son chapeau de cardinal pend au mur. Il ne tient pas sa plume : elle est plantée dans l'encrier, et il appuie la tête sur sa main, absorbé. Un lion dort sous le pupitre.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_modalite",

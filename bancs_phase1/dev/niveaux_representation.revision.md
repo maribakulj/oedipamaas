@@ -72,3 +72,24 @@ Décisions ouvertes : 5 cas en version 1 ; maintenant 12 au niveau des cas (nr-0
 - **Les relations de position et de figuration** sont traitées comme du vocabulaire fermé du lecteur : au-dessus de, devant, symbolise, personnifie, représente (ASSERTIONS ; audit § 3.7). C'est mon choix. Si elles relèvent de K, nr-022, nr-023#2, nr-019 et les positions de nr-003 demanderont des équivalences.
 - **« Signify »** est traité comme un pas lexical vers la relation de symbole, et **« symbolise »** comme la relation elle-même. La frontière se discute.
 - **Restriction de sélection.** « The Child » / « l'Enfant », dans nr-003 et nr-012, est lu comme un nom de la même figure dans les deux langues. Aucune entrée de K ne le dit : c'est une restriction de sélection que je n'ai pas écrite, faute de ressource.
+
+## 5. Rétablissement (28/11)
+
+Décision de la propriétaire : les textes qui avaient été adaptés aux lacunes de WOLF ou de WordNet reprennent leur forme de la version 1 (`v1_avant_relecture/niveaux_representation.json`). Les statuts sont recalculés selon le § 4.1, point 2, avec les sens WOLF lus par `sens_fr.py`.
+
+| élément | ce qui revient | statut avant → après |
+|---|---|---|
+| nr-003#3 (portée) | le texte français : « en ajoute deux qui planent au-dessus de l'étable », « l'Enfant couché dans la crèche ». « Crèche » n'a aucun sens WOLF qui atteigne manger, et « planer » est absent de WOLF. | `etablie` → `inconnue` |
+| nr-017#5 (portée) | le texte français : « elle a les yeux bandés ». « Bandé » est absent de WOLF, et rien n'atteint blindfolded. L'extension `referent_conceptuel` de la variante est retirée. | `etablie` → `inconnue` |
+| nr-015#4 (paraphrase) | « présente une roue brisée » à la place de « tient ». « Présenter » a 61 sens WOLF, et aucun n'atteint hold. | `etablie_sous_hypotheses` → `inconnue` |
+| nr-023#2 (portée) | « whose colour here symbolizes heaven » à la place de « whose blue ». Rien dans K ne dit que la couleur du manteau bleu est le bleu. Une `decision_ouverte` est ajoutée à la variante. | `etablie` → `inconnue` |
+| nr-013#1 (traduction) | « pierced with arrows » à la place de « pierced by ». Mêmes lemmes ; la préposition donne le rôle d'instrument. | `etablie` → `etablie` (inchangé) |
+| nr-012#3 (temps) | « Christ Child » à la place de « Christ-child ». Je le rétablis dans le doute, car je l'avais aligné sur la définition. | `etablie` → `etablie` (inchangé ; suppose que `cle_de_nom` ignore le trait d'union) |
+
+**Ce qui n'est pas rétabli :** nr-001, où « beside them » reste retiré de la définition. C'est une correction de sûreté demandée par la relecture C, non un contournement de WOLF. Les autres réécritures avaient déjà été annulées à l'harmonisation : nr-001, 007, 010, 017, 022, 023 et 024.
+
+**Cas qui perdent leur variante de statut différent :** nr-003, nr-017 et nr-023. Je n'ai rien réécrit pour la retrouver, conformément à la consigne. Le validateur signale aussi nr-018. Ce cas n'a jamais eu de variante de portée, de modalité, de temps ou d'inversion de statut différent : sa seule variante de statut différent est un `changement_de_participant` (#2), et le cas de base est `inconnue` depuis la révision.
+
+**Forme :** chaque variante de traduction déclare maintenant sa `langue`, comme l'exige le validateur.
+
+**Validateur** (`--quotas`) : 24 cas de base, 120 variantes, 0 erreur, 4 exigences non remplies (nr-003, nr-017, nr-018, nr-023 : aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère).

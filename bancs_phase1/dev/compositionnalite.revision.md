@@ -189,3 +189,67 @@ co-021, co-022 et co-023.
 - **variantes :** 16 `etablie`, 36 `etablie_sous_hypotheses`, 2 `ecartee`, 87 `inconnue`.
 
 **Le validateur :** 24 cas, 141 variantes, 0 erreur, quotas atteints (composés ≥ 2 : 21, ≥ 3 : 8).
+
+## 5. Rétablissement (28/11)
+
+**La décision de la propriétaire :** rétablir les textes et les définitions modifiés pour éviter une lacune de WOLF ou
+de WordNet.
+- **Ce qui est gardé :** les corrections de fond demandées par la relecture A. Ce sont les inclusions fausses retirées
+  de K (little_girl ⊑ child, haranguer ⇔ preach, apostle ⊑ man), les attestations sans source passées à
+  `attestee: false`, les variations renommées ou réécrites (co-002#3, co-012#3 pour le nom, co-014#3), la formule de
+  co-004#4, et les pivots corrigés (co-008, co-009, et co-010 selon WOLF).
+- **Les équivalences de la version 1** reviennent dans K, mais `attestee: false`. Ce sont « filer sa quenouille »,
+  « pommelé », « desséché », « s'enrouler autour de », et le groupe de la Vierge à l'Enfant.
+- **Les statuts** sont recalculés par la règle de BANCS § 4.1, 2 : lemmes de la définition, sens WOLF du texte. Je n'ai
+  rien réécrit pour retrouver un statut.
+
+**Ce qui revient, avec l'ancien et le nouveau statut de base.** Les sigles sont E (`etablie`), H (esh), X (`ecartee`)
+et I (`inconnue`).
+
+| id | ce qui revient | base avant → après | variantes changées |
+|---|---|---|---|
+| co-001 | la base française d'origine (« filer sa quenouille »), la définition « old woman spinning with a distaff » | E → H [sens, equivalence_non_attestee] | #1 (anglais) I → H [eq] ; #2, #5, #6 E → H [sens, eq] |
+| co-002 | la base anglaise d'origine. #3 garde le texte de la révision, demandé par la relecture | I → I | #3 H → E (anglais : mêmes lemmes) |
+| co-006 | #2 « who wears a red cloak » | E → E | #2 E → H [eq] (wears ⇔ in, non attesté) |
+| co-007 | la base française d'origine (« pommelé ») | X → I (pommelé absent de WOLF ; la négation ne passe que par une équivalence non attestée) | #1 (anglais) I → X ; #2, #6 X → I ; #3 E → H [sens, eq] |
+| co-008 | la définition « bishop praying in the wilderness » et les textes (« devant l'entrée d'une grotte », « au désert ») | I → I | #3, #4 : la même sorte, sans l'équivalence « prier à genoux » |
+| co-009 | la définition « queen leaving the royal palace » et les textes (« walks out through the palace gate ») | I → I | #3 E → I (aucun appui pour « royal » ; walk_out vers leave : 2 sens sur 3) |
+| co-010 | la définition « prophet preaching to soldiers » et les textes (« harangue », « soi-disant ») | I → I | #3 H → I (haranguer : orate seulement, dans WOLF) |
+| co-012 | #2 « venu des montagnes », #3 « Sur un alpage, au pied de hautes montagnes » | I → I | #3 H → I (alpage absent de WOLF ; aucun paysage dit) |
+| co-015 | la définition « mother giving an apple to her daughter », #3 « à sa fillette » | H → I (fillette n'atteint pas daughter ; le possessif ne dit pas la filiation) | #2, #3, #5, #6 H → I |
+| co-016 | la définition « angel leading a child by the hand » | E → I (little_girl et fillette n'atteignent pas child) | #1, #2, #5, #6 → I |
+| co-017 | la définition « … at the feet of the Virgin and Child » | E → H [eq] (le groupe de la Vierge à l'Enfant, non attesté) | #1 H [sens, eq] ; #2, #5 E → H [eq] |
+| co-019 | les textes d'origine : un seul luth, une seule chalemie (la révision avait ajouté une viole et une flûte à bec). Je ne l'ai pas fait pour une lacune de WOLF, mais pour éviter la question du pluriel : **rétabli dans le doute** | H → I (pluriel : deux membres, le plus prudent) | #1, #2, #6 H → I |
+| co-020 | la base anglaise d'origine | I → I | #3 H → E (anglais : mêmes lemmes) |
+| co-021 | la définition « withered tree entwined by a vine », le texte « desséché », le pivot wither%2:30:00:: | H [sens] → H [sens, eq] (desséché absent de WOLF, s'enrouler n'atteint pas entwine) | #1 E → H [sens] (twine → entwine : 1 sens sur 4) ; #2, #6 H [sens, eq] |
+| co-022 | la définition « Salome dancing before Herod » | I → I | #3, #4 restent H [sens, identite] (Hérode atteint herod par WOLF) |
+| co-023 | la définition « the Virgin, crowned, seated beside Christ » | H [sens] → H [sens, condition_suffisante_non_attestee] | #2, #6 : la même chose |
+
+**Les langues :** 12 cas en français, 12 en anglais. co-001 et co-007 sont de nouveau en français, co-002 et co-020 en
+anglais.
+
+**Les statuts changés par le rétablissement : 34.**
+- 30 sont plus faibles : 6 cas de base (co-007, co-015, co-016, co-019, et co-001, co-017 de E à H) et 24 variantes.
+- 4 sont plus forts : co-001#1, co-002#3, co-007#1 et co-020#3. Ce sont les variantes anglaises redevenues
+  traductions ou variantes d'une base anglaise.
+- **Les cas de base après :** 2 `etablie`, 8 `etablie_sous_hypotheses`, 0 `ecartee`, 14 `inconnue`.
+- **Les variantes après :** 6 `etablie`, 33 `etablie_sous_hypotheses`, 1 `ecartee`, 101 `inconnue`.
+
+**Les cas qui n'ont plus de variante de statut différent par la portée, la modalité, le temps ou une inversion des
+rôles.** Ils sont notés, non réécrits (consigne, point 4) :
+- **par le rétablissement :** co-009, co-010, co-012, co-015, co-016, co-019. Pour co-015, co-016 et co-019, toutes les
+  variantes sont `inconnue`, comme la base ;
+- **déjà depuis l'harmonisation :** co-004. Sa variante #4 est devenue `inconnue`, et seule la variante de participant
+  (#3) diffère.
+
+**Les exigences du validateur, nouvelles à cette passe.**
+- Les traductions déclarent maintenant leur langue.
+- Les `decision_ouverte` dont toutes les options donnent le même statut sont retirées. Elles étaient sur les cas co-004,
+  006, 013, 016, 020, 022 et 024, et sur les variantes co-009#3, co-010#3 et co-012#3.
+- Les options propres à une variante sont déplacées sur la variante (co-011#1, co-018#4, co-018#5, co-023#1,
+  co-023#5). Le validateur exige maintenant que le statut retenu soit le plus prudent des options du cas.
+- Restent les 7 exigences « aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère »
+  (co-004, 009, 010, 012, 015, 016, 019), notées ci-dessus.
+
+**Le validateur :** 24 cas de base, 141 variantes, 0 erreur, 7 exigences non remplies ; composés ≥ 2 : 21, ≥ 3 : 8.
+Les quotas sont atteints.

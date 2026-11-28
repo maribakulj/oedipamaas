@@ -177,3 +177,38 @@ polysémique et qu'un seul de ses sens atteint le sens que demande la définitio
 - **Variantes : 4 ajoutées,** sur sa-003#1, sa-009#1, sa-020#2 et sa-022#3.
 
 **Les cas de base par statut, après :** 6 etablie, 6 etablie_sous_hypotheses, 1 non_certifiee, 11 inconnue.
+
+## 5. Rétablissement (28/11)
+
+La décision de la propriétaire : on rétablit ce qui avait été modifié pour contourner une lacune de WOLF ou de WordNet. Ce
+qu'une relecture avait demandé sur le fond reste corrigé :
+- l'inclusion fausse hand ⊑ give retirée de K ;
+- la destination de sa-004#2 ;
+- la plausibilité de sa-004#3 ;
+- l'inventaire de sa-006, devenu une source citée ;
+- « his feet » dans sa-015.
+
+Les statuts sont recalculés par la règle actuelle (§ 4.1.2, sens WOLF). Quand WOLF ne relie aucun sens du mot français, K
+reçoit une correspondance non attestée.
+
+| élément | ce qui revient | statut avant → après |
+|---|---|---|
+| sa-011 (le cas et ses 7 variantes) | le français redevient la langue de base, et l'anglais redevient la traduction. Il avait été passé en anglais à l'harmonisation, faute d'un mot français relié à jug. | cas : inconnue → inconnue ; #2 : etablie → esh [equivalence_non_attestee, sens] ; #7 : non_certifiee → inconnue (vrai seulement sous hypothèses, § 4.1) ; les autres variantes restent inconnue. La `decision_ouverte` est remise en français, avec l'option `rattachement_au_nom_tete` : esh. **Plus de variante de statut différent :** noté, rien n'est réécrit. |
+| sa-006#1 | « sortant de la mer », au lieu d'« émergeant » | non_certifiee → inconnue. sortir n'atteint pas emerge (0/14) ; la correspondance est ajoutée à K, non attestée. Le cas garde sa variante de statut différent (#2, etablie). |
+| sa-017#1 | « couronne de roses », au lieu de « guirlande » | esh [connaissance_typique, sens] → esh [connaissance_typique, equivalence_non_attestee, sens]. couronne n'atteint pas wreath (0/8). |
+| sa-010 (définition, rétablie dans le doute) | « the Christ child », au lieu de « the Child » | cas : inconnue, inchangé ; #6 (le catalogue cité) : non_certifiee → inconnue. christ_child est absent de WordNet 3.0, et l'identité l'Enfant / the Christ child, écrite dans K, n'est pas attestée. **Plus de variante de statut différent :** noté. |
+| sa-012 (définition, rétablie dans le doute) | « the Christ child », au lieu de « the Child » | cas : inconnue, inchangé ; #2 : etablie → esh [identite]. Même identité non attestée. |
+| sa-016 (définition, rétablie dans le doute) | « the son of the widow of Nain », au lieu de « the widow's son » | statuts inchangés (esh). Les hypothèses du cas et des variantes françaises #2, #4, #6 gagnent `identite`, puisque Naïm / Nain n'est pas attesté (Nain est absent de WordNet 3.0). La traduction anglaise dit « Nain » : elle est inchangée. |
+| sa-020 (définition, rétablie dans le doute) | « the Lamb », au lieu de « a lamb » | inchangé : le type est le lemme lamb, qu'agneau atteint par ses 5 sens. |
+
+**Ce qui n'est pas rétabli, et pourquoi :**
+- **sa-001 :** la définition « giving » était déjà revenue à l'harmonisation.
+- **Les correspondances non attestées ajoutées à K** (endormi / sleeping, relever / raise, remettre / present, gentilhomme, bourse, couronne d'épines, arracher, genoux, couché, cruche, sortir, couronne) ne changent aucun texte. Elles nomment la lacune comme une hypothèse ; elles ne la contournent pas.
+
+**Un champ ajouté pour le validateur :** chaque variante `traduction` porte maintenant `langue`, la langue opposée à celle du cas. Le validateur l'exige à présent.
+
+**Le bilan :**
+- 5 statuts changés, tous plus faibles : sa-006#1, sa-010#6, sa-011#2, sa-011#7, sa-012#2.
+- Les cas de base par statut : 6 etablie, 6 etablie_sous_hypotheses, 1 non_certifiee, 11 inconnue.
+- Les langues : 12 en / 12 fr.
+- Le validateur : 0 erreur. Il signale 2 exigences non remplies, que le rétablissement fait perdre et qui ne sont pas contournées : sa-010 et sa-011 n'ont plus de variante de portée, de modalité, de temps ou d'inversion dont le statut diffère.

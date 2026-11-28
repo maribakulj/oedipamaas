@@ -48,7 +48,8 @@
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "ajout_figure_non_liee",
@@ -103,7 +104,7 @@
   "langue": "fr",
   "sorte": "indetermine",
   "description": "Panneau de prédelle, tempera et or sur bois, Sienne, vers 1440. Un évêque se tient devant l'autel ; un diacre est debout à la droite de l'évêque. Il élève le calice des deux mains. Le fond d'or est usé par endroits.",
-  "definition": "bishop raising the chalice, a deacon standing at his right",
+  "definition": "bishop elevating the chalice, a deacon standing at his right",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [],
@@ -113,7 +114,7 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "La position est dite sans ambiguïté (« à la droite de l'évêque »). Mais « Il » a deux antécédents compatibles, l'évêque et le diacre. La coréférence seulement possible n'est pas dans le graphe (NOYAU § 1, C9) : l'agent de l'élévation forme une classe dont l'identité avec l'évêque est inconnue (identité en monde ouvert). Aucun appui négatif non plus. Le statut le plus prudent est inconnue ; les documents ne disent pas si un pronom ambigu peut fonder une hypothèse d'identité (voir decision_ouverte). Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : « droite » n'a dans WOLF que des sens de ligne (line, straight_line), qui n'atteignent pas right : les variantes françaises qui lèvent l'ambiguïté du pronom (#4, #7) restent inconnue ; les variantes anglaises #8 et #9 emploient les lemmes de la définition.",
+  "justification": "La position est dite sans ambiguïté (« à la droite de l'évêque »). Mais « Il » a deux antécédents compatibles, l'évêque et le diacre. La coréférence seulement possible n'est pas dans le graphe (NOYAU § 1, C9) : l'agent de l'élévation forme une classe dont l'identité avec l'évêque est inconnue (identité en monde ouvert). Aucun appui négatif non plus. Le statut le plus prudent est inconnue ; les documents ne disent pas si un pronom ambigu peut fonder une hypothèse d'identité (voir decision_ouverte). Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : « droite » n'a dans WOLF que des sens de ligne (line, straight_line), qui n'atteignent pas right : les variantes françaises qui lèvent l'ambiguïté du pronom (#4, #7) restent inconnue ; les variantes anglaises #8 et #9 emploient les lemmes de la définition. Rétablissement (28/11) : la définition d'origine (« elevating ») revient : « élever » n'atteint elevate que par 5 de ses 26 sens WOLF, raise par 4 sur 27. Les variantes anglaises #8 et #9 sont retirées. Toutes les variantes sont inconnue : le cas n'a plus de variante de statut différent.",
   "decision_ouverte": {
    "question": "Un pronom à deux antécédents compatibles peut-il fonder une conclusion sous l'hypothèse « identite » (l'antécédent choisi), ou la coréférence seulement possible, absente du graphe (NOYAU § 1, C9), laisse-t-elle la conclusion inconnue ?",
    "statut_selon_l_option": {
@@ -127,7 +128,8 @@
     "description": "Predella panel, tempera and gold on wood, Siena, c. 1440. A bishop stands before the altar; a deacon stands at the bishop's right. He raises the chalice with both hands. The gold ground is worn in places.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -146,7 +148,7 @@
    {
     "variation": "composition",
     "description": "Panneau de prédelle, tempera et or sur bois, Sienne, vers 1440. Un évêque se tient devant l'autel ; un diacre est debout à la droite de l'évêque. L'évêque élève le calice des deux mains.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
@@ -169,20 +171,6 @@
     "description": "Panneau de prédelle, tempera et or sur bois, Sienne, vers 1440. Un évêque se tient devant l'autel ; un diacre est debout à la droite de l'évêque. Selon l'inventaire de la sacristie de 1610, c'est l'évêque qui élève le calice des deux mains.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
-   },
-   {
-    "variation": "composition",
-    "description": "Predella panel, tempera and gold on wood, Siena, c. 1440. A bishop stands before the altar; a deacon stands at the bishop's right. The bishop raises the chalice with both hands.",
-    "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
-   },
-   {
-    "variation": "changement_de_portee",
-    "description": "Predella panel, tempera and gold on wood, Siena, c. 1440. A bishop stands before the altar; a deacon stands at the bishop's right. According to the 1610 sacristy inventory, it is the bishop who raises the chalice with both hands.",
-    "sorte": "indetermine",
-    "statut_attendu": "non_certifiee",
     "hypotheses_attendues": []
    }
   ]
@@ -236,7 +224,8 @@
     "description": "Stained glass, glass painted with grisaille and silver stain, Rouen, early 16th century. A young man, Tobias, walks beside an angel with red wings. The boy carries a large fish hanging from a string. Restoration leads in the lower part.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -333,9 +322,10 @@
    {
     "variation": "traduction",
     "description": "Huile sur toile, école espagnole, XVIIe siècle. Saint Jérôme est figuré en vieillard émacié, agenouillé dans un paysage rocheux devant un petit crucifix. Le pénitent se frappe la poitrine avec une pierre qu'il tient de la main droite. Un chapeau de cardinal est posé au sol près de lui.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -416,7 +406,8 @@
     "description": "Pen and brown wash on paper, Venice, c. 1530. A bearded old man sits at a table reading a large open book. A saint in cardinal's robes stands by the window. Old annotation on the verso.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -490,9 +481,9 @@
    "famille_lexicale": "noun.person"
   },
   "langue": "fr",
-  "sorte": "indetermine",
+  "sorte": "positif",
   "description": "Huile sur panneau de chêne, Bruges, vers 1490. Portrait double d'un couple de donateurs : les deux époux sont assis côte à côte sur un banc, l'épouse à la gauche de son mari. Ils tiennent chacun un chapelet. Les armoiries du mari figurent au revers.",
-  "definition": "two spouses seated side by side, the wife at her husband's left",
+  "definition": "married couple seated side by side, the wife at her husband's left",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -509,19 +500,20 @@
   "extensions_requises": [
    "collection"
   ],
-  "justification": "« Les deux époux » est une collection de deux membres (FONDEMENTS_SEMANTIQUES § 2.1 et § 2.6 : un référent de groupe, ses membres quand ils sont dits, son nombre) ; « l'épouse » et « son mari » en sont les membres, dits par la reprise, et des époux par K (hyperonymie). La posture assise vaut pour chacun (prédicat distributif), ce que la définition demande aussi. La position de l'épouse à la gauche de la figure du mari est dite dans les mêmes termes que la définition. Toutes les prémisses sont de l'auteur, de portée represente. Il faut un référent de collection relié à ses membres, que le langage actuel n'a pas (FONDEMENTS_SEMANTIQUES § 7). Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : la locution « côte à côte », dont la définition dépend (« side by side »), n'a aucun sens dans WOLF : aucun lien positif, statut inconnue. La traduction anglaise, qui emploie les mêmes mots que la définition, est établie.",
+  "justification": "« Les deux époux » est une collection de deux membres (FONDEMENTS_SEMANTIQUES § 2.1 et § 2.6 : un référent de groupe, ses membres quand ils sont dits, son nombre) ; « l'épouse » et « son mari » en sont les membres, dits par la reprise, et des époux par K (hyperonymie). La posture assise vaut pour chacun (prédicat distributif), ce que la définition demande aussi. La position de l'épouse à la gauche de la figure du mari est dite dans les mêmes termes que la définition. Toutes les prémisses sont de l'auteur, de portée represente. Il faut un référent de collection relié à ses membres, que le langage actuel n'a pas (FONDEMENTS_SEMANTIQUES § 7). Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : la locution « côte à côte », dont la définition dépend (« side by side »), n'a aucun sens dans WOLF : aucun lien positif, statut inconnue. La traduction anglaise, qui emploie les mêmes mots que la définition, est établie. Rétablissement (28/11) : la définition d'origine (« married couple ») et la traduction d'origine (« sit ») reviennent. Aucun sens de couple n'atteint married_couple, sit n'atteint pas seated : la traduction est inconnue, comme la base. Le cas n'a plus de variante de statut différent.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Oil on oak panel, Bruges, c. 1490. Double portrait of a donor couple: the two spouses are seated side by side on a bench, the wife at her husband's left. Each holds a rosary. The husband's arms are painted on the reverse.",
+    "description": "Oil on oak panel, Bruges, c. 1490. Double portrait of a donor couple: the two spouses sit side by side on a bench, the wife at her husband's left. Each holds a rosary. The husband's arms are painted on the reverse.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
     "description": "Huile sur panneau de chêne, Bruges, vers 1490. Les deux époux, le mari et sa femme, sont assis côte à côte sur un banc ; elle est à la gauche de son mari. Chacun tient un chapelet.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
@@ -549,13 +541,13 @@
    {
     "variation": "ajout_negation_non_liee",
     "description": "Huile sur panneau de chêne, Bruges, vers 1490. Portrait double d'un couple de donateurs : les deux époux sont assis côte à côte sur un banc, l'épouse à la gauche de son mari. Aucun saint patron ne les présente.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "« côte à côte » n'a aucun sens dans WOLF (ni side_by_side dans WordNet 3.0) ; « époux » (marriage hors) et « épouse » (spouse hors) n'atteignent pas toujours spouse et wife. La relation de la définition n'a donc aucun appui lexical si l'on prend les sens de WOLF ; elle en aurait un si la lecture fixait la locution et les sens.",
+   "question": "« married couple » n'est atteint ni par « couple » (aucun sens, en français ou en anglais), ni par « époux » qu'à travers un sens sur quatre (marriage) ; « côte à côte » n'a aucun sens dans WOLF, ni side_by_side dans WordNet ; dans la traduction, « sit » n'atteint pas seated. Le statut serait établi si la lecture fixait ces sens et la locution.",
    "statut_selon_l_option": {
     "tous_les_sens": "inconnue",
     "sens_fixe_par_le_contexte": "etablie"
@@ -602,7 +594,8 @@
     "description": "Tapisserie, laine et soie, Bruxelles, vers 1530, d'une tenture des Amours des dieux. Dans un jardin, un couple de jeunes amants se tient face à face sous une tonnelle. Les amants ne s'enlacent pas : le jeune homme tend une rose à la jeune fille, qui lève la main pour la refuser.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -688,14 +681,17 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "« Les trois Grâces » est un groupe nommé dont le nombre est dit (FONDEMENTS_SEMANTIQUES § 2.6 : une collection, son nombre). L'état « nues », en apposition au groupe, vaut pour lui (et pour chacune, lecture distributive : la définition est satisfaite dans les deux lectures). La restitution des bras est un fait de l'œuvre, d'un autre contexte (FONDEMENTS_SEMANTIQUES § 2.5), sans effet sur le figuré. Une entité plurielle avec nombre/2 et une propriété suffit à cette définition dans le langage actuel (NOYAU § 1 et § 4.1 : nombre(X, 3) certifiable si l'entité est présente selon l'auteur) ; la collection et l'état réifié ne sont pas requis pour ce statut. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : « Grâces » et « nues » n'atteignent grace et nude que par certains de leurs sens WOLF : hypothèse de sens. La traduction anglaise (Graces, nude) est établie.",
+  "justification": "« Les trois Grâces » est un groupe nommé dont le nombre est dit (FONDEMENTS_SEMANTIQUES § 2.6 : une collection, son nombre). L'état « nues », en apposition au groupe, vaut pour lui (et pour chacune, lecture distributive : la définition est satisfaite dans les deux lectures). La restitution des bras est un fait de l'œuvre, d'un autre contexte (FONDEMENTS_SEMANTIQUES § 2.5), sans effet sur le figuré. Une entité plurielle avec nombre/2 et une propriété suffit à cette définition dans le langage actuel (NOYAU § 1 et § 4.1 : nombre(X, 3) certifiable si l'entité est présente selon l'auteur) ; la collection et l'état réifié ne sont pas requis pour ce statut. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : « Grâces » et « nues » n'atteignent grace et nude que par certains de leurs sens WOLF : hypothèse de sens. La traduction anglaise (Graces, nude) est établie. Rétablissement (28/11) : la traduction d'origine (« naked ») revient : naked n'atteint nude que par 1 de ses 5 sens, d'où etablie_sous_hypotheses [sens].",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Marble relief, Rome, 2nd century AD, restored in the 17th century. The three Graces, nude, stand with their arms intertwined, the central one seen from behind. The arms of the right-hand figure are modern restorations.",
+    "description": "Marble relief, Rome, 2nd century AD, restored in the 17th century. The three Graces, naked, stand with their arms intertwined, the central one seen from behind. The arms of the right-hand figure are modern restorations.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -769,8 +765,8 @@
   },
   "langue": "en",
   "sorte": "indetermine",
-  "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on a bier; the apostles stand at the bier, grieving, their heads bowed. Above, Christ receives her soul in the form of a swaddled child. Small losses at the lower edge.",
-  "definition": "St Peter grieving at the bier on which the Virgin lies",
+  "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on her deathbed; the apostles stand around the bier, bowing their heads in grief. Above, Christ receives her soul in the form of a swaddled child. Small losses at the lower edge.",
+  "definition": "St Peter grieving at the bier of the Virgin",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -787,55 +783,56 @@
   "extensions_requises": [
    "collection"
   ],
-  "justification": "Le groupe nommé « the apostles » est une collection dont les membres ne sont pas dits (FONDEMENTS_SEMANTIQUES § 2.6 : ses membres quand ils sont dits). K va de Pierre vers apôtre, non des apôtres de la scène vers Pierre : qu'un Pierre fasse partie du groupe figuré n'est ni dit ni déductible, et le fait du récit (Pierre est l'un des Douze) ne vaut pas dans le figuré (FONDEMENTS_SEMANTIQUES § 1.2 ; § 2.6 : domaines restreints, « les apôtres de la scène » contre ceux du récit). Aucun appui négatif : inconnue, non écartée (pas de monde clos).",
+  "justification": "Le groupe nommé « the apostles » est une collection dont les membres ne sont pas dits (FONDEMENTS_SEMANTIQUES § 2.6 : ses membres quand ils sont dits). K va de Pierre vers apôtre, non des apôtres de la scène vers Pierre : qu'un Pierre fasse partie du groupe figuré n'est ni dit ni déductible, et le fait du récit (Pierre est l'un des Douze) ne vaut pas dans le figuré (FONDEMENTS_SEMANTIQUES § 1.2 ; § 2.6 : domaines restreints, « les apôtres de la scène » contre ceux du récit). Aucun appui négatif : inconnue, non écartée (pas de monde clos). Rétablissement (28/11) : la définition et les textes d'origine reviennent (« deathbed », « the bier », « bowing their heads in grief »). « grief » (nom) n'atteint pas grieve, et la coréférence du lit de mort et de la civière n'est pas dite : #3 est inconnue ; #7, réalignée sur le texte d'origine, aussi (la civière n'est pas dite celle de la Vierge). Le cas n'a plus de variante de statut différent.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Plaque d'ivoire, Constantinople, Xe siècle. La Vierge repose sur une civière funèbre ; les apôtres se tiennent près de la civière et s'affligent, la tête inclinée. En haut, le Christ reçoit son âme sous la forme d'un enfant emmailloté.",
+    "description": "Plaque d'ivoire, Constantinople, Xe siècle. La Vierge repose sur son lit de mort ; les apôtres se tiennent autour de la couche funèbre, la tête inclinée de douleur. En haut, le Christ reçoit son âme sous la forme d'un enfant emmailloté.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Ivory plaque, Constantinople, 10th century. At the bier on which the Virgin lies stand the apostles, grieving, their heads bowed.",
+    "description": "Ivory plaque, Constantinople, 10th century. Around the bier on which the Virgin lies stand the apostles, grieving, their heads bowed.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "composition",
-    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on a bier; the apostles stand at the bier, among them Peter, swinging a censer at its head. Each of them grieves, head bowed.",
+    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on her deathbed; the apostles stand around the bier, among them Peter, swinging a censer at its head. Each of them bows his head in grief.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
-    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on a bier; the apostles stand at the bier, grieving, their heads bowed. The Golden Legend names Peter first among the mourners.",
+    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on her deathbed; the apostles stand around the bier, bowing their heads in grief. The Golden Legend names Peter first among the mourners.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on a bier; the apostles stand at the bier, grieving, their heads bowed. Two angels hover above with veiled hands.",
+    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on her deathbed; the apostles stand around the bier, bowing their heads in grief. Two angels hover above with veiled hands.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on a bier; the apostles stand at the bier, grieving, their heads bowed. No candlestick is shown.",
+    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on her deathbed; the apostles stand around the bier, bowing their heads in grief. No candlestick is shown.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
-    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on a bier; the apostles stand at the bier, grieving, their heads bowed. The 1821 sale catalogue states that Peter stands at the head of the bier, grieving.",
+    "description": "Ivory plaque, Constantinople, 10th century. The Virgin lies on her deathbed; the apostles stand around the bier, bowing their heads in grief. The 1821 sale catalogue states that Peter stands at the head of the bier, grieving.",
     "sorte": "indetermine",
-    "statut_attendu": "non_certifiee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ]
@@ -868,7 +865,7 @@
   "extensions_requises": [
    "collection"
   ],
-  "justification": "« Two angels crown her » est ambigu : collectif (un couronnement, agent la collection des deux anges) ou distributif (deux couronnements, chacun d'un ange). Le cas indécidé « reste une ambiguïté et n'est pas résolu par défaut » (FONDEMENTS_SEMANTIQUES § 2.6). La définition est satisfaite dans les deux lectures (un couronnement de la Vierge dont l'agent est un ou des anges) ; une supervaluation sur les lectures l'établirait, comme D30 le fait pour les sens (NOYAU § 2). Mais les documents ne la fixent que pour les sens : statut prudent inconnue, voir decision_ouverte.",
+  "justification": "« Two angels crown her » est ambigu : collectif (un couronnement, agent la collection des deux anges) ou distributif (deux couronnements, chacun d'un ange). Le cas indécidé « reste une ambiguïté et n'est pas résolu par défaut » (FONDEMENTS_SEMANTIQUES § 2.6). La définition est satisfaite dans les deux lectures (un couronnement de la Vierge dont l'agent est un ou des anges) ; une supervaluation sur les lectures l'établirait, comme D30 le fait pour les sens (NOYAU § 2). Mais les documents ne la fixent que pour les sens : statut prudent inconnue, voir decision_ouverte. Rétablissement (28/11) : #3 reprend son texte d'origine (« set a single crown on her head ») : aucun sens de set n'atteint crown, inconnue.",
   "decision_ouverte": {
    "question": "Une conclusion vraie dans la lecture distributive et dans la lecture collective d'un pluriel non marqué est-elle établie par supervaluation sur les lectures (par analogie avec D30), ou l'ambiguïté non résolue (FONDEMENTS_SEMANTIQUES § 2.6) bloque-t-elle toute conclusion ?",
    "statut_selon_l_option": {
@@ -882,7 +879,8 @@
     "description": "Miniature, tempera et or sur parchemin, d'un livre d'heures, Paris, vers 1420. La Vierge est agenouillée en prière sur un coussin. Deux anges la couronnent. Fond losangé bleu et rouge ; bordure de rinceaux de lierre.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -893,9 +891,9 @@
    },
    {
     "variation": "composition",
-    "description": "Illuminated miniature, Paris, c. 1420. The Virgin kneels in prayer on a cushion. Together, the two angels crown her with a single crown.",
+    "description": "Illuminated miniature, Paris, c. 1420. The Virgin kneels in prayer on a cushion. Together, two angels set a single crown on her head.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
@@ -951,7 +949,7 @@
   "langue": "fr",
   "sorte": "indetermine",
   "description": "Panneau, huile sur bois, Anvers, vers 1520. Les trois Rois, agenouillés devant la Vierge et l'Enfant, offrent un présent à l'Enfant. À l'arrière-plan, la cavalcade de leur suite traverse un paysage de collines.",
-  "definition": "the three kings each offering a gift to the Child",
+  "definition": "the three kings each offering a gift to the Christ Child",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [],
@@ -962,7 +960,7 @@
    "collection",
    "quantification_enoncee"
   ],
-  "justification": "La définition est distributive (« each ») : trois dons, chacun d'un roi. Le texte est ambigu : collectif (un seul présent, offert par les trois ensemble) ou distributif (chacun un présent). L'ambiguïté n'est pas résolue par défaut (FONDEMENTS_SEMANTIQUES § 2.6) ; la conclusion dépend de la lecture, et seule la lecture distributive la donne. Aucune lecture n'est niée : pas d'écartement. Les documents ne disent pas si une lecture distributive peut être supposée comme hypothèse (aucune sorte d'hypothèse n'est prévue pour elle) : statut prudent inconnue, voir decision_ouverte.",
+  "justification": "La définition est distributive (« each ») : trois dons, chacun d'un roi. Le texte est ambigu : collectif (un seul présent, offert par les trois ensemble) ou distributif (chacun un présent). L'ambiguïté n'est pas résolue par défaut (FONDEMENTS_SEMANTIQUES § 2.6) ; la conclusion dépend de la lecture, et seule la lecture distributive la donne. Aucune lecture n'est niée : pas d'écartement. Les documents ne disent pas si une lecture distributive peut être supposée comme hypothèse (aucune sorte d'hypothèse n'est prévue pour elle) : statut prudent inconnue, voir decision_ouverte. Rétablissement (28/11) : la définition d'origine (« the Christ Child ») revient : aucun sens de « enfant » n'atteint un Christ Child, absent de WordNet, et K ne le donne pas. #3 et #8 sont inconnue : le cas n'a plus de variante de statut différent.",
   "decision_ouverte": {
    "question": "Le choix de la lecture distributive d'un pluriel ambigu est-il une hypothèse admissible (de quelle sorte : sens, hypothese_interpretative ?), donnant etablie_sous_hypotheses, ou l'ambiguïté laisse-t-elle la conclusion inconnue ?",
    "statut_selon_l_option": {
@@ -976,7 +974,8 @@
     "description": "Panel, oil on wood, Antwerp, c. 1520. The three Kings, kneeling before the Virgin and Child, offer a gift to the Child. In the background their retinue rides through a hilly landscape.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -989,10 +988,8 @@
     "variation": "composition",
     "description": "Panneau, huile sur bois, Anvers, vers 1520. Les trois Rois, agenouillés devant la Vierge et l'Enfant, offrent chacun un présent à l'Enfant : une coupe d'or, un encensoir, un flacon.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "composition",
@@ -1026,7 +1023,7 @@
     "variation": "changement_de_portee",
     "description": "Panneau, huile sur bois, Anvers, vers 1520. Les trois Rois, agenouillés devant la Vierge et l'Enfant, offrent un présent à l'Enfant. Le livret de la confrérie, cité par le catalogue, précise que chacun des Rois offre son propre présent.",
     "sorte": "indetermine",
-    "statut_attendu": "non_certifiee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ]
@@ -1053,9 +1050,9 @@
   },
   "langue": "en",
   "sorte": "positif",
-  "description": "Woodcut from an illustrated Bible, Lyon, 1545, hand-coloured in yellow and green. Two spies return from the land of Canaan. They jointly carry an enormous bunch of grapes on a pole resting on their shoulders.",
-  "definition": "the two spies jointly carrying a bunch of grapes on a pole",
-  "statut_attendu": "etablie",
+  "description": "Woodcut from an illustrated Bible, Lyon, 1545, hand-coloured in yellow and green. Two spies return from the land of Canaan. They jointly carry an enormous bunch of grapes slung from a pole resting on their shoulders.",
+  "definition": "the two spies carrying together a huge bunch of grapes on a pole",
+  "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [],
   "operations_requises": [
@@ -1064,25 +1061,22 @@
   "extensions_requises": [
    "collection"
   ],
-  "justification": "« jointly » marque la lecture collective : un seul événement de portage, dont l'agent est la collection des deux espions et le thème l'unique grappe (FONDEMENTS_SEMANTIQUES § 2.6 : « ensemble » collectif). Les deux sens de « jointly » (en conjonction ; en collaboration) donnent la même lecture : aucune hypothèse de sens (D30). Le nombre deux est dit. La définition demande un portage collectif : il faut un agent de collection, que le langage actuel n'a pas (AUDIT § 3.4, (2), et FONDEMENTS_SEMANTIQUES § 7). Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : le texte et la définition emploient les mêmes lemmes (spy, jointly, carry, bunch, grape, pole) : lien certain. En revanche « bear » (#2 : 5 sens sur 13 atteignent carry) et les mots français de #1 (« ensemble », « porter », « grappe », « perche ») ne fondent qu'une hypothèse de sens.",
+  "justification": "« jointly » marque la lecture collective : un seul événement de portage, dont l'agent est la collection des deux espions et le thème l'unique grappe (FONDEMENTS_SEMANTIQUES § 2.6 : « ensemble » collectif). Les deux sens de « jointly » (en conjonction ; en collaboration) donnent la même lecture : aucune hypothèse de sens (D30). Le nombre deux est dit. La définition demande un portage collectif : il faut un agent de collection, que le langage actuel n'a pas (AUDIT § 3.4, (2), et FONDEMENTS_SEMANTIQUES § 7). Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : le texte et la définition emploient les mêmes lemmes (spy, jointly, carry, bunch, grape, pole) : lien certain. En revanche « bear » (#2 : 5 sens sur 13 atteignent carry) et les mots français de #1 (« ensemble », « porter », « grappe », « perche ») ne fondent qu'une hypothèse de sens. Rétablissement (28/11) : la définition d'origine (« carrying together a huge bunch of grapes on a pole ») et les textes d'origine (« jointly », « enormous », « slung from a pole ») reviennent. Aucun sens de jointly n'atteint together, enormous n'atteint pas huge, et « slung from a pole » ne donne pas la relation « on a pole » sans K : inconnue. Toutes les variantes sont inconnue : le cas n'a plus de variante de statut différent.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Gravure sur bois d'une Bible illustrée, Lyon, 1545, rehaussée de jaune et de vert. Deux espions reviennent du pays de Canaan. Ensemble, ils portent une énorme grappe de raisin sur une perche posée sur leurs épaules.",
+    "description": "Gravure sur bois d'une Bible illustrée, Lyon, 1545, rehaussée de jaune et de vert. Deux espions reviennent du pays de Canaan. Ensemble, ils portent une énorme grappe de raisin suspendue à une perche posée sur leurs épaules.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Woodcut, Lyon, 1545. Returning from Canaan, two spies jointly bear an enormous bunch of grapes on a pole across their shoulders.",
+    "description": "Woodcut, Lyon, 1545. Returning from Canaan, two spies bear between them, jointly, an enormous bunch of grapes hung from a pole across their shoulders.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "composition",
@@ -1093,23 +1087,23 @@
    },
    {
     "variation": "changement_de_temps",
-    "description": "Woodcut, Lyon, 1545. Two spies, about to set off from Canaan, bend down to lift jointly an enormous bunch of grapes on a pole.",
+    "description": "Woodcut, Lyon, 1545. Two spies, about to set off from Canaan, bend down to lift jointly an enormous bunch of grapes slung from a pole.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Woodcut, Lyon, 1545. Two vintagers jointly carry an enormous bunch of grapes on a pole resting on their shoulders.",
+    "description": "Woodcut, Lyon, 1545. Two vintagers jointly carry an enormous bunch of grapes slung from a pole resting on their shoulders.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Woodcut, Lyon, 1545. Two spies return from the land of Canaan. They jointly carry an enormous bunch of grapes on a pole resting on their shoulders. Behind them Moses waits at the edge of the camp.",
+    "description": "Woodcut, Lyon, 1545. Two spies return from the land of Canaan. They jointly carry an enormous bunch of grapes slung from a pole resting on their shoulders. Behind them Moses waits at the edge of the camp.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
@@ -1142,7 +1136,7 @@
    "famille_lexicale": "adj.all"
   },
   "langue": "fr",
-  "sorte": "indetermine",
+  "sorte": "positif",
   "description": "Suite de gravures au burin, Nuremberg, vers 1550 ; frontispice. Sept jeunes femmes assises en demi-cercle personnifient les sept Arts libéraux ; chacune tient son attribut, la Grammaire une férule, la Musique un luth. Marge inférieure coupée.",
   "definition": "the seven Liberal Arts personified by seven women",
   "statut_attendu": "inconnue",
@@ -1162,12 +1156,13 @@
     "description": "Series of engravings, Nuremberg, c. 1550; title page. Seven young women seated in a semicircle personify the seven Liberal Arts; each holds her attribute, Grammar a ferule, Music a lute. Lower margin trimmed.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
     "description": "Suite de gravures au burin, Nuremberg, vers 1550 ; frontispice. Les sept Arts libéraux sont personnifiés par autant de jeunes femmes assises en demi-cercle, chacune avec son attribut.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
@@ -1195,14 +1190,14 @@
    {
     "variation": "ajout_figure_non_liee",
     "description": "Suite de gravures au burin, Nuremberg, vers 1550 ; frontispice. Sept jeunes femmes assises en demi-cercle personnifient les sept Arts libéraux. Au centre, Apollon joue de la lyre.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
     "description": "Suite de gravures au burin, Nuremberg, vers 1550 ; frontispice. Sept jeunes femmes assises en demi-cercle personnifient les sept Arts libéraux. Aucune ne porte de couronne.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
@@ -1255,7 +1250,8 @@
     "description": "Fresque d'un réfectoire monastique, Lombardie, vers 1510, très repeinte. Le Christ est assis au centre d'une longue table avec dix apôtres. Douze pains et un plat de poissons sont posés sur la nappe.",
     "sorte": "negatif",
     "statut_attendu": "ecartee",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1350,7 +1346,8 @@
     "hypotheses_attendues": [
      "identite",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1412,12 +1409,9 @@
   "langue": "fr",
   "sorte": "positif",
   "description": "Plat en majolique, Urbino, vers 1540, a istoriato. Hercule, vêtu de la peau du lion, frappe l'hydre de Lerne de sa massue ; plusieurs têtes du monstre gisent déjà au sol. Revers inscrit en bleu.",
-  "definition": "Heracles striking the Hydra with his club",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "identite",
-   "sens"
-  ],
+  "definition": "Heracles fighting the Lernaean Hydra, striking it with his club",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "identite_documentaire",
@@ -1437,24 +1431,24 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Le nom du texte (HERCULE) n'est celui de la définition (HERACLES) que par un alias de traduction. WordNet atteste Hercules = Heracles (un synset), non la forme française : l'alias français est une équivalence non attestée, qui donne au mieux etablie_sous_hypotheses (FONDEMENTS_SEMANTIQUES § 2.7 ; BANCS § 4 et § 4.1). Le noyau clôt les alias établis (NOYAU § 2, D33). Sous la figuration, le nom désigne le personnage figuré (FONDEMENTS_SEMANTIQUES § 1.2). L'instrument (« de sa massue ») et le patient (l'hydre) sont des rôles du langage actuel, affirmés par l'auteur ; la définition dit « striking », comme le texte. La traduction anglaise (Hercules) est établie sans hypothèse. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : « frapper » n'atteint strike que par 8 de ses 12 sens : hypothèse de sens ; « hydre » et « massue » sont certains.",
+  "justification": "Le nom du texte (HERCULE) n'est celui de la définition (HERACLES) que par un alias de traduction. WordNet atteste Hercules = Heracles (un synset), non la forme française : l'alias français est une équivalence non attestée, qui donne au mieux etablie_sous_hypotheses (FONDEMENTS_SEMANTIQUES § 2.7 ; BANCS § 4 et § 4.1). Le noyau clôt les alias établis (NOYAU § 2, D33). Sous la figuration, le nom désigne le personnage figuré (FONDEMENTS_SEMANTIQUES § 1.2). L'instrument (« de sa massue ») et le patient (l'hydre) sont des rôles du langage actuel, affirmés par l'auteur ; la définition dit « striking », comme le texte. La traduction anglaise (Hercules) est établie sans hypothèse. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : « frapper » n'atteint strike que par 8 de ses 12 sens : hypothèse de sens ; « hydre » et « massue » sont certains. Rétablissement (28/11) : la définition d'origine (« fighting the Lernaean Hydra, striking it ») revient. La traduction anglaise emploie « Lernaean Hydra » (même expression, lien certain), mais strike n'atteint fight que par 1 de ses 21 sens : etablie_sous_hypotheses [sens]. Le texte français ne donne aucun appui à « Lernaean » : inconnue.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Maiolica dish, Urbino, c. 1540, istoriato. Hercules, wearing the lion skin, strikes the Lernaean Hydra with his club; several of the monster's heads already lie on the ground. Reverse inscribed in blue.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
     "description": "Plat en majolique, Urbino, vers 1540. L'hydre de Lerne est frappée à coups de massue par Héraclès, vêtu de la peau du lion ; plusieurs têtes gisent au sol.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "inversion_des_roles",
@@ -1481,29 +1475,22 @@
     "variation": "ajout_figure_non_liee",
     "description": "Plat en majolique, Urbino, vers 1540. Hercule, vêtu de la peau du lion, frappe l'hydre de Lerne de sa massue. À gauche, Iolaos brandit une torche.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
     "description": "Plat en majolique, Urbino, vers 1540. Hercule, vêtu de la peau du lion, frappe l'hydre de Lerne de sa massue. Le crabe envoyé par Héra n'est pas représenté.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "Deux choix : l'alias de traduction Hercule (et Héraclès) / Heracles, non attesté, et le sens de mots français dont un sens WOLF au moins n'atteint pas le lemme de la définition.",
+   "question": "« Lernaean » n'a aucun sens dans WordNet 3.0 ni dans WOLF, et « fight » n'est atteint que par 1 des 12 sens de « frapper ». Si « hydre de Lerne » / « Lernaean Hydra » est un nom propre, il ne faut qu'un alias (non attesté) et une hypothèse de sens ; si « Lernaean » est un adjectif, l'atome n'a aucun appui.",
    "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte_et_alias_atteste": "etablie"
+    "tous_les_sens": "inconnue",
+    "nom_propre_et_sens_fixe_par_le_contexte": "etablie_sous_hypotheses"
    }
   }
  },
@@ -1552,14 +1539,15 @@
   "extensions_requises": [
    "contenu_d_inscription"
   ],
-  "justification": "Deux pas manquent. (1) Le nom vient du contenu d'une inscription de l'œuvre (l'extension contenu_d_inscription, BANCS § 4.1) ; son rattachement à la figure n'est qu'une connaissance typique non attestée : au mieux une hypothèse (FONDEMENTS_SEMANTIQUES § 2.7). (2) MINERVA n'est pas un alias établi d'ATHENA : la glose « counterpart of » est une relation inconnue (« le défaut d'une glose est relation inconnue », § 2.7), qui ne permet que l'abduction. Or une identité Minerva = Athena n'explique aucune observation du texte : elle ne servirait que la requête, et une telle hypothèse est inadmissible (SPECIFICATION_OPERATIONS § 4 ; FONDEMENTS_SEMANTIQUES § 5). Statut : inconnue. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : la définition dit « with spear and shield » ; aucun sens de hold n'atteint with, et K ne relie pas tenir et avec : les variantes qui disent « holding » (#3, #4) restent inconnue (un pas lexical, gardé) ; #7 emploie les mots de la définition.",
+  "justification": "Deux pas manquent. (1) Le nom vient du contenu d'une inscription de l'œuvre (l'extension contenu_d_inscription, BANCS § 4.1) ; son rattachement à la figure n'est qu'une connaissance typique non attestée : au mieux une hypothèse (FONDEMENTS_SEMANTIQUES § 2.7). (2) MINERVA n'est pas un alias établi d'ATHENA : la glose « counterpart of » est une relation inconnue (« le défaut d'une glose est relation inconnue », § 2.7), qui ne permet que l'abduction. Or une identité Minerva = Athena n'explique aucune observation du texte : elle ne servirait que la requête, et une telle hypothèse est inadmissible (SPECIFICATION_OPERATIONS § 4 ; FONDEMENTS_SEMANTIQUES § 5). Statut : inconnue. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : la définition dit « with spear and shield » ; aucun sens de hold n'atteint with, et K ne relie pas tenir et avec : les variantes qui disent « holding » (#3, #4) restent inconnue (un pas lexical, gardé) ; #7 emploie les mots de la définition. Rétablissement (28/11) : la variante #7, écrite avec les mots de la définition pour éviter le pas hold → with, est retirée. Le cas n'a plus de variante de statut différent.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Plaquette en bronze, Padoue, vers 1500. Une déesse casquée se tient debout, tenant une lance et un bouclier, une chouette posée à ses pieds. L'inscription de l'exergue porte MINERVA. Patine brun foncé, légèrement usée.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1571,7 +1559,7 @@
    {
     "variation": "changement_de_participant",
     "description": "Bronze plaquette, Padua, c. 1500. A helmeted goddess, Athena, stands holding a spear and a shield, an owl perched at her feet.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
@@ -1594,13 +1582,6 @@
     "description": "Bronze plaquette, Padua, c. 1500. A helmeted goddess stands holding a spear and a shield, an owl perched at her feet. She wears no aegis. The inscription in the exergue reads MINERVA.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
-   },
-   {
-    "variation": "changement_de_participant",
-    "description": "Bronze plaquette, Padua, c. 1500. Athena stands with spear and shield, an owl perched at her feet. Dark brown patina, slightly worn.",
-    "sorte": "positif",
-    "statut_attendu": "etablie",
     "hypotheses_attendues": []
    }
   ]
@@ -1651,7 +1632,8 @@
     "description": "Title: St John the Baptist Preaching. Oil on canvas, Neapolitan school, c. 1650. A man clad in an animal skin, standing on a rock, preaches to a crowd seated at his feet. Old relining.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -1718,7 +1700,7 @@
    "famille_lexicale": "noun.person"
   },
   "langue": "fr",
-  "sorte": "indetermine",
+  "sorte": "positif",
   "description": "Panneau d'albâtre sculpté, polychromie partielle, Nottingham, XVe siècle. Un bourreau tend à Salomé la tête du Baptiste, qu'elle reçoit sur un plat. À droite, Hérode attablé lève la main. Dorures usées.",
   "definition": "Salome being handed the head of John the Baptist on a dish",
   "statut_attendu": "inconnue",
@@ -1750,12 +1732,13 @@
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "identite"
-    ]
+    ],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
     "description": "Panneau d'albâtre, Nottingham, XVe siècle. Salomé reçoit sur un plat la tête du Baptiste, que lui tend un bourreau ; Hérode, attablé à droite, lève la main.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
@@ -1783,7 +1766,7 @@
    {
     "variation": "ajout_negation_non_liee",
     "description": "Panneau d'albâtre, Nottingham, XVe siècle. Un bourreau tend à Salomé la tête du Baptiste, qu'elle reçoit sur un plat. Hérodiade n'est pas représentée.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
@@ -1853,7 +1836,8 @@
      "identite",
      "connaissance_typique",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1958,7 +1942,8 @@
     "hypotheses_attendues": [
      "identite",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -2045,7 +2030,8 @@
     "description": "Oil on canvas, Bologna, c. 1610. Saint Jerome, an old man naked to the waist, kneels in prayer before a crucifix set up in a rocky landscape. His lion sleeps at his feet. A cardinal's hat lies on a stone.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -2113,7 +2099,7 @@
   "langue": "fr",
   "sorte": "contre_modele",
   "description": "Miniature d'un psautier, Angleterre, vers 1250, or et couleurs sur parchemin. Devant le tombeau vide ne se tiennent pas seulement les saintes femmes : Pierre et Jean y accourent aussi. Un ange assis sur la pierre roulée désigne le linceul.",
-  "definition": "the Holy Women at the empty tomb, only women standing before it",
+  "definition": "the Holy Women at the empty sepulchre, only women standing before it",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [],
@@ -2124,14 +2110,15 @@
    "quantification_enoncee",
    "collection"
   ],
-  "justification": "La définition demande une quantification exclusive (« only women ») sur le domaine « devant le tombeau ». Le texte nie une autre quantification : « seulement les saintes femmes ». Or « seulement des saintes femmes » implique « seulement des femmes » (les saintes femmes sont des femmes), et non l'inverse : un appui négatif de la première ne dit rien de la seconde (FONDEMENTS_SEMANTIQUES § 3.3), puisque d'autres femmes pourraient être là. Pierre et Jean ne réfutent rien sans une incompatibilité dans K (BANCS § 4.1, 3). Aucun appui négatif ni positif : inconnue. La quantification énoncée est une assertion de l'auteur (§ 2.6), mais sa monotonie n'est spécifiée nulle part. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : dans #3, « se tiennent » n'atteint pas stand (aucun des sens WOLF de « tenir », et « se tenir » n'a pas d'entrée) : inconnue ; la variante anglaise #7 (« stand only the holy women ») est établie.",
+  "justification": "La définition demande une quantification exclusive (« only women ») sur le domaine « devant le tombeau ». Le texte nie une autre quantification : « seulement les saintes femmes ». Or « seulement des saintes femmes » implique « seulement des femmes » (les saintes femmes sont des femmes), et non l'inverse : un appui négatif de la première ne dit rien de la seconde (FONDEMENTS_SEMANTIQUES § 3.3), puisque d'autres femmes pourraient être là. Pierre et Jean ne réfutent rien sans une incompatibilité dans K (BANCS § 4.1, 3). Aucun appui négatif ni positif : inconnue. La quantification énoncée est une assertion de l'auteur (§ 2.6), mais sa monotonie n'est spécifiée nulle part. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : dans #3, « se tiennent » n'atteint pas stand (aucun des sens WOLF de « tenir », et « se tenir » n'a pas d'entrée) : inconnue ; la variante anglaise #7 (« stand only the holy women ») est établie. Rétablissement (28/11) : la définition d'origine (« sepulchre ») revient : ni « tombeau » ni tomb n'atteignent sepulchre (WordNet donne sepulchre ⊑ tomb, non l'inverse). La variante anglaise #7 est retirée. Toutes les variantes sont inconnue : le cas n'a plus de variante de statut différent.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Miniature from a psalter, England, c. 1250, gold and colours on parchment. Before the empty tomb stand not only the holy women: Peter and John come running too. An angel seated on the rolled-back stone points to the shroud.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -2143,7 +2130,7 @@
    {
     "variation": "changement_de_modalite",
     "description": "Miniature d'un psautier, Angleterre, vers 1250. Devant le tombeau vide ne se tiennent que les saintes femmes. Un ange assis sur la pierre roulée désigne le linceul.",
-    "sorte": "indetermine",
+    "sorte": "positif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
@@ -2166,13 +2153,6 @@
     "description": "Miniature d'un psautier, Angleterre, vers 1250. Devant le tombeau vide ne se tiennent pas seulement les saintes femmes : Pierre et Jean y accourent aussi. Dans la marge inférieure, un dragon grotesque mord sa queue.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
-   },
-   {
-    "variation": "changement_de_modalite",
-    "description": "Miniature from a psalter, England, c. 1250. Before the empty tomb stand only the holy women. An angel seated on the rolled-back stone points to the shroud.",
-    "sorte": "positif",
-    "statut_attendu": "etablie",
     "hypotheses_attendues": []
    }
   ]
@@ -2205,12 +2185,9 @@
   "langue": "fr",
   "sorte": "positif",
   "description": "Relief en bois de tilleul polychrome, Souabe, vers 1500, d'un retable de la Passion. Au jardin des Oliviers, pendant que le Christ prie à l'écart, les trois apôtres, Pierre, Jacques et Jean, sont assis au pied du rocher : tous dorment, sauf Jean, qui garde les yeux ouverts. Les mains du Christ sont refaites.",
-  "definition": "Peter sleeping while Christ prays",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "identite",
-   "sens"
-  ],
+  "definition": "Peter asleep while Christ prays in the Garden of Gethsemane",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "identite_documentaire",
@@ -2234,24 +2211,22 @@
    "relation_entre_eventualites",
    "etat_reifie"
   ],
-  "justification": "La collection des trois apôtres a ses membres dits (Pierre, Jacques, Jean). « tous dorment, sauf Jean » est une quantification énoncée avec exception, prémisse de l'auteur (FONDEMENTS_SEMANTIQUES § 2.6 : « tous sauf X ») ; la déduction en tire, pour chaque membre distinct de Jean, qu'il dort (§ 2.6 : « tous les apôtres dorment, plus un apôtre figuré, donne il dort »). Pierre est distinct de Jean par la distinction documentaire de Peter et John (NOYAU § 1), à condition que les noms français soient ceux de Peter et de John : un alias non attesté, d'où etablie_sous_hypotheses [identite] (FONDEMENTS § 2.7 ; BANCS § 4.1). Le sommeil est un état dont le porteur est Pierre, simultané à la prière du Christ (« pendant que » : ONTOLOGIE_EVENTUALITES § 2, simultanéité) : il faut l'état réifié et une relation entre éventualités. La traduction anglaise (Peter, John) est établie sans hypothèse. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : « dormir » est certain (sleep), « prier » n'atteint pray que par 2 de ses 8 sens : hypothèse de sens.",
+  "justification": "La collection des trois apôtres a ses membres dits (Pierre, Jacques, Jean). « tous dorment, sauf Jean » est une quantification énoncée avec exception, prémisse de l'auteur (FONDEMENTS_SEMANTIQUES § 2.6 : « tous sauf X ») ; la déduction en tire, pour chaque membre distinct de Jean, qu'il dort (§ 2.6 : « tous les apôtres dorment, plus un apôtre figuré, donne il dort »). Pierre est distinct de Jean par la distinction documentaire de Peter et John (NOYAU § 1), à condition que les noms français soient ceux de Peter et de John : un alias non attesté, d'où etablie_sous_hypotheses [identite] (FONDEMENTS § 2.7 ; BANCS § 4.1). Le sommeil est un état dont le porteur est Pierre, simultané à la prière du Christ (« pendant que » : ONTOLOGIE_EVENTUALITES § 2, simultanéité) : il faut l'état réifié et une relation entre éventualités. La traduction anglaise (Peter, John) est établie sans hypothèse. Régime des sens (BANCS § 4.1, 2, « Ce que D30 dit exactement »), vérifié sur WOLF (sens_fr.py) et WordNet 3.0 : « dormir » est certain (sleep), « prier » n'atteint pray que par 2 de ses 8 sens : hypothèse de sens. Rétablissement (28/11) : la définition d'origine (« asleep … in the Garden of Gethsemane ») revient, et la traduction d'origine (« asleep »). Gethsemane n'est ni dans WordNet ni dans K, et « dormir » n'atteint pas asleep : inconnue, pour la base et pour toutes les variantes, quel que soit l'alias (la decision_ouverte est retirée). Le cas n'a plus de variante de statut différent.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Polychrome limewood relief, Swabia, c. 1500, from a Passion altarpiece. In the Garden of Olives, while Christ prays apart, the three apostles, Peter, James and John, sit at the foot of the rock: all are sleeping except John, who keeps his eyes open. Christ's hands are replaced.",
+    "description": "Polychrome limewood relief, Swabia, c. 1500, from a Passion altarpiece. In the Garden of Olives, while Christ prays apart, the three apostles, Peter, James and John, sit at the foot of the rock: all are asleep except John, who keeps his eyes open. Christ's hands are replaced.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
     "description": "Relief en bois de tilleul polychrome, Souabe, vers 1500. Tandis que le Christ prie à l'écart, les trois apôtres, Pierre, Jacques et Jean, sont assis au pied du rocher ; à l'exception de Jean, resté éveillé, tous dorment.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
@@ -2278,30 +2253,16 @@
     "variation": "ajout_figure_non_liee",
     "description": "Relief en bois de tilleul polychrome, Souabe, vers 1500. Au jardin des Oliviers, pendant que le Christ prie à l'écart, les trois apôtres, Pierre, Jacques et Jean, sont assis au pied du rocher : tous dorment, sauf Jean. Au fond, Judas guide les soldats vers le jardin.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
     "description": "Relief en bois de tilleul polychrome, Souabe, vers 1500. Au jardin des Oliviers, pendant que le Christ prie à l'écart, les trois apôtres, Pierre, Jacques et Jean, sont assis au pied du rocher : tous dorment, sauf Jean. Aucun ange n'apporte le calice.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "Deux choix : l'alias de traduction Pierre / Peter et Jean / John, non attesté, et le sens de mots français dont un sens WOLF au moins n'atteint pas le lemme de la définition.",
-   "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte_et_alias_atteste": "etablie"
-   }
-  }
+  ]
  }
 ]

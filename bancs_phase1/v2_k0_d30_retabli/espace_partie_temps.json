@@ -1,0 +1,2384 @@
+[
+ {
+  "id": "ep-001",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "partie_tout",
+    "construction": "partie_obligatoire"
+   }
+  ],
+  "pivot": {
+   "lemme": "deck",
+   "cle_de_sens": "deck%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Woodcut from a printed Bible. From the deck, two sailors throw Jonah into the stormy sea, where a great fish waits with open jaws. The cut is coloured by hand in blue and green.",
+  "definition": "Jonah is thrown into the sea by the sailors; the vessel is shown",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "sens",
+   "consequence_conditionnelle"
+  ],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "deck%1:06:00:: est partie de ship%1:06:00:: (méronymie de partie) ; ship%1:06:00:: ⊑ vessel%1:06:00::",
+    "attestee": true,
+    "source": "WordNet 3.0 : deck%1:06:00:: (03167666) #p ship%1:06:00:: (04194289) ; ship%1:06:00:: @ vessel%1:06:00:: (04530566)"
+   },
+   {
+    "sorte": "implication",
+    "contenu": "foredeck%1:06:00:: ⊑ deck%1:06:00::",
+    "attestee": true,
+    "source": "WordNet 3.0 : foredeck%1:06:00:: (03382413) @ deck%1:06:00:: (03167666)"
+   },
+   {
+    "sorte": "consequence_conditionnelle",
+    "contenu": "toute occurrence de deck%1:06:00:: implique un ship dont elle est partie, à condition que la partie soit obligatoire ; la méronymie de WordNet ne dit pas si elle l'est",
+    "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "le nom français « Jonas » désigne Jonah (jonah%1:18:00::)",
+    "attestee": true,
+    "source": "WOLF (OMW 1.4, fra) : Jonas → 11089868-n jonah%1:18:00::"
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "deduction"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Le vessel n'est pas nommé : il n'est atteint que par la règle partie ⇒ tout, qui ne s'applique déductivement que si la partie est obligatoire (FONDEMENTS § 2.4 ; SPECIFICATION_OPERATIONS § 2). La méronymie de WordNet (implicite dans K, BANCS § 4.1) dit que deck%1:06:00:: est partie de ship, non que tout deck a un ship : la condition n'est pas établie, et la règle ne s'applique que sous hypothèse (SPECIFICATION_OPERATIONS § 2, « Elle peut s'appliquer sous hypothèse ») : consequence_conditionnelle. De plus « deck » a quatre sens, dont un seul a ce tout (NOYAU § 2, D30) : avec tous les sens, il faut aussi l'hypothèse de sens (BANCS § 4.1, point 2). Le statut retenu est le plus prudent. Sous les deux options du sens de « deck », le statut est le même (sous hypothèses) ; seule l'hypothèse de sens disparaît si le contexte fixe deck%1:06:00::, la condition de partie obligatoire restant supposée.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Woodcut from a printed Bible. Jonah is thrown from the deck into the stormy sea by two sailors; a great fish waits for him with open jaws. The cut is coloured by hand.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "consequence_conditionnelle"
+    ]
+   },
+   {
+    "variation": "traduction",
+    "description": "Gravure sur bois d'une Bible imprimée. Depuis le pont, deux marins jettent Jonas dans la mer démontée, où un grand poisson l'attend, la gueule ouverte. La planche est coloriée à la main en bleu et en vert.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "consequence_conditionnelle"
+    ],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Woodcut from a printed Bible. From the foredeck, two sailors throw Jonah into the stormy sea, where a great fish waits with open jaws. The cut is coloured by hand in blue and green.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "consequence_conditionnelle"
+    ]
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Woodcut from a printed Bible. The caption says that two sailors threw Jonah from the deck into the sea; the cut itself shows only the stormy waves and a great fish with open jaws.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Woodcut from a printed Bible. Two sailors, perhaps standing on a deck, throw Jonah into the stormy sea, where a great fish waits with open jaws.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Woodcut from a printed Bible. From the deck, two sailors throw Jonah into the stormy sea, where a great fish waits with open jaws. A gull flies overhead.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "consequence_conditionnelle"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ep-002",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "partie_tout",
+    "construction": "partie_obligatoire"
+   },
+   {
+    "famille": "niveaux_representation",
+    "phenomene": "oeuvre_contre_figure",
+    "construction": "etat_de_conservation"
+   }
+  ],
+  "pivot": {
+   "lemme": "mainmast",
+   "cle_de_sens": "mainmast%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Panneau votif peint sur bois. Dans la tempête, la foudre frappe le grand mât, qui se fend ; trois marins agenouillés implorent la Vierge apparue dans les nuées. La partie inférieure du panneau, où se trouvait la coque, est perdue.",
+  "definition": "a sailing vessel struck by lightning",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "mainmast%1:06:00:: ⊑ mast%1:06:00:: ; mast%1:06:00:: est partie de sailing_vessel%1:06:00:: ; sailing_vessel ⊑ vessel",
+    "attestee": true,
+    "source": "WordNet 3.0 : mainmast%1:06:00:: (03711999) @ mast%1:06:00:: (03726760) ; mast (03726760) #p sailing_vessel (04128837) ; sailing_vessel @ vessel (04530566)"
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "deduction"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Le mât implique au mieux un voilier (méronymie de WordNet, et pour mainmast par son hyperonyme mast seulement, BANCS § 4.1), sous la condition supposée de partie obligatoire (SPECIFICATION_OPERATIONS § 2). Mais quel que soit ce tout, l'événement frappe le mât, non le voilier : une partie n'est pas son tout (FONDEMENTS § 3.4), et K ne contient aucune règle qui transfère le patient d'une partie à son tout. Le rôle patient du voilier n'a aucun appui, ni positif ni négatif : inconnue. La lacune du panneau est un énoncé de portée oeuvre (AUDIT § 3.7) : elle ne nie pas la coque figurée. Contre-modèle : tout est là sauf la relation distinctive. Harmonisation : « frapper » (WOLF, 12 sens) n'atteint strike que pour 8 sens ; les variantes françaises où la frappe du voilier est dite ne sont établies que sous hypothèse de sens, et la variante citée reste inconnue. Correction de l'harmonisation, pour la variante citée : La valeur vraie vient d'un lien positif, même incertain : un lien partiel est un appui, l'hypothèse de sens ne porte que sur la certification (NOYAU § 2 et § 4.3). Une source citée n'est jamais certifiable : non_certifiee, sous les deux options.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Panneau votif peint sur bois. Le grand mât, frappé par la foudre, se fend dans la tempête ; trois marins agenouillés implorent la Vierge apparue dans les nuées. Le bas du panneau est perdu.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Votive panel painted on wood. In the storm, lightning strikes the mainmast, which splits; three kneeling sailors implore the Virgin, who has appeared in the clouds. The lower part of the panel, where the hull was, is lost.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Panneau votif peint sur bois. Dans la tempête, la foudre frappe le voilier, dont le grand mât se fend ; trois marins agenouillés implorent la Vierge apparue dans les nuées. La partie inférieure du panneau est perdue.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "decision_ouverte": {
+     "question": "« frapper » a 12 sens WOLF, dont 4 n'atteignent pas strike : le contexte fixe-t-il le sens ?",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    }
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Panneau votif peint sur bois. L'inscription du cadre rapporte que la foudre frappa le voilier ; la peinture montre le grand mât qui se fend et trois marins agenouillés devant la Vierge apparue dans les nuées.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Panneau votif peint sur bois. Dans la tempête, la foudre frappe le grand mât, qui se fend ; trois marins agenouillés implorent la Vierge apparue dans les nuées. Aucun saint ne l'accompagne. La partie inférieure du panneau est perdue.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Panneau votif peint sur bois. Selon la notice ancienne que cite le catalogue, le panneau montre le voilier frappé par la foudre ; trois marins agenouillés y implorent la Vierge apparue dans les nuées.",
+    "sorte": "indetermine",
+    "statut_attendu": "non_certifiee",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-003",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "partie_tout",
+    "construction": "partie_facultative"
+   },
+   {
+    "famille": "definitions_classification",
+    "phenomene": "definition_partielle",
+    "construction": "indices_insuffisants"
+   }
+  ],
+  "pivot": {
+   "lemme": "wheel",
+   "cle_de_sens": "wheel%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Etching of a farmyard at dusk. A girl scatters grain for the hens; behind her, a single wheel leans against the wall of the barn. A cat watches from the hayloft.",
+  "definition": "farmyard with a cart",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "wheel%1:06:00:: est partie de wheeled_vehicle%1:06:00:: (méronymie) ; cart%1:06:00:: ⊑ wheeled_vehicle",
+    "attestee": true,
+    "source": "WordNet 3.0 : wheel%1:06:00:: (04574999) #p wheeled_vehicle (04576211) ; cart%1:06:00:: @ wagon @ wheeled_vehicle"
+   },
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "une roue isolée, dans une cour de ferme, est typiquement celle d'un chariot (cart) ; elle peut aussi être celle d'un moulin, d'un rouet ou d'une autre machine",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "abduction"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Une roue est une partie facultative : son tout n'est pas impliqué, il est seulement « supposé » (FONDEMENTS § 2.4). La méronymie de WordNet ne donne qu'un véhicule à roues, non un chariot : établir « cart » demande la connaissance typique, par abduction (SPECIFICATION_OPERATIONS § 4), avec des explications concurrentes à des coûts voisins. Les documents ne disent pas si une partie détachée appelle encore un tout supposé. Le statut n'est pas fixé : on retient l'option la plus prudente, inconnue (decision_ouverte). Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : la définition relie farmyard et cart par « with » ; aucune variante ne dit cette relation, sauf la notice citée (#7, non_certifiee, mêmes mots). La variante au chariot nommé passe donc d'etablie à inconnue.",
+  "decision_ouverte": {
+   "question": "Une partie facultative figurée seule, détachée de tout tout, fonde-t-elle par abduction (connaissance typique) l'hypothèse d'un tout d'un type donné, et l'ambiguïté entre touts concurrents laisse-t-elle un statut sous hypothèses ou aucun ?",
+   "statut_selon_l_option": {
+    "une partie détachée n'appelle aucun tout supposé": "inconnue",
+    "le tout est supposé par abduction typique, ambiguïté rapportée": "etablie_sous_hypotheses"
+   }
+  },
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Etching of a farmyard at dusk. Against the barn wall, behind a girl who scatters grain for the hens, leans a single wheel. A cat looks down from the hayloft.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Eau-forte représentant une cour de ferme au crépuscule. Une fillette jette du grain aux poules ; derrière elle, une roue isolée est appuyée contre le mur de la grange. Un chat observe la scène depuis le fenil.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Etching of a farmyard at dusk. A girl scatters grain for the hens; behind her stands a cart with one wheel missing. A cat watches from the hayloft.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Etching of a farmyard at dusk. A girl scatters grain for the hens; behind her, a single wheel leans against the barn wall. According to the sale catalogue, the wheel belonged to a cart that the etcher later burnished out of the plate.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Etching of a farmyard at dusk. A girl scatters grain for the hens. There is no cart in the yard; only a single wheel leans against the wall of the barn.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Etching of a farmyard at dusk. A girl scatters grain for the hens; behind her, a single wheel leans against the wall of the barn. A dog sleeps by the well.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Etching of a farmyard at dusk. According to the old catalogue quoted on the label, the etching shows a farmyard with a cart; a girl scatters grain for the hens.",
+    "sorte": "indetermine",
+    "statut_attendu": "non_certifiee",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-004",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "partie_tout",
+    "construction": "partie_facultative"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "coreference",
+    "construction": "pronom"
+   }
+  ],
+  "pivot": {
+   "lemme": "beard",
+   "cle_de_sens": "beard%1:08:00::",
+   "famille_lexicale": "noun.body"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Panneau d'un retable. Saint Antoine, ermite, est assis devant sa cabane et lit un livre posé sur ses genoux. Sa barbe blanche descend jusqu'à sa ceinture. Un porcelet dort à ses pieds.",
+  "definition": "a hermit with a white beard reading a book",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "sens"
+  ],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "beard%1:08:00:: est partie de face et de adult_male_body (méronymie)",
+    "attestee": true,
+    "source": "WordNet 3.0 : beard%1:08:00:: (05261566) #p face (05600637), #p adult_male_body (05220306)"
+   },
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "le possessif « sa » (sa barbe) peut se lire partie_de ou possession ; la définition (« with a white beard ») demande partie_de ; aucune ressource ne restreint « sa » à partie_de pour une partie du corps",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "La barbe est dite, avec sa couleur, et reliée à l'ermite par le possessif « sa » (coréférence par pronom, NOYAU § 1). La définition demande la relation partie_de ; le possessif a plusieurs sens de relation (AUDIT § 3.5, (3)), et aucune restriction attestée ne les départage. Avec tous les sens (D30), la relation n'est établie que sous hypothèse de sens ; avec le sens fixé par le contexte, établie (BANCS § 4.1, point 2). Le statut retenu est le plus prudent. Le tout n'implique pas sa partie facultative (FONDEMENTS § 2.4 ; variante de participant). Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : la définition demande la relation « with » ; le texte dit le possessif (« sa », « his »). Ce sont deux mots de relation sans sens dans WordNet ni dans WOLF : chacun n'est que lui-même (NOYAU § 2, D20), et aucun lien ne va de l'un à l'autre. Inconnue, et non plus sous hypothèse de sens. En outre « ermite » (WOLF) n'atteint hermit que par 2 de ses 3 sens (eremite). Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : le possessif « sa » est une relation produite par la lecture, à plusieurs lectures (partie, possession) ; « with a white beard » fixe la lecture d'avoir une partie. L'atome dépend de la lecture : hypothèse de sens. S'y ajoute « ermite » (WOLF, 2 sens sur 3). Sous hypothèse de sens, et non plus inconnue.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Panneau d'un retable. Assis devant sa cabane, saint Antoine, ermite, lit un livre posé sur ses genoux ; une barbe blanche lui descend jusqu'à la ceinture. Un porcelet dort à ses pieds.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ]
+   },
+   {
+    "variation": "traduction",
+    "description": "Altarpiece panel. St Anthony the hermit sits in front of his hut, reading a book that rests on his knees. His white beard reaches down to his belt. A piglet sleeps at his feet.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "langue": "en"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Panneau d'un retable. Saint Antoine, ermite, est assis devant sa cabane et lit un livre posé sur ses genoux. Sa chevelure blanche descend jusqu'à sa ceinture. Un porcelet dort à ses pieds.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Panneau d'un retable. Saint Antoine, ermite, est assis devant sa cabane et lit un livre posé sur ses genoux. Contrairement à l'usage, il n'a pas de barbe. Un porcelet dort à ses pieds.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panneau d'un retable. Saint Antoine, ermite, est assis devant sa cabane et lit un livre posé sur ses genoux. Sa barbe blanche descend jusqu'à sa ceinture. Un corbeau lui apporte un pain.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ]
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Panneau d'un retable. Saint Antoine, ermite, est assis devant sa cabane et lit un livre posé sur ses genoux. Sa barbe blanche descend jusqu'à sa ceinture. Il ne porte pas de sandales.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ]
+   }
+  ],
+  "decision_ouverte": {
+   "question": "Le possessif « sa » (partie ou possession) et les sens WOLF de « ermite » sont-ils fixés par le contexte ?",
+   "statut_selon_l_option": {
+    "tous_les_sens": "etablie_sous_hypotheses",
+    "sens_fixe_par_le_contexte": "etablie"
+   }
+  }
+ },
+ {
+  "id": "ep-005",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "au_dessus_au_dessous"
+   }
+  ],
+  "pivot": {
+   "lemme": "above",
+   "cle_de_sens": "above%4:02:01::",
+   "famille_lexicale": "adv.all"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Stained-glass panel. Christ stands waist-deep in the Jordan and John the Baptist pours water over his head from a shell. Directly above Christ's head hovers a white dove.",
+  "definition": "a dove hovering above the head of Christ",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "above(X, Y) ⇔ beneath(Y, X) : relations converses au sens spatial (above%4:02:01::, beneath%4:02:00::) ; WordNet ne donne qu'une antonymie entre adverbes, qui n'atteste pas la converse",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "La relation spatiale orientée est dite par l'auteur, dans les mots de la définition (AUDIT § 3.5, (1)). Établie (NOYAU § 4.4). La paraphrase passe par la converse, qui n'est pas attestée (une antonymie n'est pas une attestation, BANCS § 4.1) et que FONDEMENTS § 3.2 ne range pas parmi les canonisations : elle ne donne au mieux qu'un statut sous hypothèse. L'inversion des rôles, sans connaissance d'asymétrie, n'est pas une preuve négative (NOYAU § 4.4). Harmonisation : la traduction française dit « plane » (absent de WOLF : aucun lien vers hover) et « de la tête du Christ » (« de » contre « 's », deux mots de relation sans sens) : inconnue. Rétablissement (28/11) : la définition d'origine (« above the head of Christ ») revient. « Christ's head » et « the head of Christ » sont la même relation de génitif, produite par la lecture (§ 4.1) : établie, inchangé.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Stained-glass panel. Christ stands waist-deep in the Jordan and John the Baptist pours water over him from a shell. Christ's head is directly beneath a hovering white dove.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "equivalence_non_attestee"
+    ]
+   },
+   {
+    "variation": "traduction",
+    "description": "Panneau de vitrail. Le Christ se tient dans le Jourdain, de l'eau jusqu'à la taille, et Jean-Baptiste lui verse de l'eau sur la tête avec une coquille. Juste au-dessus de la tête du Christ plane une colombe blanche.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Stained-glass panel. Christ stands waist-deep in the Jordan and John the Baptist pours water over him from a shell. Christ's head is directly above a white dove that skims the water.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Stained-glass panel. The border inscription says that a dove hovered above Christ's head; the panel itself shows only Christ, waist-deep in the Jordan, and John the Baptist pouring water from a shell.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Stained-glass panel. Christ stands waist-deep in the Jordan and John the Baptist pours water over his head from a shell. Directly above Christ's head hovers a white bird, perhaps a dove.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Stained-glass panel. Christ stands waist-deep in the Jordan and John the Baptist pours water over his head from a shell. Directly above Christ's head hovers a white dove. On the bank, two angels hold his garments.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-006",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "au_dessus_au_dessous"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "patient_contre_theme",
+    "construction": "tenue_ou_port"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "nombre",
+    "construction": "groupe_de_n"
+   }
+  ],
+  "pivot": {
+   "lemme": "above",
+   "cle_de_sens": "above%4:02:01::",
+   "famille_lexicale": "adv.all"
+  },
+  "langue": "fr",
+  "sorte": "negatif",
+  "description": "Miniature d'un livre d'heures. La Vierge trône au centre ; la couronne repose déjà sur sa tête. Deux anges, de part et d'autre, soulèvent les pans de son manteau bleu.",
+  "definition": "two angels holding a crown above the head of the Virgin",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "« reposer sur » (en contact) et « au-dessus de » (above%4:02:01::) : aucune ressource ne dit que l'une implique l'autre ou qu'elles s'excluent",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Configuration voisine : la couronne est sur la tête (portée, non tenue), les anges tiennent le manteau. Aucun appui positif pour « les anges tiennent la couronne », aucun appui négatif non plus : le silence n'est pas une négation (BANCS § 4, monde clos refusé). Le rapport entre « sur » et « au-dessus de » est une relation inconnue (AUDIT § 3.5) : il ne fonde rien. Inconnue (NOYAU § 4.4). La variante qui nie la tenue reste inconnue : « hold » et « angel » sont polysémiques, et la négation n'est que possible (NOYAU § 2, D30 ; BANCS § 4.1, point 2) ; elle serait écartée avec le sens fixé par le contexte. Harmonisation : la variante de temps, en français, dit « au-dessus de sa tête » : le possessif contre « the head of the Virgin » n'a aucun lien (D20), et « ange », « tenir », « couronne », « tête » n'atteignent leur lemme que par une partie de leurs sens WOLF. Elle passe d'etablie à inconnue : aucune variante française ne peut plus changer de statut (voir la révision). Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « au-dessus de » et le possessif « sa tête » sont des relations de la lecture, non des mots de K. La variante de temps n'est donc plus inconnue : sous hypothèse de sens, par les seuls mots lexicaux (WOLF).",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Miniature d'un livre d'heures. Sur la tête de la Vierge, qui trône au centre, repose déjà la couronne ; de part et d'autre, deux anges soulèvent les pans de son manteau bleu.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Miniature from a book of hours. The Virgin is enthroned in the centre; the crown already rests on her head. Two angels, one on either side, lift the hem of her blue mantle.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Miniature d'un livre d'heures. La Vierge trône au centre. Deux anges tiennent une couronne au-dessus de sa tête, qu'ils s'apprêtent à y poser.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "decision_ouverte": {
+     "question": "« ange », « tenir », « couronne », « Vierge », « tête » n'atteignent leur lemme que par une partie de leurs sens WOLF : le contexte les fixe-t-il ?",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    }
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Miniature d'un livre d'heures. La Vierge trône au centre ; la couronne repose déjà sur sa tête, et aucun ange ne la tient. Deux anges, de part et d'autre, soulèvent les pans de son manteau bleu.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Miniature d'un livre d'heures. Sainte Catherine trône au centre ; la couronne repose déjà sur sa tête. Deux anges, de part et d'autre, soulèvent les pans de son manteau bleu.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Miniature d'un livre d'heures. La Vierge trône au centre ; la couronne repose déjà sur sa tête. Deux anges, de part et d'autre, soulèvent les pans de son manteau bleu. En bas de la page, un donateur prie à genoux.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-007",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "devant_derriere"
+   },
+   {
+    "famille": "niveaux_representation",
+    "phenomene": "autre_oeuvre",
+    "construction": "d_apres"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "posture_et_porteur",
+    "construction": "couche"
+   }
+  ],
+  "pivot": {
+   "lemme": "behind",
+   "cle_de_sens": "behind%4:02:00::",
+   "famille_lexicale": "adv.all"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Gravure d'après un tableau perdu. Saint Jérôme, agenouillé devant un crucifix fixé à un tronc d'arbre, se frappe la poitrine avec une pierre. Derrière lui, un lion est couché. Au loin, un monastère.",
+  "definition": "St Jerome kneeling before a crucifix, with a lion lying behind him",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "« devant », « derrière » se lisent comme les relations spatiales before%4:02:01:: et behind%4:02:00:: ; aucune ressource lexicale ne donne ce passage du français à l'anglais pour les prépositions",
+    "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "le nom français « Jérôme » désigne Jerome (Eusebius Hieronymus)",
+    "attestee": true,
+    "source": "WOLF (OMW 1.4, fra) : Jérôme → 11083064-n eusebius_hieronymus%1:18:00:: (synset de Jerome)"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Les deux relations spatiales orientées sont dites par l'auteur (AUDIT § 3.5, (1)). « D'après un tableau perdu » met le tableau dans le contexte d'une autre œuvre, mais les phrases suivantes décrivent la gravure elle-même, de portée represente (FONDEMENTS § 2.5 ; AUDIT § 3.7). Établie (NOYAU § 4.4), sous réserve du passage des prépositions françaises aux relations, que la lecture fait et que la phase ne spécifie pas (revision, point général). Ce qui n'est dit que du tableau perdu n'établit rien pour la gravure. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « est couché » : WOLF ne donne pour coucher que lay/put_down, qui n'atteint pas lie ; « couché » n'est pas dans WOLF. L'atome « lying » n'a aucun lien. De plus « devant » et « derrière » n'atteignent before et behind que par une partie de leurs sens. Inconnue ; la traduction anglaise, mêmes mots que la définition, reste établie. Rétablissement (28/11) : la variante écartée ajoutée à l'harmonisation sur un mot à un seul sens est retirée (DECISIONS_PHASE1 § 3.3).",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Gravure d'après un tableau perdu. Un lion est couché derrière saint Jérôme, qui s'agenouille devant un crucifix fixé à un tronc d'arbre et se frappe la poitrine avec une pierre.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Engraving after a lost painting. St Jerome, kneeling before a crucifix fixed to a tree trunk, beats his breast with a stone. Behind him a lion lies on the ground. In the distance, a monastery.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Gravure d'après un tableau perdu. Saint Jérôme est agenouillé derrière un lion couché, face à un crucifix fixé à un tronc d'arbre, et se frappe la poitrine avec une pierre.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Gravure d'après un tableau perdu. Saint Jérôme, agenouillé devant un crucifix fixé à un tronc d'arbre, se frappe la poitrine avec une pierre. Selon l'inventaire de 1650, un lion était couché derrière lui dans le tableau.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Gravure d'après un tableau perdu. Saint Jérôme, agenouillé devant un crucifix fixé à un tronc d'arbre, se frappe la poitrine avec une pierre. Derrière lui est couché un animal, peut-être un lion.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Gravure d'après un tableau perdu. Saint Jérôme, agenouillé devant un crucifix fixé à un tronc d'arbre, se frappe la poitrine avec une pierre. Derrière lui, un lion est couché. Le chapeau de cardinal n'est pas figuré.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "« couché » se lit-il lie (posture) sans ressource, et devant / derrière dans leur sens spatial ?",
+   "statut_selon_l_option": {
+    "tous_les_sens, sans lien pour couché": "inconnue",
+    "couché relié à lie, tous les sens de devant / derrière": "etablie_sous_hypotheses",
+    "couché relié à lie, sens fixés par le contexte": "etablie"
+   }
+  }
+ },
+ {
+  "id": "ep-008",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "devant_derriere"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "posture_et_porteur",
+    "construction": "assis_ou_debout"
+   }
+  ],
+  "pivot": {
+   "lemme": "before",
+   "cle_de_sens": "before%4:02:01::",
+   "famille_lexicale": "adv.all"
+  },
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Predella panel. In a garden at dawn, the risen Christ, holding a spade, walks away towards the right. Mary Magdalene kneels behind him and stretches out her hand towards his cloak.",
+  "definition": "Mary Magdalene kneeling before the risen Christ",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "before%4:02:01:: (at or in the front) et behind%4:02:00:: (in or to the rear) : aucune ressource n'en atteste l'exclusion, ni le cadre de référence (intrinsèque ou relatif au spectateur)",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Le texte dit « derrière », la définition demande « devant ». Aucune sorte de connaissance ne dit que deux relations s'excluent, et l'antonymie n'en tient pas lieu (BANCS § 4.1, point 3) ; le cadre de référence n'est pas fixé (AUDIT § 3.5, (3)). La relation demandée n'a ni appui positif ni appui négatif : inconnue (NOYAU § 4.4). La variante qui nie l'agenouillement est écartée : « kneel » n'a qu'un sens (kneel%2:35:00::).",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Predella panel. Behind the risen Christ, who walks away towards the right holding a spade, kneels Mary Magdalene, stretching out her hand towards his cloak. It is dawn, in a garden.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Panneau de prédelle. Dans un jardin, à l'aube, le Christ ressuscité, une bêche à la main, s'éloigne vers la droite. Marie-Madeleine est agenouillée derrière lui et tend la main vers son manteau.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Predella panel. In a garden at dawn, the risen Christ, holding a spade, walks away towards the right. Mary Magdalene does not kneel: she stands behind him and stretches out her hand towards his cloak.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Predella panel. In a garden at dawn, Mary Magdalene walks away towards the right. The risen Christ, holding a spade, kneels behind her.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Predella panel. In a garden at dawn, the risen Christ, holding a spade, walks away towards the right. Mary Magdalene kneels behind him and stretches out her hand towards his cloak. In the distance, two angels sit on the empty tomb.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "Si une sorte « incompatibilité attestée » était admise (behind et before exclusifs dans le cadre intrinsèque de la figure), le contre-modèle serait-il écarté ?",
+   "statut_selon_l_option": {
+    "aucune incompatibilité admise": "inconnue",
+    "incompatibilité attestée, cadre intrinsèque": "ecartee",
+    "incompatibilité attestée, cadre du spectateur": "inconnue"
+   }
+  }
+ },
+ {
+  "id": "ep-009",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "gauche_droite_de_la_figure"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "collection",
+    "construction": "groupe_nomme"
+   }
+  ],
+  "pivot": {
+   "lemme": "right",
+   "cle_de_sens": "right%3:00:00::",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "fr",
+  "sorte": "indetermine",
+  "description": "Tympan sculpté. Le Christ juge trône au centre, de face, les bras ouverts. À droite, les élus montent vers la Jérusalem céleste ; à gauche, des démons poussent les damnés vers la gueule de l'enfer.",
+  "definition": "Christ as Judge, with the elect at his right hand and the damned at his left",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "pour une figure frontale, sa droite (right%3:00:00::, cadre de la figure) est la gauche du spectateur ; convention géométrique, sans ressource qui l'atteste",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "collection"
+  ],
+  "justification": "« À droite » sans point de référence peut se lire dans le cadre du spectateur (et les élus sont alors à la gauche du Christ, frontal) ou dans celui de la figure centrale (et ils sont à sa droite). Le cadre de référence est une connaissance que les documents signalent sans la fixer (AUDIT § 3.5, (3)). Ce n'est pas une polysémie lexicale au sens de D30 (NOYAU § 2), et les documents ne disent pas si la supervaluation s'y applique. Le statut n'est pas fixé : l'option la plus prudente, inconnue, est retenue (decision_ouverte). Aucune incompatibilité attestée de la droite et de la gauche n'est admise (BANCS § 4.1, point 3) : K ne contient pas l'exclusion de la droite et de la gauche : même dans le cadre du spectateur, la définition n'est pas écartée. Harmonisation : « élus » (WOLF : un seul sens, un jeu de cartes) n'atteint pas elect, et « damnés » n'est pas dans WOLF. Les variantes françaises qui disaient « à sa droite » ou citaient une notice passent à inconnue.",
+  "decision_ouverte": {
+   "question": "« élus » n'a dans WOLF qu'un sens (un jeu de cartes) et « damnés » aucun : sans lien vers elect et damned, le cadre de référence ne décide plus rien. Avec un lien admis, reste la question du cadre (spectateur ou figure).",
+   "statut_selon_l_option": {
+    "sans lien lexical (WOLF)": "inconnue",
+    "lien admis, cadre du spectateur": "inconnue",
+    "lien admis, cadre de la figure principale": "etablie_sous_hypotheses"
+   }
+  },
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Tympan sculpté. Au centre trône, de face et les bras ouverts, le Christ juge. Les élus montent, à droite, vers la Jérusalem céleste ; à gauche, les damnés sont poussés par des démons vers la gueule de l'enfer.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Carved tympanum. Christ the Judge is enthroned in the centre, frontal, his arms open. On the right, the elect ascend towards the heavenly Jerusalem; on the left, demons drive the damned towards the mouth of hell.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Tympan sculpté. Le Christ juge trône au centre, de face, les bras ouverts. À sa droite, les élus montent vers la Jérusalem céleste ; à sa gauche, des démons poussent les damnés vers la gueule de l'enfer.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Tympan sculpté. Le Christ juge trône au centre, de face, les bras ouverts. À sa gauche, les élus montent vers la Jérusalem céleste ; à sa droite, des démons poussent les damnés vers la gueule de l'enfer.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Tympan sculpté. Le Christ juge trône au centre, de face, les bras ouverts. Sous lui, saint Michel pèse les âmes. À droite, les élus montent vers la Jérusalem céleste ; à gauche, des démons poussent les damnés vers la gueule de l'enfer.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Tympan sculpté. L'inscription du linteau proclame que les élus siègent à la droite du Juge. Le Christ trône au centre, de face ; à droite, les élus montent vers la Jérusalem céleste ; à gauche, les damnés sont poussés vers l'enfer.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Tympan sculpté. Selon la notice ancienne que cite le guide, le tympan montre les élus à la droite du Christ juge et les damnés à sa gauche ; le Christ trône au centre, de face.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-010",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "gauche_droite_de_la_figure"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "patient_contre_theme",
+    "construction": "tenue_ou_port"
+   },
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "identification_de_personnage",
+    "construction": "par_le_nom"
+   }
+  ],
+  "pivot": {
+   "lemme": "left",
+   "cle_de_sens": "left%3:00:00::",
+   "famille_lexicale": "adj.all"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Polychrome wooden statue, about 1500. St Peter stands barefoot; he holds the keys in his right hand and a closed book in his left. The paint of the mantle is much abraded.",
+  "definition": "an apostle holding a book in his left hand",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "Peter (St._Peter) est une instance de Apostle (apostle%1:18:00::)",
+    "attestee": true,
+    "source": "WordNet 3.0 : peter%1:18:00:: (11231157) @i apostle%1:18:00:: (09798811)"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "La latéralité d'une main dite « his left » est celle de la figure : le cadre de référence n'est pas en jeu (AUDIT § 3.5, (3)), et la définition emploie la même tournure. Le type « apostle » vient du nom par l'instance de WordNet (implicite, BANCS § 4.1). La tenue est dite. Établie (NOYAU § 4.4). L'état de la peinture est de portée oeuvre et ne touche rien. Harmonisation : le cas de base, en anglais, dit les mots de la définition (St._Peter n'a qu'un sens, instance d'Apostle) : établie. La traduction française n'est établie que sous hypothèse de sens (WOLF). Rétablissement (28/11) : la variante d'origine où l'auteur se contredit (« holds no book ») revient, en #6 : sous hypothèse de sens (la négation d'un mot polysémique n'est que possible, NOYAU § 2), contradictoire avec le sens fixé.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Polychrome wooden statue, about 1500. Standing barefoot, St Peter holds a closed book in his left hand and the keys in his right. The paint of the mantle is much abraded.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Statue en bois polychrome, vers 1500. Saint Pierre se tient pieds nus ; il tient les clés dans sa main droite et un livre fermé dans sa main gauche. La peinture du manteau est très usée.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "decision_ouverte": {
+     "question": "« Pierre », « tenir », « livre », « gauche », « main » n'atteignent leur lemme anglais que par une partie de leurs sens WOLF : le contexte les fixe-t-il ?",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    },
+    "langue": "fr"
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Polychrome wooden statue, about 1500. St Peter stands barefoot; he holds the keys in his left hand and a closed book in his right. The paint of the mantle is much abraded.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Polychrome wooden statue, about 1500. St Peter stands barefoot; he holds the keys in his right hand and in his left an object, probably a book. The paint of the mantle is much abraded.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Polychrome wooden statue, about 1500. St Peter stands barefoot; he holds the keys in his right hand and a closed book in his left. A small donor kneels at his feet.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "composition",
+    "description": "Polychrome wooden statue, about 1500. St Peter stands barefoot; he holds the keys in his right hand and a closed book in his left. In his left hand St Peter holds no book.",
+    "sorte": "indetermine",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "decision_ouverte": {
+     "question": "« holds no book » : « hold » et « book » sont polysémiques, la négation n'est que possible ; elle ne contredit rien, mais la conclusion positive n'est plus établie que sous l'hypothèse qu'elle vise un autre sens (NOYAU § 2). Avec le sens fixé, la négation est certaine et le cas contradictoire.",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "contradictoire"
+     }
+    }
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Polychrome wooden statue, about 1500. According to the guidebook quoted on the label, St Peter holds a closed book in his left hand; the left forearm is now missing.",
+    "sorte": "indetermine",
+    "statut_attendu": "non_certifiee",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-011",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "preposition_polysemique",
+    "construction": "de_matiere"
+   },
+   {
+    "famille": "compositionnalite",
+    "phenomene": "compose_a_relation_implicite",
+    "construction": "matiere"
+   }
+  ],
+  "pivot": {
+   "lemme": "thorn",
+   "cle_de_sens": "thorn%1:20:00::",
+   "famille_lexicale": "noun.plant"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Huile sur toile. Le Christ est assis sur une marche, les mains liées, une couronne d'épines posée sur la tête. Derrière lui, un soldat lui tend un roseau en ricanant.",
+  "definition": "Christ with a thorn crown on his head",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "sens",
+   "equivalence_non_attestee"
+  ],
+  "connaissances_supposees": [
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "le composé « thorn crown » a pour relation implicite la matière (crown made_of thorn%1:20:00::) ; aucune ressource ne le donne",
+    "attestee": false
+   },
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "« de » (couronne d'épines) peut se lire matière, possession, partie ou représentation ; aucune restriction de sélection attestée n'exclut les autres sens",
+    "attestee": false
+   },
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "« couronne d'épines » correspond aussi à l'entrée lexicalisée crown_of_thorns (trois sens : l'artefact, une plante, une affliction) ; seule la glose de crown_of_thorns%1:06:00:: dit la matière",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "canonisation"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "« De » a plusieurs sens de relation (AUDIT § 3.5, (3)). Sans restriction de sélection attestée (BANCS § 4.1 : elles doivent être écrites, avec leur source), la matière n'est établie que sous hypothèse de sens (D30 ; BANCS § 4.1, point 2). Côté définition, la relation implicite du composé n'est pas attestée (FONDEMENTS § 3.2 : le composé nominal n'est pas une propriété par la seule syntaxe ; § 2.7 : le défaut est relation inconnue) : equivalence_non_attestee. La lecture lexicalisée (crown_of_thorns) ne fait pas mieux : trois sens, et une glose seule. Statut le plus prudent : sous hypothèses. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « posée sur la tête » : « sur » n'est ni dans WordNet ni dans WOLF, et n'a aucun lien vers le « on » de la définition (D20). Inconnue, au lieu de sous hypothèses. La traduction anglaise (« on his head ») reste sous hypothèses : crown_of_thorns n'atteint crown que par un de ses trois sens, et le composé de la définition n'est pas attesté. Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « sur » est une relation de la lecture, sans polysémie qui compte ici : il ne bloque plus rien. Restent le « de » polysémique de « couronne d'épines » (la définition fixe la matière : hypothèse de sens), le composé non attesté de la définition, et les sens WOLF d'épine, de couronne et de tête. Sous hypothèses, et non plus inconnue. Sous les deux options de sens, le statut est le même (sous hypothèses) : si le contexte fixe le « de » de matière et les sens WOLF, il reste l'équivalence non attestée du composé.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Huile sur toile. Assis sur une marche, les mains liées, le Christ a sur la tête une couronne d'épines. Un soldat placé derrière lui lui tend un roseau en ricanant.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "equivalence_non_attestee"
+    ]
+   },
+   {
+    "variation": "traduction",
+    "description": "Oil on canvas. Christ sits on a step, his hands bound, a crown of thorns set on his head. Behind him, a sneering soldier holds out a reed to him.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "equivalence_non_attestee"
+    ],
+    "langue": "en"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Huile sur toile. Le Christ est assis sur une marche, les mains liées, une couronne de laurier posée sur la tête. Derrière lui, un soldat lui tend un roseau en ricanant.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Huile sur toile. Le Christ est assis sur une marche, les mains liées. Derrière lui, un soldat s'apprête à lui poser sur la tête une couronne d'épines.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Huile sur toile. Le Christ est assis sur une marche, les mains liées, une couronne d'épines posée sur la tête. Il ne porte pas de manteau. Un soldat lui tend un roseau.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "equivalence_non_attestee"
+    ]
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Huile sur toile. Le Christ est assis sur une marche, les mains liées ; il a sur la tête ce qui semble être une couronne d'épines. Un soldat lui tend un roseau.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-012",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "preposition_polysemique",
+    "construction": "de_matiere"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "collection",
+    "construction": "couple"
+   }
+  ],
+  "pivot": {
+   "lemme": "leaf",
+   "cle_de_sens": "leaf%1:20:00::",
+   "famille_lexicale": "noun.plant"
+  },
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Fresco fragment. Adam and Eve leave the garden, driven out by an angel with a raised sword. The couple are clothed in garments of skins and walk with bowed heads.",
+  "definition": "Adam and Eve wearing garments of fig leaves",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "be clothed in X ⇔ wear X ; clothe et wear sont deux synsets, reliés par la seule glose de wear",
+    "attestee": false
+   },
+   {
+    "sorte": "implication",
+    "contenu": "fig_leaf%1:20:00:: ⊑ leaf%1:20:00::",
+    "attestee": true,
+    "source": "WordNet 3.0 : fig_leaf%1:20:00:: (13156006) @ leaf%1:20:00:: (13152742)"
+   },
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "une peau (skin) et une feuille (leaf) comme matières d'un même vêtement : aucune ressource n'en atteste l'exclusion",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "collection"
+  ],
+  "justification": "Tout est satisfait (Adam, Ève, chacun portant un vêtement, dans les mots de la définition) sauf la matière : peaux au lieu de feuilles. Aucune incompatibilité attestée n'est admise (BANCS § 4.1, point 3), et le silence ne nie pas : inconnue. « The first couple » est une apposition qui nomme la collection (FONDEMENTS § 2.6). « Of » est le même mot des deux côtés : la relation de matière n'y demande pas de choix de sens. La variante qui nie les feuilles reste inconnue : « leaf » a trois sens, et la négation n'est que possible (D30 ; BANCS § 4.1, point 2). Rétablissement (28/11) : les textes et la définition d'origine reviennent (« clothed in garments of », « Adam and Eve wearing garments of fig leaves »). Aucun sens de clothe n'atteint wear (WordNet) : le lien ne passe que par l'équivalence non attestée. La variante aux feuilles est sous hypothèse equivalence_non_attestee ; la variante citée n'a plus de valeur vraie (aucun lien positif) : inconnue. Le cas n'a plus de variante de statut différent par la portée, la modalité, le temps ou l'inversion.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Fresco fragment. Clothed in garments of skins, the couple, Adam and Eve, walk out of the garden with bowed heads, driven out by an angel with a raised sword.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Fragment de fresque. Adam et Ève quittent le jardin, chassés par un ange à l'épée levée. Le couple, vêtu de tuniques de peau, marche tête basse.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Fresco fragment. Adam and Eve leave the garden, driven out by an angel with a raised sword. The couple are clothed in garments of fig leaves and walk with bowed heads.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "equivalence_non_attestee"
+    ]
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Fresco fragment. Adam and Eve leave the garden, driven out by an angel with a raised sword. The couple's garments are not made of leaves but of skins.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Fresco fragment. Adam and Eve leave the garden, driven out by an angel with a raised sword. The couple are clothed in garments of skins and walk with bowed heads. Behind them, a serpent coils around a tree.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Fresco fragment. According to the old guidebook quoted on the label, the fresco shows Adam and Eve leaving the garden, the couple clothed in garments of fig leaves.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "Si une sorte « incompatibilité attestée » était admise (un vêtement de peaux n'est pas un vêtement de feuilles), le contre-modèle serait-il écarté ?",
+   "statut_selon_l_option": {
+    "aucune incompatibilité admise": "inconnue",
+    "incompatibilité attestée": "ecartee"
+   }
+  }
+ },
+ {
+  "id": "ep-013",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "preposition_polysemique",
+    "construction": "de_partie"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "noms_propres",
+    "construction": "nom_partiel"
+   }
+  ],
+  "pivot": {
+   "lemme": "head",
+   "cle_de_sens": "head%1:08:00::",
+   "famille_lexicale": "noun.body"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing the head of the Baptist, while Herodias looks on with satisfaction.",
+  "definition": "Salome holding a dish bearing the head of John the Baptist",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "le nom « the Baptist » (« le Baptiste ») désigne John the Baptist ; WordNet ne le donne pas (baptist%1:18:00:: : follower of Baptistic doctrines)",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Salomé tient le plat (« holds », le verbe de la définition). « Of » est le même mot des deux côtés. Le nom partiel n'est relié au nom complet par aucune ressource : l'alias n'est pas établi (NOYAU § 2), et une connaissance non attestée donne au mieux un statut sous hypothèse (FONDEMENTS § 2.7 ; BANCS § 4.1) : identite. La tête est une partie détachée ; le tout n'a pas à être figuré, et la définition ne le demande pas (FONDEMENTS § 2.4 et § 3.4). Harmonisation : la traduction française dit « la tête du Baptiste » : « de » n'a aucun lien vers « of » (D20), et « Baptiste » n'a dans WOLF que le sens baptist%1:18:00:: (follower of Baptistic doctrines). Inconnue. Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « de » et « of » sont la même relation de génitif ; la traduction française n'est plus inconnue, mais sous hypothèse d'identité (l'alias) et de sens (WOLF). Rétablissement (28/11) : les textes d'origine reviennent (« holds out », « est held out », « présente »). Aucun des sens de hold_out (5) ni de présenter (61, WOLF) n'atteint hold : l'atome « holding » n'a aucun lien. Inconnue, pour le cas et toutes ses variantes ; le cas n'a plus de variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Panel painting. A silver dish bearing the Baptist's head is held out by Salome at Herod's table; Herodias looks on with satisfaction.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Peinture sur panneau. À la table d'Hérode, Salomé présente un plat d'argent portant la tête du Baptiste, sous le regard satisfait d'Hérodiade.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing a sculpted head of the Baptist, while Herodias looks on with satisfaction.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing a head, probably that of the Baptist, while Herodias looks on.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing the head of the Baptist, while Herodias looks on with satisfaction. A dog sleeps under the table.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Panel painting. At Herod's table, Salome holds out a silver dish bearing the head of the Baptist. No blood stains the white cloth.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-014",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "preposition_polysemique",
+    "construction": "de_partie"
+   }
+  ],
+  "pivot": {
+   "lemme": "hand",
+   "cle_de_sens": "hand%1:08:00::",
+   "famille_lexicale": "noun.body"
+  },
+  "langue": "fr",
+  "sorte": "indetermine",
+  "description": "Relief en ivoire. Au sommet, la main de Dieu sort d'un nuage et bénit le martyr, que deux bourreaux lapident. Le fond est ajouré.",
+  "definition": "God the Father blessing a martyr from the clouds",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "hand%1:08:00:: est partie de arm et de homo (human_being)",
+    "attestee": true,
+    "source": "WordNet 3.0 : hand%1:08:00:: (05564590) #p arm (05563770), #p homo (02472293)"
+   },
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "« la main de Dieu » : de se lit partie_de ; Dieu n'est pas un homo, et aucune ressource ne restreint « de » à partie_de ici",
+    "attestee": false
+   },
+   {
+    "sorte": "hypothese_interpretative",
+    "contenu": "« Dieu », dans ce contexte iconographique, désigne Dieu le Père (God the Father) ; ni WordNet ni WOLF n'ont God the Father",
+    "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "« Dieu le Père » et « God the Father » sont deux noms du même individu ; aucune ressource consultable",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "« La main de Dieu » est une partie figurée seule : le tout est un autre référent (FONDEMENTS § 2.4), et une partie n'est pas son tout (FONDEMENTS § 3.4). Deux questions ne sont pas fixées : le tout d'une partie figurée est-il un référent présent dans le monde figuré (NOYAU § 1), et l'agent de « la main bénit » est-il le tout ? Sous l'option qui le fait présent, la lecture partie_de de « de » n'est elle-même pas attestée : ce serait au mieux un statut sous hypothèse de sens. On retient l'option la plus prudente, inconnue. La variante « Dieu lui-même n'est pas figuré » dépend de la même décision (écartée sous la première option, contradictoire sous la seconde) : elle est mise à inconnue. Harmonisation : « sort d'un nuage » est une source de l'événement (un rôle, sans mot de relation) ; mais « Dieu » et « bénir » ne sont reliés à god et bless que sous hypothèse de sens (WOLF). Correction de l'harmonisation, pour la variante citée : La valeur vraie vient d'un lien positif, même incertain : un lien partiel est un appui, l'hypothèse de sens ne porte que sur la certification (NOYAU § 2 et § 4.3). Une source citée n'est jamais certifiable : non_certifiee, sous les deux options. Rétablissement (28/11) : la définition d'origine (« God the Father ») et la variante « Dieu le Père, en buste » reviennent. Le nom n'est relié à God the Father que par un alias non attesté : la variante est sous hypothèses d'identité et de sens ; la notice citée (« Dieu bénissant ») n'a plus de valeur vraie : inconnue. Le cas n'a plus de variante de statut différent par la portée, la modalité, le temps ou l'inversion. Variante #4 : avec ou sans le sens de « bénir » fixé, le statut est le même (sous hypothèses), l'alias Dieu le Père / God the Father restant supposé.",
+  "decision_ouverte": {
+   "question": "Le tout d'une partie figurée seule (la main de Dieu sortant d'un nuage) est-il un référent figuré présent, et reçoit-il le rôle d'agent de l'événement dont la partie est le sujet ?",
+   "statut_selon_l_option": {
+    "le tout n'est qu'un référent impliqué, non présent ; la partie seule est agent": "inconnue",
+    "le tout est présent par sa partie et reçoit l'agent": "etablie_sous_hypotheses"
+   }
+  },
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Relief en ivoire. Une main sort d'un nuage, au sommet : c'est celle de Dieu, qui bénit le martyr lapidé par deux bourreaux. Le fond est ajouré.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Ivory relief. At the top, the hand of God emerges from a cloud and blesses the martyr, who is being stoned by two executioners. The background is pierced.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Relief en ivoire. Dieu lui-même n'est pas figuré : seule sa main sort d'un nuage, au sommet, et bénit le martyr, que deux bourreaux lapident.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Relief en ivoire. Au sommet, Dieu le Père, en buste, sort d'un nuage et bénit le martyr, que deux bourreaux lapident. Le fond est ajouré.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "identite",
+     "sens"
+    ]
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Relief en ivoire. Au sommet, la main de Dieu sort d'un nuage et bénit le martyr, que deux bourreaux lapident. À gauche, un jeune homme garde leurs manteaux.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Relief en ivoire. Selon la légende, Dieu apparut au martyr dans les nuées et le bénit ; le relief ne montre que le martyr et les deux bourreaux qui le lapident.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Relief en ivoire. Selon la notice ancienne que cite le catalogue, le relief montre Dieu bénissant le martyr depuis un nuage, au sommet ; deux bourreaux lapident le martyr.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-015",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "preposition_polysemique",
+    "construction": "de_possession"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "instrument_et_moyen",
+    "construction": "avec_un_instrument"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "coreference",
+    "construction": "designation_reprise"
+   }
+  ],
+  "pivot": {
+   "lemme": "sword",
+   "cle_de_sens": "sword%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre. David, debout sur le corps du géant, lui tranche la tête avec l'épée de Goliath. Les Philistins s'enfuient à l'arrière-plan.",
+  "definition": "David cutting off Goliath's head with Goliath's own sword",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "« de » (l'épée de Goliath) peut se lire possession, partie, matière ou représentation ; la définition (« own ») demande la possession",
+    "attestee": false
+   },
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "« le géant » pourrait reprendre Goliath ; WordNet fait de Goliath une instance de warrior, non de giant (goliath%1:18:00:: @i warrior) : rien ne fonde la reprise",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "« Le géant » reprend l'apposition « Goliath, le géant philistin » (coréférence par apposition et reprise du même nom, NOYAU § 1). « Décapiter » est behead. Mais « de » a plusieurs sens de relation (AUDIT § 3.5) et aucune restriction de sélection attestée ne réduit « l'épée du géant » à la possession (BANCS § 4.1) : avec tous les sens, la possession n'est établie que sous hypothèse de sens ; avec le sens fixé par le contexte, établie. Statut le plus prudent : sous hypothèse. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « l'épée du géant » : « de » (du) n'a aucun lien vers le « 's » de la définition (D20) : inconnue, au lieu de sous hypothèse de sens. La traduction anglaise dit « the giant's sword » : le même mot de relation que la définition, et la reprise par l'apposition : établie (remontée). Rétablissement (28/11) : la variante écartée ajoutée à l'harmonisation sur un mot à un seul sens est retirée (DECISIONS_PHASE1 § 3.3). Rétablissement (28/11) : les textes et la définition d'origine reviennent (« debout sur le corps du géant, lui tranche la tête avec l'épée de Goliath », « cutting off Goliath's head »). L'inclusion fausse Goliath ⊑ géant reste retirée de K : la reprise « le géant » n'est pas fondée, et la tête coupée n'est pas établie comme celle de Goliath. Inconnue pour le cas et ses variantes ; le cas n'a plus de variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre ; debout sur le corps du géant, David lui tranche la tête avec l'épée qui appartient à Goliath. Les Philistins s'enfuient.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Miniature from a moralised Bible. Goliath lies on the ground, his forehead split by the stone. Standing on the giant's body, David cuts off his head with Goliath's own sword. The Philistines flee in the background.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre. David, debout sur le corps du géant, lui tranche la tête avec sa propre épée. Les Philistins s'enfuient à l'arrière-plan.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Miniature d'une bible moralisée. David gît à terre. Goliath, debout sur son corps, lui tranche la tête avec l'épée de David.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre. David, debout sur le corps du géant, lève l'épée de Goliath et s'apprête à lui trancher la tête.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Miniature d'une bible moralisée. Goliath gît à terre, le front ouvert par la pierre. David, debout sur le corps du géant, lui tranche la tête avec l'épée de Goliath. Le roi Saül observe la scène depuis une colline.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "« Le géant » (et « lui ») reprennent-ils Goliath ? Sans connaissance qui fasse de Goliath un géant, la coréférence n'est que possible (NOYAU § 1, C9). Si la lecture la résolvait, il resterait les hypothèses de sens : trancher (1 sens WOLF sur 37 atteint cut_off), tête, et le « de » de possession.",
+   "statut_selon_l_option": {
+    "coréférence seulement possible": "inconnue",
+    "coréférence résolue par la lecture": "etablie_sous_hypotheses"
+   }
+  }
+ },
+ {
+  "id": "ep-016",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "preposition_polysemique",
+    "construction": "de_possession"
+   },
+   {
+    "famille": "definitions_classification",
+    "phenomene": "mots_sans_structure",
+    "construction": "mots_de_la_definition_sans_leurs_relations"
+   }
+  ],
+  "pivot": {
+   "lemme": "ring",
+   "cle_de_sens": "ring%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Genre painting. In a village street, a peasant woman bends to kiss the ring of the old bishop, who raises his other hand in blessing over her child.",
+  "definition": "a woman kissing the hand of a bishop",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "l'anneau d'un évêque est porté à un doigt de sa main",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "Les mots de la définition (woman, kiss, hand, bishop) sont tous dans le texte, mais la main n'est pas le patient du baiser : le baiser porte sur l'anneau. Aucune connaissance de K ne transfère le patient d'un objet porté à la partie du corps qui le porte, et l'appariement de mots sans leurs relations n'est pas sûr (AUDIT § 3.8 ; SPECIFICATION_OPERATIONS § 3.2). Inconnue (NOYAU § 4.4). La variante qui nie le baiser de la main reste inconnue : « kiss » a deux sens et « hand » quatorze, la négation n'est que possible (D30 ; BANCS § 4.1, point 2).",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Genre painting. In a village street, the old bishop's ring is kissed by a peasant woman who bends before him; he raises his other hand in blessing over her child.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Scène de genre. Dans une rue de village, une paysanne s'incline pour baiser l'anneau du vieil évêque, qui lève son autre main pour bénir son enfant.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Genre painting. In a village street, a peasant woman bends to kiss the hand of the old bishop, who raises his other hand in blessing over her child.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Genre painting. In a village street, the old bishop bends to kiss the hand of a peasant woman, who holds her child.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Genre painting. In a village street, a peasant woman bends before the old bishop; she does not kiss his hand but his ring, while he blesses her child.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Genre painting. In a village street, a peasant woman bends to kiss the ring of the old bishop, who raises his other hand in blessing over her child. The woman wears no headscarf.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Genre painting. According to the old sale catalogue quoted on the label, the painting shows a peasant woman kissing the hand of an old bishop in a village street.",
+    "sorte": "indetermine",
+    "statut_attendu": "non_certifiee",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-017",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "temps_entre_evenements",
+    "construction": "avant_de"
+   },
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "narration_continue",
+    "construction": "meme_personnage_deux_fois"
+   }
+  ],
+  "pivot": {
+   "lemme": "before",
+   "cle_de_sens": "before%4:02:03::",
+   "famille_lexicale": "adv.all"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Panneau de prédelle. Dans un même paysage fluvial, Tobie est figuré deux fois : à gauche, il saisit le poisson au bord de l'eau avant de le vider, à droite, sous le regard de l'ange Raphaël.",
+  "definition": "Tobias seizing the fish before gutting it",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "« Tobie » et « Tobias » sont deux noms du même individu ; ni WordNet ni WOLF ne les donnent",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "relation_entre_eventualites",
+   "identite_entre_situations",
+   "situation_referent"
+  ],
+  "justification": "La précédence entre les deux événements est dite par « avant de » ; elle ne s'écrit que par une relation entre éventualités (AUDIT § 3.5, (4)). Les deux événements sont figurés dans deux situations d'un même espace, et les deux figures sont le même individu (ONTOLOGIE_EVENTUALITES § 3 ; FONDEMENTS § 2.3). Rétablissement (28/11) : Tobie revient à la place de Samson (DECISIONS_PHASE1 § 3.3), avec les textes d'origine. « Vider » n'atteint pas gut (WOLF : un seul sens, consume) : inconnue. L'alias Tobie / Tobias n'est pas attesté. La traduction anglaise (Tobias, seizes, gutting, before : les mots de la définition) est établie. Le cas n'a plus de variante de statut différent par la portée, la modalité, le temps ou l'inversion.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Panneau de prédelle. Tobie apparaît deux fois dans le même paysage fluvial : avant de vider le poisson, à droite, sous le regard de l'ange Raphaël, il le saisit, à gauche, au bord de l'eau.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Predella panel. In a single river landscape Tobias is shown twice: on the left he seizes the fish at the water's edge before gutting it, on the right, watched by the angel Raphael.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Panneau de prédelle. Dans un même paysage fluvial, Tobie est figuré deux fois : à gauche, il vide le poisson avant de le saisir, à droite, au bord de l'eau, sous le regard de l'ange Raphaël.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Panneau de prédelle. Au bord du fleuve, Tobie saisit le poisson sous le regard de l'ange Raphaël ; il le videra plus tard, sur la route.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Panneau de prédelle. Selon le livre de Tobie, le jeune homme saisit le poisson avant de le vider ; le panneau ne montre que la capture, au bord du fleuve, sous le regard de l'ange Raphaël.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panneau de prédelle. Dans un même paysage fluvial, Tobie est figuré deux fois : à gauche, il saisit le poisson au bord de l'eau avant de le vider, à droite, sous le regard de l'ange Raphaël. Un chien suit l'ange.",
+    "sorte": "positif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "« vider » n'a dans WOLF qu'un sens (consume, eat_up), qui n'atteint pas gut : l'atome « gutting » n'a aucun lien. S'il en avait un, resteraient l'alias Tobie / Tobias (non attesté) et les sens de saisir, poisson, avant.",
+   "statut_selon_l_option": {
+    "tous_les_sens, sans lien pour vider": "inconnue",
+    "vider relié à gut": "etablie_sous_hypotheses"
+   }
+  }
+ },
+ {
+  "id": "ep-018",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "temps_entre_evenements",
+    "construction": "avant_de"
+   },
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "juxtaposition_d_episodes",
+    "construction": "registres"
+   }
+  ],
+  "pivot": {
+   "lemme": "before",
+   "cle_de_sens": "before%4:02:03::",
+   "famille_lexicale": "adv.all"
+  },
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Romanesque capital carved in two registers. In the upper register Cain slays Abel with a club; in the lower register Cain and Abel offer their sacrifices, a lamb and a sheaf of wheat.",
+  "definition": "Cain and Abel offering their sacrifices before Cain slays Abel",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "slay ⊑ kill",
+    "attestee": true,
+    "source": "WordNet 3.0 : slay%2:41:00:: (02482425, synset murder) @ kill%2:35:00:: (01323958)"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "relation_entre_eventualites",
+   "situation_referent"
+  ],
+  "justification": "Les deux épisodes sont figurés, chacun dans sa situation (ONTOLOGIE_EVENTUALITES § 3, juxtaposition d'épisodes), mais aucun ordre n'est dit : deux registres juxtaposés n'énoncent pas de succession. K ne contient aucune convention de lecture des registres (de haut en bas, ou de bas en haut), et la connaissance du récit biblique n'est pas dans K : elle n'existe pas pour le cas (BANCS_PHASE1 § 4). La relation de précédence n'a aucun appui : inconnue (NOYAU § 4.4).",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Romanesque capital carved in two registers. The lower register shows the sacrifices of Cain and Abel, a lamb and a sheaf of wheat; the upper shows the murder of Abel, whom Cain slays with a club.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Chapiteau roman sculpté sur deux registres. Au registre supérieur, Caïn tue Abel avec une massue ; au registre inférieur, Caïn et Abel offrent leurs sacrifices, un agneau et une gerbe de blé.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Romanesque capital carved in two registers. In the lower register Cain and Abel offer their sacrifices, a lamb and a sheaf of wheat, before Cain slays Abel with a club, in the upper register.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Romanesque capital carved in two registers. In the upper register Abel slays Cain with a club; in the lower register Cain and Abel offer their sacrifices, a lamb and a sheaf of wheat.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Romanesque capital carved in two registers. In the upper register Cain slays Abel with a club; in the lower register Cain and Abel offer their sacrifices, a lamb and a sheaf of wheat. A hand emerges from a cloud above the lamb.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Romanesque capital carved in two registers. In the upper register Cain slays Abel with a club; in the lower register Cain and Abel offer their sacrifices. No smoke rises from Cain's sheaf.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-019",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "cause_et_but",
+    "construction": "pour_finalite"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "direction_source_destination",
+    "construction": "dans_un_mouvement"
+   }
+  ],
+  "pivot": {
+   "lemme": "purpose",
+   "cle_de_sens": "purpose%1:09:00::",
+   "famille_lexicale": "noun.cognition"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Panel from a small altarpiece. Zacchaeus climbs up into a sycamore in order to see Christ, who passes along the road below with his disciples.",
+  "definition": "Zacchaeus climbing a sycamore in order to see Christ",
+  "statut_attendu": "etablie",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "climb up et climb sont un même synset",
+    "attestee": true,
+    "source": "WordNet 3.0 : climb_up%2:38:00:: (01921964), synset de climb"
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "le nom français « Zachée » désigne Zacchaeus ; ni WordNet ni WOLF ne le donnent",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "relation_entre_eventualites",
+   "evenement_participant"
+  ],
+  "justification": "La définition fait d'une éventualité le but d'une autre : cela ne s'écrit que par une relation entre éventualités (AUDIT § 3.5, (4), fréquence de la cause et du but), et l'éventualité visée (voir le Christ) est sous le contexte du but, non affirmée de la scène (AUDIT § 3.3, (4) : un événement comme participant, avec son contexte ; FONDEMENTS § 2.5). Le texte dit exactement cette configuration : établie, ces extensions données. Une finalité qui n'est dite que par la source n'établit rien pour la figure (variante de portée). Harmonisation : la traduction française dit « pour voir » : « pour » n'est ni dans WordNet ni dans WOLF, et n'a aucun lien vers « in order to » : inconnue. Précision « les rôles et les relations ne passent pas par K » (BANCS § 4.1, point 2, dernier tiret) : « pour » (le but) est une relation de la lecture. La traduction française n'est plus inconnue : grimper et sycomore sont certains par WOLF, « voir » ne l'est pas, et l'alias Zachée / Zacchaeus n'est pas attesté. Variante #2 : avec ou sans le sens de « voir » fixé, le statut est le même (sous hypothèses), l'alias Zachée / Zacchaeus restant supposé.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Panel from a small altarpiece. In order to see Christ, who passes along the road below with his disciples, Zacchaeus climbs up into a sycamore.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Panneau d'un petit retable. Zachée grimpe dans un sycomore pour voir le Christ, qui passe en contrebas sur la route avec ses disciples.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "identite",
+     "sens"
+    ],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Panel from a small altarpiece. According to the Gospel, Zacchaeus climbed the tree in order to see Christ; the panel shows him climbing a sycamore as Christ passes along the road below.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Panel from a small altarpiece. Christ climbs up into a sycamore in order to see Zacchaeus, who passes along the road below.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panel from a small altarpiece. Zacchaeus climbs up into a sycamore in order to see Christ, who passes along the road below with his disciples. A woman watches from a window.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Panel from a small altarpiece. Zacchaeus stands at the foot of a sycamore, about to climb it in order to see Christ, who approaches along the road.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-020",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "cause_et_but",
+    "construction": "pour_finalite"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "imminence",
+    "construction": "geste_suspendu"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "instrument_et_moyen",
+    "construction": "avec_un_instrument"
+   }
+  ],
+  "pivot": {
+   "lemme": "purpose",
+   "cle_de_sens": "purpose%1:09:00::",
+   "famille_lexicale": "noun.cognition"
+  },
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Vitrail. Moïse, debout devant le rocher, lève son bâton pour le frapper ; derrière lui, le peuple assoiffé attend, les cruches vides à la main.",
+  "definition": "Moses striking the rock with his staff, water gushing out",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "le nom français « Moïse » désigne Moses (moses%1:18:00::)",
+    "attestee": true,
+    "source": "WOLF (OMW 1.4, fra) : Moïse → 11193392-n moses%1:18:00::"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "relation_entre_eventualites",
+   "evenement_participant",
+   "ancrage_temporel"
+  ],
+  "justification": "Le coup est le but du geste, non un événement figuré : ce qui est sous le contexte d'un but n'appuie pas le monde figuré (FONDEMENTS § 2.5 ; AUDIT § 3.3, (4)). Le geste suspendu figure l'imminence, qui ne dit pas l'événement en cours (ONTOLOGIE_EVENTUALITES § 1.2). L'eau qui jaillit n'est pas dite. Aucun appui, ni positif ni négatif, pour la frappe : inconnue. Contre-modèle : Moïse, le rocher, le bâton et le geste sont là. Distinguer le but du figuré demande la relation entre éventualités et l'événement participant ; distinguer l'imminent de l'en-cours, l'ancrage temporel. Le nom français « Moïse » n'est relié à « Moses » que par un alias non attesté (BANCS § 4.1) : la variante où la frappe est dite n'est établie que sous hypothèse d'identité. La variante qui nie la frappe reste inconnue : « frapper » est polysémique, la négation n'est que possible (D30 ; BANCS § 4.1, point 2). Harmonisation : l'alias Moïse / Moses est attesté par WOLF (11193392-n), d'où plus d'hypothèse d'identité ; mais la variante de temps n'est établie que sous hypothèse de sens.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Vitrail. Pour frapper le rocher devant lequel il se tient, Moïse lève son bâton ; le peuple assoiffé attend derrière lui, les cruches vides à la main.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Stained-glass window. Moses, standing before the rock, raises his staff in order to strike it; behind him the thirsty people wait, holding their empty jugs.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Vitrail. Moïse, debout devant le rocher, le frappe de son bâton, et l'eau jaillit ; derrière lui, le peuple assoiffé tend ses cruches.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "decision_ouverte": {
+     "question": "« frapper », « rocher », « bâton », « eau » n'atteignent strike, rock, staff, water que par une partie de leurs sens WOLF : le contexte les fixe-t-il ?",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    }
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Vitrail. Moïse, debout devant le rocher, ne le frappe pas encore : il lève son bâton pour le frapper ; derrière lui, le peuple assoiffé attend, les cruches vides à la main.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Vitrail. Moïse, debout devant le rocher, lève son bâton pour le frapper ; Aaron se tient à ses côtés. Derrière eux, le peuple assoiffé attend, les cruches vides à la main.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-021",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "cause_et_but",
+    "construction": "pour_finalite"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "source_citee",
+    "construction": "selon"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "negation_atomique",
+    "construction": "aucun"
+   }
+  ],
+  "pivot": {
+   "lemme": "purpose",
+   "cle_de_sens": "purpose%1:09:00::",
+   "famille_lexicale": "noun.cognition"
+  },
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Etching for a town chronicle. On the tower, the watchman lights the beacon with his torch. According to the chronicler quoted on the label, he does so in order to warn the city of the approaching fleet. No ship is visible on the horizon.",
+  "definition": "a watchman lighting a beacon in order to warn a city of an approaching fleet",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "relation_entre_eventualites",
+   "evenement_participant",
+   "contexte_emboite"
+  ],
+  "justification": "L'allumage est figuré et dit par l'auteur ; la finalité n'est dite que par une source citée. Les documents ne disent pas si la finalité qu'une source attribue à un geste figuré est une assertion de la source sur la scène (énonciateur cité, portée represente : non certifiable, NOYAU § 4.4) ou une assertion du monde de la source (inconnue pour la figure, FONDEMENTS § 2.5). On retient l'option la plus prudente, inconnue (BANCS § 4.1 : entre non_certifiee et inconnue, inconnue). « No ship is visible » porte sur le monde figuré ; la flotte est dans le contenu du but, un autre contexte, que cette négation ne touche pas (FONDEMENTS § 2.5, accessibilité) : elle ne change pas le statut.",
+  "decision_ouverte": {
+   "question": "La finalité d'un geste figuré, dite seulement par une source citée, est-elle une assertion de la source sur la scène (non certifiable) ou une assertion du contexte de la source (sans effet sur la figure) ?",
+   "statut_selon_l_option": {
+    "assertion du contexte de la source": "inconnue",
+    "assertion de la source sur la scène figurée": "non_certifiee"
+   }
+  },
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Etching for a town chronicle. With his torch, the watchman lights the beacon on the tower; the chronicler quoted on the label says that this is to warn the city of the approaching fleet. No ship can be seen on the horizon.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Eau-forte pour une chronique urbaine. Sur la tour, le guetteur allume le feu d'alarme avec sa torche. Selon le chroniqueur cité sur le cartel, il le fait pour avertir la ville de l'approche de la flotte. Aucun navire n'est visible à l'horizon.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Etching for a town chronicle. On the tower, the watchman lights the beacon with his torch in order to warn the city of the approaching fleet. No ship is visible on the horizon.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Etching for a town chronicle. On the tower, the watchman perhaps lights the beacon with his torch; according to the chronicler quoted on the label, he does so in order to warn the city of the approaching fleet.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Etching for a town chronicle. On the tower, the watchman lights the beacon with his torch, while gulls circle overhead. According to the chronicler quoted on the label, he does so in order to warn the city of the approaching fleet.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "ep-022",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "temps_entre_evenements",
+    "construction": "pendant_que"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "etat_simultane",
+    "construction": "etat_pendant_evenement"
+   }
+  ],
+  "pivot": {
+   "lemme": "simultaneously",
+   "cle_de_sens": "simultaneously%4:02:00::",
+   "famille_lexicale": "adv.all"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Retable peint. Le Christ sort du tombeau, l'étendard à la main, pendant que les soldats dorment, appuyés sur leurs lances.",
+  "definition": "Christ rising from the tomb while the soldiers sleep",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "sens",
+   "hypothese_interpretative"
+  ],
+  "connaissances_supposees": [
+   {
+    "sorte": "hypothese_interpretative",
+    "contenu": "le Christ qui sort (comes out) du tombeau ressuscite : sortir du tombeau ⇒ rise from the tomb ; identification interprétative, non une inclusion lexicale",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "relation_entre_eventualites",
+   "etat_reifie"
+  ],
+  "justification": "La simultanéité entre l'événement et l'état est dite par « pendant que » ; elle ne s'écrit que par une relation entre éventualités (AUDIT § 3.5, (4) ; ONTOLOGIE_EVENTUALITES § 2). Le sommeil est une éventualité réifiée (FONDEMENTS § 2.2). Mais le texte dit « sort du tombeau », la définition « rising » : le passage est une identification interprétative (FONDEMENTS § 2.7), qui ne donne qu'un statut sous hypothèse. La traduction dit « comes out of the tomb », pour garder le même besoin de K. Harmonisation (BANCS § 4.1, « Ce que D30 dit exactement ») : « pendant que » (et « tandis que ») n'est ni dans WordNet ni dans WOLF : aucun lien vers le « while » de la définition (D20), et la relation de simultanéité n'a pas d'appui. Inconnue. La traduction anglaise (« while ») reste sous hypothèse interprétative. Rétablissement (28/11) : la variante écartée ajoutée à l'harmonisation sur un mot à un seul sens est retirée (DECISIONS_PHASE1 § 3.3). Sous les deux options de sens (soldat), le statut est le même (sous hypothèses) : l'hypothèse interprétative reste.",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Retable peint. Tandis que les soldats dorment, appuyés sur leurs lances, le Christ sort du tombeau, l'étendard à la main.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "hypothese_interpretative"
+    ]
+   },
+   {
+    "variation": "traduction",
+    "description": "Painted altarpiece. Christ comes out of the tomb, the banner in his hand, while the soldiers sleep, leaning on their lances.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "hypothese_interpretative"
+    ],
+    "langue": "en"
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Retable peint. Le Christ est déjà sorti du tombeau et se tient debout, l'étendard à la main ; les soldats, réveillés, s'enfuient.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Retable peint. Les soldats dorment, appuyés sur leurs lances, pendant que le Christ sort du tombeau, l'étendard à la main.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Retable peint. Selon la notice ancienne que cite le catalogue, le Christ y sort du tombeau, l'étendard à la main, pendant que les soldats dorment.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Retable peint. Le Christ sort du tombeau, l'étendard à la main, pendant que les soldats dorment, appuyés sur leurs lances. Aucun ange n'est figuré près du tombeau.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "hypothese_interpretative"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ep-023",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "temps_entre_evenements",
+    "construction": "pendant_que"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "negation_atomique",
+    "construction": "verbe_nie"
+   }
+  ],
+  "pivot": {
+   "lemme": "simultaneously",
+   "cle_de_sens": "simultaneously%4:02:00::",
+   "famille_lexicale": "adv.all"
+  },
+  "langue": "en",
+  "sorte": "negatif",
+  "description": "Manuscript illumination. In the courtyard of the high priest, Peter warms his hands at the brazier and denies Christ before a servant girl. The cock perched on the wall does not crow.",
+  "definition": "Peter denying Christ while the cock crows",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "relation_entre_eventualites"
+  ],
+  "justification": "Le chant du coq est nié par l'auteur, avec son agent présent. Mais « crow » a trois sens (crow%2:32:00::, %2:32:01::, %2:32:02::) : la négation n'est certaine que si chaque sens demandé est inclus dans chaque sens du mot nié, sinon elle n'est que possible et ne réfute rien (NOYAU § 2, D30). Avec tous les sens, inconnue ; avec le sens fixé par le contexte (le coq), écartée (NOYAU § 1.1 et § 4.4). Statut le plus prudent : inconnue (BANCS § 4.1, point 2).",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Manuscript illumination. Peter, warming his hands at the brazier in the high priest's courtyard, denies Christ before a servant girl; on the wall, the perched cock is not crowing.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Enluminure. Dans la cour du grand prêtre, Pierre se chauffe les mains au brasero et renie le Christ devant une servante. Le coq perché sur le mur ne chante pas.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Manuscript illumination. In the courtyard of the high priest, Peter warms his hands at the brazier and denies Christ before a servant girl. The cock perched on the wall may be crowing.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Manuscript illumination. In the courtyard of the high priest, the servant girl denies Christ before Peter, who warms his hands at the brazier. The cock perched on the wall does not crow.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Manuscript illumination. In the courtyard of the high priest, Peter warms his hands at the brazier and denies Christ before a servant girl. A soldier dozes by the gate. The cock perched on the wall does not crow.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Manuscript illumination. Peter has already left the courtyard of the high priest, weeping; the brazier still glows, and the cock perched on the wall crows.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Manuscript illumination. In the courtyard of the high priest, Peter warms his hands at the brazier and denies Christ before a servant girl, while the cock perched on the wall crows.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "La négation « the cock does not crow » vise-t-elle le seul sens « utter shrill sounds » (crow%2:32:02::), fixé par le contexte ?",
+   "statut_selon_l_option": {
+    "tous_les_sens": "inconnue",
+    "sens_fixe_par_le_contexte": "ecartee"
+   }
+  }
+ },
+ {
+  "id": "ep-024",
+  "famille": "espace_partie_temps",
+  "phenomenes": [
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "temps_entre_evenements",
+    "construction": "avant_de"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "negation_de_description",
+    "construction": "evenement_nie_avec_roles"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "instrument_et_moyen",
+    "construction": "avec_un_instrument"
+   }
+  ],
+  "pivot": {
+   "lemme": "before",
+   "cle_de_sens": "before%4:02:03::",
+   "famille_lexicale": "adv.all"
+  },
+  "langue": "en",
+  "sorte": "negatif",
+  "description": "Panel painting. In the house of the Pharisee, a woman kneels at Christ's feet and dries them with her hair. She does not wash them with her tears: the basin beside her is empty.",
+  "definition": "a woman washing Christ's feet with her tears before drying them with her hair",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "relation_entre_eventualites"
+  ],
+  "justification": "Le lavement est nié avec tous ses rôles, chaque participant présent (NOYAU § 1.1). Mais « wash » est polysémique : la négation n'est certaine que si chaque sens demandé est inclus dans chaque sens du mot nié, sinon elle n'est que possible et ne réfute rien (NOYAU § 2, D30). Avec tous les sens, inconnue ; avec le sens fixé par le contexte, écartée (NOYAU § 4.2 et § 4.4). Statut le plus prudent : inconnue (BANCS § 4.1, point 2). La négation d'un lavement par un autre agent ne nierait rien de celui de la femme, sous aucune option (variante).",
+  "variantes": [
+   {
+    "variation": "paraphrase",
+    "description": "Panel painting. In the Pharisee's house, Christ's feet are dried with her hair by a kneeling woman; she does not wash them with her tears, and the basin beside her is empty.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "traduction",
+    "description": "Peinture sur panneau. Dans la maison du pharisien, une femme agenouillée aux pieds du Christ les essuie avec ses cheveux. Elle ne les lave pas de ses larmes : le bassin posé près d'elle est vide.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Panel painting. In the house of the Pharisee, a woman kneels at Christ's feet and dries them with her hair; she has perhaps washed them with her tears before.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Panel painting. In the house of the Pharisee, a woman kneels at Christ's feet and dries them with her hair. A servant standing by does not wash them: the basin in his hands is empty.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panel painting. In the house of the Pharisee, a woman kneels at Christ's feet and dries them with her hair. She does not wash them with her tears: the basin beside her is empty. The Pharisee watches from the table.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Panel painting. In the house of the Pharisee, the same woman is shown twice: she washes Christ's feet with her tears before drying them with her hair, the washing on the left, the drying on the right.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": [],
+    "extensions_requises": [
+     "relation_entre_eventualites",
+     "identite_entre_situations",
+     "plusieurs_situations"
+    ]
+   }
+  ],
+  "decision_ouverte": {
+   "question": "La négation « she does not wash them » vise-t-elle le seul sens de wash qu'emploie la définition, fixé par le contexte ?",
+   "statut_selon_l_option": {
+    "tous_les_sens": "inconnue",
+    "sens_fixe_par_le_contexte": "ecartee"
+   }
+  }
+ }
+]

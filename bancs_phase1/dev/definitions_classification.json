@@ -64,7 +64,8 @@
     "hypotheses_attendues": [
      "relation_inconnue",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_participant",
@@ -169,7 +170,8 @@
     "hypotheses_attendues": [
      "condition_suffisante_non_attestee",
      "sens"
-    ]
+    ],
+    "langue": "en"
    },
    {
     "variation": "changement_de_modalite",
@@ -261,7 +263,8 @@
     "description": "Panneau de vitrail, Rouen, vers 1520. Une religieuse agenouillée a une vision : dans une nuée au-dessus d'elle, un ange tient un vase doré destiné au vin de la messe, d'où s'élève une hostie. La religieuse joint les mains. La bordure inférieure du panneau est une restauration moderne.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_portee",
@@ -348,21 +351,20 @@
     "description": "Altarpiece panel, Catalonia, c. 1460. Saint Eulalia, crowned, holds a palm and an X-shaped cross. According to the saint's Passion, the girl chose to die rather than deny her faith. The background is gilded and punched.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_portee",
-    "description": "Altarpiece panel, Catalonia, c. 1460. The panel shows a young woman, the martyr Eulalia, crowned and holding a palm and an X-shaped cross. The background is gilded and punched.",
+    "description": "Panneau de retable, Catalogne, vers 1460. Le panneau figure une jeune femme couronnée, la martyre Eulalie, qui tient une palme et une croix en X. Le fond est doré et poinçonné.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ],
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
     "decision_ouverte": {
-     "question": "Le statut dépend du choix d'un sens : D30 (tous les sens du mot, BANCS § 4.1, point 2) ou le sens que le contexte semble fixer ? (« woman » n'atteint pas « female » par tous ses sens : womanhood, cleaning woman.)",
+     "question": "« Palme » est absent de WOLF : l'atome « palm » n'a aucun appui. Si un sens de « palme » atteignait palm, le statut serait celui du lien positif, sous hypothèse de sens (« femme » n'atteint pas « female » par tous ses sens).",
      "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie"
+      "wolf_tel_quel": "inconnue",
+      "palme_atteignant_palm": "etablie_sous_hypotheses"
      }
     }
    },
@@ -446,7 +448,8 @@
     "description": "Fresco from a villa in Campania, 1st century AD. The giant Polyphemus, seated on a rock, holds a lyre and gazes at Galatea, who passes on a dolphin. The painter gave him no eye in the middle of his forehead: his face has two eyes, like a man's.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -491,14 +494,7 @@
     "hypotheses_attendues": [
      "identite",
      "sens"
-    ],
-    "decision_ouverte": {
-     "question": "Le statut dépend du choix d'un sens : D30 (tous les sens du mot, BANCS § 4.1, point 2) ou le sens que le contexte semble fixer ? (« cyclope » a dans WOLF le sens mohawk ; « lyre » le sens lyra ; « tenir » n'atteint pas toujours « hold ».)",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie_sous_hypotheses"
-     }
-    }
+    ]
    }
   ],
   "decision_ouverte": {
@@ -567,7 +563,8 @@
     "description": "Tapisserie, Pays-Bas méridionaux, vers 1500, laine et soie. Dans une prairie de mille-fleurs, une jeune femme assise sous un chêne laisse un cheval blanc poser la tête sur ses genoux. Le cheval n'est pas une créature imaginaire : le lissier lui a donné la selle et la bride d'un vrai palefroi. Un chasseur observe la scène derrière une haie.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -629,7 +626,7 @@
   "langue": "fr",
   "sorte": "indetermine",
   "description": "Gravure au burin, Pays-Bas, vers 1520. Un vieil homme barbu, peut-être un ermite, vit seul dans le désert : aucun autre personnage n'apparaît dans la scène. Assis devant une cabane de branchages, il lit un gros livre. Un crâne est posé à ses pieds.",
-  "definition": "hermit reading in the desert",
+  "definition": "hermit reading in the wilderness",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -653,14 +650,15 @@
    "base_de_definitions",
    "quantification_enoncee"
   ],
-  "justification": "La solitude est énoncée (« seul », « aucun autre personnage ») : c'est une assertion du texte, non une inférence en monde clos (FONDEMENTS § 2.6). Mais une condition nécessaire sert à réfuter, jamais à établir (FONDEMENTS § 2.7, tableau ; SPECIFICATION § 3, tableau, et § 3.1, « un moine n'établit pas tonsure, par aucune définition »). Les sortes qui proposent une abduction sont listées sans elle (SPECIFICATION § 4). La condition de solitude n'est d'ailleurs pas attestée pour le sens visé. « Peut-être un ermite » n'est pas une prémisse (ASSERTIONS, modalité). Inconnue, fixée par les documents. Dans la variante qui nie « religieux », la négation n'est que possible : le mot « hermit » de la définition a aussi le sens hermit%1:18:00::, qui n'est pas inclus dans religious (NOYAU § 2, D30). Elle ne réfute donc rien.",
+  "justification": "La solitude est énoncée (« seul », « aucun autre personnage ») : c'est une assertion du texte, non une inférence en monde clos (FONDEMENTS § 2.6). Mais une condition nécessaire sert à réfuter, jamais à établir (FONDEMENTS § 2.7, tableau ; SPECIFICATION § 3, tableau, et § 3.1, « un moine n'établit pas tonsure, par aucune définition »). Les sortes qui proposent une abduction sont listées sans elle (SPECIFICATION § 4). La condition de solitude n'est d'ailleurs pas attestée pour le sens visé. « Peut-être un ermite » n'est pas une prémisse (ASSERTIONS, modalité). Inconnue, fixée par les documents. Le lieu « désert » n'atteint « wilderness » que par un de ses sens WOLF (wilderness%1:15:00:: ; les autres, desert%1:15:00:: et wasteland, n'y mènent pas) : un lien sous hypothèse de sens ; en anglais, desert%1:15:00:: n'y mène pas. Dans la variante qui nie « religieux », la négation n'est que possible : le mot « hermit » de la définition a aussi le sens hermit%1:18:00::, qui n'est pas inclus dans religious (NOYAU § 2, D30). Elle ne réfute donc rien.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Engraving, Netherlands, c. 1520. An old bearded man, perhaps a hermit, lives alone in the desert: no other figure appears in the scene. Seated before a hut of branches, he reads a large book. A skull lies at his feet.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_modalite",
@@ -768,7 +766,8 @@
     "description": "Maiolica dish, Urbino, c. 1540. In the centre, a bearded archer shoots with a bow at a fleeing stag. Below the waist his body is not equine: it ends in a goat's legs with cloven hooves. A border of scrolling foliage frames the scene.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -865,7 +864,7 @@
    "base_de_definitions",
    "abduction"
   ],
-  "justification": "Le texte ne dit « pèlerin » que sous la modalité « possible », qui n'est jamais une prémisse (ASSERTIONS). La seule autre voie est la classification côté graphe par une connaissance typique, qui ne donne qu'une hypothèse (SPECIFICATION § 3.2 et § 4). L'appariement est partiel : le bâton porté, la marche sur une route. Ni chapeau (la tête nue ne nie pas un attribut de K), ni besace, ni coquille ; la ville n'est pas dite un sanctuaire. Le seuil n'est pas fixé par les documents. Le statut retenu est le plus prudent. Dans la variante « who is not a pilgrim », la négation n'est que possible (pilgrim a trois sens, NOYAU § 2, D30), et ne réfute rien.",
+  "justification": "Le texte ne dit « pèlerin » que sous la modalité « possible », qui n'est jamais une prémisse (ASSERTIONS). La seule autre voie est la classification côté graphe par une connaissance typique, qui ne donne qu'une hypothèse (SPECIFICATION § 3.2 et § 4). L'appariement est partiel : le bâton porté, la marche sur une route. Ni chapeau (la tête nue ne nie pas un attribut de K), ni besace, ni coquille ; la ville n'est pas dite un sanctuaire. Le seuil n'est pas fixé par les documents. Le statut retenu est le plus prudent. Dans la variante « who is not a pilgrim », la négation n'est que possible (pilgrim a trois sens, NOYAU § 2, D30), et ne réfute rien. La définition demande « on the road » ; le texte dit « along a road ». Les prépositions sont leur propre sens (D20), et rien dans K ne relie along à on : la relation n'a aucun appui, même quand le type « pilgrim » est dit.",
   "decision_ouverte": {
    "question": "Quel est le seuil d'appariement partiel d'une entrée typique (SPECIFICATION § 3.2) ? Un attribut sur quatre, plus la marche, suffit-il à proposer la classification ? Et l'identification « peut-être un pèlerin » peut-elle entrer comme prémisse graduée (AUDIT § 3.6) ?",
    "statut_selon_l_option": {
@@ -880,23 +879,21 @@
     "description": "Gravure sur bois d'un livre d'heures imprimé, Paris, vers 1500. Un homme vêtu d'une courte cape, peut-être un pèlerin, marche sur une route vers une ville lointaine, un bâton sur l'épaule. Il est nu-tête. Une borne se dresse à gauche.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_participant",
-    "description": "Woodcut from a printed book of hours, Paris, c. 1500. A man in a short cloak walks on a road toward a shrine on a hill. He carries a staff, a scrip hangs at his side, and his broad-brimmed hat bears a scallop shell. A milestone stands at the left.",
+    "description": "Woodcut from a printed book of hours, Paris, c. 1500. A man in a short cloak walks along a road toward a shrine on a hill. He carries a staff, a scrip hangs at his side, and his broad-brimmed hat bears a scallop shell. A milestone stands at the left.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "connaissance_typique",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Woodcut from a printed book of hours, Paris, c. 1500. A pilgrim in a short cloak walks on a road toward a distant town, carrying a staff over his shoulder. His head is bare. A milestone stands at the left.",
+    "description": "Woodcut from a printed book of hours, Paris, c. 1500. A pilgrim in a short cloak walks along a road toward a distant town, carrying a staff over his shoulder. His head is bare. A milestone stands at the left.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
@@ -980,7 +977,8 @@
     "description": "Nature morte, huile sur bois, Leyde, années 1640. Sur un rebord de pierre reposent un crâne, un sablier, une chandelle éteinte et un livre ouvert. Une bulle de savon flotte au-dessus du crâne. Le rebord est éclairé par la gauche.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1074,7 +1072,8 @@
     "description": "Oil on canvas, Spanish school, 17th century. An old man in rags, perhaps blind, walks down a street, guided by a young boy who holds him by the sleeve. His eyes are closed. He holds out a begging bowl to the passers-by.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -1175,14 +1174,22 @@
     "description": "Predella panel, Umbria, c. 1480, titled ‘The Flight into Egypt’. A woman in a blue mantle, a child in her arms, sits on a donkey moving along a stony path. A palm tree bends towards her on the right.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Predella panel, Umbria, c. 1480. The panel depicts the Flight into Egypt: Mary, holding the Child, is seated on a donkey that Joseph leads by the bridle along a stony path. A palm tree bends towards her on the right.",
+    "description": "Panneau de prédelle, Ombrie, vers 1480. Le panneau figure la Fuite en Égypte : Marie, l'Enfant dans les bras, est assise sur un âne que Joseph conduit par la bride sur un chemin pierreux. Un palmier s'incline vers elle, à droite.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "decision_ouverte": {
+     "question": "« (flight into Egypt) » est-il une étiquette, ou un atome de situation ? Dans WOLF, « fuite » n'atteint pas flight (leak, escape la plante, drain) : comme atome, il n'a aucun appui. Comme étiquette, restent l'alias Marie/Mary non attesté et les sens de « conduire », « enfant », « assise ».",
+     "statut_selon_l_option": {
+      "atome_de_situation": "inconnue",
+      "etiquette": "etablie_sous_hypotheses"
+     }
+    }
    },
    {
     "variation": "changement_de_modalite",
@@ -1262,18 +1269,19 @@
   "extensions_requises": [
    "abduction"
   ],
-  "justification": "Le diacre et le gril tenu sont établis ; le nom de Laurent ne l'est pas. L'identification passe par une connaissance typique, identifiée bien que non attestée : l'hypothèse « la figure désigne saint Laurent » explique l'observation (un diacre tient un gril), sans concurrente dans K (FONDEMENTS § 2.7 et § 5 ; SPECIFICATION § 4 : jamais établie). Que K ne donne le gril à aucune autre figure ne prouve pas qu'il n'y en a pas d'autre (monde ouvert). La connaissance porte sur gridiron%1:06:00::, et « gridiron » a deux sens. Exclure le terrain de football par « holds … in his right hand » demande une restriction de sélection que K ne contient pas : la liste prudente garde `sens` (BANCS § 4.1, règle 2 ; le statut est le même). Dans la variante « Saint Stephen », la distinction n'est pas attestée. Bloque-t-elle l'abduction ? Sans elle, l'hypothèse resterait admissible ; le statut retenu est le plus prudent, `inconnue`.",
+  "justification": "Le diacre et le gril tenu sont établis ; le nom de Laurent ne l'est pas. L'identification passe par une connaissance typique, identifiée bien que non attestée : l'hypothèse « la figure désigne saint Laurent » explique l'observation (un diacre tient un gril), sans concurrente dans K (FONDEMENTS § 2.7 et § 5 ; SPECIFICATION § 4 : jamais établie). Que K ne donne le gril à aucune autre figure ne prouve pas qu'il n'y en a pas d'autre (monde ouvert). La connaissance porte sur gridiron%1:06:00::, et « gridiron » a deux sens. Exclure le terrain de football par « holds … in his right hand » demande une restriction de sélection que K ne contient pas : la liste prudente garde `sens` (BANCS § 4.1, règle 2 ; le statut est le même). Dans la variante « Saint Stephen », la distinction n'est pas attestée. Bloque-t-elle l'abduction ? Sans elle, l'hypothèse resterait admissible ; le statut retenu est le plus prudent, `inconnue`. Dans la paraphrase, « carries » n'atteint « hold » que par un de ses sens (bear, carry, hold) : `sens`, sans changement de statut.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Volet de retable, Cologne, vers 1480. Un jeune diacre en dalmatique rouge tient un gril de la main droite et un livre fermé de la gauche. Il se tient sur un carrelage, devant une tenture de brocart.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Wing of an altarpiece, Cologne, c. 1480. In his right hand a young deacon, wearing a red dalmatic, holds a gridiron; in his left, a closed book. Behind him hangs a brocade.",
+    "description": "Wing of an altarpiece, Cologne, c. 1480. In his right hand a young deacon, wearing a red dalmatic, carries a gridiron; in his left, a closed book. Behind him hangs a brocade.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
@@ -1379,7 +1387,8 @@
     "description": "Panel from a polyptych, Lombardy, c. 1410. A crowned female saint holds a broken wheel set with spikes. On the frame below her, a painted inscription reads ‘S. BARBARA’. The gold ground is worn.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_portee",
@@ -1452,12 +1461,9 @@
   "langue": "fr",
   "sorte": "positif",
   "description": "Vitrail d'une chapelle, Troyes, vers 1530. Une jeune femme couronnée, traditionnellement identifiée comme sainte Barbe, tient une palme. À sa droite se dresse une tour percée de trois fenêtres. Le panneau a été remonté au XIXe siècle.",
-  "definition": "St Barbara with a tower to her right",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "connaissance_typique",
-   "sens"
-  ],
+  "definition": "St Barbara with a tower beside her",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [
    {
     "sorte": "connaissance_typique",
@@ -1477,51 +1483,36 @@
   "extensions_requises": [
    "abduction"
   ],
-  "justification": "La tour et sa position à droite de la jeune femme, du point de vue de la figure (« à sa droite », comme la définition), sont dites. Le nom n'est dit que sous la modalité « traditionnel », qui n'est jamais une prémisse (ASSERTIONS ; AUDIT § 3.6). L'identification passe donc par l'attribut typique, identifié bien que non attesté : établie sous hypothèse, jamais établie (FONDEMENTS § 2.7 et § 5 ; SPECIFICATION § 4). « Tour » est polysémique (tower, mais aussi tour, tournure) : la liste prudente garde `sens` (BANCS § 4.1, règle 2). L'implication « à droite ⇒ à côté », non fondée, est retirée : la définition demande maintenant le côté. Quand le nom est dit (« sainte Barbe »), il n'est relié à « Barbara » que par un alias non attesté : `identite` ; et sa négation ne réfute « Barbara » que si l'alias est admis, d'où `inconnue` (statut prudent).",
+  "justification": "La tour est dite « à sa droite ». La définition demande une tour « beside her », et aucune connaissance de K ne relie « à droite de » à « à côté de » : l'implication que la version 1 posait était non fondée, et elle a été retirée (relecture C). La relation de la définition n'a donc aucun appui, et la conclusion ne peut pas être établie, même sous hypothèse : l'abduction par l'attribut typique ne fournit pas la relation demandée (SPECIFICATION § 4 : la requête est évaluée après l'explication). Le nom n'est dit que sous la modalité « traditionnel », qui n'est jamais une prémisse (ASSERTIONS). C'est le statut démontrable relativement à K : inconnue. La sorte reste `positif`, celle de la configuration que le cas décrit.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Stained-glass window from a chapel, Troyes, c. 1530. A young crowned woman, traditionally identified as Saint Barbara, holds a palm. To her right rises a tower pierced by three windows. The panel was releaded in the 19th century.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "connaissance_typique",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_modalite",
     "description": "Vitrail d'une chapelle, Troyes, vers 1530. Sainte Barbe, couronnée, tient une palme. À sa droite se dresse une tour percée de trois fenêtres. Le panneau a été remonté au XIXe siècle.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "identite",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
     "description": "Vitrail d'une chapelle, Troyes, vers 1530. Une jeune femme couronnée, qui n'est pas sainte Barbe, tient une palme. À sa droite se dresse une tour percée de trois fenêtres. Le panneau a été remonté au XIXe siècle.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": [],
-    "decision_ouverte": {
-     "question": "La négation de « sainte Barbe » ne réfute « Barbara » que si l'alias entre langues est admis.",
-     "statut_selon_l_option": {
-      "alias_non_atteste": "inconnue",
-      "alias_atteste": "ecartee"
-     }
-    }
+    "hypotheses_attendues": []
    },
    {
     "variation": "paraphrase",
     "description": "Vitrail d'une chapelle, Troyes, vers 1530. Portant couronne, une jeune femme que la tradition désigne comme sainte Barbe tient une palme ; une tour à trois fenêtres s'élève à sa droite. Le vitrail a été remonté au XIXe siècle.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "connaissance_typique",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
@@ -1534,13 +1525,17 @@
     "variation": "ajout_figure_non_liee",
     "description": "Vitrail d'une chapelle, Troyes, vers 1530. Une jeune femme couronnée, traditionnellement identifiée comme sainte Barbe, tient une palme. À sa droite se dresse une tour percée de trois fenêtres. À gauche, un donateur agenouillé prie.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "connaissance_typique",
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
-  ]
+  ],
+  "decision_ouverte": {
+   "question": "Une connaissance (implication ou relation spatiale de K) relie-t-elle « à droite de » à « à côté de » ?",
+   "statut_selon_l_option": {
+    "aucune_connaissance": "inconnue",
+    "implication_attestee": "etablie_sous_hypotheses"
+   }
+  }
  },
  {
   "id": "dc-016",
@@ -1595,7 +1590,8 @@
     "description": "Huile sur cuivre, Anvers, XVIIe siècle, d'après un retable perdu. Une jeune femme en robe verte tient une palme et un livre ouvert. Selon une gravure de l'original perdu, la sainte y tenait une tenaille serrant une dent ; le copiste l'a remplacée par le livre.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "changement_de_portee",
@@ -1675,7 +1671,8 @@
     "description": "Huile sur toile, Venise, vers 1750. Vue imaginaire où le peintre a placé le Colisée au bord d'une lagune, à côté d'une pyramide. Des pêcheurs tirent leurs filets au premier plan. Le ciel est rose de la lumière du soir.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1768,7 +1765,8 @@
     "description": "Etching, Paris, 1660, made after a performance of the opera ‘Daphne’. On the stage, a singer costumed as a nymph raises her arms. Behind her, a laurel of painted cardboard, mounted on a frame, stands for the place of the metamorphosis. Musicians play in the pit.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_portee",
@@ -1885,7 +1883,8 @@
     "hypotheses_attendues": [
      "connaissance_typique",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1981,7 +1980,8 @@
     "description": "Margin of a book of hours, Flanders, c. 1320. A fox, a so-called monk in frock and cowl, preaches from a pulpit to a row of geese. A cock is perched on the edge of the pulpit. The leaf is trimmed at the top.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_participant",
@@ -2099,7 +2099,8 @@
     "description": "Huile sur toile, Bologne, vers 1630. Une jeune femme en chemise blanche est assise à une table, les mains jointes. Sur la table, un crâne repose sur un livre fermé, et au-dessus d'eux un crucifix est accroché au mur. Une chandelle brûle à côté du livre.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "composition",
@@ -2185,7 +2186,8 @@
     "description": "Tapestry, Tournai, c. 1470. In an orchard, a girl gives an apple to a young man who kneels before her. He wears a wreath of flowers. Rabbits play in the grass.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "changement_de_participant",
@@ -2248,7 +2250,7 @@
   },
   "langue": "en",
   "sorte": "contre_modele",
-  "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. The page is divided into two registers. In the upper register, an angel stands on a hill and speaks to Joseph, who is asleep. In the lower register, three shepherds watch their flocks at night.",
+  "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. The page is divided into two registers. In the upper register, an angel stands on a hill and speaks to Joseph, who is asleep. In the lower register, three shepherds watch over their flocks at night.",
   "definition": "shepherds watching their flocks at night, with an angel above them",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
@@ -2273,32 +2275,33 @@
     "description": "Feuillet d'un évangéliaire enluminé, Reichenau, vers l'an mil. La page est divisée en deux registres. Au registre supérieur, un ange, debout sur une colline, parle à Joseph endormi. Au registre inférieur, trois bergers gardent leurs troupeaux pendant la nuit.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "composition",
-    "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. A single scene fills the page: three shepherds watch their flocks at night, and in the sky above them an angel appears.",
+    "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. A single scene fills the page: three shepherds watch over their flocks at night, and in the sky above them an angel appears.",
     "sorte": "positif",
     "statut_attendu": "etablie",
     "hypotheses_attendues": []
    },
    {
     "variation": "paraphrase",
-    "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. The upper of two registers shows an angel on a hill addressing the sleeping Joseph; the lower shows three shepherds keeping watch their flocks by night.",
+    "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. The upper of two registers shows an angel on a hill addressing the sleeping Joseph; the lower shows three shepherds keeping watch over their flocks by night.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. Three shepherds watch their flocks at night. The angel of the page is not above them: it stands beside Joseph, at the same level, in a separate frame to the right.",
+    "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. Three shepherds watch over their flocks at night. The angel of the page is not above them: it stands beside Joseph, at the same level, in a separate frame to the right.",
     "sorte": "negatif",
     "statut_attendu": "ecartee",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. The page is divided into two registers. In the upper register, an angel stands on a hill and speaks to Joseph, who is asleep. In the lower register, three shepherds watch their flocks at night, and a dog lies among the sheep.",
+    "description": "Leaf from an illuminated gospel book, Reichenau, c. 1000. The page is divided into two registers. In the upper register, an angel stands on a hill and speaks to Joseph, who is asleep. In the lower register, three shepherds watch over their flocks at night, and a dog lies among the sheep.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
@@ -2364,7 +2367,8 @@
       "lemme_young_man": "inconnue",
       "man_et_propriete_young": "etablie_sous_hypotheses"
      }
-    }
+    },
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",

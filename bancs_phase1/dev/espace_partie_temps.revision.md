@@ -293,3 +293,80 @@ règle des sens de K.
 **Les `decision_ouverte` :** 15 sur les cas, 7 sur les variantes.
 
 **Le validateur :** `24 cas de base, 149 variantes, 0 erreurs ; composés ≥2 : 21, ≥3 : 7`.
+
+## 5. Rétablissement (28/11)
+
+**La décision de la propriétaire.** Les textes et les définitions qu'on avait adaptés aux lacunes de WOLF ou de WordNet
+reviennent à leur version 1 (`v1_avant_relecture/espace_partie_temps.json`). La liste suivie est celle de
+DECISIONS_PHASE1 § 3.3.
+- Les statuts sont recalculés selon le § 4.1 : les sens WOLF par `sens_fr.py`, et les relations produites par la
+  lecture.
+- Les corrections de fond demandées par la relecture ne sont pas rétablies : l'inclusion fausse Goliath ⊑ géant
+  reste retirée de K, et les connaissances restent non attestées.
+
+### Les éléments rétablis
+
+| élément | ce qui revient | statut avant | statut après |
+|---|---|---|---|
+| **ep-017** | Tobie, à la place de Samson : description, définition « Tobias seizing the fish before gutting it » et les 6 variantes de la version 1, telles quelles (dans le doute, avec le rattachement ambigu de « à droite », dont la relecture disait que le statut ne dépend pas) | ESH [sens] | `inconnue` |
+| ep-017, traduction anglaise (#2) | (mêmes mots que la définition) | `etablie` | `etablie` |
+| **ep-005** | la définition d'origine, « a dove hovering above the head of Christ » | `etablie` | `etablie` |
+| **ep-012** | la définition « Adam and Eve wearing garments of fig leaves » et les textes « the couple are clothed in garments of… » | | |
+| ep-012#3 | | `etablie` | ESH [equivalence_non_attestee] |
+| ep-012#6 (notice citée, reformulée avec « clothed in ») | | `non_certifiee` | `inconnue` |
+| **ep-013** | « holds out », « is held out », « présente » | ESH [identite] | `inconnue` (cas et toutes ses variantes) |
+| **ep-014** | la définition « God the Father blessing a martyr from the clouds » et la variante #4 « Dieu le Père, en buste » | | |
+| ep-014#4 | | ESH [sens] | ESH [identite, sens] |
+| ep-014#7 (notice citée) | | `non_certifiee` | `inconnue` |
+| **ep-015** | la définition « David cutting off Goliath's head with Goliath's own sword » et les textes d'origine (« debout sur le corps du géant, lui tranche la tête avec l'épée de Goliath ») | ESH [sens] | `inconnue` (cas, #1, #2, #6) |
+| **ep-010#6** | la variante `composition` d'origine (« In his left hand St Peter holds no book ») ; la variante de portée passe en #7 | `contradictoire` (version 1) | ESH [sens] |
+| **ep-007#7, ep-015#7, ep-022#7** | retirées : ces variantes `ecartee` avaient été ajoutées sur un mot à un seul sens (s'agenouiller, décapiter, tombeau) pour garder une variante de statut différent | `ecartee` | (supprimées) |
+
+**Les raisons des nouveaux statuts :**
+- **ep-017 :** « vider » n'a dans WOLF qu'un sens (consume), qui n'atteint pas gut. L'atome « gutting » n'a aucun lien,
+  et l'alias Tobie / Tobias, absent de WordNet et de WOLF, est écrit dans K, non attesté.
+- **ep-005 :** « Christ's head » et « the head of Christ » sont la même relation de génitif.
+- **ep-012 :** aucun sens de clothe n'atteint wear. Le lien ne passe que par l'équivalence « be clothed in ⇔ wear »,
+  écrite dans K comme non attestée.
+- **ep-013 :** aucun sens de hold_out (5) ni de présenter (61 dans WOLF) n'atteint hold.
+- **ep-014 :** God the Father n'est ni dans WordNet ni dans WOLF. L'alias et l'identification « Dieu » sont écrits dans
+  K, non attestés.
+- **ep-015 :** la reprise « le géant » n'est pas fondée (Goliath @i warrior), et la tête coupée n'est pas établie
+  comme celle de Goliath. Une `decision_ouverte` donne le statut si la lecture résolvait la coréférence.
+- **ep-010#6 :** la négation de deux mots polysémiques (hold, book) n'est que possible. Elle laisse la conclusion
+  positive sous hypothèse de sens ; avec le sens fixé, ce serait `contradictoire` (`decision_ouverte` de variante).
+
+**Ce qui n'est pas rétabli, et pourquoi :**
+- **ep-022#2** garde « comes out of the tomb ». Ce changement ne contournait pas une lacune : il ajoutait le même pas
+  interprétatif qu'en français, comme la relecture le demandait.
+- **ep-013** garde l'alias non attesté.
+- **ep-015** garde le retrait de l'inclusion Goliath ⊑ géant.
+
+**Les statuts changés :** 16, tous plus faibles. 3 variantes sont retirées et 1 est rétablie. Aucun statut ne remonte.
+
+### Les cas qui perdent leur variante de statut différent
+
+Comme demandé, rien n'est réécrit pour la retrouver. Ces cas n'ont plus de variante de portée, de modalité, de temps
+ou d'inversion dont le statut diffère : ep-007, 012, 013, 014, 015 et 017. ep-009 l'avait déjà perdue, par « élus » et
+« damnés » dans WOLF.
+
+### Les corrections de forme demandées par le validateur
+
+- Chaque variante `traduction` déclare maintenant sa `langue`.
+- 5 `decision_ouverte` dont les options donnaient le même statut sont retirées : ep-001, ep-011, ep-022, ep-014#4 et
+  ep-019#2. La différence d'hypothèses est dite dans la justification.
+
+### Les chiffres
+
+**Les cas de base, par statut :**
+
+| statut | nombre |
+|---|---|
+| `inconnue` | 17 |
+| `etablie_sous_hypotheses` | 4 |
+| `etablie` | 3 |
+
+**Les `decision_ouverte` :** 12 sur les cas, 5 sur les variantes.
+
+**Le validateur :** `24 cas de base, 147 variantes, 0 erreurs, 7 exigences non remplies`. Les 7 exigences sont les cas
+sans variante de statut différent listés ci-dessus. Les quotas de composition sont atteints : ≥2 : 21, ≥3 : 7.

@@ -135,3 +135,72 @@ scratchpad de la session (`mn/wn_lien.py`, `mn/liens*.txt`).
 **Les cas de base, par statut :** inconnue 14, etablie_sous_hypotheses 6, etablie 3, non_certifiee 1.
 
 **Le validateur, avec --quotas :** 24 cas de base, 127 variantes, 0 erreur ; 23 cas composés ≥2, 15 cas ≥3.
+
+## 4. Rétablissement (28/11)
+
+**La décision de la propriétaire :** rétablir ce que la révision et l'harmonisation avaient modifié pour contourner une
+lacune de WOLF ou de WordNet. Les statuts sont recalculés par la règle du § 4.1, point 2 : les sens WOLF, et les seules
+connaissances déjà écrites dans K. Aucune entrée n'a été ajoutée à K pour relever un statut. La version d'avant le
+rétablissement est gardée dans le scratchpad de la session (`mn/avant_retablissement.json`).
+
+### Ce qui revient
+
+| élément | ce qui revient (version 1) | statut avant → après |
+|---|---|---|
+| mn-001, définition | « aged hermit… » | inchangé : la base reste `inconnue` ; #2 reste `etablie_sous_hypotheses` [sens] (vieil n'atteint aged que par 3 sens sur 19) |
+| mn-004, définition | « Madonna and Child enthroned, attended by angels » | #2 : etablie → **inconnue** (« the Virgin » n'atteint madonna par aucun de ses 3 sens ; « attended by » n'a pas de lien) ; la base reste `inconnue` |
+| mn-010, définition | « the new-born Christ Child… » | #2 : etablie → **inconnue** (Christ Child n'est pas dans WordNet ; « the Child » ne l'atteint pas) |
+| mn-011, définition | « …a ladder reaching to heaven… » | inchangé : la base reste `etablie_sous_hypotheses` (ciel : 2 sens sur 3 vers heaven, déjà sous hypothèse de sens) ; #1 reste `etablie_sous_hypotheses` |
+| mn-011#3, texte | « Jacob dort ; il voit en songe une échelle dressée jusqu'au ciel… » | etablie_sous_hypotheses → **inconnue** (dormir n'a pas de lien vers asleep ; songe est absent de WOLF) |
+| mn-012#6, texte | « il reçoit d'elle une bague » | non_certifiee → **inconnue** (receive / recevoir n'a pas de lien vers hand) |
+| mn-013#3, texte | « he prays with joined hands » | etablie → **inconnue** (le verbe pray n'a pas de lien vers prayer) |
+| mn-014, définition | « the Virgin seated, nursing the Christ Child » | base : etablie_sous_hypotheses → **inconnue** ; #1 etablie → inconnue ; #3 et #5 etablie_sous_hypotheses → inconnue. La `decision_ouverte` est retirée : le statut ne dépend plus d'un sens |
+| mn-015, définition | « the dead body of Christ being lowered…, a man standing on a ladder supporting it » | base : etablie → **inconnue** (« standing » n'est pas dit ; Christ n'atteint body par aucun sens) ; #1 etablie_sous_hypotheses → inconnue ; #3 et #5 etablie → inconnue. « Standing » est rétabli dans le doute : je l'avais retiré moi-même, sans demande de la relecture |
+| mn-015#3, texte | « take the dead Christ down…, holds the body » | etablie → inconnue (voir la ligne ci-dessus) |
+| mn-016, définition | « the haloed Virgin presenting the naked Christ Child, the Child without a halo » | inchangé : la base reste `inconnue` |
+| mn-016#7 | variante anglaise ajoutée à l'harmonisation, dans un cas français, pour garder un lien de même lemme | **retirée** (elle était `ecartee`) |
+| mn-003#6 | même motif | **retirée** (elle était `etablie`) |
+| mn-021#3, texte | « At the command of the king… » | etablie_sous_hypotheses → **inconnue** (le nom command n'a pas de lien vers order) |
+
+mn-021 et mn-024 (la définition, et le texte de #2) avaient déjà été rétablis à l'harmonisation.
+
+### Ce qui n'est pas rétabli, parce que c'était une correction de fond
+
+- **mn-005 :** « la Vierge, sa mère ». La coréférence n'était pas dite (relecture B ; FS § 3.1, invariant 1).
+- **mn-006#3 :** le texte ne réalisait ni sa condition (« in place of Isaac ») ni sa variation (relecture B).
+- **mn-023#4 :** le rattachement ambigu de « according to » était une erreur de sûreté possible (relecture B).
+- **Les connaissances retirées de K :** l'inclusion king ⊑ ruler de mn-021, enlevée à la révision puis rétablie avec
+  sa source.
+- **Les équivalences non attestées ajoutées à K à l'harmonisation** (sits / seated, couronner, debout, couché,
+  phylactère, sortir de, couronne de laurier, Sainte Famille) sont gardées. Ce ne sont pas des réécritures du texte :
+  elles écrivent dans K, comme le § 4.1 le demande, ce que le cas suppose. Elles laissent le statut sous hypothèse,
+  jamais `etablie`.
+- **mn-024#6** (en français) est gardée : c'est une variante ajoutée, non un texte modifié.
+
+### Les autres changements, demandés par le validateur
+
+- Chaque variante déclare maintenant sa `langue` : celle de l'autre langue pour une traduction, celle du cas sinon.
+- Trois `decision_ouverte` dont les deux options donnaient le même statut sont retirées : mn-005#2, mn-007 et mn-011.
+
+### Les cas sans variante de statut différent (notés, non réécrits)
+
+| cas | pourquoi |
+|---|---|
+| mn-003 | la variante #6 a été retirée |
+| mn-004 | #2 est devenue `inconnue` |
+| mn-010 | #2 est devenue `inconnue` |
+| mn-014 | Christ Child |
+| mn-015 | standing et body |
+| mn-016 | la variante #7 a été retirée |
+| mn-006 | une conséquence de la révision, non du rétablissement : la variante de statut différent (#3) est un `changement_de_participant`, que le validateur ne compte pas |
+
+### Les nombres
+
+- **Statuts changés :** 2 cas de base (mn-014 et mn-015, vers `inconnue`) et 11 variantes, tous plus faibles. Aucun
+  n'est plus fort. Deux variantes sont retirées.
+- **Les cas de base, par statut :** inconnue 16, etablie_sous_hypotheses 5, etablie 2, non_certifiee 1.
+- **Les `decision_ouverte` :** 11 sur les cas de base, 7 sur des variantes.
+
+**Le validateur, avec --quotas :** 24 cas de base, 125 variantes, 0 erreur, 7 exigences non remplies. Ce sont les 7
+cas ci-dessus, sans variante de portée, de modalité, de temps ou d'inversion qui change de statut. Les quotas sont
+atteints : 23 cas composés ≥2, 15 cas ≥3.

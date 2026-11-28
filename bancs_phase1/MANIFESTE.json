@@ -1,6 +1,6 @@
 {
  "cree": "2026-11-27T23:47:39Z",
- "role": "les bancs de développement de la phase 1 (docs/BANCS_PHASE1.md) : les cas, leurs questions, les trois relectures indépendantes, les révisions et l'harmonisation, la couverture ; la version 1 d'avant relecture est gardée (v1_avant_relecture/)",
+ "role": "les bancs de développement de la phase 1 (docs/BANCS_PHASE1.md) : les cas, leurs questions, les trois relectures indépendantes, les révisions et l'harmonisation, la couverture ; la version 1 d'avant relecture est gardée (v1_avant_relecture/) ; le 28/11 : les textes d'origine rétablis (dev/ et v2_k0_d30_retabli/, statuts relatifs à K0-d30), et les scripts de la mesure de WOLF (etude_ressources/)",
  "statut": "développement ; accord entre agents, non validé par la propriétaire (D23)",
  "repartition": "bancs/phase1/repartition.json du dépôt, graine 20261127",
  "fichiers": [
@@ -16,8 +16,8 @@
   },
   {
    "chemin": "dev/compositionnalite.json",
-   "taille": 127306,
-   "sha256": "37f836daa84610042b21a138574b90f332c410f30bf9c6b0b55c2dce654ca8ad"
+   "taille": 119422,
+   "sha256": "f130690de21629837029b4734901fbab2f0e61f5fb3fa14f81b2fcea665a8a8c"
   },
   {
    "chemin": "dev/compositionnalite.questions.md",
@@ -26,13 +26,13 @@
   },
   {
    "chemin": "dev/compositionnalite.revision.md",
-   "taille": 18128,
-   "sha256": "3eae7e271a366462b957a93376e191cfd54ea2c4e4d47c6eddaeca762086b64d"
+   "taille": 24365,
+   "sha256": "0b5057c4adf705cf2ffc1995ebe2da41f9cfa811b646e6b7bc300c2a3fc526ad"
   },
   {
    "chemin": "dev/definitions_classification.json",
-   "taille": 122642,
-   "sha256": "486d0883219469e65c3fe57af8c556cdb613104f4a2e501618b20861a59679d1"
+   "taille": 123342,
+   "sha256": "7b01b136b50397e7b28cda24beb395cee4a1f646b0a6072d844c1804b7a251d7"
   },
   {
    "chemin": "dev/definitions_classification.questions.md",
@@ -41,13 +41,13 @@
   },
   {
    "chemin": "dev/definitions_classification.revision.md",
-   "taille": 19007,
-   "sha256": "bebb7d9cdd242134dffb11dbfbc7708fc81b1ced3513791f75743e458981a8d5"
+   "taille": 24942,
+   "sha256": "bc7d77c87f3ae07ca079e8715d582c7f6d633b25a72e97bdd94c8af53cb6ab9f"
   },
   {
    "chemin": "dev/espace_partie_temps.json",
-   "taille": 115840,
-   "sha256": "ad7cd3ede47ad5ba3a56633626880106c4cb3c19dd7d305c92ff7668defa881b"
+   "taille": 116677,
+   "sha256": "b33890359187a87cc74578c501799555a0e8ab973384e9ce54425d56214041d2"
   },
   {
    "chemin": "dev/espace_partie_temps.questions.md",
@@ -56,13 +56,13 @@
   },
   {
    "chemin": "dev/espace_partie_temps.revision.md",
-   "taille": 23759,
-   "sha256": "6e0b809cd8f13152ee96c29ce189a1ef938a6b6c75cba05ba04fe11fa2651d44"
+   "taille": 29134,
+   "sha256": "31c55ed99b5986d787beeb93346cddac451b2fd7e8c18656e47de091f14e0ea3"
   },
   {
    "chemin": "dev/evenements_etats.json",
-   "taille": 120423,
-   "sha256": "3d3095e219b24f358708ff89fdfcf6d674513b7fa160f7836f3d45888bdd3b0c"
+   "taille": 123251,
+   "sha256": "9dfd8c654e470fe644ccbc887fee2cc23c7c8fbcf60d3cd4d16089dd0cd8cdbe"
   },
   {
    "chemin": "dev/evenements_etats.questions.md",
@@ -71,13 +71,13 @@
   },
   {
    "chemin": "dev/evenements_etats.revision.md",
-   "taille": 20132,
-   "sha256": "ce8283df742b84b347a151d0aa81e83e499d89cd7f14c04be04d61273f6e31f8"
+   "taille": 25676,
+   "sha256": "9c0727f8d46c1e1219a2dbf01ae46e2a38165321f7aef0565708440d0e929f81"
   },
   {
    "chemin": "dev/modalite_negation_contextes.json",
-   "taille": 107581,
-   "sha256": "5a4b8aebec6e30c0ac6398ea18b82a8112242f5588cb5babc8624051e84f02cb"
+   "taille": 108096,
+   "sha256": "2a031af44c2520ae36f27a4f4b4a6ff31a6607a6b608de96f373f460afcdcdc9"
   },
   {
    "chemin": "dev/modalite_negation_contextes.questions.md",
@@ -86,13 +86,13 @@
   },
   {
    "chemin": "dev/modalite_negation_contextes.revision.md",
-   "taille": 12743,
-   "sha256": "5fd8e1376f492988b5a155072cf9aa71541267d6ac5915df6e49b676fbd94a43"
+   "taille": 18506,
+   "sha256": "5220c41d768565da00c390c6e2a1eb5302dd98a8f5d75aba59473395d7b1977c"
   },
   {
    "chemin": "dev/niveaux_representation.json",
-   "taille": 104532,
-   "sha256": "82099b8b42cb083370b11142770d16c04ce4dcd00dacfeb044f66ffc2610e82b"
+   "taille": 112620,
+   "sha256": "ab953dd53c4d39784dc187c642fd524db08c9dff662297e9900f44a0d11dee02"
   },
   {
    "chemin": "dev/niveaux_representation.questions.md",
@@ -101,13 +101,13 @@
   },
   {
    "chemin": "dev/niveaux_representation.revision.md",
-   "taille": 11060,
-   "sha256": "63201486012478c9a2e2fd45758f1ab64e1891622122176eb914be350890ea7a"
+   "taille": 13870,
+   "sha256": "e494a6cefb2555f835fe22a1840dbedb3ef3c90c8f81cc6f9db7db415f993075"
   },
   {
    "chemin": "dev/phenomenes_iconographiques.json",
-   "taille": 121889,
-   "sha256": "e1e80d8721e11cbfef247c14e01a9c8fbcd4ed044bf1e107d8125137acdea8f6"
+   "taille": 121826,
+   "sha256": "8a0c1993a22c6bdb77d004aadcb866350a3ba241e532a42c52ae4eb2e2e972c3"
   },
   {
    "chemin": "dev/phenomenes_iconographiques.questions.md",
@@ -116,13 +116,13 @@
   },
   {
    "chemin": "dev/phenomenes_iconographiques.revision.md",
-   "taille": 14544,
-   "sha256": "af23c537a33540c023c8fdd2291d80948dca858f99aecdb874cf788498f765fb"
+   "taille": 23744,
+   "sha256": "f3953cd2601aadd4d6a084479bae8015c797e472cda0475c4b31b6543547037f"
   },
   {
    "chemin": "dev/reference_quantification.json",
-   "taille": 112514,
-   "sha256": "0b4d5e543c890d5f624a709cbab002dc9ff3855d504ac373db4654e689153515"
+   "taille": 114263,
+   "sha256": "00b66e759759863a106917243f224b40b125d4b8ecc4acc9b11354eba4abcd5b"
   },
   {
    "chemin": "dev/reference_quantification.questions.md",
@@ -131,8 +131,8 @@
   },
   {
    "chemin": "dev/reference_quantification.revision.md",
-   "taille": 22122,
-   "sha256": "72151f9959dbf8b60f7a089fe54231c61b2da8e9ba8deebc452829b2af7cfe56"
+   "taille": 29064,
+   "sha256": "84b0b59d8cc8640c111c370191962025688a0d1befb853070fbc51437fecf04c"
   },
   {
    "chemin": "dev/relecture_A.md",
@@ -151,8 +151,8 @@
   },
   {
    "chemin": "dev/structures_argumentales.json",
-   "taille": 139623,
-   "sha256": "005eff723399c9643ddbdfdf50aa6d6361a8d8409f25d42a797d28bbb1f9fc2c"
+   "taille": 143177,
+   "sha256": "fca9fb6cc528e0aca9387f428aca1c95e363d95356cfae3ce08947a77f50d440"
   },
   {
    "chemin": "dev/structures_argumentales.questions.md",
@@ -161,8 +161,88 @@
   },
   {
    "chemin": "dev/structures_argumentales.revision.md",
-   "taille": 16686,
-   "sha256": "24cae3bf52e5888fba1da12b1407a751c79afb3b953317811d76c91e2fa80eba"
+   "taille": 20569,
+   "sha256": "feff6cd3af3a17f01624920415d8d22416c1858e0fcb904fdd2f5065c37cb2d2"
+  },
+  {
+   "chemin": "etude_ressources/absents.tsv",
+   "taille": 4500,
+   "sha256": "058e4dd506772badc44725cf1400f0be33d596b9244c3201dfd7f5931f91459d"
+  },
+  {
+   "chemin": "etude_ressources/analyse2.py",
+   "taille": 3708,
+   "sha256": "42c440dd6690c01023078d60d57c431d8b01af7cdd67695aedb69ef679380914"
+  },
+  {
+   "chemin": "etude_ressources/candidats.tsv",
+   "taille": 5734,
+   "sha256": "5956e7fe7b40f3e2e43cbabdd73f79bea4d033f1df0f12e45c13ae79b782412b"
+  },
+  {
+   "chemin": "etude_ressources/echantillon.txt",
+   "taille": 35595,
+   "sha256": "c9a5d66e14b4caf54bba7d5b1a4c9b51a250e026c0739f4954c3f48e3f5531e8"
+  },
+  {
+   "chemin": "etude_ressources/empreintes.txt",
+   "taille": 1172,
+   "sha256": "713661901f6b506706d44c9073ff21a251129209de3584ed0a8127652e3e5aac"
+  },
+  {
+   "chemin": "etude_ressources/extraire.py",
+   "taille": 1186,
+   "sha256": "729820f9bfa1cf2ae7221d856873f8f63f642b622a2be4eb4f29184753983709"
+  },
+  {
+   "chemin": "etude_ressources/instant_mesure.txt",
+   "taille": 29,
+   "sha256": "3d1e8789869f0a9ccbe99efa3235a36339531041b884d33d1b58270161c13173"
+  },
+  {
+   "chemin": "etude_ressources/mesurer.py",
+   "taille": 4410,
+   "sha256": "16069ce5110fffc6f899307a7a792ac695549d48b529cfa8b8cd2d31c141e1fd"
+  },
+  {
+   "chemin": "etude_ressources/mesurer_stanza.py",
+   "taille": 4929,
+   "sha256": "514f33037aea31e76eacbe7f4d90636e078569d1a7413a34132f56de9ab79c25"
+  },
+  {
+   "chemin": "etude_ressources/mwe.py",
+   "taille": 1860,
+   "sha256": "8226be43aeb30a0774ad6e652221bea256f5711a979df802ed24a22f1dbe8ecf"
+  },
+  {
+   "chemin": "etude_ressources/presents.tsv",
+   "taille": 24104,
+   "sha256": "bba04110aac5610e6e1400cac08c75b1baf17ede9921b2ce330368f22fa5cc65"
+  },
+  {
+   "chemin": "etude_ressources/propn.tsv",
+   "taille": 2706,
+   "sha256": "11661556bc209dca91bf18d854711aa706b811067f0756b2c5d93cf524704337"
+  },
+  {
+   "chemin": "etude_ressources/stats.json",
+   "taille": 1845,
+   "sha256": "3aa001da3c9a53561d930eca31f531ef676396d8fc2988b937a0cc244f2cc9f8"
+  },
+  {
+   "chemin": "etude_ressources/stats2.json",
+   "taille": 8903,
+   "sha256": "e255ae7c7b2febc3a25f9e05044b7708c75081ee14cc28e47fba705b38cbe7a7"
+  },
+  {
+   "chemin": "etude_ressources/textes_fr.json",
+   "taille": 176313,
+   "sha256": "8ffca2b5ac788d7b7170faee7cf1ce2f9176d7b14af7af496f2b755137a7b4e3"
+  },
+  {
+   "chemin": "etude_ressources/wolf_mwe_trouvees.tsv",
+   "taille": 978,
+   "sha256": "56621813de0894a4932e5b8f33aa61e18c1df448413fb2cf8809245b6e91f1f2"
   },
   {
    "chemin": "v1_avant_relecture/compositionnalite.json",
@@ -253,6 +333,167 @@
    "chemin": "v1_avant_relecture/structures_argumentales.questions.md",
    "taille": 12165,
    "sha256": "59a3c90078936f4d28b5234fc4d2e39a8e0d80159f5193525a496a4f9592bb81"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/CONSOLIDATION.md",
+   "taille": 973,
+   "sha256": "a8ee526a6847898e84a7206b9153db08b5b3d4518ead53497ce390413dae54b3"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/COUVERTURE.md",
+   "taille": 57520,
+   "sha256": "f77eac9bcc7f7e1c8e98f1f09eeffdf1e437fb6bdc19bd3b0f4dc84adafa91c8"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/compositionnalite.json",
+   "taille": 119422,
+   "sha256": "f130690de21629837029b4734901fbab2f0e61f5fb3fa14f81b2fcea665a8a8c"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/compositionnalite.questions.md",
+   "taille": 14927,
+   "sha256": "c8bf9e9b4636efcfc2917312a48e3cfc3cdce715128e4ad69c7af0472b1caa83"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/compositionnalite.revision.md",
+   "taille": 24365,
+   "sha256": "0b5057c4adf705cf2ffc1995ebe2da41f9cfa811b646e6b7bc300c2a3fc526ad"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/definitions_classification.json",
+   "taille": 123342,
+   "sha256": "7b01b136b50397e7b28cda24beb395cee4a1f646b0a6072d844c1804b7a251d7"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/definitions_classification.questions.md",
+   "taille": 12243,
+   "sha256": "b817994ddcb4392c3edcd0a8324e8bf20214f63281285c1961e73d3285e19fed"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/definitions_classification.revision.md",
+   "taille": 24942,
+   "sha256": "bc7d77c87f3ae07ca079e8715d582c7f6d633b25a72e97bdd94c8af53cb6ab9f"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/espace_partie_temps.json",
+   "taille": 116677,
+   "sha256": "b33890359187a87cc74578c501799555a0e8ab973384e9ce54425d56214041d2"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/espace_partie_temps.questions.md",
+   "taille": 14872,
+   "sha256": "a5cb74de807b953e4a55d47886003a48eed7370868087ab40cfb4ea45f7e5424"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/espace_partie_temps.revision.md",
+   "taille": 29134,
+   "sha256": "31c55ed99b5986d787beeb93346cddac451b2fd7e8c18656e47de091f14e0ea3"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/evenements_etats.json",
+   "taille": 123251,
+   "sha256": "9dfd8c654e470fe644ccbc887fee2cc23c7c8fbcf60d3cd4d16089dd0cd8cdbe"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/evenements_etats.questions.md",
+   "taille": 14157,
+   "sha256": "7517261f405653ca865b69e56936d3871ef8263a71135dbaabcf480df0b76025"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/evenements_etats.revision.md",
+   "taille": 25676,
+   "sha256": "9c0727f8d46c1e1219a2dbf01ae46e2a38165321f7aef0565708440d0e929f81"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/modalite_negation_contextes.json",
+   "taille": 108096,
+   "sha256": "2a031af44c2520ae36f27a4f4b4a6ff31a6607a6b608de96f373f460afcdcdc9"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/modalite_negation_contextes.questions.md",
+   "taille": 14406,
+   "sha256": "f2045e8ffc9ca2379431a04d96d2f2dc6336c2a84484f541d300cba891298732"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/modalite_negation_contextes.revision.md",
+   "taille": 18506,
+   "sha256": "5220c41d768565da00c390c6e2a1eb5302dd98a8f5d75aba59473395d7b1977c"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/niveaux_representation.json",
+   "taille": 112620,
+   "sha256": "ab953dd53c4d39784dc187c642fd524db08c9dff662297e9900f44a0d11dee02"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/niveaux_representation.questions.md",
+   "taille": 10123,
+   "sha256": "6c5c63ca696807d7b3bebf59cda39e1bc3b59b8f15b9cf437addeda0b5b9aee9"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/niveaux_representation.revision.md",
+   "taille": 13870,
+   "sha256": "e494a6cefb2555f835fe22a1840dbedb3ef3c90c8f81cc6f9db7db415f993075"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/phenomenes_iconographiques.json",
+   "taille": 121826,
+   "sha256": "8a0c1993a22c6bdb77d004aadcb866350a3ba241e532a42c52ae4eb2e2e972c3"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/phenomenes_iconographiques.questions.md",
+   "taille": 14538,
+   "sha256": "7cc315c11318f9577f0f4c40c028aac946d695d835504c6f919c657b334c30b5"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/phenomenes_iconographiques.revision.md",
+   "taille": 23744,
+   "sha256": "f3953cd2601aadd4d6a084479bae8015c797e472cda0475c4b31b6543547037f"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/reference_quantification.json",
+   "taille": 114263,
+   "sha256": "00b66e759759863a106917243f224b40b125d4b8ecc4acc9b11354eba4abcd5b"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/reference_quantification.questions.md",
+   "taille": 13887,
+   "sha256": "e1e99ad91d66e0e8445509d59e8a055c21d34eed45ea6effe03fc3c07dbd0fea"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/reference_quantification.revision.md",
+   "taille": 29064,
+   "sha256": "84b0b59d8cc8640c111c370191962025688a0d1befb853070fbc51437fecf04c"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/relecture_A.md",
+   "taille": 23949,
+   "sha256": "879ca8fe9cee3e7b76f5bff3799b21b760236394b463d43e9acdc53a3f8768a0"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/relecture_B.md",
+   "taille": 22978,
+   "sha256": "5ad8774ee47094044b14f4a40f11af3a8521340ff85885b2704dd5d9272f7643"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/relecture_C.md",
+   "taille": 20232,
+   "sha256": "ac434b4831436d4485b8c300799cfa129f38a0e710ecb9b4f73692714c101d6d"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/structures_argumentales.json",
+   "taille": 143177,
+   "sha256": "fca9fb6cc528e0aca9387f428aca1c95e363d95356cfae3ce08947a77f50d440"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/structures_argumentales.questions.md",
+   "taille": 12165,
+   "sha256": "59a3c90078936f4d28b5234fc4d2e39a8e0d80159f5193525a496a4f9592bb81"
+  },
+  {
+   "chemin": "v2_k0_d30_retabli/structures_argumentales.revision.md",
+   "taille": 20569,
+   "sha256": "feff6cd3af3a17f01624920415d8d22416c1858e0fcb904fdd2f5065c37cb2d2"
   }
- ]
+ ],
+ "mis_a_jour": "2026-11-28T04:27:00Z"
 }

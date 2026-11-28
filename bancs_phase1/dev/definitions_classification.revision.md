@@ -212,3 +212,76 @@ de la lecture ni du raisonnement. Elles sont gardées telles quelles, comme des 
   (eremite), « arc ».
 
 **Les cas de base sont inchangés.** 15 `inconnue`, 7 `etablie_sous_hypotheses`, 1 `etablie`, 1 `ecartee`.
+
+## 6. Rétablissement (28/11)
+
+La décision de la propriétaire : rétablir les textes et les définitions modifiés pour éviter une lacune de WOLF ou de
+WordNet. Version avant le rétablissement : /tmp/claude-0/-home-user-oedipamaas/d0859811-5c3e-5c8f-a763-617b9258ee72/scratchpad/dc_v3.json.
+
+Les statuts ci-dessous sont recalculés selon BANCS § 4.1, point 2, avec les sens WOLF (`sens_fr.py`). C'est le statut
+démontrable relativement à K. La sorte reste celle de la configuration que le cas décrit.
+
+### 6.1 Les éléments rétablis
+
+| élément | ce qui revient | ancien statut | nouveau statut |
+|---|---|---|---|
+| dc-004#2 | le texte français de la révision (« la martyre Eulalie, qui tient une palme »), à la place de la version anglaise | `etablie_sous_hypotheses` [sens] | `inconnue`. « Palme » est absent de WOLF : l'atome « palm » n'a aucun appui. La variante porte une `decision_ouverte` (si un sens de « palme » atteignait palm : `etablie_sous_hypotheses`). |
+| dc-012#2 | le texte français de la révision (« Le panneau figure la Fuite en Égypte : Marie, l'Enfant dans les bras… ») | `etablie` | `inconnue`. Comme atome de situation, « fuite » n'atteint pas flight dans WOLF (leak, escape la plante, drain). Comme étiquette, la variante serait `etablie_sous_hypotheses` [identite, sens]. Le statut retenu est le plus faible, et la `decision_ouverte` est portée par la variante. |
+| dc-007, définition | « hermit reading in the wilderness » (version 1), à la place de « in the desert » | base `inconnue` ; #6 `etablie_sous_hypotheses` [sens] | Inchangés. « Désert » n'atteint wilderness que par un de ses sens WOLF, d'où `sens`. En anglais, desert%1:15:00:: n'y mène pas, mais la traduction est `inconnue` de toute façon. |
+| dc-015, définition | « St Barbara with a tower beside her » (version 1), à la place de « to her right » | base `etablie_sous_hypotheses` [connaissance_typique, sens] ; variantes : `etablie_sous_hypotheses` ×4, `inconnue` ×2 | `inconnue` pour le cas et ses six variantes. L'implication « à droite ⇒ à côté », non fondée, reste retirée de K (relecture C) : la relation « beside » n'a aucun appui. `decision_ouverte` : `etablie_sous_hypotheses` si une implication attestée existait. Je rétablis dans le doute : la définition avait été réécrite à la suite d'une correction de K, mais avec les mots du texte. |
+| dc-009#2 et #3 | « walks along a road » (version 1), à la place de « on a road » | #2 `etablie_sous_hypotheses` ; #3 `etablie` | `inconnue` et `inconnue`. Les prépositions sont leur propre sens (D20), et rien ne relie along à on. |
+| dc-013#2 | « carries a gridiron » (version 1), à la place de « holds » | `etablie_sous_hypotheses` [connaissance_typique, sens] | Inchangé : « carry » atteint « hold » par un de ses sens (bear, carry, hold), d'où `sens`. |
+| dc-023, cas et variantes | « watch over their flocks » (version 1), à la place de « watch » | — | Inchangés : watch_over est monosémique, et son synset contient watch. Le lien est certain : la réécriture était inutile. |
+
+### 6.2 Ce qui n'a pas été rétabli
+
+Ce sont des corrections de fond demandées par la relecture ou par le § 4.1, non des contournements d'une lacune de la
+ressource :
+- le genre « Still life » ajouté à dc-010, un atome sans appui (relecture C) ;
+- la refonte de dc-006 sur une hyperonymie attestée (§ 4.1, règle 1) ;
+- les « peut-être » de dc-007, dc-009 et dc-011, et la modalité de dc-004#4, ajoutés pour que les variantes réalisent
+  leur variation (relecture C) ;
+- la version anglaise de dc-012#2 n'est pas gardée, mais le passage du titre au figuré, qui en faisait un changement de
+  modalité (relecture C), l'est.
+
+Les traductions affaiblies par WOLF (dc-006#1, dc-010#1, dc-013#1, dc-024#1) n'avaient pas été réécrites : elles
+restent telles quelles.
+
+### 6.3 Les autres changements
+
+- **Le validateur exige maintenant que chaque traduction déclare sa langue.** J'ai ajouté un champ `langue` aux 24
+  variantes `traduction`.
+- **dc-005#7 :** la `decision_ouverte` est retirée. Ses deux options donnaient le même statut, ce que le validateur
+  signale.
+
+### 6.4 Les statuts changés : 9, tous plus faibles
+
+- dc-004#2 : `etablie_sous_hypotheses` → `inconnue`.
+- dc-012#2 : `etablie` → `inconnue`.
+- dc-015 : le cas de base et ses variantes #1, #2, #4 et #6, de `etablie_sous_hypotheses` à `inconnue`. Les variantes #3
+  et #5 étaient déjà `inconnue`.
+- dc-009#2 et #3 : `etablie_sous_hypotheses` → `inconnue`, et `etablie` → `inconnue`.
+
+Cas de base, après le rétablissement : 16 `inconnue`, 6 `etablie_sous_hypotheses`, 1 `etablie`, 1 `ecartee`.
+
+### 6.5 Les cas qui perdent leur variante de statut différent
+
+Rien n'a été réécrit pour la retrouver :
+- **dc-004, dc-009, dc-012, dc-015 :** la perte vient du rétablissement.
+- **dc-021, dc-022 :** la limite existait déjà (§ 4). Seule une composition ou un changement de participant y fait
+  changer le statut.
+
+Le validateur les signale comme des exigences non remplies.
+
+### 6.6 La sortie du validateur
+
+```
+EXIGENCE dc-004 : aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère
+EXIGENCE dc-009 : aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère
+EXIGENCE dc-012 : aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère
+EXIGENCE dc-015 : aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère
+EXIGENCE dc-021 : aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère
+EXIGENCE dc-022 : aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère
+24 cas de base, 141 variantes, 0 erreurs, 6 exigences non remplies
+  definitions_classification : 24 cas, composés ≥2 : 24, ≥3 : 7
+```

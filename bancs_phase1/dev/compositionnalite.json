@@ -19,16 +19,24 @@
    "cle_de_sens": "old%3:00:02::",
    "famille_lexicale": "adj.all"
   },
-  "langue": "en",
+  "langue": "fr",
   "sorte": "positif",
-  "description": "Line engraving, c. 1650. In a peasant interior, an old woman spinning at her distaff sits by the window. A cat sleeps on the tiled floor. The light falls from the left.",
-  "definition": "old woman spinning",
-  "statut_attendu": "etablie",
-  "hypotheses_attendues": [],
+  "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une vieille femme filant sa quenouille est assise près de la fenêtre. Un chat dort sur le carreau. La lumière vient de la gauche.",
+  "definition": "old woman spinning with a distaff",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "sens",
+   "equivalence_non_attestee"
+  ],
   "connaissances_supposees": [
    {
     "sorte": "relation_inconnue",
     "contenu": "old%3:00:02:: et young%3:00:00:: sont des adjectifs de degré : des propriétés ordinaires, relatives à une classe de comparaison (ONTOLOGIE_EVENTUALITES § 1 et § 6) ; aucune ressource n'en donne la classe",
+    "attestee": false
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« filer sa quenouille » (fr), « spinning at one's distaff » (en) ⇔ spin with a distaff : la quenouille est l'instrument du filage. « filer » n'a dans WOLF que le sens get_cracking (attestation de la version 1 retirée : aucune ressource)",
     "attestee": false
    }
   ],
@@ -38,56 +46,69 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "« old », « woman » et « spinning » sont les lemmes mêmes de la définition : chaque sens se lexicalise vers son lemme, le lien est certain (BANCS_PHASE1 § 4.1, 2, « Ce que D30 dit exactement »). « old » est un adjectif de degré, propriété ordinaire non réifiée, de même classe de comparaison que le libellé (ONTOLOGIE_EVENTUALITES § 1 et § 6) ; le participe adjoint est un événement en cours de même agent (ONTOLOGIE § 2). Établie. La base est passée en anglais à l'harmonisation : en français, « filer » n'a dans WOLF qu'un sens (get cracking), qui n'atteint pas spin ; la traduction française (#1) le garde, avec son statut.",
+  "justification": "« vieille » est un adjectif de degré, propriété ordinaire non réifiée, de même classe de comparaison que le libellé (ONTOLOGIE_EVENTUALITES § 1 et § 6) ; le participe adjoint est un événement en cours de même agent (ONTOLOGIE § 2). Mais « filer » n'a dans WOLF qu'un sens (get_cracking), qui n'atteint pas spin : le lien ne passe que par l'équivalence non attestée « filer sa quenouille ⇔ spin with a distaff » ; et « vieux » (7 sens sur 19) et « femme » (7 sur 8) n'atteignent pas tous leur lemme. Établie sous hypothèses (BANCS_PHASE1 § 4.1, 2 ; F § 2.7 : une équivalence non attestée donne au mieux esh). Rétabli le 28/11 : texte français et définition d'origine.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une vieille femme filant sa quenouille est assise près de la fenêtre. Un chat dort sur le carreau. La lumière vient de la gauche.",
+    "description": "Line engraving, c. 1650. In a peasant interior, an old woman spinning at her distaff sits by the window. A cat sleeps on the tiled floor. The light falls from the left.",
     "sorte": "positif",
-    "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "equivalence_non_attestee"
+    ],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
-    "description": "Line engraving, c. 1650. In a peasant interior, an old woman, seated by the window, spins at her distaff. A cat sleeps on the tiled floor. The light falls from the left.",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une vieille femme, assise près de la fenêtre, file sa quenouille. Un chat dort sur le carreau. La lumière vient de la gauche.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "equivalence_non_attestee"
+    ]
    },
    {
     "variation": "changement_de_participant",
-    "description": "Line engraving, c. 1650. In a peasant interior, an old man spinning at a distaff sits by the window. A cat sleeps on the tiled floor. The light falls from the left.",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, un vieil homme filant une quenouille est assis près de la fenêtre. Un chat dort sur le carreau. La lumière vient de la gauche.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Line engraving, c. 1650. In a peasant interior, a woman, perhaps elderly, spinning at her distaff, sits by the window. A cat sleeps on the tiled floor.",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une femme, peut-être âgée, filant sa quenouille, est assise près de la fenêtre. Un chat dort sur le carreau.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Line engraving, c. 1650. In a peasant interior, an old woman spinning at her distaff sits by the window. A young boy looks in through the half-open door. A cat sleeps on the tiled floor.",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une vieille femme filant sa quenouille est assise près de la fenêtre. Un jeune garçon regarde par la porte entrouverte. Un chat dort sur le carreau.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "equivalence_non_attestee"
+    ]
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Line engraving, c. 1650. In a peasant interior, an old woman spinning at her distaff sits by the window. No fire burns in the hearth. A cat sleeps on the tiled floor.",
+    "description": "Gravure au burin, vers 1650. Dans un intérieur paysan, une vieille femme filant sa quenouille est assise près de la fenêtre. Aucun feu ne brûle dans l'âtre. Un chat dort sur le carreau.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "equivalence_non_attestee"
+    ]
    }
   ],
   "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens. #1 (français) : « filer » n'a dans WOLF que le sens get_cracking, qui n'atteint pas spin, et « vieux » a 19 sens dont 7 seulement atteignent old. #3 dépend d'une incompatibilité (homme / femme) qu'aucune sorte de connaissance ne dit (BANCS § 4.1, 3). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
+   "question": "vieux, femme n'atteignent pas tous leur lemme ; filer ne mène à spin que par une équivalence non attestée. #3 dépend d'une incompatibilité homme / femme, qu'aucune sorte ne dit (§ 4.1, 3). Règle de BANCS_PHASE1 § 4.1, 2 (lemmes de la définition, sens WOLF du texte) ; statut de tous_les_sens retenu.",
    "statut_selon_l_option": {
-    "tous_les_sens (WOLF tel quel), #1": "inconnue",
-    "si WOLF donnait filer → spin, #1": "etablie_sous_hypotheses",
+    "tous_les_sens (retenu)": "etablie_sous_hypotheses",
+    "sens_fixe_par_le_contexte (l'équivalence restant non attestée)": "etablie_sous_hypotheses",
+    "équivalence attestée et sens fixé": "etablie",
     "incompatibilite_attestee (homme / femme), #3": "ecartee"
    }
   }
@@ -112,9 +133,9 @@
    "cle_de_sens": "young%3:00:00::",
    "famille_lexicale": "adj.all"
   },
-  "langue": "fr",
+  "langue": "en",
   "sorte": "indetermine",
-  "description": "Panneau d'un retable démembré, Ombrie, début du XVe siècle. Saint Jean, le plus jeune des apôtres, assis sur une île rocheuse, écrit dans un livre. Un aigle se tient à son côté, un encrier au bec.",
+  "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. Saint John, the youngest of the apostles, sits writing in a book on a rocky island. An eagle stands at his side, holding an inkpot in its beak.",
   "definition": "young man writing in a book, an eagle beside him",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
@@ -140,51 +161,43 @@
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. Saint John, the youngest of the apostles, sits writing in a book on a rocky island. An eagle stands at his side, holding an inkpot in its beak.",
+    "description": "Panneau d'un retable démembré, Ombrie, début du XVe siècle. Saint Jean, le plus jeune des apôtres, assis sur une île rocheuse, écrit dans un livre. Un aigle se tient à son côté, un encrier au bec.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Panneau d'un retable démembré, Ombrie, début du XVe siècle. Sur une île rocheuse est assis saint Jean, le plus jeune des apôtres, qui écrit dans un livre, tandis qu'un aigle tient près de lui un encrier dans son bec.",
+    "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. On a rocky island sits Saint John, youngest of the apostles, writing in a book, while an eagle beside him holds an inkpot in its beak.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Panneau d'un retable démembré, Ombrie, début du XVe siècle. Saint Jean, le plus jeune des apôtres, est figuré en jeune homme ; assis sur une île rocheuse, il écrit dans un livre. Un aigle se tient à son côté, un encrier au bec.",
+    "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. Saint John, the youngest of the apostles, is shown as a young man; he sits writing in a book on a rocky island. An eagle stands at his side, holding an inkpot in its beak.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ],
-    "decision_ouverte": {
-     "question": "Le statut dépend du sens de mots du texte dont un sens n'atteint pas le lemme de la définition (jeune : 2 sens sur 11 dans WOLF ; homme, écrire, livre, aigle). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie"
-     }
-    }
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Panneau d'un retable démembré, Ombrie, début du XVe siècle. Saint Jean, le plus jeune des apôtres, assis sur une île rocheuse, écrit dans un livre. Un aigle se tient à son côté, un encrier au bec. Un navire passe au loin.",
+    "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. Saint John, the youngest of the apostles, sits writing in a book on a rocky island. An eagle stands at his side, holding an inkpot in its beak. A ship passes in the distance.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Panneau d'un retable démembré, Ombrie, début du XVe siècle. Saint Jean, le plus jeune des apôtres, assis sur une île rocheuse, écrit dans un livre. Un aigle, qui n'a pas de nimbe, se tient à son côté, un encrier au bec.",
+    "description": "Panel from a dismembered altarpiece, Umbria, early fifteenth century. Saint John, the youngest of the apostles, sits writing in a book on a rocky island. An eagle stands at his side, holding an inkpot in its beak; it has no halo.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "Le superlatif relatif d'un adjectif de degré (« the youngest of the apostles ») implique-t-il le positif (« young ») ? ONTOLOGIE_EVENTUALITES § 6 laisse ouverte la classe de comparaison, et aucune sorte de connaissance n'est prévue pour ce lien. De plus, « man » demande une connaissance que K n'a pas (apostle n'atteint que person dans WordNet 3.0). La variante #3 porte sa propre décision de sens.",
+   "question": "Le superlatif relatif d'un adjectif de degré (« the youngest of the apostles ») implique-t-il le positif (« young ») ? ONTOLOGIE_EVENTUALITES § 6 laisse ouverte la classe de comparaison, et aucune sorte de connaissance n'est prévue pour ce lien. De plus, « man » demande une connaissance que K n'a pas (apostle n'atteint que person dans WordNet 3.0). La variante #3 ne dépend d'aucun sens (young, man, write, book, eagle sont les lemmes de la définition).",
    "statut_selon_l_option": {
     "le superlatif n'implique pas le positif": "inconnue",
     "connaissance typique superlatif ⇒ positif, et apôtre ⇒ homme": "etablie_sous_hypotheses"
@@ -249,7 +262,8 @@
       "tous_les_sens": "etablie_sous_hypotheses",
       "sens_fixe_par_le_contexte": "etablie"
      }
-    }
+    },
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -350,7 +364,8 @@
     "description": "Leaf from a natural history album, watercolour and bodycolour on vellum, c. 1590. A seated lynx, seen in profile, raises its head to the left; its spotted fur is rendered hair by hair. The drawing, strikingly naturalistic, was made from a specimen in the royal menagerie.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -403,14 +418,7 @@
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens : rien ne dit le lynx fabuleux. Les variantes #3 et #4 portent leur propre décision.",
-   "statut_selon_l_option": {
-    "tous_les_sens": "inconnue",
-    "sens_fixe_par_le_contexte": "inconnue"
-   }
-  }
+  ]
  },
  {
   "id": "co-005",
@@ -462,7 +470,8 @@
     "description": "Illumination from a bestiary, England, thirteenth century. In a roundel, an imaginary creature with a bird's head and a fish's body swims among stylised waves. The ground is burnished gold.",
     "sorte": "positif",
     "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -546,7 +555,7 @@
   "connaissances_supposees": [
    {
     "sorte": "equivalence_etablie",
-    "contenu": "« vêtu de N » (fr) ⇔ « in N » (en), pour un vêtement : le port du vêtement",
+    "contenu": "« vêtu de N » (fr) et « who wears N » (en) ⇔ « in N », pour un vêtement : le port du vêtement",
     "attestee": false
    }
   ],
@@ -566,14 +575,17 @@
     "hypotheses_attendues": [
      "sens",
      "equivalence_non_attestee"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Oil on panel, Flemish, c. 1520. A falcon is held on the gloved left hand of a young man in a red cloak. Behind him stretches a river landscape with a castle.",
+    "description": "Oil on panel, Flemish, c. 1520. A falcon is held on the gloved left hand of a young man who wears a red cloak. Behind him stretches a river landscape with a castle.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "equivalence_non_attestee"
+    ]
    },
    {
     "variation": "changement_de_participant",
@@ -603,15 +615,7 @@
     "statut_attendu": "etablie",
     "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens : man, red, cloak, hold, falcon sont les lemmes de la définition. #1 (français) dépend de homme, manteau (1 sens sur 9 dans WOLF), tenir, faucon, et de « vêtu de ⇔ in », non attesté. Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-   "statut_selon_l_option": {
-    "tous_les_sens (#1)": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte (#1, l'équivalence restant non attestée)": "etablie_sous_hypotheses",
-    "incompatibilite_attestee (bleu / rouge), #4": "inconnue"
-   }
-  }
+  ]
  },
  {
   "id": "co-007",
@@ -638,69 +642,85 @@
    "cle_de_sens": "dappled%5:00:00:patterned:00",
    "famille_lexicale": "adj.all"
   },
-  "langue": "en",
+  "langue": "fr",
   "sorte": "negatif",
-  "description": "Stained-glass window in the north chapel, c. 1530. Saint Martin, mounted on a horse, cuts his cloak in two with his sword to share it with a poor man. The saint's horse is not dappled: its coat is a uniform white.",
+  "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. Le cheval du saint n'est pas pommelé : sa robe est d'un blanc uniforme.",
   "definition": "saint on a dappled horse cutting his cloak in two with a sword",
-  "statut_attendu": "ecartee",
+  "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
-  "connaissances_supposees": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« pommelé » (fr), d'une robe de cheval ⇔ dappled%5:00:00:patterned:00 ; « pommelé » est absent de WOLF (attestation de la version 1 retirée : aucune ressource)",
+    "attestee": false
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« trancher son manteau pour en donner la moitié » (fr), « cut his cloak to give half of it » (en) ⇔ « cut his cloak in two »",
+    "attestee": false
+   }
+  ],
   "operations_requises": [
    "lecture"
   ],
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "« the saint's horse » reprend « a horse » (désignation reprise, coréférence établie par la lecture). La propriété « dappled » y est niée par l'auteur, de portée figurée, sur une entité présente : appui négatif de propriete(X, dappled) pour la classe de ce cheval (NOYAU § 1.1). Le type demandé, le lemme « dappled », n'a qu'un sens, et le mot nié est le même : chaque sens demandé est inclus dans chaque sens nié, la négation est certaine (BANCS_PHASE1 § 4.1, 2 ; NOYAU § 2). Un seul conjoint faux suffit : écartée pour ces référents, avec l'auteur pour fondement (NOYAU § 4.2, § 4.4, D31). La base est passée en anglais à l'harmonisation : « pommelé » est absent de WOLF, et la négation française (#1) ne réfute rien.",
+  "justification": "« le cheval du saint » reprend « un cheval » (désignation reprise). La propriété « pommelé » y est niée par l'auteur, mais « pommelé » est absent de WOLF : le mot nié n'a aucun sens dans K, et ne rejoint dappled que par une équivalence non attestée. Une négation n'est certaine que si chaque sens du type demandé est inclus dans chaque sens du mot nié (BANCS_PHASE1 § 4.1, 2 ; NOYAU § 2), et une équivalence non attestée ne fonde aucune déduction (F § 2.7) : la négation ne réfute rien, inconnue. La traduction anglaise (#1), où « dappled » est nié, est écartée. Rétabli le 28/11 : texte français d'origine ; la lacune de WOLF fait partie de la mesure.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche en deux son manteau de son épée pour le partager avec un pauvre. Le cheval du saint n'est pas pommelé : sa robe est d'un blanc uniforme.",
+    "description": "Stained-glass window in the north chapel, c. 1530. Saint Martin, mounted on a horse, cuts his cloak with his sword to give half of it to a poor man. The saint's horse is not dappled: its coat is a uniform white.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Vitrail de la chapelle nord, vers 1530. Monté sur un cheval qui n'est pas pommelé, mais d'un blanc uniforme, saint Martin tranche de son épée son manteau pour en donner la moitié à un pauvre.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
-    "variation": "paraphrase",
-    "description": "Stained-glass window in the north chapel, c. 1530. Mounted on a horse that is not dappled but a uniform white, Saint Martin cuts his cloak in two with his sword to share it with a poor man.",
-    "sorte": "negatif",
-    "statut_attendu": "ecartee",
-    "hypotheses_attendues": []
-   },
-   {
     "variation": "changement_de_modalite",
-    "description": "Stained-glass window in the north chapel, c. 1530. Saint Martin, mounted on a horse, cuts his cloak in two with his sword to share it with a poor man. The saint's horse is dappled grey.",
+    "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. Le cheval du saint est pommelé de gris.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "equivalence_non_attestee"
+    ]
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Stained-glass window in the north chapel, c. 1530. Saint Martin, mounted on a horse, cuts his cloak in two with his sword to share it with a poor man. The saint's horse is perhaps not dappled: the glass is badly weathered.",
+    "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. Le cheval du saint n'est peut-être pas pommelé : le verre est très altéré.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Stained-glass window in the north chapel, c. 1530. Saint Martin, mounted on a horse, cuts his cloak in two with his sword to share it with a poor man. In the background, the poor man's horse is not dappled.",
+    "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. À l'arrière-plan, le cheval du pauvre n'est pas pommelé.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Stained-glass window in the north chapel, c. 1530. Saint Martin, mounted on a horse, cuts his cloak in two with his sword to share it with a poor man. A dog runs in the foreground. The saint's horse is not dappled: its coat is a uniform white.",
+    "description": "Vitrail de la chapelle nord, vers 1530. Saint Martin, monté sur un cheval, tranche de son épée son manteau pour en donner la moitié à un pauvre. Un chien court au premier plan. Le cheval du saint n'est pas pommelé : sa robe est d'un blanc uniforme.",
     "sorte": "negatif",
-    "statut_attendu": "ecartee",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens (dappled : un sens). #1 : « pommelé » est absent de WOLF ; sa négation n'a aucun sens à opposer au type demandé et ne réfute rien. Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
+   "question": "« pommelé » est absent de WOLF ; il ne rejoint dappled que par une équivalence non attestée. Règle de BANCS_PHASE1 § 4.1, 2 (lemmes de la définition, sens WOLF du texte) ; statut de tous_les_sens retenu.",
    "statut_selon_l_option": {
-    "tous_les_sens (WOLF tel quel), #1": "inconnue",
-    "si WOLF donnait pommelé → dappled, #1": "ecartee"
+    "tous_les_sens (WOLF tel quel) (retenu)": "inconnue",
+    "équivalence pommelé ⇔ dappled attestée": "ecartee",
+    "#3, tous_les_sens": "etablie_sous_hypotheses"
    }
   }
  },
@@ -726,8 +746,8 @@
   },
   "langue": "fr",
   "sorte": "negatif",
-  "description": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant une grotte. Sa mitre et sa crosse sont posées à terre près de lui. Au loin, une ville fortifiée.",
-  "definition": "bishop kneeling in prayer before a cave",
+  "description": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant l'entrée d'une grotte. Sa mitre et sa crosse sont posées à terre près de lui. Au loin, une ville fortifiée.",
+  "definition": "bishop praying in the wilderness",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -740,11 +760,6 @@
     "sorte": "connaissance_typique",
     "contenu": "une mitre et une crosse près d'une figure sont les attributs typiques d'un évêque",
     "attestee": false
-   },
-   {
-    "sorte": "equivalence_etablie",
-    "contenu": "« prier à genoux » (fr) ⇔ « kneeling in prayer » (en) : le verbe prier et le nom prayer sont de catégories différentes, et « à genoux » n'est pas un verbe",
-    "attestee": false
    }
   ],
   "operations_requises": [
@@ -754,60 +769,59 @@
    "modificateur_non_intersectif",
    "ancrage_temporel"
   ],
-  "justification": "FONDEMENTS_SEMANTIQUES § 1.2 définit le privatif par « dans aucun contexte » (un faux pistolet) ; un ancien évêque, lui, l'a été : c'est une fonction antérieure au moment figuré (ONTOLOGIE_EVENTUALITES § 2), et aucune ressource n'atteste que « former » soit privatif (la version 1 le donnait à tort pour attesté, et citait le sens %5:00:01, qui n'est pas celui des personnes). Si l'ancrage antérieur n'exclut pas l'état présent, rien ne nie « évêque », et l'abduction par la mitre et la crosse proposerait l'hypothèse typique. Les documents ne tranchent pas : décision ouverte, et le plus prudent, inconnue, est retenu (BANCS_PHASE1 § 4 ; même question que la décision ouverte d'ee-009 sur l'exclusion des ancrages).",
+  "justification": "FONDEMENTS_SEMANTIQUES § 1.2 définit le privatif par « dans aucun contexte » (un faux pistolet) ; un ancien évêque, lui, l'a été : c'est une fonction antérieure au moment figuré (ONTOLOGIE_EVENTUALITES § 2), et aucune ressource n'atteste que « former » soit privatif (la version 1 le donnait à tort pour attesté, et citait le sens %5:00:01, qui n'est pas celui des personnes). Si l'ancrage antérieur n'exclut pas l'état présent, rien ne nie « évêque », et l'abduction par la mitre et la crosse proposerait l'hypothèse typique. Les documents ne tranchent pas : décision ouverte, et le plus prudent, inconnue, est retenu (BANCS_PHASE1 § 4 ; même question que la décision ouverte d'ee-009 sur l'exclusion des ancrages). Rétabli le 28/11 : définition et textes d'origine (« in the wilderness », « devant l'entrée d'une grotte »).",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Predella panel, Siena, c. 1440. A former bishop, withdrawn to the desert, kneels in prayer before a cave. His mitre and crozier lie on the ground beside him. In the distance, a walled town.",
+    "description": "Predella panel, Siena, c. 1440. A former bishop, withdrawn to the desert, kneels in prayer before the mouth of a cave. His mitre and crozier lie on the ground beside him. In the distance, a walled town.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
-    "description": "Panneau de prédelle, Sienne, vers 1440. Retiré au désert, un ancien évêque prie à genoux devant une grotte, sa mitre et sa crosse posées à terre près de lui. Au loin, une ville fortifiée.",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Retiré au désert, un ancien évêque prie à genoux devant l'entrée d'une grotte, sa mitre et sa crosse posées à terre près de lui. Au loin, une ville fortifiée.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Panneau de prédelle, Sienne, vers 1440. Un évêque, qui renoncera plus tard à sa charge, prie à genoux devant une grotte. Sa mitre et sa crosse sont posées à terre près de lui.",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Un évêque, qui renoncera plus tard à sa charge, prie à genoux au désert devant l'entrée d'une grotte. Sa mitre et sa crosse sont posées à terre près de lui.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
-     "sens",
-     "equivalence_non_attestee"
+     "sens"
     ],
     "decision_ouverte": {
-     "question": "Le statut dépend du sens de mots du texte dont un sens n'atteint pas le lemme de la définition (prier : 2 sens sur 8 dans WOLF ; « évêque » et « grotte » sont certains). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
+     "question": "prier (2 sens sur 8 dans WOLF) et désert (3 sur 4) n'atteignent pas tous pray et wilderness ; « évêque » est certain. Règle de BANCS_PHASE1 § 4.1, 2 (lemmes de la définition, sens WOLF du texte) ; statut de tous_les_sens retenu.",
      "statut_selon_l_option": {
       "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie_sous_hypotheses"
+      "sens_fixe_par_le_contexte": "etablie"
      }
     }
    },
    {
     "variation": "changement_de_participant",
-    "description": "Panneau de prédelle, Sienne, vers 1440. Un ermite prie à genoux devant une grotte. Une mitre et une crosse sont posées à terre près de lui. Au loin, une ville fortifiée.",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Un ermite prie à genoux au désert devant l'entrée d'une grotte. Une mitre et une crosse sont posées à terre près de lui. Au loin, une ville fortifiée.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "connaissance_typique",
-     "sens",
-     "equivalence_non_attestee"
+     "sens"
     ]
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant une grotte. Un lion est couché près d'un rocher. Sa mitre et sa crosse sont posées à terre près de lui.",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant l'entrée d'une grotte. Un lion est couché près d'un rocher. Sa mitre et sa crosse sont posées à terre près de lui.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant une grotte. Sa mitre et sa crosse sont posées à terre près de lui. Au loin, une ville fortifiée, dont aucune tour n'a de toit.",
+    "description": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant l'entrée d'une grotte. Sa mitre et sa crosse sont posées à terre près de lui. Au loin, une ville fortifiée, dont aucune tour n'a de toit.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
@@ -850,8 +864,8 @@
   },
   "langue": "en",
   "sorte": "contre_modele",
-  "description": "Miniature from a Book of Hours, Bruges, c. 1500. The former queen Vashti leaves the palace, followed by a servant carrying a chest. On the terrace above, King Ahasuerus watches her go. According to the Book of Esther, she was banished for refusing to appear at the king's feast.",
-  "definition": "queen leaving a palace",
+  "description": "Miniature from a Book of Hours, Bruges, c. 1500. Through the palace gate the former queen Vashti walks out, followed by a servant carrying a chest. On the terrace above, King Ahasuerus watches her go. According to the Book of Esther, she was banished for refusing to appear at the king's feast.",
+  "definition": "queen leaving the royal palace",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -877,23 +891,24 @@
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Miniature d'un livre d'heures, Bruges, vers 1500. L'ancienne reine Vasthi quitte le palais, suivie d'une servante qui porte un coffre. Sur la terrasse, le roi Assuérus la regarde partir. Selon le livre d'Esther, elle fut bannie pour avoir refusé de paraître au festin du roi.",
+    "description": "Miniature d'un livre d'heures, Bruges, vers 1500. Par la porte du palais sort l'ancienne reine Vasthi, suivie d'une servante qui porte un coffre. Sur la terrasse, le roi Assuérus la regarde partir. Selon le livre d'Esther, elle fut bannie pour avoir refusé de paraître au festin du roi.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Miniature from a Book of Hours, Bruges, c. 1500. Followed by a servant carrying a chest, the former queen Vashti leaves the palace, watched by King Ahasuerus from the terrace above.",
+    "description": "Miniature from a Book of Hours, Bruges, c. 1500. Followed by a servant carrying a chest, the former queen Vashti walks out through the palace gate, watched by King Ahasuerus from the terrace above.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Miniature from a Book of Hours, Bruges, c. 1500. Queen Vashti, who will soon be banished, leaves the palace, followed by a servant carrying a chest. On the terrace above, King Ahasuerus watches her go.",
+    "description": "Miniature from a Book of Hours, Bruges, c. 1500. Queen Vashti, who will soon be banished, walks out through the palace gate, followed by a servant carrying a chest. On the terrace above, King Ahasuerus watches her go.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
@@ -905,14 +920,14 @@
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Miniature from a Book of Hours, Bruges, c. 1500. The former queen Vashti leaves the palace, followed by a servant carrying a chest. A peacock struts in the courtyard. On the terrace above, King Ahasuerus watches her go.",
+    "description": "Miniature from a Book of Hours, Bruges, c. 1500. Through the palace gate the former queen Vashti walks out, followed by a servant carrying a chest. A peacock struts in the courtyard. On the terrace above, King Ahasuerus watches her go.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "« Former » : un privatif ou un ancrage antérieur, exclusif ou non de l'état présent (comme co-008 et ee-009) ? La variante #3 ne dépend d'aucun sens (queen, leave, palace sont les lemmes de la définition).",
+   "question": "« Former » : un privatif ou un ancrage antérieur, exclusif ou non de l'état présent (comme co-008 et ee-009) ? La variante #3 est inconnue (rien ne dit le palais royal).",
    "statut_selon_l_option": {
     "privatif": "ecartee",
     "ancrage antérieur, exclusif de l'état présent": "ecartee",
@@ -942,8 +957,8 @@
   },
   "langue": "fr",
   "sorte": "indetermine",
-  "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prétendu prophète, debout sur une borne, prêche à un groupe de soldats. Un capitaine à cheval lève la main pour le faire taire.",
-  "definition": "prophet preaching to a group of soldiers",
+  "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prétendu prophète, debout sur une borne, harangue un groupe de soldats. Un capitaine à cheval lève la main pour le faire taire.",
+  "definition": "prophet preaching to soldiers",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -959,37 +974,29 @@
   "extensions_requises": [
    "modificateur_non_intersectif"
   ],
-  "justification": "« prétendu » n'est ni intersectif ni de mode d'existence, et FONDEMENTS_SEMANTIQUES § 1.2 ne range que deux sortes de modificateurs non intersectifs : un prétendu prophète peut l'être ou ne pas l'être. Le titre « Le Faux Prophète » est une modalité de titre : un indice, jamais une preuve (ASSERTIONS ; NOYAU § 1). Aucun appui ne fixe le type « prophète ». La définition reprend le mot de la version 1 (« preaching ») ; c'est le texte qui dit maintenant « prêche » : la version 1 disait « harangue » et donnait pour attestée une équivalence haranguer ⇔ preach qui n'existe ni dans WordNet (harangue%2:32:00::) ni dans WOLF (haranguer n'y a que le sens orate). Décision ouverte, le plus prudent retenu.",
+  "justification": "« prétendu » n'est ni intersectif ni de mode d'existence, et FONDEMENTS_SEMANTIQUES § 1.2 ne range que deux sortes de modificateurs non intersectifs : un prétendu prophète peut l'être ou ne pas l'être. Le titre « Le Faux Prophète » est une modalité de titre : un indice, jamais une preuve (ASSERTIONS ; NOYAU § 1). Aucun appui ne fixe le type « prophète ». La définition et le texte sont ceux de la version 1 (rétablis le 28/11) : « haranguer » ne mène pas à preach (WOLF : orate), et l'équivalence fausse de la version 1 reste retirée. Décision ouverte, le plus prudent retenu.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Canvas, Neapolitan school, c. 1660, titled 'The False Prophet'. In a prison yard, the alleged prophet, standing on a bollard, preaches to a group of soldiers. A mounted captain raises his hand to silence him.",
+    "description": "Canvas, Neapolitan school, c. 1660, titled 'The False Prophet'. In a prison yard, the alleged prophet, standing on a bollard, harangues a group of soldiers. A mounted captain raises his hand to silence him.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
-    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, debout sur une borne, le prétendu prophète prêche à un groupe de soldats, qu'un capitaine à cheval veut faire taire d'un geste.",
+    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, debout sur une borne, le soi-disant prophète harangue un groupe de soldats, qu'un capitaine à cheval veut faire taire d'un geste.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_modalite",
-    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prophète, debout sur une borne, prêche à un groupe de soldats. Un capitaine à cheval lève la main pour le faire taire.",
+    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prophète, debout sur une borne, harangue un groupe de soldats. Un capitaine à cheval lève la main pour le faire taire.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ],
-    "decision_ouverte": {
-     "question": "Le statut dépend du sens de mots du texte dont un sens n'atteint pas le lemme de la définition (prophète : 2 sens sur 5 dans WOLF ; groupe, soldat ; « prêcher » est certain). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie"
-     }
-    }
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
@@ -1000,21 +1007,21 @@
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prétendu prophète, debout sur une borne, prêche à un groupe de soldats. Un chien aboie près de la porte.",
+    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prétendu prophète, debout sur une borne, harangue un groupe de soldats. Un chien aboie près de la porte.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prétendu prophète, debout sur une borne, prêche à un groupe de soldats, qui ne portent pas de casque.",
+    "description": "Toile, école napolitaine, vers 1660, intitulée « Le Faux Prophète ». Dans une cour de prison, le prétendu prophète, debout sur une borne, harangue un groupe de soldats, qui ne portent pas de casque.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "Que fait « prétendu » (alleged) du type de sa tête ? FONDEMENTS_SEMANTIQUES § 1.2 ne connaît que les privatifs et les modificateurs de mode d'existence ; l'inventaire range « prétendu » parmi les privatifs, alors que l'adjectif est non engageant. La variante #3 porte sa propre décision de sens.",
+   "question": "Que fait « prétendu » (alleged) du type de sa tête ? FONDEMENTS_SEMANTIQUES § 1.2 ne connaît que les privatifs et les modificateurs de mode d'existence ; l'inventaire range « prétendu » parmi les privatifs, alors que l'adjectif est non engageant. La variante #3 est inconnue : haranguer n'atteint pas preach.",
    "statut_selon_l_option": {
     "non engageant : ni N ni non-N (retenu)": "inconnue",
     "privatif comme « faux » (FONDEMENTS § 1.2)": "ecartee",
@@ -1086,7 +1093,15 @@
     "description": "Miséricorde en chêne sculpté, stalles du chœur d'une église paroissiale du Norfolk, vers 1420. Un tueur de dragons se repose, adossé à un arbre, l'épée au fourreau et l'écu posé près de lui. Le dragon mort gît à ses pieds.",
     "sorte": "positif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr",
+    "decision_ouverte": {
+     "question": "« tueur » est absent de WOLF : la connaissance sur slayer n'a plus de point d'appui. Règle de BANCS_PHASE1 § 4.1, 2 ; statut de tous_les_sens retenu.",
+     "statut_selon_l_option": {
+      "tous_les_sens (WOLF tel quel)": "inconnue",
+      "si WOLF donnait tueur → slayer": "etablie_sous_hypotheses"
+     }
+    }
    },
    {
     "variation": "paraphrase",
@@ -1129,16 +1144,7 @@
      "sens"
     ]
    }
-  ],
-  "decision_ouverte": {
-   "question": "La relation inconnue (la glose de slayer) reste une hypothèse dans toutes les options. L'atome « beast » ne part que de « dragon », dont un sens sur quatre l'atteint : hypothèse de sens. #1 (français) : « tueur » est absent de WOLF, l'abduction n'a plus de point d'appui. Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-   "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie_sous_hypotheses",
-    "tous_les_sens (WOLF tel quel), #1": "inconnue",
-    "si WOLF donnait tueur → slayer, #1": "etablie_sous_hypotheses"
-   }
-  }
+  ]
  },
  {
   "id": "co-012",
@@ -1186,30 +1192,22 @@
     "description": "Etching, c. 1780, from a series of popular types. In the market square of a town, a mountain shepherd in a sheepskin coat shows a lamb to a market woman. Behind them, a church façade and fruit stalls.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
-    "description": "Eau-forte, vers 1780, d'une suite de types populaires. Un berger des montagnes, en manteau de peau, présente un agneau à une marchande sur la place du marché d'une ville, devant une église et des étals de fruits.",
+    "description": "Eau-forte, vers 1780, d'une suite de types populaires. Un berger venu des montagnes, en manteau de peau, présente un agneau à une marchande sur la place du marché d'une ville, devant une église et des étals de fruits.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Eau-forte, vers 1780, d'une suite de types populaires. Dans un paysage de montagnes, un berger en manteau de peau présente un agneau à une marchande.",
+    "description": "Eau-forte, vers 1780, d'une suite de types populaires. Sur un alpage, au pied de hautes montagnes, un berger en manteau de peau présente un agneau à une marchande.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ],
-    "decision_ouverte": {
-     "question": "Le statut dépend du sens de mots du texte dont un sens n'atteint pas le lemme de la définition (berger : 2 sens sur 3 dans WOLF ; paysage, montagne ; « agneau » est certain). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie"
-     }
-    }
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
@@ -1234,7 +1232,7 @@
    }
   ],
   "decision_ouverte": {
-   "question": "La base dépend d'une incompatibilité (une place de ville et un paysage de montagne), qu'aucune sorte de connaissance ne dit (BANCS_PHASE1 § 4.1, 3). La variante #3 porte sa propre décision de sens.",
+   "question": "La base dépend d'une incompatibilité (une place de ville et un paysage de montagne), qu'aucune sorte de connaissance ne dit (BANCS_PHASE1 § 4.1, 3). La variante #3 est inconnue (alpage absent de WOLF, aucun paysage dit).",
    "statut_selon_l_option": {
     "sans incompatibilité attestée (retenu)": "inconnue",
     "incompatibilite_attestee (ville / paysage de montagne)": "ecartee"
@@ -1298,7 +1296,8 @@
     "hypotheses_attendues": [
      "connaissance_typique",
      "sens"
-    ]
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1341,14 +1340,7 @@
      "connaissance_typique"
     ]
    }
-  ],
-  "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens (martyr, wear, crown, gold sont les lemmes de la définition) ; la relation de matière reste une connaissance typique. #1 (français) dépend de porter (5 sens sur 42 dans WOLF), couronne, or ; « martyre » est certain. Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-   "statut_selon_l_option": {
-    "tous_les_sens (#1)": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte (#1)": "etablie_sous_hypotheses"
-   }
-  }
+  ]
  },
  {
   "id": "co-014",
@@ -1396,7 +1388,8 @@
     "description": "Oil on canvas, c. 1830. In a snow-covered cemetery, a young widow in mourning lays a wreath on a grave. A marble angel, wings folded, watches over the grave. In the background, a steeple in the mist.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -1476,53 +1469,39 @@
   "langue": "fr",
   "sorte": "contre_modele",
   "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une belle-mère tend une pomme à la fillette de son époux, qui détourne la tête. Une servante récure un chaudron près de l'âtre.",
-  "definition": "mother holding out an apple to a little girl",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "sens",
-   "equivalence_non_attestee"
-  ],
-  "connaissances_supposees": [
-   {
-    "sorte": "equivalence_etablie",
-    "contenu": "« tendre (une chose) à quelqu'un » (fr) ⇔ « hold out (a thing) to someone » (en) : la chose est le thème, la personne la destinataire",
-    "attestee": false
-   }
-  ],
+  "definition": "mother giving an apple to her daughter",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
   "operations_requises": [
    "lecture"
   ],
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Un composé à trait d'union lexicalisé est un seul mot, de sens propre : « belle-mère » n'est ni « belle » ni « mère » par composition (FONDEMENTS_SEMANTIQUES § 3.2). Ses deux sens sont stepmother et mother-in-law. Correction de la version 1 : dans WordNet 3.0, mother-in-law%1:18:00:: ⊑ mother%1:18:00:: (pointeur @) ; seul stepmother (⊑ stepparent ⊑ parent) n'atteint pas mother. Sous tous les sens, la définition serait donc établie sous l'hypothèse du sens « mère du conjoint » ; sous le sens fixé par le contexte (« la fillette de son époux » : la seconde épouse), elle ne l'est pas. De plus, « tendre ⇔ hold out » n'est pas attesté. Par la règle harmonisée (BANCS_PHASE1 § 4.1, 2), le statut retenu est celui de tous_les_sens : établie sous les hypothèses de sens et d'équivalence ; la décision ouverte garde inconnue pour le sens fixé par le contexte.",
+  "justification": "Un composé à trait d'union lexicalisé est un seul mot : « belle-mère » n'est ni « belle » ni « mère » par composition (FONDEMENTS_SEMANTIQUES § 3.2). Ses sens WOLF sont mother-in-law (⊑ mother) et stepmother. Mais la définition demande aussi « her daughter », et « fillette » (WOLF : little_girl, young_girl) n'atteint pas daughter ; le possessif ne dit pas la filiation (relecture A). Aucun appui pour l'atome daughter, sous aucun sens : inconnue. Rétabli le 28/11 : définition d'origine.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Genre scene, oil on panel, Leiden, c. 1660. In a kitchen, a stepmother holds out an apple to her husband's little daughter, who turns her head away. A maid scours a cauldron by the hearth.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
     "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, la fillette de l'époux détourne la tête de la pomme que lui tend sa belle-mère, tandis qu'une servante récure un chaudron.",
     "sorte": "contre_modele",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens",
-     "equivalence_non_attestee"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une mère tend une pomme à une fillette, qui détourne la tête. Une servante récure un chaudron près de l'âtre.",
+    "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une mère tend une pomme à sa fillette, qui détourne la tête. Une servante récure un chaudron près de l'âtre.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens",
-     "equivalence_non_attestee"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "inversion_des_roles",
@@ -1535,28 +1514,23 @@
     "variation": "ajout_figure_non_liee",
     "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une belle-mère tend une pomme à la fillette de son époux, qui détourne la tête. Un chat guette sous la table.",
     "sorte": "contre_modele",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens",
-     "equivalence_non_attestee"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
     "description": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une belle-mère tend une pomme à la fillette de son époux, qui détourne la tête. La servante, près de l'âtre, ne regarde pas la scène.",
     "sorte": "contre_modele",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens",
-     "equivalence_non_attestee"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "« belle-mère » a deux sens dans WOLF : mother-in-law (⊑ mother) et stepmother (qui n'atteint pas mother). Par la règle, tous_les_sens donne un lien sous hypothèse de sens ; le contexte (« la fillette de son époux ») fixe plutôt stepmother. « tendre » n'a dans WOLF aucun sens qui atteigne hold_out : l'équivalence écrite en K n'est pas attestée. « fillette » : 1 sens sur 2 atteint little_girl. Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
+   "question": "« fillette » n'atteint pas daughter par ses deux sens WOLF, et le possessif ne dit pas la filiation : le statut ne dépend d'aucun choix de sens. « belle-mère » (mother-in-law ⊑ mother, stepmother) et « tendre » (1 sens sur 9 vers give) ne jouent plus. Règle de BANCS_PHASE1 § 4.1, 2 (lemmes de la définition, sens WOLF du texte) ; statut de tous_les_sens retenu.",
    "statut_selon_l_option": {
-    "tous_les_sens (retenu)": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte (stepmother)": "inconnue"
+    "tous_les_sens": "inconnue",
+    "sens_fixe_par_le_contexte": "inconnue",
+    "si le possessif disait la filiation": "etablie_sous_hypotheses"
    }
   }
  },
@@ -1578,8 +1552,8 @@
   "langue": "en",
   "sorte": "positif",
   "description": "Holy card, chromolithograph, c. 1890. A guardian angel with outspread wings leads a little girl by the hand across a broken footbridge over a torrent. Below, the dark water foams over the rocks.",
-  "definition": "angel leading a girl by the hand",
-  "statut_attendu": "etablie",
+  "definition": "angel leading a child by the hand",
+  "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [],
   "operations_requises": [
@@ -1588,22 +1562,21 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Un composé nom-nom lexicalisé est un seul sens, que K ordonne comme tout type : guardian_angel%1:18:00:: ⊑ angel%1:18:00:: par l'hyperonymie (implicite, BANCS_PHASE1 § 4.1, 1), et ce lien est certain, guardian angel n'ayant qu'un sens. Ce n'est pas un composé à relation implicite (FONDEMENTS_SEMANTIQUES § 3.2). Correction de la version 1 : la définition disait « child », et K donnait little_girl ⊑ child pour attesté, ce qui est faux (little_girl ⊑ female ⊑ person) ; elle dit maintenant « girl », au sens girl%1:18:02::, le synset même de little_girl. « lead » et « hand » sont les lemmes de la définition : liens certains (BANCS_PHASE1 § 4.1, 2). Établie.",
+  "justification": "Un composé nom-nom lexicalisé est un seul sens : guardian_angel%1:18:00:: ⊑ angel par l'hyperonymie (implicite), lien certain. Mais la définition demande « child », et little_girl%1:18:00:: ⊑ female ⊑ person n'atteint pas child (l'inclusion de la version 1 était fausse et reste retirée de K) ; « fillette » (WOLF) non plus. L'atome child n'a aucun appui : inconnue. Rétabli le 28/11 : définition d'origine.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Image pieuse, chromolithographie, vers 1890. Un ange gardien aux ailes déployées conduit par la main une fillette sur une passerelle brisée au-dessus d'un torrent. En contrebas, l'eau sombre écume sur les rochers.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
     "description": "Holy card, chromolithograph, c. 1890. A little girl is led by the hand across a broken footbridge over a torrent by a guardian angel with outspread wings.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
@@ -1624,24 +1597,17 @@
     "variation": "ajout_figure_non_liee",
     "description": "Holy card, chromolithograph, c. 1890. A guardian angel with outspread wings leads a little girl by the hand across a broken footbridge over a torrent. A shepherd watches from the far bank.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
     "description": "Holy card, chromolithograph, c. 1890. A guardian angel with outspread wings leads a little girl, who wears no shoes, by the hand across a broken footbridge over a torrent.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
+    "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens : guardian angel (un sens) ⊑ angel, little girl (un sens, synset contenant girl), lead et hand sont les lemmes de la définition. #1 (français) dépend d'ange (4 sens sur 7 dans WOLF), conduire, main ; « fillette » atteint girl par ses deux sens ; « ange gardien » est absent de WOLF comme composé, et la tête « ange » porte le lien. Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-   "statut_selon_l_option": {
-    "tous_les_sens (#1)": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte (#1)": "etablie"
-   }
-  }
+  ]
  },
  {
   "id": "co-017",
@@ -1661,17 +1627,25 @@
   "langue": "en",
   "sorte": "positif",
   "description": "Votive panel, Cologne, c. 1460. The Virgin, enthroned, holds the Child on her knee. At her feet kneel the founder and first abbess of the convent, their hands joined in prayer. A view of the convent buildings fills the background.",
-  "definition": "founder of a convent kneeling at the feet of the Virgin",
-  "statut_attendu": "etablie",
-  "hypotheses_attendues": [],
-  "connaissances_supposees": [],
+  "definition": "founder of a convent kneeling at the feet of the Virgin and Child",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "equivalence_non_attestee"
+  ],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« the Virgin holds the Child on her knee » ⇔ « the Virgin and Child » (le groupe), et « at her feet » ⇔ « at the feet of the Virgin and Child »",
+    "attestee": false
+   }
+  ],
   "operations_requises": [
    "lecture"
   ],
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Le complément « of the convent » est partagé par les deux têtes coordonnées sous un seul déterminant : il se distribue sur « founder » comme sur « first abbess » ; le verbe au pluriel dit deux référents (FONDEMENTS_SEMANTIQUES § 2.4 et § 3.2). Les prémisses sont de l'auteur, affirmées, figurées. Les mots du texte sont les lemmes de la définition : liens certains (BANCS_PHASE1 § 4.1, 2). Établie. La lecture structurale est retenue parce que le texte la fixe ; aucune sorte d'hypothèse n'existe pour une lecture structurale ouverte (voir les questions).",
+  "justification": "Le complément « of the convent » est partagé par les deux têtes coordonnées sous un seul déterminant : il se distribue sur « founder » comme sur « first abbess » ; le verbe au pluriel dit deux référents (FONDEMENTS_SEMANTIQUES § 2.4 et § 3.2). Les prémisses sont de l'auteur, affirmées, figurées. Les mots du texte sont les lemmes de la définition (liens certains), mais le groupe « the Virgin and Child » et « aux pieds » de ce groupe ne se lisent sur « the Virgin holds the Child… at her feet » que par une équivalence non attestée : établie sous hypothèse. Rétabli le 28/11 : définition d'origine. La lecture structurale est retenue parce que le texte la fixe ; aucune sorte d'hypothèse n'existe pour une lecture structurale ouverte (voir les questions).",
   "variantes": [
    {
     "variation": "traduction",
@@ -1679,15 +1653,19 @@
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
-     "sens"
-    ]
+     "sens",
+     "equivalence_non_attestee"
+    ],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
     "description": "Votive panel, Cologne, c. 1460. The founder and first abbess of the convent kneel, hands joined, at the feet of the Virgin, who sits enthroned with the Child on her knee.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "equivalence_non_attestee"
+    ]
    },
    {
     "variation": "changement_de_participant",
@@ -1707,15 +1685,18 @@
     "variation": "ajout_figure_non_liee",
     "description": "Votive panel, Cologne, c. 1460. The Virgin, enthroned, holds the Child on her knee. At her feet kneel the founder and first abbess of the convent, their hands joined in prayer. Saint Ursula stands behind them with her arrow.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "equivalence_non_attestee"
+    ]
    }
   ],
   "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens : founder, convent, kneel, feet, the Virgin sont les lemmes de la définition. #1 (français) dépend de couvent, pied, vierge (3 sens sur 11 dans WOLF) ; fondateur et agenouiller sont certains. La traduction répète le déterminant, ce qui rend le partage du complément moins sûr, sans sorte d'hypothèse pour le dire. Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
+   "question": "La base ne dépend d'aucun sens, mais d'une équivalence non attestée (le groupe de la Vierge à l'Enfant) : founder, convent, kneel, feet, the Virgin sont les lemmes de la définition. #1 (français) dépend de couvent, pied, vierge (3 sens sur 11 dans WOLF) ; fondateur et agenouiller sont certains. La traduction répète le déterminant, ce qui rend le partage du complément moins sûr, sans sorte d'hypothèse pour le dire. Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
    "statut_selon_l_option": {
-    "tous_les_sens (#1)": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte (#1)": "etablie"
+    "tous_les_sens (retenu, l'équivalence restant non attestée)": "etablie_sous_hypotheses",
+    "équivalence attestée": "etablie",
+    "tous_les_sens (#1)": "etablie_sous_hypotheses"
    }
   }
  },
@@ -1761,7 +1742,8 @@
       "tous_les_sens (WOLF tel quel)": "inconnue",
       "si WOLF donnait le sens attendu": "etablie_sous_hypotheses"
      }
-    }
+    },
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
@@ -1782,14 +1764,28 @@
     "description": "Miniature from a psalter, Paris, c. 1320. In a vaulted cell, a seated figure, either a monk or a nun, reads an open book placed on a lectern.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "decision_ouverte": {
+     "question": "Une alternative de la description (« either a monk or a nun ») dont chaque branche satisfait la disjonction de la définition établit-elle la définition (raisonnement par cas) ? NOYAU § 1 exclut les assertions sous alternative des prémisses.",
+     "statut_selon_l_option": {
+      "sans raisonnement par cas (retenu)": "inconnue",
+      "avec raisonnement par cas": "etablie"
+     }
+    }
    },
    {
     "variation": "changement_de_modalite",
     "description": "Miniature from a psalter, Paris, c. 1320. In a vaulted cell, a seated nun does not read: she sleeps, her head resting on the open book.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "decision_ouverte": {
+     "question": "La négation de « read » n'est certaine que si chaque sens du lemme read est inclus dans chaque sens du mot nié : ce n'est pas le cas (BANCS § 4.1, 2) ; et la réfutation d'une description niée entière n'est pas dérivée par le noyau 0.3 (D41).",
+     "statut_selon_l_option": {
+      "tous_les_sens (retenu)": "inconnue",
+      "sens_fixe_par_le_contexte, D41 levée": "ecartee"
+     }
+    }
    },
    {
     "variation": "ajout_figure_non_liee",
@@ -1798,18 +1794,7 @@
     "statut_attendu": "etablie",
     "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "Trois points ouverts. (1) La base ne dépend d'aucun sens (nun, read, book sont les lemmes de la définition) (NOYAU § 2 (D30) prend tous les sens que K donne à un mot ; BANCS_PHASE1 § 4.1, 2 (provisoire) : quand le statut en dépend, le plus prudent est retenu.). (2) #4 : une alternative de la description (« either a monk or a nun ») dont chaque branche satisfait la disjonction de la définition établit-elle la définition (raisonnement par cas) ? NOYAU § 1 exclut les assertions sous alternative des prémisses. (3) #5 : la négation de « read », verbe polysémique, n'est certaine que si NOYAU § 2 ne s'applique pas aux événements niés (relecture A, ligne D1) ; et la réfutation d'une description niée entière n'est pas dérivée par le noyau 0.3 (D41).",
-   "statut_selon_l_option": {
-    "tous_les_sens": "etablie",
-    "sens_fixe_par_le_contexte": "etablie",
-    "#4 sans raisonnement par cas (retenu)": "inconnue",
-    "#4 avec raisonnement par cas": "etablie_sous_hypotheses",
-    "#5 négation incertaine, règle de N § 2 appliquée aux événements (retenu)": "inconnue",
-    "#5 négation certaine, sens fixé, D41 levée": "ecartee"
-   }
-  }
+  ]
  },
  {
   "id": "co-019",
@@ -1838,12 +1823,10 @@
   },
   "langue": "en",
   "sorte": "positif",
-  "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a lute, a viol, an open songbook and a skull; a candle has just been snuffed out. The objects allude to the transience of earthly pleasures.",
+  "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a lute, an open songbook and a skull; a candle has just been snuffed out. The objects allude to the transience of earthly pleasures.",
   "definition": "musical instruments (e.g. lute, viol, harp) lying on a table",
-  "statut_attendu": "etablie_sous_hypotheses",
-  "hypotheses_attendues": [
-   "sens"
-  ],
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
   "connaissances_supposees": [],
   "operations_requises": [
    "lecture"
@@ -1851,36 +1834,26 @@
   "extensions_requises": [
    "aucune"
   ],
-  "justification": "Le luth et la viole sont deux instruments de musique (lute%1:06:00:: et viol%1:06:00:: ⊑ musical_instrument%1:06:00::, hyperonymie implicite), et deux des exemples : sous toute lecture de la liste (exemples d'un terme général, ou disjonction fermée), et que le pluriel demande un ou deux membres, la définition est satisfaite (la description de la version 1 n'avait qu'un luth : relecture A). Seule la lecture conjonctive, que FONDEMENTS_SEMANTIQUES § 3.2 exclut, ne le serait pas. Mais lute (l'instrument, un mastic) et table sont polysémiques : hypothèse de sens, le plus prudent retenu. La vanité est un énoncé du signifié (FONDEMENTS § 2.5).",
+  "justification": "La définition demande des instruments de musique (pluriel), illustrés par une liste « e.g. ». Le texte ne figure qu'un luth : lute%1:06:00:: ⊑ musical_instrument, mais un sens de lute sur deux (un mastic) n'atteint pas le lemme. Si un seul membre suffit au pluriel, la définition est établie sous l'hypothèse de sens ; s'il en faut deux, rien ne la satisfait. F § 2.6 ne traite que des collections dites : décision ouverte, le plus prudent, inconnue, est retenu (relecture A). La vanité est un énoncé du signifié (FONDEMENTS § 2.5). Rétabli le 28/11 : textes d'origine (la révision avait ajouté une viole).",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Vanité, huile sur toile, Leyde, vers 1640. Sur une table couverte d'un tapis sombre reposent un luth, une viole, un recueil de chansons ouvert et un crâne ; une chandelle vient d'être soufflée. Les objets évoquent la fugacité des plaisirs terrestres.",
+    "description": "Vanité, huile sur toile, Leyde, vers 1640. Sur une table couverte d'un tapis sombre reposent un luth, un recueil de chansons ouvert et un crâne ; une chandelle vient d'être soufflée. Les objets évoquent la fugacité des plaisirs terrestres.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ],
-    "decision_ouverte": {
-     "question": "Le statut dépend du sens de mots du texte dont un sens n'atteint pas le lemme de la définition (table : 6 sens sur 7 dans WOLF ; luth et viole sont certains). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie"
-     }
-    }
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. A lute, a viol, an open songbook and a skull lie on a table covered with a dark cloth, beside a candle just snuffed out; together they allude to the transience of earthly pleasures.",
+    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. A lute, an open songbook and a skull lie on a table covered with a dark cloth, beside a candle just snuffed out; together they allude to the transience of earthly pleasures.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_participant",
-    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a shawm, a recorder, an open songbook and a skull; a candle has just been snuffed out.",
+    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a shawm, an open songbook and a skull; a candle has just been snuffed out.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
@@ -1894,28 +1867,27 @@
    },
    {
     "variation": "changement_de_portee",
-    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie an open songbook and a skull. The inventory of 1680 describes a lute and a viol beside them, since painted out.",
+    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie an open songbook and a skull. The inventory of 1680 describes a lute beside them, since painted out.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a lute, a viol, an open songbook and a skull; a fly has settled on the skull.",
+    "description": "Vanitas still life, oil on canvas, Leiden, c. 1640. On a table covered with a dark cloth lie a lute, an open songbook and a skull; a fly has settled on the skull.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ]
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
    }
   ],
   "decision_ouverte": {
-   "question": "(1) Le pluriel de la définition (« instruments ») demande-t-il deux membres (F § 2.6 ne traite que des collections dites) ? La viole atteint musical_instrument par son seul sens ; le luth par un sens sur deux (lute est aussi un mastic). Si un membre suffit, la base est établie ; s'il en faut deux, elle dépend du sens de lute. (2) #3 : la chalemie (shawm ⊑ musical_instrument, un sens) et la flûte à bec (recorder, 1 sens sur 4) ne sont pas dans la liste ; « e.g. » donne-t-il le terme général pour seule condition, ou la liste est-elle une disjonction fermée ? Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
+   "question": "(1) Le pluriel « musical instruments » demande-t-il deux membres ? (2) lute : 1 sens sur 2 vers musical_instrument (luth, en français : certain). (3) #3 : la chalemie (shawm, un sens) n'est pas dans la liste ; « e.g. » est-il une liste ouverte ? Règle de BANCS_PHASE1 § 4.1, 2 (lemmes de la définition, sens WOLF du texte) ; statut de tous_les_sens retenu.",
    "statut_selon_l_option": {
-    "un membre suffit": "etablie",
-    "deux membres, tous_les_sens (retenu)": "etablie_sous_hypotheses",
-    "#3 liste fermée (retenu)": "inconnue",
-    "#3 liste ouverte, un membre suffit (shawm)": "etablie"
+    "deux membres (retenu)": "inconnue",
+    "un membre suffit, tous_les_sens": "etablie_sous_hypotheses",
+    "un membre suffit, sens_fixe_par_le_contexte": "etablie",
+    "#1 (luth, certain), un membre suffit": "etablie",
+    "#3 liste ouverte, un membre suffit": "etablie"
    }
   }
  },
@@ -1944,9 +1916,9 @@
    "cle_de_sens": "fall%2:38:03::",
    "famille_lexicale": "verb.motion"
   },
-  "langue": "fr",
+  "langue": "en",
   "sorte": "indetermine",
-  "description": "Fresque, mur sud d'une chapelle de cimetière, Ombrie, vers 1500. Sous le trône du Christ, des anges déchus gisent enchaînés dans une fosse de feu, les ailes brisées. Au-dessus d'eux, l'archange Michel remet son épée au fourreau.",
+  "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Beneath the throne of Christ, fallen angels lie chained in a fiery pit, their wings broken. Above them, the archangel Michael sheathes his sword.",
   "definition": "angels falling from heaven",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
@@ -1965,67 +1937,52 @@
    "ancrage_temporel",
    "etat_reifie"
   ],
-  "justification": "« fallen angels » est un participe d'un verbe inaccusatif : l'ange en est le thème, et le participe dit l'état résultant d'une chute antérieure (ONTOLOGIE_EVENTUALITES § 5 ; aucun rôle par la seule syntaxe, FONDEMENTS_SEMANTIQUES § 3.2 et SPECIFICATION_OPERATIONS § 1, « a fallen angel »). La définition demande la chute en cours. Une conséquence n'est pas l'événement (FONDEMENTS § 3.4) : rien n'établit la chute figurée en cours, et rien ne la nie. Inconnue, quels que soient les sens (« déchu » est absent de WOLF, ce qui ne change rien à un statut déjà inconnu).",
+  "justification": "« fallen angels » est un participe d'un verbe inaccusatif : l'ange en est le thème, et le participe dit l'état résultant d'une chute antérieure (ONTOLOGIE_EVENTUALITES § 5 ; aucun rôle par la seule syntaxe, FONDEMENTS_SEMANTIQUES § 3.2 et SPECIFICATION_OPERATIONS § 1, « a fallen angel »). La définition demande la chute en cours. Une conséquence n'est pas l'événement (FONDEMENTS § 3.4) : rien n'établit la chute figurée en cours, et rien ne la nie. Inconnue, quels que soient les sens.",
   "variantes": [
    {
     "variation": "traduction",
-    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Beneath the throne of Christ, fallen angels lie chained in a fiery pit, their wings broken. Above them, the archangel Michael sheathes his sword.",
+    "description": "Fresque, mur sud d'une chapelle de cimetière, Ombrie, vers 1500. Sous le trône du Christ, des anges déchus gisent enchaînés dans une fosse de feu, les ailes brisées. Au-dessus d'eux, l'archange Michel remet son épée au fourreau.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr"
    },
    {
     "variation": "paraphrase",
-    "description": "Fresque, mur sud d'une chapelle de cimetière, Ombrie, vers 1500. Sous le trône du Christ, des anges qui sont tombés gisent enchaînés dans une fosse de feu, les ailes brisées, tandis qu'au-dessus d'eux l'archange Michel remet son épée au fourreau.",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Beneath the throne of Christ, angels who have fallen lie chained in a fiery pit, their wings broken, while above them the archangel Michael sheathes his sword.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Fresque, mur sud d'une chapelle de cimetière, Ombrie, vers 1500. Des anges rebelles tombent du ciel, chassés par l'archange Michel qui brandit son épée.",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Rebel angels fall headlong from heaven, driven out by the archangel Michael, who brandishes his sword.",
     "sorte": "positif",
-    "statut_attendu": "etablie_sous_hypotheses",
-    "hypotheses_attendues": [
-     "sens"
-    ],
-    "decision_ouverte": {
-     "question": "Le statut dépend du sens de mots du texte dont un sens n'atteint pas le lemme de la définition (ange : 4 sens sur 7 dans WOLF ; tomber : 33 sur 38 ; ciel : 2 sur 3). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-     "statut_selon_l_option": {
-      "tous_les_sens": "etablie_sous_hypotheses",
-      "sens_fixe_par_le_contexte": "etablie"
-     }
-    }
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_temps",
-    "description": "Fresque, mur sud d'une chapelle de cimetière, Ombrie, vers 1500. Au bord du ciel, l'archange Michel lève son épée contre les anges rebelles, sur le point de tomber.",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. At the edge of heaven, the archangel Michael raises his sword against the rebel angels, who are about to fall.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Fresque, mur sud d'une chapelle de cimetière, Ombrie, vers 1500. Sous le trône du Christ, des anges déchus gisent enchaînés dans une fosse de feu, les ailes brisées. Un donateur est agenouillé dans l'angle inférieur gauche.",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Beneath the throne of Christ, fallen angels lie chained in a fiery pit, their wings broken. A donor kneels in the lower left corner.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "ajout_negation_non_liee",
-    "description": "Fresque, mur sud d'une chapelle de cimetière, Ombrie, vers 1500. Sous le trône du Christ, des anges déchus gisent enchaînés dans une fosse de feu. Au-dessus d'eux, l'archange Michel, qui ne porte pas de casque, remet son épée au fourreau.",
+    "description": "Fresco, south wall of a cemetery chapel, Umbria, c. 1500. Beneath the throne of Christ, fallen angels lie chained in a fiery pit. Above them, the archangel Michael, who wears no helmet, sheathes his sword.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens. La variante #3 porte sa propre décision de sens.",
-   "statut_selon_l_option": {
-    "tous_les_sens": "inconnue",
-    "sens_fixe_par_le_contexte": "inconnue"
-   }
-  }
+  ]
  },
  {
   "id": "co-021",
@@ -2049,21 +2006,32 @@
   ],
   "pivot": {
    "lemme": "wither",
-   "cle_de_sens": "wither%2:30:01::",
+   "cle_de_sens": "wither%2:30:00::",
    "famille_lexicale": "verb.change"
   },
   "langue": "fr",
   "sorte": "positif",
-  "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, un arbre flétri se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son tronc. La devise, gravée sur un cartouche, en fait l'image de l'amitié fidèle jusqu'après la mort.",
-  "definition": "withered tree with a vine twining about its trunk",
+  "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, un arbre desséché se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son tronc. La devise, gravée sur un cartouche, en fait l'image de l'amitié fidèle jusqu'après la mort.",
+  "definition": "withered tree entwined by a vine",
   "statut_attendu": "etablie_sous_hypotheses",
   "hypotheses_attendues": [
-   "sens"
+   "sens",
+   "equivalence_non_attestee"
   ],
   "connaissances_supposees": [
    {
     "sorte": "implication",
-    "contenu": "le participe passé d'un verbe inaccusatif (wither%2:30:01::, se flétrir) dit l'état résultant de son thème (ONTOLOGIE_EVENTUALITES § 5) ; « withered » et « flétri » ont la même forme canonique, l'état réifié",
+    "contenu": "le participe passé d'un verbe inaccusatif (wither%2:30:00::) dit l'état résultant de son thème (ONTOLOGIE_EVENTUALITES § 5)",
+    "attestee": false
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« desséché » (fr), d'un arbre ⇔ withered (l'état résultant de wither) ; « desséché » et « dessécher » sont absents de WOLF (attestation de la version 1 retirée)",
+    "attestee": false
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« s'enrouler autour de » (fr) ⇔ entwine (la vigne enlace l'arbre) ; « enrouler » n'atteint entwine par aucun sens WOLF",
     "attestee": false
    }
   ],
@@ -2074,34 +2042,38 @@
   "extensions_requises": [
    "etat_reifie"
   ],
-  "justification": "Le participe d'un verbe inaccusatif dit l'état résultant de son thème : l'arbre est flétri (ONTOLOGIE_EVENTUALITES § 5), et la définition demande le même état ; « flétrir » n'a dans WOLF qu'un sens, wither%2:30:01:: : le lien vers le lemme wither est certain (le texte disait « desséché », absent de WOLF, ce qui aurait rendu le cas inconnu sans rien tester). Le tronc est une partie de l'arbre (trunk%1:20:00:: partie de tree, méronymie implicite). La devise est une inscription sur l'œuvre, le sens moral est du signifié (FONDEMENTS_SEMANTIQUES § 2.5). Mais arbre (3 sens sur 4 dans WOLF), vigne, tronc et enrouler n'atteignent pas tous leur lemme : hypothèse de sens (statut de tous_les_sens).",
+  "justification": "Le participe d'un verbe inaccusatif dit l'état résultant de son thème (ONTOLOGIE_EVENTUALITES § 5), et la définition demande cet état. Mais « desséché » est absent de WOLF, et « enrouler » n'atteint entwine par aucun sens : les deux liens ne passent que par des équivalences non attestées ; « arbre » et « vigne » n'atteignent pas tous leur lemme. La devise est une inscription sur l'œuvre, le sens moral est du signifié (FONDEMENTS § 2.5). Établie sous hypothèses (F § 2.7 ; BANCS § 4.1, 2). Rétabli le 28/11 : définition, texte (« desséché ») et pivot d'origine.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Copper engraving, frontispiece of an emblem book, Antwerp, 1613. In the centre, a withered tree stands beside a spring; a vine laden with grapes twines about its trunk. The motto, engraved on a cartouche, makes it an image of faithful friendship beyond death.",
     "sorte": "positif",
-    "statut_attendu": "etablie",
-    "hypotheses_attendues": []
-   },
-   {
-    "variation": "paraphrase",
-    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Autour du tronc d'un arbre flétri, dressé au bord d'une source, s'enroule une vigne chargée de grappes ; la devise du cartouche en fait l'image de l'amitié fidèle.",
-    "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
      "sens"
+    ],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Autour du tronc d'un arbre desséché, dressé au bord d'une source, s'enroule une vigne chargée de grappes ; la devise du cartouche en fait l'image de l'amitié fidèle.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens",
+     "equivalence_non_attestee"
     ]
    },
    {
     "variation": "changement_de_temps",
-    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, un arbre qui commence à se flétrir se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son tronc.",
+    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, un arbre qui commence à se dessécher se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son tronc.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    },
    {
     "variation": "changement_de_portee",
-    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. La devise, gravée sur un cartouche, parle d'un arbre flétri qu'embrasse une vigne ; l'image montre une vigne chargée de grappes au bord d'une source.",
+    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. La devise, gravée sur un cartouche, parle d'un arbre desséché qu'embrasse une vigne ; l'image montre une vigne chargée de grappes au bord d'une source.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
     "hypotheses_attendues": [],
@@ -2119,19 +2091,21 @@
    },
    {
     "variation": "ajout_figure_non_liee",
-    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, un arbre flétri se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son tronc. Au loin, un village.",
+    "description": "Gravure sur cuivre, frontispice d'un recueil d'emblèmes, Anvers, 1613. Au centre, un arbre desséché se dresse au bord d'une source ; une vigne chargée de grappes s'enroule autour de son tronc. Au loin, un village.",
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
-     "sens"
+     "sens",
+     "equivalence_non_attestee"
     ]
    }
   ],
   "decision_ouverte": {
-   "question": "Le statut dépend du sens de mots du texte dont un sens n'atteint pas le lemme de la définition (arbre, vigne, tronc, enrouler ; « flétrir » est certain). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
+   "question": "desséché (absent de WOLF) et s'enrouler ne rejoignent withered et entwine que par des équivalences non attestées ; arbre, vigne n'atteignent pas tous leur lemme ; en anglais (#1), twine n'atteint entwine que par 1 sens sur 4. Règle de BANCS_PHASE1 § 4.1, 2 (lemmes de la définition, sens WOLF du texte) ; statut de tous_les_sens retenu.",
    "statut_selon_l_option": {
-    "tous_les_sens": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie"
+    "tous_les_sens (retenu)": "etablie_sous_hypotheses",
+    "équivalences attestées, sens fixés": "etablie",
+    "#1, tous_les_sens": "etablie_sous_hypotheses"
    }
   }
  },
@@ -2158,7 +2132,7 @@
   "langue": "fr",
   "sorte": "indetermine",
   "description": "Huile sur toile, Lombardie, vers 1520. Salomé, ayant dansé devant Hérode, reçoit des mains d'un bourreau la tête de Jean-Baptiste sur un plat. Hérode, attablé, détourne le regard. Une servante tient une aiguière.",
-  "definition": "Salome dancing",
+  "definition": "Salome dancing before Herod",
   "statut_attendu": "inconnue",
   "hypotheses_attendues": [],
   "connaissances_supposees": [
@@ -2179,14 +2153,15 @@
   "extensions_requises": [
    "ancrage_temporel"
   ],
-  "justification": "Le participe composé d'un verbe inergatif (« ayant dansé ») dit un processus antérieur au moment figuré, dont Salomé est l'agent ; il ne dit aucun état résultant (ONTOLOGIE_EVENTUALITES § 1.2 et § 2, ancrage antérieur). La définition demande la danse en cours. L'antériorité n'est pas une négation de la danse au moment figuré : inconnue, non écartée (D31), sous tous les sens et quel que soit l'alias. La définition ne nomme plus Hérode (la version 1 l'exigeait, sans alias Hérode ⇔ Herod dans K).",
+  "justification": "Le participe composé d'un verbe inergatif (« ayant dansé ») dit un processus antérieur au moment figuré, dont Salomé est l'agent ; il ne dit aucun état résultant (ONTOLOGIE_EVENTUALITES § 1.2 et § 2, ancrage antérieur). La définition demande la danse en cours. L'antériorité n'est pas une négation de la danse au moment figuré : inconnue, non écartée (D31), sous tous les sens et quel que soit l'alias. La définition d'origine (« before Herod ») est rétablie le 28/11 ; « Hérode » atteint herod par WOLF.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Oil on canvas, Lombardy, c. 1520. Salome, having danced before Herod, receives from an executioner the head of John the Baptist on a dish. Herod, seated at table, looks away. A maidservant holds a ewer.",
     "sorte": "indetermine",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -2205,7 +2180,7 @@
      "identite"
     ],
     "decision_ouverte": {
-     "question": "« danser » : 3 sens sur 4 dans WOLF atteignent dance ; « Salomé » est un nom, absent de WOLF : l'alias Salomé ⇔ Salome est écrit en K, non attesté (hypothèse d'identité). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
+     "question": "« danser » : 3 sens sur 4 dans WOLF vers dance ; « Hérode » atteint herod par WOLF ; « Salomé » est absent de WOLF, l'alias Salomé ⇔ Salome n'est pas attesté. Règle de BANCS_PHASE1 § 4.1, 2 (lemmes de la définition, sens WOLF du texte) ; statut de tous_les_sens retenu.",
      "statut_selon_l_option": {
       "tous_les_sens": "etablie_sous_hypotheses",
       "sens_fixe_par_le_contexte, alias attesté": "etablie"
@@ -2227,7 +2202,7 @@
      "identite_entre_situations"
     ],
     "decision_ouverte": {
-     "question": "« danser » : 3 sens sur 4 dans WOLF atteignent dance ; « Salomé » est un nom, absent de WOLF : l'alias Salomé ⇔ Salome est écrit en K, non attesté (hypothèse d'identité). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
+     "question": "« danser » : 3 sens sur 4 dans WOLF vers dance ; « Hérode » atteint herod par WOLF ; « Salomé » est absent de WOLF, l'alias Salomé ⇔ Salome n'est pas attesté. Règle de BANCS_PHASE1 § 4.1, 2 (lemmes de la définition, sens WOLF du texte) ; statut de tous_les_sens retenu.",
      "statut_selon_l_option": {
       "tous_les_sens": "etablie_sous_hypotheses",
       "sens_fixe_par_le_contexte, alias attesté": "etablie"
@@ -2248,14 +2223,7 @@
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens ni de l'alias : la danse est antérieure. Les variantes #3 et #4 portent leur propre décision.",
-   "statut_selon_l_option": {
-    "tous_les_sens": "inconnue",
-    "sens_fixe_par_le_contexte": "inconnue"
-   }
-  }
+  ]
  },
  {
   "id": "co-023",
@@ -2280,15 +2248,21 @@
   "langue": "en",
   "sorte": "positif",
   "description": "Apse mosaic, Rome, late thirteenth century. The Virgin sits crowned at the right hand of Christ, sharing his wide throne. Angels in white crowd the gold ground; below, the apostles stand in a row.",
-  "definition": "the Virgin, crowned, seated at the right hand of Christ",
+  "definition": "the Virgin, crowned, seated beside Christ",
   "statut_attendu": "etablie_sous_hypotheses",
   "hypotheses_attendues": [
-   "sens"
+   "sens",
+   "condition_suffisante_non_attestee"
   ],
   "connaissances_supposees": [
    {
     "sorte": "implication",
     "contenu": "le participe passé attribut d'un verbe transitif résultatif (crown%2:41:00::) dit l'état résultant de son patient (ONTOLOGIE_EVENTUALITES § 5) ; la classe du verbe n'est donnée par aucune ressource citée",
+    "attestee": false
+   },
+   {
+    "sorte": "implication",
+    "contenu": "« at the right hand of X » ⇒ « beside X » (sans réciproque)",
     "attestee": false
    }
   ],
@@ -2299,14 +2273,22 @@
   "extensions_requises": [
    "etat_reifie"
   ],
-  "justification": "Le participe passé attribut d'un verbe transitif résultatif (« sits crowned ») dit l'état résultant de son patient, la Vierge ; l'événement est antérieur, son agent n'est pas dit (ONTOLOGIE_EVENTUALITES § 5 ; FONDEMENTS_SEMANTIQUES § 3.2). La définition dit le même participe et la même posture, dont la Vierge est le porteur, et maintenant « at the right hand of », comme le texte (la version 1 disait « beside » et donnait « at the right hand of ⇔ beside » pour une équivalence, alors que ce n'est qu'une implication). Les mots du texte sont les lemmes de la définition, sauf « sits » contre « seated » : un seul sens de sit sur dix atteint le lemme seat, d'où l'hypothèse de sens (BANCS_PHASE1 § 4.1, 2, statut de tous_les_sens).",
+  "justification": "Le participe passé attribut d'un verbe transitif résultatif (« sits crowned ») dit l'état résultant de son patient, la Vierge ; l'événement est antérieur, son agent n'est pas dit (ONTOLOGIE_EVENTUALITES § 5 ; FONDEMENTS_SEMANTIQUES § 3.2). La définition (« seated beside Christ », rétablie le 28/11) demande la posture assise, que « sits » n'atteint par le lemme seat que pour un sens sur dix, et « beside », que « at the right hand of » ne donne que par une implication non attestée. Établie sous hypothèses.",
   "variantes": [
    {
     "variation": "traduction",
     "description": "Mosaïque d'abside, Rome, fin du XIIIe siècle. La Vierge siège couronnée à la droite du Christ, sur son large trône. Des anges vêtus de blanc emplissent le fond d'or ; en bas, les apôtres se tiennent en rang.",
     "sorte": "positif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "fr",
+    "decision_ouverte": {
+     "question": "« couronner » et « couronné » sont absents de WOLF : aucun lien ne part du participe. Règle de BANCS_PHASE1 § 4.1, 2 ; statut de tous_les_sens retenu.",
+     "statut_selon_l_option": {
+      "tous_les_sens (WOLF tel quel)": "inconnue",
+      "si WOLF donnait couronner → crown": "etablie_sous_hypotheses"
+     }
+    }
    },
    {
     "variation": "paraphrase",
@@ -2314,7 +2296,8 @@
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
-     "sens"
+     "sens",
+     "condition_suffisante_non_attestee"
     ]
    },
    {
@@ -2336,7 +2319,14 @@
     "description": "Apse mosaic, Rome, late thirteenth century. The Virgin sits uncrowned at the right hand of Christ; her crown lies on a cushion at her feet.",
     "sorte": "negatif",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "decision_ouverte": {
+     "question": "« uncrowned » est un antonyme morphologique, sans force négative (FONDEMENTS § 2.7, § 3.3 ; BANCS § 4.1, 3).",
+     "statut_selon_l_option": {
+      "sans incompatibilité attestée (retenu)": "inconnue",
+      "incompatibilite_attestee (crowned / uncrowned)": "ecartee"
+     }
+    }
    },
    {
     "variation": "ajout_figure_non_liee",
@@ -2344,21 +2334,11 @@
     "sorte": "positif",
     "statut_attendu": "etablie_sous_hypotheses",
     "hypotheses_attendues": [
-     "sens"
+     "sens",
+     "condition_suffisante_non_attestee"
     ]
    }
-  ],
-  "decision_ouverte": {
-   "question": "(1) La base dépend du seul pas de « sits » vers le lemme « seat » (« seated », dans la définition) : un sens de sit sur dix l'atteint ; Virgin, crowned, right hand, Christ sont les lemmes de la définition. (2) #1 (français) : « couronner » et « couronné » sont absents de WOLF, aucun lien ne part du participe. (3) #5 : « uncrowned » est un antonyme morphologique, sans force négative (FONDEMENTS § 2.7, § 3.3 ; BANCS § 4.1, 3). Règle de BANCS_PHASE1 § 4.1, 2 (« Ce que D30 dit exactement ») : un mot de la définition est un type lemme ; un lien est certain si chaque sens du mot du texte (WOLF pour le français) atteint ce lemme ; le statut retenu est celui de tous_les_sens.",
-   "statut_selon_l_option": {
-    "tous_les_sens (retenu)": "etablie_sous_hypotheses",
-    "sens_fixe_par_le_contexte": "etablie",
-    "#1, WOLF tel quel (retenu)": "inconnue",
-    "#1, si WOLF donnait couronner → crown": "etablie_sous_hypotheses",
-    "#5 sans incompatibilité attestée (retenu)": "inconnue",
-    "#5 incompatibilite_attestee (crowned / uncrowned)": "ecartee"
-   }
-  }
+  ]
  },
  {
   "id": "co-024",
@@ -2418,7 +2398,8 @@
     "description": "Fresco in the chapel of a bishop's palace, c. 1480. Saint Peter is imprisoned in a vaulted dungeon; he sleeps, chained, between two drowsy soldiers. Through a small window, a ray of light announces the coming of the angel.",
     "sorte": "contre_modele",
     "statut_attendu": "inconnue",
-    "hypotheses_attendues": []
+    "hypotheses_attendues": [],
+    "langue": "en"
    },
    {
     "variation": "paraphrase",
@@ -2465,13 +2446,6 @@
     "statut_attendu": "inconnue",
     "hypotheses_attendues": []
    }
-  ],
-  "decision_ouverte": {
-   "question": "La base ne dépend d'aucun sens ni de l'alias. La variante #3 porte sa propre décision.",
-   "statut_selon_l_option": {
-    "tous_les_sens": "inconnue",
-    "sens_fixe_par_le_contexte": "inconnue"
-   }
-  }
+  ]
  }
 ]

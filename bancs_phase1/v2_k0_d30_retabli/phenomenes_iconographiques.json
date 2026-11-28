@@ -1,0 +1,2305 @@
+[
+ {
+  "id": "pi-001",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "narration_continue",
+    "construction": "meme_personnage_deux_fois"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "gauche_droite_de_la_figure"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "coreference",
+    "construction": "designation_reprise"
+   }
+  ],
+  "pivot": {
+   "lemme": "reappear",
+   "cle_de_sens": "reappear%2:30:00::",
+   "famille_lexicale": "verb.change"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Panneau de coffre (cassone), tempera sur bois, Ferrare, vers 1490. À gauche, le jeune Tobie, guidé par l'ange Raphaël, tire de la rivière un grand poisson. À droite, dans la même campagne, le même Tobie reparaît, plus tard, de retour chez son père : il frotte du fiel du poisson les yeux de son père aveugle. Le jeune homme porte dans les deux scènes le même manteau rouge.",
+  "definition": "Tobias, accompanied by the angel, drawing a great fish out of the river and, in a later scene within the same picture, the same Tobias anointing the eyes of his blind father with the gall of the fish",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Tobie » et « Tobias » désignent le même individu (alias entre langues) ; aucune ressource consultée ne donne cet alias (pas de synset WordNet)",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "situation_referent",
+   "identite_entre_situations",
+   "relation_entre_eventualites"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 2.3 et ONTOLOGIE_EVENTUALITES § 3 : la narration continue est faite de plusieurs situations dans un même espace figuré, avec une relation « figure le même individu dans une autre situation » qui ne fusionne pas les figures. L'auteur l'affirme (« le même Tobie reparaît ») et dit la succession (« plus tard », ONTOLOGIE § 2, succession entre situations). Les mots de la définition sont ceux de la description (guide, rub, father, blind, gall, fish), en anglais par WOLF (BANCS § 4.1). Mais l'alias « Tobie » / « Tobias » n'est attesté par aucune ressource (Tobias n'a pas de synset dans WordNet) : il ne fonde qu'une hypothèse (BANCS § 4.1, FONDEMENTS § 2.7), d'où etablie_sous_hypotheses [identite]. La traduction anglaise, qui dit « Tobias », est etablie : l'écart vient de l'alias, non de la sémantique. Sans situations comme référents ni relation d'identité entre situations, le langage actuel fusionnerait les deux figures ou les laisserait d'identité inconnue (AUDIT § 2). Harmonisation (BANCS § 4.1, point 2, « Ce que D30 dit exactement ») : les mots de la description sont français, et leurs sens WOLF n'atteignent pas tous le lemme de la définition ; le lien positif n'est certain que sous tous les sens, d'où l'hypothèse de sens (option tous_les_sens retenue). Rétablissement (28/11) : la définition d'origine revient (« accompanied by the angel », « anointing »). Aucun sens de guider/guide n'atteint accompany, aucun de frotter/rub ni d'appliquer n'atteint anoint (WordNet, WOLF) : ces atomes n'ont aucun appui, d'où inconnue pour le cas et toutes ses variantes ; la décision sur l'alias n'a plus d'effet et est retirée. La correction de fond (« son père aveugle ») est gardée. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Cassone panel, tempera on wood, Ferrara, c. 1490. At left the young Tobias, guided by the angel Raphael, draws a large fish out of the river. At right, in the same countryside, the same Tobias reappears later, back at his father's house, rubbing the fish's gall on his blind father's eyes.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Sur ce panneau de coffre ferrarais, Tobie figure deux fois. On le voit d'abord, à gauche, sortir un grand poisson de la rivière sous la garde de l'ange Raphaël. Puis, à droite, rentré chez son père, il applique sur les yeux de son père aveugle le fiel de ce même poisson.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Panneau de coffre, tempera sur bois, Ferrare, vers 1490. À gauche, le jeune Tobie, guidé par l'ange Raphaël, tire de la rivière un grand poisson. À droite, un jeune homme, peut-être de nouveau Tobie, frotte de fiel les yeux d'un vieil aveugle.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Panneau de coffre, tempera sur bois, Ferrare, vers 1490. À gauche, le jeune Tobie, guidé par l'ange Raphaël, tire de la rivière un grand poisson. À droite, plus tard, le vieil aveugle, père de Tobie, frotte du fiel du poisson les yeux de son fils agenouillé.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Panneau de coffre, tempera sur bois, Ferrare, vers 1490. À gauche, le jeune Tobie, guidé par l'ange Raphaël, tire de la rivière un grand poisson. Selon un inventaire de 1598, le panneau jumeau, aujourd'hui perdu, montrait Tobie guérissant les yeux de son père.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panneau de coffre, tempera sur bois, Ferrare, vers 1490. À gauche, le jeune Tobie, guidé par l'ange Raphaël, tire de la rivière un grand poisson. À droite, le même Tobie reparaît, plus tard, de retour chez son père, et frotte du fiel du poisson les yeux de son père aveugle. Au loin, un berger garde ses moutons.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-002",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "narration_continue",
+    "construction": "meme_personnage_deux_fois"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "nombre",
+    "construction": "groupe_de_n"
+   }
+  ],
+  "pivot": {
+   "lemme": "youth",
+   "cle_de_sens": "youth%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Stained-glass roundel, Leuven, c. 1520. Two youths appear in the same landscape. At left, the prodigal son rides away from his father's farmhouse, a purse at his belt. At right, another young man, a hired swineherd in rags, kneels among the pigs and eats from their trough.",
+  "definition": "continuous narrative of the prodigal son: the son leaving his father's house and, in a later scene of the same picture, the same son reduced to herding swine",
+  "statut_attendu": "ecartee",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "situation_referent",
+   "identite_entre_situations"
+  ],
+  "justification": "NOYAU § 1 et § 4.1 : « another young man » est une distinction établie par le texte ; l'identité entre situations que la définition exige (ONTOLOGIE § 3) a donc un appui négatif dit, et la substitution qui lie le fils au porcher est fausse : ecartee pour ces référents (NOYAU § 4.4, D31). Ce n'est pas le monde clos : le refus vient d'une contrainte du texte, non du silence. Contre-modèle : deux scènes, un fils qui part, un jeune homme parmi les porcs, tout y est sauf l'identité. « Two youths » est un nombre, qui ne dit pas à lui seul que les deux figures sont deux individus (NOYAU § 1) : c'est « another » qui le dit. La définition reprend les mots de la description (ride away, farmhouse, rags, kneel among the pigs) : la variante où le même fils s'agenouille parmi les porcs est etablie sans passer par un nom d'agent (« swineherd »), qui ne donnerait qu'une connaissance typique (FONDEMENTS § 3.2). Rétablissement (28/11) : la définition d'origine revient (« leaving his father's house », « reduced to herding swine »). La variante #4 (« kneels among the pigs ») ne dit pas « herding » et passe à inconnue ; le cas reste ecartee par la distinction dite.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Médaillon de vitrail, Louvain, vers 1520. Deux jeunes gens figurent dans le même paysage. À gauche, le fils prodigue quitte à cheval la ferme de son père, une bourse à la ceinture. À droite, un autre jeune homme, un porcher loué, en haillons, s'agenouille parmi les porcs et mange dans leur auge.",
+    "sorte": "contre_modele",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Stained-glass roundel, Leuven, c. 1520. At left the prodigal son rides away from his father's farmhouse, a purse at his belt. At right kneels a second, different youth: a ragged hired hand who feeds among the swine, not the son himself.",
+    "sorte": "contre_modele",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Stained-glass roundel, Leuven, c. 1520. At left the prodigal son rides away from his father's farmhouse. At right a ragged youth, either the prodigal son again or a hired swineherd, kneels among the pigs.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Stained-glass roundel, Leuven, c. 1520. At left the prodigal son rides away from his father's farmhouse, a purse at his belt. At right, later, the same son, now in rags, kneels among the pigs and eats from their trough.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Stained-glass roundel, Leuven, c. 1520. Two youths appear in the same landscape. At left the prodigal son rides away from his father's farmhouse; no servant waves him goodbye. At right another young man, a hired swineherd in rags, kneels among the pigs.",
+    "sorte": "contre_modele",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Stained-glass roundel, Leuven, c. 1520. At left the prodigal son rides away from his father's farmhouse, on whose roof stands a stork. At right another young man, a hired swineherd in rags, kneels among the pigs.",
+    "sorte": "contre_modele",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-003",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "narration_continue",
+    "construction": "meme_personnage_deux_fois"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "contenu_d_une_eventualite",
+    "construction": "reve"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "etat_adjectival_de_stade",
+    "construction": "apposition"
+   }
+  ],
+  "pivot": {
+   "lemme": "martin",
+   "cle_de_sens": "martin%1:18:03::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "fr",
+  "sorte": "indetermine",
+  "description": "Prédelle peinte, Sienne, vers 1340. À gauche, saint Martin, à cheval, tranche son manteau et en donne la moitié à un pauvre. À droite, la nuit suivante, saint Martin, endormi, voit en songe le Christ vêtu de cette moitié de manteau.",
+  "definition": "St Martin dividing his cloak with a beggar and, in a later scene of the same picture, the same Martin, asleep, seeing in a dream Christ wearing the half of the cloak",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "situation_referent",
+   "identite_entre_situations",
+   "relation_entre_eventualites",
+   "contexte_emboite",
+   "evenement_participant",
+   "etat_reifie"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 8 et ONTOLOGIE § 6 laissent ouverte l'identité d'un personnage à travers les situations. NOYAU § 1 : deux classes ne sont pas, par là, un même individu, et ONTOLOGIE § 3 : la relation cherchée n'est ni une coréférence entre mentions d'une figure ni une distinction. Ici le texte nomme deux fois « saint Martin » sans dire que c'est le même, alors que la définition l'exige (« the same Martin »). Le contenu du rêve est un contexte ouvert par l'éventualité (FONDEMENTS § 2.5). Le mendiant est dit « mendiant » (beggar), non « pauvre » (pauper, plus général que beggar dans WordNet : le lien positif n'irait pas). Les documents ne fixant pas le statut, l'option la plus faible, inconnue, est retenue. Rétablissement (28/11) : les textes d'origine reviennent (« un pauvre », « tranche son manteau », « vêtu de », « en songe », et la négation « n'est pas endormi » de #4). « Pauvre » (pauper) n'atteint pas beggar, « songe » n'est pas dans WOLF, « dividing » n'est atteint par aucun mot du texte : inconnue sous toutes les options, et la décision sur l'identité, sans effet, est retirée (la question reste dans le fichier de questions). #4 nie un adjectif polysémique : la négation n'est que possible, inconnue. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Painted predella, Siena, c. 1340. At left, St Martin on horseback cuts his cloak in two and gives half to a beggar. At right, on the following night, St Martin, asleep, sees in a dream Christ wearing that half of the cloak.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Prédelle peinte, Sienne, vers 1340. Saint Martin y partage d'abord son manteau avec un pauvre, à gauche. Puis, la nuit suivante, saint Martin endormi rêve du Christ, qui porte la moitié du manteau.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "composition",
+    "description": "Prédelle peinte, Sienne, vers 1340. À gauche, saint Martin, à cheval, tranche son manteau et en donne la moitié à un pauvre. À droite, la nuit suivante, le même Martin reparaît, endormi : il voit en songe le Christ vêtu de cette moitié de manteau.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Prédelle peinte, Sienne, vers 1340. À gauche, saint Martin, à cheval, tranche son manteau et en donne la moitié à un pauvre. À droite, la nuit suivante, saint Martin n'est pas endormi : il veille en prière, et le Christ vêtu de la moitié du manteau lui apparaît.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Prédelle peinte, Sienne, vers 1340. À gauche, saint Martin, à cheval, tranche son manteau et en donne la moitié à un pauvre ; un écuyer le suit. À droite, la nuit suivante, saint Martin, endormi, voit en songe le Christ vêtu de cette moitié de manteau.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Prédelle peinte, Sienne, vers 1340. À gauche, saint Martin, à cheval, donne la moitié de son manteau à un pauvre ; à droite, il prie. Selon la Légende dorée, la nuit suivante, le Christ lui apparut en songe, vêtu de la moitié du manteau.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-004",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "juxtaposition_d_episodes",
+    "construction": "registres"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "au_dessus_au_dessous"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "situation_comme_referent",
+    "construction": "la_scene_nommee"
+   }
+  ],
+  "pivot": {
+   "lemme": "tier",
+   "cle_de_sens": "tier%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Carved ivory casket panel, Byzantine, eleventh century. The panel is divided into two tiers. The upper tier shows Joseph sold by his brothers to the Ishmaelite merchants. The lower tier shows the next scene of the story: Joseph before Pharaoh, interpreting the king's dreams.",
+  "definition": "the story of Joseph told in successive episodes: Joseph sold by his brothers to the merchants, followed by Joseph interpreting the dreams of Pharaoh",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "situation_referent",
+   "relation_entre_eventualites"
+  ],
+  "justification": "ONTOLOGIE § 3 et § 4 : la juxtaposition d'épisodes est faite de plusieurs situations, chacune avec son moment, et d'une relation de succession, ici dite par l'auteur des scènes figurées (« the next scene »). La définition nomme Joseph dans chaque épisode sans demander que ce soit le même individu (NOYAU § 3 : aucune identité implicite). « Ishmaelite merchants » est un sous-type intersectif de « merchants » ; les autres mots sont ceux de la définition. Prémisses de l'auteur, figurées : etablie. Il faut les situations comme référents et la succession entre situations (ONTOLOGIE § 4) : sans elles l'ordre n'est pas représentable. Rétablissement (28/11) : la définition (« successive episodes ») et les textes d'origine (« the scene that follows in the story », « the king's dreams ») reviennent ; dans le doute, la reprise « the king » et le contexte du récit sont rétablis aussi. Aucun sens de scene n'atteint episode, et « follows in the story » situe la succession dans le récit : inconnue partout. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Plaque de coffret en ivoire, Byzance, XIe siècle. Le panneau est divisé en deux registres. Le registre supérieur montre Joseph vendu par ses frères aux marchands ismaélites. Le registre inférieur montre la scène suivante du récit : Joseph devant Pharaon, interprétant les songes du roi.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Carved ivory casket panel, Byzantine, eleventh century. In the upper tier his brothers sell Joseph to Ishmaelite merchants. Beneath it, in the next scene, Joseph interprets Pharaoh's dreams before the enthroned king.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Carved ivory casket panel, Byzantine, eleventh century. The upper tier shows Joseph sold by his brothers to the Ishmaelite merchants. The lower tier shows the scene that precedes it in the carver's order: Joseph before Pharaoh, interpreting the king's dreams.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Carved ivory casket panel, Byzantine, eleventh century. The surviving upper tier shows Joseph sold by his brothers to the Ishmaelite merchants. The lower tier, sawn off and lost, is said by an old inventory to have shown Joseph before Pharaoh.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Carved ivory casket panel, Byzantine, eleventh century. The upper tier shows Joseph sold by his brothers to the Ishmaelite merchants, a camel kneeling beside them. The lower tier shows the next scene: Joseph before Pharaoh, interpreting the king's dreams.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Carved ivory casket panel, Byzantine, eleventh century. The upper tier shows Joseph sold by his brothers to the Ishmaelite merchants. The worn lower tier probably shows the next scene, Joseph before Pharaoh interpreting the king's dreams.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-005",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "juxtaposition_d_episodes",
+    "construction": "registres"
+   },
+   {
+    "famille": "definitions_classification",
+    "phenomene": "mots_sans_structure",
+    "construction": "mots_de_la_definition_sans_leurs_relations"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "au_dessus_au_dessous"
+   }
+  ],
+  "pivot": {
+   "lemme": "tier",
+   "cle_de_sens": "tier%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Miniature d'une Bible historiale, Paris, vers 1400, peinte en deux registres. Au registre supérieur, Agar et son fils Ismaël, chassés, errent dans le désert. Au registre inférieur, dans un autre épisode, un ange apparaît à Abraham auprès d'une source.",
+  "definition": "Hagar and Ishmael in the wilderness, with an angel and a spring of water",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Agar » et « Hagar » désignent le même individu (alias entre langues) ; aucune ressource consultée ne donne cet alias (pas de synset WordNet)",
+    "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Ismaël » et « Ishmael » désignent le même individu (alias entre langues) ; aucune ressource consultée ne donne cet alias (pas de synset WordNet)",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "situation_referent"
+  ],
+  "justification": "ONTOLOGIE § 4 et § 6 : la satisfaction relative à une situation n'est pas fixée, et c'est aux bancs d'en donner les cas. Chaque mot de la définition a ici un appui (Agar, Ismaël, le désert, un ange, une source), mais réparti sur deux situations (famille définitions : les mots sans leurs relations). Si la définition doit être satisfaite dans une seule scène, rien ne l'est ; l'absence d'un ange auprès d'Agar n'est pas une preuve négative (D31), d'où inconnue et non ecartee. Sur l'œuvre entière, l'alias Agar / Hagar, non attesté (BANCS § 4.1), ne donnerait qu'etablie_sous_hypotheses. Option la plus faible : inconnue. La définition dit « desert », le mot de la description : « wilderness » n'est pas un hyperonyme de desert dans WordNet. Rétablissement (28/11) : la définition d'origine revient (« wilderness », « a spring of water ») et la variante #6 d'origine remplace celle qui avait été écrite en anglais pour éviter l'alias Agar / Hagar. « Désert » atteint wilderness par 3 sens WOLF sur 4, mais rien n'appuie « of water » : inconnue sous toutes les options, et la décision sur la situation, sans effet, est retirée. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Miniature from a Bible historiale, Paris, c. 1400, painted in two registers. In the upper register Hagar and her son Ishmael, cast out, wander in the wilderness. In the lower register, in another episode, an angel appears to Abraham beside a spring.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Miniature d'une Bible historiale, Paris, vers 1400. Elle superpose deux épisodes : en haut, l'errance au désert d'Agar et d'Ismaël après leur renvoi ; en bas, l'apparition d'un ange à Abraham près d'une source.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Miniature d'une Bible historiale, Paris, vers 1400, peinte en deux registres. Au registre supérieur, Agar et son fils Ismaël, chassés, errent dans le désert, et un ange leur apparaît auprès d'une source. Au registre inférieur, Abraham offre un sacrifice.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Miniature d'une Bible historiale, Paris, vers 1400, en deux registres. Au registre supérieur, Agar et son fils Ismaël errent dans le désert. Au registre inférieur, un ange apparaît à Abraham auprès d'une source. Aucune inscription n'accompagne les scènes.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Miniature d'une Bible historiale, Paris, vers 1400, en deux registres. Au registre supérieur, Agar et son fils Ismaël errent dans le désert. Au registre inférieur, un ange apparaît à Abraham auprès d'une source, tandis qu'un serviteur garde un âne.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Miniature d'une Bible historiale, Paris, vers 1400, en deux registres. Au registre supérieur, une femme et un enfant, sans doute Agar et Ismaël, errent dans le désert. Au registre inférieur, un ange apparaît à Abraham auprès d'une source.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-006",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "representation_emboitee",
+    "construction": "tableau_dans_le_tableau"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "devant_derriere"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "posture_et_porteur",
+    "construction": "assis_ou_debout"
+   }
+  ],
+  "pivot": {
+   "lemme": "painting",
+   "cle_de_sens": "painting%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Oil on panel, Delft, c. 1660. A young woman sits at a table by the window, reading a letter. On the wall behind her hangs a framed painting of the Crucifixion, with the Virgin and St John at the foot of the cross.",
+  "definition": "a woman seated at a table reading a letter, with a painting of the Crucifixion hanging on the wall behind her",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "contexte_emboite"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 2.3 et § 2.5, ONTOLOGIE § 3 : le tableau dans le tableau est une figuration emboîtée, un chemin de contextes. La définition demande un tableau figuré (au mur, derrière la femme) et son contenu dans ce contexte emboîté ; l'auteur dit les deux, avec les mots mêmes de la définition (sit, read, letter, painting, hang, wall, behind), de sorte que chaque sens du mot atteint le même mot (NOYAU § 2, D30). etablie, avec l'extension des contextes emboîtés : le langage plat ne sépare pas « un tableau de la Crucifixion au mur » d'« une Crucifixion figurée » (AUDIT § 3.6 (4)). Rétablissement (28/11) : la définition d'origine revient (« seated »). « Seated » est un adjectif de WordNet, qu'aucun sens de sit (verbe) ni d'asseoir n'atteint : inconnue partout. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Huile sur bois, Delft, vers 1660. Une jeune femme, assise à une table près de la fenêtre, lit une lettre. Au mur, derrière elle, est accroché un tableau encadré de la Crucifixion, avec la Vierge et saint Jean au pied de la croix.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Oil on panel, Delft, c. 1660. Behind the seated young woman, who reads a letter at a table by the window, the wall displays a framed Crucifixion. The Virgin and St John stand at the foot of the cross in the little picture.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Oil on panel, Delft, c. 1660. A young woman sits at a table by the window, reading a letter, before a bare wall. The panel was long paired in a private collection with a small Crucifixion by the same hand.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Oil on panel, Delft, c. 1660. A young woman sits at a table by the window, reading a letter. On the wall behind her hangs a framed landscape with a river.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Oil on panel, Delft, c. 1660. A young woman sits at a table by the window, reading a letter, while a spaniel sleeps on the floor. On the wall behind her hangs a framed painting of the Crucifixion.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Oil on panel, Delft, c. 1660. A young woman sits at a table by the window, reading a letter. On the wall behind her, half in shadow, hangs what seems to be a painting of the Crucifixion.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-007",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "representation_emboitee",
+    "construction": "tableau_dans_le_tableau"
+   },
+   {
+    "famille": "niveaux_representation",
+    "phenomene": "autre_oeuvre",
+    "construction": "copie"
+   }
+  ],
+  "pivot": {
+   "lemme": "picture",
+   "cle_de_sens": "picture%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "fr",
+  "sorte": "indetermine",
+  "description": "Cabinet d'amateur, huile sur cuivre, Anvers, vers 1630. Deux collectionneurs examinent un globe au premier plan. Au mur du fond, parmi une vingtaine de tableaux, une copie réduite d'un Calvaire montre le Christ en croix entre les deux larrons.",
+  "definition": "Christ crucified between the two thieves",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "contexte_emboite"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 1.2 et § 2.5 : chaque contexte a son domaine, et le contenu d'une figuration emboîtée n'est pas le monde figuré de premier niveau ; ONTOLOGIE § 3 : la situation emboîtée a son propre moment. Mais aucun document ne dit si une définition de scène, qui ne nomme aucun contexte, est satisfaite par une scène figurée dans un tableau figuré. La copie (famille niveaux : une autre œuvre) ajoute que ce Calvaire est aussi celui d'une œuvre tierce. Option la plus faible : inconnue. Rétablissement (28/11) : la définition (« crucified ») et le mot « larrons » reviennent. « Larron » n'est pas dans WOLF et « en croix » n'atteint pas crucify : inconnue sous les deux options, et la décision, sans effet, est retirée. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Collector's cabinet, oil on copper, Antwerp, c. 1630. Two collectors examine a globe in the foreground. On the back wall, among some twenty pictures, a reduced copy of a Calvary shows Christ on the cross between the two thieves.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Huile sur cuivre, Anvers, vers 1630. Au premier plan d'un cabinet d'amateur, deux collectionneurs se penchent sur un globe. Parmi la vingtaine de tableaux accrochés au fond figure une petite copie d'un Calvaire : le Christ en croix entre les deux larrons.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Huile sur cuivre, Anvers, vers 1630. Le Christ est en croix entre les deux larrons. Au pied de la croix, deux collectionneurs en habit contemporain examinent un globe.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Cabinet d'amateur, huile sur cuivre, Anvers, vers 1630. Deux collectionneurs examinent un globe ; un chien est couché sous la table. Au mur du fond, une copie réduite d'un Calvaire montre le Christ en croix entre les deux larrons.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Cabinet d'amateur, huile sur cuivre, Anvers, vers 1630. Deux collectionneurs, dont aucun ne porte l'épée, examinent un globe. Au mur du fond, une copie réduite d'un Calvaire montre le Christ en croix entre les deux larrons.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Cabinet d'amateur, huile sur cuivre, Anvers, vers 1630. Deux collectionneurs examinent un globe. Au mur du fond, une petite toile, semble-t-il la copie d'un Calvaire, montre le Christ en croix entre les deux larrons.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-008",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "representation_emboitee",
+    "construction": "tapisserie_ou_decor"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "devant_derriere"
+   }
+  ],
+  "pivot": {
+   "lemme": "tapestry",
+   "cle_de_sens": "tapestry%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Illuminated page from a book of hours, Bourges, c. 1415. A duke feasts with his household at a long table covered with a white cloth. Behind them the wall of the hall is hung with a tapestry in which mounted hunters and hounds pursue a stag.",
+  "definition": "a feast in a hall whose wall, behind the diners, is hung with a tapestry of a stag hunt",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "le nom d'événement « feast » et le verbe « feast », au sens du repas de fête, ont le même type d'éventualité",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "canonisation"
+  ],
+  "extensions_requises": [
+   "contexte_emboite"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 2.3 et § 2.5 : une tapisserie figurée ouvre un contexte de figuration emboîté, où la poursuite du cerf est figurée ; la définition la demande dans ce contexte, avec la tapisserie tendue derrière le duc dans le monde figuré. La définition reprend les mots de la description (feast, pursue, hunters, stag, behind) : aucune canonisation ni inclusion n'est demandée (« pursue » n'implique pas « hunt », c'est l'inverse, et un nom d'agent ou un composé ne donnent pas l'événement : FONDEMENTS § 3.2). etablie, avec les contextes emboîtés. Rétablissement (28/11) : la définition et les textes d'origine reviennent (« a feast », « behind the diners », « a stag hunt », « festoie », « tendu de »), avec l'équivalence feast (nom) / feast (verbe), sans source (attestee false). Pursue n'atteint pas hunt (c'est l'inverse), et un nom d'agent ne donne pas l'événement : inconnue partout. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Page enluminée d'un livre d'heures, Bourges, vers 1415. Un duc festoie avec sa maison à une longue table couverte d'une nappe blanche. Derrière eux, le mur de la salle est tendu d'une tapisserie où des chasseurs à cheval et des chiens poursuivent un cerf.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Illuminated page from a book of hours, Bourges, c. 1415. The duke's feast takes place before a wall hung with a hunting tapestry. On it, mounted hunters and hounds chase a stag.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Illuminated page from a book of hours, Bourges, c. 1415. A duke feasts with his household at a long table before a plain stone wall. Mounted hunters and hounds pursue a stag along the decorated border of the page.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Illuminated page from a book of hours, Bourges, c. 1415. A duke feasts with his household at a long table. Behind them hangs a tapestry that may represent a stag hunt, though its design is barely indicated.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Illuminated page from a book of hours, Bourges, c. 1415. A duke feasts with his household at a long table while a dwarf juggles in the foreground. Behind them the wall is hung with a tapestry in which hunters and hounds pursue a stag.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Illuminated page from a book of hours, Bourges, c. 1415. A duke feasts with his household at a long table; no musicians are present. Behind them the wall is hung with a tapestry in which hunters and hounds pursue a stag.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-009",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "representation_emboitee",
+    "construction": "tapisserie_ou_decor"
+   },
+   {
+    "famille": "niveaux_representation",
+    "phenomene": "oeuvre_contre_figure",
+    "construction": "etat_de_conservation"
+   }
+  ],
+  "pivot": {
+   "lemme": "tapestry",
+   "cle_de_sens": "tapestry%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "fr",
+  "sorte": "contre_modele",
+  "description": "Tapisserie de laine et de soie, Bruxelles, vers 1530. Elle représente le Jugement de Pâris : le berger tend la pomme d'or à Vénus, devant Junon et Minerve. Les couleurs ont pâli et la bordure inférieure a été coupée.",
+  "definition": "a palace hall hung with a tapestry of the Judgement of Paris",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Pâris » et « Paris » désignent le même individu (alias entre langues)",
+    "attestee": true,
+    "source": "WordNet 3.0, synset paris%1:18:00:: (lemmes Paris, le prince troyen) ; forme française par WOLF (passage d'un mot français à un sens, implicite selon BANCS § 4.1)"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "ASSERTIONS (portées) et FONDEMENTS_SEMANTIQUES § 2.5 : que l'œuvre soit une tapisserie est dit de l'œuvre (portée oeuvre), non du figuré. La définition demande une salle figurée, une tapisserie figurée qui y est tendue, et le Jugement de Pâris dans le contexte emboîté de cette tapisserie : trois niveaux, quand le texte n'en a que deux. Rien n'est nié, et l'absence n'est pas une négation (D31) : inconnue. L'état de conservation est de l'œuvre et n'établit rien. Le langage actuel atteint déjà ce statut par la portée ; la variante de portée, etablie, demande le contexte emboîté. Rétablissement (28/11) : le texte d'origine de #3 revient (« le mur du fond est tendu d'une tapisserie »). Aucun sens WOLF de « tendre » n'atteint hang : inconnue. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Wool and silk tapestry, Brussels, c. 1530. It represents the Judgement of Paris: the shepherd hands the golden apple to Venus, before Juno and Minerva. The colours have faded and the lower border has been cut away.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Cette tenture de laine et de soie, tissée à Bruxelles vers 1530, figure Pâris remettant la pomme d'or à Vénus en présence de Junon et de Minerve. Pâlie, elle a perdu sa bordure inférieure.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Huile sur toile, Anvers, vers 1600. Dans une salle de palais, des courtisans conversent ; le mur du fond est tendu d'une tapisserie du Jugement de Pâris, où le berger tend la pomme d'or à Vénus. La toile est très usée.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Tapisserie de laine et de soie, Bruxelles, vers 1530. Elle représente le Jugement de Pâris : le berger tend la pomme d'or à Vénus, devant Junon et Minerve. Aucune marque de lissier n'est visible.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Tapisserie de laine et de soie, Bruxelles, vers 1530. Elle représente sans doute le Jugement de Pâris : un berger tend une pomme d'or à l'une de trois déesses.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Tapisserie de laine et de soie, Bruxelles, vers 1530. Elle représente le Jugement de Pâris : le berger tend la pomme d'or à Vénus, devant Junon et Minerve, et un amour vole au-dessus d'eux.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-010",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "representation_emboitee",
+    "construction": "vision_figuree"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "posture_et_porteur",
+    "construction": "assis_ou_debout"
+   }
+  ],
+  "pivot": {
+   "lemme": "vision",
+   "cle_de_sens": "vision%1:11:00::",
+   "famille_lexicale": "noun.event"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Altarpiece wing, oil on panel, Bruges, c. 1480. On the island of Patmos, St John the Evangelist sits on a rock, pen in hand, his eagle beside him. Above him, in the sky, appears his vision: a woman clothed with the sun, the moon beneath her feet.",
+  "definition": "St John the Evangelist seated on Patmos, beholding in a vision the woman clothed with the sun, the moon under her feet",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « saint Jean l'Évangéliste » et « St John the Evangelist » désignent le même individu (alias entre langues)",
+    "attestee": true,
+    "source": "WordNet 3.0, synset john%1:18:00:: (lemmes John, Saint John, St. John, John the Evangelist) ; forme française par WOLF (passage d'un mot français à un sens, implicite selon BANCS § 4.1)"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "contexte_emboite",
+   "evenement_participant"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 2.5 et AUDIT § 3.3 (4) : le contenu d'une vision est un contexte ouvert par l'éventualité de la vision ; ses référents ne sont pas ceux du monde figuré, et Jean, référent du monde figuré, est accessible depuis lui. L'auteur dit que la femme est le contenu de la vision de Jean (« his vision »), et la définition la demande dans ce même contexte, avec les mêmes mots (sit, rock, vision, clothed, sun, moon, beneath). etablie, avec un événement participant sous un contexte. Rétablissement (28/11) : la définition d'origine revient (« seated on Patmos, beholding in a vision », « under her feet »). Aucun sens de sit n'atteint l'adjectif seated, et aucun mot du texte ne donne behold : inconnue partout. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Volet de retable, huile sur bois, Bruges, vers 1480. Dans l'île de Patmos, saint Jean l'Évangéliste est assis sur un rocher, la plume à la main, son aigle près de lui. Au-dessus de lui, dans le ciel, apparaît sa vision : une femme revêtue du soleil, la lune sous ses pieds.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Altarpiece wing, oil on panel, Bruges, c. 1480. Seated on a rock on Patmos, St John the Evangelist looks up at the sky, where the painter shows his vision. A woman clothed with the sun stands there upon the moon.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Altarpiece wing, oil on panel, Bruges, c. 1480. On the island of Patmos, St John the Evangelist sits on a rock, pen in hand. The scroll on his knee bears the opening words of his vision of the woman clothed with the sun.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "extensions_requises": [
+     "contenu_d_inscription"
+    ]
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Altarpiece wing, oil on panel, Bruges, c. 1480. On Patmos, St John the Evangelist sits on a rock, writing. Above the kneeling donor at right appears the donor's own vision: a woman clothed with the sun, the moon beneath her feet.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Altarpiece wing, oil on panel, Bruges, c. 1480. On the island of Patmos, St John the Evangelist sits on a rock, pen in hand, while a ship sails past the island. Above him, in the sky, appears his vision: a woman clothed with the sun, the moon beneath her feet.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Altarpiece wing, oil on panel, Bruges, c. 1480. On the island of Patmos, St John the Evangelist sits on a rock, pen in hand. Above him a woman clothed with the sun seems to appear in the sky, perhaps as his vision.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-011",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "representation_emboitee",
+    "construction": "vision_figuree"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "negation_de_description",
+    "construction": "evenement_nie_avec_roles"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "devant_derriere"
+   }
+  ],
+  "pivot": {
+   "lemme": "apparition",
+   "cle_de_sens": "apparition%1:11:00::",
+   "famille_lexicale": "noun.event"
+  },
+  "langue": "fr",
+  "sorte": "negatif",
+  "description": "Panneau de retable, Florence, vers 1490. Saint Bernard écrit à son pupitre, dans un paysage rocheux. Derrière lui, la Vierge apparaît dans une nuée, entourée d'anges. Le saint, penché sur sa page, ne voit pas la Vierge : seul le moine qui l'accompagne lève les yeux vers elle.",
+  "definition": "St Bernard at his writing desk, seeing the Virgin appear to him",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "NOYAU § 1.1 et § 4.4 : « ne voit pas la Vierge » nie l'événement voir, d'agent Bernard et de thème la Vierge, tous deux présents, et la requête demande ce même événement avec ces rôles. Mais NOYAU § 2 (D30) : la négation n'est certaine que si chaque sens du prédicat demandé (see, très polysémique) est inclus dans chaque sens du verbe nié ; sinon elle n'est que possible et ne réfute rien. BANCS § 4.1 (2) : le statut dépend du choix du sens, et le plus prudent pour une négation est inconnue (la version 1 écrivait ecartee, l'option du sens fixé par le contexte). Qu'un autre (le moine) voie la Vierge n'est une preuve ni dans un sens ni dans l'autre. Rétablissement (28/11) : la définition (« writing desk ») et le mot « pupitre » reviennent. Aucun sens WOLF de « pupitre » n'atteint desk : la variante #3 passe à inconnue. La décision sur la négation de « voir » reste. Plus aucune variante de statut différent sous tous_les_sens.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Altarpiece panel, Florence, c. 1490. St Bernard writes at his desk in a rocky landscape. Behind him the Virgin appears in a cloud, surrounded by angels. Bent over his page, the saint does not see the Virgin: only the monk who accompanies him looks up at her.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Panneau de retable, Florence, vers 1490. Apparue dans une nuée derrière saint Bernard, la Vierge n'est pas vue de lui : le saint continue d'écrire à son pupitre, et seul son compagnon la regarde.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Panneau de retable, Florence, vers 1490. Saint Bernard écrit à son pupitre, dans un paysage rocheux. Il se retourne et voit la Vierge, qui lui apparaît dans une nuée, entourée d'anges.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "inversion_des_roles",
+    "description": "Panneau de retable, Florence, vers 1490. Saint Bernard écrit à son pupitre. Derrière lui, la Vierge apparaît dans une nuée ; les yeux baissés vers les anges, elle ne voit pas le saint.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panneau de retable, Florence, vers 1490. Saint Bernard écrit à son pupitre, où est posé un chardonneret. Derrière lui, la Vierge apparaît dans une nuée. Le saint, penché sur sa page, ne voit pas la Vierge.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Panneau de retable, Florence, vers 1490. Saint Bernard écrit à son pupitre, le dos tourné à la Vierge qui apparaît dans une nuée. Le moine qui l'accompagne, endormi, ne la voit pas.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "La négation d'un verbe polysémique (« ne voit pas ») réfute-t-elle l'événement de même prédicat et de mêmes rôles quand le contexte fixe le sens perceptif ?",
+   "statut_selon_l_option": {
+    "tous_les_sens": "inconnue",
+    "sens_fixe_par_le_contexte": "ecartee"
+   }
+  }
+ },
+ {
+  "id": "pi-012",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "representation_emboitee",
+    "construction": "vision_figuree"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "contenu_d_une_eventualite",
+    "construction": "reve"
+   },
+   {
+    "famille": "compositionnalite",
+    "phenomene": "adjectif_de_mode_d_existence",
+    "construction": "imaginaire"
+   }
+  ],
+  "pivot": {
+   "lemme": "dream",
+   "cle_de_sens": "dream%1:09:01::",
+   "famille_lexicale": "noun.cognition"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Woodcut, Augsburg, c. 1495. A knight lies asleep beneath a tree, his helmet on the grass beside him. Above him, enclosed in a cloud, is his dream: a winged dragon breathing fire.",
+  "definition": "a sleeping knight dreaming of an imaginary winged creature",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "dragon%1:18:02:: (la créature de la mythologie, crachant le feu) ⊑ mythical_monster ⊑ monster ⊑ imaginary_creature",
+    "attestee": true,
+    "source": "WordNet 3.0 : dragon%1:18:02:: @ mythical_monster%1:18:00:: @ monster%1:18:02:: @ imaginary_creature%1:18:00::"
+   },
+   {
+    "sorte": "implication",
+    "contenu": "dragon%1:05:02:: (le lézard planeur, aux membranes en forme d'ailes) ⊑ agamid ⊑ lizard ; il n'atteint pas imaginary_creature",
+    "attestee": true,
+    "source": "WordNet 3.0 : dragon%1:05:02:: @ agamid%1:05:00::"
+   },
+   {
+    "sorte": "equivalence_etablie",
+    "contenu": "« asleep » et « sleeping » ont le même type d'état (dormir), pour le même porteur",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "canonisation"
+  ],
+  "extensions_requises": [
+   "contexte_emboite",
+   "evenement_participant",
+   "modificateur_non_intersectif",
+   "etat_reifie"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 2.5 : le contenu d'un rêve est un contexte ouvert par l'éventualité, et la définition y place la créature. § 1.2 : un modificateur de mode d'existence (« imaginary ») ne retire pas le type dans le contexte où la créature existe. NOYAU § 2 (D30) et BANCS § 4.1 (2) : la conclusion dépend du sens de « dragon », dont un sens (le lézard planeur, ailé lui aussi) n'atteint pas imaginary_creature ; « breathing fire » ne fixe le sens que par une désambiguïsation non spécifiée. Le plus prudent pour un lien positif : etablie_sous_hypotheses [sens]. La définition reprend les mots « lie », « asleep », « dream » (nom) de la description : aucune canonisation n'est demandée. La négation de « asleep » (variante) porte sur un adjectif polysémique (sommeil, mort, engourdi) : seulement possible, donc inconnue. Rétablissement (28/11) : la définition d'origine revient (« a sleeping knight dreaming of »), avec l'équivalence asleep / sleeping, sans source (attestee false), et les textes d'origine de #1 et #2. « His dream » (nom) ne donne pas « dreaming » (verbe) sans une équivalence que K n'a pas : inconnue. Seule la paraphrase #2, qui dit « what he dreams of » et « the sleeping knight », reste etablie_sous_hypotheses [sens], avec sa décision.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Gravure sur bois, Augsbourg, vers 1495. Un chevalier dort sous un arbre, son heaume posé dans l'herbe près de lui. Au-dessus de lui, enfermé dans une nuée, figure son rêve : un dragon ailé crachant le feu.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Woodcut, Augsburg, c. 1495. In a cloud above the sleeping knight, whose helmet lies on the grass, the woodcutter shows what he dreams of. It is a fire-breathing winged dragon.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "decision_ouverte": {
+     "question": "Le contexte (« fire-breathing ») fixe-t-il le sens mythologique de « dragon » (D30) ?",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    }
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Woodcut, Augsburg, c. 1495. A knight lies asleep beneath a tree, his helmet on the grass beside him. Nearby, a winged dragon breathing fire crawls out of its cave.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Woodcut, Augsburg, c. 1495. The knight beneath the tree is not asleep: he keeps watch, his helmet on the grass beside him. Above him, enclosed in a cloud, is his dream of a winged dragon breathing fire.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Woodcut, Augsburg, c. 1495. A knight lies asleep beneath a tree while his horse grazes nearby. Above him, enclosed in a cloud, is his dream: a winged dragon breathing fire.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Woodcut, Augsburg, c. 1495. A knight lies asleep beneath a tree, his helmet on the grass beside him. Above him, enclosed in a cloud, is his dream: a lion crouching in a meadow.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-013",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "identification_de_personnage",
+    "construction": "par_le_nom"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "posture_et_porteur",
+    "construction": "couche"
+   }
+  ],
+  "pivot": {
+   "lemme": "jerome",
+   "cle_de_sens": "jerome%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Huile sur bois, Bruges, vers 1520. Saint Jérôme, en habit de cardinal, écrit dans son cabinet de travail. Un lion est couché à ses pieds, sur les dalles.",
+  "definition": "St Jerome writing in his study, a lion lying at his feet",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Jérôme » et « Jerome » désignent le même individu (alias entre langues)",
+    "attestee": true,
+    "source": "WordNet 3.0, synset jerome%1:18:00:: (lemmes Jerome, Saint Jerome, St. Jerome, Hieronymus) ; forme française par WOLF (passage d'un mot français à un sens, implicite selon BANCS § 4.1)"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "FONDEMENTS.md § 4.2 (la désignation : un individu est établi quand le texte nomme le référent figuré par son nom) et FONDEMENTS_SEMANTIQUES § 1.2 (sous la figuration, un nom désigne le personnage figuré). L'alias entre les deux formes du nom est écrit dans K avec sa source (BANCS § 4.1). Le lion étendu et sa position sont figurés. Toutes les prémisses sont de l'auteur : etablie, avec le langage actuel. Harmonisation (BANCS § 4.1, point 2, « Ce que D30 dit exactement ») : les mots de la description sont français, et leurs sens WOLF n'atteignent pas tous le lemme de la définition ; le lien positif n'est certain que sous tous les sens, d'où l'hypothèse de sens (option tous_les_sens retenue). La version 1 disait « cabinet de travail » et « couché », absents de WOLF ou sans sens atteignant study et lie : la description dit « bureau » et « étendu », la définition « desk ». Rétablissement (28/11) : la définition (« in his study ») et les textes d'origine (« cabinet de travail », « couché ») reviennent. Aucun sens WOLF de « cabinet » n'atteint study, et « couché » n'est pas dans WOLF : inconnue pour le texte français. La traduction anglaise (« writes in his study », « lies ») reste etablie. Plus de variante de statut différent par portée, modalité, temps ou inversion.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Oil on panel, Bruges, c. 1520. St Jerome, in cardinal's robes, writes in his study. A lion lies at his feet on the flagstones.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Huile sur bois, Bruges, vers 1520. Dans son cabinet de travail, saint Jérôme, vêtu en cardinal, est occupé à écrire, tandis qu'à ses pieds un lion repose, couché sur les dalles.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Huile sur bois, Bruges, vers 1520. Un vieillard en habit de cardinal, traditionnellement identifié comme saint Jérôme, écrit dans son cabinet. Un lion est couché à ses pieds.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Le tableau est intitulé Saint Jérôme dans son cabinet. Un vieillard en habit de cardinal y écrit à sa table ; un lion est couché à ses pieds.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Huile sur bois, Bruges, vers 1520. Saint Jérôme, en habit de cardinal, écrit dans son cabinet de travail ; un crâne et un sablier sont posés sur une étagère. Un lion est couché à ses pieds.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Huile sur bois, Bruges, vers 1520. Saint Augustin, en habit d'évêque, écrit dans son cabinet de travail. Un lion est couché à ses pieds, sur les dalles.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-014",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "identification_de_personnage",
+    "construction": "par_le_nom"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "noms_propres",
+    "construction": "nom_partiel"
+   }
+  ],
+  "pivot": {
+   "lemme": "john",
+   "cle_de_sens": "john%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "en",
+  "sorte": "indetermine",
+  "description": "Panel from a polyptych, Umbria, c. 1450. St John, a beardless young man in a red mantle, stands on rocky ground and holds an open book. A gold background closes the scene.",
+  "definition": "St John the Evangelist standing, holding a book",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "distinction_documentaire",
+    "contenu": "John the Evangelist et John the Baptist sont deux individus",
+    "attestee": true,
+    "source": "WordNet 3.0 : deux synsets d'instance, john%1:18:00:: et john_the_baptist%1:18:00::"
+   },
+   {
+    "sorte": "relation_inconnue",
+    "contenu": "« St John » est un lemme du synset de l'Évangéliste (john%1:18:00::), mais la forme est aussi celle, abrégée, du Baptiste (« St. John the Baptist ») ; aucune ressource ne dit que la forme courte désigne l'un plutôt que l'autre dans une description d'œuvre",
+    "attestee": false
+   },
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "un aigle auprès d'un saint nommé John est typiquement l'attribut de John the Evangelist",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "NOYAU § 1 et § 2 : un nom n'appuie nom(X, [Clé]) que par sa clé ou par un alias établi. WordNet range « St. John » parmi les lemmes de l'Évangéliste ; si les co-lemmes d'un synset sont des alias établis, le cas est etablie. Mais la forme courte est aussi celle du Baptiste, que WordNet distingue (distinction documentaire) : une hypothèse d'identité devrait être comparée à cette concurrente de même coût (FONDEMENTS § 5, SPEC § 4). Les documents ne disent ni si les co-lemmes valent alias, ni le statut d'une ambiguïté rapportée. Option la plus faible : inconnue.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Panneau de polyptyque, Ombrie, vers 1450. Saint Jean, jeune homme imberbe au manteau rouge, se tient debout sur un sol rocheux et tient un livre ouvert. Un fond d'or ferme la scène.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Panel from a polyptych, Umbria, c. 1450. Standing on rocky ground against a gold background, the beardless young St John, wrapped in a red mantle, holds an open book.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "composition",
+    "description": "Panel from a polyptych, Umbria, c. 1450. St John, a beardless young man in a red mantle, stands on rocky ground and holds an open book. An eagle stands at his feet.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "identite",
+     "connaissance_typique"
+    ],
+    "extensions_requises": [
+     "abduction"
+    ]
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Panel from a polyptych, Umbria, c. 1450. St John the Evangelist, a beardless young man in a red mantle, stands on rocky ground and holds an open book.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panel from a polyptych, Umbria, c. 1450. St John, a beardless young man in a red mantle, stands on rocky ground and holds an open book, while a small donor kneels at his feet.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Panel from a polyptych, Umbria, c. 1450. The young St John who stands on rocky ground, holding an open book, is not John the Evangelist: he is the Baptist as a youth.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "Un nom partiel (« St John »), lemme de l'un de deux individus documentés comme distincts et forme abrégée de l'autre, établit-il l'identité, fonde-t-il une hypothèse, ou rien sans un autre indice ?",
+   "statut_selon_l_option": {
+    "les co-lemmes d'un synset WordNet sont des alias établis": "etablie",
+    "une hypothèse d'identité, l'ambiguïté rapportée": "etablie_sous_hypotheses",
+    "rien sans désambiguïsation par un autre indice": "inconnue"
+   }
+  }
+ },
+ {
+  "id": "pi-015",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "identification_de_personnage",
+    "construction": "par_les_attributs"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "patient_contre_theme",
+    "construction": "tenue_ou_port"
+   }
+  ],
+  "pivot": {
+   "lemme": "key",
+   "cle_de_sens": "key%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Statue en bois polychrome, Souabe, vers 1500. Un vieillard barbu, pieds nus, vêtu d'un manteau jaune sur une tunique bleue, tient deux grandes clés dans la main droite et un livre fermé dans la gauche.",
+  "definition": "St Peter holding the keys",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "connaissance_typique",
+   "sens"
+  ],
+  "connaissances_supposees": [
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "un vieillard barbu qui tient une ou deux clés est typiquement saint Pierre (attribut identifiant)",
+    "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Pierre » et « Peter » désignent le même individu (alias entre langues)",
+    "attestee": true,
+    "source": "WordNet 3.0, synset peter%1:18:00:: (lemmes Peter, Simon Peter, Saint Peter, St. Peter) ; forme française par WOLF (passage d'un mot français à un sens, implicite selon BANCS § 4.1)"
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "abduction"
+  ],
+  "extensions_requises": [
+   "abduction"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 2.7 : une connaissance typique ne permet que l'abduction, sous hypothèse, défaisable ; elle n'a pas besoin d'attestation pour cela (l'attestation fonde la déduction), mais elle n'est pas attestée ici (aucune ressource consultée ; BANCS § 4.1). SPEC § 4 : l'hypothèse « ce vieillard est saint Pierre » explique des observations (un vieillard barbu, des clés qu'il tient) ; K ne contient aucune concurrente. Jamais etablie : etablie_sous_hypotheses [connaissance_typique]. L'alias Pierre / Peter sert à la variante qui nomme le saint. Harmonisation (BANCS § 4.1, point 2, « Ce que D30 dit exactement ») : les mots de la description sont français, et leurs sens WOLF n'atteignent pas tous le lemme de la définition ; le lien positif n'est certain que sous tous les sens, d'où l'hypothèse de sens (option tous_les_sens retenue). Rétablissement (28/11) : le texte d'origine de #2 revient (« serre deux grandes clés ») : aucun sens WOLF de « serrer » n'atteint hold, la variante passe à inconnue.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Polychrome wooden statue, Swabia, c. 1500. A bearded old man, barefoot, wearing a yellow mantle over a blue tunic, holds two large keys in his right hand and a closed book in his left.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique"
+    ],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Statue en bois polychrome, Souabe, vers 1500. Dans sa main droite, le vieillard barbu aux pieds nus serre deux grandes clés ; sa main gauche porte un livre fermé.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "composition",
+    "description": "Statue en bois polychrome, Souabe, vers 1500. Saint Pierre, vieillard barbu aux pieds nus, tient deux grandes clés dans la main droite et un livre fermé dans la gauche.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "extensions_requises": [
+     "aucune"
+    ],
+    "decision_ouverte": {
+     "question": "Les mots français du texte atteignent-ils les lemmes de la définition par tous leurs sens WOLF, ou le contexte fixe-t-il le sens ? (« tenir » : 33 sens WOLF sur 52 atteignent hold ; « clé » : 15 sur 17.)",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    }
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Statue en bois polychrome, Souabe, vers 1500. Un vieillard barbu, pieds nus, tient un livre fermé. Deux clés croisées sont sculptées sur le socle, aux armes du donateur.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Statue en bois polychrome, Souabe, vers 1500. Un vieillard barbu, pieds nus, tient deux grandes clés dans la main droite et un livre fermé dans la gauche. Il ne porte pas de nimbe.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique",
+     "sens"
+    ]
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Statue en bois polychrome, Souabe, vers 1500. Un vieillard barbu, pieds nus, tient dans la main droite un objet brisé, peut-être deux clés, et un livre fermé dans la gauche.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-016",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "identification_de_personnage",
+    "construction": "par_les_attributs"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "negation_atomique",
+    "construction": "verbe_nie"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "patient_contre_theme",
+    "construction": "tenue_ou_port"
+   },
+   {
+    "famille": "definitions_classification",
+    "phenomene": "attributs_identifiants",
+    "construction": "attribut_typique_d_un_seul"
+   }
+  ],
+  "pivot": {
+   "lemme": "gridiron",
+   "cle_de_sens": "gridiron%1:06:00::",
+   "famille_lexicale": "noun.artifact"
+  },
+  "langue": "en",
+  "sorte": "negatif",
+  "description": "Panel from a dismantled polyptych, Venice, c. 1460. A young deacon in a red dalmatic stands holding a book in his right hand. He does not hold the gridiron: it leans against the parapet behind him.",
+  "definition": "St Lawrence holding the gridiron",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "un diacre accompagné d'un gril est typiquement saint Laurent, et lui seul (attribut typique d'un seul)",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "NOYAU § 1.1 et § 4.4 : « he does not hold the gridiron » nie l'événement tenir, d'agent le diacre et de thème le gril, tous deux présents ; l'atome de la définition qui le demande serait faux pour ces référents, et la conjonction avec lui. Mais NOYAU § 2 (D30) : « hold » est polysémique, et la négation n'est certaine que si chaque sens du prédicat demandé est inclus dans chaque sens du verbe nié ; sinon elle est seulement possible. BANCS § 4.1 (2) : le plus prudent pour une négation est inconnue (la version 1 écrivait ecartee, l'option du sens fixé). L'identification par l'attribut, une hypothèse typique (FONDEMENTS § 2.7), ne relève pas l'atome nié. Rétablissement (28/11) : le texte d'origine de #2 revient (« carries only a book ») ; son statut ne change pas.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Panneau d'un polyptyque démembré, Venise, vers 1460. Un jeune diacre en dalmatique rouge se tient debout, un livre dans la main droite. Il ne tient pas le gril : celui-ci est appuyé contre le parapet derrière lui.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Panel from a dismantled polyptych, Venice, c. 1460. The gridiron is not held by the young deacon in the red dalmatic, who carries only a book. It leans against the parapet at his back.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Panel from a dismantled polyptych, Venice, c. 1460. A young deacon in a red dalmatic stands holding a book in his right hand and the gridiron in his left.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique"
+    ],
+    "extensions_requises": [
+     "abduction"
+    ]
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Panel from a dismantled polyptych, Venice, c. 1460. A young deacon in a red dalmatic stands with a book. Beside him an angel, who does not hold the gridiron, points to it where it leans against the parapet.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Panel from a dismantled polyptych, Venice, c. 1460. A young deacon in a red dalmatic stands holding a book; a small donor kneels at lower left. He does not hold the gridiron, which leans against the parapet behind him.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Panel from a dismantled polyptych, Venice, c. 1460. There is no landscape: a young deacon in a red dalmatic stands against a gold ground, holding a book. He does not hold the gridiron, which leans against the parapet behind him.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "La négation d'un verbe polysémique (« does not hold ») réfute-t-elle l'événement de même prédicat et de mêmes rôles quand le contexte fixe le sens de tenir en main ?",
+   "statut_selon_l_option": {
+    "tous_les_sens": "inconnue",
+    "sens_fixe_par_le_contexte": "ecartee"
+   }
+  }
+ },
+ {
+  "id": "pi-017",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "identification_de_personnage",
+    "construction": "par_une_inscription"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "contenu_d_une_eventualite",
+    "construction": "inscription"
+   },
+   {
+    "famille": "reference_quantification",
+    "phenomene": "noms_propres",
+    "construction": "alias_traduit"
+   }
+  ],
+  "pivot": {
+   "lemme": "inscribe",
+   "cle_de_sens": "inscribe%2:32:03::",
+   "famille_lexicale": "verb.communication"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Vitrail, Chartres, vers 1220. Un évêque mitré, la crosse à la main, bénit de la main droite. Au-dessous de lui, une banderole porte son nom, inscrit en lettres blanches : S. NICOLAVS.",
+  "definition": "St Nicholas, as a bishop, giving a blessing",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Nicolaus (latin, ici S. NICOLAVS) » et « Nicholas » désignent le même individu (alias entre langues) ; aucune ressource consultée ne donne cet alias (pas de synset WordNet)",
+    "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Nicolas » et « Nicholas » désignent le même individu (alias entre langues)",
+    "attestee": true,
+    "source": "WordNet 3.0, synset nicholas%1:18:00:: (lemmes Nicholas, Saint Nicholas, St. Nicholas) ; forme française par WOLF (passage d'un mot français à un sens, implicite selon BANCS § 4.1)"
+   },
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "une inscription nominale portée par une banderole voisine d'une figure nomme ordinairement cette figure",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "contenu_d_inscription"
+  ],
+  "justification": "FONDEMENTS.md § 4.2 (la désignation par le nom) : l'auteur dit que l'inscription est le nom de l'évêque (« son nom »), une assertion de l'auteur sur la figure ; mais la forme de ce nom n'est donnée que par le contenu de l'inscription (contenu_d_inscription, BANCS § 4.1), et elle est latine. L'alias Nicolaus / Nicholas n'est attesté par aucune ressource (le synset nicholas%1:18:00:: n'a pas la forme latine) : une hypothèse (BANCS § 4.1, FONDEMENTS § 2.7), d'où etablie_sous_hypotheses [identite] (la version 1 écrivait etablie, en tenant l'alias pour établi). Sans la phrase de l'auteur qui rattache l'inscription à la figure, il faudrait de plus une hypothèse typique (variante de portée). Harmonisation (BANCS § 4.1, point 2, « Ce que D30 dit exactement ») : les mots de la description sont français, et leurs sens WOLF n'atteignent pas tous le lemme de la définition ; le lien positif n'est certain que sous tous les sens, d'où l'hypothèse de sens (option tous_les_sens retenue). La définition ne dit plus « mitred » (« mitré » n'est pas dans WOLF). Rétablissement (28/11) : la définition d'origine revient (« giving a blessing »). Le texte dit « bénit » ou « blesses » : le passage du verbe à la locution nominale demande une équivalence que K n'a pas, d'où inconnue partout ; la décision sur l'alias latin, sans effet, est retirée. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Stained-glass window, Chartres, c. 1220. A mitred bishop, crozier in hand, blesses with his right hand. Below him a scroll bears his name, inscribed in white letters: S. NICOLAVS.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Vitrail, Chartres, vers 1220. Le nom de l'évêque mitré qui bénit, S. NICOLAVS, est inscrit en lettres blanches sur la banderole placée sous lui.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Vitrail, Chartres, vers 1220. Un évêque mitré, la crosse à la main, bénit de la main droite. Au-dessous de lui, une banderole porte, en lettres blanches, l'inscription S. NICOLAVS.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Vitrail, Chartres, vers 1220. Un évêque mitré, la crosse à la main, bénit de la main droite. Une étiquette fixée au XIXe siècle par un restaurateur sur la barlotière le désigne comme saint Nicolas.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Vitrail, Chartres, vers 1220. Un évêque mitré bénit de la main droite ; à sa gauche, trois enfants sortent d'un saloir. Au-dessous de lui, une banderole porte son nom, inscrit en lettres blanches : S. NICOLAVS.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Vitrail, Chartres, vers 1220. Un évêque mitré, la crosse à la main, bénit de la main droite. La banderole au-dessous de lui porte son nom, à demi effacé, qui pourrait se lire S. NICOLAVS.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-018",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "identification_de_personnage",
+    "construction": "par_une_inscription"
+   },
+   {
+    "famille": "niveaux_representation",
+    "phenomene": "oeuvre_contre_figure",
+    "construction": "inscription_sur_l_oeuvre"
+   }
+  ],
+  "pivot": {
+   "lemme": "inscribe",
+   "cle_de_sens": "inscribe%2:32:03::",
+   "famille_lexicale": "verb.communication"
+  },
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Engraving, Antwerp, c. 1600. An old man in a hooded cloak reads a book by candlelight at a bare table. Inscribed in the plate at lower left: HIERONYMUS WIERIX FECIT.",
+  "definition": "St Jerome reading by candlelight",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "« Hieronymus » et « Jerome » sont deux noms du même individu",
+    "attestee": true,
+    "source": "WordNet 3.0, synset jerome%1:18:00:: (lemmes Jerome, Saint Jerome, Hieronymus, Eusebius Hieronymus)"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "ASSERTIONS (portées oeuvre et histoire) et FONDEMENTS_SEMANTIQUES § 2.5 : l'inscription est dans la planche, de portée oeuvre, et nomme le graveur (« fecit ») ; elle ne nomme pas le vieillard figuré. NOYAU § 1 : un nom vaut pour l'entité qu'il nomme, et seulement elle. Le nom « Hieronymus », alias attesté de Jerome, n'est donc le nom d'aucun référent figuré : inconnue. Contre-modèle : le nom de Jérôme et un vieillard qui lit à la chandelle sont là, mais le nom n'est pas celui de la figure. (« Hieronymus » est ici aussi le prénom d'un autre individu, le graveur : l'alias porte sur des noms, non sur des individus, et n'est pas en cause.) Rétablissement (28/11) : le texte d'origine de #2 revient (« by the light of a candle ») ; son statut ne change pas.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Gravure, Anvers, vers 1600. Un vieillard au manteau à capuchon lit un livre à la lueur d'une chandelle, à une table nue. Inscrit dans la planche, en bas à gauche : HIERONYMUS WIERIX FECIT.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Engraving, Antwerp, c. 1600. The plate is signed at lower left HIERONYMUS WIERIX FECIT. Above, an old man in a hooded cloak reads by the light of a candle at a bare table.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Engraving, Antwerp, c. 1600. An old man in a hooded cloak, whom the inscription on the wall behind him names as S. HIERONYMUS, reads a book by candlelight at a bare table.",
+    "sorte": "positif",
+    "statut_attendu": "etablie",
+    "hypotheses_attendues": [],
+    "extensions_requises": [
+     "contenu_d_inscription"
+    ]
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Engraving, Antwerp, c. 1600. An old man in a hooded cloak reads a book by candlelight at a table on which lies a skull. Inscribed in the plate at lower left: HIERONYMUS WIERIX FECIT.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Engraving, Antwerp, c. 1600. An old man in a hooded cloak reads a book by candlelight; no lion is visible. Inscribed in the plate at lower left: HIERONYMUS WIERIX FECIT.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Engraving, Antwerp, c. 1600. An old man in a hooded cloak reads a book by candlelight. The inscription at lower left, HIERONYMUS WIERIX FECIT, may also have been meant to name the reader.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-019",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "niveaux_de_signification",
+    "construction": "iconologique"
+   },
+   {
+    "famille": "definitions_classification",
+    "phenomene": "definition_structure_complete",
+    "construction": "periphrase_definitionnelle"
+   }
+  ],
+  "pivot": {
+   "lemme": "transience",
+   "cle_de_sens": "transience%1:07:00::",
+   "famille_lexicale": "noun.attribute"
+  },
+  "langue": "fr",
+  "sorte": "positif",
+  "description": "Nature morte, huile sur bois, Leyde, vers 1640. Sur une table de pierre sont posés un crâne, un sablier, une bougie éteinte et un luth aux cordes rompues. Le peintre fait de ces objets autant de signes de la fugacité de la vie humaine.",
+  "definition": "still life whose objects, among them a skull and an hourglass, signify the transience of human life",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "referent_conceptuel"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 2.1 (un concept est signifié par un individu figuré, non présent dans l'image) et AUDIT § 3.7 (4) : il faut un référent conceptuel et une relation de signification. L'auteur énonce lui-même le niveau iconologique, avec le verbe de la définition (« signifient ») : la version 1 disait « le peintre fait de ces objets autant de signes de », dont le passage au verbe demandait une équivalence absente de K (§ 3.2). BANCS § 4.1 (2), D30 : les mots du texte sont français, et leurs sens WOLF n'atteignent pas tous le lemme de la définition (« signifier » : 4 sens sur 15 atteignent signify ; « brièveté » : 1 sur 2 atteint transience ; « crâne » : 1 sur 2 ; « sablier » : 1 sur 2). D'où etablie_sous_hypotheses [sens] (tous_les_sens) ; etablie si le contexte fixe les sens. « Fugacité », de la version 1, n'est pas dans WOLF : il ne donnait aucun appui. La définition est une périphrase de « vanité », satisfaite par sa structure. Rétablissement (28/11) : la définition (« still life whose objects ») et les textes d'origine reviennent (« le peintre fait de ces objets autant de signes de », « fugacité », « nature morte »), sauf la source fictive de #3 (correction demandée par la relecture). « Fugacité » et « nature morte » ne sont pas dans WOLF, et la locution n'a pas d'équivalence dans K : inconnue partout. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Still life, oil on panel, Leiden, c. 1640. On a stone table lie a skull, an hourglass, an extinguished candle and a lute with broken strings. The painter makes each of these objects a sign of the transience of human life.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Nature morte, huile sur bois, Leyde, vers 1640. Crâne, sablier, bougie éteinte et luth aux cordes rompues, disposés sur une table de pierre, signifient ici la fugacité de la vie humaine.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Nature morte, huile sur bois, Leyde, vers 1640. Sur une table de pierre sont posés un crâne, un sablier, une bougie éteinte et un luth. Selon le catalogue d'une vente de 1898, ces objets signifient la fugacité de la vie humaine.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Nature morte, huile sur bois, Leyde, vers 1640. Sur une table de pierre sont posés un crâne, un sablier, une bougie éteinte et un luth. Ces objets évoquent peut-être la fugacité de la vie humaine.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Nature morte, huile sur bois, Leyde, vers 1640. Sur une table de pierre sont posés un crâne, un sablier, une bougie éteinte et un luth. Ces objets ne sont pas ici des signes de la fugacité de la vie : le peintre inventorie le cabinet d'un médecin.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Nature morte, huile sur bois, Leyde, vers 1640. Sur une table de pierre sont posés un crâne, un sablier, une bougie éteinte et un luth ; un citron à demi pelé pend du bord. Le peintre fait de ces objets autant de signes de la fugacité de la vie humaine.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-020",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "niveaux_de_signification",
+    "construction": "iconologique"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "resultat_d_un_evenement_accompli",
+    "construction": "corps_ou_objet_resultant"
+   }
+  ],
+  "pivot": {
+   "lemme": "skull",
+   "cle_de_sens": "skull%1:08:00::",
+   "famille_lexicale": "noun.body"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Oil on canvas, Haarlem, c. 1630. On a stone ledge lie a closed book and a skull, beside a candle that has just been snuffed out, a thread of smoke still rising from its wick.",
+  "definition": "objects signifying the transience of life: a skull beside an extinguished candle",
+  "statut_attendu": "etablie_sous_hypotheses",
+  "hypotheses_attendues": [
+   "connaissance_typique",
+   "condition_suffisante_non_attestee"
+  ],
+  "connaissances_supposees": [
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "un crâne à côté d'une bougie éteinte signifie typiquement la brièveté de la vie (vanité)",
+    "attestee": false
+   },
+   {
+    "sorte": "implication",
+    "contenu": "snuff out, accompli ⇒ la chandelle est éteinte (extinguished, état résultant), après l'événement",
+    "attestee": false
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "deduction",
+   "abduction"
+  ],
+  "extensions_requises": [
+   "referent_conceptuel",
+   "abduction",
+   "etat_reifie",
+   "ancrage_temporel"
+  ],
+  "justification": "SPEC § 4 et FONDEMENTS_SEMANTIQUES § 2.7 et § 5 : sans énoncé de l'auteur, la signification des objets est une explication abduite d'une connaissance typique (non attestée : aucune ressource consultée), qui explique des objets observés (le crâne, la bougie éteinte, leur voisinage) ; K ne contient aucune concurrente. Jamais etablie : etablie_sous_hypotheses [connaissance_typique]. La version 1 opposait une « concurrente » (les attributs d'un saint pénitent absent) écrite pour le cas, sans ressource, et qui n'expliquait pas les mêmes objets : elle est retirée, et le statut passe d'inconnue à etablie_sous_hypotheses. La relation « beside », que la définition demande et que la version 1 ne disait pas, est maintenant dite. Les mots anglais sont ceux de la définition (skull, extinguished, candle, beside) : liens certains (D30, même lemme). Rétablissement (28/11) : le pas lexical d'origine revient (« a candle that has just been snuffed out », « qu'on vient de souffler », « put out », « offers as emblems of »), avec l'implication snuff out ⇒ éteinte, sans source (attestee false). La relation « beside », correction de fond, est gardée. L'adjectif « extinguished » de WordNet a le seul sens « destroyed », et un verbe n'atteint pas un adjectif : le lien ne passe que par l'implication non attestée, d'où etablie_sous_hypotheses [connaissance_typique, condition_suffisante_non_attestee]. « Souffler » (WOLF) et « put out » ne sont pas « snuff out » : #1 et #2 sont inconnue ; #3 (« offers as emblems ») aussi.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Huile sur toile, Haarlem, vers 1630. Sur un rebord de pierre reposent un livre fermé et un crâne, à côté d'une chandelle qu'on vient de souffler, dont la mèche fume encore.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Oil on canvas, Haarlem, c. 1630. A closed book and a skull, beside a candle whose flame has just been put out, its wick still smoking, are set on a stone ledge.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "composition",
+    "description": "Oil on canvas, Haarlem, c. 1630. On a stone ledge lie a closed book and a skull beside a candle just snuffed out, which the painter offers as emblems of the transience of life.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Oil on canvas, Haarlem, c. 1630. On a stone ledge lie a closed book and a skull beside a candle just snuffed out. The frame, added in the nineteenth century, bears the motto MEMENTO MORI.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique",
+     "condition_suffisante_non_attestee"
+    ]
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Oil on canvas, Haarlem, c. 1630. On a stone ledge lie a closed book, on which a fly has settled, and a skull beside a candle that has just been snuffed out.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "connaissance_typique",
+     "condition_suffisante_non_attestee"
+    ]
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Oil on canvas, Haarlem, c. 1630. On a stone ledge lie a skull and a closed book beside a burning candle, which a hand is about to snuff out.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "extensions_requises": [
+     "ancrage_temporel"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "pi-021",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "niveaux_de_signification",
+    "construction": "preiconographique"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "patient_contre_theme",
+    "construction": "tenue_ou_port"
+   },
+   {
+    "famille": "evenements_etats",
+    "phenomene": "resultat_d_un_evenement_accompli",
+    "construction": "corps_ou_objet_resultant"
+   }
+  ],
+  "pivot": {
+   "lemme": "judith",
+   "cle_de_sens": "judith%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "en",
+  "sorte": "positif",
+  "description": "Oil on canvas, Bologna, c. 1620. In Holofernes' tent, Judith stands with the sword still in her right hand; with her left she holds up his severed head by the hair. Her maidservant holds open a sack.",
+  "definition": "a woman holding a sword in one hand and a severed head in the other",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "implication",
+    "contenu": "judith%1:18:00:: (l'héroïne juive) ⊑ heroine ⊑ woman",
+    "attestee": true,
+    "source": "WordNet 3.0 : judith%1:18:00:: @i heroine%1:18:00:: @ woman%1:18:00::"
+   },
+   {
+    "sorte": "implication",
+    "contenu": "judith%1:10:00:: (le livre apocryphe) n'atteint pas woman",
+    "attestee": true,
+    "source": "WordNet 3.0 : judith%1:10:00:: (noun.communication), sans hyperonyme vers woman"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "FONDEMENTS_SEMANTIQUES § 1.2 et NOYAU § 2 : un lien positif va d'un mot du texte vers le type lemme de la définition. Le niveau préiconographique (« a woman ») est impliqué par le niveau iconographique (« Judith ») par une inclusion de WordNet (@i heroine @ woman), non par une abduction : c'est le pas que le cas teste, et il est gardé. Mais « Judith » a aussi le sens du livre (judith%1:10:00::), qui n'atteint pas woman : D30 (BANCS § 4.1, point 2) donne etablie_sous_hypotheses [sens] ; la version 1 écrivait etablie. Les autres mots (hold, sword, head) sont les mêmes lemmes des deux côtés. La version 1 demandait aussi « a severed head » : ce pas n'était pas testé, et aucun mot français de WOLF n'atteint sever (trancher, couper) ; la définition demande « a head ». La négation de « hold » (variante) n'est que possible : inconnue. Rétablissement (28/11) : la définition (« a severed head ») et les textes d'origine reviennent (« stands with the sword still in her right hand », « holds up », « grips », « brandit », « tranchée »), avec la composition « objet résultant ». Rien ne dit que Judith tient l'épée (« with the sword in her hand », « grip » n'atteint pas hold) : inconnue partout, quel que soit le sens de « Judith ». Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Huile sur toile, Bologne, vers 1620. Dans la tente d'Holopherne, Judith se tient debout, l'épée encore dans la main droite ; de la gauche, elle brandit par les cheveux sa tête tranchée. Sa servante tient un sac ouvert.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Oil on canvas, Bologna, c. 1620. Holofernes' severed head is held up by the hair in Judith's left hand, while her right hand still grips the sword. Her maidservant holds open a sack.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_temps",
+    "description": "Oil on canvas, Bologna, c. 1620. In Holofernes' tent, Judith raises her sword over the sleeping general, about to strike. Her maidservant holds open a sack.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "extensions_requises": [
+     "ancrage_temporel"
+    ]
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Oil on canvas, Bologna, c. 1620. In Holofernes' tent, Judith stands with the sword in her right hand, while her maidservant holds up his severed head by the hair.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Oil on canvas, Bologna, c. 1620. In Holofernes' tent, Judith stands with the sword still in her right hand; with her left she holds up his severed head by the hair. Outside, a guard sleeps.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Oil on canvas, Bologna, c. 1620. In Holofernes' tent, Judith stands with the sword still in her right hand. She does not hold his severed head, which already lies in the sack her maidservant holds open.",
+    "sorte": "negatif",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-022",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "niveaux_de_signification",
+    "construction": "preiconographique"
+   },
+   {
+    "famille": "definitions_classification",
+    "phenomene": "definition_partielle",
+    "construction": "indices_insuffisants"
+   },
+   {
+    "famille": "structures_argumentales",
+    "phenomene": "patient_contre_theme",
+    "construction": "tenue_ou_port"
+   }
+  ],
+  "pivot": {
+   "lemme": "woman",
+   "cle_de_sens": "woman%1:18:00::",
+   "famille_lexicale": "noun.person"
+  },
+  "langue": "fr",
+  "sorte": "indetermine",
+  "description": "Dessin à la plume et lavis brun, Venise, vers 1560. Une jeune femme richement vêtue tient par les cheveux une tête d'homme coupée. Elle détourne le regard ; le fond n'est qu'esquissé.",
+  "definition": "Judith holding the head of Holofernes",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "une femme tenant une tête d'homme coupée est typiquement Judith avec la tête d'Holopherne ; une épée et une servante portant un sac sont des indices propres à Judith",
+    "attestee": false
+   },
+   {
+    "sorte": "connaissance_typique",
+    "contenu": "une femme tenant une tête d'homme coupée est typiquement Salomé avec la tête de Jean-Baptiste ; un plat est un indice propre à Salomé",
+    "attestee": false
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Holopherne » et « Holofernes » désignent le même individu (alias entre langues)",
+    "attestee": true,
+    "source": "WordNet 3.0, synset holofernes%1:18:00:: (lemmes Holofernes) ; forme française par WOLF (passage d'un mot français à un sens, implicite selon BANCS § 4.1)"
+   }
+  ],
+  "operations_requises": [
+   "lecture",
+   "abduction"
+  ],
+  "extensions_requises": [
+   "abduction"
+  ],
+  "justification": "SPEC § 4 : deux explications de même coût (connaissances typiques, coût 2) couvrent exactement les mêmes observations (une femme, une tête d'homme coupée tenue par les cheveux) et conduisent à des notations différentes : l'ambiguïté est rapportée, jamais tranchée en silence. Les deux connaissances ne sont pas attestées (aucune ressource consultée, BANCS § 4.1). Les indices sont insuffisants (famille définitions). Le statut qui suit une ambiguïté rapportée n'est pas fixé : option la plus faible, inconnue. L'alias Holopherne / Holofernes sert à la variante qui nomme les personnages. Rétablissement (28/11) : la structure d'origine des connaissances typiques revient (« une tête d'homme coupée »). « Coupée » n'atteint pas sever dans WOLF : l'appariement de #3 n'est que partiel, et aucun seuil n'est fixé (SPEC § 3.2), d'où inconnue.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Pen and brown wash drawing, Venice, c. 1560. A richly dressed young woman holds a man's severed head by the hair. She looks away; the background is only sketched.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Dessin à la plume et lavis brun, Venise, vers 1560. C'est par les cheveux qu'une jeune femme aux riches vêtements tient la tête coupée d'un homme, en détournant les yeux.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "composition",
+    "description": "Dessin à la plume et lavis brun, Venise, vers 1560. Une jeune femme richement vêtue, une épée dans la main droite, tient de la gauche une tête d'homme coupée ; derrière elle, une servante ouvre un sac.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_participant",
+    "description": "Dessin à la plume et lavis brun, Venise, vers 1560. Judith, richement vêtue, tient par les cheveux la tête coupée d'Holopherne. Elle détourne le regard.",
+    "sorte": "positif",
+    "statut_attendu": "etablie_sous_hypotheses",
+    "hypotheses_attendues": [
+     "sens"
+    ],
+    "extensions_requises": [
+     "aucune"
+    ],
+    "decision_ouverte": {
+     "question": "Les mots français du texte atteignent-ils les lemmes de la définition par tous leurs sens WOLF, ou le contexte fixe-t-il le sens ? (« tenir » : 33 sens WOLF sur 52 atteignent hold ; « tête » : 28 sur 34.)",
+     "statut_selon_l_option": {
+      "tous_les_sens": "etablie_sous_hypotheses",
+      "sens_fixe_par_le_contexte": "etablie"
+     }
+    }
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Dessin à la plume et lavis brun, Venise, vers 1560. Une jeune femme richement vêtue tient par les cheveux une tête d'homme coupée ; un petit chien dort à ses pieds.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Dessin à la plume et lavis brun, Venise, vers 1560. Le montage porte, d'une main du XVIIIe siècle, le titre Judith. Une jeune femme y tient par les cheveux une tête d'homme coupée.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Dessin à la plume et lavis brun, Venise, vers 1560. La jeune femme richement vêtue qui tient par les cheveux une tête d'homme coupée n'est pas Judith : c'est Salomé.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   }
+  ],
+  "decision_ouverte": {
+   "question": "Une description préiconographique que deux connaissances typiques de même coût expliquent (Judith, Salomé), dont une seule conduit à la définition : etablie_sous_hypotheses avec l'ambiguïté rapportée, ou inconnue ?",
+   "statut_selon_l_option": {
+    "hypothèse retenue, concurrente rapportée": "etablie_sous_hypotheses",
+    "ambiguïté sans conclusion": "inconnue"
+   }
+  }
+ },
+ {
+  "id": "pi-023",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "evenement_historique_contre_figure",
+    "construction": "lieu_reel_contre_lieu_figure"
+   },
+   {
+    "famille": "niveaux_representation",
+    "phenomene": "histoire_contre_figure",
+    "construction": "attribution"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "devant_derriere"
+   }
+  ],
+  "pivot": {
+   "lemme": "venice",
+   "cle_de_sens": "venice%1:15:00::",
+   "famille_lexicale": "noun.location"
+  },
+  "langue": "en",
+  "sorte": "contre_modele",
+  "description": "Altarpiece, oil on panel, attributed to Giovanni Bellini, c. 1505. Painted for the church of San Zaccaria in Venice, where it still hangs, it shows the Virgin enthroned with the Child among four saints. Behind the throne glitters the gold mosaic of a painted apse.",
+  "definition": "the Virgin enthroned with the Child, a view of Venice in the background",
+  "statut_attendu": "inconnue",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Venise » et « Venice » désignent le même individu (alias entre langues)",
+    "attestee": true,
+    "source": "WordNet 3.0, synset venice%1:15:00:: (lemmes Venice, Venezia) ; forme française par WOLF (passage d'un mot français à un sens, implicite selon BANCS § 4.1)"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "ASSERTIONS (portée histoire) et FONDEMENTS_SEMANTIQUES § 1.2 : le lieu réel de l'œuvre (Venise, où elle fut peinte et se trouve) est de son histoire ; les faits du monde réel ne sont pas importés dans la scène, et le lieu figuré est une abside peinte. Rien ne dit que le fond figuré montre Venise, rien ne le nie : inconnue (D31). L'attribution est de l'histoire et n'établit rien. Contre-modèle : la Vierge, l'Enfant, un fond et Venise sont dans le texte, mais Venise n'y est pas un lieu figuré. L'alias Venise / Venice sert à la traduction. Rétablissement (28/11) : le texte d'origine de #3 revient (sans « in the background ») : rien ne dit que la vue de Venise est au fond, inconnue. Plus aucune variante de statut différent.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Retable, huile sur bois, attribué à Giovanni Bellini, vers 1505. Peint pour l'église San Zaccaria de Venise, où il se trouve toujours, il montre la Vierge trônant avec l'Enfant entre quatre saints. Derrière le trône scintille la mosaïque d'or d'une abside peinte.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": [],
+    "langue": "fr"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Altarpiece, oil on panel, attributed to Giovanni Bellini, c. 1505. The panel, which still hangs in San Zaccaria in Venice, the church it was painted for, shows the enthroned Virgin and Child among four saints before a painted apse.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Altarpiece, oil on panel, attributed to Giovanni Bellini, c. 1505. It shows the Virgin enthroned with the Child among four saints. Behind the throne an arch opens onto a view of Venice, with its domes and the lagoon.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Altarpiece, oil on panel, attributed to Giovanni Bellini, c. 1505. Painted for San Zaccaria in Venice, it shows the Virgin enthroned with the Child among four saints, while an angel plays the viol at the foot of the throne.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_negation_non_liee",
+    "description": "Altarpiece, oil on panel, attributed to Giovanni Bellini, c. 1505. Painted for San Zaccaria in Venice, it shows the Virgin enthroned with the Child among four saints. No donor is portrayed.",
+    "sorte": "contre_modele",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Altarpiece, oil on panel, attributed to Giovanni Bellini, c. 1505. It shows the Virgin enthroned with the Child among four saints. Through an arch behind the throne a distant city, possibly Venice, is glimpsed.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ },
+ {
+  "id": "pi-024",
+  "famille": "phenomenes_iconographiques",
+  "phenomenes": [
+   {
+    "famille": "phenomenes_iconographiques",
+    "phenomene": "evenement_historique_contre_figure",
+    "construction": "lieu_reel_contre_lieu_figure"
+   },
+   {
+    "famille": "modalite_negation_contextes",
+    "phenomene": "modalite",
+    "construction": "traditionnellement"
+   },
+   {
+    "famille": "espace_partie_temps",
+    "phenomene": "position_relative",
+    "construction": "devant_derriere"
+   }
+  ],
+  "pivot": {
+   "lemme": "alexandria",
+   "cle_de_sens": "alexandria%1:15:00::",
+   "famille_lexicale": "noun.location"
+  },
+  "langue": "fr",
+  "sorte": "negatif",
+  "description": "Grande toile peinte pour la Scuola Grande di San Marco, Venise, vers 1505. Saint Marc prêche, debout sur une estrade, devant une foule d'hommes et de femmes enturbannés. La ville qui s'étend derrière lui n'est pas Alexandrie, où la tradition situe l'épisode : c'est Venise, reconnaissable au campanile et aux coupoles de la basilique.",
+  "definition": "St Mark preaching, the city of Alexandria rising behind him",
+  "statut_attendu": "ecartee",
+  "hypotheses_attendues": [],
+  "connaissances_supposees": [
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Alexandrie » et « Alexandria » désignent le même individu (alias entre langues)",
+    "attestee": true,
+    "source": "WordNet 3.0, synset alexandria%1:15:00:: (lemmes Alexandria, El Iskandriyah) ; forme française par WOLF (passage d'un mot français à un sens, implicite selon BANCS § 4.1)"
+   },
+   {
+    "sorte": "identite_documentaire",
+    "contenu": "les noms « Marc » et « Mark » désignent le même individu (alias entre langues)",
+    "attestee": true,
+    "source": "WordNet 3.0, synset mark%1:18:01:: (lemmes Mark, Saint Mark, St. Mark) ; forme française par WOLF (passage d'un mot français à un sens, implicite selon BANCS § 4.1)"
+   }
+  ],
+  "operations_requises": [
+   "lecture"
+  ],
+  "extensions_requises": [
+   "aucune"
+  ],
+  "justification": "NOYAU § 1.1 (un nom nié d'une entité présente est un appui négatif de nom(X, …) pour sa classe ; une clé de nom n'a pas de sens, et la négation ne dépend d'aucun choix de sens, D24) et § 4.4 : la ville figurée derrière Marc est présente, et l'auteur nie qu'elle soit Alexandrie ; par l'alias écrit dans K, la substitution qui lie la ville de la définition à cette ville est fausse : ecartee pour ces référents (D31). Le lieu de l'épisode selon la tradition est d'un autre contexte (modalité traditionnelle) et n'appuie rien dans le figuré (FONDEMENTS_SEMANTIQUES § 2.5) : le lieu réel de l'événement n'est pas le lieu figuré. Rétablissement (28/11) : la définition d'origine revient (« rising behind him »). La variante #6 (« s'étend ») passe à inconnue ; le cas reste ecartee par le nom nié.",
+  "variantes": [
+   {
+    "variation": "traduction",
+    "description": "Large canvas painted for the Scuola Grande di San Marco, Venice, c. 1505. St Mark preaches, standing on a platform, before a crowd of turbaned men and women. The city that stretches out behind him is not Alexandria, where tradition places the episode: it is Venice, recognisable by the campanile and the domes of the basilica.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": [],
+    "langue": "en"
+   },
+   {
+    "variation": "paraphrase",
+    "description": "Grande toile peinte pour la Scuola Grande di San Marco, Venise, vers 1505. Derrière saint Marc qui prêche à une foule enturbannée, la ville n'est pas Alexandrie, lieu traditionnel de l'épisode, mais Venise, avec son campanile et les coupoles de la basilique.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Grande toile peinte pour la Scuola Grande di San Marco, Venise, vers 1505. Saint Marc prêche devant une foule enturbannée. La ville qui s'étend derrière lui est traditionnellement identifiée comme Alexandrie, bien qu'on y reconnaisse le campanile de Venise.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_portee",
+    "description": "Grande toile peinte pour la Scuola Grande di San Marco, Venise, vers 1505. Saint Marc prêche devant une foule enturbannée ; derrière lui s'étend une ville aux coupoles orientales. Selon la tradition, l'épisode eut lieu à Alexandrie.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "ajout_figure_non_liee",
+    "description": "Grande toile peinte pour la Scuola Grande di San Marco, Venise, vers 1505. Saint Marc prêche devant une foule enturbannée, tandis qu'une girafe traverse la place. La ville qui s'étend derrière lui n'est pas Alexandrie : c'est Venise.",
+    "sorte": "negatif",
+    "statut_attendu": "ecartee",
+    "hypotheses_attendues": []
+   },
+   {
+    "variation": "changement_de_modalite",
+    "description": "Grande toile peinte pour la Scuola Grande di San Marco, Venise, vers 1505. Saint Marc prêche, debout sur une estrade, devant une foule enturbannée. La ville qui s'étend derrière lui est Alexandrie, avec son phare et ses coupoles.",
+    "sorte": "indetermine",
+    "statut_attendu": "inconnue",
+    "hypotheses_attendues": []
+   }
+  ]
+ }
+]

@@ -154,3 +154,78 @@ qui donnait `inconnue` et non une hypothèse :
 - **Les `decision_ouverte` :** 6 cas en version 1 ; 13 cas et 12 variantes après.
 - **Le validateur :** `24 cas de base, 145 variantes, 0 erreurs` ; `phenomenes_iconographiques : 24 cas, composés ≥2 :
   24, ≥3 : 12`.
+
+
+## 5. Rétablissement (28/11)
+
+**La décision de la propriétaire :** « Rétablis les textes et définitions d'origine lorsque les rédacteurs les ont modifiés pour éviter les lacunes de WOLF. Ces lacunes font partie de ce que nous cherchons à mesurer. »
+
+**La méthode.**
+- Chaque description, définition ou variante qui diffère de la version 1 (`v1_avant_relecture/`) a été examinée, ainsi que les éléments listés au § 3.3 de `DECISIONS_PHASE1.md`.
+- Est rétabli tout ce qui contournait une lacune ou un bruit de WOLF ou de WordNet :
+  - un mot français remplacé ;
+  - une définition réécrite avec les mots du texte ;
+  - un pas lexical retiré ;
+  - une variante passée en anglais.
+- Les statuts sont recalculés par la règle actuelle (BANCS § 4.1, point 2 ; `sens_fr.py` pour le français ; les pointeurs `@`, `@i` de WordNet). Ils sont tous plus faibles, comme attendu, et aucun n'a été remonté.
+
+**Ce qui n'est pas rétabli** (des corrections de fond, non des contournements) :
+- **les connaissances corrigées :**
+  - les alias et les sources ajoutés dans K, avec `attestee: false` faute de source ;
+  - la concurrente non fondée de pi-020, qui reste retirée ;
+  - les connaissances typiques passées à `attestee: false` ;
+- **pi-001 :** « son père aveugle ». La version 1 ne disait pas que l'aveugle était le père (relecture C).
+- **pi-020 :** la relation « beside ». La définition la demande, et la version 1 ne la disait pas.
+- **pi-019#3 :** la source fictive, à la place d'un historien réel (relecture C, qualité).
+- **pi-014#6 et pi-022#7 :** les variantes de nom nié. Elles répondent à la remarque de forme de la relecture C, sur des cas en anglais, ou en français sans changement de langue.
+- **Les statuts de négation affaiblis par la règle des sens** (pi-011, pi-016, pi-012#4, pi-021#6). Ils viennent de la règle, non d'un texte modifié.
+
+**Dans le doute, j'ai rétabli, et je le signale :**
+- pi-004 : « the scene that follows in the story », « the king's dreams ». C'était une reprise et un contexte, non une lacune de ressource.
+- pi-021 : « stands with the sword », « holds up », « grips ».
+- pi-002 : « reduced to herding swine ». La variante ne disait pas « herding » : la cause n'est pas une ressource.
+
+### 5.1 Les éléments rétablis, et leurs statuts
+
+| cas | ce qui revient | statuts : avant → après |
+|---|---|---|
+| pi-001 | la définition « accompanied by the angel … anointing » ; les textes de #1, #2 et #6 (« applique », « sortir … sous la garde de »), avec « son père » gardé | 001 : ESH → inconnue ; #1 : etablie → inconnue ; #2, #6 : ESH → inconnue. Aucun sens de guide/guider n'atteint accompany, ni de rub/frotter/appliquer anoint. La décision sur l'alias est retirée : elle n'a plus d'effet |
+| pi-002 | la définition « leaving his father's house … reduced to herding swine » | #4 : etablie → inconnue ; le cas reste ecartee |
+| pi-003 | la définition « dividing » ; tous les textes d'origine : « pauvre », « tranche … donne la moitié », « vêtu de », « en songe », et #4 « n'est pas endormi » | #3 : ESH → inconnue ; #4 : ecartee → inconnue. Pauper n'atteint pas beggar, « songe » n'est pas dans WOLF, la négation d'« endormi » n'est que possible. La décision sur l'identité est retirée, sans effet (la question reste dans le fichier de questions) |
+| pi-004 | la définition « successive episodes » ; tous les textes d'origine | 004 : etablie → inconnue ; #1 : ESH → inconnue ; #2, #5 : etablie → inconnue. Aucun sens de scene n'atteint episode |
+| pi-005 | la définition « wilderness … a spring of water » ; #1 ; #6 d'origine, à la place de la variante écrite en anglais pour éviter l'alias | #3 : ESH → inconnue ; #6 : ecartee → inconnue. Rien n'appuie « of water ». La décision sur la situation est retirée, sans effet |
+| pi-006 | la définition « seated » ; #2 | 006 : etablie → inconnue ; #1 : ESH → inconnue ; #2, #5 : etablie → inconnue. L'adjectif seated n'est atteint par aucun sens de sit ni d'asseoir |
+| pi-007 | la définition « crucified » ; « larrons » | #3 : etablie → inconnue. « Larron » n'est pas dans WOLF. La décision est retirée, sans effet |
+| pi-008 | la définition « a feast … behind the diners … a stag hunt » ; tous les textes d'origine (« festoie », « tendu de », « behind them ») ; l'équivalence feast (nom / verbe), `attestee: false` | 008 : etablie → inconnue ; #1 : ESH → inconnue ; #2, #5, #6 : etablie → inconnue. Pursue n'atteint pas hunt |
+| pi-009 | #3 « le mur du fond est tendu d'une tapisserie » | #3 : ESH → inconnue. Aucun sens WOLF de « tendre » n'atteint hang |
+| pi-010 | la définition « seated on Patmos, beholding in a vision … under her feet » ; #2 | 010 : etablie → inconnue ; #1 : ESH → inconnue ; #2, #5 : etablie → inconnue |
+| pi-011 | la définition « writing desk » ; « pupitre » | #3 : ESH → inconnue. La décision sur la négation de « voir » reste |
+| pi-012 | la définition « a sleeping knight dreaming of » ; #1 (« dort ») et #2 ; l'équivalence asleep / sleeping, `attestee: false` | 012 : ESH → inconnue ; #1, #5 : ESH → inconnue. « His dream » (nom) ne donne pas « dreaming » (verbe). #2 reste ESH [sens], avec sa propre décision |
+| pi-013 | la définition « in his study » ; « cabinet de travail », « couché » | 013 : ESH → inconnue ; #2, #5 : ESH → inconnue. La traduction anglaise reste etablie |
+| pi-015 | #2 « serre deux grandes clés » | #2 : ESH → inconnue (aucun sens WOLF de « serrer » n'atteint hold) |
+| pi-016 | #2 « carries only a book » | inchangé (inconnue) |
+| pi-017 | la définition « giving a blessing » | 017 et #1, #2, #3, #5 : ESH → inconnue. Du verbe « bless » à la locution, pas d'équivalence dans K. La décision sur l'alias latin est retirée, sans effet |
+| pi-018 | #2 « by the light of a candle » | inchangé (inconnue) |
+| pi-019 | la définition « still life whose objects » ; tous les textes d'origine (« le peintre fait de ces objets autant de signes de », « fugacité ») ; la source fictive de #3 est gardée | 019 : ESH → inconnue ; #1 : etablie → inconnue ; #2, #6 : ESH → inconnue ; #3 : non_certifiee → inconnue. « Fugacité » et « nature morte » ne sont pas dans WOLF. La décision est retirée, sans effet |
+| pi-020 | « a candle that has just been snuffed out », « qu'on vient de souffler », « chandelle », « put out », « offers as emblems of », avec « beside » gardé ; l'implication snuff out ⇒ éteinte, `attestee: false` | 020 : ESH [connaissance_typique] → ESH [connaissance_typique, condition_suffisante_non_attestee] (même statut, une hypothèse de plus : l'adjectif extinguished, de sens unique « destroyed », n'est atteint que par l'implication non attestée) ; #1, #2 : ESH → inconnue ; #3 : etablie → inconnue ; #4, #5 : même statut, une hypothèse de plus |
+| pi-021 | la définition « a severed head » ; la composition « objet résultant » ; tous les textes d'origine (« stands with the sword », « holds up », « grips », « brandit », « tranchée ») | 021 : ESH → inconnue ; #1, #2, #5 : ESH → inconnue. Rien ne dit que Judith tient l'épée |
+| pi-022 | « une tête d'homme coupée » dans les deux connaissances typiques | #3 : ESH → inconnue. « Coupée » n'atteint pas sever, et l'appariement partiel n'a pas de seuil |
+| pi-023 | #3, sans « in the background » | #3 : etablie → inconnue |
+| pi-024 | la définition « rising behind him » | #6 : ESH → inconnue ; le cas reste ecartee (le nom nié) |
+
+**Une correction de forme, sans rapport avec le rétablissement :** le validateur exige maintenant qu'une traduction déclare sa langue. Le champ `langue` est ajouté aux 24 variantes de traduction.
+
+### 5.2 Les chiffres
+
+- **Les statuts changés par le rétablissement :** 56, tous plus faibles. Aucun n'est plus fort.
+- **Les cas de base, par statut, après :** `inconnue` 20, `ecartee` 2 (pi-002, pi-024), `etablie_sous_hypotheses` 2 (pi-015, pi-020), `etablie` 0. Les sortes sont inchangées.
+- **Les variantes, par statut :** `inconnue` 124, `ecartee` 9, `etablie_sous_hypotheses` 9, `etablie` 3.
+- **Les `decision_ouverte` :**
+  - sur les cas : pi-011, pi-014, pi-016, pi-022. Les autres n'avaient plus d'effet : toutes leurs options donnaient `inconnue` ;
+  - sur les variantes : pi-012#2, pi-015#3, pi-022#4.
+- **Les cas qui perdent leur variante de statut différent** (par portée, modalité, temps ou inversion). Rien n'a été réécrit pour la retrouver, conformément à la consigne :
+  - pi-001, 003, 004, 005, 006, 007, 008, 009, 010, 011, 012, 013, 017, 019, 021, 023 (16 cas) ;
+  - pour pi-011, la différence ne subsiste que sous l'option `sens_fixe_par_le_contexte`.
+- **Le validateur :** `24 cas de base, 145 variantes, 0 erreurs, 16 exigences non remplies` ; `phenomenes_iconographiques : 24 cas, composés ≥2 : 24, ≥3 : 13`.
+  - Les 16 exigences non remplies sont exactement ces 16 cas sans variante de statut différent.
+  - Les quotas de composition et de sortes sont tenus.
