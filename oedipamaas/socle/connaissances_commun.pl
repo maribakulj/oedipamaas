@@ -2,7 +2,7 @@
     (entier de l'édition Prolog de WordNet) ou un lemme (atome). */
 :- module(connaissances_commun, []).
 :- encoding(utf8).
-:- use_module(raisonnement, []).
+:- use_module(noms_propres, []).
 
 version(L, V) :- format(atom(V), "wordnet 3.0 ; wolf omw-1.4 ; ~w", [L]).
 
@@ -34,4 +34,4 @@ lemme(fr, S, W) :- ressources:wolf(S, W).
 % l'inclusion sémantique : l'hyperonymie et l'instance de WordNet, jamais la lexicalisation (d'un sens vers un lemme)
 inclus(S, P) :- integer(S), ( wordnet:hyp(S, P) ; wordnet:ins(S, P) ).
 
-cle_de_nom(Nom, C) :- raisonnement:normaliser_nom(Nom, C).
+cle_de_nom(Nom, C) :- noms_propres:normaliser_nom(Nom, C).

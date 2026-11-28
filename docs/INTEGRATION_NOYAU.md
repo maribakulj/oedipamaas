@@ -24,7 +24,7 @@ options E1 à E10. Ce document les tranche, sous réserve de la propriétaire. A
 3. **Trois fonctions de `raisonnement.pl` sont légitimement réutilisées :** `normaliser_nom` (16 appels, aucun test
    dédié), `tete_mot_cle` et `sens_de_lieu`. Le reste est T1/T2, et T6 est du code mort.
 4. **`charger_base` paie environ 4 s de `raisonnement:preparer` et 1,6 s de `morphologie`,** dont ni le lecteur ni le
-   noyau n'ont besoin. Quinze outils l'appellent.
+   noyau n'ont besoin. Seize outils l'appellent.
 5. **Le noyau ne rend aucun `etabli` aujourd'hui :** `familles_justifiees/1` n'est affirmé nulle part, et son meilleur
    statut est donc `etablissable`. Sa sortie est faite de termes Prolog, sans JSON de preuve.
 6. **Des écarts de sens avec T1/T2 ont été mesurés sur dix textes inventés :**
@@ -47,7 +47,7 @@ options E1 à E10. Ce document les tranche, sous réserve de la propriétaire. A
 ## 2. Les étapes
 
 **Étape 1 : séparer les fonctions réutilisées.** C'est une refactorisation sans changement de comportement.
-- `normaliser_nom`, `tete_mot_cle` et `sens_de_lieu` passent dans un module neutre, `oedipamaas/socle/noms.pl`, que
+- `normaliser_nom`, `tete_mot_cle` et `sens_de_lieu` passent dans un module neutre, `oedipamaas/socle/noms_propres.pl` (le nom `noms.pl` est déjà pris par l'ancien module des gabarits, qui reste tel quel), que
   `raisonnement.pl`, K et le noyau importent.
 - Le noyau et `codage.pl` ne chargent plus `raisonnement.pl`. Un test le vérifie sur la vraie chaîne de chargement, et
   pas seulement sur un K de test.
@@ -145,7 +145,22 @@ sens, la version majeure. La version 1.0 est la première ; l'ancienne sortie n'
   qualification. Ils sont publiés sans être corrigés dans les règles du noyau.
 - **Une revue Opus ciblée,** puisque la modification touche la commande et la certification exposée.
 
-## 6. Ce qui reste à la propriétaire
+## 6. Ce que les tests de caractérisation ont révélé (28/11)
+
+Les tests de `normaliser_nom` (`tests/plunit/test_noms_propres.pl`) figent le comportement actuel sans le corriger, et
+marquent dix questions (`% QUESTION :`). Les principales :
+- seules É, È, À et Ç sont repliées, de sorte que `JÉRÔME` et `Jérôme` ne donnent pas la même clé ;
+- une forme NFD ne donne pas la même clé que sa forme NFC ;
+- les apostrophes typographiques et les tirets ne sont pas unifiés ;
+- les titres de saint donnent cinq clés différentes ;
+- surtout, la clé **confond `Pâris` et `Paris`, ou `Léon` et `Leon`, c'est-à-dire des individus distincts,** alors
+  qu'elle sert à l'alias (`NOYAU.md`, § 2).
+
+**C'est la question des clés distinctes** de `docs/SPECIFICATION_K.md` (§ 4). Une clé de recherche peut confondre ; un
+identifiant d'individu ne le doit pas. La corriger changerait les clés de tous les index. Ce n'est donc pas une
+refactorisation, mais une décision, à prendre avec la normalisation de K, et non dans cette intégration.
+
+## 7. Ce qui reste à la propriétaire
 
 - **E1 et E2 :** la forme du protocole, et en particulier l'abandon des listes `etablis` et `contredits`.
 - **E7 :** accepter, en version 1.0, la perte de la raison d'un non-établissement.
