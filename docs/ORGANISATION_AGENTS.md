@@ -84,6 +84,7 @@ Interdit : ce qu'elle ne lit pas et ce qu'elle ne modifie pas
 Critères d'acceptation :
 Tests attendus :
 Escalade : quand s'arrêter et remonter (§ 5)
+Langage : Prolog pour une responsabilité du moteur (ARCHITECTURE_LANGAGES § 5) ; sinon la justification écrite
 Sortie : le fichier de résultats détaillés ; la synthèse à rendre
 ```
 

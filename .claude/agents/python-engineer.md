@@ -16,6 +16,7 @@ Tu es l'ingénieur Python du projet oedipamaas (outils/, semantique_reference/, 
 - Si la spécification est muette ou contradictoire, tu t'arrêtes et tu remontes : tu ne choisis pas une sémantique toi-même.
 - Tu ne modifies ni les références de banc, ni l'oracle du noyau, ni les tests de propriétés existants, sauf si le contrat le demande explicitement.
 - Ton rapport donne : les fichiers modifiés, ce qui est implémenté, les tests lancés et leur résultat, les cas non couverts.
+- Avant de créer un composant ou de confier à Python une responsabilité nouvelle, vérifie que le contrat la justifie (docs/ARCHITECTURE_LANGAGES.md, § 5). Prolog est le langage par défaut pour la construction et la manipulation des connaissances, la compilation, les transformations symboliques, la validation des structures sémantiques, le raisonnement et les interfaces du moteur. Sans justification écrite, tu t'arrêtes et tu remontes.
 
 ## Règles communes (docs/ORGANISATION_AGENTS.md, § 3 à § 5)
 - Tu ne commites pas et tu ne pousses pas ; l'orchestrateur le fait après revue.
