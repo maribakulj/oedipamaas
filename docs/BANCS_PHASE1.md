@@ -330,3 +330,77 @@ méthode des bancs. Parmi ces dernières :
 - le jugement d'un échantillon par la propriétaire (D23) ;
 - les cas de qualification, qu'écrit une autre session ;
 - le passage du moteur actuel sur le banc, qui donnera le point de départ (§ 7).
+
+## 9. La version 3 des bancs (proposition, 28/11, à valider avant d'être appliquée)
+
+**Les décisions de la propriétaire** (28/11) qui la fondent :
+- les bancs ne sont pas encore des références définitives ;
+- trois niveaux de statut ;
+- la supervaluation sur les interprétations contextuellement admissibles ;
+- les définitions typées par des concepts ;
+- les textes d'origine rétablis ;
+- des incompatibilités attestées et indexées ;
+- la satisfaction dans un contexte emboîté ;
+- une représentation formelle et un K formel ;
+- la traduction qui garde le statut de référence ;
+- les décisions regroupées en principes.
+
+Les principes sont dans `docs/INTERPRETATIONS_ADMISSIBLES.md`, la notation dans `docs/NOTATION_REFERENCE.md`.
+
+### 9.1 Ce qui est fait
+
+- **Les textes et définitions d'origine sont rétablis** dans les neuf familles, là où les rédacteurs les avaient
+  adaptés aux lacunes de WOLF ou de WordNet. Chaque élément rétabli est listé dans le fichier `.revision.md` de sa
+  famille.
+- **Les statuts relatifs à K0-d30 sont recalculés** sur les textes rétablis. Ce sont les statuts démontrables sous le K
+  du 28/11 : WordNet et WOLF tels quels, tous leurs sens. L'état est gardé dans
+  `/home/user/donnees/bancs_phase1/v2_k0_d30_retabli/`.
+- **Rien n'est substitué :** la version 1, d'avant relecture, et les jugements relatifs à D30 sont tous gardés.
+- **Le validateur contrôle les exigences du protocole** (`--exigences`) :
+  - les variantes et les traductions (langue déclarée, même statut de référence) ;
+  - les sortes ;
+  - la couverture des constructions et des paires ;
+  - la cohérence des décisions ouvertes.
+
+  L'exigence d'une variante de statut différent porte sur le statut de référence dès qu'un cas en a un.
+
+### 9.2 Le schéma 3 d'un cas
+
+| champ | niveau | contenu |
+|---|---|---|
+| `statut_reference`, `hypotheses_reference`, `justification_reference` | (a) | le jugement sur la signification, par supervaluation sur les interprétations admissibles ; ni WordNet, ni WOLF, ni le noyau |
+| `statut_attendu` (et à terme une table par K nommé) | (b) | le statut démontrable relativement à K0-d30, conservé tel quel |
+| `dependances` | (a) et (b) | les dimensions dont le statut dépend (sens, structure, coréférence, portée, pluriel, cadre, ancrage, contexte, identité, forme du libellé, entrée de K), avec le statut par option ; elles remplacent la `decision_ouverte` à question unique |
+| `representation_reference`, `connaissances_formelles` | — | la notation de référence et le K formel, quand les constructions sont spécifiées |
+| `historique` | — | les statuts des versions précédentes (v1, K0-d30), jamais effacés |
+
+La `sorte` suit l'intention du cas, donc le niveau (a), et jamais la seule couverture de K.
+
+### 9.3 La procédure du jugement de référence (a)
+
+1. **Deux annotateurs indépendants,** qui n'ont écrit ni relu le cas, jugent le statut de référence de chaque cas et de
+   chaque variante. Ils lisent la description et la définition. Ils ne voient pas les statuts relatifs à K, et
+   n'ouvrent ni WordNet ni WOLF.
+2. **Chaque jugement donne :**
+   - le statut ;
+   - les points d'ambiguïté que le sens laisse ouverts, et les valeurs admissibles ;
+   - les dépendances ;
+   - une justification selon les principes.
+3. **Un adjudicateur liste les désaccords.** Ceux qui tiennent à un principe non tranché deviennent des dépendances. Les
+   autres sont tranchés par écrit, avec leur raison.
+4. **La propriétaire juge un échantillon** (D23), stratifié par famille et par écart entre (a) et (b).
+5. **Le statut (b) est contrôlé contre (a).** Un (b) plus fort que (a) signale une erreur de K ou de représentation
+   (`docs/INTERPRETATIONS_ADMISSIBLES.md`, § 2.6), et le cas est revu.
+
+### 9.4 La mesure du moteur actuel, point de départ
+
+1. **Les textes** passent par le lecteur actuel.
+2. **Les définitions** sont compilées comme des libellés de scène, par un adaptateur de mesure, sans changer le
+   compilateur.
+3. **Le noyau** évalue chaque paire ; c'est le niveau (c).
+4. **Les comptes** se font par famille, sorte et langue :
+   - les écarts (c) / (b) et (c) / (a) ;
+   - les erreurs de sûreté : une affirmation de (c) absente de (b) ou de (a) ;
+   - les relations métamorphiques, sur le niveau (a).
+
+**Aucune référence n'est modifiée d'après ces résultats.**
