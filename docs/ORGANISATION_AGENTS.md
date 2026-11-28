@@ -88,7 +88,9 @@ Sortie : le fichier de résultats détaillés ; la synthèse à rendre
 ```
 
 **Les règles communes,** rappelées dans chaque fichier d'agent :
-- **Les agents ne commitent ni ne poussent.** C'est l'orchestrateur qui le fait, après la revue.
+- **Les agents ne commitent ni ne poussent.** C'est l'orchestrateur qui le fait, après la revue. Une seule exception : l'archivage
+  mécanique sur la branche de données, quand le contrat le demande (`data-operator`). La ligne `Co-Authored-By` du
+  commit nomme alors le modèle qui l'a fait.
 - **Chaque agent a son propre dossier de brouillon**, sous le scratchpad de la session : `<scratchpad>/<rôle>_<tâche>/`.
   Ne jamais partager un dossier entre deux agents, en particulier entre deux annotateurs (une indépendance a été perdue
   ainsi, `BANCS_PHASE1.md`, § 9.5).
@@ -198,4 +200,5 @@ Chaque tâche importante y est inscrite, avec :
 | 28/11 | arbitrage à l'aveugle des 16 désaccords du pilote d'annotation | semantic-auditor | Opus (27) | high | 2 contradictions de spécification remontées | même document, § 1 |
 | 28/11 | audit des langages : inventaire mécanique | data-operator | Haiku (26) | low | — | `/home/user/donnees/audit_langages/` |
 | 28/11 | audit des langages : étude comparative et expérimentation Python / Prolog | researcher | Sonnet (92) | high | 5 points remontés (`AUDIT_LANGAGES.md` § 7.3) | `docs/AUDIT_LANGAGES.md` |
+| 28/11 | archivage des pilotes et de l'audit sur `donnees/banc-graphes` | data-operator | Haiku | low | — | commit 5279353 ; un fichier de 22 Mo exclu, régénérable |
 | 28/11 | audit des langages : arbitrage | orchestrateur | Opus | — | — | `docs/ARCHITECTURE_LANGAGES.md` |

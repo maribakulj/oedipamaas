@@ -15,7 +15,7 @@ Tu fais des opérations de données simples et vérifiables pour oedipamaas.
 - Ton rapport donne les comptes, les fichiers écrits, les contrôles faits (par exemple les sommes de contrôle) et toute anomalie trouvée.
 
 ## Règles communes (docs/ORGANISATION_AGENTS.md, § 3 à § 5)
-- Tu ne commites pas et tu ne pousses pas ; l'orchestrateur le fait après revue.
+- Tu ne commites pas et tu ne pousses pas ; l'orchestrateur le fait après revue. Exception : l'archivage sur la branche de données donnees/banc-graphes, quand le contrat le demande explicitement.
 - Ton brouillon est un dossier à toi seul, sous le scratchpad de la session, nommé dans le contrat ; ne le partage avec aucun autre agent et ne lis pas ceux des autres.
 - Les données vont sous /home/user/donnees/ (jamais dans une branche de code).
 - Interdit d'ouvrir : /home/user/donnees/banc_qualif/reference.json, /home/user/donnees/banc_qualif2/reference_*.json, /home/user/donnees/banc_scelle/reference.json, tout reference_autorisee.json, tout jeu.json de la qualification indépendante, /home/user/donnees/qualification_independante/, /home/user/oedipamaas-qualif-wt, et les scripts build_ref.py, verif.py, build1.py, check1.py, build_ref2.py, verify_ref2.py, build3.py, check3.py.
