@@ -1,0 +1,397 @@
+{
+ "version": 1,
+ "date": "2026-11-27",
+ "note": "Écrit par la session de développement : les noms des constructions de qualification lui sont connus. La qualification ajoute une troisième strate, « hors inventaire », proposée par la session de qualification seule (docs/BANCS_PHASE1.md, § 3).",
+ "familles_lexicales": {
+  "ressource": "fichiers lexicographiques de WordNet 3.0 (lexnames), pour le mot pivot du phénomène",
+  "liste": [
+   "adj.all",
+   "adj.pert",
+   "adj.ppl",
+   "adv.all",
+   "noun.act",
+   "noun.animal",
+   "noun.artifact",
+   "noun.attribute",
+   "noun.body",
+   "noun.cognition",
+   "noun.communication",
+   "noun.event",
+   "noun.feeling",
+   "noun.food",
+   "noun.group",
+   "noun.location",
+   "noun.motive",
+   "noun.object",
+   "noun.person",
+   "noun.phenomenon",
+   "noun.plant",
+   "noun.possession",
+   "noun.process",
+   "noun.quantity",
+   "noun.relation",
+   "noun.shape",
+   "noun.state",
+   "noun.substance",
+   "noun.time",
+   "verb.body",
+   "verb.change",
+   "verb.cognition",
+   "verb.communication",
+   "verb.competition",
+   "verb.consumption",
+   "verb.contact",
+   "verb.creation",
+   "verb.emotion",
+   "verb.motion",
+   "verb.perception",
+   "verb.possession",
+   "verb.social",
+   "verb.stative",
+   "verb.weather"
+  ]
+ },
+ "familles": {
+  "evenements_etats": {
+   "intitule": "événements, états, processus, situations",
+   "phenomenes": {
+    "nominalisation_evenement": [
+     "genitif_objet",
+     "genitif_sujet",
+     "complement_d_agent",
+     "nom_nu",
+     "nom_d_action_francais"
+    ],
+    "etat_adjectival_de_stade": [
+     "attribut",
+     "epithete",
+     "apposition",
+     "participe_resultatif"
+    ],
+    "etat_nominal": [
+     "nom_d_etat_genitif",
+     "avoir_un_etat",
+     "locution_etre_en"
+    ],
+    "propriete_ordinaire_contre_etat": [
+     "couleur_ou_matiere",
+     "origine",
+     "meme_mot_deux_emplois"
+    ],
+    "evenement_en_cours": [
+     "present_progressif",
+     "participe_adjoint",
+     "phase_preparatoire"
+    ],
+    "resultat_d_un_evenement_accompli": [
+     "corps_ou_objet_resultant",
+     "vestiges",
+     "etat_resultant_nomme"
+    ],
+    "imminence": [
+     "sur_le_point_de",
+     "geste_suspendu"
+    ],
+    "etat_simultane": [
+     "etat_pendant_evenement",
+     "gerondif_d_etat"
+    ],
+    "processus_contre_accomplissement": [
+     "activite_sans_terme",
+     "accomplissement_avec_terme"
+    ],
+    "situation_comme_referent": [
+     "la_scene_nommee",
+     "deux_scenes_comptees",
+     "description_de_cadre"
+    ]
+   }
+  },
+  "compositionnalite": {
+   "intitule": "sémantique compositionnelle",
+   "phenomenes": {
+    "adjectif_intersectif": [
+     "epithete",
+     "attribut"
+    ],
+    "adjectif_de_degre": [
+     "taille",
+     "age"
+    ],
+    "adjectif_privatif": [
+     "faux",
+     "ancien",
+     "pretendu"
+    ],
+    "adjectif_de_mode_d_existence": [
+     "fabuleux",
+     "imaginaire",
+     "legendaire"
+    ],
+    "compose_lexicalise": [
+     "compose_soude",
+     "compose_a_trait_d_union",
+     "nom_nom_lexicalise"
+    ],
+    "compose_a_relation_implicite": [
+     "matiere",
+     "but",
+     "lieu",
+     "partie",
+     "agent_du_compose"
+    ],
+    "participe_inaccusatif": [
+     "participe_passe",
+     "participe_present"
+    ],
+    "participe_inergatif": [
+     "participe_present",
+     "participe_passe_d_un_inergatif"
+    ],
+    "participe_resultatif_transitif": [
+     "participe_passe_epithete",
+     "participe_passe_attribut"
+    ],
+    "coordination_de_libelle": [
+     "enumeration_alternative",
+     "coordination_conjonctive",
+     "liste_d_exemples",
+     "complement_partage"
+    ]
+   }
+  },
+  "structures_argumentales": {
+   "intitule": "cadres et structures argumentales",
+   "phenomenes": {
+    "patient_contre_theme": [
+     "changement_d_etat",
+     "deplacement",
+     "tenue_ou_port"
+    ],
+    "participant_indirect": [
+     "sujet_partage_par_coordination",
+     "controle_infinitif",
+     "participe_detache",
+     "relative"
+    ],
+    "direction_source_destination": [
+     "vers",
+     "depuis",
+     "dans_un_mouvement"
+    ],
+    "instrument_et_moyen": [
+     "avec_un_instrument",
+     "par_un_moyen"
+    ],
+    "destinataire": [
+     "donner_a",
+     "adresser_a"
+    ],
+    "posture_et_porteur": [
+     "agenouille",
+     "assis_ou_debout",
+     "couche"
+    ]
+   }
+  },
+  "reference_quantification": {
+   "intitule": "référence, identité, coréférence, quantification",
+   "phenomenes": {
+    "coreference": [
+     "pronom",
+     "nom_repris",
+     "apposition",
+     "designation_reprise"
+    ],
+    "distributif_collectif": [
+     "chacun",
+     "ensemble",
+     "ambigu"
+    ],
+    "nombre": [
+     "cardinal",
+     "paire",
+     "groupe_de_n"
+    ],
+    "quantification_enoncee": [
+     "tous",
+     "seul_ou_aucun_autre",
+     "seulement",
+     "tous_sauf"
+    ],
+    "noms_propres": [
+     "nom_complet",
+     "nom_partiel",
+     "designation_epithete",
+     "alias_traduit"
+    ],
+    "collection": [
+     "couple",
+     "foule",
+     "groupe_nomme"
+    ]
+   }
+  },
+  "espace_partie_temps": {
+   "intitule": "relations spatiales, temporelles, causales, méréologiques",
+   "phenomenes": {
+    "preposition_polysemique": [
+     "de_partie",
+     "de_possession",
+     "de_matiere",
+     "de_representation"
+    ],
+    "partie_tout": [
+     "partie_obligatoire",
+     "partie_facultative",
+     "partie_d_une_partie"
+    ],
+    "position_relative": [
+     "gauche_droite_du_spectateur",
+     "gauche_droite_de_la_figure",
+     "devant_derriere",
+     "au_dessus_au_dessous"
+    ],
+    "temps_entre_evenements": [
+     "apres_avoir",
+     "avant_de",
+     "pendant_que"
+    ],
+    "cause_et_but": [
+     "pour_finalite",
+     "a_cause_de"
+    ]
+   }
+  },
+  "modalite_negation_contextes": {
+   "intitule": "modalités, alternatives, négation, contextes",
+   "phenomenes": {
+    "negation_atomique": [
+     "verbe_nie",
+     "sans_objet",
+     "aucun"
+    ],
+    "negation_de_description": [
+     "entite_qualifiee_niee",
+     "evenement_nie_avec_roles"
+    ],
+    "modalite": [
+     "peut_etre",
+     "semble",
+     "traditionnellement",
+     "autrefois_attribue"
+    ],
+    "alternative": [
+     "ou_bien",
+     "soit_soit"
+    ],
+    "source_citee": [
+     "selon",
+     "d_apres_le_recit"
+    ],
+    "contenu_d_une_eventualite": [
+     "vision",
+     "reve",
+     "ordre",
+     "tentative",
+     "parole",
+     "inscription"
+    ],
+    "titre": [
+     "titre_seul",
+     "titre_contredit_par_la_description"
+    ]
+   }
+  },
+  "niveaux_representation": {
+   "intitule": "niveaux de représentation des descriptions d'œuvres",
+   "phenomenes": {
+    "oeuvre_contre_figure": [
+     "support_et_technique",
+     "etat_de_conservation",
+     "inscription_sur_l_oeuvre"
+    ],
+    "personnification": [
+     "figure_qui_personnifie",
+     "concept_nomme",
+     "attribut_allegorique"
+    ],
+    "symbole": [
+     "objet_symbolique",
+     "couleur_symbolique"
+    ],
+    "histoire_contre_figure": [
+     "attribution",
+     "provenance",
+     "commentaire_de_style"
+    ],
+    "autre_oeuvre": [
+     "d_apres",
+     "pendant_ou_serie",
+     "copie"
+    ]
+   }
+  },
+  "definitions_classification": {
+   "intitule": "définitions conceptuelles, classification",
+   "phenomenes": {
+    "definition_structure_complete": [
+     "genre_et_difference",
+     "periphrase_definitionnelle"
+    ],
+    "definition_partielle": [
+     "indices_insuffisants",
+     "indices_suffisants_non_attestes"
+    ],
+    "mots_sans_structure": [
+     "mots_de_la_definition_sans_leurs_relations"
+    ],
+    "condition_necessaire": [
+     "refutation_par_la_negation_d_une_condition"
+    ],
+    "attributs_identifiants": [
+     "attribut_typique_d_un_seul",
+     "attribut_partage_par_plusieurs"
+    ],
+    "fiction_et_extension": [
+     "creature_fictive_figuree",
+     "objet_reel_figure_comme_fictif"
+    ]
+   }
+  },
+  "phenomenes_iconographiques": {
+   "intitule": "phénomènes iconographiques",
+   "phenomenes": {
+    "narration_continue": [
+     "meme_personnage_deux_fois",
+     "episodes_successifs_dans_un_espace"
+    ],
+    "juxtaposition_d_episodes": [
+     "registres",
+     "polyptyque_ou_predelle"
+    ],
+    "representation_emboitee": [
+     "tableau_dans_le_tableau",
+     "miroir",
+     "vision_figuree",
+     "tapisserie_ou_decor"
+    ],
+    "evenement_historique_contre_figure": [
+     "fait_historique_non_figure",
+     "lieu_reel_contre_lieu_figure"
+    ],
+    "niveaux_de_signification": [
+     "preiconographique",
+     "iconographique",
+     "iconologique"
+    ],
+    "identification_de_personnage": [
+     "par_le_nom",
+     "par_les_attributs",
+     "par_le_contexte_narratif",
+     "par_une_inscription"
+    ]
+   }
+  }
+ }
+}

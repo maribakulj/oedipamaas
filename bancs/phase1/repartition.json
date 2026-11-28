@@ -1,0 +1,612 @@
+{
+ "graine": 20261127,
+ "inventaire_sha256": "c44f1dd822f4ce8073454e7e0e4e47b6330e7b44fcf55f8b226390fafc5136db",
+ "familles_lexicales": {
+  "developpement": [
+   "adj.all",
+   "adj.pert",
+   "adv.all",
+   "noun.act",
+   "noun.artifact",
+   "noun.attribute",
+   "noun.body",
+   "noun.cognition",
+   "noun.event",
+   "noun.feeling",
+   "noun.food",
+   "noun.location",
+   "noun.motive",
+   "noun.object",
+   "noun.person",
+   "noun.plant",
+   "noun.possession",
+   "noun.process",
+   "noun.shape",
+   "noun.time",
+   "verb.body",
+   "verb.change",
+   "verb.cognition",
+   "verb.communication",
+   "verb.creation",
+   "verb.emotion",
+   "verb.motion",
+   "verb.possession",
+   "verb.social",
+   "verb.stative",
+   "verb.weather"
+  ],
+  "qualification": [
+   "adj.ppl",
+   "noun.animal",
+   "noun.communication",
+   "noun.group",
+   "noun.phenomenon",
+   "noun.quantity",
+   "noun.relation",
+   "noun.state",
+   "noun.substance",
+   "verb.competition",
+   "verb.consumption",
+   "verb.contact",
+   "verb.perception"
+  ]
+ },
+ "constructions": {
+  "compositionnalite": {
+   "adjectif_de_degre": {
+    "developpement": [
+     "age"
+    ],
+    "qualification": [
+     "taille"
+    ]
+   },
+   "adjectif_de_mode_d_existence": {
+    "developpement": [
+     "fabuleux",
+     "imaginaire"
+    ],
+    "qualification": [
+     "legendaire"
+    ]
+   },
+   "adjectif_intersectif": {
+    "developpement": [
+     "epithete"
+    ],
+    "qualification": [
+     "attribut"
+    ]
+   },
+   "adjectif_privatif": {
+    "developpement": [
+     "ancien",
+     "pretendu"
+    ],
+    "qualification": [
+     "faux"
+    ]
+   },
+   "compose_a_relation_implicite": {
+    "developpement": [
+     "agent_du_compose",
+     "lieu",
+     "matiere"
+    ],
+    "qualification": [
+     "but",
+     "partie"
+    ]
+   },
+   "compose_lexicalise": {
+    "developpement": [
+     "compose_a_trait_d_union",
+     "nom_nom_lexicalise"
+    ],
+    "qualification": [
+     "compose_soude"
+    ]
+   },
+   "coordination_de_libelle": {
+    "developpement": [
+     "complement_partage",
+     "enumeration_alternative",
+     "liste_d_exemples"
+    ],
+    "qualification": [
+     "coordination_conjonctive"
+    ]
+   },
+   "participe_inaccusatif": {
+    "developpement": [
+     "participe_passe"
+    ],
+    "qualification": [
+     "participe_present"
+    ]
+   },
+   "participe_inergatif": {
+    "developpement": [
+     "participe_passe_d_un_inergatif"
+    ],
+    "qualification": [
+     "participe_present"
+    ]
+   },
+   "participe_resultatif_transitif": {
+    "developpement": [
+     "participe_passe_attribut"
+    ],
+    "qualification": [
+     "participe_passe_epithete"
+    ]
+   }
+  },
+  "definitions_classification": {
+   "attributs_identifiants": {
+    "developpement": [
+     "attribut_typique_d_un_seul"
+    ],
+    "qualification": [
+     "attribut_partage_par_plusieurs"
+    ]
+   },
+   "condition_necessaire": {
+    "developpement": [
+     "refutation_par_la_negation_d_une_condition"
+    ],
+    "qualification": []
+   },
+   "definition_partielle": {
+    "developpement": [
+     "indices_insuffisants"
+    ],
+    "qualification": [
+     "indices_suffisants_non_attestes"
+    ]
+   },
+   "definition_structure_complete": {
+    "developpement": [
+     "periphrase_definitionnelle"
+    ],
+    "qualification": [
+     "genre_et_difference"
+    ]
+   },
+   "fiction_et_extension": {
+    "developpement": [
+     "objet_reel_figure_comme_fictif"
+    ],
+    "qualification": [
+     "creature_fictive_figuree"
+    ]
+   },
+   "mots_sans_structure": {
+    "developpement": [
+     "mots_de_la_definition_sans_leurs_relations"
+    ],
+    "qualification": []
+   }
+  },
+  "espace_partie_temps": {
+   "cause_et_but": {
+    "developpement": [
+     "pour_finalite"
+    ],
+    "qualification": [
+     "a_cause_de"
+    ]
+   },
+   "partie_tout": {
+    "developpement": [
+     "partie_facultative",
+     "partie_obligatoire"
+    ],
+    "qualification": [
+     "partie_d_une_partie"
+    ]
+   },
+   "position_relative": {
+    "developpement": [
+     "au_dessus_au_dessous",
+     "devant_derriere",
+     "gauche_droite_de_la_figure"
+    ],
+    "qualification": [
+     "gauche_droite_du_spectateur"
+    ]
+   },
+   "preposition_polysemique": {
+    "developpement": [
+     "de_matiere",
+     "de_partie",
+     "de_possession"
+    ],
+    "qualification": [
+     "de_representation"
+    ]
+   },
+   "temps_entre_evenements": {
+    "developpement": [
+     "avant_de",
+     "pendant_que"
+    ],
+    "qualification": [
+     "apres_avoir"
+    ]
+   }
+  },
+  "evenements_etats": {
+   "etat_adjectival_de_stade": {
+    "developpement": [
+     "apposition",
+     "attribut",
+     "epithete"
+    ],
+    "qualification": [
+     "participe_resultatif"
+    ]
+   },
+   "etat_nominal": {
+    "developpement": [
+     "avoir_un_etat",
+     "locution_etre_en"
+    ],
+    "qualification": [
+     "nom_d_etat_genitif"
+    ]
+   },
+   "etat_simultane": {
+    "developpement": [
+     "etat_pendant_evenement"
+    ],
+    "qualification": [
+     "gerondif_d_etat"
+    ]
+   },
+   "evenement_en_cours": {
+    "developpement": [
+     "participe_adjoint",
+     "phase_preparatoire"
+    ],
+    "qualification": [
+     "present_progressif"
+    ]
+   },
+   "imminence": {
+    "developpement": [
+     "geste_suspendu"
+    ],
+    "qualification": [
+     "sur_le_point_de"
+    ]
+   },
+   "nominalisation_evenement": {
+    "developpement": [
+     "complement_d_agent",
+     "genitif_sujet",
+     "nom_nu"
+    ],
+    "qualification": [
+     "genitif_objet",
+     "nom_d_action_francais"
+    ]
+   },
+   "processus_contre_accomplissement": {
+    "developpement": [
+     "accomplissement_avec_terme"
+    ],
+    "qualification": [
+     "activite_sans_terme"
+    ]
+   },
+   "propriete_ordinaire_contre_etat": {
+    "developpement": [
+     "couleur_ou_matiere",
+     "origine"
+    ],
+    "qualification": [
+     "meme_mot_deux_emplois"
+    ]
+   },
+   "resultat_d_un_evenement_accompli": {
+    "developpement": [
+     "corps_ou_objet_resultant",
+     "vestiges"
+    ],
+    "qualification": [
+     "etat_resultant_nomme"
+    ]
+   },
+   "situation_comme_referent": {
+    "developpement": [
+     "description_de_cadre",
+     "la_scene_nommee"
+    ],
+    "qualification": [
+     "deux_scenes_comptees"
+    ]
+   }
+  },
+  "modalite_negation_contextes": {
+   "alternative": {
+    "developpement": [
+     "soit_soit"
+    ],
+    "qualification": [
+     "ou_bien"
+    ]
+   },
+   "contenu_d_une_eventualite": {
+    "developpement": [
+     "inscription",
+     "ordre",
+     "parole",
+     "reve"
+    ],
+    "qualification": [
+     "tentative",
+     "vision"
+    ]
+   },
+   "modalite": {
+    "developpement": [
+     "peut_etre",
+     "semble",
+     "traditionnellement"
+    ],
+    "qualification": [
+     "autrefois_attribue"
+    ]
+   },
+   "negation_atomique": {
+    "developpement": [
+     "aucun",
+     "verbe_nie"
+    ],
+    "qualification": [
+     "sans_objet"
+    ]
+   },
+   "negation_de_description": {
+    "developpement": [
+     "evenement_nie_avec_roles"
+    ],
+    "qualification": [
+     "entite_qualifiee_niee"
+    ]
+   },
+   "source_citee": {
+    "developpement": [
+     "selon"
+    ],
+    "qualification": [
+     "d_apres_le_recit"
+    ]
+   },
+   "titre": {
+    "developpement": [
+     "titre_seul"
+    ],
+    "qualification": [
+     "titre_contredit_par_la_description"
+    ]
+   }
+  },
+  "niveaux_representation": {
+   "autre_oeuvre": {
+    "developpement": [
+     "copie",
+     "d_apres"
+    ],
+    "qualification": [
+     "pendant_ou_serie"
+    ]
+   },
+   "histoire_contre_figure": {
+    "developpement": [
+     "attribution",
+     "commentaire_de_style"
+    ],
+    "qualification": [
+     "provenance"
+    ]
+   },
+   "oeuvre_contre_figure": {
+    "developpement": [
+     "etat_de_conservation",
+     "inscription_sur_l_oeuvre"
+    ],
+    "qualification": [
+     "support_et_technique"
+    ]
+   },
+   "personnification": {
+    "developpement": [
+     "attribut_allegorique",
+     "concept_nomme"
+    ],
+    "qualification": [
+     "figure_qui_personnifie"
+    ]
+   },
+   "symbole": {
+    "developpement": [
+     "couleur_symbolique"
+    ],
+    "qualification": [
+     "objet_symbolique"
+    ]
+   }
+  },
+  "phenomenes_iconographiques": {
+   "evenement_historique_contre_figure": {
+    "developpement": [
+     "lieu_reel_contre_lieu_figure"
+    ],
+    "qualification": [
+     "fait_historique_non_figure"
+    ]
+   },
+   "identification_de_personnage": {
+    "developpement": [
+     "par_le_nom",
+     "par_les_attributs",
+     "par_une_inscription"
+    ],
+    "qualification": [
+     "par_le_contexte_narratif"
+    ]
+   },
+   "juxtaposition_d_episodes": {
+    "developpement": [
+     "registres"
+    ],
+    "qualification": [
+     "polyptyque_ou_predelle"
+    ]
+   },
+   "narration_continue": {
+    "developpement": [
+     "meme_personnage_deux_fois"
+    ],
+    "qualification": [
+     "episodes_successifs_dans_un_espace"
+    ]
+   },
+   "niveaux_de_signification": {
+    "developpement": [
+     "iconologique",
+     "preiconographique"
+    ],
+    "qualification": [
+     "iconographique"
+    ]
+   },
+   "representation_emboitee": {
+    "developpement": [
+     "tableau_dans_le_tableau",
+     "tapisserie_ou_decor",
+     "vision_figuree"
+    ],
+    "qualification": [
+     "miroir"
+    ]
+   }
+  },
+  "reference_quantification": {
+   "collection": {
+    "developpement": [
+     "couple",
+     "groupe_nomme"
+    ],
+    "qualification": [
+     "foule"
+    ]
+   },
+   "coreference": {
+    "developpement": [
+     "apposition",
+     "designation_reprise",
+     "pronom"
+    ],
+    "qualification": [
+     "nom_repris"
+    ]
+   },
+   "distributif_collectif": {
+    "developpement": [
+     "ambigu",
+     "ensemble"
+    ],
+    "qualification": [
+     "chacun"
+    ]
+   },
+   "nombre": {
+    "developpement": [
+     "groupe_de_n",
+     "paire"
+    ],
+    "qualification": [
+     "cardinal"
+    ]
+   },
+   "noms_propres": {
+    "developpement": [
+     "alias_traduit",
+     "nom_complet",
+     "nom_partiel"
+    ],
+    "qualification": [
+     "designation_epithete"
+    ]
+   },
+   "quantification_enoncee": {
+    "developpement": [
+     "seul_ou_aucun_autre",
+     "seulement",
+     "tous_sauf"
+    ],
+    "qualification": [
+     "tous"
+    ]
+   }
+  },
+  "structures_argumentales": {
+   "destinataire": {
+    "developpement": [
+     "donner_a"
+    ],
+    "qualification": [
+     "adresser_a"
+    ]
+   },
+   "direction_source_destination": {
+    "developpement": [
+     "dans_un_mouvement",
+     "depuis"
+    ],
+    "qualification": [
+     "vers"
+    ]
+   },
+   "instrument_et_moyen": {
+    "developpement": [
+     "avec_un_instrument"
+    ],
+    "qualification": [
+     "par_un_moyen"
+    ]
+   },
+   "participant_indirect": {
+    "developpement": [
+     "participe_detache",
+     "relative",
+     "sujet_partage_par_coordination"
+    ],
+    "qualification": [
+     "controle_infinitif"
+    ]
+   },
+   "patient_contre_theme": {
+    "developpement": [
+     "deplacement",
+     "tenue_ou_port"
+    ],
+    "qualification": [
+     "changement_d_etat"
+    ]
+   },
+   "posture_et_porteur": {
+    "developpement": [
+     "assis_ou_debout",
+     "couche"
+    ],
+    "qualification": [
+     "agenouille"
+    ]
+   }
+  }
+ }
+}
