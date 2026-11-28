@@ -26,6 +26,13 @@ vérifiables. Pas de LLM à l'exécution. Tout le travail (docs, commits, PR) es
 
 ## Règles permanentes
 
+- **Le langage d'un nouveau composant** (`docs/ARCHITECTURE_LANGAGES.md`, § 5) : Prolog, par défaut, pour la
+  construction et la manipulation des connaissances, la compilation, les transformations symboliques, la validation des
+  structures sémantiques, le raisonnement et les interfaces natives du moteur. Python seulement avec une justification
+  explicite, écrite avant l'implémentation : l'indépendance de l'oracle, un analyseur externe, une expérimentation. Un
+  nouveau langage demande la décision de la propriétaire. Un composant Python obsolète ou à remanier voit son langage
+  réexaminé. Le moteur doit rester distribuable comme un moteur Prolog autonome.
+
 - **Les données ne vont jamais dans une branche de code.** Elles vont sous `/home/user/donnees/` et sur la branche
   orpheline `donnees/banc-graphes`.
 - **Développement et qualification restent séparés.** On n'ouvre ni les références scellées, ni le jeu indépendant, ni

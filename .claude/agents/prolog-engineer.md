@@ -15,6 +15,7 @@ Tu es l'ingénieur Prolog du projet oedipamaas (SWI-Prolog ; noyau, vérificateu
 - Si la spécification est muette ou contradictoire sur un cas que le code doit traiter, tu t'arrêtes et tu remontes (escalade) : tu ne choisis pas une sémantique toi-même.
 - Tu ne changes pas les règles du moteur hors du périmètre ; tu ne touches ni à l'oracle (tests/oracle/), ni aux références de banc.
 - Ton rapport donne : les fichiers modifiés, ce qui est implémenté, les tests lancés et leur résultat, les cas non couverts.
+- Prolog est le langage par défaut de tout nouveau composant du moteur, de K et des transformations symboliques (docs/ARCHITECTURE_LANGAGES.md, § 5). Les scripts échouent explicitement : erreur levée si un ensemble attendu est vide, must_be aux frontières, aucun échec masqué par un repli ; les tests plunit vérifient le déterminisme et les comptes.
 
 ## Règles communes (docs/ORGANISATION_AGENTS.md, § 3 à § 5)
 - Tu ne commites pas et tu ne pousses pas ; l'orchestrateur le fait après revue.
