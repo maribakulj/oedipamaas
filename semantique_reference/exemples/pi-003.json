@@ -1,0 +1,2534 @@
+{
+ "dossier": "pi-003",
+ "notation": "nr-1",
+ "famille": "phenomenes_iconographiques",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/a_annoter/phenomenes_iconographiques.json",
+ "source_reference": "/home/user/donnees/bancs_phase1/v3/reference/phenomenes_iconographiques.json",
+ "remarques": "Deux situations, un contexte de rêve, meme_individu dit (la moitié du manteau) et supposé ou dit (Martin). La famille n'a pas de référence adjugée dans v3 : la comparaison se fait au profil que l'étude décrit (§ 8.4).",
+ "cas": [
+  {
+   "notation": "nr-1",
+   "id": "pi-003 (b), identité supposée",
+   "description": {
+    "id": "pi-003",
+    "langue": "fr",
+    "texte": "Prédelle peinte, Sienne, vers 1340. À gauche, saint Martin, à cheval, tranche son manteau et en donne la moitié à un pauvre. À droite, la nuit suivante, saint Martin, endormi, voit en songe le Christ vêtu de cette moitié de manteau.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "parent": "principal",
+      "ouvert_par": "e2",
+      "id": "reve",
+      "sorte": "reve"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s1",
+      "sorte": "situation"
+     },
+     {
+      "id": "s2",
+      "sorte": "situation"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "im1",
+      "id": "m1",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ich",
+      "id": "ch",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ip",
+      "id": "p",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ih1",
+      "id": "h1",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ie1",
+      "id": "e1",
+      "sorte": "changement"
+     },
+     {
+      "situation": "s2",
+      "introduit_par": "im2",
+      "id": "m2",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s2",
+      "introduit_par": "id",
+      "id": "d",
+      "sorte": "etat"
+     },
+     {
+      "situation": "s2",
+      "introduit_par": "ie2",
+      "id": "e2",
+      "sorte": "processus"
+     },
+     {
+      "contexte": "reve",
+      "introduit_par": "ic",
+      "id": "c",
+      "sorte": "individu"
+     },
+     {
+      "contexte": "reve",
+      "introduit_par": "iw",
+      "id": "w",
+      "sorte": "etat"
+     },
+     {
+      "contexte": "reve",
+      "introduit_par": "ih2",
+      "id": "h2",
+      "sorte": "individu"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "im1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m1"
+        ],
+        "type": "oc:saint_martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 46,
+       "fin": 58,
+       "extrait": "saint Martin"
+      }
+     },
+     {
+      "id": "nm1",
+      "contenu": {
+       "atome": {
+        "pred": "nom",
+        "args": [
+         "m1"
+        ],
+        "valeur": "martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 52,
+       "fin": 58,
+       "extrait": "Martin"
+      }
+     },
+     {
+      "id": "ich",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:cheval"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 60,
+       "fin": 68,
+       "extrait": "à cheval"
+      }
+     },
+     {
+      "id": "mo",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "m1",
+         "ch"
+        ],
+        "type": "oc:monte_sur"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 60,
+       "fin": 68,
+       "extrait": "à cheval"
+      }
+     },
+     {
+      "id": "ip",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "p"
+        ],
+        "type": "oc:pauvre"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 117,
+       "fin": 123,
+       "extrait": "pauvre"
+      }
+     },
+     {
+      "id": "ih1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "h1"
+        ],
+        "type": "oc:moitie_manteau"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 102,
+       "fin": 111,
+       "extrait": "la moitié"
+      }
+     },
+     {
+      "id": "ie1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e1"
+        ],
+        "type": "oc:donner"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "r1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "m1"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "r2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "h1"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "r3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "p"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "im2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m2"
+        ],
+        "type": "oc:saint_martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 153,
+       "fin": 174,
+       "extrait": "saint Martin, endormi"
+      }
+     },
+     {
+      "id": "nm2",
+      "contenu": {
+       "atome": {
+        "pred": "nom",
+        "args": [
+         "m2"
+        ],
+        "valeur": "martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 153,
+       "fin": 174,
+       "extrait": "saint Martin, endormi"
+      }
+     },
+     {
+      "id": "id",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "d"
+        ],
+        "type": "oc:endormi"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 167,
+       "fin": 174,
+       "extrait": "endormi"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "d",
+         "m2"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 167,
+       "fin": 174,
+       "extrait": "endormi"
+      }
+     },
+     {
+      "id": "ie2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e2"
+        ],
+        "type": "oc:voir_en_reve"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 176,
+       "fin": 189,
+       "extrait": "voit en songe"
+      }
+     },
+     {
+      "id": "rv",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e2",
+         "m2"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 176,
+       "fin": 189,
+       "extrait": "voit en songe"
+      }
+     },
+     {
+      "id": "succ",
+      "contenu": {
+       "atome": {
+        "pred": "succede",
+        "args": [
+         "s1",
+         "s2"
+        ]
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 135,
+       "fin": 151,
+       "extrait": "la nuit suivante"
+      }
+     },
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "oc:christ"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 190,
+       "fin": 199,
+       "extrait": "le Christ"
+      }
+     },
+     {
+      "id": "iw",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "w"
+        ],
+        "type": "oc:vetu"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 200,
+       "fin": 204,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "rw1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "w",
+         "c"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 200,
+       "fin": 204,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "ih2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "h2"
+        ],
+        "type": "oc:moitie_manteau"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 214,
+       "fin": 231,
+       "extrait": "moitié de manteau"
+      }
+     },
+     {
+      "id": "rw2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "w",
+         "h2"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 200,
+       "fin": 204,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "mh",
+      "contenu": {
+       "atome": {
+        "pred": "meme_individu",
+        "args": [
+         "h2",
+         "h1"
+        ]
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 208,
+       "fin": 220,
+       "extrait": "cette moitié"
+      }
+     },
+     {
+      "id": "mm",
+      "contenu": {
+       "atome": {
+        "pred": "meme_individu",
+        "args": [
+         "m1",
+         "m2"
+        ]
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "identite",
+       "contenu": "Martin de la première scène = Martin du rêve (même nom)"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 153,
+       "fin": 174,
+       "extrait": "saint Martin, endormi"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "pi-003:def",
+    "libelle": "St Martin dividing his cloak with a beggar and, in a later scene of the same picture, the same Martin, asleep, seeing in a dream Christ wearing the half of the cloak",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "M2",
+      "individu"
+     ],
+     [
+      "E1",
+      "changement"
+     ],
+     [
+      "E2",
+      "processus"
+     ],
+     [
+      "B",
+      "individu"
+     ],
+     [
+      "H1",
+      "individu"
+     ],
+     [
+      "H2",
+      "individu"
+     ],
+     [
+      "Ch",
+      "individu"
+     ],
+     [
+      "W",
+      "etat"
+     ],
+     [
+      "S1",
+      "situation"
+     ],
+     [
+      "S2",
+      "situation"
+     ],
+     [
+      "St",
+      "etat"
+     ],
+     [
+      "Cx",
+      "contexte"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:saint_martin"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E1"
+       ],
+       "type": "oc:donner"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E1",
+        "?M"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E1",
+        "?B"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "oc:pauvre"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E1",
+        "?H1"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?H1"
+       ],
+       "type": "oc:moitie_manteau"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E1",
+        "?S1"
+       ]
+      },
+      {
+       "pred": "meme_individu",
+       "args": [
+        "?M",
+        "?M2"
+       ]
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?St"
+       ],
+       "type": "oc:endormi"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?St",
+        "?M2"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E2"
+       ],
+       "type": "oc:voir_en_reve"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E2",
+        "?M2"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E2",
+        "?S2"
+       ]
+      },
+      {
+       "pred": "succede",
+       "args": [
+        "?S1",
+        "?S2"
+       ]
+      },
+      {
+       "pred": "contexte_ouvert",
+       "args": [
+        "?Cx",
+        "?E2"
+       ],
+       "valeur": "reve"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Ch"
+       ],
+       "type": "oc:christ",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "oc:vetu",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?W",
+        "?Ch"
+       ],
+       "valeur": "porteur",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?W",
+        "?H2"
+       ],
+       "valeur": "theme",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "meme_individu",
+       "args": [
+        "?H2",
+        "?H1"
+       ]
+      }
+     ]
+    }
+   },
+   "connaissances": {
+    "version": "K-pi-003",
+    "entrees": []
+   },
+   "comparaison": {
+    "niveau": "b",
+    "attendu": "ecart",
+    "statut_calcule": "etablie_sous_hypotheses",
+    "raison": "l'identité de Martin entre les deux situations n'est pas dite : une hypothèse de nature identite (fondée sur le même nom), gardée telle ; IA § 8.4 juge la référence etablie (le lecteur tient le même Martin) : en (a), l'identité est un postulat du jugement, la représentation (a) l'écrit affirmée (pi-003 (a))"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "source": "docs/INTERPRETATIONS_ADMISSIBLES.md § 8.4 (pas de référence adjugée dans v3 pour cette famille)"
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "pi-003 (a)",
+   "description": {
+    "id": "pi-003",
+    "langue": "fr",
+    "texte": "Prédelle peinte, Sienne, vers 1340. À gauche, saint Martin, à cheval, tranche son manteau et en donne la moitié à un pauvre. À droite, la nuit suivante, saint Martin, endormi, voit en songe le Christ vêtu de cette moitié de manteau.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "parent": "principal",
+      "ouvert_par": "e2",
+      "id": "reve",
+      "sorte": "reve"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s1",
+      "sorte": "situation"
+     },
+     {
+      "id": "s2",
+      "sorte": "situation"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "im1",
+      "id": "m1",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ich",
+      "id": "ch",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ip",
+      "id": "p",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ih1",
+      "id": "h1",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ie1",
+      "id": "e1",
+      "sorte": "changement"
+     },
+     {
+      "situation": "s2",
+      "introduit_par": "im2",
+      "id": "m2",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s2",
+      "introduit_par": "id",
+      "id": "d",
+      "sorte": "etat"
+     },
+     {
+      "situation": "s2",
+      "introduit_par": "ie2",
+      "id": "e2",
+      "sorte": "processus"
+     },
+     {
+      "contexte": "reve",
+      "introduit_par": "ic",
+      "id": "c",
+      "sorte": "individu"
+     },
+     {
+      "contexte": "reve",
+      "introduit_par": "iw",
+      "id": "w",
+      "sorte": "etat"
+     },
+     {
+      "contexte": "reve",
+      "introduit_par": "ih2",
+      "id": "h2",
+      "sorte": "individu"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "im1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m1"
+        ],
+        "type": "oc:saint_martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 46,
+       "fin": 58,
+       "extrait": "saint Martin"
+      }
+     },
+     {
+      "id": "nm1",
+      "contenu": {
+       "atome": {
+        "pred": "nom",
+        "args": [
+         "m1"
+        ],
+        "valeur": "martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 52,
+       "fin": 58,
+       "extrait": "Martin"
+      }
+     },
+     {
+      "id": "ich",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:cheval"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 60,
+       "fin": 68,
+       "extrait": "à cheval"
+      }
+     },
+     {
+      "id": "mo",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "m1",
+         "ch"
+        ],
+        "type": "oc:monte_sur"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 60,
+       "fin": 68,
+       "extrait": "à cheval"
+      }
+     },
+     {
+      "id": "ip",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "p"
+        ],
+        "type": "oc:pauvre"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 117,
+       "fin": 123,
+       "extrait": "pauvre"
+      }
+     },
+     {
+      "id": "ih1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "h1"
+        ],
+        "type": "oc:moitie_manteau"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 102,
+       "fin": 111,
+       "extrait": "la moitié"
+      }
+     },
+     {
+      "id": "ie1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e1"
+        ],
+        "type": "oc:donner"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "r1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "m1"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "r2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "h1"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "r3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "p"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "im2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m2"
+        ],
+        "type": "oc:saint_martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 153,
+       "fin": 174,
+       "extrait": "saint Martin, endormi"
+      }
+     },
+     {
+      "id": "nm2",
+      "contenu": {
+       "atome": {
+        "pred": "nom",
+        "args": [
+         "m2"
+        ],
+        "valeur": "martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 153,
+       "fin": 174,
+       "extrait": "saint Martin, endormi"
+      }
+     },
+     {
+      "id": "id",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "d"
+        ],
+        "type": "oc:endormi"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 167,
+       "fin": 174,
+       "extrait": "endormi"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "d",
+         "m2"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 167,
+       "fin": 174,
+       "extrait": "endormi"
+      }
+     },
+     {
+      "id": "ie2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e2"
+        ],
+        "type": "oc:voir_en_reve"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 176,
+       "fin": 189,
+       "extrait": "voit en songe"
+      }
+     },
+     {
+      "id": "rv",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e2",
+         "m2"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 176,
+       "fin": 189,
+       "extrait": "voit en songe"
+      }
+     },
+     {
+      "id": "succ",
+      "contenu": {
+       "atome": {
+        "pred": "succede",
+        "args": [
+         "s1",
+         "s2"
+        ]
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 135,
+       "fin": 151,
+       "extrait": "la nuit suivante"
+      }
+     },
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "oc:christ"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 190,
+       "fin": 199,
+       "extrait": "le Christ"
+      }
+     },
+     {
+      "id": "iw",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "w"
+        ],
+        "type": "oc:vetu"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 200,
+       "fin": 204,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "rw1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "w",
+         "c"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 200,
+       "fin": 204,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "ih2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "h2"
+        ],
+        "type": "oc:moitie_manteau"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 214,
+       "fin": 231,
+       "extrait": "moitié de manteau"
+      }
+     },
+     {
+      "id": "rw2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "w",
+         "h2"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 200,
+       "fin": 204,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "mh",
+      "contenu": {
+       "atome": {
+        "pred": "meme_individu",
+        "args": [
+         "h2",
+         "h1"
+        ]
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 208,
+       "fin": 220,
+       "extrait": "cette moitié"
+      }
+     },
+     {
+      "id": "mm",
+      "contenu": {
+       "atome": {
+        "pred": "meme_individu",
+        "args": [
+         "m1",
+         "m2"
+        ]
+       }
+      },
+      "provenance": {
+       "document": "pi-003",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 153,
+       "fin": 174,
+       "extrait": "saint Martin, endormi"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "pi-003:def",
+    "libelle": "St Martin dividing his cloak with a beggar and, in a later scene of the same picture, the same Martin, asleep, seeing in a dream Christ wearing the half of the cloak",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "M2",
+      "individu"
+     ],
+     [
+      "E1",
+      "changement"
+     ],
+     [
+      "E2",
+      "processus"
+     ],
+     [
+      "B",
+      "individu"
+     ],
+     [
+      "H1",
+      "individu"
+     ],
+     [
+      "H2",
+      "individu"
+     ],
+     [
+      "Ch",
+      "individu"
+     ],
+     [
+      "W",
+      "etat"
+     ],
+     [
+      "S1",
+      "situation"
+     ],
+     [
+      "S2",
+      "situation"
+     ],
+     [
+      "St",
+      "etat"
+     ],
+     [
+      "Cx",
+      "contexte"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:saint_martin"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E1"
+       ],
+       "type": "oc:donner"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E1",
+        "?M"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E1",
+        "?B"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "oc:pauvre"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E1",
+        "?H1"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?H1"
+       ],
+       "type": "oc:moitie_manteau"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E1",
+        "?S1"
+       ]
+      },
+      {
+       "pred": "meme_individu",
+       "args": [
+        "?M",
+        "?M2"
+       ]
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?St"
+       ],
+       "type": "oc:endormi"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?St",
+        "?M2"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E2"
+       ],
+       "type": "oc:voir_en_reve"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E2",
+        "?M2"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E2",
+        "?S2"
+       ]
+      },
+      {
+       "pred": "succede",
+       "args": [
+        "?S1",
+        "?S2"
+       ]
+      },
+      {
+       "pred": "contexte_ouvert",
+       "args": [
+        "?Cx",
+        "?E2"
+       ],
+       "valeur": "reve"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Ch"
+       ],
+       "type": "oc:christ",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "oc:vetu",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?W",
+        "?Ch"
+       ],
+       "valeur": "porteur",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?W",
+        "?H2"
+       ],
+       "valeur": "theme",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "meme_individu",
+       "args": [
+        "?H2",
+        "?H1"
+       ]
+      }
+     ]
+    }
+   },
+   "connaissances": {
+    "version": "K*-pi-003",
+    "entrees": []
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "source": "docs/INTERPRETATIONS_ADMISSIBLES.md § 8.4 (pas de référence adjugée dans v3 pour cette famille)"
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "pi-003#2 (a)",
+   "description": {
+    "id": "pi-003#2",
+    "langue": "fr",
+    "texte": "Prédelle peinte, Sienne, vers 1340. À gauche, saint Martin, à cheval, tranche son manteau et en donne la moitié à un pauvre. À droite, la nuit suivante, le même Martin reparaît, endormi : il voit en songe le Christ vêtu de cette moitié de manteau.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "parent": "principal",
+      "ouvert_par": "e2",
+      "id": "reve",
+      "sorte": "reve"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s1",
+      "sorte": "situation"
+     },
+     {
+      "id": "s2",
+      "sorte": "situation"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "im1",
+      "id": "m1",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ich",
+      "id": "ch",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ip",
+      "id": "p",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ih1",
+      "id": "h1",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s1",
+      "introduit_par": "ie1",
+      "id": "e1",
+      "sorte": "changement"
+     },
+     {
+      "situation": "s2",
+      "introduit_par": "im2",
+      "id": "m2",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s2",
+      "introduit_par": "id",
+      "id": "d",
+      "sorte": "etat"
+     },
+     {
+      "situation": "s2",
+      "introduit_par": "ie2",
+      "id": "e2",
+      "sorte": "processus"
+     },
+     {
+      "contexte": "reve",
+      "introduit_par": "ic",
+      "id": "c",
+      "sorte": "individu"
+     },
+     {
+      "contexte": "reve",
+      "introduit_par": "iw",
+      "id": "w",
+      "sorte": "etat"
+     },
+     {
+      "contexte": "reve",
+      "introduit_par": "ih2",
+      "id": "h2",
+      "sorte": "individu"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "im1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m1"
+        ],
+        "type": "oc:saint_martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 46,
+       "fin": 58,
+       "extrait": "saint Martin"
+      }
+     },
+     {
+      "id": "nm1",
+      "contenu": {
+       "atome": {
+        "pred": "nom",
+        "args": [
+         "m1"
+        ],
+        "valeur": "martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 52,
+       "fin": 58,
+       "extrait": "Martin"
+      }
+     },
+     {
+      "id": "ich",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:cheval"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 60,
+       "fin": 68,
+       "extrait": "à cheval"
+      }
+     },
+     {
+      "id": "mo",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "m1",
+         "ch"
+        ],
+        "type": "oc:monte_sur"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 60,
+       "fin": 68,
+       "extrait": "à cheval"
+      }
+     },
+     {
+      "id": "ip",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "p"
+        ],
+        "type": "oc:pauvre"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 117,
+       "fin": 123,
+       "extrait": "pauvre"
+      }
+     },
+     {
+      "id": "ih1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "h1"
+        ],
+        "type": "oc:moitie_manteau"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 102,
+       "fin": 111,
+       "extrait": "la moitié"
+      }
+     },
+     {
+      "id": "ie1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e1"
+        ],
+        "type": "oc:donner"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "r1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "m1"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "r2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "h1"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "r3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "p"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "donne"
+      }
+     },
+     {
+      "id": "im2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m2"
+        ],
+        "type": "oc:saint_martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 153,
+       "fin": 167,
+       "extrait": "le même Martin"
+      }
+     },
+     {
+      "id": "nm2",
+      "contenu": {
+       "atome": {
+        "pred": "nom",
+        "args": [
+         "m2"
+        ],
+        "valeur": "martin"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 153,
+       "fin": 167,
+       "extrait": "le même Martin"
+      }
+     },
+     {
+      "id": "id",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "d"
+        ],
+        "type": "oc:endormi"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 178,
+       "fin": 185,
+       "extrait": "endormi"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "d",
+         "m2"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 178,
+       "fin": 185,
+       "extrait": "endormi"
+      }
+     },
+     {
+      "id": "ie2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e2"
+        ],
+        "type": "oc:voir_en_reve"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 191,
+       "fin": 204,
+       "extrait": "voit en songe"
+      }
+     },
+     {
+      "id": "rv",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e2",
+         "m2"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 191,
+       "fin": 204,
+       "extrait": "voit en songe"
+      }
+     },
+     {
+      "id": "succ",
+      "contenu": {
+       "atome": {
+        "pred": "succede",
+        "args": [
+         "s1",
+         "s2"
+        ]
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 135,
+       "fin": 151,
+       "extrait": "la nuit suivante"
+      }
+     },
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "oc:christ"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 205,
+       "fin": 214,
+       "extrait": "le Christ"
+      }
+     },
+     {
+      "id": "iw",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "w"
+        ],
+        "type": "oc:vetu"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 215,
+       "fin": 219,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "rw1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "w",
+         "c"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 215,
+       "fin": 219,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "ih2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "h2"
+        ],
+        "type": "oc:moitie_manteau"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 229,
+       "fin": 246,
+       "extrait": "moitié de manteau"
+      }
+     },
+     {
+      "id": "rw2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "w",
+         "h2"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 215,
+       "fin": 219,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "mh",
+      "contenu": {
+       "atome": {
+        "pred": "meme_individu",
+        "args": [
+         "h2",
+         "h1"
+        ]
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 223,
+       "fin": 235,
+       "extrait": "cette moitié"
+      }
+     },
+     {
+      "id": "mm",
+      "contenu": {
+       "atome": {
+        "pred": "meme_individu",
+        "args": [
+         "m1",
+         "m2"
+        ]
+       }
+      },
+      "provenance": {
+       "document": "pi-003#2",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 153,
+       "fin": 167,
+       "extrait": "le même Martin"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "pi-003:def",
+    "libelle": "St Martin dividing his cloak with a beggar and, in a later scene of the same picture, the same Martin, asleep, seeing in a dream Christ wearing the half of the cloak",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "M2",
+      "individu"
+     ],
+     [
+      "E1",
+      "changement"
+     ],
+     [
+      "E2",
+      "processus"
+     ],
+     [
+      "B",
+      "individu"
+     ],
+     [
+      "H1",
+      "individu"
+     ],
+     [
+      "H2",
+      "individu"
+     ],
+     [
+      "Ch",
+      "individu"
+     ],
+     [
+      "W",
+      "etat"
+     ],
+     [
+      "S1",
+      "situation"
+     ],
+     [
+      "S2",
+      "situation"
+     ],
+     [
+      "St",
+      "etat"
+     ],
+     [
+      "Cx",
+      "contexte"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:saint_martin"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E1"
+       ],
+       "type": "oc:donner"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E1",
+        "?M"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E1",
+        "?B"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "oc:pauvre"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E1",
+        "?H1"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?H1"
+       ],
+       "type": "oc:moitie_manteau"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E1",
+        "?S1"
+       ]
+      },
+      {
+       "pred": "meme_individu",
+       "args": [
+        "?M",
+        "?M2"
+       ]
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?St"
+       ],
+       "type": "oc:endormi"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?St",
+        "?M2"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E2"
+       ],
+       "type": "oc:voir_en_reve"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E2",
+        "?M2"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E2",
+        "?S2"
+       ]
+      },
+      {
+       "pred": "succede",
+       "args": [
+        "?S1",
+        "?S2"
+       ]
+      },
+      {
+       "pred": "contexte_ouvert",
+       "args": [
+        "?Cx",
+        "?E2"
+       ],
+       "valeur": "reve"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Ch"
+       ],
+       "type": "oc:christ",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "oc:vetu",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?W",
+        "?Ch"
+       ],
+       "valeur": "porteur",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?W",
+        "?H2"
+       ],
+       "valeur": "theme",
+       "contexte": "?Cx"
+      },
+      {
+       "pred": "meme_individu",
+       "args": [
+        "?H2",
+        "?H1"
+       ]
+      }
+     ]
+    }
+   },
+   "connaissances": {
+    "version": "K*-pi-003",
+    "entrees": []
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "source": "texte : « le même Martin reparaît » (identité dite)"
+   }
+  }
+ ]
+}

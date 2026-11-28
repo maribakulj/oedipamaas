@@ -1,0 +1,3540 @@
+{
+ "dossier": "ee-002",
+ "notation": "nr-1",
+ "famille": "evenements_etats",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/a_annoter/evenements_etats.json",
+ "source_reference": "/home/user/donnees/bancs_phase1/v3/reference/evenements_etats.json",
+ "remarques": "Le cavalier et le mendiant (étude § 1.1). Niveau (a) : les sens fixés par le contexte, K* les postulats de signification ; niveau (b) : les points de sens et les contraintes que K atteste.",
+ "cas": [
+  {
+   "notation": "nr-1",
+   "id": "ee-002 (a)",
+   "description": {
+    "id": "ee-002",
+    "langue": "fr",
+    "texte": "Vitrail, deuxième quart du XVIe siècle, baie sud du chœur. Un cavalier en armure, monté sur un cheval blanc, tend son manteau rouge à un mendiant nu, assis au bord du chemin. Le paysage se réduit à quelques arbres. La bordure porte les armoiries du donateur.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ic",
+      "id": "c",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ich",
+      "id": "ch",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "im",
+      "id": "m",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ib",
+      "id": "b",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "changement"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "in",
+      "id": "n",
+      "sorte": "etat"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "wn30:10185793-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 70,
+       "extrait": "cavalier"
+      }
+     },
+     {
+      "id": "ich",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:cheval"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 95,
+       "fin": 101,
+       "extrait": "cheval"
+      }
+     },
+     {
+      "id": "mo",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "ch"
+        ],
+        "type": "oc:monte_sur"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 82,
+       "fin": 91,
+       "extrait": "monté sur"
+      }
+     },
+     {
+      "id": "im",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m"
+        ],
+        "type": "wn30:03050026-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 118,
+       "fin": 125,
+       "extrait": "manteau"
+      }
+     },
+     {
+      "id": "pm",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "m"
+        ],
+        "type": "oc:rouge"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 126,
+       "fin": 131,
+       "extrait": "rouge"
+      }
+     },
+     {
+      "id": "po",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "m"
+        ],
+        "type": "oc:possession"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 114,
+       "fin": 125,
+       "extrait": "son manteau"
+      }
+     },
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "wn30:09838895-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 137,
+       "fin": 145,
+       "extrait": "mendiant"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:tendre_transfert"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "c"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "m"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "b"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "in",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "n"
+        ],
+        "type": "oc:nu"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 146,
+       "fin": 148,
+       "extrait": "nu"
+      }
+     },
+     {
+      "id": "rn",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "n",
+         "b"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 146,
+       "fin": 148,
+       "extrait": "nu"
+      }
+     },
+     {
+      "id": "an",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "n"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 146,
+       "fin": 148,
+       "extrait": "nu"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "ee-002:def",
+    "libelle": "a horseman giving his cloak to a naked beggar",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "Y",
+      "individu"
+     ],
+     [
+      "Z",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "T",
+      "situation"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:10185793-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Y"
+       ],
+       "type": "wn30:03050026-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Z"
+       ],
+       "type": "wn30:09838895-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:donner_transfert"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Y"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Z"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?Y"
+       ],
+       "type": "oc:possession"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:nu"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?Z"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E",
+        "?T"
+       ]
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?S",
+        "?T"
+       ]
+      }
+     ]
+    },
+    "provenance": {
+     "document": "ee-002:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 45,
+     "extrait": "a horseman giving his cloak to a naked beggar"
+    }
+   },
+   "connaissances": {
+    "version": "K*-ee-002",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:tendre_transfert",
+      "sur": "oc:donner_transfert",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "incompatibilite",
+      "id": "k2",
+      "a": "oc:vetu",
+      "b": "oc:nu",
+      "forme": "etat",
+      "indexation": [
+       "porteur",
+       "moment",
+       "contexte"
+      ],
+      "sorte": "contraires",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "ee-002#0 (a)",
+   "description": {
+    "id": "ee-002#0",
+    "langue": "en",
+    "texte": "Stained-glass window, second quarter of the sixteenth century, south bay of the choir. A horseman in armour, mounted on a white horse, hands his red cloak to a naked beggar sitting by the roadside. The landscape is reduced to a few trees. The border bears the donor's arms.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ic",
+      "id": "c",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ich",
+      "id": "ch",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "im",
+      "id": "m",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ib",
+      "id": "b",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "changement"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "in",
+      "id": "n",
+      "sorte": "etat"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "wn30:10185793-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 89,
+       "fin": 97,
+       "extrait": "horseman"
+      }
+     },
+     {
+      "id": "ich",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:cheval"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 89,
+       "fin": 94,
+       "extrait": "horse"
+      }
+     },
+     {
+      "id": "mo",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "ch"
+        ],
+        "type": "oc:monte_sur"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 119,
+       "extrait": "mounted on"
+      }
+     },
+     {
+      "id": "im",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m"
+        ],
+        "type": "wn30:03050026-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 149,
+       "fin": 154,
+       "extrait": "cloak"
+      }
+     },
+     {
+      "id": "pm",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "m"
+        ],
+        "type": "oc:rouge"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 145,
+       "fin": 148,
+       "extrait": "red"
+      }
+     },
+     {
+      "id": "po",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "m"
+        ],
+        "type": "oc:possession"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 141,
+       "fin": 154,
+       "extrait": "his red cloak"
+      }
+     },
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "wn30:09838895-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 166,
+       "fin": 172,
+       "extrait": "beggar"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:hand_over"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 135,
+       "fin": 140,
+       "extrait": "hands"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "c"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 135,
+       "fin": 140,
+       "extrait": "hands"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "m"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 135,
+       "fin": 140,
+       "extrait": "hands"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "b"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 135,
+       "fin": 140,
+       "extrait": "hands"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 135,
+       "fin": 140,
+       "extrait": "hands"
+      }
+     },
+     {
+      "id": "in",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "n"
+        ],
+        "type": "oc:nu"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 160,
+       "fin": 165,
+       "extrait": "naked"
+      }
+     },
+     {
+      "id": "rn",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "n",
+         "b"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 160,
+       "fin": 165,
+       "extrait": "naked"
+      }
+     },
+     {
+      "id": "an",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "n"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#0",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 160,
+       "fin": 165,
+       "extrait": "naked"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "ee-002:def",
+    "libelle": "a horseman giving his cloak to a naked beggar",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "Y",
+      "individu"
+     ],
+     [
+      "Z",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "T",
+      "situation"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:10185793-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Y"
+       ],
+       "type": "wn30:03050026-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Z"
+       ],
+       "type": "wn30:09838895-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:donner_transfert"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Y"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Z"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?Y"
+       ],
+       "type": "oc:possession"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:nu"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?Z"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E",
+        "?T"
+       ]
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?S",
+        "?T"
+       ]
+      }
+     ]
+    },
+    "provenance": {
+     "document": "ee-002:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 45,
+     "extrait": "a horseman giving his cloak to a naked beggar"
+    }
+   },
+   "connaissances": {
+    "version": "K*-ee-002-en",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:hand_over",
+      "sur": "oc:donner_transfert",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "incompatibilite",
+      "id": "k2",
+      "a": "oc:vetu",
+      "b": "oc:nu",
+      "forme": "etat",
+      "indexation": [
+       "porteur",
+       "moment",
+       "contexte"
+      ],
+      "sorte": "contraires",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "remarque": "traduction : même profil (étude § 2.7), à la correspondance des points près"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "ee-002 (b)",
+   "description": {
+    "id": "ee-002",
+    "langue": "fr",
+    "texte": "Vitrail, deuxième quart du XVIe siècle, baie sud du chœur. Un cavalier en armure, monté sur un cheval blanc, tend son manteau rouge à un mendiant nu, assis au bord du chemin. Le paysage se réduit à quelques arbres. La bordure porte les armoiries du donateur.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ic",
+      "id": "c",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ich",
+      "id": "ch",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "im",
+      "id": "m",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ib",
+      "id": "b",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "changement"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "in",
+      "id": "n",
+      "sorte": "etat"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": {
+         "alternatifs": "pc"
+        }
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 70,
+       "extrait": "cavalier"
+      }
+     },
+     {
+      "id": "ich",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:cheval"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 95,
+       "fin": 101,
+       "extrait": "cheval"
+      }
+     },
+     {
+      "id": "mo",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "ch"
+        ],
+        "type": "oc:monte_sur"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 82,
+       "fin": 91,
+       "extrait": "monté sur"
+      }
+     },
+     {
+      "id": "im",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m"
+        ],
+        "type": "wn30:03050026-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 118,
+       "fin": 125,
+       "extrait": "manteau"
+      }
+     },
+     {
+      "id": "pm",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "m"
+        ],
+        "type": "oc:rouge"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 126,
+       "fin": 131,
+       "extrait": "rouge"
+      }
+     },
+     {
+      "id": "po",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "m"
+        ],
+        "type": "oc:possession"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 114,
+       "fin": 125,
+       "extrait": "son manteau"
+      }
+     },
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "wn30:09838895-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 137,
+       "fin": 145,
+       "extrait": "mendiant"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": {
+         "alternatifs": "pe"
+        }
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "c"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "m"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "b"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 113,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "in",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "n"
+        ],
+        "type": "oc:nu"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 146,
+       "fin": 148,
+       "extrait": "nu"
+      }
+     },
+     {
+      "id": "rn",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "n",
+         "b"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 146,
+       "fin": 148,
+       "extrait": "nu"
+      }
+     },
+     {
+      "id": "an",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "n"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 146,
+       "fin": 148,
+       "extrait": "nu"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "pc",
+      "cote": "D",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:10185793-n",
+       "oc:cavalryman",
+       "oc:knight_personne",
+       "oc:passenger",
+       "oc:rider_animal",
+       "oc:rider_vehicule",
+       "oc:piece_echecs",
+       "oc:rider_clause",
+       "oc:check_addition"
+      ],
+      "ancre": "ic",
+      "provenance": {
+       "document": "ee-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 70,
+       "extrait": "cavalier"
+      }
+     },
+     {
+      "id": "pe",
+      "cote": "D",
+      "dimension": "sens",
+      "domaine": [
+       "oc:tendre_transfert",
+       "oc:tendre_etendre"
+      ],
+      "ancre": "ie"
+     }
+    ],
+    "contraintes": [
+     {
+      "id": "cadre",
+      "forme": "exclusion",
+      "interdits": [
+       {
+        "pe": "oc:tendre_etendre"
+       }
+      ],
+      "source": "cadre de sous-catégorisation : « tendre X à Y »",
+      "sorte": "cadre_de_sous_categorisation"
+     }
+    ]
+   },
+   "definition": {
+    "id": "ee-002:def",
+    "libelle": "a horseman giving his cloak to a naked beggar",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "Y",
+      "individu"
+     ],
+     [
+      "Z",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "T",
+      "situation"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": {
+        "alternatifs": "ph"
+       }
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Y"
+       ],
+       "type": "wn30:03050026-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Z"
+       ],
+       "type": "wn30:09838895-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:donner_transfert"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Y"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Z"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?Y"
+       ],
+       "type": "oc:possession"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:nu"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?Z"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E",
+        "?T"
+       ]
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?S",
+        "?T"
+       ]
+      }
+     ]
+    },
+    "points": [
+     {
+      "id": "ph",
+      "cote": "Δ",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:10185793-n",
+       "wn30:10185682-n"
+      ],
+      "ancre": "horseman"
+     }
+    ],
+    "provenance": {
+     "document": "ee-002:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 45,
+     "extrait": "a horseman giving his cloak to a naked beggar"
+    }
+   },
+   "connaissances": {
+    "version": "K-ee-002 (WordNet, WOLF, VerbNet [à vérifier])",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:tendre_transfert",
+      "sur": "oc:donner_transfert",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "k3",
+      "sous": "oc:donner_transfert",
+      "sur": "oc:transfert",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "restriction_de_selection",
+      "id": "k4",
+      "predicat": "oc:transfert",
+      "role": "agent",
+      "requis": "oc:anime",
+      "domaine": [
+       "figuration"
+      ],
+      "source": {
+       "ressource": "VerbNet 3.3",
+       "element": "give-13.1 Agent [+animate]",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "incompatibilite",
+      "id": "k5",
+      "a": "oc:anime",
+      "b": "oc:artefact",
+      "forme": "type",
+      "indexation": [
+       "porteur",
+       "contexte"
+      ],
+      "sorte": "types_disjoints",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "kp0",
+      "sous": "wn30:10185793-n",
+      "sur": "oc:personne",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "kp1",
+      "sous": "oc:cavalryman",
+      "sur": "oc:personne",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "kp2",
+      "sous": "oc:knight_personne",
+      "sur": "oc:personne",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "kp3",
+      "sous": "oc:passenger",
+      "sur": "oc:personne",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "kp4",
+      "sous": "oc:rider_animal",
+      "sur": "oc:personne",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "kp5",
+      "sous": "oc:rider_vehicule",
+      "sur": "oc:personne",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "kpa",
+      "sous": "oc:personne",
+      "sur": "oc:anime",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "ka0",
+      "sous": "oc:piece_echecs",
+      "sur": "oc:artefact",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "ka1",
+      "sous": "oc:rider_clause",
+      "sur": "oc:artefact",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "inclusion",
+      "id": "ka2",
+      "sous": "oc:check_addition",
+      "sur": "oc:artefact",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "validation": "à vérifier"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "incompatibilite",
+      "id": "k2",
+      "a": "oc:vetu",
+      "b": "oc:nu",
+      "forme": "etat",
+      "indexation": [
+       "porteur",
+       "moment",
+       "contexte"
+      ],
+      "sorte": "contraires",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "b",
+    "attendu": "ecart",
+    "statut_calcule": "etablie_sous_hypotheses",
+    "raison": "K : la glose de WordNet ne permet d'exclure ni les cinq autres sens de personne de « cavalier », ni l'éleveur de « horseman » ; l'écart (a) → (b) est un affaiblissement (déf. 12), non une erreur (étude § 1.1, § 1.4)"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "ee-002#2 (a)",
+   "description": {
+    "id": "ee-002#2",
+    "langue": "fr",
+    "texte": "Vitrail, deuxième quart du XVIe siècle. Un mendiant nu, assis au bord du chemin, tend un manteau rouge à un cavalier en armure monté sur un cheval blanc.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ic",
+      "id": "c",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ich",
+      "id": "ch",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "im",
+      "id": "m",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ib",
+      "id": "b",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "changement"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "in",
+      "id": "n",
+      "sorte": "etat"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "wn30:10185793-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 108,
+       "fin": 116,
+       "extrait": "cavalier"
+      }
+     },
+     {
+      "id": "ich",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:cheval"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 140,
+       "fin": 146,
+       "extrait": "cheval"
+      }
+     },
+     {
+      "id": "im",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m"
+        ],
+        "type": "wn30:03050026-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 89,
+       "fin": 96,
+       "extrait": "manteau"
+      }
+     },
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "wn30:09838895-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 43,
+       "fin": 51,
+       "extrait": "mendiant"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:tendre_transfert"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 81,
+       "fin": 85,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "m"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 81,
+       "fin": 85,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 81,
+       "fin": 85,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "in",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "n"
+        ],
+        "type": "oc:nu"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 52,
+       "fin": 54,
+       "extrait": "nu"
+      }
+     },
+     {
+      "id": "rn",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "n",
+         "b"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 52,
+       "fin": 54,
+       "extrait": "nu"
+      }
+     },
+     {
+      "id": "an",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "n"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 52,
+       "fin": 54,
+       "extrait": "nu"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "b"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 81,
+       "fin": 85,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "c"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 81,
+       "fin": 85,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "mo",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "ch"
+        ],
+        "type": "oc:monte_sur"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 127,
+       "fin": 136,
+       "extrait": "monté sur"
+      }
+     },
+     {
+      "id": "pm",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "m"
+        ],
+        "type": "oc:rouge"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#2",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 97,
+       "fin": 102,
+       "extrait": "rouge"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "ee-002:def",
+    "libelle": "a horseman giving his cloak to a naked beggar",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "Y",
+      "individu"
+     ],
+     [
+      "Z",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "T",
+      "situation"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:10185793-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Y"
+       ],
+       "type": "wn30:03050026-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Z"
+       ],
+       "type": "wn30:09838895-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:donner_transfert"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Y"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Z"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?Y"
+       ],
+       "type": "oc:possession"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:nu"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?Z"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E",
+        "?T"
+       ]
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?S",
+        "?T"
+       ]
+      }
+     ]
+    },
+    "provenance": {
+     "document": "ee-002:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 45,
+     "extrait": "a horseman giving his cloak to a naked beggar"
+    }
+   },
+   "connaissances": {
+    "version": "K*-ee-002",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:tendre_transfert",
+      "sur": "oc:donner_transfert",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "incompatibilite",
+      "id": "k2",
+      "a": "oc:vetu",
+      "b": "oc:nu",
+      "forme": "etat",
+      "indexation": [
+       "porteur",
+       "moment",
+       "contexte"
+      ],
+      "sorte": "contraires",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "remarque": "aucune asymétrie du don n'est attestée dans K* (décision 9) : rien ne réfute"
+   },
+   "reference_adjugee": {
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "dependance",
+    "raison": "Les rôles sont inversés avec le même objet. Le F de A repose sur l'asymétrie du transfert, que la décision 9 ne tient pour négative que si elle est attestée ; elle ne l'est pas encore. Dépendance."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "ee-002#3 (a)",
+   "description": {
+    "id": "ee-002#3",
+    "langue": "fr",
+    "texte": "Vitrail, deuxième quart du XVIe siècle. Un mendiant, désormais vêtu du manteau rouge que le cavalier en armure vient de lui donner, s'éloigne au bord du chemin ; le cavalier reprend sa route.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ic",
+      "id": "c",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "im",
+      "id": "m",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ib",
+      "id": "b",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "changement"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "iv",
+      "id": "v",
+      "sorte": "etat"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ie2",
+      "id": "e2",
+      "sorte": "processus"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "wn30:09838895-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 43,
+       "fin": 51,
+       "extrait": "mendiant"
+      }
+     },
+     {
+      "id": "iv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vetu"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 63,
+       "fin": 67,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "rv",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "v",
+         "b"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 63,
+       "fin": 67,
+       "extrait": "vêtu"
+      }
+     },
+     {
+      "id": "av",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "v"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 53,
+       "fin": 62,
+       "extrait": "désormais"
+      }
+     },
+     {
+      "id": "im",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m"
+        ],
+        "type": "wn30:03050026-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 71,
+       "fin": 78,
+       "extrait": "manteau"
+      }
+     },
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "wn30:10185793-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 92,
+       "fin": 100,
+       "extrait": "cavalier"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:tendre_transfert"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 124,
+       "fin": 130,
+       "extrait": "donner"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "c"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 124,
+       "fin": 130,
+       "extrait": "donner"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "m"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 124,
+       "fin": 130,
+       "extrait": "donner"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "b"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 120,
+       "fin": 130,
+       "extrait": "lui donner"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "anterieure"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 111,
+       "fin": 130,
+       "extrait": "vient de lui donner"
+      }
+     },
+     {
+      "id": "ie2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e2"
+        ],
+        "type": "oc:s_eloigner"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 132,
+       "fin": 141,
+       "extrait": "s'éloigne"
+      }
+     },
+     {
+      "id": "r2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e2",
+         "b"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 132,
+       "fin": 141,
+       "extrait": "s'éloigne"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e2"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#3",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 132,
+       "fin": 141,
+       "extrait": "s'éloigne"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "ee-002:def",
+    "libelle": "a horseman giving his cloak to a naked beggar",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "Y",
+      "individu"
+     ],
+     [
+      "Z",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "T",
+      "situation"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:10185793-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Y"
+       ],
+       "type": "wn30:03050026-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Z"
+       ],
+       "type": "wn30:09838895-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:donner_transfert"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Y"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Z"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?Y"
+       ],
+       "type": "oc:possession"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:nu"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?Z"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E",
+        "?T"
+       ]
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?S",
+        "?T"
+       ]
+      }
+     ]
+    },
+    "provenance": {
+     "document": "ee-002:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 45,
+     "extrait": "a horseman giving his cloak to a naked beggar"
+    }
+   },
+   "connaissances": {
+    "version": "K*-ee-002",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:tendre_transfert",
+      "sur": "oc:donner_transfert",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "incompatibilite",
+      "id": "k2",
+      "a": "oc:vetu",
+      "b": "oc:nu",
+      "forme": "etat",
+      "indexation": [
+       "porteur",
+       "moment",
+       "contexte"
+      ],
+      "sorte": "contraires",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "remarque": "deux réfutations : le don est antérieur (exclusivité de l'ancrage) ; le mendiant est vêtu au moment figuré (l'incompatibilité indexée vêtu / nu)"
+   },
+   "reference_adjugee": {
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "ee-002#4 (a)",
+   "description": {
+    "id": "ee-002#4",
+    "langue": "fr",
+    "texte": "Vitrail, deuxième quart du XVIe siècle. Un cavalier en armure tend son manteau rouge à un mendiant assis au bord du chemin ; le mendiant n'est pas nu, mais couvert de haillons.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ic",
+      "id": "c",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "im",
+      "id": "m",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ib",
+      "id": "b",
+      "sorte": "individu"
+     },
+     {
+      "situation": "s0",
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "changement"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "wn30:10185793-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 43,
+       "fin": 51,
+       "extrait": "cavalier"
+      }
+     },
+     {
+      "id": "im",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m"
+        ],
+        "type": "wn30:03050026-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 71,
+       "fin": 78,
+       "extrait": "manteau"
+      }
+     },
+     {
+      "id": "pm",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "m"
+        ],
+        "type": "oc:rouge"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 79,
+       "fin": 84,
+       "extrait": "rouge"
+      }
+     },
+     {
+      "id": "po",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "m"
+        ],
+        "type": "oc:possession"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 67,
+       "fin": 78,
+       "extrait": "son manteau"
+      }
+     },
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "wn30:09838895-n"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 90,
+       "fin": 98,
+       "extrait": "mendiant"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:tendre_transfert"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 66,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "c"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 66,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "m"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 66,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "b"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 66,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 66,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "nn",
+      "contenu": {
+       "non": {
+        "atomes": [
+         {
+          "pred": "type",
+          "args": [
+           "?s"
+          ],
+          "type": "oc:nu"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?s",
+           "b"
+          ],
+          "valeur": "porteur"
+         },
+         {
+          "pred": "ancrage",
+          "args": [
+           "?s"
+          ],
+          "valeur": "en_cours"
+         }
+        ],
+        "locales": [
+         [
+          "s",
+          "etat"
+         ]
+        ]
+       }
+      },
+      "qualification": {
+       "polarite": "neg"
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 137,
+       "fin": 149,
+       "extrait": "n'est pas nu"
+      }
+     },
+     {
+      "id": "ha",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "b"
+        ],
+        "type": "oc:couvert_de_haillons"
+       }
+      },
+      "provenance": {
+       "document": "ee-002#4",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 156,
+       "fin": 175,
+       "extrait": "couvert de haillons"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "ee-002:def",
+    "libelle": "a horseman giving his cloak to a naked beggar",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "Y",
+      "individu"
+     ],
+     [
+      "Z",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "T",
+      "situation"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:10185793-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Y"
+       ],
+       "type": "wn30:03050026-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Z"
+       ],
+       "type": "wn30:09838895-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:donner_transfert"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Y"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Z"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?Y"
+       ],
+       "type": "oc:possession"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:nu"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?Z"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E",
+        "?T"
+       ]
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?S",
+        "?T"
+       ]
+      }
+     ]
+    },
+    "provenance": {
+     "document": "ee-002:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 45,
+     "extrait": "a horseman giving his cloak to a naked beggar"
+    }
+   },
+   "connaissances": {
+    "version": "K*-ee-002",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:tendre_transfert",
+      "sur": "oc:donner_transfert",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "incompatibilite",
+      "id": "k2",
+      "a": "oc:vetu",
+      "b": "oc:nu",
+      "forme": "etat",
+      "indexation": [
+       "porteur",
+       "moment",
+       "contexte"
+      ],
+      "sorte": "contraires",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "remarque": "« n'est pas nu » : une proposition niée, au moment figuré ; elle réfute la sélection entière (D41 levé), pour le mendiant"
+   },
+   "reference_adjugee": {
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  }
+ ]
+}
