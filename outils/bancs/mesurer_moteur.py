@@ -77,6 +77,36 @@ def surete_stricte(c, ref):
     return (c == "etablie" and ref != "etablie") or (c == "ecartee" and ref not in ("ecartee", "contradictoire"))
 
 
+# Les deux coordonnées (ℓ⁺, ℓ⁻) de la définition 11 (docs/INTERPRETATIONS_ADMISSIBLES.md, 1.1, § 3.5), pour comparer
+# (c) au niveau (a), dont les statuts ne sont pas ceux du noyau 0.3 (divergent, par_contexte, ecartee_sous_hypotheses).
+# Elles sont celles de outils/bancs/comparer_niveaux.py ; `par_contexte` arrive déjà résolu dans la référence.
+AXES = {"etablie": (3, 0), "etablie_sous_hypotheses": (2, 0), "ecartee": (0, 3), "ecartee_sous_hypotheses": (0, 2),
+        "divergent": (2, 2), "contradictoire": (1, 1), "non_certifiee": (1, 0)}
+
+
+def axes(s):
+    return AXES.get(s, (0, 0))
+
+
+def comparer_axes(c, ax):
+    """(c) contre (a) sur les deux axes, comptés à part : plus_fort si (c) dépasse (a) sur un axe (une erreur de sûreté
+    sur cet axe), accord si les deux coordonnées sont égales, plus_faible sinon."""
+    if ax is None:
+        return None
+    x = axes(c)
+    if x[0] > ax[0] or x[1] > ax[1]:
+        return "plus_fort"
+    return "accord" if tuple(x) == tuple(ax) else "plus_faible"
+
+
+def surete_stricte_axes(c, ax):
+    """L'erreur stricte de BANCS § 7, lue sur les axes de (a) : etablie sans que (a) établisse, ecartee sans que (a)
+    écarte."""
+    if ax is None:
+        return None
+    return (c == "etablie" and ax[0] < 3) or (c == "ecartee" and ax[1] < 3)
+
+
 # les extensions qui ne sont pas des limites du langage d'assertions ou des requêtes, mais des opérations ou des
 # connaissances (docs/AUDIT_EXPRESSIVITE.md, § 4 : la classification par définition, l'abduction)
 HORS_LANGAGE = {"base_de_definitions", "abduction"}
@@ -229,19 +259,27 @@ def assembler(cas, brut, jugements, reference):
             st = t["noyau"]["statut"]
             b = x["statut_attendu"]
             if ref is None:
-                a = None
+                a = ax = None
             elif n == "base":
                 a = ref.get("statut_synthetique")
+                ax = ref.get("axes")
             else:
                 a = (ref.get("variantes") or {}).get(str(n))
+                ax = (ref.get("axes_variantes") or {}).get(str(n))
+            if a is not None and ax is None:
+                ax = list(axes(a))
             elems.append({
                 "n": n, "langue": t["langue"], "variation": x.get("variation", "base"), "sorte": x.get("sorte"),
                 "description": x["description"],
                 "statut_c": st, "noyau": t["noyau"], "statut_b": b, "hypotheses_b": x.get("hypotheses_attendues", []),
                 "c_contre_b": comparer(st, b), "surete_stricte_b": surete_stricte(st, b),
                 "decision_ouverte_b": x.get("decision_ouverte") or (c.get("decision_ouverte") if n != "base" else None),
-                "statut_a": a, "c_contre_a": comparer(st, a) if a is not None else ("a_remplir" if reference is None else None),
-                "surete_stricte_a": surete_stricte(st, a),
+                "statut_a": a, "axes_a": ax,
+                "c_contre_a": comparer_axes(st, ax) if a is not None else ("a_remplir" if reference is None else None),
+                "c_contre_a_par_axe": ({"positif": (axes(st)[0] > ax[0]) - (axes(st)[0] < ax[0]),
+                                        "negatif": (axes(st)[1] > ax[1]) - (axes(st)[1] < ax[1])}
+                                       if a is not None else None),
+                "surete_stricte_a": surete_stricte_axes(st, ax) if a is not None else None,
                 "echec": classer_echec(t, d),
                 "lecture": t["lecture"], "graphe_vide": not a_un_atome(t["faits"]), "validation": t["validation"],
                 "faits": t["faits"], "phrases": t["phrases"], "temps": t["temps"],
@@ -288,6 +326,22 @@ def resume(sortie):
     R["c_contre_b_par_langue"] = {l: dict(collections.Counter(e["c_contre_b"] for _, e in tous if e["langue"] == l))
                                   for l in ("en", "fr")}
     R["c_contre_a"] = cnt(e["c_contre_a"] for _, e in tous)
+    # les deux axes à part, jamais additionnés (déf. 11) ; 1 : (c) plus fort, -1 : plus faible, 0 : égal
+    R["c_contre_a_par_axe"] = {ax: cnt({1: "plus_fort", 0: "egal", -1: "plus_faible"}[e["c_contre_a_par_axe"][ax]]
+                                       for _, e in tous if e["c_contre_a_par_axe"])
+                               for ax in ("positif", "negatif")}
+    mat_a = collections.defaultdict(collections.Counter)
+    for _, e in tous:
+        if e["statut_a"] is not None:
+            mat_a[e["statut_a"]][e["statut_c"]] += 1
+    R["matrice_a_lignes_c_colonnes"] = {k: dict(v) for k, v in sorted(mat_a.items())}
+    R["c_contre_a_par_langue"] = {l: dict(collections.Counter(e["c_contre_a"] for _, e in tous if e["langue"] == l))
+                                  for l in ("en", "fr")}
+    R["plus_fort_que_a"] = [{"id": c["id"], "n": e["n"], "langue": e["langue"], "variation": e["variation"],
+                             "statut_a": e["statut_a"], "axes_a": e["axes_a"], "statut_c": e["statut_c"],
+                             "statut_b": e["statut_b"], "surete_stricte": e["surete_stricte_a"],
+                             "hypotheses_c": e["noyau"].get("hypotheses", []), "description": e["description"]}
+                            for c, e in tous if e["c_contre_a"] == "plus_fort"]
     R["plus_fort_que_b"] = [{"id": c["id"], "n": e["n"], "langue": e["langue"], "variation": e["variation"],
                             "sorte": e["sorte"], "statut_b": e["statut_b"], "statut_c": e["statut_c"],
                             "hypotheses_c": e["noyau"].get("hypotheses", []),
@@ -408,6 +462,19 @@ def tableaux(R, sortie):
     table("(c) par sorte", R["statut_c_par_sorte"])
     table("(c) par classe de représentabilité", R["statut_c_par_representabilite"])
     table("Matrice : (b) en ligne, (c) en colonne", R["matrice_b_lignes_c_colonnes"])
+    if R.get("matrice_a_lignes_c_colonnes"):
+        table("Matrice : (a) en ligne, (c) en colonne", R["matrice_a_lignes_c_colonnes"])
+        L.append("### (c) contre (a), par axe (déf. 11, les axes comptés à part)\n")
+        L.append("| axe | égal | (c) plus fort | (c) plus faible |\n|---|---|---|---|")
+        for ax, v in R["c_contre_a_par_axe"].items():
+            L.append(f"| {ax} | {v.get('egal', 0)} | {v.get('plus_fort', 0)} | {v.get('plus_faible', 0)} |")
+        L.append("")
+        L.append("### (c) plus fort que (a)\n")
+        L.append("| élément | (a) | (c) | (b) | erreur stricte |\n|---|---|---|---|---|")
+        for x in R["plus_fort_que_a"]:
+            k = x["id"] if x["n"] == "base" else f"{x['id']}#{x['n']}"
+            L.append(f"| {k} | {x['statut_a']} | {x['statut_c']} | {x['statut_b']} | {'oui' if x['surete_stricte'] else 'non'} |")
+        L.append("")
     L.append("### (c) contre (b), par famille\n")
     L.append("| famille | accord | plus fort | plus faible |\n|---|---|---|---|")
     for f, v in R["c_contre_b_par_famille"].items():

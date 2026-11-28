@@ -205,7 +205,7 @@ Sur les 7 conclusions de cas non représentables, 4 sont plus fortes que (b) (ee
   - 101 `etablie` de (b) restent `inconnue`, 2 ne sont que sous hypothèses.
   - Parmi les inconnues anglaises, 155 n'ont qu'un atome manquant.
 - **(c) plus fort :** 20, examinés au § 5.
-- **(c) contre (a) :** à remplir (§ 7).
+- **(c) contre (a) :** § 7.
 
 ## 5. Les 20 cas où (c) est plus fort que (b), un par un
 
@@ -310,22 +310,81 @@ Par langue du cas : en, 66 / 17 / 25 ; fr, 65 / 17 / 26.
     - L'ancrage, l'inscription ou le contexte qui décide n'y est pas dicible, mais son absence donne le bon statut par
       défaut.
 
-## 7. Le niveau (a) : la colonne à remplir
+## 7. Le niveau (a) : la colonne remplie (28/11)
 
-Le niveau (a) n'est pas encore disponible. `mesurer_moteur.py` lit `/home/user/donnees/bancs_phase1/v3/reference.json`
-dès qu'il existe, et ne l'ouvre pas sinon.
-- **Le format :** `{id: {statut_synthetique, variantes: {n: statut}}}`, où n est le rang de la variante à partir de 0,
-  comme `docs/ANNOTATION_REFERENCE.md` (§ 6).
-- **Ce qui se calcule alors,** pour chaque élément : `statut_a`, `c_contre_a` (accord, plus fort, plus faible) et
-  `surete_stricte_a` ; dans le résumé, `c_contre_a` et `surete_stricte_a`.
-- **Aujourd'hui,** les 1 494 éléments portent `"c_contre_a": "a_remplir"`.
-- **Il n'est pas nécessaire de relancer le moteur pour remplir la colonne.** `--brut` reprend un `resultats.json`
-  précédent (§ 9). `tests/test_mesure_bancs.py` le vérifie avec une référence factice.
+**La référence (a)** est le statut sémantique adjugé de la version 3 des bancs (deux annotations indépendantes,
+`docs/ANNOTATION_REFERENCE.md`, puis la règle par contexte de son § 7.1). Le moteur n'a pas été relancé : les comptes
+sont refaits par `--brut` sur la même sortie. Aucune référence n'a été révisée d'après cette sortie : la référence a été
+adjugée avant que ses rédacteurs voient la colonne.
+
+**Le format** que lit `mesurer_moteur.py` est écrit par `outils/bancs/comparer_niveaux.py` :
+`{id: {statut_synthetique, variantes: {n: statut}, axes, axes_variantes}}`. `axes` porte les deux coordonnées (ℓ⁺, ℓ⁻) de
+la définition 11 (`docs/INTERPRETATIONS_ADMISSIBLES.md`, 1.1), `par_contexte` déjà résolu par le maximum de ses contextes
+sur chaque axe.
+
+**La comparaison se fait sur les deux axes, comptés à part.** La première version du script comparait (c) à (a) par la
+table des affirmations du noyau 0.3, qui ne connaît ni `divergent`, ni `ecartee_sous_hypotheses`, ni `par_contexte` :
+elle comptait donc co-014 #0 (`etablie_sous_hypotheses` contre `par_contexte`, établie dans la statue) comme plus fort
+que (a). Elle est remplacée, pour (a) seulement, par `comparer_axes` et `surete_stricte_axes`. (c) contre (b) garde la
+comparaison des affirmations : (b) parle la langue du noyau. Les comptes retrouvent ceux de `docs/mesures/NIVEAUX_BANCS.md`.
 
 | | accord | (c) plus fort | (c) plus faible | erreurs strictes |
 |---|---|---|---|---|
 | (c) contre (b) | 1 056 | 20 | 418 | 12 |
-| (c) contre (a) | à remplir | à remplir | à remplir | à remplir |
+| (c) contre (a) | 301 | 10 | 1 183 | 10 |
+
+| axe | égal | (c) plus fort | (c) plus faible |
+|---|---|---|---|
+| positif | 584 | 10 | 900 |
+| négatif | 1 148 | 0 | 346 |
+
+**Par langue :** en anglais 152 accords, 10 plus forts, 581 plus faibles ; en français 149 accords, aucun plus fort,
+602 plus faibles (les 149 accords français sont des `inconnue` des deux côtés).
+
+**La matrice (a) en ligne, (c) en colonne :**
+
+| (a) \\ (c) | etablie | etablie_sous_hypotheses | ecartee | inconnue | total |
+|---|---|---|---|---|---|
+| etablie | 10 | 9 | 0 | 502 | 521 |
+| etablie_sous_hypotheses | 0 | 0 | 0 | 281 | 281 |
+| par_contexte | 0 | 1 | 0 | 10 | 11 |
+| divergent | 0 | 0 | 0 | 49 | 49 |
+| non_certifiee | 3 | 0 | 0 | 45 | 48 |
+| contradictoire | 0 | 0 | 0 | 3 | 3 |
+| ecartee | 5 | 0 | 1 | 262 | 268 |
+| ecartee_sous_hypotheses | 0 | 0 | 0 | 21 | 21 |
+| inconnue | 2 | 0 | 0 | 290 | 292 |
+
+**Les 10 éléments où (c) est plus fort que (a),** tous sur l'axe positif, tous des erreurs strictes :
+
+| élément | (a) | (c) | (b) | la cause (§ 5) |
+|---|---|---|---|---|
+| rq-014 (base), #5, #6 | ecartee | etablie | ecartee | compilateur réel : « Christ » et le nombre perdus |
+| rq-014 #3 | inconnue | etablie | inconnue | idem |
+| dc-017 #2 | ecartee | etablie | inconnue | lecteur : le Colisée, simple modèle, lu comme figuré |
+| sa-015 #2 | ecartee | etablie | inconnue | langage : l'ordre « after » contre « while » ni lu ni compilé |
+| ep-003 #6, ep-016 #6 | non_certifiee | etablie | non_certifiee | lecteur : le contenu cité lu comme affirmé |
+| mn-023 #2 | non_certifiee | etablie | non_certifiee | idem |
+| mn-023 #1 | inconnue | etablie | inconnue | lecteur : le récit de la source (la Légende dorée) lu comme figuré |
+
+- **Contre (a), les erreurs sont plus graves que contre (b) dans trois cas** : dc-017 #2 et sa-015 #2 sont réfutés en
+  (a), là où K0-d30 ne permettait que `inconnue`. (c) établit donc ce que le sens réfute.
+- **Deux erreurs strictes de (c) contre (b) disparaissent contre (a)** : sa-015 #4 et rq-010 #1, que (a) établit. Ce
+  n'est pas une réussite du moteur :
+  - sa-015 #4 est établie **dans le contexte du sarcophage figuré**, par la règle par contexte ; le moteur l'établit
+    en lisant la scène au premier niveau. Le statut est le bon, le chemin est faux.
+  - rq-010 #1 : (a) établit par cas sur les deux lectures du pluriel ; le moteur n'en lit qu'une.
+- **De même, 10 conclusions sous hypothèses sont plus faibles que (a) sans être des dérivations valides :**
+  - ee-023 (base, #1, #4) et co-014 #0 : la scène ou la figure n'est pas au premier niveau, et le moteur la lit au
+    premier niveau ;
+  - co-016 (base, #1, #4, #5) : l'hypothèse de sens (« girl » → daughter → child) est fausse en contexte.
+
+  **Un accord ou un affaiblissement de statut n'est pas une preuve correcte.** C'est la raison des mesures séparées
+  de la validité des dérivations (e⁺_der) et de leur certification (e⁺_cert) (`docs/INTERPRETATIONS_ADMISSIBLES.md`,
+  1.1, déf. 12). Elles ne se calculent pas encore : la sortie du moteur ne porte pas le chemin de contexte, et (a) n'a
+  pas de représentation formelle écrite pour ces cas.
+- **L'axe négatif :** (c) n'écarte qu'un élément (ee-007 #5, `ecartee` des deux côtés). Les 346 éléments plus faibles sur cet
+  axe sont les réfutations et les divergences de (a) que le moteur laisse `inconnue`.
 
 ## 8. Les échecs par étape
 
@@ -371,7 +430,9 @@ python3 outils/bancs/mesurer_moteur.py \
   `--brut …/resultats.json --sortie AUTRE.json`.
 - **Le test :** `python3 -m pytest tests/test_mesure_bancs.py`, qui lance la mesure sur trois cas et vérifie qu'elle
   tourne, que les statuts sont dans leur domaine, que la colonne (a) se calcule, et que les fichiers de cas ne changent
-  pas.
+  pas ; il vérifie aussi la comparaison sur les deux axes.
+- **La colonne (a) :** `python3 outils/bancs/comparer_niveaux.py …/v3/reference …/v3/cas …/resultats.json …/v3/niveaux`,
+  puis la copie de `niveaux/reference.json` en `…/v3/reference.json`, puis `mesurer_moteur.py --brut …/resultats.json`.
 - **Le moteur est déterministe :** deux passes complètes ont donné les mêmes comptes.
 
 **Les fichiers :**

@@ -91,3 +91,17 @@ def test_la_colonne_a_se_calcule_quand_la_reference_existe(mesure):
     assert rq["elements"][0]["statut_a"] == "ecartee" and rq["elements"][0]["c_contre_a"] is not None
     assert rq["elements"][1]["statut_a"] == "ecartee"
     assert all(e["statut_a"] is None for c in r["cas"] if c["id"] != "rq-014" for e in c["elements"])
+
+
+def test_comparer_a_sur_les_deux_axes():
+    # (a) a ses propres statuts (divergent, par_contexte résolu en coordonnées) : la comparaison suit la déf. 11
+    assert mm.comparer_axes("etablie_sous_hypotheses", [2, 2]) == "plus_faible"   # contre divergent
+    assert mm.comparer_axes("etablie", [2, 2]) == "plus_fort"
+    assert mm.comparer_axes("etablie_sous_hypotheses", [3, 0]) == "plus_faible"   # contre par_contexte établi
+    assert mm.comparer_axes("ecartee", [3, 0]) == "plus_fort"
+    assert mm.comparer_axes("inconnue", [0, 0]) == "accord"
+    assert mm.comparer_axes("inconnue", None) is None
+    assert mm.surete_stricte_axes("etablie", [1, 0])                             # non_certifiee
+    assert not mm.surete_stricte_axes("etablie", [3, 0])
+    assert mm.surete_stricte_axes("ecartee", [0, 2])                             # écartée sous hypothèses
+    assert not mm.surete_stricte_axes("etablie_sous_hypotheses", [0, 0])

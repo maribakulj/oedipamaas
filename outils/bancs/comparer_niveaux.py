@@ -4,7 +4,8 @@
 
 (a) le statut de référence adjugé (REFERENCE_DIR/<famille>.json) ; (b) le statut relatif à K0-d30 (CAS_DIR, champ
 `statut_attendu`, convention historique) ; (c) le statut du moteur actuel (la mesure initiale). Écrit
-SORTIE_DIR/reference.json (le format qu'attend outils/bancs/mesurer_moteur.py) et SORTIE_DIR/niveaux.md.
+SORTIE_DIR/reference.json (le format qu'attend outils/bancs/mesurer_moteur.py : le statut et ses deux coordonnées,
+`axes` et `axes_variantes`, `par_contexte` déjà résolu par ses contextes) et SORTIE_DIR/niveaux.md.
 
 Chaque statut reçoit ses deux coordonnées (ℓ⁺, ℓ⁻) de la définition 11 ; `par_contexte` prend, sur chaque axe, le
 maximum de ses contextes. Un niveau inférieur PLUS FORT qu'un niveau supérieur sur un axe est un écart de sûreté sur
@@ -54,11 +55,13 @@ def main():
     ref = {}
     for k, x in A.items():
         i, _, n = k.partition("#")
-        e = ref.setdefault(i, {"statut_synthetique": None, "variantes": {}})
+        e = ref.setdefault(i, {"statut_synthetique": None, "variantes": {}, "axes": None, "axes_variantes": {}})
         if n:
             e["variantes"][n] = x["statut_reference"]
+            e["axes_variantes"][n] = list(axes(x))
         else:
             e["statut_synthetique"] = x["statut_reference"]
+            e["axes"] = list(axes(x))
     json.dump(ref, open(os.path.join(out, "reference.json"), "w"), ensure_ascii=False, indent=1)
     L = ["# Les trois niveaux de statut sur les bancs de développement (28/11)\n",
          f"{len(A)} éléments en (a), {len(B)} en (b), {len(C)} en (c).\n"]
