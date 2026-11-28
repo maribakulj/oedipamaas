@@ -31,12 +31,15 @@ dans `.claude/agents/<rôle>.md`.
   grep -o '"model":"[^"]*"' ~/.claude/projects/<projet>/<session>/subagents/agent-<id>.jsonl | sort | uniq -c
   ```
   Le résultat est consigné au journal (§ 7).
-- **Une limite constatée le 28/11.** Le dossier `.claude/agents/` a été créé pendant la session, et celle-ci ne l'a pas
-  chargé : l'appel par `subagent_type` a été refusé. La surveillance documentée ne vaut, semble-t-il, que pour un dossier
-  qui existait au démarrage. Jusqu'au redémarrage, l'orchestrateur appelle donc un agent général en lui passant
-  explicitement le `model` et l'`effort` du rôle. Le prompt lui fait lire d'abord le fichier du rôle. Le modèle est
-  vérifié dans la transcription comme ci-dessus. À partir de la session suivante, l'appel par `subagent_type` suffit, et
-  le frontmatter décide.
+- **Ce qui a été constaté le 28/11 :**
+  - la session a d'abord refusé l'appel par `subagent_type`, alors que le dossier `.claude/agents/` venait d'être créé
+    comme lien symbolique ;
+  - une fois le lien remplacé par un vrai dossier, les rôles sont apparus après quelques minutes ;
+  - les agents lancés entre-temps ont été appelés comme agents généraux, avec le `model` et l'`effort` du rôle passés
+    explicitement, et un prompt qui leur fait lire d'abord le fichier du rôle.
+
+  Leur modèle a été vérifié dans la transcription, comme pour les autres. Le dossier doit être un vrai dossier : un lien
+  symbolique ne semble pas suivi.
 
 ## 2. Les rôles
 
@@ -166,8 +169,8 @@ On élargit la délégation par étapes, et on ne lance pas de grande campagne r
 |---|---|
 | implémentation, tests, revue de code, documentation technique, études | déléguée à Sonnet (capacité établie pour des contrats explicites ; l'implémentation reste revue) |
 | inventaires, extractions, manifestes, CI | déléguée à Haiku, ou à un script ; le résultat se vérifie mécaniquement |
-| annotation sémantique des bancs (niveau (a)) | **en qualification** : pilote Sonnet contre la double annotation Opus et la référence adjugée (§ 7) |
-| représentation formelle des cas (nr-1) | **en qualification** : pilote Sonnet sur des cas déjà écrits par Opus, sans les voir (§ 7) |
+| annotation sémantique des bancs (niveau (a)) | **déléguée à Sonnet le 28/11** après le pilote (`docs/mesures/QUALIFICATION_DELEGATION.md`, § 1) ; désaccords arbitrés à l'aveugle par Opus |
+| représentation formelle des cas (nr-1) | **déléguée à Sonnet le 28/11** après le pilote (même document, § 2), par lots ; écarts revus par Opus |
 | adjudication des désaccords complexes, décisions formelles, sûreté | Opus |
 
 **Un biais à garder en tête :** la référence adjugée vient d'annotations Opus. L'accord avec elle favorise Opus. La
@@ -187,7 +190,11 @@ Chaque tâche importante y est inscrite, avec :
 | 28/11 | bancs v3 : annotations A et B, adjudications, représentations formelles des cas de base, langage de référence | agents généraux | Opus (hérité de la session, avant cette organisation) | — | — | `BANCS_PHASE1.md` § 9.5, `docs/mesures/FORMEL_BANCS.md` |
 | 28/11 | vérification de la configuration (champs du frontmatter, ordre de priorité du modèle) | claude-code-guide | non vérifié (agent intégré) | — | — | § 1 |
 | 28/11 | état de la CI de `claude/bancs-v3` | ci-investigator (agent général, modèle et effort passés à l'appel) | Haiku (transcription : 13 réponses) | low | — | brouillon `ci-investigator_bancs-v3/ci.md` ; un commit sans exécution, poussé avec le suivant |
-| 28/11 | L22 : implémentation du statut local ER_H | python-engineer (idem) | Sonnet (à vérifier) | high | — | en cours |
-| 28/11 | L22 : tests d'après la spécification | test-engineer (idem) | Sonnet (à vérifier) | high | — | en cours |
-| 28/11 | pilote : représentation formelle de 16 cas de base, déjà écrits par Opus | formal-representer (idem) | Sonnet (à vérifier) | high | — | en cours |
-| 28/11 | pilote : annotation de 9 cas et de leurs variantes (62 éléments) | semantic-annotator (idem) | Sonnet (à vérifier) | high | — | en cours |
+| 28/11 | L22 : implémentation du statut local ER_H | python-engineer (idem) | Sonnet (65 réponses) | high | 2 doutes de spécification remontés, tranchés par l'orchestrateur ; la spécification a été corrigée deux fois | commit 5b37eb4 |
+| 28/11 | L22 : tests d'après la spécification | test-engineer (idem) | Sonnet (68) | high | 4 doutes remontés et tranchés | 51 tests, 8 mutations tuées |
+| 28/11 | L22 : première revue indépendante | code-reviewer | Sonnet (50) | high | — | 6 mutations vivantes, renvoyées aux tests ; 3 doutes tranchés |
+| 28/11 | pilote : représentation formelle de 16 cas de base, déjà écrits par Opus | formal-representer (idem) | Sonnet (45) | high | — | `QUALIFICATION_DELEGATION.md`, § 2 |
+| 28/11 | pilote : annotation de 9 cas et de leurs variantes (62 éléments) | semantic-annotator (idem) | Sonnet (13) | high | — | même document, § 1 |
+| 28/11 | arbitrage à l'aveugle des 16 désaccords du pilote d'annotation | semantic-auditor | Opus (27) | high | 2 contradictions de spécification remontées | même document, § 1 |
+| 28/11 | audit des langages : inventaire mécanique | data-operator | Haiku (26) | low | — | `/home/user/donnees/audit_langages/` |
+| 28/11 | audit des langages : étude comparative | researcher | Sonnet | high | — | en cours |
