@@ -304,8 +304,34 @@ attendus de cette spécification.
    par la propriétaire.
 3. **La lecture du § 2.5** sur les postulats de référence, à confirmer par la propriétaire.
 4. **Les périmètres :** leur vocabulaire (langue, domaine, contexte) reste à fixer sur les premiers cas réels.
-5. **Le format concret du module compilé et de son manifeste.** Il suivra l'interface du noyau, et la mesure sur DBnary
-   et l'AAT pour le traitement par flux.
+5. **Le format concret du module compilé et de son manifeste.** Il suivra l'interface du noyau. La mesure du 28/11 sur
+   DBnary et l'AAT complets (`/home/user/donnees/audit_langages/echelle/RAPPORT.md`) en fixe déjà les contraintes :
+   - **le traitement par flux est la règle de K1.**
+     - Sur DBnary français (21,8 M triplets), le chargement intégral prend 322 s pour un pic de 5,2 Go, et sa première
+       requête 25 s. Le flux, extraction ciblée comprise, prend 150 s pour 315 Mo. Ces 150 s viennent surtout de
+       l'écriture, qui n'est pas optimisée, et le flux reste à 14 Mo sur l'ontolex seul.
+     - Charger DBnary français et anglais ensemble fait planter SWI-Prolog vers 11 Go, par une erreur fatale et non par
+       une exception.
+     - Le chargement intégral n'est donc permis que pour une source petite, et jamais comme moyen d'extraire ;
+   - **la lecture doit être exacte, et elle l'est.** Le flux, les requêtes sur le magasin et un comptage indépendant
+     donnent des enregistrements identiques à l'octet ;
+   - **les lecteurs RDF de SWI-Prolog sont trop indulgents pour INV-R3.**
+     - Un octet UTF-8 invalide n'y est qu'un avertissement, et le triplet corrompu est livré.
+     - Le message ne nomme pas le fichier.
+     - Le décompte des erreurs n'est pas homogène entre Turtle et N-Triples.
+
+     Le lecteur de K1 doit donc intercepter tous les messages d'erreur et d'avertissement (`message_hook`), les
+     rattacher au fichier, et faire échouer la lecture (code 2) ;
+   - **DBnary ne contient aucun lien vers un synset.** Le seul lien vers l'anglais est la traduction. Un alignement de
+     DBnary vers WordNet est donc toujours un alignement par pivot, de méthode `alignement_automatique`, et `proposée` ;
+   - **l'AAT ne porte sa version dans aucun triplet.** Sa `version` (§ 2.1) est la date `Last-Modified` de l'archive
+     téléchargée, avec l'empreinte des fichiers ;
+   - **les doublons de triplets existent dans les sources** : 604 257 dans l'AAT. Ils sont comptés et rapportés
+     (INV-ID3), jamais écartés en silence ;
+   - **les entrées anonymes** (66 534 nœuds sans IRI dans DBnary, imbriqués dans des relations lexicales) n'ont pas
+     d'`id_origine` stable. Elles sont comptées et rapportées comme hors de l'extraction, et non retenues avec des
+     identifiants de nœud anonyme ;
+   - **une date anormale** (`dcterms:modified` postérieure au téléchargement) est rapportée et gardée telle quelle.
 6. **La couche de licence de K.** L'audit du 28/11 (`/home/user/donnees/audit_licences/RAPPORT.md`) a trouvé :
    - **Joconde :** le ministère et data.gouv.fr disent Licence ouverte Etalab, alors que 13 des 16 exports portent
      `dcterms:rights "CC-BY-SA"`. C'est un champ libre de l'outil d'export, sans version ni URL. La recommandation est de
