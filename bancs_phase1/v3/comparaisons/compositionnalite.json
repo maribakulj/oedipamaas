@@ -1,0 +1,1250 @@
+{
+ "elements": 165,
+ "manquants": [],
+ "accord_statut": 0.9151515151515152,
+ "kappa_statut": 0.8879837067209777,
+ "accord_valeurs": 0.9030303030303031,
+ "desaccords": [
+  {
+   "id": "co-001#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-003#4",
+   "champs": [
+    "valeurs"
+   ],
+   "A": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-005#3",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-006#3",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-007#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "ecartee_sous_hypotheses",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-008",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-008#0",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-008#1",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-008#3",
+   "champs": [
+    "valeurs",
+    "dimensions",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-008#4",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-008#5",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-010#2",
+   "champs": [
+    "dimensions"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-011",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identite"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-011#0",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identite"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-011#1",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identite"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-011#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-011#4",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-011#5",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identite"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-013#3",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-014",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue figurant un ange"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-014#0",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue figurant un ange"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-014#1",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue figurant un ange"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-014#3",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > statue figurant un ange"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > statue"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-014#4",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue figurant un ange"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-014#5",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue figurant un ange"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > statue"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-015#3",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-020#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-023#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-024",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions",
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-024#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions",
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-024#1",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions",
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-024#3",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "co-024#5",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions",
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  }
+ ],
+ "confusion": [
+  [
+   "ecartee | inconnue",
+   5
+  ],
+  [
+   "divergent | ecartee",
+   4
+  ],
+  [
+   "etablie_sous_hypotheses | inconnue",
+   3
+  ],
+  [
+   "ecartee_sous_hypotheses | inconnue",
+   1
+  ],
+  [
+   "ecartee | divergent",
+   1
+  ]
+ ]
+}

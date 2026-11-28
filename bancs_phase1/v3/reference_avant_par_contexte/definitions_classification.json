@@ -1,0 +1,5399 @@
+[
+ {
+  "id": "dc-001",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "etablie",
+   "B": "etablie"
+  },
+  "variantes": [
+   {
+    "id": "dc-001#0",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 0,
+    "langue": "en",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "signalée par B pour une omission ou une nuance sans effet sur la signification jugée : tenue pour fidèle."
+   },
+   {
+    "id": "dc-001#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-001#2",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-001#3",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-001#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "etablie_sous_hypotheses",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "la moitié inférieure brisée se terminait en queue de poisson (« may have ended »)"
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Le bas du corps est brisé : dans l'œuvre actuelle, la queue de poisson n'est ni dite ni niée (N, A explicite, B ne dit rien de V pour l'œuvre actuelle) ; dans l'état d'origine, elle n'est que possible. Par la précision 1.1 § 1, le statut se lit sur l'œuvre telle que la notice la décrit ; l'état d'origine est un contexte (IA § 7.3), non une convention, et va dans satisfactions_contextuelles.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "valeurs",
+     "natures",
+     "contextes"
+    ],
+    "n": 4,
+    "langue": "en"
+   },
+   {
+    "id": "dc-001#5",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 5,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-002",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "etablie",
+   "B": "etablie"
+  },
+  "variantes": [
+   {
+    "id": "dc-002#0",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-002#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "en"
+   },
+   {
+    "id": "dc-002#2",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-002#3",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-002#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "La tête est couverte d'un capuchon : aucune tonsure n'est figurée. « Il avait reçu la tonsure à Saint-Denis » vient de la rubrique, qui raconte l'histoire de l'homme et ne décrit pas l'image : elle ne satisfait rien (guide § 3), et seules les inclusions analytiques passent d'un contexte à l'autre (décision 21). Le non_certifiee de A demanderait en outre que l'état résultant d'un rite tienne au moment figuré. Même tenue pour une dépendance, l'option prudente est inconnue.",
+    "annotateurs": {
+     "A": "non_certifiee",
+     "B": "inconnue"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "natures"
+    ],
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-002#5",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 5,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-003",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [
+   {
+    "chemin": "principal > vision de la religieuse",
+    "statut": "etablie",
+    "classe": {},
+    "valeur": "V",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B : l'ange tenant le vase du vin de la messe (un calice, par la signification) n'est que dans la vision de la religieuse, et la définition ne nomme aucun contexte. Par la précision 1.1 § 1, le statut se lit sur le contexte principal (N) ; la satisfaction dans la vision va dans satisfactions_contextuelles.",
+  "regle_1_1": "contexte : la vision passe dans satisfactions_contextuelles ; etablie devient inconnue sur le principal",
+  "annotateurs": {
+   "A": "etablie",
+   "B": "etablie"
+  },
+  "variantes": [
+   {
+    "id": "dc-003#0",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > vision de la religieuse",
+      "statut": "etablie",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B : l'ange tenant le vase du vin de la messe (un calice, par la signification) n'est que dans la vision de la religieuse, et la définition ne nomme aucun contexte. Par la précision 1.1 § 1, le statut se lit sur le contexte principal (N) ; la satisfaction dans la vision va dans satisfactions_contextuelles.",
+    "regle_1_1": "contexte : la vision passe dans satisfactions_contextuelles ; etablie devient inconnue sur le principal",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-003#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "en"
+   },
+   {
+    "id": "dc-003#2",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > vision de la religieuse",
+      "statut": "etablie",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B : l'ange tenant le vase du vin de la messe (un calice, par la signification) n'est que dans la vision de la religieuse, et la définition ne nomme aucun contexte. Par la précision 1.1 § 1, le statut se lit sur le contexte principal (N) ; la satisfaction dans la vision va dans satisfactions_contextuelles.",
+    "regle_1_1": "contexte : la vision passe dans satisfactions_contextuelles ; etablie devient inconnue sur le principal",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-003#3",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > vision de la religieuse",
+      "statut": "etablie",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B : l'ange tenant le vase du vin de la messe (un calice, par la signification) n'est que dans la vision de la religieuse, et la définition ne nomme aucun contexte. Par la précision 1.1 § 1, le statut se lit sur le contexte principal (N) ; la satisfaction dans la vision va dans satisfactions_contextuelles.",
+    "regle_1_1": "contexte : la vision passe dans satisfactions_contextuelles ; etablie devient inconnue sur le principal",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-003#4",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le vase doré est destiné au vin de la messe, donc un calice, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 4,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-004",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "connaissance_typique",
+      "contenu": "la palme tenue par une sainte est l'attribut du martyre"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses : le martyre repose sur la palme, connaissance typique). Profil retenu : celui de A. B ajoute une ligne « citée » tirée de la Passion ; une source qui raconte la vie de la sainte ne décrit pas l'image et ne satisfait rien (guide § 3 ; décision 21) : la ligne n'est pas gardée, sans effet sur le statut.",
+  "annotateurs": {
+   "A": "etablie_sous_hypotheses",
+   "B": "etablie_sous_hypotheses"
+  },
+  "variantes": [
+   {
+    "id": "dc-004#0",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "la palme tenue par une sainte est l'attribut du martyre"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses : le martyre repose sur la palme, connaissance typique). Profil retenu : celui de A. B ajoute une ligne « citée » tirée de la Passion ; une source qui raconte la vie de la sainte ne décrit pas l'image et ne satisfait rien (guide § 3 ; décision 21) : la ligne n'est pas gardée, sans effet sur le statut.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-004#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-004#2",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "la palme tenue par une sainte est l'attribut du martyre"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses : le martyre repose sur la palme, connaissance typique). Profil retenu : celui de A. B ajoute une ligne « citée » tirée de la Passion ; une source qui raconte la vie de la sainte ne décrit pas l'image et ne satisfait rien (guide § 3 ; décision 21) : la ligne n'est pas gardée, sans effet sur le statut.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-004#3",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "la sainte tient une palme, ce que l'auteur ne donne que pour possible"
+       },
+       {
+        "nature": "connaissance_typique",
+        "contenu": "la palme tenue par une sainte est l'attribut du martyre"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses : le martyre repose sur la palme, connaissance typique). Profil retenu : celui de A. B ajoute une ligne « citée » tirée de la Passion ; une source qui raconte la vie de la sainte ne décrit pas l'image et ne satisfait rien (guide § 3 ; décision 21) : la ligne n'est pas gardée, sans effet sur le statut.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-004#4",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "la palme tenue par une sainte est l'attribut du martyre"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses : le martyre repose sur la palme, connaissance typique). Profil retenu : celui de A. B ajoute une ligne « citée » tirée de la Passion ; une source qui raconte la vie de la sainte ne décrit pas l'image et ne satisfait rien (guide § 3 ; décision 21) : la ligne n'est pas gardée, sans effet sur le statut.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 4,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-005",
+  "statut_reference": "divergent",
+  "profil": [
+   {
+    "classe": {
+     "p1": "géant à œil unique au milieu du front (trait figuré)"
+    },
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "membre de la race des Cyclopes (espèce mythologique)"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "connaissance_typique",
+      "contenu": "dans la fable, Polyphème est un Cyclope, quelle que soit la façon dont on le figure"
+     }
+    ]
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "sens",
+    "porte_sur": "« cyclops » (définition)",
+    "valeurs": [
+     "géant à œil unique au milieu du front (trait figuré)",
+     "membre de la race des Cyclopes (espèce mythologique)"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (divergent) sur un point de sens de la définition : « cyclops » trait figuré (l'œil unique, réfuté par la négation dite) ou désignation du personnage de la fable (V). Profil retenu : celui de B, qui nomme l'hypothèse de la classe désignative (Polyphème est un Cyclope dans la fable) ; A n'en écrit pas, sans changer les valeurs.",
+  "annotateurs": {
+   "A": "divergent",
+   "B": "divergent"
+  },
+  "desaccord_champs": [
+   "natures"
+  ],
+  "variantes": [
+   {
+    "id": "dc-005#0",
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "géant à œil unique au milieu du front (trait figuré)"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "membre de la race des Cyclopes (espèce mythologique)"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "dans la fable, Polyphème est un Cyclope, quelle que soit la façon dont on le figure"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« cyclops » (définition)",
+      "valeurs": [
+       "géant à œil unique au milieu du front (trait figuré)",
+       "membre de la race des Cyclopes (espèce mythologique)"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent) sur un point de sens de la définition : « cyclops » trait figuré (l'œil unique, réfuté par la négation dite) ou désignation du personnage de la fable (V). Profil retenu : celui de B, qui nomme l'hypothèse de la classe désignative (Polyphème est un Cyclope dans la fable) ; A n'en écrit pas, sans changer les valeurs.",
+    "annotateurs": {
+     "A": "divergent",
+     "B": "divergent"
+    },
+    "desaccord_champs": [
+     "natures"
+    ],
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-005#1",
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "géant à œil unique au milieu du front (trait figuré)"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "membre de la race des Cyclopes (espèce mythologique)"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "dans la fable, Polyphème est un Cyclope, quelle que soit la façon dont on le figure"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« cyclops » (définition)",
+      "valeurs": [
+       "géant à œil unique au milieu du front (trait figuré)",
+       "membre de la race des Cyclopes (espèce mythologique)"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent) sur un point de sens de la définition : « cyclops » trait figuré (l'œil unique, réfuté par la négation dite) ou désignation du personnage de la fable (V). Profil retenu : celui de B, qui nomme l'hypothèse de la classe désignative (Polyphème est un Cyclope dans la fable) ; A n'en écrit pas, sans changer les valeurs.",
+    "annotateurs": {
+     "A": "divergent",
+     "B": "divergent"
+    },
+    "desaccord_champs": [
+     "natures"
+    ],
+    "n": 1,
+    "langue": "fr",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "signalée par B pour une omission ou une nuance sans effet sur la signification jugée : tenue pour fidèle."
+   },
+   {
+    "id": "dc-005#2",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "trait figuré"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "désignation"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "dans la fable, Polyphème est un Cyclope, quelle que soit la façon dont on le figure"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« cyclops » (définition)",
+      "valeurs": [
+       "géant à œil unique au milieu du front (trait figuré)",
+       "membre de la race des Cyclopes (désignation du personnage)"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "etablie_sous_hypotheses",
+      "classe": {
+       "p1": "trait figuré"
+      },
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le front, très abîmé, portait un œil unique (« peut-être »)"
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "A et B s'accordent sur le statut. Restructuré par la précision 1.1 § 1 : sur l'œuvre actuelle, la lecture descriptive n'a ni appui ni négation (le front est abîmé : N) et la lecture désignative donne V ; l'œil unique possible de l'état d'origine est une satisfaction contextuelle, non une classe du principal. Statut inchangé.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "natures",
+     "contextes"
+    ],
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-005#3",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "trait figuré"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "désignation"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "dans la fable, Polyphème est un Cyclope, quelle que soit la façon dont on le figure"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« cyclops » (définition)",
+      "valeurs": [
+       "géant à œil unique au milieu du front (trait figuré)",
+       "membre de la race des Cyclopes (désignation du personnage)"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "etablie_sous_hypotheses",
+      "classe": {
+       "p1": "trait figuré"
+      },
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le visage perdu suivait Ovide, que suit le programme, et portait un œil unique"
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "A et B s'accordent sur le statut. « Selon Ovide » parle du géant de la fable, non de la figure (une source qui raconte, guide § 3) ; c'est l'auteur qui dit que le programme suit Ovide : l'énonciateur de la satisfaction d'origine est l'auteur, sous abduction (B), non la source citée (A). Restructuré par la précision 1.1 § 1 comme dc-005#2.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "natures",
+     "contextes"
+    ],
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-005#4",
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "géant à œil unique au milieu du front (trait figuré)"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "membre de la race des Cyclopes (espèce mythologique)"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "dans la fable, Polyphème est un Cyclope, quelle que soit la façon dont on le figure"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« cyclops » (définition)",
+      "valeurs": [
+       "géant à œil unique au milieu du front (trait figuré)",
+       "membre de la race des Cyclopes (espèce mythologique)"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent) sur un point de sens de la définition : « cyclops » trait figuré (l'œil unique, réfuté par la négation dite) ou désignation du personnage de la fable (V). Profil retenu : celui de B, qui nomme l'hypothèse de la classe désignative (Polyphème est un Cyclope dans la fable) ; A n'en écrit pas, sans changer les valeurs.",
+    "annotateurs": {
+     "A": "divergent",
+     "B": "divergent"
+    },
+    "desaccord_champs": [
+     "natures"
+    ],
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-005#5",
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "géant à œil unique au milieu du front (trait figuré)"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "membre de la race des Cyclopes (espèce mythologique)"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "dans la fable, Polyphème est un Cyclope, quelle que soit la façon dont on le figure"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« cyclops » (définition)",
+      "valeurs": [
+       "géant à œil unique au milieu du front (trait figuré)",
+       "membre de la race des Cyclopes (espèce mythologique)"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent) sur un point de sens de la définition : « cyclops » trait figuré (l'œil unique, réfuté par la négation dite) ou désignation du personnage de la fable (V). Profil retenu : celui de B, qui nomme l'hypothèse de la classe désignative (Polyphème est un Cyclope dans la fable) ; A n'en écrit pas, sans changer les valeurs.",
+    "annotateurs": {
+     "A": "divergent",
+     "B": "divergent"
+    },
+    "desaccord_champs": [
+     "natures"
+    ],
+    "n": 5,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-005#6",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 6,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-006",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "ecartee",
+   "B": "ecartee"
+  },
+  "variantes": [
+   {
+    "id": "dc-006#0",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-006#1",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 1,
+    "langue": "en",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "signalée par B pour une omission ou une nuance sans effet sur la signification jugée : tenue pour fidèle."
+   },
+   {
+    "id": "dc-006#2",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-006#3",
+    "statut_reference": "contradictoire",
+    "profil": [
+     {
+      "classe": {
+       "p1": "mode d'existence"
+      },
+      "valeur": "B",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "rendu"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« The unicorn is not an imaginary creature »",
+      "valeurs": [
+       "mode d'existence : ce n'est pas une créature fabuleuse",
+       "rendu : elle est traitée comme un animal réel, sellé et bridé"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (contradictoire). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "contradictoire",
+     "B": "contradictoire"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-006#4",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 4,
+    "langue": "en"
+   },
+   {
+    "id": "dc-006#5",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 5,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-007",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "le vieillard qui vit seul au désert est un ermite, ce que l'auteur ne donne que pour possible"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "etablie_sous_hypotheses",
+   "B": "etablie_sous_hypotheses"
+  },
+  "variantes": [
+   {
+    "id": "dc-007#0",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le vieillard qui vit seul au désert est un ermite, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-007#1",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-007#2",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le vieillard qui vit seul au désert est un ermite, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-007#3",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le vieillard qui vit seul au désert est un ermite, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-007#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "inscription et figure : légende gravée",
+      "decision": "décision 20 (l'étiquette : source citée ou titre, reste) ; décision 21",
+      "question": "La légende gravée (« il vécut seul au désert pendant quarante ans ») est-elle une source citée qui parle du figuré, un texte inscrit dont le contenu passe à la figure par un lien typique, ou un récit de la vie de l'homme qui ne décrit pas l'image ?",
+      "options": [
+       {
+        "option": "source citée parlant du figuré",
+        "statut": "non_certifiee"
+       },
+       {
+        "option": "texte inscrit, lien titulus-figure typique, désert du moment figuré supposé",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "récit de vie : rien ne passe à la figuration (guide § 3 ; décision 21)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "Seuls la lecture, le vieillard et la cabane de branchages sont dits de la figure ; la solitude au désert vient de la légende gravée, qui raconte sa vie. A (esh, connaissance typique) et B (non_certifiee, source citée) lisent l'inscription de deux façons que les principes ne départagent pas, et une troisième (récit) ne satisfait rien. Dépendance ; on retient inconnue.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "non_certifiee"
+    },
+    "desaccord_champs": [
+     "statut",
+     "natures",
+     "contextes"
+    ],
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-007#5",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 5,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-008",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "ecartee",
+   "B": "ecartee"
+  },
+  "variantes": [
+   {
+    "id": "dc-008#0",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-008#1",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-008#2",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le corps est chevalin au-dessous de la taille, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-008#3",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-008#4",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-008#5",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 5,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-009",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "l'homme à la cape et au bâton est un pèlerin, ce que l'auteur ne donne que pour possible"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "etablie_sous_hypotheses",
+   "B": "etablie_sous_hypotheses"
+  },
+  "variantes": [
+   {
+    "id": "dc-009#0",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'homme à la cape et au bâton est un pèlerin, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-009#1",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "l'homme au bourdon, à l'escarcelle et au chapeau à coquille, en route vers un sanctuaire, est un pèlerin"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 1,
+    "langue": "en"
+   },
+   {
+    "id": "dc-009#2",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-009#3",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-009#4",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'homme à la cape et au bâton est un pèlerin, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 4,
+    "langue": "en"
+   },
+   {
+    "id": "dc-009#5",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'homme à la cape et au bâton est un pèlerin, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 5,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-010",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "connaissance_typique",
+      "contenu": "crâne, sablier, chandelle éteinte et bulle de savon font allusion à la brièveté de la vie (vanité)"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [
+   {
+    "id": "d1",
+    "dimension": "symbole non dit (connaissance typique)",
+    "decision": "guide § 1 ; décision 24 (non fixé)",
+    "question": "Une signification symbolique que l'auteur ne dit pas (le crâne et le sablier comme allusion à la fugacité de la vie) peut-elle être apportée comme hypothèse de connaissance typique, sans observation qu'elle explique ?",
+    "options": [
+     {
+      "option": "admise comme connaissance typique",
+      "statut": "etablie_sous_hypotheses"
+     },
+     {
+      "option": "non admise : le symbole doit être dit",
+      "statut": "inconnue"
+     }
+    ],
+    "statut_retenu": "etablie_sous_hypotheses",
+    "raison_retenu": "Dépendance signalée, non appliquée : A et B s'accordent, et la référence d'un accord est leur jugement commun (consigne, étape 1).",
+    "appliquee": false
+   }
+  ],
+  "source": "accord",
+  "raison": "Accord de A et B : crâne et sablier sont dits ; l'allusion à la fugacité de la vie, non dite, repose sur la connaissance typique de la vanité. Dépendance signalée (même thème que nr-023 : un symbole non dit), non appliquée à un accord.",
+  "annotateurs": {
+   "A": "etablie_sous_hypotheses",
+   "B": "etablie_sous_hypotheses"
+  },
+  "variantes": [
+   {
+    "id": "dc-010#0",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "crâne, sablier, chandelle éteinte et bulle de savon font allusion à la brièveté de la vie (vanité)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "symbole non dit (connaissance typique)",
+      "decision": "guide § 1 ; décision 24 (non fixé)",
+      "question": "Une signification symbolique que l'auteur ne dit pas (le crâne et le sablier comme allusion à la fugacité de la vie) peut-elle être apportée comme hypothèse de connaissance typique, sans observation qu'elle explique ?",
+      "options": [
+       {
+        "option": "admise comme connaissance typique",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "non admise : le symbole doit être dit",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "raison_retenu": "Dépendance signalée, non appliquée : A et B s'accordent, et la référence d'un accord est leur jugement commun (consigne, étape 1).",
+      "appliquee": false
+     }
+    ],
+    "source": "accord",
+    "raison": "Accord de A et B : crâne et sablier sont dits ; l'allusion à la fugacité de la vie, non dite, repose sur la connaissance typique de la vanité. Dépendance signalée (même thème que nr-023 : un symbole non dit), non appliquée à un accord.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-010#1",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "crâne, sablier, chandelle éteinte et bulle de savon font allusion à la brièveté de la vie (vanité)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "symbole non dit (connaissance typique)",
+      "decision": "guide § 1 ; décision 24 (non fixé)",
+      "question": "Une signification symbolique que l'auteur ne dit pas (le crâne et le sablier comme allusion à la fugacité de la vie) peut-elle être apportée comme hypothèse de connaissance typique, sans observation qu'elle explique ?",
+      "options": [
+       {
+        "option": "admise comme connaissance typique",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "non admise : le symbole doit être dit",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "raison_retenu": "Dépendance signalée, non appliquée : A et B s'accordent, et la référence d'un accord est leur jugement commun (consigne, étape 1).",
+      "appliquee": false
+     }
+    ],
+    "source": "accord",
+    "raison": "Accord de A et B : crâne et sablier sont dits ; l'allusion à la fugacité de la vie, non dite, repose sur la connaissance typique de la vanité. Dépendance signalée (même thème que nr-023 : un symbole non dit), non appliquée à un accord.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 1,
+    "langue": "en"
+   },
+   {
+    "id": "dc-010#2",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "inconnue"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-010#3",
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "le crâne et le sablier d'une nature morte font d'ordinaire allusion à la fugacité de la vie (vanité)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "non_certifiee",
+     "B": "non_certifiee"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-010#4",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "crâne, sablier, chandelle éteinte et bulle de savon font allusion à la brièveté de la vie (vanité)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "symbole non dit (connaissance typique)",
+      "decision": "guide § 1 ; décision 24 (non fixé)",
+      "question": "Une signification symbolique que l'auteur ne dit pas (le crâne et le sablier comme allusion à la fugacité de la vie) peut-elle être apportée comme hypothèse de connaissance typique, sans observation qu'elle explique ?",
+      "options": [
+       {
+        "option": "admise comme connaissance typique",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "non admise : le symbole doit être dit",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "raison_retenu": "Dépendance signalée, non appliquée : A et B s'accordent, et la référence d'un accord est leur jugement commun (consigne, étape 1).",
+      "appliquee": false
+     }
+    ],
+    "source": "accord",
+    "raison": "Accord de A et B : crâne et sablier sont dits ; l'allusion à la fugacité de la vie, non dite, repose sur la connaissance typique de la vanité. Dépendance signalée (même thème que nr-023 : un symbole non dit), non appliquée à un accord.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 4,
+    "langue": "en"
+   },
+   {
+    "id": "dc-010#5",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "crâne, sablier, chandelle éteinte et bulle de savon font allusion à la brièveté de la vie (vanité)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "symbole non dit (connaissance typique)",
+      "decision": "guide § 1 ; décision 24 (non fixé)",
+      "question": "Une signification symbolique que l'auteur ne dit pas (le crâne et le sablier comme allusion à la fugacité de la vie) peut-elle être apportée comme hypothèse de connaissance typique, sans observation qu'elle explique ?",
+      "options": [
+       {
+        "option": "admise comme connaissance typique",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "non admise : le symbole doit être dit",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "raison_retenu": "Dépendance signalée, non appliquée : A et B s'accordent, et la référence d'un accord est leur jugement commun (consigne, étape 1).",
+      "appliquee": false
+     }
+    ],
+    "source": "accord",
+    "raison": "Accord de A et B : crâne et sablier sont dits ; l'allusion à la fugacité de la vie, non dite, repose sur la connaissance typique de la vanité. Dépendance signalée (même thème que nr-023 : un symbole non dit), non appliquée à un accord.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 5,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-011",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "le vieillard aux yeux clos est aveugle, ce que l'auteur ne donne que pour possible"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "etablie_sous_hypotheses",
+   "B": "etablie_sous_hypotheses"
+  },
+  "variantes": [
+   {
+    "id": "dc-011#0",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le vieillard aux yeux clos est aveugle, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-011#1",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le vieillard aux yeux clos est aveugle, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-011#2",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-011#3",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-011#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "inversion de rôles (K* : asymétrie)",
+      "decision": "décision 9 (la liste des relations asymétriques reste)",
+      "question": "Inversion de rôles : « guider » (le vieillard guide le garçon ; la définition demande le garçon guidant le vieillard) est-elle une relation asymétrique (R(x, y) exclut R(y, x) au même moment), donc un appui négatif ?",
+      "options": [
+       {
+        "option": "asymétrie analytique",
+        "statut": "ecartee"
+       },
+       {
+        "option": "asymétrie non attestée",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas (ecartee affirmerait un F que l'autre option n'affirme pas).",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "Rôles inversés : le vieillard aveugle guide le garçon. Que « guider » soit asymétrique au même moment (B) est une entrée que la décision 9 laisse ouverte (« la liste des relations asymétriques ») ; A n'y voit aucun appui négatif. Dépendance ; on retient inconnue.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "ecartee"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs"
+    ],
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-011#5",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le vieillard aux yeux clos, guidé par la manche, est aveugle"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 5,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-012",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [
+   {
+    "id": "d1",
+    "dimension": "élément non mentionné apporté par la connaissance typique d'un type",
+    "decision": "guide §§ 1 et 3 ; décision 24 (non fixé)",
+    "question": "Joseph menant l'âne, que la description ne mentionne pas, peut-il être supposé parce que une Fuite en Égypte (reconnue au titre, à l'âne et au palmier) le comporte d'ordinaire ?",
+    "options": [
+     {
+      "option": "admis comme connaissance typique",
+      "statut": "etablie_sous_hypotheses"
+     },
+     {
+      "option": "non admis : le silence n'appuie rien, et la connaissance typique n'explique ici aucune observation",
+      "statut": "inconnue"
+     }
+    ],
+    "statut_retenu": "inconnue",
+    "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas.",
+    "appliquee": true
+   }
+  ],
+  "source": "dependance",
+  "raison": "La femme à l'enfant sur un âne est dite ; Joseph menant l'âne n'est mentionné nulle part. Le titre « La Fuite en Égypte » est un texte, qui ne satisfait rien seul (guide § 3). Que Joseph soit supposé parce qu'une Fuite en Égypte le comporte d'ordinaire (A) est une connaissance typique qui n'explique aucune observation ; B la refuse. Dépendance ; on retient inconnue.",
+  "annotateurs": {
+   "A": "etablie_sous_hypotheses",
+   "B": "inconnue"
+  },
+  "desaccord_champs": [
+   "statut",
+   "valeurs",
+   "natures"
+  ],
+  "variantes": [
+   {
+    "id": "dc-012#0",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "élément non mentionné apporté par la connaissance typique d'un type",
+      "decision": "guide §§ 1 et 3 ; décision 24 (non fixé)",
+      "question": "Joseph menant l'âne, que la description ne mentionne pas, peut-il être supposé parce que une Fuite en Égypte (reconnue au titre, à l'âne et au palmier) le comporte d'ordinaire ?",
+      "options": [
+       {
+        "option": "admis comme connaissance typique",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "non admis : le silence n'appuie rien, et la connaissance typique n'explique ici aucune observation",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "La femme à l'enfant sur un âne est dite ; Joseph menant l'âne n'est mentionné nulle part. Le titre « La Fuite en Égypte » est un texte, qui ne satisfait rien seul (guide § 3). Que Joseph soit supposé parce qu'une Fuite en Égypte le comporte d'ordinaire (A) est une connaissance typique qui n'explique aucune observation ; B la refuse. Dépendance ; on retient inconnue.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "inconnue"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "natures"
+    ],
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-012#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-012#2",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la femme est la Vierge (« peut-être »)"
+       },
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'homme âgé qui conduit l'âne est Joseph (« peut-être »)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de B, le plus explicite. désaccord de forme seulement (natures) : statut et valeurs communs ; natures des hypothèses : A ['abduction'], B ['identification_iconographique'].",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "natures"
+    ],
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-012#3",
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la femme au manteau bleu, l'enfant dans les bras, sur un âne, est Marie avec l'Enfant (titre, palmier qui s'incline)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : celui de A, le plus explicite. désaccord de forme seulement (natures) : statut et valeurs communs ; natures des hypothèses : A ['identification_iconographique'], B ∅.",
+    "annotateurs": {
+     "A": "non_certifiee",
+     "B": "non_certifiee"
+    },
+    "desaccord_champs": [
+     "natures"
+    ],
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-012#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "élément non mentionné apporté par la connaissance typique d'un type",
+      "decision": "guide §§ 1 et 3 ; décision 24 (non fixé)",
+      "question": "Joseph menant l'âne, que la description ne mentionne pas, peut-il être supposé parce que une Fuite en Égypte (reconnue au titre, à l'âne et au palmier) le comporte d'ordinaire ?",
+      "options": [
+       {
+        "option": "admis comme connaissance typique",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "non admis : le silence n'appuie rien, et la connaissance typique n'explique ici aucune observation",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "La femme à l'enfant sur un âne est dite ; Joseph menant l'âne n'est mentionné nulle part. Le titre « La Fuite en Égypte » est un texte, qui ne satisfait rien seul (guide § 3). Que Joseph soit supposé parce qu'une Fuite en Égypte le comporte d'ordinaire (A) est une connaissance typique qui n'explique aucune observation ; B la refuse. Dépendance ; on retient inconnue.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "inconnue"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "natures"
+    ],
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-012#5",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "élément non mentionné apporté par la connaissance typique d'un type",
+      "decision": "guide §§ 1 et 3 ; décision 24 (non fixé)",
+      "question": "Joseph menant l'âne, que la description ne mentionne pas, peut-il être supposé parce que une Fuite en Égypte (reconnue au titre, à l'âne et au palmier) le comporte d'ordinaire ?",
+      "options": [
+       {
+        "option": "admis comme connaissance typique",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "non admis : le silence n'appuie rien, et la connaissance typique n'explique ici aucune observation",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "La femme à l'enfant sur un âne est dite ; Joseph menant l'âne n'est mentionné nulle part. Le titre « La Fuite en Égypte » est un texte, qui ne satisfait rien seul (guide § 3). Que Joseph soit supposé parce qu'une Fuite en Égypte le comporte d'ordinaire (A) est une connaissance typique qui n'explique aucune observation ; B la refuse. Dépendance ; on retient inconnue.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "inconnue"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "natures"
+    ],
+    "n": 5,
+    "langue": "fr",
+    "paraphrase_infidele": true,
+    "remarque_fidelite": "Paraphrase (même langue), non traduction : elle omet le titre « La Fuite en Égypte », une information qui appuyait l'identification ; infidélité réelle, sans effet sur le statut (inconnue). A l'avait signalée sous le champ traduction_infidele, qui ne vaut que pour une traduction."
+   }
+  ]
+ },
+ {
+  "id": "dc-013",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identification_iconographique",
+      "contenu": "le jeune diacre au gril est saint Laurent"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "etablie_sous_hypotheses",
+   "B": "etablie_sous_hypotheses"
+  },
+  "variantes": [
+   {
+    "id": "dc-013#0",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "le jeune diacre au gril est saint Laurent"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-013#1",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "le jeune diacre au gril est saint Laurent"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 1,
+    "langue": "en",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "signalée par B pour une omission ou une nuance sans effet sur la signification jugée : tenue pour fidèle."
+   },
+   {
+    "id": "dc-013#2",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-013#3",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "inconnue"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-013#4",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'objet endommagé est un gril, ce que l'auteur ne donne que pour possible"
+       },
+       {
+        "nature": "identification_iconographique",
+        "contenu": "le jeune diacre au gril est saint Laurent"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 4,
+    "langue": "en"
+   },
+   {
+    "id": "dc-013#5",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "le jeune diacre au gril est saint Laurent"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 5,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-014",
+  "statut_reference": "divergent",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identification_iconographique",
+      "contenu": "la sainte couronnée à la roue brisée et hérissée de pointes est sainte Catherine d'Alexandrie"
+     }
+    ]
+   },
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "connaissance_typique",
+      "contenu": "l'inscription S. BARBARA, sur le cadre sous elle, nomme la figure (lien titulus-figure, décision 20)"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (divergent). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "divergent",
+   "B": "divergent"
+  },
+  "variantes": [
+   {
+    "id": "dc-014#0",
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la sainte couronnée à la roue brisée et hérissée de pointes est sainte Catherine d'Alexandrie"
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "l'inscription S. BARBARA, sur le cadre sous elle, nomme la figure (lien titulus-figure, décision 20)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "divergent",
+     "B": "divergent"
+    },
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-014#1",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la sainte couronnée à la roue brisée et hérissée de pointes est sainte Catherine d'Alexandrie"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-014#2",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la sainte couronnée à la roue brisée hérissée de pointes est Catherine d'Alexandrie"
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "l'inscription « S. KATERINA » nomme la sainte figurée"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de B, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-014#3",
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la sainte couronnée à la roue brisée et hérissée de pointes est sainte Catherine d'Alexandrie"
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "l'inscription S. BARBARA, peut-être ajoutée au XIXe siècle, nomme la figure"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "divergent",
+     "B": "divergent"
+    },
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-014#4",
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la sainte couronnée à la roue brisée et hérissée de pointes est sainte Catherine d'Alexandrie"
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "l'inscription S. BARBARA, sur le cadre sous elle, nomme la figure (lien titulus-figure, décision 20)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "divergent",
+     "B": "divergent"
+    },
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-014#5",
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la sainte couronnée à la roue brisée et hérissée de pointes est sainte Catherine d'Alexandrie"
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "l'inscription S. BARBARA, sur le cadre sous elle, nomme la figure (lien titulus-figure, décision 20)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "divergent",
+     "B": "divergent"
+    },
+    "n": 5,
+    "langue": "fr",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "signalée par B pour une omission ou une nuance sans effet sur la signification jugée : tenue pour fidèle."
+   }
+  ]
+ },
+ {
+  "id": "dc-015",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "cite",
+    "hypotheses": []
+   },
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identification_iconographique",
+      "contenu": "la jeune femme couronnée à la palme, près d'une tour, est sainte Barbe"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de B, le plus explicite.",
+  "annotateurs": {
+   "A": "etablie_sous_hypotheses",
+   "B": "etablie_sous_hypotheses"
+  },
+  "variantes": [
+   {
+    "id": "dc-015#0",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la jeune femme couronnée à la palme, près d'une tour, est sainte Barbe"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de B, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-015#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-015#2",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-015#3",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la jeune femme couronnée à la palme, près d'une tour, est sainte Barbe"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de B, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-015#4",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "etablie_sous_hypotheses",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "la tour prévue par le devis fut exécutée (« ce verre a été perdu » la présuppose)"
+       },
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la jeune femme couronnée à la palme, près d'une tour, est sainte Barbe, comme le veut la tradition rapportée"
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« Ce verre a été perdu lors du remontage » : par la signification de « perdre », le verre de la tour n'est plus dans le vitrail ; la seule tour citée n'est pas à ses côtés dans l'œuvre actuelle (F pour les référents cités, comme « remplacer » en dc-016, où A et B s'accordent). A l'écrit ; B ne juge que l'état d'origine et dit lui-même que « la tour n'est plus dans le vitrail ». Par la précision 1.1 § 1, le statut se lit sur l'œuvre telle que la notice la décrit ; l'état d'origine est un contexte (IA § 7.3), non une convention, et va dans satisfactions_contextuelles. A écrivait divergent : une différence de contextes n'en donne jamais.",
+    "annotateurs": {
+     "A": "divergent",
+     "B": "etablie_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "natures",
+     "contextes"
+    ],
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-015#5",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la jeune femme couronnée à la palme, près d'une tour, est sainte Barbe"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de B, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 5,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-016",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "ecartee",
+   "B": "ecartee"
+  },
+  "variantes": [
+   {
+    "id": "dc-016#0",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-016#1",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la jeune femme à la palme et à la tenaille serrant une dent est sainte Apollonie"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 1,
+    "langue": "en"
+   },
+   {
+    "id": "dc-016#2",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "inconnue"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-016#3",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "inconnue"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-016#4",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 4,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-017",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "etablie",
+   "B": "etablie"
+  },
+  "variantes": [
+   {
+    "id": "dc-017#0",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-017#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "en",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "signalée par B pour une omission ou une nuance sans effet sur la signification jugée : tenue pour fidèle."
+   },
+   {
+    "id": "dc-017#2",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-017#3",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'amphithéâtre en ruine est le Colisée, que le peintre connaissait par des estampes"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-017#4",
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'amphithéâtre en ruine est le Colisée, ce que l'auteur ne donne que pour possible"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "n": 4,
+    "langue": "en"
+   },
+   {
+    "id": "dc-017#5",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 5,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-018",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [
+   {
+    "chemin": "principal > décor de la scène (fiction scénique)",
+    "statut": "etablie",
+    "classe": {},
+    "valeur": "V",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "dependances": [
+   {
+    "id": "d1",
+    "dimension": "contexte : statue et décor",
+    "decision": "décisions 13 et 31 (« la statue et le décor », reste)",
+    "question": "« Un laurier de carton peint » : une matière (un laurier fait de carton, comme « un ange de marbre » au sens matière, IA § 7.5), un modificateur privatif (un objet de carton, qui n'est pas un arbre), ou un décor qui figure un laurier dans la fiction scénique ? Le premier donne V sur le principal, le deuxième F, le troisième F ou N sur le principal et V dans le décor.",
+    "options": [
+     {
+      "option": "matière : un laurier de carton est un laurier",
+      "statut": "etablie (principal)"
+     },
+     {
+      "option": "privatif ou décor : l'objet de carton n'est pas un arbre",
+      "statut": "ecartee (principal)"
+     }
+    ],
+    "statut_retenu": "inconnue",
+    "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas ; sur le décor, A et B s'accordent : V.",
+    "appliquee": true
+   }
+  ],
+  "source": "dependance",
+  "raison": "A (etablie dans le contexte du décor) et B (divergent : F matériel, V scénique) s'accordent sur une chose : dans la fiction scénique, le décor figure un laurier. Par la précision 1.1 § 1, c'est une satisfaction contextuelle, non une lecture, et le divergent de B ne tient pas. Sur le contexte principal (la scène d'opéra), le statut dépend de la lecture de « laurier de carton », que les principes laissent ouverte (décisions 13 et 31) : on retient inconnue.",
+  "annotateurs": {
+   "A": "etablie",
+   "B": "divergent"
+  },
+  "desaccord_champs": [
+   "statut",
+   "valeurs",
+   "dimensions",
+   "contextes"
+  ],
+  "variantes": [
+   {
+    "id": "dc-018#0",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > décor de la scène (fiction scénique)",
+      "statut": "etablie",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "contexte : statue et décor",
+      "decision": "décisions 13 et 31 (« la statue et le décor », reste)",
+      "question": "« Un laurier de carton peint » : une matière (un laurier fait de carton, comme « un ange de marbre » au sens matière, IA § 7.5), un modificateur privatif (un objet de carton, qui n'est pas un arbre), ou un décor qui figure un laurier dans la fiction scénique ? Le premier donne V sur le principal, le deuxième F, le troisième F ou N sur le principal et V dans le décor.",
+      "options": [
+       {
+        "option": "matière : un laurier de carton est un laurier",
+        "statut": "etablie (principal)"
+       },
+       {
+        "option": "privatif ou décor : l'objet de carton n'est pas un arbre",
+        "statut": "ecartee (principal)"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas ; sur le décor, A et B s'accordent : V.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "A (etablie dans le contexte du décor) et B (divergent : F matériel, V scénique) s'accordent sur une chose : dans la fiction scénique, le décor figure un laurier. Par la précision 1.1 § 1, c'est une satisfaction contextuelle, non une lecture, et le divergent de B ne tient pas. Sur le contexte principal (la scène d'opéra), le statut dépend de la lecture de « laurier de carton », que les principes laissent ouverte (décisions 13 et 31) : on retient inconnue.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "divergent"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "dimensions",
+     "contextes"
+    ],
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-018#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-018#2",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-018#3",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > décor de la scène (fiction scénique)",
+      "statut": "etablie",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "contexte : statue et décor",
+      "decision": "décisions 13 et 31 (« la statue et le décor », reste)",
+      "question": "« Un laurier de carton peint » : une matière (un laurier fait de carton, comme « un ange de marbre » au sens matière, IA § 7.5), un modificateur privatif (un objet de carton, qui n'est pas un arbre), ou un décor qui figure un laurier dans la fiction scénique ? Le premier donne V sur le principal, le deuxième F, le troisième F ou N sur le principal et V dans le décor.",
+      "options": [
+       {
+        "option": "matière : un laurier de carton est un laurier",
+        "statut": "etablie (principal)"
+       },
+       {
+        "option": "privatif ou décor : l'objet de carton n'est pas un arbre",
+        "statut": "ecartee (principal)"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas ; sur le décor, A et B s'accordent : V.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "A (etablie dans le contexte du décor) et B (divergent : F matériel, V scénique) s'accordent sur une chose : dans la fiction scénique, le décor figure un laurier. Par la précision 1.1 § 1, c'est une satisfaction contextuelle, non une lecture, et le divergent de B ne tient pas. Sur le contexte principal (la scène d'opéra), le statut dépend de la lecture de « laurier de carton », que les principes laissent ouverte (décisions 13 et 31) : on retient inconnue.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "divergent"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "dimensions",
+     "contextes"
+    ],
+    "n": 3,
+    "langue": "fr",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "B la signale (« tient lieu du lieu », musiciens omis) : nuance sans effet, tenue pour fidèle."
+   },
+   {
+    "id": "dc-018#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > décor de la scène (fiction scénique)",
+      "statut": "etablie",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "contexte : statue et décor",
+      "decision": "décisions 13 et 31 (« la statue et le décor », reste)",
+      "question": "« Un laurier de carton peint » : une matière (un laurier fait de carton, comme « un ange de marbre » au sens matière, IA § 7.5), un modificateur privatif (un objet de carton, qui n'est pas un arbre), ou un décor qui figure un laurier dans la fiction scénique ? Le premier donne V sur le principal, le deuxième F, le troisième F ou N sur le principal et V dans le décor.",
+      "options": [
+       {
+        "option": "matière : un laurier de carton est un laurier",
+        "statut": "etablie (principal)"
+       },
+       {
+        "option": "privatif ou décor : l'objet de carton n'est pas un arbre",
+        "statut": "ecartee (principal)"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas ; sur le décor, A et B s'accordent : V.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "A (etablie dans le contexte du décor) et B (divergent : F matériel, V scénique) s'accordent sur une chose : dans la fiction scénique, le décor figure un laurier. Par la précision 1.1 § 1, c'est une satisfaction contextuelle, non une lecture, et le divergent de B ne tient pas. Sur le contexte principal (la scène d'opéra), le statut dépend de la lecture de « laurier de carton », que les principes laissent ouverte (décisions 13 et 31) : on retient inconnue.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "divergent"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "dimensions",
+     "contextes"
+    ],
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-018#5",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > décor de la scène (fiction scénique)",
+      "statut": "etablie_sous_hypotheses",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le décor est un laurier de carton (« peut-être »)"
+       }
+      ]
+     }
+    ],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "contexte : statue et décor",
+      "decision": "décisions 13 et 31 (« la statue et le décor », reste)",
+      "question": "« Un laurier de carton peint » : une matière (un laurier fait de carton, comme « un ange de marbre » au sens matière, IA § 7.5), un modificateur privatif (un objet de carton, qui n'est pas un arbre), ou un décor qui figure un laurier dans la fiction scénique ? Le premier donne V sur le principal, le deuxième F, le troisième F ou N sur le principal et V dans le décor.",
+      "options": [
+       {
+        "option": "matière : un laurier de carton est un laurier",
+        "statut": "etablie (principal)"
+       },
+       {
+        "option": "privatif ou décor : l'objet de carton n'est pas un arbre",
+        "statut": "ecartee (principal)"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas ; sur le décor, A et B s'accordent : V.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "A (etablie dans le contexte du décor) et B (divergent : F matériel, V scénique) s'accordent sur une chose : dans la fiction scénique, le décor figure un laurier. Par la précision 1.1 § 1, c'est une satisfaction contextuelle, non une lecture, et le divergent de B ne tient pas. Sur le contexte principal (la scène d'opéra), le statut dépend de la lecture de « laurier de carton », que les principes laissent ouverte (décisions 13 et 31) : on retient inconnue. Ici le décor n'est que peut-être un laurier.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "divergent"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "dimensions",
+     "contextes"
+    ],
+    "n": 5,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-019",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [],
+    "relation": "portrait historié : la modèle figurée en Diane (décision 34)"
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "adjudication",
+  "raison": "A et B s'accordent sur etablie ; ils ne diffèrent que par le libellé du contexte. Le portrait historié (décision 34) a deux relations, le modèle réel et le personnage figuré : Diane est figurée dans la figuration même de l'œuvre, non dans un contexte emboîté. Contexte : principal.",
+  "annotateurs": {
+   "A": "etablie",
+   "B": "etablie"
+  },
+  "desaccord_champs": [
+   "contextes"
+  ],
+  "variantes": [
+   {
+    "id": "dc-019#0",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "relation": "portrait historié : la modèle figurée en Diane (décision 34)"
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "A et B s'accordent sur etablie ; ils ne diffèrent que par le libellé du contexte. Le portrait historié (décision 34) a deux relations, le modèle réel et le personnage figuré : Diane est figurée dans la figuration même de l'œuvre, non dans un contexte emboîté. Contexte : principal.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "desaccord_champs": [
+     "contextes"
+    ],
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-019#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "relation": "portrait historié : la modèle figurée en Diane (décision 34)"
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "A et B s'accordent sur etablie ; ils ne diffèrent que par le libellé du contexte. Le portrait historié (décision 34) a deux relations, le modèle réel et le personnage figuré : Diane est figurée dans la figuration même de l'œuvre, non dans un contexte emboîté. Contexte : principal.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "desaccord_champs": [
+     "contextes"
+    ],
+    "n": 1,
+    "langue": "en"
+   },
+   {
+    "id": "dc-019#2",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "inconnue"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-019#3",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "relation": "portrait historié (décision 34)"
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« Portrait of a lady, perhaps Marie-Anne de Bourbon, princesse de Conti, as Diana » : « perhaps » est dans l'apposition, fermée par la virgule ; « as Diana » se rattache à « portrait of a lady ». Le texte ne laisse pas au lecteur compétent une portée large : ce n'est pas un point (guide § 2). Croissant et arc sont dits : etablie (A). B gardait la portée large, sous identification iconographique.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "statut",
+     "dimensions",
+     "natures",
+     "contextes"
+    ],
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-019#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "inconnue"
+    },
+    "n": 4,
+    "langue": "en"
+   },
+   {
+    "id": "dc-019#5",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "relation": "portrait historié : la modèle figurée en Diane (décision 34)"
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "A et B s'accordent sur etablie ; ils ne diffèrent que par le libellé du contexte. Le portrait historié (décision 34) a deux relations, le modèle réel et le personnage figuré : Diane est figurée dans la figuration même de l'œuvre, non dans un contexte emboîté. Contexte : principal.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "desaccord_champs": [
+     "contextes"
+    ],
+    "n": 5,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-020",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "adjudication",
+  "raison": "« Prétendu » n'engage pas (décision 29, tranchée) : ni « il est moine », ni « il ne l'est pas ». La lecture privative de B (faux moine : F) donne à « prétendu » la force d'une négation que le principe lui refuse ; froc et capuchon sont un costume. Un renard peut être moine dans une fable (dc-020#6, accord etablie) : aucune incompatibilité d'espèce. Inconnue (A).",
+  "annotateurs": {
+   "A": "inconnue",
+   "B": "ecartee_sous_hypotheses"
+  },
+  "desaccord_champs": [
+   "statut",
+   "valeurs",
+   "dimensions"
+  ],
+  "variantes": [
+   {
+    "id": "dc-020#0",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« Prétendu » n'engage pas (décision 29, tranchée) : ni « il est moine », ni « il ne l'est pas ». La lecture privative de B (faux moine : F) donne à « prétendu » la force d'une négation que le principe lui refuse ; froc et capuchon sont un costume. Un renard peut être moine dans une fable (dc-020#6, accord etablie) : aucune incompatibilité d'espèce. Inconnue (A).",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "ecartee_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "dimensions"
+    ],
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-020#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-020#2",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 2,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-020#3",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-020#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« Prétendu » n'engage pas (décision 29, tranchée) : ni « il est moine », ni « il ne l'est pas ». La lecture privative de B (faux moine : F) donne à « prétendu » la force d'une négation que le principe lui refuse ; froc et capuchon sont un costume. Un renard peut être moine dans une fable (dc-020#6, accord etablie) : aucune incompatibilité d'espèce. Inconnue (A).",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "ecartee_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "dimensions"
+    ],
+    "n": 4,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-020#5",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« Qui se donne pour moine » rapporte une prétention du renard ; comme « prétendu », elle n'engage pas (décision 29, tranchée) : ni « il est moine », ni « il ne l'est pas ». La lecture privative de B (faux moine : F) donne à « prétendu » la force d'une négation que le principe lui refuse ; froc et capuchon sont un costume. Un renard peut être moine dans une fable (dc-020#6, accord etablie) : aucune incompatibilité d'espèce. Inconnue (A).",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "ecartee_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "dimensions"
+    ],
+    "n": 5,
+    "langue": "fr",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "B la signale (feuillet rogné omis) : omission sans effet ; « qui se donne pour moine » rend « prétendu moine », tenue pour fidèle."
+   },
+   {
+    "id": "dc-020#6",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 6,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-021",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "ecartee",
+   "B": "ecartee"
+  },
+  "variantes": [
+   {
+    "id": "dc-021#0",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-021#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "en"
+   },
+   {
+    "id": "dc-021#2",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-021#3",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-021#4",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 4,
+    "langue": "en"
+   },
+   {
+    "id": "dc-021#5",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > estampe épinglée au mur",
+      "statut": "etablie",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B : la jeune femme au crâne dans son giron n'est que dans l'estampe figurée au mur ; la définition ne nomme aucun contexte. Par la précision 1.1 § 1, le statut se lit sur le principal, où la femme prie sans crâne mentionné (N).",
+    "regle_1_1": "contexte : l'estampe passe dans satisfactions_contextuelles",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 5,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-022",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [
+   {
+    "id": "d1",
+    "dimension": "inversion de rôles (K* : asymétrie)",
+    "decision": "décision 9 (la liste des relations asymétriques reste)",
+    "question": "Inversion de rôles avec un même objet : « donner » (la même pomme, entre les mêmes personnes) est-elle une relation asymétrique (R(x, y) exclut R(y, x) au même moment), donc un appui négatif ?",
+    "options": [
+     {
+      "option": "asymétrie analytique",
+      "statut": "ecartee"
+     },
+     {
+      "option": "asymétrie non attestée",
+      "statut": "inconnue"
+     }
+    ],
+    "statut_retenu": "inconnue",
+    "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas (ecartee affirmerait un F que l'autre option n'affirme pas).",
+    "appliquee": true
+   }
+  ],
+  "source": "dependance",
+  "raison": "Rôles inversés avec un même objet : la jeune fille donne la pomme au jeune homme. Que le transfert d'un même objet entre les mêmes personnes au même moment soit asymétrique (B) est une entrée que la décision 9 laisse ouverte ; A n'y voit aucun appui négatif. Dépendance ; on retient inconnue.",
+  "annotateurs": {
+   "A": "inconnue",
+   "B": "ecartee"
+  },
+  "desaccord_champs": [
+   "statut",
+   "valeurs"
+  ],
+  "variantes": [
+   {
+    "id": "dc-022#0",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "inversion de rôles (K* : asymétrie)",
+      "decision": "décision 9 (la liste des relations asymétriques reste)",
+      "question": "Inversion de rôles avec un même objet : « donner » (la même pomme, entre les mêmes personnes) est-elle une relation asymétrique (R(x, y) exclut R(y, x) au même moment), donc un appui négatif ?",
+      "options": [
+       {
+        "option": "asymétrie analytique",
+        "statut": "ecartee"
+       },
+       {
+        "option": "asymétrie non attestée",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas (ecartee affirmerait un F que l'autre option n'affirme pas).",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "Rôles inversés avec un même objet : la jeune fille donne la pomme au jeune homme. Que le transfert d'un même objet entre les mêmes personnes au même moment soit asymétrique (B) est une entrée que la décision 9 laisse ouverte ; A n'y voit aucun appui négatif. Dépendance ; on retient inconnue.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "ecartee"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs"
+    ],
+    "n": 0,
+    "langue": "en"
+   },
+   {
+    "id": "dc-022#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-022#2",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "inversion de rôles (K* : asymétrie)",
+      "decision": "décision 9 (la liste des relations asymétriques reste)",
+      "question": "Inversion de rôles avec un même objet : « donner » (la même pomme, entre les mêmes personnes) est-elle une relation asymétrique (R(x, y) exclut R(y, x) au même moment), donc un appui négatif ?",
+      "options": [
+       {
+        "option": "asymétrie analytique",
+        "statut": "ecartee"
+       },
+       {
+        "option": "asymétrie non attestée",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas (ecartee affirmerait un F que l'autre option n'affirme pas).",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "Rôles inversés avec un même objet : la jeune fille donne la pomme au jeune homme. Que le transfert d'un même objet entre les mêmes personnes au même moment soit asymétrique (B) est une entrée que la décision 9 laisse ouverte ; A n'y voit aucun appui négatif. Dépendance ; on retient inconnue.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "ecartee"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs"
+    ],
+    "n": 2,
+    "langue": "fr",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "B la signale (« s'agenouille » pour « agenouillé ») : nuance d'aspect sans effet, tenue pour fidèle."
+   },
+   {
+    "id": "dc-022#3",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "inconnue"
+    },
+    "n": 3,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-022#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "inversion de rôles (K* : asymétrie)",
+      "decision": "décision 9 (la liste des relations asymétriques reste)",
+      "question": "Inversion de rôles avec un même objet : « donner » (la même pomme, entre les mêmes personnes) est-elle une relation asymétrique (R(x, y) exclut R(y, x) au même moment), donc un appui négatif ?",
+      "options": [
+       {
+        "option": "asymétrie analytique",
+        "statut": "ecartee"
+       },
+       {
+        "option": "asymétrie non attestée",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas (ecartee affirmerait un F que l'autre option n'affirme pas).",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "Rôles inversés avec un même objet : la jeune fille donne la pomme au jeune homme. Que le transfert d'un même objet entre les mêmes personnes au même moment soit asymétrique (B) est une entrée que la décision 9 laisse ouverte ; A n'y voit aucun appui négatif. Dépendance ; on retient inconnue.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "ecartee"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs"
+    ],
+    "n": 4,
+    "langue": "fr"
+   }
+  ]
+ },
+ {
+  "id": "dc-023",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [
+   {
+    "id": "d1",
+    "dimension": "convention d'évaluation : situation unique",
+    "decision": "décision 14 (reste ouverte)",
+    "question": "Le libellé (« shepherds watching their flocks at night, with an angel above them ») demande-t-il que ses conditions soient satisfaites dans une même situation ?",
+    "options": [
+     {
+      "option": "une seule situation demandée (convention)",
+      "statut": "inconnue"
+     },
+     {
+      "option": "l'image entière suffit (convention : hypothèse de nature convention)",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "statut_retenu": "inconnue",
+    "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas ; la classe V ne tient que sous une convention que la sémantique n'a pas fixée.",
+    "appliquee": true
+   }
+  ],
+  "source": "dependance",
+  "raison": "Deux registres, deux situations : l'ange parle à Joseph au registre supérieur ; les bergers veillent au registre inférieur. Sur la page, l'ange est au-dessus d'eux ; dans leur scène, aucun ange. Que « with an angel above them » demande une seule situation n'est pas fixé (décision 14, reste) : A le traite en convention, B en exige une. Dépendance ; on retient inconnue, la classe V ne tenant que sous une convention.",
+  "annotateurs": {
+   "A": "etablie_sous_hypotheses",
+   "B": "inconnue"
+  },
+  "desaccord_champs": [
+   "statut",
+   "valeurs",
+   "natures"
+  ],
+  "variantes": [
+   {
+    "id": "dc-023#0",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "convention d'évaluation : situation unique",
+      "decision": "décision 14 (reste ouverte)",
+      "question": "Le libellé (« shepherds watching their flocks at night, with an angel above them ») demande-t-il que ses conditions soient satisfaites dans une même situation ?",
+      "options": [
+       {
+        "option": "une seule situation demandée (convention)",
+        "statut": "inconnue"
+       },
+       {
+        "option": "l'image entière suffit (convention : hypothèse de nature convention)",
+        "statut": "etablie_sous_hypotheses"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas ; la classe V ne tient que sous une convention que la sémantique n'a pas fixée.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "Deux registres, deux situations : l'ange parle à Joseph au registre supérieur ; les bergers veillent au registre inférieur. Sur la page, l'ange est au-dessus d'eux ; dans leur scène, aucun ange. Que « with an angel above them » demande une seule situation n'est pas fixé (décision 14, reste) : A le traite en convention, B en exige une. Dépendance ; on retient inconnue, la classe V ne tenant que sous une convention.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "inconnue"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "natures"
+    ],
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-023#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "en"
+   },
+   {
+    "id": "dc-023#2",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "convention d'évaluation : situation unique",
+      "decision": "décision 14 (reste ouverte)",
+      "question": "Le libellé (« shepherds watching their flocks at night, with an angel above them ») demande-t-il que ses conditions soient satisfaites dans une même situation ?",
+      "options": [
+       {
+        "option": "une seule situation demandée (convention)",
+        "statut": "inconnue"
+       },
+       {
+        "option": "l'image entière suffit (convention : hypothèse de nature convention)",
+        "statut": "etablie_sous_hypotheses"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas ; la classe V ne tient que sous une convention que la sémantique n'a pas fixée.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "Deux registres, deux situations : l'ange parle à Joseph au registre supérieur ; les bergers veillent au registre inférieur. Sur la page, l'ange est au-dessus d'eux ; dans leur scène, aucun ange. Que « with an angel above them » demande une seule situation n'est pas fixé (décision 14, reste) : A le traite en convention, B en exige une. Dépendance ; on retient inconnue, la classe V ne tenant que sous une convention.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "inconnue"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "natures"
+    ],
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-023#3",
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "ecartee",
+     "B": "ecartee"
+    },
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-023#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "convention d'évaluation : situation unique",
+      "decision": "décision 14 (reste ouverte)",
+      "question": "Le libellé (« shepherds watching their flocks at night, with an angel above them ») demande-t-il que ses conditions soient satisfaites dans une même situation ?",
+      "options": [
+       {
+        "option": "une seule situation demandée (convention)",
+        "statut": "inconnue"
+       },
+       {
+        "option": "l'image entière suffit (convention : hypothèse de nature convention)",
+        "statut": "etablie_sous_hypotheses"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "raison_retenu": "option la plus prudente sur les deux axes : elle n'affirme ni un V ni un F que l'autre option n'affirme pas ; la classe V ne tient que sous une convention que la sémantique n'a pas fixée.",
+      "appliquee": true
+     }
+    ],
+    "source": "dependance",
+    "raison": "Deux registres, deux situations : l'ange parle à Joseph au registre supérieur ; les bergers veillent au registre inférieur. Sur la page, l'ange est au-dessus d'eux ; dans leur scène, aucun ange. Que « with an angel above them » demande une seule situation n'est pas fixé (décision 14, reste) : A le traite en convention, B en exige une. Dépendance ; on retient inconnue, la classe V ne tenant que sous une convention.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "inconnue"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "natures"
+    ],
+    "n": 4,
+    "langue": "en"
+   }
+  ]
+ },
+ {
+  "id": "dc-024",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+  "annotateurs": {
+   "A": "etablie",
+   "B": "etablie"
+  },
+  "variantes": [
+   {
+    "id": "dc-024#0",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 0,
+    "langue": "fr"
+   },
+   {
+    "id": "dc-024#1",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 1,
+    "langue": "en",
+    "paraphrase_infidele": false,
+    "remarque_fidelite": "signalée par B pour une omission ou une nuance sans effet sur la signification jugée : tenue pour fidèle."
+   },
+   {
+    "id": "dc-024#2",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "etablie",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Le disque de lumière « that once encircled his head is entirely lost » ; seul son contour incisé subsiste. Dans l'œuvre actuelle, un contour incisé ne dit ni ne nie un nimbe (N, A explicite ; B ne dit rien de V pour l'œuvre actuelle). Contrairement à dc-015#4, quelque chose du nimbe reste, qui peut encore le figurer : on n'en tire pas de F. Par la précision 1.1 § 1, le statut se lit sur l'œuvre telle que la notice la décrit ; l'état d'origine est un contexte (IA § 7.3), non une convention, et va dans satisfactions_contextuelles.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie"
+    },
+    "desaccord_champs": [
+     "statut",
+     "valeurs",
+     "natures",
+     "contextes"
+    ],
+    "n": 2,
+    "langue": "en"
+   },
+   {
+    "id": "dc-024#3",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "etablie_sous_hypotheses",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "sa tête était entourée d'un disque de lumière (« may once have been »)"
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« May once have been encircled… now hard to make out » : dans l'œuvre actuelle, rien n'est affirmé (N) ; dans l'état d'origine, le nimbe n'est que possible. Par la précision 1.1 § 1, le statut se lit sur l'œuvre telle que la notice la décrit ; l'état d'origine est un contexte (IA § 7.3), non une convention, et va dans satisfactions_contextuelles.",
+    "annotateurs": {
+     "A": "etablie_sous_hypotheses",
+     "B": "etablie_sous_hypotheses"
+    },
+    "desaccord_champs": [
+     "valeurs",
+     "natures",
+     "contextes"
+    ],
+    "n": 3,
+    "langue": "en"
+   },
+   {
+    "id": "dc-024#4",
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "inconnue",
+     "B": "inconnue"
+    },
+    "n": 4,
+    "langue": "en"
+   },
+   {
+    "id": "dc-024#5",
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : celui de A, le plus explicite.",
+    "annotateurs": {
+     "A": "etablie",
+     "B": "etablie"
+    },
+    "n": 5,
+    "langue": "en"
+   }
+  ]
+ }
+]

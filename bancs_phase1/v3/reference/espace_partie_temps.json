@@ -1,0 +1,7225 @@
+[
+ {
+  "id": "ep-001",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Deux marins jettent Jonas à la mer depuis le pont : le pont est une partie obligatoire d'un navire, qui est donc figuré. V.",
+  "variantes": [
+   {
+    "id": "ep-001#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Passif ; « from the deck » : V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-001#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle ; « pont » ne peut être ici qu'un pont de navire.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-001#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « foredeck » : partie du navire. V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-001#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : La légende raconte le jet ; « the cut itself shows only the stormy waves and a great fish » : ni le jet ni le navire ne sont figurés, et « only » le dit.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-001#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "les marins se tiennent sur un pont de navire, ce que l'auteur ne dit que « perhaps »"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Le jet de Jonas par les marins est dit ; le navire ne l'est que par « perhaps standing on a deck ». V sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-001#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La mouette est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-002",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La foudre frappe le grand mât, qui se fend : le grand mât est une partie d'un voilier, figurée ; frapper une partie, c'est frapper le tout. La coque est perdue, mais le voilier reste figuré par son mât. V.",
+  "variantes": [
+   {
+    "id": "ep-002#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation : « Le grand mât, frappé par la foudre, se fend ».",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-002#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-002#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « la foudre frappe le voilier » : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-002#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le mât qui se fend sur la peinture est frappé par la foudre, comme le rapporte l'inscription du cadre"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : L'inscription raconte que la foudre frappa le voilier (contexte d'inscription, au passé) ; la peinture ne montre que le mât qui se fend. La foudre figurée n'est que supposée. Les hypothèses diffèrent de nature sans changer les valeurs : A ['abduction'] ; B ['connaissance_typique'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-002#4",
+    "n": 4,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur un saint.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-002#5",
+    "n": 5,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Le voilier frappé par la foudre n'est dit que par la notice ancienne, citée, qui décrit le panneau.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-003",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Une roue isolée contre le mur : une roue n'est pas une charrette, et une roue seule n'en implique pas une. N.",
+  "variantes": [
+   {
+    "id": "ep-003#0",
+    "n": 0,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Reformulation : roue isolée.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-003#1",
+    "n": 1,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Traduction fidèle (« une roue isolée »).",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-003#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « a cart with one wheel missing » : une charrette, endommagée, est là. V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-003#3",
+    "n": 3,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": [],
+      "remarque": "selon le catalogue cité, la charrette a été effacée de la planche"
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état antérieur de la planche",
+      "statut": "non_certifiee",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "cite",
+      "remarque": "la charrette, effacée depuis, n'est dite que par le catalogue cité"
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Le statut est commun (non_certifiee) ; A écrit aussi l'état antérieur et la valeur de l'auteur. Précision 1.1.1 : l'état antérieur de la planche est un autre contexte ; il va dans satisfactions_contextuelles et ne fait pas le statut. Dans le contexte principal, l'auteur ne dit qu'une roue (N) ; seul le catalogue cité dit l'absence de charrette (F) : non_certifiee, la polarité gardée dans le profil (doute de A). Le doute de B (l'histoire de la planche comme contexte non figuratif) ne vaut pas ici : le catalogue décrit les états de l'image.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     },
+     {
+      "chemin": "principal > état antérieur de la planche",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal",
+     "principal > état antérieur de la planche"
+    ]
+   },
+   {
+    "id": "ep-003#4",
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « There is no cart in the yard » : négation dite.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-003#5",
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le chien est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-003#6",
+    "n": 6,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : La cour avec une charrette n'est dite que par l'ancien catalogue cité.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "inconnue"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "inconnue"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-004",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Saint Antoine, ermite, lit un livre ; sa barbe blanche descend jusqu'à sa ceinture : V.",
+  "variantes": [
+   {
+    "id": "ep-004#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation : « une barbe blanche lui descend jusqu'à la ceinture ».",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-004#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-004#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : C'est la chevelure qui est blanche et longue ; la barbe n'est pas dite : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-004#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « il n'a pas de barbe » : négation dite.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-004#4",
+    "n": 4,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Le corbeau est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-004#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur les sandales.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-005",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Directly above Christ's head hovers a white dove » : V.",
+  "variantes": [
+   {
+    "id": "ep-005#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Christ's head is directly beneath a hovering white dove » : relation converse, V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-005#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-005#2",
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : La tête du Christ est au-dessus de la colombe : la colombe est dessous, ce qui exclut qu'elle soit au-dessus (ordre strict et son inverse).",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-005#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : L'inscription dit la colombe ; « the panel itself shows only Christ ... and John the Baptist » : la colombe n'est pas figurée, et « only » le dit.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-005#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'oiseau blanc est une colombe (« perhaps a dove »)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « a white bird, perhaps a dove » : V sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-005#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Les anges sont sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-006",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {
+     "p1": "unique_dans_la_scene"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "saillante_seulement"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "portee",
+    "porte_sur": "« la couronne repose déjà sur sa tête »",
+    "valeurs": [
+     "unique_dans_la_scene",
+     "saillante_seulement"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [
+   {
+    "id": "d1",
+    "dimension": "unicité de l'article défini",
+    "question": "« la couronne repose déjà sur sa tête » : le défini dit-il une couronne unique dans la scène (alors aucune couronne n'est tenue au-dessus de la tête : F), ou seulement la couronne saillante, une autre n'étant ni dite ni exclue (N) ?",
+    "options": [
+     {
+      "option": "point admis : F si unique, N sinon (A)",
+      "statut": "ecartee_sous_hypotheses"
+     },
+     {
+      "option": "pas de point : une couronne non citée n'est pas exclue (B)",
+      "statut": "inconnue"
+     }
+    ],
+    "statut_retenu": "inconnue",
+    "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+   }
+  ],
+  "source": "dependance",
+  "raison": "La couronne citée repose sur la tête, et les anges soulèvent le manteau : A et B s'accordent sur les faits. Le F de A ne tient que par l'unicité du défini.",
+  "variantes": [
+   {
+    "id": "ep-006#0",
+    "n": 0,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "p1": "unique_dans_la_scene"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "saillante_seulement"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "portee",
+      "porte_sur": "« la couronne repose déjà sur sa tête »",
+      "valeurs": [
+       "unique_dans_la_scene",
+       "saillante_seulement"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "unicité de l'article défini",
+      "question": "« la couronne repose déjà sur sa tête » : le défini dit-il une couronne unique dans la scène (alors aucune couronne n'est tenue au-dessus de la tête : F), ou seulement la couronne saillante, une autre n'étant ni dite ni exclue (N) ?",
+      "options": [
+       {
+        "option": "point admis : F si unique, N sinon (A)",
+        "statut": "ecartee_sous_hypotheses"
+       },
+       {
+        "option": "pas de point : une couronne non citée n'est pas exclue (B)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "La couronne citée repose sur la tête, et les anges soulèvent le manteau : A et B s'accordent sur les faits. Le F de A ne tient que par l'unicité du défini.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-006#1",
+    "n": 1,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "p1": "unique_dans_la_scene"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "saillante_seulement"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "portee",
+      "porte_sur": "« la couronne repose déjà sur sa tête »",
+      "valeurs": [
+       "unique_dans_la_scene",
+       "saillante_seulement"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "unicité de l'article défini",
+      "question": "« la couronne repose déjà sur sa tête » : le défini dit-il une couronne unique dans la scène (alors aucune couronne n'est tenue au-dessus de la tête : F), ou seulement la couronne saillante, une autre n'étant ni dite ni exclue (N) ?",
+      "options": [
+       {
+        "option": "point admis : F si unique, N sinon (A)",
+        "statut": "ecartee_sous_hypotheses"
+       },
+       {
+        "option": "pas de point : une couronne non citée n'est pas exclue (B)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "La couronne citée repose sur la tête, et les anges soulèvent le manteau : A et B s'accordent sur les faits. Le F de A ne tient que par l'unicité du défini.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-006#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Deux anges tiennent une couronne au-dessus de sa tête » : V ; qu'ils s'apprêtent à la poser est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-006#3",
+    "n": 3,
+    "statut_reference": "ecartee_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "unique_dans_la_scene"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "saillante_seulement"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "portee",
+      "porte_sur": "« la couronne repose déjà sur sa tête »",
+      "valeurs": [
+       "unique_dans_la_scene",
+       "saillante_seulement"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "unicité de l'article défini ; réfutation pour les référents cités",
+      "question": "« la couronne repose déjà sur sa tête, et aucun ange ne la tient » : la négation porte sur « la » couronne. Réfute-t-elle la définition existentielle seulement si cette couronne est la seule (A), ou dès qu'elle est réfutée pour les référents cités (B, IA § 2.5 : `ecartee` affirme la réfutation « pour les référents cités ») ?",
+      "options": [
+       {
+        "option": "F seulement sous l'unicité du défini (A)",
+        "statut": "ecartee_sous_hypotheses"
+       },
+       {
+        "option": "F pour les référents cités, sans point (B)",
+        "statut": "ecartee"
+       }
+      ],
+      "statut_retenu": "ecartee_sous_hypotheses",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas). F dans la lecture « unique » (les deux l'affirment), N dans la lecture « saillante » (seul B y affirme F)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Négation dite de la couronne citée. B, qui juge le cas N faute d'exclure une autre couronne, juge ici F pour les référents cités : la question de principe est celle de mn-009.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-006#4",
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "p1": "unique_dans_la_scene"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "saillante_seulement"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "portee",
+      "porte_sur": "« la couronne repose déjà sur sa tête »",
+      "valeurs": [
+       "unique_dans_la_scene",
+       "saillante_seulement"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "unicité de l'article défini",
+      "question": "« la couronne repose déjà sur sa tête » : le défini dit-il une couronne unique dans la scène (alors aucune couronne n'est tenue au-dessus de la tête : F), ou seulement la couronne saillante, une autre n'étant ni dite ni exclue (N) ?",
+      "options": [
+       {
+        "option": "point admis : F si unique, N sinon (A)",
+        "statut": "ecartee_sous_hypotheses"
+       },
+       {
+        "option": "pas de point : une couronne non citée n'est pas exclue (B)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "La couronne citée repose sur la tête, et les anges soulèvent le manteau : A et B s'accordent sur les faits. Le F de A ne tient que par l'unicité du défini. Sainte Catherine trône : la Vierge n'est pas dite ; même dépendance pour le F de A.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-006#5",
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "p1": "unique_dans_la_scene"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "saillante_seulement"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "portee",
+      "porte_sur": "« la couronne repose déjà sur sa tête »",
+      "valeurs": [
+       "unique_dans_la_scene",
+       "saillante_seulement"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "unicité de l'article défini",
+      "question": "« la couronne repose déjà sur sa tête » : le défini dit-il une couronne unique dans la scène (alors aucune couronne n'est tenue au-dessus de la tête : F), ou seulement la couronne saillante, une autre n'étant ni dite ni exclue (N) ?",
+      "options": [
+       {
+        "option": "point admis : F si unique, N sinon (A)",
+        "statut": "ecartee_sous_hypotheses"
+       },
+       {
+        "option": "pas de point : une couronne non citée n'est pas exclue (B)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "La couronne citée repose sur la tête, et les anges soulèvent le manteau : A et B s'accordent sur les faits. Le F de A ne tient que par l'unicité du défini.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "inconnue"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "inconnue"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-007",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Jérôme agenouillé devant un crucifix ; « Derrière lui, un lion est couché » : V.",
+  "variantes": [
+   {
+    "id": "ep-007#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Un lion est couché derrière saint Jérôme » : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-007#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-007#2",
+    "n": 2,
+    "statut_reference": "ecartee_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "spectateur"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "intrinseque_du_lion"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "cadre_de_reference",
+      "porte_sur": "« derrière un lion couché »",
+      "valeurs": [
+       "spectateur",
+       "intrinseque_du_lion"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee_sous_hypotheses). Profil retenu : A. Justification de A : Jérôme est agenouillé derrière le lion. Au sens du spectateur (la profondeur), le lion est devant Jérôme, ce qui exclut qu'il soit derrière lui : F. Au sens intrinsèque du lion, Jérôme est dans son dos, et rien ne dit où est le lion par rapport à Jérôme : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-007#3",
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le lion n'est dit que par l'inventaire de 1650, et dans le tableau perdu, une autre œuvre : rien sur la gravure. N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-007#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'animal couché est un lion (« peut-être un lion »)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « un animal, peut-être un lion » : V sous l'hypothèse.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-007#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur le chapeau de cardinal.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-008",
+  "statut_reference": "divergent",
+  "profil": [
+   {
+    "classe": {
+     "p1": "devant_spatial"
+    },
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "en_presence_de"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "sens",
+    "porte_sur": "« kneeling before » (définition)",
+    "valeurs": [
+     "devant_spatial",
+     "en_presence_de"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : Madeleine est agenouillée derrière le Christ qui s'éloigne. Si « before » est spatial (en face de, devant lui), derrière exclut devant : F. Si « kneeling before » veut dire s'agenouiller en sa présence, en hommage : V.",
+  "variantes": [
+   {
+    "id": "ep-008#0",
+    "n": 0,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "devant_spatial"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "en_presence_de"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« kneeling before » (définition)",
+      "valeurs": [
+       "devant_spatial",
+       "en_presence_de"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : Reformulation : même disposition.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-008#1",
+    "n": 1,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "devant_spatial"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "en_presence_de"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« kneeling before » (définition)",
+      "valeurs": [
+       "devant_spatial",
+       "en_presence_de"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-008#2",
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {
+       "d1": "devant_lui"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "en_sa_presence"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "(définition) « kneeling before the risen Christ »",
+      "valeurs": [
+       "devant_lui",
+       "en_sa_presence"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : B (le plus explicite). Justification de B : « does not kneel: she stands » : F. Les points diffèrent sans changer les valeurs : A aucun ; B ['sens (définition) « kneeling before the risen Christ »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-008#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {
+       "d1": "devant_lui"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "en_sa_presence"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "(définition) « kneeling before the risen Christ »",
+      "valeurs": [
+       "devant_lui",
+       "en_sa_presence"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : B (le plus explicite). Justification de B : Marie-Madeleine s'éloigne en marchant : marcher exclut d'être agenouillée. F. Les points diffèrent sans changer les valeurs : A aucun ; B ['sens (définition) « kneeling before the risen Christ »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-008#4",
+    "n": 4,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "devant_spatial"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "en_presence_de"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« kneeling before » (définition)",
+      "valeurs": [
+       "devant_spatial",
+       "en_presence_de"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : Les anges sur le tombeau sont sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "divergent"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "divergent"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-009",
+  "statut_reference": "divergent",
+  "profil": [
+   {
+    "classe": {
+     "p1": "spectateur"
+    },
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "intrinseque_du_Christ"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "cadre_de_reference",
+    "porte_sur": "« À droite, les élus ... ; à gauche, ... les damnés »",
+    "valeurs": [
+     "spectateur",
+     "intrinseque_du_Christ"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : « À droite ... à gauche » sans possesseur : droite du spectateur ou du Christ. Le Christ est de face : la droite du spectateur est sa gauche. Spectateur : les élus sont à sa gauche, F ; intrinsèque : V.",
+  "variantes": [
+   {
+    "id": "ep-009#0",
+    "n": 0,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "spectateur"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "intrinseque_du_Christ"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "cadre_de_reference",
+      "porte_sur": "« Les élus montent, à droite ... ; à gauche »",
+      "valeurs": [
+       "spectateur",
+       "intrinseque_du_Christ"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : Reformulation : même ambiguïté.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-009#1",
+    "n": 1,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "spectateur"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "intrinseque_du_Christ"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "cadre_de_reference",
+      "porte_sur": "« On the right ... on the left »",
+      "valeurs": [
+       "spectateur",
+       "intrinseque_du_Christ"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : Traduction fidèle : « On the right ... on the left » garde l'ambiguïté.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-009#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « À sa droite, les élus ; à sa gauche, ... les damnés » : droite du Christ. V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-009#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « À sa gauche, les élus ; à sa droite, les damnés » : inversé, en cadre intrinsèque explicite.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-009#4",
+    "n": 4,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "spectateur"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "intrinseque_du_Christ"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "cadre_de_reference",
+      "porte_sur": "« À droite ... à gauche »",
+      "valeurs": [
+       "spectateur",
+       "intrinseque_du_Christ"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : Saint Michel est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-009#5",
+    "n": 5,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "spectateur"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "intrinseque_du_Christ"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "cadre_de_reference",
+      "porte_sur": "« à droite, les élus ... ; à gauche, les damnés »",
+      "valeurs": [
+       "spectateur",
+       "intrinseque_du_Christ"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : L'inscription dit les élus à la droite du Juge, dans son propre contexte ; la phrase de l'auteur reste ambiguë.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-009#6",
+    "n": 6,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Les élus à la droite du Christ juge ne viennent que de la notice ancienne, citée, qui décrit le tympan.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "divergent"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "divergent"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-010",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Saint Pierre, un apôtre, tient un livre fermé dans sa main gauche : V.",
+  "variantes": [
+   {
+    "id": "ep-010#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-010#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-010#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le livre est dans la main droite, les clés dans la gauche. Un livre dans la main gauche n'est pas dit ; tenir les clés ne l'exclut pas analytiquement : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-010#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'objet tenu dans la main gauche est un livre (« probably a book »)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « probably a book » : V sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-010#4",
+    "n": 4,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Le donateur est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-010#5",
+    "n": 5,
+    "statut_reference": "contradictoire",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "B",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (contradictoire). Profil retenu : A. Justification de A : « a closed book in his left » et « In his left hand St Peter holds no book » : l'auteur affirme et nie, dans la même interprétation. Contradiction interne.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "contradictoire"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "contradictoire"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-010#6",
+    "n": 6,
+    "statut_reference": "par_contexte",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "non_certifiee",
+      "classe": {},
+      "valeur": "V",
+      "enonciateur": "cite",
+      "remarque": "le guide cité décrit le livre tenu de la main gauche, avant la perte de l'avant-bras"
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Le statut est commun (ecartee). L'auteur dit l'avant-bras gauche perdu : dans l'œuvre telle que la notice la décrit, rien n'est tenu de la main gauche (incompatibilité analytique). Précision 1.1.1 : l'état d'origine, que A met dans le profil, va dans satisfactions_contextuelles. Le doute de A (le F tiendrait à une convention, § 7.3) est levé par la même précision : le statut se lit sur le contexte principal ; ce n'est pas une hypothèse de nature convention.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     },
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal",
+     "principal > état d'origine"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-011",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « une couronne d'épines posée sur la tête » : V, que « couronne d'épines » soit lu comme unité ou comme construction.",
+  "variantes": [
+   {
+    "id": "ep-011#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-011#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-011#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Une couronne de laurier sur la tête : une couronne d'épines n'est pas dite ; deux couronnes ne sont pas exclues analytiquement : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-011#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Le soldat s'apprête à poser la couronne : qu'elle soit posée ou que la pose soit en préparation, l'état résultant (sur la tête) ne tient pas encore.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-011#4",
+    "n": 4,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur le manteau.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-011#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "ce qu'il a sur la tête est une couronne d'épines (« semble »)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « ce qui semble être une couronne d'épines » : V sous l'hypothèse.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-012",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Adam et Ève sont vêtus de tuniques de peau ; des vêtements de feuilles de figuier ne sont pas dits, et le texte ne dit pas qu'ils n'en portent pas : N.",
+  "variantes": [
+   {
+    "id": "ep-012#0",
+    "n": 0,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Reformulation.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-012#1",
+    "n": 1,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-012#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « clothed in garments of fig leaves » : V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-012#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « The couple's garments are not made of leaves but of skins » : la négation porte sur leurs vêtements (défini) faits de feuilles ; des feuilles de figuier sont des feuilles, la négation s'étend.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-012#4",
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le serpent est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-012#5",
+    "n": 5,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Les vêtements de feuilles de figuier ne sont dits que par l'ancien guide, cité.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "inconnue"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "inconnue"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-013",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Salomé tend un plat d'argent portant la tête du Baptiste : tendre le plat, c'est le tenir. V.",
+  "variantes": [
+   {
+    "id": "ep-013#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Passif : V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-013#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction : « présente un plat » rend « holds out ».",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-013#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le plat porte une tête sculptée du Baptiste : une tête sculptée n'est pas sa tête (modificateur de représentation) ; la vraie tête n'est pas dite : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-013#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "la tête est celle du Baptiste (« probably »)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « a head, probably that of the Baptist » : V sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-013#4",
+    "n": 4,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Le chien est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-013#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur le sang.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-014",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {
+     "p1": "main_suffit"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identification_iconographique",
+      "contenu": "la main de Dieu sortant d'une nuée est celle de Dieu le Père"
+     }
+    ]
+   },
+   {
+    "classe": {
+     "p1": "figure_de_Dieu_exigee"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "forme_du_libelle",
+    "porte_sur": "« God the Father blessing ... from the clouds »",
+    "valeurs": [
+     "main_suffit",
+     "figure_de_Dieu_exigee"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : La main de Dieu sort d'un nuage et bénit le martyr. Si la main suffit à figurer Dieu qui bénit (pars pro toto), V, sous l'hypothèse que c'est le Père ; si la définition exige Dieu le Père figuré en personne, rien ne le dit, sans l'exclure : N. Les points diffèrent sans changer les valeurs : A ['forme_du_libelle « God the Father blessing ... from the clouds »'] ; B ['sens (définition) « God the Father blessing »']. Les hypothèses diffèrent de nature sans changer les valeurs : A ['identification_iconographique'] ; B ['connaissance_typique'].",
+  "variantes": [
+   {
+    "id": "ep-014#0",
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "main_suffit"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la main de Dieu sortant d'une nuée est celle de Dieu le Père"
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p1": "figure_de_Dieu_exigee"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« God the Father blessing ... from the clouds »",
+      "valeurs": [
+       "main_suffit",
+       "figure_de_Dieu_exigee"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Reformulation. Les points diffèrent sans changer les valeurs : A ['forme_du_libelle « God the Father blessing ... from the clouds »'] ; B ['sens (définition) « God the Father blessing »']. Les hypothèses diffèrent de nature sans changer les valeurs : A ['identification_iconographique'] ; B ['connaissance_typique'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-014#1",
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "main_suffit"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la main de Dieu sortant d'une nuée est celle de Dieu le Père"
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p1": "figure_de_Dieu_exigee"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« God the Father blessing ... from the clouds »",
+      "valeurs": [
+       "main_suffit",
+       "figure_de_Dieu_exigee"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Traduction fidèle. Les points diffèrent sans changer les valeurs : A ['forme_du_libelle « God the Father blessing ... from the clouds »'] ; B ['sens (définition) « God the Father blessing »']. Les hypothèses diffèrent de nature sans changer les valeurs : A ['identification_iconographique'] ; B ['connaissance_typique'].",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-014#2",
+    "n": 2,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "main_suffit"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la main de Dieu sortant d'une nuée est celle de Dieu le Père"
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p1": "figure_de_Dieu_exigee"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« God the Father blessing ... from the clouds »",
+      "valeurs": [
+       "main_suffit",
+       "figure_de_Dieu_exigee"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : « Dieu lui-même n'est pas figuré : seule sa main » : si Dieu doit être figuré en personne, négation dite : F ; si la main suffit : V sous l'hypothèse. Les points diffèrent sans changer les valeurs : A ['forme_du_libelle « God the Father blessing ... from the clouds »'] ; B ['sens (définition) « God the Father blessing »']. Les hypothèses diffèrent de nature sans changer les valeurs : A ['identification_iconographique'] ; B ['connaissance_typique'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-014#3",
+    "n": 3,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "d1": "en_personne"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "par_sa_main"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "(définition) « God the Father blessing »",
+      "valeurs": [
+       "en_personne",
+       "par_sa_main"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : B (le plus explicite). Justification de B : « Dieu le Père, en buste, sort d'un nuage et bénit » : V. Les points diffèrent sans changer les valeurs : A aucun ; B ['sens (définition) « God the Father blessing »'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-014#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "main_suffit"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la main de Dieu sortant d'une nuée est celle de Dieu le Père"
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p1": "figure_de_Dieu_exigee"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« God the Father blessing ... from the clouds »",
+      "valeurs": [
+       "main_suffit",
+       "figure_de_Dieu_exigee"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Le jeune homme aux manteaux est sans effet. Les points diffèrent sans changer les valeurs : A ['forme_du_libelle « God the Father blessing ... from the clouds »'] ; B ['sens (définition) « God the Father blessing »']. Les hypothèses diffèrent de nature sans changer les valeurs : A ['identification_iconographique'] ; B ['connaissance_typique'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-014#5",
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {
+       "d1": "en_personne"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "par_sa_main"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "(définition) « God the Father blessing »",
+      "valeurs": [
+       "en_personne",
+       "par_sa_main"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : B (le plus explicite). Justification de B : La légende raconte ; « le relief ne montre que le martyr et les deux bourreaux » : ni Dieu ni main. Restriction dite : F. Les points diffèrent sans changer les valeurs : A aucun ; B ['sens (définition) « God the Father blessing »'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-014#6",
+    "n": 6,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {
+       "d1": "en_personne"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "« Dieu » de la notice est Dieu le Père."
+       }
+      ]
+     },
+     {
+      "classe": {
+       "d1": "par_sa_main"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "« Dieu » de la notice est Dieu le Père."
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "(définition) « God the Father blessing »",
+      "valeurs": [
+       "en_personne",
+       "par_sa_main"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : B (le plus explicite). Justification de B : Dieu bénissant depuis un nuage n'est dit que par la notice citée. Valeur citée. Les points diffèrent sans changer les valeurs : A aucun ; B ['sens (définition) « God the Father blessing »']. Les hypothèses diffèrent de nature sans changer les valeurs : A aucune ; B ['connaissance_typique'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-015",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : David, debout sur le corps, tranche la tête de Goliath avec l'épée de Goliath : V.",
+  "variantes": [
+   {
+    "id": "ep-015#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « l'épée qui appartient à Goliath » : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-015#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-015#2",
+    "n": 2,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "Goliath"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "David"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "coreference",
+      "porte_sur": "« sa propre épée »",
+      "valeurs": [
+       "David",
+       "Goliath"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "incompatibilité de possession (un contraire lexical fonde-t-il un F ?)",
+      "question": "Dans la lecture David, l'épée est « sa propre épée ». Cela exclut-il analytiquement qu'elle soit « Goliath's own sword », ou n'est-ce qu'une opposition (une épée prise change de main) ?",
+      "options": [
+       {
+        "option": "exclusion analytique : F dans la lecture David (A)",
+        "statut": "divergent"
+       },
+       {
+        "option": "pas d'exclusion attestée : N dans la lecture David (B)",
+        "statut": "etablie_sous_hypotheses"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas). Le V de la lecture Goliath est affirmé par les deux."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A et B ont le même point de coréférence ; ils divergent sur la valeur de la lecture David.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-015#3",
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Les rôles sont inversés : Goliath tranche la tête de David. Que David tranche celle de Goliath n'est pas dit : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-015#4",
+    "n": 4,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p2": "en_cours_preparatoire"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p2": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p2",
+      "dimension": "ancrage",
+      "porte_sur": "« s'apprête à lui trancher la tête »",
+      "valeurs": [
+       "en_cours_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : David lève l'épée de Goliath et s'apprête à trancher : phase préparatoire figurée en cours, V ; imminent, appui négatif de l'action en cours, F.  Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-015#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Saül sur la colline est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-016",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {
+     "p1": "en_cours"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "connaissance_typique",
+      "contenu": "baiser l'anneau de l'évêque, porté au doigt, c'est lui baiser la main"
+     }
+    ]
+   },
+   {
+    "classe": {
+     "p1": "imminent"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "ancrage",
+    "porte_sur": "« bends to kiss »",
+    "valeurs": [
+     "en_cours",
+     "imminent"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [
+   {
+    "id": "d1",
+    "dimension": "ancrage du but (« bends to kiss », « s'incline pour baiser » ; frontière lexicale de la décision 26)",
+    "question": "La construction de but figure-t-elle le baiser en cours, le geste en étant la phase préparatoire (ONT § 1.2), sans point (A), ou laisse-t-elle ouverte une lecture imminente, appui négatif du baiser en cours (B) ?",
+    "options": [
+     {
+      "option": "pas de point (A)",
+      "statut": "etablie_sous_hypotheses"
+     },
+     {
+      "option": "point admis : en cours V, imminent F (B)",
+      "statut": "divergent"
+     }
+    ],
+    "statut_retenu": "etablie_sous_hypotheses",
+    "pourquoi": "Aucune des deux options n'est la plus prudente sur les deux axes (l'une affirme un V ou un F que l'autre n'affirme pas) : je retiens leur partie commune, classe par classe (la valeur que les deux options affirment, N sinon), et le statut qui s'en lit. V sous l'hypothèse de l'anneau dans la lecture en cours (les deux l'affirment) ; N dans la lecture imminente (seul B y affirme F). Le statut est celui de A."
+   }
+  ],
+  "source": "dependance",
+  "raison": "A et B s'accordent sur l'hypothèse de l'anneau (connaissance typique).",
+  "variantes": [
+   {
+    "id": "ep-016#0",
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "baiser l'anneau de l'évêque, c'est lui baiser la main qui le porte"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Passif : l'anneau est baisé. Même profil.  Fidélité : voir remarque_fidelite (dépendance d1 du cas).",
+    "langue": "en",
+    "traduction": false,
+    "traduction_infidele": false,
+    "paraphrase_infidele": null,
+    "remarque_fidelite": "B la marque `traduction_infidele` : le passif « is kissed » fixe le baiser en cours et efface la lecture imminente. C'est une reformulation en anglais : le champ serait `paraphrase_infidele` (guide § 7). Elle n'est infidèle que si « bends to kiss » admet la lecture imminente, ce qui est la dépendance d1 du cas : non tranché. Le jugement de la variante telle qu'elle est est le même sous les deux options.",
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-016#1",
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "baiser l'anneau de l'évêque, porté au doigt, c'est lui baiser la main"
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« bends to kiss »",
+      "valeurs": [
+       "en_cours",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "ancrage du but (« bends to kiss », « s'incline pour baiser » ; frontière lexicale de la décision 26)",
+      "question": "La construction de but figure-t-elle le baiser en cours, le geste en étant la phase préparatoire (ONT § 1.2), sans point (A), ou laisse-t-elle ouverte une lecture imminente, appui négatif du baiser en cours (B) ?",
+      "options": [
+       {
+        "option": "pas de point (A)",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "point admis : en cours V, imminent F (B)",
+        "statut": "divergent"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "pourquoi": "Aucune des deux options n'est la plus prudente sur les deux axes (l'une affirme un V ou un F que l'autre n'affirme pas) : je retiens leur partie commune, classe par classe (la valeur que les deux options affirment, N sinon), et le statut qui s'en lit. V sous l'hypothèse de l'anneau dans la lecture en cours (les deux l'affirment) ; N dans la lecture imminente (seul B y affirme F). Le statut est celui de A."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A et B s'accordent sur l'hypothèse de l'anneau (connaissance typique). Traduction fidèle (« s'incline pour baiser »).",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-016#2",
+    "n": 2,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« bends to kiss the hand »",
+      "valeurs": [
+       "en_cours",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "ancrage du but (« bends to kiss », « s'incline pour baiser » ; frontière lexicale de la décision 26)",
+      "question": "La construction de but figure-t-elle le baiser en cours, le geste en étant la phase préparatoire (ONT § 1.2), sans point (A), ou laisse-t-elle ouverte une lecture imminente, appui négatif du baiser en cours (B) ?",
+      "options": [
+       {
+        "option": "pas de point (A)",
+        "statut": "etablie"
+       },
+       {
+        "option": "point admis : en cours V, imminent F (B)",
+        "statut": "divergent"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "pourquoi": "Aucune des deux options n'est la plus prudente sur les deux axes (l'une affirme un V ou un F que l'autre n'affirme pas) : je retiens leur partie commune, classe par classe (la valeur que les deux options affirment, N sinon), et le statut qui s'en lit. V dans la lecture en cours (les deux l'affirment, sans hypothèse) ; N dans la lecture imminente. V n'étant affirmé que dans une lecture, etablie_sous_hypotheses."
+     }
+    ],
+    "source": "dependance",
+    "raison": "La main est dite ; reste l'ancrage du but.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-016#3",
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : C'est l'évêque qui baise la main de la femme : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-016#4",
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « she does not kiss his hand but his ring » : négation dite du baiser de la main.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-016#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "baiser l'anneau de l'évêque, porté au doigt, c'est lui baiser la main"
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« bends to kiss »",
+      "valeurs": [
+       "en_cours",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "ancrage du but (« bends to kiss », « s'incline pour baiser » ; frontière lexicale de la décision 26)",
+      "question": "La construction de but figure-t-elle le baiser en cours, le geste en étant la phase préparatoire (ONT § 1.2), sans point (A), ou laisse-t-elle ouverte une lecture imminente, appui négatif du baiser en cours (B) ?",
+      "options": [
+       {
+        "option": "pas de point (A)",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "point admis : en cours V, imminent F (B)",
+        "statut": "divergent"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "pourquoi": "Aucune des deux options n'est la plus prudente sur les deux axes (l'une affirme un V ou un F que l'autre n'affirme pas) : je retiens leur partie commune, classe par classe (la valeur que les deux options affirment, N sinon), et le statut qui s'en lit. V sous l'hypothèse de l'anneau dans la lecture en cours (les deux l'affirment) ; N dans la lecture imminente (seul B y affirme F). Le statut est celui de A."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A et B s'accordent sur l'hypothèse de l'anneau (connaissance typique). La négation porte sur le fichu, sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-016#6",
+    "n": 6,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Le baiser de la main n'est dit que par l'ancien catalogue de vente, cité.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-017",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {
+     "p1": "precision_temporelle"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "vidage_figure_exige"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "forme_du_libelle",
+    "porte_sur": "« before gutting it »",
+    "valeurs": [
+     "precision_temporelle",
+     "vidage_figure_exige"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Tobie figuré deux fois : à gauche, il saisit le poisson avant de le vider ; à droite, il le vide sous le regard de Raphaël. La saisie précède le vidage, et les deux sont figurés : V, que « before gutting it » soit une simple précision ou exige le vidage figuré.",
+  "variantes": [
+   {
+    "id": "ep-017#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "vidage_figure_exige"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before gutting it »",
+      "valeurs": [
+       "precision_temporelle",
+       "vidage_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation : saisie à gauche, vidage à droite.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-017#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "vidage_figure_exige"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before gutting it »",
+      "valeurs": [
+       "precision_temporelle",
+       "vidage_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-017#2",
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {
+       "d1": "saisie_figuree"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "succession_figuree"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « seizing the fish before gutting it »",
+      "valeurs": [
+       "saisie_figuree",
+       "succession_figuree"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : B (le plus explicite). Justification de B : « il vide le poisson avant de le saisir » : l'ordre inverse, pour les mêmes éventualités. F dans les deux lectures. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « seizing the fish before gutting it »'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-017#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "vidage_figure_exige"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before gutting it »",
+      "valeurs": [
+       "precision_temporelle",
+       "vidage_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : La saisie est figurée ; « il le videra plus tard, sur la route » : le vidage est postérieur, hors de la scène. Précision : V ; vidage exigé : non figuré, sans négation dite : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-017#4",
+    "n": 4,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "vidage_figure_exige"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before gutting it »",
+      "valeurs": [
+       "precision_temporelle",
+       "vidage_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : « le panneau ne montre que la capture » : saisie figurée, vidage non figuré, dit par « ne ... que ». Précision : V (la saisie est celle qui précède le vidage dans le récit) ; vidage exigé : F.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-017#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "vidage_figure_exige"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before gutting it »",
+      "valeurs": [
+       "precision_temporelle",
+       "vidage_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Le chien est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-018",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {
+     "p1": "precision_temporelle"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "meurtre_figure_exige"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identite",
+      "contenu": "le Caïn et l'Abel du registre inférieur sont les mêmes individus que ceux du registre supérieur"
+     }
+    ]
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "forme_du_libelle",
+    "porte_sur": "« before Cain slays Abel »",
+    "valeurs": [
+     "precision_temporelle",
+     "meurtre_figure_exige"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Deux registres : les offrandes, et le meurtre. Abel offrant est vivant, donc avant sa mort. Précision : les offrandes figurées suffisent : V. Meurtre exigé : il est figuré ; la succession suit si ce sont les mêmes Caïn et Abel dans les deux registres (hypothèse d'identité, le même nom dans deux situations).",
+  "variantes": [
+   {
+    "id": "ep-018#0",
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "meurtre_figure_exige"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identite",
+        "contenu": "le Caïn et l'Abel du registre inférieur sont les mêmes individus que ceux du registre supérieur"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before Cain slays Abel »",
+      "valeurs": [
+       "precision_temporelle",
+       "meurtre_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Reformulation.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-018#1",
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "meurtre_figure_exige"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identite",
+        "contenu": "le Caïn et l'Abel du registre inférieur sont les mêmes individus que ceux du registre supérieur"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before Cain slays Abel »",
+      "valeurs": [
+       "precision_temporelle",
+       "meurtre_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-018#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "d1": "offrande_figuree"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "succession_figuree"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « offering their sacrifices before Cain slays Abel »",
+      "valeurs": [
+       "offrande_figuree",
+       "succession_figuree"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : B (le plus explicite). Justification de B : « offer their sacrifices [...], before Cain slays Abel » : la succession est dite. V. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « offering their sacrifices before Cain slays Abel »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-018#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "meurtre_figure_exige"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before Cain slays Abel »",
+      "valeurs": [
+       "precision_temporelle",
+       "meurtre_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Au registre supérieur, Abel tue Caïn : le meurtre de la définition n'est pas figuré, sans être exclu analytiquement : N si on l'exige ; les offrandes restent figurées : V en précision.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-018#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "meurtre_figure_exige"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identite",
+        "contenu": "le Caïn et l'Abel du registre inférieur sont les mêmes individus que ceux du registre supérieur"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before Cain slays Abel »",
+      "valeurs": [
+       "precision_temporelle",
+       "meurtre_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : La main sortant de la nuée est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-018#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "precision_temporelle"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "meurtre_figure_exige"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identite",
+        "contenu": "le Caïn et l'Abel du registre inférieur sont les mêmes individus que ceux du registre supérieur"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« before Cain slays Abel »",
+      "valeurs": [
+       "precision_temporelle",
+       "meurtre_figure_exige"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : La négation porte sur la fumée.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-019",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Zachée grimpe dans un sycomore pour voir le Christ : le but est dit par l'auteur. V.",
+  "variantes": [
+   {
+    "id": "ep-019#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-019#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-019#2",
+    "n": 2,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la scène figurée est l'épisode de l'Évangile, où Zachée grimpe pour voir le Christ ; son but vaut pour la figure"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Le but n'est que dans l'Évangile, qui raconte ; le panneau montre Zachée grimpant pendant que le Christ passe. Le but n'est figuré que par l'identification de l'épisode. Les hypothèses diffèrent de nature sans changer les valeurs : A ['identification_iconographique'] ; B ['abduction'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-019#3",
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : C'est le Christ qui grimpe pour voir Zachée : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-019#4",
+    "n": 4,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La femme à la fenêtre est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-019#5",
+    "n": 5,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours_preparatoire"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« about to climb it »",
+      "valeurs": [
+       "en_cours_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : Zachée, au pied de l'arbre, est sur le point d'y grimper : phase préparatoire figurée en cours, V ; imminent, F.  Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-020",
+  "statut_reference": "ecartee_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {
+     "p1": "en_cours_preparatoire"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "imminent"
+    },
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "ancrage",
+    "porte_sur": "« lève son bâton pour le frapper »",
+    "valeurs": [
+     "en_cours_preparatoire",
+     "imminent"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee_sous_hypotheses). Profil retenu : A. Justification de A : Moïse lève son bâton pour frapper le rocher ; le peuple attend, les cruches vides. Frappe en phase préparatoire : la frappe est en cours, mais l'eau qui jaillit n'est pas dite : N. Frappe imminente : appui négatif de la frappe en cours : F.  Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle.",
+  "variantes": [
+   {
+    "id": "ep-020#0",
+    "n": 0,
+    "statut_reference": "ecartee_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours_preparatoire"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« Pour frapper le rocher ..., Moïse lève son bâton »",
+      "valeurs": [
+       "en_cours_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee_sous_hypotheses). Profil retenu : A. Justification de A : Reformulation.  Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-020#1",
+    "n": 1,
+    "statut_reference": "ecartee_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours_preparatoire"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« raises his staff in order to strike it »",
+      "valeurs": [
+       "en_cours_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee_sous_hypotheses). Profil retenu : A. Justification de A : Traduction fidèle.  Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "ecartee_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-020#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « le frappe de son bâton, et l'eau jaillit » : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-020#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « ne le frappe pas encore » : négation dite de la frappe en cours.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-020#4",
+    "n": 4,
+    "statut_reference": "ecartee_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours_preparatoire"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« lève son bâton pour le frapper »",
+      "valeurs": [
+       "en_cours_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee_sous_hypotheses). Profil retenu : A. Justification de A : Aaron est sans effet.  Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "ecartee_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "ecartee_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-021",
+  "statut_reference": "non_certifiee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "cite",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Le guetteur allume le feu (auteur) ; le but, avertir la ville de l'approche de la flotte, ne vient que du chroniqueur cité. La conjonction ne tient qu'avec la valeur citée. La flotte n'a pas à être figurée : elle est dans le contenu du but ; « No ship is visible » n'a donc pas d'effet.",
+  "variantes": [
+   {
+    "id": "ep-021#0",
+    "n": 0,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Reformulation : le but est encore celui du chroniqueur.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-021#1",
+    "n": 1,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-021#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : L'auteur dit lui-même le but : V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-021#3",
+    "n": 3,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le guetteur allume bien le feu, ce que l'auteur ne dit que « perhaps »"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : L'allumage n'est que « perhaps », le but que cité.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-021#4",
+    "n": 4,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Les mouettes sont sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "non_certifiee"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "non_certifiee"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-022",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Le Christ sort du tombeau pendant que les soldats dorment : V.",
+  "variantes": [
+   {
+    "id": "ep-022#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-022#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-022#2",
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « déjà sorti » : ancrage antérieur, appui négatif de la sortie en cours ; et les soldats, réveillés, s'enfuient : ils ne dorment pas.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-022#3",
+    "n": 3,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Ordre inversé de la phrase, même contenu : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-022#4",
+    "n": 4,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Toute la scène n'est dite que par la notice ancienne, citée.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-022#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur l'ange.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-023",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « The cock perched on the wall does not crow » : négation dite ; la simultanéité demandée est réfutée.",
+  "variantes": [
+   {
+    "id": "ep-023#0",
+    "n": 0,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « the perched cock is not crowing » : négation dite.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-023#1",
+    "n": 1,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-023#2",
+    "n": 2,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le coq chante (« may be crowing »)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Pierre renie le Christ ; le chant du coq n'est que possible. V sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-023#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : C'est la servante qui renie ; et le coq ne chante pas : la conjonction est réfutée par la négation.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-023#4",
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Le soldat est sans effet ; le coq ne chante pas.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-023#5",
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Je suis B. Le reniement n'est pas dit ; son antériorité vient du récit (Pierre pleure après avoir renié), non d'un ancrage dit par l'auteur. Avoir quitté la cour n'exclut pas analytiquement de renier. Un appui négatif ne vient ni d'une implication non attestée ni du silence (guide § 3 ; IA § 6.3, décision 10).",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-023#6",
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Pierre renie le Christ pendant que le coq chante : V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "ecartee"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "ecartee"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "ep-024",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {
+     "d1": "lavement_figure"
+    },
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "d1": "succession_figuree"
+    },
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "d1",
+    "dimension": "forme_du_libelle",
+    "porte_sur": "(définition) « washing [...] with her tears before drying them with her hair »",
+    "valeurs": [
+     "lavement_figure",
+     "succession_figuree"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee). Profil retenu : B (le plus explicite). Justification de B : « She does not wash them with her tears » : négation sur la femme citée, dans la scène figurée. F dans les deux lectures (lavement figuré ; succession lavement puis essuyage figurée). Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « washing [...] with her tears before drying them with her hair »'].",
+  "variantes": [
+   {
+    "id": "ep-024#0",
+    "n": 0,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {
+       "d1": "lavement_figure"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "succession_figuree"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « washing [...] with her tears before drying them with her hair »",
+      "valeurs": [
+       "lavement_figure",
+       "succession_figuree"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : B (le plus explicite). Justification de B : Paraphrase fidèle : même jugement que le cas. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « washing [...] with her tears before drying them with her hair »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-024#1",
+    "n": 1,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {
+       "d1": "lavement_figure"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "succession_figuree"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « washing [...] with her tears before drying them with her hair »",
+      "valeurs": [
+       "lavement_figure",
+       "succession_figuree"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : B (le plus explicite). Justification de B : Traduction fidèle : même jugement que le cas. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « washing [...] with her tears before drying them with her hair »'].",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-024#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "d1": "lavement_figure"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "succession_figuree"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« washing [...] with her tears before drying them with her hair »",
+      "valeurs": [
+       "lavement_figure",
+       "succession_figuree"
+      ],
+      "cote": "definition"
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "forme du libellé (« X-ing before Y-ing ») ; antériorité modalisée comme appui négatif",
+      "question": "La définition demande-t-elle le lavement figuré en cours, ou la succession lavement-essuyage ? Et un lavement « perhaps » antérieur fonde-t-il, sous l'hypothèse qu'il a eu lieu, un appui négatif du lavement en cours (décision 26) ?",
+      "options": [
+       {
+        "option": "pas de point ; lavement en cours demandé ; F sous l'abduction du lavement antérieur (A)",
+        "statut": "ecartee_sous_hypotheses"
+       },
+       {
+        "option": "point admis ; lavement figuré : N ; succession : V sous l'abduction (B)",
+        "statut": "etablie_sous_hypotheses"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Aucune des deux options n'est la plus prudente sur les deux axes (l'une affirme un V ou un F que l'autre n'affirme pas) : je retiens leur partie commune, classe par classe (la valeur que les deux options affirment, N sinon), et le statut qui s'en lit. Lecture « lavement figuré » : A y affirme F, B N ; lecture « succession » : B y affirme V, A ne l'admet pas. Aucune valeur n'est commune : N partout."
+     }
+    ],
+    "source": "dependance",
+    "raison": "L'essuyage est en cours ; le lavement n'est que possible et antérieur. A et B admettent ailleurs (ep-017#4) un point analogue sur « before gutting it » ; la lecture « succession » de B demanderait pourtant le lavement figuré, ce que le texte ne dit pas même sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-024#3",
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "d1": "lavement_figure"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "succession_figuree"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « washing [...] with her tears before drying them with her hair »",
+      "valeurs": [
+       "lavement_figure",
+       "succession_figuree"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : B (le plus explicite). Justification de B : C'est un serviteur qui ne lave pas ; de la femme, le lavement n'est ni dit ni nié : N. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « washing [...] with her tears before drying them with her hair »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-024#4",
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {
+       "d1": "lavement_figure"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "succession_figuree"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « washing [...] with her tears before drying them with her hair »",
+      "valeurs": [
+       "lavement_figure",
+       "succession_figuree"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : B (le plus explicite). Justification de B : Ajout d'un élément sans rapport avec la définition : même jugement que le cas. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « washing [...] with her tears before drying them with her hair »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "ep-024#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "d1": "lavement_figure"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "succession_figuree"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « washing [...] with her tears before drying them with her hair »",
+      "valeurs": [
+       "lavement_figure",
+       "succession_figuree"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : B (le plus explicite). Justification de B : La même femme figurée deux fois : lavement à gauche, essuyage à droite, « before ». V. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « washing [...] with her tears before drying them with her hair »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "ecartee"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "ecartee"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ }
+]

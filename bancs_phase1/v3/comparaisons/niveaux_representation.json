@@ -1,0 +1,1752 @@
+{
+ "elements": 144,
+ "manquants": [],
+ "accord_statut": 0.6944444444444444,
+ "kappa_statut": 0.5970747217806041,
+ "accord_valeurs": 0.7291666666666666,
+ "desaccords": [
+  {
+   "id": "nr-001#2",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal (copie, telle qu'elle reproduisait l'original)"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-002",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-002#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-002#1",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "nr-002#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-002#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction",
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-004#2",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-004#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-005",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-005#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-005#1",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "nr-005#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-007",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-007#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-007#2",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "nr-007#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-007#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-008#1",
+   "champs": [
+    "statut",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-008#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal (gravure, telle qu'elle reproduit le vitrail)"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-012",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-012#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-012#1",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-012#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-012#4",
+   "champs": [
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction",
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-013#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > dessin sous-jacent"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > dessin sous-jacent (réflectographie)"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-014",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-014#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-014#2",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "nr-014#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-014#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-015#2",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction",
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction",
+     "connaissance_typique",
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-019#4",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-020",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-020#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-020#2",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-020#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-020#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-023",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-023#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-023#2",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "nr-023#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-023#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-024",
+   "champs": [
+    "statut",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal (signifié, selon le programme de l'abbé Hugues)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-024#0",
+   "champs": [
+    "statut",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal (signifié, selon le programme de l'abbé Hugues)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-024#2",
+   "champs": [
+    "statut",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal (signifié, selon le programme de l'abbé Hugues)"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "nr-024#3",
+   "champs": [
+    "statut",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal (signifié, selon le programme de l'abbé Hugues)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "nr-024#4",
+   "champs": [
+    "statut",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction",
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal (signifié, selon le programme de l'abbé Hugues)"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  }
+ ],
+ "confusion": [
+  [
+   "etablie_sous_hypotheses | inconnue",
+   20
+  ],
+  [
+   "inconnue | etablie_sous_hypotheses",
+   10
+  ],
+  [
+   "etablie_sous_hypotheses | non_certifiee",
+   6
+  ],
+  [
+   "etablie_sous_hypotheses | etablie",
+   5
+  ],
+  [
+   "inconnue | non_certifiee",
+   2
+  ],
+  [
+   "inconnue | ecartee",
+   1
+  ]
+ ]
+}

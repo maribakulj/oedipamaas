@@ -1,0 +1,3536 @@
+[
+ {
+  "id": "sa-001",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "Le saint barbu « hands a closed book ... to a young deacon, who receives it » : donneur, objet, destinataire sont dits.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Passif (« is handed by him to a young deacon ») : mêmes rôles.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "C'est le diacre qui tend le livre au saint, qui le reçoit : le même livre ne passe pas au même moment du saint au diacre et du diacre au saint.",
+    "doute": "Le F tient à l'incompatibilité des deux directions d'un même transfert ; un autre livre non mentionné laisserait N.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le saint, qui « seems to hand » le livre au diacre, le lui donne."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Le don n'est qu'apparent ; il est supposé.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "Le destinataire est un donateur agenouillé, non un diacre ; aucun diacre n'est cité, et rien ne nie qu'il y en ait un.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; « no donor » est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-002",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "ecartee",
+  "justification": "« un gentilhomme ... ne donne pas sa bourse au mendiant » : négation de l'auteur, qui porte sur toute la proposition demandée.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Passif nié (« la bourse n'est pas donnée par le gentilhomme ... au mendiant ») : même négation.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« donne sa bourse au mendiant » : tout est dit ; détourner la tête est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "La négation porte sur un autre don (la sébile du mendiant au gentilhomme) ; le don de la bourse n'est ni dit ni nié.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "La négation porte sur le don à l'enfant ; le don au mendiant, à l'écart, n'est pas nié.",
+    "doute": "Il serre la bourse contre sa poitrine, ce qui rend le don au mendiant improbable ; je n'en ai pas fait une incompatibilité analytique.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Même contenu que le cas ; le chien est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-003",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "« Elijah ascends to heaven in a chariot of fire » : tout est dit, en cours.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Paraphrase du cas : même contenu pertinent, même jugement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« Elijah descends from heaven » : descendre exclut monter pour le même mouvement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« about to ascend », le char encore à terre, les nuées closes : l'ascension est imminente, ce qui exclut le en cours.",
+    "doute": "Une convention qui compterait l'imminent comme en cours rendrait la seconde classe V ; je l'ai laissée F.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Seule la légende raconte l'ascension ; « the woodcut itself shows only Elisha » : la quantification exclut Élie de la figuration.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; le berger est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-004",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "ecartee",
+  "justification": "La Sainte Famille fuit la Judée « vers la Galilée », où Nazareth apparaît : la fuite figurée a un seul terme, la Galilée, qui n'est pas l'Égypte.",
+  "doute": "Le F suppose que la définition porte sur la fuite figurée ; c'est la seule fuite citée.",
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "La Sainte Famille fuit la Judée « pour gagner l'Égypte », qu'annonce une pyramide : tout est dit.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« la Sainte Famille ne fuit pas en Égypte » : négation de l'auteur ; le pendant n'est pas cette œuvre.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Paraphrase du cas : même contenu pertinent, même jugement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Même contenu que le cas ; le berger est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Même contenu que le cas ; « aucun soldat » est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-005",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "« Un ange descend du ciel ... au-dessus d'un vieillard endormi » : tout est dit.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« Descendant du ciel, ... un ange plane au-dessus de ... un vieillard endormi » : la descente est dite par le participe.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« Un ange monte vers le ciel » : monter exclut descendre pour le même mouvement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Le vieillard « vient de s'éveiller » et est assis : il n'est pas endormi.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "La descente de l'ange n'est que dans la Légende dorée ; « La fresque ne montre que le vieillard ... et deux bergers » : l'ange est exclu de la figuration.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; « aucun chien » est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-006",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "cite",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "non_certifiee",
+  "justification": "L'auteur dit Vénus debout sur une coquille près du rivage ; qu'elle sorte de la mer n'est dit que « according to the Medici inventory », qui décrit l'image : V pour l'énonciateur cité seulement.",
+  "doute": "La pose (sur la coquille, près du rivage, tordant sa chevelure) invite à l'abduction ; je m'en suis tenu à la source.",
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "non_certifiee",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« Venus emerges from the sea on a scallop shell » : dit par l'auteur.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Vénus, qui « seems to emerge from the sea », en sort."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "La sortie de la mer n'est qu'apparente.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "non_certifiee",
+    "justification": "Même partage que le cas : la sortie de la mer n'est que dans l'inventaire.",
+    "doute": "La pose (sur la coquille, près du rivage, tordant sa chevelure) invite à l'abduction ; je m'en suis tenu à la source.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "non_certifiee",
+    "justification": "L'auteur ne dit pas le mouvement ; l'inventaire cité dit qu'elle descend dans la mer, ce qui exclut qu'elle en sorte. La seule valeur vient de la source.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "non_certifiee",
+    "justification": "Même partage que le cas ; le dauphin est sans effet.",
+    "doute": "La pose (sur la coquille, près du rivage, tordant sa chevelure) invite à l'abduction ; je m'en suis tenu à la source.",
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-007",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "« saint Luc peint la Vierge avec un pinceau fin » : agent, objet peint et instrument sont dits.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Paraphrase du cas : même contenu pertinent, même jugement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Saint Luc peint avec un pinceau (autre que celui posé sur la tablette)."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Il peint la Vierge ; l'instrument n'est pas dit, et le seul pinceau cité est posé sur la tablette.",
+    "doute": "Si l'on lie « a brush » au pinceau cité, posé et non tenu, la valeur serait F ; je n'ai pas tenu cette liaison pour imposée.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > petit tableau sur le chevalet",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Le petit tableau sur le chevalet figure « saint Luc peignant la Vierge avec un pinceau fin » : satisfaite dans ce contexte emboîté.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« le pinceau levé, s'apprête à peindre la Vierge »",
+      "valeurs": [
+       "en_cours_phase_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours_phase_preparatoire"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "divergent",
+    "justification": "Le panneau est « encore vierge » : la peinture n'a pas commencé. Comme pour « s'apprête à sacrifier », la phase préparatoire (assis, pinceau levé, modèle posant) peut compter comme en cours (V), ou l'acte comme seulement imminent (F). L'instrument est dit.",
+    "doute": "Une convention qui compterait l'imminent comme en cours rendrait la seconde classe V ; je l'ai laissée F.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; l'apprenti est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-008",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "L'épée posée près du corps décapité est l'instrument de la mise à mort."
+     }
+    ]
+   }
+  ],
+  "statut_synthetique": "etablie_sous_hypotheses",
+  "justification": "À la prédelle, Paul décapité, et le bourreau « who has slain him » : la mise à mort est dite ; l'instrument ne l'est pas, une épée gît près du corps. L'épée du panneau principal est un attribut, sans effet.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "L'épée posée près du corps décapité est l'instrument de la mise à mort."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« who has slain him with a sword » : l'instrument est dit.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "L'épée posée près du corps décapité est l'instrument de la mise à mort."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "« slain by the executioner ... beside a sword » : l'instrument n'est pas dit.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "non_certifiee",
+    "justification": "La prédelle est aujourd'hui illisible, sauf une épée : rien n'est figuré de la mise à mort (N, l'illisible n'étant pas nié). L'inventaire de 1650, cité, la décrivait.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le bourreau l'a tué avec l'épée posée près du corps, comme il « apparaît »."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "La mise à mort est dite, l'instrument n'est qu'apparent.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "L'épée posée près du corps décapité est l'instrument de la mise à mort."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Même contenu pertinent que le cas ; la femme au voile est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-009",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "« Weeping, Mary Magdalene kneels at the foot of the cross » : tout est dit.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Paraphrase du cas : même contenu pertinent, même jugement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "C'est saint Jean qui pleure au pied de la croix ; Madeleine se tient près de la Vierge, sans que ses pleurs soient dits ni niés.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Le vers peint sur le cadre (« Weeping, the Magdalene clings to the cross ») décrit la figure de Madeleine."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "L'auteur dit Madeleine agenouillée au pied de la croix ; les pleurs ne sont que dans le vers du cadre, un texte.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Madeleine, « seemingly weeping », pleure."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Les pleurs ne sont qu'apparents.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; le crâne est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-010",
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "structure",
+    "porte_sur": "« le bénissant » (rattachement)",
+    "valeurs": [
+     "Simeon",
+     "Marie"
+    ]
+   }
+  ],
+  "profil": [
+   {
+    "classe": {
+     "p1": "Simeon"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "Marie"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie_sous_hypotheses",
+  "justification": "Le participe détaché « le bénissant » se rattache d'ordinaire au sujet, Siméon (V) ; rattaché à « Marie », complément de « des mains de », c'est elle qui bénit, et la bénédiction de Siméon n'est pas dite (N).",
+  "doute": "Le rattachement à Marie est grammaticalement défavorisé ; je l'ai gardé admissible.",
+  "variantes": [
+   {
+    "n": 0,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "structure",
+      "porte_sur": "« blessing him » (rattachement)",
+      "valeurs": [
+       "Simeon",
+       "Marie"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "Simeon"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "Marie"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Traduction fidèle ; même ambiguïté de rattachement.",
+    "doute": "Le rattachement à Marie est grammaticalement défavorisé ; je l'ai gardé admissible.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« il ne le bénit pas, et c'est Marie qui lève la main » : négation de l'auteur.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "« Marie, bénissant l'Enfant, le remet » : c'est Marie qui bénit ; la bénédiction de Siméon n'est ni dite ni niée.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "structure",
+      "porte_sur": "« le bénissant » (rattachement)",
+      "valeurs": [
+       "Enfant",
+       "Simeon",
+       "Marie"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "Enfant"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "Simeon"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "Marie"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Le sujet est « l'Enfant » : « le bénissant » peut dire l'Enfant bénissant Siméon (N), Siméon, le plus proche, bénissant l'Enfant (V), ou Marie (N).",
+    "doute": "La lecture « l'Enfant bénit Siméon » m'a paru la plus probable.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "structure",
+      "porte_sur": "« le bénissant » (rattachement)",
+      "valeurs": [
+       "Simeon",
+       "Marie"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "Simeon"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "Marie"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Même contenu que le cas ; le lévite est sans effet.",
+    "doute": "Le rattachement à Marie est grammaticalement défavorisé ; je l'ai gardé admissible.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "non_certifiee",
+    "justification": "L'auteur ne dit que la réception de l'Enfant ; la bénédiction n'est dite que par le catalogue de restauration cité, la main étant refaite.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-011",
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "structure",
+    "porte_sur": "« qui verse l'eau d'une cruche dans un bassin » (rattachement)",
+    "valeurs": [
+     "servante",
+     "dame"
+    ]
+   }
+  ],
+  "profil": [
+   {
+    "classe": {
+     "p1": "servante"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "dame"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie_sous_hypotheses",
+  "justification": "« la servante de la dame qui verse l'eau ... » : la relative se rattache à « la servante » (V) ou à « la dame » (N : la servante ne fait que regarder vers la fenêtre). Le texte ne tranche pas.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "structure",
+      "porte_sur": "« who pours water from a jug into a basin » (rattachement)",
+      "valeurs": [
+       "servante",
+       "dame"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "servante"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "dame"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Traduction fidèle ; même ambiguïté.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« la servante, qui verse l'eau d'une cruche dans un bassin » : la relative appositive ne se rattache qu'à elle.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« sa servante, qui ne verse pas l'eau » : négation de l'auteur.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "C'est la dame qui verse ; la servante tient le bassin. Que la servante verse n'est ni dit ni nié.",
+    "doute": "Tenir le bassin pendant que la dame verse rend improbable qu'elle verse elle-même ; ce n'est pas analytique.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« qui vient de verser », la cruche vide posée : l'action est antérieure, ce qui exclut le en cours.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "structure",
+      "porte_sur": "« qui verse l'eau d'une cruche dans un bassin » (rattachement)",
+      "valeurs": [
+       "servante",
+       "dame"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "servante"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "dame"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Même contenu que le cas ; « aucun chat » est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 6,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "non_certifiee",
+    "justification": "Aujourd'hui, la servante regarde vers la fenêtre, la partie est repeinte (N). Qu'elle versait l'eau n'est dit que par le catalogue de 1696, pour l'état d'origine.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-012",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "ecartee",
+  "justification": "« an old shepherd who does not offer the lamb ... to the Child » : négation de l'auteur. L'attribution est sans effet.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« an old shepherd who offers the lamb ... to the Child » : tout est dit.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Passif nié (« is not offered by him to the Child ») : même négation.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "La négation porte sur l'offrande à la Vierge ; l'offrande à l'Enfant n'est pas niée.",
+    "doute": "Il serre l'agneau contre lui, ce qui rend toute offrande improbable ; je n'en ai pas tiré F.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Même contenu que le cas ; le bœuf et l'âne sont sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Même contenu que le cas ; « no angel » est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-013",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "Judith « lève l'épée au-dessus de lui », Holopherne « endormi » : tout est dit.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Paraphrase du cas : même contenu pertinent, même jugement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "C'est la servante qui lève l'épée ; que Judith la lève n'est ni dit ni nié.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Holopherne empoigne la chevelure de Judith et lève l'épée : agent de ces actions, il est éveillé, ce qui exclut « sleeping Holofernes ».",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Holopherne « s'éveille » : il n'est plus endormi au moment figuré.",
+    "doute": "Le réveil en cours laisse peut-être un reste de sommeil ; je l'ai lu comme excluant « sleeping ».",
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; « aucun garde » est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-014",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "Tobie, qui « perhaps anoints » les yeux de son père avec le fiel, les oint."
+     }
+    ]
+   }
+  ],
+  "statut_synthetique": "etablie_sous_hypotheses",
+  "justification": "Tobie s'agenouille devant son père aveugle ; l'onction avec le fiel n'est que possible (« perhaps »).",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Tobie, qui « perhaps anoints » les yeux de son père avec le fiel, les oint."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« anoints the old man's eyes with the gall of the fish » : dit par l'auteur.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Tobie, qui « possibly anoints » les yeux de son père, les oint."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Même réserve que le cas (« possibly »).",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "C'est l'ange qui oint les yeux du vieillard ; que Tobie le fasse n'est ni dit ni nié.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "C'est Tobit, aveugle, qui oint les yeux de son fils : l'onction demandée (par le fils, des yeux du père) n'est ni dite ni niée.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Tobie, qui « perhaps anoints » les yeux de son père avec le fiel, les oint."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Même contenu que le cas ; le chien est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-015",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "Joseph d'Arimathie descend le corps de la croix « while Nicodemus draws the nail from his feet » : les deux éventualités sont dites simultanées.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Passifs : mêmes éventualités, même simultanéité.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« After Nicodemus has drawn the nail » : l'extraction du clou est antérieure à la descente, ce qui exclut « while a nail is drawn ».",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "C'est la couronne d'épines qu'on descend ; « The body of Christ still hangs from the cross » : la descente du corps n'a pas commencé.",
+    "doute": "« still hangs » exclut-il analytiquement qu'on soit en train de le descendre ? Je l'ai lu ainsi.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > petite scène sculptée sur le flanc du sarcophage",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "La petite scène sculptée sur le sarcophage figure la Descente de croix et l'extraction du clou : satisfaite dans ce contexte emboîté.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; Madeleine est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-016",
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "sens",
+    "porte_sur": "« relève »",
+    "valeurs": [
+     "ressusciter",
+     "soulever"
+    ]
+   }
+  ],
+  "profil": [
+   {
+    "classe": {
+     "p1": "ressusciter"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "soulever"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identification_iconographique",
+      "contenu": "La scène, aux portes de Naïm, est la résurrection du fils de la veuve : le fils étendu sur la civière est mort."
+     }
+    ]
+   }
+  ],
+  "statut_synthetique": "etablie_sous_hypotheses",
+  "justification": "« le Christ relève le fils de la veuve, étendu sur une civière » : « relever » peut dire la résurrection même (V), ou le geste de le soulever, la mort du fils n'étant pas dite (V sous l'identification de l'épisode).",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« raises »",
+      "valeurs": [
+       "ressusciter",
+       "soulever"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "ressusciter"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "soulever"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La scène, aux portes de Naïm, est la résurrection du fils de la veuve : le fils étendu sur la civière est mort."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Traduction fidèle ; « raises » a la même alternative.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« est relevé »",
+      "valeurs": [
+       "ressusciter",
+       "soulever"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "ressusciter"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "soulever"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La scène, aux portes de Naïm, est la résurrection du fils de la veuve : le fils étendu sur la civière est mort."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Passif : même point.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« relève »",
+      "valeurs": [
+       "ressusciter",
+       "soulever"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "ressusciter"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "soulever"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La scène, aux portes de Naïm, est la résurrection du fils de la veuve : le fils étendu sur la civière est mort."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "non_certifiee",
+    "justification": "« dit-on » : l'auteur ne prend pas l'action à son compte, rapportée d'une voix anonyme (énonciateur cité) ; la scène est très effacée.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« s'apprête à relever »",
+      "valeurs": [
+       "ressusciter",
+       "soulever"
+      ]
+     },
+     {
+      "id": "p2",
+      "dimension": "ancrage",
+      "porte_sur": "« s'apprête à relever ... il tend la main vers lui »",
+      "valeurs": [
+       "en_cours_phase_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "ressusciter",
+       "p2": "en_cours_phase_preparatoire"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "soulever",
+       "p2": "en_cours_phase_preparatoire"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La scène, aux portes de Naïm, est la résurrection du fils de la veuve : le fils étendu sur la civière est mort."
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p2": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "divergent",
+    "justification": "Il tend la main vers le fils : sous la lecture de la phase préparatoire, les deux sens donnent V comme dans le cas ; sous l'imminence, le en cours est exclu (F).",
+    "doute": "Une convention qui compterait l'imminent comme en cours rendrait la seconde classe V ; je l'ai laissée F.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "Le Christ relève la veuve, non le fils, qui repose sur la civière : la résurrection du fils n'est ni dite ni niée.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "sens",
+      "porte_sur": "« relève »",
+      "valeurs": [
+       "ressusciter",
+       "soulever"
+      ]
+     }
+    ],
+    "profil": [
+     {
+      "classe": {
+       "p1": "ressusciter"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "soulever"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La scène, aux portes de Naïm, est la résurrection du fils de la veuve : le fils étendu sur la civière est mort."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Même contenu que le cas ; les apôtres sont sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-017",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identification_iconographique",
+      "contenu": "La jeune femme à la couronne de roses et à la corbeille de fruits est sainte Dorothée."
+     }
+    ]
+   }
+  ],
+  "statut_synthetique": "etablie_sous_hypotheses",
+  "justification": "Une jeune femme porte une couronne de roses et tient une corbeille de fruits ; aucune inscription : qu'elle soit sainte Dorothée ne se tire que de ses attributs.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La jeune femme à la couronne de roses et à la corbeille de fruits est sainte Dorothée."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La jeune femme à la couronne de roses et à la corbeille de fruits est sainte Dorothée."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "ecartee_sous_hypotheses",
+    "justification": "Elle tient la couronne dans la main, « her loose hair is bare » : elle ne la porte pas. Si c'est Dorothée (identification par les attributs), F.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La jeune femme à la couronne de roses et à la corbeille de fruits est sainte Dorothée."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "ecartee_sous_hypotheses",
+    "justification": "« who does not wear the wreath of roses » : négation de l'auteur ; F pour Dorothée, si c'est elle.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La jeune femme à la couronne de roses et à la corbeille de fruits est sainte Dorothée."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Passif : même contenu que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "cite",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La jeune femme à la couronne de roses et à la corbeille de fruits est sainte Dorothée."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "non_certifiee",
+    "justification": "La tête est perdue (N dans l'œuvre actuelle, rien n'étant nié) ; la couronne portée n'est dite que par une note de 1700, pour l'état d'origine, et l'identification reste à supposer.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "La jeune femme à la couronne de roses et à la corbeille de fruits est sainte Dorothée."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Même contenu que le cas ; le donateur est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-018",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "ecartee",
+  "justification": "« ne porte pas encore la couronne d'épines » : négation de l'auteur ; le couronnement est imminent.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« porte la couronne d'épines qu'un soldat ... vient de lui enfoncer » : dit.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Paraphrase du cas : même contenu pertinent, même jugement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« La couronne d'épines repose sur le bloc, à côté de lui » : elle n'est pas sur sa tête ; la négation explicite porte, elle, sur le manteau.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Même contenu que le cas ; Pilate est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-019",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "La Vierge assise sur un trône tient l'Enfant sur ses genoux. Les restaurations (tête de l'Enfant, pieds du trône) ne changent pas la figuration.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Paraphrase du cas : même contenu pertinent, même jugement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« the Virgin stands beside it » : debout exclut assise ; c'est l'Enfant qui siège sur le trône.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« about to sit down », l'Enfant contre son épaule : elle n'est pas encore assise (l'imminent exclut l'état).",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "La Vierge, « probably seated on a throne originally », l'était."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "Il ne subsiste que le buste : la position assise n'est figurée que dans l'état d'origine, probable. L'Enfant est tenu « against her breast », non dit sur ses genoux, sans que ce soit exclu : N dans les deux contextes.",
+    "doute": "Tenu contre la poitrine pourrait sembler exclure « on her lap » ; un enfant assis sur les genoux peut être tenu contre la poitrine.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; « no angels » est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-020",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal > état d'origine",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "Dans l'alternative de l'auteur, le saint était debout."
+     }
+    ]
+   },
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal > état d'origine",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "Dans l'alternative de l'auteur, le saint était assis sur un rocher."
+     }
+    ]
+   }
+  ],
+  "statut_synthetique": "divergent",
+  "justification": "Le saint désigne l'agneau (la désignation est dite). Le bas est perdu : dans l'œuvre actuelle, la station debout n'est pas figurée (N). Pour l'état d'origine, l'auteur pose une alternative (« soit debout, soit assis ») : ses branches sont des cas, non des lectures ; la définition est vraie dans l'une, fausse dans l'autre (assis exclut debout), donc ni établie ni écartée ; choisir une branche est une abduction.",
+  "doute": "Le statut « divergent » ne résume ici que des branches abductives ; sans hypothèse, rien n'est établi ni écarté.",
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Dans l'alternative de l'auteur, le saint était debout."
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Dans l'alternative de l'auteur, le saint était assis sur un rocher."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "divergent",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": "Le statut « divergent » ne résume ici que des branches abductives ; sans hypothèse, rien n'est établi ni écarté.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« Saint Jean-Baptiste, debout, ... désigne de l'index l'agneau » : tout est dit ; la perte sous les genoux est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Dans l'alternative de l'auteur, le saint était debout."
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Dans l'alternative de l'auteur, le saint était assis sur un rocher."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "divergent",
+    "justification": "« on ne peut dire s'il se tenait debout ou s'il était assis » : la même alternative, dite comme une ignorance ; même profil.",
+    "doute": "Le statut « divergent » ne résume ici que des branches abductives ; sans hypothèse, rien n'est établi ni écarté.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le panneau suivait le dessin préparatoire, qui montre le saint debout."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Le dessin préparatoire est une autre œuvre et ne satisfait rien pour celle-ci ; le bas du panneau est perdu (N). Sous l'hypothèse que le panneau le suivait, V dans l'état d'origine.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Dans l'alternative de l'auteur, le saint était debout."
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Dans l'alternative de l'auteur, le saint était assis sur un rocher."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "divergent",
+    "justification": "Même contenu que le cas ; l'ange est sans effet.",
+    "doute": "Le statut « divergent » ne résume ici que des branches abductives ; sans hypothèse, rien n'est établi ni écarté.",
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-021",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "« The knight lies recumbent ... A lion crouches beneath his feet » : tout est dit.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Paraphrase du cas : même contenu pertinent, même jugement.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "C'est le lion qui est couché ; le chevalier « stands upright » : debout exclut gisant.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "La feuille « shows only the knight's head and shoulders » : la quantification exclut le lion. Le gisant perdu, que décrit la note du dessinateur, est une autre œuvre.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > état d'origine",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le chevalier, « perhaps originally recumbent », l'était."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "divergent",
+    "justification": "Aujourd'hui, le fragment est dressé (« upright ») : le chevalier n'est pas gisant (F). Dans l'état d'origine, il ne l'était que peut-être (V sous hypothèse). Le lion est dit.",
+    "doute": "« upright » dit peut-être la position matérielle du fragment, non la posture figurée ; ce serait alors N dans l'œuvre actuelle.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; « no inscription » est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-022",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "ecartee",
+  "justification": "« Il est éveillé » : Jacob, le même, dans la même situation et au même moment, n'est pas endormi. Couché sur le dos, la tête sur une pierre, est dit.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« Il ne dort pas » : négation de l'auteur.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« Jacob, encore endormi, est étendu sur le dos, la tête posée sur une pierre » : tout est dit.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« Jacob, éveillé » : même raison que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Jacob est « éveillé » et assis ; c'est un berger qui dort couché sur le dos, la tête sur une pierre.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "« Il est éveillé » : même raison que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-023",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "etablie",
+  "justification": "La Justice (une femme couronnée, personnification) « remet une épée au jeune roi agenouillé devant elle » : tout est dit.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« reçoit une épée des mains de ... la Justice » : la converse dit le même transfert.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Le sujet de « lui remet une épée » est le roi : c'est lui qui remet l'épée à la Justice ; le même objet ne passe pas au même moment dans les deux sens.",
+    "doute": "Une lecture où « qui tient une balance, lui remet » aurait la Justice pour sujet n'est pas grammaticale sans coordination.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "La Justice « tient seule la balance et l'épée » : la quantification exclut le roi. Le carton perdu est une autre œuvre.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "La Justice, qui « semble remettre » une épée au roi, la lui remet."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "etablie_sous_hypotheses",
+    "justification": "Le geste n'est qu'apparent (trame usée).",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "Même contenu que le cas ; le page est sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ },
+ {
+  "id": "sa-024",
+  "points": [],
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "statut_synthetique": "ecartee",
+  "justification": "« He does not hold his quill: it stands in the inkwell » : écrire avec une plume demande de la tenir ; la seule plume citée n'est pas tenue.",
+  "doute": null,
+  "variantes": [
+   {
+    "n": 0,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Traduction fidèle : même profil que le cas.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 1,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "etablie",
+    "justification": "« writes in an open book with a quill » : tout est dit.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 2,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Passif nié (« His quill is not held by him ») : même raison.",
+    "doute": null,
+    "traduction_infidele": false
+   },
+   {
+    "n": 3,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "inconnue",
+    "justification": "La négation porte sur l'encrier ; la plume est en main, posée sur la page, pendant qu'il regarde un crucifix. Qu'il écrive n'est ni dit ni nié.",
+    "doute": "Le regard tourné vers le crucifix suggère une pause ; ce n'est pas une incompatibilité analytique.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 4,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Le vers gravé (« Jerome lays down his pen to pray ») décrit la figure."
+       }
+      ]
+     }
+    ],
+    "statut_synthetique": "ecartee_sous_hypotheses",
+    "justification": "L'auteur dit Jérôme la tête appuyée sur la main ; le vers gravé, un texte, dit qu'il pose sa plume. Sous l'hypothèse que le vers décrit l'image, il n'écrit pas.",
+    "doute": "Sans cette hypothèse, N.",
+    "traduction_infidele": false
+   },
+   {
+    "n": 5,
+    "points": [],
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "statut_synthetique": "ecartee",
+    "justification": "Même contenu que le cas ; le crâne et le sablier sont sans effet.",
+    "doute": null,
+    "traduction_infidele": false
+   }
+  ]
+ }
+]

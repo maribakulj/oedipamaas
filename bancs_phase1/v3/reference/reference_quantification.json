@@ -1,0 +1,7306 @@
+[
+ {
+  "id": "rq-001",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : L'auteur dit un ermite qui tient un crâne dans la main gauche : la définition est satisfaite ; le reste (chapelet, état de la feuille) est sans effet.",
+  "variantes": [
+   {
+    "id": "rq-001#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation au passif : l'ermite tient le crâne dans sa main gauche.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-001#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle : « un ermite ... tient un crâne de la main gauche ».",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-001#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Même description, plus un berger au loin, sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-001#3",
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : L'homme est dit pèlerin, non ermite. Pèlerin et ermite ne s'excluent pas analytiquement, mais rien ne dit qu'il soit ermite : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-001#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'ermite tient bien un crâne, ce que l'auteur ne dit que « perhaps » (planche usée)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « He perhaps holds a skull » : l'auteur n'affirme pas la tenue du crâne. V seulement sous l'hypothèse qu'il le tient.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-001#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur un lion, sans rapport avec la définition.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-002",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {
+     "p1": "eveque"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "diacre"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "coreference",
+    "porte_sur": "« Il élève le calice »",
+    "valeurs": [
+     "eveque",
+     "diacre"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « Il élève le calice » : deux antécédents masculins, l'évêque et le diacre, le dernier sujet étant le diacre. Si « il » est l'évêque, l'évêque élève le calice et le diacre est à sa droite (droite intrinsèque, « à la droite de l'évêque ») : V. Si c'est le diacre, rien ne dit que l'évêque élève le calice : N, non F.",
+  "variantes": [
+   {
+    "id": "rq-002#0",
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "eveque"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "diacre"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "coreference",
+      "porte_sur": "« He raises the chalice »",
+      "valeurs": [
+       "eveque",
+       "diacre"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Traduction fidèle : « He raises the chalice » garde les deux antécédents.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-002#1",
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "eveque"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "diacre"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "coreference",
+      "porte_sur": "« C'est lui qui élève le calice »",
+      "valeurs": [
+       "eveque",
+       "diacre"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « C'est lui qui élève le calice » : la reprise peut viser l'évêque ou le diacre ; même profil que le cas.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-002#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "p1": "eveque"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "diacre"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "coreference",
+      "porte_sur": "« Il élève le calice »",
+      "valeurs": [
+       "eveque",
+       "diacre"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "fondement d'un F (connaissance typique)",
+      "question": "L'évêque est à la droite du diacre ; la définition demande le diacre à la droite de l'évêque. Une connaissance typique (deux figures côte à côte sont orientées de même) peut-elle fonder un F sous hypothèse ? Le guide § 4 admet « des F sous hypothèses » ; IA § 6.3 ne compte parmi les appuis négatifs ni l'opposition typique ni une implication non attestée, et la droite intrinsèque de l'un ne dit rien de celle de l'autre.",
+      "options": [
+       {
+        "option": "oui : l'orientation commune est une hypothèse connaissance_typique, et l'inversion réfute « at his right » quel que soit l'antécédent de « il » (A)",
+        "statut": "ecartee_sous_hypotheses"
+       },
+       {
+        "option": "non : sans orientation dite, une des deux conditions reste sans appui, N (B)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A réfute sous l'hypothèse d'une orientation commune ; B juge N. Le texte ne dit pas l'orientation des figures (contrairement à rq-006#2, où « assis côte à côte sur un banc » la donne) ; la question de principe est ouverte : dépendance d1.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-002#3",
+    "n": 3,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « L'évêque élève le calice » lève la coréférence ; le diacre est à sa droite : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-002#4",
+    "n": 4,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "eveque",
+       "p2": "en_cours_preparatoire"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "eveque",
+       "p2": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "diacre",
+       "p2": "en_cours_preparatoire"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "diacre",
+       "p2": "imminent"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "coreference",
+      "porte_sur": "« Il s'apprête à élever le calice »",
+      "valeurs": [
+       "eveque",
+       "diacre"
+      ]
+     },
+     {
+      "id": "p2",
+      "dimension": "ancrage",
+      "porte_sur": "« s'apprête à élever »",
+      "valeurs": [
+       "en_cours_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A (le plus explicite). Justification de A : Deux points : l'antécédent de « il », et l'ancrage de « s'apprête à élever ». Lu comme phase préparatoire figurée en cours (ONTOLOGIE § 1.2), l'élévation par l'évêque est en cours : V ; lu comme imminent, l'ancrage imminent est un appui négatif de l'élévation en cours : F. Avec le diacre pour antécédent, rien sur l'évêque : N.  Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle. B dit représenter la convention par le point d'ancrage ; ses valeurs sont en fait la phase préparatoire et l'imminence (sa justification cite ONT § 1.2) : le point est du texte, la convention reste à part (précision 1.1.2).",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-002#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "eveque"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "diacre"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "coreference",
+      "porte_sur": "« Il élève le calice »",
+      "valeurs": [
+       "eveque",
+       "diacre"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Comme le cas, plus une femme qui allume un cierge, sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-002#6",
+    "n": 6,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : L'auteur dit l'évêque et le diacre à sa droite ; que l'évêque élève le calice ne vient que de l'inventaire de 1610, une source sur l'œuvre : la valeur ne vient que d'un énonciateur cité.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-003",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Un jeune homme, Tobie » : l'auteur identifie Tobie ; « le garçon » le reprend, seul candidat ; il porte un gros poisson : V. Les plombs de restauration sont sans effet.",
+  "variantes": [
+   {
+    "id": "rq-003#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle : « A young man, Tobias ... The boy carries a large fish ».",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-003#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Tobie, un jeune homme ... il porte un gros poisson » : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-003#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : C'est l'ange qui porte le poisson. Que Tobie le porte n'est pas dit ; rien ne l'exclut analytiquement : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-003#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "le jeune homme qui marche avec un ange en portant un poisson est Tobie"
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A (le plus explicite). Justification de A : L'auteur ne nomme pas le jeune homme ; seul le marché de 1512, une source citée, le nomme Tobie. Les attributs donnés par l'auteur (l'ange, le poisson) fondent aussi une identification iconographique : V sous cette hypothèse.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-003#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "le jeune homme est Tobie, selon l'identification traditionnelle que rapporte l'auteur, appuyée par l'ange et le poisson"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « Traditionnellement identifié comme Tobie » : l'auteur rapporte l'identification sans la prendre à son compte. V sous l'hypothèse d'identification.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-003#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur un chien, sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-004",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Saint Jérôme, figuré en vieillard agenouillé ; « the penitent », seule figure, le reprend et se frappe la poitrine avec une pierre : pénitent et geste dits. V.",
+  "variantes": [
+   {
+    "id": "rq-004#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-004#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation : « With a stone held in his right hand the penitent beats his breast ».",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-004#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Il se frappe la poitrine du poing fermé ; la pierre n'est pas dite. Le poing comme instrument n'exclut pas analytiquement une pierre tenue : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-004#3",
+    "n": 3,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "en_cours"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« about to strike his breast »",
+      "valeurs": [
+       "imminent",
+       "en_cours"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : A. Justification de A : « raises a stone ..., about to strike his breast » : la frappe est imminente. Si « beating » demande la frappe en cours, l'imminent en est un appui négatif : F. Mais se battre la poitrine est itératif : lever la pierre entre deux coups est une phase du battement en cours : V. Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-004#4",
+    "n": 4,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Le lion à l'arrière-plan est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-004#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "jerome"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "moine"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "coreference",
+      "porte_sur": "« The penitent »",
+      "valeurs": [
+       "jerome",
+       "moine"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Deux figures agenouillées : « the penitent » peut reprendre Jérôme ou le moine hiéronymite. Jérôme : V ; le moine : rien n'est dit de Jérôme pénitent : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-004#6",
+    "n": 6,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « not Saint Jerome, as the old inventory claimed, but Saint Onuphrius » : l'auteur nie que le vieillard soit Jérôme ; l'identité demandée est réfutée. L'inventaire (cité) disait Jérôme ; la contradiction entre sources reste documentaire.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-005",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Celui qui lit à la table est un vieillard barbu ; le saint, une autre figure (introduite par un indéfini), se tient debout près de la fenêtre. Rien ne dit que le lecteur soit un saint, ni que le saint lise à une table ; aucune incompatibilité : N.",
+  "variantes": [
+   {
+    "id": "rq-005#0",
+    "n": 0,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-005#1",
+    "n": 1,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Reformulation : mêmes figures, mêmes rôles.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-005#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le chat est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-005#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le vieillard qui lit est un saint (« sans doute » chez l'auteur)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « sans doute un saint » : l'auteur ne l'affirme pas. V sous l'hypothèse.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-005#4",
+    "n": 4,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Un saint barbu est assis à une table et lit » : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-005#5",
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Comme le cas ; la négation porte sur un lion.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-005#6",
+    "n": 6,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : Le vieillard lit à une table (auteur) ; qu'il soit un saint ne vient que de l'annotation du verso, citée par le catalogue.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "inconnue"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "inconnue"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-006",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Un couple de donateurs, « les deux époux », assis côte à côte, « l'épouse à la gauche de son mari » : gauche intrinsèque au mari, comme dans la définition. V.",
+  "variantes": [
+   {
+    "id": "rq-006#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-006#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation : « elle est à la gauche de son mari ».",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-006#2",
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « le mari à la gauche de son épouse » : assis côte à côte sur un même banc, ils ont la même orientation ; l'épouse est donc à la droite de son mari, ce qui exclut « à sa gauche ».",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-006#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Un portrait double de deux sœurs : les deux figures sont des femmes, aucune n'est un mari, et « portrait double » borne les modèles à deux.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-006#4",
+    "n": 4,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": [
+       {
+        "nature": "identite",
+        "contenu": "les deux donateurs figurés sont les personnes que les archives disent mari et femme"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A (le plus explicite). Justification de A : Un homme et une femme côte à côte, la femme à la gauche de l'homme : dit. Qu'ils soient mariés ne vient que des archives de la ville, citées, et vaut des personnes réelles, à relier aux figures. Les hypothèses diffèrent de nature sans changer les valeurs : A ['identite'] ; B aucune.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-006#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur un saint patron, sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-007",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « The lovers do not embrace » : négation dite de l'auteur.",
+  "variantes": [
+   {
+    "id": "rq-007#0",
+    "n": 0,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Traduction fidèle : « Les amants ne s'enlacent pas ».",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-007#1",
+    "n": 1,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « are not embracing » : négation dite.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-007#2",
+    "n": 2,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "les amants s'enlacent, ce que l'auteur ne dit que « perhaps » (partie retissée)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « perhaps embrace » : V seulement sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-007#3",
+    "n": 3,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « The lovers embrace » : V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-007#4",
+    "n": 4,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (non_certifiee). Profil retenu : A. Justification de A : L'enlacement n'est dit que par l'inventaire de 1547, source citée sur la tenture.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "non_certifiee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "non_certifiee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-007#5",
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Comme le cas, plus un paon, sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "ecartee"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "ecartee"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-008",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Les trois Grâces, nues, enlacées : V. La restauration des bras d'une figure ne touche ni le nombre ni la nudité.",
+  "variantes": [
+   {
+    "id": "rq-008#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle (« naked »).",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-008#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation : « Nues, les trois Grâces se tiennent enlacées ».",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-008#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "seuil de l'identification iconographique",
+      "question": "« Trois nymphes, nues, enlacées, celle du centre vue de dos » : le schéma des Grâces peut-il fonder une hypothèse d'identification (guide § 1) quand l'auteur donne lui-même une autre désignation ? Nymphe et Grâce ne s'excluent pas.",
+      "options": [
+       {
+        "option": "oui : V sous identification_iconographique (B)",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "non : la désignation de l'auteur arrête l'identification ; N (A)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A et B s'accordent sur les faits ; ils divergent sur le seuil d'une identification iconographique.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-008#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "trois figures féminines nues enlacées sont les trois Grâces"
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A (le plus explicite). Justification de A : L'auteur ne les identifie pas ; le restaurateur du XVIIe siècle, cité, les dit les trois Grâces. La configuration dite fonde aussi l'identification iconographique.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-008#4",
+    "n": 4,
+    "statut_reference": "ecartee_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "trois_figurees_exigees"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "nom_du_groupe"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« the three Graces »",
+      "valeurs": [
+       "trois_figurees_exigees",
+       "nom_du_groupe"
+      ],
+      "cote": "definition"
+     }
+    ],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "inconnue",
+      "classe": {},
+      "valeur": "N",
+      "enonciateur": "auteur",
+      "remarque": "« fragment » : le relief entier a pu montrer les trois figures ; rien n'en est dit (doutes de A et de B). Précision 1.1.1 : ce contexte ne fait pas le statut."
+     }
+    ],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "nombre du libellé lu comme exact (forme du libellé)",
+      "question": "« au nombre de deux sur ce fragment » : nombre dit. « the three Graces » exige-t-il trois figures figurées, ou nomme-t-il seulement le groupe, dont deux membres figurés suffiraient ?",
+      "options": [
+       {
+        "option": "trois figures exigées, pas de point : F (B)",
+        "statut": "ecartee"
+       },
+       {
+        "option": "point admis : F si trois figures exigées, V si le nom du groupe suffit (A)",
+        "statut": "divergent"
+       }
+      ],
+      "statut_retenu": "ecartee_sous_hypotheses",
+      "pourquoi": "Aucune des deux options n'est la plus prudente sur les deux axes (l'une affirme un V ou un F que l'autre n'affirme pas) : je retiens leur partie commune, classe par classe (la valeur que les deux options affirment, N sinon), et le statut qui s'en lit. F dans la lecture « trois figures exigées » (les deux options l'affirment) ; N dans la lecture « nom du groupe » (seule la seconde y affirme V)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Le désaccord tient à la lecture de « three » dans le libellé, que les principes ne fixent pas.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee_sous_hypotheses"
+     },
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-008#5",
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « se dévêtent ; l'une dénoue sa ceinture » : l'événement de déshabillage est en cours, son état résultant (nues) ne tient pas encore.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-008#6",
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur un Amour, sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-009",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "connaissance_typique",
+      "contenu": "Pierre est parmi « les apôtres » figurés autour de la couche"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Les apôtres se tiennent autour de la couche, la tête inclinée de douleur (chacun). Pierre n'est pas nommé : qu'il soit parmi eux est supposé. V sous cette hypothèse.",
+  "variantes": [
+   {
+    "id": "rq-009#0",
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Pierre est parmi « les apôtres » figurés autour de la couche"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-009#1",
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Pierre est parmi « les apôtres » figurés autour de la couche"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Reformulation : mêmes apôtres, Pierre non nommé.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-009#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « among them Peter ... Each of them bows his head in grief » : Pierre est à la tête de la couche et s'afflige : V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-009#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Pierre est parmi « les apôtres » figurés autour de la couche"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : La Légende dorée parle du récit, non de l'ivoire : elle ne satisfait rien ; même profil que le cas.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-009#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Pierre est parmi « les apôtres » figurés autour de la couche"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Les anges sont sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-009#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Pierre est parmi « les apôtres » figurés autour de la couche"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : La négation porte sur un chandelier.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-009#6",
+    "n": 6,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Pierre est parmi « les apôtres » figurés autour de la couche"
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A (le plus explicite). Justification de A : Comme le cas ; le catalogue de 1821, cité, place en outre Pierre à la tête de la couche, affligé.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-010",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {
+     "p1": "collective"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "distributive"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "pluriel",
+    "porte_sur": "« Two angels crown her »",
+    "valeurs": [
+     "collective",
+     "distributive"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Two angels crown her » : collectif (un couronnement par deux anges) ou distributif (chacun la couronne). Dans les deux lectures, elle est couronnée par des anges : V, avec des solutions différentes.",
+  "variantes": [
+   {
+    "id": "rq-010#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« Deux anges la couronnent »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle ; « Deux anges la couronnent » garde l'ambiguïté.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-010#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« is crowned by two angels »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Passif : « is crowned by two angels », même ambiguïté, V dans les deux lectures.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-010#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Together, two angels set a single crown » : collectif explicite, V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-010#3",
+    "n": 3,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Each of the two angels crowns her in turn » : distributif explicite, V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-010#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem » (miniature écaillée)"
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "idem"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« Two angels seem to crown her »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « seem to crown her » : V seulement sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-010#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« Two angels crown her »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La colombe est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-010#6",
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« Two angels crown her »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La rubrique citée dit « ensemble », mais l'auteur dit lui-même qu'ils la couronnent : V dans les deux lectures de l'auteur.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-011",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {
+     "p1": "collective"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "distributive"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "pluriel",
+    "porte_sur": "« Les trois Rois ... offrent un présent »",
+    "valeurs": [
+     "collective",
+     "distributive"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « offrent un présent » : distributif (chacun un présent) : V ; collectif (un présent offert ensemble) : la définition demande que chacun offre un présent, ce que cette lecture ne dit pas, sans l'exclure : N.",
+  "variantes": [
+   {
+    "id": "rq-011#0",
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« The three Kings ... offer a gift »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Traduction fidèle ; « offer a gift » garde l'ambiguïté.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-011#1",
+    "n": 1,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : « Un présent est offert à l'Enfant par les trois Rois » : le sujet indéfini singulier du passif prend la portée large ; seule la lecture collective reste. Chacun offrant un présent n'est pas dit : N.  A et B la marquent `traduction_infidele` ; c'est une reformulation en français : le champ juste est `paraphrase_infidele` (guide § 7). L'infidélité est réelle : la lecture distributive du cas disparaît. Le jugement reste celui de la variante telle qu'elle est.",
+    "langue": "fr",
+    "traduction": false,
+    "traduction_infidele": false,
+    "paraphrase_infidele": true,
+    "raison_infidelite": "Reformulation dans la même langue : le passif à sujet indéfini singulier fixe un seul présent et efface la lecture distributive du cas.",
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-011#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « offrent chacun un présent : une coupe d'or, un encensoir, un flacon » : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-011#3",
+    "n": 3,
+    "statut_reference": "ecartee_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "unique_coffret"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "unique_present"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "portee",
+      "porte_sur": "« offrent ensemble [...] un unique coffret »",
+      "valeurs": [
+       "unique_coffret",
+       "unique_present"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Je suis B. « un unique coffret » est une quantification dite sur les coffrets ; qu'il soit le seul présent n'est pas dit. Dans la lecture littérale, d'autres présents ne sont pas exclus, et le silence ne réfute rien (guide § 3 ; IA § 6.4-6.5 : un domaine restreint ne ferme pas le monde). Le F n'est fondé que dans la lecture où « unique » borne les présents. Dans cette lecture, F suppose aussi que l'offrande commune d'un même présent ne vaut pas « each offering a gift » ; c'est la lecture de la définition que A et B partagent (doute de A).",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-011#4",
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : C'est l'Enfant qui offre un présent aux Rois ; l'offrande des Rois n'est pas dite : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-011#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "chacun des Rois offre un présent, ce que l'auteur ne dit que « sans doute » (couche usée)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « offrent sans doute chacun un présent » : V sous l'hypothèse.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-011#6",
+    "n": 6,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« offrent un présent »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Le chien est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-011#7",
+    "n": 7,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": [],
+      "remarque": "valeur du seul livret cité, qui précise que chacun offre son propre présent"
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« offrent un présent »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Le statut est commun (etablie_sous_hypotheses) ; les valeurs diffèrent par la façon d'écrire la valeur citée. Dans la lecture collective, l'auteur ne dit pas que chacun offre un présent : N (A) ; le livret cité donne V, qui ne vient que de lui (guide § 3, `enonciateur`). B écrit la classe collective « V (cité) » et efface la valeur de l'auteur ; je garde les deux lignes, comme A. Que le livret parle du tableau, non du récit, est le point de chemin de IA § 7.5 ; A et B le lisent ainsi.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-012",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Deux espions revenant de Canaan portent ensemble une énorme grappe suspendue à une perche : V.",
+  "variantes": [
+   {
+    "id": "rq-012#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle : « Ensemble, ils portent ».",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-012#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « bear between them, jointly » : V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-012#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Chacun porte une grappe sur l'épaule : ni grappe portée ensemble, ni perche. Rien n'exclut analytiquement une autre grappe portée en commun : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-012#3",
+    "n": 3,
+    "statut_reference": "ecartee_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "phase_preparatoire"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« bend down to lift jointly [...] » (le portage)",
+      "valeurs": [
+       "phase_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "ancrage (« about to », phase préparatoire d'une activité)",
+      "question": "Se baisser pour soulever la grappe est-il la phase préparatoire d'un portage en cours (ONT § 1.2, qui la range dans l'en cours pour un événement de changement), ou le portage, une activité, n'a-t-il pas commencé (ancrage imminent, appui négatif par la décision 26) ?",
+      "options": [
+       {
+        "option": "pas de point : le portage n'a pas commencé, F (A)",
+        "statut": "ecartee"
+       },
+       {
+        "option": "point admis : V en phase préparatoire, F si imminent (B)",
+        "statut": "divergent"
+       }
+      ],
+      "statut_retenu": "ecartee_sous_hypotheses",
+      "pourquoi": "Aucune des deux options n'est la plus prudente sur les deux axes (l'une affirme un V ou un F que l'autre n'affirme pas) : je retiens leur partie commune, classe par classe (la valeur que les deux options affirment, N sinon), et le statut qui s'en lit. F dans la lecture imminente (les deux l'affirment), N dans la lecture préparatoire (seul B y affirme V)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Le désaccord porte sur la frontière lexicale de la décision 26 (« about to », « bend down to »), que IA § 8.3 laisse ouverte. Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-012#4",
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Deux vendangeurs : rien ne dit que ce soient les espions. Pas d'incompatibilité analytique : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-012#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Moïse au bord du camp est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-012#6",
+    "n": 6,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "seuil de l'identification (lien d'un texte imprimé à son image)",
+      "question": "L'image décrite : deux hommes, une perche sur les épaules. Le verset imprimé dessous raconte que les espions portèrent une grappe sur un bâton. Le lien typique du texte à l'image (décision 20) peut-il fonder que les hommes sont les espions et que la perche porte une grappe, objet que la description de l'image ne dit pas ? Le guide § 3 : une source qui raconte, ou un titre seul, ne satisfait rien.",
+      "options": [
+       {
+        "option": "oui : V sous connaissance_typique (B)",
+        "statut": "etablie_sous_hypotheses"
+       },
+       {
+        "option": "non : le verset raconte ; N (A)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A et B s'accordent : le verset est un contexte de récit, non de figuration. Ils divergent sur le lien typique qui le relierait à l'image. Comparer ep-002#3, où les deux acceptent l'hypothèse parce qu'elle explique une observation dite (le mât qui se fend) ; ici, la grappe n'est pas observée.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-013",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Sept jeunes femmes personnifient les sept Arts libéraux : V.",
+  "variantes": [
+   {
+    "id": "rq-013#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-013#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « personnifiés par autant de jeunes femmes » : sept. V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-013#2",
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Six femmes pour six des sept Arts ; « l'Astronomie manque » : nombre dit et absence dite.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-013#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "les sept jeunes femmes tenant chacune un objet personnifient les sept Arts libéraux, comme le dit le titre du frontispice"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Seul le titre nomme les Arts libéraux ; un titre seul ne satisfait rien. Sept femmes tenant chacune un objet, sous ce titre : V sous l'hypothèse d'identification. Les hypothèses diffèrent de nature sans changer les valeurs : A ['identification_iconographique'] ; B ['connaissance_typique'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-013#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "les sept femmes personnifient les Arts libéraux, ce que l'auteur ne dit que « semblent »"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « semblent personnifier » : V sous l'hypothèse.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-013#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Apollon au centre est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-013#6",
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur une couronne.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-014",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « with ten apostles » : le nombre des apôtres à table est dit, dix ; la définition en demande douze. Les douze pains sont un leurre.",
+  "variantes": [
+   {
+    "id": "rq-014#0",
+    "n": 0,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-014#1",
+    "n": 1,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Reformulation : dix apôtres.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-014#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « with the twelve apostles » : V ; les dix pains sont sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-014#3",
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le nombre des apôtres est illisible ; le contrat de 1509 prescrivait les douze, contenu déontique hors de la figuration : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-014#4",
+    "n": 4,
+    "statut_reference": "ecartee_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "les apôtres sont dix, ce que l'auteur ne dit que « probably »"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee_sous_hypotheses). Profil retenu : A. Justification de A : « probably ten apostles » : F seulement sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-014#5",
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Dix apôtres ; le serviteur est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-014#6",
+    "n": 6,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Dix apôtres ; la négation porte sur les nimbes.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "ecartee"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "ecartee"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-015",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {
+     "d1": "deux_filles_figurees"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "d1": "famille_de_Loth"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "d1",
+    "dimension": "forme_du_libelle",
+    "porte_sur": "(définition) « one of his two daughters »",
+    "valeurs": [
+     "deux_filles_figurees",
+     "famille_de_Loth"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : B (le plus explicite). Justification de B : La définition peut demander que les deux filles soient figurées, ou dire seulement que la donneuse est l'une des deux filles de Loth. Ici les deux filles sont là et l'une lui donne le vin : V dans les deux lectures. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « one of his two daughters »'].",
+  "variantes": [
+   {
+    "id": "rq-015#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "d1": "deux_filles_figurees"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "famille_de_Loth"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « one of his two daughters »",
+      "valeurs": [
+       "deux_filles_figurees",
+       "famille_de_Loth"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : B (le plus explicite). Justification de B : Traduction fidèle : même jugement que le cas. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « one of his two daughters »'].",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-015#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "d1": "deux_filles_figurees"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "famille_de_Loth"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « one of his two daughters »",
+      "valeurs": [
+       "deux_filles_figurees",
+       "famille_de_Loth"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : B (le plus explicite). Justification de B : Paraphrase fidèle : même jugement que le cas. « one of his two daughters, while the other pours » : les deux sont là. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « one of his two daughters »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-015#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "d1": "deux_filles_figurees"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "famille_de_Loth"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « one of his two daughters »",
+      "valeurs": [
+       "deux_filles_figurees",
+       "famille_de_Loth"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : B (le plus explicite). Justification de B : C'est Loth qui donne le vin à sa fille. Qu'il en reçoive n'est ni dit ni exclu : N. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « one of his two daughters »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-015#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "d1": "deux_filles_figurees"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "famille_de_Loth"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Loth a deux filles, selon le récit ; « One of his daughters » dit seulement au moins deux."
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « one of his two daughters »",
+      "valeurs": [
+       "deux_filles_figurees",
+       "famille_de_Loth"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : B (le plus explicite). Justification de B : Une seule fille est figurée. Lecture « deux filles figurées » : N. Lecture « famille de Loth » : la donneuse est l'une de ses filles ; qu'il en ait deux vient du récit : V sous hypothèse. Les hypothèses diffèrent de nature sans changer les valeurs : A aucune ; B ['connaissance_typique'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-015#4",
+    "n": 4,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « one of his two daughters »",
+      "valeurs": [
+       "deux_filles_figurees",
+       "famille_de_Loth"
+      ]
+     },
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« one is about to hand him a shallow cup of wine »",
+      "valeurs": [
+       "en_cours",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (divergent). Profil retenu : B (le plus explicite). Justification de B : « about to hand » : phase préparatoire du don (en cours) ou don imminent. En cours : V ; imminent : F (décision 26). Le point d1 ne change rien (les deux filles sont là). Les points diffèrent sans changer les valeurs : A ['ancrage « is about to hand him »'] ; B ['ancrage « one is about to hand him a shallow cup of wine »', 'forme_du_libelle (définition) « one of his two daughters »']. Précision 1.1.2 : le point d'ancrage (phase préparatoire contre imminence) est un point du texte ; la classe imminente est F par l'exclusivité des ancrages (décision 26, IA § 6.2), que les deux annotateurs appliquent. La convention « l'imminent compte comme en cours » (guide § 3), non tranchée, n'est pas une valeur du point : sous elle, la classe imminente serait V, avec une hypothèse de nature convention. Le statut est écrit sans elle.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "divergent"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "divergent"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-015#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "d1": "deux_filles_figurees"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "famille_de_Loth"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "(définition) « one of his two daughters »",
+      "valeurs": [
+       "deux_filles_figurees",
+       "famille_de_Loth"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : B (le plus explicite). Justification de B : Ajout d'un élément sans rapport avec la définition : même jugement que le cas. Les points diffèrent sans changer les valeurs : A aucun ; B ['forme_du_libelle (définition) « one of his two daughters »'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-016",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Hercule (le même héros qu'Héraclès) frappe l'hydre de Lerne de sa massue : il la combat et la frappe. V.",
+  "variantes": [
+   {
+    "id": "rq-016#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-016#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Passif, « Héraclès » : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-016#2",
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Hercule a laissé tomber sa massue : il ne la tient plus et ne peut frapper avec elle ; frapper avec un instrument exige de le tenir. La conjonction est réfutée.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-016#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'homme vêtu d'une peau de lion qui frappe l'hydre de Lerne est Hercule, ce qu'appuie l'inscription « Hercole » du revers"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : L'auteur ne nomme pas l'homme ; la peau de lion, l'hydre de Lerne et l'inscription du revers (contexte d'inscription) fondent l'identification. V sous hypothèse.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-016#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "le héros est Hercule, ce que l'auteur ne dit que « peut-être »"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « peut-être Hercule » : V sous l'hypothèse. Les hypothèses diffèrent de nature sans changer les valeurs : A ['abduction'] ; B ['identification_iconographique'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-016#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Iolaos est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-016#6",
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur le crabe.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-017",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identification_iconographique",
+      "contenu": "la déesse casquée à la lance, au bouclier et à la chouette est Minerve, c'est-à-dire Athéna, comme le dit l'inscription de l'exergue"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Une déesse casquée debout, lance et bouclier : dit. Qu'elle soit Athéna n'est pas dit par l'auteur ; l'inscription MINERVA (contexte d'inscription) et les attributs fondent l'identification ; Minerve et Athéna sont la même déesse.",
+  "variantes": [
+   {
+    "id": "rq-017#0",
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la déesse casquée à la lance, au bouclier et à la chouette est Minerve, c'est-à-dire Athéna, comme le dit l'inscription de l'exergue"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-017#1",
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la déesse casquée à la lance, au bouclier et à la chouette est Minerve, c'est-à-dire Athéna, comme le dit l'inscription de l'exergue"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Reformulation : même inscription, mêmes attributs.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-017#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « A helmeted goddess, Athena » : l'auteur identifie. V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-017#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la déesse casquée à la lance, au bouclier et à la chouette est Athéna"
+       }
+      ]
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A (le plus explicite). Justification de A : Le catalogue de 1863, cité, l'identifie à Athéna ; les attributs dits fondent aussi l'identification.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-017#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "la déesse est Athéna, ce que l'auteur ne dit que « perhaps »"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « perhaps Athena » : V sous l'hypothèse. Les hypothèses diffèrent de nature sans changer les valeurs : A ['abduction'] ; B ['identification_iconographique'].",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-017#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la déesse casquée à la lance, au bouclier et à la chouette est Minerve, c'est-à-dire Athéna, comme le dit l'inscription de l'exergue"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : La négation porte sur l'égide ; même profil que le cas.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-018",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identification_iconographique",
+      "contenu": "l'homme vêtu d'une peau de bête qui prêche à la foule est saint Jean-Baptiste, comme le dit le titre"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Un homme prêche (dit). Seul le titre le nomme : un titre seul ne satisfait rien, mais avec la peau de bête il fonde l'identification. V sous hypothèse.",
+  "variantes": [
+   {
+    "id": "rq-018#0",
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'homme vêtu d'une peau de bête qui prêche à la foule est saint Jean-Baptiste, comme le dit le titre"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-018#1",
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'homme vêtu d'une peau de bête qui prêche à la foule est saint Jean-Baptiste, comme le dit le titre"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « connue sous le titre » : même situation.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-018#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Saint Jean-Baptiste ... prêche » : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-018#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'homme est saint Jean-Baptiste, ce que l'auteur ne dit que « peut-être », appuyé par le titre"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « peut-être saint Jean-Baptiste » : V sous l'hypothèse. Les hypothèses diffèrent de nature sans changer les valeurs : A ['abduction'] ; B ['identification_iconographique'].",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-018#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "« saint Jean » vêtu d'une peau de bête et prêchant est le Baptiste, non l'Évangéliste"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « Saint Jean » peut désigner plusieurs saints ; la peau de bête et la prédication désignent le Baptiste. V sous l'hypothèse d'identification.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-018#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'homme vêtu d'une peau de bête qui prêche à la foule est saint Jean-Baptiste, comme le dit le titre"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : L'enfant à l'agneau est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-019",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Un bourreau tend à Salomé la tête du Baptiste, qu'elle reçoit sur un plat : V.",
+  "variantes": [
+   {
+    "id": "rq-019#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-019#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Reformulation : V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-019#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : C'est Salomé qui tend la tête au bourreau : qu'on la lui tende n'est pas dit : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-019#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "« saint Jean » dont la tête est tendue à Salomé sur un plat est le Baptiste"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "seuil de l'identification (nom partiel)",
+      "question": "« la tête de saint Jean », tendue à Salomé sur un plat : le contexte fixe-t-il le Baptiste sans point (guide § 2), ou l'identification reste-t-elle une hypothèse (guide § 1 ; IA § 7.4 et décision 5 : un nom partiel est un point d'identité) ?",
+      "options": [
+       {
+        "option": "le contexte suffit : etablie (A)",
+        "statut": "etablie"
+       },
+       {
+        "option": "hypothèse d'identification : V sous hypothèse (B)",
+        "statut": "etablie_sous_hypotheses"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas). Ici, elle n'affirme V que sous l'hypothèse ; aucune option n'affirme de F."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Les deux annotateurs donnent V ; ils divergent sur la nature de ce qui fixe le Baptiste.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-019#4",
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Le bourreau s'apprête à trancher la tête du Baptiste agenouillé : la tête n'est pas tranchée, donc pas tendue à Salomé. Incompatibilité analytique (vivant agenouillé, tête non coupée).",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-019#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur Hérodiade.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-020",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "identification_iconographique",
+      "contenu": "saint Jean vêtu de poil de chameau et montrant l'agneau est le Baptiste"
+     },
+     {
+      "nature": "identification_iconographique",
+      "contenu": "l'agneau couché sur le livre est l'Agneau de Dieu"
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Saint Jean, vêtu de poil de chameau, montre un agneau couché sur un livre : le Baptiste et l'Agneau sont des identifications iconographiques, que fondent les attributs. V sous ces hypothèses.",
+  "variantes": [
+   {
+    "id": "rq-020#0",
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "saint Jean vêtu de poil de chameau et montrant l'agneau est le Baptiste"
+       },
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'agneau couché sur le livre est l'Agneau de Dieu"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Traduction fidèle (« il montre un agneau »).",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-020#1",
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "saint Jean vêtu de poil de chameau et montrant l'agneau est le Baptiste"
+       },
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'agneau couché sur le livre est l'Agneau de Dieu"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Reformulation : mêmes attributs.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-020#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Saint Jean tient un calice et montre un aigle : ni agneau, ni Baptiste (les attributs sont ceux de l'Évangéliste) : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-020#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'agneau couché sur le livre est l'Agneau de Dieu"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « St John the Baptist » : l'identité est dite ; reste que l'agneau est l'Agneau. V sous cette hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-020#4",
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "saint Jean vêtu de poil de chameau et montrant l'agneau est le Baptiste"
+       },
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'agneau couché sur le livre est l'Agneau de Dieu"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : Le donateur est sans effet.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-020#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "saint Jean vêtu de poil de chameau et montrant l'agneau est le Baptiste"
+       },
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'agneau couché sur le livre est l'Agneau de Dieu"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : La négation porte sur le nimbe.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-020#6",
+    "n": 6,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "saint Jean vêtu de poil de chameau et montrant l'agneau est le Baptiste"
+       },
+       {
+        "nature": "identification_iconographique",
+        "contenu": "l'agneau couché sur le livre est l'Agneau de Dieu"
+       },
+       {
+        "nature": "abduction",
+        "contenu": "l'objet usé sur le livre est un agneau (« what may be a lamb »)"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « what may be a lamb » : une hypothèse de plus.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie_sous_hypotheses"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie_sous_hypotheses"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-021",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « alone in his tent; no one else is present » : exclusivité énoncée. V.",
+  "variantes": [
+   {
+    "id": "rq-021#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "fr",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-021#1",
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « No one but Judith and Holofernes is in his tent » : V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-021#2",
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Ils sont sous la tente ; l'exclusivité n'est pas dite, et le silence ne la donne pas : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-021#3",
+    "n": 3,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La sentinelle est dehors, hors du domaine (la tente) : l'exclusivité tient. V.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-021#4",
+    "n": 4,
+    "statut_reference": "contradictoire",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "B",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (contradictoire). Profil retenu : A. Justification de A : « alone ...; no one else is present » et, près du lit, une troisième figure, la servante : l'exclusivité dite et une personne de plus dans le domaine, dans la même interprétation. Contradiction interne.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "contradictoire"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "contradictoire"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-021#5",
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "ils sont seuls, ce que l'auteur ne dit que « seem »"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « seem to be alone » : V sous l'hypothèse.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-021#6",
+    "n": 6,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le Livre de Judith dit qu'elle fut laissée seule avec lui : source du récit, non description de l'image. L'eau-forte les montre sous la tente, sans exclusivité dite : N.",
+    "langue": "en",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-022",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {
+     "d1": "sans_autre_personne"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "d1": "sans_aucun_compagnon"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "d1",
+    "dimension": "sens",
+    "porte_sur": "« alone »",
+    "valeurs": [
+     "sans_autre_personne",
+     "sans_aucun_compagnon"
+    ],
+    "cote": "definition"
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [
+   {
+    "id": "d1",
+    "dimension": "domaine de « alone » (sens, définition)",
+    "question": "« St Jerome praying alone » : « alone » veut-il dire sans autre personne (le lion, son attribut constant, ne compte pas ; « seul avec son lion » est du français ordinaire), ou sans aucun compagnon, animal compris ? Les principes ne fixent pas le domaine ; A écarte la seconde lecture (doute), B l'admet.",
+    "options": [
+     {
+      "option": "pas de point : « alone » = sans autre personne (A)",
+      "statut": "inconnue"
+     },
+     {
+      "option": "point admis : sans autre personne / sans aucun compagnon (B)",
+      "statut": "ecartee_sous_hypotheses"
+     }
+    ],
+    "statut_retenu": "inconnue",
+    "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+   }
+  ],
+  "source": "dependance",
+  "raison": "Jérôme prie devant le crucifix : dit. Dans la lecture « sans autre personne », l'exclusivité n'est pas dite : N (A et B). Le F de B ne vaut que dans la lecture « sans aucun compagnon », que A n'admet pas.",
+  "variantes": [
+   {
+    "id": "rq-022#0",
+    "n": 0,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "d1": "sans_autre_personne"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "sans_aucun_compagnon"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "« alone »",
+      "valeurs": [
+       "sans_autre_personne",
+       "sans_aucun_compagnon"
+      ],
+      "cote": "definition"
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "domaine de « alone » (sens, définition)",
+      "question": "« St Jerome praying alone » : « alone » veut-il dire sans autre personne (le lion, son attribut constant, ne compte pas ; « seul avec son lion » est du français ordinaire), ou sans aucun compagnon, animal compris ? Les principes ne fixent pas le domaine ; A écarte la seconde lecture (doute), B l'admet.",
+      "options": [
+       {
+        "option": "pas de point : « alone » = sans autre personne (A)",
+        "statut": "inconnue"
+       },
+       {
+        "option": "point admis : sans autre personne / sans aucun compagnon (B)",
+        "statut": "ecartee_sous_hypotheses"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Jérôme prie devant le crucifix : dit. Dans la lecture « sans autre personne », l'exclusivité n'est pas dite : N (A et B). Le F de B ne vaut que dans la lecture « sans aucun compagnon », que A n'admet pas. Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-022#1",
+    "n": 1,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "d1": "sans_autre_personne"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "sans_aucun_compagnon"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "« alone »",
+      "valeurs": [
+       "sans_autre_personne",
+       "sans_aucun_compagnon"
+      ],
+      "cote": "definition"
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "domaine de « alone » (sens, définition)",
+      "question": "« St Jerome praying alone » : « alone » veut-il dire sans autre personne (le lion, son attribut constant, ne compte pas ; « seul avec son lion » est du français ordinaire), ou sans aucun compagnon, animal compris ? Les principes ne fixent pas le domaine ; A écarte la seconde lecture (doute), B l'admet.",
+      "options": [
+       {
+        "option": "pas de point : « alone » = sans autre personne (A)",
+        "statut": "inconnue"
+       },
+       {
+        "option": "point admis : sans autre personne / sans aucun compagnon (B)",
+        "statut": "ecartee_sous_hypotheses"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Jérôme prie devant le crucifix : dit. Dans la lecture « sans autre personne », l'exclusivité n'est pas dite : N (A et B). Le F de B ne vaut que dans la lecture « sans aucun compagnon », que A n'admet pas. Reformulation fidèle.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-022#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "d1": "sans_autre_personne"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "sans_aucun_compagnon"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "(définition) « alone »",
+      "valeurs": [
+       "sans_autre_personne",
+       "sans_aucun_compagnon"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : B (le plus explicite). Justification de B : « prie seul » : exclusivité dite, sans restriction, et aucun lion n'est mentionné. V dans les deux lectures. Les points diffèrent sans changer les valeurs : A aucun ; B ['sens (définition) « alone »'].  La dépendance d1 du cas (domaine de « alone ») est ici sans effet : les deux options donnent le même statut.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-022#3",
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "d1": "sans_autre_personne"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "sans_aucun_compagnon"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "« alone »",
+      "valeurs": [
+       "sans_autre_personne",
+       "sans_aucun_compagnon"
+      ],
+      "cote": "definition"
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "domaine de « alone » (sens, définition)",
+      "question": "« St Jerome praying alone » : « alone » veut-il dire sans autre personne (le lion, son attribut constant, ne compte pas ; « seul avec son lion » est du français ordinaire), ou sans aucun compagnon, animal compris ? Les principes ne fixent pas le domaine ; A écarte la seconde lecture (doute), B l'admet.",
+      "options": [
+       {
+        "option": "pas de point : « alone » = sans autre personne (A)",
+        "statut": "etablie"
+       },
+       {
+        "option": "point admis : sans autre personne / sans aucun compagnon (B)",
+        "statut": "divergent"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "pourquoi": "Aucune des deux options n'est la plus prudente sur les deux axes (l'une affirme un V ou un F que l'autre n'affirme pas) : je retiens leur partie commune, classe par classe (la valeur que les deux options affirment, N sinon), et le statut qui s'en lit. V dans la lecture « sans autre personne » (les deux l'affirment) ; N dans la lecture « sans aucun compagnon » (seul B y affirme F)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "« seul avec son lion » : aucune autre personne, dit ; un compagnon animal, dit.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-022#4",
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {
+       "d1": "sans_autre_personne"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "sans_aucun_compagnon"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "(définition) « alone »",
+      "valeurs": [
+       "sans_autre_personne",
+       "sans_aucun_compagnon"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : B (le plus explicite). Justification de B : « il n'est pas seul : un autre ermite prie à ses côtés » : F dans les deux lectures. Les points diffèrent sans changer les valeurs : A aucun ; B ['sens (définition) « alone »'].  La dépendance d1 du cas (domaine de « alone ») est ici sans effet : les deux options donnent le même statut.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-022#5",
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "d1": "sans_autre_personne"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "d1": "sans_aucun_compagnon"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "dimension": "sens",
+      "porte_sur": "« alone »",
+      "valeurs": [
+       "sans_autre_personne",
+       "sans_aucun_compagnon"
+      ],
+      "cote": "definition"
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "id": "d1",
+      "dimension": "domaine de « alone » (sens, définition)",
+      "question": "« St Jerome praying alone » : « alone » veut-il dire sans autre personne (le lion, son attribut constant, ne compte pas ; « seul avec son lion » est du français ordinaire), ou sans aucun compagnon, animal compris ? Les principes ne fixent pas le domaine ; A écarte la seconde lecture (doute), B l'admet.",
+      "options": [
+       {
+        "option": "pas de point : « alone » = sans autre personne (A)",
+        "statut": "inconnue"
+       },
+       {
+        "option": "point admis : sans autre personne / sans aucun compagnon (B)",
+        "statut": "ecartee_sous_hypotheses"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "pourquoi": "Statut de référence : celui de l'option la plus prudente sur les deux axes (elle n'affirme ni un V ni un F que l'autre option n'affirme pas)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Jérôme prie devant le crucifix : dit. Dans la lecture « sans autre personne », l'exclusivité n'est pas dite : N (A et B). Le F de B ne vaut que dans la lecture « sans aucun compagnon », que A n'admet pas. Le pèlerin au loin ne change rien : A et B lisent « seul » relativement au lieu de la prière.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "inconnue"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "inconnue"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-023",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « ne se tiennent pas seulement les saintes femmes : Pierre et Jean y accourent aussi » : l'exclusivité est niée par l'auteur, avec deux hommes.",
+  "variantes": [
+   {
+    "id": "rq-023#0",
+    "n": 0,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-023#1",
+    "n": 1,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « ne sont pas les seules à se tenir devant le tombeau » : négation de l'exclusivité.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-023#2",
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « ne se tiennent que les saintes femmes » : exclusivité dite ; l'ange est assis sur la pierre, non debout devant le tombeau. V.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-023#3",
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Les trois saintes femmes devant le tombeau : dit ; l'exclusivité n'est pas dite : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-023#4",
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le psaume parle du récit ; l'image montre les saintes femmes, sans exclusivité dite : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-023#5",
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : Comme le cas ; le dragon de la marge est sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "ecartee"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "ecartee"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ },
+ {
+  "id": "rq-024",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Au jardin des Oliviers (Gethsémani), le Christ prie à l'écart ; des trois apôtres, « tous dorment, sauf Jean » : Pierre dort. V.",
+  "variantes": [
+   {
+    "id": "rq-024#0",
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Traduction fidèle.",
+    "langue": "en",
+    "traduction": true,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-024#1",
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la scène du Christ priant à l'écart près des trois apôtres endormis est au jardin de Gethsémani"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Je suis A. B juge la paraphrase fidèle et reprend le jugement du cas sans l'examiner ; elle perd le lieu, que la définition demande (« in the Garden of Gethsemane »). C'est une reformulation en français : `paraphrase_infidele`, non `traduction_infidele` (guide § 7, dernier alinéa). Jugée telle qu'elle est : Gethsémani ne vient que de l'identification de la scène (guide § 1) : V sous hypothèse. Si l'on tenait que le contexte suffit (la question du seuil de rq-019#3), l'option prudente resterait celle-ci.",
+    "langue": "fr",
+    "traduction": false,
+    "traduction_infidele": false,
+    "paraphrase_infidele": true,
+    "raison_infidelite": "Reformulation dans la même langue qui perd « Au jardin des Oliviers », que la définition demande.",
+    "historique": {
+     "statut_contexte_principal": "etablie_sous_hypotheses"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie_sous_hypotheses"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-024#2",
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « tous dorment, sauf Pierre » : l'exception dit que Pierre ne dort pas.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-024#3",
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « sur le point de s'endormir » : l'endormissement est imminent, l'état endormi ne tient pas encore.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "ecartee"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "ecartee"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-024#4",
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le sommeil n'est que dans le récit évangélique ; le relief montre les apôtres assis, sans dire qu'ils dorment : N.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "inconnue"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "inconnue"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-024#5",
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Judas et les soldats sont sans effet.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   },
+   {
+    "id": "rq-024#6",
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : La négation porte sur l'ange au calice.",
+    "langue": "fr",
+    "traduction": false,
+    "historique": {
+     "statut_contexte_principal": "etablie"
+    },
+    "resultats_par_contexte": [
+     {
+      "chemin": "principal",
+      "statut": "etablie"
+     }
+    ],
+    "contexte_du_statut": [
+     "principal"
+    ]
+   }
+  ],
+  "historique": {
+   "statut_contexte_principal": "etablie"
+  },
+  "resultats_par_contexte": [
+   {
+    "chemin": "principal",
+    "statut": "etablie"
+   }
+  ],
+  "contexte_du_statut": [
+   "principal"
+  ]
+ }
+]

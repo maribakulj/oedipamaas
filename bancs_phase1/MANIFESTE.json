@@ -1,7 +1,7 @@
 {
  "cree": "2026-11-27T23:47:39Z",
- "role": "les bancs de développement de la phase 1 (docs/BANCS_PHASE1.md) : les cas, leurs questions, les trois relectures indépendantes, les révisions et l'harmonisation, la couverture ; la version 1 d'avant relecture est gardée (v1_avant_relecture/) ; le 28/11 : les textes d'origine rétablis (dev/ et v2_k0_d30_retabli/, statuts relatifs à K0-d30), et les scripts de la mesure de WOLF (etude_ressources/)",
- "statut": "développement ; accord entre agents, non validé par la propriétaire (D23)",
+ "role": "les bancs de développement de la phase 1 (docs/BANCS_PHASE1.md) : les cas, leurs questions, les trois relectures indépendantes, les révisions et l'harmonisation, la couverture ; la version 1 d'avant relecture est gardée (v1_avant_relecture/) ; le 28/11 : les textes d'origine rétablis (dev/ et v2_k0_d30_retabli/, statuts relatifs à K0-d30), et les scripts de la mesure de WOLF (etude_ressources/) ; le 28/11 (version 3) : v3/ — les cas sans statut donnés aux annotateurs, les deux annotations indépendantes, leurs comparaisons, les références adjugées (niveau a) avant et après la règle par contexte, les cas au schéma 3, la comparaison des trois niveaux, la mesure initiale du moteur (niveau c, compressée)",
+ "statut": "développement ; références adjugées par des agents, non validées par la propriétaire (D23) ; non qualifiées",
  "repartition": "bancs/phase1/repartition.json du dépôt, graine 20261127",
  "fichiers": [
   {
@@ -493,7 +493,442 @@
    "chemin": "v2_k0_d30_retabli/structures_argumentales.revision.md",
    "taille": 20569,
    "sha256": "feff6cd3af3a17f01624920415d8d22416c1858e0fcb904fdd2f5065c37cb2d2"
+  },
+  {
+   "chemin": "v3/a_annoter/compositionnalite.json",
+   "taille": 45875,
+   "sha256": "c26bf49133c2b90d82f06fff9836bf6aff5d2a07da5d9e954f6a3ab433004c3c"
+  },
+  {
+   "chemin": "v3/a_annoter/definitions_classification.json",
+   "taille": 49930,
+   "sha256": "5b10b1b9340cf08d8f024d4318629e47c93d7ee7081335145e8df02dfc8e7789"
+  },
+  {
+   "chemin": "v3/a_annoter/espace_partie_temps.json",
+   "taille": 43807,
+   "sha256": "031432a38246db505d485a9a44dcc876ead8698201457a2a9c3d8f23129fd0c9"
+  },
+  {
+   "chemin": "v3/a_annoter/evenements_etats.json",
+   "taille": 51666,
+   "sha256": "6950f32fb4d524aeb3ea703698f90c9a92c06b3488fa25a3d09018eb1c5892db"
+  },
+  {
+   "chemin": "v3/a_annoter/modalite_negation_contextes.json",
+   "taille": 45789,
+   "sha256": "a83af466ed4d52bba7e655129b78cea4ec997b6cabd718067b00d03930157ce8"
+  },
+  {
+   "chemin": "v3/a_annoter/niveaux_representation.json",
+   "taille": 44754,
+   "sha256": "19fb17cd4fa851351a2b60fd6889e5bd6f43e20a99ce6b078bf73da26e29362c"
+  },
+  {
+   "chemin": "v3/a_annoter/phenomenes_iconographiques.json",
+   "taille": 49770,
+   "sha256": "7c4dba5d1622af43bbc5eb93ad51c85910266e0d948ad5f04fe97d48325d0407"
+  },
+  {
+   "chemin": "v3/a_annoter/reference_quantification.json",
+   "taille": 49162,
+   "sha256": "c4b5337dca92b65970782bb461fb1d4f0b2133aff0e6b41e977ee5c26ccc28da"
+  },
+  {
+   "chemin": "v3/a_annoter/structures_argumentales.json",
+   "taille": 56360,
+   "sha256": "f76e6a6f3d6bed7e308cb19b8c10f0868a243bb97c914ccd47f688b33d6456d6"
+  },
+  {
+   "chemin": "v3/annotations/compositionnalite.A.json",
+   "taille": 90263,
+   "sha256": "482509368934d24ac544e443f07bd0d16d7501a04bfd1617c4c5204caa4eafa7"
+  },
+  {
+   "chemin": "v3/annotations/compositionnalite.B.json",
+   "taille": 82696,
+   "sha256": "56bb95916a2baeac0730c81b4020df70caec8d6ee918d9ee9c58101ea4f39aa7"
+  },
+  {
+   "chemin": "v3/annotations/definitions_classification.A.json",
+   "taille": 91955,
+   "sha256": "8676fb4dc39442744c29b15e213895e8f3c8c0bfcfa78b3214ac96066d9b401d"
+  },
+  {
+   "chemin": "v3/annotations/definitions_classification.B.json",
+   "taille": 100797,
+   "sha256": "9757f8b91d64da59fdb8024f6133e789bcebcc45191b6cf1802c81b5437a1076"
+  },
+  {
+   "chemin": "v3/annotations/espace_partie_temps.A.json",
+   "taille": 92348,
+   "sha256": "083d9fd1597623b29d1d300b7cdfc2fcc3979db7ea94c0cc74b501d37948bce2"
+  },
+  {
+   "chemin": "v3/annotations/espace_partie_temps.B.json",
+   "taille": 97787,
+   "sha256": "6c1b6ce521f04582acf90e9ad833a26c5ae70db5522cee079b68babbf076840b"
+  },
+  {
+   "chemin": "v3/annotations/evenements_etats.A.json",
+   "taille": 93961,
+   "sha256": "755744795ee200b05b822bb7d58605ab2660373dec858eeae817972271d1b431"
+  },
+  {
+   "chemin": "v3/annotations/evenements_etats.B.json",
+   "taille": 92315,
+   "sha256": "c382c6e3400e742a29673264b3c40a13ce7b92ceee4d93e10c64832a6f61678b"
+  },
+  {
+   "chemin": "v3/annotations/modalite_negation_contextes.A.json",
+   "taille": 66737,
+   "sha256": "5cb5e1a5b58bcc121370e4cb0552789476bec0761cf9933dff113794894e8061"
+  },
+  {
+   "chemin": "v3/annotations/modalite_negation_contextes.B.json",
+   "taille": 67382,
+   "sha256": "66634884233d5c0d963bd022f02e9a517c144958e5bac70bd4c5b91b2232411f"
+  },
+  {
+   "chemin": "v3/annotations/niveaux_representation.A.json",
+   "taille": 77252,
+   "sha256": "fcf4b71a865343e93d265a55266a44d47c904995d80d247b1c38c9b9efa1adf6"
+  },
+  {
+   "chemin": "v3/annotations/niveaux_representation.B.json",
+   "taille": 76329,
+   "sha256": "a55f9c8b119da10ba1621f33434ac0d069d12029d4c814176425acda1862de6a"
+  },
+  {
+   "chemin": "v3/annotations/phenomenes_iconographiques.A.json",
+   "taille": 86545,
+   "sha256": "57922e7495fb73e40e0a0796ae1aff3474c7d84b7b7fb2ec2a6ac7f5c522d679"
+  },
+  {
+   "chemin": "v3/annotations/phenomenes_iconographiques.B.json",
+   "taille": 88830,
+   "sha256": "3bf2115201fee6e51b5b6b4d845b231ba55f453cda2404ef41153c821ce3316c"
+  },
+  {
+   "chemin": "v3/annotations/reference_quantification.A.json",
+   "taille": 97954,
+   "sha256": "8fe2d31e19ae81107aa2115cf4f53658d3e107f8c6ab48f2a1a9b3c1acb50ba1"
+  },
+  {
+   "chemin": "v3/annotations/reference_quantification.B.json",
+   "taille": 104049,
+   "sha256": "3e8b4880088df9aadf2e95281db414896e022fe41f2318f84531e88f24df6a1e"
+  },
+  {
+   "chemin": "v3/annotations/structures_argumentales.A.json",
+   "taille": 87346,
+   "sha256": "1b19a92c345a6d7cd3783a8f10d600f5b068b4ef0deb4021082a8c2ba4b7f717"
+  },
+  {
+   "chemin": "v3/annotations/structures_argumentales.B.json",
+   "taille": 80693,
+   "sha256": "c9f725b18dbdaea0e169161793e590e1e9a384180163b9434eff6d77e803246f"
+  },
+  {
+   "chemin": "v3/cas/K.json",
+   "taille": 627,
+   "sha256": "bc3266ceec14f5872590ed114ae6986bc73eac0a237bf3ca62c7aca2aca0f89c"
+  },
+  {
+   "chemin": "v3/cas/compositionnalite.json",
+   "taille": 285863,
+   "sha256": "e85f9a292325ee204c13b3526bf191e4080fbbf1fe52d891e20c50b5bb3665aa"
+  },
+  {
+   "chemin": "v3/cas/definitions_classification.json",
+   "taille": 297787,
+   "sha256": "dbbf9d5903170a2f3927f0d35e089e516853cc5645f45ccdaa17e32c2ea40118"
+  },
+  {
+   "chemin": "v3/cas/espace_partie_temps.json",
+   "taille": 290167,
+   "sha256": "99e23f9470cefb2e4f875f4d8d9d02da6b6ae59f51ce04721923be9f960a5dc8"
+  },
+  {
+   "chemin": "v3/cas/evenements_etats.json",
+   "taille": 297962,
+   "sha256": "ee071d18d6f0c81a68ab128edae45ead44ef192c6fd72fe9a2d19b69e9e3d226"
+  },
+  {
+   "chemin": "v3/cas/modalite_negation_contextes.json",
+   "taille": 246291,
+   "sha256": "6a895e6393f91e4f75a7768ab698416a257f589d7c8e09cbd419ba9c86685922"
+  },
+  {
+   "chemin": "v3/cas/niveaux_representation.json",
+   "taille": 263320,
+   "sha256": "69b0419cad5c8305409d74d914965ea55b9a86c47a3a2b56371917b680a69678"
+  },
+  {
+   "chemin": "v3/cas/phenomenes_iconographiques.json",
+   "taille": 274699,
+   "sha256": "2e923d5abc8728d8b1869918ce7902af9b4bb133fa6bea91bb03c377dfa0305b"
+  },
+  {
+   "chemin": "v3/cas/reference_quantification.json",
+   "taille": 288601,
+   "sha256": "198a90918fb27d204d037ee6c4620c1d013c3f5f7b885d402eb2c89ae20aa928"
+  },
+  {
+   "chemin": "v3/cas/structures_argumentales.json",
+   "taille": 293022,
+   "sha256": "39f6ed0d9e8f22a81aadb432425c01610ce6b971ad0cdaa02b75b71f1dfb3c88"
+  },
+  {
+   "chemin": "v3/comparaisons/compositionnalite.json",
+   "taille": 18261,
+   "sha256": "9549e3d37e9b7b141aaca949fe0d210d99b2ea29a82487b06c3fd264471d7124"
+  },
+  {
+   "chemin": "v3/comparaisons/definitions_classification.json",
+   "taille": 24862,
+   "sha256": "74e5a05c60c8c62d0e7d8694f5d601e91fc949e5ea1b47ca7834d008d6e3f5e8"
+  },
+  {
+   "chemin": "v3/comparaisons/espace_partie_temps.json",
+   "taille": 19700,
+   "sha256": "1f2656d48760d69902e834a54775806d623598c406d5ffbe087194c8d9c65802"
+  },
+  {
+   "chemin": "v3/comparaisons/evenements_etats.json",
+   "taille": 16669,
+   "sha256": "fa993d025d8218eb8e5f0ca1b34fb02a98eede2df41ed3f597864adbe9a3ea26"
+  },
+  {
+   "chemin": "v3/comparaisons/modalite_negation_contextes.json",
+   "taille": 9897,
+   "sha256": "4428307561130f4cd4c19be18318026c7638d8b194c6dfc02ad1ee81a4da88d0"
+  },
+  {
+   "chemin": "v3/comparaisons/niveaux_representation.json",
+   "taille": 27232,
+   "sha256": "dcfd735b98bd23732a477e2e25dbac9548d901aeaa5611abe52af9aca51c90ff"
+  },
+  {
+   "chemin": "v3/comparaisons/phenomenes_iconographiques.json",
+   "taille": 29228,
+   "sha256": "c10c5a44fb386a9351ff4357dcd0b316ffb33e02da7fc70b56bff6437c47a8a4"
+  },
+  {
+   "chemin": "v3/comparaisons/reference_quantification.json",
+   "taille": 15570,
+   "sha256": "0556225406efd2b8d53897ec61750e899f0a2b92769ca9f715ab71271783a145"
+  },
+  {
+   "chemin": "v3/comparaisons/structures_argumentales.json",
+   "taille": 16705,
+   "sha256": "47ddad57303bfeeab01d70a3d33f9a7289498ffd37ad4a44d9d4437054f14ac6"
+  },
+  {
+   "chemin": "v3/mesure_initiale/resultats.json.xz",
+   "taille": 1365292,
+   "sha256": "5a6a8453aa28c7e9e7b335ebd2ad78533a1114622c85ec00f844cb0454cce2a1"
+  },
+  {
+   "chemin": "v3/mesure_initiale/sensibilite_surete_A.json",
+   "taille": 32088545,
+   "sha256": "7ce7cc531a949449a9f85930c55075e3db1da363b46b3e36cd5207ba8e148ee0"
+  },
+  {
+   "chemin": "v3/mesure_initiale/tableaux.md",
+   "taille": 2687,
+   "sha256": "c43dca1eb91b83620a0d1ffaf3aeae0498f4733d1d95016690c3cbd331e1d433"
+  },
+  {
+   "chemin": "v3/niveaux/niveaux.md",
+   "taille": 1200,
+   "sha256": "6ece04e8c0283c742413e9c349c414c0ccfada23cc744a0ebf15960dcb5e98eb"
+  },
+  {
+   "chemin": "v3/niveaux/reference.json",
+   "taille": 45422,
+   "sha256": "540116067853b1de3a03593f57173f49ade60a6e47bc95d0c55de343ba6efdb7"
+  },
+  {
+   "chemin": "v3/reference/compositionnalite.adjudication.md",
+   "taille": 22062,
+   "sha256": "682df6d3d8270ad296cfac32a6629e8f25cd8850bae0e6d7378739bad6c30dff"
+  },
+  {
+   "chemin": "v3/reference/compositionnalite.json",
+   "taille": 147780,
+   "sha256": "3ad951e355fb64065457c03ce6012b1fde8978e180eb33b1c0c489504c686c7a"
+  },
+  {
+   "chemin": "v3/reference/definitions_classification.adjudication.md",
+   "taille": 49536,
+   "sha256": "f0b6e6844d439e5e25c30ecc197bc956d2c148682d3649aeaaa4dab79aa475bf"
+  },
+  {
+   "chemin": "v3/reference/definitions_classification.json",
+   "taille": 195671,
+   "sha256": "467755ad62382eb0cebeab2a4377d4946457f9fb457ebfc85053ae6dc69682e8"
+  },
+  {
+   "chemin": "v3/reference/espace_partie_temps.adjudication.md",
+   "taille": 32188,
+   "sha256": "48c2e4d323c8bef3ff9f88465c1591b0a2cf64f61ccb87abd2ef4514d2cbdbc2"
+  },
+  {
+   "chemin": "v3/reference/espace_partie_temps.json",
+   "taille": 184784,
+   "sha256": "9564560209f3651346c7edec5af2a9b0f76081dbed1ca6ee02c9fcf09d31e0e6"
+  },
+  {
+   "chemin": "v3/reference/evenements_etats.adjudication.md",
+   "taille": 30882,
+   "sha256": "7564a83f9bf3193132e7d785dc219882b0bfd966cb01196e373996146f7d5813"
+  },
+  {
+   "chemin": "v3/reference/evenements_etats.json",
+   "taille": 164858,
+   "sha256": "d0a37fb6ad7f2ade9f8039340d44516602fff523022e9b014f6e13e03c2a8049"
+  },
+  {
+   "chemin": "v3/reference/modalite_negation_contextes.adjudication.md",
+   "taille": 29329,
+   "sha256": "a8dbf51543a8a3c60788bffbf52fb6a86015fc7e088a36667264e45317dc660d"
+  },
+  {
+   "chemin": "v3/reference/modalite_negation_contextes.json",
+   "taille": 144772,
+   "sha256": "a0553ee3fc6396fc9c4508df548f13391f205e855a7067aa8ee68fb1156f7931"
+  },
+  {
+   "chemin": "v3/reference/niveaux_representation.adjudication.md",
+   "taille": 59543,
+   "sha256": "720080d5ca45fce6769708c78173de7ca08b94317b20b45c8ef197bd53deb3ba"
+  },
+  {
+   "chemin": "v3/reference/niveaux_representation.json",
+   "taille": 175343,
+   "sha256": "169dba8f4504befa3ada8f89c2d3428c0daf18cc97970af14a5fe5f340ab5c2c"
+  },
+  {
+   "chemin": "v3/reference/phenomenes_iconographiques.adjudication.md",
+   "taille": 43906,
+   "sha256": "f8fb5440e9110dbf1ccf8e252498aa10a44ec38b858d81120db69fce72002355"
+  },
+  {
+   "chemin": "v3/reference/phenomenes_iconographiques.json",
+   "taille": 180357,
+   "sha256": "4cd84f43f0b1f8b891abffec81a10e9a331251a6e43a06b35e1bc22a9d707300"
+  },
+  {
+   "chemin": "v3/reference/reference_quantification.adjudication.md",
+   "taille": 28419,
+   "sha256": "e937818211d0315e8a331395c1424a849d90980d4c498a8fb198f8b50787dbea"
+  },
+  {
+   "chemin": "v3/reference/reference_quantification.json",
+   "taille": 190470,
+   "sha256": "51263fb581fbbb762142010ab7738980fe0a15a624503262babcf3c7f9b427ae"
+  },
+  {
+   "chemin": "v3/reference/structures_argumentales.adjudication.md",
+   "taille": 21094,
+   "sha256": "d3101dbf750c520e04d2490949d4f330582c4aae5394dc5013d18e8b6c5d6a9d"
+  },
+  {
+   "chemin": "v3/reference/structures_argumentales.json",
+   "taille": 146222,
+   "sha256": "e04d93f1307c554f48ef956698ca50a327fa20d5c440f771203ecb50f920d4a3"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/compositionnalite.adjudication.md",
+   "taille": 22062,
+   "sha256": "682df6d3d8270ad296cfac32a6629e8f25cd8850bae0e6d7378739bad6c30dff"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/compositionnalite.json",
+   "taille": 107813,
+   "sha256": "bb33dbee0b6d0ec5a6ce485155ac593336d39fceb369261932c0504c77b93647"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/definitions_classification.adjudication.md",
+   "taille": 49536,
+   "sha256": "f0b6e6844d439e5e25c30ecc197bc956d2c148682d3649aeaaa4dab79aa475bf"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/definitions_classification.json",
+   "taille": 154436,
+   "sha256": "720aa0a6a374098d425f5d701c365936b63a47ef337ae8bebb5aa0f2e551cd12"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/espace_partie_temps.adjudication.md",
+   "taille": 32188,
+   "sha256": "48c2e4d323c8bef3ff9f88465c1591b0a2cf64f61ccb87abd2ef4514d2cbdbc2"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/espace_partie_temps.json",
+   "taille": 144270,
+   "sha256": "20d27f1e395856f553583aeef27cd2d52b25febf0f007a1296bf8587c5b715fa"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/evenements_etats.adjudication.md",
+   "taille": 30882,
+   "sha256": "7564a83f9bf3193132e7d785dc219882b0bfd966cb01196e373996146f7d5813"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/evenements_etats.json",
+   "taille": 121378,
+   "sha256": "33f6747b799446e89ca1818a2c24a71b8fa844212820a4ed700ae08f9d1c1227"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/modalite_negation_contextes.adjudication.md",
+   "taille": 29329,
+   "sha256": "a8dbf51543a8a3c60788bffbf52fb6a86015fc7e088a36667264e45317dc660d"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/modalite_negation_contextes.json",
+   "taille": 108890,
+   "sha256": "e155659003b349bb85094f9509c0db5a0a9aae4724123021bd4638082602717c"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/niveaux_representation.adjudication.md",
+   "taille": 59543,
+   "sha256": "720080d5ca45fce6769708c78173de7ca08b94317b20b45c8ef197bd53deb3ba"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/niveaux_representation.json",
+   "taille": 140548,
+   "sha256": "8f05a5f05d7a8ea582ca656b6a536ba4507560bff8731abb3855d71a74844169"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/phenomenes_iconographiques.adjudication.md",
+   "taille": 43906,
+   "sha256": "f8fb5440e9110dbf1ccf8e252498aa10a44ec38b858d81120db69fce72002355"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/phenomenes_iconographiques.json",
+   "taille": 139767,
+   "sha256": "6139675bef4879e913aa811b4f2105ce09ca0a399697bd10125052ce7b2a60f8"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/reference_quantification.adjudication.md",
+   "taille": 28419,
+   "sha256": "e937818211d0315e8a331395c1424a849d90980d4c498a8fb198f8b50787dbea"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/reference_quantification.json",
+   "taille": 146762,
+   "sha256": "66b58f25f3aee1acc215402d3b8c8f21bbcf62d4016b10f3e540b92691925e2a"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/structures_argumentales.adjudication.md",
+   "taille": 21094,
+   "sha256": "d3101dbf750c520e04d2490949d4f330582c4aae5394dc5013d18e8b6c5d6a9d"
+  },
+  {
+   "chemin": "v3/reference_avant_par_contexte/structures_argumentales.json",
+   "taille": 105657,
+   "sha256": "c0eeb98d84b99fb32e2caf171d786f3831003935f885ed697f76a092a45543dc"
   }
  ],
- "mis_a_jour": "2026-11-28T04:27:00Z"
+ "mis_a_jour": "2026-11-28T11:25:15Z"
 }

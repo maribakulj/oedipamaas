@@ -1,0 +1,4363 @@
+[
+ {
+  "id": "ee-001",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "pm": "apparence_assertee"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "pm": "modalise"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "prémisse graduée (décision 22) : Samson, qui « semble dormir », dort."
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "pm",
+      "dimension": "portee",
+      "porte_sur": "« qui semble dormir »",
+      "valeurs": [
+       "apparence_assertee",
+       "modalise"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« semble » est un point (modalité ou apparence), et une prémisse graduée est une hypothèse d'une sorte propre, non un silence (INTERP § 8.3, décision 22). La classe « apparence » donne V ; la classe « modalisé » donne V sous l'hypothèse de la prémisse graduée, non N. A et B s'accordent sur etablie_sous_hypotheses ; le profil réunit le point de B et l'hypothèse de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-002",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "theme": "inversion de rôles",
+      "dimension": "K : asymétrie d'une relation entre les mêmes participants (décision 9 : une inversion n'est négative que par une asymétrie attestée ; la liste des relations asymétriques reste à faire)",
+      "question": "« Un mendiant nu tend un manteau rouge à un cavalier » réfute-t-il « le cavalier donne son manteau au mendiant » ? Le transfert d'un même objet entre les mêmes personnes est-il asymétrique au même moment, et « un manteau » est-il « son manteau » ?",
+      "options": [
+       {
+        "option": "le don a une direction unique pour un même objet au même moment : F pour les référents cités (A)",
+        "statut": "ecartee"
+       },
+       {
+        "option": "aucune asymétrie attestée ; le don du cavalier n'est ni dit ni nié (B)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "prudence": "L'option « aucune asymétrie attestée » n'affirme ni V ni F ; l'autre affirme un F qu'elle n'affirme pas. La référence retient la plus prudente : inconnue."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Les rôles sont inversés avec le même objet. Le F de A repose sur l'asymétrie du transfert, que la décision 9 ne tient pour négative que si elle est attestée ; elle ne l'est pas encore. Dépendance."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "etablie_sous_hypotheses",
+      "classes": [
+       {
+        "classe": {},
+        "valeur": "V",
+        "contexte": "principal > état d'origine",
+        "enonciateur": "auteur",
+        "hypotheses": [
+         {
+          "nature": "connaissance_typique",
+          "contenu": "le « pauvre » de l'inscription est un mendiant"
+         },
+         {
+          "nature": "identite",
+          "contenu": "le « il » de l'inscription est le cavalier qui subsiste"
+         }
+        ]
+       }
+      ],
+      "remarque": "L'auteur dit que l'inscription « nomme la scène » perdue : le lien de l'inscription à la figuration d'origine est dit (décision 20), non seulement typique. A s'abstient de ce contexte (proche d'un titre seul) ; la valeur reste sous hypothèses."
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Œuvre actuelle : « il ne subsiste qu'un cavalier » est une quantification dite qui exclut le mendiant et le don (guide § 3) : F, comme le jugent A et B. L'état d'origine est un autre contexte (guide § 7.1 ; décision 19) : il va dans satisfactions_contextuelles et ne fait pas « divergent » (contre B). Le statut se lit sur le contexte principal : ecartee."
+   },
+   {
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-003",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "prémisse graduée (décision 22) : le roi, qui « may already be dead », est mort."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« may already be dead » est une prémisse graduée de l'auteur : la décision 22 (INTERP § 8.3) en fait une hypothèse d'une sorte propre, non une absence d'information ; la valeur est V sous cette hypothèse (A). B la tient pour N, ce que la décision 22 exclut. La sorte de l'hypothèse reste ouverte (« avec l'abduction ») : elle est notée abduction, avec la mention « prémisse graduée »."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 6,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-004",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "La cécité du géant résulte d'un aveuglement : « blind » n'implique pas « blinded » (on peut naître aveugle)."
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "La cécité du géant résulte d'un aveuglement : « blind » n'implique pas « blinded » (on peut naître aveugle)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "La cécité du géant résulte d'un aveuglement : « blind » n'implique pas « blinded » (on peut naître aveugle)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "pm": "apparence_assertee"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "la cécité du géant résulte d'un aveuglement (« blinded »), ce que « blind » ne dit pas"
+       }
+      ]
+     },
+     {
+      "classe": {
+       "pm": "modalise"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "prémisse graduée (décision 22) : le géant, qui « seems to be blind », est aveugle."
+       },
+       {
+        "nature": "abduction",
+        "contenu": "la cécité du géant résulte d'un aveuglement"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "pm",
+      "dimension": "portee",
+      "porte_sur": "« who seems to be blind »",
+      "valeurs": [
+       "apparence_assertee",
+       "modalise"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« seems » est un point (modalité ou apparence), et une prémisse graduée est une hypothèse d'une sorte propre, non un silence (INTERP § 8.3, décision 22). La classe « apparence » donne V ; la classe « modalisé » donne V sous l'hypothèse de la prémisse graduée, non N. A et B s'accordent sur etablie_sous_hypotheses ; le profil réunit le point de B et l'hypothèse de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "La cécité du géant résulte d'un aveuglement : « blind » n'implique pas « blinded » (on peut naître aveugle)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-005",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {
+       "p1": "le_chien"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "Tobie"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "coreference",
+      "porte_sur": "« se jette vers lui »",
+      "valeurs": [
+       "le_chien",
+       "Tobie"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de B. Diffèrent : dimensions. B explicite la coréférence de « lui » (deux classes N) ; A ne la pose pas. Mêmes valeurs."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-006",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "prémisse graduée (décision 22) : Achille, « perhaps in a rage », est en colère."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« perhaps in a rage » est une prémisse graduée de l'auteur : la décision 22 (INTERP § 8.3) en fait une hypothèse d'une sorte propre, non une absence d'information ; la valeur est V sous cette hypothèse (A). B la tient pour N, ce que la décision 22 exclut. La sorte de l'hypothèse reste ouverte (« avec l'abduction ») : elle est notée abduction, avec la mention « prémisse graduée »."
+   },
+   {
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-007",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "le texte de l'inscription du cadre (« and he wept bitterly ») vaut pour la figure de l'apôtre"
+       },
+       {
+        "nature": "abduction",
+        "contenu": "le visage caché dans les mains figure ces pleurs"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de B. Diffèrent : natures. Mêmes valeurs ; B distingue deux hypothèses (le lien typique de l'inscription à la figure, décision 20 ; l'abduction du visage caché), A n'en pose qu'une."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-008",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {
+     "p1": "en_cours_phase_preparatoire"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "imminent"
+    },
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [],
+    "remarque": "V sous la convention de l'imminent, F sans elle : dépendance"
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "ancrage",
+    "porte_sur": "« s'apprête à sacrifier »",
+    "valeurs": [
+     "en_cours_phase_preparatoire",
+     "imminent"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [
+   {
+    "theme": "ancrage préparatoire / imminent",
+    "dimension": "convention d'évaluation : l'ancrage imminent (décision 26 ; guide § 7.2 ; ONT § 1.2 range la phase préparatoire dans l'en cours)",
+    "question": "L'imminent compte-t-il comme en cours, pour une définition au participe présent ?",
+    "options": [
+     {
+      "option": "oui : l'imminent compte comme en cours (hypothèse de nature convention)",
+      "statut": "etablie_sous_hypotheses",
+      "effet": "V (phase préparatoire) ; V sous convention (imminent)"
+     },
+     {
+      "option": "non : l'ancrage imminent est un appui négatif du en cours (INTERP § 6.2)",
+      "statut": "divergent",
+      "effet": "V (phase préparatoire) ; F (imminent)"
+     }
+    ],
+    "statut_retenu": "etablie_sous_hypotheses",
+    "prudence": "Aucune option n'est prudente sur les deux axes : « oui » affirme un V (lecture imminente) que « non » n'affirme pas, « non » un F (lecture imminente) que « oui » n'affirme pas. La référence garde ce que les deux affirment : V sous la lecture de la phase préparatoire, N sous la lecture imminente ; d'où etablie_sous_hypotheses (choix : phase préparatoire)."
+   }
+  ],
+  "source": "dependance",
+  "raison": "A et B lisent tous deux « s'apprête à sacrifier » comme un point d'ancrage (phase préparatoire ou imminent) et s'accordent sur divergent ; B ajoute une classe V sous la convention de l'imminent. Une convention n'est pas une lecture (guide § 7.2) : elle n'ouvre pas de classe, elle conditionne la valeur de la classe imminente. Cette convention n'est pas tranchée : dépendance, et la référence retient la partie commune des deux options.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours_phase_preparatoire"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "V sous la convention de l'imminent, F sans elle : dépendance"
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« is preparing to sacrifice »",
+      "valeurs": [
+       "en_cours_phase_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "theme": "ancrage préparatoire / imminent",
+      "dimension": "convention d'évaluation : l'ancrage imminent (décision 26 ; guide § 7.2 ; ONT § 1.2 range la phase préparatoire dans l'en cours)",
+      "question": "L'imminent compte-t-il comme en cours, pour une définition au participe présent ?",
+      "options": [
+       {
+        "option": "oui : l'imminent compte comme en cours (hypothèse de nature convention)",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V (phase préparatoire) ; V sous convention (imminent)"
+       },
+       {
+        "option": "non : l'ancrage imminent est un appui négatif du en cours (INTERP § 6.2)",
+        "statut": "divergent",
+        "effet": "V (phase préparatoire) ; F (imminent)"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "prudence": "Aucune option n'est prudente sur les deux axes : « oui » affirme un V (lecture imminente) que « non » n'affirme pas, « non » un F (lecture imminente) que « oui » n'affirme pas. La référence garde ce que les deux affirment : V sous la lecture de la phase préparatoire, N sous la lecture imminente ; d'où etablie_sous_hypotheses (choix : phase préparatoire)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A et B lisent tous deux « is preparing to sacrifice » comme un point d'ancrage (phase préparatoire ou imminent) et s'accordent sur divergent ; B ajoute une classe V sous la convention de l'imminent. Une convention n'est pas une lecture (guide § 7.2) : elle n'ouvre pas de classe, elle conditionne la valeur de la classe imminente. Cette convention n'est pas tranchée : dépendance, et la référence retient la partie commune des deux options.",
+    "traduction_infidele": false,
+    "fidelite": "« is preparing to sacrifice » penche vers la phase préparatoire, mais garde, comme « s'apprête à », les deux lectures : fidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours_phase_preparatoire"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "V sous la convention de l'imminent, F sans elle : dépendance"
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« se prépare à immoler »",
+      "valeurs": [
+       "en_cours_phase_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "theme": "ancrage préparatoire / imminent",
+      "dimension": "convention d'évaluation : l'ancrage imminent (décision 26 ; guide § 7.2 ; ONT § 1.2 range la phase préparatoire dans l'en cours)",
+      "question": "L'imminent compte-t-il comme en cours, pour une définition au participe présent ?",
+      "options": [
+       {
+        "option": "oui : l'imminent compte comme en cours (hypothèse de nature convention)",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V (phase préparatoire) ; V sous convention (imminent)"
+       },
+       {
+        "option": "non : l'ancrage imminent est un appui négatif du en cours (INTERP § 6.2)",
+        "statut": "divergent",
+        "effet": "V (phase préparatoire) ; F (imminent)"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "prudence": "Aucune option n'est prudente sur les deux axes : « oui » affirme un V (lecture imminente) que « non » n'affirme pas, « non » un F (lecture imminente) que « oui » n'affirme pas. La référence garde ce que les deux affirment : V sous la lecture de la phase préparatoire, N sous la lecture imminente ; d'où etablie_sous_hypotheses (choix : phase préparatoire)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A et B lisent tous deux « se prépare à immoler » comme un point d'ancrage (phase préparatoire ou imminent) et s'accordent sur divergent ; B ajoute une classe V sous la convention de l'imminent. Une convention n'est pas une lecture (guide § 7.2) : elle n'ouvre pas de classe, elle conditionne la valeur de la classe imminente. Cette convention n'est pas tranchée : dépendance, et la référence retient la partie commune des deux options."
+   },
+   {
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "V sous la lecture préparatoire si le point est admis ; sous l'imminent, F sans la convention, V avec elle"
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« la hache levée, est sur le point de sacrifier »",
+      "valeurs": [
+       "en_cours_phase_preparatoire",
+       "imminent"
+      ],
+      "remarque": "point admis par A, refusé par B : dépendance"
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "theme": "ancrage préparatoire / imminent",
+      "dimension": "espace (un point d'ancrage pour « sur le point de » : décision 26, « reste : la frontière lexicale (« s'apprête », « about to ») comme point de D ») et convention d'évaluation : l'ancrage imminent (décision 26 ; guide § 7.2 ; ONT § 1.2 range la phase préparatoire dans l'en cours)",
+      "question": "« sur le point de » laisse-t-il une lecture de phase préparatoire (en cours) à côté de l'imminent ? Et l'imminent compte-t-il comme en cours ?",
+      "options": [
+       {
+        "option": "point admis, sans convention (A)",
+        "statut": "divergent",
+        "effet": "V (préparatoire) ; F (imminent)"
+       },
+       {
+        "option": "point admis, avec la convention",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V (préparatoire) ; V sous convention (imminent)"
+       },
+       {
+        "option": "imminent seul, sans convention (B sans sa classe sous convention)",
+        "statut": "ecartee",
+        "effet": "F"
+       },
+       {
+        "option": "imminent seul, avec la convention (B)",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V sous convention"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "prudence": "Aucun V n'est affirmé par toutes les options (« imminent seul, sans convention » donne ecartee), aucun F non plus (les options avec la convention n'en ont pas). Ce que toutes affirment ne contient ni V ni F : inconnue. B range à tort la convention parmi les lectures (« divergent ») : guide § 7.2."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A admet un point d'ancrage (phase préparatoire, le geste engagé, ou imminent) et conclut divergent ; B lit « sur le point de » comme univoquement imminent et conclut divergent par une classe sous convention, ce que le guide § 7.2 exclut. Deux questions restent ouvertes : la frontière lexicale de « sur le point de » comme point (décision 26) et la convention de l'imminent. La référence retient ce que toutes les options affirment : rien."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 6,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours_phase_preparatoire"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "imminent"
+      },
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "V sous la convention de l'imminent, F sans elle : dépendance"
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« s'apprête à sacrifier »",
+      "valeurs": [
+       "en_cours_phase_preparatoire",
+       "imminent"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "theme": "ancrage préparatoire / imminent",
+      "dimension": "convention d'évaluation : l'ancrage imminent (décision 26 ; guide § 7.2 ; ONT § 1.2 range la phase préparatoire dans l'en cours)",
+      "question": "L'imminent compte-t-il comme en cours, pour une définition au participe présent ?",
+      "options": [
+       {
+        "option": "oui : l'imminent compte comme en cours (hypothèse de nature convention)",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V (phase préparatoire) ; V sous convention (imminent)"
+       },
+       {
+        "option": "non : l'ancrage imminent est un appui négatif du en cours (INTERP § 6.2)",
+        "statut": "divergent",
+        "effet": "V (phase préparatoire) ; F (imminent)"
+       }
+      ],
+      "statut_retenu": "etablie_sous_hypotheses",
+      "prudence": "Aucune option n'est prudente sur les deux axes : « oui » affirme un V (lecture imminente) que « non » n'affirme pas, « non » un F (lecture imminente) que « oui » n'affirme pas. La référence garde ce que les deux affirment : V sous la lecture de la phase préparatoire, N sous la lecture imminente ; d'où etablie_sous_hypotheses (choix : phase préparatoire)."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A et B lisent tous deux « s'apprête à sacrifier » comme un point d'ancrage (phase préparatoire ou imminent) et s'accordent sur divergent ; B ajoute une classe V sous la convention de l'imminent. Une convention n'est pas une lecture (guide § 7.2) : elle n'ouvre pas de classe, elle conditionne la valeur de la classe imminente. Cette convention n'est pas tranchée : dépendance, et la référence retient la partie commune des deux options."
+   }
+  ]
+ },
+ {
+  "id": "ee-009",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [],
+    "remarque": "V sous la lecture préparatoire si le point est admis ; sous l'imminent, F sans la convention, V avec elle"
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "ancrage",
+    "porte_sur": "« her sword raised high above his neck, about to strike »",
+    "valeurs": [
+     "en_cours_phase_preparatoire",
+     "imminent"
+    ],
+    "remarque": "point admis par A, refusé par B : dépendance"
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [
+   {
+    "theme": "ancrage préparatoire / imminent",
+    "dimension": "espace (un point d'ancrage pour « about to strike » : décision 26, « reste : la frontière lexicale (« s'apprête », « about to ») comme point de D ») et convention d'évaluation : l'ancrage imminent (décision 26 ; guide § 7.2 ; ONT § 1.2 range la phase préparatoire dans l'en cours)",
+    "question": "« about to strike » laisse-t-il une lecture de phase préparatoire (en cours) à côté de l'imminent ? Et l'imminent compte-t-il comme en cours ?",
+    "options": [
+     {
+      "option": "point admis, sans convention (A)",
+      "statut": "divergent",
+      "effet": "V (préparatoire) ; F (imminent)"
+     },
+     {
+      "option": "point admis, avec la convention",
+      "statut": "etablie_sous_hypotheses",
+      "effet": "V (préparatoire) ; V sous convention (imminent)"
+     },
+     {
+      "option": "imminent seul, sans convention (B sans sa classe sous convention)",
+      "statut": "ecartee",
+      "effet": "F"
+     },
+     {
+      "option": "imminent seul, avec la convention (B)",
+      "statut": "etablie_sous_hypotheses",
+      "effet": "V sous convention"
+     }
+    ],
+    "statut_retenu": "inconnue",
+    "prudence": "Aucun V n'est affirmé par toutes les options (« imminent seul, sans convention » donne ecartee), aucun F non plus (les options avec la convention n'en ont pas). Ce que toutes affirment ne contient ni V ni F : inconnue. B range à tort la convention parmi les lectures (« divergent ») : guide § 7.2."
+   }
+  ],
+  "source": "dependance",
+  "raison": "A admet un point d'ancrage (phase préparatoire, le geste engagé, ou imminent) et conclut divergent ; B lit « about to strike » comme univoquement imminent et conclut divergent par une classe sous convention, ce que le guide § 7.2 exclut. Deux questions restent ouvertes : la frontière lexicale de « about to strike » comme point (décision 26) et la convention de l'imminent. La référence retient ce que toutes les options affirment : rien.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "V sous la lecture préparatoire si le point est admis ; sous l'imminent, F sans la convention, V avec elle"
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« l'épée levée haut au-dessus de son cou, sur le point de frapper »",
+      "valeurs": [
+       "en_cours_phase_preparatoire",
+       "imminent"
+      ],
+      "remarque": "point admis par A, refusé par B : dépendance"
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "theme": "ancrage préparatoire / imminent",
+      "dimension": "espace (un point d'ancrage pour « sur le point de frapper » : décision 26, « reste : la frontière lexicale (« s'apprête », « about to ») comme point de D ») et convention d'évaluation : l'ancrage imminent (décision 26 ; guide § 7.2 ; ONT § 1.2 range la phase préparatoire dans l'en cours)",
+      "question": "« sur le point de frapper » laisse-t-il une lecture de phase préparatoire (en cours) à côté de l'imminent ? Et l'imminent compte-t-il comme en cours ?",
+      "options": [
+       {
+        "option": "point admis, sans convention (A)",
+        "statut": "divergent",
+        "effet": "V (préparatoire) ; F (imminent)"
+       },
+       {
+        "option": "point admis, avec la convention",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V (préparatoire) ; V sous convention (imminent)"
+       },
+       {
+        "option": "imminent seul, sans convention (B sans sa classe sous convention)",
+        "statut": "ecartee",
+        "effet": "F"
+       },
+       {
+        "option": "imminent seul, avec la convention (B)",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V sous convention"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "prudence": "Aucun V n'est affirmé par toutes les options (« imminent seul, sans convention » donne ecartee), aucun F non plus (les options avec la convention n'en ont pas). Ce que toutes affirment ne contient ni V ni F : inconnue. B range à tort la convention parmi les lectures (« divergent ») : guide § 7.2."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A admet un point d'ancrage (phase préparatoire, le geste engagé, ou imminent) et conclut divergent ; B lit « sur le point de frapper » comme univoquement imminent et conclut divergent par une classe sous convention, ce que le guide § 7.2 exclut. Deux questions restent ouvertes : la frontière lexicale de « sur le point de frapper » comme point (décision 26) et la convention de l'imminent. La référence retient ce que toutes les options affirment : rien.",
+    "traduction_infidele": false,
+    "fidelite": "« sur le point de frapper » rend « about to strike » : fidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "V sous la lecture préparatoire si le point est admis ; sous l'imminent, F sans la convention, V avec elle"
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« About to strike, Judith raises her sword »",
+      "valeurs": [
+       "en_cours_phase_preparatoire",
+       "imminent"
+      ],
+      "remarque": "point admis par A, refusé par B : dépendance"
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "theme": "ancrage préparatoire / imminent",
+      "dimension": "espace (un point d'ancrage pour « about to strike » : décision 26, « reste : la frontière lexicale (« s'apprête », « about to ») comme point de D ») et convention d'évaluation : l'ancrage imminent (décision 26 ; guide § 7.2 ; ONT § 1.2 range la phase préparatoire dans l'en cours)",
+      "question": "« about to strike » laisse-t-il une lecture de phase préparatoire (en cours) à côté de l'imminent ? Et l'imminent compte-t-il comme en cours ?",
+      "options": [
+       {
+        "option": "point admis, sans convention (A)",
+        "statut": "divergent",
+        "effet": "V (préparatoire) ; F (imminent)"
+       },
+       {
+        "option": "point admis, avec la convention",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V (préparatoire) ; V sous convention (imminent)"
+       },
+       {
+        "option": "imminent seul, sans convention (B sans sa classe sous convention)",
+        "statut": "ecartee",
+        "effet": "F"
+       },
+       {
+        "option": "imminent seul, avec la convention (B)",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V sous convention"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "prudence": "Aucun V n'est affirmé par toutes les options (« imminent seul, sans convention » donne ecartee), aucun F non plus (les options avec la convention n'en ont pas). Ce que toutes affirment ne contient ni V ni F : inconnue. B range à tort la convention parmi les lectures (« divergent ») : guide § 7.2."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A admet un point d'ancrage (phase préparatoire, le geste engagé, ou imminent) et conclut divergent ; B lit « about to strike » comme univoquement imminent et conclut divergent par une classe sous convention, ce que le guide § 7.2 exclut. Deux questions restent ouvertes : la frontière lexicale de « about to strike » comme point (décision 26) et la convention de l'imminent. La référence retient ce que toutes les options affirment : rien."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "V sous la lecture préparatoire si le point est admis ; sous l'imminent, F sans la convention, V avec elle"
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« her sword raised high above his neck, about to strike »",
+      "valeurs": [
+       "en_cours_phase_preparatoire",
+       "imminent"
+      ],
+      "remarque": "point admis par A, refusé par B : dépendance"
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "theme": "ancrage préparatoire / imminent",
+      "dimension": "espace (un point d'ancrage pour « about to strike » : décision 26, « reste : la frontière lexicale (« s'apprête », « about to ») comme point de D ») et convention d'évaluation : l'ancrage imminent (décision 26 ; guide § 7.2 ; ONT § 1.2 range la phase préparatoire dans l'en cours)",
+      "question": "« about to strike » laisse-t-il une lecture de phase préparatoire (en cours) à côté de l'imminent ? Et l'imminent compte-t-il comme en cours ?",
+      "options": [
+       {
+        "option": "point admis, sans convention (A)",
+        "statut": "divergent",
+        "effet": "V (préparatoire) ; F (imminent)"
+       },
+       {
+        "option": "point admis, avec la convention",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V (préparatoire) ; V sous convention (imminent)"
+       },
+       {
+        "option": "imminent seul, sans convention (B sans sa classe sous convention)",
+        "statut": "ecartee",
+        "effet": "F"
+       },
+       {
+        "option": "imminent seul, avec la convention (B)",
+        "statut": "etablie_sous_hypotheses",
+        "effet": "V sous convention"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "prudence": "Aucun V n'est affirmé par toutes les options (« imminent seul, sans convention » donne ecartee), aucun F non plus (les options avec la convention n'en ont pas). Ce que toutes affirment ne contient ni V ni F : inconnue. B range à tort la convention parmi les lectures (« divergent ») : guide § 7.2."
+     }
+    ],
+    "source": "dependance",
+    "raison": "A admet un point d'ancrage (phase préparatoire, le geste engagé, ou imminent) et conclut divergent ; B lit « about to strike » comme univoquement imminent et conclut divergent par une classe sous convention, ce que le guide § 7.2 exclut. Deux questions restent ouvertes : la frontière lexicale de « about to strike » comme point (décision 26) et la convention de l'imminent. La référence retient ce que toutes les options affirment : rien."
+   }
+  ]
+ },
+ {
+  "id": "ee-010",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "prémisse graduée (décision 22) : la miniature, qui représente « peut-être » la flagellation du Christ par deux bourreaux, la représente."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« représente peut-être » est une prémisse graduée de l'auteur : la décision 22 (INTERP § 8.3) en fait une hypothèse d'une sorte propre, non une absence d'information ; la valeur est V sous cette hypothèse (A). B la tient pour N, ce que la décision 22 exclut. La sorte de l'hypothèse reste ouverte (« avec l'abduction ») : elle est notée abduction, avec la mention « prémisse graduée »."
+   },
+   {
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-011",
+  "statut_reference": "divergent",
+  "profil": [
+   {
+    "classe": {
+     "p1": "en_cours"
+    },
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {
+     "p1": "accompli"
+    },
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [
+   {
+    "id": "p1",
+    "dimension": "ancrage",
+    "porte_sur": "« The fall of Icarus »",
+    "valeurs": [
+     "en_cours",
+     "accompli"
+    ]
+   }
+  ],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "accompli"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« La chute d'Icare »",
+      "valeurs": [
+       "en_cours",
+       "accompli"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "accompli"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« Icarus's fall »",
+      "valeurs": [
+       "en_cours",
+       "accompli"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 6,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "en_cours"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "accompli"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« The fall of Icarus »",
+      "valeurs": [
+       "en_cours",
+       "accompli"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-012",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "Le jeune homme agenouillé dans l'eau est celui qu'on baptise."
+     },
+     {
+      "nature": "connaissance_typique",
+      "contenu": "Celui qui baptise est un homme (l'agent du baptême n'est pas désigné)."
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le jeune homme agenouillé dans l'eau est celui qu'on baptise."
+       },
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Celui qui baptise est un homme (l'agent du baptême n'est pas désigné)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "prémisse graduée (décision 22) : la scène, « peut-être un baptême », en est un."
+       },
+       {
+        "nature": "abduction",
+        "contenu": "le jeune homme agenouillé dans l'eau est celui qu'on baptise"
+       },
+       {
+        "nature": "connaissance_typique",
+        "contenu": "celui qui baptise, non désigné, est un homme"
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« Peut-être un baptême » est une prémisse graduée de l'auteur : la décision 22 (INTERP § 8.3) en fait une hypothèse d'une sorte propre, non une absence d'information ; la valeur est V sous cette hypothèse (A). B la tient pour N, ce que la décision 22 exclut. La sorte de l'hypothèse reste ouverte (« avec l'abduction ») : elle est notée abduction, avec la mention « prémisse graduée ». Les deux autres hypothèses sont celles du cas de base."
+   },
+   {
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "L'inscription « Baptême » du cadre nomme la scène figurée."
+       },
+       {
+        "nature": "abduction",
+        "contenu": "Le jeune homme agenouillé dans l'eau est celui qu'on baptise."
+       },
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Celui qui baptise est un homme (l'agent du baptême n'est pas désigné)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le jeune homme agenouillé dans l'eau est celui qu'on baptise."
+       },
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Celui qui baptise est un homme (l'agent du baptême n'est pas désigné)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le jeune homme agenouillé dans l'eau est celui qu'on baptise."
+       },
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Celui qui baptise est un homme (l'agent du baptême n'est pas désigné)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 6,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-013",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "Les voyageurs marchent vers la ville qui s'élève au loin (le but n'est pas dit)."
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Les voyageurs marchent vers la ville qui s'élève au loin (le but n'est pas dit)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Les voyageurs marchent vers la ville qui s'élève au loin (le but n'est pas dit)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "au_moins_deux"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Les voyageurs marchent vers la ville qui s'élève au loin (le but n'est pas dit)."
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p1": "exactement_deux"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "forme_du_libelle",
+      "porte_sur": "« two travellers »",
+      "valeurs": [
+       "au_moins_deux",
+       "exactement_deux"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A. « two travellers » : A et B lisent le nombre comme un point du libellé (au moins deux, exactement deux), décision 32 ; la question du nombre lu comme exact est ainsi portée par le profil, non tranchée."
+   },
+   {
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "pm": "apparence_assertee"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "pm": "modalise"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "les voyageurs se dirigent vers la ville qui s'élève au loin"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "pm",
+      "dimension": "portee",
+      "porte_sur": "« apparently towards »",
+      "valeurs": [
+       "apparence_assertee",
+       "modalise"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de B. Diffèrent : dimensions. B pose le point de « apparently » (décision 22) ; A une abduction. Mêmes valeurs."
+   },
+   {
+    "n": 6,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Les voyageurs marchent vers la ville qui s'élève au loin (le but n'est pas dit)."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 7,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Une abduction explique une observation, c'est-à-dire une assertion admissible de l'auteur dans le chemin figuré (décision 24). Ici l'auteur ne pose que les voyageurs et l'inconnu ; la ville et le but ne sont que dans l'inventaire cité. L'abduction du cas de base n'a donc plus d'observation (contre B) : la valeur ne vient que de la source, non_certifiee (A)."
+   }
+  ]
+ },
+ {
+  "id": "ee-014",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "etablie",
+      "classes": [
+       {
+        "classe": {},
+        "valeur": "V",
+        "contexte": "principal > état d'origine",
+        "enonciateur": "auteur",
+        "hypotheses": []
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A. Précision 1.1 (1) : « principal > état d'origine » (etablie) va dans satisfactions_contextuelles ; le statut se lit sur le contexte principal. Le statut commun « divergent » devient « ecartee » : une différence de contexte ne fait pas une divergence."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-015",
+  "statut_reference": "etablie_sous_hypotheses",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [
+     {
+      "nature": "abduction",
+      "contenu": "Le guerrier « entirely grey, the colour of stone » est changé en pierre."
+     }
+    ]
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le guerrier « entirely grey, the colour of stone » est changé en pierre."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le guerrier « stone-grey » est changé en pierre."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "divergent",
+    "profil": [
+     {
+      "classe": {
+       "p1": "etat_resultant"
+      },
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "evenement_en_cours_ou_accompli"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "ancrage",
+      "porte_sur": "« turned to stone » (définition)",
+      "valeurs": [
+       "etat_resultant",
+       "evenement_en_cours_ou_accompli"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-016",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "connaissance_typique",
+        "contenu": "Le chef barbu au torque est gaulois."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "Le chef, « peut-être gaulois », est gaulois."
+       }
+      ]
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A. Diffèrent : natures. A tient « peut-être gaulois » pour une prémisse graduée (décision 22) ; B fonde la même valeur sur une connaissance typique (le torque). Deux explications concurrentes de la même classe (décision 23) ; mêmes valeurs."
+   },
+   {
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-017",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-018",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [
+     {
+      "theme": "inversion de rôles",
+      "dimension": "K : asymétrie d'une relation entre les mêmes participants (décision 9 : une inversion n'est négative que par une asymétrie attestée ; la liste des relations asymétriques reste à faire)",
+      "question": "« An old man carries a young man on his shoulders » réfute-t-il « a man carrying an old man on his shoulders » ? « Porter sur ses épaules » est-il asymétrique entre les mêmes personnes au même moment (et « young » exclut-il « old » pour le porté, décision 30) ?",
+      "options": [
+       {
+        "option": "porter est asymétrique et le porté, jeune, n'est pas vieux : F pour les référents cités (A)",
+        "statut": "ecartee"
+       },
+       {
+        "option": "aucune asymétrie attestée : l'homme portant un vieillard n'est ni dit ni nié (B)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "prudence": "L'option « aucune asymétrie attestée » n'affirme ni V ni F ; l'autre affirme un F qu'elle n'affirme pas. La référence retient la plus prudente : inconnue."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Inversion des rôles entre les mêmes participants ; le F de A demande une asymétrie que la décision 9 ne tient pas encore pour attestée. Dépendance."
+   },
+   {
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "« The ruins of the city are described only in the inscription on the back » est une quantification dite (« only ») : les ruines ne sont données que par le texte du revers, donc pas par la figuration de la face (guide § 3 ; INTERP § 6.4). B le reconnaît (« non figurées ») mais conclut N ; c'est un F fondé sur une quantification, non sur un silence. L'inscription, contexte de texte, ne satisfait rien."
+   },
+   {
+    "n": 6,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-019",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-020",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-021",
+  "statut_reference": "non_certifiee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   },
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "cite",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "non_certifiee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "cite",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-022",
+  "statut_reference": "etablie",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "V",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ },
+ {
+  "id": "ee-023",
+  "statut_reference": "inconnue",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "N",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": [],
+    "remarque": "dans le contexte principal, rien ne satisfait la définition sous cette lecture ; elle l'est dans « principal > tapisserie figurée au mur du fond »"
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [
+   {
+    "chemin": "principal > tapisserie figurée au mur du fond",
+    "statut": "etablie",
+    "classes": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal > tapisserie figurée au mur du fond",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ]
+   }
+  ],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A. Diffèrent : contextes. Précision 1.1 (1) : « principal > tapisserie figurée au mur du fond » (etablie) va dans satisfactions_contextuelles ; le statut se lit sur le contexte principal. Le statut commun « etablie » devient « inconnue » : une satisfaction dans un autre contexte ne donne pas son statut à l'œuvre (retenir la notation reste une décision documentaire).",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "dans le contexte principal, rien ne satisfait la définition sous cette lecture ; elle l'est dans « principal > tapisserie figurée au mur du fond »"
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > tapisserie figurée au mur du fond",
+      "statut": "etablie",
+      "classes": [
+       {
+        "classe": {},
+        "valeur": "V",
+        "contexte": "principal > tapisserie figurée au mur du fond",
+        "enonciateur": "auteur",
+        "hypotheses": []
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A. Diffèrent : contextes. Précision 1.1 (1) : « principal > tapisserie figurée au mur du fond » (etablie) va dans satisfactions_contextuelles ; le statut se lit sur le contexte principal. Le statut commun « etablie » devient « inconnue » : une satisfaction dans un autre contexte ne donne pas son statut à l'œuvre (retenir la notation reste une décision documentaire).",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "dans le contexte principal, rien ne satisfait la définition sous cette lecture ; elle l'est dans « principal > tapisserie figurée au mur du fond »"
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > tapisserie figurée au mur du fond",
+      "statut": "etablie",
+      "classes": [
+       {
+        "classe": {},
+        "valeur": "V",
+        "contexte": "principal > tapisserie figurée au mur du fond",
+        "enonciateur": "auteur",
+        "hypotheses": []
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A. Diffèrent : contextes. Précision 1.1 (1) : « principal > tapisserie figurée au mur du fond » (etablie) va dans satisfactions_contextuelles ; le statut se lit sur le contexte principal. Le statut commun « etablie » devient « inconnue » : une satisfaction dans un autre contexte ne donne pas son statut à l'œuvre (retenir la notation reste une décision documentaire)."
+   },
+   {
+    "n": 2,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > tapisserie figurée au mur du fond",
+      "statut": "inconnue",
+      "classes": [
+       {
+        "classe": {},
+        "valeur": "N",
+        "contexte": "principal > tapisserie figurée au mur du fond",
+        "enonciateur": "auteur",
+        "hypotheses": [],
+        "remarque": "ecartee si l'inversion du don est négative, inconnue sinon : dépendance"
+       }
+      ]
+     }
+    ],
+    "dependances": [
+     {
+      "theme": "inversion de rôles",
+      "dimension": "K : asymétrie d'une relation entre les mêmes participants (décision 9 : une inversion n'est négative que par une asymétrie attestée ; la liste des relations asymétriques reste à faire)",
+      "question": "Dans la tapisserie figurée, « one of three goddesses handing an apple to a shepherd » réfute-t-il « a shepherd giving an apple to one of three goddesses » ?",
+      "options": [
+       {
+        "option": "le don d'une même pomme a une direction unique : F dans la tapisserie (A)",
+        "statut": "ecartee"
+       },
+       {
+        "option": "aucune asymétrie attestée : le don du berger n'est ni dit ni nié (B)",
+        "statut": "inconnue"
+       }
+      ],
+      "statut_retenu": "inconnue",
+      "prudence": "L'option « aucune asymétrie attestée » n'affirme ni V ni F ; l'autre affirme un F qu'elle n'affirme pas. La référence retient la plus prudente : inconnue."
+     }
+    ],
+    "source": "dependance",
+    "raison": "Précision 1.1 (1) : la scène n'est que dans la tapisserie figurée ; le contexte principal ne satisfait rien (N, inconnue) et la tapisserie va dans satisfactions_contextuelles. Dans ce contexte, inversion des rôles avec le même objet : dépendance, inconnue retenu."
+   },
+   {
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [],
+      "remarque": "dans le contexte principal, rien ne satisfait la définition sous cette lecture ; elle l'est dans « principal > tapisserie figurée au mur du fond »"
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > tapisserie figurée au mur du fond",
+      "statut": "etablie",
+      "classes": [
+       {
+        "classe": {},
+        "valeur": "V",
+        "contexte": "principal > tapisserie figurée au mur du fond",
+        "enonciateur": "auteur",
+        "hypotheses": []
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A. Diffèrent : contextes. Précision 1.1 (1) : « principal > tapisserie figurée au mur du fond » (etablie) va dans satisfactions_contextuelles ; le statut se lit sur le contexte principal. Le statut commun « etablie » devient « inconnue » : une satisfaction dans un autre contexte ne donne pas son statut à l'œuvre (retenir la notation reste une décision documentaire)."
+   },
+   {
+    "n": 5,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > tapisserie figurée au mur du fond",
+      "statut": "etablie_sous_hypotheses",
+      "classes": [
+       {
+        "classe": {},
+        "valeur": "V",
+        "contexte": "principal > tapisserie figurée au mur du fond",
+        "enonciateur": "auteur",
+        "hypotheses": [
+         {
+          "nature": "abduction",
+          "contenu": "prémisse graduée (décision 22) : la tapisserie, qui « may show » un berger tendant une pomme à une déesse, le montre."
+         },
+         {
+          "nature": "identification_iconographique",
+          "contenu": "la scène est le Jugement de Pâris, et la déesse l'une de trois déesses"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "dependances": [],
+    "source": "adjudication",
+    "raison": "Précision 1.1 (1) : le contexte principal ne satisfait rien (inconnue). Dans la tapisserie, « may show » est une prémisse graduée (décision 22) : V sous cette hypothèse et sous l'identification iconographique qui donne les trois déesses (A) ; le N de B ne repose que sur la réserve modale."
+   }
+  ]
+ },
+ {
+  "id": "ee-024",
+  "statut_reference": "ecartee",
+  "profil": [
+   {
+    "classe": {},
+    "valeur": "F",
+    "contexte": "principal",
+    "enonciateur": "auteur",
+    "hypotheses": []
+   }
+  ],
+  "points": [],
+  "satisfactions_contextuelles": [],
+  "dependances": [],
+  "source": "accord",
+  "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+  "variantes": [
+   {
+    "n": 0,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A.",
+    "traduction_infidele": false,
+    "fidelite": "Traduction fidèle (examinée) ; ni A ni B ne l'ont jugée infidèle."
+   },
+   {
+    "n": 1,
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 2,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 3,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 4,
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   },
+   {
+    "n": 5,
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "dependances": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  ]
+ }
+]

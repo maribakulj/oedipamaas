@@ -1,0 +1,1624 @@
+{
+ "elements": 165,
+ "manquants": [],
+ "accord_statut": 0.8363636363636363,
+ "kappa_statut": 0.7890125503196779,
+ "accord_valeurs": 0.8363636363636363,
+ "desaccords": [
+  {
+   "id": "dc-001#4",
+   "champs": [
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction",
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-002#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-005",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-005#0",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-005#1",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "dc-005#2",
+   "champs": [
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "abduction",
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "abduction",
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-005#3",
+   "champs": [
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "abduction",
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "abduction",
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-005#4",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-005#5",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-007#4",
+   "champs": [
+    "statut",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal (selon la légende gravée)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-011#4",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-012",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique",
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-012#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique",
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-012#2",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-012#3",
+   "champs": [
+    "natures"
+   ],
+   "A": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "non_certifiee",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-012#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique",
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-012#5",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "connaissance_typique",
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "dc-015#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention",
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction",
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-018",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > décor de la scène"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > fiction scénique (le décor figure le lieu)"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-018#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > décor de la scène"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > fiction scénique (le décor figure le lieu)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-018#3",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > décor de la scène"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > fiction scénique (le décor figure le lieu)"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "dc-018#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > décor de la scène"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal",
+     "principal > fiction scénique (le décor figure le lieu)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-018#5",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal > décor de la scène"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "divergent",
+    "valeurs": [
+     "F",
+     "V"
+    ],
+    "dimensions": [
+     "contexte"
+    ],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal",
+     "principal > fiction scénique (le décor figure le lieu)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-019",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal (portrait historié : la modèle figurée en Diane)"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-019#0",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal (portrait historié : la modèle figurée en Diane)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-019#1",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal (portrait historié : la modèle figurée en Diane)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-019#3",
+   "champs": [
+    "statut",
+    "dimensions",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [
+     "portee"
+    ],
+    "natures": [
+     "identification_iconographique"
+    ],
+    "contextes": [
+     "principal (portrait historié : la modèle figurée en Diane)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-019#5",
+   "champs": [
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal (portrait historié : la modèle figurée en Diane)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-020",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee_sous_hypotheses",
+    "valeurs": [
+     "F",
+     "N"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-020#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee_sous_hypotheses",
+    "valeurs": [
+     "F",
+     "N"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-020#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee_sous_hypotheses",
+    "valeurs": [
+     "F",
+     "N"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-020#5",
+   "champs": [
+    "statut",
+    "valeurs",
+    "dimensions"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee_sous_hypotheses",
+    "valeurs": [
+     "F",
+     "N"
+    ],
+    "dimensions": [
+     "sens"
+    ],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "dc-022",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-022#0",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-022#2",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": true
+   }
+  },
+  {
+   "id": "dc-022#4",
+   "champs": [
+    "statut",
+    "valeurs"
+   ],
+   "A": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "ecartee",
+    "valeurs": [
+     "F"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-023",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": true,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-023#0",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-023#2",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-023#4",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "inconnue",
+    "valeurs": [
+     "N"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-024#2",
+   "champs": [
+    "statut",
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": true,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [],
+    "contextes": [
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  },
+  {
+   "id": "dc-024#3",
+   "champs": [
+    "valeurs",
+    "natures",
+    "contextes"
+   ],
+   "A": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "N",
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction",
+     "convention"
+    ],
+    "contextes": [
+     "principal",
+     "principal > état d'origine"
+    ],
+    "doute": false,
+    "infidele": false
+   },
+   "B": {
+    "statut": "etablie_sous_hypotheses",
+    "valeurs": [
+     "V"
+    ],
+    "dimensions": [],
+    "natures": [
+     "abduction"
+    ],
+    "contextes": [
+     "principal > état d'origine de l'œuvre (conservation)"
+    ],
+    "doute": false,
+    "infidele": false
+   }
+  }
+ ],
+ "confusion": [
+  [
+   "etablie_sous_hypotheses | inconnue",
+   8
+  ],
+  [
+   "inconnue | ecartee",
+   5
+  ],
+  [
+   "etablie | divergent",
+   4
+  ],
+  [
+   "inconnue | ecartee_sous_hypotheses",
+   4
+  ],
+  [
+   "non_certifiee | inconnue",
+   1
+  ],
+  [
+   "etablie_sous_hypotheses | non_certifiee",
+   1
+  ],
+  [
+   "divergent | etablie_sous_hypotheses",
+   1
+  ],
+  [
+   "etablie_sous_hypotheses | divergent",
+   1
+  ],
+  [
+   "etablie | etablie_sous_hypotheses",
+   1
+  ],
+  [
+   "etablie_sous_hypotheses | etablie",
+   1
+  ]
+ ]
+}
