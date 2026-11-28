@@ -331,7 +331,7 @@ méthode des bancs. Parmi ces dernières :
 - les cas de qualification, qu'écrit une autre session ;
 - le passage du moteur actuel sur le banc, qui donnera le point de départ (§ 7).
 
-## 9. La version 3 des bancs (proposition, 28/11, à valider avant d'être appliquée)
+## 9. La version 3 des bancs (lancée le 28/11 sur la décision de la propriétaire ; les bancs ne sont pas qualifiés)
 
 **Les décisions de la propriétaire** (28/11) qui la fondent :
 - les bancs ne sont pas encore des références définitives ;
@@ -404,3 +404,93 @@ La `sorte` suit l'intention du cas, donc le niveau (a), et jamais la seule couve
    - les relations métamorphiques, sur le niveau (a).
 
 **Aucune référence n'est modifiée d'après ces résultats.**
+
+### 9.5 L'état de la version 3, le 28/11
+
+**Les bancs ne sont pas qualifiés.** Les références (a) sont adjugées par des agents d'un même modèle ; leur accord
+n'est pas une validation humaine (D23). L'échantillon de la propriétaire reste à faire.
+
+**Le jugement de référence (a)** suit la procédure du § 9.3 et le guide `docs/ANNOTATION_REFERENCE.md`.
+- **Deux annotations indépendantes par famille,** sur des cas sans statut (`v3/a_annoter/`), sans K ni sortie du moteur.
+  Toutes sont gardées (`v3/annotations/<famille>.{A,B}.json`), avec leurs comparaisons (`v3/comparaisons/`).
+
+  | famille | accord sur le statut | kappa |
+  |---|---|---|
+  | evenements_etats | 0,94 | 0,92 |
+  | compositionnalite | 0,92 | 0,89 |
+  | structures_argumentales | 0,92 | 0,89 |
+  | reference_quantification | 0,93 | 0,90 |
+  | espace_partie_temps | 0,92 | 0,90 |
+  | modalite_negation_contextes | 0,89 | 0,85 |
+  | niveaux_representation | 0,69 | 0,60 |
+  | definitions_classification | 0,84 | 0,79 |
+  | phenomenes_iconographiques | 0,89 | 0,86 |
+
+- **Une limite de l'indépendance, dans le groupe 2** (reference_quantification, espace_partie_temps,
+  modalite_negation_contextes) : des annotateurs A et B ont partagé des dossiers de brouillon. Aucun signe de copie
+  n'a été trouvé, l'accord y est comparable à celui du groupe 1, et 9 justifications identiques sur 503 éléments. Les
+  trois fichiers `.adjudication.md` du groupe le disent. Refaire l'annotation B du groupe dans un dossier isolé est une
+  décision à prendre.
+- **L'adjudication** tranche par écrit ou fait d'un désaccord une dépendance nommée, en gardant le statut le plus prudent
+  sur les deux axes. 130 éléments sur 1 494 ont des dépendances. Les plus fréquentes : le symbole non dit (20), le seuil
+  de l'identification iconographique (16 ; 7 de plus pour le lien titre-image), la situation unique (10), l'asymétrie
+  d'une relation (8, plus 5 inversions de rôles), la convention de l'imminent (8, plus 10 frontières lexicales),
+  le contraire lexical (6), l'unicité de l'article défini (5).
+- **La règle par contexte** (guide, § 7.1, corrigée) a changé 64 statuts adjugés : 38 `inconnue` → `etablie`, 8 →
+  `etablie_sous_hypotheses`, 5 → `non_certifiee`, 1 → `ecartee`, 1 → `ecartee_sous_hypotheses`, 6 `ecartee` et 5
+  `etablie_sous_hypotheses` → `par_contexte`. L'ancien statut est gardé dans `historique.statut_contexte_principal`.
+
+**Les cas au schéma 3** (`v3/cas/`, `outils/bancs/migrer_v3.py`, `reporter_reference.py`) portent les trois niveaux.
+Chaque statut relatif porte son K nommé (`K0-d30` : les connaissances, le langage, la représentation, la sémantique et
+la date, `v3/cas/K.json`). K0-d30 est une convention historique, non la sémantique cible.
+
+**Les exigences du protocole** (`valider_cas.py --exigences`), jugées sur le statut sémantique et son contexte : 9
+manquent, contre 69 sur K0-d30. Ce sont de vrais manques (co-012, dc-006, dc-022, mn-006, pi-005, rq-009, rq-017,
+rq-020, sa-004) : la seule variante qui y change le résultat est un changement de participant ou une composition, qui ne
+compte pas comme variation différenciante. Aucune variante n'a été ajoutée pour les remplir ; elles restent signalées.
+
+**Les trois niveaux comparés** (`outils/bancs/comparer_niveaux.py`, `docs/mesures/NIVEAUX_BANCS.md`), sur 1 494
+éléments, par axe (déf. 11), les axes comptés à part :
+
+| | égal | plus faible (positif / négatif) | plus fort (positif / négatif) |
+|---|---|---|---|
+| (b) contre (a) | 499 | 727 / 316 | 6 / 1 |
+| (c) contre (a) | 301 | 900 / 346 | 10 / 0 |
+| (c) contre (b) | 1 056 | 393 / 30 | 20 / 0 |
+
+**Les 7 éléments où (b) est plus fort que (a), examinés un par un.** Aucun ne conduit à réviser (a) ; aucun n'est
+corrigé dans (b), qui reste l'état historique.
+
+| élément | (a) | (b) | la cause |
+|---|---|---|---|
+| ee-008 #0 (« is preparing to sacrifice »), sa-007 #4 (« s'apprête à peindre »), ep-016 #2 (« bends to kiss ») | etablie_sous_hypotheses | etablie | la convention de l'imminent : (a) garde un point d'ancrage (en cours ou imminent) dont une valeur est `N`, `V` sous la convention ; K0-d30 lisait la phase préparatoire comme en cours sans ce point. L'écart se ferme ou se confirme avec la décision sur l'imminent |
+| ee-013 #4 (« three travellers … » contre « two travellers ») | divergent | ecartee | la représentation de (b) lit le nombre du libellé comme exact ; (a) garde les deux lectures (au moins deux, `V` sous l'abduction du but ; exactement deux, `F`). (b) est plus fort sur l'axe négatif |
+| ee-021 #3 (« selon le catalogue, elle prie ; en réalité, elle ne prie pas ») | ecartee | non_certifiee | un effet du statut synthétique, non une erreur de K : le profil de (a) garde la classe `V` de l'énonciateur cité, mais la négation de l'auteur décide du statut (déf. 10). (b) ne voit pas la négation de l'auteur. C'est un argument de plus pour mesurer la sûreté sur les profils |
+| ep-010 #5 (« holds … a closed book in his left [hand]. In his left hand St Peter holds no book ») | contradictoire | etablie_sous_hypotheses | (b) perd l'appui négatif de la phrase niée : la dérivation positive est valide, sa certification ne l'est pas (le contre-exemple du lion ailé, étude 1.1, § 2.6) |
+| rq-020 #3 (« pointing to a lamb ») contre « the Lamb » | etablie_sous_hypotheses | etablie | la lecture D30 de la définition : le mot « Lamb » y est l'union des sens de son lemme, qui contient l'agneau ordinaire ; (a) lit le concept (l'Agneau de Dieu) et demande une identification iconographique. C'est ce que la décision 3 remplace par des alternatives (`docs/LANGAGE_REFERENCE.md`, § 5) |
+
+**Les 10 éléments où (c) est plus fort que (a)** sont tous sur l'axe positif et tous des erreurs strictes. Ils sont
+analysés dans `docs/mesures/MESURE_INITIALE_BANCS.md`, § 7 : 4 du compilateur réel (rq-014), 4 du lecteur sur le
+discours cité ou rapporté (ep-003 #6, ep-016 #6, mn-023 #1, #2), 1 d'un référent conceptuel lu comme figuré (dc-017 #2),
+1 d'un ordre d'éventualités ni lu ni compilé (sa-015 #2). Deux accords de statut avec (a) reposent sur une dérivation
+fausse (sa-015 #4, rq-010 #1), et 8 conclusions sous hypothèses plus faibles que (a) aussi (ee-023, co-014 #0, co-016).
+Un accord de statut n'est pas une preuve correcte : e⁺_der et e⁺_cert restent à mesurer.
+
+**Le langage formel de référence** (`docs/LANGAGE_REFERENCE.md`, `semantique_reference/`) a sa syntaxe abstraite, ses
+règles de formation, sa sémantique, un interpréteur indépendant du moteur et un oracle de propriétés
+(`tests/test_semantique_reference.py`). Cinq cas réels y sont écrits (ee-002, mn-004, rq-010, co-018 #3, pi-003) ; leur
+niveau (a) calculé égale la référence adjugée.
+
+**Les représentations formelles des cas de base** (`v3/formel/`, `docs/mesures/FORMEL_BANCS.md`) ont été écrites par
+trois rédacteurs qui n'ont vu ni la référence adjugée, ni K0-d30, ni le moteur, puis recalculées par l'interpréteur et
+comparées à la référence (`outils/bancs/comparer_formel.py`).
+- 197 cas sont représentés, 18 ne le sont pas (ce qui leur manque est écrit), et 1 n'est pas fait (co-018).
+- 168 des 197 ont le même statut et le même contexte que la référence.
+- Les écarts tiennent surtout à trois règles :
+  - la portée d'une réfutation (L6), 8 cas ;
+  - l'attestation des postulats de K\*, 11 cas ;
+  - le seuil d'une identification ou d'une abduction, 5 cas.
+- Aucun côté n'a été réécrit d'après l'autre. Les variantes restent à représenter.
+
+**Les données** sont dans `/home/user/donnees/bancs_phase1/v3/` et archivées sur la branche `donnees/banc-graphes`
+(`bancs_phase1/v3/`).

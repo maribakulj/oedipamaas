@@ -1,0 +1,2391 @@
+{
+ "objet": "La représentabilité des 216 cas de développement de la phase 1 dans le langage actuel (assertions v1, docs/ASSERTIONS.md ; requêtes UCQ sans négation, docs/NOYAU.md § 3), pour la mesure initiale (docs/mesures/MESURE_INITIALE_BANCS.md).",
+ "statut": "jugement d'agent, provisoire, à valider par la propriétaire",
+ "date": "2026-11-28",
+ "methode": [
+  "Jugé sur la définition et la description du cas de base seulement : ni extensions_requises, ni justification, ni connaissances_supposees, ni phenomenes n'ont été lus avant le jugement ; la comparaison avec extensions_requises est faite après, par outils/bancs/mesurer_moteur.py.",
+  "Critères : docs/AUDIT_EXPRESSIVITE.md (faits F1 à F6, proposition 1, § 3 et § 4), docs/ASSERTIONS.md, docs/NOYAU.md § 3.",
+  "representable : tout ce dont le statut dépend peut être dit (les ambiguïtés que le langage dit par alternative, modalité, énonciateur, portée, négation d'assertion sont dicibles).",
+  "projection_partielle : une partie de la définition ou de la description ne peut pas être dite (non_dicible), mais ce n'est pas l'élément qui décide du statut ; la projection qui l'omet garde le cas posable. La partie perdue rend la requête plus faible ou le graphe moins informatif.",
+  "non_representable : l'élément qui décide du statut ne peut pas être dit ; toute projection perd le statut ou affirme plus que le texte. Le cas est compté tel, sans projection forcée.",
+  "extensions : les extensions du langage (vocabulaire du validateur, outils/bancs/valider_cas.py) qui manquent pour la partie non dicible ; operations_hors_langage : ce qui manque sans être une limite du langage (base_de_definitions : la classification par définition ; abduction).",
+  "adaptateur : legitime (un vrai libellé de cette forme passerait par le chemin scene, sans contexte hiérarchique utile) ; legitime_sans_heritage (chemin scene, mais un vrai libellé serait une subdivision d'une personne ou d'un récit, et le compilateur réel y ajouterait l'héritage des noms : heritage/4) ; autre_chemin (un vrai libellé de ce genre passerait par un autre chemin du compilateur : chemin_juge). Le chemin mécanique (libelles_iconclass:type_de_libelle/4 sur l'analyse de la définition) est dans les résultats, à côté."
+ ],
+ "cas": [
+  {
+   "id": "ee-001",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "la simultanéité « while » / « pendant qu'il dort » entre l'état (dormir) et l'événement (couper) : aucune relation ne relie deux éventualités (F2) ; la projection garde les deux conjoints sans leur lien",
+   "extensions": [
+    "relation_entre_eventualites",
+    "etat_reifie"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-002",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-003",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la négation « is not dead » est une assertion niée (polarité), dicible",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-004",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« blinded » réduit à la propriété (l'événement d'aveuglement antérieur n'est pas dit) ; « towards » en relation entre entités",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-005",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-006",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-007",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-008",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "l'imminence « s'apprête à sacrifier » : aucun terme d'aspect ni de temps (F4) ; toute projection affirme le sacrifice ou le perd",
+   "extensions": [
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-009",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "l'imminence « about to strike » contre l'événement en cours de la définition (F4)",
+   "extensions": [
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "un vrai libellé de Judith serait une subdivision de son récit, avec l'héritage de la personne"
+  },
+  {
+   "id": "ee-010",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« two torturers » : nombre/2",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-011",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision du récit d'Icare (héritage)"
+  },
+  {
+   "id": "ee-012",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-013",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-014",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-015",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« the colour of stone » : une propriété, dicible ; l'être de pierre ne l'est pas moins",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision du récit de Persée (héritage)"
+  },
+  {
+   "id": "ee-016",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-017",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "l'antériorité du meurtre (le corps sans vie, Caïn qui s'enfuit) : le moment figuré n'est pas dicible (F4)",
+   "extensions": [
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision du récit de Caïn et Abel (héritage)"
+  },
+  {
+   "id": "ee-018",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-019",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "deux registres, deux scènes : sans situations, le graphe fusionne les deux moments de la même femme ; « while » de la définition",
+   "extensions": [
+    "plusieurs_situations",
+    "identite_entre_situations",
+    "relation_entre_eventualites"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-020",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-021",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la prière dite par une source citée (énonciateur cite(...)) ; la citation emboîtée (le catalogue cité par le cartel) est aplatie (F3)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-022",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "la personnification (un concept figuré par une femme) : la projection est une femme portant le nom de la Vérité",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "ee-023",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "la scène est dans la tapisserie figurée : un contexte emboîté (F3, une seule portée)",
+   "extensions": [
+    "contexte_emboite",
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ee-024",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« is not broken » : assertion niée ; la lecture des critiques est citée",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-001",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-002",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-003",
+   "classe": "projection_partielle",
+   "cote": "definition",
+   "non_dicible": "« in the form of » : la créature n'est pas un lion (modificateur non intersectif) ; la projection en fait un lion ailé fabuleux",
+   "extensions": [
+    "modificateur_non_intersectif"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "lettres doublées (25FF, animaux fabuleux) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "co-004",
+   "classe": "non_representable",
+   "cote": "definition",
+   "non_dicible": "« fabulous animal in the form of » : seul le caractère fabuleux (non intersectif) distingue la définition d'un lynx naturel",
+   "extensions": [
+    "modificateur_non_intersectif"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "lettres doublées (25FF) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "co-005",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« imaginary » en propriété ; tête d'oiseau, corps de poisson en parties",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "lettres doublées (25FF) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "co-006",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-007",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« n'est pas pommelé » : assertion niée",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-008",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« un ancien évêque » : un modificateur privatif ; la propriété « ancien » en ferait un évêque",
+   "extensions": [
+    "modificateur_non_intersectif"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-009",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« the former queen » : modificateur privatif",
+   "extensions": [
+    "modificateur_non_intersectif"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-010",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« le prétendu prophète » : modificateur non intersectif",
+   "extensions": [
+    "modificateur_non_intersectif"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-011",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« who has slain » / « dragon-slayer » : un événement passé (antériorité non dicible) ; la projection garde l'événement sans ancrage des deux côtés",
+   "extensions": [
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-012",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« berger des montagnes » contre « in a mountain landscape » : deux relations dicibles ; le sens du « de » relève de K",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-013",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-014",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« un ange de marbre » : une statue d'ange (figuration), non un ange",
+   "extensions": [
+    "referent_conceptuel",
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-015",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "belle-mère / mère : deux types, la distinction relève de K",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-016",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-017",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Vierge à l'Enfant (héritage des noms)"
+  },
+  {
+   "id": "co-018",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la disjonction « hermit, monk or nun » est dicible (ou) ; le compilateur la conjoint (défaut connu du compilateur, EXPERIENCE_CROISEE § 6.1)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-019",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la liste d'exemples (e.g.) : le type général suffit",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-020",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« falling » (en cours) contre « fallen » (accompli) : l'aspect n'est pas dicible (F4)",
+   "extensions": [
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-021",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le sens emblématique (la devise) est hors de la définition",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "co-022",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« ayant dansé » : la danse est antérieure au moment figuré (F4)",
+   "extensions": [
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision du récit de Jean-Baptiste (héritage)"
+  },
+  {
+   "id": "co-023",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Vierge (héritage)"
+  },
+  {
+   "id": "co-024",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le passif résultatif « est emprisonné » ; les soldats endormis ne sont pas agents : dicible",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision du récit de Pierre (héritage)"
+  },
+  {
+   "id": "dc-001",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la classification (une créature mi-femme mi-poisson est une sirène) est une opération sur une base de définitions, non une limite du langage",
+   "extensions": [],
+   "operations_hors_langage": [
+    "base_de_definitions"
+   ],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "lettres doublées (25FF, créatures fabuleuses) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "dc-002",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la tonsure décrite sans être nommée : classification par définition",
+   "extensions": [],
+   "operations_hors_langage": [
+    "base_de_definitions"
+   ],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "dc-003",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "l'ange et le calice sont dans la vision de la religieuse : un contexte emboîté",
+   "extensions": [
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [
+    "base_de_definitions"
+   ],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "dc-004",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le martyre dit par la source (énonciateur cité, portée source)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "lettres doublées (11HH, saintes) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "dc-005",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« aucun œil au milieu du front », « deux yeux » : une entité niée et nombre/2 ; écarter « cyclope » demande la définition du cyclope et une incompatibilité dans K",
+   "extensions": [],
+   "operations_hors_langage": [
+    "base_de_definitions"
+   ],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Polyphème (héritage)"
+  },
+  {
+   "id": "dc-006",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« is not an imaginary creature » : propriété niée ; cheval contre licorne relève de K",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "probablement sous 25FF (la licorne) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "dc-007",
+   "classe": "projection_partielle",
+   "cote": "description",
+   "non_dicible": "« vit seul », « aucun autre personnage » : quantification énoncée, non décisive ; « peut-être un ermite » est une modalité dicible",
+   "extensions": [
+    "quantification_enoncee"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "dc-008",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« son corps n'est pas chevalin » : propriété niée ; le centaure demande sa définition",
+   "extensions": [],
+   "operations_hors_langage": [
+    "base_de_definitions"
+   ],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "lettres doublées (25FF) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "dc-009",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« perhaps a pilgrim » : modalité",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "dc-010",
+   "classe": "projection_partielle",
+   "cote": "definition",
+   "non_dicible": "« alluding to the transience of life » : une signification (référent conceptuel) ; la projection garde la nature morte au crâne et au sablier",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "un genre (« still life ») avec une signification : chemin genre ou concept"
+  },
+  {
+   "id": "dc-011",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« peut-être aveugle » : modalité",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "dc-012",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le titre (modalité titre) ; la parenthèse « (flight into Egypt) »",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de la Fuite en Égypte (73B…, héritage)"
+  },
+  {
+   "id": "dc-013",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le diacre au gril sans nom : identification par l'attribut (abduction)",
+   "extensions": [],
+   "operations_hors_langage": [
+    "abduction"
+   ],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11H(LAWRENCE)) : le compilateur réel ne garde que les noms, l'attribut n'est que possible"
+  },
+  {
+   "id": "dc-014",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "l'inscription « S. BARBARA » : son contenu n'est pas dicible (F4)",
+   "extensions": [
+    "contenu_d_inscription"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11HH(CATHERINE)) : noms seuls, et lettres doublées"
+  },
+  {
+   "id": "dc-015",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« traditionnellement identifiée » : modalité traditionnel",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11HH(BARBARA)) : noms seuls, et lettres doublées"
+  },
+  {
+   "id": "dc-016",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "les tenailles sont dans l'original perdu : portée autre_oeuvre, source citée",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11HH(APOLLONIA)) : noms seuls, et lettres doublées"
+  },
+  {
+   "id": "dc-017",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "un nom de monument sur un gabarit « (...) » (61…) : chemin gabarit ou individu"
+  },
+  {
+   "id": "dc-018",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "un laurier de carton sur une scène d'opéra : une figuration d'arbre, non un arbre",
+   "extensions": [
+    "referent_conceptuel",
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "gabarit d'arbre (25G3(LAUREL)) : chemin gabarit"
+  },
+  {
+   "id": "dc-019",
+   "classe": "projection_partielle",
+   "cote": "description",
+   "non_dicible": "« portrait … as Diana » : la princesse figurée sous les traits de Diane ; la projection donne le nom de Diane à la figure",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (Diane, 92C…) : noms seuls"
+  },
+  {
+   "id": "dc-020",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« un renard, prétendu moine » : modificateur non intersectif",
+   "extensions": [
+    "modificateur_non_intersectif"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "dc-021",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "dc-022",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "rôles inversés : dicibles",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "dc-023",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "deux registres : l'ange est dans l'autre scène que les bergers",
+   "extensions": [
+    "plusieurs_situations"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'Annonce aux bergers (héritage)"
+  },
+  {
+   "id": "dc-024",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le nimbe décrit (« disc of radiant light ») : classification par définition",
+   "extensions": [],
+   "operations_hors_langage": [
+    "base_de_definitions"
+   ],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ep-001",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le navire par sa partie (le pont) : méréologie de K",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision du récit de Jonas (héritage)"
+  },
+  {
+   "id": "ep-002",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la coque perdue (portée oeuvre) ; le mât partie du navire",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ep-003",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la roue seule, partie d'une charrette : K",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ep-004",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ep-005",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Baptême du Christ (héritage)"
+  },
+  {
+   "id": "ep-006",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« above the head » contre « sur sa tête » : deux relations dicibles",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Couronnement de la Vierge (héritage)"
+  },
+  {
+   "id": "ep-007",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Jérôme (11H(JEROME)…, héritage)"
+  },
+  {
+   "id": "ep-008",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« before » contre « behind » : relations dicibles",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Noli me tangere (héritage)"
+  },
+  {
+   "id": "ep-009",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« at his right hand » (intrinsèque) contre « à droite » (du spectateur ?) : le cadre de référence n'est pas dicible (aucune extension de la liste ne le nomme)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Jugement dernier (héritage)"
+  },
+  {
+   "id": "ep-010",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ep-011",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Passion (héritage)"
+  },
+  {
+   "id": "ep-012",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire d'Adam et Ève (héritage)"
+  },
+  {
+   "id": "ep-013",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Jean-Baptiste (héritage)"
+  },
+  {
+   "id": "ep-014",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la main de Dieu pour Dieu : partie pour le tout (K)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ep-015",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« Goliath's own sword » : relation de possession dicible",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de David (héritage)"
+  },
+  {
+   "id": "ep-016",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ep-017",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« before gutting it » (une relation entre éventualités) ; Tobie figuré deux fois (narration continue)",
+   "extensions": [
+    "relation_entre_eventualites",
+    "plusieurs_situations",
+    "identite_entre_situations"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Tobie (héritage)"
+  },
+  {
+   "id": "ep-018",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« before Cain slays Abel » : l'ordre de deux éventualités, en deux registres",
+   "extensions": [
+    "relation_entre_eventualites",
+    "plusieurs_situations"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Caïn et Abel (héritage)"
+  },
+  {
+   "id": "ep-019",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« in order to see Christ » : le but, une relation entre éventualités ; la projection garde la montée et le Christ",
+   "extensions": [
+    "relation_entre_eventualites",
+    "contexte_d_eventualite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Zachée (héritage)"
+  },
+  {
+   "id": "ep-020",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« lève son bâton pour le frapper » : l'imminence (F4) ; l'eau ne jaillit pas encore",
+   "extensions": [
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Moïse (héritage)"
+  },
+  {
+   "id": "ep-021",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« in order to warn » : le but, dit par le chroniqueur cité ; la flotte qui approche n'est pas figurée",
+   "extensions": [
+    "contexte_d_eventualite",
+    "relation_entre_eventualites"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "ep-022",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« while the soldiers sleep » : la simultanéité ; la projection garde les deux éventualités",
+   "extensions": [
+    "relation_entre_eventualites"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Résurrection (héritage)"
+  },
+  {
+   "id": "ep-023",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« while the cock crows » : la simultanéité ; la négation « does not crow » est dicible",
+   "extensions": [
+    "relation_entre_eventualites"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Reniement de Pierre (héritage)"
+  },
+  {
+   "id": "ep-024",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« before drying them » : l'ordre des éventualités ; la négation « does not wash » est dicible",
+   "extensions": [
+    "relation_entre_eventualites"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Marie-Madeleine (héritage)"
+  },
+  {
+   "id": "mn-001",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« peut-être un ermite » : modalité",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "mn-002",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« seems to be weeping » : modalité",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "mn-003",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "la personnification ; « traditionnellement identifiée » est une modalité dicible",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5, personnifications) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "mn-004",
+   "classe": "projection_partielle",
+   "cote": "description",
+   "non_dicible": "« No angels appear » : une quantification négative, approchée par l'entité nue niée (NOYAU § 1.1)",
+   "extensions": [
+    "quantification_enoncee"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Vierge à l'Enfant (héritage)"
+  },
+  {
+   "id": "mn-005",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« ne couronne pas » : événement nié",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Couronnement de la Vierge (héritage)"
+  },
+  {
+   "id": "mn-006",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« in place of Isaac » (une substitution entre éventualités) ; le sacrifice du bélier n'a pas encore lieu",
+   "extensions": [
+    "relation_entre_eventualites",
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le sacrifice d'Isaac (héritage)"
+  },
+  {
+   "id": "mn-007",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« soit Paul, soit Matthieu » : alternative",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "mn-008",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "la mort au combat n'est dite que par l'inscription (son contenu), et elle est antérieure",
+   "extensions": [
+    "contenu_d_inscription",
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "mn-009",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« ordonne à un soldat de décapiter » : un événement ordonné, non accompli (participant événement, contexte)",
+   "extensions": [
+    "evenement_participant",
+    "contexte_d_eventualite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Jean-Baptiste (héritage)"
+  },
+  {
+   "id": "mn-010",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "la naissance est le contenu de l'annonce, non une scène figurée",
+   "extensions": [
+    "contexte_d_eventualite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Nativité (héritage)"
+  },
+  {
+   "id": "mn-011",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "l'échelle et les anges sont le contenu du rêve de Jacob : un contexte emboîté, des deux côtés",
+   "extensions": [
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Jacob (héritage)"
+  },
+  {
+   "id": "mn-012",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la remise de la bague dite par l'inventaire : énonciateur cité",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "mn-013",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« perhaps the donor » : modalité",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Vierge à l'Enfant (héritage)"
+  },
+  {
+   "id": "mn-014",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Vierge à l'Enfant (héritage)"
+  },
+  {
+   "id": "mn-015",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« traditionally identified » : modalité traditionnel",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Déposition (héritage)"
+  },
+  {
+   "id": "mn-016",
+   "classe": "non_representable",
+   "cote": "definition",
+   "non_dicible": "« the Child without a halo » : une négation dans la requête",
+   "extensions": [
+    "negation_dans_la_requete"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Vierge à l'Enfant (héritage)"
+  },
+  {
+   "id": "mn-017",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« does not bless » : événement nié",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Christ en majesté (héritage)"
+  },
+  {
+   "id": "mn-018",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« ne pourfend pas » : événement nié",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "probablement sous 25FF (le dragon) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "mn-019",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« either Perseus or David » : alternative",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Persée (héritage)"
+  },
+  {
+   "id": "mn-020",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le texte du phylactère n'est pas demandé par la définition",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "mn-021",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« ordering a saint to be cast » : un événement participant d'un autre (F1)",
+   "extensions": [
+    "evenement_participant"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "mn-022",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "les vaches sont dans le rêve de Pharaon : contexte emboîté",
+   "extensions": [
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Joseph (héritage)"
+  },
+  {
+   "id": "mn-023",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la Légende dorée comme source du sujet : dicible",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11HH(MARGARET)) : lettres doublées, non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "mn-024",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le titre ancien (modalité titre) ; l'âne",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Fuite en Égypte (héritage)"
+  },
+  {
+   "id": "nr-001",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la copie est l'œuvre décrite ; l'original perdu (portée autre_oeuvre)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Lamentation (héritage)"
+  },
+  {
+   "id": "nr-002",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le sujet nommé par le titre de la copie, sans figure décrite",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'Adoration des mages (héritage)"
+  },
+  {
+   "id": "nr-003",
+   "classe": "projection_partielle",
+   "cote": "description",
+   "non_dicible": "« ne montre aucun ange » : quantification négative approchée par l'entité nue niée ; le contraste avec l'original (autre_oeuvre) est dicible",
+   "extensions": [
+    "quantification_enoncee"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Nativité (héritage)"
+  },
+  {
+   "id": "nr-004",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la gravure d'après un tableau : ce qu'on y voit est figuré",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Martin (11H(MARTIN)…, héritage)"
+  },
+  {
+   "id": "nr-005",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la scène est dite du carton (portée autre_oeuvre)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Didon (héritage)"
+  },
+  {
+   "id": "nr-006",
+   "classe": "projection_partielle",
+   "cote": "definition",
+   "non_dicible": "« about to sacrifice » : l'imminence (F4) ; la main droite contre la gauche est dicible",
+   "extensions": [
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le sacrifice d'Isaac (héritage)"
+  },
+  {
+   "id": "nr-007",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le nom « Jérôme » est celui du peintre (portée histoire)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Jérôme (héritage)"
+  },
+  {
+   "id": "nr-008",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "les attributions (portée histoire)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision d'Eustache (héritage)"
+  },
+  {
+   "id": "nr-009",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« a cavalry charge in feathers » : une métaphore citée ; ni le sens figuré ni la non-littéralité ne sont dicibles",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "un genre (« battle scene ») suivi d'un « : » : chemin genre ou classe"
+  },
+  {
+   "id": "nr-010",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Judith (héritage)"
+  },
+  {
+   "id": "nr-011",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le bras brisé de la statue : portée oeuvre, dicible",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "nr-012",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "l'Enfant dont il ne reste que les pieds : portée oeuvre",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Vierge à l'Enfant (héritage)"
+  },
+  {
+   "id": "nr-013",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Sébastien (héritage)"
+  },
+  {
+   "id": "nr-014",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "la signature « IACOBVS F. » : le contenu d'une inscription, et qu'il nomme le peintre",
+   "extensions": [
+    "contenu_d_inscription"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Jacques le Majeur (héritage)"
+  },
+  {
+   "id": "nr-015",
+   "classe": "projection_partielle",
+   "cote": "description",
+   "non_dicible": "l'inscription « S. KATHERINA » : son contenu ; la projection en fait le nom de la figure",
+   "extensions": [
+    "contenu_d_inscription"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11HH(CATHERINE)) : lettres doublées, non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "nr-016",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "la personnification, reconnue à ses attributs (abduction)",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [
+    "abduction"
+   ],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5, personnifications) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "nr-017",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "la personnification ; « aucun bandeau » est une entité niée",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5, personnifications) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "nr-018",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "la personnification, sans nom ; jeune contre vieux est dicible",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5, personnifications) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "nr-019",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "la personnification",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5, personnifications) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "nr-020",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "Prudence, nom d'une personne, contre Prudence personnifiée : la projection (une femme nommée Prudence) établirait à tort",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5, personnifications) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "nr-021",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "la Charité dans une vision : contexte emboîté, et personnification",
+   "extensions": [
+    "contexte_emboite",
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5, personnifications) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "nr-022",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« as a symbol of purity » : la symbolisation n'est pas dicible",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "un concept (une couleur et ce qu'elle symbolise) : chemin concept ou classe"
+  },
+  {
+   "id": "nr-023",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« as a symbol of heaven »",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "un concept : chemin concept ou classe"
+  },
+  {
+   "id": "nr-024",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« as a symbol of hope » ; la signification dite par le programme cité",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "un concept : chemin concept ou classe"
+  },
+  {
+   "id": "pi-001",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "narration continue : deux scènes d'un même tableau, le même Tobie, « plus tard »",
+   "extensions": [
+    "plusieurs_situations",
+    "identite_entre_situations",
+    "relation_entre_eventualites"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Tobie (héritage)"
+  },
+  {
+   "id": "pi-002",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "narration continue : deux scènes, l'identité du fils entre elles",
+   "extensions": [
+    "plusieurs_situations",
+    "identite_entre_situations"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la parabole du fils prodigue (héritage)"
+  },
+  {
+   "id": "pi-003",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "deux scènes, le même Martin, et le Christ vu en songe",
+   "extensions": [
+    "plusieurs_situations",
+    "identite_entre_situations",
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Martin (héritage)"
+  },
+  {
+   "id": "pi-004",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "des épisodes successifs, en deux registres",
+   "extensions": [
+    "plusieurs_situations",
+    "relation_entre_eventualites"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "un récit (« the story of Joseph ») : chemin récit, noms et aspects"
+  },
+  {
+   "id": "pi-005",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "deux registres : l'ange et la source sont dans l'autre épisode",
+   "extensions": [
+    "plusieurs_situations"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire d'Agar (héritage)"
+  },
+  {
+   "id": "pi-006",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "le contenu du tableau figuré (« a painting of the Crucifixion ») : la projection en fait une relation « of » vers un nom",
+   "extensions": [
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "pi-007",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "le Calvaire est dans une copie accrochée dans le cabinet figuré : contexte emboîté",
+   "extensions": [
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Crucifixion (héritage)"
+  },
+  {
+   "id": "pi-008",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "le contenu de la tapisserie figurée (la chasse au cerf)",
+   "extensions": [
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "pi-009",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "l'œuvre est la tapisserie (portée oeuvre), la salle n'est pas figurée : dicible",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "pi-010",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "la femme vêtue de soleil est le contenu de la vision : contexte emboîté",
+   "extensions": [
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Jean l'Évangéliste (héritage)"
+  },
+  {
+   "id": "pi-011",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« seeing the Virgin appear » : un événement perçu (participant événement) ; « seul le moine » ; la négation « ne voit pas » est dicible",
+   "extensions": [
+    "evenement_participant",
+    "quantification_enoncee"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Bernard (héritage)"
+  },
+  {
+   "id": "pi-012",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "la créature est le contenu du rêve : contexte emboîté",
+   "extensions": [
+    "contexte_emboite"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "pi-013",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Jérôme (héritage)"
+  },
+  {
+   "id": "pi-014",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« St John » : l'identité (Jean l'Évangéliste ou Baptiste) est un point d'ambiguïté du nom, dicible par une alternative",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11H(…)/11HH(…)) : le compilateur réel ne garde que les noms (et les lettres doublées ne sont pas prises en charge)"
+  },
+  {
+   "id": "pi-015",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le vieillard aux clés sans nom : identification par l'attribut (abduction)",
+   "extensions": [],
+   "operations_hors_langage": [
+    "abduction"
+   ],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11H(…)/11HH(…)) : le compilateur réel ne garde que les noms (et les lettres doublées ne sont pas prises en charge)"
+  },
+  {
+   "id": "pi-016",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« does not hold the gridiron » : relation niée",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11H(…)/11HH(…)) : le compilateur réel ne garde que les noms (et les lettres doublées ne sont pas prises en charge)"
+  },
+  {
+   "id": "pi-017",
+   "classe": "projection_partielle",
+   "cote": "description",
+   "non_dicible": "le nom porté par la banderole (contenu d'inscription) ; la projection le donne à la figure",
+   "extensions": [
+    "contenu_d_inscription"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11H(…)/11HH(…)) : le compilateur réel ne garde que les noms (et les lettres doublées ne sont pas prises en charge)"
+  },
+  {
+   "id": "pi-018",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "« HIERONYMUS WIERIX FECIT » : une signature (contenu d'inscription), qui nomme le graveur",
+   "extensions": [
+    "contenu_d_inscription"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Jérôme (héritage)"
+  },
+  {
+   "id": "pi-019",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« signify the transience » : la signification (référent conceptuel) ; la projection garde la nature morte au crâne et au sablier",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "un genre (« still life ») : chemin genre"
+  },
+  {
+   "id": "pi-020",
+   "classe": "projection_partielle",
+   "cote": "definition",
+   "non_dicible": "« objects signifying the transience of life » : la signification ; « a candle that has just been snuffed out » (ancrage) est réduit à « éteinte »",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "« objects … : » : une classe (segments après « : ») ou un concept"
+  },
+  {
+   "id": "pi-021",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« in one hand … in the other » : deux mains distinctes (distincts)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "pi-022",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la jeune femme à la tête coupée sans nom : identification (abduction)",
+   "extensions": [],
+   "operations_hors_langage": [
+    "abduction"
+   ],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Judith (héritage)"
+  },
+  {
+   "id": "pi-023",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "Venise lieu de destination de l'œuvre (portée histoire), non le fond",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Vierge à l'Enfant (héritage)"
+  },
+  {
+   "id": "pi-024",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« n'est pas Alexandrie » : un nom nié ; la tradition citée",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Marc (héritage)"
+  },
+  {
+   "id": "rq-001",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "rq-002",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« Il élève le calice » : le pronom a deux antécédents ; dicible par une alternative de deux événements",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "rq-003",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Tobie (héritage)"
+  },
+  {
+   "id": "rq-004",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Jérôme (héritage)"
+  },
+  {
+   "id": "rq-005",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "deux figures : le vieillard qui lit et le saint debout",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "rq-006",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« married couple » : un collectif et ses membres ; « à la gauche de son mari » (cadre intrinsèque) est une relation dicible",
+   "extensions": [
+    "collection"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "rq-007",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« pair of lovers » : un collectif ; la négation « do not embrace » est dicible",
+   "extensions": [
+    "collection"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "rq-008",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« three » : nombre/2",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous les Grâces (héritage)"
+  },
+  {
+   "id": "rq-009",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "Pierre parmi les apôtres non nommés : une identité que le texte ne donne pas",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Dormition (héritage)"
+  },
+  {
+   "id": "rq-010",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« Two angels crown her » : lecture collective ou distributive, deux agents d'un même événement",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Couronnement de la Vierge (héritage)"
+  },
+  {
+   "id": "rq-011",
+   "classe": "non_representable",
+   "cote": "definition",
+   "non_dicible": "« each offering a gift » : la quantification distributive (« each ») n'est pas dicible",
+   "extensions": [
+    "quantification_enoncee"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'Adoration des mages (héritage)"
+  },
+  {
+   "id": "rq-012",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« carrying together » : deux agents d'un même événement",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous les explorateurs de Canaan (héritage)"
+  },
+  {
+   "id": "rq-013",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "la personnification des sept Arts par sept femmes",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5, personnifications) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "rq-014",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« twelve » contre « ten » : nombre/2",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Cène (héritage)"
+  },
+  {
+   "id": "rq-015",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« one of his two daughters » : la fille qui donne le vin ; le nombre des filles est dicible",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Lot (héritage)"
+  },
+  {
+   "id": "rq-016",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous les travaux d'Hercule (héritage)"
+  },
+  {
+   "id": "rq-017",
+   "classe": "projection_partielle",
+   "cote": "description",
+   "non_dicible": "l'inscription « MINERVA » : son contenu ; la projection le donne à la déesse, et Athéna / Minerve est un alias de K",
+   "extensions": [
+    "contenu_d_inscription"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (Athéna, 92C…) : noms seuls"
+  },
+  {
+   "id": "rq-018",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "le titre (modalité titre)",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Jean-Baptiste (héritage)"
+  },
+  {
+   "id": "rq-019",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Jean-Baptiste (héritage)"
+  },
+  {
+   "id": "rq-020",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Jean-Baptiste (héritage)"
+  },
+  {
+   "id": "rq-021",
+   "classe": "non_representable",
+   "cote": "definition",
+   "non_dicible": "« alone » : une condition non monotone (proposition 1 de l'audit)",
+   "extensions": [
+    "quantification_enoncee"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Judith (héritage)"
+  },
+  {
+   "id": "rq-022",
+   "classe": "non_representable",
+   "cote": "definition",
+   "non_dicible": "« praying alone » : non monotone",
+   "extensions": [
+    "quantification_enoncee"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Jérôme (héritage)"
+  },
+  {
+   "id": "rq-023",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "« only women » : non monotone ; « pas seulement »",
+   "extensions": [
+    "quantification_enoncee",
+    "negation_dans_la_requete"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous les saintes femmes au tombeau (héritage)"
+  },
+  {
+   "id": "rq-024",
+   "classe": "non_representable",
+   "cote": "les_deux",
+   "non_dicible": "Pierre ne dort que par « tous dorment, sauf Jean » (quantification) ; « while » (simultanéité)",
+   "extensions": [
+    "quantification_enoncee",
+    "relation_entre_eventualites"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Mont des Oliviers (héritage)"
+  },
+  {
+   "id": "sa-001",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "sa-002",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« ne donne pas » : événement nié",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "sa-003",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire d'Élie (héritage)"
+  },
+  {
+   "id": "sa-004",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la direction (vers la Galilée, non l'Égypte) : relations dicibles",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Fuite en Égypte (héritage)"
+  },
+  {
+   "id": "sa-005",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "sa-006",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "l'émergence dite par l'inventaire : énonciateur cité",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Vénus (héritage)"
+  },
+  {
+   "id": "sa-007",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Luc (héritage)"
+  },
+  {
+   "id": "sa-008",
+   "classe": "non_representable",
+   "cote": "description",
+   "non_dicible": "le martyre est accompli (« who has slain him ») et dans la prédelle, une autre scène que le panneau principal",
+   "extensions": [
+    "ancrage_temporel",
+    "plusieurs_situations"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Paul (héritage)"
+  },
+  {
+   "id": "sa-009",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Crucifixion (héritage)"
+  },
+  {
+   "id": "sa-010",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« le bénissant » : le rattachement du participe est un point de structure, dicible par une alternative",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Présentation au Temple (héritage)"
+  },
+  {
+   "id": "sa-011",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la relative « qui verse » : deux rattachements, dicibles par une alternative",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "sa-012",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« does not offer » : événement nié",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'Adoration des bergers (héritage)"
+  },
+  {
+   "id": "sa-013",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Judith (héritage)"
+  },
+  {
+   "id": "sa-014",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« perhaps anoints » : modalité",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Tobie (héritage)"
+  },
+  {
+   "id": "sa-015",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "« while » : la simultanéité ; la projection garde les deux éventualités",
+   "extensions": [
+    "relation_entre_eventualites"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Déposition (héritage)"
+  },
+  {
+   "id": "sa-016",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« from the dead » : le changement d'état est réduit à l'événement",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous les miracles du Christ (héritage)"
+  },
+  {
+   "id": "sa-017",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "la jeune femme à la couronne de roses sans nom : identification (abduction)",
+   "extensions": [],
+   "operations_hors_langage": [
+    "abduction"
+   ],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "individu (11H(…)/11HH(…)) : le compilateur réel ne garde que les noms (et les lettres doublées ne sont pas prises en charge)"
+  },
+  {
+   "id": "sa-018",
+   "classe": "projection_partielle",
+   "cote": "description",
+   "non_dicible": "« ne porte pas encore » : l'aspect (« pas encore », « prêt à ») ; la négation est dicible",
+   "extensions": [
+    "ancrage_temporel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous le Couronnement d'épines (héritage)"
+  },
+  {
+   "id": "sa-019",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous la Vierge à l'Enfant (héritage)"
+  },
+  {
+   "id": "sa-020",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« soit debout, soit assis » : alternative",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous Jean-Baptiste (héritage)"
+  },
+  {
+   "id": "sa-021",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime",
+   "chemin_juge": null
+  },
+  {
+   "id": "sa-022",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "éveillé contre endormi : l'incompatibilité relève de K",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "sous l'histoire de Jacob (héritage)"
+  },
+  {
+   "id": "sa-023",
+   "classe": "projection_partielle",
+   "cote": "les_deux",
+   "non_dicible": "la Justice personnifiée par une femme couronnée",
+   "extensions": [
+    "referent_conceptuel"
+   ],
+   "operations_hors_langage": [],
+   "adaptateur": "autre_chemin",
+   "chemin_juge": "concept (division 5, personnifications) : non pris en charge par le compilateur réel"
+  },
+  {
+   "id": "sa-024",
+   "classe": "representable",
+   "cote": null,
+   "non_dicible": "« does not hold his quill » : relation niée",
+   "extensions": [],
+   "operations_hors_langage": [],
+   "adaptateur": "legitime_sans_heritage",
+   "chemin_juge": "subdivision de Jérôme (héritage)"
+  }
+ ]
+}

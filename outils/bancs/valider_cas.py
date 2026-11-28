@@ -20,6 +20,8 @@ y a une erreur de forme ou de côté (les quotas sont rapportés, et comptés co
 import argparse, collections, json, os, sys
 
 STATUTS = {"etablie", "etablie_sous_hypotheses", "contradictoire", "non_certifiee", "ecartee", "inconnue"}
+# les statuts de référence (niveau (a), docs/INTERPRETATIONS_ADMISSIBLES.md 1.1, déf. 10, et la règle par contexte)
+STATUTS_REFERENCE = STATUTS | {"ecartee_sous_hypotheses", "divergent", "par_contexte", "incomplet", "aucune_interpretation"}
 HYPOTHESES = {"sens", "equivalence_non_attestee", "condition_suffisante_non_attestee", "consequence_conditionnelle",
               "connaissance_typique", "hypothese_interpretative", "abduction", "identite", "relation_inconnue"}
 SORTES = {"positif", "negatif", "indetermine", "contre_modele"}
@@ -33,7 +35,9 @@ CHAMPS = {"id", "famille", "phenomenes", "pivot", "langue", "sorte", "descriptio
 FACULTATIFS = {"graphe_attendu", "requete_attendue", "remarque", "decision_ouverte",
                # version 3 (docs/BANCS_PHASE1.md, § 9) : les trois niveaux de statut, la représentation de référence
                "statut_reference", "hypotheses_reference", "justification_reference", "dependances",
-               "representation_reference", "connaissances_formelles", "historique"}
+               "representation_reference", "connaissances_formelles", "historique", "schema", "statuts_relatifs",
+               "profil_reference", "points_reference", "annotations", "contexte_du_statut",
+               "resultats_par_contexte", "source_reference"}
 CONNAISSANCES = {"equivalence_etablie", "condition_suffisante", "condition_necessaire", "implication",
                  "consequence_conditionnelle", "connaissance_typique", "hypothese_interpretative", "relation_inconnue",
                  "distinction_documentaire", "identite_documentaire"}
@@ -181,8 +185,13 @@ def exigences(cas, rep, cote):
                 manque(c, f"variante {i} : une traduction correcte garde le statut sémantique de référence")
         # l'exigence porte sur la signification : sur le statut sémantique de référence quand le cas en a un (schéma
         # 3), sinon sur le statut attendu ; un statut démontrable égal faute de K ne la contredit pas
+        # (décision 6 de la propriétaire : la satisfaction garde son chemin) un changement de portée qui déplace la
+        # satisfaction dans un autre contexte change le résultat même si le nom du statut est le même
         cle = "statut_reference" if "statut_reference" in c else "statut_attendu"
-        if not any(v.get("variation") in DIFFERENCIANTES and v.get(cle, c.get(cle)) != c.get(cle) for v in vs):
+
+        def res(x):
+            return (x.get(cle, c.get(cle)), tuple(x.get("contexte_du_statut") or ()) if cle == "statut_reference" else ())
+        if not any(v.get("variation") in DIFFERENCIANTES and res(v) != res(c) for v in vs):
             manque(c, "aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère")
         for ou, x in [("cas", c)] + [(f"variante {i}", v) for i, v in enumerate(vs)]:
             d = x.get("decision_ouverte")
