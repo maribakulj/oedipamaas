@@ -1,0 +1,28 @@
+{
+ "graine": "audit-langages-1",
+ "complet": false,
+ "strates": {
+  "les_deux": 34264,
+  "wolf_seul": 24827,
+  "wonef_seul": 19415
+ },
+ "tires": {
+  "synsets": 400,
+  "avec_wolf": 300,
+  "avec_wonef": 300
+ },
+ "entrees": {
+  "wolf": "/home/user/donnees/ressources/omw/omw-1.4/fra/wn-data-fra.tab",
+  "wolf_sha256": "0e6a4761389f6bcf30872a477e5a6c00d6f4f1e5fc73b58d8bd7be68699dc648",
+  "wonef": "/home/user/donnees/ressources/wonef/wonef-fscore-0.1.xml.bz2",
+  "wonef_sha256": "6f69ab14ee839a5557eda223382b6ceb8e6a0e508c236fd8429b47875bde9293",
+  "wordnet": "/home/user/donnees/WordNet-3.0/dict",
+  "wordnet_sha256_noun_verb_adj_adv_concatenes": "c43193f82786076972f3311480d423c0b644b099532fe962d6de3d0d778743c5"
+ },
+ "sorties_sha256": {
+  "wolf.tab": "cfd2b438ef69f9b2891fd46b8da00d1a322ef224e82db86190edbd4e75fc6f6f",
+  "wonef.xml": "da472d3cd45055d25f43da4fa6d2e9956e16247d89c8087771abe27a2d410478",
+  "wn30_ids.txt": "ec863cc0b94b587db56783d830704e07acdbde44cfdfb3f29cc33393ed3a122f"
+ },
+ "pivot_ids": 117659
+}

@@ -1,0 +1,198 @@
+chemin	langage	lignes_code	categories	raisonne	note
+oedipamaas/__init__.py	python	1	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/base.py	python	214	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/cli.py	python	98	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/lecture.py	python	135	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/moteur.py	python	462	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/recherche.py	python	269	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/references.py	python	70	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/regles/regles.pl	prolog	74	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/semantique.py	python	84	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/socle/__init__.py	python	0	b	non	paquet
+oedipamaas/socle/arbre.pl	prolog	87	b	amont	pièces partagées Iconclass (arbre, notation, morphologie) ; libelles et sens chargés par la CLI ou la chaîne 1.0
+oedipamaas/socle/assertions.pl	prolog	133	b	oui	noyau logique
+oedipamaas/socle/cadres.pl	prolog	166	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/candidats.py	python	32	a	non	chaîne 1.0 (BM25, traits, décision apprise)
+oedipamaas/socle/cles.pl	prolog	89	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/codage.pl	prolog	150	d,b	oui	couche Iconclass du noyau ; comparateur d'inclusion
+oedipamaas/socle/coder.py	python	70	a	non	chaîne 1.0 (BM25, traits, décision apprise)
+oedipamaas/socle/commande.pl	prolog	3	b	non	CLI et frontière CoNLL-U
+oedipamaas/socle/compilation.pl	prolog	69	d	amont	compilateur C3 (libellés -> requêtes)
+oedipamaas/socle/compiler_decision.py	python	51	a	non	chaîne 1.0 (BM25, traits, décision apprise)
+oedipamaas/socle/compiler_iconclass.py	python	119	c,b	non	transcription Iconclass, WordNet, liens morphosémantiques, WOLF en faits Prolog (aucune provenance fine)
+oedipamaas/socle/compiler_ressources.py	python	46	c,b	non	transcription Iconclass, WordNet, liens morphosémantiques, WOLF en faits Prolog (aucune provenance fine)
+oedipamaas/socle/compiler_wordnet.py	python	72	c,b	non	transcription Iconclass, WordNet, liens morphosémantiques, WOLF en faits Prolog (aucune provenance fine)
+oedipamaas/socle/conllu.pl	prolog	55	b	non	CLI et frontière CoNLL-U
+oedipamaas/socle/connaissances_commun.pl	prolog	24	b	amont	module K actuel (WordNet 3.0 + WOLF)
+oedipamaas/socle/connaissances_en.pl	prolog	10	b	amont	module K actuel (WordNet 3.0 + WOLF)
+oedipamaas/socle/connaissances_fr.pl	prolog	10	b	amont	module K actuel (WordNet 3.0 + WOLF)
+oedipamaas/socle/construire_base.py	python	33	a,c	non	index de la chaîne 1.0 ; encore cité dans INSTALLATION.md
+oedipamaas/socle/decision.pl	prolog	141	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/definitions.pl	prolog	369	d	amont	compilateur C3 (libellés -> requêtes)
+oedipamaas/socle/description.pl	prolog	7	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/faits_description.py	python	72	a	non	chaîne 1.0 (BM25, traits, décision apprise)
+oedipamaas/socle/hypotheses.pl	prolog	66	a	oui	premier jet de projection / méthode des profils, abandonnés
+oedipamaas/socle/inclusion.pl	prolog	146	d,b	oui	couche Iconclass du noyau ; comparateur d'inclusion
+oedipamaas/socle/interpretation.pl	prolog	651	d	amont	canonisation C7 ; lecteur C7 (texte -> assertions) ; ancrage
+oedipamaas/socle/lexique.pl	prolog	99	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/libelles.pl	prolog	199	b	amont	pièces partagées Iconclass (arbre, notation, morphologie) ; libelles et sens chargés par la CLI ou la chaîne 1.0
+oedipamaas/socle/libelles_iconclass.pl	prolog	116	d	amont	compilateur C3 (libellés -> requêtes)
+oedipamaas/socle/mondes.pl	prolog	179	d	amont	canonisation C7 ; lecteur C7 (texte -> assertions) ; ancrage
+oedipamaas/socle/morphologie.pl	prolog	56	b	amont	pièces partagées Iconclass (arbre, notation, morphologie) ; libelles et sens chargés par la CLI ou la chaîne 1.0
+oedipamaas/socle/moteur.py	python	84	a	non	chaîne 1.0 (BM25, traits, décision apprise)
+oedipamaas/socle/noms.pl	prolog	85	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/normalisation.pl	prolog	124	d	amont	canonisation C7 ; lecteur C7 (texte -> assertions) ; ancrage
+oedipamaas/socle/notation.pl	prolog	115	b	amont	pièces partagées Iconclass (arbre, notation, morphologie) ; libelles et sens chargés par la CLI ou la chaîne 1.0
+oedipamaas/socle/oedipamaas.pl	prolog	167	b	non	CLI et frontière CoNLL-U
+oedipamaas/socle/preuve.pl	prolog	29	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/projection.pl	prolog	124	a	oui	premier jet de projection / méthode des profils, abandonnés
+oedipamaas/socle/raisonnement.pl	prolog	242	b,a	oui	ancien raisonnement T1/T2, encore appelé par la CLI et par K (normaliser_nom)
+oedipamaas/socle/recherche.pl	prolog	130	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/requetes.pl	prolog	86	b	oui	noyau logique
+oedipamaas/socle/requetes_iconclass.pl	prolog	318	d	amont	compilateur C3 (libellés -> requêtes)
+oedipamaas/socle/satisfaction.pl	prolog	467	b	oui	noyau logique
+oedipamaas/socle/satisfaction_reference.pl	prolog	313	f,b	oui	moteur de référence en Prolog (même langage que le noyau)
+oedipamaas/socle/scene.pl	prolog	60	d	amont	canonisation C7 ; lecteur C7 (texte -> assertions) ; ancrage
+oedipamaas/socle/sens.pl	prolog	58	b	amont	pièces partagées Iconclass (arbre, notation, morphologie) ; libelles et sens chargés par la CLI ou la chaîne 1.0
+oedipamaas/socle/specialisation.pl	prolog	143	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/stanza_textes.py	python	53	g,c	non	Stanza -> CoNLL-U (frontière)
+oedipamaas/socle/sujets.pl	prolog	254	a,b	non	méthode abandonnée ; fournit encore ferme/2 (mots-outils) au compilateur C3
+oedipamaas/socle/traits.pl	prolog	156	a	oui	chaîne 1.0 (décision apprise compilée en clauses, preuve lexicale)
+oedipamaas/socle/udpipe.pl	prolog	91	b	non	CLI et frontière CoNLL-U
+oedipamaas/socle/verificateur.pl	prolog	298	b	oui	noyau logique
+oedipamaas/texte.py	python	69	a	non	version 0.2 (ligne de base de la mesure finale)
+oedipamaas/wikidata.py	python	33	a	non	version 0.2 (ligne de base de la mesure finale)
+outils/bancs/adaptateur_scene.pl	prolog	46	e	non	outil de mesure ou d'expérience
+outils/bancs/comparer_annotations.py	python	54	e	non	outil de mesure ou d'expérience
+outils/bancs/comparer_formel.py	python	128	e,f	non	recalcule les statuts par l'interpréteur de référence
+outils/bancs/comparer_niveaux.py	python	75	e	non	outil de mesure ou d'expérience
+outils/bancs/mesurer_moteur.pl	prolog	152	e	non	outil de mesure ou d'expérience
+outils/bancs/mesurer_moteur.py	python	430	e	non	outil de mesure ou d'expérience
+outils/bancs/migrer_v3.py	python	36	e	non	outil de mesure ou d'expérience
+outils/bancs/rapport.py	python	77	e	non	outil de mesure ou d'expérience
+outils/bancs/repartir.py	python	43	e	non	outil de mesure ou d'expérience
+outils/bancs/reporter_reference.py	python	32	e	non	outil de mesure ou d'expérience
+outils/bancs/sens.py	python	20	e	non	outil de mesure ou d'expérience
+outils/bancs/sens_fr.py	python	34	e	non	outil de mesure ou d'expérience
+outils/bancs/statut_par_contexte.py	python	26	e	non	outil de mesure ou d'expérience
+outils/bancs/valider_cas.py	python	230	e	non	outil de mesure ou d'expérience
+outils/croise/classer.py	python	53	e	non	outil de mesure ou d'expérience
+outils/croise/croiser.pl	prolog	74	e	non	outil de mesure ou d'expérience
+outils/croise/diagnostiquer.py	python	83	e	non	outil de mesure ou d'expérience
+outils/croise/sonder.pl	prolog	47	e	non	outil de mesure ou d'expérience
+outils/croise/tableaux.py	python	138	e	non	outil de mesure ou d'expérience
+outils/definitions/compiler_definitions.pl	prolog	35	c,d	non	compilation hors ligne des définitions et requêtes
+outils/definitions/lire_libelles.pl	prolog	56	c,d	non	compilation hors ligne des définitions et requêtes
+outils/definitions/stanza_conllu.py	python	60	g,c	non	Stanza -> CoNLL-U (frontière)
+outils/definitions/tirage_jugement.pl	prolog	48	e	non	outil de mesure ou d'expérience
+outils/definitions/tirage_vertical.pl	prolog	33	e	non	outil de mesure ou d'expérience
+outils/graphes/analyse_roles.py	python	124	e	non	outil de mesure ou d'expérience
+outils/graphes/apparier.py	python	89	e	non	outil de mesure ou d'expérience
+outils/graphes/archiver.py	python	103	e	non	outil de mesure ou d'expérience
+outils/graphes/coder_graphes.pl	prolog	48	e	non	outil de mesure ou d'expérience
+outils/graphes/comparer_graphes.py	python	829	e	non	outil de mesure ou d'expérience
+outils/graphes/decisions_qualificatifs.py	python	34	e	non	outil de mesure ou d'expérience
+outils/graphes/echantillon_relecture.py	python	89	e	non	outil de mesure ou d'expérience
+outils/graphes/effet_codage.py	python	48	e	non	outil de mesure ou d'expérience
+outils/graphes/lire.pl	prolog	44	e	non	outil de mesure ou d'expérience
+outils/graphes/premisses.pl	prolog	51	e	oui	appelle les prédicats du noyau pour l'admissibilité des prémisses
+outils/graphes/relire.pl	prolog	52	e	non	outil de mesure ou d'expérience
+outils/graphes/valider_annotations.py	python	95	e	non	outil de mesure ou d'expérience
+outils/graphes/vers_faits.py	python	89	e	non	outil de mesure ou d'expérience
+outils/graphes/version_banc.py	python	66	e	non	outil de mesure ou d'expérience
+outils/inference/analyser.py	python	99	e	non	outil de mesure ou d'expérience
+outils/inference/experience.pl	prolog	217	e	non	outil de mesure ou d'expérience
+outils/inference/morphosemantique.py	python	20	c	non	lecture xls (xlrd)
+outils/mesure/actions_sens_c3.pl	prolog	34	e	non	outil de mesure ou d'expérience
+outils/mesure/banc.py	python	28	e	non	outil de mesure ou d'expérience
+outils/mesure/coherence_c3.py	python	40	e	non	outil de mesure ou d'expérience
+outils/mesure/composes_c3.pl	prolog	26	e	non	outil de mesure ou d'expérience
+outils/mesure/echantillon_j2.py	python	33	e	non	outil de mesure ou d'expérience
+outils/mesure/echantillonner_c3.py	python	43	e	non	outil de mesure ou d'expérience
+outils/mesure/etablis.py	python	38	e	non	outil de mesure ou d'expérience
+outils/mesure/mesure.py	python	110	e	non	outil de mesure ou d'expérience
+outils/mesure/resume_reference.py	python	145	e	non	outil de mesure ou d'expérience
+outils/mesure/resumer_c3.py	python	84	e	non	outil de mesure ou d'expérience
+outils/mesure/reunir_tranches.py	python	63	e	non	outil de mesure ou d'expérience
+outils/mesure/roles_verbnet.py	python	80	e	non	outil de mesure ou d'expérience
+outils/mesure/sites_c3.pl	prolog	39	e	non	outil de mesure ou d'expérience
+outils/mesure/sous_reference.py	python	19	e	non	outil de mesure ou d'expérience
+outils/mesure/tirer_banc.py	python	21	e	non	outil de mesure ou d'expérience
+outils/mesure/transitions_c3.py	python	13	e	non	outil de mesure ou d'expérience
+outils/mesure/voir_echantillon_c3.py	python	6	e	non	outil de mesure ou d'expérience
+outils/moisson/cartels.py	python	118	e	non	outil de mesure ou d'expérience
+outils/moisson/joconde.py	python	48	e	non	outil de mesure ou d'expérience
+outils/moisson/moisson.py	python	122	e	non	outil de mesure ou d'expérience
+outils/noyau/injection.py	python	245	e,f	non	test des tests (mutation du noyau)
+outils/qualification/tirer_jeu_independant.py	python	104	e	non	outil de mesure ou d'expérience
+outils/requetes/comparer.pl	prolog	38	e,d	oui	compare les requêtes compilées aux références par inclusion (appelle le noyau)
+outils/requetes/compiler_tout.pl	prolog	28	c,d	non	compilation hors ligne des définitions et requêtes
+outils/requetes/compiler_vertical.pl	prolog	18	c,d	non	compilation hors ligne des définitions et requêtes
+outils/ressources/commun.py	python	166	c,e	non	lexiques normalisés, manifestes (prototype de construction de K)
+outils/ressources/contexte.py	python	137	e	non	outil de mesure ou d'expérience
+outils/ressources/corpus.py	python	104	g,e	non	lemmatisation Stanza du corpus de mesure
+outils/ressources/echantillon.py	python	206	e	non	outil de mesure ou d'expérience
+outils/ressources/lexiques.py	python	243	c,e	non	lexiques normalisés, manifestes (prototype de construction de K)
+outils/ressources/manifeste.py	python	75	c,e	non	lexiques normalisés, manifestes (prototype de construction de K)
+outils/ressources/mesurer.py	python	275	e	non	outil de mesure ou d'expérience
+outils/sujets/construire.pl	prolog	11	a	non	méthode des profils, abandonnée
+outils/sujets/diagnostic.pl	prolog	30	a	non	méthode des profils, abandonnée
+outils/sujets/mesure.pl	prolog	35	a	non	méthode des profils, abandonnée
+outils/sujets/mesure_scene.py	python	76	a	non	méthode des profils, abandonnée
+outils/sujets/mesure_sujets.py	python	39	a	non	méthode des profils, abandonnée
+outils/sujets/scenes.pl	prolog	51	a	non	méthode des profils, abandonnée
+outils/vertical/coder.pl	prolog	159	e	non	outil de mesure ou d'expérience
+outils/vertical/mesurer.py	python	20	e	non	outil de mesure ou d'expérience
+outils/vertical/projeter.pl	prolog	48	a	non	mesure du premier jet de projection
+semantique_reference/__init__.py	python	1	f	oui	interpréteur de référence du langage (stdlib seule)
+semantique_reference/banc.py	python	38	f	oui	interpréteur de référence du langage (stdlib seule)
+semantique_reference/connaissances.py	python	107	f	oui	interpréteur de référence du langage (stdlib seule)
+semantique_reference/formation.py	python	633	f	oui	interpréteur de référence du langage (stdlib seule)
+semantique_reference/inclusion.py	python	265	f	oui	interpréteur de référence du langage (stdlib seule)
+semantique_reference/interprete.py	python	1802	f	oui	interpréteur de référence du langage (stdlib seule)
+semantique_reference/json_concret.py	python	305	f	oui	interpréteur de référence du langage (stdlib seule)
+semantique_reference/syntaxe.py	python	355	f	oui	interpréteur de référence du langage (stdlib seule)
+tests/descriptions_synthetiques.py	python	9	a	non	tests de la 0.2
+tests/oracle/differentiel.py	python	233	f	oui	oracle Python du noyau, écrit d'après NOYAU.md seul
+tests/oracle/oracle_noyau.py	python	1189	f	oui	oracle Python du noyau, écrit d'après NOYAU.md seul
+tests/plunit/connaissances_essai.pl	prolog	42	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/connaissances_gen.pl	prolog	17	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/connaissances_losange.pl	prolog	11	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/generateur_noyau.pl	prolog	65	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/paires.pl	prolog	108	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_assertions.pl	prolog	53	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_bout_en_bout.pl	prolog	100	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_codage.pl	prolog	102	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_compilateur.pl	prolog	91	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_conllu.pl	prolog	46	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_inclusion.pl	prolog	106	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_inclusion_generatif.pl	prolog	102	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_monotonie.pl	prolog	80	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_normalisation.pl	prolog	64	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_noyau.pl	prolog	314	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_noyau_generatif.pl	prolog	85	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_noyau_robustesse.pl	prolog	145	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_noyau_semantique.pl	prolog	349	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_paires.pl	prolog	58	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_ressources.pl	prolog	42	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_sens_occurrence.pl	prolog	43	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/plunit/test_surete_lecteur.pl	prolog	116	b	non	tests du moteur en Prolog, écrits d'après la spécification (ils vérifient, ne dérivent rien)
+tests/semantique_reference_gen.py	python	277	f	non	tests / générateurs de l'oracle
+tests/test_bancs.py	python	86	e	non	tests des outils de mesure
+tests/test_croise.py	python	85	e	non	tests des outils de mesure
+tests/test_graphes.py	python	271	e	non	tests des outils de mesure
+tests/test_mesure_bancs.py	python	82	e	non	tests des outils de mesure
+tests/test_moteur.py	python	267	a	non	tests de la 0.2
+tests/test_oracle.py	python	13	f	non	tests / générateurs de l'oracle
+tests/test_plunit.py	python	12	b	non	lance chaque fichier plunit
+tests/test_semantique_reference.py	python	1100	f	non	tests / générateurs de l'oracle
+tests/test_semantique_reference_exemples.py	python	50	f	non	tests / générateurs de l'oracle
+tests/test_socle_arbre.py	python	127	a	non	tests de la chaîne 1.0 ; arbre, notation et morphologie sont partagés
+tests/test_socle_cles.py	python	55	a	non	tests de la chaîne 1.0 ; arbre, notation et morphologie sont partagés
+tests/test_socle_decision.py	python	183	a	non	tests de la chaîne 1.0 ; arbre, notation et morphologie sont partagés
+tests/test_socle_lexique.py	python	52	a	non	tests de la chaîne 1.0 ; arbre, notation et morphologie sont partagés
+tests/test_socle_libelles.py	python	97	a	non	tests de la chaîne 1.0 ; arbre, notation et morphologie sont partagés
+tests/test_socle_morphologie.py	python	26	a	non	tests de la chaîne 1.0 ; arbre, notation et morphologie sont partagés
+tests/test_socle_moteur_ordres.py	python	21	a	non	tests de la chaîne 1.0 ; arbre, notation et morphologie sont partagés
+tests/test_socle_notation.py	python	76	a	non	tests de la chaîne 1.0 ; arbre, notation et morphologie sont partagés
+tests/test_socle_recherche.py	python	200	a	non	tests de la chaîne 1.0 ; arbre, notation et morphologie sont partagés

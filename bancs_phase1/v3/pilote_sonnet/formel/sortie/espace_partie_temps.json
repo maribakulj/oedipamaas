@@ -1,0 +1,874 @@
+{
+ "notation": "nr-1",
+ "famille": "espace_partie_temps",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/pilote_sonnet/formel/entree_espace_partie_temps.json",
+ "remarques": "ep-007 et ep-016 représentés. ep-016 emploie un point d'ancrage (phase préparatoire / imminent) et deux hypothèses (typique, convention) ; la convention est écrite comme l'assertion supposée ancrage(e, en_cours) (écart signalé au cas : l'imminence n'est pas un fait du modèle).",
+ "cas": [
+  {
+   "id": "ep-007",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "ep-007",
+    "langue": "fr",
+    "texte": "Gravure d'après un tableau perdu. Saint Jérôme, agenouillé devant un crucifix fixé à un tronc d'arbre, se frappe la poitrine avec une pierre. Derrière lui, un lion est couché. Au loin, un monastère.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "j",
+      "sorte": "individu",
+      "introduit_par": "ij"
+     },
+     {
+      "id": "sk",
+      "sorte": "etat",
+      "introduit_par": "isk"
+     },
+     {
+      "id": "cx",
+      "sorte": "individu",
+      "introduit_par": "icx"
+     },
+     {
+      "id": "l",
+      "sorte": "individu",
+      "introduit_par": "il"
+     },
+     {
+      "id": "sl",
+      "sorte": "etat",
+      "introduit_par": "isl"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ij",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "j"
+        ],
+        "type": "oc:saint_jerome"
+       }
+      },
+      "provenance": {
+       "document": "ep-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 34,
+       "fin": 46,
+       "extrait": "Saint Jérôme"
+      }
+     },
+     {
+      "id": "isk",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sk"
+        ],
+        "type": "oc:agenouille"
+       }
+      },
+      "provenance": {
+       "document": "ep-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 48,
+       "fin": 58,
+       "extrait": "agenouillé"
+      }
+     },
+     {
+      "id": "rsk",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "sk",
+         "j"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "ep-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 48,
+       "fin": 58,
+       "extrait": "agenouillé"
+      }
+     },
+     {
+      "id": "icx",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "cx"
+        ],
+        "type": "oc:crucifix"
+       }
+      },
+      "provenance": {
+       "document": "ep-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 69,
+       "fin": 77,
+       "extrait": "crucifix"
+      }
+     },
+     {
+      "id": "dv",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "j",
+         "cx"
+        ],
+        "type": "oc:devant"
+       }
+      },
+      "provenance": {
+       "document": "ep-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 59,
+       "fin": 77,
+       "extrait": "devant un crucifix"
+      }
+     },
+     {
+      "id": "il",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "l"
+        ],
+        "type": "oc:lion"
+       }
+      },
+      "provenance": {
+       "document": "ep-007",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 159,
+       "fin": 163,
+       "extrait": "lion"
+      }
+     },
+     {
+      "id": "isl",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sl"
+        ],
+        "type": "oc:couche"
+       }
+      },
+      "provenance": {
+       "document": "ep-007",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 168,
+       "fin": 174,
+       "extrait": "couché"
+      }
+     },
+     {
+      "id": "rsl",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "sl",
+         "l"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "ep-007",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 168,
+       "fin": 174,
+       "extrait": "couché"
+      }
+     },
+     {
+      "id": "dr",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "l",
+         "j"
+        ],
+        "type": "oc:derriere"
+       }
+      },
+      "provenance": {
+       "document": "ep-007",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 142,
+       "fin": 154,
+       "extrait": "Derrière lui"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "ep-007:def",
+    "libelle": "St Jerome kneeling before a crucifix, with a lion lying behind him",
+    "langue": "en",
+    "variables": [
+     [
+      "J",
+      "individu"
+     ],
+     [
+      "Sk",
+      "etat"
+     ],
+     [
+      "C",
+      "individu"
+     ],
+     [
+      "L",
+      "individu"
+     ],
+     [
+      "Sl",
+      "etat"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?J"
+       ],
+       "type": "oc:saint_jerome"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Sk"
+       ],
+       "type": "oc:agenouille"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?Sk",
+        "?J"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:crucifix"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?J",
+        "?C"
+       ],
+       "type": "oc:devant"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "oc:lion"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Sl"
+       ],
+       "type": "oc:couche"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?Sl",
+        "?L"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?L",
+        "?J"
+       ],
+       "type": "oc:derriere"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "ep-007:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 66,
+     "extrait": "St Jerome kneeling before a crucifix, with a lion lying behind him"
+    }
+   },
+   "connaissances": {
+    "version": "K*-ep-007",
+    "entrees": []
+   },
+   "remarques": "Omissions : l'arbre, la pierre dont il se frappe la poitrine, le monastère au loin, le fait que la gravure soit d'après un tableau perdu (le renversement d'une gravure n'affecte pas « devant » ni « derrière lui »).\nLecture : « derrière lui », dit de Jérôme, est un repère intrinsèque (le dos de Jérôme) ; la définition emploie la même expression avec le même pronom. Aucun point de cadre_de_reference : l'expression est la même des deux côtés et non ambiguë pour un référent humain. Le mot « lion » n'est pas pris pour un point de sens (le contexte, Jérôme, fixe l'animal).\nAucune contrainte de situation écrite : une seule scène ; les postures (agenouillé, couché) sont des états de porteur, sans ancrage écrit des deux côtés (rien n'en dépend).",
+   "statut_calcule": {
+    "synthetique": "etablie",
+    "principal": "etablie",
+    "par_contexte": {
+     "principal": "etablie"
+    },
+    "detail": {
+     "principal": {
+      "statut": "etablie",
+      "ligne": 4,
+      "classes": [
+       {
+        "statut_local": "E",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": true
+     }
+    }
+   },
+   "hypotheses": []
+  },
+  {
+   "id": "ep-016",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "ep-016",
+    "langue": "en",
+    "texte": "Genre painting. In a village street, a peasant woman bends to kiss the ring of the old bishop, who raises his other hand in blessing over her child.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "w",
+      "sorte": "individu",
+      "introduit_par": "iw"
+     },
+     {
+      "id": "b",
+      "sorte": "individu",
+      "introduit_par": "ib"
+     },
+     {
+      "id": "r",
+      "sorte": "individu",
+      "introduit_par": "ir"
+     },
+     {
+      "id": "h1",
+      "sorte": "individu",
+      "introduit_par": "ih1"
+     },
+     {
+      "id": "e",
+      "sorte": "changement",
+      "introduit_par": "ie"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iw",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "w"
+        ],
+        "type": "oc:paysanne"
+       }
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 39,
+       "fin": 52,
+       "extrait": "peasant woman"
+      }
+     },
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "oc:eveque"
+       }
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 87,
+       "fin": 93,
+       "extrait": "bishop"
+      }
+     },
+     {
+      "id": "ir",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "r"
+        ],
+        "type": "oc:bague"
+       }
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 71,
+       "fin": 75,
+       "extrait": "ring"
+      }
+     },
+     {
+      "id": "po",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "r",
+         "b"
+        ],
+        "type": "oc:possession"
+       }
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 71,
+       "fin": 93,
+       "extrait": "ring of the old bishop"
+      }
+     },
+     {
+      "id": "ih1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "h1"
+        ],
+        "type": "oc:main"
+       }
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 110,
+       "fin": 115,
+       "extrait": "other"
+      }
+     },
+     {
+      "id": "mh1",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "h1",
+         "b"
+        ],
+        "type": "oc:main_de"
+       }
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 110,
+       "fin": 115,
+       "extrait": "other"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:baiser"
+       }
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 66,
+       "extrait": "kiss"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "w"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 66,
+       "extrait": "kiss"
+      }
+     },
+     {
+      "id": "rr",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "r"
+        ],
+        "valeur": "patient"
+       }
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 71,
+       "fin": 75,
+       "extrait": "ring"
+      }
+     },
+     {
+      "id": "rh",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "h1"
+        ],
+        "valeur": "patient"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "connaissance_typique",
+       "contenu": "baiser la bague d'un évêque, c'est baiser sa main (la main qui la porte)"
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 75,
+       "extrait": "kiss the ring"
+      }
+     },
+     {
+      "id": "ae1",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "garde": {
+       "pan": [
+        "phase_preparatoire"
+       ]
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 53,
+       "fin": 66,
+       "extrait": "bends to kiss"
+      }
+     },
+     {
+      "id": "ae2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "convention",
+       "contenu": "le baiser, imminent, compte comme en cours"
+      },
+      "garde": {
+       "pan": [
+        "imminente"
+       ]
+      },
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 53,
+       "fin": 66,
+       "extrait": "bends to kiss"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "pan",
+      "cote": "D",
+      "dimension": "ancrage",
+      "domaine": [
+       "phase_preparatoire",
+       "imminente"
+      ],
+      "ancre": "bends to kiss",
+      "provenance": {
+       "document": "ep-016",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 53,
+       "fin": 66,
+       "extrait": "bends to kiss"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "ep-016:def",
+    "libelle": "a woman kissing the hand of a bishop",
+    "langue": "en",
+    "variables": [
+     [
+      "W",
+      "individu"
+     ],
+     [
+      "B",
+      "individu"
+     ],
+     [
+      "H",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "oc:femme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "oc:eveque"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?H"
+       ],
+       "type": "oc:main"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?H",
+        "?B"
+       ],
+       "type": "oc:main_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:baiser"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?W"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?H"
+       ],
+       "valeur": "patient"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "ep-016:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 36,
+     "extrait": "a woman kissing the hand of a bishop"
+    }
+   },
+   "connaissances": {
+    "version": "K*-ep-016",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:paysanne",
+      "sur": "oc:femme",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "remarques": "Omissions : la rue du village, « old » (adjectif de degré, non demandé par la définition), la bénédiction de l'enfant, la main levée h2 (non écrite : seule la première main h1 sert).\nLecture 1 (partie / contiguïté, § 9) : le texte dit que la femme baise la BAGUE ; la définition demande la MAIN. Aucune règle du langage ne transfère « baiser la bague » en « baiser la main » (décision 37). J'écris la main h1 (présupposée par « his other hand ») et le patient h1 comme assertion supposée de nature connaissance_typique (un seul contenu, partagé). Sans cette hypothèse le statut serait inconnue. Doute : le geste de baiser l'anneau pourrait n'être pas tenu pour un baiser de la main ; le choix est le mien, non celui d'une ressource.\nLecture 2 (ancrage, guide § 7 précision 2) : « bends to kiss » laisse ouvert la phase préparatoire du baiser (en cours, ONT § 1.2) et son imminence : point pan. Pour la valeur imminente, l'hypothèse de nature convention « l'imminent compte comme en cours » est écrite comme l'assertion supposée ancrage(e, en_cours) ; on n'écrit pas ancrage(e, imminente) en plus, car RS 6 le ferait contredire cette assertion. Écart : l'imminence elle-même n'est donc pas un fait du modèle (elle n'est que dans le contenu de l'hypothèse).\n« peasant woman » ⊑ « woman » : K* k1.",
+   "statut_calcule": {
+    "synthetique": "etablie_sous_hypotheses",
+    "principal": "etablie_sous_hypotheses",
+    "par_contexte": {
+     "principal": "etablie_sous_hypotheses"
+    },
+    "detail": {
+     "principal": {
+      "statut": "etablie_sous_hypotheses",
+      "ligne": 5,
+      "classes": [
+       {
+        "statut_local": "E_H",
+        "interpretations": 1,
+        "cylindres": [
+         {
+          "pan": [
+           "phase_preparatoire"
+          ]
+         }
+        ]
+       },
+       {
+        "statut_local": "E_H",
+        "interpretations": 1,
+        "cylindres": [
+         {
+          "pan": [
+           "imminente"
+          ]
+         }
+        ]
+       }
+      ],
+      "hypotheses": [
+       [
+        "connaissance_typique",
+        "baiser la bague d'un évêque, c'est baiser sa main (la main qui la porte)"
+       ],
+       [
+        "convention",
+        "le baiser, imminent, compte comme en cours"
+       ]
+      ],
+      "refutation_fermee": false,
+      "uniforme_plus": true
+     }
+    }
+   },
+   "hypotheses": [
+    {
+     "nature": "connaissance_typique",
+     "contenu": "baiser la bague d'un évêque, c'est baiser sa main (la main qui la porte)"
+    },
+    {
+     "nature": "convention",
+     "contenu": "le baiser, imminent, compte comme en cours"
+    }
+   ]
+  }
+ ]
+}

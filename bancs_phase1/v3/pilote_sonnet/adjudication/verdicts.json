@@ -1,0 +1,139 @@
+[
+ {
+  "element": "ee-011",
+  "verdict": "X",
+  "statut_correct": "etablie",
+  "gravite": "surete",
+  "principe": "appliqué : guide § 2 (un point seulement si le texte laisse la lecture) ; guide § 3 (jamais un F par l'absence d'une mention)",
+  "justification": "« The fall of Icarus » figure la chute sans marque d'accompli : « accompli » n'est pas une lecture du texte (le #3 la marque, « already fallen »). La classe F de Y tient à un ancrage que le texte ne dit pas : un F par silence. Laboureur au sillon, baie et navires : V. (Forme : le point de X sur Δ est superflu.)"
+ },
+ {
+  "element": "ee-011#0",
+  "verdict": "Y",
+  "statut_correct": "etablie",
+  "gravite": "surete",
+  "principe": "appliqué : IA § 2.7 (une traduction fidèle a le profil du cas) ; guide § 3",
+  "justification": "Traduction fidèle du cas : même profil. « La chute d'Icare » ne dit pas l'accompli ; la classe F de X repose sur un ancrage non dit, donc sur le silence."
+ },
+ {
+  "element": "ee-011#1",
+  "verdict": "Y",
+  "statut_correct": "etablie",
+  "gravite": "surete",
+  "principe": "appliqué : guide § 3",
+  "justification": "Comme le cas : chute figurée sans marque d'accompli, pas de classe F. Le paysage tient au sillon (terre labourée, en plein air) et au navire marchand (la mer) ; je le tiens, avec Y, pour une inclusion de signification. Doute gardé : sinon N, inconnue."
+ },
+ {
+  "element": "ee-011#3",
+  "verdict": "X",
+  "statut_correct": "ecartee",
+  "gravite": "surete",
+  "principe": "appliqué : IA § 6.2 (exclusivité des ancrages, décision 26) ; ONT § 1.2 (les libellés distinguent en cours et accompli) ; guide § 7.2 (une convention n'est pas une lecture)",
+  "justification": "« Who has already fallen » ancre la chute avant le moment figuré ; « falling » la demande en cours : appui négatif par l'exclusivité des ancrages. « Chute incluant son résultat » n'est pas un sens de « falling » ; ce serait au mieux une convention non posée, non une lecture. Le V de Y est sans fondement."
+ },
+ {
+  "element": "ee-011#5",
+  "verdict": "Y",
+  "statut_correct": "ecartee",
+  "gravite": "prudence",
+  "principe": "appliqué : IA § 6.3, 4 (distinction documentaire) ; NOYAU § 4.4 (écartée pour ces référents). Écart de spécification signalé : le guide § 3 ne nomme pas la distinction documentaire parmi les fondements d'un F",
+  "justification": "L'unique chute figurée est celle de Phaéton ; Phaéton et Icare sont deux individus documentés distincts : appui négatif pour ces référents, non un F par silence. X ne donne aucun fondement à N. Si le guide § 3 était lu comme excluant la distinction documentaire, le statut serait au plus ecartee_sous_hypotheses (distinction supposée)."
+ },
+ {
+  "element": "ee-011#6",
+  "verdict": "aucun",
+  "statut_correct": "etablie",
+  "gravite": {
+   "X": "prudence",
+   "Y": "surete"
+  },
+  "principe": "appliqué : guide § 3",
+  "justification": "Le laboureur est dit (« A ploughman guides his horse along a furrow ») : X le croit à tort absent. La chute est figurée sans marque d'accompli, comme dans le cas : la classe F de Y est sans fondement. Paysage : sillon et rivage."
+ },
+ {
+  "element": "sa-016",
+  "verdict": "Y",
+  "statut_correct": "etablie",
+  "gravite": "prudence",
+  "principe": "appliqué : guide § 2 (admissibilité contextuelle) ; IA § 4.4, co-015 (la référence peut n'admettre que la lecture du contexte)",
+  "justification": "« Aux portes de Naïm », « le fils de la veuve » sur une civière portée par deux hommes : le contexte ne laisse à « relève » que ressusciter, qui entraîne la mort antérieure : V sans hypothèse. La classe « soulever » de X n'est pas admissible (et son hypothèse est mal nommée : l'identité de la scène est dite, non iconographique)."
+ },
+ {
+  "element": "sa-016#0",
+  "verdict": "Y",
+  "statut_correct": "etablie",
+  "gravite": "prudence",
+  "principe": "appliqué : IA § 2.7",
+  "justification": "Traduction fidèle : même profil que le cas. « Bier » rend la mort analytique, et « raises » dit d'un mort sur une bière est ressusciter. Pas de classe « soulever »."
+ },
+ {
+  "element": "sa-016#1",
+  "verdict": "X",
+  "statut_correct": "etablie",
+  "gravite": "prudence",
+  "principe": "appliqué : guide § 2",
+  "justification": "Passif du cas : même événement, mêmes rôles, même profil. La classe « soulever » de Y n'est pas admissible en contexte."
+ },
+ {
+  "element": "sa-016#4",
+  "verdict": "X",
+  "statut_correct": "inconnue",
+  "gravite": "surete",
+  "principe": "appliqué : guide § 3 ; NOYAU § 4.4 et décision 9 (un autre patient, un rôle inversé ne sont pas des appuis négatifs) ; ONT § 1.2 (la phase préparatoire est en cours)",
+  "justification": "Le Christ relève la veuve ; du relèvement du fils, rien n'est dit. « Repose » est compatible avec la phase préparatoire d'une résurrection, et un autre patient n'est pas un appui négatif : aucun fondement de F. N, inconnue."
+ },
+ {
+  "element": "sa-016#5",
+  "verdict": "X",
+  "statut_correct": "etablie",
+  "gravite": "prudence",
+  "principe": "appliqué : guide § 2",
+  "justification": "Les deux apôtres sont un ajout neutre : même profil que le cas. La classe « soulever » de Y n'est pas admissible."
+ },
+ {
+  "element": "co-024#3",
+  "verdict": "dependance",
+  "statut_correct": {
+   "A : « emprisonner » est asymétrique (R(x, y) exclut R(y, x) au même moment), postulat de signification": "ecartee",
+   "B : aucune asymétrie analytique": "inconnue"
+  },
+  "gravite": {
+   "si A": "prudence (X)",
+   "si B": "surete (Y)"
+  },
+  "principe": "décision 9 (rôle inversé) : la liste des relations asymétriques reste à faire ; ici, l'asymétrie d'« emprisonner » au niveau (a)",
+  "justification": "Rôles inversés : Pierre emprisonne les soldats. Une inversion n'est négative que par une asymétrie de la relation, dont la liste est ouverte ; celle d'« emprisonner » n'est pas manifestement analytique (« enchaînés » n'est qu'une opposition typique, IA § 6.1). X a vu la dépendance mais l'a tranchée par prudence : la référence doit garder les deux options."
+ },
+ {
+  "element": "rq-017#4",
+  "verdict": "Y",
+  "statut_correct": "etablie_sous_hypotheses",
+  "gravite": "prudence",
+  "principe": "appliqué : décision 22 (une prémisse graduée est une hypothèse, non un choix de lecture) ; guide § 7.3 ne vaut que pour une disjonction dite. ouvert sans effet sur le statut : décision 22, la nature de l'hypothèse d'une prémisse graduée (« perhaps », « peut-être »)",
+  "justification": "« Perhaps Athena » est une prémisse graduée, non une alternative dite (« soit A, soit B ») ; la branche « une autre déesse » de X n'est pas dans le texte. Debout, lance et bouclier : V sous l'hypothèse. Forme : la nature de l'hypothèse reste à fixer (décision 22) ; « abduction » est provisoire."
+ },
+ {
+  "element": "nr-018#4",
+  "verdict": "Y",
+  "statut_correct": "ecartee_sous_hypotheses",
+  "gravite": "prudence",
+  "principe": "appliqué : décision 22 ; décision 30 (incompatibilité de degré indexée par la classe de comparaison). ouvert sans effet sur le statut : décision 22, la nature de l'hypothèse d'une prémisse graduée (« perhaps », « peut-être »)",
+  "justification": "« Perhaps a youth » est une prémisse graduée, donc une hypothèse, non une alternative. Sous elle, « a youth » et « an old man » s'excluent pour la même figure, au même moment, dans la même classe de comparaison : F. Le profil a une classe, F sous l'hypothèse."
+ },
+ {
+  "element": "pi-001#2",
+  "verdict": "X",
+  "statut_correct": "etablie_sous_hypotheses",
+  "gravite": "prudence",
+  "principe": "appliqué : décision 22 ; décision 27 (la mise en page ne dit pas d'ordre). ouvert sans effet sur le statut : décision 22, la nature de l'hypothèse d'une prémisse graduée (« perhaps », « peut-être »)",
+  "justification": "« Peut-être de nouveau Tobie » est une prémisse graduée, non une alternative dite : V sous hypothèses. Le père (non dit), le fiel du poisson et la postériorité sont des hypothèses, bien séparées par X. Forme : la nature de la première (identite chez X) reste à fixer par la décision 22."
+ },
+ {
+  "element": "pi-001#3",
+  "verdict": "X",
+  "statut_correct": "inconnue",
+  "gravite": "surete",
+  "principe": "appliqué : décision 9 ; NOYAU § 4.4 (un rôle inversé n'est pas une preuve négative)",
+  "justification": "Rôles inversés : le père frotte de fiel les yeux du fils. Une inversion n'est négative que par une asymétrie de la relation ; se frotter les yeux l'un l'autre est possible, la relation n'est pas asymétrique. Aucun fondement de F : N."
+ }
+]

@@ -1,0 +1,1402 @@
+{
+ "notation": "nr-1",
+ "famille": "compositionnalite",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/pilote_sonnet/formel/entree_compositionnalite.json",
+ "remarques": "co-011, co-015, co-008 représentés (co-008 par l'ancrage antérieur d'un état, seul dire de « ancien » en § 9 ; co-011 par l'hypothèse d'identité du dragon ; co-015 par un postulat K* d'incompatibilité de relation). Les types sont des concepts propres oc:, sans alignement WordNet (aucune ressource consultée). K* : statut attestee pour un postulat de signification que le guide § 1 range chez le lecteur compétent (source « K* (postulat de signification, jugement de référence) », comme dans les exemples de semantique_reference/exemples/) ; non_attestee ailleurs. À trancher par l'orchestrateur : la consigne du rôle (« attesté seulement si une ressource le donne ») et la pratique des exemples (K* attestee) ne se recouvrent pas. Les provenances (offsets) sont calculées sur le texte du cas.",
+ "cas": [
+  {
+   "id": "co-011",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "co-011",
+    "langue": "en",
+    "texte": "Misericord, carved oak, choir stalls of a Norfolk parish church, c. 1420. A dragon-slayer sits resting against a tree, his sword sheathed and his shield propped at his side. The dead dragon lies at his feet.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "x",
+      "sorte": "individu",
+      "introduit_par": "ix"
+     },
+     {
+      "id": "d",
+      "sorte": "individu",
+      "introduit_par": "idr"
+     },
+     {
+      "id": "m",
+      "sorte": "etat",
+      "introduit_par": "im"
+     },
+     {
+      "id": "l",
+      "sorte": "etat",
+      "introduit_par": "il"
+     },
+     {
+      "id": "e",
+      "sorte": "changement",
+      "introduit_par": "ie"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ix",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "x"
+        ],
+        "type": "oc:tueur_de_dragon"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 76,
+       "fin": 89,
+       "extrait": "dragon-slayer"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:tuer"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 76,
+       "fin": 89,
+       "extrait": "dragon-slayer"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "x"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 76,
+       "fin": 89,
+       "extrait": "dragon-slayer"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "anterieure"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 76,
+       "fin": 89,
+       "extrait": "dragon-slayer"
+      }
+     },
+     {
+      "id": "rp",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "d"
+        ],
+        "valeur": "patient"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "identite",
+       "contenu": "le dragon que « dragon-slayer » dit tué est le dragon mort couché à ses pieds"
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 174,
+       "fin": 189,
+       "extrait": "The dead dragon"
+      }
+     },
+     {
+      "id": "idr",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "d"
+        ],
+        "type": "oc:dragon"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 183,
+       "fin": 189,
+       "extrait": "dragon"
+      }
+     },
+     {
+      "id": "im",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m"
+        ],
+        "type": "oc:mort"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 178,
+       "fin": 182,
+       "extrait": "dead"
+      }
+     },
+     {
+      "id": "rm",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "m",
+         "d"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 178,
+       "fin": 182,
+       "extrait": "dead"
+      }
+     },
+     {
+      "id": "am",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "m"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 178,
+       "fin": 182,
+       "extrait": "dead"
+      }
+     },
+     {
+      "id": "il",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "l"
+        ],
+        "type": "oc:couche"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 190,
+       "fin": 194,
+       "extrait": "lies"
+      }
+     },
+     {
+      "id": "rl",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "l",
+         "d"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 190,
+       "fin": 194,
+       "extrait": "lies"
+      }
+     },
+     {
+      "id": "al",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "l"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 190,
+       "fin": 194,
+       "extrait": "lies"
+      }
+     },
+     {
+      "id": "af",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "d",
+         "x"
+        ],
+        "type": "oc:aux_pieds_de"
+       }
+      },
+      "provenance": {
+       "document": "co-011",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 195,
+       "fin": 206,
+       "extrait": "at his feet"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "co-011:def",
+    "libelle": "person who has slain a dragon, the dead beast lying at his feet",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "D",
+      "individu"
+     ],
+     [
+      "M",
+      "etat"
+     ],
+     [
+      "L",
+      "etat"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "oc:personne"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:tuer"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?D"
+       ],
+       "valeur": "patient"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?D"
+       ],
+       "type": "oc:dragon"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "anterieure"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:mort"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?M",
+        "?D"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?M"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "oc:couche"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?L",
+        "?D"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?L"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?D",
+        "?X"
+       ],
+       "type": "oc:aux_pieds_de"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "co-011:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 63,
+     "extrait": "person who has slain a dragon, the dead beast lying at his feet"
+    }
+   },
+   "connaissances": {
+    "version": "K*-co-011",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:tueur_de_dragon",
+      "sur": "oc:personne",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "remarques": "Omissions : le lieu (misericorde, stalles), le chêne sculpté, l'arbre, l'épée au fourreau, le bouclier, l'attitude « sits resting against a tree » : rien de cela n'entre dans la définition.\nLecture 1 (décomposition lexicale) : « dragon-slayer » est un nom d'agent ; il est écrit comme l'agent d'un événement de mise à mort antérieur (« person who has slain a dragon » : ancrage antérieure), ce que K* donne comme sens du mot ; K* ne peut pas le produire (aucune règle de K ne crée de référent, § 3.3 RS 7), il est donc écrit dans la description comme lecture lexicale affirmée.\nLecture 2 (définition) : « the dead beast » est lu comme anaphore du dragon (même variable D), sans point : aucun autre animal n'est introduit.\nHypothèse (identité non dite, guide § 1) : que le dragon tué par le tueur de dragon soit le dragon mort à ses pieds n'est pas dit ; il est écrit comme assertion supposée de nature identite (rôle patient de l'événement). Doute : un lecteur peut tenir cette identité pour acquise (anaphore définie « The dead dragon ») ; sans elle le statut serait inconnue.\n« Dead » est lu comme état (ONT § 1.1) ; « lies » comme état de posture ; « at his feet » comme relation typée sans règle (les parties du corps ne sont pas représentées).",
+   "statut_calcule": {
+    "synthetique": "etablie_sous_hypotheses",
+    "principal": "etablie_sous_hypotheses",
+    "par_contexte": {
+     "principal": "etablie_sous_hypotheses"
+    },
+    "detail": {
+     "principal": {
+      "statut": "etablie_sous_hypotheses",
+      "ligne": 5,
+      "classes": [
+       {
+        "statut_local": "E_H",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [
+       [
+        "identite",
+        "le dragon que « dragon-slayer » dit tué est le dragon mort couché à ses pieds"
+       ]
+      ],
+      "refutation_fermee": false,
+      "uniforme_plus": true
+     }
+    }
+   },
+   "hypotheses": [
+    {
+     "nature": "identite",
+     "contenu": "le dragon que « dragon-slayer » dit tué est le dragon mort couché à ses pieds"
+    }
+   ]
+  },
+  {
+   "id": "co-015",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "co-015",
+    "langue": "fr",
+    "texte": "Scène de genre, huile sur bois, Leyde, vers 1660. Dans une cuisine, une belle-mère tend une pomme à la fillette de son époux, qui détourne la tête. Une servante récure un chaudron près de l'âtre.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "x",
+      "sorte": "individu",
+      "introduit_par": "ix"
+     },
+     {
+      "id": "z",
+      "sorte": "individu",
+      "introduit_par": "iz"
+     },
+     {
+      "id": "y",
+      "sorte": "individu",
+      "introduit_par": "iy"
+     },
+     {
+      "id": "a",
+      "sorte": "individu",
+      "introduit_par": "ia"
+     },
+     {
+      "id": "e",
+      "sorte": "changement",
+      "introduit_par": "ie"
+     },
+     {
+      "id": "e2",
+      "sorte": "processus",
+      "introduit_par": "ie2"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ix",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "x"
+        ],
+        "type": "oc:femme"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 72,
+       "fin": 82,
+       "extrait": "belle-mère"
+      }
+     },
+     {
+      "id": "iz",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "z"
+        ],
+        "type": "oc:fillette"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 103,
+       "fin": 111,
+       "extrait": "fillette"
+      }
+     },
+     {
+      "id": "iy",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "y"
+        ],
+        "type": "oc:epoux"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 119,
+       "fin": 124,
+       "extrait": "époux"
+      }
+     },
+     {
+      "id": "ia",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "a"
+        ],
+        "type": "oc:pomme"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 92,
+       "fin": 97,
+       "extrait": "pomme"
+      }
+     },
+     {
+      "id": "bm",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "x",
+         "z"
+        ],
+        "type": "oc:belle_mere_de"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 72,
+       "fin": 82,
+       "extrait": "belle-mère"
+      }
+     },
+     {
+      "id": "ep",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "x",
+         "y"
+        ],
+        "type": "oc:epouse_de"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 115,
+       "fin": 124,
+       "extrait": "son époux"
+      }
+     },
+     {
+      "id": "fi",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "z",
+         "y"
+        ],
+        "type": "oc:fille_de"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 100,
+       "fin": 124,
+       "extrait": "la fillette de son époux"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:tendre_transfert"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 83,
+       "fin": 87,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "x"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 83,
+       "fin": 87,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "a"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 83,
+       "fin": 87,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "z"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 83,
+       "fin": 87,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 83,
+       "fin": 87,
+       "extrait": "tend"
+      }
+     },
+     {
+      "id": "ie2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e2"
+        ],
+        "type": "oc:detourner_la_tete"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 130,
+       "fin": 146,
+       "extrait": "détourne la tête"
+      }
+     },
+     {
+      "id": "r2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e2",
+         "z"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 130,
+       "fin": 146,
+       "extrait": "détourne la tête"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e2"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "co-015",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 130,
+       "fin": 146,
+       "extrait": "détourne la tête"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "co-015:def",
+    "libelle": "mother giving an apple to her daughter",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "Z",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "A",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?Z"
+       ],
+       "type": "oc:mere_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:donner_transfert"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?A"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Z"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": "oc:pomme"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "co-015:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 38,
+     "extrait": "mother giving an apple to her daughter"
+    }
+   },
+   "connaissances": {
+    "version": "K*-co-015",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:tendre_transfert",
+      "sur": "oc:donner_transfert",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "incompatibilite",
+      "id": "k2",
+      "a": "oc:belle_mere_de",
+      "b": "oc:mere_de",
+      "forme": "relation",
+      "indexation": [
+       "porteur",
+       "contexte"
+      ],
+      "sorte": "contraires",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "remarques": "Omissions : la cuisine, la servante, le chaudron, l'âtre ; le fait que la fillette détourne la tête est écrit (e2) mais n'entre pas dans la définition (aucune règle ne fait d'un refus une non-donation : « tend » reste un don en cours, comme dans la convention de ee-002, K* k1).\nLecture : « belle-mère » est lu au sens de marâtre (contexte : « la fillette de son époux ») ; l'autre sens (mère du conjoint) est écarté par le contexte, sans point. La relation belle_mere_de(x, z) est écrite directement, avec l'épouse et la fille de l'époux comme appuis.\nPostulat K* k2 (statut attestee, source K*) : une belle-mère n'est pas la mère de l'enfant de son époux (incompatibilité de relation, même couple d'arguments). C'est le seul fondement du F : doute, c'est un postulat de signification que je tiens pour analytique ; sans k2 le statut calculé serait inconnue, et avec k2 non_attestee il serait ecartee_sous_hypotheses [connaissance_non_attestee] (variantes calculées dans le brouillon). « mother » est lu au sens de la relation de parenté mere_de ; « her daughter » est portée par la même relation (le sexe de l'enfant n'est pas redit).\nLe refus (« détourne la tête ») n'est pas lu comme réfutation du don.",
+   "statut_calcule": {
+    "synthetique": "ecartee",
+    "principal": "ecartee",
+    "par_contexte": {
+     "principal": "ecartee"
+    },
+    "detail": {
+     "principal": {
+      "statut": "ecartee",
+      "ligne": 7,
+      "classes": [
+       {
+        "statut_local": "R",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": false
+     }
+    }
+   },
+   "hypotheses": []
+  },
+  {
+   "id": "co-008",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "co-008",
+    "langue": "fr",
+    "texte": "Panneau de prédelle, Sienne, vers 1440. Un ancien évêque, retiré au désert, prie à genoux devant l'entrée d'une grotte. Sa mitre et sa crosse sont posées à terre près de lui. Au loin, une ville fortifiée.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "id": "x",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "ix"
+     },
+     {
+      "id": "sb",
+      "sorte": "etat",
+      "situation": "s0",
+      "introduit_par": "isb"
+     },
+     {
+      "id": "w",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "iw"
+     },
+     {
+      "id": "e",
+      "sorte": "processus",
+      "situation": "s0",
+      "introduit_par": "ie"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ix",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "x"
+        ],
+        "type": "oc:personne"
+       }
+      },
+      "provenance": {
+       "document": "co-008",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 50,
+       "fin": 56,
+       "extrait": "évêque"
+      }
+     },
+     {
+      "id": "isb",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sb"
+        ],
+        "type": "oc:etre_eveque"
+       }
+      },
+      "provenance": {
+       "document": "co-008",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 43,
+       "fin": 56,
+       "extrait": "ancien évêque"
+      }
+     },
+     {
+      "id": "rsb",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "sb",
+         "x"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "co-008",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 43,
+       "fin": 56,
+       "extrait": "ancien évêque"
+      }
+     },
+     {
+      "id": "asb",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "sb"
+        ],
+        "valeur": "anterieure"
+       }
+      },
+      "provenance": {
+       "document": "co-008",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 43,
+       "fin": 49,
+       "extrait": "ancien"
+      }
+     },
+     {
+      "id": "iw",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "w"
+        ],
+        "type": "oc:desert"
+       }
+      },
+      "provenance": {
+       "document": "co-008",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 68,
+       "fin": 74,
+       "extrait": "désert"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:prier"
+       }
+      },
+      "provenance": {
+       "document": "co-008",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 76,
+       "fin": 80,
+       "extrait": "prie"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "x"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "co-008",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 76,
+       "fin": 80,
+       "extrait": "prie"
+      }
+     },
+     {
+      "id": "rl",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "w"
+        ],
+        "valeur": "lieu"
+       }
+      },
+      "provenance": {
+       "document": "co-008",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 58,
+       "fin": 74,
+       "extrait": "retiré au désert"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "co-008",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 76,
+       "fin": 80,
+       "extrait": "prie"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "co-008:def",
+    "libelle": "bishop praying in the wilderness",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "E",
+      "processus"
+     ],
+     [
+      "W",
+      "individu"
+     ],
+     [
+      "T",
+      "situation"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:etre_eveque"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?X"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:prier"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "oc:lieu_sauvage"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?W"
+       ],
+       "valeur": "lieu"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?S",
+        "?T"
+       ]
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?E",
+        "?T"
+       ]
+      }
+     ]
+    },
+    "provenance": {
+     "document": "co-008:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 32,
+     "extrait": "bishop praying in the wilderness"
+    }
+   },
+   "connaissances": {
+    "version": "K*-co-008",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:desert",
+      "sur": "oc:lieu_sauvage",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "remarques": "Omissions : « à genoux », la grotte, la mitre et la crosse posées à terre, la ville fortifiée (aucun n'entre dans la définition).\nLecture (modificateur non intersectif) : « ancien évêque » n'a pas d'opérateur dans le langage (§ 9) ; la lecture de § 9 (« seul l'ancrage antérieur dit ancien ») est suivie : la dignité d'évêque est un état (ONT § 1.1 : « ancien » situe l'état par rapport au moment figuré), de porteur x, d'ancrage antérieure ; la définition (« bishop praying ») demande ce même état en cours. Conséquence : « bishop » n'est pas écrit comme un type d'individu dans ce cas (une représentation par type d'individu ne pourrait pas dire « ancien »).\nLe F repose sur l'exclusivité de l'ancrage (RS 6), dont § 3.12 L8 dit que c'est une propriété du langage encore à confirmer (décision 26). Il porte sur l'état sb : c'est une réfutation « pour ces référents » (R5/L6), refutation_fermee est faux ; le profil n'a rien d'autre.\n« wilderness » : « désert » (lieu de retraite) est lu comme une espèce de lieu sauvage (K* k1) ; « prie » est localisé au désert parce que « retiré au désert » et « prie » ont le même sujet (lecture, non hypothèse). Doute : « ancien évêque » pourrait être lu comme une dignité toujours portée (titre d'usage) ; le texte dit « ancien ».",
+   "statut_calcule": {
+    "synthetique": "ecartee",
+    "principal": "ecartee",
+    "par_contexte": {
+     "principal": "ecartee"
+    },
+    "detail": {
+     "principal": {
+      "statut": "ecartee",
+      "ligne": 7,
+      "classes": [
+       {
+        "statut_local": "R",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": false
+     }
+    }
+   },
+   "hypotheses": []
+  }
+ ]
+}

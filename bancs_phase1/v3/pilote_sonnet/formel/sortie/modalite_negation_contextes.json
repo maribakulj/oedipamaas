@@ -1,0 +1,1089 @@
+{
+ "notation": "nr-1",
+ "famille": "modalite_negation_contextes",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/pilote_sonnet/formel/entree_modalite_negation_contextes.json",
+ "remarques": "mn-006 représenté ; le statut calculé ecartee vient d'une réfutation pour la substitution R = Isaac (R5/L6) et ne doit pas être lu comme la lecture (a) naturelle (inconnue). mn-022 représenté ; la scène est dans le rêve (contexte reve), statut établi dans principal > reve.",
+ "cas": [
+  {
+   "id": "mn-006",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "mn-006",
+    "langue": "en",
+    "texte": "Oil on panel, Antwerp, c. 1530. On a mountain top Abraham does not sacrifice Isaac: an angel seizes his raised arm, the knife still in his hand. Isaac kneels, bound, on the altar. A ram is caught by its horns in a thicket nearby.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "ab",
+      "sorte": "individu",
+      "introduit_par": "iab"
+     },
+     {
+      "id": "is",
+      "sorte": "individu",
+      "introduit_par": "iis"
+     },
+     {
+      "id": "an",
+      "sorte": "individu",
+      "introduit_par": "ian"
+     },
+     {
+      "id": "r",
+      "sorte": "individu",
+      "introduit_par": "ir"
+     },
+     {
+      "id": "th",
+      "sorte": "individu",
+      "introduit_par": "ith"
+     },
+     {
+      "id": "sp",
+      "sorte": "etat",
+      "introduit_par": "isp"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iab",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ab"
+        ],
+        "type": "oc:abraham"
+       }
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 50,
+       "fin": 57,
+       "extrait": "Abraham"
+      }
+     },
+     {
+      "id": "iis",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "is"
+        ],
+        "type": "oc:isaac"
+       }
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 77,
+       "fin": 82,
+       "extrait": "Isaac"
+      }
+     },
+     {
+      "id": "ian",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "an"
+        ],
+        "type": "oc:ange"
+       }
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 87,
+       "fin": 92,
+       "extrait": "angel"
+      }
+     },
+     {
+      "id": "ir",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "r"
+        ],
+        "type": "oc:belier"
+       }
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 4,
+       "debut": 182,
+       "fin": 185,
+       "extrait": "ram"
+      }
+     },
+     {
+      "id": "ith",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "th"
+        ],
+        "type": "oc:buisson"
+       }
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 4,
+       "debut": 214,
+       "fin": 221,
+       "extrait": "thicket"
+      }
+     },
+     {
+      "id": "nm",
+      "contenu": {
+       "non": {
+        "atomes": [
+         {
+          "pred": "type",
+          "args": [
+           "?e"
+          ],
+          "type": "oc:sacrifier"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?e",
+           "ab"
+          ],
+          "valeur": "agent"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?e",
+           "is"
+          ],
+          "valeur": "patient"
+         },
+         {
+          "pred": "ancrage",
+          "args": [
+           "?e"
+          ],
+          "valeur": "en_cours"
+         }
+        ],
+        "locales": [
+         [
+          "e",
+          "changement"
+         ]
+        ]
+       }
+      },
+      "qualification": {
+       "polarite": "neg"
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 58,
+       "fin": 82,
+       "extrait": "does not sacrifice Isaac"
+      }
+     },
+     {
+      "id": "isp",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sp"
+        ],
+        "type": "oc:pris_dans"
+       }
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 4,
+       "debut": 186,
+       "fin": 195,
+       "extrait": "is caught"
+      }
+     },
+     {
+      "id": "rsp",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "sp",
+         "r"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 4,
+       "debut": 186,
+       "fin": 195,
+       "extrait": "is caught"
+      }
+     },
+     {
+      "id": "asp",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "sp"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 4,
+       "debut": 186,
+       "fin": 195,
+       "extrait": "is caught"
+      }
+     },
+     {
+      "id": "lsp",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "r",
+         "th"
+        ],
+        "type": "oc:dans"
+       }
+      },
+      "provenance": {
+       "document": "mn-006",
+       "langue": "en",
+       "phrase": 4,
+       "debut": 209,
+       "fin": 221,
+       "extrait": "in a thicket"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "mn-006:def",
+    "libelle": "Abraham sacrificing a ram in place of Isaac",
+    "langue": "en",
+    "variables": [
+     [
+      "A",
+      "individu"
+     ],
+     [
+      "R",
+      "individu"
+     ],
+     [
+      "I",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": "oc:abraham"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?R"
+       ],
+       "type": "oc:belier"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?I"
+       ],
+       "type": "oc:isaac"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:sacrifier"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?A"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?R"
+       ],
+       "valeur": "patient"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?E",
+        "?I"
+       ],
+       "type": "oc:a_la_place_de"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "mn-006:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 43,
+     "extrait": "Abraham sacrificing a ram in place of Isaac"
+    }
+   },
+   "connaissances": {
+    "version": "K*-mn-006",
+    "entrees": []
+   },
+   "remarques": "Omissions : le sommet de la montagne, l'ange qui saisit le bras levé, le couteau, Isaac agenouillé et lié sur l'autel : écarts sans effet sur la définition.\nLe texte nie le sacrifice d'Isaac (proposition niée de l'auteur, au moment figuré) ; il dit le bélier pris dans un buisson, non sacrifié. Aucun sacrifice du bélier n'est écrit : le silence n'est pas une négation. « in place of Isaac » est écrit comme relation typée a_la_place_de entre l'événement et Isaac, sans règle (§ 9 : relations entre éventualités) ; elle n'a pas d'effet ici puisque aucun sacrifice du bélier n'est dit.\nAttendu à la lecture (a) : inconnue. L'interpréteur peut rendre ecartee : la proposition niée « Abraham ne sacrifie pas Isaac » réfute la sélection pour la substitution R = Isaac (un « référent sans rapport » : Isaac n'est pas un bélier, et la définition demande type(R, bélier)), réfutation non fermée (§ 3.12 L6, § 7 R5 : une décision est à prendre). Je n'ai pas contourné : le statut calculé est rapporté tel quel, et doit être lu avec cette réserve. Exemple minimal du comportement : un cas sans bélier du tout (description : Abraham, Isaac, « Abraham ne sacrifie pas Isaac » ; définition : Abraham sacrifie un bélier) rend ecartee, σ = {A ↦ Abraham, R ↦ Isaac}.",
+   "statut_calcule": {
+    "synthetique": "ecartee",
+    "principal": "ecartee",
+    "par_contexte": {
+     "principal": "ecartee"
+    },
+    "detail": {
+     "principal": {
+      "statut": "ecartee",
+      "ligne": 7,
+      "classes": [
+       {
+        "statut_local": "R",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": false
+     }
+    }
+   },
+   "hypotheses": []
+  },
+  {
+   "id": "mn-022",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "mn-022",
+    "langue": "en",
+    "texte": "Woodcut, Lyon, 1540. Pharaoh lies asleep in a curtained bed. In a cloud above him his dream is shown: on the bank of the Nile seven lean cows devour seven fat ones.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "id": "reve",
+      "sorte": "reve",
+      "parent": "principal",
+      "ouvert_par": "rv"
+     }
+    ],
+    "referents": [
+     {
+      "id": "ph",
+      "sorte": "individu",
+      "introduit_par": "iph"
+     },
+     {
+      "id": "sl",
+      "sorte": "etat",
+      "introduit_par": "isl"
+     },
+     {
+      "id": "rv",
+      "sorte": "processus",
+      "introduit_par": "irv"
+     },
+     {
+      "id": "l",
+      "sorte": "collection",
+      "contexte": "reve",
+      "introduit_par": "il"
+     },
+     {
+      "id": "f",
+      "sorte": "collection",
+      "contexte": "reve",
+      "introduit_par": "if"
+     },
+     {
+      "id": "e",
+      "sorte": "changement",
+      "contexte": "reve",
+      "introduit_par": "ie"
+     },
+     {
+      "id": "rb",
+      "sorte": "individu",
+      "contexte": "reve",
+      "introduit_par": "irb"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iph",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ph"
+        ],
+        "type": "oc:pharaon"
+       }
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 21,
+       "fin": 28,
+       "extrait": "Pharaoh"
+      }
+     },
+     {
+      "id": "isl",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sl"
+        ],
+        "type": "oc:endormi"
+       }
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 34,
+       "fin": 40,
+       "extrait": "asleep"
+      }
+     },
+     {
+      "id": "rsl",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "sl",
+         "ph"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 34,
+       "fin": 40,
+       "extrait": "asleep"
+      }
+     },
+     {
+      "id": "asl",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "sl"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 34,
+       "fin": 40,
+       "extrait": "asleep"
+      }
+     },
+     {
+      "id": "irv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "rv"
+        ],
+        "type": "oc:rever"
+       }
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 82,
+       "fin": 100,
+       "extrait": "his dream is shown"
+      }
+     },
+     {
+      "id": "rrv",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "rv",
+         "ph"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 82,
+       "fin": 91,
+       "extrait": "his dream"
+      }
+     },
+     {
+      "id": "arv",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "rv"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 82,
+       "fin": 100,
+       "extrait": "his dream is shown"
+      }
+     },
+     {
+      "id": "il",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "l"
+        ],
+        "type": "oc:vache"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 126,
+       "fin": 141,
+       "extrait": "seven lean cows"
+      }
+     },
+     {
+      "id": "nl",
+      "contenu": {
+       "atome": {
+        "pred": "nombre",
+        "args": [
+         "l"
+        ],
+        "valeur": 7
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 126,
+       "fin": 131,
+       "extrait": "seven"
+      }
+     },
+     {
+      "id": "pl",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "l"
+        ],
+        "type": "oc:maigre"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 132,
+       "fin": 136,
+       "extrait": "lean"
+      }
+     },
+     {
+      "id": "if",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "f"
+        ],
+        "type": "oc:vache"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 149,
+       "fin": 163,
+       "extrait": "seven fat ones"
+      }
+     },
+     {
+      "id": "nf",
+      "contenu": {
+       "atome": {
+        "pred": "nombre",
+        "args": [
+         "f"
+        ],
+        "valeur": 7
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 149,
+       "fin": 154,
+       "extrait": "seven"
+      }
+     },
+     {
+      "id": "pf",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "f"
+        ],
+        "type": "oc:gras"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 155,
+       "fin": 158,
+       "extrait": "fat"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:devorer"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 142,
+       "fin": 148,
+       "extrait": "devour"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "l"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 142,
+       "fin": 148,
+       "extrait": "devour"
+      }
+     },
+     {
+      "id": "rp",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "f"
+        ],
+        "valeur": "patient"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 142,
+       "fin": 148,
+       "extrait": "devour"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 142,
+       "fin": 148,
+       "extrait": "devour"
+      }
+     },
+     {
+      "id": "irb",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "rb"
+        ],
+        "type": "oc:rive_du_nil"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 105,
+       "fin": 125,
+       "extrait": "the bank of the Nile"
+      }
+     },
+     {
+      "id": "rl",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "rb"
+        ],
+        "valeur": "lieu"
+       }
+      },
+      "qualification": {
+       "contexte": "reve"
+      },
+      "provenance": {
+       "document": "mn-022",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 102,
+       "fin": 125,
+       "extrait": "on the bank of the Nile"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "mn-022:def",
+    "libelle": "seven lean cows devouring seven fat cows on a river bank",
+    "langue": "en",
+    "variables": [
+     [
+      "L",
+      "collection"
+     ],
+     [
+      "F",
+      "collection"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "B",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "oc:vache"
+      },
+      {
+       "pred": "nombre",
+       "args": [
+        "?L"
+       ],
+       "valeur": 7
+      },
+      {
+       "pred": "propriete",
+       "args": [
+        "?L"
+       ],
+       "type": "oc:maigre"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?F"
+       ],
+       "type": "oc:vache"
+      },
+      {
+       "pred": "nombre",
+       "args": [
+        "?F"
+       ],
+       "valeur": 7
+      },
+      {
+       "pred": "propriete",
+       "args": [
+        "?F"
+       ],
+       "type": "oc:gras"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:devorer"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?L"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?F"
+       ],
+       "valeur": "patient"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "oc:berge_de_riviere"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?B"
+       ],
+       "valeur": "lieu"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "mn-022:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 56,
+     "extrait": "seven lean cows devouring seven fat cows on a river bank"
+    }
+   },
+   "connaissances": {
+    "version": "K*-mn-022",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:rive_du_nil",
+      "sur": "oc:berge_de_riviere",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "remarques": "Omissions : le lit à rideaux, la nuée.\nLecture (guide § 7, précision 1) : la scène des vaches est le contenu du rêve de Pharaon, un contexte de sorte reve ouvert par l'éventualité « rêver » (rv) ; la définition y est satisfaite et ne l'est pas dans le principal (Pharaon dort, aucune vache n'y est figurée). Le statut se lit par contexte, avec son chemin principal > reve.\n« seven lean cows devour seven fat ones » : deux collections de vaches (type, nombre, propriété), l'événement a pour agent la première et pour patient la seconde (lecture collective, la même qu'à la définition : aucun point pluriel, puisque les deux côtés disent la même structure). « on the bank of the Nile » localise l'événement (rôle lieu) ; la rive du Nil est une espèce de berge (K* k1). « Fat ones » est lu comme « fat cows » (ellipse).",
+   "statut_calcule": {
+    "synthetique": "etablie dans principal > reve",
+    "principal": "inconnue",
+    "par_contexte": {
+     "principal": "inconnue",
+     "reve": "etablie"
+    },
+    "detail": {
+     "principal": {
+      "statut": "inconnue",
+      "ligne": 12,
+      "classes": [
+       {
+        "statut_local": "N",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": false
+     },
+     "reve": {
+      "statut": "etablie",
+      "ligne": 4,
+      "classes": [
+       {
+        "statut_local": "E",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": true
+     }
+    }
+   },
+   "hypotheses": []
+  }
+ ]
+}

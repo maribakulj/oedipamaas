@@ -1,0 +1,246 @@
+{
+ "notation": "nr-1",
+ "famille": "reference_quantification",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/pilote_sonnet/formel/entree_reference_quantification.json",
+ "remarques": "rq-014 représenté ; « ten apostles » lu comme un décompte exact (exactement(10)), ce qui réfute « les douze apôtres » (au_moins(12)).",
+ "cas": [
+  {
+   "id": "rq-014",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "rq-014",
+    "langue": "en",
+    "texte": "Fresco in a monastic refectory, Lombardy, c. 1510, heavily overpainted. Christ sits at the centre of a long table with ten apostles. Twelve loaves and a dish of fish are laid on the cloth.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "c",
+      "sorte": "individu",
+      "introduit_par": "ic"
+     },
+     {
+      "id": "t",
+      "sorte": "individu",
+      "introduit_par": "it"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "oc:christ"
+       }
+      },
+      "provenance": {
+       "document": "rq-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 72,
+       "fin": 78,
+       "extrait": "Christ"
+      }
+     },
+     {
+      "id": "it",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "t"
+        ],
+        "type": "oc:table"
+       }
+      },
+      "provenance": {
+       "document": "rq-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 108,
+       "fin": 113,
+       "extrait": "table"
+      }
+     },
+     {
+      "id": "at",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "t"
+        ],
+        "type": "oc:a_table"
+       }
+      },
+      "provenance": {
+       "document": "rq-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 79,
+       "fin": 113,
+       "extrait": "sits at the centre of a long table"
+      }
+     },
+     {
+      "id": "dix",
+      "contenu": {
+       "quantification": {
+        "quant": "exactement",
+        "variable": [
+         "z",
+         "individu"
+        ],
+        "restriction": [
+         {
+          "pred": "type",
+          "args": [
+           "?z"
+          ],
+          "type": "oc:apotre"
+         },
+         {
+          "pred": "relation",
+          "args": [
+           "?z",
+           "t"
+          ],
+          "type": "oc:a_table"
+         }
+        ],
+        "n": 10
+       }
+      },
+      "provenance": {
+       "document": "rq-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 119,
+       "fin": 131,
+       "extrait": "ten apostles"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "rq-014:def",
+    "libelle": "Christ at table with the twelve apostles",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "Tb",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "oc:christ"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Tb"
+       ],
+       "type": "oc:table"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?Tb"
+       ],
+       "type": "oc:a_table"
+      },
+      {
+       "compte": {
+        "quant": "au_moins",
+        "n": 12,
+        "variable": [
+         "z",
+         "individu"
+        ],
+        "restriction": {
+         "et": [
+          {
+           "pred": "type",
+           "args": [
+            "?z"
+           ],
+           "type": "oc:apotre"
+          },
+          {
+           "pred": "relation",
+           "args": [
+            "?z",
+            "?Tb"
+           ],
+           "type": "oc:a_table"
+          }
+         ]
+        }
+       }
+      }
+     ]
+    },
+    "provenance": {
+     "document": "rq-014:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 40,
+     "extrait": "Christ at table with the twelve apostles"
+    }
+   },
+   "connaissances": {
+    "version": "K*-rq-014",
+    "entrees": []
+   },
+   "remarques": "Omissions : le réfectoire, la fresque très repeinte, les douze pains et le plat de poisson (« twelve loaves » n'est pas « twelve apostles »), la nappe.\nLecture : « with ten apostles » est lu comme un décompte exact des apôtres à table avec le Christ : quantification énoncée exactement(10) sur les apôtres à table. « Christ at table with the twelve apostles » est lu comme au moins douze apôtres à table (« les douze » : tous), ce que dix ne satisfait pas : RS 11 (au_moins(12) est réfuté par un énoncé exactement(10)). Le langage n'a pas de dimension pour « au moins dix » contre « exactement dix » : le choix d'une lecture exacte est le mien. Doute : si dix est lu comme « au moins dix » (des apôtres repeints ou perdus), le statut serait inconnue ; le texte ne dit pas que la lacune est repeinte, seulement que la fresque l'est, et aucun contexte d'état d'origine n'est écrit.\nLe Christ à table : relation typée a_table (même mot des deux côtés). La réfutation porte sur la substitution Tb = la table (refutation_fermee faux, sans réserve : une seule table).",
+   "statut_calcule": {
+    "synthetique": "ecartee",
+    "principal": "ecartee",
+    "par_contexte": {
+     "principal": "ecartee"
+    },
+    "detail": {
+     "principal": {
+      "statut": "ecartee",
+      "ligne": 7,
+      "classes": [
+       {
+        "statut_local": "R",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": false
+     }
+    }
+   },
+   "hypotheses": []
+  }
+ ]
+}

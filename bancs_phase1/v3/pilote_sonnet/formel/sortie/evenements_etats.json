@@ -1,0 +1,848 @@
+{
+ "notation": "nr-1",
+ "famille": "evenements_etats",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/pilote_sonnet/formel/entree_evenements_etats.json",
+ "remarques": "ee-003 et ee-023 représentés, ee-017 non représenté (relation de résultat entre un état et l'événement antérieur : voir le manque). ee-023 se lit par contexte (la scène est dans la tapisserie, contexte emboîté).",
+ "cas": [
+  {
+   "id": "ee-003",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "ee-003",
+    "langue": "en",
+    "texte": "Oil on panel, Flemish, c. 1530. An old king lies on a curtained bed, surrounded by his courtiers. The king is not dead: his eyes are open and he stretches out a hand towards his eldest son, who kneels at the bedside. By the window a physician examines a flask.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "k",
+      "sorte": "individu",
+      "introduit_par": "ik"
+     },
+     {
+      "id": "l",
+      "sorte": "individu",
+      "introduit_par": "il"
+     },
+     {
+      "id": "c",
+      "sorte": "collection",
+      "introduit_par": "ic"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ik",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "k"
+        ],
+        "type": "oc:roi"
+       }
+      },
+      "provenance": {
+       "document": "ee-003",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 39,
+       "fin": 43,
+       "extrait": "king"
+      }
+     },
+     {
+      "id": "il",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "l"
+        ],
+        "type": "oc:lit"
+       }
+      },
+      "provenance": {
+       "document": "ee-003",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 64,
+       "fin": 67,
+       "extrait": "bed"
+      }
+     },
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "oc:courtisan"
+       }
+      },
+      "provenance": {
+       "document": "ee-003",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 87,
+       "fin": 96,
+       "extrait": "courtiers"
+      }
+     },
+     {
+      "id": "cl",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "k",
+         "l"
+        ],
+        "type": "oc:couche_sur"
+       }
+      },
+      "provenance": {
+       "document": "ee-003",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 44,
+       "fin": 67,
+       "extrait": "lies on a curtained bed"
+      }
+     },
+     {
+      "id": "au",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "k"
+        ],
+        "type": "oc:autour_de"
+       }
+      },
+      "provenance": {
+       "document": "ee-003",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 69,
+       "fin": 96,
+       "extrait": "surrounded by his courtiers"
+      }
+     },
+     {
+      "id": "nm",
+      "contenu": {
+       "non": {
+        "atomes": [
+         {
+          "pred": "type",
+          "args": [
+           "?s"
+          ],
+          "type": "oc:mort"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?s",
+           "k"
+          ],
+          "valeur": "porteur"
+         },
+         {
+          "pred": "ancrage",
+          "args": [
+           "?s"
+          ],
+          "valeur": "en_cours"
+         }
+        ],
+        "locales": [
+         [
+          "s",
+          "etat"
+         ]
+        ]
+       }
+      },
+      "qualification": {
+       "polarite": "neg"
+      },
+      "provenance": {
+       "document": "ee-003",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 98,
+       "fin": 118,
+       "extrait": "The king is not dead"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "ee-003:def",
+    "libelle": "a dead king lying on his bed, his courtiers around him",
+    "langue": "en",
+    "variables": [
+     [
+      "K",
+      "individu"
+     ],
+     [
+      "L",
+      "individu"
+     ],
+     [
+      "C",
+      "entite"
+     ],
+     [
+      "S",
+      "etat"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?K"
+       ],
+       "type": "oc:roi"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:mort"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?K"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "oc:lit"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?K",
+        "?L"
+       ],
+       "type": "oc:couche_sur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:courtisan"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?C",
+        "?K"
+       ],
+       "type": "oc:autour_de"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "ee-003:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 54,
+     "extrait": "a dead king lying on his bed, his courtiers around him"
+    }
+   },
+   "connaissances": {
+    "version": "K*-ee-003",
+    "entrees": []
+   },
+   "remarques": "Omissions : l'âge du roi (« old »), les rideaux, les yeux ouverts et la main tendue vers le fils aîné (ils appuient la vie mais n'ont pas à être écrits : la négation dite suffit), le fils, le médecin et la fiole, le panneau.\nLecture : « The king is not dead » est une proposition niée de l'auteur, sur l'état mort de porteur le roi, au moment figuré (ancrage en cours) ; « dead » est lu comme état (ONT § 1.1 : « déjà mort », « pas encore mort »). Le F vient de cette négation dite (guide § 3), jamais d'une absence. « lying on his bed » : relation couche_sur ; « his courtiers » : la possession n'est pas écrite, seul « autour de » l'est. La réfutation porte sur la substitution K = le roi (refutation_fermee faux au sens de § 3.12 L6), ce qui est sans réserve ici : le roi est le seul candidat.",
+   "statut_calcule": {
+    "synthetique": "ecartee",
+    "principal": "ecartee",
+    "par_contexte": {
+     "principal": "ecartee"
+    },
+    "detail": {
+     "principal": {
+      "statut": "ecartee",
+      "ligne": 7,
+      "classes": [
+       {
+        "statut_local": "R",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": false
+     }
+    }
+   },
+   "hypotheses": []
+  },
+  {
+   "id": "ee-017",
+   "represente": false,
+   "manque": [
+    {
+     "construction": "relation de résultat entre un état résultant et l'événement qui y mène (un corps sans vie suppose une mise à mort antérieure), avec l'ancrage antérieur de cet événement",
+     "extrait": "Le corps sans vie d'Abel gît dans un champ, près d'un autel où fume encore une offrande. Caïn s'enfuit vers la droite, une mâchoire d'âne à la main, en se retournant.",
+     "ce_qu_il_faudrait": "Une règle (ou une relation entre éventualités munie d'une sémantique) qui, d'un état résultant (mort, de porteur Abel, en cours), donne un événement antérieur (tuer, ancrage antérieure) et un référent pour cet événement : K ne crée aucun référent (RS 7) et § 9 dit qu'un état résultant ne donne pas l'ancrage antérieur de son événement. Elle devrait aussi séparer la part analytique (quelqu'un est mort avant le moment figuré) de la part abductive (c'est Caïn qui a tué Abel, avec la mâchoire d'âne qu'il tient).",
+     "pourquoi_on_ne_peut_omettre": "La définition dit « slaying » (participe actif : événement en cours) ; la scène figure l'accompli par son seul état résultant (ONT § 1.2 : les libellés distinguent les deux figurations). L'ancrage antérieur du meurtre est ce qui sépare ecartee de inconnue. Sans la règle, l'interpréteur ne trouve aucun événement de mise à mort et rend inconnue par silence ; avec l'événement écrit à la main comme une hypothèse de nature abduction (agent Caïn, patient Abel, instrument la mâchoire, ancrage antérieure), il rend ecartee_sous_hypotheses (calculé dans le brouillon, variante non retenue). Ni l'un ni l'autre n'est la lecture que la règle donnerait pour la part analytique ; écrire l'événement revient à forcer une projection que le langage ne spécifie pas."
+    }
+   ],
+   "remarques": "Tout le reste est écrivable : Abel mort (état mort, porteur Abel, en cours), Caïn fuyant (processus, en cours), la mâchoire d'âne tenue par Caïn, la définition (Caïn, Abel, la mâchoire, un événement tuer d'ancrage en cours de patient Abel, d'agent Caïn, d'instrument la mâchoire). Omissions possibles sans effet : le champ, l'autel et son offrande, la direction de la fuite, le regard en arrière, la chronique. Variante du brouillon : /tmp/claude-0/-home-user-oedipamaas/d0859811-5c3e-5c8f-a763-617b9258ee72/scratchpad/formal-representer_pilote/ee-017_variante_abduction.json (formation sans défaut, statut calculé ecartee_sous_hypotheses [abduction])."
+  },
+  {
+   "id": "ee-023",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "ee-023",
+    "langue": "en",
+    "texte": "Oil on canvas, Dutch, c. 1660. A young woman sits reading a letter in an interior, her maid standing beside her. On the back wall hangs a large tapestry whose scene shows a shepherd handing an apple to one of three goddesses. A rolled map lies on the table.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "id": "tapisserie",
+      "sorte": "emboite",
+      "parent": "principal"
+     }
+    ],
+    "referents": [
+     {
+      "id": "t",
+      "sorte": "individu",
+      "introduit_par": "it"
+     },
+     {
+      "id": "p",
+      "sorte": "individu",
+      "contexte": "tapisserie",
+      "introduit_par": "ip"
+     },
+     {
+      "id": "a",
+      "sorte": "individu",
+      "contexte": "tapisserie",
+      "introduit_par": "ia"
+     },
+     {
+      "id": "g",
+      "sorte": "individu",
+      "contexte": "tapisserie",
+      "introduit_par": "ig"
+     },
+     {
+      "id": "gs",
+      "sorte": "collection",
+      "contexte": "tapisserie",
+      "introduit_par": "igs"
+     },
+     {
+      "id": "e",
+      "sorte": "changement",
+      "contexte": "tapisserie",
+      "introduit_par": "ie"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "it",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "t"
+        ],
+        "type": "oc:tapisserie"
+       }
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 144,
+       "fin": 152,
+       "extrait": "tapestry"
+      }
+     },
+     {
+      "id": "ip",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "p"
+        ],
+        "type": "oc:berger"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 173,
+       "fin": 181,
+       "extrait": "shepherd"
+      }
+     },
+     {
+      "id": "ia",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "a"
+        ],
+        "type": "oc:pomme"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 193,
+       "fin": 198,
+       "extrait": "apple"
+      }
+     },
+     {
+      "id": "ig",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "g"
+        ],
+        "type": "oc:deesse"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 202,
+       "fin": 224,
+       "extrait": "one of three goddesses"
+      }
+     },
+     {
+      "id": "igs",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "gs"
+        ],
+        "type": "oc:deesse"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 209,
+       "fin": 224,
+       "extrait": "three goddesses"
+      }
+     },
+     {
+      "id": "ngs",
+      "contenu": {
+       "atome": {
+        "pred": "nombre",
+        "args": [
+         "gs"
+        ],
+        "valeur": 3
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 209,
+       "fin": 214,
+       "extrait": "three"
+      }
+     },
+     {
+      "id": "mem",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "g",
+         "gs"
+        ],
+        "type": "oc:membre_de"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 202,
+       "fin": 224,
+       "extrait": "one of three goddesses"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:remettre"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 182,
+       "fin": 189,
+       "extrait": "handing"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "p"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 182,
+       "fin": 189,
+       "extrait": "handing"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "a"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 182,
+       "fin": 189,
+       "extrait": "handing"
+      }
+     },
+     {
+      "id": "rd",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "g"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 182,
+       "fin": 189,
+       "extrait": "handing"
+      }
+     },
+     {
+      "id": "ae",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "qualification": {
+       "contexte": "tapisserie"
+      },
+      "provenance": {
+       "document": "ee-023",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 182,
+       "fin": 189,
+       "extrait": "handing"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "ee-023:def",
+    "libelle": "a shepherd giving an apple to one of three goddesses",
+    "langue": "en",
+    "variables": [
+     [
+      "P",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "A",
+      "individu"
+     ],
+     [
+      "G",
+      "individu"
+     ],
+     [
+      "GS",
+      "collection"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?P"
+       ],
+       "type": "oc:berger"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:donner_transfert"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?P"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": "oc:pomme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?A"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?G"
+       ],
+       "type": "oc:deesse"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?G"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?GS"
+       ],
+       "type": "oc:deesse"
+      },
+      {
+       "pred": "nombre",
+       "args": [
+        "?GS"
+       ],
+       "valeur": 3
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?G",
+        "?GS"
+       ],
+       "type": "oc:membre_de"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "ee-023:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 52,
+     "extrait": "a shepherd giving an apple to one of three goddesses"
+    }
+   },
+   "connaissances": {
+    "version": "K*-ee-023",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:remettre",
+      "sur": "oc:donner_transfert",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "remarques": "Omissions : toute la scène principale (la jeune femme qui lit, sa servante, la lettre, la carte, la table) : elle n'entre pas dans la définition.\nLecture (guide § 7, précision 1) : la scène du berger est celle de la tapisserie, un contexte emboîté (sorte emboite) enfant de la figuration ; la définition est satisfaite dans ce contexte et pas dans le principal. Le statut se lit par contexte. Le contexte n'est pas relié à un référent éventualité (RF3 ne l'exige que pour vision, rêve, parole, contrat, inscription) ; le référent t (la tapisserie) est écrit dans le principal pour mémoire.\n« one of three goddesses » est écrit comme une collection de trois déesses (type, nombre) et une relation typée membre_de, les deux côtés avec les mêmes mots : le langage n'a pas de membre-de réel (§ 9, les collections), mais la correspondance est ici syntaxique (même relation, même nombre des deux côtés), sans inférence sur les membres. « handing » ⊑ « giving » : K* k1 (même convention que ee-002).",
+   "statut_calcule": {
+    "synthetique": "etablie dans principal > tapisserie",
+    "principal": "inconnue",
+    "par_contexte": {
+     "principal": "inconnue",
+     "tapisserie": "etablie"
+    },
+    "detail": {
+     "principal": {
+      "statut": "inconnue",
+      "ligne": 12,
+      "classes": [
+       {
+        "statut_local": "N",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": false
+     },
+     "tapisserie": {
+      "statut": "etablie",
+      "ligne": 4,
+      "classes": [
+       {
+        "statut_local": "E",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": true
+     }
+    }
+   },
+   "hypotheses": []
+  }
+ ]
+}

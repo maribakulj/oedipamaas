@@ -1,0 +1,365 @@
+{
+ "notation": "nr-1",
+ "famille": "definitions_classification",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/pilote_sonnet/formel/entree_definitions_classification.json",
+ "remarques": "dc-014 représenté, avec un point d'identité à deux valeurs (attributs, inscription) : composition d'éléments existants (point, hypothèse identification_iconographique, énonciateur cité), non un exemple du guide. Voir les remarques du cas. K* : voir le fichier compositionnalite (conventions communes).",
+ "cas": [
+  {
+   "id": "dc-014",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "dc-014",
+    "langue": "fr",
+    "texte": "Panneau d'un polyptyque, Lombardie, vers 1410. Une sainte couronnée tient une roue brisée, hérissée de pointes. Sur le cadre, au-dessous d'elle, une inscription peinte porte « S. BARBARA ». Le fond d'or est usé.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "x",
+      "sorte": "individu",
+      "introduit_par": "ix"
+     },
+     {
+      "id": "r",
+      "sorte": "individu",
+      "introduit_par": "ir"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ix",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "x"
+        ],
+        "type": "oc:sainte"
+       }
+      },
+      "provenance": {
+       "document": "dc-014",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 51,
+       "fin": 57,
+       "extrait": "sainte"
+      }
+     },
+     {
+      "id": "ir",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "r"
+        ],
+        "type": "oc:roue"
+       }
+      },
+      "provenance": {
+       "document": "dc-014",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 78,
+       "fin": 82,
+       "extrait": "roue"
+      }
+     },
+     {
+      "id": "pr1",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "r"
+        ],
+        "type": "oc:brisee"
+       }
+      },
+      "provenance": {
+       "document": "dc-014",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 83,
+       "fin": 89,
+       "extrait": "brisée"
+      }
+     },
+     {
+      "id": "pr2",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "r"
+        ],
+        "type": "oc:herissee_de_pointes"
+       }
+      },
+      "provenance": {
+       "document": "dc-014",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 91,
+       "fin": 110,
+       "extrait": "hérissée de pointes"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "x",
+         "r"
+        ],
+        "type": "oc:tient"
+       }
+      },
+      "provenance": {
+       "document": "dc-014",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 68,
+       "fin": 73,
+       "extrait": "tient"
+      }
+     },
+     {
+      "id": "ia",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "x"
+        ],
+        "type": "oc:sainte_catherine_d_alexandrie"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "identification_iconographique",
+       "contenu": "sainte tenant une roue brisée hérissée de pointes : attribut de sainte Catherine d'Alexandrie"
+      },
+      "garde": {
+       "pid": [
+        "par_attributs"
+       ]
+      },
+      "provenance": {
+       "document": "dc-014",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 68,
+       "fin": 110,
+       "extrait": "tient une roue brisée, hérissée de pointes"
+      }
+     },
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "x"
+        ],
+        "type": "oc:sainte_barbe"
+       }
+      },
+      "qualification": {
+       "enonciateur": "cite:inscription"
+      },
+      "garde": {
+       "pid": [
+        "par_inscription"
+       ]
+      },
+      "provenance": {
+       "document": "dc-014",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 174,
+       "fin": 188,
+       "extrait": "« S. BARBARA »"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "pid",
+      "cote": "D",
+      "dimension": "identite",
+      "domaine": [
+       "par_attributs",
+       "par_inscription"
+      ],
+      "ancre": "la sainte à la roue (inscription S. BARBARA)",
+      "provenance": {
+       "document": "dc-014",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 174,
+       "fin": 188,
+       "extrait": "« S. BARBARA »"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "dc-014:def",
+    "libelle": "St Catherine of Alexandria with the broken spiked wheel",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "R",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "oc:sainte_catherine_d_alexandrie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?R"
+       ],
+       "type": "oc:roue"
+      },
+      {
+       "pred": "propriete",
+       "args": [
+        "?R"
+       ],
+       "type": "oc:brisee"
+      },
+      {
+       "pred": "propriete",
+       "args": [
+        "?R"
+       ],
+       "type": "oc:herissee_de_pointes"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?R"
+       ],
+       "type": "oc:accompagne_de"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "dc-014:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 55,
+     "extrait": "St Catherine of Alexandria with the broken spiked wheel"
+    }
+   },
+   "connaissances": {
+    "version": "K*-dc-014",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:tient",
+      "sur": "oc:accompagne_de",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     },
+     {
+      "entree": "incompatibilite",
+      "id": "k2",
+      "a": "oc:sainte_catherine_d_alexandrie",
+      "b": "oc:sainte_barbe",
+      "forme": "type",
+      "indexation": [
+       "porteur",
+       "contexte"
+      ],
+      "sorte": "identite",
+      "source": {
+       "ressource": "connaissance commune, aucune ressource consultée",
+       "validation": "à faire"
+      },
+      "statut": "non_attestee"
+     }
+    ]
+   },
+   "remarques": "Omissions : la couronne, le fond d'or usé, le cadre, le polyptyque.\nLecture à deux valeurs (point pid, dimension identite) : (1) par_attributs : la sainte à la roue brisée hérissée de pointes est Catherine d'Alexandrie, écrit comme hypothèse de nature identification_iconographique (guide § 1) ; (2) par_inscription : la légende « S. BARBARA » désigne la figure, écrit comme assertion de l'énonciateur cite:inscription (le texte ne dit pas que la figure est Barbe ; il dit ce que porte l'inscription). Le langage n'a pas de construction « une légende identifie la figure » : le contexte `inscription` ne satisfait rien et rien ne transmet son nom à la figure ; j'ai donc utilisé un point et l'énonciateur cité, qui sont des constructions existantes, sans trancher entre l'inscription et les attributs. À confirmer : c'est une composition de ma part, non un exemple du guide.\nK* : k1 (tenir ⊑ être accompagné de, attestee) ; k2 (Catherine et Barbe sont deux saintes distinctes, non_attestee : connaissance hagiographique, aucune ressource consultée) : elle ne fonde que le F de la lecture par_inscription, déjà tenu d'un énonciateur cité. Résultat calculé : classe par_attributs E_H [identification_iconographique], classe par_inscription N (le F n'est ni de l'auteur ni sans hypothèse) ; avec k2 attestee la seconde classe serait NC- et le statut synthétique resterait etablie_sous_hypotheses (variante calculée dans le brouillon). Doute : ce statut peut sembler faible face à une légende qui dit autre chose ; il résulte du fait que le langage ne laisse pas un énonciateur cité certifier un F (§ 3.6, C⁻).\n« with the broken spiked wheel » est lu comme une relation d'accompagnement (tenir en est une espèce).",
+   "statut_calcule": {
+    "synthetique": "etablie_sous_hypotheses",
+    "principal": "etablie_sous_hypotheses",
+    "par_contexte": {
+     "principal": "etablie_sous_hypotheses"
+    },
+    "detail": {
+     "principal": {
+      "statut": "etablie_sous_hypotheses",
+      "ligne": 6,
+      "classes": [
+       {
+        "statut_local": "E_H",
+        "interpretations": 1,
+        "cylindres": [
+         {
+          "pid": [
+           "par_attributs"
+          ]
+         }
+        ]
+       },
+       {
+        "statut_local": "N",
+        "interpretations": 1,
+        "cylindres": [
+         {
+          "pid": [
+           "par_inscription"
+          ]
+         }
+        ]
+       }
+      ],
+      "hypotheses": [
+       [
+        "identification_iconographique",
+        "sainte tenant une roue brisée hérissée de pointes : attribut de sainte Catherine d'Alexandrie"
+       ]
+      ],
+      "refutation_fermee": false,
+      "uniforme_plus": true
+     }
+    }
+   },
+   "hypotheses": [
+    {
+     "nature": "identification_iconographique",
+     "contenu": "sainte tenant une roue brisée hérissée de pointes : attribut de sainte Catherine d'Alexandrie"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+{
+ "role": "audit des langages : inventaire, classification, expérimentation Python et Prolog (docs/AUDIT_LANGAGES.md de la branche claude/bancs-v3)",
+ "fichiers": [
+  {
+   "chemin": "AUDIT_LANGAGES.md",
+   "taille": 62126,
+   "sha256": "8851f5edc6fed5a21efa58e4da6583865f8bab8cc2676c4a824514ef634a9432"
+  },
+  {
+   "chemin": "inventaire.py",
+   "taille": 16339,
+   "sha256": "f8504f4665581569181f9ab14a942d9865d83b39a39775075ef0e991f7a98433"
+  },
+  {
+   "chemin": "inventaire.tsv",
+   "taille": 23142,
+   "sha256": "b0b9529fd609f0b751816a8f6fdc5cbe9c90014180bfb7538687a05d8940beb6"
+  },
+  {
+   "chemin": "par_dossier.tsv",
+   "taille": 869,
+   "sha256": "c0313a00d4073eb8cb730f02c9bc297edf9db4e9689a3712664cd86c733fc18d"
+  },
+  {
+   "chemin": "classification/classer.py",
+   "taille": 6909,
+   "sha256": "211d801a358fc3cd38fc6df7431401024ed0f2bb4d4146251f07f173fd9d9131"
+  },
+  {
+   "chemin": "classification/classification_fichiers.tsv",
+   "taille": 19584,
+   "sha256": "b700820a7f0535f0ed4bb4c359030175b01fa363b9b44081b2e3952873ee8c0b"
+  },
+  {
+   "chemin": "classification/graphe_charge.py",
+   "taille": 1637,
+   "sha256": "d286ccea1d383d138d2340689970fa122abbe59e210f40c8b88d90602d4d2299"
+  },
+  {
+   "chemin": "experience/rejouer.sh",
+   "taille": 2076,
+   "sha256": "c57cd80f633719705dc6093059fa6129cf155cc8256427ea54f94fc0f6e6484d"
+  },
+  {
+   "chemin": "experience/commun/chrono.py",
+   "taille": 1439,
+   "sha256": "df8386e1d492168a9352e6e1b9aebf59c6d92155ee2307e1d96eb69e3c3358fc"
+  },
+  {
+   "chemin": "experience/commun/comparer_faits.pl",
+   "taille": 693,
+   "sha256": "1bbdb989f4a9aa8cc22be2c842bc02f1dd56ecaeb96a35e8803d46aa2a3a07e5"
+  },
+  {
+   "chemin": "experience/commun/extraire_echantillon.py",
+   "taille": 5853,
+   "sha256": "a2246215a6d8b15b7189f7a1d98e5e2d9dc7950fef18e352d939e6b1bf924879"
+  },
+  {
+   "chemin": "experience/commun/fabriquer_mutants.py",
+   "taille": 7254,
+   "sha256": "2e3893a8be0df2faee52744717a54f5a1fd0bc55e0401e0721883980f7737a79"
+  },
+  {
+   "chemin": "experience/commun/lancer_mutants.py",
+   "taille": 1906,
+   "sha256": "b1ac7cd21a107715007e6b250a2ce2c117e897e1fdeeb132790c7992e4168195"
+  },
+  {
+   "chemin": "experience/commun/loc.py",
+   "taille": 1278,
+   "sha256": "550c5737e8d5d4637f53bccf5511835a0065951d29974c93fbb740ab4dcd3a3f"
+  },
+  {
+   "chemin": "experience/commun/turtle_prolog.pl",
+   "taille": 865,
+   "sha256": "2ba46dfdc3ad43d42c89c55029e88afbdedeed3f3b47000fbae5ecf3c3952ca2"
+  },
+  {
+   "chemin": "experience/echantillon/s400/MANIFESTE.json",
+   "taille": 1014,
+   "sha256": "0a95dec954a05fc6c893e5ca931b8ded5cd059db0080bece753ce62f619c74b1"
+  },
+  {
+   "chemin": "experience/echantillon/s400/wn30_ids.txt",
+   "taille": 1294249,
+   "sha256": "ec863cc0b94b587db56783d830704e07acdbde44cfdfb3f29cc33393ed3a122f"
+  },
+  {
+   "chemin": "experience/echantillon/s400/wolf.tab",
+   "taille": 16386,
+   "sha256": "cfd2b438ef69f9b2891fd46b8da00d1a322ef224e82db86190edbd4e75fc6f6f"
+  },
+  {
+   "chemin": "experience/echantillon/s400/wonef.xml",
+   "taille": 124488,
+   "sha256": "da472d3cd45055d25f43da4fa6d2e9956e16247d89c8087771abe27a2d410478"
+  },
+  {
+   "chemin": "experience/echantillon_complet/MANIFESTE.json",
+   "taille": 1019,
+   "sha256": "43b41122a2a83b95a33a587ec00b379cf551a7db0267fe49c40feeab9fdbd43d"
+  },
+  {
+   "chemin": "experience/echantillon_complet/wn30_ids.txt",
+   "taille": 1294249,
+   "sha256": "ec863cc0b94b587db56783d830704e07acdbde44cfdfb3f29cc33393ed3a122f"
+  },
+  {
+   "chemin": "experience/echantillon_complet/wolf.tab",
+   "taille": 3269292,
+   "sha256": "d67166ef0cad6a5bc0bcc07b79ecd3b54aa6e8c868bfe8291429f749d9e0a3cd"
+  },
+  {
+   "chemin": "experience/mutants/s400/M00_sain.tsv",
+   "taille": 392143,
+   "sha256": "26d043538c88c29cef16462103d31a9aaf2e4592f000ab3c18eecaf6f34f64fd"
+  },
+  {
+   "chemin": "experience/mutants/s400/M01_source_inexistante.tsv",
+   "taille": 392146,
+   "sha256": "51892e5d83b3490242b9037da28ab1fe3ea96e77d63ed4acfa3d4718013b808b"
+  },
+  {
+   "chemin": "experience/mutants/s400/M02_source_sans_version.tsv",
+   "taille": 392130,
+   "sha256": "4f350066f88edaa5c922a5a6f7ed659175356ae3605566f477056023fc3a710b"
+  },
+  {
+   "chemin": "experience/mutants/s400/M03_alignement_sans_version_source.tsv",
+   "taille": 392130,
+   "sha256": "4b6c0b17b4d6d5c32651fb8794dbec8750d8a092a7f073c3875a2df62d4bc4b1"
+  },
+  {
+   "chemin": "experience/mutants/s400/M04_alignement_sans_version_pivot.tsv",
+   "taille": 392140,
+   "sha256": "f073b42e9055ff951e84ea95b6a23b3086a4206a9f1f331b1511b70c421fc575"
+  },
+  {
+   "chemin": "experience/mutants/s400/M05_pivot_inconnu.tsv",
+   "taille": 392143,
+   "sha256": "8613a3b6a7f2aee68fa1070c0ee15c9e9e5b10111edf820379e8ae1dc5fbb2e2"
+  },
+  {
+   "chemin": "experience/mutants/s400/M06_vote_atteste.tsv",
+   "taille": 392139,
+   "sha256": "2de92e60c55431a84d0a21fc904ffa0f5826bff628806f228e0ae71d980bc9d8"
+  },
+  {
+   "chemin": "experience/mutants/s400/M07_attestee_sans_attestation.tsv",
+   "taille": 392139,
+   "sha256": "f5073a89b632cb2ff9544e0d6a778a17a4ec112a25e44e4ba21c4965c66bae7f"
+  },
+  {
+   "chemin": "experience/mutants/s400/M08_non_attestee_avec_attestation.tsv",
+   "taille": 392160,
+   "sha256": "6cfd70e6cbfe1f92207f4080d1745766f9eeeff9002e740b62930294e1f1cf1a"
+  },
+  {
+   "chemin": "experience/mutants/s400/M09_identifiant_double.tsv",
+   "taille": 392289,
+   "sha256": "6ea4d5a29eacfe0921f9a7e858b4568345edd93118566c3254f8ffc7056aa34b"
+  },
+  {
+   "chemin": "experience/mutants/s400/M10_entree_non_alignee.tsv",
+   "taille": 392023,
+   "sha256": "78f816ecdd0cffd503caf51e786ce13945d3410091dd100faad0bc948e64a30d"
+  },
+  {
+   "chemin": "experience/mutants/s400/M11_rang_faux.tsv",
+   "taille": 392143,
+   "sha256": "51a75f75461a2c9a25bc86cb83cbc8b0d9a8e7c5848a507f446e6d0de4ede182"
+  },
+  {
+   "chemin": "experience/mutants/s400/M12_deux_versions_deux_voix.tsv",
+   "taille": 392619,
+   "sha256": "42c5ce922346a49cfe5553c8f66c05e84c401a3b28c41716ccce8d20e5af6070"
+  },
+  {
+   "chemin": "experience/mutants/s400/M13_vote_entree_inexistante.tsv",
+   "taille": 392172,
+   "sha256": "bbc613c950f0decea4f264c8011c60d17f194dc61451b5a43a92f75bb155ba84"
+  },
+  {
+   "chemin": "experience/mutants/s400/M14_licence_incoherente.tsv",
+   "taille": 392138,
+   "sha256": "4f3e9dcc0d1199a8b3a32ce087cb80c222bdfa0e7e43d8a19770ae80de8474f9"
+  },
+  {
+   "chemin": "experience/mutants/s400/M15_temoin_attestee_legitime.tsv",
+   "taille": 392172,
+   "sha256": "6f265763ada02194250e5df2af31e9381d5ec6cdef519eac99eb819bc3d967f3"
+  },
+  {
+   "chemin": "experience/mutants/s400/M16_statut_hors_domaine.tsv",
+   "taille": 392139,
+   "sha256": "05e17bc420b1662bd1403536a36a0d8f7c056c840d706af6aa76bccca1358aec"
+  },
+  {
+   "chemin": "experience/mutants/s400/M17_vote_sans_entree.tsv",
+   "taille": 392109,
+   "sha256": "943c629d5e19ba26238d7a8158ad4decce915047ebcec8d0d0ebd52152e62a02"
+  },
+  {
+   "chemin": "experience/mutants/s400/attendus.tsv",
+   "taille": 38098,
+   "sha256": "ea544ce8615f7f8312df12e360249546d054df1ac97cee5f3b0b244cc492f88f"
+  },
+  {
+   "chemin": "experience/pl/construire_k.pl",
+   "taille": 11151,
+   "sha256": "bfed6e4267ae229918e0a881b5938dbcff0d9363b6d88478b491988259bcfd0b"
+  },
+  {
+   "chemin": "experience/pl/test_k.pl",
+   "taille": 1329,
+   "sha256": "a834b9720c2aec66f65ea189316a96de09b1c5db2b1b67c4ba35a3bab5790a4c"
+  },
+  {
+   "chemin": "experience/py/construire_k.py",
+   "taille": 9191,
+   "sha256": "a41042faa5d9662cc908a6d9a381e5113575f93a27e597f310fe741d4a8b307a"
+  },
+  {
+   "chemin": "experience/py/test_k.py",
+   "taille": 876,
+   "sha256": "c554413d02c5bf77147d368e3eb48f0a32f3ae59a6932174de5125158907daf4"
+  },
+  {
+   "chemin": "experience/py/__pycache__/construire_k.cpython-313.pyc",
+   "taille": 17937,
+   "sha256": "5ec8d48160c983600e1286ca1d4b7c01c14a7f25ad8a560e4213cfaabbf40ae6"
+  },
+  {
+   "chemin": "experience/py/__pycache__/test_k.cpython-313-pytest-9.1.1.pyc",
+   "taille": 3099,
+   "sha256": "c1791774946af130d5a43bd64065c50f4be7efa4451fa59fca4fc0a6264a3787"
+  },
+  {
+   "chemin": "experience/resultats/chrono_turtle.tsv",
+   "taille": 44,
+   "sha256": "e2d4ef97731c426e7b9f1c8f28310f53858988bed89a4da32cb051dc44b3824e"
+  },
+  {
+   "chemin": "experience/resultats/mutants_s400.tsv",
+   "taille": 1760,
+   "sha256": "ec6c8c36a3fb2b28251fd5d65e93e6671e2870d84a324710d04a850ba9e7fa0c"
+  },
+  {
+   "chemin": "experience/resultats/complet_v2/chrono_complet.tsv",
+   "taille": 693,
+   "sha256": "8999215fc3ad5159106b7977c5a2c99ded462686b7cbbae10e917db4f5e3fb1c"
+  },
+  {
+   "chemin": "experience/resultats/s400/chrono_s400.tsv",
+   "taille": 1190,
+   "sha256": "602882d900eb8a123be01577dfd838c1ea2dcb27bb96dc4d43369254e2f53f52"
+  },
+  {
+   "chemin": "experience/resultats/s400/k_faits_pl.pl",
+   "taille": 154035,
+   "sha256": "140c189f52c77c5c156cbe4ef0cafd5cf2c2724482d0766b78ef597cb8c71748"
+  },
+  {
+   "chemin": "experience/resultats/s400/k_faits_py.pl",
+   "taille": 154035,
+   "sha256": "140c189f52c77c5c156cbe4ef0cafd5cf2c2724482d0766b78ef597cb8c71748"
+  },
+  {
+   "chemin": "experience/resultats/s400/k_pl.tsv",
+   "taille": 392143,
+   "sha256": "26d043538c88c29cef16462103d31a9aaf2e4592f000ab3c18eecaf6f34f64fd"
+  },
+  {
+   "chemin": "experience/resultats/s400/k_py.tsv",
+   "taille": 392143,
+   "sha256": "26d043538c88c29cef16462103d31a9aaf2e4592f000ab3c18eecaf6f34f64fd"
+  },
+  {
+   "chemin": "experience/resultats/v1_divergence/chrono_complet_v1.tsv",
+   "taille": 154,
+   "sha256": "684c5056ea88839aafc8f661f15bc7df62f510046ad262fc50f18211c1998808"
+  },
+  {
+   "chemin": "experience/resultats/v1_divergence/complet_k_py_contre_k_pl.diff",
+   "taille": 454,
+   "sha256": "fdd9371c982d52785ced7b1cc0c20fbb311dc36403653758aec5d1fe2f0916f5"
+  },
+  {
+   "chemin": "experience/spec/SPEC.md",
+   "taille": 5383,
+   "sha256": "1b4405aa2cb78a71a2e6135f256d2626f50056e172e714462188b6c53531392f"
+  }
+ ],
+ "mis_a_jour": "2026-11-28"
+}

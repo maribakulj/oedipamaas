@@ -1,0 +1,362 @@
+{
+ "notation": "nr-1",
+ "famille": "niveaux_representation",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/pilote_sonnet/formel/entree_niveaux_representation.json",
+ "remarques": "nr-012 représenté ; statut par contexte (inconnue au principal, établie dans l'état d'origine).",
+ "cas": [
+  {
+   "id": "nr-012",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "nr-012",
+    "langue": "en",
+    "texte": "Fragment of a fresco detached from a chapel wall. Of the Virgin enthroned, the head and hands are well preserved; of the Christ Child once seated on her lap, only the feet survive, the rest of the paint layer having flaked away. A later repainting covers the lower edge.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "id": "origine",
+      "sorte": "etat_d_origine",
+      "parent": "principal"
+     }
+    ],
+    "referents": [
+     {
+      "id": "v",
+      "sorte": "individu",
+      "introduit_par": "iv"
+     },
+     {
+      "id": "t",
+      "sorte": "etat",
+      "introduit_par": "it"
+     },
+     {
+      "id": "c",
+      "sorte": "individu",
+      "introduit_par": "ic"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vierge_marie"
+       }
+      },
+      "provenance": {
+       "document": "nr-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 57,
+       "fin": 63,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "it",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "t"
+        ],
+        "type": "oc:trone"
+       }
+      },
+      "provenance": {
+       "document": "nr-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 64,
+       "fin": 73,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "t",
+         "v"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "nr-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 64,
+       "fin": 73,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "oc:enfant_jesus"
+       }
+      },
+      "provenance": {
+       "document": "nr-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 121,
+       "fin": 133,
+       "extrait": "Christ Child"
+      }
+     },
+     {
+      "id": "ov",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vierge_marie"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "nr-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 57,
+       "fin": 63,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "ot",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "t"
+        ],
+        "type": "oc:trone"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "nr-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 64,
+       "fin": 73,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "ort",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "t",
+         "v"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "nr-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 64,
+       "fin": 73,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "oc",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "c"
+        ],
+        "type": "oc:enfant_jesus"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "nr-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 121,
+       "fin": 133,
+       "extrait": "Christ Child"
+      }
+     },
+     {
+      "id": "og",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "c",
+         "v"
+        ],
+        "type": "oc:assis_sur_les_genoux_de"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "nr-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 134,
+       "fin": 156,
+       "extrait": "once seated on her lap"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "nr-012:def",
+    "libelle": "the Virgin enthroned with the Christ-child seated on her lap",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "Tr",
+      "etat"
+     ],
+     [
+      "C",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:vierge_marie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Tr"
+       ],
+       "type": "oc:trone"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?Tr",
+        "?M"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:enfant_jesus"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?C",
+        "?M"
+       ],
+       "type": "oc:assis_sur_les_genoux_de"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "nr-012:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 60,
+     "extrait": "the Virgin enthroned with the Christ-child seated on her lap"
+    }
+   },
+   "connaissances": {
+    "version": "K*-nr-012",
+    "entrees": []
+   },
+   "remarques": "Omissions : la tête et les mains conservées de la Vierge, la fresque détachée du mur de la chapelle, le repeint du bord inférieur (il ne dit rien de l'état d'origine ni de la définition).\nLecture (guide § 7, précision 1) : « once seated on her lap » dit l'état d'origine de l'œuvre altérée ; il est écrit dans le contexte etat_d_origine, enfant du principal (comme mn-004). Dans l'état actuel (principal), seuls les pieds de l'Enfant subsistent : l'Enfant y est présent (c) mais sa position assise n'y est pas dite, d'où inconnue au principal ; dans l'état d'origine la définition est établie. Les faits communs (la Vierge, le trône) sont répétés dans le contexte d'origine, parce que l'évaluation d'un contexte ne lit que ses propres faits.\nDoute : les pieds seuls pourraient suffire à tenir l'Enfant pour figuré au principal ; je l'ai écrit présent et non assis. « enthroned » est lu comme l'état trone de porteur la Vierge (même convention que mn-004).",
+   "statut_calcule": {
+    "synthetique": "etablie dans principal > origine",
+    "principal": "inconnue",
+    "par_contexte": {
+     "principal": "inconnue",
+     "origine": "etablie"
+    },
+    "detail": {
+     "principal": {
+      "statut": "inconnue",
+      "ligne": 12,
+      "classes": [
+       {
+        "statut_local": "N",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": false
+     },
+     "origine": {
+      "statut": "etablie",
+      "ligne": 4,
+      "classes": [
+       {
+        "statut_local": "E",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [],
+      "refutation_fermee": false,
+      "uniforme_plus": true
+     }
+    }
+   },
+   "hypotheses": []
+  }
+ ]
+}

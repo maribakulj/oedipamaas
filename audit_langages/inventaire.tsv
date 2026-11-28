@@ -1,0 +1,198 @@
+chemin	langage	lignes	lignes_code	imports_internes	imports_externes	appelle_prolog	appele_par_python	teste_par	point_entree	dernier_commit
+oedipamaas/__init__.py	python	3	1			non	n/a	tests/test_moteur.py	non	2026-11-22
+oedipamaas/base.py	python	268	214	.;.wikidata		oui	n/a	tests/test_moteur.py	non	2026-11-22
+oedipamaas/cli.py	python	118	98	.base;.lecture;.moteur;.semantique		non	n/a	tests/test_moteur.py	oui	2026-11-23
+oedipamaas/lecture.py	python	168	135	.		non	n/a	tests/test_moteur.py	non	2026-11-22
+oedipamaas/moteur.py	python	562	462	.;.lecture;.recherche;.semantique	janus_swi;numpy	oui	n/a	tests/test_moteur.py	non	2026-11-22
+oedipamaas/recherche.py	python	334	269	.;.lecture	numpy	non	n/a	tests/test_moteur.py	non	2026-11-22
+oedipamaas/references.py	python	91	70			non	n/a	tests/test_moteur.py	non	2026-11-22
+oedipamaas/regles/regles.pl	prolog	120	74			n/a	oui		non	2026-11-22
+oedipamaas/semantique.py	python	110	84		numpy;sentence_transformers	non	n/a		non	2026-11-22
+oedipamaas/socle/__init__.py	python	0	0			non	n/a	tests/test_socle_cles.py;tests/test_socle_recherche.py	non	2026-11-23
+oedipamaas/socle/arbre.pl	prolog	119	87	notation		n/a	oui	tests/test_socle_arbre.py	non	2026-11-23
+oedipamaas/socle/assertions.pl	prolog	164	133			n/a	oui		non	2026-11-26
+oedipamaas/socle/cadres.pl	prolog	262	166	arbre;lexique;libelles;morphologie;specialisation		n/a	oui	tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/candidats.py	python	43	32	oedipamaas.socle		oui	n/a		oui	2026-11-24
+oedipamaas/socle/cles.pl	prolog	130	89	lexique;libelles;morphologie;specialisation		n/a	oui	tests/test_socle_cles.py;tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/codage.pl	prolog	261	150	connaissances_en;connaissances_fr;normalisation;satisfaction;verificateur	apply;lists;ordsets;pairs	n/a	oui	tests/plunit/test_codage.pl	non	2026-11-26
+oedipamaas/socle/coder.py	python	93	70	oedipamaas.socle	janus_swi	oui	n/a	tests/test_socle_moteur_ordres.py	oui	2026-11-24
+oedipamaas/socle/commande.pl	prolog	5	3	oedipamaas		n/a	non		oui	2026-11-23
+oedipamaas/socle/compilation.pl	prolog	114	69	arbre;raisonnement	ordsets;yall	n/a	non		non	2026-11-24
+oedipamaas/socle/compiler_decision.py	python	76	51			non	n/a	tests/test_socle_decision.py	oui	2026-11-24
+oedipamaas/socle/compiler_iconclass.py	python	154	119			oui	n/a	tests/test_socle_arbre.py;tests/test_socle_cles.py;tests/test_socle_decision.py;tests/test_socle_lexique.py;tests/test_socle_libelles.py;tests/test_socle_recherche.py	oui	2026-11-23
+oedipamaas/socle/compiler_ressources.py	python	68	46		xlrd	oui	n/a		oui	2026-11-24
+oedipamaas/socle/compiler_wordnet.py	python	93	72			oui	n/a	tests/test_socle_cles.py;tests/test_socle_lexique.py;tests/test_socle_morphologie.py;tests/test_socle_recherche.py	oui	2026-11-24
+oedipamaas/socle/conllu.pl	prolog	75	55			n/a	oui	tests/plunit/test_conllu.pl	non	2026-11-23
+oedipamaas/socle/connaissances_commun.pl	prolog	37	24	raisonnement		n/a	non		non	2026-11-26
+oedipamaas/socle/connaissances_en.pl	prolog	16	10	connaissances_commun		n/a	non		non	2026-11-25
+oedipamaas/socle/connaissances_fr.pl	prolog	16	10	connaissances_commun		n/a	non		non	2026-11-25
+oedipamaas/socle/construire_base.py	python	45	33		janus_swi	oui	n/a		oui	2026-11-24
+oedipamaas/socle/decision.pl	prolog	196	141	arbre;sans_descendant(Ns)		n/a	oui	tests/test_socle_decision.py	non	2026-11-24
+oedipamaas/socle/definitions.pl	prolog	553	369	ADJ;ADP;C);CCONJ']) );M;M]>>( M = mot(_;M]>>( arg(4;PUNCT;['DET;\+ memberchk(C;_;_) );arbre;interpretation;libelles_iconclass;meme_personne(Kn);raisonnement;sujets	apply;lists;pcre;yall	n/a	non	tests/plunit/test_compilateur.pl	non	2026-11-27
+oedipamaas/socle/description.pl	prolog	11	7			n/a	oui	tests/test_socle_cles.py;tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/faits_description.py	python	107	72			non	n/a	tests/test_socle_cles.py;tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/hypotheses.pl	prolog	129	66	arbre		n/a	non		non	2026-11-24
+oedipamaas/socle/inclusion.pl	prolog	214	146	requetes;satisfaction	apply;lists	n/a	oui	tests/plunit/test_inclusion.pl;tests/plunit/test_inclusion_generatif.pl	non	2026-11-27
+oedipamaas/socle/interpretation.pl	prolog	908	651	connaissances_en;connaissances_fr;mondes;satisfaction		n/a	non		non	2026-11-27
+oedipamaas/socle/lexique.pl	prolog	139	99	libelles;morphologie		n/a	oui	tests/test_socle_cles.py;tests/test_socle_lexique.py;tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/libelles.pl	prolog	281	199	arbre		n/a	oui	tests/test_socle_libelles.py	non	2026-11-23
+oedipamaas/socle/libelles_iconclass.pl	prolog	198	116	arbre;sujets	pcre	n/a	non		non	2026-11-24
+oedipamaas/socle/mondes.pl	prolog	276	179			n/a	non		non	2026-11-24
+oedipamaas/socle/morphologie.pl	prolog	81	56			n/a	oui	tests/test_socle_morphologie.py	non	2026-11-23
+oedipamaas/socle/moteur.py	python	115	84	oedipamaas.socle;oedipamaas.socle.candidats		oui	n/a	tests/test_socle_moteur_ordres.py	oui	2026-11-24
+oedipamaas/socle/noms.pl	prolog	141	85	lexique;libelles;morphologie;notation;specialisation		n/a	oui	tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/normalisation.pl	prolog	211	124		apply;lists;ordsets	n/a	non		non	2026-11-26
+oedipamaas/socle/notation.pl	prolog	175	115		dcg	n/a	oui	tests/test_socle_decision.py;tests/test_socle_notation.py	non	2026-11-23
+oedipamaas/socle/oedipamaas.pl	prolog	204	167	Morpho;Sens;assertions;interpretation;raisonnement;udpipe	crypto;json;main;optparse	n/a	non		non	2026-11-24
+oedipamaas/socle/preuve.pl	prolog	48	29	recherche;specialisation	json	n/a	oui	tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/projection.pl	prolog	206	124	arbre;assertions;compilation;raisonnement	ordsets	n/a	non		non	2026-11-24
+oedipamaas/socle/raisonnement.pl	prolog	354	242	arbre;assertions;notation		n/a	non		non	2026-11-24
+oedipamaas/socle/recherche.pl	prolog	192	130	arbre;lexique;libelles;morphologie		n/a	oui	tests/test_socle_cles.py;tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/requetes.pl	prolog	115	86		apply;lists	n/a	oui	tests/plunit/test_noyau.pl	non	2026-11-26
+oedipamaas/socle/requetes_iconclass.pl	prolog	466	318	C]>>( C = type(_;_) ; C = genre(_) );_) ; C = nom(_;arbre;definitions;interpretation;raisonnement;requetes	apply;lists;pairs;yall	n/a	non	tests/plunit/test_compilateur.pl	non	2026-11-27
+oedipamaas/socle/satisfaction.pl	prolog	639	467	assertions;requetes	apply;assoc;lists;pairs;solution_sequences;time;yall	n/a	oui	tests/oracle/differentiel.py;tests/oracle/oracle_noyau.py;tests/plunit/test_noyau.pl;tests/plunit/test_noyau_generatif.pl	non	2026-11-26
+oedipamaas/socle/satisfaction_reference.pl	prolog	390	313		apply;lists;pairs	n/a	oui	tests/oracle/differentiel.py;tests/oracle/oracle_noyau.py;tests/plunit/test_noyau.pl;tests/plunit/test_noyau_generatif.pl	non	2026-11-26
+oedipamaas/socle/scene.pl	prolog	90	60	assertions;raisonnement;sujets		n/a	non		non	2026-11-24
+oedipamaas/socle/sens.pl	prolog	98	58	arbre;libelles;morphologie		n/a	non		non	2026-11-24
+oedipamaas/socle/specialisation.pl	prolog	227	143	arbre;lexique;libelles;morphologie;recherche		n/a	oui	tests/test_socle_cles.py;tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/stanza_textes.py	python	79	53		stanza	non	n/a		oui	2026-11-24
+oedipamaas/socle/sujets.pl	prolog	388	254	arbre;raisonnement;udpipe	pcre	n/a	non		non	2026-11-24
+oedipamaas/socle/traits.pl	prolog	219	156	arbre;cadres;cles;noms;recherche;specialisation		n/a	oui	tests/test_socle_recherche.py	non	2026-11-24
+oedipamaas/socle/udpipe.pl	prolog	127	91	conllu	crypto;dicts;process;readutil	n/a	oui	tests/plunit/test_conllu.pl	non	2026-11-24
+oedipamaas/socle/verificateur.pl	prolog	372	298	assertions	apply;lists	n/a	oui	tests/plunit/test_noyau.pl	non	2026-11-27
+oedipamaas/texte.py	python	99	69			non	n/a	tests/test_moteur.py	non	2026-11-22
+oedipamaas/wikidata.py	python	49	33	.		non	n/a	tests/test_moteur.py	non	2026-11-22
+outils/bancs/adaptateur_scene.pl	prolog	92	46		apply;lists	n/a	oui		non	2026-11-28
+outils/bancs/comparer_annotations.py	python	75	54			non	n/a		oui	2026-11-28
+outils/bancs/comparer_formel.py	python	164	128	semantique_reference		non	n/a	tests/test_bancs.py	oui	2026-11-28
+outils/bancs/comparer_niveaux.py	python	97	75			non	n/a		oui	2026-11-28
+outils/bancs/mesurer_moteur.pl	prolog	193	152	bancs(adaptateur_scene);socle(codage);socle(conllu);socle(definitions);socle(libelles_iconclass);socle(oedipamaas);socle(requetes_iconclass);socle(satisfaction);socle(sujets);socle(udpipe);socle(verificateur)	apply;json;lists;pairs;process	n/a	oui		oui	2026-11-28
+outils/bancs/mesurer_moteur.py	python	543	430			oui	n/a	tests/test_mesure_bancs.py	oui	2026-11-28
+outils/bancs/migrer_v3.py	python	54	36			non	n/a		oui	2026-11-28
+outils/bancs/rapport.py	python	91	77			non	n/a		oui	2026-11-27
+outils/bancs/repartir.py	python	64	43			non	n/a		oui	2026-11-27
+outils/bancs/reporter_reference.py	python	44	32			non	n/a		oui	2026-11-28
+outils/bancs/sens.py	python	29	20			non	n/a		oui	2026-11-27
+outils/bancs/sens_fr.py	python	44	34			non	n/a		oui	2026-11-27
+outils/bancs/statut_par_contexte.py	python	52	26			non	n/a		oui	2026-11-28
+outils/bancs/valider_cas.py	python	283	230			non	n/a		oui	2026-11-28
+outils/croise/classer.py	python	75	53			non	n/a		oui	2026-11-27
+outils/croise/croiser.pl	prolog	100	74	socle(codage);socle(oedipamaas);socle(satisfaction);socle(verificateur)	json	n/a	oui		oui	2026-11-27
+outils/croise/diagnostiquer.py	python	108	83			non	n/a		oui	2026-11-27
+outils/croise/sonder.pl	prolog	66	47	socle(codage);socle(oedipamaas);socle(satisfaction)	json	n/a	oui		oui	2026-11-27
+outils/croise/tableaux.py	python	190	138			non	n/a	tests/test_croise.py	oui	2026-11-27
+outils/definitions/compiler_definitions.pl	prolog	49	35	socle(compilation);socle(definitions);socle(oedipamaas)		n/a	non		oui	2026-11-24
+outils/definitions/lire_libelles.pl	prolog	78	56	socle(arbre);socle(conllu);socle(libelles_iconclass);socle(morphologie);socle(sujets);socle(udpipe)	json;process	n/a	non		oui	2026-11-24
+outils/definitions/stanza_conllu.py	python	92	60		stanza	non	n/a		oui	2026-11-24
+outils/definitions/tirage_jugement.pl	prolog	58	48		json;random	n/a	non		oui	2026-11-24
+outils/definitions/tirage_vertical.pl	prolog	51	33		json;random	n/a	non		oui	2026-11-25
+outils/graphes/analyse_roles.py	python	160	124			non	n/a		oui	2026-11-26
+outils/graphes/apparier.py	python	122	89			non	n/a	tests/test_graphes.py	oui	2026-11-27
+outils/graphes/archiver.py	python	138	103			non	n/a		oui	2026-11-27
+outils/graphes/coder_graphes.pl	prolog	62	48	socle(codage);socle(oedipamaas)	json	n/a	oui		oui	2026-11-26
+outils/graphes/comparer_graphes.py	python	1070	829			non	n/a	tests/test_graphes.py	oui	2026-11-27
+outils/graphes/decisions_qualificatifs.py	python	42	34			non	n/a		non	2026-11-27
+outils/graphes/echantillon_relecture.py	python	115	89			non	n/a		oui	2026-11-26
+outils/graphes/effet_codage.py	python	67	48			non	n/a		oui	2026-11-26
+outils/graphes/lire.pl	prolog	63	44	socle(normalisation);socle(oedipamaas)	json	n/a	oui		oui	2026-11-26
+outils/graphes/premisses.pl	prolog	91	51	socle(assertions);socle(satisfaction)	json	n/a	oui	tests/test_graphes.py	oui	2026-11-27
+outils/graphes/relire.pl	prolog	64	52	socle(normalisation);socle(oedipamaas)	json	n/a	non		oui	2026-11-27
+outils/graphes/valider_annotations.py	python	110	95			non	n/a		oui	2026-11-26
+outils/graphes/vers_faits.py	python	123	89			non	n/a		oui	2026-11-27
+outils/graphes/version_banc.py	python	89	66			non	n/a	tests/test_croise.py	oui	2026-11-27
+outils/inference/analyser.py	python	122	99			non	n/a		oui	2026-11-27
+outils/inference/experience.pl	prolog	328	217	socle(codage);socle(oedipamaas);socle(satisfaction)	json	n/a	oui		oui	2026-11-27
+outils/inference/morphosemantique.py	python	33	20		xlrd	non	n/a		oui	2026-11-27
+outils/mesure/actions_sens_c3.pl	prolog	46	34	socle(normalisation);socle(oedipamaas)	json	n/a	non		oui	2026-11-27
+outils/mesure/banc.py	python	38	28	~mesure		non	n/a		oui	2026-11-24
+outils/mesure/coherence_c3.py	python	59	40			non	n/a		oui	2026-11-27
+outils/mesure/composes_c3.pl	prolog	41	26	socle(oedipamaas)	json	n/a	non		oui	2026-11-27
+outils/mesure/echantillon_j2.py	python	45	33			non	n/a		oui	2026-11-24
+outils/mesure/echantillonner_c3.py	python	61	43			non	n/a		oui	2026-11-27
+outils/mesure/etablis.py	python	45	38	~mesure		non	n/a		oui	2026-11-24
+outils/mesure/mesure.py	python	156	110			non	n/a		oui	2026-11-24
+outils/mesure/resume_reference.py	python	181	145			non	n/a		oui	2026-11-26
+outils/mesure/resumer_c3.py	python	116	84			non	n/a		oui	2026-11-27
+outils/mesure/reunir_tranches.py	python	82	63			non	n/a		oui	2026-11-27
+outils/mesure/roles_verbnet.py	python	107	80			non	n/a		oui	2026-11-27
+outils/mesure/sites_c3.pl	prolog	51	39	socle(oedipamaas);socle(requetes_iconclass)	json	n/a	oui		oui	2026-11-27
+outils/mesure/sous_reference.py	python	31	19			non	n/a		oui	2026-11-24
+outils/mesure/tirer_banc.py	python	34	21			non	n/a		oui	2026-11-24
+outils/mesure/transitions_c3.py	python	19	13			non	n/a		non	2026-11-27
+outils/mesure/voir_echantillon_c3.py	python	10	6			non	n/a		non	2026-11-27
+outils/moisson/cartels.py	python	153	118			non	n/a		oui	2026-11-24
+outils/moisson/joconde.py	python	64	48			non	n/a		oui	2026-11-24
+outils/moisson/moisson.py	python	161	122			non	n/a		oui	2026-11-23
+outils/noyau/injection.py	python	283	245			oui	n/a		oui	2026-11-27
+outils/qualification/tirer_jeu_independant.py	python	133	104			non	n/a		oui	2026-11-27
+outils/requetes/comparer.pl	prolog	60	38	socle(connaissances_en);socle(connaissances_fr);socle(inclusion);socle(normalisation);socle(oedipamaas);socle(satisfaction)	json	n/a	oui		oui	2026-11-26
+outils/requetes/compiler_tout.pl	prolog	35	28	socle(oedipamaas);socle(requetes_iconclass)		n/a	non		oui	2026-11-25
+outils/requetes/compiler_vertical.pl	prolog	22	18	socle(oedipamaas);socle(requetes_iconclass)	json	n/a	non		oui	2026-11-25
+outils/ressources/commun.py	python	219	166			non	n/a		non	2026-11-28
+outils/ressources/contexte.py	python	165	137	~commun;~mesurer		non	n/a		oui	2026-11-28
+outils/ressources/corpus.py	python	134	104	~commun	stanza	non	n/a		oui	2026-11-28
+outils/ressources/echantillon.py	python	250	206	~commun		non	n/a		oui	2026-11-28
+outils/ressources/lexiques.py	python	299	243	~commun		non	n/a		oui	2026-11-28
+outils/ressources/manifeste.py	python	87	75	~commun		non	n/a		oui	2026-11-28
+outils/ressources/mesurer.py	python	318	275	~commun		non	n/a		oui	2026-11-28
+outils/sujets/construire.pl	prolog	15	11	socle(morphologie);socle(raisonnement);socle(sujets)		n/a	non		oui	2026-11-24
+outils/sujets/diagnostic.pl	prolog	36	30	socle(arbre);socle(hypotheses);socle(morphologie)	json	n/a	non		oui	2026-11-24
+outils/sujets/mesure.pl	prolog	46	35	F;socle(sujets)	json;random	n/a	non		oui	2026-11-24
+outils/sujets/mesure_scene.py	python	98	76			non	n/a		oui	2026-11-24
+outils/sujets/mesure_sujets.py	python	51	39	~mesure		non	n/a		oui	2026-11-24
+outils/sujets/scenes.pl	prolog	62	51	socle(hypotheses);socle(oedipamaas);socle(scene)	json	n/a	non		oui	2026-11-24
+outils/vertical/coder.pl	prolog	214	159	socle(codage);socle(oedipamaas)	json;process;readutil;time	n/a	oui		oui	2026-11-27
+outils/vertical/mesurer.py	python	33	20			oui	n/a		oui	2026-11-25
+outils/vertical/projeter.pl	prolog	66	48	socle(oedipamaas);socle(projection)	json;time	n/a	oui		oui	2026-11-25
+semantique_reference/__init__.py	python	13	1			non	n/a	tests/test_semantique_reference.py;tests/test_semantique_reference_exemples.py	non	2026-11-28
+semantique_reference/banc.py	python	54	38	.		non	n/a	tests/test_semantique_reference_exemples.py	oui	2026-11-28
+semantique_reference/connaissances.py	python	151	107	.syntaxe		non	n/a		non	2026-11-28
+semantique_reference/formation.py	python	697	633	.connaissances;.inclusion;.interprete;.syntaxe		non	n/a	tests/test_semantique_reference.py;tests/test_semantique_reference_exemples.py	non	2026-11-28
+semantique_reference/inclusion.py	python	327	265	.connaissances;.interprete;.syntaxe		non	n/a	tests/test_semantique_reference.py	non	2026-11-28
+semantique_reference/interprete.py	python	2371	1802	.connaissances;.syntaxe		non	n/a	tests/test_semantique_reference.py;tests/test_semantique_reference_exemples.py	non	2026-11-28
+semantique_reference/json_concret.py	python	416	305	.		non	n/a	tests/semantique_reference_gen.py;tests/test_semantique_reference.py;tests/test_semantique_reference_exemples.py	non	2026-11-28
+semantique_reference/syntaxe.py	python	654	355			non	n/a	tests/semantique_reference_gen.py;tests/test_semantique_reference.py	non	2026-11-28
+tests/descriptions_synthetiques.py	python	11	9			non	n/a		non	2026-11-22
+tests/oracle/differentiel.py	python	290	233	~oracle_noyau		oui	n/a	tests/oracle/oracle_noyau.py;tests/test_oracle.py	oui	2026-11-26
+tests/oracle/oracle_noyau.py	python	1796	1189			non	n/a	tests/oracle/differentiel.py;tests/test_oracle.py	non	2026-11-26
+tests/plunit/connaissances_essai.pl	prolog	53	42			n/a	oui		non	2026-11-26
+tests/plunit/connaissances_gen.pl	prolog	23	17			n/a	oui	tests/oracle/differentiel.py;tests/oracle/oracle_noyau.py	non	2026-11-26
+tests/plunit/connaissances_losange.pl	prolog	13	11			n/a	oui		non	2026-11-26
+tests/plunit/generateur_noyau.pl	prolog	80	65		apply;lists;random;yall	n/a	oui	tests/oracle/oracle_noyau.py	non	2026-11-26
+tests/plunit/paires.pl	prolog	147	108			n/a	non	tests/plunit/test_paires.pl	non	2026-11-24
+tests/plunit/test_assertions.pl	prolog	76	53	../../oedipamaas/socle/assertions	plunit	n/a	non		non	2026-11-23
+tests/plunit/test_bout_en_bout.pl	prolog	131	100	../../oedipamaas/socle/oedipamaas;../../oedipamaas/socle/raisonnement	json;plunit;yall	n/a	non		non	2026-11-24
+tests/plunit/test_codage.pl	prolog	128	102	../../oedipamaas/socle/codage;../../oedipamaas/socle/requetes;connaissances_essai;connaissances_gen;generateur_noyau;test_noyau_semantique	apply;lists;plunit;random	n/a	non		non	2026-11-26
+tests/plunit/test_compilateur.pl	prolog	130	91	../../oedipamaas/socle/definitions;../../oedipamaas/socle/requetes_iconclass	plunit	n/a	non		non	2026-11-27
+tests/plunit/test_conllu.pl	prolog	64	46	../../oedipamaas/socle/conllu;../../oedipamaas/socle/udpipe	plunit	n/a	non		non	2026-11-23
+tests/plunit/test_inclusion.pl	prolog	126	106	../../oedipamaas/socle/inclusion;../../oedipamaas/socle/requetes;../../oedipamaas/socle/satisfaction;connaissances_essai;test_noyau_semantique	plunit;random	n/a	oui		non	2026-11-26
+tests/plunit/test_inclusion_generatif.pl	prolog	135	102	../../oedipamaas/socle/inclusion;../../oedipamaas/socle/requetes;../../oedipamaas/socle/satisfaction;connaissances_gen;generateur_noyau	apply;lists;plunit;random	n/a	oui	tests/plunit/generateur_noyau.pl	non	2026-11-26
+tests/plunit/test_monotonie.pl	prolog	105	80	../../oedipamaas/socle/requetes;../../oedipamaas/socle/satisfaction;connaissances_gen;generateur_noyau	apply;lists;plunit;random	n/a	non		non	2026-11-27
+tests/plunit/test_normalisation.pl	prolog	82	64	../../oedipamaas/socle/normalisation;../../oedipamaas/socle/satisfaction;connaissances_essai;test_noyau_semantique	lists;plunit	n/a	non	tests/plunit/test_surete_lecteur.pl	non	2026-11-26
+tests/plunit/test_noyau.pl	prolog	367	314	../../oedipamaas/socle/requetes;../../oedipamaas/socle/satisfaction;../../oedipamaas/socle/verificateur;connaissances_essai	apply;lists;plunit	n/a	oui		non	2026-11-26
+tests/plunit/test_noyau_generatif.pl	prolog	112	85	../../oedipamaas/socle/requetes;../../oedipamaas/socle/satisfaction;../../oedipamaas/socle/satisfaction_reference;../../oedipamaas/socle/verificateur;connaissances_gen;generateur_noyau	apply;lists;plunit;random	n/a	oui	tests/oracle/oracle_noyau.py;tests/plunit/generateur_noyau.pl	non	2026-11-26
+tests/plunit/test_noyau_robustesse.pl	prolog	171	145	../../oedipamaas/socle/satisfaction;../../oedipamaas/socle/satisfaction_reference;../../oedipamaas/socle/verificateur;connaissances_essai;connaissances_losange;test_noyau_semantique	apply;lists;plunit;random	n/a	oui		non	2026-11-26
+tests/plunit/test_noyau_semantique.pl	prolog	374	349	../../oedipamaas/socle/satisfaction;../../oedipamaas/socle/satisfaction_reference;../../oedipamaas/socle/verificateur;connaissances_essai	apply;lists;plunit	n/a	oui		non	2026-11-26
+tests/plunit/test_paires.pl	prolog	73	58	../../oedipamaas/socle/assertions;../../oedipamaas/socle/interpretation;../../oedipamaas/socle/udpipe;paires	plunit	n/a	non		non	2026-11-24
+tests/plunit/test_ressources.pl	prolog	51	42	../../oedipamaas/socle/inclusion;../../oedipamaas/socle/satisfaction;../../oedipamaas/socle/verificateur;connaissances_essai;test_noyau_semantique	plunit	n/a	oui		non	2026-11-27
+tests/plunit/test_sens_occurrence.pl	prolog	53	43	../../oedipamaas/socle/satisfaction;../../oedipamaas/socle/satisfaction_reference;../../oedipamaas/socle/verificateur;connaissances_essai;test_noyau_semantique	lists;plunit	n/a	oui		non	2026-11-26
+tests/plunit/test_surete_lecteur.pl	prolog	140	116	../../oedipamaas/socle/interpretation	lists;plunit	n/a	non		non	2026-11-27
+tests/semantique_reference_gen.py	python	315	277	semantique_reference.json_concret;semantique_reference.syntaxe		non	n/a		non	2026-11-28
+tests/test_bancs.py	python	114	86	~repartir;~valider_cas		non	n/a		non	2026-11-28
+tests/test_croise.py	python	122	85		pytest	non	n/a		non	2026-11-27
+tests/test_graphes.py	python	373	271		pytest	oui	n/a		non	2026-11-27
+tests/test_mesure_bancs.py	python	107	82	~mesurer_moteur	pytest;stanza	oui	n/a		non	2026-11-28
+tests/test_moteur.py	python	350	267	oedipamaas;oedipamaas.base;oedipamaas.cli;oedipamaas.lecture;oedipamaas.moteur;oedipamaas.recherche;oedipamaas.wikidata;~descriptions_synthetiques	pytest	non	n/a		non	2026-11-23
+tests/test_oracle.py	python	19	13		pytest	oui	n/a		non	2026-11-26
+tests/test_plunit.py	python	19	12		pytest	oui	n/a		non	2026-11-23
+tests/test_semantique_reference.py	python	1461	1100	semantique_reference;semantique_reference.json_concret;semantique_reference.syntaxe;~semantique_reference_gen	pytest	non	n/a		non	2026-11-28
+tests/test_semantique_reference_exemples.py	python	76	50	semantique_reference	pytest	non	n/a		non	2026-11-28
+tests/test_socle_arbre.py	python	146	127	oedipamaas.socle.compiler_iconclass	pytest	oui	n/a		non	2026-11-23
+tests/test_socle_cles.py	python	66	55	oedipamaas.socle;oedipamaas.socle.compiler_iconclass;oedipamaas.socle.compiler_wordnet	pytest	oui	n/a		non	2026-11-23
+tests/test_socle_decision.py	python	230	183	oedipamaas.socle.compiler_decision;oedipamaas.socle.compiler_iconclass	pytest	oui	n/a		non	2026-11-23
+tests/test_socle_lexique.py	python	60	52	oedipamaas.socle.compiler_iconclass;oedipamaas.socle.compiler_wordnet	pytest	oui	n/a		non	2026-11-23
+tests/test_socle_libelles.py	python	119	97	oedipamaas.socle.compiler_iconclass	pytest	oui	n/a		non	2026-11-23
+tests/test_socle_morphologie.py	python	32	26	oedipamaas.socle.compiler_wordnet	pytest	oui	n/a		non	2026-11-23
+tests/test_socle_moteur_ordres.py	python	29	21	oedipamaas.socle.coder;oedipamaas.socle.moteur	pytest	non	n/a		non	2026-11-23
+tests/test_socle_notation.py	python	102	76		pytest	oui	n/a		non	2026-11-23
+tests/test_socle_recherche.py	python	248	200	oedipamaas.socle;oedipamaas.socle.compiler_iconclass;oedipamaas.socle.compiler_wordnet	pytest	oui	n/a		non	2026-11-23

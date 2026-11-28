@@ -1,0 +1,338 @@
+{
+ "notation": "nr-1",
+ "famille": "phenomenes_iconographiques",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/pilote_sonnet/formel/entree_phenomenes_iconographiques.json",
+ "remarques": "pi-014 représenté ; l'identification de « St John » par ses attributs est une hypothèse de nature identification_iconographique.",
+ "cas": [
+  {
+   "id": "pi-014",
+   "represente": true,
+   "notation": "nr-1",
+   "description": {
+    "id": "pi-014",
+    "langue": "en",
+    "texte": "Panel from a polyptych, Umbria, c. 1450. St John, a beardless young man in a red mantle, stands on rocky ground and holds an open book. A gold background closes the scene.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "x",
+      "sorte": "individu",
+      "introduit_par": "ix"
+     },
+     {
+      "id": "s",
+      "sorte": "etat",
+      "introduit_par": "is"
+     },
+     {
+      "id": "bk",
+      "sorte": "individu",
+      "introduit_par": "ibk"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "ix",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "x"
+        ],
+        "type": "oc:saint_jean"
+       }
+      },
+      "provenance": {
+       "document": "pi-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 41,
+       "fin": 48,
+       "extrait": "St John"
+      }
+     },
+     {
+      "id": "ii",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "x"
+        ],
+        "type": "oc:saint_jean_evangeliste"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "identification_iconographique",
+       "contenu": "jeune homme imberbe tenant un livre : saint Jean l'Évangéliste plutôt que saint Jean-Baptiste"
+      },
+      "provenance": {
+       "document": "pi-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 50,
+       "fin": 71,
+       "extrait": "a beardless young man"
+      }
+     },
+     {
+      "id": "is",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "s"
+        ],
+        "type": "oc:debout"
+       }
+      },
+      "provenance": {
+       "document": "pi-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 89,
+       "fin": 95,
+       "extrait": "stands"
+      }
+     },
+     {
+      "id": "rs",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "s",
+         "x"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "pi-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 89,
+       "fin": 95,
+       "extrait": "stands"
+      }
+     },
+     {
+      "id": "as",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "s"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "pi-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 89,
+       "fin": 95,
+       "extrait": "stands"
+      }
+     },
+     {
+      "id": "ibk",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "bk"
+        ],
+        "type": "oc:livre"
+       }
+      },
+      "provenance": {
+       "document": "pi-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 130,
+       "fin": 134,
+       "extrait": "book"
+      }
+     },
+     {
+      "id": "pbk",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "bk"
+        ],
+        "type": "oc:ouvert"
+       }
+      },
+      "provenance": {
+       "document": "pi-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 125,
+       "fin": 129,
+       "extrait": "open"
+      }
+     },
+     {
+      "id": "tn",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "x",
+         "bk"
+        ],
+        "type": "oc:tient"
+       }
+      },
+      "provenance": {
+       "document": "pi-014",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 116,
+       "fin": 121,
+       "extrait": "holds"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "pi-014:def",
+    "libelle": "St John the Evangelist standing, holding a book",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "B",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "oc:saint_jean_evangeliste"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:debout"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?X"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "oc:livre"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?B"
+       ],
+       "type": "oc:tient"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "pi-014:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 47,
+     "extrait": "St John the Evangelist standing, holding a book"
+    }
+   },
+   "connaissances": {
+    "version": "K*-pi-014",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:saint_jean_evangeliste",
+      "sur": "oc:saint_jean",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "remarques": "Omissions : le manteau rouge, le sol rocheux, le fond d'or, le polyptyque, l'Ombrie ; « young » (adjectif de degré, non demandé) et « beardless » ne sont écrits que dans le contenu de l'hypothèse.\nLe texte dit « St John » sans dire lequel ; la définition demande l'Évangéliste. L'identification par les attributs (jeune homme imberbe, livre) est une identification iconographique : hypothèse de nature identification_iconographique (guide § 1), non un point (le guide la range parmi les hypothèses, non parmi les lectures). Sans elle le statut serait inconnue ; le nom « St John » seul n'est pas ambigu à lire (l'homonymie est tranchée par l'hypothèse).\nDoute : on peut aussi lire « St John » comme un point d'identité à deux valeurs (Évangéliste, Baptiste) ; le guide préfère l'hypothèse pour une identification par attributs.\n« stands » : état de posture ; « holds » : relation typée tient (comme dc-014).",
+   "statut_calcule": {
+    "synthetique": "etablie_sous_hypotheses",
+    "principal": "etablie_sous_hypotheses",
+    "par_contexte": {
+     "principal": "etablie_sous_hypotheses"
+    },
+    "detail": {
+     "principal": {
+      "statut": "etablie_sous_hypotheses",
+      "ligne": 5,
+      "classes": [
+       {
+        "statut_local": "E_H",
+        "interpretations": 1,
+        "cylindres": [
+         {}
+        ]
+       }
+      ],
+      "hypotheses": [
+       [
+        "identification_iconographique",
+        "jeune homme imberbe tenant un livre : saint Jean l'Évangéliste plutôt que saint Jean-Baptiste"
+       ]
+      ],
+      "refutation_fermee": false,
+      "uniforme_plus": true
+     }
+    }
+   },
+   "hypotheses": [
+    {
+     "nature": "identification_iconographique",
+     "contenu": "jeune homme imberbe tenant un livre : saint Jean l'Évangéliste plutôt que saint Jean-Baptiste"
+    }
+   ]
+  }
+ ]
+}

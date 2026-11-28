@@ -1,0 +1,966 @@
+[
+ {
+  "id": "co-011",
+  "famille": "compositionnalite",
+  "reference": "etablie_sous_hypotheses",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "etablie_sous_hypotheses",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   2,
+   0
+  ],
+  "par_contexte": {
+   "principal": "etablie_sous_hypotheses"
+  },
+  "defauts": [],
+  "hypotheses": [
+   "identite"
+  ],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "etablie_sous_hypotheses",
+   "principal": "etablie_sous_hypotheses",
+   "par_contexte": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "detail": {
+    "principal": {
+     "statut": "etablie_sous_hypotheses",
+     "ligne": 5,
+     "classes": [
+      {
+       "statut_local": "E_H",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [
+      [
+       "identite",
+       "le dragon que « dragon-slayer » dit tué est le dragon mort couché à ses pieds"
+      ]
+     ],
+     "refutation_fermee": false,
+     "uniforme_plus": true
+    }
+   }
+  },
+  "axes_reference": [
+   2,
+   0
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "co-015",
+  "famille": "compositionnalite",
+  "reference": "ecartee",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "ecartee",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   0,
+   3
+  ],
+  "par_contexte": {
+   "principal": "ecartee"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": false,
+  "ecrit": {
+   "synthetique": "ecartee",
+   "principal": "ecartee",
+   "par_contexte": {
+    "principal": "ecartee"
+   },
+   "detail": {
+    "principal": {
+     "statut": "ecartee",
+     "ligne": 7,
+     "classes": [
+      {
+       "statut_local": "R",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    }
+   }
+  },
+  "axes_reference": [
+   0,
+   3
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "co-008",
+  "famille": "compositionnalite",
+  "reference": "divergent",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "ecartee",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   0,
+   3
+  ],
+  "par_contexte": {
+   "principal": "ecartee"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": false,
+  "ecrit": {
+   "synthetique": "ecartee",
+   "principal": "ecartee",
+   "par_contexte": {
+    "principal": "ecartee"
+   },
+   "detail": {
+    "principal": {
+     "statut": "ecartee",
+     "ligne": 7,
+     "classes": [
+      {
+       "statut_local": "R",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    }
+   }
+  },
+  "axes_reference": [
+   2,
+   2
+  ],
+  "comparaison": "plus faible (positif), plus fort (negatif)",
+  "meme_statut": false
+ },
+ {
+  "id": "dc-014",
+  "famille": "definitions_classification",
+  "reference": "divergent",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "etablie_sous_hypotheses",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   2,
+   0
+  ],
+  "par_contexte": {
+   "principal": "etablie_sous_hypotheses"
+  },
+  "defauts": [],
+  "hypotheses": [
+   "identification_iconographique"
+  ],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "etablie_sous_hypotheses",
+   "principal": "etablie_sous_hypotheses",
+   "par_contexte": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "detail": {
+    "principal": {
+     "statut": "etablie_sous_hypotheses",
+     "ligne": 6,
+     "classes": [
+      {
+       "statut_local": "E_H",
+       "interpretations": 1,
+       "cylindres": [
+        {
+         "pid": [
+          "par_attributs"
+         ]
+        }
+       ]
+      },
+      {
+       "statut_local": "N",
+       "interpretations": 1,
+       "cylindres": [
+        {
+         "pid": [
+          "par_inscription"
+         ]
+        }
+       ]
+      }
+     ],
+     "hypotheses": [
+      [
+       "identification_iconographique",
+       "sainte tenant une roue brisée hérissée de pointes : attribut de sainte Catherine d'Alexandrie"
+      ]
+     ],
+     "refutation_fermee": false,
+     "uniforme_plus": true
+    }
+   }
+  },
+  "axes_reference": [
+   2,
+   2
+  ],
+  "comparaison": "plus faible (negatif)",
+  "meme_statut": false
+ },
+ {
+  "id": "ep-007",
+  "famille": "espace_partie_temps",
+  "reference": "etablie",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "etablie",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   3,
+   0
+  ],
+  "par_contexte": {
+   "principal": "etablie"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "etablie",
+   "principal": "etablie",
+   "par_contexte": {
+    "principal": "etablie"
+   },
+   "detail": {
+    "principal": {
+     "statut": "etablie",
+     "ligne": 4,
+     "classes": [
+      {
+       "statut_local": "E",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": true
+    }
+   }
+  },
+  "axes_reference": [
+   3,
+   0
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "ep-016",
+  "famille": "espace_partie_temps",
+  "reference": "etablie_sous_hypotheses",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "etablie_sous_hypotheses",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   2,
+   0
+  ],
+  "par_contexte": {
+   "principal": "etablie_sous_hypotheses"
+  },
+  "defauts": [],
+  "hypotheses": [
+   "connaissance_typique",
+   "convention"
+  ],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "etablie_sous_hypotheses",
+   "principal": "etablie_sous_hypotheses",
+   "par_contexte": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "detail": {
+    "principal": {
+     "statut": "etablie_sous_hypotheses",
+     "ligne": 5,
+     "classes": [
+      {
+       "statut_local": "E_H",
+       "interpretations": 1,
+       "cylindres": [
+        {
+         "pan": [
+          "phase_preparatoire"
+         ]
+        }
+       ]
+      },
+      {
+       "statut_local": "E_H",
+       "interpretations": 1,
+       "cylindres": [
+        {
+         "pan": [
+          "imminente"
+         ]
+        }
+       ]
+      }
+     ],
+     "hypotheses": [
+      [
+       "connaissance_typique",
+       "baiser la bague d'un évêque, c'est baiser sa main (la main qui la porte)"
+      ],
+      [
+       "convention",
+       "le baiser, imminent, compte comme en cours"
+      ]
+     ],
+     "refutation_fermee": false,
+     "uniforme_plus": true
+    }
+   }
+  },
+  "axes_reference": [
+   2,
+   0
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "ee-003",
+  "famille": "evenements_etats",
+  "reference": "ecartee",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "ecartee",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   0,
+   3
+  ],
+  "par_contexte": {
+   "principal": "ecartee"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": false,
+  "ecrit": {
+   "synthetique": "ecartee",
+   "principal": "ecartee",
+   "par_contexte": {
+    "principal": "ecartee"
+   },
+   "detail": {
+    "principal": {
+     "statut": "ecartee",
+     "ligne": 7,
+     "classes": [
+      {
+       "statut_local": "R",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    }
+   }
+  },
+  "axes_reference": [
+   0,
+   3
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "ee-017",
+  "famille": "evenements_etats",
+  "reference": "ecartee",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": false,
+  "manque": [
+   "relation de résultat entre un état résultant et l'événement qui y mène (un corps sans vie suppose une mise à mort antérieure), avec l'ancrage antérieur de cet événement"
+  ]
+ },
+ {
+  "id": "ee-023",
+  "famille": "evenements_etats",
+  "reference": "etablie",
+  "contexte_reference": [
+   "principal > tapisserie figurée au mur du fond"
+  ],
+  "represente": true,
+  "statut": "etablie",
+  "contextes": [
+   "tapisserie"
+  ],
+  "axes": [
+   3,
+   0
+  ],
+  "par_contexte": {
+   "principal": "inconnue",
+   "tapisserie": "etablie"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "etablie dans principal > tapisserie",
+   "principal": "inconnue",
+   "par_contexte": {
+    "principal": "inconnue",
+    "tapisserie": "etablie"
+   },
+   "detail": {
+    "principal": {
+     "statut": "inconnue",
+     "ligne": 12,
+     "classes": [
+      {
+       "statut_local": "N",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    },
+    "tapisserie": {
+     "statut": "etablie",
+     "ligne": 4,
+     "classes": [
+      {
+       "statut_local": "E",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": true
+    }
+   }
+  },
+  "axes_reference": [
+   3,
+   0
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "mn-006",
+  "famille": "modalite_negation_contextes",
+  "reference": "inconnue",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "ecartee",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   0,
+   3
+  ],
+  "par_contexte": {
+   "principal": "ecartee"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": false,
+  "ecrit": {
+   "synthetique": "ecartee",
+   "principal": "ecartee",
+   "par_contexte": {
+    "principal": "ecartee"
+   },
+   "detail": {
+    "principal": {
+     "statut": "ecartee",
+     "ligne": 7,
+     "classes": [
+      {
+       "statut_local": "R",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    }
+   }
+  },
+  "axes_reference": [
+   0,
+   0
+  ],
+  "comparaison": "plus fort (negatif)",
+  "meme_statut": false
+ },
+ {
+  "id": "mn-022",
+  "famille": "modalite_negation_contextes",
+  "reference": "etablie",
+  "contexte_reference": [
+   "principal > rêve de Pharaon"
+  ],
+  "represente": true,
+  "statut": "etablie",
+  "contextes": [
+   "reve"
+  ],
+  "axes": [
+   3,
+   0
+  ],
+  "par_contexte": {
+   "principal": "inconnue",
+   "reve": "etablie"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "etablie dans principal > reve",
+   "principal": "inconnue",
+   "par_contexte": {
+    "principal": "inconnue",
+    "reve": "etablie"
+   },
+   "detail": {
+    "principal": {
+     "statut": "inconnue",
+     "ligne": 12,
+     "classes": [
+      {
+       "statut_local": "N",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    },
+    "reve": {
+     "statut": "etablie",
+     "ligne": 4,
+     "classes": [
+      {
+       "statut_local": "E",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": true
+    }
+   }
+  },
+  "axes_reference": [
+   3,
+   0
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "nr-012",
+  "famille": "niveaux_representation",
+  "reference": "etablie",
+  "contexte_reference": [
+   "principal > état d'origine"
+  ],
+  "represente": true,
+  "statut": "etablie",
+  "contextes": [
+   "origine"
+  ],
+  "axes": [
+   3,
+   0
+  ],
+  "par_contexte": {
+   "principal": "inconnue",
+   "origine": "etablie"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "etablie dans principal > origine",
+   "principal": "inconnue",
+   "par_contexte": {
+    "principal": "inconnue",
+    "origine": "etablie"
+   },
+   "detail": {
+    "principal": {
+     "statut": "inconnue",
+     "ligne": 12,
+     "classes": [
+      {
+       "statut_local": "N",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    },
+    "origine": {
+     "statut": "etablie",
+     "ligne": 4,
+     "classes": [
+      {
+       "statut_local": "E",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": true
+    }
+   }
+  },
+  "axes_reference": [
+   3,
+   0
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "pi-014",
+  "famille": "phenomenes_iconographiques",
+  "reference": "divergent",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "etablie_sous_hypotheses",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   2,
+   0
+  ],
+  "par_contexte": {
+   "principal": "etablie_sous_hypotheses"
+  },
+  "defauts": [],
+  "hypotheses": [
+   "identification_iconographique"
+  ],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "etablie_sous_hypotheses",
+   "principal": "etablie_sous_hypotheses",
+   "par_contexte": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "detail": {
+    "principal": {
+     "statut": "etablie_sous_hypotheses",
+     "ligne": 5,
+     "classes": [
+      {
+       "statut_local": "E_H",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [
+      [
+       "identification_iconographique",
+       "jeune homme imberbe tenant un livre : saint Jean l'Évangéliste plutôt que saint Jean-Baptiste"
+      ]
+     ],
+     "refutation_fermee": false,
+     "uniforme_plus": true
+    }
+   }
+  },
+  "axes_reference": [
+   2,
+   2
+  ],
+  "comparaison": "plus faible (negatif)",
+  "meme_statut": false
+ },
+ {
+  "id": "rq-014",
+  "famille": "reference_quantification",
+  "reference": "ecartee",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "ecartee",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   0,
+   3
+  ],
+  "par_contexte": {
+   "principal": "ecartee"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": false,
+  "ecrit": {
+   "synthetique": "ecartee",
+   "principal": "ecartee",
+   "par_contexte": {
+    "principal": "ecartee"
+   },
+   "detail": {
+    "principal": {
+     "statut": "ecartee",
+     "ligne": 7,
+     "classes": [
+      {
+       "statut_local": "R",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    }
+   }
+  },
+  "axes_reference": [
+   0,
+   3
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "sa-008",
+  "famille": "structures_argumentales",
+  "reference": "etablie_sous_hypotheses",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "etablie_sous_hypotheses",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   2,
+   0
+  ],
+  "par_contexte": {
+   "principal": "etablie_sous_hypotheses"
+  },
+  "defauts": [],
+  "hypotheses": [
+   "abduction"
+  ],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "etablie_sous_hypotheses",
+   "principal": "etablie_sous_hypotheses",
+   "par_contexte": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "detail": {
+    "principal": {
+     "statut": "etablie_sous_hypotheses",
+     "ligne": 5,
+     "classes": [
+      {
+       "statut_local": "E_H",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [
+      [
+       "abduction",
+       "l'épée couchée près du corps est l'arme avec laquelle le bourreau a tué Paul"
+      ]
+     ],
+     "refutation_fermee": false,
+     "uniforme_plus": true
+    }
+   }
+  },
+  "axes_reference": [
+   2,
+   0
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ },
+ {
+  "id": "sa-020",
+  "famille": "structures_argumentales",
+  "reference": "inconnue",
+  "contexte_reference": [
+   "principal"
+  ],
+  "represente": true,
+  "statut": "inconnue",
+  "contextes": [
+   "principal"
+  ],
+  "axes": [
+   0,
+   0
+  ],
+  "par_contexte": {
+   "principal": "inconnue",
+   "origine": "inconnue"
+  },
+  "defauts": [],
+  "hypotheses": [],
+  "refutation_fermee": null,
+  "ecrit": {
+   "synthetique": "inconnue",
+   "principal": "inconnue",
+   "par_contexte": {
+    "principal": "inconnue",
+    "origine": "inconnue"
+   },
+   "detail": {
+    "principal": {
+     "statut": "inconnue",
+     "ligne": 12,
+     "classes": [
+      {
+       "statut_local": "N",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    },
+    "origine": {
+     "statut": "inconnue",
+     "ligne": 12,
+     "classes": [
+      {
+       "statut_local": "N",
+       "interpretations": 1,
+       "cylindres": [
+        {}
+       ]
+      }
+     ],
+     "hypotheses": [],
+     "refutation_fermee": false,
+     "uniforme_plus": false
+    }
+   }
+  },
+  "axes_reference": [
+   0,
+   0
+  ],
+  "comparaison": "égal",
+  "meme_statut": true
+ }
+]

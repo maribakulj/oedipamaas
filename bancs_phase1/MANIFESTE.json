@@ -983,6 +983,131 @@
    "chemin": "v3/reference_avant_par_contexte/structures_argumentales.json",
    "taille": 105657,
    "sha256": "c0eeb98d84b99fb32e2caf171d786f3831003935f885ed697f76a092a45543dc"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/cle_adjudication.json",
+   "taille": 670,
+   "sha256": "7609862c715f21322dbd528399ddf07d2f53322248542a8f5545ed9f234a44e2"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/adjudication/desaccords.json",
+   "taille": 29225,
+   "sha256": "9f958997d4cc6d0cbf5b155c68262238249af923f3722d9857d8b821b74b6430"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/adjudication/verdicts.json",
+   "taille": 8725,
+   "sha256": "9e85a8296e9d09b1a86c72164d2d2eb880711c1838faf1207913d8eb79291109"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/annotation/entree.json",
+   "taille": 18703,
+   "sha256": "c4a12b760d5bb8344e5b15b5fd5ad87c77d329f2309d9c5939fd7edae08f9af2"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/annotation/pilote.S.json",
+   "taille": 55920,
+   "sha256": "386ad989f10d8b7eec8686e42fc06f5a196f7846bfc1944c1fd7b1b49b861eb9"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/entree_compositionnalite.json",
+   "taille": 5825,
+   "sha256": "f209ff0d9e393687975bd4dbe620fa48f3766f13825c5af7f1452bcb569152a3"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/entree_definitions_classification.json",
+   "taille": 2005,
+   "sha256": "091dadfe9f87cb073d21910745bdbbc69b23b1124799bbd8e01552f3d8615f14"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/entree_espace_partie_temps.json",
+   "taille": 3795,
+   "sha256": "d27c33545be691260398b866a389615363bd7c73d293a3c36cfa3eb431b1fd79"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/entree_evenements_etats.json",
+   "taille": 6114,
+   "sha256": "e158150536b36e25d1b459d1f031864dcfe16792d59ff971279c1c6eb39aaa9a"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/entree_modalite_negation_contextes.json",
+   "taille": 3392,
+   "sha256": "d512bc8b2ea1a21ecc75bad181622f2704df4af392d9bd13e9ac2e6b2897d4ca"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/entree_niveaux_representation.json",
+   "taille": 1878,
+   "sha256": "e637aa367744abd0eb3d300abeaf5bf7782d997caad70c5096dfc48ae5c43d8a"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/entree_phenomenes_iconographiques.json",
+   "taille": 1717,
+   "sha256": "9e0ca2f948a30bb1a083bcdabe8c81fec409bac423ec0f97d6b2ae5a74f1b247"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/entree_reference_quantification.json",
+   "taille": 1967,
+   "sha256": "627ea5503fc327c98698bc0c5dd57e875fa37c4a82d575b30ff2ee640f259b7c"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/entree_structures_argumentales.json",
+   "taille": 4977,
+   "sha256": "508681ada35aafbe467471fb5a44c0c2e10af14ec750c1704736bb4e85faafe5"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/comparaison/formel.json",
+   "taille": 17346,
+   "sha256": "8b886a919a57f5763a3bf2bb1b16bc6c4f9d3d515a7acc4873967973bd2e9bf7"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/comparaison/formel.md",
+   "taille": 1529,
+   "sha256": "08bb54302ebb72116158d1070ba9aa1996bbdb468af476e43127fec9c1ac790a"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/sortie/compositionnalite.json",
+   "taille": 30159,
+   "sha256": "6e317a581094391fa4d82971f36c9cf6eb08a6893de1e1e257deac22d7240676"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/sortie/definitions_classification.json",
+   "taille": 9549,
+   "sha256": "a6609f93a7fa1bb6c1ba9ceb2d7d9d905a2af4897af634e3882d1d4d9cab1e06"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/sortie/espace_partie_temps.json",
+   "taille": 18392,
+   "sha256": "f9dc351f3d0388c592af7fa05e8251e8659c00335b40b2354c4852c45ea604c6"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/sortie/evenements_etats.json",
+   "taille": 19987,
+   "sha256": "0e003f8054a55a2833c0dcff948b64953cd4dc7e3af1405285bab191b8743346"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/sortie/modalite_negation_contextes.json",
+   "taille": 22048,
+   "sha256": "b35ccf58fa2c8a4e3dcc458b92c77977456a6ff5e82414f22922cf734563c302"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/sortie/niveaux_representation.json",
+   "taille": 7919,
+   "sha256": "e13ea2a53801571d136c0720bb5aa61948cd6ac6c0bd8641af2e855a4c878af5"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/sortie/phenomenes_iconographiques.json",
+   "taille": 7677,
+   "sha256": "b6fd2019c9fb62bf5796cd3f48d63ddd7efd121ba4af85ec1975dd27ce9b3d75"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/sortie/reference_quantification.json",
+   "taille": 5836,
+   "sha256": "d4c08df6c39e87a7951de45259b6308d2c8b90a24644435a99a60aa849893ea6"
+  },
+  {
+   "chemin": "v3/pilote_sonnet/formel/sortie/structures_argumentales.json",
+   "taille": 26426,
+   "sha256": "33725d805f694ff9af38b9cc2ae7ff4a8628e3d4740b705e3cd57e7608dd0533"
   }
  ],
  "mis_a_jour": "2026-11-28"
