@@ -461,6 +461,54 @@ Pour une définition (F_s, F_n) et σ sur les variables de F_s :
   certifiée **sans hypothèse** a été trouvée ; R si la recherche positive est finie sans aucun appui positif et qu'une
   réfutation certifiée a été trouvée ; **?** sinon (L3, L4). Une classe non atteinte est ?. Une erreur est une erreur.
 
+**L22, une même substitution certifiée de chaque signe sous des hypothèses différentes (résolution du 28/11,
+provisoire, à confirmer par la propriétaire ; `docs/mesures/FORMEL_BANCS.md`, § 2.4, dc-014).** Le statut local suivait un
+ordre de priorité, E_H avant R_H. Une substitution σ certifiée positive sous H₁ et négative sous H₂, sans l'être d'aucun
+signe sans hypothèse, donnait donc E_H, et la réfutation sous H₂ n'entrait pas dans le statut. C'est une priorité donnée
+au positif, que la décision du 28/11 (§ 1) exclut. Pour une telle σ, la valeur est V sous H₁, F sous H₂ et B sous H₁ ∪ H₂.
+
+- **Une ligne doublement conditionnelle** est une ligne dont C⁺ et C⁻ sont non vides et ne contiennent pas ∅.
+- **Le statut local** se lit dans cet ordre, avec CP l'union des C⁺ des lignes :
+  1. si ∅ ∈ CP : **E**, sans changement ;
+  2. sinon, si CP ≠ ∅ et qu'au moins une ligne certifiée positive a un C⁻ vide : **E_H**, sans changement. Une
+     solution non contestée suffit à la conclusion existentielle ; une réfutation qui porte sur une autre substitution
+     n'y retire rien (c'est la question L6, distincte) ;
+  3. sinon, si CP ≠ ∅, c'est-à-dire que toute ligne certifiée positive est doublement conditionnelle : **ER_H**, un
+     nouveau statut local, avec deux familles d'ensembles minimaux d'hypothèses :
+     - `hyps_plus`, les ensembles minimaux de CP ;
+     - `hyps_moins`, les réunions minimales d'un ensemble de C⁻ par ligne certifiée positive : sous chacune, tout
+       candidat appuyé positivement est réfuté. Une réfutation qui porte sur une autre substitution n'y entre pas. Elle
+       reste dans les réfutations citées, au titre de L6. La première rédaction prenait aussi les C⁻ des lignes sans D⁺ :
+       une réfutation sans hypothèse d'une autre figure y mettait ∅ et effaçait la famille négative.
+
+     Chaque hypothèse garde sa nature ;
+  4. sinon, la suite inchangée : B, NC⁺, R, R_H, NC⁻, N.
+- **Dans la table de la déf. 10,** ER_H appartient à la fois à I⁺ (avec E, E_H) et à I⁻ (avec R, R_H). Un profil qui le
+  contient tombe donc sur la ligne « des classes V et des classes F » : `divergent`, (ℓ⁺, ℓ⁻) = (2, 2), et le profil
+  garde la classe avec ses deux familles d'hypothèses. Pour qu'une seule ligne vaille (T8), la ligne « toutes
+  certifiées positives, dont une sous hypothèses » demande en plus I⁻ = ∅, et sa duale I⁺ = ∅. T8 porte alors sur les
+  dix statuts locaux.
+- **Le dual** (proposition 3) envoie ER_H sur ER_H, en échangeant `hyps_plus` et `hyps_moins`.
+- **Le consensus des branches** (§ 3.8), signe par signe, car une alternative de l'auteur ne vaut d'un signe que si
+  chaque branche le vaut. La première rédaction de cette règle, faite le même jour, donnait ER_H à tout mélange de {E,
+  E_H, ER_H} : elle certifiait un signe négatif que les branches E et E_H n'ont pas. Elle est corrigée ainsi :
+  - **le côté positif** vaut si toutes les branches sont dans {E, E_H, ER_H}. Ses ensembles d'hypothèses sont les
+    réunions minimales d'un ensemble positif par branche, ∅ pour une branche E, comme pour E_H ;
+  - **le côté négatif** vaut si toutes les branches sont dans {R, R_H, ER_H}, avec ses réunions minimales de la même
+    façon ;
+  - **les deux côtés valent** seulement si toutes les branches sont ER_H : le résultat est ER_H. Un seul côté donne E,
+    E_H, R ou R_H par les règles existantes, une branche ER_H y apportant la famille du signe. Si aucun côté ne vaut,
+    ER_H compte comme B dans les règles existantes ;
+  - par exemple, {ER_H, E} donne E_H sous la famille positive de la branche ER_H ; {ER_H, R} donne R_H sous sa famille
+    négative ; {ER_H, ER_H} donne ER_H.
+- **Les mesures** (déf. 12) se lisent signe par signe : une référence ER_H n'est jamais « l'autre signe ». La
+  restriction des signes envoie ER_H sur R_H quand le signe + n'est pas licencié, sur E_H quand le signe − ne l'est pas,
+  et sur N quand aucun ne l'est.
+- **Partout ailleurs** (mesures, index, comparateur, restriction des signes), ER_H compte à la fois comme E_H et comme
+  R_H.
+- **L22b, ouvert.** On ne tranche pas ici une ligne certifiée positive sous H et réfutée sans hypothèse, ni l'inverse.
+  La certification les exclut déjà, puisque C⁺ demande l'absence d'appui négatif connu. Un test doit le vérifier.
+
 ### 3.8 Les alternatives de l'auteur : la preuve par cas (étude § 3.4 ; L9)
 
 Sous i, la valeur est le **consensus** des branches : D⁺ si chaque branche a D⁺, D⁻ si chaque branche a D⁻ (la
@@ -486,7 +534,7 @@ doit expliquer des observations (décision 33) ; aucune n'est produite.
 ### 3.10 Le statut synthétique, son ordre, son dual, les mesures, l'index (déf. 10 à 12, étude § 3.6)
 
 - **Syn(Π)** est la table de la déf. 10, chaque ligne écrite **indépendamment** des autres (`lignes_satisfaites`) : T8
-  vérifie, sur tous les profils de zéro à quatre classes et des neuf statuts locaux, qu'exactement une ligne vaut. Ses
+  vérifie, sur tous les profils de zéro à quatre classes et des dix statuts locaux (neuf avant L22), qu'exactement une ligne vaut. Ses
   attributs : la ligne, le signe d'un NC, la couverture de chaque signe, les hypothèses par classe et par nature,
   l'uniformité, les témoins, les réfutations citées et si elles sont **fermées** (L6).
 - **L'ordre** (déf. 11) : (ℓ⁺, ℓ⁻) par la table de l'étude ; ce que chaque niveau garantit est vérifié sur tous les

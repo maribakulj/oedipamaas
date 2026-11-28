@@ -139,6 +139,8 @@ Ils s'ajoutent aux points L1 à L21 de `docs/LANGAGE_REFERENCE.md`, § 3.12. Rie
 
 - **L22, une réfutation sous une autre hypothèse disparaît du statut** (dc-014, § 2.4). Il faut une ligne de la déf. 10,
   ou un statut local, pour une classe vraie sous H1 et fausse sous H2 incomparables.
+  **Résolu provisoirement le 28/11** par le statut local ER_H (`docs/LANGAGE_REFERENCE.md`, § 3.7, L22), à confirmer
+  par la propriétaire. Les représentations n'ont pas été recalculées dans ce document.
 - **L23, un contexte n'hérite d'aucun fait de son parent** (co-014, nr-012, sa-020). Il faut une règle de ce qui passe
   d'un contexte à un contexte emboîté : ce qui subsiste dans l'état d'origine, ou un référent du principal nommé dans
   une statue.

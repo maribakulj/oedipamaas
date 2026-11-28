@@ -1538,7 +1538,11 @@ def compte_neg(base: Base, f: Compte, sigma: dict, ctx, sortes: dict) -> list:
 # § 3.6 à § 3.8 Le résultat sous une interprétation : lignes, certification, statut local (déf. 2, 5)
 # ==============================================================================================================
 
-STATUTS_LOCAUX = ("E", "E_H", "R", "R_H", "B", "NC+", "NC-", "N", "?")
+# § 3.7, L22 : ER_H est le dixième statut local (une même substitution certifiée de chaque signe sous des hypothèses
+# différentes). Il compte à la fois comme E_H et comme R_H partout où la spécification ne dit pas autre chose.
+STATUTS_LOCAUX = ("E", "E_H", "R", "R_H", "ER_H", "B", "NC+", "NC-", "N", "?")
+STATUTS_PLUS = ("E", "E_H", "ER_H")   # I⁺ de la déf. 10 (L22 : ER_H y est, avec E et E_H)
+STATUTS_MOINS = ("R", "R_H", "ER_H")  # I⁻ de la déf. 10 (L22 : ER_H y est, avec R et R_H)
 
 
 @dataclass(frozen=True)
@@ -1642,8 +1646,8 @@ class ResultatBranche:
     """Le résultat dans une branche des alternatives de l'auteur (déf. 5)."""
     statut: str
     lignes: tuple
-    hyps_plus: tuple = ()   # ensembles minimaux d'hypothèses (E_H)
-    hyps_moins: tuple = ()  # (R_H)
+    hyps_plus: tuple = ()   # ensembles minimaux d'hypothèses (E_H ; ER_H : la famille de CP, § 3.7 L22)
+    hyps_moins: tuple = ()  # (R_H ; ER_H : la famille des C⁻, § 3.7 L22)
     complet: bool = True
 
 
@@ -1651,15 +1655,24 @@ def statut_local(lignes) -> tuple:
     """Le statut local (déf. 5, NOYAU § 4.4 étendu ; § 3.7) : une solution certifiée sans hypothèse (E), sous des
     hypothèses non lexicales (E_H), une substitution contradictoire (B), une vraie non certifiable (NC+), une
     réfutation certifiée sans hypothèse (R), sous hypothèses (R_H), une fausse non certifiable (NC−), rien (N).
-    Rend (statut, hypothèses minimales du signe)."""
+    Rend (statut, hypothèses minimales du signe). Pour ER_H (§ 3.7, L22) le second terme est le couple de deux
+    familles (hyps_plus, hyps_moins)."""
     def mini(hs):
         hs = list(dict.fromkeys(hs))
         return tuple(sorted((h for h in hs if not any(g < h for g in hs)), key=lambda h: (len(h), sorted(map(str, h)))))
     cp = [h for l in lignes for h in l.c_plus]
     if any(not h for h in cp):
         return "E", ()
-    if cp:
+    # § 3.7, L22. Une ligne doublement conditionnelle est certifiée positive (C⁺ ≠ ∅, sans ∅ puisque ∅ ∉ CP) et
+    # C⁻ ≠ ∅. Si une ligne certifiée positive a un C⁻ vide, la solution n'est contestée par rien : E_H, sans changement.
+    if any(l.c_plus and not l.c_moins for l in lignes):
         return "E_H", mini(cp)
+    if cp:
+        # toute ligne certifiée positive est doublement conditionnelle : ER_H, deux familles d'ensembles minimaux
+        # hyps_moins : les réunions minimales d'un ensemble de C⁻ par ligne certifiée positive (le produit du
+        # consensus, § 3.8) ; les C⁻ des lignes sans D⁺ n'y entrent pas (ils restent dans les réfutations citées, L6)
+        hm = _unions([l.c_moins for l in lignes if l.c_plus])
+        return "ER_H", (mini(cp), tuple(sorted(hm, key=lambda h: (len(h), sorted(map(str, h))))))
     if any(l.d_plus and l.d_moins for l in lignes):
         return "B", ()
     if any(l.d_plus for l in lignes):
@@ -1741,6 +1754,8 @@ def evaluer_branche(base: Base, Dl: Definition, ctx, budget: Budget) -> Resultat
             return ResultatBranche("R", retenues(lignes), (), (), complet=False)
         return ResultatBranche("?", retenues(lignes), (), (), complet=False)
     st, hs = statut_local(lignes)
+    if st == "ER_H":  # § 3.7, L22 : le résultat garde les deux familles
+        return ResultatBranche(st, retenues(lignes), hs[0], hs[1], True)
     return ResultatBranche(st, retenues(lignes), hs if st == "E_H" else (), hs if st == "R_H" else (), True)
 
 
@@ -1752,6 +1767,9 @@ class ResultatLocal:
     hypotheses: tuple
     branches: tuple
     complet: bool
+    # § 3.7, L22 : les deux familles d'un ER_H (vides pour les autres statuts) ; `hypotheses` en est alors la réunion
+    hyps_plus: tuple = ()
+    hyps_moins: tuple = ()
 
     def cle(self) -> tuple:
         """Ce qui fait la classe (déf. 6, lue au § 3.9) : le statut, les hypothèses, et les lignes gardées, les
@@ -1760,38 +1778,59 @@ class ResultatLocal:
             sig = tuple((k, tuple(sorted(v)) if isinstance(v, frozenset) else v) for k, v in l.sigma)
             return (sig, l.valeur, tuple(sorted(tuple(sorted(map(str, h))) for h in l.c_plus)),
                     tuple(sorted(tuple(sorted(map(str, h))) for h in l.c_moins)))
+        familles = ((tuple(tuple(sorted(map(str, h))) for h in self.hyps_plus),
+                     tuple(tuple(sorted(map(str, h))) for h in self.hyps_moins)) if self.statut == "ER_H" else ())
         return (self.statut, tuple(tuple(sorted(map(str, h))) for h in self.hypotheses),
-                tuple(tuple(sorted(resume(l) for l in b.lignes)) for b in self.branches), self.complet)
+                tuple(tuple(sorted(resume(l) for l in b.lignes)) for b in self.branches), self.complet) + familles
+
+
+def _unions(listes):
+    """Les réunions d'un ensemble par liste (les hypothèses réunies d'une branche à l'autre, § 3.8), minimales."""
+    acc = [frozenset()]
+    for l in listes:
+        acc = list(dict.fromkeys(a | h for a in acc for h in l))
+    return tuple(h for h in acc if not any(g < h for g in acc))
 
 
 def combiner_branches(rs: list) -> tuple:
     """Une alternative de l'auteur se traite par cas (§ 3.8, extension signalée au § 3.12) : sous i, la valeur est
     le consensus des branches (ce qui vaut dans toutes : D⁺ si chaque branche a D⁺, D⁻ si chacune a D⁻), certifiée
-    d'un signe si chaque branche l'est. Une branche n'est jamais une hypothèse à choisir. Rend (statut, hyps)."""
+    d'un signe si chaque branche l'est. Une branche n'est jamais une hypothèse à choisir. Rend (statut, hyps) ;
+    pour ER_H, hyps est le couple (hyps_plus, hyps_moins) (§ 3.7, L22)."""
     if len(rs) == 1:
         r = rs[0]
+        if r.statut == "ER_H":
+            return "ER_H", (r.hyps_plus, r.hyps_moins)
         return r.statut, (r.hyps_plus or r.hyps_moins)
     if any(r.statut == "?" for r in rs):
         return "?", ()
-    dp = all(r.statut in ("E", "E_H", "NC+", "B") for r in rs)
-    dm = all(r.statut in ("R", "R_H", "NC-", "B") for r in rs)
-
-    def unions(listes):
-        acc = [frozenset()]
-        for l in listes:
-            acc = list(dict.fromkeys(a | h for a in acc for h in l))
-        return tuple(h for h in acc if not any(g < h for g in acc))
+    # § 3.7, L22, signe par signe : le côté positif vaut si toutes les branches sont dans {E, E_H, ER_H}, le côté
+    # négatif si elles sont toutes dans {R, R_H, ER_H} ; ses ensembles sont les réunions minimales d'un ensemble du
+    # signe par branche (∅ pour E, R). Les deux côtés valent seulement si toutes les branches sont ER_H : ER_H. Un
+    # seul côté : les règles existantes (E_H, R_H), l'ER_H y apportant sa famille du signe. Aucun : ER_H compte comme B.
+    if any(r.statut == "ER_H" for r in rs):
+        plus_vaut = all(r.statut in STATUTS_PLUS for r in rs)
+        moins_vaut = all(r.statut in STATUTS_MOINS for r in rs)
+        if plus_vaut and moins_vaut:
+            return "ER_H", (_unions([r.hyps_plus for r in rs]), _unions([r.hyps_moins for r in rs]))
+        if plus_vaut:
+            return "E_H", _unions([r.hyps_plus or (frozenset(),) for r in rs])
+        if moins_vaut:
+            return "R_H", _unions([r.hyps_moins or (frozenset(),) for r in rs])
+    sts = ["B" if r.statut == "ER_H" else r.statut for r in rs]
+    dp = all(t in ("E", "E_H", "NC+", "B") for t in sts)
+    dm = all(t in ("R", "R_H", "NC-", "B") for t in sts)
     if dp and not dm:
         if all(r.statut == "E" for r in rs):
             return "E", ()
         if all(r.statut in ("E", "E_H") for r in rs):
-            return "E_H", unions([r.hyps_plus or (frozenset(),) for r in rs])
+            return "E_H", _unions([r.hyps_plus or (frozenset(),) for r in rs])
         return "NC+", ()
     if dm and not dp:
         if all(r.statut == "R" for r in rs):
             return "R", ()
         if all(r.statut in ("R", "R_H") for r in rs):
-            return "R_H", unions([r.hyps_moins or (frozenset(),) for r in rs])
+            return "R_H", _unions([r.hyps_moins or (frozenset(),) for r in rs])
         return "NC-", ()
     if dp and dm:
         return "B", ()
@@ -1827,7 +1866,13 @@ def resultats_sous_i(cas: Cas, i: dict, budget: Budget, contextes=None) -> dict:
             except BudgetEpuise:
                 rs.append(ResultatBranche("?", (), complet=False))
         st, hs = combiner_branches(rs)
-        out[ctx] = ResultatLocal(st, tuple(hs), tuple(rs), all(r.complet for r in rs))
+        complet = all(r.complet for r in rs)
+        if st == "ER_H":  # § 3.7, L22 : les deux familles ; `hypotheses` en est la réunion, pour la lecture par nature
+            hp, hm = hs
+            out[ctx] = ResultatLocal(st, tuple(dict.fromkeys(tuple(hp) + tuple(hm))), tuple(rs), complet,
+                                     tuple(hp), tuple(hm))
+        else:
+            out[ctx] = ResultatLocal(st, tuple(hs), tuple(rs), complet)
     return out
 
 
@@ -2018,7 +2063,7 @@ def robustesse(profil: Profil) -> dict:
     couverture par des cylindres maximaux."""
     I = profil.I
     out = {}
-    groupes = {"+": ("E", "E_H"), "-": ("R", "R_H")}
+    groupes = {"+": STATUTS_PLUS, "-": STATUTS_MOINS}  # § 3.7, L22 : ER_H compte dans les deux couvertures
     groupes.update({s: (s,) for s in STATUTS_LOCAUX})
     for nom, statuts in groupes.items():
         X = [i for c in profil.classes if c.statut in statuts for i in c.interpretations]
@@ -2036,7 +2081,7 @@ def _cas_certifies(profil: Profil, signe: str) -> list:
     """Pour chaque (classe, branche) d'un signe, les substitutions certifiées, sur leurs mentions."""
     out = []
     for c in profil.classes:
-        if c.statut not in (("E", "E_H") if signe == "+" else ("R", "R_H")):
+        if c.statut not in (STATUTS_PLUS if signe == "+" else STATUTS_MOINS):
             continue
         for b in c.resultat.branches:
             sols = []
@@ -2085,7 +2130,8 @@ def lignes_satisfaites(statuts: list) -> list:
 
     def ens(*ls):
         return [s for s in I if s in ls]
-    Ip, Im, Iq = ens("E", "E_H"), ens("R", "R_H"), ens("?")
+    # § 3.7, L22 : ER_H appartient à la fois à I⁺ et à I⁻
+    Ip, Im, Iq = ens(*STATUTS_PLUS), ens(*STATUTS_MOINS), ens("?")
     out = []
     if n == 0:
         out.append(1)
@@ -2095,13 +2141,13 @@ def lignes_satisfaites(statuts: list) -> list:
         out.append(3)
     if n and len(ens("E")) == n:
         out.append(4)
-    if n and len(Ip) == n and ens("E_H"):
+    if n and len(Ip) == n and ens("E_H") and not Im:  # L22 : « toutes certifiées positives, dont une sous hypothèses » : I⁻ = ∅
         out.append(5)
     if n and not Iq and 0 < len(Ip) < n and not Im:
         out.append(6)
     if n and len(ens("R")) == n:
         out.append(7)
-    if n and len(Im) == n and ens("R_H"):
+    if n and len(Im) == n and ens("R_H") and not Ip:  # L22 : la duale, I⁺ = ∅
         out.append(8)
     if n and not Iq and 0 < len(Im) < n and not Ip:
         out.append(9)
@@ -2160,12 +2206,13 @@ def syn(profil: Profil) -> StatutSynthetique:
         for H in c.resultat.hypotheses:
             for h in sorted(H):
                 hyps.append((k, h))
-    temoins = [c.temoin for c in profil.classes if c.statut in ("E", "E_H", "R", "R_H")] if ligne_ in (3, 6, 9) else []
+    temoins = [c.temoin for c in profil.classes if c.statut in STATUTS_PLUS + STATUTS_MOINS] \
+        if ligne_ in (3, 6, 9) else []
     # § 3.12 : la déf. 10 ne distingue pas une réfutation fermée (« aucun ange » : σ vide) d'une réfutation « pour
     # ces référents » (NOYAU § 4.4), qui peut porter sur un référent qu'aucun autre atome ne retient. On les cite.
     refs, fermees = [], []
     for k, c in enumerate(profil.classes):
-        if c.statut not in ("R", "R_H"):
+        if c.statut not in STATUTS_MOINS:  # L22 : ER_H compte comme R_H
             continue
         sig = [dict(l.sigma) for b in c.resultat.branches for l in b.lignes if l.c_moins and not l.d_plus]
         refs.extend((k, x) for x in sig)
@@ -2175,7 +2222,7 @@ def syn(profil: Profil) -> StatutSynthetique:
                              bool(fermees) and all(fermees))
 
 
-DUAL_LOCAL = {"E": "R", "R": "E", "E_H": "R_H", "R_H": "E_H", "NC+": "NC-", "NC-": "NC+", "B": "B", "N": "N", "?": "?"}
+DUAL_LOCAL = {"E": "R", "R": "E", "E_H": "R_H", "R_H": "E_H", "ER_H": "ER_H", "NC+": "NC-", "NC-": "NC+", "B": "B", "N": "N", "?": "?"}
 DUAL_NOM = {"etablie": "ecartee", "ecartee": "etablie", "etablie_sous_hypotheses": "ecartee_sous_hypotheses",
             "ecartee_sous_hypotheses": "etablie_sous_hypotheses"}
 
@@ -2183,6 +2230,13 @@ DUAL_NOM = {"etablie": "ecartee", "ecartee": "etablie", "etablie_sous_hypotheses
 def dual_statuts(statuts: list) -> list:
     """Le profil dual Π̄ (proposition 3), lu sur les statuts locaux."""
     return [DUAL_LOCAL[s] for s in statuts]
+
+
+def dual_familles(statut: str, hyps_plus: tuple = (), hyps_moins: tuple = ()) -> tuple:
+    """Le dual d'un statut local avec ses deux familles d'hypothèses (proposition 3 ; § 3.7, L22) : (statut dual,
+    hyps_plus du dual, hyps_moins du dual). ER_H va sur ER_H, en échangeant hyps_plus et hyps_moins ; E_H et R_H, qui
+    n'en portent qu'une, la portent de l'autre côté."""
+    return DUAL_LOCAL[statut], hyps_moins, hyps_plus
 
 
 def dual_nom(nom: str, signe: str = "") -> tuple:
@@ -2255,9 +2309,9 @@ def restreindre(statut: str, signes: set) -> str:
     """Le statut local rapporté pour la notation, quand seuls certains signes sont licenciés (étude § 2.6, la
     sémantique paraconsistante : une valeur B donne D⁺ sous S⁺_Q, D⁻ sous S⁻_Q)."""
     if "+" not in signes:
-        statut = {"E": "N", "E_H": "N", "NC+": "N", "B": "NC-"}.get(statut, statut)
+        statut = {"E": "N", "E_H": "N", "ER_H": "R_H", "NC+": "N", "B": "NC-"}.get(statut, statut)
     if "-" not in signes:
-        statut = {"R": "N", "R_H": "N", "NC-": "N", "B": "NC+"}.get(statut, statut)
+        statut = {"R": "N", "R_H": "N", "ER_H": "E_H", "NC-": "N", "B": "NC+"}.get(statut, statut)
     return statut
 
 
@@ -2272,18 +2326,22 @@ def mesures(statuts_m: list, statuts_r: list, hyps_m=None, hyps_r=None, divergen
     hyps_r = hyps_r or [()] * len(statuts_r)
     m = {"e+_der": 0, "e+_cert": 0, "e-_der": 0, "e-_cert": 0, "d_nr": 0, "n_perdue": 0}
     for sm, sr, hm, hr in zip(statuts_m, statuts_r, hyps_m, hyps_r):
-        if sm in ("E", "E_H"):
+        # L22 : ER_H compte à la fois comme E_H et comme R_H. Les deux premiers tests sont lus signe par signe : le
+        # signe que le système dérive manque à la référence. Une référence ER_H porte les deux signes : elle n'est
+        # jamais « l'autre signe » (sans cela, ER_H contre ER_H compterait deux erreurs). Décidé le 28/11 (§ 3.7, L22,
+        # « Les mesures »).
+        if sm in STATUTS_PLUS:
             if sr in ("R", "R_H", "NC-", "N"):
                 m["e+_der"] += 1
             elif sr == "B":
                 m["e+_cert"] += 1
-        if sm in ("R", "R_H"):
+        if sm in STATUTS_MOINS:
             if sr in ("E", "E_H", "NC+", "N"):
                 m["e-_der"] += 1
             elif sr == "B":
                 m["e-_cert"] += 1
-        if sm in ("E", "E_H", "R", "R_H") and sr in ("E", "E_H", "R", "R_H"):
-            if (sm in ("E", "R") and sr in ("E_H", "R_H")) or _natures(hm) != _natures(hr) and hm and hr:
+        if sm in STATUTS_PLUS + ("R", "R_H") and sr in STATUTS_PLUS + ("R", "R_H"):
+            if (sm in ("E", "R") and sr in ("E_H", "R_H", "ER_H")) or _natures(hm) != _natures(hr) and hm and hr:
                 m["n_perdue"] += 1
     if divergent_r and complet_m:
         nom = syn_statuts(statuts_m)[0] if statuts_m else "aucune_interpretation"
