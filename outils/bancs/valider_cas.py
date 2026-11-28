@@ -33,7 +33,8 @@ CHAMPS = {"id", "famille", "phenomenes", "pivot", "langue", "sorte", "descriptio
 FACULTATIFS = {"graphe_attendu", "requete_attendue", "remarque", "decision_ouverte",
                # version 3 (docs/BANCS_PHASE1.md, § 9) : les trois niveaux de statut, la représentation de référence
                "statut_reference", "hypotheses_reference", "justification_reference", "dependances",
-               "representation_reference", "connaissances_formelles", "historique"}
+               "representation_reference", "connaissances_formelles", "historique", "schema", "statuts_relatifs",
+               "profil_reference", "points_reference", "annotations"}
 CONNAISSANCES = {"equivalence_etablie", "condition_suffisante", "condition_necessaire", "implication",
                  "consequence_conditionnelle", "connaissance_typique", "hypothese_interpretative", "relation_inconnue",
                  "distinction_documentaire", "identite_documentaire"}
