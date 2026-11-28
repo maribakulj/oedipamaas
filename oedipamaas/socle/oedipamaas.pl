@@ -29,15 +29,34 @@
 
 version_moteur('1.0.0-j1').
 
+% charger_base(+Base) : tout ce que les outils attendent : les ressources (charger_ressources), puis ce que seul
+% T1/T2 demande (morphologie, index des libellés de raisonnement:preparer, couche de sens de la refonte).
+% La séparation est sans changement de comportement : même ordre, mêmes gardes.
 charger_base(Base) :-
     (   current_predicate(iconclass:n/1) -> true
-    ;   forall(member(F, ['iconclass.qlf', 'wordnet.qlf']),
-               ( directory_file_path(Base, F, C), load_files(C, [redefine_module(true)]) )),
-        module_property(oedipamaas, file(Ici)), file_directory_name(Ici, Dir),
-        directory_file_path(Dir, 'morphologie.pl', Morpho),
-        use_module(Morpho),                              % après WordNet : son index se construit au chargement
-        morphologie:indexer
+    ;   charger_ressources(Base),
+        charger_morphologie
     ),
+    preparer_t1t2.
+
+% charger_ressources(+Base) : ce que le lecteur et le noyau demandent de la base : Iconclass et WordNet. Ni la
+% morphologie, ni l'index de T1/T2, ni la couche de sens n'y sont : ils ne sont pas chargés, et le module
+% raisonnement n'est pas nécessaire (docs/INTEGRATION_NOYAU.md, § 2, étape 1).
+charger_ressources(Base) :-
+    (   current_predicate(iconclass:n/1) -> true
+    ;   forall(member(F, ['iconclass.qlf', 'wordnet.qlf']),
+               ( directory_file_path(Base, F, C), load_files(C, [redefine_module(true)]) ))
+    ).
+
+% la morphologie (T1/T2 et outils de compilation) : après WordNet, son index se construit au chargement
+charger_morphologie :-
+    module_property(oedipamaas, file(Ici)), file_directory_name(Ici, Dir),
+    directory_file_path(Dir, 'morphologie.pl', Morpho),
+    use_module(Morpho),
+    morphologie:indexer.
+
+% ce que seul T1/T2 demande : l'index des libellés, et la couche de sens de la refonte
+preparer_t1t2 :-
     raisonnement:preparer,
     (   \+ getenv('OEDIPAMAAS_REFONTE', '1') -> true    % prototype de la refonte (banc d'essai) seulement
     ;   getenv('OEDIPAMAAS_SANS_SENS', _) -> true      % pour mesurer l'apport de la couche de sens
@@ -172,7 +191,7 @@ versions(Base, _{moteur: Vm, base: Vb, analyseur: Va, regles: Vr}) :-
     ;   Va = "non configuré"
     ),
     module_property(oedipamaas, file(F)), file_directory_name(F, Dir),
-    findall(C, ( member(X, [assertions, conllu, interpretation, raisonnement, udpipe, oedipamaas, arbre, notation, mondes]),
+    findall(C, ( member(X, [assertions, conllu, interpretation, raisonnement, noms_propres, udpipe, oedipamaas, arbre, notation, mondes]),
                  atom_concat(X, '.pl', Fx), directory_file_path(Dir, Fx, Px), read_file_to_string(Px, C, []) ), Cs),
     atomic_list_concat(Cs, Tout), crypto_data_hash(Tout, H, [algorithm(sha256)]),
     string_concat("sha256:", H, Vr).
