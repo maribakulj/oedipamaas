@@ -1,0 +1,1605 @@
+{
+ "dossier": "mn-004",
+ "notation": "nr-1",
+ "famille": "modalite_negation_contextes",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/a_annoter/modalite_negation_contextes.json",
+ "source_reference": "/home/user/donnees/bancs_phase1/v3/reference/modalite_negation_contextes.json",
+ "remarques": "Aucun ange (étude § 1.3) : une quantification négative énoncée, de domaine la composition ; l'état d'origine est un autre contexte (décision 19, guide § 7, précision 1).",
+ "cas": [
+  {
+   "notation": "nr-1",
+   "id": "mn-004 (a)",
+   "description": {
+    "id": "mn-004",
+    "langue": "en",
+    "texte": "Fresco fragment, Umbria, c. 1400. The Virgin is enthroned with the Child on her knee, between four standing saints. No angels appear in the composition. The upper part of the gold ground is lost.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "parent": "principal",
+      "id": "origine",
+      "sorte": "etat_d_origine"
+     }
+    ],
+    "referents": [
+     {
+      "introduit_par": "iv",
+      "id": "v",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "it",
+      "id": "t",
+      "sorte": "etat"
+     },
+     {
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "is",
+      "id": "s",
+      "sorte": "collection"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vierge_marie"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 38,
+       "fin": 44,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "it",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "t"
+        ],
+        "type": "oc:trone"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 48,
+       "fin": 57,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "t",
+         "v"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 48,
+       "fin": 57,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:enfant_jesus"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 67,
+       "fin": 72,
+       "extrait": "Child"
+      }
+     },
+     {
+      "id": "sg",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "e",
+         "v"
+        ],
+        "type": "oc:sur_le_genou_de"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 73,
+       "fin": 84,
+       "extrait": "on her knee"
+      }
+     },
+     {
+      "id": "is",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "s"
+        ],
+        "type": "oc:saint"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 108,
+       "fin": 114,
+       "extrait": "saints"
+      }
+     },
+     {
+      "id": "ns",
+      "contenu": {
+       "atome": {
+        "pred": "nombre",
+        "args": [
+         "s"
+        ],
+        "valeur": 4
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 94,
+       "fin": 98,
+       "extrait": "four"
+      }
+     },
+     {
+      "id": "aucun",
+      "contenu": {
+       "quantification": {
+        "quant": "aucun",
+        "variable": [
+         "z",
+         "entite"
+        ],
+        "restriction": [
+         {
+          "pred": "type",
+          "args": [
+           "?z"
+          ],
+          "type": {
+           "alternatifs": "d1"
+          }
+         }
+        ]
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 116,
+       "fin": 151,
+       "extrait": "No angels appear in the composition"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "cote": "D",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:09538915-n"
+      ],
+      "ancre": "angels (D)"
+     }
+    ]
+   },
+   "definition": {
+    "id": "mn-004:def",
+    "libelle": "Madonna and Child enthroned, attended by angels",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "C",
+      "individu"
+     ],
+     [
+      "T",
+      "etat"
+     ],
+     [
+      "A",
+      "entite"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:vierge_marie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:enfant_jesus"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?T"
+       ],
+       "type": "oc:trone"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?T",
+        "?M"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": {
+        "alternatifs": "d2"
+       }
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?A",
+        "?M"
+       ],
+       "type": "oc:aupres_de"
+      }
+     ]
+    },
+    "points": [
+     {
+      "id": "d2",
+      "cote": "Δ",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:09538915-n"
+      ],
+      "ancre": "angels (Δ)"
+     }
+    ]
+   },
+   "connaissances": {
+    "version": "K*-mn-004",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:au_pied_du_trone_de",
+      "sur": "oc:aupres_de",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "contexte_origine": "inconnue (rien n'est dit de l'état d'origine)"
+   },
+   "reference_adjugee": {
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "inconnue",
+      "classe": {},
+      "valeur": "N",
+      "enonciateur": "auteur",
+      "remarque": "« The upper part of the gold ground is lost » : la négation vaut de la composition actuelle (IA § 7.3)"
+     }
+    ],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « No angels appear in the composition » : quantification négative dite, de domaine la composition. Dans l'œuvre telle qu'elle est.  Précision 1.1.1 : l'état d'origine (fond d'or perdu en haut) va dans satisfactions_contextuelles, inconnue ; le statut se lit sur l'œuvre actuelle."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "mn-004 (b)",
+   "description": {
+    "id": "mn-004",
+    "langue": "en",
+    "texte": "Fresco fragment, Umbria, c. 1400. The Virgin is enthroned with the Child on her knee, between four standing saints. No angels appear in the composition. The upper part of the gold ground is lost.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "parent": "principal",
+      "id": "origine",
+      "sorte": "etat_d_origine"
+     }
+    ],
+    "referents": [
+     {
+      "introduit_par": "iv",
+      "id": "v",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "it",
+      "id": "t",
+      "sorte": "etat"
+     },
+     {
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "is",
+      "id": "s",
+      "sorte": "collection"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vierge_marie"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 38,
+       "fin": 44,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "it",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "t"
+        ],
+        "type": "oc:trone"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 48,
+       "fin": 57,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "t",
+         "v"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 48,
+       "fin": 57,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:enfant_jesus"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 67,
+       "fin": 72,
+       "extrait": "Child"
+      }
+     },
+     {
+      "id": "sg",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "e",
+         "v"
+        ],
+        "type": "oc:sur_le_genou_de"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 73,
+       "fin": 84,
+       "extrait": "on her knee"
+      }
+     },
+     {
+      "id": "is",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "s"
+        ],
+        "type": "oc:saint"
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 108,
+       "fin": 114,
+       "extrait": "saints"
+      }
+     },
+     {
+      "id": "ns",
+      "contenu": {
+       "atome": {
+        "pred": "nombre",
+        "args": [
+         "s"
+        ],
+        "valeur": 4
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 94,
+       "fin": 98,
+       "extrait": "four"
+      }
+     },
+     {
+      "id": "aucun",
+      "contenu": {
+       "quantification": {
+        "quant": "aucun",
+        "variable": [
+         "z",
+         "entite"
+        ],
+        "restriction": [
+         {
+          "pred": "type",
+          "args": [
+           "?z"
+          ],
+          "type": {
+           "alternatifs": "d1"
+          }
+         }
+        ]
+       }
+      },
+      "provenance": {
+       "document": "mn-004",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 116,
+       "fin": 151,
+       "extrait": "No angels appear in the composition"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "cote": "D",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:09538915-n",
+       "oc:personne_sainte",
+       "oc:investisseur",
+       "oc:angel_falls"
+      ],
+      "ancre": "angels (D)"
+     }
+    ],
+    "contraintes": [
+     {
+      "id": "instance",
+      "forme": "exclusion",
+      "interdits": [
+       {
+        "d1": "oc:angel_falls"
+       }
+      ],
+      "source": "WordNet (@i) et morphologie : nom commun au pluriel",
+      "sorte": "nombre"
+     }
+    ],
+    "preferences": [
+     {
+      "id": "dom",
+      "point": "d1",
+      "ordre": [
+       "wn30:09538915-n",
+       "oc:personne_sainte",
+       "oc:investisseur"
+      ],
+      "source": "le domaine religieux (une préférence)"
+     }
+    ]
+   },
+   "definition": {
+    "id": "mn-004:def",
+    "libelle": "Madonna and Child enthroned, attended by angels",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "C",
+      "individu"
+     ],
+     [
+      "T",
+      "etat"
+     ],
+     [
+      "A",
+      "entite"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:vierge_marie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:enfant_jesus"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?T"
+       ],
+       "type": "oc:trone"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?T",
+        "?M"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": {
+        "alternatifs": "d2"
+       }
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?A",
+        "?M"
+       ],
+       "type": "oc:aupres_de"
+      }
+     ]
+    },
+    "points": [
+     {
+      "id": "d2",
+      "cote": "Δ",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:09538915-n",
+       "oc:personne_sainte",
+       "oc:investisseur"
+      ],
+      "ancre": "angels (Δ)"
+     }
+    ],
+    "preferences": [
+     {
+      "id": "dom2",
+      "point": "d2",
+      "ordre": [
+       "wn30:09538915-n",
+       "oc:personne_sainte",
+       "oc:investisseur"
+      ],
+      "source": "le domaine religieux"
+     },
+     {
+      "id": "lemme",
+      "couplage": [
+       "d1",
+       "d2"
+      ],
+      "source": "même lemme, même sens (une préférence)"
+     }
+    ]
+   },
+   "connaissances": {
+    "version": "K*-mn-004",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:au_pied_du_trone_de",
+      "sur": "oc:aupres_de",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "b",
+    "attendu": "ecart",
+    "statut_calcule": "ecartee_sous_hypotheses",
+    "raison": "K : aucune contrainte attestable n'exclut la personne sainte ni l'investisseur, d'aucun côté ; les trois couples diagonaux sont F, les six autres N (étude § 3.7 (c), exemple 1) ; un affaiblissement, non une erreur"
+   },
+   "reference_adjugee": {
+    "statut_reference": "ecartee",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "F",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [
+     {
+      "chemin": "principal > état d'origine",
+      "statut": "inconnue",
+      "classe": {},
+      "valeur": "N",
+      "enonciateur": "auteur",
+      "remarque": "« The upper part of the gold ground is lost » : la négation vaut de la composition actuelle (IA § 7.3)"
+     }
+    ],
+    "source": "accord",
+    "raison": "Accord de A et B (ecartee). Profil retenu : A. Justification de A : « No angels appear in the composition » : quantification négative dite, de domaine la composition. Dans l'œuvre telle qu'elle est.  Précision 1.1.1 : l'état d'origine (fond d'or perdu en haut) va dans satisfactions_contextuelles, inconnue ; le statut se lit sur l'œuvre actuelle."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "mn-004#1 (a)",
+   "description": {
+    "id": "mn-004#1",
+    "langue": "en",
+    "texte": "Fresco fragment, Umbria, c. 1400. The Virgin is enthroned with the Child on her knee, between four standing saints. Two angels kneel at the foot of the throne. The upper part of the gold ground is lost.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "parent": "principal",
+      "id": "origine",
+      "sorte": "etat_d_origine"
+     }
+    ],
+    "referents": [
+     {
+      "introduit_par": "iv",
+      "id": "v",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "it",
+      "id": "t",
+      "sorte": "etat"
+     },
+     {
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "is",
+      "id": "s",
+      "sorte": "collection"
+     },
+     {
+      "introduit_par": "ia",
+      "id": "g",
+      "sorte": "collection"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vierge_marie"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 38,
+       "fin": 44,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "it",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "t"
+        ],
+        "type": "oc:trone"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 48,
+       "fin": 57,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "t",
+         "v"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 48,
+       "fin": 57,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:enfant_jesus"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 67,
+       "fin": 72,
+       "extrait": "Child"
+      }
+     },
+     {
+      "id": "sg",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "e",
+         "v"
+        ],
+        "type": "oc:sur_le_genou_de"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 73,
+       "fin": 84,
+       "extrait": "on her knee"
+      }
+     },
+     {
+      "id": "is",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "s"
+        ],
+        "type": "oc:saint"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 108,
+       "fin": 114,
+       "extrait": "saints"
+      }
+     },
+     {
+      "id": "ns",
+      "contenu": {
+       "atome": {
+        "pred": "nombre",
+        "args": [
+         "s"
+        ],
+        "valeur": 4
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 94,
+       "fin": 98,
+       "extrait": "four"
+      }
+     },
+     {
+      "id": "ia",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "g"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 116,
+       "fin": 126,
+       "extrait": "Two angels"
+      }
+     },
+     {
+      "id": "na",
+      "contenu": {
+       "atome": {
+        "pred": "nombre",
+        "args": [
+         "g"
+        ],
+        "valeur": 2
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 116,
+       "fin": 119,
+       "extrait": "Two"
+      }
+     },
+     {
+      "id": "ag",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "g",
+         "v"
+        ],
+        "type": "oc:au_pied_du_trone_de"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#1",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 133,
+       "fin": 158,
+       "extrait": "at the foot of the throne"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "cote": "D",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:09538915-n"
+      ],
+      "ancre": "angels (D)"
+     }
+    ]
+   },
+   "definition": {
+    "id": "mn-004:def",
+    "libelle": "Madonna and Child enthroned, attended by angels",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "C",
+      "individu"
+     ],
+     [
+      "T",
+      "etat"
+     ],
+     [
+      "A",
+      "entite"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:vierge_marie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:enfant_jesus"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?T"
+       ],
+       "type": "oc:trone"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?T",
+        "?M"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": {
+        "alternatifs": "d2"
+       }
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?A",
+        "?M"
+       ],
+       "type": "oc:aupres_de"
+      }
+     ]
+    },
+    "points": [
+     {
+      "id": "d2",
+      "cote": "Δ",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:09538915-n"
+      ],
+      "ancre": "angels (Δ)"
+     }
+    ]
+   },
+   "connaissances": {
+    "version": "K*-mn-004",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:au_pied_du_trone_de",
+      "sur": "oc:aupres_de",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : Deux anges agenouillés au pied du trône : la Vierge à l'Enfant trônant est entourée d'anges. V."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "mn-004#2 (a)",
+   "description": {
+    "id": "mn-004#2",
+    "langue": "en",
+    "texte": "Fresco fragment, Umbria, c. 1400. The Virgin is enthroned with the Child on her knee, between four standing saints. The contract of 1398 stipulated that no angels should be painted. The upper part of the gold ground is lost.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "parent": "principal",
+      "id": "origine",
+      "sorte": "etat_d_origine"
+     },
+     {
+      "parent": "principal",
+      "id": "histoire",
+      "sorte": "histoire"
+     },
+     {
+      "parent": "histoire",
+      "ouvert_par": "st",
+      "id": "contrat",
+      "sorte": "deontique"
+     }
+    ],
+    "referents": [
+     {
+      "introduit_par": "iv",
+      "id": "v",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "it",
+      "id": "t",
+      "sorte": "etat"
+     },
+     {
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "is",
+      "id": "s",
+      "sorte": "collection"
+     },
+     {
+      "contexte": "histoire",
+      "introduit_par": "ic",
+      "id": "k",
+      "sorte": "individu"
+     },
+     {
+      "contexte": "histoire",
+      "introduit_par": "ist",
+      "id": "st",
+      "sorte": "changement"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vierge_marie"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 38,
+       "fin": 44,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "it",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "t"
+        ],
+        "type": "oc:trone"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 48,
+       "fin": 57,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "t",
+         "v"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 48,
+       "fin": 57,
+       "extrait": "enthroned"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:enfant_jesus"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 67,
+       "fin": 72,
+       "extrait": "Child"
+      }
+     },
+     {
+      "id": "sg",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "e",
+         "v"
+        ],
+        "type": "oc:sur_le_genou_de"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 73,
+       "fin": 84,
+       "extrait": "on her knee"
+      }
+     },
+     {
+      "id": "is",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "s"
+        ],
+        "type": "oc:saint"
+       }
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 108,
+       "fin": 114,
+       "extrait": "saints"
+      }
+     },
+     {
+      "id": "ns",
+      "contenu": {
+       "atome": {
+        "pred": "nombre",
+        "args": [
+         "s"
+        ],
+        "valeur": 4
+       }
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 94,
+       "fin": 98,
+       "extrait": "four"
+      }
+     },
+     {
+      "id": "ic",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "k"
+        ],
+        "type": "oc:contrat"
+       }
+      },
+      "qualification": {
+       "contexte": "histoire"
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 116,
+       "fin": 136,
+       "extrait": "The contract of 1398"
+      }
+     },
+     {
+      "id": "ist",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "st"
+        ],
+        "type": "oc:stipuler"
+       }
+      },
+      "qualification": {
+       "contexte": "histoire"
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 137,
+       "fin": 147,
+       "extrait": "stipulated"
+      }
+     },
+     {
+      "id": "rst",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "st",
+         "k"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "qualification": {
+       "contexte": "histoire"
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 137,
+       "fin": 147,
+       "extrait": "stipulated"
+      }
+     },
+     {
+      "id": "aucun",
+      "contenu": {
+       "quantification": {
+        "quant": "aucun",
+        "variable": [
+         "z",
+         "entite"
+        ],
+        "restriction": [
+         {
+          "pred": "type",
+          "args": [
+           "?z"
+          ],
+          "type": {
+           "alternatifs": "d1"
+          }
+         }
+        ]
+       }
+      },
+      "qualification": {
+       "contexte": "contrat"
+      },
+      "provenance": {
+       "document": "mn-004#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 153,
+       "fin": 180,
+       "extrait": "no angels should be painted"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "d1",
+      "cote": "D",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:09538915-n"
+      ],
+      "ancre": "angels (D)"
+     }
+    ]
+   },
+   "definition": {
+    "id": "mn-004:def",
+    "libelle": "Madonna and Child enthroned, attended by angels",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "C",
+      "individu"
+     ],
+     [
+      "T",
+      "etat"
+     ],
+     [
+      "A",
+      "entite"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:vierge_marie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:enfant_jesus"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?T"
+       ],
+       "type": "oc:trone"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?T",
+        "?M"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": {
+        "alternatifs": "d2"
+       }
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?A",
+        "?M"
+       ],
+       "type": "oc:aupres_de"
+      }
+     ]
+    },
+    "points": [
+     {
+      "id": "d2",
+      "cote": "Δ",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:09538915-n"
+      ],
+      "ancre": "angels (Δ)"
+     }
+    ]
+   },
+   "connaissances": {
+    "version": "K*-mn-004",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "oc:au_pied_du_trone_de",
+      "sur": "oc:aupres_de",
+      "source": {
+       "ressource": "K* (postulat de signification, jugement de référence)",
+       "validation": "guide d'annotation § 1"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "remarque": "la négation est dans le contexte déontique d'un contrat, hors de la figuration : rien n'appuie ni ne réfute (étude § 6.5)"
+   },
+   "reference_adjugee": {
+    "statut_reference": "inconnue",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "N",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B (inconnue). Profil retenu : A. Justification de A : Le contrat de 1398 prescrivait qu'on ne peigne pas d'anges : contenu déontique, hors de la figuration. Des anges, rien n'est dit : N."
+   }
+  }
+ ]
+}
