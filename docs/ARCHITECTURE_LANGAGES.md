@@ -1,4 +1,4 @@
-# La répartition des responsabilités entre les langages : l'arbitrage (28/11, à valider par la propriétaire)
+# La répartition des responsabilités entre les langages : l'arbitrage (28/11, validé par la propriétaire)
 
 **La question de la propriétaire.** Python a été choisi pour plusieurs composants sans décision architecturale
 comparative. Faut-il le garder, le remplacer en partie ou en totalité par Clojure, réserver Clojure à la construction de
@@ -10,7 +10,7 @@ K, ou recentrer le projet sur Prolog ? Deux contraintes s'appliquent :
 - l'inventaire mécanique, fait par script : `/home/user/donnees/audit_langages/inventaire.tsv` ;
 - l'étude comparative et une expérimentation en Python et en Prolog : `docs/AUDIT_LANGAGES.md`, avec ses scripts sous
   `/home/user/donnees/audit_langages/` ;
-- l'arbitrage ci-dessous. Il reste une proposition tant que la propriétaire ne l'a pas validée.
+- l'arbitrage ci-dessous, validé par la propriétaire le 28/11, avec les précisions du § 4.
 
 Rien n'a été réécrit, et aucune dépendance n'a été ajoutée.
 
@@ -126,3 +126,54 @@ Ce sont des préalables à D, ou à toute autre architecture :
 5. `semantic-auditor` revoit les invariants et la certification.
 
 La correction de la table des axes va à `python-engineer`.
+
+## 4. La décision de la propriétaire (28/11)
+
+**D-minimal est validé.** La nouvelle K se construit en Prolog. Python garde les composants existants et la
+vérification indépendante. Clojure n'est pas introduit à ce stade.
+
+**Une décision pragmatique et révisable.** Ce n'est pas une démonstration de la supériorité de Prolog sur Clojure.
+Clojure n'a pas été expérimenté, et ses avantages ne se réduisent pas à Jena ou à SHACL : transformations
+fonctionnelles, structures persistantes, traitement de données. Le § 2 de ce document est à lire avec cette réserve :
+il écarte Clojure pour ce projet et à ce stade, pas en général.
+
+**Les précisions qui s'imposent à la suite :**
+- **Prolog est le langage du moteur et de la construction sémantique de K.** L'importation, la transformation et la
+  validation des ressources sont des opérations clairement distinctes du raisonnement.
+- **Une spécification unique, neutre et versionnée de K** sert de contrat à toutes les implémentations. L'unité du
+  langage ne garantit pas, à elle seule, l'unité de la sémantique.
+- **On ne migre aucun composant existant sans nécessité démontrée.**
+- **Le pilote démontre la faisabilité de K en Prolog sur deux ressources, non sa robustesse générale.** Avant de le
+  reprendre comme fondement, on reproduit et on examine :
+  - la correspondance exacte des versions (INV7) et l'exhaustivité d'un vote (INV8) ;
+  - les empreintes des données effectivement lues ;
+  - les ambiguïtés des identifiants et des séparateurs ;
+  - la provenance dans les faits compilés, et l'arité des faits lus ;
+  - les données mal formées, les ensembles vides, et toute déduplication silencieuse.
+
+  Le résultat défavorable du mutant M01 est gardé : on clarifie la spécification avant d'en changer l'attendu.
+- **Les mesures sur DBnary et l'AAT complets** comparent le chargement intégral et le traitement par flux. On ne charge
+  pas un graphe entier quand une extraction ciblée suffit.
+- **Les statuts de K sont `proposée`, `attestée` et `rejetée`.** Ce sont des statuts de qualification des connaissances,
+  distincts des valeurs logiques et des statuts de satisfaction des requêtes.
+  - Le rejet d'une inclusion n'est pas une preuve de disjonction entre les concepts.
+  - On garde chaque jugement avec sa source, son périmètre, sa version, et ses éventuelles contradictions avec d'autres.
+    Un jugement de validation n'écrase jamais en silence les précédents.
+  - Les postulats formels de la sémantique de référence se distinguent des connaissances attestées par une ressource
+    externe.
+- **La coexistence de deux raisonneurs actifs est un défaut architectural prioritaire.**
+  - La commande publique appelle le noyau actuel par `codage.pl`, avec ses mécanismes de vérification et de
+    certification.
+  - L'intégration se prépare sans toucher aux fondements sémantiques, et sans prétendre que le noyau est qualifié pour
+    la production.
+  - Les fonctions de `raisonnement.pl` encore légitimement réutilisées sont séparées de l'ancien algorithme.
+  - L'ancien raisonneur reste comme baseline historique, derrière des commandes explicitement identifiées comme telles.
+- **L'interface :** une API publique indépendante du langage, par un protocole JSON/JSONL versionné. Un client Python
+  facultatif peut l'appeler, sans dupliquer de logique métier et sans devenir une dépendance du moteur. Il n'y a donc
+  pas de contradiction entre PLAN_V1 et le cahier des charges. Les dépendances de compilation, d'expérimentation, de
+  lecture linguistique et d'exécution du noyau sont distinguées.
+- **La normalisation des chaînes** garde les formes d'origine. Elle distingue les clés de recherche, les clés de vote et
+  les identifiants conceptuels, et n'efface aucune distinction sémantique ou documentaire.
+- **Sont validés :** la clarification des licences Joconde et le signalement des entrées WOLF corrompues.
+- **Pas de chantier de réécriture générale.** La suite reste centrée sur les fondements exécutables, la qualification
+  du langage de référence, l'intégration du noyau actuel et les besoins démontrés de K.

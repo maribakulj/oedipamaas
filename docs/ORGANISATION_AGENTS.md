@@ -91,6 +91,13 @@ Sortie : le fichier de résultats détaillés ; la synthèse à rendre
 - **Les agents ne commitent ni ne poussent.** C'est l'orchestrateur qui le fait, après la revue. Une seule exception : l'archivage
   mécanique sur la branche de données, quand le contrat le demande (`data-operator`). La ligne `Co-Authored-By` du
   commit nomme alors le modèle qui l'a fait.
+
+  Cette exception est validée par la propriétaire, à trois conditions :
+  - l'archivage est mécanique, contrôlé, et limité au périmètre autorisé ;
+  - les caches, les fichiers `.pyc` et les artefacts régénérables inutiles en sont exclus ;
+  - **la licence de chaque ressource est vérifiée avant tout archivage public**, puisque le dépôt est public. Un
+    fichier tiré d'une ressource dont la licence n'est pas vérifiée n'est pas archivé. Il est seulement décrit, avec
+    son empreinte et le moyen de le régénérer.
 - **Chaque agent a son propre dossier de brouillon**, sous le scratchpad de la session : `<scratchpad>/<rôle>_<tâche>/`.
   Ne jamais partager un dossier entre deux agents, en particulier entre deux annotateurs (une indépendance a été perdue
   ainsi, `BANCS_PHASE1.md`, § 9.5).
@@ -166,6 +173,13 @@ fixés d'avance et indépendants du modèle :
 - la consommation, quand elle est accessible (le nombre de jetons du sous-agent).
 
 On élargit la délégation par étapes, et on ne lance pas de grande campagne redondante pour comparer.
+
+**La décision de la propriétaire (28/11).** L'organisation est validée, ainsi que la délégation de l'annotation et de la
+représentation formelle à Sonnet, à deux conditions : les contrôles par échantillonnage et les arbitrages indépendants
+continuent. Les pilotes ne démontrent pas une équivalence générale entre Sonnet et Opus. La consommation par cas du
+pilote de représentation formelle est élevée. On regroupe donc les missions pour amortir l'apprentissage des
+spécifications. On mesure, quand c'est possible, la consommation **totale** d'une tâche : reprises, arbitrages et
+coordination compris.
 
 | famille de tâches | état |
 |---|---|
