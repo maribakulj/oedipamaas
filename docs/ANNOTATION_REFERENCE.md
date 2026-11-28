@@ -178,16 +178,23 @@ La justification est courte : ce qui fonde chaque valeur, et pourquoi les autres
 Les annotateurs ont rencontré trois lacunes du guide. Ils les ont réglées chacun à sa façon. L'adjudication applique les
 règles ci-dessous à toutes les familles, sans changer les jugements initiaux, qui sont gardés.
 
-**1. Un contexte n'est pas une lecture.** Un résultat qui diffère selon le contexte n'est pas une divergence entre
-interprétations. Par exemple, une scène réfutée pour l'œuvre telle qu'elle est aujourd'hui, mais satisfaite dans son
-état d'origine, ou satisfaite dans une vision et non dans la scène principale.
-- **Le statut synthétique se lit sur le contexte principal :** la figuration de l'œuvre telle que la notice la décrit.
-- **Les autres contextes** donnent chacun leur résultat, dans `satisfactions_contextuelles` : le chemin, le statut, la
-  classe. Une vision, un tableau figuré ou un récit en font partie, de même que l'état d'origine d'une œuvre altérée,
-  sous le chemin `principal > état d'origine`.
-- **Seule une divergence entre lectures donne `divergent`.** Une différence entre contextes n'en donne jamais.
-- **Retenir une notation** pour l'œuvre à partir d'un contexte emboîté reste une décision documentaire, que l'annotation
-  ne prend pas.
+**1. Un contexte n'est pas une lecture** (règle corrigée le 28/11, selon la décision 6 de la propriétaire).
+Un résultat qui diffère selon le contexte n'est pas une divergence entre interprétations. Par exemple, une scène réfutée
+pour l'œuvre telle qu'elle est, mais satisfaite dans son état d'origine ; ou satisfaite dans une vision, et non dans la
+scène principale.
+- **Une définition est satisfaite dans le contexte où la scène est figurée.** Ce contexte peut être la figuration
+  principale, une vision, un rêve, un tableau figuré, une statue, un récit figuré ou l'état d'origine d'une œuvre
+  altérée. Le résultat garde son chemin (`resultats_par_contexte`).
+- **Le statut de référence se lit sur les contextes qui prennent une valeur :**
+  - si un seul contexte en prend une, c'est son statut, avec son chemin (`contexte_du_statut`) ;
+  - si plusieurs en prennent la même, c'est ce statut, avec leurs chemins ;
+  - s'ils en prennent de différentes, c'est **`par_contexte`**, chaque contexte gardant le sien. Ce n'est ni `divergent`
+    ni une priorité d'un signe.
+- **Retenir la notation pour l'œuvre principale est une décision documentaire à part.** L'annotation ne la prend pas.
+- **La première version de cette règle était fausse.** Elle lisait le statut sur le seul contexte principal, et rendait
+  `inconnue` une scène satisfaite dans une vision. Elle confondait ainsi la satisfaction contextuelle et la décision
+  documentaire. Les adjudications l'ont appliquée. La correction est faite par `outils/bancs/statut_par_contexte.py`,
+  qui garde l'ancien statut dans `historique.statut_contexte_principal`.
 
 **2. Une convention n'est pas une lecture.** Quand le résultat dépend d'une convention d'évaluation non tranchée, on
 garde deux choses distinctes :
