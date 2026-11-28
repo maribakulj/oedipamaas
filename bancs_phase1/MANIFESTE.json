@@ -725,9 +725,64 @@
    "sha256": "47ddad57303bfeeab01d70a3d33f9a7289498ffd37ad4a44d9d4437054f14ac6"
   },
   {
+   "chemin": "v3/formel/compositionnalite.json",
+   "taille": 137620,
+   "sha256": "ba0b26b5c5d3ab7196e080175d8a9fcda17bb4390c3b3a8c247c88078982335e"
+  },
+  {
+   "chemin": "v3/formel/definitions_classification.json",
+   "taille": 204592,
+   "sha256": "be9c5b22894f3a03bde1f66cfd7c9c84bb109704289db4302ea05b6eff74ed4b"
+  },
+  {
+   "chemin": "v3/formel/espace_partie_temps.json",
+   "taille": 154290,
+   "sha256": "48831cedfe523db8238b87260b2402c3afb2124bbac52bf9c4168a6bab88c08f"
+  },
+  {
+   "chemin": "v3/formel/evenements_etats.json",
+   "taille": 207207,
+   "sha256": "a1c913aa6a57edb82c4b2cf4cd88bbb18f95d8c9cfb4dc3e4aba819e365475b9"
+  },
+  {
+   "chemin": "v3/formel/modalite_negation_contextes.json",
+   "taille": 218473,
+   "sha256": "71f3472d8ff9eb77560aa1cf5a2371894b2c8ef9328c2d029af99562120ede69"
+  },
+  {
+   "chemin": "v3/formel/niveaux_representation.json",
+   "taille": 225477,
+   "sha256": "adaf9724c74632125953854dc8a07726888abf6c12146526c6dcd31fc0b95a6c"
+  },
+  {
+   "chemin": "v3/formel/phenomenes_iconographiques.json",
+   "taille": 273565,
+   "sha256": "f6a044c21990bb40ae4de97031b7fbbfeadb677c08255248f570d424f94700c2"
+  },
+  {
+   "chemin": "v3/formel/reference_quantification.json",
+   "taille": 208712,
+   "sha256": "2e6972af269e630190b57ca80b9dc9819d37c3149c537abbe98bb1d94826c943"
+  },
+  {
+   "chemin": "v3/formel/structures_argumentales.json",
+   "taille": 181567,
+   "sha256": "4ae30076803b70efd81ddd44c4d21873ab8048b1fa9b607d4e9700b99da7d5ff"
+  },
+  {
+   "chemin": "v3/formel_comparaison/formel.json",
+   "taille": 117027,
+   "sha256": "92a5b3e930f32cff8dac4c1759c42016b2ea0e6657f859ff49b6f7ecea078bc9"
+  },
+  {
+   "chemin": "v3/formel_comparaison/formel.md",
+   "taille": 6357,
+   "sha256": "208e389f48c1351d5609556951c19e3972703f7ef636af12f3a3c6aa3afb400c"
+  },
+  {
    "chemin": "v3/mesure_initiale/resultats.json.xz",
-   "taille": 1365292,
-   "sha256": "5a6a8453aa28c7e9e7b335ebd2ad78533a1114622c85ec00f844cb0454cce2a1"
+   "taille": 1342212,
+   "sha256": "d78e087ee5f96b4cd3ebdcc2dc27fe4384a3386186288cf5032a0a33cdcb79fe"
   },
   {
    "chemin": "v3/mesure_initiale/sensibilite_surete_A.json",
@@ -736,8 +791,8 @@
   },
   {
    "chemin": "v3/mesure_initiale/tableaux.md",
-   "taille": 2687,
-   "sha256": "c43dca1eb91b83620a0d1ffaf3aeae0498f4733d1d95016690c3cbd331e1d433"
+   "taille": 4016,
+   "sha256": "e2b6b91ded83d958b6fd34da612fabf891ddd2a5eed25a5eaa46259bcffceaf7"
   },
   {
    "chemin": "v3/niveaux/niveaux.md",
@@ -746,8 +801,8 @@
   },
   {
    "chemin": "v3/niveaux/reference.json",
-   "taille": 45422,
-   "sha256": "540116067853b1de3a03593f57173f49ade60a6e47bc95d0c55de343ba6efdb7"
+   "taille": 94148,
+   "sha256": "4b811e8c3bf0f4bbb896b7060e0254f4499a1a57ba9406d3efda8eac074b2e6b"
   },
   {
    "chemin": "v3/reference/compositionnalite.adjudication.md",
@@ -930,5 +985,5 @@
    "sha256": "c0eeb98d84b99fb32e2caf171d786f3831003935f885ed697f76a092a45543dc"
   }
  ],
- "mis_a_jour": "2026-11-28T11:25:15Z"
+ "mis_a_jour": "2026-11-28"
 }

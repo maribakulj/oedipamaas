@@ -47,6 +47,42 @@
 | inconnue | 6 | 8 | 0 | 1047 | 1061 |
 | non_certifiee | 3 | 0 | 0 | 18 | 21 |
 
+### Matrice : (a) en ligne, (c) en colonne
+
+| | etablie | etablie_sous_hypotheses | ecartee | inconnue | total |
+|---|---|---|---|---|---|
+| contradictoire | 0 | 0 | 0 | 3 | 3 |
+| divergent | 0 | 0 | 0 | 49 | 49 |
+| ecartee | 5 | 0 | 1 | 262 | 268 |
+| ecartee_sous_hypotheses | 0 | 0 | 0 | 21 | 21 |
+| etablie | 10 | 9 | 0 | 502 | 521 |
+| etablie_sous_hypotheses | 0 | 0 | 0 | 281 | 281 |
+| inconnue | 2 | 0 | 0 | 290 | 292 |
+| non_certifiee | 3 | 0 | 0 | 45 | 48 |
+| par_contexte | 0 | 1 | 0 | 10 | 11 |
+
+### (c) contre (a), par axe (déf. 11, les axes comptés à part)
+
+| axe | égal | (c) plus fort | (c) plus faible |
+|---|---|---|---|
+| positif | 584 | 10 | 900 |
+| negatif | 1148 | 0 | 346 |
+
+### (c) plus fort que (a)
+
+| élément | (a) | (c) | (b) | erreur stricte |
+|---|---|---|---|---|
+| dc-017#2 | ecartee | etablie | inconnue | oui |
+| ep-003#6 | non_certifiee | etablie | non_certifiee | oui |
+| ep-016#6 | non_certifiee | etablie | non_certifiee | oui |
+| mn-023#1 | inconnue | etablie | inconnue | oui |
+| mn-023#2 | non_certifiee | etablie | non_certifiee | oui |
+| rq-014 | ecartee | etablie | ecartee | oui |
+| rq-014#3 | inconnue | etablie | inconnue | oui |
+| rq-014#5 | ecartee | etablie | ecartee | oui |
+| rq-014#6 | ecartee | etablie | ecartee | oui |
+| sa-015#2 | ecartee | etablie | inconnue | oui |
+
 ### (c) contre (b), par famille
 
 | famille | accord | plus fort | plus faible |

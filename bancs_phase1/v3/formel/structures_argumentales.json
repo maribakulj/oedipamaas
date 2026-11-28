@@ -1,0 +1,9079 @@
+{
+ "notation": "nr-1",
+ "famille": "structures_argumentales",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/a_annoter/structures_argumentales.json",
+ "remarques": "Mêmes conventions que evenements_etats.json.",
+ "cas": [
+  {
+   "notation": "nr-1",
+   "id": "sa-001",
+   "description": {
+    "id": "sa-001",
+    "langue": "en",
+    "texte": "Panel from a dismantled altarpiece, tempera and gold on poplar, Umbria, about 1420. A bearded saint in a red mantle stands at the left of a pavement drawn in perspective. He hands a closed book bound in green to a young deacon, who receives it with veiled hands. Gold ground; the haloes are punched.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s",
+      "sorte": "individu",
+      "introduit_par": "i_s"
+     },
+     {
+      "id": "bk",
+      "sorte": "individu",
+      "introduit_par": "i_bk"
+     },
+     {
+      "id": "dc",
+      "sorte": "individu",
+      "introduit_par": "i_dc"
+     },
+     {
+      "id": "e",
+      "sorte": "changement",
+      "introduit_par": "i_e"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_s",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "s"
+        ],
+        "type": "wn30:10547145-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-001",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 94,
+       "fin": 99,
+       "extrait": "saint"
+      }
+     },
+     {
+      "id": "i_bk",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "bk"
+        ],
+        "type": "wn30:02870092-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-001",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 189,
+       "fin": 193,
+       "extrait": "book"
+      }
+     },
+     {
+      "id": "i_dc",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "dc"
+        ],
+        "type": "wn30:09994520-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-001",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 220,
+       "fin": 226,
+       "extrait": "deacon"
+      }
+     },
+     {
+      "id": "i_e",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "wn30:02230772-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-001",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 174,
+       "fin": 179,
+       "extrait": "hands"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "s"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-001",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 171,
+       "fin": 179,
+       "extrait": "He hands"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "bk"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-001",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 174,
+       "fin": 193,
+       "extrait": "hands a closed book"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "dc"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "sa-001",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 209,
+       "fin": 226,
+       "extrait": "to a young deacon"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-001",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 174,
+       "fin": 179,
+       "extrait": "hands"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-001:def",
+    "libelle": "a saint giving a book to a deacon",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "B",
+      "individu"
+     ],
+     [
+      "Z",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:10547145-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:02230772-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?B"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Z"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "wn30:02870092-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Z"
+       ],
+       "type": "wn30:09994520-n"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-001:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 33,
+     "extrait": "a saint giving a book to a deacon"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-001",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {},
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "« give » de la définition est lu au sens que le contexte d'une scène figurée fixe : « place into the hands or custody of » (02230772-v, le synset de « hand ») ; le sens « transfer possession » (02199590-v) n'est pas tenu pour une lecture distincte ici. « He » est le saint (la phrase précédente). Omis : la barbe, le manteau rouge, la reliure verte, les mains voilées, le fond d'or, les nimbes."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-002",
+   "description": {
+    "id": "sa-002",
+    "langue": "fr",
+    "texte": "Gravure au burin, deuxième état, vers 1630. Sur le seuil d'un palais, un gentilhomme en manteau court ne donne pas sa bourse au mendiant qui l'implore : il la serre contre sa poitrine et détourne la tête. Le mendiant, appuyé sur une béquille, tend sa sébile. Légende en vers sous le trait carré.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "g",
+      "sorte": "individu",
+      "introduit_par": "i_g"
+     },
+     {
+      "id": "pu",
+      "sorte": "individu",
+      "introduit_par": "i_pu"
+     },
+     {
+      "id": "m",
+      "sorte": "individu",
+      "introduit_par": "i_m"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_g",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "g"
+        ],
+        "type": "wn30:10271677-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 73,
+       "fin": 84,
+       "extrait": "gentilhomme"
+      }
+     },
+     {
+      "id": "i_pu",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "pu"
+        ],
+        "type": "wn30:04026417-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 118,
+       "fin": 124,
+       "extrait": "bourse"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "g",
+         "pu"
+        ],
+        "type": "oc:possession"
+       }
+      },
+      "provenance": {
+       "document": "sa-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 115,
+       "fin": 124,
+       "extrait": "sa bourse"
+      }
+     },
+     {
+      "id": "i_m",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "m"
+        ],
+        "type": "wn30:09847010-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 128,
+       "fin": 136,
+       "extrait": "mendiant"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "non": {
+        "atomes": [
+         {
+          "pred": "type",
+          "args": [
+           "?e"
+          ],
+          "type": "wn30:02230772-v"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?e",
+           "g"
+          ],
+          "valeur": "agent"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?e",
+           "pu"
+          ],
+          "valeur": "theme"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?e",
+           "m"
+          ],
+          "valeur": "destinataire"
+         }
+        ],
+        "locales": [
+         [
+          "e",
+          "changement"
+         ]
+        ]
+       }
+      },
+      "qualification": {
+       "polarite": "neg"
+      },
+      "provenance": {
+       "document": "sa-002",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 102,
+       "fin": 136,
+       "extrait": "ne donne pas sa bourse au mendiant"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-002:def",
+    "libelle": "a nobleman giving his purse to a beggar",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "Y",
+      "individu"
+     ],
+     [
+      "Z",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:10271677-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:02230772-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Y"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Z"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Y"
+       ],
+       "type": "wn30:04026417-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?Y"
+       ],
+       "type": "oc:possession"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Z"
+       ],
+       "type": "wn30:09847010-n"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-002:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 39,
+     "extrait": "a nobleman giving his purse to a beggar"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-002",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:possession": {
+     "glose": "x possède y ; la relation du possessif (« son », « ses », « his »)",
+     "justification": "relation entre référents ; WordNet n'a pas de concept de relation possessive"
+    }
+   },
+   "statut_calcule": {
+    "principal": "ecartee"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "R",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "Une éventualité niée de l'auteur avec ses participants : ¬∃e (give(e) ∧ agent(e, gentilhomme) ∧ theme(e, bourse) ∧ destinataire(e, mendiant)) ; elle réfute la définition pour ces référents. « gentilhomme » est lu au sens de nobleman (10271677-n), le même des deux côtés. « give » de la définition est lu au sens que le contexte d'une scène figurée fixe : « place into the hands or custody of » (02230772-v, le synset de « hand ») ; le sens « transfer possession » (02199590-v) n'est pas tenu pour une lecture distincte ici. Omis : le seuil du palais, le manteau court, la béquille, la sébile, la légende, le deuxième état (une donnée d'histoire de l'estampe)."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-003",
+   "description": {
+    "id": "sa-003",
+    "langue": "en",
+    "texte": "Woodcut from a picture Bible, Augsburg, 1534, hand-coloured in red and yellow. Elijah ascends to heaven in a chariot of fire drawn by two horses, the clouds parting above him. Below, Elisha stretches out his arms towards the mantle falling from the chariot. A river runs across the foreground.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "el",
+      "sorte": "individu",
+      "introduit_par": "i_el"
+     },
+     {
+      "id": "e",
+      "sorte": "changement",
+      "introduit_par": "i_e"
+     },
+     {
+      "id": "h",
+      "sorte": "individu",
+      "introduit_par": "i_h"
+     },
+     {
+      "id": "ch",
+      "sorte": "individu",
+      "introduit_par": "i_ch"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_el",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "el"
+        ],
+        "type": "wn30:10956612-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-003",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 79,
+       "fin": 85,
+       "extrait": "Elijah"
+      }
+     },
+     {
+      "id": "i_e",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "wn30:01969216-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-003",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 86,
+       "fin": 93,
+       "extrait": "ascends"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "el"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-003",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 79,
+       "fin": 93,
+       "extrait": "Elijah ascends"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-003",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 86,
+       "fin": 93,
+       "extrait": "ascends"
+      }
+     },
+     {
+      "id": "i_h",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "h"
+        ],
+        "type": "wn30:05627785-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-003",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 97,
+       "fin": 103,
+       "extrait": "heaven"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "e",
+         "h"
+        ],
+        "type": "oc:vers"
+       }
+      },
+      "provenance": {
+       "document": "sa-003",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 94,
+       "fin": 103,
+       "extrait": "to heaven"
+      }
+     },
+     {
+      "id": "i_ch",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:char_de_feu"
+       }
+      },
+      "provenance": {
+       "document": "sa-003",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 124,
+       "extrait": "chariot of fire"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "el",
+         "ch"
+        ],
+        "type": "oc:dans"
+       }
+      },
+      "provenance": {
+       "document": "sa-003",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 104,
+       "fin": 124,
+       "extrait": "in a chariot of fire"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-003:def",
+    "libelle": "Elijah ascending to heaven in a chariot of fire",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "H",
+      "individu"
+     ],
+     [
+      "C",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:10956612-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:01969216-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?E",
+        "?H"
+       ],
+       "type": "oc:vers"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?H"
+       ],
+       "type": "wn30:05627785-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?C"
+       ],
+       "type": "oc:dans"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:char_de_feu"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-003:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 47,
+     "extrait": "Elijah ascending to heaven in a chariot of fire"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-003",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:char_de_feu": {
+     "glose": "le char de feu d'Élie (« chariot of fire », 2 R 2, 11)",
+     "justification": "composé dont le sens n'est pas celui de « chariot » (03009111-n) plus une matière : un objet surnaturel",
+     "alignement": "wn30:03009269-n (chariot)"
+    },
+    "oc:dans": {
+     "glose": "x se trouve dans y (un lieu, un contenant, une étendue)",
+     "justification": "relation spatiale, sans synset"
+    },
+    "oc:vers": {
+     "glose": "le mouvement ou le geste x est dirigé vers y (« towards », « vers », « to heaven »)",
+     "justification": "relation de direction entre une éventualité et un but, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "« chariot of fire » : le même concept composé des deux côtés (oc:char_de_feu). Omis : les deux chevaux, les nuées, Élisée, le manteau qui tombe, la rivière, la mise en couleurs."
+  },
+  {
+   "id": "sa-004",
+   "represente": false,
+   "manque": [
+    {
+     "construction": "l'unicité de la destination d'un déplacement, et l'incompatibilité de deux destinations distinctes (la Galilée n'est pas en Égypte)",
+     "extrait": "la Sainte Famille fuit la Judée vers la Galilée",
+     "ce_qu_il_faudrait": "une incompatibilité de forme relation indexée par son premier argument, qui nie R(e, y) de R(e, x) quand x et y sont deux lieux disjoints (une relation fonctionnelle : un rôle de but unique), ou une contrainte de disjonction entre lieux ; l'incompatibilité de forme relation du langage (G 21g, L20) ne porte que sur les mêmes arguments (un ordre et son inverse)",
+     "pourquoi_on_ne_peut_omettre": "la définition demande une fuite vers l'Égypte ; le texte dit une fuite vers la Galilée (le retour d'Égypte, Mt 2, 22). Le jugement est F. Sans l'unicité de la destination, la représentation ne réfute rien et l'interpréteur rendrait inconnue ; plier la destination dans le type de l'éventualité (une « fuite vers la Galilée » incompatible avec une « fuite en Égypte ») serait une projection forcée."
+    }
+   ],
+   "remarques": "Le reste est représentable : la Sainte Famille fuit (une collection, dite), Marie assise sur l'âne, Joseph, l'ange."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-005",
+   "description": {
+    "id": "sa-005",
+    "langue": "fr",
+    "texte": "Fresque de la voûte d'une chapelle, vers 1340. Un ange descend du ciel, les ailes déployées, au-dessus d'un vieillard endormi, saint Joachim, couché parmi ses moutons sur une pente rocheuse. Deux bergers conversent à droite. L'enduit est lacunaire dans l'angle inférieur.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "an",
+      "sorte": "individu",
+      "introduit_par": "i_an"
+     },
+     {
+      "id": "e",
+      "sorte": "changement",
+      "introduit_par": "i_e"
+     },
+     {
+      "id": "h",
+      "sorte": "individu",
+      "introduit_par": "i_h"
+     },
+     {
+      "id": "om",
+      "sorte": "individu",
+      "introduit_par": "i_om"
+     },
+     {
+      "id": "sl",
+      "sorte": "etat",
+      "introduit_par": "i_sl"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_an",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "an"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 50,
+       "fin": 54,
+       "extrait": "ange"
+      }
+     },
+     {
+      "id": "i_e",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "wn30:01970826-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 55,
+       "fin": 62,
+       "extrait": "descend"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "an"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 47,
+       "fin": 62,
+       "extrait": "Un ange descend"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 55,
+       "fin": 62,
+       "extrait": "descend"
+      }
+     },
+     {
+      "id": "i_h",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "h"
+        ],
+        "type": "wn30:05627785-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 66,
+       "fin": 70,
+       "extrait": "ciel"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "e",
+         "h"
+        ],
+        "type": "oc:depuis"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 55,
+       "fin": 70,
+       "extrait": "descend du ciel"
+      }
+     },
+     {
+      "id": "i_om",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "om"
+        ],
+        "type": "wn30:10375506-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 108,
+       "fin": 117,
+       "extrait": "vieillard"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "an",
+         "om"
+        ],
+        "type": "oc:au_dessus_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 93,
+       "fin": 117,
+       "extrait": "au-dessus d'un vieillard"
+      }
+     },
+     {
+      "id": "i_sl",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sl"
+        ],
+        "type": "wn30:00187736-a"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 118,
+       "fin": 125,
+       "extrait": "endormi"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "sl",
+         "om"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 108,
+       "fin": 125,
+       "extrait": "vieillard endormi"
+      }
+     },
+     {
+      "id": "a6",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "sl"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-005",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 118,
+       "fin": 125,
+       "extrait": "endormi"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-005:def",
+    "libelle": "an angel descending from heaven above a sleeping old man",
+    "langue": "en",
+    "variables": [
+     [
+      "A",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "H",
+      "individu"
+     ],
+     [
+      "O",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": "wn30:09538915-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:01970826-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?A"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?E",
+        "?H"
+       ],
+       "type": "oc:depuis"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?H"
+       ],
+       "type": "wn30:05627785-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?A",
+        "?O"
+       ],
+       "type": "oc:au_dessus_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?O"
+       ],
+       "type": "wn30:10375506-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:00187736-a"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?O"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-005:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 56,
+     "extrait": "an angel descending from heaven above a sleeping old man"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-005",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:au_dessus_de": {
+     "glose": "x se trouve au-dessus de y (« above », « au-dessus de »)",
+     "justification": "relation spatiale, sans synset"
+    },
+    "oc:depuis": {
+     "glose": "le mouvement x part de y (« from heaven », « from the cross », « from his feet »)",
+     "justification": "relation de source entre une éventualité et un lieu ou un objet, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "« du ciel » : le ciel comme séjour de Dieu et des anges (Heaven, 05627785-n), le sens que le contexte (un ange qui descend) fixe. DOUTE : le sens « sky » (09436708-n) n'inclurait pas « heaven » ; on ne le tient pas pour une lecture admissible ici. « vieillard » = old man (10375506-n), le même des deux côtés. Omis : saint Joachim (le nom), les moutons, la pente, les bergers, l'enduit."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-006",
+   "description": {
+    "id": "sa-006",
+    "langue": "en",
+    "texte": "Front panel of a cassone, tempera and gold on wood, Florence, about 1470. Venus stands naked on a scallop shell close to the shore, wringing out her hair, while two winds blow from the left. According to the Medici inventory of 1492, Venus was shown there emerging from the sea. A nymph hurries from the right with a flowered cloak.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "v",
+      "sorte": "individu",
+      "introduit_par": "i_v"
+     },
+     {
+      "id": "st",
+      "sorte": "etat",
+      "introduit_par": "i_st"
+     },
+     {
+      "id": "n",
+      "sorte": "etat",
+      "introduit_par": "i_n"
+     },
+     {
+      "id": "sea",
+      "sorte": "individu",
+      "introduit_par": "i_sea"
+     },
+     {
+      "id": "em",
+      "sorte": "changement",
+      "introduit_par": "i_em"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_v",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "wn30:09555127-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 74,
+       "fin": 79,
+       "extrait": "Venus"
+      }
+     },
+     {
+      "id": "i_st",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "st"
+        ],
+        "type": "wn30:01546111-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 80,
+       "fin": 86,
+       "extrait": "stands"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "st",
+         "v"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 74,
+       "fin": 86,
+       "extrait": "Venus stands"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "st"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 80,
+       "fin": 86,
+       "extrait": "stands"
+      }
+     },
+     {
+      "id": "i_n",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "n"
+        ],
+        "type": "wn30:00457998-a"
+       }
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 87,
+       "fin": 92,
+       "extrait": "naked"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "n",
+         "v"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 80,
+       "fin": 92,
+       "extrait": "stands naked"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "n"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 87,
+       "fin": 92,
+       "extrait": "naked"
+      }
+     },
+     {
+      "id": "i_sea",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sea"
+        ],
+        "type": "wn30:09426788-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 274,
+       "fin": 277,
+       "extrait": "sea"
+      }
+     },
+     {
+      "id": "i_em",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "em"
+        ],
+        "type": "wn30:00528990-v"
+       }
+      },
+      "qualification": {
+       "enonciateur": "cite:inventaire_medicis_1492"
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 256,
+       "fin": 264,
+       "extrait": "emerging"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "em",
+         "v"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "qualification": {
+       "enonciateur": "cite:inventaire_medicis_1492"
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 234,
+       "fin": 264,
+       "extrait": "Venus was shown there emerging"
+      }
+     },
+     {
+      "id": "a6",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "em",
+         "sea"
+        ],
+        "type": "oc:hors_de"
+       }
+      },
+      "qualification": {
+       "enonciateur": "cite:inventaire_medicis_1492"
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 256,
+       "fin": 277,
+       "extrait": "emerging from the sea"
+      }
+     },
+     {
+      "id": "a7",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "em"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "qualification": {
+       "enonciateur": "cite:inventaire_medicis_1492"
+      },
+      "provenance": {
+       "document": "sa-006",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 256,
+       "fin": 264,
+       "extrait": "emerging"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-006:def",
+    "libelle": "Venus emerging from the sea",
+    "langue": "en",
+    "variables": [
+     [
+      "V",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?V"
+       ],
+       "type": "wn30:09555127-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:00528990-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?V"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?E",
+        "?S"
+       ],
+       "type": "oc:hors_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:09426788-n"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-006:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 27,
+     "extrait": "Venus emerging from the sea"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-006",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:hors_de": {
+     "glose": "le mouvement x part de l'intérieur de y et en sort (« out of the water », « from the sea »)",
+     "justification": "relation de source entre une éventualité et un lieu, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "non_certifiee"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "NC+",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "L'auteur décrit Vénus debout, nue, sur une coquille près du rivage ; seule une source citée (« According to the Medici inventory of 1492 ») dit qu'elle sort de la mer : énonciateur cite:inventaire_medicis_1492, dans le contexte principal (« was shown there » : la source parle de la figure). Debout sur une coquille ne réfute pas « émerger de la mer » : aucune incompatibilité. non_certifiee. « sea » : la mer (09426788-n), le même référent dans la source et dans le texte de l'auteur (« close to the shore » n'est pas écrit). DOUTE : le passé « was shown » pourrait faire de la description de l'inventaire celle d'un état antérieur ; rien ne le dit. Omis : les deux vents, la nymphe, le manteau, « wringing out her hair »."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-007",
+   "description": {
+    "id": "sa-007",
+    "langue": "fr",
+    "texte": "Panneau, Flandres, vers 1500. Assis devant un chevalet, saint Luc peint la Vierge avec un pinceau fin ; sur le panneau posé sur le chevalet, le portrait de la Vierge est à moitié achevé. La Vierge, qui pose avec l'Enfant dans une loggia, regarde le peintre. Le bœuf de l'évangéliste est couché à ses pieds.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "lu",
+      "sorte": "individu",
+      "introduit_par": "i_lu"
+     },
+     {
+      "id": "vi",
+      "sorte": "individu",
+      "introduit_par": "i_vi"
+     },
+     {
+      "id": "br",
+      "sorte": "individu",
+      "introduit_par": "i_br"
+     },
+     {
+      "id": "p",
+      "sorte": "changement",
+      "introduit_par": "i_p"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_lu",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "lu"
+        ],
+        "type": "wn30:11144604-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 56,
+       "fin": 65,
+       "extrait": "saint Luc"
+      }
+     },
+     {
+      "id": "i_vi",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "vi"
+        ],
+        "type": "wn30:11161412-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 75,
+       "fin": 81,
+       "extrait": "Vierge"
+      }
+     },
+     {
+      "id": "i_br",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "br"
+        ],
+        "type": "wn30:03876231-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 90,
+       "fin": 97,
+       "extrait": "pinceau"
+      }
+     },
+     {
+      "id": "i_p",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "p"
+        ],
+        "type": "wn30:01684663-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 66,
+       "fin": 71,
+       "extrait": "peint"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "p",
+         "lu"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 56,
+       "fin": 71,
+       "extrait": "saint Luc peint"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "p",
+         "vi"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 66,
+       "fin": 81,
+       "extrait": "peint la Vierge"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "p",
+         "br"
+        ],
+        "valeur": "instrument"
+       }
+      },
+      "provenance": {
+       "document": "sa-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 82,
+       "fin": 101,
+       "extrait": "avec un pinceau fin"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "p"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-007",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 66,
+       "fin": 71,
+       "extrait": "peint"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-007:def",
+    "libelle": "Saint Luke painting the Virgin with a brush",
+    "langue": "en",
+    "variables": [
+     [
+      "L",
+      "individu"
+     ],
+     [
+      "P",
+      "changement"
+     ],
+     [
+      "V",
+      "individu"
+     ],
+     [
+      "B",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "wn30:11144604-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?P"
+       ],
+       "type": "wn30:01684663-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?P",
+        "?L"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?P",
+        "?V"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?V"
+       ],
+       "type": "wn30:11161412-n"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?P",
+        "?B"
+       ],
+       "valeur": "instrument"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "wn30:02908217-n"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?P"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-007:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 43,
+     "extrait": "Saint Luke painting the Virgin with a brush"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-007",
+    "entrees": [
+     {
+      "entree": "inclusion",
+      "id": "k1",
+      "sous": "wn30:03876231-n",
+      "sur": "wn30:02908217-n",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "element": "hyperonymie (@, @i) : paintbrush (03876231) ⊑ brush (02908217)",
+       "validation": "relation lue dans les fichiers dict/ de WordNet 3.0"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "represente": true,
+   "concepts": {},
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "paintbrush ⊑ brush (WordNet). « peint la Vierge » : paint, « make a painting of » (01684663-v), le même des deux côtés ; le portrait à moitié achevé confirme l'en cours. La Vierge peinte est la Vierge qui pose (une seule figure). Omis : le chevalet, la loggia, l'Enfant, le bœuf, « fin »."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-008",
+   "description": {
+    "id": "sa-008",
+    "langue": "en",
+    "texte": "Altarpiece of Saint Paul, tempera and gold on panel, Siena, about 1380. In the main panel the apostle stands holding a book and a sword. In the predella below, his martyrdom: the headless body of Paul lies on the grass, and the executioner who has slain him wipes his hands on his tunic. A sword lies on the ground beside the body.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "p",
+      "sorte": "individu",
+      "introduit_par": "i_p"
+     },
+     {
+      "id": "ex",
+      "sorte": "individu",
+      "introduit_par": "i_ex"
+     },
+     {
+      "id": "k",
+      "sorte": "changement",
+      "introduit_par": "i_k"
+     },
+     {
+      "id": "sw",
+      "sorte": "individu",
+      "introduit_par": "i_sw"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_p",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "p"
+        ],
+        "type": "wn30:11225661-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-008",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 196,
+       "fin": 200,
+       "extrait": "Paul"
+      }
+     },
+     {
+      "id": "i_ex",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ex"
+        ],
+        "type": "wn30:10069427-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-008",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 228,
+       "fin": 239,
+       "extrait": "executioner"
+      }
+     },
+     {
+      "id": "i_k",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "k"
+        ],
+        "type": "wn30:02482425-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-008",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 248,
+       "fin": 253,
+       "extrait": "slain"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "k",
+         "ex"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-008",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 224,
+       "fin": 257,
+       "extrait": "the executioner who has slain him"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "k",
+         "p"
+        ],
+        "valeur": "patient"
+       }
+      },
+      "provenance": {
+       "document": "sa-008",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 244,
+       "fin": 257,
+       "extrait": "has slain him"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "k"
+        ],
+        "valeur": "anterieure"
+       }
+      },
+      "provenance": {
+       "document": "sa-008",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 244,
+       "fin": 253,
+       "extrait": "has slain"
+      }
+     },
+     {
+      "id": "i_sw",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sw"
+        ],
+        "type": "wn30:04373894-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-008",
+       "langue": "en",
+       "phrase": 4,
+       "debut": 290,
+       "fin": 295,
+       "extrait": "sword"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "sw",
+         "p"
+        ],
+        "type": "oc:a_cote_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-008",
+       "langue": "en",
+       "phrase": 4,
+       "debut": 315,
+       "fin": 330,
+       "extrait": "beside the body"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "k",
+         "sw"
+        ],
+        "valeur": "instrument"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "l'épée posée près du corps décapité de Paul est l'arme du supplice"
+      },
+      "provenance": {
+       "document": "sa-008",
+       "langue": "en",
+       "phrase": 4,
+       "debut": 288,
+       "fin": 330,
+       "extrait": "A sword lies on the ground beside the body"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-008:def",
+    "libelle": "Saint Paul slain with a sword",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:11225661-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:02482425-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "patient"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?S"
+       ],
+       "valeur": "instrument"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:04373894-n"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "anterieure"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-008:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 29,
+     "extrait": "Saint Paul slain with a sword"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-008",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:a_cote_de": {
+     "glose": "x se trouve à côté de y (« beside », « at his side »)",
+     "justification": "relation spatiale, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E_H",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "l'épée posée près du corps décapité de Paul est l'arme du supplice"
+       }
+      ]
+     }
+    ]
+   },
+   "hypotheses": [
+    {
+     "nature": "abduction",
+     "contenu": "l'épée posée près du corps décapité de Paul est l'arme du supplice"
+    }
+   ],
+   "remarques": "Le meurtre est dit (« the executioner who has slain him », antérieur) ; l'instrument ne l'est pas : l'épée posée près du corps décapité en est l'explication évidente, une abduction (assertion supposée). « slain » de la définition : l'événement accompli (antérieur), le même ancrage. Le panneau principal (l'apôtre debout, tenant un livre et une épée) est une autre figure de Paul, dans une autre situation ; elle est omise (son épée n'est l'instrument de rien, et l'omettre ne change rien). Omis : l'herbe, la tunique, le geste du bourreau."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-009",
+   "description": {
+    "id": "sa-009",
+    "langue": "en",
+    "texte": "Crucifixion, oil on copper, Antwerp, about 1610. Weeping, Mary Magdalene kneels at the foot of the cross and embraces it, her loosened hair falling over her shoulders. The Virgin and Saint John stand to either side. A dark sky covers Jerusalem in the distance.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "mm",
+      "sorte": "individu",
+      "introduit_par": "i_mm"
+     },
+     {
+      "id": "w",
+      "sorte": "processus",
+      "introduit_par": "i_w"
+     },
+     {
+      "id": "cr",
+      "sorte": "individu",
+      "introduit_par": "i_cr"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_mm",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "mm"
+        ],
+        "type": "wn30:11162582-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-009",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 58,
+       "fin": 72,
+       "extrait": "Mary Magdalene"
+      }
+     },
+     {
+      "id": "i_w",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "w"
+        ],
+        "type": "wn30:00066191-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-009",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 49,
+       "fin": 56,
+       "extrait": "Weeping"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "w",
+         "mm"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-009",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 49,
+       "fin": 72,
+       "extrait": "Weeping, Mary Magdalene"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "w"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-009",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 49,
+       "fin": 56,
+       "extrait": "Weeping"
+      }
+     },
+     {
+      "id": "i_cr",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "cr"
+        ],
+        "type": "wn30:03135532-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-009",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 99,
+       "fin": 104,
+       "extrait": "cross"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "mm",
+         "cr"
+        ],
+        "type": "oc:au_pied_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-009",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 73,
+       "fin": 104,
+       "extrait": "kneels at the foot of the cross"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-009:def",
+    "libelle": "Mary Magdalene weeping at the foot of the cross",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "W",
+      "processus"
+     ],
+     [
+      "C",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "wn30:11162582-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "wn30:00066191-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?W",
+        "?M"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?W"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?M",
+        "?C"
+       ],
+       "type": "oc:au_pied_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "wn30:03135532-n"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-009:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 47,
+     "extrait": "Mary Magdalene weeping at the foot of the cross"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-009",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:au_pied_de": {
+     "glose": "x se trouve au pied de y (une structure : « at the foot of the cross »)",
+     "justification": "relation spatiale, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "Omis : l'étreinte de la croix, les cheveux, la Vierge, saint Jean, le ciel, Jérusalem ; « kneels » (la posture)."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-010",
+   "description": {
+    "id": "sa-010",
+    "langue": "fr",
+    "texte": "Présentation au Temple, vitrail, Bourges, vers 1215. Sous une arcature, le vieillard Siméon reçoit l'Enfant des mains de Marie, le bénissant. Joseph porte deux colombes dans un panier ; la prophétesse Anne se tient derrière l'autel.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "si",
+      "sorte": "individu",
+      "introduit_par": "i_si"
+     },
+     {
+      "id": "ch",
+      "sorte": "individu",
+      "introduit_par": "i_ch"
+     },
+     {
+      "id": "ma",
+      "sorte": "individu",
+      "introduit_par": "i_ma"
+     },
+     {
+      "id": "b",
+      "sorte": "changement",
+      "introduit_par": "i_b"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_si",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "si"
+        ],
+        "type": "oc:simeon"
+       }
+      },
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 85,
+       "fin": 91,
+       "extrait": "Siméon"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "si"
+        ],
+        "type": "wn30:10375506-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 75,
+       "fin": 84,
+       "extrait": "vieillard"
+      }
+     },
+     {
+      "id": "i_ch",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:enfant_jesus"
+       }
+      },
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 99,
+       "fin": 107,
+       "extrait": "l'Enfant"
+      }
+     },
+     {
+      "id": "i_ma",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ma"
+        ],
+        "type": "wn30:11161412-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 121,
+       "fin": 126,
+       "extrait": "Marie"
+      }
+     },
+     {
+      "id": "i_b",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "wn30:00866505-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 131,
+       "fin": 140,
+       "extrait": "bénissant"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "b",
+         "ch"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 128,
+       "fin": 140,
+       "extrait": "le bénissant"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "b"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 131,
+       "fin": 140,
+       "extrait": "bénissant"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "b",
+         "si"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "garde": {
+       "pb": [
+        "simeon"
+       ]
+      },
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 72,
+       "fin": 140,
+       "extrait": "le vieillard Siméon reçoit l'Enfant des mains de Marie, le bénissant"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "b",
+         "ma"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "garde": {
+       "pb": [
+        "marie"
+       ]
+      },
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 108,
+       "fin": 140,
+       "extrait": "des mains de Marie, le bénissant"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "pb",
+      "cote": "D",
+      "dimension": "structure",
+      "domaine": [
+       "simeon",
+       "marie"
+      ],
+      "ancre": "le bénissant",
+      "provenance": {
+       "document": "sa-010",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 128,
+       "fin": 140,
+       "extrait": "le bénissant"
+      }
+     }
+    ],
+    "preferences": [
+     {
+      "id": "pref_sujet",
+      "point": "pb",
+      "ordre": [
+       "simeon",
+       "marie"
+      ],
+      "source": "le participe détaché se rapporte d'ordinaire au sujet : une norme souvent violée, une préférence (étude § 4.3)"
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-010:def",
+    "libelle": "Simeon blessing the Christ child",
+    "langue": "en",
+    "variables": [
+     [
+      "S",
+      "individu"
+     ],
+     [
+      "B",
+      "changement"
+     ],
+     [
+      "C",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "oc:simeon"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "wn30:00866505-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?B",
+        "?S"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?B",
+        "?C"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:enfant_jesus"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?B"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-010:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 32,
+     "extrait": "Simeon blessing the Christ child"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-010",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:enfant_jesus": {
+     "glose": "le Christ enfant (« l'Enfant », « the Child », « the Christ child »)",
+     "justification": "WordNet n'a que la personne de Jésus (11083656-n), sans le stade de l'enfance",
+     "alignement": "wn30:11083656-n"
+    },
+    "oc:simeon": {
+     "glose": "Siméon, le vieillard juste de Jérusalem qui reçoit l'Enfant au Temple (Luc 2, 25)",
+     "justification": "le Simeon de WordNet (10599068-n) est le fils de Jacob, un autre individu"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {
+        "pb": [
+         "simeon"
+        ]
+       }
+      ],
+      "hypotheses": []
+     },
+     {
+      "statut_local": "N",
+      "interpretations": 1,
+      "cylindres": [
+       {
+        "pb": [
+         "marie"
+        ]
+       }
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "Un point de structure : le rattachement du participe détaché « le bénissant », au sujet (Siméon) ou au complément le plus proche (Marie) ; « le » est l'Enfant. La norme du sujet n'est qu'une préférence (étude § 4.3) : elle ordonne, n'exclut pas. Sous Siméon, V ; sous Marie, N (Siméon ne bénit pas, rien ne le réfute). « l'Enfant » d'une Présentation au Temple est le Christ enfant (lecture). Omis : l'arcature, Joseph, les colombes, Anne, l'autel, « reçoit des mains de »."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-011",
+   "description": {
+    "id": "sa-011",
+    "langue": "fr",
+    "texte": "Scène de genre, huile sur toile, Delft, vers 1660. Dans une cuisine dallée de blanc et de noir, la servante de la dame qui verse l'eau d'une cruche dans un bassin regarde vers la fenêtre. Un garçon apporte une brassée de bois. Une carte de Hollande pend au mur.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "se",
+      "sorte": "individu",
+      "introduit_par": "i_se"
+     },
+     {
+      "id": "da",
+      "sorte": "individu",
+      "introduit_par": "i_da"
+     },
+     {
+      "id": "wa",
+      "sorte": "individu",
+      "introduit_par": "i_wa"
+     },
+     {
+      "id": "ju",
+      "sorte": "individu",
+      "introduit_par": "i_ju"
+     },
+     {
+      "id": "ba",
+      "sorte": "individu",
+      "introduit_par": "i_ba"
+     },
+     {
+      "id": "v",
+      "sorte": "changement",
+      "introduit_par": "i_v"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_se",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "se"
+        ],
+        "type": "wn30:10282672-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 99,
+       "fin": 107,
+       "extrait": "servante"
+      }
+     },
+     {
+      "id": "i_da",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "da"
+        ],
+        "type": "wn30:09989290-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 114,
+       "fin": 118,
+       "extrait": "dame"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "se",
+         "da"
+        ],
+        "type": "oc:au_service_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 118,
+       "extrait": "la servante de la dame"
+      }
+     },
+     {
+      "id": "i_wa",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "wa"
+        ],
+        "type": "wn30:14845743-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 129,
+       "fin": 134,
+       "extrait": "l'eau"
+      }
+     },
+     {
+      "id": "i_ju",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ju"
+        ],
+        "type": "wn30:03603722-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 141,
+       "fin": 147,
+       "extrait": "cruche"
+      }
+     },
+     {
+      "id": "i_ba",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ba"
+        ],
+        "type": "wn30:02801525-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 156,
+       "fin": 162,
+       "extrait": "bassin"
+      }
+     },
+     {
+      "id": "i_v",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "wn30:02069551-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 123,
+       "fin": 128,
+       "extrait": "verse"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "v",
+         "wa"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 123,
+       "fin": 134,
+       "extrait": "verse l'eau"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "v",
+         "ju"
+        ],
+        "type": "oc:hors_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 135,
+       "fin": 147,
+       "extrait": "d'une cruche"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "v",
+         "ba"
+        ],
+        "type": "oc:dans"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 148,
+       "fin": 162,
+       "extrait": "dans un bassin"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "v"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 123,
+       "fin": 128,
+       "extrait": "verse"
+      }
+     },
+     {
+      "id": "a6",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "v",
+         "se"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "garde": {
+       "pr": [
+        "servante"
+       ]
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 128,
+       "extrait": "la servante de la dame qui verse"
+      }
+     },
+     {
+      "id": "a7",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "v",
+         "da"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "garde": {
+       "pr": [
+        "dame"
+       ]
+      },
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 111,
+       "fin": 128,
+       "extrait": "la dame qui verse"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "pr",
+      "cote": "D",
+      "dimension": "structure",
+      "domaine": [
+       "servante",
+       "dame"
+      ],
+      "ancre": "qui verse",
+      "provenance": {
+       "document": "sa-011",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 119,
+       "fin": 128,
+       "extrait": "qui verse"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-011:def",
+    "libelle": "a maidservant pouring water from a jug into a basin",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "P",
+      "changement"
+     ],
+     [
+      "W",
+      "individu"
+     ],
+     [
+      "J",
+      "individu"
+     ],
+     [
+      "B",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "wn30:10282672-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?P"
+       ],
+       "type": "wn30:02069551-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?P",
+        "?M"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?P",
+        "?W"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "wn30:14845743-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?P",
+        "?J"
+       ],
+       "type": "oc:hors_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?J"
+       ],
+       "type": "wn30:03603722-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?P",
+        "?B"
+       ],
+       "type": "oc:dans"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "wn30:02801525-n"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?P"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-011:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 51,
+     "extrait": "a maidservant pouring water from a jug into a basin"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-011",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:au_service_de": {
+     "glose": "x est au service de y (« la servante de la dame »)",
+     "justification": "relation entre personnes, sans synset"
+    },
+    "oc:dans": {
+     "glose": "x se trouve dans y (un lieu, un contenant, une étendue)",
+     "justification": "relation spatiale, sans synset"
+    },
+    "oc:hors_de": {
+     "glose": "le mouvement x part de l'intérieur de y et en sort (« out of the water », « from the sea »)",
+     "justification": "relation de source entre une éventualité et un lieu, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {
+        "pr": [
+         "servante"
+        ]
+       }
+      ],
+      "hypotheses": []
+     },
+     {
+      "statut_local": "N",
+      "interpretations": 1,
+      "cylindres": [
+       {
+        "pr": [
+         "dame"
+        ]
+       }
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "Un point de structure : la relative « qui verse l'eau … » se rattache à « la servante » (la tête du groupe) ou à « la dame » (le nom le plus proche). Sous la servante, V ; sous la dame, N. Aucune règle n'exclut l'une des deux. « cruche » / « jug » : le même concept (03603722-n). Omis : « regarde vers la fenêtre », le garçon, le bois, la carte, le dallage."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-012",
+   "description": {
+    "id": "sa-012",
+    "langue": "en",
+    "texte": "Adoration of the Shepherds, oil on panel, attributed to the workshop of a Haarlem master, about 1520. At the left kneels an old shepherd who does not offer the lamb he carries on his shoulders to the Child: he holds it tight and gazes at the Virgin. The Child lies on a sheaf of straw. Formerly given to the master himself, the panel was reattributed in 1958.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "sh",
+      "sorte": "individu",
+      "introduit_par": "i_sh"
+     },
+     {
+      "id": "la",
+      "sorte": "individu",
+      "introduit_par": "i_la"
+     },
+     {
+      "id": "ch",
+      "sorte": "individu",
+      "introduit_par": "i_ch"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_sh",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sh"
+        ],
+        "type": "wn30:10587605-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 128,
+       "fin": 136,
+       "extrait": "shepherd"
+      }
+     },
+     {
+      "id": "i_la",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "la"
+        ],
+        "type": "wn30:02412440-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 160,
+       "fin": 164,
+       "extrait": "lamb"
+      }
+     },
+     {
+      "id": "i_ch",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:enfant_jesus"
+       }
+      },
+      "provenance": {
+       "document": "sa-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 200,
+       "fin": 205,
+       "extrait": "Child"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "non": {
+        "atomes": [
+         {
+          "pred": "type",
+          "args": [
+           "?e"
+          ],
+          "type": "wn30:02297142-v"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?e",
+           "sh"
+          ],
+          "valeur": "agent"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?e",
+           "la"
+          ],
+          "valeur": "theme"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?e",
+           "ch"
+          ],
+          "valeur": "destinataire"
+         }
+        ],
+        "locales": [
+         [
+          "e",
+          "changement"
+         ]
+        ]
+       }
+      },
+      "qualification": {
+       "polarite": "neg"
+      },
+      "provenance": {
+       "document": "sa-012",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 141,
+       "fin": 205,
+       "extrait": "does not offer the lamb he carries on his shoulders to the Child"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-012:def",
+    "libelle": "a shepherd offering a lamb to the Christ child",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "L",
+      "individu"
+     ],
+     [
+      "C",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:10587605-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:02297142-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?L"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?C"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "wn30:02412440-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:enfant_jesus"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-012:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 46,
+     "extrait": "a shepherd offering a lamb to the Christ child"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-012",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:enfant_jesus": {
+     "glose": "le Christ enfant (« l'Enfant », « the Child », « the Christ child »)",
+     "justification": "WordNet n'a que la personne de Jésus (11083656-n), sans le stade de l'enfance",
+     "alignement": "wn30:11083656-n"
+    }
+   },
+   "statut_calcule": {
+    "principal": "ecartee"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "R",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "Une éventualité niée de l'auteur, avec ses participants (offer, « present for acceptance », 02297142-v) : réfutation pour ces référents. Omis : « old », « he holds it tight », le regard vers la Vierge, la gerbe, l'attribution (un contexte d'histoire)."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-013",
+   "description": {
+    "id": "sa-013",
+    "langue": "fr",
+    "texte": "Huile sur toile, Naples, vers 1620. Dans la tente, Judith empoigne la chevelure d'Holopherne endormi et lève l'épée au-dessus de lui. Sa servante, à droite, tient ouvert un sac de toile. Une chandelle éclaire la scène par en bas.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "ju",
+      "sorte": "individu",
+      "introduit_par": "i_ju"
+     },
+     {
+      "id": "ho",
+      "sorte": "individu",
+      "introduit_par": "i_ho"
+     },
+     {
+      "id": "sl",
+      "sorte": "etat",
+      "introduit_par": "i_sl"
+     },
+     {
+      "id": "sw",
+      "sorte": "individu",
+      "introduit_par": "i_sw"
+     },
+     {
+      "id": "r",
+      "sorte": "changement",
+      "introduit_par": "i_r"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_ju",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ju"
+        ],
+        "type": "wn30:10226219-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 51,
+       "fin": 57,
+       "extrait": "Judith"
+      }
+     },
+     {
+      "id": "i_ho",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ho"
+        ],
+        "type": "wn30:11057221-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 82,
+       "fin": 92,
+       "extrait": "Holopherne"
+      }
+     },
+     {
+      "id": "i_sl",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sl"
+        ],
+        "type": "wn30:00187736-a"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 93,
+       "fin": 100,
+       "extrait": "endormi"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "sl",
+         "ho"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 82,
+       "fin": 100,
+       "extrait": "Holopherne endormi"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "sl"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 93,
+       "fin": 100,
+       "extrait": "endormi"
+      }
+     },
+     {
+      "id": "i_sw",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sw"
+        ],
+        "type": "wn30:04373894-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 115,
+       "extrait": "l'épée"
+      }
+     },
+     {
+      "id": "i_r",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "r"
+        ],
+        "type": "wn30:01974062-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 104,
+       "fin": 108,
+       "extrait": "lève"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "r",
+         "ju"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 51,
+       "fin": 108,
+       "extrait": "Judith empoigne la chevelure d'Holopherne endormi et lève"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "r",
+         "sw"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 104,
+       "fin": 115,
+       "extrait": "lève l'épée"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "r"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 104,
+       "fin": 108,
+       "extrait": "lève"
+      }
+     },
+     {
+      "id": "a6",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "sw",
+         "ho"
+        ],
+        "type": "oc:au_dessus_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-013",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 116,
+       "fin": 132,
+       "extrait": "au-dessus de lui"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-013:def",
+    "libelle": "Judith raising a sword above the sleeping Holofernes",
+    "langue": "en",
+    "variables": [
+     [
+      "J",
+      "individu"
+     ],
+     [
+      "R",
+      "changement"
+     ],
+     [
+      "S",
+      "individu"
+     ],
+     [
+      "H",
+      "individu"
+     ],
+     [
+      "St",
+      "etat"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?J"
+       ],
+       "type": "wn30:10226219-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?R"
+       ],
+       "type": "wn30:01974062-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?R",
+        "?J"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?R",
+        "?S"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:04373894-n"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?R"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?S",
+        "?H"
+       ],
+       "type": "oc:au_dessus_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?H"
+       ],
+       "type": "wn30:11057221-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?St"
+       ],
+       "type": "wn30:00187736-a"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?St",
+        "?H"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?St"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-013:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 52,
+     "extrait": "Judith raising a sword above the sleeping Holofernes"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-013",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:au_dessus_de": {
+     "glose": "x se trouve au-dessus de y (« above », « au-dessus de »)",
+     "justification": "relation spatiale, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "« lui » est Holopherne. Omis : la chevelure empoignée, la servante, le sac, la chandelle, la tente."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-014",
+   "description": {
+    "id": "sa-014",
+    "langue": "en",
+    "texte": "Miniature from a Book of Hours, Rouen, about 1470. In a chamber, young Tobias kneels before his blind father Tobit and perhaps anoints the old man's eyes with the gall of the fish. The angel Raphael stands behind him, a staff in his hand. Anna, the mother, spins by the hearth.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "to",
+      "sorte": "individu",
+      "introduit_par": "i_to"
+     },
+     {
+      "id": "fa",
+      "sorte": "individu",
+      "introduit_par": "i_fa"
+     },
+     {
+      "id": "bl",
+      "sorte": "etat",
+      "introduit_par": "i_bl"
+     },
+     {
+      "id": "ey",
+      "sorte": "collection",
+      "introduit_par": "i_ey"
+     },
+     {
+      "id": "ga",
+      "sorte": "individu",
+      "introduit_par": "i_ga"
+     },
+     {
+      "id": "an",
+      "sorte": "changement",
+      "introduit_par": "i_an"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_to",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "to"
+        ],
+        "type": "oc:tobie"
+       }
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 71,
+       "fin": 77,
+       "extrait": "Tobias"
+      }
+     },
+     {
+      "id": "i_fa",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "fa"
+        ],
+        "type": "oc:tobit"
+       }
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 109,
+       "fin": 114,
+       "extrait": "Tobit"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "fa",
+         "to"
+        ],
+        "type": "oc:pere_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 92,
+       "fin": 114,
+       "extrait": "his blind father Tobit"
+      }
+     },
+     {
+      "id": "i_bl",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "bl"
+        ],
+        "type": "wn30:02158826-a"
+       }
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "blind"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "bl",
+         "fa"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 108,
+       "extrait": "blind father"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "bl"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 101,
+       "extrait": "blind"
+      }
+     },
+     {
+      "id": "i_ey",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ey"
+        ],
+        "type": "wn30:05311054-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 149,
+       "fin": 153,
+       "extrait": "eyes"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "ey",
+         "fa"
+        ],
+        "type": "oc:partie_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 135,
+       "fin": 153,
+       "extrait": "the old man's eyes"
+      }
+     },
+     {
+      "id": "i_ga",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ga"
+        ],
+        "type": "oc:fiel_du_poisson"
+       }
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 163,
+       "fin": 179,
+       "extrait": "gall of the fish"
+      }
+     },
+     {
+      "id": "i_an",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "an"
+        ],
+        "type": "wn30:00085626-v"
+       }
+      },
+      "qualification": {
+       "modalite": "possible"
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 127,
+       "fin": 134,
+       "extrait": "anoints"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "an",
+         "to"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "qualification": {
+       "modalite": "possible"
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 119,
+       "fin": 134,
+       "extrait": "perhaps anoints"
+      }
+     },
+     {
+      "id": "a6",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "an",
+         "ey"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "qualification": {
+       "modalite": "possible"
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 127,
+       "fin": 153,
+       "extrait": "anoints the old man's eyes"
+      }
+     },
+     {
+      "id": "a7",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "an",
+         "ga"
+        ],
+        "valeur": "instrument"
+       }
+      },
+      "qualification": {
+       "modalite": "possible"
+      },
+      "provenance": {
+       "document": "sa-014",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 154,
+       "fin": 179,
+       "extrait": "with the gall of the fish"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-014:def",
+    "libelle": "Tobias anointing the eyes of his blind father with the gall of the fish",
+    "langue": "en",
+    "variables": [
+     [
+      "T",
+      "individu"
+     ],
+     [
+      "F",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "Y",
+      "collection"
+     ],
+     [
+      "G",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?T"
+       ],
+       "type": "oc:tobie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?F"
+       ],
+       "type": "oc:tobit"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?F",
+        "?T"
+       ],
+       "type": "oc:pere_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:02158826-a"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?F"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:00085626-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?T"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?Y"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Y"
+       ],
+       "type": "wn30:05311054-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?Y",
+        "?F"
+       ],
+       "type": "oc:partie_de"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?G"
+       ],
+       "valeur": "instrument"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?G"
+       ],
+       "type": "oc:fiel_du_poisson"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-014:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 71,
+     "extrait": "Tobias anointing the eyes of his blind father with the gall of the fish"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-014",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:fiel_du_poisson": {
+     "glose": "le fiel du poisson que Raphaël fait garder à Tobie (Tb 6)",
+     "justification": "le « gall » de WordNet n'a pas le sens de bile (14275240-n et suiv. sont des plaies ou une rancœur)"
+    },
+    "oc:partie_de": {
+     "glose": "x est une partie (du corps, d'un objet) de y",
+     "justification": "relation de partie, non une méronymie de concepts (l'entrée `partie` de K est inerte) : un fait entre deux référents",
+     "alignement": "WordNet : pointeur %p (méronymie de partie) entre concepts"
+    },
+    "oc:pere_de": {
+     "glose": "x est le père de y",
+     "justification": "relation de parenté entre référents ; le nom « father » de WordNet n'est pas une relation",
+     "alignement": "wn30:10080869-n (father) comme type"
+    },
+    "oc:tobie": {
+     "glose": "Tobie, le fils de Tobit (livre de Tobie)",
+     "justification": "absent de WordNet (seul le livre, 06459681-n)"
+    },
+    "oc:tobit": {
+     "glose": "Tobit, le père aveugle de Tobie",
+     "justification": "absent de WordNet (seul le livre, 06459681-n)"
+    }
+   },
+   "statut_calcule": {
+    "principal": "inconnue"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "N",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "« perhaps anoints » : l'onction est seulement possible (modalité possible : elle n'appuie rien, RS 1). La portée de « perhaps » (sur le seul second conjoint, ou sur la coordination) n'est pas un point qui compte : sous l'une et l'autre, l'onction est possible et la définition N. Omis : l'agenouillement, Raphaël, le bâton, Anna qui file."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-015",
+   "description": {
+    "id": "sa-015",
+    "langue": "en",
+    "texte": "Relief, alabaster with traces of gilding, Nottingham, 15th century. Joseph of Arimathea, standing on a ladder, lowers the body of Christ from the cross while Nicodemus draws the nail from his feet with pincers. The Virgin, at the left, holds one of the dead arms. The upper corner is broken.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "id": "jo",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_jo"
+     },
+     {
+      "id": "ch",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_ch"
+     },
+     {
+      "id": "bo",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_bo"
+     },
+     {
+      "id": "cr",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_cr"
+     },
+     {
+      "id": "lo",
+      "sorte": "changement",
+      "situation": "s0",
+      "introduit_par": "i_lo"
+     },
+     {
+      "id": "ni",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_ni"
+     },
+     {
+      "id": "na",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_na"
+     },
+     {
+      "id": "ft",
+      "sorte": "collection",
+      "situation": "s0",
+      "introduit_par": "i_ft"
+     },
+     {
+      "id": "dr",
+      "sorte": "changement",
+      "situation": "s0",
+      "introduit_par": "i_dr"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_jo",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "jo"
+        ],
+        "type": "oc:joseph_d_arimathie"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 68,
+       "fin": 87,
+       "extrait": "Joseph of Arimathea"
+      }
+     },
+     {
+      "id": "i_ch",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "wn30:11083656-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 130,
+       "fin": 136,
+       "extrait": "Christ"
+      }
+     },
+     {
+      "id": "i_bo",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "bo"
+        ],
+        "type": "wn30:05218119-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 122,
+       "fin": 126,
+       "extrait": "body"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "bo",
+         "ch"
+        ],
+        "type": "oc:corps_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 118,
+       "fin": 136,
+       "extrait": "the body of Christ"
+      }
+     },
+     {
+      "id": "i_cr",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "cr"
+        ],
+        "type": "wn30:03135532-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 146,
+       "fin": 151,
+       "extrait": "cross"
+      }
+     },
+     {
+      "id": "i_lo",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "lo"
+        ],
+        "type": "wn30:01973125-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 111,
+       "fin": 117,
+       "extrait": "lowers"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "lo",
+         "jo"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 68,
+       "fin": 117,
+       "extrait": "Joseph of Arimathea, standing on a ladder, lowers"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "lo",
+         "bo"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 111,
+       "fin": 136,
+       "extrait": "lowers the body of Christ"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "lo",
+         "cr"
+        ],
+        "type": "oc:depuis"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 137,
+       "fin": 151,
+       "extrait": "from the cross"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "lo"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 111,
+       "fin": 117,
+       "extrait": "lowers"
+      }
+     },
+     {
+      "id": "i_ni",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ni"
+        ],
+        "type": "oc:nicodeme"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 158,
+       "fin": 167,
+       "extrait": "Nicodemus"
+      }
+     },
+     {
+      "id": "i_na",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "na"
+        ],
+        "type": "wn30:03804744-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 178,
+       "fin": 182,
+       "extrait": "nail"
+      }
+     },
+     {
+      "id": "i_ft",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ft"
+        ],
+        "type": "wn30:05563266-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 192,
+       "fin": 196,
+       "extrait": "feet"
+      }
+     },
+     {
+      "id": "a6",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "ft",
+         "ch"
+        ],
+        "type": "oc:partie_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 188,
+       "fin": 196,
+       "extrait": "his feet"
+      }
+     },
+     {
+      "id": "i_dr",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "dr"
+        ],
+        "type": "wn30:01351170-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 168,
+       "fin": 173,
+       "extrait": "draws"
+      }
+     },
+     {
+      "id": "a7",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "dr",
+         "ni"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 158,
+       "fin": 173,
+       "extrait": "Nicodemus draws"
+      }
+     },
+     {
+      "id": "a8",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "dr",
+         "na"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 168,
+       "fin": 182,
+       "extrait": "draws the nail"
+      }
+     },
+     {
+      "id": "a9",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "dr",
+         "ft"
+        ],
+        "type": "oc:depuis"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 183,
+       "fin": 196,
+       "extrait": "from his feet"
+      }
+     },
+     {
+      "id": "a10",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "dr"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-015",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 168,
+       "fin": 173,
+       "extrait": "draws"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-015:def",
+    "libelle": "the body of Christ being lowered from the cross while a nail is drawn from his feet",
+    "langue": "en",
+    "variables": [
+     [
+      "B",
+      "individu"
+     ],
+     [
+      "C",
+      "individu"
+     ],
+     [
+      "L",
+      "changement"
+     ],
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "D",
+      "changement"
+     ],
+     [
+      "N",
+      "individu"
+     ],
+     [
+      "F",
+      "collection"
+     ],
+     [
+      "T",
+      "situation"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "wn30:05218119-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?B",
+        "?C"
+       ],
+       "type": "oc:corps_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "wn30:11083656-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "wn30:01973125-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?L",
+        "?B"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?L",
+        "?X"
+       ],
+       "type": "oc:depuis"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:03135532-n"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?L"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?D"
+       ],
+       "type": "wn30:01351170-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?D",
+        "?N"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?N"
+       ],
+       "type": "wn30:03804744-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?D",
+        "?F"
+       ],
+       "type": "oc:depuis"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?F"
+       ],
+       "type": "wn30:05563266-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?F",
+        "?C"
+       ],
+       "type": "oc:partie_de"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?D"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?L",
+        "?T"
+       ]
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?D",
+        "?T"
+       ]
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-015:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 83,
+     "extrait": "the body of Christ being lowered from the cross while a nail is drawn from his feet"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-015",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:corps_de": {
+     "glose": "x est le corps (mort) de la personne y (« the body of Christ »)",
+     "justification": "relation entre un corps et la personne, sans synset"
+    },
+    "oc:depuis": {
+     "glose": "le mouvement x part de y (« from heaven », « from the cross », « from his feet »)",
+     "justification": "relation de source entre une éventualité et un lieu ou un objet, sans synset"
+    },
+    "oc:joseph_d_arimathie": {
+     "glose": "Joseph d'Arimathie",
+     "justification": "absent de WordNet"
+    },
+    "oc:nicodeme": {
+     "glose": "Nicodème",
+     "justification": "absent de WordNet"
+    },
+    "oc:partie_de": {
+     "glose": "x est une partie (du corps, d'un objet) de y",
+     "justification": "relation de partie, non une méronymie de concepts (l'entrée `partie` de K est inerte) : un fait entre deux référents",
+     "alignement": "WordNet : pointeur %p (méronymie de partie) entre concepts"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "« while » : une même situation (dans(?L, ?T), dans(?D, ?T)) et deux ancrages en cours. « his feet » : ceux du Christ (le contexte le fixe). « draws the nail » : extract, « remove, usually with some force » (01351170-v), le même des deux côtés ; « the nail » appuie « a nail ». Omis : l'échelle, les tenailles, la Vierge, le bras mort, le coin brisé (l'état de conservation, sans effet)."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-016",
+   "description": {
+    "id": "sa-016",
+    "langue": "fr",
+    "texte": "Peinture murale, nef d'une église de Catalogne, vers 1100. Aux portes de Naïm, le Christ relève le fils de la veuve, étendu sur une civière que portent deux hommes. La mère, voilée, lève les mains. Une bande de rinceaux court au-dessus de la scène.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "ch",
+      "sorte": "individu",
+      "introduit_par": "i_ch"
+     },
+     {
+      "id": "so",
+      "sorte": "individu",
+      "introduit_par": "i_so"
+     },
+     {
+      "id": "ve",
+      "sorte": "individu",
+      "introduit_par": "i_ve"
+     },
+     {
+      "id": "na",
+      "sorte": "individu",
+      "introduit_par": "i_na"
+     },
+     {
+      "id": "e",
+      "sorte": "changement",
+      "introduit_par": "i_e"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_ch",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "wn30:11083656-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 82,
+       "fin": 88,
+       "extrait": "Christ"
+      }
+     },
+     {
+      "id": "i_so",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "so"
+        ],
+        "type": "wn30:10624074-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 99,
+       "fin": 103,
+       "extrait": "fils"
+      }
+     },
+     {
+      "id": "i_ve",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ve"
+        ],
+        "type": "wn30:10780284-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 110,
+       "fin": 115,
+       "extrait": "veuve"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "so",
+         "ve"
+        ],
+        "type": "oc:fils_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 96,
+       "fin": 115,
+       "extrait": "le fils de la veuve"
+      }
+     },
+     {
+      "id": "i_na",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "na"
+        ],
+        "type": "oc:naim"
+       }
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 73,
+       "fin": 77,
+       "extrait": "Naïm"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "ve",
+         "na"
+        ],
+        "type": "oc:de"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "identification_iconographique",
+       "contenu": "la veuve, aux portes de Naïm, est la veuve de Naïm de Luc 7, 11-17"
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 59,
+       "fin": 77,
+       "extrait": "Aux portes de Naïm"
+      }
+     },
+     {
+      "id": "i_e",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": {
+         "alternatifs": "ps"
+        }
+       }
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 89,
+       "fin": 95,
+       "extrait": "relève"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "ch"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 79,
+       "fin": 95,
+       "extrait": "le Christ relève"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "so"
+        ],
+        "valeur": "patient"
+       }
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 89,
+       "fin": 103,
+       "extrait": "relève le fils"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "e"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 89,
+       "fin": 95,
+       "extrait": "relève"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "ps",
+      "cote": "D",
+      "dimension": "sens",
+      "domaine": [
+       "wn30:00098517-v",
+       "oc:relever_physique"
+      ],
+      "ancre": "relève",
+      "provenance": {
+       "document": "sa-016",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 89,
+       "fin": 95,
+       "extrait": "relève"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-016:def",
+    "libelle": "Christ raising the son of the widow of Nain from the dead",
+    "langue": "en",
+    "variables": [
+     [
+      "C",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "individu"
+     ],
+     [
+      "W",
+      "individu"
+     ],
+     [
+      "N",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "wn30:11083656-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:00098517-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?C"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?S"
+       ],
+       "valeur": "patient"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:10624074-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?S",
+        "?W"
+       ],
+       "type": "oc:fils_de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "wn30:10780284-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?W",
+        "?N"
+       ],
+       "type": "oc:de"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?N"
+       ],
+       "type": "oc:naim"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-016:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 57,
+     "extrait": "Christ raising the son of the widow of Nain from the dead"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-016",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:de": {
+     "glose": "x est de y : les ruines d'une ville, la femme d'un lieu (relation génitive non possessive)",
+     "justification": "relation entre référents, sans synset"
+    },
+    "oc:fils_de": {
+     "glose": "x est le fils de y",
+     "justification": "relation de parenté entre référents",
+     "alignement": "wn30:10624074-n (son) comme type"
+    },
+    "oc:naim": {
+     "glose": "Naïm, la ville de Galilée de Luc 7, 11",
+     "justification": "absent de WordNet"
+    },
+    "oc:relever_physique": {
+     "glose": "relever quelqu'un : l'aider à se relever, le faire se lever (sans retour à la vie)",
+     "justification": "un sens du français « relever » sans synset propre",
+     "alignement": "wn30:01983264-v (get up, rise)"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E_H",
+      "interpretations": 1,
+      "cylindres": [
+       {
+        "ps": [
+         "wn30:00098517-v"
+        ]
+       }
+      ],
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la veuve, aux portes de Naïm, est la veuve de Naïm de Luc 7, 11-17"
+       }
+      ]
+     },
+     {
+      "statut_local": "N",
+      "interpretations": 1,
+      "cylindres": [
+       {
+        "ps": [
+         "oc:relever_physique"
+        ]
+       }
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [
+    {
+     "nature": "identification_iconographique",
+     "contenu": "la veuve, aux portes de Naïm, est la veuve de Naïm de Luc 7, 11-17"
+    }
+   ],
+   "remarques": "Un point de sens sur « relève » : {ressusciter (resurrect, raise, « raise from the dead », 00098517-v), relever au sens physique}. Le français biblique admet « relever » pour ressusciter, et le contexte (le fils de la veuve, étendu sur une civière que portent deux hommes, aux portes de Naïm) l'appelle sans exclure le sens physique ; le texte ne dit pas que le fils est mort. « the widow of Nain » : la veuve est de Naïm par identification (assertion supposée de nature identification_iconographique) ; le texte ne dit que le lieu de la scène. Sous ressusciter, E_H ; sous le sens physique, N. Omis : la civière, les porteurs, la mère voilée qui lève les mains, les rinceaux."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-017",
+   "description": {
+    "id": "sa-017",
+    "langue": "en",
+    "texte": "Statuette, painted limewood, Mechelen, about 1500. A young woman wears a wreath of roses on her loose hair and holds a basket of fruit in her left hand. Her mantle is gilded; the right hand is lost. No inscription survives on the base.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "w",
+      "sorte": "individu",
+      "introduit_par": "i_w"
+     },
+     {
+      "id": "wr",
+      "sorte": "individu",
+      "introduit_par": "i_wr"
+     },
+     {
+      "id": "we",
+      "sorte": "etat",
+      "introduit_par": "i_we"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_w",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "w"
+        ],
+        "type": "wn30:10129825-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-017",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 53,
+       "fin": 64,
+       "extrait": "young woman"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "w"
+        ],
+        "type": "oc:sainte_dorothee"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "identification_iconographique",
+       "contenu": "la jeune femme couronnée de roses, un panier de fruits à la main, est sainte Dorothée"
+      },
+      "provenance": {
+       "document": "sa-017",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 111,
+       "fin": 134,
+       "extrait": "holds a basket of fruit"
+      }
+     },
+     {
+      "id": "i_wr",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "wr"
+        ],
+        "type": "oc:couronne_de_roses"
+       }
+      },
+      "provenance": {
+       "document": "sa-017",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 73,
+       "fin": 88,
+       "extrait": "wreath of roses"
+      }
+     },
+     {
+      "id": "i_we",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "we"
+        ],
+        "type": "wn30:00047745-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-017",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 65,
+       "fin": 70,
+       "extrait": "wears"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "we",
+         "w"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-017",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 51,
+       "fin": 70,
+       "extrait": "A young woman wears"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "we",
+         "wr"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-017",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 65,
+       "fin": 88,
+       "extrait": "wears a wreath of roses"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "we"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-017",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 65,
+       "fin": 70,
+       "extrait": "wears"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-017:def",
+    "libelle": "Saint Dorothy wearing a wreath of roses",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "W",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "oc:sainte_dorothee"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:00047745-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?X"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?W"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "oc:couronne_de_roses"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-017:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 39,
+     "extrait": "Saint Dorothy wearing a wreath of roses"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-017",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:couronne_de_roses": {
+     "glose": "une couronne (un chapel) de roses portée sur la tête",
+     "justification": "composé : wreath (04606014-n) fait de roses",
+     "alignement": "wn30:04606014-n"
+    },
+    "oc:sainte_dorothee": {
+     "glose": "sainte Dorothée de Césarée, vierge et martyre",
+     "justification": "absente de WordNet"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie_sous_hypotheses"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E_H",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": [
+       {
+        "nature": "identification_iconographique",
+        "contenu": "la jeune femme couronnée de roses, un panier de fruits à la main, est sainte Dorothée"
+       }
+      ]
+     }
+    ]
+   },
+   "hypotheses": [
+    {
+     "nature": "identification_iconographique",
+     "contenu": "la jeune femme couronnée de roses, un panier de fruits à la main, est sainte Dorothée"
+    }
+   ],
+   "remarques": "L'identification de sainte Dorothée par ses attributs (la couronne de roses, le panier de fruits) est une hypothèse de nature identification_iconographique (le guide, § 1). « No inscription survives » ne nie rien (le silence). Omis : les cheveux défaits, le manteau doré, la main perdue (l'état de conservation, sans effet : la couronne subsiste)."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-018",
+   "description": {
+    "id": "sa-018",
+    "langue": "fr",
+    "texte": "Gravure sur bois de la Passion, Nuremberg, 1509. Le Christ, assis sur un bloc de pierre, les mains liées, ne porte pas encore la couronne d'épines : derrière lui, un soldat la tient levée au-dessus de sa tête, prêt à l'y enfoncer avec deux bâtons croisés. Deux autres soldats ricanent en s'inclinant.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "ch",
+      "sorte": "individu",
+      "introduit_par": "i_ch"
+     },
+     {
+      "id": "co",
+      "sorte": "individu",
+      "introduit_par": "i_co"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_ch",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "wn30:11083656-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-018",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 52,
+       "fin": 58,
+       "extrait": "Christ"
+      }
+     },
+     {
+      "id": "i_co",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "co"
+        ],
+        "type": "oc:couronne_d_epines"
+       }
+      },
+      "provenance": {
+       "document": "sa-018",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 129,
+       "fin": 146,
+       "extrait": "couronne d'épines"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "non": {
+        "atomes": [
+         {
+          "pred": "type",
+          "args": [
+           "?s"
+          ],
+          "type": "wn30:00047745-v"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?s",
+           "ch"
+          ],
+          "valeur": "porteur"
+         },
+         {
+          "pred": "role",
+          "args": [
+           "?s",
+           "co"
+          ],
+          "valeur": "theme"
+         },
+         {
+          "pred": "ancrage",
+          "args": [
+           "?s"
+          ],
+          "valeur": "en_cours"
+         }
+        ],
+        "locales": [
+         [
+          "s",
+          "etat"
+         ]
+        ]
+       }
+      },
+      "qualification": {
+       "polarite": "neg"
+      },
+      "provenance": {
+       "document": "sa-018",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 106,
+       "fin": 146,
+       "extrait": "ne porte pas encore la couronne d'épines"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-018:def",
+    "libelle": "Christ wearing the crown of thorns",
+    "langue": "en",
+    "variables": [
+     [
+      "C",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "K",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "wn30:11083656-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:00047745-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?C"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?K"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?K"
+       ],
+       "type": "oc:couronne_d_epines"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-018:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 34,
+     "extrait": "Christ wearing the crown of thorns"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-018",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:couronne_d_epines": {
+     "glose": "la couronne d'épines de la Passion",
+     "justification": "le « crown of thorns » de WordNet (14477667-n) est une affliction figurée"
+    }
+   },
+   "statut_calcule": {
+    "principal": "ecartee"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "R",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "« ne porte pas encore » : un état nié au moment figuré, ¬∃s (wear(s) ∧ porteur(s, Christ) ∧ theme(s, la couronne) ∧ en cours), qui réfute la définition pour ces référents. « pas encore » ne dit rien du port à venir (l'imminence est celle du geste du soldat) ; la définition demande le port en cours. Omis : le bloc de pierre, les mains liées, le soldat, les bâtons, les autres soldats."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-019",
+   "description": {
+    "id": "sa-019",
+    "langue": "en",
+    "texte": "Romanesque statue, walnut with traces of polychromy, Auvergne, 12th century. The Virgin, seated frontally on a throne, holds the Child on her lap; he raises his right hand in blessing. The Child's head is a modern replacement, and the throne has lost its front legs.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "vi",
+      "sorte": "individu",
+      "introduit_par": "i_vi"
+     },
+     {
+      "id": "st",
+      "sorte": "etat",
+      "introduit_par": "i_st"
+     },
+     {
+      "id": "th",
+      "sorte": "individu",
+      "introduit_par": "i_th"
+     },
+     {
+      "id": "ch",
+      "sorte": "individu",
+      "introduit_par": "i_ch"
+     },
+     {
+      "id": "lp",
+      "sorte": "individu",
+      "introduit_par": "i_lp"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_vi",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "vi"
+        ],
+        "type": "wn30:11161412-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 81,
+       "fin": 87,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "i_st",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "st"
+        ],
+        "type": "wn30:01543123-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 89,
+       "fin": 95,
+       "extrait": "seated"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "st",
+         "vi"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 77,
+       "fin": 95,
+       "extrait": "The Virgin, seated"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "st"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 89,
+       "fin": 95,
+       "extrait": "seated"
+      }
+     },
+     {
+      "id": "i_th",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "th"
+        ],
+        "type": "wn30:04429376-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 111,
+       "fin": 117,
+       "extrait": "throne"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "vi",
+         "th"
+        ],
+        "type": "oc:sur"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 106,
+       "fin": 117,
+       "extrait": "on a throne"
+      }
+     },
+     {
+      "id": "i_ch",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ch"
+        ],
+        "type": "oc:enfant_jesus"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 129,
+       "fin": 134,
+       "extrait": "Child"
+      }
+     },
+     {
+      "id": "i_lp",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "lp"
+        ],
+        "type": "wn30:05562595-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 142,
+       "fin": 145,
+       "extrait": "lap"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "lp",
+         "vi"
+        ],
+        "type": "oc:partie_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 138,
+       "fin": 145,
+       "extrait": "her lap"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "ch",
+         "lp"
+        ],
+        "type": "oc:sur"
+       }
+      },
+      "provenance": {
+       "document": "sa-019",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 119,
+       "fin": 145,
+       "extrait": "holds the Child on her lap"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-019:def",
+    "libelle": "the Virgin seated on a throne with the Child on her lap",
+    "langue": "en",
+    "variables": [
+     [
+      "V",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "T",
+      "individu"
+     ],
+     [
+      "C",
+      "individu"
+     ],
+     [
+      "L",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?V"
+       ],
+       "type": "wn30:11161412-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:01543123-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?V"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?V",
+        "?T"
+       ],
+       "type": "oc:sur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?T"
+       ],
+       "type": "wn30:04429376-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?C"
+       ],
+       "type": "oc:enfant_jesus"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?C",
+        "?L"
+       ],
+       "type": "oc:sur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "wn30:05562595-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?L",
+        "?V"
+       ],
+       "type": "oc:partie_de"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-019:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 55,
+     "extrait": "the Virgin seated on a throne with the Child on her lap"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-019",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:enfant_jesus": {
+     "glose": "le Christ enfant (« l'Enfant », « the Child », « the Christ child »)",
+     "justification": "WordNet n'a que la personne de Jésus (11083656-n), sans le stade de l'enfance",
+     "alignement": "wn30:11083656-n"
+    },
+    "oc:partie_de": {
+     "glose": "x est une partie (du corps, d'un objet) de y",
+     "justification": "relation de partie, non une méronymie de concepts (l'entrée `partie` de K est inerte) : un fait entre deux référents",
+     "alignement": "WordNet : pointeur %p (méronymie de partie) entre concepts"
+    },
+    "oc:sur": {
+     "glose": "x est posé sur, se trouve sur ou contre y (« sur », « on », « in a lap »)",
+     "justification": "relation spatiale entre référents, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "La statue figure la Vierge et l'Enfant (contexte principal). La tête moderne de l'Enfant et les pieds perdus du trône ne changent ni la posture ni la place de l'Enfant : aucun contexte d'état d'origine n'est nécessaire. Omis : « frontally », la bénédiction."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-020",
+   "description": {
+    "id": "sa-020",
+    "langue": "fr",
+    "texte": "Volet gauche d'un triptyque, huile sur bois, Bruges, vers 1480. Saint Jean-Baptiste, vêtu d'une peau de chameau, désigne de l'index l'agneau couché sur le livre qu'il tient de l'autre main. Le bas du panneau, sous la taille, est perdu : le saint était soit debout, soit assis sur un rocher. Le fond montre un paysage traversé par une rivière.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     },
+     {
+      "id": "origine",
+      "sorte": "etat_d_origine",
+      "parent": "principal"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "id": "jb",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_jb"
+     },
+     {
+      "id": "ag",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_ag"
+     },
+     {
+      "id": "po",
+      "sorte": "processus",
+      "situation": "s0",
+      "introduit_par": "i_po"
+     },
+     {
+      "id": "sd",
+      "sorte": "etat",
+      "contexte": "origine",
+      "situation": "s0",
+      "introduit_par": "i_sd"
+     },
+     {
+      "id": "ss",
+      "sorte": "etat",
+      "contexte": "origine",
+      "situation": "s0",
+      "introduit_par": "i_ss"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_jb",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "jb"
+        ],
+        "type": "wn30:11087359-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 64,
+       "fin": 83,
+       "extrait": "Saint Jean-Baptiste"
+      }
+     },
+     {
+      "id": "i_ag",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ag"
+        ],
+        "type": "wn30:06883274-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 132,
+       "fin": 140,
+       "extrait": "l'agneau"
+      }
+     },
+     {
+      "id": "i_po",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "po"
+        ],
+        "type": "wn30:00923793-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 113,
+       "fin": 120,
+       "extrait": "désigne"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "po",
+         "jb"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 64,
+       "fin": 83,
+       "extrait": "Saint Jean-Baptiste"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "po",
+         "ag"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 113,
+       "fin": 140,
+       "extrait": "désigne de l'index l'agneau"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "po"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 113,
+       "fin": 120,
+       "extrait": "désigne"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "jb"
+        ],
+        "type": "wn30:11087359-n"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 64,
+       "fin": 83,
+       "extrait": "Saint Jean-Baptiste"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ag"
+        ],
+        "type": "wn30:06883274-n"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 132,
+       "fin": 140,
+       "extrait": "l'agneau"
+      }
+     },
+     {
+      "id": "a6",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "po"
+        ],
+        "type": "wn30:00923793-v"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 113,
+       "fin": 120,
+       "extrait": "désigne"
+      }
+     },
+     {
+      "id": "a7",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "po",
+         "jb"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 64,
+       "fin": 83,
+       "extrait": "Saint Jean-Baptiste"
+      }
+     },
+     {
+      "id": "a8",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "po",
+         "ag"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 113,
+       "fin": 140,
+       "extrait": "désigne de l'index l'agneau"
+      }
+     },
+     {
+      "id": "a9",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "po"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 113,
+       "fin": 120,
+       "extrait": "désigne"
+      }
+     },
+     {
+      "id": "i_sd",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "sd"
+        ],
+        "type": "wn30:01546111-v"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 3,
+       "debut": 257,
+       "fin": 263,
+       "extrait": "debout"
+      }
+     },
+     {
+      "id": "a10",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "sd",
+         "jb"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 3,
+       "debut": 237,
+       "fin": 263,
+       "extrait": "le saint était soit debout"
+      }
+     },
+     {
+      "id": "a11",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "sd"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 3,
+       "debut": 257,
+       "fin": 263,
+       "extrait": "debout"
+      }
+     },
+     {
+      "id": "i_ss",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ss"
+        ],
+        "type": "wn30:01543123-v"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 3,
+       "debut": 270,
+       "fin": 275,
+       "extrait": "assis"
+      }
+     },
+     {
+      "id": "a12",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "ss",
+         "jb"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 3,
+       "debut": 265,
+       "fin": 289,
+       "extrait": "soit assis sur un rocher"
+      }
+     },
+     {
+      "id": "a13",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "ss"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "qualification": {
+       "contexte": "origine"
+      },
+      "provenance": {
+       "document": "sa-020",
+       "langue": "fr",
+       "phrase": 3,
+       "debut": 270,
+       "fin": 275,
+       "extrait": "assis"
+      }
+     }
+    ],
+    "alternatives": [
+     {
+      "id": "posture",
+      "branches": [
+       [
+        "i_sd",
+        "a10",
+        "a11"
+       ],
+       [
+        "i_ss",
+        "a12",
+        "a13"
+       ]
+      ]
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-020:def",
+    "libelle": "Saint John the Baptist standing, pointing at the Lamb",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "P",
+      "processus"
+     ],
+     [
+      "L",
+      "individu"
+     ],
+     [
+      "T",
+      "situation"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": "wn30:11087359-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:01546111-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?X"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?S",
+        "?T"
+       ]
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?P"
+       ],
+       "type": "wn30:00923793-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?P",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?P",
+        "?L"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "wn30:06883274-n"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?P"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-020:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 53,
+     "extrait": "Saint John the Baptist standing, pointing at the Lamb"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-020",
+    "entrees": [
+     {
+      "entree": "incompatibilite",
+      "id": "k1",
+      "a": "wn30:01546111-v",
+      "b": "wn30:01543123-v",
+      "forme": "etat",
+      "indexation": [
+       "porteur",
+       "moment",
+       "contexte"
+      ],
+      "sorte": "contraires",
+      "source": {
+       "ressource": "K* (postulat de signification posé par l'annotateur, sans attestation)",
+       "validation": "non attesté : ne fonde qu'une hypothèse (connaissance_non_attestee)"
+      },
+      "statut": "non_attestee"
+     }
+    ]
+   },
+   "represente": true,
+   "concepts": {},
+   "statut_calcule": {
+    "principal": "inconnue",
+    "origine": "inconnue"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "N",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ],
+    "origine": [
+     {
+      "statut_local": "N",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "Le bas du panneau est perdu : la posture n'est plus figurée dans l'œuvre telle qu'elle est (contexte principal : inconnue) ; elle l'était dans l'état d'origine (« était »), où l'auteur donne une alternative, debout ou assis (guide § 7, précision 3 : une alternative de l'auteur, traitée par cas, non un point). Dans l'état d'origine, les parties qui subsistent sont réécrites (ce qui reste faisait partie de l'original : une lecture). Branche debout : V ; branche assis : F, par l'incompatibilité debout / assis (k1, non attestée) ; le consensus des branches est N : inconnue dans les deux contextes. « l'agneau » sur le livre du Baptiste est l'Agneau de Dieu (Agnus Dei, 06883274-n : « figure of a lamb; emblematic of Christ »), lecture. Omis : la peau de chameau, le livre, le paysage, la rivière."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-021",
+   "description": {
+    "id": "sa-021",
+    "langue": "en",
+    "texte": "Tomb effigy, Purbeck marble, English, about 1280. The knight lies recumbent in mail, his legs crossed and his hands joined in prayer on his breast. A lion crouches beneath his feet, and two angels support the cushion under his head. The nose and the angels' wings are broken.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "kn",
+      "sorte": "individu",
+      "introduit_par": "i_kn"
+     },
+     {
+      "id": "rc",
+      "sorte": "etat",
+      "introduit_par": "i_rc"
+     },
+     {
+      "id": "li",
+      "sorte": "individu",
+      "introduit_par": "i_li"
+     },
+     {
+      "id": "ft",
+      "sorte": "collection",
+      "introduit_par": "i_ft"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_kn",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "kn"
+        ],
+        "type": "wn30:10238375-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-021",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 54,
+       "fin": 60,
+       "extrait": "knight"
+      }
+     },
+     {
+      "id": "i_rc",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "rc"
+        ],
+        "type": "wn30:01238201-a"
+       }
+      },
+      "provenance": {
+       "document": "sa-021",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 66,
+       "fin": 75,
+       "extrait": "recumbent"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "rc",
+         "kn"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-021",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 50,
+       "fin": 75,
+       "extrait": "The knight lies recumbent"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "rc"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-021",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 66,
+       "fin": 75,
+       "extrait": "recumbent"
+      }
+     },
+     {
+      "id": "i_li",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "li"
+        ],
+        "type": "wn30:02129165-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-021",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 150,
+       "fin": 154,
+       "extrait": "lion"
+      }
+     },
+     {
+      "id": "i_ft",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ft"
+        ],
+        "type": "wn30:05563266-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-021",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 176,
+       "fin": 180,
+       "extrait": "feet"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "ft",
+         "kn"
+        ],
+        "type": "oc:partie_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-021",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 172,
+       "fin": 180,
+       "extrait": "his feet"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "li",
+         "ft"
+        ],
+        "type": "oc:sous"
+       }
+      },
+      "provenance": {
+       "document": "sa-021",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 164,
+       "fin": 180,
+       "extrait": "beneath his feet"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-021:def",
+    "libelle": "a recumbent knight with a lion beneath his feet",
+    "langue": "en",
+    "variables": [
+     [
+      "K",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "L",
+      "individu"
+     ],
+     [
+      "F",
+      "collection"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?K"
+       ],
+       "type": "wn30:10238375-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:01238201-a"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?K"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "wn30:02129165-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?L",
+        "?F"
+       ],
+       "type": "oc:sous"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?F"
+       ],
+       "type": "wn30:05563266-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?F",
+        "?K"
+       ],
+       "type": "oc:partie_de"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-021:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 47,
+     "extrait": "a recumbent knight with a lion beneath his feet"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-021",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:partie_de": {
+     "glose": "x est une partie (du corps, d'un objet) de y",
+     "justification": "relation de partie, non une méronymie de concepts (l'entrée `partie` de K est inerte) : un fait entre deux référents",
+     "alignement": "WordNet : pointeur %p (méronymie de partie) entre concepts"
+    },
+    "oc:sous": {
+     "glose": "x se trouve sous y (« beneath », « sous »)",
+     "justification": "relation spatiale, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "Le gisant figure le chevalier (contexte principal). Omis : la maille, les jambes croisées, les mains jointes, les anges, le coussin, les cassures."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-022",
+   "description": {
+    "id": "sa-022",
+    "langue": "fr",
+    "texte": "Miniature d'une Bible historiale, Paris, vers 1400. Jacob est étendu sur le dos, la tête posée sur une pierre, au pied d'une échelle qui monte jusqu'au ciel. Il est éveillé et regarde les anges qui gravissent les échelons. Un paysage de collines bleues ferme l'horizon.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "s0",
+      "sorte": "situation"
+     },
+     {
+      "id": "ja",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_ja"
+     },
+     {
+      "id": "ly",
+      "sorte": "etat",
+      "situation": "s0",
+      "introduit_par": "i_ly"
+     },
+     {
+      "id": "te",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_te"
+     },
+     {
+      "id": "pi",
+      "sorte": "individu",
+      "situation": "s0",
+      "introduit_par": "i_pi"
+     },
+     {
+      "id": "aw",
+      "sorte": "etat",
+      "situation": "s0",
+      "introduit_par": "i_aw"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_ja",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ja"
+        ],
+        "type": "wn30:10218390-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 52,
+       "fin": 57,
+       "extrait": "Jacob"
+      }
+     },
+     {
+      "id": "i_ly",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ly"
+        ],
+        "type": "oc:allonge_sur_le_dos"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 79,
+       "extrait": "étendu sur le dos"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "ly",
+         "ja"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 52,
+       "fin": 68,
+       "extrait": "Jacob est étendu"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "ly"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 62,
+       "fin": 68,
+       "extrait": "étendu"
+      }
+     },
+     {
+      "id": "i_te",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "te"
+        ],
+        "type": "wn30:05538625-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 81,
+       "fin": 88,
+       "extrait": "la tête"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "te",
+         "ja"
+        ],
+        "type": "oc:partie_de"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 81,
+       "fin": 88,
+       "extrait": "la tête"
+      }
+     },
+     {
+      "id": "i_pi",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "pi"
+        ],
+        "type": "wn30:09416076-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 103,
+       "fin": 109,
+       "extrait": "pierre"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "te",
+         "pi"
+        ],
+        "type": "oc:sur"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "la tête posée sur une pierre"
+      }
+     },
+     {
+      "id": "i_aw",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "aw"
+        ],
+        "type": "wn30:00186616-a"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 165,
+       "fin": 172,
+       "extrait": "éveillé"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "aw",
+         "ja"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 158,
+       "fin": 172,
+       "extrait": "Il est éveillé"
+      }
+     },
+     {
+      "id": "a6",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "aw"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-022",
+       "langue": "fr",
+       "phrase": 2,
+       "debut": 165,
+       "fin": 172,
+       "extrait": "éveillé"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-022:def",
+    "libelle": "Jacob asleep, lying on his back with his head on a stone",
+    "langue": "en",
+    "variables": [
+     [
+      "J",
+      "individu"
+     ],
+     [
+      "S",
+      "etat"
+     ],
+     [
+      "T",
+      "situation"
+     ],
+     [
+      "L",
+      "etat"
+     ],
+     [
+      "H",
+      "individu"
+     ],
+     [
+      "P",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?J"
+       ],
+       "type": "wn30:10218390-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:00187736-a"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?S",
+        "?J"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?S"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "dans",
+       "args": [
+        "?S",
+        "?T"
+       ]
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?L"
+       ],
+       "type": "oc:allonge_sur_le_dos"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?L",
+        "?J"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?H"
+       ],
+       "type": "wn30:05538625-n"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?H",
+        "?J"
+       ],
+       "type": "oc:partie_de"
+      },
+      {
+       "pred": "relation",
+       "args": [
+        "?H",
+        "?P"
+       ],
+       "type": "oc:sur"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?P"
+       ],
+       "type": "wn30:09416076-n"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-022:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 56,
+     "extrait": "Jacob asleep, lying on his back with his head on a stone"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-022",
+    "entrees": [
+     {
+      "entree": "incompatibilite",
+      "id": "k1",
+      "a": "wn30:00186616-a",
+      "b": "wn30:00187736-a",
+      "forme": "etat",
+      "indexation": [
+       "porteur",
+       "moment",
+       "contexte"
+      ],
+      "sorte": "contradictoires",
+      "source": {
+       "ressource": "WordNet 3.0",
+       "element": "la glose de awake (00186616-a) : « not in a state of sleep » (contre asleep, 00187736-a, « in a state of sleep »)",
+       "validation": "relation lue dans les fichiers dict/ de WordNet 3.0"
+      },
+      "statut": "attestee"
+     }
+    ]
+   },
+   "represente": true,
+   "concepts": {
+    "oc:allonge_sur_le_dos": {
+     "glose": "être étendu sur le dos (un état de posture)",
+     "justification": "WordNet lie (01547001-v) ne dit pas la posture sur le dos",
+     "alignement": "wn30:01547001-v"
+    },
+    "oc:partie_de": {
+     "glose": "x est une partie (du corps, d'un objet) de y",
+     "justification": "relation de partie, non une méronymie de concepts (l'entrée `partie` de K est inerte) : un fait entre deux référents",
+     "alignement": "WordNet : pointeur %p (méronymie de partie) entre concepts"
+    },
+    "oc:sur": {
+     "glose": "x est posé sur, se trouve sur ou contre y (« sur », « on », « in a lap »)",
+     "justification": "relation spatiale entre référents, sans synset"
+    }
+   },
+   "statut_calcule": {
+    "principal": "ecartee"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "R",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "« Il est éveillé » et « asleep » : la même figure, la même situation, le même moment ; l'incompatibilité indexée est attestée par la glose de WordNet (awake : « not in a state of sleep ») : une réfutation sans hypothèse (étude § 6.2, l'exemple sa-022). « étendu sur le dos » / « lying on his back » : le même état de posture (oc:allonge_sur_le_dos). Omis : l'échelle, les anges qui gravissent les échelons, le regard, les collines."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-023",
+   "description": {
+    "id": "sa-023",
+    "langue": "fr",
+    "texte": "Tapisserie de laine et soie, Bruxelles, vers 1530. Une femme couronnée, la Justice, tenant une balance, remet une épée au jeune roi agenouillé devant elle. Derrière le roi, deux conseillers en robe s'entretiennent. Une bordure de fleurs et de fruits encadre la scène.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "w",
+      "sorte": "individu",
+      "introduit_par": "i_w"
+     },
+     {
+      "id": "ju",
+      "sorte": "concept",
+      "introduit_par": "i_ju"
+     },
+     {
+      "id": "ep",
+      "sorte": "individu",
+      "introduit_par": "i_ep"
+     },
+     {
+      "id": "ro",
+      "sorte": "individu",
+      "introduit_par": "i_ro"
+     },
+     {
+      "id": "kn",
+      "sorte": "etat",
+      "introduit_par": "i_kn"
+     },
+     {
+      "id": "pr",
+      "sorte": "changement",
+      "introduit_par": "i_pr"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_w",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "w"
+        ],
+        "type": "wn30:10787470-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 55,
+       "fin": 60,
+       "extrait": "femme"
+      }
+     },
+     {
+      "id": "i_ju",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ju"
+        ],
+        "type": "wn30:04850117-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 72,
+       "fin": 82,
+       "extrait": "la Justice"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "w",
+         "ju"
+        ],
+        "type": "oc:personnifie"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 51,
+       "fin": 82,
+       "extrait": "Une femme couronnée, la Justice"
+      }
+     },
+     {
+      "id": "i_ep",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ep"
+        ],
+        "type": "wn30:04373894-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 114,
+       "fin": 118,
+       "extrait": "épée"
+      }
+     },
+     {
+      "id": "i_ro",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "ro"
+        ],
+        "type": "wn30:10231515-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 128,
+       "fin": 131,
+       "extrait": "roi"
+      }
+     },
+     {
+      "id": "i_kn",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "kn"
+        ],
+        "type": "wn30:01545649-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 132,
+       "fin": 142,
+       "extrait": "agenouillé"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "kn",
+         "ro"
+        ],
+        "valeur": "porteur"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 128,
+       "fin": 142,
+       "extrait": "roi agenouillé"
+      }
+     },
+     {
+      "id": "a3",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "kn"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 132,
+       "fin": 142,
+       "extrait": "agenouillé"
+      }
+     },
+     {
+      "id": "i_pr",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "pr"
+        ],
+        "type": "wn30:02262752-v"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 104,
+       "fin": 109,
+       "extrait": "remet"
+      }
+     },
+     {
+      "id": "a4",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "pr",
+         "w"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 72,
+       "fin": 109,
+       "extrait": "la Justice, tenant une balance, remet"
+      }
+     },
+     {
+      "id": "a5",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "pr",
+         "ep"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 104,
+       "fin": 118,
+       "extrait": "remet une épée"
+      }
+     },
+     {
+      "id": "a6",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "pr",
+         "ro"
+        ],
+        "valeur": "destinataire"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 119,
+       "fin": 131,
+       "extrait": "au jeune roi"
+      }
+     },
+     {
+      "id": "a7",
+      "contenu": {
+       "atome": {
+        "pred": "ancrage",
+        "args": [
+         "pr"
+        ],
+        "valeur": "en_cours"
+       }
+      },
+      "provenance": {
+       "document": "sa-023",
+       "langue": "fr",
+       "phrase": 1,
+       "debut": 104,
+       "fin": 109,
+       "extrait": "remet"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-023:def",
+    "libelle": "Justice presenting a sword to a kneeling king",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "J",
+      "concept"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "S",
+      "individu"
+     ],
+     [
+      "K",
+      "individu"
+     ],
+     [
+      "Kn",
+      "etat"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "relation",
+       "args": [
+        "?X",
+        "?J"
+       ],
+       "type": "oc:personnifie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?J"
+       ],
+       "type": "wn30:04850117-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "wn30:02262752-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?S"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?K"
+       ],
+       "valeur": "destinataire"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?E"
+       ],
+       "valeur": "en_cours"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?S"
+       ],
+       "type": "wn30:04373894-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?K"
+       ],
+       "type": "wn30:10231515-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Kn"
+       ],
+       "type": "wn30:01545649-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?Kn",
+        "?K"
+       ],
+       "valeur": "porteur"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?Kn"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-023:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 45,
+     "extrait": "Justice presenting a sword to a kneeling king"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-023",
+    "entrees": []
+   },
+   "represente": true,
+   "concepts": {
+    "oc:personnifie": {
+     "glose": "la figure x personnifie le concept y (« la Vérité, personnifiée par une jeune femme »)",
+     "justification": "relation de signification entre une figure et un concept ; le langage n'en a pas (§ 9) : un fait écrit, sans règle"
+    }
+   },
+   "statut_calcule": {
+    "principal": "etablie"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "E",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": []
+     }
+    ]
+   },
+   "hypotheses": [],
+   "remarques": "La personnification (« Une femme …, la Justice ») est écrite comme une relation oc:personnifie vers un concept (justice, 04850117-n), de même des deux côtés ; le langage n'a pas de relation de signification (§ 9), aucune n'est demandée. « remet » est lu au sens de « remettre officiellement » (present, submit : « hand over formally », 02262752-v), le sens de « presenting » : le contexte (un roi agenouillé reçoit l'épée des mains de la Justice) le fixe. DOUTE : lu au seul sens de « hand » (02230772-v), il faudrait le postulat hand ⊑ present, faux en général. Omis : la couronne, la balance, les conseillers, la bordure, « jeune »."
+  },
+  {
+   "notation": "nr-1",
+   "id": "sa-024",
+   "description": {
+    "id": "sa-024",
+    "langue": "en",
+    "texte": "Engraving, Antwerp, about 1560. In his study, Saint Jerome sits at a sloping desk before an open book, his cardinal's hat hanging on the wall. He does not hold his quill: it stands in the inkwell, and he rests his head on his hand, lost in thought. A lion sleeps under the desk.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "id": "je",
+      "sorte": "individu",
+      "introduit_par": "i_je"
+     },
+     {
+      "id": "qu",
+      "sorte": "individu",
+      "introduit_par": "i_qu"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "i_je",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "je"
+        ],
+        "type": "wn30:11083064-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-024",
+       "langue": "en",
+       "phrase": 1,
+       "debut": 46,
+       "fin": 58,
+       "extrait": "Saint Jerome"
+      }
+     },
+     {
+      "id": "i_qu",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "qu"
+        ],
+        "type": "wn30:04033901-n"
+       }
+      },
+      "provenance": {
+       "document": "sa-024",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 164,
+       "fin": 169,
+       "extrait": "quill"
+      }
+     },
+     {
+      "id": "a1",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "je",
+         "qu"
+        ],
+        "type": "oc:possession"
+       }
+      },
+      "provenance": {
+       "document": "sa-024",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 160,
+       "fin": 169,
+       "extrait": "his quill"
+      }
+     },
+     {
+      "id": "a2",
+      "contenu": {
+       "non": {
+        "atomes": [
+         {
+          "pred": "relation",
+          "args": [
+           "je",
+           "qu"
+          ],
+          "type": "oc:tenir"
+         }
+        ]
+       }
+      },
+      "qualification": {
+       "polarite": "neg"
+      },
+      "provenance": {
+       "document": "sa-024",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 143,
+       "fin": 169,
+       "extrait": "He does not hold his quill"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "sa-024:def",
+    "libelle": "Saint Jerome writing with a quill",
+    "langue": "en",
+    "variables": [
+     [
+      "J",
+      "individu"
+     ],
+     [
+      "W",
+      "processus"
+     ],
+     [
+      "Q",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?J"
+       ],
+       "type": "wn30:11083064-n"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?W"
+       ],
+       "type": "wn30:01698271-v"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?W",
+        "?J"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?W",
+        "?Q"
+       ],
+       "valeur": "instrument"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?Q"
+       ],
+       "type": "wn30:04033901-n"
+      },
+      {
+       "pred": "ancrage",
+       "args": [
+        "?W"
+       ],
+       "valeur": "en_cours"
+      }
+     ]
+    },
+    "provenance": {
+     "document": "sa-024:definition",
+     "langue": "en",
+     "phrase": 0,
+     "debut": 0,
+     "fin": 33,
+     "extrait": "Saint Jerome writing with a quill"
+    }
+   },
+   "connaissances": {
+    "version": "K*-sa-024",
+    "entrees": [
+     {
+      "entree": "regle",
+      "id": "k1",
+      "sorte": "condition_necessaire",
+      "variables": [
+       [
+        "e",
+        "processus"
+       ],
+       [
+        "x",
+        "individu"
+       ],
+       [
+        "q",
+        "individu"
+       ]
+      ],
+      "premisse": [
+       {
+        "pred": "type",
+        "args": [
+         "?e"
+        ],
+        "type": "wn30:01698271-v"
+       },
+       {
+        "pred": "role",
+        "args": [
+         "?e",
+         "?x"
+        ],
+        "valeur": "agent"
+       },
+       {
+        "pred": "role",
+        "args": [
+         "?e",
+         "?q"
+        ],
+        "valeur": "instrument"
+       }
+      ],
+      "conclusion": [
+       {
+        "pred": "relation",
+        "args": [
+         "?x",
+         "?q"
+        ],
+        "type": "oc:tenir"
+       }
+      ],
+      "source": {
+       "ressource": "K* (postulat de signification posé par l'annotateur, sans attestation)",
+       "validation": "non attesté : ne fonde qu'une hypothèse (connaissance_non_attestee)"
+      },
+      "statut": "non_attestee"
+     }
+    ]
+   },
+   "represente": true,
+   "concepts": {
+    "oc:possession": {
+     "glose": "x possède y ; la relation du possessif (« son », « ses », « his »)",
+     "justification": "relation entre référents ; WordNet n'a pas de concept de relation possessive"
+    },
+    "oc:tenir": {
+     "glose": "x tient y (dans la main)",
+     "justification": "une relation entre référents ; le verbe hold (01216670-v) est écrit ailleurs comme un état, ici la négation porte sur la relation",
+     "alignement": "wn30:01216670-v"
+    }
+   },
+   "statut_calcule": {
+    "principal": "ecartee_sous_hypotheses"
+   },
+   "classes": {
+    "principal": [
+     {
+      "statut_local": "R_H",
+      "interpretations": 1,
+      "cylindres": [
+       {}
+      ],
+      "hypotheses": [
+       {
+        "nature": "connaissance_non_attestee",
+        "contenu": "k1"
+       }
+      ]
+     }
+    ]
+   },
+   "hypotheses": [
+    {
+     "nature": "connaissance_non_attestee",
+     "contenu": "k1"
+    }
+   ],
+   "remarques": "« He does not hold his quill » nie une relation (oc:tenir) ; la définition demande qu'il écrive avec la plume. La réfutation passe par une règle (k1, non attestée) : écrire avec un instrument, c'est le tenir ; par contraposition, ¬∃e (write(e) ∧ agent(e, Jérôme) ∧ instrument(e, plume)) : ecartee_sous_hypotheses [connaissance_non_attestee]. La règle n'indexe pas le moment (une seule situation). « write » : produire un texte (01698271-v), le même des deux côtés. Omis : le pupitre, le livre, le chapeau, l'encrier, la tête sur la main, le lion."
+  }
+ ]
+}
