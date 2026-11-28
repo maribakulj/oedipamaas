@@ -179,8 +179,10 @@ def exigences(cas, rep, cote):
                 manque(c, f"variante {i} : une traduction déclare sa langue, différente de celle du cas")
             if "statut_reference" in c and v.get("statut_reference", c["statut_reference"]) != c["statut_reference"]:
                 manque(c, f"variante {i} : une traduction correcte garde le statut sémantique de référence")
-        if not any(v.get("variation") in DIFFERENCIANTES and v.get("statut_attendu") != c.get("statut_attendu")
-                   for v in vs):
+        # l'exigence porte sur la signification : sur le statut sémantique de référence quand le cas en a un (schéma
+        # 3), sinon sur le statut attendu ; un statut démontrable égal faute de K ne la contredit pas
+        cle = "statut_reference" if "statut_reference" in c else "statut_attendu"
+        if not any(v.get("variation") in DIFFERENCIANTES and v.get(cle, c.get(cle)) != c.get(cle) for v in vs):
             manque(c, "aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère")
         for ou, x in [("cas", c)] + [(f"variante {i}", v) for i, v in enumerate(vs)]:
             d = x.get("decision_ouverte")
