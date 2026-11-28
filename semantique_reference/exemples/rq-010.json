@@ -1,0 +1,1377 @@
+{
+ "dossier": "rq-010",
+ "notation": "nr-1",
+ "famille": "reference_quantification",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/a_annoter/reference_quantification.json",
+ "source_reference": "/home/user/donnees/bancs_phase1/v3/reference/reference_quantification.json",
+ "remarques": "« Two angels crown her » (étude § 3.7 (d), exemple 1) : un point de lecture d'un pluriel, collective ou distributive ; une solution différente dans chaque lecture.",
+ "cas": [
+  {
+   "notation": "nr-1",
+   "id": "rq-010 (a)",
+   "description": {
+    "id": "rq-010",
+    "langue": "en",
+    "texte": "Illuminated miniature, tempera and gold on parchment, from a book of hours, Paris, c. 1420. The Virgin kneels in prayer on a cushion. Two angels crown her. Blue and red diapered background; marginal ivy-leaf border.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "introduit_par": "iv",
+      "id": "v",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ig",
+      "id": "g",
+      "sorte": "collection"
+     },
+     {
+      "introduit_par": "ia1",
+      "id": "a1",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ia2",
+      "id": "a2",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ie0",
+      "id": "e0",
+      "sorte": "changement"
+     },
+     {
+      "introduit_par": "ie1",
+      "id": "e1",
+      "sorte": "changement"
+     },
+     {
+      "introduit_par": "ie2",
+      "id": "e2",
+      "sorte": "changement"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vierge_marie"
+       }
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 96,
+       "fin": 102,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "ig",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "g"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 138,
+       "fin": 144,
+       "extrait": "angels"
+      }
+     },
+     {
+      "id": "ia1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "a1"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 138,
+       "fin": 144,
+       "extrait": "angels"
+      }
+     },
+     {
+      "id": "ia2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "a2"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 138,
+       "fin": 144,
+       "extrait": "angels"
+      }
+     },
+     {
+      "id": "pr",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "v"
+        ],
+        "type": "oc:agenouillee_en_priere"
+       }
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 103,
+       "fin": 119,
+       "extrait": "kneels in prayer"
+      }
+     },
+     {
+      "id": "ie0",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e0"
+        ],
+        "type": "oc:couronner"
+       }
+      },
+      "garde": {
+       "p1": [
+        "collective"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     },
+     {
+      "id": "r0a",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e0",
+         "g"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "garde": {
+       "p1": [
+        "collective"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     },
+     {
+      "id": "r0t",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e0",
+         "v"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "garde": {
+       "p1": [
+        "collective"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     },
+     {
+      "id": "ie1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e1"
+        ],
+        "type": "oc:couronner"
+       }
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     },
+     {
+      "id": "r1a",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "a1"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     },
+     {
+      "id": "r1t",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "v"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     },
+     {
+      "id": "ie2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e2"
+        ],
+        "type": "oc:couronner"
+       }
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     },
+     {
+      "id": "r2a",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e2",
+         "a2"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     },
+     {
+      "id": "r2t",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e2",
+         "v"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "cote": "D",
+      "dimension": "pluriel",
+      "domaine": [
+       "collective",
+       "distributive"
+      ],
+      "ancre": "crown",
+      "provenance": {
+       "document": "rq-010",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 134,
+       "fin": 154,
+       "extrait": "Two angels crown her"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "rq-010:def",
+    "libelle": "the Virgin crowned by angels",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "A",
+      "entite"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:vierge_marie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:couronner"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?M"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?A"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": "wn30:09538915-n"
+      }
+     ]
+    }
+   },
+   "connaissances": {
+    "version": "K*-rq-010",
+    "entrees": []
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "remarque": "etablie par cas (∀i∃σ), non uniforme : l'approximation ∃σ∀i ne l'établit pas"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     },
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« Two angels crown her »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Two angels crown her » : collectif (un couronnement par deux anges) ou distributif (chacun la couronne). Dans les deux lectures, elle est couronnée par des anges : V, avec des solutions différentes."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "rq-010#2 (a)",
+   "description": {
+    "id": "rq-010#2",
+    "langue": "en",
+    "texte": "Illuminated miniature, Paris, c. 1420. The Virgin kneels in prayer on a cushion. Together, two angels set a single crown on her head.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "introduit_par": "iv",
+      "id": "v",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ig",
+      "id": "g",
+      "sorte": "collection"
+     },
+     {
+      "introduit_par": "ia1",
+      "id": "a1",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ia2",
+      "id": "a2",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ie0",
+      "id": "e0",
+      "sorte": "changement"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vierge_marie"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#2",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 43,
+       "fin": 49,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "ig",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "g"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 95,
+       "fin": 101,
+       "extrait": "angels"
+      }
+     },
+     {
+      "id": "ia1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "a1"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 95,
+       "fin": 101,
+       "extrait": "angels"
+      }
+     },
+     {
+      "id": "ia2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "a2"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 95,
+       "fin": 101,
+       "extrait": "angels"
+      }
+     },
+     {
+      "id": "pr",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "v"
+        ],
+        "type": "oc:agenouillee_en_priere"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#2",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 50,
+       "fin": 66,
+       "extrait": "kneels in prayer"
+      }
+     },
+     {
+      "id": "ie0",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e0"
+        ],
+        "type": "oc:couronner"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 120,
+       "extrait": "Together, two angels set a single crown"
+      }
+     },
+     {
+      "id": "r0a",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e0",
+         "g"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 120,
+       "extrait": "Together, two angels set a single crown"
+      }
+     },
+     {
+      "id": "r0t",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e0",
+         "v"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#2",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 120,
+       "extrait": "Together, two angels set a single crown"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "rq-010:def",
+    "libelle": "the Virgin crowned by angels",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "A",
+      "entite"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:vierge_marie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:couronner"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?M"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?A"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": "wn30:09538915-n"
+      }
+     ]
+    }
+   },
+   "connaissances": {
+    "version": "K*-rq-010",
+    "entrees": []
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie). Profil retenu : A. Justification de A : « Together, two angels set a single crown » : collectif explicite, V."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "rq-010#4 (a)",
+   "description": {
+    "id": "rq-010#4",
+    "langue": "en",
+    "texte": "Illuminated miniature, Paris, c. 1420. The Virgin kneels in prayer on a cushion. Two angels seem to crown her; the upper part of the miniature is flaked.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "introduit_par": "iv",
+      "id": "v",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ig",
+      "id": "g",
+      "sorte": "collection"
+     },
+     {
+      "introduit_par": "ia1",
+      "id": "a1",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ia2",
+      "id": "a2",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ie0",
+      "id": "e0",
+      "sorte": "changement"
+     },
+     {
+      "introduit_par": "ie1",
+      "id": "e1",
+      "sorte": "changement"
+     },
+     {
+      "introduit_par": "ie2",
+      "id": "e2",
+      "sorte": "changement"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "iv",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "v"
+        ],
+        "type": "oc:vierge_marie"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 43,
+       "fin": 49,
+       "extrait": "Virgin"
+      }
+     },
+     {
+      "id": "ig",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "g"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 85,
+       "fin": 91,
+       "extrait": "angels"
+      }
+     },
+     {
+      "id": "ia1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "a1"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 85,
+       "fin": 91,
+       "extrait": "angels"
+      }
+     },
+     {
+      "id": "ia2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "a2"
+        ],
+        "type": "wn30:09538915-n"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 85,
+       "fin": 91,
+       "extrait": "angels"
+      }
+     },
+     {
+      "id": "pr",
+      "contenu": {
+       "atome": {
+        "pred": "propriete",
+        "args": [
+         "v"
+        ],
+        "type": "oc:agenouillee_en_priere"
+       }
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 50,
+       "fin": 66,
+       "extrait": "kneels in prayer"
+      }
+     },
+     {
+      "id": "ie0",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e0"
+        ],
+        "type": "oc:couronner"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem »"
+      },
+      "garde": {
+       "p1": [
+        "collective"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     },
+     {
+      "id": "r0a",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e0",
+         "g"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem »"
+      },
+      "garde": {
+       "p1": [
+        "collective"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     },
+     {
+      "id": "r0t",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e0",
+         "v"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem »"
+      },
+      "garde": {
+       "p1": [
+        "collective"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     },
+     {
+      "id": "ie1",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e1"
+        ],
+        "type": "oc:couronner"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem »"
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     },
+     {
+      "id": "r1a",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "a1"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem »"
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     },
+     {
+      "id": "r1t",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e1",
+         "v"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem »"
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     },
+     {
+      "id": "ie2",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e2"
+        ],
+        "type": "oc:couronner"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem »"
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     },
+     {
+      "id": "r2a",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e2",
+         "a2"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem »"
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     },
+     {
+      "id": "r2t",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e2",
+         "v"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "qualification": {
+       "modalite": "supposee",
+       "nature": "abduction",
+       "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem »"
+      },
+      "garde": {
+       "p1": [
+        "distributive"
+       ]
+      },
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "cote": "D",
+      "dimension": "pluriel",
+      "domaine": [
+       "collective",
+       "distributive"
+      ],
+      "ancre": "crown",
+      "provenance": {
+       "document": "rq-010#4",
+       "langue": "en",
+       "phrase": 3,
+       "debut": 81,
+       "fin": 109,
+       "extrait": "Two angels seem to crown her"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "rq-010:def",
+    "libelle": "the Virgin crowned by angels",
+    "langue": "en",
+    "variables": [
+     [
+      "M",
+      "individu"
+     ],
+     [
+      "E",
+      "changement"
+     ],
+     [
+      "A",
+      "entite"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?M"
+       ],
+       "type": "oc:vierge_marie"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:couronner"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?M"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?A"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?A"
+       ],
+       "type": "wn30:09538915-n"
+      }
+     ]
+    }
+   },
+   "connaissances": {
+    "version": "K*-rq-010",
+    "entrees": []
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "remarque": "« seem » : chaque classe sous une hypothèse de nature abduction, gardée"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie_sous_hypotheses",
+    "profil": [
+     {
+      "classe": {
+       "p1": "collective"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "les anges la couronnent, ce que l'auteur ne dit que « seem » (miniature écaillée)"
+       }
+      ]
+     },
+     {
+      "classe": {
+       "p1": "distributive"
+      },
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": [
+       {
+        "nature": "abduction",
+        "contenu": "idem"
+       }
+      ]
+     }
+    ],
+    "points": [
+     {
+      "id": "p1",
+      "dimension": "pluriel",
+      "porte_sur": "« Two angels seem to crown her »",
+      "valeurs": [
+       "collective",
+       "distributive"
+      ]
+     }
+    ],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B (etablie_sous_hypotheses). Profil retenu : A. Justification de A : « seem to crown her » : V seulement sous l'hypothèse."
+   }
+  }
+ ]
+}

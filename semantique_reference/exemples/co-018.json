@@ -1,0 +1,634 @@
+{
+ "dossier": "co-018",
+ "notation": "nr-1",
+ "famille": "compositionnalite",
+ "source_textes": "/home/user/donnees/bancs_phase1/v3/a_annoter/compositionnalite.json",
+ "source_reference": "/home/user/donnees/bancs_phase1/v3/reference/compositionnalite.json",
+ "remarques": "« either a monk or a nun » : le banc v3 numérote la variante n = 3 ; l'étude (§ 3.4, § 3.7 (d)) la cite co-018#4 (la numérotation de la phase 1, à partir de 1).",
+ "cas": [
+  {
+   "notation": "nr-1",
+   "id": "co-018#3 (a), alternative",
+   "description": {
+    "id": "co-018#3",
+    "langue": "en",
+    "texte": "Miniature from a psalter, Paris, c. 1320. In a vaulted cell, a seated figure, either a monk or a nun, reads an open book placed on a lectern.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "introduit_par": "if",
+      "id": "f",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ib",
+      "id": "b",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "processus"
+     },
+     {
+      "introduit_par": "il",
+      "id": "l",
+      "sorte": "individu"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "if",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "f"
+        ],
+        "type": "oc:figure"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 61,
+       "fin": 76,
+       "extrait": "a seated figure"
+      }
+     },
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "oc:livre"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 116,
+       "fin": 120,
+       "extrait": "book"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:lire"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 102,
+       "fin": 107,
+       "extrait": "reads"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "f"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 102,
+       "fin": 107,
+       "extrait": "reads"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "b"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 102,
+       "fin": 107,
+       "extrait": "reads"
+      }
+     },
+     {
+      "id": "il",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "l"
+        ],
+        "type": "oc:pupitre"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 133,
+       "fin": 140,
+       "extrait": "lectern"
+      }
+     },
+     {
+      "id": "sur",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "b",
+         "l"
+        ],
+        "type": "oc:pose_sur"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 121,
+       "fin": 140,
+       "extrait": "placed on a lectern"
+      }
+     },
+     {
+      "id": "moine",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "f"
+        ],
+        "type": "oc:moine"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 85,
+       "fin": 91,
+       "extrait": "a monk"
+      }
+     },
+     {
+      "id": "moniale",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "f"
+        ],
+        "type": "oc:moniale"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 95,
+       "fin": 100,
+       "extrait": "a nun"
+      }
+     }
+    ],
+    "alternatives": [
+     {
+      "id": "alt",
+      "branches": [
+       [
+        "moine"
+       ],
+       [
+        "moniale"
+       ]
+      ]
+     }
+    ]
+   },
+   "definition": {
+    "id": "co-018:def",
+    "libelle": "hermit, monk or nun reading a book",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "E",
+      "processus"
+     ],
+     [
+      "B",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": {
+        "union": [
+         "oc:ermite",
+         "oc:moine",
+         "oc:moniale"
+        ]
+       }
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:lire"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?B"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "oc:livre"
+      }
+     ]
+    }
+   },
+   "connaissances": {
+    "version": "K*-co-018",
+    "entrees": []
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "remarque": "une alternative de l'auteur : deux branches, deux cas de la preuve ; aucune n'est une hypothèse à choisir (étude § 3.4)"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  },
+  {
+   "notation": "nr-1",
+   "id": "co-018#3 (a), union",
+   "description": {
+    "id": "co-018#3",
+    "langue": "en",
+    "texte": "Miniature from a psalter, Paris, c. 1320. In a vaulted cell, a seated figure, either a monk or a nun, reads an open book placed on a lectern.",
+    "contextes": [
+     {
+      "id": "principal",
+      "sorte": "figuration"
+     }
+    ],
+    "referents": [
+     {
+      "introduit_par": "if",
+      "id": "f",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ib",
+      "id": "b",
+      "sorte": "individu"
+     },
+     {
+      "introduit_par": "ie",
+      "id": "e",
+      "sorte": "processus"
+     },
+     {
+      "introduit_par": "il",
+      "id": "l",
+      "sorte": "individu"
+     }
+    ],
+    "assertions": [
+     {
+      "id": "if",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "f"
+        ],
+        "type": "oc:figure"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 61,
+       "fin": 76,
+       "extrait": "a seated figure"
+      }
+     },
+     {
+      "id": "ib",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "b"
+        ],
+        "type": "oc:livre"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 116,
+       "fin": 120,
+       "extrait": "book"
+      }
+     },
+     {
+      "id": "ie",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "e"
+        ],
+        "type": "oc:lire"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 102,
+       "fin": 107,
+       "extrait": "reads"
+      }
+     },
+     {
+      "id": "ra",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "f"
+        ],
+        "valeur": "agent"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 102,
+       "fin": 107,
+       "extrait": "reads"
+      }
+     },
+     {
+      "id": "rt",
+      "contenu": {
+       "atome": {
+        "pred": "role",
+        "args": [
+         "e",
+         "b"
+        ],
+        "valeur": "theme"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 102,
+       "fin": 107,
+       "extrait": "reads"
+      }
+     },
+     {
+      "id": "il",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "l"
+        ],
+        "type": "oc:pupitre"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 133,
+       "fin": 140,
+       "extrait": "lectern"
+      }
+     },
+     {
+      "id": "sur",
+      "contenu": {
+       "atome": {
+        "pred": "relation",
+        "args": [
+         "b",
+         "l"
+        ],
+        "type": "oc:pose_sur"
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 121,
+       "fin": 140,
+       "extrait": "placed on a lectern"
+      }
+     },
+     {
+      "id": "mm",
+      "contenu": {
+       "atome": {
+        "pred": "type",
+        "args": [
+         "f"
+        ],
+        "type": {
+         "union": [
+          "oc:moine",
+          "oc:moniale"
+         ]
+        }
+       }
+      },
+      "provenance": {
+       "document": "co-018#3",
+       "langue": "en",
+       "phrase": 2,
+       "debut": 78,
+       "fin": 100,
+       "extrait": "either a monk or a nun"
+      }
+     }
+    ]
+   },
+   "definition": {
+    "id": "co-018:def",
+    "libelle": "hermit, monk or nun reading a book",
+    "langue": "en",
+    "variables": [
+     [
+      "X",
+      "individu"
+     ],
+     [
+      "E",
+      "processus"
+     ],
+     [
+      "B",
+      "individu"
+     ]
+    ],
+    "suffisante": {
+     "et": [
+      {
+       "pred": "type",
+       "args": [
+        "?X"
+       ],
+       "type": {
+        "union": [
+         "oc:ermite",
+         "oc:moine",
+         "oc:moniale"
+        ]
+       }
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?E"
+       ],
+       "type": "oc:lire"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?X"
+       ],
+       "valeur": "agent"
+      },
+      {
+       "pred": "role",
+       "args": [
+        "?E",
+        "?B"
+       ],
+       "valeur": "theme"
+      },
+      {
+       "pred": "type",
+       "args": [
+        "?B"
+       ],
+       "type": "oc:livre"
+      }
+     ]
+    }
+   },
+   "connaissances": {
+    "version": "K*-co-018",
+    "entrees": []
+   },
+   "comparaison": {
+    "niveau": "a",
+    "attendu": "egal",
+    "remarque": "la même information comme un type union sur un seul référent : une seule solution, uniforme ; les deux représentations s'accordent"
+   },
+   "reference_adjugee": {
+    "statut_reference": "etablie",
+    "profil": [
+     {
+      "classe": {},
+      "valeur": "V",
+      "contexte": "principal",
+      "enonciateur": "auteur",
+      "hypotheses": []
+     }
+    ],
+    "points": [],
+    "satisfactions_contextuelles": [],
+    "source": "accord",
+    "raison": "Accord de A et B sur le statut et les valeurs ; profil de A."
+   }
+  }
+ ]
+}
