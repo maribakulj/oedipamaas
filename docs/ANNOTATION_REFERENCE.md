@@ -170,3 +170,36 @@ Un fichier JSON par famille et par annotateur : une liste, un objet par cas.
 ```
 
 La justification est courte : ce qui fonde chaque valeur, et pourquoi les autres lectures sont exclues par le contexte.
+
+## 7. Les précisions pour l'adjudication (version 1.1, 28/11)
+
+Les annotateurs ont rencontré trois lacunes du guide. Ils les ont réglées chacun à sa façon. L'adjudication applique les
+règles ci-dessous à toutes les familles, sans changer les jugements initiaux, qui sont gardés.
+
+**1. Un contexte n'est pas une lecture.** Un résultat qui diffère selon le contexte n'est pas une divergence entre
+interprétations. Par exemple, une scène réfutée pour l'œuvre telle qu'elle est aujourd'hui, mais satisfaite dans son
+état d'origine, ou satisfaite dans une vision et non dans la scène principale.
+- **Le statut synthétique se lit sur le contexte principal :** la figuration de l'œuvre telle que la notice la décrit.
+- **Les autres contextes** donnent chacun leur résultat, dans `satisfactions_contextuelles` : le chemin, le statut, la
+  classe. Une vision, un tableau figuré ou un récit en font partie, de même que l'état d'origine d'une œuvre altérée,
+  sous le chemin `principal > état d'origine`.
+- **Seule une divergence entre lectures donne `divergent`.** Une différence entre contextes n'en donne jamais.
+- **Retenir une notation** pour l'œuvre à partir d'un contexte emboîté reste une décision documentaire, que l'annotation
+  ne prend pas.
+
+**2. Une convention n'est pas une lecture.** Quand le résultat dépend d'une convention d'évaluation non tranchée, on
+garde deux choses distinctes :
+- le point d'ancrage, pour ce que le texte laisse ouvert : par exemple la phase préparatoire contre l'imminence ;
+- l'hypothèse de nature `convention`, pour ce que la sémantique n'a pas fixé : par exemple que l'imminent compte comme
+  en cours.
+
+`docs/ONTOLOGIE_EVENTUALITES.md`, § 1.2 range la phase préparatoire dans l'en cours.
+
+**3. Une alternative de l'auteur n'est pas une ambiguïté.** « Soit Persée, soit David » est une disjonction dite.
+- Elle se traite par cas, chaque branche gardant sa nature ; ce n'est pas un point d'ambiguïté.
+- Si la définition est vraie dans toutes les branches, la valeur est `V`.
+- Si elle n'est vraie que dans certaines, la valeur est `N`, et les branches sont rapportées.
+
+**Les champs ajoutés par des annotateurs** (`nature_variante`, `raison_infidelite`, deux lignes de preuve pour une même
+classe) sont gardés. `traduction_infidele` ne vaut que pour une traduction. Une reformulation dans la même langue qui
+change le sens se signale par `paraphrase_infidele`.
