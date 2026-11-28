@@ -125,6 +125,8 @@ Chaque hypothèse a aussi son `contenu`.
 
 Il **résume** le profil. Il **ne le remplace pas** (décision du 28/11, § 1).
 
+**Ce tableau suit la définition 10 de `docs/INTERPRETATIONS_ADMISSIBLES.md` (version 1.1, § 3.5), qui fait foi ; ses lignes s'excluent : une classe `B` jointe à des classes `V` (ou `F`) sans classe du signe opposé donne `etablie_sous_hypotheses` (ou `ecartee_sous_hypotheses`), la classe `B` restant au profil ; `contradictoire` et `non_certifiee` ne valent qu'en l'absence de toute classe `V` ou `F` d'énonciateur `auteur`.**
+
 | le profil | le statut synthétique |
 |---|---|
 | toutes les classes `V`, sans hypothèse, énonciateur auteur | `etablie` |
