@@ -287,3 +287,46 @@ est celle de WOLF, non celle du mot anglais correspondant : « couronne » y a, 
 - **Une erreur de sûreté** est un statut plus fort que l'attendu : `etablie` pour `etablie_sous_hypotheses`, `inconnue`
   ou `ecartee`, ou `ecartee` pour `inconnue`. Elle est comptée à part, et elle prime sur la couverture.
 - **La qualification,** une fois, après la validation des bancs par la propriétaire.
+
+## 8. L'état du côté développement, le 28/11 (à valider par la propriétaire)
+
+**Les cas.** 216 cas de base (24 par famille) et 1 286 variantes. Ils sont sur la branche `donnees/banc-graphes`, dans
+`bancs_phase1/`, avec leurs questions, les trois relectures, les révisions, la couverture (`dev/COUVERTURE.md`) et la
+version 1 d'avant relecture. Le validateur passe sur l'ensemble, quotas compris.
+
+**La couverture.** Les 112 constructions de développement sont toutes employées, et chacune comme phénomène principal.
+Les 36 paires de familles sont toutes composées. Les cas sont écrits pour moitié en français, pour moitié en anglais.
+
+**Le chemin suivi :**
+1. la rédaction ;
+2. trois relectures indépendantes : 111 lignes de désaccord, dont 54 de sûreté ;
+3. une révision de chaque famille, où chaque désaccord est corrigé ou contesté par écrit ;
+4. une harmonisation selon le § 4.1.
+
+**Les statuts des cas de base :**
+
+| statut | version 1 | après harmonisation |
+|---|---|---|
+| `etablie` | 79 | 29 |
+| `etablie_sous_hypotheses` | 19 | 67 |
+| `ecartee` | 27 | 5 |
+| `non_certifiee` | 4 | 3 |
+| `inconnue` | 87 | 112 |
+
+Les `decision_ouverte` passent de 43 à 204.
+
+**Ce que les bancs montrent déjà :**
+- **sous D30 à la lettre, avec WOLF, le français ne donne presque aucun lien certain.** 1 cas de base français sur 108
+  est `etablie`, contre 28 sur 108 en anglais ;
+- sous l'option `sens_fixe_par_le_contexte`, les cas et variantes `etablie` passent de 177 à 251, et les `ecartee` de
+  38 à 65.
+
+**Les décisions à prendre** sont dans `docs/DECISIONS_PHASE1.md` : 40 décisions sémantiques et les questions de
+méthode des bancs. Parmi ces dernières :
+- les textes et les définitions que des rédacteurs ont adaptés aux trous de WOLF ;
+- la relation « traduction : même statut ».
+
+**Ce qui n'est pas fait :**
+- le jugement d'un échantillon par la propriétaire (D23) ;
+- les cas de qualification, qu'écrit une autre session ;
+- le passage du moteur actuel sur le banc, qui donnera le point de départ (§ 7).
