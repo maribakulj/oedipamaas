@@ -177,3 +177,46 @@ il écarte Clojure pour ce projet et à ce stade, pas en général.
 - **Sont validés :** la clarification des licences Joconde et le signalement des entrées WOLF corrompues.
 - **Pas de chantier de réécriture générale.** La suite reste centrée sur les fondements exécutables, la qualification
   du langage de référence, l'intégration du noyau actuel et les besoins démontrés de K.
+
+## 5. L'orientation de long terme (décision de la propriétaire, 28/11)
+
+**D-minimal n'est pas l'architecture définitive.** L'absence de migration immédiate ne fige pas la répartition actuelle
+entre Python et Prolog. À terme, les responsabilités de Python se réduisent au profit de Prolog, chaque fois que cela
+apporte au moins l'un de ces trois gains :
+- une meilleure cohérence architecturale ;
+- moins de dépendances ;
+- moins de représentations intermédiaires.
+
+**Prolog est le langage privilégié de tout nouveau composant** qui relève :
+- de la construction et de la manipulation des connaissances ;
+- de la compilation ;
+- des transformations symboliques ;
+- de la validation des structures sémantiques ;
+- du raisonnement ;
+- des interfaces natives du moteur.
+
+**Python est gardé là où il a une justification technique ou scientifique propre :**
+- l'indépendance de l'oracle et de l'interpréteur de référence ;
+- les analyseurs linguistiques externes (Stanza) ;
+- certaines expérimentations.
+
+**Les règles qui en découlent :**
+1. **Pas de migration immédiate,** ni de réécriture systématique.
+2. **Un composant Python devenu obsolète, ou qui doit être substantiellement remanié,** voit son langage réexaminé
+   avant d'être remplacé. Par défaut, il passe en Prolog s'il relève d'une des catégories ci-dessus.
+3. **Toute nouvelle responsabilité confiée à Python, et tout nouveau langage, se justifient explicitement.** La
+   justification est écrite dans le contrat de la tâche, ou dans le document de conception, avant l'implémentation, et
+   elle nomme le besoin que Prolog ne couvre pas. Un nouveau langage demande en outre la décision de la propriétaire.
+   Python ne s'étend pas par habitude.
+4. **La cible de distribution :** Oedipamaas doit pouvoir être distribué comme un **moteur Prolog autonome**. Les outils
+   Python en sont un environnement scientifique et expérimental distinct :
+   - l'oracle et l'interpréteur de référence ;
+   - la mesure et les expériences ;
+   - la glue des analyseurs externes ;
+   - un client facultatif du protocole JSON/JSONL.
+
+   Le moteur ne dépend d'aucun d'eux. Le découpage des dépendances (§ 4) prépare cette séparation.
+
+**Comment on la suit.** L'inventaire de `docs/AUDIT_LANGAGES.md` (§ 1) sert de point de départ. Chaque composant Python y
+a une catégorie. La part de Python dans les catégories du moteur (exécution, compilation, transformations symboliques)
+est l'indicateur à faire décroître. Elle est relevée à chaque révision de cet inventaire.
