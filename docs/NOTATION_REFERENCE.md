@@ -136,16 +136,20 @@ excluent. La forme suit `docs/INTERPRETATIONS_ADMISSIBLES.md` :
 ]}
 ```
 
-**Les sortes de points :**
-- `sens` : le sens lexical ;
-- `rattachement` : syntaxique ;
+**Les sortes de points** sont les onze dimensions de `docs/INTERPRETATIONS_ADMISSIBLES.md`, § 3.1 :
+- `sens` : le sens lexical d'une occurrence ;
+- `sens_relation` : une préposition ou une construction ;
+- `structure` : un rattachement, ou une unité lexicalisée ;
 - `coreference` ;
-- `portee` : de la négation ou d'un quantificateur ;
-- `distributivite` ;
+- `portee` : d'une négation, d'une modalité ou d'un quantificateur ;
+- `pluriel` : la lecture collective ou distributive ;
 - `cadre_de_reference` : la gauche et la droite ;
 - `ancrage` : temporel ;
-- `contexte` : le contexte de représentation ;
-- `identite`.
+- `contexte` : le chemin d'une assertion ;
+- `identite` ;
+- `forme_du_libelle` : une liste, un pluriel.
+
+Un point a un côté (`D` ou `Δ`) : la définition a ses propres points, désambiguïsés comme ceux de la description.
 
 **Une exclusion** cite ce qui la démontre : une entrée de K (§ 5), ou une contrainte du texte. **Une préférence**
 ordonne des valeurs mais n'en exclut aucune. Une préférence statistique n'est jamais une exclusion (décision du 28/11,
