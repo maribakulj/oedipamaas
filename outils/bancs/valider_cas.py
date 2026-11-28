@@ -13,6 +13,8 @@ COTE : developpement ou qualification. Chaque fichier contient une liste de cas 
   - les quotas de composition, par famille principale : au moins 40 % des cas à deux phénomènes ou plus dont un d'une
     autre famille, au moins 10 % à trois ou plus ;
   - les identifiants uniques.
+Avec --exigences, il contrôle aussi les exigences du protocole (exigences()) : les variantes, les traductions, les
+sortes, la couverture des constructions et des paires, la cohérence des décisions ouvertes.
 Il ne juge pas le statut attendu : c'est l'affaire de la relecture (D23). Sortie : un rapport, et un code d'erreur s'il
 y a une erreur de forme ou de côté (les quotas sont rapportés, et comptés comme erreurs avec --quotas)."""
 import argparse, collections, json, os, sys
@@ -28,7 +30,10 @@ OPERATIONS = {"lecture", "canonisation", "deduction", "classification", "abducti
 CHAMPS = {"id", "famille", "phenomenes", "pivot", "langue", "sorte", "description", "definition", "statut_attendu",
           "hypotheses_attendues", "connaissances_supposees", "operations_requises", "extensions_requises",
           "justification", "variantes"}
-FACULTATIFS = {"graphe_attendu", "requete_attendue", "remarque", "decision_ouverte"}
+FACULTATIFS = {"graphe_attendu", "requete_attendue", "remarque", "decision_ouverte",
+               # version 3 (docs/BANCS_PHASE1.md, § 9) : les trois niveaux de statut, la représentation de référence
+               "statut_reference", "hypotheses_reference", "justification_reference", "dependances",
+               "representation_reference", "connaissances_formelles", "historique"}
 CONNAISSANCES = {"equivalence_etablie", "condition_suffisante", "condition_necessaire", "implication",
                  "consequence_conditionnelle", "connaissance_typique", "hypothese_interpretative", "relation_inconnue",
                  "distinction_documentaire", "identite_documentaire"}
@@ -143,6 +148,81 @@ def controler(cas, inv, rep, cote, lex=None):
     return erreurs
 
 
+# la force d'un statut, pour l'ordre de sûreté : un statut plus fort qu'un autre affirme davantage (docs/BANCS_PHASE1.md,
+# § 4.1) ; inconnue est le plus faible
+FORCE = {"inconnue": 0, "non_certifiee": 1, "etablie_sous_hypotheses": 2, "contradictoire": 2, "ecartee": 3, "etablie": 3}
+DIFFERENCIANTES = {"changement_de_portee", "changement_de_modalite", "changement_de_temps", "inversion_des_roles"}
+
+
+def exigences(cas, rep, cote):
+    """Les exigences du protocole que la forme seule ne contrôle pas (docs/BANCS_PHASE1.md, § 4 et § 5) :
+    les variantes, les traductions, les sortes, la couverture des constructions et la cohérence des décisions ouvertes."""
+    m = []
+
+    def manque(c, t):
+        m.append(f"{c.get('id', '?')} : {t}")
+
+    for c in cas:
+        vs = c.get("variantes", [])
+        types = {v.get("variation") for v in vs}
+        if len(vs) < 5:
+            manque(c, f"{len(vs)} variantes (au moins 5)")
+        if len(types) < 4:
+            manque(c, f"{len(types)} variations différentes (au moins 4)")
+        trads = [v for v in vs if v.get("variation") == "traduction"]
+        if not trads:
+            manque(c, "aucune traduction")
+        for i, v in enumerate(vs):
+            if v.get("variation") != "traduction":
+                continue
+            if v.get("langue") not in ("fr", "en") or v.get("langue") == c.get("langue"):
+                manque(c, f"variante {i} : une traduction déclare sa langue, différente de celle du cas")
+            if "statut_reference" in c and v.get("statut_reference", c["statut_reference"]) != c["statut_reference"]:
+                manque(c, f"variante {i} : une traduction correcte garde le statut sémantique de référence")
+        if not any(v.get("variation") in DIFFERENCIANTES and v.get("statut_attendu") != c.get("statut_attendu")
+                   for v in vs):
+            manque(c, "aucune variante de portée, de modalité, de temps ou d'inversion dont le statut diffère")
+        for ou, x in [("cas", c)] + [(f"variante {i}", v) for i, v in enumerate(vs)]:
+            d = x.get("decision_ouverte")
+            if not d:
+                continue
+            opts = d.get("statut_selon_l_option", {})
+            if len(opts) < 2:
+                manque(c, f"{ou} : une decision_ouverte a au moins deux options")
+            elif x.get("statut_attendu") not in opts.values():
+                manque(c, f"{ou} : le statut retenu n'est le statut d'aucune option")
+            elif FORCE.get(x["statut_attendu"], 9) > min(FORCE.get(t, 9) for t in opts.values()):
+                manque(c, f"{ou} : le statut retenu n'est pas le plus prudent des options")
+            elif len(set(opts.values())) == 1:
+                manque(c, f"{ou} : une decision_ouverte dont les options donnent le même statut")
+    par = collections.defaultdict(list)
+    for c in cas:
+        par[c.get("famille")].append(c)
+    for f, cs in sorted(par.items()):
+        n = len(cs)
+        k = collections.Counter(c.get("sorte") for c in cs)
+        if k["positif"] < 0.3 * n:
+            m.append(f"{f} : {k['positif']} positifs sur {n} (au moins 30 %)")
+        if k["negatif"] + k["contre_modele"] < 0.2 * n:
+            m.append(f"{f} : {k['negatif'] + k['contre_modele']} négatifs ou contre-modèles sur {n} (au moins 20 %)")
+        if k["indetermine"] < 0.15 * n:
+            m.append(f"{f} : {k['indetermine']} indéterminés sur {n} (au moins 15 %)")
+        if f in rep["constructions"]:
+            princ = {(c["phenomenes"][0]["phenomene"], c["phenomenes"][0]["construction"]) for c in cs if c.get("phenomenes")}
+            for ph, x in rep["constructions"][f].items():
+                for co in x[cote]:
+                    if (ph, co) not in princ:
+                        m.append(f"{f} : la construction {ph}/{co} n'est phénomène principal d'aucun cas")
+    fams = sorted(rep["constructions"])
+    paires = collections.Counter(tuple(sorted((c["famille"], p["famille"]))) for c in cas
+                                 for p in c.get("phenomenes", [])[1:] if p["famille"] != c["famille"])
+    for i, a in enumerate(fams):
+        for b in fams[i + 1:]:
+            if paires[(a, b)] < 2 and len(par) == len(fams):
+                m.append(f"la paire {a} × {b} est composée {paires[(a, b)]} fois (au moins 2)")
+    return m
+
+
 def quotas(cas):
     r = {}
     par = collections.defaultdict(list)
@@ -168,6 +248,7 @@ def main():
     a.add_argument("inventaire"); a.add_argument("repartition")
     a.add_argument("cote", choices=["developpement", "qualification"]); a.add_argument("cas", nargs="+")
     a.add_argument("--wordnet"); a.add_argument("--quotas", action="store_true")
+    a.add_argument("--exigences", action="store_true", help="les exigences non remplies comptent comme des erreurs")
     o = a.parse_args()
     inv, rep = json.load(open(o.inventaire)), json.load(open(o.repartition))
     cas = [c for f in o.cas for c in json.load(open(f))]
@@ -176,12 +257,15 @@ def main():
     q = quotas([c for c in cas if isinstance(c, dict) and "phenomenes" in c and "famille" in c])
     for e in es:
         print("ERREUR", e)
+    ex = exigences([c for c in cas if isinstance(c, dict) and "phenomenes" in c], rep, o.cote) if not es else []
+    for e in ex:
+        print("EXIGENCE", e)
     nv = sum(len(c.get("variantes", [])) for c in cas)
-    print(f"{len(cas)} cas de base, {nv} variantes, {len(es)} erreurs")
+    print(f"{len(cas)} cas de base, {nv} variantes, {len(es)} erreurs, {len(ex)} exigences non remplies")
     for f, x in q.items():
         print(f"  {f} : {x['cas']} cas, composés ≥2 : {x['composes_2']}, ≥3 : {x['composes_3']}"
               f"{'' if x['ok'] else '  (quotas non atteints)'}")
-    sys.exit(1 if es or (o.quotas and not all(x["ok"] for x in q.values())) else 0)
+    sys.exit(1 if es or (o.exigences and ex) or (o.quotas and not all(x["ok"] for x in q.values())) else 0)
 
 
 if __name__ == "__main__":

@@ -74,3 +74,22 @@ def test_validateur_accepte_et_refuse():
     q = copy.deepcopy(c)
     q["pivot"]["cle_de_sens"] = "dream%2:29:00::"
     assert valider_cas.controler([q], INV, REP, "developpement")
+
+
+def test_exigences_du_protocole():
+    c = cas_type()
+    ex = valider_cas.exigences([c], REP, "developpement")
+    assert any("au moins 5" in e for e in ex)
+    assert any("déclare sa langue" in e for e in ex)
+    assert any("dont le statut diffère" in e for e in ex)
+    # une decision_ouverte dont le statut retenu n'est pas le plus prudent
+    q = copy.deepcopy(c)
+    q["decision_ouverte"] = {"question": "?", "statut_selon_l_option": {"a": "etablie", "b": "inconnue"}}
+    assert any("plus prudent" in e for e in valider_cas.exigences([q], REP, "developpement"))
+    q["statut_attendu"] = "inconnue"
+    assert not any("plus prudent" in e for e in valider_cas.exigences([q], REP, "developpement"))
+    # une traduction qui change le statut sémantique de référence
+    q = copy.deepcopy(c)
+    q["statut_reference"] = "etablie"
+    q["variantes"][0].update(langue="fr", statut_reference="inconnue")
+    assert any("statut sémantique de référence" in e for e in valider_cas.exigences([q], REP, "developpement"))
