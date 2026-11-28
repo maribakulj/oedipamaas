@@ -197,4 +197,5 @@ Chaque tâche importante y est inscrite, avec :
 | 28/11 | pilote : annotation de 9 cas et de leurs variantes (62 éléments) | semantic-annotator (idem) | Sonnet (13) | high | — | même document, § 1 |
 | 28/11 | arbitrage à l'aveugle des 16 désaccords du pilote d'annotation | semantic-auditor | Opus (27) | high | 2 contradictions de spécification remontées | même document, § 1 |
 | 28/11 | audit des langages : inventaire mécanique | data-operator | Haiku (26) | low | — | `/home/user/donnees/audit_langages/` |
-| 28/11 | audit des langages : étude comparative | researcher | Sonnet | high | — | en cours |
+| 28/11 | audit des langages : étude comparative et expérimentation Python / Prolog | researcher | Sonnet (92) | high | 5 points remontés (`AUDIT_LANGAGES.md` § 7.3) | `docs/AUDIT_LANGAGES.md` |
+| 28/11 | audit des langages : arbitrage | orchestrateur | Opus | — | — | `docs/ARCHITECTURE_LANGAGES.md` |
