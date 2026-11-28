@@ -479,8 +479,18 @@ Un accord de statut n'est pas une preuve correcte : e⁺_der et e⁺_cert resten
 **Le langage formel de référence** (`docs/LANGAGE_REFERENCE.md`, `semantique_reference/`) a sa syntaxe abstraite, ses
 règles de formation, sa sémantique, un interpréteur indépendant du moteur et un oracle de propriétés
 (`tests/test_semantique_reference.py`). Cinq cas réels y sont écrits (ee-002, mn-004, rq-010, co-018 #3, pi-003) ; leur
-niveau (a) calculé égale la référence adjugée. Les représentations formelles des autres cas de base sont en cours, écrites
-sans voir la référence adjugée (`v3/formel/`), puis comparées à elle.
+niveau (a) calculé égale la référence adjugée.
+
+**Les représentations formelles des cas de base** (`v3/formel/`, `docs/mesures/FORMEL_BANCS.md`) ont été écrites par
+trois rédacteurs qui n'ont vu ni la référence adjugée, ni K0-d30, ni le moteur, puis recalculées par l'interpréteur et
+comparées à la référence (`outils/bancs/comparer_formel.py`).
+- 197 cas sont représentés, 18 ne le sont pas (ce qui leur manque est écrit), et 1 n'est pas fait (co-018).
+- 168 des 197 ont le même statut et le même contexte que la référence.
+- Les écarts tiennent surtout à trois règles :
+  - la portée d'une réfutation (L6), 8 cas ;
+  - l'attestation des postulats de K\*, 11 cas ;
+  - le seuil d'une identification ou d'une abduction, 5 cas.
+- Aucun côté n'a été réécrit d'après l'autre. Les variantes restent à représenter.
 
 **Les données** sont dans `/home/user/donnees/bancs_phase1/v3/` et archivées sur la branche `donnees/banc-graphes`
 (`bancs_phase1/v3/`).

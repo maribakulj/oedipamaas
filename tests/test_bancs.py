@@ -93,3 +93,22 @@ def test_exigences_du_protocole():
     q["statut_reference"] = "etablie"
     q["variantes"][0].update(langue="fr", statut_reference="inconnue")
     assert any("statut sémantique de référence" in e for e in valider_cas.exigences([q], REP, "developpement"))
+
+
+def test_comparer_formel_regle_par_contexte_et_axes():
+    import importlib.util, pathlib
+    chemin = pathlib.Path(__file__).resolve().parents[1] / "outils" / "bancs" / "comparer_formel.py"
+    spec = importlib.util.spec_from_file_location("comparer_formel", chemin)
+    cf = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(cf)
+    # un seul contexte prend une valeur : son statut, avec son chemin
+    assert cf.par_contexte([("principal", "inconnue", (0, 0)), ("vis", "etablie", (3, 0))])[:2] == ("etablie", ["vis"])
+    # deux contextes de valeurs différentes : par_contexte, le maximum sur chaque axe
+    assert cf.par_contexte([("principal", "ecartee", (0, 3)), ("o", "etablie", (3, 0))]) == ("par_contexte", ["principal", "o"], (3, 3))
+    assert cf.par_contexte([("principal", "inconnue", (0, 0))])[0] == "inconnue"
+    assert cf.comparer((0, 3), (2, 2)) == "plus faible (positif), plus fort (negatif)"
+    assert cf.comparer((3, 0), (3, 0)) == "égal"
+    assert cf.axes_nc("non_certifiee", "-") == (0, 1)
+    # un cas réel d'exemple se recalcule
+    x = cf.element_d_exemple("ee-002")
+    assert x is not None and cf.evaluer_element(x)["statut"] == "etablie"

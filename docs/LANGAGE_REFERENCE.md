@@ -803,6 +803,10 @@ l'étude décrit. Les cinq dossiers se lisent et se vérifient par `test_semanti
 
 ## 9. Ce qui manque
 
+**L'écriture des 216 cas de base** (28/11) a relevé d'autres lacunes, numérotées L22 à L32 dans
+`docs/mesures/FORMEL_BANCS.md`, § 4, et les constructions qui manquent aux 18 cas non représentés (§ 3). Elles ne sont
+pas corrigées ici.
+
 **Pour représenter les cas que le langage ne représente pas encore :**
 - **les adjectifs de degré** et leur classe de comparaison (décision 30 : *young* / *old*) : l'indexation d'une
   incompatibilité ne connaît pas la classe ;
